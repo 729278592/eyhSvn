@@ -8,6 +8,13 @@
     <link href="css/AdminLTE.min.css" rel="stylesheet" type="text/css" />
     <link rel="stylesheet" href="css/font/css/font-awesome.min.css"/>
     <link rel="stylesheet" href="css/Backstagb.css"/>
+    <style>
+        table{width: 100%;}
+        table tr{display: inline-block;line-height: 50px;}
+        table tr td{border: none;}
+        table tr td:first-child{text-align: right;width: 85px;}
+        table tr td:last-child{text-align: left;position: relative;left: 10px;}
+    </style>
 </head>
 <body>
 <header class="main-header">
@@ -125,99 +132,167 @@
         </ul>
         <div class="wrc_c wrc_c2">
             <div class="wrcc_h">
-                记录列表
+                新增员工
             </div>
             <table>
-                <thead>
-                <tr>
-                    <th>姓名</th>
-                    <th>微信号</th>
-                    <th>手机号码</th>
-                    <th>邮箱地址</th>
-                    <th>部门</th>
-                    <th>职位</th>
-                    <th>操作</th>
-                </tr>
-                </thead>
-                <tbody>
-                <tr>
-                    <td>lemon</td>
-                    <td>ton g_96 1094 707</td>
-                    <td>136 379 160 53</td>
-                    <td>961 0947 07@q q.com</td>
-                    <td>企业号体验14544</td>
-                    <td></td>
-                    <td><a href="javascript:void(0)" class="tda"><img src="images/cwa/remove1.png" alt="" style="position: relative;top: -1px;*top: 0;"/>删除</a>
-                        <img src="images/cwa/xian1.png" alt="" style="position: relative;*top: 2px;"/> <a href="" class="tda1"><img src="images/cwa/xi.png" alt=""style="vertical-align: -1px;"/>详情</a></td>
-                </tr>
-                <tr>
-                    <td>小洁</td>
-                    <td>cjc heng</td>
-                    <td>150 866 777 45</td>
-                    <td>282 8022 93@q q.com</td>
-                    <td>企业号体验14544</td>
-                    <td>d</td>
-                    <td><a href="javascript:void(0)" class="tda"><img src="images/cwa/remove1.png" alt="" style="position: relative;top: -1px;*top: 0;"/>删除</a>
-                        <img src="images/cwa/xian1.png" alt="" style="position: relative;*top: 2px;"/> <a href="" class="tda1"><img src="images/cwa/xi.png" alt=""style="vertical-align: -1px;"/>详情</a></td>
-                </tr>
-                <tr>
-                    <td></td>
-                    <td></td>
-                    <td></td>
-                    <td></td>
-                    <td></td>
-                    <td></td>
-                    <td></td>
-                </tr>
-                </tbody>
-            </table>
-            <div class="wrcc_f">
-                <div class="d_left">
-                    <a href="#" class="p_shan">
-                        <img src="images/cwa/jiahao.png" alt="" style="position: relative;top: -2px;"/>新增
-                    </a>
-                </div>
-                <ul class="wrccf_ul">
-                    <li class="f_li">《</li>
-                    <li class="lan_li">首页</li>
-                    <li class="z_li lan_li">1</li>
-                    <li class="lan_li">2</li>
-                    <li class="lan_li">3</li>
-                    <li class="lan_li">4</li>
-                    <li class="lan_li">5</li>
-                    <li class="lan_li">...</li>
-                    <li class="lan_li">尾页</li>
-                    <li class="l_li">》</li>
-                </ul>
-                <div class="d_right" style="margin-right: -50px;"><a href="" class="p_shan">批量删除</a> <span style="color: #565656;">共 32 条</span></div>
-            </div>
-        </div>
-        <div class="wrc_c wrc_c1">
-            <div class="wrcc_h">
-                批量导入
-            </div>
-            <table class="wrcc_c">
                 <tr>
                     <td>
-                        <span style="font-size: 13px;color: #201f1f;font-weight: bold;">导入用户名信息 : </span>
+                        <span>姓名</span> <span style="color: #fc2626;">*</span>
+                    </td>
+                    <td>
+                        <input type="text" class="wc_in" value="" />
+                    </td>
+                </tr>
+                <tr>
+                    <td>
+                        <span>帐号</span> <span style="color: #fc2626;">*</span>
+                    </td>
+                    <td>
+                        <input type="text" class="wc_in" value="" placeholder="成员唯一标识，不可更改，不支持中文"/>
+                    </td>
+                </tr>
+                <tr>
+                    <td>
+                        <span>性别</span> <span style="color: #fc2626;">*</span>
+                    </td>
+                    <td>
+                        <input type="text" class="wc_in" value="" placeholder=""/>
+                    </td>
+                </tr>
+                <tr>
+                    <td>
+                        <span>微信号</span> <span style="color: #fc2626;">*</span>
+                    </td>
+                    <td>
+                        <input type="text" class="wc_in" value="" placeholder="允许员工扫描的微信匹配关注"/>
+                    </td>
+                </tr>
+                <tr>
+                    <td>
+                        <span>手机</span> <span style="color: #fc2626;">*</span>
+                    </td>
+                    <td>
+                        <input type="text" class="wc_in" value="" placeholder="允许手机对应的微信与员工扫描的微信匹配关注"/>
+                    </td>
+                </tr>
+                <tr>
+                    <td>
+                        <span>邮箱</span> <span style="color: #fc2626;">*</span>
+                    </td>
+                    <td>
+                        <input type="text" class="wc_in" value="" placeholder="若未匹配到员工的微信，则通过邮箱来验证身份"/>
+                    </td>
+                </tr>
+                <tr>
+                    <td>
+                        <span>所在部门</span> <span style="color: #fc2626;">*</span>
+                    </td>
+                    <td>
+                        <input type="text" class="wc_in" value="" placeholder="所在部门"/>
+                    </td>
+                </tr>
+                <tr>
+                    <td>
+                        <span>职位</span> <span style="color: #fc2626;">*</span>
+                    </td>
+                    <td>
+                        <input type="text" class="wc_in" value="" placeholder="职位"/>
+                    </td>
+                </tr>
+            </table>
+            <button class="inblock wr_a" style="background: #fb9766;">保存</button><span class="inblock inblock0"></span>
+            <button class="inblock wr_a" style="background: #969696;">取消</button>
+            <!--<table>-->
+                <!--<thead>-->
+                <!--<tr>-->
+                    <!--<th>姓名</th>-->
+                    <!--<th>微信号</th>-->
+                    <!--<th>手机号码</th>-->
+                    <!--<th>邮箱地址</th>-->
+                    <!--<th>部门</th>-->
+                    <!--<th>职位</th>-->
+                    <!--<th>操作</th>-->
+                <!--</tr>-->
+                <!--</thead>-->
+                <!--<tbody>-->
+                <!--<tr>-->
+                    <!--<td>lemon</td>-->
+                    <!--<td>ton g_96 1094 707</td>-->
+                    <!--<td>136 379 160 53</td>-->
+                    <!--<td>961 0947 07@q q.com</td>-->
+                    <!--<td>企业号体验14544</td>-->
+                    <!--<td></td>-->
+                    <!--<td><a href="javascript:void(0)" class="tda"><img src="images/cwa/remove1.png" alt="" style="position: relative;top: -1px;*top: 0;"/>删除</a>-->
+                        <!--<img src="images/cwa/xian1.png" alt="" style="position: relative;*top: 2px;"/> <a href="" class="tda1"><img src="images/cwa/xi.png" alt=""style="vertical-align: -1px;"/>详情</a></td>-->
+                <!--</tr>-->
+                <!--<tr>-->
+                    <!--<td>小洁</td>-->
+                    <!--<td>cjc heng</td>-->
+                    <!--<td>150 866 777 45</td>-->
+                    <!--<td>282 8022 93@q q.com</td>-->
+                    <!--<td>企业号体验14544</td>-->
+                    <!--<td>d</td>-->
+                    <!--<td><a href="javascript:void(0)" class="tda"><img src="images/cwa/remove1.png" alt="" style="position: relative;top: -1px;*top: 0;"/>删除</a>-->
+                        <!--<img src="images/cwa/xian1.png" alt="" style="position: relative;*top: 2px;"/> <a href="" class="tda1"><img src="images/cwa/xi.png" alt=""style="vertical-align: -1px;"/>详情</a></td>-->
+                <!--</tr>-->
+                <!--<tr>-->
+                    <!--<td></td>-->
+                    <!--<td></td>-->
+                    <!--<td></td>-->
+                    <!--<td></td>-->
+                    <!--<td></td>-->
+                    <!--<td></td>-->
+                    <!--<td></td>-->
+                <!--</tr>-->
+                <!--</tbody>-->
+            <!--</table>-->
+            <!--<div class="wrcc_f">-->
+                <!--<div class="d_left">-->
+                    <!--<a href="#" class="p_shan">-->
+                        <!--<img src="images/cwa/jiahao.png" alt="" style="position: relative;top: -2px;"/>新增-->
+                    <!--</a>-->
+                <!--</div>-->
+                <!--<ul class="wrccf_ul">-->
+                    <!--<li class="f_li">《</li>-->
+                    <!--<li class="lan_li">首页</li>-->
+                    <!--<li class="z_li lan_li">1</li>-->
+                    <!--<li class="lan_li">2</li>-->
+                    <!--<li class="lan_li">3</li>-->
+                    <!--<li class="lan_li">4</li>-->
+                    <!--<li class="lan_li">5</li>-->
+                    <!--<li class="lan_li">...</li>-->
+                    <!--<li class="lan_li">尾页</li>-->
+                    <!--<li class="l_li">》</li>-->
+                <!--</ul>-->
+                <!--<div class="d_right" style="margin-right: -50px;"><a href="" class="p_shan">批量删除</a> <span style="color: #565656;">共 32 条</span></div>-->
+            <!--</div>-->
+        </div>
+        <!--<div class="wrc_c wrc_c1">-->
+            <!--<div class="wrcc_h">-->
+                <!--批量导入-->
+            <!--</div>-->
+            <!--<table class="wrcc_c">-->
+                <!--<tr>-->
+                    <!--<td>-->
+                        <!--<span style="font-size: 13px;color: #201f1f;font-weight: bold;">导入用户名信息 : </span>-->
 
-                        <input type="file" class="wrccc_i"placeholder="选择要上传的文件"/>选择文件
-                    </td>
-                    <td>
-                        <span class="inblock inblock4 inblock5">下载标准模板</span>
-                    </td>
-                    <td>
-                        <span style="position: relative;left: -45px;">请按照我们提供的标准模板填写通讯录的信息</span>
-                    </td>
-                    <td>
-                    <span>
-                         <a href="" class="inblock wr_a" style="background: #fb9766;top:-3px;">导入</a>
-                        <a href="" class="inblock wr_a" style="background: #969696;top:-3px;">取消</a>
-                    </span>
-                    </td>
-                </tr>
-            </table>
-        </div>
+                        <!--<input type="file" class="wrccc_i"placeholder="选择要上传的文件"/>选择文件-->
+                    <!--</td>-->
+                    <!--<td>-->
+                        <!--<span class="inblock inblock4 inblock5">下载标准模板</span>-->
+                    <!--</td>-->
+                    <!--<td>-->
+                        <!--<span style="position: relative;left: -45px;">请按照我们提供的标准模板填写通讯录的信息</span>-->
+                    <!--</td>-->
+                    <!--<td>-->
+                    <!--<span>-->
+                         <!--<a href="" class="inblock wr_a" style="background: #fb9766;top:-3px;">导入</a>-->
+                        <!--<a href="" class="inblock wr_a" style="background: #969696;top:-3px;">取消</a>-->
+                    <!--</span>-->
+                    <!--</td>-->
+                <!--</tr>-->
+            <!--</table>-->
+        <!--</div>-->
 
 
     </div>

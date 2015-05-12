@@ -85,6 +85,7 @@ button{cursor: pointer;}
 .tda1{color: #2776a0;}
 .tda2{color: #555;font-size: 12px;}
 .bangd{color: #829091;}
+
 table{ border-collapse:collapse;width: 98%;margin: 3px auto;}
 tr th{background: #dbe3e9;font-weight: 200;}
 tr th,tr td{ text-align:center;font-size: 14px;border:1px solid #cccccc;color: #565656;height: 2.6em;}
