@@ -1,0 +1,220 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="UTF-8">
+    <title>我的应用</title>
+    <meta content='width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no' name='viewport'>
+    <link href="css/bootstrap.min.css" rel="stylesheet" type="text/css" />
+    <link href="css/AdminLTE.min.css" rel="stylesheet" type="text/css" />
+    <link rel="stylesheet" href="css/font/css/font-awesome.min.css"/>
+    <link rel="stylesheet" href="css/Backstagb.css"/>
+      <style>
+          @media screen and (max-width: 520px) {
+              .breadcrumb{padding: 8px 15px;}
+          }
+      </style>
+  </head>
+  <body>
+      <header class="main-header">
+        <a href="" class="logo"style="background: #54a9e8;"><input type="image" src="images/logo.png"/></a>
+        <nav class="navbar navbar-static-top" role="navigation"style="background: #81c5f9;height: 60px;line-height: 60px;">
+          <a href="#" class="sidebar-toggle" data-toggle="offcanvas" role="button">
+            <span class="sr-only">Toggle navigation</span>
+          </a>
+            <div class="wh_right">
+                <img src="images/help.png" alt="" class="wh_i1"/>
+                <a href="#" style="color: #3b4759;" class="help">帮助</a>
+                <img src="images/xian.png" alt="" class="wh_i2"/>
+                <span style="color: #deeffd;">易优弧科技有限公司</span>
+                <img src="images/xian.png" alt="" class="wh_i3"/>
+
+                <div class="dropdown block">
+                    <a id="dLabel" data-target="#" href="#" data-toggle="dropdown" aria-haspopup="true" role="button" aria-expanded="false" style="color: #fff;">
+                        <span class="inblocka"><img src="images/people.png" alt="" class="wh_i4"/></span>
+                        <span class="xm">陈小洁 <span class="caret"></span></span>
+                    </a>
+                    <ul class="dropdown-menu" role="menu" aria-labelledby="dLabel" style="border: 1px solid #82c5f9;">
+                        <li>
+                            <img src="images/wr_sanjiao.png" alt="" class="wr_san"/>
+                            <a href="javascript:void(0)" id="li_a" ><span ><i class="fa fa-user"></i></span> 账号信息</a>
+                        </li>
+                        <li>
+                            <a href="javascript:void(0)" id="li_a1" ><span><i class="fa fa-key"></i></span> 修改密码</a>
+                        </li>
+                        <li>
+                            <a href="javascript:void(0)"  id="li_a2" ><span style="position: relative;left: -10px;"><i class="fa fa-power-off"></i></span> 退出</a>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+        </nav>
+      </header>
+      <aside class="main-sidebar">
+          <ul class="w_lc">
+              <li class="on">
+                  <div class="wlc_div lan">
+                      <i class="fa fa-home icon1"></i>
+                      <span >应用中心</span>
+                      <i class="fa fa-caret-down icon2"></i>
+                  </div>
+                  <ul class="wul_ul">
+                      <li class="wul_li1">
+                          <a href="#" class="li_lan">我的应用</a>
+                          <img src="images/icon8.png" alt="" class="wrc_img"/>
+                      </li>
+                      <li class="wul_li1">
+                          <a href="#">服务类型设置</a>
+                          <img src="images/icon8.png" alt="" class="wrc_img hide"/>
+                      </li>
+                  </ul>
+              </li>
+              <li>
+                  <div class="wlc_div">
+                      <i class="fa fa-sitemap icon1"></i>
+                      <span>组织结构</span>
+                      <i class="fa fa-caret-right icon2"></i>
+                  </div>
+                  <ul class="wul_ul">
+                      <li class="wul_li1">
+                          <a href="#">我的应用</a>
+                      </li>
+                      <li class="wul_li1">
+                          <a href="#">服务设置类别</a>
+                      </li>
+                  </ul>
+              </li>
+              <li>
+                  <div class="wlc_div">
+                      <i class="fa fa-users icon1"></i>
+                      <span>人员管理</span>
+                      <i class="fa fa-caret-right icon2"></i>
+                  </div>
+                  <ul class="wul_ul">
+                      <li class="wul_li1">
+                          <a href="#" class="li_lan">人员管理</a>
+                          <img src="images/icon8.png" alt="" class="wrc_img"/>
+                      </li>
+                  </ul>
+              </li>
+              <li>
+                  <div class="wlc_div">
+                      <i class="fa fa-gear icon1"></i>
+                      <span>系统设置</span>
+                      <i class="fa fa-caret-right icon2"></i>
+                  </div>
+              <ul class="wul_ul">
+                  <li class="wul_li1">
+                      <a href="#">管理员</a>
+                      <img src="images/icon8.png" alt="" class="wrc_img hide"/>
+                  </li>
+                  <li class="wul_li1">
+                      <a href="#" class="li_lan">权限管理</a>
+                      <img src="images/icon8.png" alt="" class="wrc_img"/>
+                  </li>
+                  <li class="wul_li1">
+                      <a href="#">缓存更新</a>
+                      <img src="images/icon8.png" alt="" class="wrc_img hide"/>
+                  </li>
+              </ul>
+              </li>
+          </ul>
+      </aside>
+      <div class="content-wrapper">
+          <div class="w_rc">
+              <ol class="breadcrumb">
+                  <li><a href="#"><img src="images/hlogo.png" alt="" class="bao"/> 我的应用</a></li>
+                  <li class="active">应用设置</li>
+              </ol>
+              <div class="wrc_c wrc_c0">
+                  <div class="caption">考勤<a href="" class="inblock">批量安装 <strong style="font-size: 15px">考勤</strong> 套件应用</a></div>
+                  <table>
+
+                      <thead>
+                      <tr>
+                          <th>图标</th>
+                          <th>应用名</th>
+                          <th>应用描述</th>
+                          <th>绑定微信企业号应用</th>
+                      </tr>
+                      </thead>
+                      <tbody>
+                      <tr>
+                          <td><img src="images/activity.png" alt="" width="42px"/></td>
+                          <td>考勤规则</td>
+                          <td class="tr3">地方价啥房间卡缴费卡打扫房间爱思考就发手机覅未经发生的分解科技</td>
+                          <td ><a href="" class="tda tda0"><i class="fa fa-unlock"></i> 安装</a></td>
+                      </tr>
+                      <tr>
+                          <td><img src="images/activity.png" alt="" width="42px"/></td>
+                          <td>考勤规则</td>
+                          <td class="tr3">地方价啥房间卡缴费卡打扫房间爱思考就发手机覅未经发生的分解科技</td>
+                          <td ><a href="" class="tda tda0"><i class=" fa fa-unlock"></i> 安装</a></td>
+                      </tr>
+                      <tr>
+                          <td><img src="images/activity.png" alt="" width="42px"/></td>
+                          <td>考勤规则</td>
+                          <td class="tr3">地方价啥房间卡缴费卡打扫房间爱思考就发手机覅未经发生的分解科技</td>
+                          <td ><a href="" class="tda tda0"><i class=" fa fa-unlock"></i> 安装</a></td>
+                      </tr>
+                      <tr>
+                          <td><img src="images/activity.png" alt="" width="42px"/></td>
+                          <td>考勤规则</td>
+                          <td class="tr3">地方价啥房间卡缴费卡打扫房间爱思考就发手机覅未经发生的分解科技</td>
+                          <td><span class="tda2"><i class=" fa fa-lock"></i> 已安装</span><br/><a href="" class="bangd">可在微信企业号后台解除绑定</a></td>
+                      </tr>
+                      </tbody>
+                  </table>
+                  <div class="caption">考勤<a href="" class="inblock">批量安装 <strong style="font-size: 15px">考勤</strong> 套件应用</a></div>
+                  <table>
+                      <thead>
+                      <tr>
+                          <th>图标</th>
+                          <th>应用名</th>
+                          <th>应用描述</th>
+                          <th>绑定微信企业号应用</th>
+                      </tr>
+                      </thead>
+                      <tbody>
+                      <tr>
+                          <td><img src="images/activity.png" alt="" width="42px"/></td>
+                          <td>考勤规则</td>
+                          <td class="tr3">地方价啥房间卡缴费卡打扫房间爱思考就发手机覅未经发生的分解科技</td>
+                          <td ><a href="" class="tda tda0"><i class="fa fa-unlock"></i> 安装</a></td>
+                      </tr>
+                      <tr>
+                          <td><img src="images/activity.png" alt="" width="42px"/></td>
+                          <td>考勤规则</td>
+                          <td class="tr3">地方价啥房间卡缴费卡打扫房间爱思考就发手机覅未经发生的分解科技</td>
+
+                          <td><span class="tda2"><i class=" fa fa-lock"></i> 已安装</span><br/><a href="" class="bangd">可在微信企业号后台解除绑定</a></td>
+                      </tr>
+                      <tr>
+                          <td><img src="images/activity.png" alt="" width="42px"/></td>
+                          <td>考勤规则</td>
+                          <td class="tr3">地方价啥房间卡缴费卡打扫房间爱思考就发手机覅未经发生的分解科技</td>
+                          <td ><a href="" class="tda tda0"><i class=" fa fa-unlock"></i> 安装</a></td>
+                      </tr>
+                      <tr>
+                          <td><img src="images/activity.png" alt="" width="42px"/></td>
+                          <td>考勤规则</td>
+                          <td class="tr3">地方价啥房间卡缴费卡打扫房间爱思考就发手机覅未经发生的分解科技</td>
+                          <td ><a href="" class="tda tda0"><i class=" fa fa-unlock"></i> 安装</a></td>
+                      </tr>
+                      </tbody>
+                  </table>
+              </div>
+          </div>
+      </div>
+      <footer class="main-footer">
+          <div class="pull-right hidden-xs">
+              <b></b>
+          </div>
+          Copyright &copy; 2014-2015 <strong><a href="#">重庆易优弧科技有限公司</a>.</strong> 保留所有权利.
+      </footer>
+      <script src="js/jquery-1.11.3.min.js"></script>
+      <script src="js/jquery-1.11.3.min.map"></script>
+    <script src="js/bootstrap.min.js" type="text/javascript"></script>
+    <script src="js/app.min.js" type="text/javascript"></script>
+      <script src="js/Backstageb.js"></script>
+  </body>
+</html>

@@ -1,0 +1,9 @@
+body,html{margin:0;padding:0;font-size:30px;color:#000;font-family:"Microsoft YaHei","微软雅黑";line-heihgt:20px;height:100%;background-color: #f6f4f5;/*background:url(../images/bg.png) no-repeat fixed center 0 #f8f8f8;background-size:100% 100%;*/}
+ul,li,img,p{margin:0;padding:0;list-style:none;border:none; vertical-align:middle;}
+input{border: 0;outline: none;}
+a{color:#000;text-decoration:none;}
+.clearfix:after {content: ".";display: block;clear: both;visibility: hidden;line-height: 0;height: 0;}
+.clearfix{display: inline-block;*display: inline;}
+html[xmlns] .clearfix {display: block;}
+
+

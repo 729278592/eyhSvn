@@ -1,0 +1,110 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8"/>
+    <title>新增员工</title>
+    <link rel="stylesheet" href="css/backstage.css"/>
+    <link rel="stylesheet" href="css/font/css/font-awesome.min.css"/>
+    <link rel="stylesheet" href="css/font/css/font-awesome-ie7.min.css"/>
+    <script src="js/jquery-1.7.2.js"></script>
+    <script src="js/Backstage.js"></script>
+    <style>
+        body{min-width: 1250px;}
+    </style>
+    <!--[if IE 8]>
+    <style>
+
+        .ie8{position: relative;top: 1px;}
+    </style>
+    <![endif]-->
+</head>
+<body>
+<div class="warpper">
+    <a href=""><input type="image" src="images/logo.png" /></a>
+    <div class="w_header">
+        <div class="wh_right">
+            <img src="images/help.png" alt="" class="wh_i1"/><a href="" style="color: #3b4759;">帮助</a><img src="images/xian.png" alt="" class="wh_i2"/><span style="color: #deeffd;">易优弧科技有限公司</span>
+            <img src="images/xian.png" alt="" class="wh_i3"/><span class="inblocka"><img src="images/people.png" alt="" class="wh_i4"/><span style="color: #deeffd;">陈洁</span> <span class="wh_block"></span></span>
+            <img src="images/wr_sanjiao.png" alt="" class="wr_san"/>
+            <ul class="whri_ul">
+                <li class="whri_uli1"><a href="javascript:void(0)"><img src="images/zf0.png" alt=""/><span class="inblock inblock15"></span>账号信息</a></li>
+                <li class="whri_uli2"><a href="javascript:void(0)"><img src="images/zf1.png" alt=""/><span class="inblock inblock15"></span>修改密码</a></li>
+                <li class="whri_uli3"><a href="javascript:void(0)"><img src="images/zf2.png" alt="" style="position: relative;left: -12px;"/><span class="inblock inblock15"></span>退出</a></li>
+            </ul>
+        </div>
+
+    </div>
+    <div class="w_content">
+        <ul class="w_lc">
+            <li class="on">
+                <div class="wlc_div lan"><i class="fa fa-bars icon1"></i><span >应用中心</span><i class="fa fa-caret-down icon2"></i></div>
+                <ul class="wul_ul">
+                    <li class="wul_li1"><a href="#" class="li_lan">我的应用</a><img src="images/icon8.png" alt="" class="wrc_img"/></li>
+                    <li class="wul_li1"><a href="#">服务类型设置</a><img src="images/icon8.png" alt="" class="wrc_img hide"/></li>
+                </ul>
+            </li>
+            <li>
+                <div class="wlc_div"><i class="fa fa-sitemap icon1"></i><span>组织结构</span><i class="fa fa-caret-right icon2"></i></div>
+                <ul class="wul_ul">
+                    <li class="wul_li1"><a href="#">我的应用</a></li>
+                    <li class="wul_li1"><a href="#">服务设置类别</a></li>
+                </ul>
+            </li>
+            <li>
+                <div class="wlc_div"><i class="fa fa-users icon1"></i><span>人员管理</span><i class="fa fa-caret-right icon2"></i></div>
+                <ul class="wul_ul">
+                    <li class="wul_li1"><a href="#" class="li_lan">人员管理</a><img src="images/icon8.png" alt="" class="wrc_img"/></li>
+
+                </ul>
+            </li>
+            <li>
+                <div class="wlc_div"><i class="fa fa-gear icon1"></i><span>系统设置</span><i class="fa fa-caret-right icon2"></i></div>
+                <ul class="wul_ul">
+
+                    <li class="wul_li1"><a href="#">管理员</a><img src="images/icon8.png" alt="" class="wrc_img hide"/></li>
+                    <li class="wul_li1"><a href="#" class="li_lan">权限管理</a><img src="images/icon8.png" alt="" class="wrc_img"/></li>
+                    <li class="wul_li1"><a href="#">缓存更新</a><img src="images/icon8.png" alt="" class="wrc_img hide"/></li>
+
+                </ul>
+            </li>
+        </ul>
+        <div class="w_rc">
+            <div class="wrc_head"><img src="images/hlogo.png" alt=""style="position: relative;*top: 2px;" class="ie8"/> <span style="position: relative;top: 1px;">人员管理>员工列表</span>
+                <ul class="wrc_ul">
+                    <li><a href="" class="btna" style="background: #a0a0a1">员工列表</a></li>
+                    <li><a href="人员管理-新增员工.html" class="btna" style="background: #fda26d">新增员工</a></li>
+                </ul>
+            </div>
+            <img src="images/cwa/cgb1.png" alt="" class="wrc_img1 wrc_img3"/>
+            <div class="wrc_c wrc_c1">
+                <div class="wrcc_h">
+                    新增员工
+                </div>
+                <div class="wrcc_c">
+                    <span>用户名 : </span><input type="text" class="wrccc_i"placeholder="姓名"/><span class="inblock"></span>
+                    <span>微信号 : </span><input type="text" class="wrccc_i"placeholder="微信号"/><span class="inblock"></span>
+                    <span>手机号 : </span><input type="text" class="wrccc_i"placeholder="手机号"/><span class="inblock"></span>
+                    <span>邮箱地址 : </span><input type="text" class="wrccc_i"placeholder="邮箱地址"/><span class="inblock"></span>
+                    <span>职位 :  <select name="" id=""class="wrccc_i">
+                        <option value="请选择">请选择</option>
+                        <option value="财务部">财务部</option>
+                        <option value="技术部">技术部</option>
+                    </select><span class="inblock"></span></span>
+                    <span>部门 : </span>
+
+
+                    <select name="" id=""class="wrccc_i">
+                        <option value="请选择">请选择</option>
+                        <option value="前端工程师">前端工程师</option>
+                        <option value="java工程师">java工程师</option>
+                    </select><span class="inblock"></span><input type="submit" class="sou" value="保存" style="position: relative;left: -10px;">
+
+                </div>
+            </div>
+
+        </div>
+    </div>
+</div>
+</body>
+
+</html>

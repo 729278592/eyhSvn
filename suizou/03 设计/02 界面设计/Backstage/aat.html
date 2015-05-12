@@ -1,0 +1,150 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8"/>
+    <title>考勤地址</title>
+    <link rel="stylesheet" href="css/backstage.css"/>
+    <link rel="stylesheet" href="css/font/css/font-awesome.min.css"/>
+    <link rel="stylesheet" href="css/font/css/font-awesome-ie7.min.css"/>
+    <script src="js/jquery-1.7.2.js"></script>
+    <script src="js/Backstage.js"></script>
+    <style>
+        body{min-width: 1180px;}
+    </style>
+
+
+    <!--[if IE 8]>
+    <style>
+        .kao{height: 29px;}
+        .ie8{position: relative;top: 1px;}
+    </style>
+    <![endif]-->
+</head>
+<body>
+<div class="warpper">
+    <a href=""><input type="image" src="images/logo.png" /></a>
+    <div class="w_header">
+        <div class="wh_right">
+            <img src="images/help.png" alt="" class="wh_i1"/><a href="" style="color: #3b4759;">帮助</a><img src="images/xian.png" alt="" class="wh_i2"/><span style="color: #deeffd;">易优弧科技有限公司</span>
+            <img src="images/xian.png" alt="" class="wh_i3"/><span class="inblocka"><img src="images/people.png" alt="" class="wh_i4"/><span style="color: #deeffd;">陈洁</span> <span class="wh_block"></span></span>
+            <img src="images/wr_sanjiao.png" alt="" class="wr_san"/>
+            <ul class="whri_ul">
+                <li class="whri_uli1"><a href="javascript:void(0)"><img src="images/zf0.png" alt=""/><span class="inblock inblock15"></span>账号信息</a></li>
+                <li class="whri_uli2"><a href="javascript:void(0)"><img src="images/zf1.png" alt=""/><span class="inblock inblock15"></span>修改密码</a></li>
+                <li class="whri_uli3"><a href="javascript:void(0)"><img src="images/zf2.png" alt="" style="position: relative;left: -12px;"/><span class="inblock inblock15"></span>退出</a></li>
+            </ul>
+        </div>
+
+    </div>
+    <div class="w_content">
+        <ul class="w_lc">
+            <li class="on">
+                <div class="wlc_div lan"><i class="fa fa-bars icon1"></i><span >应用中心</span><i class="fa fa-caret-down icon2"></i></div>
+                <ul class="wul_ul">
+                    <li class="wul_li1"><a href="#" class="li_lan">我的应用</a><img src="images/icon8.png" alt="" class="wrc_img"/></li>
+                    <li class="wul_li1"><a href="#">服务类型设置</a><img src="images/icon8.png" alt="" class="wrc_img hide"/></li>
+                </ul>
+            </li>
+            <li>
+                <div class="wlc_div"><i class="fa fa-sitemap icon1"></i><span>组织结构</span><i class="fa fa-caret-right icon2"></i></div>
+                <ul class="wul_ul">
+                    <li class="wul_li1"><a href="#">我的应用</a></li>
+                    <li class="wul_li1"><a href="#">服务设置类别</a></li>
+                </ul>
+            </li>
+            <li>
+                <div class="wlc_div"><i class="fa fa-users icon1"></i><span>人员管理</span><i class="fa fa-caret-right icon2"></i></div>
+                <ul class="wul_ul">
+                    <li class="wul_li1"><a href="#" class="li_lan">人员管理</a><img src="images/icon8.png" alt="" class="wrc_img"/></li>
+
+                </ul>
+            </li>
+            <li>
+                <div class="wlc_div"><i class="fa fa-gear icon1"></i><span>系统设置</span><i class="fa fa-caret-right icon2"></i></div>
+                <ul class="wul_ul">
+
+                    <li class="wul_li1"><a href="#">管理员</a><img src="images/icon8.png" alt="" class="wrc_img hide"/></li>
+                    <li class="wul_li1"><a href="#" class="li_lan">权限管理</a><img src="images/icon8.png" alt="" class="wrc_img"/></li>
+                    <li class="wul_li1"><a href="#">缓存更新</a><img src="images/icon8.png" alt="" class="wrc_img hide"/></li>
+
+                </ul>
+            </li>
+        </ul>
+        <div class="w_rc">
+            <div class="wrc_head"><img src="images/hlogo.png" alt=""style="position: relative;*top: 2px;" class="ie8"/> <span style="position: relative;top: 1px;">考勤>设置>考勤地址</span>
+                <ul class="wrc_ul">
+                    <li><a href="ats.html" class="btna" style="background: #a0a0a1">考勤标准</a></li>
+                    <li><a href="" class="btna" style="background: #a0a0a1">考勤规则</a></li>
+                    <li><a href="" class="btna" style="background: #fda26d">考勤地址</a></li>
+                </ul>
+            </div>
+            <div class="bxian bxian1">
+                <div class="kao kao0"><a href="dlw.html">地理位置校验</a></div>
+                <div class="kao kao1"><a href="">IP地址校验</a></div>
+            </div>
+            <img src="images/cwa/cgb7.png" alt="" class="wrc_img1 wrc_img6"/>
+            <div class="wrc_c wrc_c4">
+                <div class="wrcc_h">
+                    考勤地址
+                </div>
+                <table>
+                    <thead>
+                    <tr>
+                        <th><input type="checkbox"/>全选</th>
+                        <th>考勤名称</th>
+                        <th>考勤IP</th>
+
+
+                        <th>操作</th>
+                    </tr>
+                    </thead>
+                    <tbody>
+                    <tr>
+                        <td class="rl"><input type="checkbox"/></td>
+                        <td>考勤</td>
+                        <td>105.489.59</td>
+
+
+                        <td ><a href="" class="tda"><img src="images/cwa/remove1.png" alt="" style="position: relative;top: -1px;*top: 0;"/>删除</a>
+                            <img src="images/cwa/xian1.png" alt="" style="position: relative;*top: 2px;"/> <a href="" class="tda1"><img src="images/cwa/bianji.png" alt=""style="vertical-align: -1px;"/>编辑</a></td>
+                    </tr>
+                    <tr>
+                        <td class="rl"><input type="checkbox"/></td>
+                        <td>考勤</td>
+                        <td>105.489.59</td>
+
+
+                        <td ><a href="" class="tda"><img src="images/cwa/remove1.png" alt="" style="position: relative;top: -1px;*top: 0;"/>删除</a>
+                            <img src="images/cwa/xian1.png" alt="" style="position: relative;*top: 2px;"/> <a href="" class="tda1"><img src="images/cwa/bianji.png" alt=""style="vertical-align: -1px;"/>编辑</a></td>
+                    </tr>
+                    <tr>
+                        <td class="rl"><input type="checkbox"/></td>
+                        <td>考勤</td>
+                        <td>105.489.59</td>
+
+
+                        <td ><a href="" class="tda"><img src="images/cwa/remove1.png" alt="" style="position: relative;top: -1px;*top: 0;"/>删除</a>
+                            <img src="images/cwa/xian1.png" alt="" style="position: relative;*top: 2px;"/> <a href="" class="tda1"><img src="images/cwa/bianji.png" alt=""style="vertical-align: -1px;"/>编辑</a></td>
+                    </tr>
+
+                    </tbody>
+                </table>
+                <div class="wrcc_f">
+                    <div class="d_left"><a href="" class="p_shan"><img src="images/cwa/jiahao.png" alt="" style="position: relative;top: -2px;"/>新增规则</a></div>
+                    <ul class="wrccf_ul">
+                        <li class="f_li">《</li>
+                        <li><</li>
+                        <li class="z_li">1</li>
+                        <li>></li>
+                        <li class="l_li">》</li>
+
+                    </ul>
+                    <div class="d_right"><a href="" class="p_shan">批量删除</a><span class="inblock"></span><span style="color: #565656;">共 32 条</span></div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+</body>
+
+</html>
