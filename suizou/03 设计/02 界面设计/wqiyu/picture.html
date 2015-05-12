@@ -1,0 +1,41 @@
+<!DOCTYPE HTML>
+<html>
+<head>
+	<meta http-equiv="content-type" content="text/html" />
+	<meta name="author" content="Steve Smith" />
+
+	<title>Untitled 1</title>
+</head>
+
+<body>
+
+<script language =javascript > 
+var curIndex=0; 
+//时间间隔 单位毫秒 
+var timeInterval=1000; 
+var arr=new Array(); 
+arr[0]="images/ban1.jpg"; 
+arr[1]="images/renBg.jpg"; 
+arr[2]="images/banner.jpg"; 
+
+setInterval(changeImg,timeInterval); 
+function changeImg() 
+{ 
+    var obj=document.getElementById("obj"); 
+    if (curIndex==arr.length-1)  
+    { 
+        curIndex=0; 
+    } 
+    else 
+    { 
+        curIndex+=1; 
+    } 
+    obj.src=arr[curIndex]; 
+} 
+</script> 
+
+<img id="obj" src ="images/ban1.jpg" border ="0" /> 
+
+
+</body>
+</html>
