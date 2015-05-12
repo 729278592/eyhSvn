@@ -6,7 +6,15 @@
     <meta http-equiv="X-UA-Compatible" content="IE=Edge">
     <title>考勤</title>
     <link rel="stylesheet" href="css/global.css"/>
+    <link rel="stylesheet" href="css/bootstrap-datepicker3.css"/>
+    <link rel="stylesheet" href="css/bootstrap-datepicker3.standalone.css"/>
+    <style>
+        .border{width: 85%;padding:10px 5%;border: 1px solid red;font-size: 15px;margin: 0 auto;margin-bottom: 20px;}
+        .ccc{background: #ccc;}
+        #sandbox-container{margin-top: -100px;width: 100%;padding-left: 4%;}
+        .datepicker{width: 100%;}
 
+    </style>
 </head>
 <body>
 
@@ -24,115 +32,49 @@
         <div class="cc_h">
             考勤统计
         </div>
-        <div class="c_btn">
-            <div class="cb_div">
-                <input type="image" src="images/btnh1.png" class="cb_inp1"/><span class="cb_spna"><input type="text" class="cb_in" value="1991" /><input type="image" src="images/btnh2.png" class="cb_in1"  id="cbs_ul1"/>
-                    <ul class="cbs_ul" style="text-align: center;">
-                        <li>1992</li>
-                        <li>1993</li>
-                        <li>1994</li>
-                        <li>1995</li>
-                        <li>1996</li>
-                        <li>1997</li>
-                        <li>1998</li>
-                        <li>1999</li>
-                        <li>2000</li>
-                        <li>2001</li>
-                        <li>2002</li>
-                        <li>2003</li>
-                    </ul>
-            </span><input type="image" src="images/btnh3.png" class="cb_inp1"/><span style="display: inline-block;width: 0.1em;"></span>
-               <input type="image" src="images/btnh4.png"  class="cb_inp1"/><span class="cb_spna"><input type="text" class="cb_in" value="5月" style="text-indent: 0.5em" /><input type="image" src="images/btnh2.png" class="cb_in1" id="cbs_ul2"/>
-                    <ul class="cbs_ul" style="text-align: center;">
-                        <li>1月</li>
-                        <li>2月</li>
-                        <li>3月</li>
-                        <li>4月</li>
-                        <li>5月</li>
-                        <li>6月</li>
-                        <li>7月</li>
-                        <li>8月</li>
-                        <li>9月</li>
-                        <li>10月</li>
-                        <li>11月</li>
-                        <li>12月</li>
-                    </ul>
-            </span><input type="image" src="images/btnh5.png"  class="cb_inp1"/>
-            </div>
-
-        </div>
-        <div class="c_ta">
-            <table>
-                <thead>
-                <tr>
-                    <th>日</th>
-                    <th>一</th>
-                    <th>二</th>
-                    <th>三</th>
-                    <th>四</th>
-                    <th>五</th>
-                    <th>六</th>
-                </tr>
-                </thead>
-                <tbody>
-                <tr>
-                    <td></td>
-                    <td>1</td>
-                    <td>2</td>
-                    <td>3</td>
-                    <td class="late">4<br/><span class="l_la">迟到</span></td>
-                    <td>5</td>
-                    <td>6</td>
-                </tr>
-                <tr>
-                    <td>7</td>
-                    <td class="tui">8<br/><span class="l_la">早退</span></td>
-                    <td>9</td>
-                    <td>10</td>
-                    <td>11</td>
-                    <td>12</td>
-                    <td>13</td>
-                </tr>
-                <tr>
-                    <td>14</td>
-                    <td>15</td>
-                    <td>16</td>
-                    <td>17</td>
-                    <td class="gong">18<br/><span class="l_la">旷工</span></td>
-                    <td>19</td>
-                    <td>20</td>
-                </tr>
-                <tr>
-                    <td>21</td>
-                    <td>22</td>
-                    <td>23</td>
-                    <td>24</td>
-                    <td>25</td>
-                    <td>26</td>
-                    <td>27</td>
-                </tr>
-                <tr>
-                    <td>28</td>
-                    <td>29</td>
-                    <td>30</td>
-                    <td>31</td>
-                    <td></td>
-                    <td></td>
-                    <td></td>
-                </tr>
-                </tbody>
-            </table>
-        </div>
-
     </div>
+    <div id="sandbox-container">
+        <div></div>
+    </div>
+    <div class="border"></div>
 </div>
+
 <!--<div class="footer">-->
     <!--<span class="f_span">-->
         <!--易优弧-->
     <!--</span>-->
 
 <!--</div>-->
-<script src="js/jquery-1.7.2.js"></script>
+<script src="js/jquery-1.10.2.min.js"></script>
+<script src="js/bootstrap-datepicker.js"></script>
+<script>
+
+    $('#sandbox-container div').datepicker({
+        weekStart: 1,
+        keyboardNavigation: false,
+        forceParse: false,
+        beforeShowDay: function (date){
+            if (date.getMonth() == (new Date()).getMonth())
+                switch (date.getDate()){
+                    case 4:
+                        return {
+                            tooltip: 'Example tooltip',
+                            classes: 'active'
+                        };
+                    case 8:
+                        return {
+                            tooltip: 'Example tooltip',
+                            classes: 'active'
+                        };
+                    case 12:
+                        return {
+                            tooltip: 'Example tooltip',
+                            classes: 'active'
+                        };
+                }
+        }
+    });
+</script>
 <script src="js/phone.js"></script>
 
 </body>

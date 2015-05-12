@@ -47,7 +47,8 @@ html[xmlns] .clearfix {display: block;}
 .cu_s4{border: 3px solid #48a9ae;color:#48a9ae }
 .cu_s5{border: 3px solid #f38d6f;color:#f38d6f }
 .cc_heade{position: relative;top: -3.8em;}
-.cc_h{width: 100%;height: 1em;text-align: center;line-height: 1em;border-bottom: 1px solid #b9b9b9;color: #080202;margin-top: 2em;}
+.cc_h{width: 100%;height: 1em;text-align: center;line-height: 1em;border-bottom: 1px solid #b9b9b9;color: #080202;
+    padding-bottom: 10px;}
 input{outline: none;}
 
 .cb_div{width: 65%;margin: 1em auto;height: 35px;}
@@ -78,7 +79,7 @@ tr th,tr td{height: 2.6em;}
     .ban,.head,.content,.footer{width: 21.3em;}
     .s_last{width: 348px;}
     .c_cccu li{font-size: 0.9em;}
-    .cc_h{margin-top: 2.5em;}
+    .cc_h{margin-top: 0.5em;}
 }
 @media screen and (max-width: 568px) {
     .cb_div{width: 72%;}
