@@ -10,8 +10,7 @@
             $(this).on("click",function(){
                 var yyear = $(".datepicker-switch").eq(0).text().substring(0,4);
                 var ymonth = $(".datepicker-switch").eq(0).text().substring(5,6);
-
-                $(".border").text(yyear + "-" + ymonth + "-" + $(this).text());
+                $(".sign_in").text(yyear + "-" + ymonth + "-" + $(this).text());
                 $(this).addClass("ccc");
                 $(this).siblings().removeClass("ccc");
                 $(this).parent().siblings().find($(".day").not(".old,.new")).removeClass("ccc");

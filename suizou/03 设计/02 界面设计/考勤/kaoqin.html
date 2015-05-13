@@ -9,11 +9,17 @@
     <link rel="stylesheet" href="css/bootstrap-datepicker3.css"/>
     <link rel="stylesheet" href="css/bootstrap-datepicker3.standalone.css"/>
     <style>
-        .border{width: 85%;padding:10px 5%;border: 1px solid red;font-size: 15px;margin: 0 auto;margin-bottom: 20px;}
+        .attendance-records{width: 96%;padding:0 2%;font-size: 15px;margin: 0 auto;
+            margin-bottom: 20px;background: #fff;}
+        .attendance-records li{width: 100%;height: 40px;border-bottom: 1px solid #ddd;line-height: 40px;}
+        .attendance-records li ul li{float: left;width: 50%;height: 40px;}
+        .attendance-records li:last-child{border-bottom: none;}
         .ccc{background: #ccc;}
         #sandbox-container{margin-top: -100px;width: 100%;padding-left: 4%;}
         .datepicker{width: 100%;}
-
+        .sign_in{position: relative;left: 50px;}
+        .the_mood,.the_about,.sign_back,.the_length{position: relative;left: 20px;}
+        .hours,.minutes{color: #ff0000;}
     </style>
 </head>
 <body>
@@ -36,7 +42,17 @@
     <div id="sandbox-container">
         <div></div>
     </div>
-    <div class="border"></div>
+    <ul class="attendance-records">
+        <li>
+            <ul>
+                <li><span>签到:</span><span class="sign_in"></span></li>
+                <li><span>签退:</span><span class="sign_back"></span></li>
+            </ul>
+        </li>
+        <li><span>工作时长:</span><span class="the_length"><span class="hours">0</span>小时<span class="minutes">0</span>分钟</span></li>
+        <li><span>签到说说:</span><span class="the_about">又是充实的一天</span></li>
+        <li><span>签退心情:</span><span class="the_mood">好</span></li>
+    </ul>
 </div>
 
 <!--<div class="footer">-->
@@ -48,7 +64,6 @@
 <script src="js/jquery-1.10.2.min.js"></script>
 <script src="js/bootstrap-datepicker.js"></script>
 <script>
-
     $('#sandbox-container div').datepicker({
         weekStart: 1,
         keyboardNavigation: false,
