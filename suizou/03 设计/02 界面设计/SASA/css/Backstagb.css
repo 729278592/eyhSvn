@@ -58,7 +58,7 @@ button{cursor: pointer;}
 
 /*The contents of my application*/
 .w_rc{width: 100%;padding: 0 0 40px 20px;*margin-top: -405px;}
-.meng{width: 100%;height:100%;background: rgba(0,0,0,.5);position: absolute;top: 0;z-index: 1000;}
+.meng{width: 100%;height:100%;background: rgba(0,0,0,.3);position: absolute;top: 0;z-index: 1000;}
 .loading{position: absolute;top: 50%;left: 50%;margin-left: -30px;margin-top: -30px;}
 .bao{margin-top: -2px;}
 .wrc_c{width: 100%;position: relative;z-index: 10;}
@@ -178,7 +178,8 @@ tr th,tr td{ text-align:center;font-size: 14px;border:1px solid #cccccc;color: #
 .tr_span1{color: #7fcffe;}
 /*The content of standard attendance*/
 .wrcc_y{font-size: 12px;padding: 15px 20px;color: #111111;border-bottom: 1px dashed #dedede;}
-.wc_in{height: 32px;border: 1px solid #d7d6d6;width: 180px;padding-left: 10px;line-height: 27px;color: #565656;position: relative;*top: 7px;}
+.wc_in{height: 32px;border: 1px solid #d7d6d6;width: 180px;padding-left: 10px;line-height: 27px;color: #565656;
+    position: relative;*top: 7px;white-space: pre-line;}
 .che{position: relative;top: 2px;}
 .wr_jia1{height: 35px;position: relative;left: 38px;}
 .inblock17{width: 45px;height: 33px;background: #ffffff;border: 1px solid #d7d6d6;line-height: 33px;text-align: center;

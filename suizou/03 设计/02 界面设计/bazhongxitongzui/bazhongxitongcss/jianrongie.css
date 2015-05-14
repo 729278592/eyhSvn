@@ -1,0 +1,196 @@
+.bazhong > .bazhong_content > .content > .content_yi > .riqi > .nian {
+    position: absolute;
+    z-index: 1;
+    background: #ffffff;
+    zoom: 1;
+    top: 29px;
+    left: 88px;
+    border: 1px solid #d5d5d5;
+    width: 101px;
+}
+.bazhong>.bazhong_content>.content>.content_yi>.riqi>.nian>ul{
+    margin: 0;
+    padding: 0;
+    list-style: none;
+    width: 101px;
+}
+.bazhong > .bazhong_content > .content > .content_yi > .riqi > .nian > ul > li {
+    width: 93px;
+    height: 27px;
+    line-height: 27px;
+    padding-left: 10px;
+
+}
+.bazhong>.bazhong_content>.content>.content_yi>.riqi>.ri{
+    position: absolute;
+    z-index: 1;
+    background: #ffffff;
+    zoom: 1;
+    top: 29px;
+    left: 286px;
+    border: 1px solid #d5d5d5;
+    font-family: "微软雅黑";
+    font-size: 12px;
+}
+.bazhong>.bazhong_content>.content>.content_yi>.riqi>.ri>ul{
+    margin: 0;
+    padding: 0;
+    list-style: none;
+}
+.bazhong>.bazhong_content>.content>.content_yi>.riqi>.ri>ul>li{
+    width: 69px;
+    height: 27px;
+    line-height: 27px;
+    padding-left: 10px;
+
+}
+.bazhong>.bazhong_content>.content>.content_er>.cheng{
+    position: absolute;
+    z-index: 1;
+    background: #ffffff;
+    zoom: 1;
+    top: 64px;
+    left: 268px;
+    border: 1px solid #d5d5d5;
+    font-family: "微软雅黑";
+    font-size: 12px;
+}
+.bazhong>.bazhong_content>.content>.content_er>.cheng>ul{
+    margin: 0;
+    padding: 0;
+    list-style: none;
+}
+.bazhong>.bazhong_content>.content>.content_er>.cheng>ul>li{
+    width: 271px;
+    height: 29px;
+    line-height: 29px;
+    padding-left: 10px;
+
+}
+
+.bazhong>.bazhong_content>.content>.content_er>.zhuangkuang{
+    position: absolute;
+    z-index: 1;
+    background: #ffffff;
+    zoom: 1;
+    top: 199px;
+    left: 268px;
+    border: 1px solid #d5d5d5;
+    font-family: "微软雅黑";
+    font-size: 12px;
+}
+.bazhong>.bazhong_content>.content>.content_er>.zhuangkuang>ul{
+    margin: 0;
+    padding: 0;
+    list-style: none;
+}
+.bazhong>.bazhong_content>.content>.content_er>.zhuangkuang>ul>li{
+    width: 271px;
+    height: 29px;
+    line-height: 29px;
+    padding-left: 10px;
+
+}
+
+.bazhong>.bazhong_content>.content>.content_er>.dangyuan{
+    position: absolute;
+    z-index: 1;
+    background: #ffffff;
+    zoom: 1;
+    top: 153px;
+    left: 670px;
+    border: 1px solid #d5d5d5;
+    font-family: "微软雅黑";
+    font-size: 12px;
+}
+.bazhong>.bazhong_content>.content>.content_er>.dangyuan>ul{
+    margin: 0;
+    padding: 0;
+    list-style: none;
+}
+.bazhong>.bazhong_content>.content>.content_er>.dangyuan>ul>li{
+    width: 121px;
+    height: 30px;
+    line-height: 29px;
+    padding-left: 10px;
+
+}
+
+
+
+
+
+
+
+
+
+
+
+.bazhong>.bazhong_content>.content>.content_er>.kouyu{
+    position: absolute;
+    z-index: 1;
+    background: #ffffff;
+    zoom: 1;
+    top: 243px;
+    left: 671px;
+    border: 1px solid #d5d5d5;
+    font-family: "微软雅黑";
+    font-size: 12px;
+}
+.bazhong>.bazhong_content>.content>.content_er>.kouyu>ul{
+    margin: 0;
+    padding: 0;
+    list-style: none;
+}
+.bazhong>.bazhong_content>.content>.content_er>.kouyu>ul>li {
+    width: 71px;
+    height: 30px;
+    line-height: 29px;
+    padding-left: 10px;
+
+}
+
+.bazhong>.bazhong_content>.content>.content_san>.keyi{
+    position: absolute;
+    z-index: 1;
+    background: #ffffff;
+    zoom: 1;
+
+
+    top: 193px;
+    left: 268px;
+    border: 1px solid #d5d5d5;
+    font-family: "微软雅黑";
+    font-size: 12px;
+}
+.bazhong>.bazhong_content>.content>.content_san>.keyi>ul{
+    margin: 0;
+    padding: 0;
+    list-style: none;
+}
+.bazhong>.bazhong_content>.content>.content_san>.keyi>ul>li{
+    width: 111px;
+    height: 27px;
+    line-height: 27px;
+    padding-left: 10px;
+
+}
+.bazhong>.bazhong_content>.content>.content_er>.techang{
+    position: absolute;
+    top: 260px;
+    left:190px;
+
+
+}
+.bazhong>.bazhong_content>.content>.content_er>.techang>textarea{
+    max-width: 672px;
+    max-height: 130px;
+    min-width: 672px;
+    min-height: 130px;
+    outline: none;
+    padding-left: 10px;
+}
+.bazhong>.bazhong_content>.content>.content_er>.techang>span{
+    position: relative;
+    top: -125px;
+}

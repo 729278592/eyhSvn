@@ -17,9 +17,10 @@
         .ccc{background: #ccc;}
         #sandbox-container{margin-top: -100px;width: 100%;padding-left: 4%;}
         .datepicker{width: 100%;}
-        .sign_in{position: relative;left: 50px;}
-        .the_mood,.the_about,.sign_back,.the_length{position: relative;left: 20px;}
+        .sign_in{position: relative;left: 35px;}
+        .the_mood,.the_about,.sign_back,.the_length{position: relative;left: 5px;}
         .hours,.minutes{color: #ff0000;}
+        .red{color: red;}
     </style>
 </head>
 <body>
@@ -65,7 +66,6 @@
 <script src="js/bootstrap-datepicker.js"></script>
 <script>
     $('#sandbox-container div').datepicker({
-        weekStart: 1,
         keyboardNavigation: false,
         forceParse: false,
         beforeShowDay: function (date){
@@ -77,15 +77,9 @@
                             classes: 'active'
                         };
                     case 8:
-                        return {
-                            tooltip: 'Example tooltip',
-                            classes: 'active'
-                        };
+                        return false;
                     case 12:
-                        return {
-                            tooltip: 'Example tooltip',
-                            classes: 'active'
-                        };
+                        return "red";
                 }
         }
     });

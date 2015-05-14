@@ -1,0 +1,556 @@
+body{
+    margin: 0;
+}
+.bazhong{
+    position: relative;
+    width: 1920px;
+    height: 1403px;
+    background: url("../bazhongxitongimg/商品详情背景图.png");
+}
+.bazhong>.logo{
+    position: absolute;
+    z-index: 1;
+    left: 390px;
+    top: 22px;
+    width: 676px;
+    height: 117px;
+    background: url("../bazhongxitongimg/巴中市志愿者公益积分管理系统首页logo_03.png") no-repeat;
+}
+.bazhong>.header{
+    position: absolute;
+    top: 135px;
+    width: 1920px;
+    height: 60px;
+    background: #df413a;
+}
+.bazhong>.header>ul{
+    position: absolute;
+    top: 0px;
+    margin: 0;
+    padding: 0;
+    margin-left: 410px;
+    list-style: none;
+}
+.bazhong>.header>ul>li{
+    position: relative;
+    float: left;
+    height: 60px;
+    width: 175px;
+    line-height: 60px;
+    text-align: center;
+    color: #f8c8ad;
+    font-size: 18px;
+    font-family: "微软雅黑";
+
+
+}
+.bazhong>.header>ul>li>span{
+    position: relative;
+    z-index: 2;
+}
+.bazhong>.header>ul>.jifen>span{
+    position: relative;
+    z-index: 2;
+
+    color: #db2c22;
+
+}
+.shadow{
+    position: absolute;
+    top: 10px;
+    *left:0px;
+    width: 175px;
+    height: 50px;
+    background: #ffcf7c;
+    border-radius: 10px 10px 0 0;
+
+}
+
+.bazhong>.content{
+    position: absolute;
+    top: 202px;
+    width: 1920px;
+    height: 1213px;
+
+}
+.bazhong>.content>.yong{
+    position: absolute;
+    left: 400px;
+}
+.yong>img{
+    position: relative;
+    top: 2px;
+}
+.bazhong>.content>.yong>.huan{
+    font-size: 16px;
+    font-family: "微软雅黑";
+    color: #3f68b5;
+}
+.bazhong>.content>.yong>.ji{
+    position: relative;
+    left: 20px;
+    font-size: 14px;
+    font-family: "微软雅黑";
+    color: #9d5f5a;
+}
+.bazhong>.content>.biao{
+    position: absolute;
+    top: 60px;
+    left: 810px;
+    width: 300px;
+    height: 40px;
+    background: url("../bazhongxitongimg/积分商城标题_03.png")no-repeat;
+}
+.bazhong>.content>.content_ul{
+    position: absolute;
+    left: 310px;
+    top: 140px;
+    width: 1297px;
+    height: 811px;
+    background: url("../bazhongxitongimg/积分商城钱_03.png")no-repeat;
+
+}
+
+
+
+
+
+.bazhong > .content >.duihuanxinxi{
+    position: absolute;
+    top: 40px;
+    left: 405px;
+    width: 1110px;
+    height: 300px;
+
+}
+.bazhong > .content >.duihuanxinxi>.xiang{
+    position: relative;
+    top: 5px;
+}
+.bazhong > .content >.duihuanxinxi>.mingcheng{
+    position: absolute;
+
+    left: 305px;
+    font-size: 20px;
+    font-family: "微软雅黑";
+    color: #445e96;
+    font-weight: bold;
+}
+.bazhong > .content >.duihuanxinxi>.li{
+    position: absolute;
+    display: inline-block;
+    width: 815px;
+    padding-bottom: 10px;
+    border-bottom: 1px solid #f0f0f0;
+    top:40px;
+    left: 305px;
+    font-size: 12px;
+    font-family: "宋体";
+    color: #b0b0b0;
+}
+.duihuanxinxi>.yi{
+    position: absolute;
+    top: 100px;
+    left: 310px;
+    width: 815px;
+    height: 1px;
+    padding-bottom: 10px;
+    border-bottom: 1px solid #f0f0f0;
+}
+.duihuanxinxi>.er{
+    position: absolute;
+    top: 160px;
+    left: 310px;
+    width: 815px;
+    height: 1px;
+    padding-bottom: 10px;
+    border-bottom: 1px solid #f0f0f0;
+}
+.duihuanxinxi>.san{
+    position: absolute;
+    top: 213px;
+    left: 310px;
+    width: 815px;
+    height: 1px;
+    padding-bottom: 10px;
+    border-bottom: 1px solid #f0f0f0;
+}
+.duihuanxinxi>.si{
+    position: absolute;
+    top: 273px;
+    left: 310px;
+    width: 815px;
+    height: 1px;
+    padding-bottom: 10px;
+    border-bottom: 1px solid #f0f0f0;
+}
+.duihuanxinxi>.feng{
+    position: absolute;
+    top: 93px;
+    left: 305px;
+    font-size: 14px;
+    font-family: "宋体";
+    color: #033787;
+}
+.duihuanxinxi>.xing{
+    position: absolute;
+    top: 93px;
+    left: 600px;
+    font-size: 14px;
+    font-family: "宋体";
+    color: #505050;
+}
+.duihuanxinxi>.dizhi{
+    position: absolute;
+    top: 150px;
+    left: 305px;
+    font-size: 14px;
+    font-family: "宋体";
+    color: #505050;
+}
+.duihuanxinxi>.shuliang{
+    position: absolute;
+    top: 202px;
+    left: 305px;
+    font-size: 14px;
+    font-family: "宋体";
+    color: #505050;
+}
+.bazhong > .content >.duihuanxinxi>.pin{
+    position: absolute;
+    top:40px;
+    left: 395px;
+    font-size: 12px;
+    font-family: "宋体";
+    color: #b0b0b0;
+}
+
+.bazhong > .content >.duihuanxinxi> input{
+    position: absolute;
+    top:91px;
+    left: 348px;
+    width: 185px;
+    height: 18px;
+    font-size: 12px;
+    line-height: 20px;
+    font-family: "宋体";
+    outline: none;
+    border: 0;
+    padding-left: 10px;
+    color: #fe9044;
+}
+.bazhong > .content >.duihuanxinxi>span>.shuru{
+    position: absolute;
+    top:87px;
+    left: 345px;
+    font-size: 12px;
+    font-family: "宋体";
+    color: #b0b0b0;
+}
+.bazhong > .content >.duihuanxinxi>.pin{
+    position: absolute;
+    top:94px;
+    left: 667px;
+
+}
+.bazhong > .content >.duihuanxinxi>.ba {
+    position: absolute;
+    top: 144px;
+    left: 367px;
+
+    display: inline-block;
+    width: 250px;
+    height: 30px;
+    background: #fdeede;
+    line-height: 30px;
+    text-align: center;
+    font-size: 14px;
+    font-family: "宋体";
+    color: #da271f;
+}
+.bazhong > .content >.duihuanxinxi>ul{
+    position: absolute;
+    left: 380px;
+    top: 200px;
+    margin: 0;
+    padding: 0;
+    list-style: none;
+}
+.bazhong > .content >.duihuanxinxi>ul>li{
+    position: relative;
+    top: -4px;
+    display: inline-block;
+    width: 35px;
+    height: 30px;
+
+}
+.bazhong > .content >.duihuanxinxi>ul>li:first-child{
+    position: relative;
+    top: -4px;
+}
+.bazhong > .content >.duihuanxinxi>ul>li:last-child{
+    position: relative;
+    left: 0;
+   top: -4px;
+}
+
+
+.bazhong > .content >.duihuanxinxi>ul>.lier{
+    position: relative;
+   left: 6px;
+    top: -9px;
+    width: 71px;
+    height: 43px;
+background: url("../bazhongxitongimg/详情输入框_03.png");
+}
+.bazhong > .content >.duihuanxinxi>ul>li>input{
+    position: relative;
+    left: 10px;
+    top: 2px;
+
+    padding-left: 5px;
+    width: 45px;
+    height: 25px;
+    outline: none;
+    border: none;
+
+
+}
+
+.bazhong > .content >.duihuanxinxi>.duihuan{
+    position: absolute;
+    left: 305px;
+    top: 252px;
+    display: inline-block;
+    width: 100px;
+    height: 30px;
+    line-height: 30px;
+    text-align: center;
+    background: #f98b03;
+    border-radius: 8px;
+    color: white;
+    font-size: 14px;
+    font-family: "宋体";
+    font-weight: bold;
+}
+.bazhong > .content >.jieshao{
+    position: absolute;
+    left: 402px;
+    top: 430px;
+    width: 1110px;
+    height: 200px;
+    font-size: 12px;
+    font-family: "宋体";
+
+
+}
+.bazhong > .content >.jieshao>.fangkuai{
+    position: relative;
+    top: -40px;
+    left: 10px;
+    width: 1110px;
+    border-bottom: 1px solid #f0f0f0;
+}
+.fangkuai>.se{
+    width: 8px;
+    height: 18px;
+    background: #b6b6b6;
+}
+.fangkuai>.jie{
+    position: relative;
+    top: -16px;
+    left: 15px;
+    font-size: 14px;
+    font-family: "宋体";
+    font-weight: bold;
+    color: #023467;
+}
+.fangkuai>.ying{
+    position: relative;
+    top: -18px;
+    left: 25px;
+    font-size: 14px;
+    font-family: "宋体";
+
+    color: #bebebe;
+}
+.jieshao>img{
+    position: relative;
+    top: -30px;
+}
+.bazhong > .content >.jieshao>span{
+    color: #4f4f4f;
+     text-indent: 24px;
+
+     line-height: 22px;
+ }
+
+.bazhong > .content >.jieshao>.bo{
+    position: absolute;
+    top: 0;
+
+}
+.bazhong > .content >.jieshao>.qian{
+    position: absolute;
+    top: 48px;
+    text-indent: 24px;
+    line-height: 22px;
+}
+.bazhong > .content >.jieshao>.bao{
+    position: absolute;
+    top: 95px;
+
+}
+.bazhong > .content >.jieshao>.shou{
+    position: absolute;
+    top: 118px;
+
+}
+.bazhong > .content >.jieshao>.wai{
+    position: absolute;
+    top: 140px;
+
+}
+
+
+.bazhong > .content > .dibu {
+    position: absolute;
+    bottom: 45px;
+    left: 745px;
+    font-family: "宋体";
+    font-size: 12px;
+    color: #898989;
+}
+
+.bazhong > .content >.remenduihuan{
+    position: absolute;
+    left: 410px;
+    top: 707px;
+    width: 1105px;
+    height: 315px;
+    background: #fdf9f0;
+    border: 1px solid #f3f3f3;
+}
+.bazhong > .content >.remenduihuan>.fangkuai1{
+    position: relative;
+    top: -50px;
+
+    width: 1105px;
+    border-bottom: 1px solid #f0f0f0;
+}
+.fangkuai1>.se{
+    width: 8px;
+    height: 18px;
+    background: #f98703;
+}
+.fangkuai1>.jie{
+    position: relative;
+    top: -18px;
+    left: 15px;
+    font-size: 14px;
+    font-family: "宋体";
+    font-weight: bold;
+    color: #023467;
+}
+.fangkuai1>.ying{
+    position: relative;
+    top: -16px;
+    left: 25px;
+    font-size: 14px;
+    font-family: "宋体";
+
+    color: #bebebe;
+}
+.bazhong > .content >.remenduihuan>.jiantou{
+    position: absolute;
+    right: 0;
+    top: 120px;
+}
+.bazhong > .content >.remenduihuan>ul{
+    position: absolute;
+   left: 20px;
+    top: 20px;
+    margin: 0;
+    padding: 0;
+    list-style: none;
+}
+.bazhong > .content >.remenduihuan>ul>li{
+    position: relative;
+
+    height: 280px;
+    display: inline-block;
+}
+.bazhong > .content >.remenduihuan>ul>li>.tai{
+    position: absolute;
+    left:75px ;
+    bottom: 30px;
+    font-family: "宋体";
+    font-size: 14px;
+    font-weight: bold;
+    color: #1f55b3;
+}
+.bazhong > .content >.remenduihuan>ul>li>.jifen{
+    position: absolute;
+    left:55px ;
+    bottom: 0px;
+    font-family: "宋体";
+    font-size: 14px;
+    font-weight: bold;
+    color: #f98703;
+}
+.bazhong > .content >.remenduihuan>ul>li>.jifen1{
+    position: absolute;
+    left:65px ;
+
+}
+.bazhong > .content >.remenduihuan>ul>li>.jifen2{
+    position: absolute;
+    left:73px ;
+
+}
+.lisan{
+    position: relative;
+    left: 8px;
+}
+.lier{
+    position: relative;
+    left: 8px;
+}
+.bazhong > .content >.leijijifen{
+    position: absolute;
+    bottom: 80px;
+    left: 420px;
+    font-family: "宋体";
+    font-size: 12px;
+    color: #023467;
+}
+.bazhong > .content >.leijijifen>.fangkuai2{
+    position: relative;
+
+
+    width: 1105px;
+    border-bottom: 1px solid #f0f0f0;
+}
+.fangkuai2>.se{
+    width: 8px;
+    height: 18px;
+    background: #f98703;
+}
+.fangkuai2>.jie{
+    position: relative;
+    top: -18px;
+    left: 15px;
+    font-size: 14px;
+    font-family: "宋体";
+    font-weight: bold;
+    color: #023467;
+}
+.fangkuai2>.ying{
+    position: relative;
+    top: -16px;
+    left: 25px;
+    font-size: 14px;
+    font-family: "宋体";
+
+    color: #bebebe;
+}

@@ -1,0 +1,793 @@
+body {
+    margin: 0;
+}
+
+.bazhong {
+    position: relative;
+    width: 1920px;
+    height: 997px;
+    background: url("../bazhongxitongimg/志愿活动管理背景.png");
+}
+
+.bazhong > .logo {
+    position: absolute;
+    z-index: 1;
+    left: 390px;
+    top: 22px;
+    width: 676px;
+    height: 117px;
+    background: url("../bazhongxitongimg/巴中市志愿者公益积分管理系统首页logo_03.png")no-repeat;
+
+}
+
+.bazhong > .header {
+    position: absolute;
+    top: 135px;
+    width: 1920px;
+    height: 60px;
+    background: #df413a;
+}
+
+.bazhong > .header > ul {
+    position: absolute;
+    top: 0px;
+    margin: 0;
+    padding: 0;
+    margin-left: 410px;
+    list-style: none;
+}
+
+.bazhong > .header > ul > li {
+    position: relative;
+
+    float: left;
+    height: 60px;
+    width: 175px;
+    line-height: 60px;
+    text-align: center;
+    color: #f8c8ad;
+    font-size: 18px;
+    font-family: "微软雅黑";
+
+}
+.bazhong>.header>ul>li>span{
+    position: relative;
+    z-index: 2;
+    *z-index: 2;
+}
+.bazhong>.header>ul>.lisi>span{
+    position: relative;
+    z-index: 2;
+    *z-index: 2;
+    color: #db2c22;
+
+}
+.shadow{
+    position: absolute;
+    top: 10px;
+    *left: 0px;
+    width: 175px;
+    height: 50px;
+    background: #ffcf7c;
+    behavior:url("../bazhongxitonghtml/iecss3.htc");
+    border-radius: 10px 10px 0 0;
+
+}
+.bazhong > .header > ul > .lisi {
+
+    color: #db2c22;
+
+}
+
+.bazhong > .content {
+    position: absolute;
+    top: 205px;
+    left: 405px;
+    width: 1100px;
+    height: 715px;
+    border: 1px solid #e1e1e1;
+    background: white;
+    border-radius: 6px;
+
+}
+.bazhong > .content>.shou{
+    width: 190px;
+    height: 25px;
+    font-size: 24px;
+    font-family: "微软雅黑";
+    margin: 10px auto;
+    color: #5d5d5d;
+}
+.bazhong > .content>.border{
+    position: relative;
+    top: 10px;
+    width: 1100px;
+    height: 1px;
+    background: #e4e4e6;
+}
+.bazhong > .content > .content_yi {
+    position: absolute;
+    top: 73px;
+    left: 14px;
+    width: 255px;
+    height: 630px;
+    background: #f4f4f4;
+    border: 1px solid #e6e6e7;
+
+}
+
+.bazhong > .content > .content_yi > .li {
+    position: relative;
+    width: 100%;
+    height: 45px;
+    border-bottom: 1px solid #f9f9f9;
+    line-height: 45px;
+    text-indent: 20px;
+    font-family: "宋体";
+    font-size: 12px;
+}
+
+.bazhong > .content > .content_yi > .li:first-child {
+    height: 38px;
+    line-height: 38px;
+}
+.bazhong > .content > .content_yi > .li:first-child >img{
+    position: absolute;
+
+    left: 8px;
+    top: 5px;
+}
+.bazhong > .content > .content_yi > .li:first-child > .shuru {
+    position: relative;
+    *top: -11px;
+    left: 20px;
+    z-index: 1;
+    margin-left: -20px;
+    width: 140px;
+    height: 20px;
+    outline: none;
+    border: none;
+    *border: 0;
+
+}
+
+.bazhong > .content > .content_yi > .li:first-child > .cha {
+    position: relative;
+    left: 37px;
+    *left: 35px;
+    display: inline-block;
+    width: 52px;
+    height: 25px;
+    text-indent: -1px;
+    line-height: 25px;
+    text-align: center;
+    font-family: "宋体";
+    font-size: 14px;
+    color: #ffffff;
+    background: #da271f;
+    margin: 9px;
+
+}
+
+.bazhong > .content > .content_yi > .li > .ren {
+    margin-left: 8px;
+    vertical-align: -5px;
+
+}
+
+.bazhong > .content > .content_yi > .li > .sanjiao {
+    vertical-align: -3px;
+}
+
+.bazhong > .content > .content_yi > .li > .zi {
+    margin-left: 8px;
+    margin-top: -10px;
+}
+
+.bazhong > .content > .content_yi > ul {
+    width: 100%;
+    height: 150px;
+    background: #fbfbfb;
+    margin: 0;
+    padding: 0;
+    list-style: none;
+    font-family: "宋体";
+    font-size: 12px;
+
+}
+.bazhong > .content > .content_yi > ul>li{
+    height: 25px;
+    line-height: 25px;
+    text-align: center;
+}
+
+.bazhong > .content > .content_yi > .ul_yi {
+    position: relative;
+    padding: 0;
+    list-style: none;
+    height: 150px;
+}
+
+
+
+
+.bazhong > .content > .content_yi > .ul_yi>.liyi{
+    position: absolute;
+    left: 40px;
+    top: 42px;
+}
+.bazhong > .content > .content_yi > .ul_yi>.liyi>.jiahaoyi{
+    position: absolute;
+    left: 0;
+    top: 0;
+    display: inline-block;
+    width: 10px;
+    height: 10px;
+    background: rgba(0,0,0,0.01);
+}
+.bazhong > .content > .content_yi > .ul_yi>.lier{
+    position: absolute;
+    left: 66px;
+    top: 34px;
+}
+.bazhong > .content > .content_yi > .ul_yi>.lier>.jiahaoer{
+    position: absolute;
+    left: -26px;
+    top: 35px;
+    display: inline-block;
+    width: 10px;
+    height: 10px;
+    background: rgba(0,0,0,0.01);
+
+}
+.bazhong > .content > .content_yi > .ul_yi>.lier>ul{
+    margin: 0;
+    padding: 0;
+    list-style: none;
+     font-family: "宋体";
+     font-size: 12px;
+ }
+.bazhong > .content > .content_yi > .ul_yi>.lier>ul>.lizhi1{
+    position: relative;
+    top: 5px;
+
+}
+.bazhong > .content > .content_yi > .ul_yi>.lier>ul>.lizhi2{
+    position: relative;
+    top: 10px;
+
+}
+.bazhong > .content > .content_yi > .ul_yi>.lisan>ul{
+    margin: 0;
+    padding: 0;
+    list-style: none;
+    font-family: "宋体";
+    font-size: 12px;
+}
+.bazhong > .content > .content_yi > .ul_yi>.lisan>ul>.lizhi1{
+    position: relative;
+    top: 4px;
+    left: 2px;
+}
+.bazhong > .content > .content_yi > .ul_yi>.lisan>ul>.lizhi2{
+    position: relative;
+    top: 10px;
+    left: 2px;
+}
+.bazhong > .content > .content_yi > .ul_yi>.lisi>ul{
+    margin: 0;
+    padding: 0;
+    list-style: none;
+    font-family: "宋体";
+    font-size: 12px;
+}
+.bazhong > .content > .content_yi > .ul_yi>.lisi>ul>.lizhi1{
+    position: relative;
+    top: 6px;
+    left: 3px;
+}
+.bazhong > .content > .content_yi > .ul_yi>.lisi>ul>.lizhi2{
+    position: relative;
+    top: 12px;
+    left: 3px;
+}
+
+.bazhong > .content > .content_yi > .ul_yi>.lisan{
+    position: absolute;
+    left: 66px;
+    top: 62px;
+}
+
+.bazhong > .content > .content_yi > .ul_yi>.lisi{
+    position: absolute;
+    left: 66px;
+    top: 88px;
+}
+.bazhong > .content > .content_yi > .ul_yi>.lisan>.jiahaosan{
+    position: absolute;
+    left: -26px;
+    top: 33px;
+    display: inline-block;
+    width: 10px;
+    height: 10px;
+    background: rgba(0,0,0,0.001);
+    /*filter: progid:DXImageTransform.Microsoft.Gradient(GradientType=0, StartColorStr='#4c000000', EndColorStr='#4c000000');*/
+}
+.bazhong > .content > .content_yi > .ul_er {
+    position: relative;
+    padding: 0;
+    list-style: none;
+    height: 150px;
+}
+
+
+
+
+.bazhong > .content > .content_yi > .ul_er>.liyi{
+    position: absolute;
+    left: 40px;
+    top: 42px;
+}
+.bazhong > .content > .content_yi > .ul_er>.liyi>.jiahaoyi{
+    position: absolute;
+    left: 0;
+    top: 0;
+    display: inline-block;
+    width: 10px;
+    height: 10px;
+    background: rgba(0,0,0,0.00001);
+
+}
+.bazhong > .content > .content_yi > .ul_er>.lier{
+    position: absolute;
+    left: 66px;
+    top: 34px;
+}
+.bazhong > .content > .content_yi > .ul_er>.lier>.jiahaoer{
+    position: absolute;
+    left: -26px;
+    top: 35px;
+    display: inline-block;
+    width: 10px;
+    height: 10px;
+    background: rgba(0,0,0,0.0001);
+}
+.bazhong > .content > .content_yi > .ul_er>.lier>ul{
+    margin: 0;
+    padding: 0;
+    list-style: none;
+    font-family: "宋体";
+    font-size: 12px;
+}
+.bazhong > .content > .content_yi > .ul_er>.lier>ul>.lizhi1{
+    position: relative;
+    top: 5px;
+
+}
+.bazhong > .content > .content_yi > .ul_er>.lier>ul>.lizhi2{
+    position: relative;
+    top: 10px;
+
+}
+.bazhong > .content > .content_yi > .ul_er>.lisan{
+    position: absolute;
+    left: 66px;
+    top: 62px;
+}
+.bazhong > .content > .content_yi > .ul_er>.lisan>ul{
+    margin: 0;
+    padding: 0;
+    list-style: none;
+    font-family: "宋体";
+    font-size: 12px;
+}
+.bazhong > .content > .content_yi > .ul_er>.lisan>.jiahaosan{
+    position: absolute;
+    left: -26px;
+    top: 33px;
+    display: inline-block;
+    width: 10px;
+    height: 10px;
+    background: rgba(0,0,0,0.001);
+
+}
+.bazhong > .content > .content_yi > .ul_er>.lisan>ul>.lizhi1{
+    position: relative;
+    top: 4px;
+    left: 2px;
+}
+.bazhong > .content > .content_yi > .ul_er>.lisan>ul>.lizhi2{
+    position: relative;
+    top: 12px;
+    left: 2px;
+}
+.bazhong > .content > .content_yi > .ul_er>.lisi{
+    position: absolute;
+    left: 66px;
+    top: 88px;
+}
+.bazhong > .content > .content_yi > .ul_er>.lisi>ul{
+    margin: 0;
+    padding: 0;
+    list-style: none;
+    font-family: "宋体";
+    font-size: 12px;
+}
+.bazhong > .content > .content_yi > .ul_er>.lisi>ul>.lizhi1{
+    position: relative;
+    top: 6px;
+    left: 3px;
+}
+.bazhong > .content > .content_yi > .ul_er>.lisi>ul>.lizhi2{
+    position: relative;
+    top: 12px;
+    left: 3px;
+}
+
+
+
+
+
+
+.bazhong > .content > .content_yi > .ul_san {
+    position: relative;
+    padding: 0;
+    list-style: none;
+    height: 150px;
+}
+
+
+
+
+.bazhong > .content > .content_yi > .ul_san>.liyi{
+    position: absolute;
+    left: 40px;
+    top: 42px;
+}
+.bazhong > .content > .content_yi > .ul_san>.liyi>.jiahaoyi{
+    position: absolute;
+    left: 0;
+    top: 0;
+    display: inline-block;
+    width: 10px;
+    height: 10px;
+    background: rgba(0,0,0,0.01);
+}
+.bazhong > .content > .content_yi > .ul_san>.lier{
+    position: absolute;
+    left: 66px;
+    top: 34px;
+}
+.bazhong > .content > .content_yi > .ul_san>.lier>.jiahaoer{
+    position: absolute;
+    left: -26px;
+    top: 35px;
+    display: inline-block;
+    width: 10px;
+    height: 10px;
+    background: rgba(0,0,0,0.01);
+
+}
+.bazhong > .content > .content_yi > .ul_san>.lier>ul{
+    margin: 0;
+    padding: 0;
+    list-style: none;
+    font-family: "宋体";
+    font-size: 12px;
+}
+.bazhong > .content > .content_yi > .ul_san>.lier>ul>.lizhi1{
+    position: relative;
+    top: 5px;
+
+}
+.bazhong > .content > .content_yi > .ul_san>.lier>ul>.lizhi2{
+    position: relative;
+    top: 10px;
+
+}
+.bazhong > .content > .content_yi > .ul_san>.lisan{
+    position: absolute;
+    left: 66px;
+    top: 62px;
+}
+.bazhong > .content > .content_yi > .ul_san>.lisan>ul{
+    margin: 0;
+    padding: 0;
+    list-style: none;
+    font-family: "宋体";
+    font-size: 12px;
+}
+.bazhong > .content > .content_yi > .ul_san>.lisan>.jiahaosan{
+    position: absolute;
+    left: -26px;
+    top: 33px;
+    display: inline-block;
+    width: 10px;
+    height: 10px;
+    background: rgba(0,0,0,0.001);
+
+}
+.bazhong > .content > .content_yi > .ul_san>.lisan>ul>.lizhi1{
+    position: relative;
+    top: 4px;
+    left: 2px;
+}
+.bazhong > .content > .content_yi > .ul_san>.lisan>ul>.lizhi2{
+    position: relative;
+    top: 13px;
+    left: 2px;
+}
+.bazhong > .content > .content_yi > .ul_san>.lisi{
+    position: absolute;
+    left: 66px;
+    top: 88px;
+}
+.bazhong > .content > .content_yi > .ul_san>.lisi>ul{
+    margin: 0;
+    padding: 0;
+    list-style: none;
+    font-family: "宋体";
+    font-size: 12px;
+}
+.bazhong > .content > .content_yi > .ul_san>.lisi>ul>.lizhi1{
+    position: relative;
+    top: 6px;
+    left: 3px;
+}
+.bazhong > .content > .content_yi > .ul_san>.lisi>ul>.lizhi2{
+    position: relative;
+    top: 13px;
+    left: 3px;
+}
+
+
+
+
+.bazhong > .content > .content_er {
+    position: absolute;
+    top: 74px;
+    right: 14px;
+    width: 805px;
+    height: 631px;
+
+}
+
+.bazhong > .content > .content_er > .ul_zuo > ul {
+    position: relative;
+    left: -10px;
+    margin: 0;
+    padding: 0;
+    list-style: none;
+
+}
+
+.bazhong > .content > .content_er > .ul_zuo > ul > li {
+    position: relative;
+    display: inline-block;
+    *float:left;
+    height: 30px;
+    line-height: 30px;
+    margin-left: 10px;
+}
+
+.bazhong > .content > .content_er > .ul_zuo > ul > li > .caozuo {
+    font-family: "宋体";
+    font-size: 12px;
+}
+
+.bazhong > .content > .content_er > .ul_zuo > ul > li > .tu {
+    vertical-align: -8px;
+}
+
+.bazhong > .content > .content_er > .ul_zuo > ul > li > .tusan {
+    position: relative;
+    top: -5px;
+}
+
+.bazhong > .content > .content_er > .ul_you > ul {
+    margin: 0;
+    padding: 0;
+    list-style: none;
+    margin-top: -28px;
+    margin-right: -15px;
+    float: right;
+}
+
+.bazhong > .content > .content_er > .ul_you > ul > li {
+position: relative;
+    *top: 30px;
+    *left: -20px;
+    margin-right: 20px;
+    *float:left;
+    position: relative;
+    display: inline-block;
+    height: 30px;
+    line-height: 30px;
+    margin-left: -15px;
+
+}
+
+.bazhong > .content > .content_er > .ul_you > ul > li > .caozuo {
+    position: relative;
+    z-index: 1;
+    font-family: "宋体";
+    font-size: 12px;
+    vertical-align: 8px;
+}
+
+.bazhong > .content > .content_er > .ul_you > ul > li > .caozuoyi {
+    padding-left: 4px;
+}
+
+.bazhong > .content > .content_er > .ul_you > ul > li > .caozuosan {
+    vertical-align: 8px;
+    text-indent: -2px;
+}
+
+.bazhong > .content > .content_er > .ul_you > ul > li > .tuer {
+    position: relative;
+    top: -4px;
+}
+
+.bazhong > .content > .content_er > .ul_you > ul > li > .tusan {
+    position: relative;
+    left: 2px;
+}
+
+.bazhong > .content > .content_er > .ul_you > ul > li > .tusi {
+    position: relative;
+    top: -6px;
+    left: -2px;
+}
+
+.bazhong > .content > .content_er > table {
+    width: 805px;
+    height: 530px;
+    border-collapse: collapse;
+    font-family: "宋体";
+    font-size: 12px;
+
+}
+
+.bazhong > .content > .content_er > table > thead > tr > th {
+    border: 1px solid #e1e1e3;
+    width: 120px;
+    height: 40px;
+    background: #eee5e5;
+}
+
+.bazhong > .content > .content_er > table > thead > tr > th:first-child {
+    width: 35px;
+    height: 40px;
+}
+
+.bazhong > .content > .content_er > table > tbody > tr > td {
+    width: 150px;
+    height: 33px;
+    border: 1px solid #e1e1e3;
+    text-align: center;
+}
+
+.bazhong > .content > .content_er > table > tbody > tr > td:first-child {
+    width: 55px;
+    height: 33px;
+
+}
+.bazhong > .content > .content_er >.hongjiao{
+    position: relative;
+    top: 20px;
+    left: 15px;
+    font-family: "宋体";
+    font-size: 12px;
+    color: #3e3e3e;
+}
+.bazhong > .content > .content_er >.hongjiao>ul{
+    position: absolute;
+    bottom: 0;
+    right: 190px;
+    margin: 0;
+    padding: 0;
+    list-style: none;
+}
+.bazhong > .content > .content_er >.hongjiao>ul>li{
+    display: inline-block;
+    *float: left;
+    *margin-left: 5px;
+    margin-left: 5px;
+}
+.bazhong > .content > .content_er >.hongjiao>.weibu{
+    position: absolute;
+    top: -6px;
+    right: 40px;
+    *top: -17px;
+
+}
+
+.bazhong > .content > .content_er >.hongjiao>.weibu>.yin{
+
+    width: 56px;
+    height: 33px;
+    display: inline-block;
+    box-shadow:inset 0px 0px 5px #ebebeb,-2px -2px 5px #ebebeb;
+}
+.bazhong > .content > .content_er >.hongjiao>.weibu>span>input{
+    width: 45px;
+    height: 25px;
+    padding-left: 5px;
+    color: #da271f;
+    outline: none;
+    display: inline-block;
+    margin: 1px;
+    *margin-top: 5px;
+
+    line-height:25px;
+    *line-height:25px;
+}
+.bazhong > .content > .content_er >.hongjiao>.weibu>img{
+    vertical-align: -8px;
+
+}
+.bazhong > .content > .content_er > table > tbody > tr > .yi, .bazhong > .content > .content_er > table > thead > tr > .yi {
+    width: 170px;
+
+
+}
+.bazhong > .content > .content_er > table > tbody > tr > .er, .bazhong > .content > .content_er > table > thead > tr > .er {
+    width: 250px;
+
+
+}
+
+.bazhong > .content > .content_er > table > tbody > tr > .san, .bazhong > .content > .content_er > table > thead > tr > .san {
+    width: 100px;
+}
+.bazhong > .content > .content_er > table > tbody > tr > .si>span{
+  position: relative;
+    left: -16px;
+}
+
+.bazhong > .content > .content_er > table > tbody > tr > .si, .bazhong > .content > .content_er > table > thead > tr > .si {
+    width: 90px;
+
+}
+
+.bazhong > .content > .content_er > table > tbody > tr > .wu, .bazhong > .content > .content_er > table > thead > tr > .wu {
+    width: 156px;
+
+}
+.bazhong > .content > .content_er > table > tbody > tr > .wu>span{
+    position: relative;
+    left: -21px;
+}
+.bazhong > .content > .content_er > table > tbody > tr > .liu, .bazhong > .content > .content_er > table > thead > tr > .liu {
+    width: 85px;
+
+}
+
+.bazhong > .content > .content_er > table > tbody > tr > .qi, .bazhong > .content > .content_er > table > thead > tr > .qi {
+    width: 80px;
+
+}
+
+.bazhong > .content > .content_er > table > tbody > tr > .ba, .bazhong > .content > .content_er > table > thead > tr > .ba {
+    width: 70px;
+
+}
+
+.bazhong > .content > .content_er > table > thead > tr > .san, .bazhong > .content > .content_er > table > thead > tr > .si {
+    text-indent: 10px;
+}
+
+.bazhong > .content > .content_er > table > tbody > tr > td:last-child {
+
+    width: 70px;
+}
+
+.bazhong > .dibu {
+    position: absolute;
+    bottom: 30px;
+    left: 700px;
+    font-family: "宋体";
+    font-size: 12px;
+    color: #898989;
+}

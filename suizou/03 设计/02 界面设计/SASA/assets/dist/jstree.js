@@ -2777,8 +2777,15 @@
 				return this.load_node(par, function () { this.create_node(par, node, pos, callback, true); });
 
 			}
-			if(!node) { node = { "text" : this.get_string('New node') }; }
-			if(node.text === undefined) { node.text = this.get_string('New node'); }
+			if(!node) { node = { "text" : this.get_string('子部门')
+           };  }
+			if(node.text === undefined) { node.text = this.get_string('子部门');
+               console.log(node)
+
+
+
+
+            }
 			var tmp, dpc, i, j;
 
 			if(par.id === '#') {
@@ -5877,7 +5884,8 @@
  *
  * Makes each node appear block level. Making selection easier. May cause slow down for large trees in old browsers.
  */
-
+    var str = " ";
+    $(".choose_department").val(" ")
 	var div = document.createElement('DIV');
 	div.setAttribute('unselectable','on');
 	div.className = 'jstree-wholerow';
@@ -5885,7 +5893,6 @@
 	$.jstree.plugins.wholerow = function (options, parent) {
 		this.bind = function () {
 			parent.bind.call(this);
-
 			this.element
 				.on('loading', $.proxy(function () {
 						div.style.height = this._data.core.li_height + 'px';
@@ -5899,6 +5906,7 @@
 				.on("deselect_all.jstree", $.proxy(function (e, data) {
 						this.element.find('.jstree-wholerow-clicked').removeClass('jstree-wholerow-clicked');
 					}, this))
+
 				.on("changed.jstree", $.proxy(function (e, data) {
 						this.element.find('.jstree-wholerow-clicked').removeClass('jstree-wholerow-clicked');
 						var tmp = false, i, j;
@@ -5906,7 +5914,16 @@
 							tmp = this.get_node(data.selected[i], true);
 							if(tmp && tmp.length) {
 								tmp.children('.jstree-wholerow').addClass('jstree-wholerow-clicked');
-							}
+                                if(str != " "){
+                                   str = " ";
+                                   
+                                }else {
+                                    str+=data.node.text + " ";
+                                }
+
+
+                                $(".choose_department").val(str)
+                            }
 						}
 					}, this))
 				.on("open_node.jstree", $.proxy(function (e, data) {
@@ -5956,7 +5973,26 @@
 			return obj;
 		};
 	};
-	// include the wholerow plugin by default
-	// $.jstree.defaults.plugins.push("wholerow");
 
+
+    $(".choose_department").on("focus",function(){
+        $(this).next().removeClass("hide")
+    });
+//    $("#content").on("focusout",function(){
+//        $(this).addClass("hide")
+//
+//    })
+    if($(".choose_department").val(" ")){
+        $(".fa-remove").addClass("hide")
+    }
+    $(".choose_department").val(" ");
+//    else if(!($(".choose_department").val(" "))){
+//        $(".fa-remove").removeClass("hide")
+//    }
+    $(".fa-remove").on("click",function(){
+        $(".choose_department").val(" ");
+        str = " ";
+        $(".fa-remove").addClass("hide");
+        console.log($(".choose_department").val())
+    })
 }));
