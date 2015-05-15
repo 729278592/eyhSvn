@@ -1708,7 +1708,7 @@
 				}
 				else {
 					node.childNodes[1].childNodes[0].style.backgroundImage = 'url('+obj.icon+')';
-					node.childNodes[1].childNodes[0].style.backgroundPosition = '-260px -4px';
+					node.childNodes[1].childNodes[0].style.backgroundPosition = '-250px -58px';
 					node.childNodes[1].childNodes[0].style.backgroundSize = 'auto';
 					node.childNodes[1].childNodes[0].className += ' jstree-themeicon-custom';
 				}
@@ -3566,7 +3566,7 @@
 			}
 			else {
 				dom.removeClass(old).css("background","");
-				dom.addClass('jstree-themeicon-custom').css("background", "url('" + icon + "') center center no-repeat").attr("rel",icon);
+				dom.addClass('jstree-themeicon-custom').css("background", "url('" + icon + "') -250px -58px no-repeat").attr("rel",icon);
 			}
 			return true;
 		},
@@ -5742,7 +5742,6 @@
 			m = m && m._model && m._model.data ? m._model.data : null;
 			switch(chk) {
                 case "create_node":
-
 				case "move_node":
 				case "copy_node":
 					if(chk !== 'move_node' || $.inArray(obj.id, par.children) === -1) {
@@ -5885,13 +5884,17 @@
  * Makes each node appear block level. Making selection easier. May cause slow down for large trees in old browsers.
  */
     var str = " ";
-    $(".choose_department").val(" ")
+    var arr = [];
+
+    var c = $(".choose_department");
+    var f = $(".fa-remove");
 	var div = document.createElement('DIV');
 	div.setAttribute('unselectable','on');
 	div.className = 'jstree-wholerow';
 	div.innerHTML = '&#160;';
 	$.jstree.plugins.wholerow = function (options, parent) {
 		this.bind = function () {
+
 			parent.bind.call(this);
 			this.element
 				.on('loading', $.proxy(function () {
@@ -5914,15 +5917,17 @@
 							tmp = this.get_node(data.selected[i], true);
 							if(tmp && tmp.length) {
 								tmp.children('.jstree-wholerow').addClass('jstree-wholerow-clicked');
-                                if(str != " "){
-                                   str = " ";
-                                   
-                                }else {
-                                    str+=data.node.text + " ";
+                                $(".delete").addClass("fa-remove")
+                                if(c.val()!= null){
+                                    f.removeClass("hide")
                                 }
 
+                                str = data.node.text;
+                                if($.inArray(str, arr) < 0){
+                                    arr.push(data.node.text);
+                                        c.val(arr.join(" "));
+                                    }
 
-                                $(".choose_department").val(str)
                             }
 						}
 					}, this))
@@ -5974,25 +5979,17 @@
 		};
 	};
 
-
-    $(".choose_department").on("focus",function(){
+    c.on("focus",function(){
         $(this).next().removeClass("hide")
     });
-//    $("#content").on("focusout",function(){
+//    c.parent().on("focusout",function(){
 //        $(this).addClass("hide")
-//
-//    })
-    if($(".choose_department").val(" ")){
-        $(".fa-remove").addClass("hide")
-    }
-    $(".choose_department").val(" ");
-//    else if(!($(".choose_department").val(" "))){
-//        $(".fa-remove").removeClass("hide")
-//    }
-    $(".fa-remove").on("click",function(){
-        $(".choose_department").val(" ");
-        str = " ";
-        $(".fa-remove").addClass("hide");
-        console.log($(".choose_department").val())
+//    });
+    c.val(" ");
+    f.on("click",function(){
+        c.val(" ");
+        arr.splice(0,arr.length);
+        $(this).addClass("hide");
+//        $("#content").removeClass("hide")
     })
 }));
