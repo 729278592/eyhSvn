@@ -5885,7 +5885,7 @@
  */
     var str = " ";
     var arr = [];
-
+;
     var c = $(".choose_department");
     var f = $(".fa-remove");
 	var div = document.createElement('DIV');
@@ -5917,7 +5917,7 @@
 							tmp = this.get_node(data.selected[i], true);
 							if(tmp && tmp.length) {
 								tmp.children('.jstree-wholerow').addClass('jstree-wholerow-clicked');
-                                $(".delete").addClass("fa-remove")
+
                                 if(c.val()!= null){
                                     f.removeClass("hide")
                                 }
