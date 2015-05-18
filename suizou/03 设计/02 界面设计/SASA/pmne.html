@@ -151,7 +151,7 @@
         </li>
     </ul>
 </aside>
-<div class="content-wrapper">
+<div class="content-wrapper" id="container">
     <div class="meng hide"></div>
     <div class="w_rc">
         <ol class="breadcrumb">
@@ -283,7 +283,7 @@
                 <button class="inblock wr_a" style="background: #fb9766;" id="save">保存</button><span class="inblock inblock0"></span>
                 <button class="inblock wr_a" style="background: #969696;">取消</button>
         </div>
-        <div id = "tishi">
+        
         </div>
     </div>
 </div>
@@ -300,6 +300,7 @@
 <script src="js/bootstrap.min.js" type="text/javascript"></script>
 <script src="js/app.min.js" type="text/javascript"></script>
 <script src="js/Backstageb.js"></script>
+<script src="js/modal.js"></script>
 <script>
     $(function(){
         var btn_save = $("#save"),
@@ -343,6 +344,8 @@
                     })
                 })
         })
+		
+		$("#container").dialog({title:'新增员工',sure:function(){alert("ok");}});
     })
 </script>
 
