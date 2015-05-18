@@ -19,13 +19,13 @@ button{cursor: pointer;}
 .wr_span{font-size: 20px;color: #fff;}
 .block{display: inline-block;*display: inline;zoom:1;}
 .block1:hover{background: #54a9e8;}
-.wr_san{position: absolute;top: -9px;left: 50px;}
+.wr_san{position: absolute;top: -7px;left: 50px;}
 #li_a,#li_a1,#li_a2{display: inline-block;width: 116px;height: 50px;line-height: 50px;position: relative;top: 0px;border-radius: 5px;}
 #dLabel{text-decoration: none;display: inline-block;height: 60px;text-align: center;padding: 0 5px;}
 #dLabel:hover{background: #5e9fd1;}
-.dropdown-menu li{height: 50px;text-align: center;position: relative;}
+.dropdown-menu li{height: 50px;text-align: center;position: relative;top: -2px;}
 .dropdown-menu li{color: #fff;}
-#li_a:hover,#li_a1:hover,#li_a2:hover{color: #80c5f9;}
+#li_a:hover,#li_a1:hover,#li_a2:hover{color: #80c5f9;background: #ddd;}
 /*head*/
 
 
@@ -111,11 +111,12 @@ tr th,tr td{ text-align:center;font-size: 14px;border:1px solid #cccccc;color: #
 .wrc_img3{height: 157px;top: 30px;}
 .wrc_img4{height: 660px;top: -45px;}
 .wrcc_f{width: 410px;height: 32px;font-size: 12px;margin-top: 20px;;position: relative;left: 50%;margin-left: -200px;}
-.wrccf_ul{height: 32px;display: inline-block}
-.wrccf_ul li{float: left;width: 30px;height: 30px;border: 1px solid #e0e0e0;border-left: none;text-align: center;line-height: 30px;font-size: 12px;color: #989898;}
-.l_li{border-radius:0 5px 5px 0;}
-.wrccf_ul .f_li{border-left: 1px solid #e0e0e0; border-radius: 5px 0 0 5px;}
-.wrccf_ul .z_li{background: #438cca;color: #fff;}
+
+.pages{height: 32px;position: relative;left: 50%;margin-left: -150px;}
+.pages li{float: left;width: 30px;height: 30px;border: 1px solid #e0e0e0;border-left: none;text-align: center;line-height: 30px;font-size: 12px;color: #989898;}
+.pages .first{border-left: 1px solid #e0e0e0; border-radius: 5px 0 0 5px;}
+.pages .last{border-radius:0 5px 5px 0;}
+.pages .active{background: #438cca;color: #fff;}
 
 .p_shan{width: 80px;height: 27px;background: #fda26d;
     line-height: 27px;text-align: center;color: #fff;border-radius: 5px;outline: none;border: none;}
@@ -128,7 +129,6 @@ tr th,tr td{ text-align:center;font-size: 14px;border:1px solid #cccccc;color: #
 }
 @media screen and (max-width: 1150px) {
     .wrcc_f{padding: 1px;}
-
 
     .table_c{width: 20%;}
 }

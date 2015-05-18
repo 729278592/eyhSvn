@@ -32,11 +32,12 @@ html[xmlns] .clearfix {display: block;}
 .f_span{font-size: 20px;position: relative;top: -1em;display: inline-block;width: 100%;border-top: 1px solid #ccc;color: #202121;line-height: 3em;}
 /*打卡*/
 /*上班摇一摇*/
-.c_wu{position: absolute;top: 3em;width: 100%;}
+.c_wu{position: absolute;top: 3em;}
 .c_yao{position: absolute;top: 2em;left: 50%;margin-left: -103px;width: 32%;}
 .yaozi{position: absolute;top: 12.6em;left: 50%;margin-left: -203px;}
 .c_ca{position: absolute;top: 20.5em;width: 100%;}
 .c_ca a{width: 12em;height: 2.5em;border: 1px solid #060606;display: inline-block;position: absolute;left: 50%;margin-left: -6em;line-height: 2.5em;text-align: center;color: #f68261;font-size: 30px;margin-bottom: 2em;}
+.description{position: relative;top: 200px;}
 /*上班摇一摇*/
 /*考勤列表*/
 .c_cimg,.cc_img{width: 100%;}
