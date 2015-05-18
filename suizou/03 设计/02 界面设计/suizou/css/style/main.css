@@ -203,10 +203,10 @@
 
 /*logo.css*/
 select,option{outline: none;}
-.w_logo{height: 790px;width: 100%;position: relative}
-.wl_img{width: 100%;height: 790px;}
-.wl_lodo{width: 520px;height: 464px;position: absolute;top: 147px;left:50%;margin-left: -271px;background: #fff;}
-.wl_p{text-align: center;font-size: 25px;color: #020202;margin-top: 55px;}
+.w_logo{height: 700px;width: 100%;position: relative;}
+.wl_img{width: 100%;height: 700px;}
+.wl_lodo{width: 470px;height: 414px;position: absolute;top: 134px;left:50%;margin-left: -252px;background: #fff;}
+.wl_p{text-align: center;font-size: 25px;color: #020202;margin-top: 20px;}
 
 .shuru{font-size: 16px;color: #020202;position: relative;}
 .error{font-size: 12px;color: red;text-align: left;position: absolute;left: 60px;top: 40px;*top: 65px;}
@@ -234,8 +234,8 @@ label.error{*position: absolute;*top: 15px;}
 
 .wz_ft{margin-left: -8px;margin-top: 20px;}
 .w_ft .zhuce,.w_ft .wft_logo{display: inline-block;*display: inline;zoom:1;width: 390px;height: 60px;border-radius: 10px;background: #f68163;
-    text-align: center;line-height: 60px;font-size: 22px;color: #ffffff;margin: 20px 70px;}
-.cop{position: relative;top: -30px;text-align: center;font-size: 15px;color: #020405;}
+    text-align: center;line-height: 60px;font-size: 22px;color: #ffffff;margin: 20px 40px;}
+.cop{position: relative;top: -30px;text-align: center;font-size: 15px;color: #020405;line-height: 30px;}
 body{overflow-x: hidden;}
 /*logo.css*/
 
