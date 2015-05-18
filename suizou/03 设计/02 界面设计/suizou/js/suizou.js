@@ -216,6 +216,22 @@ $(function(){
             $(element).valid();
         }
     });
+
+$(".close").on("click",function(){
+    $(this).parent().parent().parent().hide()
+})
+    jQuery(function(){
+        var jq=jQuery;
+        jq('.cl_li4').click(function () {
+        jq('html,body').animate({
+        scrollTop : '0px'
+        }, 400);//返回顶部所用的时间
+        });
+        });
+
+
+
+
     $(document).ready(function(){
         //禁止退格键 作用于Firefox、Opera
         document.onkeypress = banBackSpace;
