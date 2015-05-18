@@ -18,6 +18,9 @@ $(function(){
             $(".error2").addClass("hide")
         }
     })
+    $(".wft_logo").on("click",function(){
+        $(this).val("正在登录中...")
+    })
     $(".cl_li2").on("click",function(){
         $(".meng").css({"display":"block"})
     })
