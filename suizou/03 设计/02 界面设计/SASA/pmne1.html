@@ -14,12 +14,15 @@
     <script>window.$q=[];window.$=window.jQuery=function(a){window.$q.push(a);};</script>
     <script>WR = "/";</script>
     <style>
-        .table_c{width: 80%;margin-left: 230px;}
-        .table_t{width: 100%;}
+        table{width: 100%;}
+        table tr{line-height: 50px;}
+        table tr td{border: none;}
+        table tr td:first-child{text-align: right;width: 85px;}
+        table tr td:last-child{text-align: left;position: relative;left: 10px;}
+        #tishi{width: 400px;border: 1px solid #ccc;position: absolute;top: -200px;background: #fff;
+            z-index: 10000;left: 50%;margin-left: -200px;border-radius: 10px;}
         .wrc_ul{margin-top: -45px;}
-        @media screen and (max-width: 1400px) {
-            .table_c{width: 70%;}
-        }
+        .span_input{margin-bottom: 10px;display: inline-block}
     </style>
 </head>
 <body>
@@ -40,7 +43,7 @@
                     <span class="inblocka"><img src="images/people.png" alt="" class="wh_i4"/></span>
                     <span class="xm">陈小洁 <span class="caret"></span></span>
                 </a>
-                <ul class="dropdown-menu" role="menu" aria-labelledby="dLabel" style="border: 1px solid #82c5f9;margin-left: -50px;">
+                <ul class="dropdown-menu" role="menu" aria-labelledby="dLabel" style="border: 1px solid #82c5f9;">
                     <li>
                         <img src="images/wr_sanjiao.png" alt="" class="wr_san"/>
                         <a href="javascript:void(0)" id="li_a" ><span ><i class="fa fa-user"></i></span> 账号信息</a>
@@ -126,76 +129,102 @@
         </li>
     </ul>
 </aside>
-<div class="content-wrapper">
+<div class="content-wrapper" id="container">
+    <div class="meng hide"></div>
     <div class="w_rc">
         <ol class="breadcrumb">
-            <li><a href="#"><img src="images/hlogo.png" alt="" class="bao"/> 考勤</a></li>
-            <li class="active">考勤统计</li>
+            <li><a href="#"><img src="images/hlogo.png" alt="" class="bao"/> 人员管理</a></li>
+            <li class="active">员工列表</li>
         </ol>
         <ul class="wrc_ul">
-            <li><a href="#" class="btna" style="background: #a0a0a1">考勤列表</a></li>
-            <li><a href="#" class="btna" style="background: #fda26d">考勤统计</a></li>
-            <li><a href="#" class="btna" style="background: #a0a0a1">考勤标准</a></li>
-            <li><a href="#" class="btna" style="background: #a0a0a1">考勤规则</a></li>
-            <li><a href="#" class="btna" style="background: #a0a0a1">考勤地址</a></li>
+            <li><a href="#" class="btna" style="background: #a0a0a1">员工列表</a></li>
+            <li><a href="#" class="btna" style="background: #fda26d">新增员工</a></li>
         </ul>
-        <div class="wrc_c wrc_c1">
-            <div class="wrcc_h">
-                搜索考勤统计记录
-            </div>
-            <table class="wrcc_c">
-                <tr>
-                    <td class="bblock">
-                        <span>搜索名称 : </span><input type="text" class="wrccc_i"placeholder="输入姓名"/>
-                    </td>
-                    <td class="bblock">
-                        <span>搜索时间 : </span><select name="" id="" class="bljb">
-                        <option value="2015年">2015</option>
-                        <option value="2016年">2016</option>
-                        <option value="2017年">2017</option>
-                    </select><input type="text" disabled value="年" class="zhi"/>
-                        <select name="" id="" class="bljb">
-                            <option value="1月">1</option>
-                            <option value="2月">2</option>
-                            <option value="3月">3</option>
-                        </select><input type="text" disabled value="月" class="zhi"/>
-                    </td>
-                    <td style="position: relative;" class="bblock">
-                        <button class="sou"type="submit"><i class="fa fa-search"></i> 搜索</button>
-                        <button class="sou"type="submit">导出</button>
-                    </td>
-                </tr>
-            </table>
-        </div>
         <div class="wrc_c wrc_c2">
             <div class="wrcc_h">
-                考勤统计
+                新增员工
             </div>
-            <div id="content" style="width: 200px;margin: 3px 0 10px 0;padding: 0;display: inline-block;float: left;margin-left: 20px;background: #f8f8f8;">
-                <span class="add_department"></span>
-                <div class="row page" id="demo" style="display:block;">
-                    <div class="col-md-12">
-                        <div class="row">
-                            <div class="col-md-12">
-                                <div id="jstree_demo" class="demo" style=" min-height:200px;"></div>
-                                <script>
-                                    $(function () {
-                                        var to = false;
-                                        $('#demo_q').keyup(function () {
-                                            if(to) { clearTimeout(to); }
-                                            to = setTimeout(function () {
-                                                var v = $('#demo_q').val();
-                                                $('#jstree_demo').jstree(true).search(v);
-                                            }, 250);
-                                        });
-                                        $('#jstree_demo').jstree({
+            <table>
+                <tr>
+                    <td>
+                        <span>姓名</span> <span style="color: #fc2626;">*</span>
+                    </td>
+                    <td>
+                        <label for=""><input type="text" class="wc_in wc_in1" value="" /></label>
+                    </td>
+                </tr>
+                <tr>
+                    <td>
+                        <span>帐号</span> <span style="color: #fc2626;">*</span>
+                    </td>
+                    <td>
+                        <label for=""><input type="text" class="wc_in wc_in1" value="" placeholder="成员唯一标识，不可更改，不支持中文"/></label>
+                    </td>
+                </tr>
+                <tr>
+                    <td>
+                        <span>性别</span> <span style="color: #fc2626;">*</span>
+                    </td>
+                    <td>
+                        <label for=""><input type="text" class="wc_in wc_in1" value="" placeholder=""/></label>
+                    </td>
+                </tr>
+                <tr>
+                    <td>
+                        <span>微信号</span> <span style="color: #fc2626;">*</span>
+                    </td>
+                    <td>
+                        <label for=""><input type="text" class="wc_in wc_in1" value="" placeholder="允许员工扫描的微信匹配关注"/></label>
+                    </td>
+                </tr>
+                <tr>
+                    <td>
+                        <span>手机</span> <span style="color: #fc2626;">*</span>
+                    </td>
+                    <td>
+                        <label for=""><input type="text" class="wc_in wc_in1" value="" placeholder="允许手机对应的微信与员工扫描的微信匹配关注"/></label>
+                    </td>
+                </tr>
+                <tr>
+                    <td>
+                        <span>邮箱</span> <span style="color: #fc2626;">*</span>
+                    </td>
+                    <td>
+                        <label for=""><input type="text" class="wc_in wc_in1" value="" placeholder="若未匹配到员工的微信，则通过邮箱来验证身份"/></label>
+                    </td>
+                </tr>
+                <tr>
+                    <td>
+                        <span>所在部门</span> <span style="color: #fc2626;">*</span>
+                    </td>
+                    <td style="position: relative">
+                        <i class="fa fa-remove hide"></i>
+                        <label for=""><input type="text" class="wc_in wc_in1 choose_department" value="" placeholder="所在部门"></label>
+                        <div id="content" style="background: #f8f8f8;position: absolute;width: 350px;top: 41px;z-index: 2000;left: 4px;" class="hide">
+                            <div class="row page" id="demo" style="display:block;">
+                                <div class="col-md-12">
+                                    <div class="row">
+                                        <div class="col-md-12">
+                                            <div id="jstree_demo" class="demo"></div>
+                                            <script>
+                                                $(function () {
+                                                    var to = false;
+                                                    $('#demo_q').keyup(function () {
+                                                        if(to) { clearTimeout(to); }
+                                                        to = setTimeout(function () {
+                                                            var v = $('#demo_q').val();
+                                                            $('#jstree_demo').jstree(true).search(v);
+                                                        }, 250);
+                                                    });
+                                                    $('#jstree_demo')
+                                                            .jstree({
                                                                 "core" : {
                                                                     "animation" : 0,
                                                                     "check_callback" : true,
                                                                     "themes" : { "stripes" : true },
                                                                     'data' : {
                                                                         'url' : function (node) {
-                                                                            return node.id === '#' ? './assets/ajax_demo_roots.json' : './assets/ajax_demo_children.json';
+                                                                            return node.id === '#' ? 'assets/ajax_demo_roots.json' : 'assets/ajax_demo_children.json';
                                                                         },
                                                                         'data' : function (node) {
                                                                             return { 'id' : node.id };
@@ -204,84 +233,35 @@
                                                                 },
                                                                 "types" : {
                                                                     "#" : { "max_children" : 1, "max_depth" : 4, "valid_children" : ["root"] },
-                                                                    "root" : { "icon" : "./assets/dist/themes/default/icon_main.png", "valid_children" : ["default"] },
+                                                                    "root" : { "icon" : "assets/dist/themes/default/icon_main.png", "valid_children" : ["default"] },
                                                                     "default" : { "valid_children" : ["default","file"] },
                                                                     "file" : { "icon" : "", "valid_children" : [] }
                                                                 },
-                                                                "plugins" : [ "contextmenu", "dnd", "search", "state", "types", "wholerow" ]
-                                                             });
-                                    });
-                                </script>
+                                                                "plugins" : ["types", "wholerow" ]
+                                                            });
+                                                });
+                                            </script>
+                                        </div>
+                                    </div>
+                                </div>
                             </div>
                         </div>
-                    </div>
-                </div>
-            </div>
-            <div class="table_c">
-                <table class="table_t">
-                    <thead>
-                    <tr>
-                        <th>编号</th>
-                        <th>姓名</th>
-                        <th>正常</th>
-                        <th>迟到</th>
-                        <th>早退</th>
-                        <th>旷工</th>
-                    </tr>
-                    </thead>
-                    <tbody>
-                    <tr>
-                        <td>1</td>
-                        <td>陈小洁</td>
-                        <td></td>
-                        <td>2</td>
-                        <td></td>
-                        <td></td>
-                    </tr>
-                    <tr>
-                        <td></td>
-                        <td></td>
-                        <td></td>
-                        <td></td>
-                        <td></td>
-                        <td></td>
-                    </tr>
-                    <tr>
-                        <td></td>
-                        <td></td>
-                        <td></td>
-                        <td></td>
-                        <td></td>
-                        <td></td>
-                    </tr>
-                    <tr>
-                        <td></td>
-                        <td></td>
-                        <td></td>
-                        <td></td>
-                        <td></td>
-                        <td></td>
-                    </tr>
-                    </tbody>
-                </table>
-            </div>
-            <div class="wrcc_f">
-                <ul class="wrccf_ul">
-                    <li class="f_li">《</li>
-                    <li class="lan_li">首页</li>
-                    <li class="z_li lan_li">1</li>
-                    <li class="lan_li">2</li>
-                    <li class="lan_li">3</li>
-                    <li class="lan_li">4</li>
-                    <li class="lan_li">5</li>
-                    <li class="lan_li">...</li>
-                    <li class="lan_li">尾页</li>
-                    <li class="l_li">》</li>
-                </ul>
-                <div class="d_right"><button class="p_shan">批量删除</button> <span style="color: #565656;">共 32 条</span></div>
-            </div>
+                    </td>
+                </tr>
+                <tr>
+                    <td>
+                        <span>职位</span> <span style="color: #fc2626;">*</span>
+                    </td>
+                    <td>
+                        <label for=""><input type="text" class="wc_in wc_in1" value="" placeholder="职位"/></label>
+                    </td>
+                </tr>
+            </table>
+                <button class="inblock wr_a" style="background: #fb9766;" id="save">保存</button><span class="inblock inblock0"></span>
+                <button class="inblock wr_a" style="background: #969696;">取消</button>
         </div>
-
+        
+        </div>
     </div>
 </div>
 <footer class="main-footer">
@@ -297,5 +277,16 @@
 <script src="js/bootstrap.min.js" type="text/javascript"></script>
 <script src="js/app.min.js" type="text/javascript"></script>
 <script src="js/Backstageb.js"></script>
+<script src="js/modal.js"></script>
+<script>
+    $(function(){
+        var btn_save = $("#save");
+        btn_save.on("click",function(){
+            $("#container").dialog({title:'新增员工',sure:function(){alert("ok");}});
+        })
+
+    })
+</script>
+
 </body>
 </html>

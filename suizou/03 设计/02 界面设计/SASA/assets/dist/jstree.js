@@ -1,5 +1,6 @@
 /*globals jQuery, define, exports, require, window, document */
 (function (factory) {
+
 	"use strict";
 	if (typeof define === 'function' && define.amd) {
 		define(['jquery'], factory);
@@ -5885,9 +5886,18 @@
  */
     var str = " ";
     var arr = [];
-;
+    var file = $(".xuanze");
     var c = $(".choose_department");
     var f = $(".fa-remove");
+    function remove(){
+        $(".tag>span").each(function(){
+            $(this).on("click",function(){
+                $(this).parent().remove()
+                arr.splice(0,arr.length);
+            })
+        })
+    }
+    remove()
 	var div = document.createElement('DIV');
 	div.setAttribute('unselectable','on');
 	div.className = 'jstree-wholerow';
@@ -5917,15 +5927,24 @@
 							tmp = this.get_node(data.selected[i], true);
 							if(tmp && tmp.length) {
 								tmp.children('.jstree-wholerow').addClass('jstree-wholerow-clicked');
+                                $(".delete").addClass("fa-remove")
+                                if(c.val()!= null){
+                                    f.removeClass("hide")
+                                }
+
 
                                 if(c.val()!= null){
                                     f.removeClass("hide")
                                 }
 
                                 str = data.node.text;
+
+
                                 if($.inArray(str, arr) < 0){
                                     arr.push(data.node.text);
-                                        c.val(arr.join(" "));
+                                    $(".bootstrap-tagsinput .tt-input").before('<span class="tag label label-info">'+str+'<span data-role="remove"></span></span>')
+                                    remove()
+
                                     }
 
                             }
@@ -5982,14 +6001,15 @@
     c.on("focus",function(){
         $(this).next().removeClass("hide")
     });
-//    c.parent().on("focusout",function(){
-//        $(this).addClass("hide")
-//    });
+
     c.val(" ");
     f.on("click",function(){
         c.val(" ");
         arr.splice(0,arr.length);
         $(this).addClass("hide");
-//        $("#content").removeClass("hide")
+    })
+
+    $(".bootstrap-tagsinput").on("click",function(){
+        $("#content").removeClass("hide")
     })
 }));
