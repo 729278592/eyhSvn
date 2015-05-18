@@ -1,0 +1,98 @@
+<!DOCTYPE html>
+<html>
+<head lang="en">
+    <meta charset="UTF-8">
+    <title></title>
+    <link rel="stylesheet" href="css/bootstrap.min.css">
+    <link rel="stylesheet" href="css/bootstrap-tagsinput.css">
+    <link rel="stylesheet" href="css/jstree.css">
+    <style>
+        .bootstrap-tagsinput { width: 20%; }
+    </style>
+    <script type="text/javascript" src="js/jquery-1.11.3.js"></script>
+    <script type="text/javascript" src="js/bootstrap.min.js"></script>
+    <script type="text/javascript" src="js/typeahead.bundle.min.js"></script>
+    <script type="text/javascript" src="js/bootstrap-tagsinput.js"></script>
+    <script type="text/javascript" src="js/jstree.js"></script>
+</head>
+<body>
+<input type="text" class="wc_in" name="email" value="" placeholder=""/>
+<input type="text" name="tags-input" id="tags-input"/>
+<div id="jstree" style="display: none"></div>
+<script>
+
+    $(function(){
+        var cities = new Bloodhound({
+            datumTokenizer: Bloodhound.tokenizers.obj.whitespace('text'),
+            queryTokenizer: Bloodhound.tokenizers.whitespace,
+            prefetch: 'json/cities.json'
+        });
+        cities.initialize();
+
+        var elt = $('#tags-input');
+        elt.tagsinput({
+            itemValue: 'id',
+            itemText: 'text',
+            typeaheadjs: {
+                name: 'cities',
+                displayKey: 'text',
+                source: cities.ttAdapter()
+            }
+        });
+
+        $('#jstree').jstree({
+            "core" : {
+                "animation" : 0,
+                "check_callback" : true,
+                "themes" : { "stripes" : true },
+                'data' : {
+                    'url' : function (node) {
+                        return node.id === '#' ?
+                                './json/ajax_roots.json' : './json/ajax_children.json';
+                    },
+                    'data' : function (node) {
+                        return { 'id' : node.id };
+                    }
+                }
+            },
+            "types" : {
+                "#" : {
+                    "max_children" : 1,
+                    "max_depth" : 15,
+                    "valid_children" : ["root"]
+                },
+                "default" : {
+                    icon: "icon icon_folder_blue"
+                }
+            },
+            "plugins" : [
+                "types", "wholerow"
+            ]
+        });
+        $('#jstree').on('changed.jstree', function (e, data) {
+            var id = data.selected[0];
+            var currNode = data.instance.get_node(id);
+            var text = currNode.text;
+            console.log(text);
+            elt.tagsinput('add', { "id": id , "text": text   });
+            console.log(elt.val());
+            //$('input').tagsinput('add', {"id": id , "text": text  });
+
+        });
+
+        //$('.bootstrap-tagsinput input').on('focus',function(e){
+        $('#tags-input').tagsinput('input').on('focus',function(e){
+            $("#jstree").show();
+            //$('input').tagsinput('add', { "value": 1 , "text": "hello"  });
+        });
+
+        //$('input').on('blur',function(){
+            //$("#jstree").hide();
+       // })
+
+    });
+
+
+</script>
+</body>
+</html>
