@@ -12,6 +12,8 @@
 
     <style>
         body{min-width:1170px; }
+
+
     </style>
     <!--[if IE 8]>
     <style>
@@ -50,7 +52,7 @@
                 <li class="ff4"><a href="index.html" class="block">首页</a></li>
                 <li><a href="财符中心_个人.html" class="block">财符中心</a></li>
                 <li><a href="场景直达.html" class="block">场景直达</a></li>
-                <li><a href="产品中心.html" class="block">产品中心</a></li>
+                <li><a href="product_center.html" class="block">产品中心</a></li>
                 <li><a href="热门活动.html" class="block">热门活动</a></li>
                 <li><a href="联系我们.html" class="block">联系我们</a></li>
             </ul>
@@ -106,29 +108,29 @@
         <div class="c_cj center">
 
             <img src="images/index/zs.png" alt="" class="ccj_i"/>
-            <div class="ccs_h">
-                <ul class="ccsh_ul">
-                    <li><a href="#"><img src="images/index/tu3.jpg" alt=""/><span class="block">关爱老人</span></a></li>
-                    <li><a href="#"><img src="images/index/tu4.jpg" alt=""/><span class="block">儿童成长</span></a></li>
-                    <li><a href="#"><img src="images/index/tu1.jpg" alt=""/><span class="block">浪漫温馨</span></a></li>
-                    <li><a href="#"><img src="images/index/tu2.jpg" alt=""/><span class="block">家庭音响</span></a></li>
-                    <li><a href="#"><img src="images/index/tu3.jpg" alt=""/><span class="block">关爱老人</span></a></li>
-                    <li><a href="#"><img src="images/index/tu4.jpg" alt=""/><span class="block">儿童成长</span></a></li>
-                    <li><a href="#"><img src="images/index/tu1.jpg" alt=""/><span class="block">浪漫温馨</span></a></li>
-                    <li><a href="#"><img src="images/index/tu2.jpg" alt=""/><span class="block">家庭音响</span></a></li>
-                </ul>
+            <div id="bei_introduce_imgfor">
+                <div id="imgfor_left" class="yuan c_left"><</div>
+                <div id="imgfor_right" class="yuan c_right">></div>
+                <div id="imgfor_con" style="width: 900px;">
+                    <div id="imgfor_con_clu">
+                        <div id="imgfor_con_roll">
+                            <a href="#"><img src="images/index/tu1.jpg" alt=""/><span class="block">浪漫温馨</span></a>
+                            <a href="#"><img src="images/index/tu2.jpg" alt=""/><span class="block">家庭音响</span></a>
+                            <a href="#"><img src="images/index/tu3.jpg" title="" id="q1"/><span class="block">关爱老人</span></a>
+                            <a href="#"><img src="images/index/tu4.jpg" title="" id="q2"/><span class="block">儿童成长</span></a>
+                        </div>
+                    </div>
+                </div>
             </div>
-            <div class="c_left yuan"><i class="fa fa-caret-left"></i></div>
-            <div class="c_right yuan"><i class="fa fa-caret-right"></i></div>
         </div>
         <div class="c_c">
-            <div class="cc_w">
-                <div class="center">
-                    <div class="fff"></div>
+
+                <div class="center cc_cba">
+
                     <img src="images/index/tuc.png" alt="" style="position: absolute;top: 0;"/>
                     <p class="cb_p"><span class="cb_s1">笨蛋1号</span> <span class="cb_s2">功能介绍</span></p>
                 </div>
-            </div>
+
 
             <div class="center c_b">
 
@@ -145,13 +147,14 @@
                     <div class="cbb_r c_div"><i class="fa fa-angle-right"></i></div>
                     <div class="cbb_m">
                         <ul class="cbbm_y">
-                            <li><a href=""class="block"><i class="fa fa-heart"></i> <span class="yi">已许愿</span><span class="er">(113+)</span></a></li>
-                            <li class="oof"><a href=""class="block"><i class="fa fa-caret-up"></i><i class="fa fa-gift"></i> <span>赠好友</span><span></span></a></span></li>
-                            <li><a href=""class="block"><i class="fa fa-money"></i> <span  class="yi">好友付</span><span></span></a></li>
+                            <li><a href="javascript:void(0)"class="block"><span class="hide h_span"><i class="fa fa-caret-up"></i></span><i class="fa fa-heart"></i> <span class="yi">已许愿</span><span class="er">(113+)</span></a></li>
+                            <li class="oof"><a href="javascript:void(0)"class="block"><span class="h_span"><i class="fa fa-caret-up"></i></span>
+                                <i class="fa fa-gift"></i> <span>赠好友</span><span></span></a></li>
+                            <li><a href="javascript:void(0)"class="block"><span class="hide h_span"><i class="fa fa-caret-up"></i></span><i class="fa fa-money"></i> <span  class="yi">好友付</span><span></span></a></li>
                         </ul>
                         <div class="cbb_g block">
                             <span>￥498</span>
-                            <a href="产品中心.html" class="block mai">立刻购买</a>
+                            <a href="product_center.html" class="block mai">立刻购买</a>
 
                         </div>
                     </div>
@@ -177,7 +180,8 @@
                         <li>魔幻灯光</li>
                         <li>极致音响</li>
                         <li>手机玩伴</li>
-                        <li class="last">家庭卫士</li>
+                        <li>家庭卫士</li>
+                        <li class="last">超级遥控</li>
                     </ul>
                 </div>
 
@@ -360,6 +364,7 @@
 </div>
 <script src="js/jquery-1.10.2.min.js"></script>
 <script type="text/javascript" src="js/koala.min.1.5.js"></script>
+<script src="js/huan_img.js"></script>
 <script src="js/Crweb.js"></script>
 <script>
     Qfast.add('script', { path: "js/terminator2.2.min.js", type: "js", requires: ['fx'] });
@@ -378,6 +383,7 @@
             interval: 3000  //** 停顿时间
         })
     });
+
 </script>
 </body>
 </html>

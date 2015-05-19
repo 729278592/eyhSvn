@@ -97,19 +97,74 @@ t.each(function(){
         $(this).siblings().find(".dui").css({"border":"3px solid transparent"}).end().find(".tut").addClass("hide");
     })
 })
-var l = $(".ccsh_ul li").width()+36;
 
 
-$(".c_left").on("click",function(){
 
-      $(".ccsh_ul li").animate({
-          "left":-l
-      },1500)
+
+
+
+//var d = $(".dao").text()
+//var set = setInterval(function(){
+//     $(".dao").text(--d);
+//    if($(".dao").text()==0){
+//        clearInterval(set);
+//        window.location.href = "登陆.html";
+//    }
+//},1000)
+
+
+$(".cbbm_y li").each(function(){
+    $(this).on("click",function(){
+        $(this).siblings().removeClass("oof")
+        $(this).addClass("oof")
+        $(this).find(".h_span").removeClass("hide")
+        $(this).siblings().find(".h_span").addClass("hide")
+    })
 })
 
-$(".c_right").on("click",function(){
 
-    $(".ccsh_ul").animate({
-        "marginLeft":l
-    },1500)
+$(".sjao").each(function(){
+    $(this).on("click",function(){
+    if($(this).parent().next(".show_div").hasClass("hide")){
+        $(this).parent().next(".show_div").removeClass("hide").addClass("show")
+        $(this).parent().siblings().next(".show_div").removeClass("show").addClass("hide")
+        $(this).parent().removeClass("cjul_d1")
+        $(this).parent().siblings().addClass("cjul_d1")
+        $(this).find("i").removeClass("fa-caret-right").addClass("fa-caret-down")
+        $(this).parent().siblings().find(".sjao").find("i").removeClass("fa-caret-down").addClass("fa-caret-right")
+    }else{
+        $(this).parent().next(".show_div").removeClass("show").addClass("hide")
+        $(this).parent().addClass("cjul_d1")
+        $(this).find("i").removeClass("fa-caret-down").addClass("fa-caret-right")
+    }
+    })
+});
+$(".block table tr:odd").css({"background":"#f9f9f9"});
+$(".block table tr:even").css({"background":"#fff"});
+$(".block table tr").each(function(){
+    $(this).hover(function(){
+            $(this).css({"background":"#f5f5f5"})
+        },
+        function(){
+            $(".block table tr:odd").css({"background":"#f9f9f9"});
+            $(".block table tr:even").css({"background":"#fff"})
+        })
+});
+
+
+
+
+
+$(".mlx span").each(function(){
+    $(this).on("click",function(){
+        $(this).addClass("beise")
+        $(this).siblings().removeClass("beise")
+        $(this).prev().css({"borderRight":"1px solid transparent"})
+        $(this).siblings().prev().css({"borderRight":"1px solid #b6b6b6"})
+    })
 })
+$(".mlx .beise").prev().css({"borderRight":"1px solid transparent"})
+
+
+
+
