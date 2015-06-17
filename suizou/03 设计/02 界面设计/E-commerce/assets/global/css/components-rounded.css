@@ -1736,7 +1736,7 @@ Dropdowns
 Dropdown Menu
 ***/
 .dropdown-menu {
-  min-width: 175px;
+  min-width: 115px;
   position: absolute;
   top: 100%;
   left: 0;
@@ -3567,10 +3567,11 @@ Portlets
 .portlet > .portlet-title > .caption {
   float: left;
   display: inline-block;
-  font-size: 18px;
+  font-size: 16px;
   line-height: 18px;
   font-weight: 300;
   padding: 10px 0;
+    color: #333;
 }
 .portlet > .portlet-title > .caption.bold {
   font-weight: 400;
@@ -3581,7 +3582,7 @@ Portlets
   display: inline-block;
   font-size: 13px;
   margin-right: 5px;
-  color: #666;
+  color: #333;
 }
 .portlet > .portlet-title > .caption > i.glyphicon {
   margin-top: 2px;
@@ -3599,6 +3600,7 @@ Portlets
   display: inline-block;
   padding: 6px 0;
 }
+.portlet > .portlet-title > .actions a{width: 80px;}
 .portlet > .portlet-title > .actions > .dropdown-menu i {
   color: #555555;
 }
@@ -4605,8 +4607,13 @@ Responsive & Scrollable Tables
 /***
 Responsive Flip Scroll Tables
 ***/
+.flip-scroll table thead th {
+
+    text-align: center;
+}
 .flip-scroll table {
   width: 100%;
+  text-align: center;
 }
 
 @media only screen and (max-width: 768px) {
@@ -4628,70 +4635,6 @@ Responsive Flip Scroll Tables
     zoom: 1;
   }
 
-  .flip-scroll table {
-    width: 100%;
-    border-collapse: collapse;
-    border-spacing: 0;
-  }
-
-  .flip-scroll th,
-  .flip-scroll td {
-    margin: 0;
-    vertical-align: top;
-  }
-
-  .flip-scroll th {
-    text-align: left;
-    border: 0 !important;
-    border-bottom: 1px solid #ddd !important;
-    border-right: 1px solid #ddd !important;
-    font-size: 13px !important;
-    padding: 5px;
-    width: auto !important;
-  }
-
-  .flip-scroll table {
-    display: block;
-    position: relative;
-    width: 100%;
-  }
-
-  .flip-scroll thead {
-    display: block;
-    float: left;
-  }
-
-  .flip-scroll tbody {
-    display: block;
-    width: auto;
-    position: relative;
-    overflow-x: auto;
-    white-space: nowrap;
-  }
-
-  .flip-scroll thead tr {
-    display: block;
-  }
-
-  .flip-scroll th {
-    display: block;
-    text-align: right;
-  }
-
-  .flip-scroll tbody tr {
-    display: inline-block;
-    vertical-align: top;
-    margin-left: -5px;
-  }
-
-  .flip-scroll td {
-    display: block;
-    min-height: 1.25em;
-    text-align: left;
-    border-top: 0 !important;
-    border-left: 0 !important;
-    border-right: 0 !important;
-  }
 
   /* sort out borders */
   .flip-scroll th {
@@ -10169,11 +10112,10 @@ Yellow Default
 }
 
 .portlet.box.yellow {
-  border: 1px solid #ffcc7b;
-  border-top: 0;
+
 }
 .portlet.box.yellow > .portlet-title {
-  background-color: #ffb848;
+  background-color: #d0eafe;
 }
 .portlet.box.yellow > .portlet-title > .caption {
   color: white;
