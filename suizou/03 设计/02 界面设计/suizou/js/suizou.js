@@ -27,8 +27,10 @@ $(function(){
     $(".bbtn").on("click",function(){
         $(".meng").css({"display":"none"})
     })
-    $(".cl_li3").on("click",function(){
-        $(".meng1").css({"display":"block"})
+    $(".cl_li3").hover(function(){
+        $(".meng1").removeClass("hide")
+    },function(){
+        $(".meng1").addClass("hide")
     })
     if (navigator.userAgent.indexOf('Firefox') >= 0){
         $(".c_login").css({"position":"relative","top":"-25px"})
@@ -148,15 +150,13 @@ $(function(){
 
             }
         },
+
         highlight: function(element, errorClass) {
             $(errorClass)
-
-
         },
 
         onfocusout: function(element){
             $(element).valid();
-
         }
 
     });
