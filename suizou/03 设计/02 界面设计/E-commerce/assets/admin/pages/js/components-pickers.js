@@ -1,7 +1,5 @@
 var ComponentsPickers = function () {
-
     var handleDatePickers = function () {
-
         if (jQuery().datepicker) {
             $('.date-picker').datepicker({
                 rtl: Main.isRTL(),
@@ -48,7 +46,6 @@ var ComponentsPickers = function () {
     e.on("click",function(){
         $(this).prev().find(".form-control").val(" ")
     });
-
 
     var handleDateRangePickers = function (i) {
         if (!jQuery().daterangepicker) {
@@ -144,70 +141,8 @@ var ComponentsPickers = function () {
         );
         //Set the initial state of the picker label
         $('#reportrange span').html(moment().subtract('days', 29).format('MMMM D, YYYY') + ' - ' + moment().format('MMMM D, YYYY'));
-    }
+    };
 
-//    function addExcludeDate(){
-//        var tmp = '<div class="form-group form-inline">'+
-//            '<label class=" control-label col-md-3"></label>'+
-//            '<div class="col-md-9">'+
-//            '<div class="input-group exclude-date">'+
-//            '<input type="text" class="form-control">'+
-//            '<span class="input-group-btn">'+
-//            '<button class="btn default date-range-toggle" type="button"><i class="fa fa-calendar"></i></button>'+
-//            '</span></div></div></div>';
-//        $('.form-body').append(tmp);
-//        $('.form-body').daterangepicker = null;
-//        $('.exclude-date').each(function(){
-//            var _this = this;
-//            $(_this).daterangepicker({
-//                    opens: 'left',
-//                    format: 'YYYY-MM-DD',
-//                    startDate: moment().subtract('days', 29),
-//                    endDate: moment(),
-//                    locale:{
-//                        applyLabel:"确认",
-//                        cancelLabel:"取消",
-//                        //fromLabel:"起始",
-//                        //toLabel:"结束",
-//                        customRangeLabel:"指定范围",
-//                        daysOfWeek:['日', '一', '二', '三', '四', '五','六'],
-//                        monthNames:['1月', '2月', '3月', '4月', '5月', '6月', '7月', '8月', '9月', '10月', '11月', '12月'],
-//                        firstDay:0
-//                    }
-//                },
-//                function (start, end) {
-//                    $(_this).children('input').val(start.format('YYYY-MM-DD') + ' - ' + end.format('YYYY-MM-DD'));
-//                }
-//            );
-//        });
-//
-//    }
-//
-//    $(function(){
-//        handleValidation();
-//
-//        $('.defaultrange').daterangepicker({
-//                opens: 'left',
-//                format: 'YYYY-MM-DD',
-//                startDate: moment().subtract('days', 29),
-//                endDate: moment(),
-//                locale:{
-//                    applyLabel:"确认",
-//                    cancelLabel:"取消",
-//                    //fromLabel:"起始",
-//                    //toLabel:"结束",
-//                    customRangeLabel:"指定范围",
-//                    daysOfWeek:['日', '一', '二', '三', '四', '五','六'],
-//                    monthNames:['1月', '2月', '3月', '4月', '5月', '6月', '7月', '8月', '9月', '10月', '11月', '12月'],
-//                    firstDay:0
-//                }
-//            },
-//            function (start, end) {
-//                console.log(this.element.context);
-//                $(this.element.context).children('input').val(start.format('YYYY-MM-DD') + ' - ' + end.format('YYYY-MM-DD'));
-//            }
-//        );
-//    })
     p.on("click",function(){
         $(this).before('<div class="form-group">'+
             '<label class="control-label col-md-3">Default Date Ranges</label>'+
@@ -220,17 +155,14 @@ var ComponentsPickers = function () {
             '<div class="empty delete">删除</div>'+
             '</div></div>');
 
-
         $('.input-group').each(function(){
             $(this).daterangepicker(null, function(start, end, label) {});
             handleDateRangePickers()
         });
         var d = $(".delete");
-        d.each(function(i){
-            var a = i + 1;
+        d.each(function(){
             $(this).on("click",function(){
                 $(this).parent().parent().remove();
-                $(".daterangepicker").eq(a).remove()
             });
         });
 
@@ -269,7 +201,7 @@ var ComponentsPickers = function () {
         });
 
         $('body').removeClass("modal-open"); // fix bug when inline picker is used in modal
-    }
+    };
 
     var handleClockfaceTimePickers = function () {
 
@@ -302,7 +234,7 @@ var ComponentsPickers = function () {
         $('.clockface_3').clockface({
             format: 'H:mm'
         }).clockface('show', '14:30');
-    }
+    };
 
     var handleColorPicker = function () {
         if (!jQuery().colorpicker) {

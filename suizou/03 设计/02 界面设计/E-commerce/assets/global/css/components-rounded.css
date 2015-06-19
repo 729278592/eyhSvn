@@ -7,9 +7,9 @@ General reset
 /* Set default body */
 body {
   color: #333333;
-  font-family: "Open Sans", sans-serif;
-  padding: 0px !important;
-  margin: 0px !important;
+  font-family: "微软雅黑";
+  padding: 0 !important;
+  margin: 0 !important;
   font-size: 13px;
   direction: ltr;
 }

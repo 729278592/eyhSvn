@@ -1115,7 +1115,7 @@ body {
 }
 
 input, button, select, textarea {
-    font-family: inherit;
+    font-family: "微软雅黑";
     font-size: inherit;
     line-height: inherit
 }

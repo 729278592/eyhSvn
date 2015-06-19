@@ -988,11 +988,9 @@
             $.each(this.locale.daysOfWeek, function (index, dayOfWeek) {
                 html += '<th>' + dayOfWeek + '</th>';
             });
-
             html += '</tr>';
             html += '</thead>';
             html += '<tbody>';
-
             for (var row = 0; row < 6; row++) {
                 html += '<tr>';
 
@@ -1019,20 +1017,16 @@
                         if (calendar[row][col].isSame(this.startDate)) { cname += ' start-date '; }
                         if (calendar[row][col].isSame(this.endDate)) { cname += ' end-date '; }
                     }
-
                     var title = 'r' + row + 'c' + col;
                     html += '<td class="' + cname.replace(/\s+/g, ' ').replace(/^\s?(.*?)\s?$/, '$1') + '" data-title="' + title + '">' + calendar[row][col].date() + '</td>';
                 }
                 html += '</tr>';
             }
-
             html += '</tbody>';
             html += '</table>';
             html += '</div>';
-
             var i;
             if (this.timePicker) {
-
                 html += '<div class="calendar-time">';
                 html += '<select class="hourselect">';
                 var start = 0;
@@ -1056,9 +1050,7 @@
                 }
 
                 html += '</select> : ';
-
                 html += '<select class="minuteselect">';
-
                 for (i = 0; i < 60; i += this.timePickerIncrement) {
                     var num = i;
                     if (num < 10)
@@ -1071,7 +1063,6 @@
                 }
 
                 html += '</select> ';
-
                 if (this.timePicker12Hour) {
                     html += '<select class="ampmselect">';
                     if (selected.hour() >= 12) {
@@ -1081,23 +1072,16 @@
                     }
                     html += '</select>';
                 }
-
                 html += '</div>';
-
             }
-
             return html;
-
         },
 
         remove: function() {
-
             this.container.remove();
             this.element.off('.daterangepicker');
             this.element.removeData('daterangepicker');
-
         }
-
     };
 
     $.fn.daterangepicker = function (options, cb) {
@@ -1105,9 +1089,8 @@
             var el = $(this);
             if (el.data('daterangepicker'))
                 el.data('daterangepicker').remove();
-            el.data('daterangepicker', new DateRangePicker(el, options, cb));
+                el.data('daterangepicker', new DateRangePicker(el, options, cb));
         });
         return this;
     };
-
 }));

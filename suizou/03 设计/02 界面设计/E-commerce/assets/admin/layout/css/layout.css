@@ -937,6 +937,7 @@ Page sidebar
   margin: 0;
   padding: 0;
   border: 0;
+
 }
 .page-sidebar .page-sidebar-menu > li.sidebar-toggler-wrapper, .page-sidebar .page-sidebar-menu > li.sidebar-search-wrapper,
 .page-sidebar-closed.page-sidebar-fixed .page-sidebar:hover .page-sidebar-menu > li.sidebar-toggler-wrapper,
@@ -974,7 +975,7 @@ Page sidebar
   border: 0;
   padding: 10px 15px;
   text-decoration: none;
-  font-size: 14px;
+  font-size: 16px;
   font-weight: 300;
 }
 .page-sidebar .page-sidebar-menu > li > a > i,
