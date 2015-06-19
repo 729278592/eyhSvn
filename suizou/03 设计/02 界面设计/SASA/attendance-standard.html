@@ -223,7 +223,30 @@
                         </select>
                         <span class="inblock inblock6">小时</span>
                     </td>
-                    <td class="bblock bzl1">
+                    <td class="bblock bzl1 days">
+                        <select name="" id="6"class="wc_in wc_in3">
+                            <option value="当日">00</option>
+                            <option value="昨天">昨天</option>
+                            <option value="明天">明天</option>
+                        </select>
+                        <span class="inblock inblock6"style="left:40px;">分钟</span>
+                    </td>
+                </tr>
+                <tr>
+                    <td style="position: relative;left: 20px;width: 200px;height: 30px;"class="inblock block">
+                        <span>工作时间</span>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+                        <input type="radio" class="che" name="ban" checked/>
+                        <span class="bzhu">弹性工时</span>
+                    </td>
+                    <td class="bblock zuoyi bzl">
+                        <select name="" id="5"class="wc_in">
+                            <option value="当日">00</option>
+                            <option value="昨天">昨天</option>
+                            <option value="明天">明天</option>
+                        </select>
+                        <span class="inblock inblock6">小时</span>
+                    </td>
+                    <td class="bblock bzl1 days">
                         <select name="" id="6"class="wc_in wc_in3">
                             <option value="当日">00</option>
                             <option value="昨天">昨天</option>
@@ -233,33 +256,7 @@
                     </td>
                 </tr>
             </table>
-            <table class="wrcc_y wrcc_t">
-                <tr>
-                    <td style="position: relative;left: 20px;width: 200px;height: 30px;"class="inblock bblock">
-                        <span>工作时间</span>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
-                        <input type="radio" class="che" name="ban"/>
-                        <span class="bzhu">弹性工时</span>
-                    </td>
-                    <td class="bblock zuoyi">
-                        <select name="" id="2"class="wc_in">
-                            <option value="当日">00</option>
-                            <option value="昨天">昨天</option>
-                            <option value="明天">明天</option>
-                        </select>
-                        <span class="inblock inblock6">小时</span>
-                    </td>
-                    <td class="bblock">
-                        <select name="" id="3"class="wc_in wc_in3">
-                            <option value="当日">00</option>
-                            <option value="昨天">昨天</option>
-                            <option value="明天">明天</option>
-                        </select>
-                        <span class="inblock inblock6"style="left:40px;op: -1px;">分钟</span>
-                    </td>
-                    <td class="bblock zuoyi">
-                    </td>
-                </tr>
-            </table>
+
             <button class="inblock wr_a" style="background: #fb9766;"id="save">保存</button><span class="inblock inblock0"></span>
             <button class="inblock wr_a" style="background: #969696;">取消</button>
         </div>
@@ -278,14 +275,14 @@
         var btn_save = $(".wr_a").first();
         btn_save.on("click",function(){
             $("#container").alert({sure:function(){alert("ok");}});
-
         });
     })
 </script>
 <script>
     $(function(){
         var menu = document.getElementsByClassName("dropdown-menu")[0];
-        var top ;
+        var top;
+        var tb = null;
         $("#wr_jia1").delegate("#jiajia","click",function(){
             $(this).before(
                             '<div class="well">'+
@@ -299,17 +296,26 @@
                             '</div>'+
                             '</div>'+
                             '</form>'+
-                            '</div>')
+                            '</div>');
+            $(".fa-calendar").each(function(i){
+                $(this).on("click",function(){
+                    tb = 44*i+ 386.617+"px";
+                    if($(".daterangepicker").eq(i).css("display") == "none"){
+                        $(".daterangepicker").eq(i).css({"display":"block","top":tb,"left":"360.55px","right":"auto"})
+                    }
+//                    else if($(".daterangepicker").eq(i).css("display") == "block"){
+//                        $(".daterangepicker").eq(i).css({"display":"none"})
+//                    }
+                })
+            });
             var b = null;
             $(".iddele").each(function(i){
                 $(this).on("click",function(){
                     b = i + 1;
-                    $(this).parent().parent().parent().parent().parent().hide()
-                    console.log($(this).parentsUntil("body").parent().find(".daterangepicker").eq(b))
-                    $(this).parentsUntil("body").parent().find(".daterangepicker").eq(b).css({"display":"none","top":top,"left":"360.55px","right":"auto"})
+                    $(this).parent().parent().parent().parent().parent().hide();
+                    $(this).parentsUntil("body").parent().find(".daterangepicker").eq(b).css({"display":"none","left":"360.55px","right":"auto"})
                 })
-            })
-
+            });
             $('.reservation').each(function(){
                 $(this).daterangepicker(null, function(start, end, label) {});
             });
@@ -317,10 +323,20 @@
         $('.reservation').each(function(){
             $(this).daterangepicker(null, function(start, end, label) {});
         });
-
         $("#empt").on("click",function(){
             $(this).prev().prev().val(" ")
-        })
+        });
+        $(".fa-calendar").each(function(i){
+            $(this).on("click",function(){
+                tb =  387+"px";
+                if($(".daterangepicker").eq(i).css("display") == "none"){
+                    $(".daterangepicker").eq(i).css({"display":"block","top":tb,"left":"360.55px","right":"auto"})
+                }
+//                else if($(".daterangepicker").eq(i).css("display") == "block"){
+//                    $(".daterangepicker").eq(i).css({"display":"none"})
+//                }
+            })
+        });
     })
 
 

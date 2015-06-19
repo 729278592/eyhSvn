@@ -17,19 +17,25 @@
 				sure   : null,
 				exit   : null
 		};
-		
 		var opts = $.extend({}, defaults, opts);
 
 		//$("div.meng").removeClass("hide");
-		var content  = '<div id="'+opts.id+'"><div class="ts_head"><span>'+opts.title+'</span></div>'+
+
+		var content  = '<div class="meng">'+
+                       '<div id="'+opts.id+'"><div class="ts_head"><span>'+opts.title+'</span></div>'+
 				       '<div class="ts_body">' +
-                       '<span class="span_input"><label for=""></label><span>性别</span> <span style="color: #fc2626;">*</span> <input type="text" class="wc_in" value="" placeholder=""/></span><br/>' +
+                       '<span class="span_input"><label for=""></label><span>性别</span> <span style="color: #fc2626;">*</span> <input type="radio" name="name" checked/>男&nbsp;&nbsp;&nbsp;&nbsp;<input type="radio" name="name"/>女</span><br/>' +
+                       '<span class="span_input"><label for=""></label><span>姓名</span> <span style="color: #fc2626;">*</span> <input type="text" class="wc_in" value="" placeholder=""/></span><br/>' +
+                       '<span class="span_input"><label for=""></label><span>姓名</span> <span style="color: #fc2626;">*</span> <input type="text" class="wc_in" value="" placeholder=""/></span><br/>' +
+                       '<span class="span_input"><label for=""></label><span>姓名</span> <span style="color: #fc2626;">*</span> <input type="text" class="wc_in" value="" placeholder=""/></span><br/>' +
+                       '<span class="span_input"><label for=""></label><span>姓名</span> <span style="color: #fc2626;">*</span> <input type="text" class="wc_in" value="" placeholder=""/></span><br/>' +
+                       '<span class="span_input"><label for=""></label><span>姓名</span> <span style="color: #fc2626;">*</span> <input type="text" class="wc_in" value="" placeholder=""/></span><br/>' +
                        '<span class="span_input"><label for=""></label><span>姓名</span> <span style="color: #fc2626;">*</span> <input type="text" class="wc_in" value="" placeholder=""/></span><br/>' +
                        '</div>'+
                        '<div class="ts_foot">'+
                        '<button class="inblock wr_a btn_dian" style="background: #fb9766;" id="btn_sure">确认</button><span class="inblock inblock0"></span>'+
                        '<button class="inblock wr_a btn_dian" style="background: #969696;" id="btn_cancel">取消</button>'+
-                       '</div></div>';
+                       '</div></div></div>';
 		$(".w_rc").append(content);
 		$("#" + opts.id).stop(true, false).animate({
         top:'250px'
@@ -78,12 +84,13 @@
 
         var opts = $.extend({}, defaults, opts);
         //$("div.meng").removeClass("hide");
-        var content  = '<div id="'+opts.id+'"><div class="ts_head"><span>'+opts.title+'</span></div>'+
-            '<div class="ts_body"><span style="color: #fc2626;">'+opts.text+'</span></div>'+
-            '<div class="ts_foot">'+
-            '<button class="inblock wr_a btn_dian" style="background: #fb9766;" id="btn_sure">确认</button><span class="inblock inblock0"></span>'+
-            '<button class="inblock wr_a btn_dian" style="background: #969696;" id="btn_cancel">取消</button>'+
-            '</div></div>';
+        var content  = '<div class="meng">'+
+                       '<div id="'+opts.id+'"><div class="ts_head"><span>'+opts.title+'</span></div>'+
+                       '<div class="ts_body"><span style="color: #fc2626;">'+opts.text+'</span></div>'+
+                       '<div class="ts_foot">'+
+                       '<button class="inblock wr_a btn_dian" style="background: #fb9766;" id="btn_sure">确认</button><span class="inblock inblock0"></span>'+
+                       '<button class="inblock wr_a btn_dian" style="background: #969696;" id="btn_cancel">取消</button>'+
+                       '</div></div></div>';
         $(".w_rc").append(content);
         $("#" + opts.id).stop(true, false).animate({
             top:'250px'
@@ -130,12 +137,12 @@
         };
         var opts = $.extend({}, defaults, opts);
         //$("div.meng").removeClass("hide");
-        var content  = '<div id="'+opts.id+'"><div class="ts_head"><span>'+opts.title+'</span></div>'+
-            '<div class="ts_body"><span style="color: #fc2626;">'+opts.text+'</span></div>'+
-            '<div class="ts_foot">'+
-            '<button class="inblock wr_a btn_dian" style="background: #fb9766;" id="btn_sure">确认</button><span class="inblock inblock0"></span>'+
-
-            '</div></div>';
+        var content  = '<div class="meng">'+
+                        '<div id="'+opts.id+'"><div class="ts_head"><span>'+opts.title+'</span></div>'+
+                        '<div class="ts_body"><span style="color: #fc2626;">'+opts.text+'</span></div>'+
+                        '<div class="ts_foot">'+
+                        '<button class="inblock wr_a btn_dian" style="background: #fb9766;" id="btn_sure">确认</button><span class="inblock inblock0"></span>'+
+                        '</div></div></div>';
         $(".w_rc").append(content);
         $("#" + opts.id).stop(true, false).animate({
             top:'250px'
@@ -170,6 +177,5 @@
                 $("div.meng").addClass("hide");
             });
         })
-
     }
 })(jQuery);

@@ -5999,7 +5999,7 @@
 	};
 
     c.on("focus",function(){
-        $(this).next().removeClass("hide")
+        $(this).parent().next().removeClass("hide")
     });
 
     c.val(" ");

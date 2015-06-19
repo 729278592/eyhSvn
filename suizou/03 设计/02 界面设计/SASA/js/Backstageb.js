@@ -10,6 +10,7 @@ $(document).ready(function(){
         var o = $(o);
         o.find("li").eq(0).find(".icon2").addClass("fa fa-caret-down")
         o.find("li>.wlc_div").on("click",function(){
+
             var c = $(this),hl = c.next().find(".wul_li1").height(),hs = c.next().find(".wul_li1").size(),h = hl*hs;
             if(c.parent().is(".on")) {
                 if(c.next().length > 0) {
@@ -89,6 +90,94 @@ $(document).ready(function(){
             })
     });
 
+
+//
+//    $("#el_verification").validate({
+//        rules: {
+//            username:{
+//                required:true
+//            },
+//            n_account:{//账号
+//                required:true,
+//                remote: {
+//                    url: "",     //后台处理程序
+//                    type: "post",               //数据发送方式
+//                    dataType: "json",           //接受数据格式
+//                    data: {//要传递的数据
+//                        emailcode: function ()
+//                        {
+//                            return $("#n_account").val();
+//                        }
+//                    }
+//                }
+//            },
+//            sex:{
+//                required:true
+//            },
+//            micro_signal:{//微信号
+//                required:true,
+//                remote: {
+//                    url: "",     //后台处理程序
+//                    type: "post",               //数据发送方式
+//                    dataType: "json",           //接受数据格式
+//                    data: {//要传递的数据
+//                        emailcode: function ()
+//                        {
+//                            return $("#micro_signal").val();
+//                        }
+//                    }
+//                }
+//            },
+//
+//            passrword: {
+//                required: true,
+//                equalTo: "#password"
+//            },
+//            phone:{
+//                required:true,
+//                digits:true,
+//                maxlength:11,
+//                minlength:11
+//
+//            } ,
+//            email: {
+//                required: true,
+//                email: true
+//            },
+//            lusername:{
+//                required:true
+//            }
+//        },
+//
+//        messages: {
+//            n_account:{
+//                remote:"您输入的账号已存在"
+//            },
+//            micro_signal:{
+//                remote:"您输入的账号已存在"
+//            },
+//            phone:{
+//                digits:"号码应为11个数字哦",
+//                minlength: jQuery.validator.format("应为 {0} 个数字"),
+//                maxlength: jQuery.validator.format("应为{0} 个数字")
+//            },
+//            passrword: {
+//                required: "应和密码一致！",
+//                equalTo: "两次输入密码不相同！"
+//            },
+//            email: {
+//                required: '请输入电子邮件',
+//                email: '请检查电子邮件的格式'
+//            } ,
+//            lusername:{
+//                required:"请输入昵称"
+//            }
+//        },
+//        onfocusout: function(element){
+//            $(element).valid();
+//        }
+//    });
+//    $("#el_verification").validate();
 })
 
 
