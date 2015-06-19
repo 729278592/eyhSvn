@@ -108,7 +108,7 @@ t.each(function(){
 //     $(".dao").text(--d);
 //    if($(".dao").text()==0){
 //        clearInterval(set);
-//        window.location.href = "登陆.html";
+//        window.location.href = "login.html";
 //    }
 //},1000)
 
