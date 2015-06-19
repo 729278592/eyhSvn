@@ -2110,8 +2110,8 @@ Form Layouts
 .form .form-actions {
   padding: 20px 10px;
   margin: 0;
-  background-color: #f5f5f5;
-  border-top: 1px solid #e5e5e5;
+  background-color: #fcfcfc;
+  border-top: 1px solid #ebebeb;
   *zoom: 1;
 }
 .portlet.light .form .form-actions {
