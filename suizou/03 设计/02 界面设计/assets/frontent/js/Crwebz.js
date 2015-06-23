@@ -178,10 +178,11 @@ var yy = $(".yhgr_u li a");
 
 
 
-
+$(".animate").hide()
 $(".ccc_ul>li").each(function(){
     $(this).hover(
         function(){
+            $(".animate").show()
             $(this).find(".animate").animate({
             "top":"0px",
             "left":"0px",
@@ -189,6 +190,7 @@ $(".ccc_ul>li").each(function(){
             },200)
         },
     function(){
+        $(".animate").hide()
         $(this).find(".animate").animate({
             "top":"132px",
             "left":"0px",
