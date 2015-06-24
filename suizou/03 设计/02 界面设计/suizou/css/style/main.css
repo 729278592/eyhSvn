@@ -158,7 +158,7 @@
     .c_di .c_li2{width: 30%}
     .c_di .c_li3{width: 24%}
     .c_di li,.c_di li img{float: left;}
-    .c_di a{text-decoration: underline;color: #020506;font-size: 21px;position: relative;left: 10px;}
+    .c_di a{color: #020506;font-size: 21px;position: relative;left: 10px;}
     .csd_span{position: relative;top: -24px;}
     .cl_span {position: relative;left: 10px;font-size: 16px;}
     .wh{width: 1px;height:25px;background: #0389cc;display: inline-block;*display: inline;zoom: 1;position: relative;top: 5px;}
@@ -238,7 +238,7 @@ label.error{*position: absolute;*top: 15px;}
 .wz_ft{margin-left: -8px;margin-top: 20px;}
 .w_ft .zhuce,.w_ft .wft_logo{display: inline-block;*display: inline;zoom:1;width: 420px;height: 40px;border-radius: 10px;background: #f68163;
     text-align: center;line-height: 40px;font-size: 22px;color: #ffffff;margin: 10px 12px;}
-.w_ft .zhuce{width: 505px;margin: 10px 14px;}
+.w_ft .zhuce{margin: 10px 60px;}
 .cop{position: relative;top: -30px;text-align: center;font-size: 15px;color: #020405;line-height: 30px;}
 body{overflow-x: hidden;}
 /*logo.css*/
