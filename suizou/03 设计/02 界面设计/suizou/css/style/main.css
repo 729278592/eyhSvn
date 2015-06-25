@@ -238,7 +238,7 @@ label.error{*position: absolute;*top: 15px;}
 .wz_ft{margin-left: -8px;margin-top: 20px;}
 .w_ft .zhuce,.w_ft .wft_logo{display: inline-block;*display: inline;zoom:1;width: 420px;height: 40px;border-radius: 10px;background: #f68163;
     text-align: center;line-height: 40px;font-size: 22px;color: #ffffff;margin: 10px 12px;}
-.w_ft .zhuce{margin: 10px 60px;}
+.w_ft .zhuce{margin: 10px 18px;}
 .cop{position: relative;top: -30px;text-align: center;font-size: 15px;color: #020405;line-height: 30px;}
 body{overflow-x: hidden;}
 /*logo.css*/
