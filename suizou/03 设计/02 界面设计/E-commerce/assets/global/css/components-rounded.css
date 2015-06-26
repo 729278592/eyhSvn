@@ -10082,6 +10082,7 @@ Yellow Default
 .portlet > .portlet-body.yellow,
 .portlet.yellow {
   background-color: #ffb848;
+    border: 1px solid #d0eafe;
 }
 
 .portlet.solid.yellow > .portlet-title,

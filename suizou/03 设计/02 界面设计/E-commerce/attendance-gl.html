@@ -29,11 +29,13 @@
 
     <!-- BEGIN PAGE LEVEL STYLES -->
     <link rel="stylesheet" type="text/css" href="./assets/global/plugins/select2/select2.css"/>
-    <link rel="stylesheet" type="text/css" href="./assets/global/plugins/datatables/plugins/bootstrap/dataTables.bootstrap.css"/>
+    <link rel="stylesheet" type="text/css"
+          href="./assets/global/plugins/datatables/plugins/bootstrap/dataTables.bootstrap.css"/>
 
 
-    <link rel="stylesheet" type="text/css" href="./assets/global/plugins/bootstrap-daterangepicker/daterangepicker-bs3.css"/>
-
+    <link rel="stylesheet" type="text/css"
+          href="./assets/global/plugins/bootstrap-daterangepicker/daterangepicker-bs3.css"/>
+    <link href="./assets/admin/pages/css/portfolio.css" rel="stylesheet" type="text/css"/>
     <!-- END PAGE LEVEL STYLES -->
 
     <!-- BEGIN THEME STYLES -->
@@ -44,7 +46,34 @@
     <link href="./assets/admin/layout/css/custom.css" rel="stylesheet" type="text/css"/>
     <!-- END THEME STYLES -->
     <style>
+        body{min-width: 1500px;}
+        div.radio,
+        div.checker {
+            margin-right: 0;
+            margin-left: 0;
+            margin-top: -3px;;
+        }
+        .mix-grid .mix {
+            padding: 10px;
+            border: 1px solid #ccc;
+            position: relative;
+            border-radius: 10px;;
+        }
+        .mix-grid .mix .mix-details {
+            background: rgba(0,0,0,.5);
+            bottom: -115%;
 
+        }
+        .mix-grid .mix a.mix-link,
+        .mix-grid .mix a.mix-preview {
+            color: #555;
+            top: 50%;
+            margin-top: -10px;;
+            background: rgba(0,0,0,.7);
+        }
+        .add{padding:8px 0;border: 1px dashed #ccc;background: #fff;text-align: center;}
+        .add a{font-size: 16px;}
+        .upload{display: inline-block;width: 72px;height: 30px;line-height: 30px;text-align: center;border: 1px solid #c6c6c6;margin-top: -3px;margin-left: -8px;}
     </style>
 </head>
 <!-- END HEAD -->
@@ -92,7 +121,7 @@
                             <ul class="dropdown-menu-list scroller" style="height: 250px;" data-handle-color="#637283">
                                 <li>
                                     <a href="javascript:;">
-                                    <span class="time">just now</span>
+                                        <span class="time">just now</span>
 									<span class="details">
 									<span class="label label-sm label-icon label-success">
 									<i class="fa fa-plus"></i>
@@ -102,7 +131,7 @@
                                 </li>
                                 <li>
                                     <a href="javascript:;">
-                                    <span class="time">3 mins</span>
+                                        <span class="time">3 mins</span>
 									<span class="details">
 									<span class="label label-sm label-icon label-danger">
 									<i class="fa fa-bolt"></i>
@@ -112,7 +141,7 @@
                                 </li>
                                 <li>
                                     <a href="javascript:;">
-                                    <span class="time">10 mins</span>
+                                        <span class="time">10 mins</span>
 									<span class="details">
 									<span class="label label-sm label-icon label-warning">
 									<i class="fa fa-bell-o"></i>
@@ -122,7 +151,7 @@
                                 </li>
                                 <li>
                                     <a href="javascript:;">
-                                    <span class="time">14 hrs</span>
+                                        <span class="time">14 hrs</span>
 									<span class="details">
 									<span class="label label-sm label-icon label-info">
 									<i class="fa fa-bullhorn"></i>
@@ -317,277 +346,99 @@
     <!-- BEGIN CONTENT -->
     <div class="page-content-wrapper">
         <div class="page-content">
-            <!-- BEGIN PAGE HEADER-->
-            <div class="page-bar">
-                <ul class="page-breadcrumb">
-                    <li>
-                        <i class="fa fa-home"></i>
-                        <a href="index.html">考勤</a>
-                        <i class="fa fa-angle-right"></i>
-                    </li>
-                    <li>
-                        <a href="#">设置</a>
-                        <i class="fa fa-angle-right"></i>
-                    </li>
-                    <li>
-                        <a href="#">考勤地址</a>
-                    </li>
-                </ul>
-                <div class=" menu_nav">
-                    <button class="btn default">考勤列表</button>
-                    <button class="btn default">考勤统计</button>
-                    <button class="btn default">考勤标准</button>
-                    <button class="btn default">考勤规则</button>
-                    <button class="btn yellow">考勤地址</button>
-                </div>
-            </div>
-            <!-- END PAGE HEADER-->
-            <!-- BEGIN PAGE CONTENT-->
-            <ul class="nav nav-tabs">
-                <li class="active">
-                    <a href="#tab_general" data-toggle="tab">
-                        地理位置校验 </a>
-                </li>
-                <li>
-                    <a href="#tab_meta" data-toggle="tab">
-                        IP位置校验 </a>
-                </li>
-            </ul>
-            <div class="row">
-                <div class="col-md-12 col-sm-12">
-                    <!-- BEGIN EXAMPLE TABLE PORTLET-->
-                    <div class="portlet box yellow">
-                        <div class="portlet-title">
-                            <div class="caption">
-                                <i class="fa fa-user"></i>Table
+            <div class="tab-content">
+                <div class="tab-pane active" id="tab_1_1">
+                    <div class="row mix-grid"style="background: #fff;">
+                        <div class="" style="width: 400px;float: left;margin: 0 30px 10px 30px;">
+                            <div class="row">
+                                <div style="display: block;  opacity: 1;" class="col-md-12 col-sm-4 mix category_1 mix_all">
+                                    <div class="mix-inner">
+                                        <img class="img-responsive" src="./assets/img.png" alt=""style="width: 100%;">
+                                        <p style="position: absolute;bottom: -10px;padding: 5px 0;line-height: 30px;width: 100%;background: #777777;color: #fff;text-indent: 10px;font-size: 16px;">标题</p>
+                                        <div class="mix-details">
+                                            <h4></h4>
+                                            <a class="mix-link" style="margin-right: -15px;">
+                                                <i class="fa fa-pencil"></i>
+                                            </a>
+
+                                        </div>
+                                    </div>
+                                </div>
                             </div>
-                            <div class="actions">
-                                <a href="#" class="btn yellow btn-sm">
-                                    <i class="fa fa-plus"></i> 新增 </a>
-                                <a href="#" class="btn red btn-sm">
-                                    <i class="fa fa-remove"></i> 删除 </a>
+                            <div class="row">
+                                <div style="display: block;  opacity: 1;" class="col-md-12 col-sm-4 mix category_1 mix_all">
+                                    <div class="mix-inner">
+                                        <img class="img-responsive" src="./assets/img2.png" alt="" style="position: relative;left: 325px;">
+                                        <p style="padding: 5px;color: #000000;font-size: 16px;position: absolute;top: 0;left: 0px;width: 190px;height: 56px;"><span>标题</span></p>
+                                        <div class="mix-details">
+                                            <h4></h4>
+                                            <a class="mix-link">
+                                                <i class="fa fa-pencil"></i>
+                                            </a>
+                                            <a class="mix-preview">
+                                                <i class="fa fa-remove"></i>
+                                            </a>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="row">
+                                <div class="add col-md-12 col-sm-4">
+                                    <a class="">+新增一条</a>
+                                </div>
                             </div>
                         </div>
-                    <div class="portlet-body">
-                        <table class="table table-striped table-bordered table-hover" id="sample_2">
-                    <thead>
-                    <tr>
-                        <th class="table-checkbox">
-                            <input type="checkbox" class="group-checkable" data-set="#sample_2 .checkboxes"/>
-                        </th>
-                        <th>
-                            Username
-                        </th>
-                        <th>
-                            Email
-                        </th>
-                        <th>
-                            Status
-                        </th>
-                    </tr>
-                    </thead>
-                    <tbody>
-                    <tr class="odd gradeX">
-                        <td>
-                            <input type="checkbox" class="checkboxes" value="1"/>
-                        </td>
-                        <td>
-                            shuxer
-                        </td>
-                        <td>
-                            <a href="mailto:shuxer@gmail.com">
-                                shuxer@gmail.com </a>
-                        </td>
-                        <td>
-                                                        <span class="label label-sm label-success">
-                                                        Approved </span>
-                        </td>
-                    </tr>
-                    <tr class="odd gradeX">
-                        <td>
-                            <input type="checkbox" class="checkboxes" value="1"/>
-                        </td>
-                        <td>
-                            looper
-                        </td>
-                        <td>
-                            <a href="mailto:looper90@gmail.com">
-                                looper90@gmail.com </a>
-                        </td>
-                        <td>
-                                                        <span class="label label-sm label-warning">
-                                                        Suspended </span>
-                        </td>
-                    </tr>
-                    <tr class="odd gradeX">
-                        <td>
-                            <input type="checkbox" class="checkboxes" value="1"/>
-                        </td>
-                        <td>
-                            userwow
-                        </td>
-                        <td>
-                            <a href="mailto:userwow@yahoo.com">
-                                userwow@yahoo.com </a>
-                        </td>
-                        <td>
-                                                        <span class="label label-sm label-success">
-                                                        Approved </span>
-                        </td>
-                    </tr>
-                    <tr class="odd gradeX">
-                        <td>
-                            <input type="checkbox" class="checkboxes" value="1"/>
-                        </td>
-                        <td>
-                            user1wow
-                        </td>
-                        <td>
-                            <a href="mailto:userwow@gmail.com">
-                                userwow@gmail.com </a>
-                        </td>
-                        <td>
-                                                        <span class="label label-sm label-default">
-                                                        Blocked </span>
-                        </td>
-                    </tr>
-                    <tr class="odd gradeX">
-                        <td>
-                            <input type="checkbox" class="checkboxes" value="1"/>
-                        </td>
-                        <td>
-                            restest
-                        </td>
-                        <td>
-                            <a href="mailto:userwow@gmail.com">
-                                test@gmail.com </a>
-                        </td>
-                        <td>
-                                                        <span class="label label-sm label-success">
-                                                        Approved </span>
-                        </td>
-                    </tr>
-                    <tr class="odd gradeX">
-                        <td>
-                            <input type="checkbox" class="checkboxes" value="1"/>
-                        </td>
-                        <td>
-                            foopl
-                        </td>
-                        <td>
-                            <a href="mailto:userwow@gmail.com">
-                                good@gmail.com </a>
-                        </td>
-                        <td>
-                                                        <span class="label label-sm label-success">
-                                                        Approved </span>
-                        </td>
-                    </tr>
-                    <tr class="odd gradeX">
-                        <td>
-                            <input type="checkbox" class="checkboxes" value="1"/>
-                        </td>
-                        <td>
-                            weep
-                        </td>
-                        <td>
-                            <a href="mailto:userwow@gmail.com">
-                                good@gmail.com </a>
-                        </td>
-                        <td>
-                                                        <span class="label label-sm label-success">
-                                                        Approved </span>
-                        </td>
-                    </tr>
-                    <tr class="odd gradeX">
-                        <td>
-                            <input type="checkbox" class="checkboxes" value="1"/>
-                        </td>
-                        <td>
-                            coop
-                        </td>
-                        <td>
-                            <a href="mailto:userwow@gmail.com">
-                                good@gmail.com </a>
-                        </td>
-                        <td>
-                                                        <span class="label label-sm label-success">
-                                                        Approved </span>
-                        </td>
-                    </tr>
-                    <tr class="odd gradeX">
-                        <td>
-                            <input type="checkbox" class="checkboxes" value="1"/>
-                        </td>
-                        <td>
-                            pppol
-                        </td>
-                        <td>
-                            <a href="mailto:userwow@gmail.com">
-                                good@gmail.com </a>
-                        </td>
-                        <td>
-                                                        <span class="label label-sm label-success">
-                                                        Approved </span>
-                        </td>
-                    </tr>
-                    <tr class="odd gradeX">
-                        <td>
-                            <input type="checkbox" class="checkboxes" value="1"/>
-                        </td>
-                        <td>
-                            test
-                        </td>
-                        <td>
-                            <a href="mailto:userwow@gmail.com">
-                                good@gmail.com </a>
-                        </td>
-                        <td>
-                                                        <span class="label label-sm label-success">
-                                                        Approved </span>
-                        </td>
-                    </tr>
-                    <tr class="odd gradeX">
-                        <td>
-                            <input type="checkbox" class="checkboxes" value="1"/>
-                        </td>
-                        <td>
-                            userwow
-                        </td>
-                        <td>
-                            <a href="mailto:userwow@gmail.com">
-                                userwow@gmail.com </a>
-                        </td>
-                        <td>
-                                                        <span class="label label-sm label-default">
-                                                        Blocked </span>
-                        </td>
-                    </tr>
-                    <tr class="odd gradeX">
-                        <td>
-                            <input type="checkbox" class="checkboxes" value="1"/>
-                        </td>
-                        <td>
-                            test
-                        </td>
-                        <td>
-                            <a href="mailto:userwow@gmail.com">
-                                test@gmail.com </a>
-                        </td>
-                        <td>
-                                                        <span class="label label-sm label-success">
-                                                        Approved </span>
-                        </td>
-                    </tr>
-                    </tbody>
-                    </table>
+                        <div class="" style="width: 800px; float: left;">
+                            <div class="portlet box">
+
+                                <div class="portlet-body form" style="background: #f9f9f9;border: 1px solid #ccc;border-radius: 10px;">
+                                    <form role="form">
+                                        <div class="form-body">
+                                            <div class="form-group">
+                                                <label>标题* <span>(必填,不能超过64个字)</span></label>
+                                                <input class="form-control input-lg"  type="text">
+                                            </div>
+                                            <div class="form-group">
+                                                <label>封面* <span>(必须上传一张图片)</span></label>
+                                                <p class="form-control input-lg"><span class="upload">上传</span>
+                                                    <span class="fr f12" style="color:#999; margin-right:5px;">大图片建议尺寸：720像素 * 400像素</span>
+                                                </p>
+                                            </div>
+                                            <div class="form-group">
+
+                                                <div class="radio-list">
+                                                    <label class="radio-inline">
+                                                        <div id="uniform-optionsRadios4" class="radio"><span class="checked"><input name="optionsRadios" id="optionsRadios4" value="option1" checked="" type="radio"></span></div> 设置正文内容 </label>
+                                                    <label class="radio-inline">
+                                                        <div id="uniform-optionsRadios5" class="radio"><span><input name="optionsRadios" id="optionsRadios5" value="option2" type="radio"></span></div> 设置页面URL </label>
+                                                    <label class="radio-inline">
+                                                        <div id="uniform-optionsRadios6" class="radio"><span><input name="optionsRadios" id="optionsRadios6" value="option3" type="radio"></span></div> 设置活动 </label>
+                                                </div>
+                                            </div>
+                                            <div class="form-group">
+                                                <label>正文*<span> (不能超过300字)</span></label>
+                                                <div style="border: 1px solid red">这里为文本编辑器</div>
+                                            </div>
+
+                                            <div class="form-group">
+                                                <label>添加原文链接</label>
+                                                <input class="form-control input-lg"  type="text">
+                                            </div>
+                                        </div>
+                                        <div class="form-actions left" style="border-radius: 0 0 10px 10px;">
+                                            <button type="submit" class="btn green">保存</button>
+                                            <button type="button" class="btn default">取消</button>
+
+                                        </div>
+                                    </form>
+                                </div>
+                            </div>
+
+                        </div>
                     </div>
-                    </div>
-                    <!-- END EXAMPLE TABLE PORTLET-->
                 </div>
 
             </div>
-            <!-- END PAGE CONTENT-->
         </div>
     </div>
     <!-- END CONTENT -->
@@ -627,20 +478,20 @@
 <script src="./assets/global/plugins/jquery.blockui.min.js" type="text/javascript"></script>
 <script src="./assets/global/plugins/jquery.cokie.min.js" type="text/javascript"></script>
 <!--jquery表单美化插件Uniform-->
+<script src="./assets/global/plugins/jquery-slimscroll/jquery.slimscroll.min.js" type="text/javascript"></script>
 <script src="./assets/global/plugins/uniform/jquery.uniform.min.js" type="text/javascript"></script>
 <script src="./assets/global/plugins/bootstrap-switch/js/bootstrap-switch.min.js" type="text/javascript"></script>
 
-<script type="text/javascript" src="./assets/global/plugins/select2/select2.min.js"></script>
-<script type="text/javascript" src="./assets/global/plugins/datatables/media/js/jquery.dataTables.min.js"></script>
-<script type="text/javascript"
-        src="./assets/global/plugins/datatables/plugins/bootstrap/dataTables.bootstrap.js"></script>
+
 <!-- END CORE PLUGINS -->
+<script type="text/javascript" src="./assets/global/plugins/jquery-mixitup/jquery.mixitup.min.js"></script>
+<script type="text/javascript" src="./assets/global/plugins/fancybox/source/jquery.fancybox.pack.js"></script>
 
 <script src="./assets/global/js/main.js" type="text/javascript"></script>
 <script src="./assets/admin/layout/js/layout.js" type="text/javascript"></script>
 <script src="./assets/admin/layout/js/quick-sidebar.js" type="text/javascript"></script>
 <script src="./assets/admin/layout/js/demo.js" type="text/javascript"></script>
-<script src="./assets/admin/pages/js/table-managed.js"></script>
+<script src="./assets/admin/pages/js/portfolio.js"></script>
 
 <script type="text/javascript">
     $(function () {
@@ -649,7 +500,7 @@
         Layout.init(); // init current layout
         QuickSidebar.init(); // init quick sidebar
         Demo.init(); // init demo features
-        TableManaged.init(); // init datatables
+        Portfolio.init(); // init datatables
     });
 </script>
 
