@@ -851,20 +851,20 @@ Page Footer
   /* 991px */
   /* Page sidebar */
   .page-sidebar {
-    background-color: #2b2b2b;
+    background-color: #fcfcfc;
     /* light sidebar */
   }
   .page-sidebar .page-sidebar-menu > li > a {
     border-top: 1px solid #3d3d3d;
   }
   .page-sidebar .page-sidebar-menu > li:hover > a, .page-sidebar .page-sidebar-menu > li.open > a {
-    background: #333333;
+    background: #078bcc;
   }
   .page-sidebar .page-sidebar-menu > li:last-child > a {
     border-bottom: 0 !important;
   }
   .page-sidebar .page-sidebar-menu > li .sub-menu {
-    background-color: #2b2b2b !important;
+    background-color: #fcfcfc !important;
   }
   .page-sidebar .page-sidebar-menu .sidebar-search input {
     background-color: #2b2b2b !important;
