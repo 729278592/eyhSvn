@@ -1,0 +1,251 @@
+body,html{margin:0;padding:0;font-size:30px;color:#000;font-family:"Microsoft YaHei","微软雅黑";line-heihgt:20px;height:100%;background-color: #f6f4f5;}
+ul,li,img{margin:0;padding:0;list-style:none;border:none; vertical-align:middle;}
+a{color:#000;text-decoration:none;}
+.clearfix:after {content: ".";display: block;clear: both;visibility: hidden;line-height: 0;height: 0;}
+.clearfix{display: inline-block;}
+html[xmlns] .clearfix {display: block;}
+
+/*考勤*/
+    .head{height: 4.3em;width: 100%;background: #242b2e;position: relative;}
+    .h_f{width: 90%;height: 3em;position: absolute;bottom: 0;line-height: 3em;padding: 0 5%;}
+    .right{position: absolute;top: 50%;margin-top: -20px;right: 5%;}
+    .lb{font-size: 1em;color: #fbf7f7;}
+    .shu{margin: 0 0.8em;}
+    .content{width: 100%;background: #f2f2f3;position: relative;height: 100%;}
+    .meng{width: 100%;height:100%;background: rgba(0,0,0,0.5);position: fixed;top: 0;z-index: 10000;bottom: 0;}
+    .loading{position: absolute;top: 50%;left: 50%;margin-left: -15px;margin-top: -15px;}
+    .bola{width:100%;margin-top: -0.5em;}
+    .ban{width: 100%;}
+    /*打卡*/
+    .c_c{width: 94%;height: 7.3em;padding: 0.8em 3%;}
+    .c_cc{width: 98%;border: 1px solid #bdbdbd;padding: 1%;height: 7.3em;background: #fdfafa;}
+    .c_ccc{width: 90%;height: 100%;background: #ffffff;border: 1px solid #e5e4e0;padding:0 5%;}
+    .c_cccu li{width: 100%;height: 2.2em;line-height: 2.2em;border-bottom: 1px dashed #ababab;position: relative;}
+    .c_cccu li span{position: absolute;right:0;vertical-align: middle;}
+    .c_cccu li:last-child{border-bottom: none;}
+    .c_cccu .li_last{border-bottom: 0;line-height: 1.4em;}
+    .s_last{display: inline-block;*display: inline;zoom: 1;;height: 1em;line-height: 1.5em;float: right;}
+    .share_btn{width: 100%;text-align: center;margin-top: 1em;}
+    .f_span{font-size: 20px;position: relative;top: -1em;display: inline-block;width: 100%;border-top: 1px solid #ccc;color: #202121;line-height: 3em;}
+    /*打卡*/
+    /*上班摇一摇*/
+    .c_wu{position: absolute;top: 3em;}
+    .c_yao{position: absolute;top: 2em;left: 50%;margin-left: -103px;width: 32%;}
+    .yaozi{position: absolute;top: 12.6em;left: 50%;margin-left: -203px;}
+    .c_ca{position: absolute;top: 20.5em;width: 100%;}
+    .c_ca a{width: 12em;height: 2.5em;border: 1px solid #060606;display: inline-block;position: absolute;left: 50%;margin-left: -6em;line-height: 2.5em;text-align: center;color: #f68261;font-size: 30px;margin-bottom: 2em;}
+    .description{position: relative;top: 200px;}
+    /*上班摇一摇*/
+    /*考勤列表*/
+    .attendance,.attendance_img{width: 100%;}
+    .attendance ul{position: relative;}
+    .attendance ul li{float: left;position: relative;width: 16%;height: 3.5em;top: -7em;margin-left: 7%;}
+    .cu_s{color: #080202;display: inline-block;position: absolute;width: 96%;height: 96%;border-radius: 112px;background: transparent;text-align: center;line-height: 104px;font-size: 1.6em;}
+    .cu_s1{position: absolute;bottom: -1.5em;left: 0.8em;}
+    .cu_s2{border: 3px solid #e12a29;color:#e12a29 }
+    .cu_s3{border: 3px solid #3da0ea;color:#3da0ea }
+    .cu_s4{border: 3px solid #48a9ae;color:#48a9ae }
+    .cu_s5{border: 3px solid #f38d6f;color:#f38d6f }
+    .cc_heade{position: relative;top: -3.8em;}
+    .cc_h{width: 100%;height: 1em;text-align: center;line-height: 1em;border-bottom: 1px solid #b9b9b9;color: #080202;padding-bottom: 10px;}
+    input{outline: none;}
+    .cb_div{width: 65%;margin: 1em auto;height: 35px;}
+    .cb_spna{position: relative;}
+    .cb_in{font-size: 21px;width: 4.1em;position: relative;top: -0.55em;height: 1.3em;padding-left: 0.5em;display: inline-block;margin: 0 0.1em;}
+    .cb_in1{position: absolute;right: 0.1em;}
+    .cbs_ul{width: 69%;position: absolute;top: 1.04em;left: 0.1em;display: none;height: 3.82em;overflow-y: scroll}
+    .cbs_ul li{width:95%;height: 1.72em; border: 1px solid #bababa;border-bottom: 0;background: #fff;font-size: 16px;line-height: 1.72em;}
+    .cbs_ul li:last-child{border-bottom:1px solid #bababa; }
+    .c_ta{width: 100%;margin-top: 1em;}
+    table{ border-collapse:collapse;width: 90%;margin: 0 auto;}
+    tr th{font-size: 29px;font-weight: 100;}
+    tr td{ text-align:center;font-size: 15px;border:1px solid #cccccc;color: #080202;}
+    tr th,tr td{height: 2.6em;}
+    .late{background: #bce0f4;color: #22b9eb;}
+    .l_la{font-size: 16px;}
+    .tui{background: #b1dfe1;color: #339ba1;}
+    .gong{background: #f8c0a7;color: #fa7011;}
+    .show{display: block;}
+    .hide{display: none;}
+    /*考勤列表*/
+/*考勤*/
+.daily{margin: 20px 0;text-align: center;}
+.daily .time{width: 80px;height: 30px;font-size: 14px;background: #d4d4d4;line-height: 30px;color: #fff;text-align: center;
+    display: inline-block;}
+.daily_details{text-align: left;position: relative;top: -28px;left: 10%;}
+.daily_details_content{padding: 15px 0 15px 15px;border: 1px solid #adadad;border-radius: 4px;display: inline-block;font-size: 14px;
+    color: #060606;background: #fff;position: relative;top: 40px;left: 10px;width: 17.85em;}
+.daily_details_content>img{position: absolute;left: -12px;}
+.footer{width: 100%;}
+.daily_footer{position: fixed;bottom:0;border-top: 1px solid #d3d3d3;width: 100%;}
+.daily_footer li{float: left;width: 25%;height: 2.5em;line-height: 2.5em;}
+.daily_footer li a{font-size: 16px;display: block;width: 100%;background: #fff;text-align: center;position: relative;}
+.keyboard{width: 3em;}
+.icon4{position: absolute;right: 0;}
+
+
+
+.person_daily_header{background: url("../images/daily/bg.png");width: 100%;height: 155px;display: inline-block;line-height: 140px;}
+.person_daily_header span,.person_daily img{font-size: 20px;position: relative;left: 20px;}
+.person_daily_header span{left: 30px;}
+.person_daily_content{width: 96%;padding: 0 2%;}
+/*日报*/
+
+/*日报*/
+@media screen and (max-width: 768px) {
+    /*考勤*/
+        .s_last{width: 55%;}
+    /*考勤*/
+}
+@media screen and (min-width: 640px) {
+    /*考勤*/
+        .ban,.head,.content,.share_btn{width: 21.3em;}
+        .s_last{width: 348px;}
+        .c_cccu li{font-size: 0.9em;}
+        .cc_h{margin-top: 0.5em;}
+    /*考勤*/
+}
+@media screen and (max-width: 568px) {
+    /*考勤*/
+        .cb_div{width: 72%;}
+        .attendance ul li{top: -6em;height: 3em;width: 3em;margin-left: 7%;}
+        .cu_s{line-height: 3.5em;font-size: 25px;}
+        .cbs_ul{margin-left: -0.05em;}
+        .cu_s1{font-size: 25px;}
+    /*考勤*/
+}
+@media screen and (max-width: 480px) {
+    /*考勤*/
+        .c_c{height: 4.5em;}
+        .c_cccu li{font-size: 0.62em;}
+        .c_cc{height: 5.2em;padding: 0.5% 1% 1% 0.5%;}
+        .li_er img{width: 1.5em;}
+        .share_btn input{width: 18em;}
+        .c_wu{top: 3em;}
+        .c_yao{width: 4em;margin-left: -2em;top: 1.5em;}
+        .yaozi{width: 8em;margin-left: -4em;top: 9em}
+        .c_ca{top: 12.4em;}
+        .c_ca a{width: 8em;margin-left: -4em;height: 1.8em;line-height: 1.8em; }
+        .attendance ul li{top: -5em;height: 2.5em;width: 2.5em;margin-left: 7%;}
+        .cu_s{line-height: 3.5em;font-size: 25px;}
+        .cu_s1{font-size: 20px;}
+        .cb_div{width: 75%;}
+        tr th{font-size: 25px;}
+        .c_ta{margin-top: 0.5em;}
+        .cc_h{margin-top: 2em;font-size: 25px;}
+        .cb_inp1{width: 3em;}
+        .cb_in{padding-left:0.2em;width: 4.6em;height: 1.5em;top: -0.55em;font-size: 18px;}
+        .cb_in1{width: 2.4em;top: -0.1em;}
+        .cbs_ul{margin-top: 0.05em;margin-left: -0.02em}
+        .cbs_ul li{width: 3.6em;font-size: 16px;}
+    /*考勤*/
+    /*日报*/
+    .daily_details_content{width: 14em;}
+    /*日报*/
+}
+@media screen and (max-width: 414px) {
+    /*考勤*/
+        .attendance ul li{top: -4.5em;height: 2.5em;width: 2.5em;margin-left: 5.4%;}
+        .cu_s{line-height: 3em;font-size: 25px;}
+        .cu_s1{font-size: 22px;}
+        .cb_div{width: 78%;}
+         tr th{font-size: 25px;}
+        .c_ta{margin-top: 0;}
+        .cbs_ul{height: 3em;}
+        .cb_inp1{width: 2.5em;}
+        .cb_in{padding-left:0.2em;width: 4.1em;height: 1.6em;top: -0.5em;font-size: 15px;}
+        .cb_in1{width: 2.1em;top: 0.4em;}
+        .cbs_ul{margin-top: 0.05em;margin-left: -0.05em;}
+        .cbs_ul li{width: 3.05em;font-size: 13px;}
+    /*考勤*/
+}
+@media screen and (max-width: 384px) {
+    /*考勤*/
+        .attendance ul li{margin-left: 3.6%;}
+    /*考勤*/
+}
+@media screen and (max-width: 375px) {
+    /*考勤*/
+        .attendance ul li{top: -4.5em;height: 2.5em;width: 2.5em;margin-left: 3.7%;}
+        .cu_s{line-height: 3em;font-size: 25px;}
+        .cu_s1{font-size: 22px;}
+        .cb_div{width: 78%;margin-top: 0.5em;}
+        .cbs_ul{height: 3em;}
+    /*考勤*/
+}
+@media screen and (max-width: 360px) {
+    /*考勤*/
+        .attendance ul li{margin-left: 3.4%;}
+    /*考勤*/
+    /*日报*/
+    .daily_details_content{width: 13em;}
+    .daily_details{left: .5%;}
+    /*日报*/
+
+}
+
+@media screen and (max-width: 320px) {
+    /*考勤*/
+        .c_cccu li{font-size: 0.6em;}
+        .c_cc{height: 4.6em;padding: 0.5% 1.1% 1.1% 0.5%;}
+        .c_c{height: 3.5em;}
+        .cb_div{width: 78%;}
+        .attendance ul li{top: -3.5em;height: 2em;width: 2em;margin-left: 4.5%;}
+        .cu_s{line-height: 2.5em;font-size: 25px;}
+        .cu_s1{font-size: 18px;}
+         tr th{font-size: 20px;}
+        .c_ta{margin-top: -1em;}
+        .cb_inp1{width: 2em;}
+        .cb_in{padding-left:0.2em;width: 3.6em;height: 1.1em;top: -0.4em;font-size: 15px;}
+        .cb_in1{width: 1.6em;top: 0.8em;}
+        .cbs_ul{margin-top: 0.05em;margin-left: -0.05em;height: 3em;}
+        .cbs_ul li{text-indent: 0.2em;width: 3em;font-size: 13px;}
+        .l_la{font-size: 12px;}
+    /*考勤*/
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+/*Backstage*/
