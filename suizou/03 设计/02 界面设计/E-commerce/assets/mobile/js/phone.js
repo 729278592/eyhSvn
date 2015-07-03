@@ -45,101 +45,6 @@
             s.eq(i).siblings().removeClass("block").addClass("hide")
         })
     });
-
-    var content0 = '<ul>'+
-                    '<li class="first" onclick="Addfirst(this)">'+
-                    '<span class="company">易优弧科技团队</span>'+
-                    '<i class="fa fa-angle-right fr"></i>'+
-                    '</li>'+
-                    '</ul>';
-
-    var content = '<ul>'+
-                   '<li class="second">'+
-                   '<ul class="department">'+
-                   '<li onclick="Addsecond(this)">'+
-                   '<span class="company">研发部</span>'+
-                   '<i class="fa fa-angle-right fr"></i>'+
-                   '</li>'+
-                   '<li onclick="Addsecond(this)">'+
-                   '<span class="company">技术部</span>'+
-                   '<i class="fa fa-angle-right fr"></i>'+
-                   '</li>'+
-                   '<li class="last" onclick="Addsecond(this)">'+
-                   '<span class="company">市场部</span>'+
-                   '<i class="fa fa-angle-right fr"></i>'+
-                   '</li>'+
-                   '</ul>'+
-                   '</li>'+
-                   '</ul>';
-
-    var content1 = '<ul>'+
-                    '<li class="three">'+
-                    '<ul class="personal_information">'+
-                    '<li onclick="Addthree(this)">'+
-                    '<img src="../images/daily/person_type.png" alt="" width="40"/>'+
-                    '<span class="name">陈小洁</span>'+
-                    '<span class="f12">cto</span>'+
-                    '<i class="fa fa-check-circle-o fr"></i>'+
-                    '</li>'+
-                    '<li onclick="Addthree(this)">'+
-                    '<img src="../images/daily/person_type.png" alt="" width="40"/>'+
-                    '<span class="name">高新</span>'+
-                    '<span class="f12">开发经理</span>'+
-                    '<i class="fa fa-check-circle-o fr"></i>'+
-                    '</li>'+
-                    '<li class="last" onclick="Addthree(this)">'+
-                    '<img src="../images/daily/person_type.png" alt="" width="40"/>'+
-                    '<span class="name">王洪波</span>'+
-                    '<span class="f12">前端开发</span>'+
-                    '<i class="fa fa-check-circle-o fr"></i>'+
-                    '</li>'+
-                    '</ul>'+
-                    '</li>'+
-                    '<li>'+
-                    '<ul>'+
-                    '<li class="second">'+
-                    '<ul class="department">'+
-                    '<li onclick="Addfoure(this)">'+
-                    '<span class="company">技术部</span>'+
-                    '<i class="fa fa-angle-right fr"></i>'+
-                    '</li>'+
-                    '<li class="last" onclick="Addfoure(this)">'+
-                    '<span class="company">市场部</span>'+
-                    '<i class="fa fa-angle-right fr"></i>'+
-                    '</li>'+
-                    '</ul>'+
-                    '</li>'+
-                    '</ul>'+
-                    '</li>'+
-                    '</ul>';
-
-    var content2 = '<ul>'+
-                    '<li class="three">'+
-                    '<ul class="personal_information">'+
-                    '<li onclick="Addthree(this)">'+
-                    '<img src="../images/daily/person_type.png" alt="" width="40"/>'+
-                    '<span class="name">周梦媛</span>'+
-                    '<span class="f12">cto</span>'+
-                    '<i class="fa fa-check-circle-o fr"></i>'+
-                    '</li>'+
-                    '<li onclick="Addthree(this)">'+
-                    '<img src="../images/daily/person_type.png" alt="" width="40"/>'+
-                    '<span class="name">韩永华</span>'+
-                    '<span class="f12">开发经理</span>'+
-                    '<i class="fa fa-check-circle-o fr"></i>'+
-                    '</li>'+
-                    '<li class="last" onclick="Addthree(this)">'+
-                    '<img src="../images/daily/person_type.png" alt="" width="40"/>'+
-                    '<span class="name">刘唐</span>'+
-                    '<span class="f12">前端开发</span>'+
-                    '<i class="fa fa-check-circle-o fr"></i>'+
-                    '</li>'+
-                    '</ul>'+
-                    '</li>'+
-                    '<li>'+
-                    '</li>'+
-                    '</ul>';
-
     var cd = $(".common");
     cd.find(".delete").each(function(){
         $(this).on("click",function(){
@@ -147,82 +52,171 @@
         });
     });
 
-    var af = $(".add_human_information ul>.first"),
-        rph = $(".registered_person_head"),
-        re = $(".return"),
-        rcn = $(".receive_person .common .name"),
-        p = $(".plus"),
-        co = $(".concrete_operation");
-    p.eq(0).on("click",function(){
-        $("#left>.one").hide();
-        $("#left>.two").slideDown();
-        $(".add_human_information").append(content0);
-       Addfirst = function(obj0){
-           $(".add_human_information").empty().append(content);
+    //请假流程
+    $.fn.leave = function(opts){
+        var content2 = '<ul>'+
+                       '<li class="second">'+
+                       '<ul class="department">'+
+                       '<li onclick="Addsecond(this)">'+
+                       '<span class="company">研发部</span>'+
+                       '<i class="fa fa-angle-right fr"></i>'+
+                       '</li>'+
+                       '<li onclick="Addsecond(this)">'+
+                       '<span class="company">技术部</span>'+
+                       '<i class="fa fa-angle-right fr"></i>'+
+                       '</li>'+
+                       '<li class="last" onclick="Addsecond(this)">'+
+                       '<span class="company">市场部</span>'+
+                       '<i class="fa fa-angle-right fr"></i>'+
+                       '</li>'+
+                       '</ul>'+
+                       '</li>'+
+                       '</ul>';
 
-               rph.html('<i class="fa fa-arrow-left"></i> <span class="company">'+$(obj0).find(".company").text()+'</span>');
-               re.addClass("yi");
-               $(".yi").on("click",function(){
-                   $(".add_human_information").empty().append(content0);
-                   $(".yi").html('<span class="company">王洪波</span>');
-                   re.removeClass("yi");
-               });
+        var content3 = '<ul>'+
+                       '<li class="three">'+
+                       '<ul class="personal_information">'+
+                       '<li onclick="Addthree(this)">'+
+                       '<img src="../images/daily/person_type.png" alt="" width="40"/>'+
+                       '<span class="name">陈小洁</span>'+
+                       '<span class="f12">cto</span>'+
+                       '<i class="fa fa-check-circle-o fr"></i>'+
+                       '</li>'+
+                       '<li onclick="Addthree(this)">'+
+                       '<img src="../images/daily/person_type.png" alt="" width="40"/>'+
+                       '<span class="name">高新</span>'+
+                       '<span class="f12">开发经理</span>'+
+                       '<i class="fa fa-check-circle-o fr"></i>'+
+                       '</li>'+
+                       '<li class="last" onclick="Addthree(this)">'+
+                       '<img src="../images/daily/person_type.png" alt="" width="40"/>'+
+                       '<span class="name">王洪波</span>'+
+                       '<span class="f12">前端开发</span>'+
+                       '<i class="fa fa-check-circle-o fr"></i>'+
+                       '</li>'+
+                       '</ul>'+
+                       '</li>'+
+                       '<li>'+
+                       '<ul>'+
+                       '<li class="second">'+
+                       '<ul class="department">'+
+                       '<li onclick="Addfoure(this)">'+
+                       '<span class="company">技术部</span>'+
+                       '<i class="fa fa-angle-right fr"></i>'+
+                       '</li>'+
+                       '<li class="last" onclick="Addfoure(this)">'+
+                       '<span class="company">市场部</span>'+
+                       '<i class="fa fa-angle-right fr"></i>'+
+                       '</li>'+
+                       '</ul>'+
+                       '</li>'+
+                       '</ul>'+
+                       '</li>'+
+                       '</ul>';
 
+        var content4 = '<ul>'+
+                       '<li class="three">'+
+                       '<ul class="personal_information">'+
+                       '<li onclick="Addthree(this)">'+
+                       '<img src="../images/daily/person_type.png" alt="" width="40"/>'+
+                       '<span class="name">周梦媛</span>'+
+                       '<span class="f12">cto</span>'+
+                       '<i class="fa fa-check-circle-o fr"></i>'+
+                       '</li>'+
+                       '<li onclick="Addthree(this)">'+
+                       '<img src="../images/daily/person_type.png" alt="" width="40"/>'+
+                       '<span class="name">韩永华</span>'+
+                       '<span class="f12">开发经理</span>'+
+                       '<i class="fa fa-check-circle-o fr"></i>'+
+                       '</li>'+
+                       '<li class="last" onclick="Addthree(this)">'+
+                       '<img src="../images/daily/person_type.png" alt="" width="40"/>'+
+                       '<span class="name">刘唐</span>'+
+                       '<span class="f12">前端开发</span>'+
+                       '<i class="fa fa-check-circle-o fr"></i>'+
+                       '</li>'+
+                       '</ul>'+
+                       '</li>'+
+                       '<li>'+
+                       '</li>'+
+                       '</ul>';
+        var defaults = {
+            company  : "易优弧科技团队",
+            registered_name:"王洪波",
+            registered_person_head : $(".registered_person_head"),
+            add_human_information:$(".add_human_information"),
+            receive_person_common_name : $(".receive_person .common .name"),
+            lo:$("#left>.one"),
+            lt:$("#left>.two"),
+            display_effect: function(){
+                this.lo.hide();
+                this.lt.slideDown();
+            },
+            display_effectyi: function(){
+                this.lt.hide();
+                this.lo.slideDown();
+            },
+            return_first:function(){
+                this.add_human_information.empty().append(content1);
+                this.registered_person_head.html('<span class="company">王洪波</span>');
+            },
+            return_second:function(obj1){
+                this.add_human_information.empty().append(content2);
+                this.registered_person_head.html('<i class="fa fa-arrow-left"></i> <span class="company">'+$(obj1).find(".company").text()+'</span>');
+                var that = this;
+                this.registered_person_head.on("click",function(){
+                    that.return_first()
+                });
+            },
+            return_three:function(obj2){
+                this.add_human_information.empty().append(content3);
+                this.registered_person_head.html('<i class="fa fa-arrow-left"></i> <span class="company">'+$(obj2).find(".company").text()+'</span>');
+                var that = this;
+                this.registered_person_head.on("click",function(){
+                    that.return_second(obj2)
+                });
+            }
+        };
+        var opts = $.extend({}, defaults, opts);
+        var content1 = '<ul>'+
+                       '<li class="first" onclick="Addfirst(this)">'+
+                       '<span class="company">'+opts.company+'</span>'+
+                       '<i class="fa fa-angle-right fr"></i>'+
+                       '</li>'+
+                       '</ul>';
 
-           Addsecond = function(obj){
-               $(".add_human_information").empty().append(content1);
-
-                   re.html('<i class="fa fa-arrow-left"></i> <span class="company">'+$(obj).find(".company").text()+'</span>');
-                   re.removeClass("yi");
-                   re.addClass("er");
-                   $(".er").on("click",function(){
-                       $(".add_human_information").empty().append(content);
-                       $(".er").html('<i class="fa fa-arrow-left"></i> <span class="company">'+$(obj0).find(".company").text()+'</span>');
-                       re.removeClass("er");
-                   });
-
-               Addthree = function(obj1){
-                   $(obj1).find(".fa").removeClass("fa-check-circle-o").addClass("fa-check-circle");
-                           setTimeout(function(){
-                                $("#left>.two").hide();
-                                $("#left>.one").slideDown();
-                                $(".add_human_information").empty();
-                               rcn.text($(obj1).find(".name").text())
-                            },1000)
-               }
-           };
-           Addfoure = function(obj){
-                   rph.html('<i class="fa fa-arrow-left"></i> <span class="company">'+$(obj).find(".company").text()+'</span>');
-                   $(".add_human_information").empty().append(content2);
-                   re.addClass("san");
-                   re.removeClass("er");
-                   $(".san").html('<i class="fa fa-arrow-left"></i> <span class="company">'+$(obj).find(".company").text()+'</span>');
-                   $(".san").on("click",function(){
-
-                       $(".add_human_information").empty().append(content1);
-                       $(".san").html('<i class="fa fa-arrow-left"></i> <span class="company">'+$(obj).find(".company").text()+'</span>');
-                       re.removeClass("san");
-                   });
-
-               Addthree = function(obj1){
-                   $(obj1).find(".fa").removeClass("fa-check-circle-o").addClass("fa-check-circle");
-                   re.addClass("san");
-                   re.html('<i class="fa fa-arrow-left"></i> <span class="company">'+$(obj).find(".company").text()+'</span>');
-                   re.on("click",function(){
-                       $(".add_human_information").empty().append(content);
-                       re.html('<i class="fa fa-arrow-left"></i> <span class="company">'+$(obj).find(".company").text()+'</span>');
-                   });
-                   setTimeout(function(){
-                       $("#left>.two").hide();
-                       $("#left>.one").slideDown();
-                       $(".add_human_information").empty();
-                       rcn.text($(obj1).find(".name").text())
-                   },1000)
-               }
-           }
-       }
-    });
-
+        opts.add_human_information.append(content1);
+        opts.display_effect();
+        Addfirst = function(obj1){
+            opts.add_human_information.empty().append(content2);
+            opts.registered_person_head.html('<i class="fa fa-arrow-left"></i> <span class="company">'+$(obj1).find(".company").text()+'</span>');
+            opts.registered_person_head.on("click",function(){
+                opts.return_first()
+            });
+            Addsecond = function(obj2){
+                opts.add_human_information.empty().append(content3);
+                opts.registered_person_head.html('<i class="fa fa-arrow-left"></i> <span class="company">'+$(obj2).find(".company").text()+'</span>');
+                opts.registered_person_head.on("click",function(){
+                    opts.return_second(obj1)
+                });
+                Addthree = function(obj3){
+                    $(obj3).find(".fa").removeClass("fa-check-circle-o").addClass("fa-check-circle");
+                    setTimeout(function(){
+                        opts.display_effectyi();
+                        opts.add_human_information.empty();
+                        opts.receive_person_common_name.text($(obj3).find(".name").text());
+                        opts.registered_person_head.html('<span class="company">王洪波</span>');
+                    },1000)};
+                Addfoure = function(obj4){
+                    opts.add_human_information.empty().append(content4);
+                    opts.registered_person_head.html('<i class="fa fa-arrow-left"></i> <span class="company">'+$(obj4).find(".company").text()+'</span>');
+                    opts.registered_person_head.on("click",function(){
+                        opts.return_three(obj2)
+                    });
+                }
+            };
+        };
+    };
 
 
 

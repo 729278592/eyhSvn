@@ -96,5 +96,13 @@
             });
         })
     </script>
+    <script>
+        $(function(){
+            var btn_sur = $(".plus").eq(0);
+            btn_sur.on("click",function(){
+                $("#container1").leave({sure:function(){ }});
+            });
+        })
+    </script>
 </body>
 </html>

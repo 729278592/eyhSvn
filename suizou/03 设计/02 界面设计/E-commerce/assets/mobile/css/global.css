@@ -181,7 +181,7 @@ html[xmlns] .clearfix {display: block;}
     .add_human_information ul li ul li{border-bottom: 1px solid #eee;padding: 10px 0;}
 
     .three ul li{padding: 4px 0;border-bottom:1px solid #DADBDC;}
-.three ul .last{border-bottom: none;}
+    .three ul .last{border-bottom: none;}
      .three ul li .fa{position: relative;top: 10px;}
      .three ul li .fa-check-circle{color: #f89980;}
     .f12{font-size: 12px;color: #bbb;position: relative;left: 25px;}
