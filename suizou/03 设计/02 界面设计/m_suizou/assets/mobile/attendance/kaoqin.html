@@ -1,0 +1,90 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8"/>
+    <meta name="viewport" content="width=device-width; initial-scale=1.0; user-scalable=no;">
+    <meta http-equiv="X-UA-Compatible" content="IE=Edge">
+    <title>考勤</title>
+    <link rel="stylesheet" href="../css/global.css"/>
+    <link rel="stylesheet" href="../css/bootstrap-datepicker3.css"/>
+    <link rel="stylesheet" href="../css/bootstrap-datepicker3.standalone.css"/>
+    <style>
+        .attendance-records{width: 96%;padding:0 2%;font-size: 15px;margin: 0 auto;
+            margin-bottom: 20px;background: #fff;}
+        .attendance-records li{width: 100%;height: 40px;border-bottom: 1px solid #ddd;line-height: 40px;}
+        .attendance-records li ul li{float: left;width: 50%;height: 40px;}
+        .attendance-records li:last-child{border-bottom: none;}
+        .ccc{background: #ccc;}
+        #sandbox-container{margin-top: -100px;width: 100%;padding-left: 4%;}
+        .datepicker{width: 100%;}
+        .sign_in{position: relative;left: 35px;}
+        .the_mood,.the_about,.sign_back,.the_length{position: relative;left: 5px;}
+        .hours,.minutes{color: #ff0000;}
+        .red{color: red;}
+    </style>
+</head>
+<body>
+
+<div class="content">
+    <div class="clearfix attendance">
+        <img src="../images/attendance/bola2.png" alt="" class="attendance_img"/>
+        <ul>
+            <li><span class="cu_s cu_s2">25</span><span class="cu_s1">出勤</span></li>
+            <li><span class="cu_s cu_s3">3</span><span class="cu_s1">迟到</span></li>
+            <li><span class="cu_s cu_s4">1</span><span class="cu_s1">早退</span></li>
+            <li><span class="cu_s cu_s5">2</span><span class="cu_s1">旷工</span></li>
+        </ul>
+    </div>
+    <div class="cc_heade">
+        <div class="cc_h">
+            考勤统计
+        </div>
+    </div>
+    <div id="sandbox-container">
+        <div></div>
+    </div>
+    <ul class="attendance-records">
+        <li>
+            <ul>
+                <li><span>签到:</span><span class="sign_in"></span></li>
+                <li><span>签退:</span><span class="sign_back"></span></li>
+            </ul>
+        </li>
+        <li><span>工作时长:</span><span class="the_length"><span class="hours">0</span>小时<span class="minutes">0</span>分钟</span></li>
+        <li><span>签到说说:</span><span class="the_about">又是充实的一天</span></li>
+        <li><span>签退心情:</span><span class="the_mood">好</span></li>
+    </ul>
+</div>
+
+<!--<div class="footer">-->
+    <!--<span class="f_span">-->
+        <!--易优弧-->
+    <!--</span>-->
+
+<!--</div>-->
+<script src="../js/jquery-1.10.2.min.js"></script>
+<script src="../js/bootstrap-datepicker.js"></script>
+<script>
+    $('#sandbox-container div').datepicker({
+        keyboardNavigation: false,
+        forceParse: false,
+        beforeShowDay: function (date){
+            if (date.getMonth() == (new Date()).getMonth())
+                switch (date.getDate()){
+                    case 4:
+                        return {
+                            tooltip: 'Example tooltip',
+                            classes: 'active'
+                        };
+                    case 8:
+                        return false;
+                    case 12:
+                        return "red";
+                }
+        }
+    });
+</script>
+<script src="../js/phone.js"></script>
+
+</body>
+</html>

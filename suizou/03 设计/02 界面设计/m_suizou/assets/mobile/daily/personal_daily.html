@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8"/>
+    <meta name="viewport" content="width=device-width; initial-scale=1.0; user-scalable=no;">
+    <title>我的日报详情</title>
+    <link rel="stylesheet" href="../css/font/css/font-awesome.min.css"/>
+    <link rel="stylesheet" href="../css/global.css"/>
+    <style>
+        #pop_up_box{width: 260px;background: #fff;border: 1px solid #ccc;position: absolute;top: 0;z-index: 10000;}
+        .pop_up_box_head{text-align: center;font-size: 14px;color: #fff;line-height: 30px;}
+        .textarea{width:90%;}
+        .operation1{position: relative;top: -2px;}
+        .operation1 li input{height: 30px;font-size: 12px;}
+        .operation1 li:first-child input{border-radius: 0 0 0 5px;}
+        .operation1 li:last-child input{border-radius: 0 0 5px 0;}
+    </style>
+</head>
+<body>
+
+<div class="content">
+    <div class="clearfix person_daily_header">
+        <a href="#"><img src="../images/daily/person.png" alt=""/></a>
+        <span>陈小洁</span>
+    </div>
+    <div class="person_daily_content">
+        <span class="daily_details">日报详情:</span>
+        <div class="daily">
+            <ul>
+                <li><span>日期</span><span class="right"><span>2014-11-24</span> <span>10:00</span> <span>星期四</span></span></li>
+                <li><span>今日总结</span><br/><span>今日完成了网页的制作和修改</span></li>
+                <li><span>明日计划</span><br/><span>今日继续完成了网页的制作和修改</span></li>
+                <li><span>抄送人</span><span class="right">陈小洁</span></li>
+                <li class="last"><span>接收人</span><span class="right">陈小洁</span></li>
+            </ul>
+        </div>
+        <div class="comment clearfix">
+            <a href="#"><img src="../images/daily/person.png" alt=""/></a>
+            <span class="comment_details">
+                <span>陈小洁<span class="right">2014-11-27</span></span><br/>
+                <span class="color">评论陈小洁日报</span><br/>
+                <span>今天的工作做得很好,继续加油 <a href="#" class="right color">回复</a></span>
+            </span>
+        </div>
+       <ul class="operation"><!--操作-->
+            <li><input type="submit" value="查看往期"/></li>
+            <li><input type="submit" value="添加评论" class="last submit"/></li>
+        </ul>
+    </div>
+    <!--<div class="copyright">易优弧</div>-->
+
+</div>
+<script src="../js/jquery-1.10.2.min.js"></script>
+<script src="../js/phone.js"></script>
+<script src="../js/modal.js"></script>
+<script>
+    $(function(){
+        var btn_sure = $(".submit");
+        btn_sure.on("click",function(){
+            $("#container").dialog({sure:function(){alert("添加成功")}});
+        });
+    })
+</script>
+</body>
+</html>
