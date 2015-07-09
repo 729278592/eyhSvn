@@ -1733,7 +1733,7 @@ console.log(options)
 							'</tr>'+
 						'</tfoot>'
 	};
-    isdian()
+    isdian();
 	DPGlobal.template = '<div class="datepicker">'+
 							'<div class="datepicker-days">'+
 								'<table class=" table-condensed">'+
@@ -1759,8 +1759,6 @@ console.log(options)
 						'</div>';
 
 	$.fn.datepicker.DPGlobal = DPGlobal;
-
-
 	$.fn.datepicker.noConflict = function(){
 		$.fn.datepicker = old;
 		return this;
@@ -1785,8 +1783,6 @@ console.log(options)
 			datepickerPlugin.call($this, 'show');
 		}
 	);
-
-
     $(function(){
         datepickerPlugin.call($('[data-provide="datepicker-inline"]'));
         isdian()

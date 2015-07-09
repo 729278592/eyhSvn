@@ -38,7 +38,10 @@
                 <div class="new_daily">
                     <textarea name="" id="2" cols="30" rows="4" style="resize: none;" class="textarea" placeholder="内容..."></textarea>
                 </div>
-                <span class="person">接收人:</span>
+                <div class="new_daily">
+                    <span class="person">接收人:</span>
+                </div>
+
                 <div class="receive_person new_daily clearfix">
                     <ul class="common">
                         <li>
@@ -49,7 +52,10 @@
                         <li><img src="../images/daily/plus.png" alt="" class="plus" width="60"/></li>
                     </ul>
                 </div>
-                <span class="person">抄送人:</span>
+                <div class="new_daily"style="border-top: none;">
+                    <span class="person">抄送人:</span>
+                </div>
+
                 <div class="copy_person new_daily clearfix">
                     <ul class="common">
                         <li>
@@ -57,7 +63,7 @@
                             <img src="../images/daily/delete.png" alt="" class="delete" width="20"/><br/>
                             <span class="name">陈小洁</span>
                         </li>
-                        <li><a href=""><img src="../images/daily/plus.png" alt="" class="plus" width="60"/></a></li>
+                        <li><img src="../images/daily/plus.png" alt="" class="plus" width="60"/></li>
                     </ul>
                     <div >
                     </div>
@@ -72,9 +78,9 @@
                         <span class="registered_person_head return">
                             <span class="concrete_operation">王洪波</span>
                         </span>
-                        <a href="new_daily.html">
+
                             <i class=" fa fa-remove fr"></i>
-                        </a>
+
                     </div>
                 </div>
                 <div class="add_human_information new_daily bb">
@@ -100,6 +106,7 @@
         $(function(){
             var btn_sur = $(".plus").eq(0);
             btn_sur.on("click",function(){
+
                 $("#container1").leave({sure:function(){ }});
             });
         })

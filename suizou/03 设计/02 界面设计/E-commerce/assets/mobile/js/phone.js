@@ -35,7 +35,7 @@
         }
     });
 
-    var d = $(".daily .state>li");
+    var d = $(".daily .state>li,.audit .state>li");
     var s = $(".state_daily>li");
     d.each(function(i){
         $(this).on("click",function(){
@@ -51,6 +51,7 @@
             $(this).parent().remove()
         });
     });
+
 
     //请假流程
     $.fn.leave = function(opts){
@@ -142,12 +143,13 @@
                        '</ul>';
         var defaults = {
             company  : "易优弧科技团队",
-            registered_name:"王洪波",
+            registered_name: "王洪波",
             registered_person_head : $(".registered_person_head"),
-            add_human_information:$(".add_human_information"),
+            add_human_information: $(".add_human_information"),
             receive_person_common_name : $(".receive_person .common .name"),
             lo:$("#left>.one"),
             lt:$("#left>.two"),
+            fa_remove:$(".fa-remove"),
             display_effect: function(){
                 this.lo.hide();
                 this.lt.slideDown();
@@ -175,6 +177,9 @@
                 this.registered_person_head.on("click",function(){
                     that.return_second(obj2)
                 });
+            },
+            faremove:function(){
+                this.display_effectyi()
             }
         };
         var opts = $.extend({}, defaults, opts);
@@ -216,18 +221,8 @@
                 }
             };
         };
+        opts.fa_remove.on("click",function(){
+            opts.add_human_information.empty();
+            opts.faremove()
+        })
     };
-
-
-
-
-
-
-
-
-
-
-
-
-
-
