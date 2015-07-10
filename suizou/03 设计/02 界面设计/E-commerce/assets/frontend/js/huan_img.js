@@ -40,10 +40,10 @@ com.initializeCss=function(){
                 parentHeight= parent.height();
             }
         }
-        var fa1_wid=parentWidth-96,Imghei=parentHeight-14;
+        var fa1_wid=parentWidth-96,Imghei=parentHeight;
         Imgwid=parseFloat(fa1_wid-mar_left*2)/3;
-        $('#imgfor_con').css({width:fa1_wid+235,height:Imghei});
-        $('#imgfor_con_clu').css({width:fa1_wid+235,height:Imghei});
+        $('#imgfor_con').css({width:fa1_wid+205,height:Imghei});
+        $('#imgfor_con_clu').css({width:fa1_wid+205,height:Imghei});
         com_obj.css({width:Imgwid,height:Imghei});
         if(Imgwid>400||Imgwid<100) throw new Error("Can only support width between 100 and 400 " );
         return Imgwid;
@@ -57,7 +57,6 @@ com.marquee=function(){
             if(com.y>5) com.y=0;
         }
         var a=-(com.x*(Imgwid+mar_left))+'px';
-
         obj.animate({
             left:a
         },speed);
@@ -90,7 +89,7 @@ com.creatElement=function(obj1){
              oIm2= m[1].append(b[1]);
              oIm3= m[m.length-2].append(b[b.length-2]);
              oIm4= m[m.length-1].append(b[b.length-1]);
-            if(imgNum.length<9){
+            if(imgNum.length<10){
                 obj1.append(oIm1.clone(true),oIm2.clone(true));
                 obj1.prepend(oIm3.clone(true),oIm4.clone(true));
                 return obj1;
@@ -145,4 +144,4 @@ com.judge=function(){
 };
 com.runSetinterval();
 };
-com.XM_start({name:"imgfor_con_roll",speed:1500,width:800,height:150});
+com.XM_start({name:"imgfor_con_roll",speed:1500,width:706,height:150});

@@ -464,15 +464,13 @@
 				this.prevButton = $("<a>",{
 					"class": "slidesPrevious slidesNavigation",
 					href: "#",
-					title: "Previous",
-					text: "Previous"
+					title: "Previous"
 				}).appendTo( this.element );
 				
 				this.nextButton = $("<a>",{
 					"class": "slidesNext slidesNavigation",
 					href: "#",
-					title: "Next",
-					text: "Next"
+					title: "Next"
 				}).appendTo( this.element );
 			} else {
 				this.nextButton = $(".slidesNext");

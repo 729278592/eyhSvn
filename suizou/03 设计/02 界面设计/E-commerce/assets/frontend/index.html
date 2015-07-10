@@ -8,6 +8,30 @@
     <link rel="stylesheet" href="css/font/css/font-awesome-ie7.min.css"/>
     <style>
         body{min-width:1170px; }
+
+
+        .hotPic{margin:0 auto;position: relative;left: -90px;}
+        .hotPic .JQ-slide{position:relative;width:1250px;height:320px;margin:0 0 15px 0;padding:10px 35px;}
+        .hotPic .JQ-slide .wrap{width:1050px;height:320px;overflow:hidden;position:relative;}
+        .hotPic .JQ-slide-content{position:absolute;}/*必须要的元素*/
+        .hotPic .imgList li{width:300px;margin:0 24px;position: relative;left: 15px;}
+
+
+        .hotPic .JQ-slide-nav a{display:block;z-index:99;width:48px;height:60px;overflow:hidden;text-decoration:none;position:absolute;top:80px;}
+        .hotPic .JQ-slide-nav a.prev{left:0;background-position:0 0;}
+        .hotPic .JQ-slide-nav a.prev:hover{background-position:-100px 0;}
+        .hotPic .JQ-slide-nav a.next{right:160px;background-position:-50px 0;}
+        .hotPic .JQ-slide-nav a.next:hover{background-position:-150px 0;}
+        /* imgList */
+        .imgList{float:none;overflow:hidden;zoom:1}
+        .imgList li{float:left;display:inline;overflow:hidden;height: 320px;}
+        .imgList li a{display:block;text-align: center;}
+        .imgList li .img{padding:5px;}
+        .imgList li a.img:hover{width: 125px;}
+        .imgList li .txt{width: 100%;display: inline-block;position: relative;font-size: 13px;color: #aaa;}
+        .imgList li .txt_head{display: inline-block;width: 100%;border-bottom: 1px solid #444;font-size: 16px;color: #333;margin-bottom: 10px;}
+        .imgList li .txt_head .fr{ float: right;}
+
     </style>
     <!--[if gte IE 7]>
     <style>
@@ -50,10 +74,11 @@
             <ul class="c_ul">
                 <li class="ff4"><a href="index.html" class="block">首页</a></li>
                 <li><a href="choi_fu_personal_center.html" class="block">财符中心</a></li>
-                <li><a href="to_the_scene.html" class="block">场景直达</a></li>
+                <li><a href="to_the_scene.html" class="block">智能场景</a></li>
                 <li><a href="product_center.html" class="block">产品中心</a></li>
+                <li><a href="#" class="block">服务中心</a></li>
                 <li><a href="popular_activities.html" class="block">热门活动</a></li>
-                <li><a href="online_feedback.html" class="block">在线反馈</a></li>
+                <li><a href="online_feedback.html" class="block">论坛</a></li>
             </ul>
         </div>
 
@@ -64,31 +89,31 @@
                 <div id="D1pic1" class="fPic">
                     <div class="fcon" style="display: none;">
                         <img src="images/index/huan1.jpg"  style="opacity: 1; ">
-                        <div class="tu5">
-                            <img src="images/index/tu5.png" alt="" class="tu_i"/>
-                            <p class="tu_p">家庭卫士</p>
-                        </div>
+                        <!--<div class="tu5">-->
+                            <!--<img src="images/index/tu5.png" alt="" class="tu_i"/>-->
+                            <!--<p class="tu_p">家庭卫士</p>-->
+                        <!--</div>-->
                     </div>
                     <div class="fcon" style="display: none;">
                         <img src="images/index/huan2.jpg" style="opacity: 1; ">
-                        <div class="tu5">
-                            <img src="images/index/tu5.png" alt="" class="tu_i"/>
-                            <p class="tu_p">儿童成长</p>
-                        </div>
+                        <!--<div class="tu5">-->
+                            <!--<img src="images/index/tu5.png" alt="" class="tu_i"/>-->
+                            <!--<p class="tu_p">儿童成长</p>-->
+                        <!--</div>-->
                     </div>
                     <div class="fcon" style="display: none;">
                         <img src="images/index/huan3.jpg" style="opacity: 1; ">
-                        <div class="tu5">
-                            <img src="images/index/tu5.png" alt="" class="tu_i"/>
-                            <p class="tu_p">家庭温馨</p>
-                        </div>
+                        <!--<div class="tu5">-->
+                            <!--<img src="images/index/tu5.png" alt="" class="tu_i"/>-->
+                            <!--<p class="tu_p">家庭温馨</p>-->
+                        <!--</div>-->
                     </div>
                     <div class="fcon" style="display: none;">
                         <img src="images/index/huan4.jpg" style="opacity: 1; ">
-                        <div class="tu5">
-                            <img src="images/index/tu5.png" alt="" class="tu_i"/>
-                            <p class="tu_p">浪漫温馨</p>
-                        </div>
+                        <!--<div class="tu5">-->
+                            <!--<img src="images/index/tu5.png" alt="" class="tu_i"/>-->
+                            <!--<p class="tu_p">浪漫温馨</p>-->
+                        <!--</div>-->
                     </div>
                 </div>
                 <div class="fbg">
@@ -111,10 +136,11 @@
                 <div id="imgfor_con" style="width: 900px;">
                     <div id="imgfor_con_clu">
                         <div id="imgfor_con_roll">
-                            <a href="#"><img src="images/index/tu1.jpg" alt=""/><span class="block">浪漫温馨</span></a>
-                            <a href="#"><img src="images/index/tu2.jpg" alt=""/><span class="block">家庭音响</span></a>
-                            <a href="#"><img src="images/index/tu3.jpg" title="" id="q1"/><span class="block">关爱老人</span></a>
-                            <a href="#"><img src="images/index/tu4.jpg" title="" id="q2"/><span class="block">儿童成长</span></a>
+                            <a href="#"><img src="images/index/tu1.jpg" alt=""/><span class="block">魔幻灯光</span></a>
+                            <a href="#"><img src="images/index/tu2.jpg" alt=""/><span class="block">极致音响</span></a>
+                            <a href="#"><img src="images/index/tu2.jpg" alt=""/><span class="block">超级遥控</span></a>
+                            <a href="#"><img src="images/index/tu3.jpg" title="" id="q1"/><span class="block">手机玩伴</span></a>
+                            <a href="#"><img src="images/index/tu4.jpg" title="" id="q2"/><span class="block">家庭卫士</span></a>
                         </div>
                     </div>
                 </div>
@@ -150,20 +176,20 @@
                 </div>
                 <div class="cb_l">
                     <img src="images/index/fang.png" alt="" class="cbl_l"/>
-                    <ul class="cbl_l cbl_ul" style="margin-right: 100px">
-                        <li><i class="fa fa-angle-up"></i><span class="block block3"></span><span>音乐播放</span></li>
-                        <li class="cul_li0"><i class="fa fa-angle-up"></i><span class="block block3"></span><span>电视、空调控制</span></li>
-                        <li class="cul_li1"><i class="fa fa-angle-up"></i><span class="block block3"></span><span>室内安防</span></li>
-                        <li class="cul_li2"><i class="fa fa-angle-up"></i><span class="block block3"></span><span>支持WIFI</span></li>
-                        <li class="cul_li3"><i class="fa fa-angle-up"></i><span class="block block3"></span><span>支持物联网</span></li>
+                    <ul class="cbl_l cbl_ul" style="margin-right: 80px">
+                        <li><span class="li_span"><img src="images/index/music.png" alt=""/></span><span class="block block3"></span><span>音乐播放</span></li>
+                        <li class="cul_li0"><span class="li_span" style="position: relative;top: -3px;"><img src="images/index/TV.png" alt=""/></span><span class="block block3"></span><span>电视、空调控制</span></li>
+                        <li class="cul_li1"><span class="li_span"><img src="images/index/clock.png" alt=""/></span><span class="block block3"></span><span>室内安防</span></li>
+                        <li class="cul_li2"><span class="li_span"><img src="images/index/wifi.png" alt=""/></span><span class="block block3"></span><span>支持WIFI</span></li>
+                        <li class="cul_li3"><span class="li_span"><img src="images/index/inter.png" alt=""/></span><span class="block block3"></span><span>支持物联网</span></li>
                     </ul>
                     <img src="images/index/fang.png" alt="" class="cbl_l"/>
                     <ul class="cbl_l cbl_ul">
-                        <li><i class="fa fa-angle-up"></i><span class="block block3"></span><span>LED灯光</span></li>
-                        <li class="cul_li0"><i class="fa fa-angle-up"></i><span class="block block3"></span><span>绚彩感应灯</span></li>
-                        <li class="cul_li1"><i class="fa fa-angle-up"></i><span class="block block3"></span><span>APP控制</span></li>
-                        <li class="cul_li2"><i class="fa fa-angle-up"></i><span class="block block3"></span><span>场景定制</span></li>
-                        <li class="cul_li3"><i class="fa fa-angle-up"></i><span class="block block3"></span><span>内存16G存储</span></li>
+                        <li><span class="li_span"><img src="images/index/light.png" alt=""/></span><span class="block block3"></span><span>LED灯光</span></li>
+                        <li class="cul_li0"><span class="li_span" style="position: relative;left: -6px;"><img src="images/index/light1.png" alt=""/></span><span class="block block3"></span><span>绚彩感应灯</span></li>
+                        <li class="cul_li1"><span class="li_span"><img src="images/index/phone.png" alt=""/></span><span class="block block3"></span><span>APP控制</span></li>
+                        <li class="cul_li2"><span class="li_span"><img src="images/index/cang.png" alt=""/></span><span class="block block3"></span><span>场景定制</span></li>
+                        <li class="cul_li3"><span class="li_span"><img src="images/index/memory.png" alt=""/></span><span class="block block3"></span><span>内存16G存储</span></li>
                     </ul>
                     <ul class="cs_di">
                         <li>魔幻灯光</li>
@@ -180,37 +206,104 @@
             <div class="cb_wj cc_l"></div>
             <div class="cb_wj cc_r"></div>
             <div class="center cb_j">
-                <img src="images/index/qiu.png" alt="" class="cbj_i" width="1240"/>
-                <p class="cbj_p">
-                    <span class="cbj_s1">财符中心,不是累计积分,是累计财富</span><br/>
-                    <span class="cbj_s2">还在等什么,快加入我们的财富计划吧!</span>
-                </p>
+                <img src="images/index/qiu.jpg" alt="" class="cbj_i" width="1240"/>
+
             </div>
         </div>
         <div class="c_c2 clearfix">
             <div class="center c_j">
                 <div class="cj_j">
-                    <p class="cjj_p"><span class="cjjp_s">财富展示</span> <span class="cjjp_s2">用户的积分展示</span></p>
-                    <img src="images/index/gd.png" alt="" class="cjj_i"/>
-                    <p class="cjj_p1">
-                        <span class="cjj_p1_p">
-                            <!--用户中奖信息-->
-                            <span class="winning_information_users">用户：陈小洁  1000分</span>
-                            <span class="winning_information_users">用户：王洪波  5000分</span>
-                            <span class="winning_information_users">用户：胡志强  2000分</span>
-                            <span class="winning_information_users">用户：王洪波  5000分</span>
-                            <span class="winning_information_users">用户：胡志强  2000分</span>
-                            <span class="winning_information_users">用户：王洪波  5000分</span>
-                            <span class="winning_information_users">用户：胡志强  2000分</span>
-                            <span class="winning_information_users">用户：陈小洁  1000分</span>
-                            <span class="winning_information_users">用户：王洪波  5000分</span>
-                            <span class="winning_information_users">用户：胡志强  2000分</span>
-                            <span class="winning_information_users">用户：王洪波  5000分</span>
-                            <span class="winning_information_users">用户：胡志强  2000分</span>
-                            <span class="winning_information_users">用户：王洪波  5000分</span>
-                            <span class="winning_information_users">用户：胡志强  2000分</span>
-                        </span>
-                    </p>
+                    <p class="cjj_p"><img src="images/index/news.png" alt=""/></p>
+                    <!--<img src="images/index/gd.png" alt="" class="cjj_i"/>-->
+                    <!--<p class="cjj_p1">-->
+                        <!--<span class="cjj_p1_p">-->
+                            <!--&lt;!&ndash;用户中奖信息&ndash;&gt;-->
+                            <!--<span class="winning_information_users">用户：陈小洁  1000分</span>-->
+                            <!--<span class="winning_information_users">用户：王洪波  5000分</span>-->
+                            <!--<span class="winning_information_users">用户：胡志强  2000分</span>-->
+                            <!--<span class="winning_information_users">用户：王洪波  5000分</span>-->
+                            <!--<span class="winning_information_users">用户：胡志强  2000分</span>-->
+                            <!--<span class="winning_information_users">用户：王洪波  5000分</span>-->
+                            <!--<span class="winning_information_users">用户：胡志强  2000分</span>-->
+                            <!--<span class="winning_information_users">用户：陈小洁  1000分</span>-->
+                            <!--<span class="winning_information_users">用户：王洪波  5000分</span>-->
+                            <!--<span class="winning_information_users">用户：胡志强  2000分</span>-->
+                            <!--<span class="winning_information_users">用户：王洪波  5000分</span>-->
+                            <!--<span class="winning_information_users">用户：胡志强  2000分</span>-->
+                            <!--<span class="winning_information_users">用户：王洪波  5000分</span>-->
+                            <!--<span class="winning_information_users">用户：胡志强  2000分</span>-->
+                        <!--</span>-->
+                    <!--</p>-->
+                    <div class="layout">
+                        <div class="hotPic">
+                            <div class="JQ-slide">
+                                <div class="JQ-slide-nav"><a class="prev" href="javascript:void(0);"><img src="images/index/prev.png" alt=""/></a>
+                                    <a class="next" href="javascript:void(0);"><img src="images/index/next.png" alt=""/></a></div>
+                                <div class="wrap">
+                                    <ul class="JQ-slide-content imgList">
+                                        <li>
+                                            <a href="#" class="img"><img src="images/index/news1.jpg" alt="" /></a>
+                                                <span class="txt">
+                                                    <span class="txt_head"><span>伙伴的发展史</span><span class="fr">2015/7/8</span></span><br/>
+                                                       几年前，开发一个移动APP一夜间暴富的消息可谓层出不穷。但是随着手机APP的数量越来越多，大多数创业者所开发的APP都被淹没在 <br/>
+                                                </span>
+                                        </li>
+                                        <li>
+                                            <a href="#" class="img"><img src="images/index/news1.jpg" alt="" /></a>
+                                                <span class="txt">
+                                                    <span class="txt_head"><span>伙伴的发展史</span><span class="fr">2015/7/8</span></span><br/>
+                                                       几年前，开发一个移动APP一夜间暴富的消息可谓层出不穷。但是随着手机APP的数量越来越多，大多数创业者所开发的APP都被淹没在 <br/>
+                                                </span>
+                                        </li>
+                                        <li>
+                                            <a href="#" class="img"><img src="images/index/news1.jpg" alt="" /></a>
+                                                <span class="txt">
+                                                    <span class="txt_head"><span>伙伴的发展史</span><span class="fr">2015/7/8</span></span><br/>
+                                                       几年前，开发一个移动APP一夜间暴富的消息可谓层出不穷。但是随着手机APP的数量越来越多，大多数创业者所开发的APP都被淹没在 <br/>
+                                                </span>
+                                        </li>
+                                        <li>
+                                            <a href="#" class="img"><img src="images/index/news1.jpg" alt="" /></a>
+                                               <span class="txt">
+                                                    <span class="txt_head"><span>伙伴的发展史</span><span class="fr">2015/7/8</span></span><br/>
+                                                       几年前，开发一个移动APP一夜间暴富的消息可谓层出不穷。但是随着手机APP的数量越来越多，大多数创业者所开发的APP都被淹没在 <br/>
+                                                </span>
+                                        </li>
+                                        <li>
+                                            <a href="#" class="img"><img src="images/index/news1.jpg" alt="" /></a>
+                                                <span class="txt">
+                                                    <span class="txt_head"><span>伙伴的发展史</span><span class="fr">2015/7/8</span></span><br/>
+                                                       几年前，开发一个移动APP一夜间暴富的消息可谓层出不穷。但是随着手机APP的数量越来越多，大多数创业者所开发的APP都被淹没在 <br/>
+                                                </span>
+                                        </li>
+                                        <li>
+                                            <a href="#" class="img"><img src="images/index/news1.jpg" alt="" /></a>
+                                               <span class="txt">
+                                                    <span class="txt_head"><span>伙伴的发展史</span><span class="fr">2015/7/8</span></span><br/>
+                                                       几年前，开发一个移动APP一夜间暴富的消息可谓层出不穷。但是随着手机APP的数量越来越多，大多数创业者所开发的APP都被淹没在 <br/>
+                                                </span>
+                                        </li>
+                                        <li>
+                                            <a href="#" class="img"><img src="images/index/news1.jpg" alt="" /></a>
+                                                <span class="txt">
+                                                    <span class="txt_head"><span>伙伴的发展史</span><span class="fr">2015/7/8</span></span><br/>
+                                                       几年前，开发一个移动APP一夜间暴富的消息可谓层出不穷。但是随着手机APP的数量越来越多，大多数创业者所开发的APP都被淹没在 <br/>
+                                                </span>
+                                        </li>
+                                        <li>
+                                            <a href="#" class="img"><img src="images/index/news1.jpg" alt="" /></a>
+                                                <span class="txt">
+                                                    <span class="txt_head"><span>伙伴的发展史</span><span class="fr">2015/7/8</span></span><br/>
+                                                       几年前，开发一个移动APP一夜间暴富的消息可谓层出不穷。但是随着手机APP的数量越来越多，大多数创业者所开发的APP都被淹没在 <br/>
+                                                </span>
+                                        </li>
+                                    </ul>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+
                 </div>
             </div>
         </div>
@@ -308,21 +401,21 @@
             <div class="center f_c1">
                 <ul class="fc_ul">
                     <li>
-                        <a href="#">
+                        <a href="use_character.html">
                             <span class="block block4"/><i class="fa fa-smile-o"></i></span><br/>
                             <span class="fc_s">正品保障</span><br/>
                             <span class="fc_s1">厂家直接发货</span>
                         </a>
                     </li>
                     <li>
-                        <a href="#">
+                        <a href="cash_on_delivery.html">
                             <span class="block block4"/><i class="fa fa-truck"></i></span><br/>
                             <span class="fc_s">免运费</span><br/>
                             <span class="fc_s1">满100免运费</span>
                         </a>
                     </li>
                     <li>
-                        <a href="#">
+                        <a href="quality_assurance.html">
                             <span class="block block4"/><i class="fa fa-money"></i></span><br/>
                             <span class="fc_s">方便付款</span><br/>
                             <span class="fc_s1">多种支付 任您选择</span>
@@ -340,38 +433,38 @@
         </div>
         <div class="f2">
             <div class="center f_c2">
-                <ul class="fcc_ul clearfix">
-                    <li>
-                        <a href="#">
-                            <a href="use_character.html" class="cjwt">常见问题</a><br/>
-                            <span class="caif">财符的使用  折现使用,  积分余额</span>
-                        </a>
-                    </li>
-                    <li>
-                        <a href="#">
-                            <a href="cash_on_delivery.html" class="cjwt">支付方式</a><br/>
-                            <span class="caif">货到付款  在线支付  线下支付</span>
-                        </a>
-                    </li>
-                    <li>
-                        <a href="#">
-                            <a href="quality_assurance.html" class="cjwt">售后服务</a><br/>
-                            <span class="caif">品质保证  退换货政策  退货流程</span>
-                        </a>
-                    </li>
-                    <li class="border">
-                        <a href="#">
-                            <a href="#" class="cjwt">客服电话</a><br/>
-                            <span class="caif">400-024-574</span>
-                        </a>
-                    </li>
-                </ul>
+                <!--<ul class="fcc_ul clearfix">-->
+                    <!--<li>-->
+                        <!--<a href="#">-->
+                            <!--<a href="use_character.html" class="cjwt">常见问题</a><br/>-->
+                            <!--<span class="caif">财符的使用  折现使用,  积分余额</span>-->
+                        <!--</a>-->
+                    <!--</li>-->
+                    <!--<li>-->
+                        <!--<a href="#">-->
+                            <!--<a href="cash_on_delivery.html" class="cjwt">支付方式</a><br/>-->
+                            <!--<span class="caif">货到付款  在线支付  线下支付</span>-->
+                        <!--</a>-->
+                    <!--</li>-->
+                    <!--<li>-->
+                        <!--<a href="#">-->
+                            <!--<a href="quality_assurance.html" class="cjwt">售后服务</a><br/>-->
+                            <!--<span class="caif">品质保证  退换货政策  退货流程</span>-->
+                        <!--</a>-->
+                    <!--</li>-->
+                    <!--<li class="border">-->
+                        <!--<a href="#">-->
+                            <!--<a href="#" class="cjwt">客服电话</a><br/>-->
+                            <!--<span class="caif">400-024-574</span>-->
+                        <!--</a>-->
+                    <!--</li>-->
+                <!--</ul>-->
                 <ul class="fcc_ul1 clearfix">
                     <li class="border"><a href="company_profile.html" class="block block6">公司简介</a></li>
                     <li><a href="recruitment_of_talents.html" class="block block6">人才招聘</a></li>
-                    <li><a href="brand_company.html" class="block block6">品牌公司</a></li>
-                    <li><a href="about_us.html" class="block block6">关于我们</a></li>
-                    <li><a href="contact_us.html" class="block block6">联系我们</a></li>
+                    <li><a href="brand_company.html" class="block block6">生态圈</a></li>
+                    <!--<li><a href="about_us.html" class="block block6">关于我们</a></li>-->
+                    <!--<li><a href="contact_us.html" class="block block6">联系我们</a></li>-->
                 </ul>
                 <p class="f_f">深圳贯和通物联科技有限公司@  版权所有</p>
             </div>
@@ -383,6 +476,7 @@
 <script src="js/huan_img.js"></script>
 <script src="js/Crwebz.js"></script>
 <script src="js/slides.js"></script>
+<script src="js/jquery.slide.js"></script>
 <script>
     Qfast.add('script', { path: "js/terminator2.2.min.js", type: "js", requires: ['fx'] });
     Qfast(false, 'script', function () {
@@ -408,6 +502,17 @@
             slide: {
                 browserWindow: true
             }
+        });
+        $("#imgfor_con_roll a span").each(function(){
+            $(this).css({"background":"#FA8A79","opacity":".8"})
+        });
+        /* 用按钮控制图片左右滚动 */
+        $(".hotPic .JQ-slide").Slide({
+            effect:"scroolLoop",
+            autoPlay:false,
+            speed:"normal",
+            timer:3000,
+            steps:1
         });
     });
 </script>
