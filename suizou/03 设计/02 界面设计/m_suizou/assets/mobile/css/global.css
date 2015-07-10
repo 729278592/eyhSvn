@@ -12,7 +12,7 @@ html[xmlns] .clearfix {display: block;}
     .lb{font-size: 1em;color: #fbf7f7;}
     .shu{margin: 0 0.8em;}
     .content{width: 100%;background: #f2f2f3;position: relative;height: 100%;max-width: 640px;margin: 0 auto;}
-    .meng{width: 100%;height:100%;background: rgba(0,0,0,0.5);position: fixed;top: 0;z-index: 10000;bottom: 0;}
+
     .loading{position: absolute;top: 50%;left: 50%;margin-left: -15px;margin-top: -15px;}
     .bola{width:100%;margin-top: -0.5em;}
     .ban{width: 100%;}

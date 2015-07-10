@@ -200,25 +200,25 @@ $(".ccc_ul>li").each(function(){
 });
 
 /*winning_information_users*/
-    var s = $(".cjj_p1_p");
-    var px = s.css('marginLeft');
-    px = 0 + 'px';
-    var a = null;
-    var c = null;
-    function Dong(){
-        a += parseInt(px)-5;
-        c = a + "px";
-        s.css({'marginLeft':c});
-        if(s.css("marginLeft") == "-20px"){
-            s.css({'marginLeft':px});
-        }
-    }
-    var set = setInterval(Dong,200);
-    s.hover(function(){
-        clearInterval(set)
-    },function(){
-        set = setInterval(Dong,200);
-    });
+//    var s = $(".cjj_p1_p");
+//    var px = s.css('marginLeft');
+//    px = 0 + 'px';
+//    var a = null;
+//    var c = null;
+//    function Dong(){
+//        a += parseInt(px)-5;
+//        c = a + "px";
+//        s.css({'marginLeft':c});
+//        if(s.css("marginLeft") == "-20px"){
+//            s.css({'marginLeft':px});
+//        }
+//    }
+//    var set = setInterval(Dong,200);
+//    s.hover(function(){
+//        clearInterval(set)
+//    },function(){
+//        set = setInterval(Dong,200);
+//    });
 
 
 

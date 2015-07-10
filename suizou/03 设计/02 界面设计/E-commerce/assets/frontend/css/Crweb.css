@@ -147,7 +147,7 @@ button{outline: none;border: 0;}
 .cjj_p1_p{display: inline-block;width: 2000px;font-size: 20px;}
 .winning_information_users{padding-right: 30px;}
 .c_c3{width: 100%;position: relative;top: -22px;}
-.cc_h{height: 95px;border-bottom: 2px solid #faa454;line-height: 95px;text-align: center;background: #ffffff;}
+.cc_h{height: 95px;border-bottom: 2px solid #faa454;line-height: 95px;text-align: center;}
 .cc_c{height: 645px;}
 .zhong{width: 348px;height: 17px;margin: 0 auto;background: #faa454;}
 .ccc_ul{margin:30px 0 0 80px;}
@@ -292,7 +292,7 @@ tr th,tr td{ text-align:center;font-size: 14px;border:1px solid #cccccc;color: #
 .prompt_login a{color: #faa555;}
 .prompt_login a:hover{text-decoration: underline;}
 .pre1{width: 80px;height: 30px;outline: none;border: 1px solid #efefef;background: #fba95d;color: #fff;}
-.lid_p1{position: relative;top: 40px;left: 0;width: 100%;height: 40px;z-index: 10;}
+.lid_p1{position: relative;top: 10px;left: 0;width: 100%;height: 40px;z-index: 10;}
 .love{color: #fa8a79;}
 .mlx{width: 100%;margin:10px 0 50px 25px;}
 .mlx span{float:left;padding: 0 5px;width: 7%;font-size: 16px;text-align: center;color: #020202;border-right: 1px solid #b6b6b6;line-height: 30px;height: 30px;background: #fff;}
@@ -617,8 +617,8 @@ img{vertical-align:middle;}
 /*购买页面*/
 .phone{font-size: 18px;color: #444;position: relative;left: 100px;}
 .kefu{font-size: 14px;color: #bbb;position: relative;left: 100px;top: -25px;}
-.payment_procedure{position: relative;top: -60px;left: 300px;}
-.personal_information{font-size: 14px;position: relative;left: 420px;top: -65px;}
+.payment_procedure{position: relative;top: -30px;left: 270px;}
+.personal_information{font-size: 14px;position: relative;left: 420px;top: -35px;}
 .pi_a{width: 50px;height: 30px;text-align: center;line-height: 30px;background: #fc9a40;color: #fff;position: relative;left: 5px;}
 .pi_a:hover{background: #f1824d;}
 .retutn_index{position: relative;left: 10px;color: #333;}

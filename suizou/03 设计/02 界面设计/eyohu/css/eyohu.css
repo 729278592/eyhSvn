@@ -35,6 +35,9 @@ input,button{outline: none;border: none;}
 .content {width: 100%;background: #f5f5f7;}
 .product_introduction_head{height: 40px;border-bottom: 2px solid #faa454;line-height: 50px;text-align: center;}
 .zhong{width: 100px;height: 5px;margin: 0 auto;background: #faa454;}
+
+
+
 .layout{margin-top: 10px;}
 .introduction{color: #feaf19;font-size: 20px;}
 .solution{margin-top: -50px;}
