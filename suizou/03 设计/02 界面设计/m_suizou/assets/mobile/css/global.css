@@ -86,9 +86,9 @@ html[xmlns] .clearfix {display: block;}
 
 
     /*日报详情*/
-    .person_daily_header{background: url("../images/daily/bg.png");width: 100%;height: 155px;display: inline-block;line-height: 140px;}
-    .person_daily_header span,.person_daily_header a{font-size: 18px;position: relative;left: 3%;}
-    .person_daily_header a img,.person_name a img{width: 70px;}
+    .person_daily_header{background: url("../images/daily/bg.png")100%;width: 100%;height: 110px;display: inline-block;line-height: 90px;}
+    .person_daily_header span,.person_daily_header a{font-size: 16px;position: relative;left: 3%;}
+    .person_daily_header a img,.person_name a img{width: 65px;}
     .person_daily_header span{left: 2%;}
     .person_daily_content,.daily_list_content,.audit_daily_content{width: 96%;padding: 0 2%;}
     .person_daily_content .daily_details,.audit_daily_content .daily_details,.daily_list_content .daily_details,.audit_daily_content .audit_details{font-size: 16px;color: #929296;position: relative;top: -20px;left: 1%;}
@@ -106,7 +106,7 @@ html[xmlns] .clearfix {display: block;}
     .daily ul .last .fa-angle-right,.audit ul .last .fa-angle-right{position: absolute;right: 0;font-size: 20px;color: #f89f8b;}
     .daily ul li .right,.audit ul li .right{float: right;}
     .person_daily_content .comment{width: 96%;padding: 2%;background: #fdfafa;border: 1px solid #dddbdb;margin-top: 10px;font-size: 14px;}
-    .person_daily_content .comment a>img{width: 70px;float: left;margin-top: -1px;}
+    .person_daily_content .comment a>img{width: 65px;float: left;margin-top: 3px;}
     .comment_details{position: relative;left: 5px;top: 5px;}
     .copyright{text-align: center;padding: 10px 0;font-size: 16px;color: #939398;}
     .comment_details .right{float: right;position: relative;top: 5px;}
