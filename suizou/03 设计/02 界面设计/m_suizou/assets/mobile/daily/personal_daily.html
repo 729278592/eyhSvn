@@ -57,7 +57,7 @@
     $(function(){
         var btn_sure = $(".submit");
         btn_sure.on("click",function(){
-            $("#container").dialog({sure:function(){alert("添加成功")}});
+            $("#container").confirm({sure:function(){alert("添加成功")}});
         });
     })
 </script>

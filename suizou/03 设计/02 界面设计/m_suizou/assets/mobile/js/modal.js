@@ -8,7 +8,7 @@
  * @exit(){}  : 点击取消后操作
  */
 (function($){
-	$.fn.dialog = function(opts){
+	$.fn.confirm = function(opts){
 		var defaults = {
 				id     : "pop_up_box",
 				title  : "添加批注"
@@ -67,7 +67,7 @@
 		})
 
 	};
-    $.fn.alert = function(opts){
+    $.fn.dialog = function(opts){
         var defaults = {
             id     : "tishi",
             width  : "480px",
@@ -121,7 +121,7 @@
         })
 
     };
-    $.fn.confirm = function(opts){
+    $.fn.alert = function(opts){
         var defaults = {
             id             : "pop_up_box",
             title          : "操作提示",
