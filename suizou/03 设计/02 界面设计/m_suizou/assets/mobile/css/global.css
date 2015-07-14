@@ -109,7 +109,7 @@ html[xmlns] .clearfix {display: block;}
     .person_daily_content .comment a>img{width: 65px;float: left;margin-top: 3px;}
     .comment_details{position: relative;left: 5px;top: 5px;}
     .copyright{text-align: center;padding: 10px 0;font-size: 16px;color: #939398;}
-    .comment_details .right{float: right;position: relative;top: 5px;}
+    .comment_details .right{float: right;position: relative;top: 5px;right: 10px;}
     .comment_details .color{color: #f7927a;}
     .comment_details a.color:hover{text-decoration: underline;}
     /*日报详情*/
