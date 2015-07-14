@@ -59,10 +59,12 @@ var yy = $(".yhgr_u li a");
     var u = $(".cj_ul1>li");
     o.each(function(i){
         $(this).on("click",function(){
-            $(this).find("img").attr({"src":"images/cjzd/tx.png"});
-            $(this).siblings().find("img").attr({"src":"images/cjzd/tx1.png"});
-            $(this).addClass("zindex")
+
+            $(this).addClass("zindex");
+            $(this).find("img").addClass("block").removeClass("hide")
             $(this).siblings().removeClass("zindex");
+            $(this).siblings().find("img").addClass("hide").removeClass("block")
+
             u.eq(i).removeClass("hide").addClass("block");
             u.eq(i).siblings().removeClass("block").addClass("hide")
         })
@@ -189,16 +191,44 @@ $(".ccc_ul>li").each(function(){
              "height":"131px"
             },200)
         },
-    function(){
-        $(".animate").hide()
-        $(this).find(".animate").animate({
-            "top":"132px",
-            "left":"0px",
-            "height":"0"
-        },200)
-    })
+        function(){
+            $(".animate").hide()
+            $(this).find(".animate").animate({
+                "top":"132px",
+                "left":"0px",
+                "height":"0"
+            },200)
+        })
 });
 
+
+
+
+    var span = $(".chiofu_rank_head span");
+    var sdiv = $(".chiofu_rank_content_div");
+    $(".chiofu_rank_content_div:first>ul>li:even").css({"background":"#fff"});
+    $(".chiofu_rank_content_div:first>ul>li:odd").css({"background":"#efebea"});
+    $(".chiofu_rank_content_div:last>ul>li:even").css({"background":"#fff"});
+    $(".chiofu_rank_content_div:last>ul>li:odd").css({"background":"#efebea"});
+    span.each(function(i){
+        $(this).on("click",function(){
+            sdiv.eq(i).addClass("hide");
+            sdiv.eq(i).siblings().removeClass("hide");
+            $(this).addClass("active");
+            $(this).siblings().removeClass("active")
+        })
+    });
+    var mi = $(".more_information");
+    mi.on("click",function(){
+        if($(this).parent().prev().find("ul li").has(".hide")){
+            $(this).parent().prev().find(".hide").removeClass("hide").addClass("faaa");
+            $(this).find('i').removeClass("fa-sort-up").addClass("fa-sort-down")
+        }
+       else if($(this).find('i').has(".fa-sort-down")){
+            $(this).parent().prev().find(".faaa").addClass("hide").removeClass("faaa");
+            $(this).find('i').removeClass("fa-sort-down").addClass("fa-sort-up")
+        }
+    });
 /*winning_information_users*/
 //    var s = $(".cjj_p1_p");
 //    var px = s.css('marginLeft');

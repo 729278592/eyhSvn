@@ -69,26 +69,26 @@ com.setInter=function(){
             clearInterval(com.setIN);
         },
         function(){
-            com.tam=true;
-            com.setIN=setInterval(com.marquee,3000);
+            com.tam = true;
+            com.setIN = setInterval(com.marquee,3000);
         }
     );
 };
-com.creatElement=function(obj1){
+com.creatElement = function(obj1){
         var imgNum,aNum,oIm1,oIm2,oIm3,oIm4;
-        var b=[],m=[];
-        imgNum=obj1.find('img');aNum=obj1.find('a');
-        for(var j=0;j<aNum.length;j++) m[j]=aNum.eq(j);
-        for(var i=0;i<imgNum.length;i++) b[i]=imgNum.eq(i);
+        var b = [],m = [];
+        imgNum = obj1.find('img');aNum = obj1.find('a');
+        for(var j = 0;j<aNum.length;j++) m[j] = aNum.eq(j);
+        for(var i = 0;i<imgNum.length;i++) b[i] = imgNum.eq(i);
         if(!aNum.attr("href")) return false;
-        if(Imgwid==0) throw new Error("The width of the target error"+Imgwid+'px');
-        var t=/\w+.jpg|.gif|.png|.bmp/i;
+        if(Imgwid == 0) throw new Error("The width of the target error"+Imgwid+'px');
+        var t = /\w+.jpg|.gif|.png|.bmp/i;
         if(!b[0].attr('src').match(t)) return false;
         if(obj1.width()/Imgwid>b.length+4){
-             oIm1= m[0].append(b[0]);
-             oIm2= m[1].append(b[1]);
-             oIm3= m[m.length-2].append(b[b.length-2]);
-             oIm4= m[m.length-1].append(b[b.length-1]);
+             oIm1 = m[0].append(b[0]);
+             oIm2 = m[1].append(b[1]);
+             oIm3 = m[m.length-2].append(b[b.length-2]);
+             oIm4 = m[m.length-1].append(b[b.length-1]);
             if(imgNum.length<10){
                 obj1.append(oIm1.clone(true),oIm2.clone(true));
                 obj1.prepend(oIm3.clone(true),oIm4.clone(true));
@@ -98,24 +98,24 @@ com.creatElement=function(obj1){
         }
         else throw new Error("超过幻灯片最大容量！");
 };
-com.runSetinterval=function(){
+com.runSetinterval = function(){
     $(window).load(function(){
         com.initializeCss();
         com.creatElement(obj);
-        com.setIN=setInterval(com.marquee,3000);
+        com.setIN = setInterval(com.marquee,3000);
         com.control();
         com.setInter();
     });
 };
-com.control=function(){
-    var L=$('#imgfor_left'),R=$('#imgfor_right');
+com.control = function(){
+    var R = $('#imgfor_left'),L = $('#imgfor_right');
     L.click(function(){
         if(!obj.is(":animated")) com.x++;
         if(com.x>com_obj.length){
             movecon.style.left=0+'px';
-            com.x=1;
+            com.x = 1;
         }
-        var a=-com.x*(Imgwid+mar_left)+'px';
+        var a =-com.x*(Imgwid+mar_left)+'px';
         if(!obj.is(":animated")){
             obj.stop(true,true).animate({
                 left:a
@@ -125,10 +125,10 @@ com.control=function(){
     R.click(function(){
         if(!obj.is(":animated")) com.x--;
         if(com.x<0){
-            movecon.style.left=-(Imgwid+mar_left)*com_obj.length+'px';
-            com.x=com_obj.length-1;
+            movecon.style.left =-(Imgwid+mar_left)*com_obj.length+'px';
+            com.x = com_obj.length - 1;
         }
-        var a=-com.x*(Imgwid+mar_left)+'px';
+        var a =-com.x*(Imgwid+mar_left)+'px';
         if(!obj.is(":animated")){
             obj.stop(true,true).animate({
                 left:a
@@ -136,10 +136,10 @@ com.control=function(){
         }
     });
 };
-com.judge=function(){
+com.judge = function(){
     console.log(com.k);
     if(com.k){
-        com.setIN=setInterval(com.marquee,2500)
+        com.setIN = setInterval(com.marquee,2500)
     }
 };
 com.runSetinterval();
