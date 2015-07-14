@@ -134,6 +134,7 @@ html[xmlns] .clearfix {display: block;}
     .person{font-size: 16px;color: #f5785b;}
     .receive_person,.copy_person{border-bottom: 1px solid #dadbdc;}
     .copy_person,.receive_person{padding-right: 0;padding-left: 8%;}
+    .common_style .people{border-radius: 30px;width: 60px;height: 60px;}
     .copy_person .common li,.receive_person .common li{float: left;position: relative;padding-right: 30px;margin-top: 10px;}
     .receive_person .common .delete,.copy_person .common .delete{position: absolute;left: 40px;top: 0;}
     .receive_person .common .name,.copy_person .common .name{display: inline-block;width: 60px;text-align: center;}
