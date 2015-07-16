@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8"/>
+    <meta name="viewport" content="width=device-width; initial-scale=1.0; user-scalable=no;">
+    <title>请假通过</title>
+    <link rel="stylesheet" href="../css/font/css/font-awesome.min.css"/>
+    <link rel="stylesheet" href="../css/global.css"/>
+    <style>
+        .textarea{width:98%;border-top: 1px solid #dbdbdb;}
+        .operation li{width: 33.3333%;position: relative;}
+        .operation li .xian1{position: absolute;top: 0;right: 0;}
+        .operation li input{background: #fff;color: #333;padding: 0;border: none;}
+    </style>
+</head>
+<body>
+
+<div class="content">
+    <div class="common_head">
+        <img src="../images/leave/leave_record1.jpg" alt=""/>
+    </div>
+    <div class="common_name">
+        <span>
+            <a href="#"><img src="../images/daily/person.png" alt=""/></a>
+            <span>陈小洁</span>
+        </span>
+        <a href="#" class="btn">审批流程</a>
+    </div>
+    <div class="common_content">
+        <span class="common_introduction">报销明细:</span>
+        <div class="common">
+            <ul>
+                <li><span>请假类型</span><span class="right"><span>事假</span></span></li>
+                <li><span>请假天数</span><span class="right">2.0天</span></li>
+                <li><span>请假日期</span><span  class="right">2014-12-1/10:00</span></li>
+                <li><span>抄送人</span><span class="right">小彤</span></li>
+                <li><span>审批人</span><span  class="right">陈小洁</span></li>
+                <li class="last"><textarea name="" id="1" cols="30" rows="4" style="resize: none;" class="textarea" placeholder="内容..."></textarea></li>
+            </ul>
+        </div>
+
+        <ul class="operation"><!--操作-->
+            <li><input type="submit" value="编辑"/><img src="../images/leave/xian1.png" class="xian1" alt=""/></li>
+            <li><input type="submit" value="撤销"/><img src="../images/leave/xian1.png" class="xian1" alt=""/></li>
+            <li><input type="submit" value="催办"/></li>
+        </ul>
+    </div>
+    <!--<div class="copyright">易优弧</div>-->
+</div>
+<script src="../js/jquery-1.10.2.min.js"></script>
+<script src="../js/phone.js"></script>
+</body>
+</html>

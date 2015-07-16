@@ -1,0 +1,123 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8"/>
+    <meta name="viewport" content="width=device-width; initial-scale=1.0; user-scalable=no;">
+    <title>新建请假</title>
+    <link rel="stylesheet" href="../css/global.css"/>
+    <link rel="stylesheet" href="../css/font/css/font-awesome.min.css"/>
+    <link rel="stylesheet" href="../../plugins/phone-date-time/css/mobiscroll.custom-2.5.0.min.css"/>
+    <style>
+        .content{background: url("../images/daily/xjrb-bg.jpg") repeat-y;}
+        #pop_up_box{width: 260px;background: #fff;border: 1px solid #ccc;position: absolute;top: 0;z-index: 10000;}
+        .pop_up_box_head{font-size: 14px;color: #fff;}
+        .pop_up_box_head span{position: relative;left: 40px;top: -10px;}
+        .pop_up_box_content{padding: 10% 0;}
+
+    </style>
+</head>
+<body>
+<div class="content">
+    <ul id="left">
+        <li class="one">
+            <img src="../images/daily/xjrb.jpg" alt="" width="100%" height="50"/>
+            <div class="bg_fff common_style">
+                <span>请假事由</span>
+            </div>
+            <div class="common_style">
+                <textarea name="" id="1" cols="30" rows="4" style="resize: none;" class="textarea" placeholder="说明..."></textarea>
+            </div>
+            <img src="../images/leave/fenge.png" alt=""/>
+            <div class="common_style">
+                <span>请假类型</span>
+            </div>
+            <div class="bg_fff common_style"style="padding: 5px 4%;">
+                <span >开始日期</span><input class="scroller" name="scroller" /><span class="fr" style="position: relative;top: 5px;"><i class="fa fa-angle-left"></i></span>
+            </div>
+            <div class="bg_fff common_style"style="padding: 5px 4%;">
+                <span >结束日期</span><input class="scroller" name="scroller" /><span class="fr" style="position: relative;top: 5px;"><i class="fa fa-angle-left"></i></span>
+            </div>
+            <div class="common_style">
+                <span class="person">审批人:</span> <span>陈小洁、小彤</span>
+            </div>
+
+            <div class="common_style">
+                <span class="person">抄送人:</span>
+            </div>
+            <div class="receive_person common_style clearfix">
+                <ul class="common">
+                    <li>
+                        <img src="../images/daily/person_type.png" alt="" class="people" />
+                        <img src="../images/daily/delete.png" alt="" class="delete" width="20"/><br/>
+                        <span class="name">陈小洁</span>
+                    </li>
+                    <li><img src="../images/daily/plus.png" alt="" class="plus" width="60"/></li>
+                </ul>
+            </div>
+
+            <ul class="operation operation2">
+
+                <li><input type="submit" value="提交" class="last submit"/></li>
+            </ul>
+        </li>
+        <li class="two hide">
+            <div class="registered_person common_style bb">
+                <div>
+                    <span class="registered_person_head return">
+                        <span class="concrete_operation">王洪波</span>
+                    </span>
+                    <i class=" fa fa-remove fr"></i>
+                </div>
+            </div>
+            <div class="add_human_information common_style bb">
+            </div>
+        </li>
+    </ul>
+</div>
+<script src="../js/jquery-1.10.2.min.js"></script>
+<script src="../js/phone.js"></script>
+<script src="../js/modal.js"></script>
+<script src="../../plugins/phone-date-time/js/mobiscroll.custom-2.5.0.min.js"></script>
+<script>
+    $(function(){
+        var btn_sure = $(".submit");
+        btn_sure.on("click",function(){
+            $("#container").alert({});
+        });
+    })
+</script>
+<script>
+    $(function(){
+        var btn_sur = $(".plus").eq(0);
+        btn_sur.on("click",function(){
+            $("#container1").leave();
+        });
+    })
+</script>
+<script type="text/javascript">
+    $(function(){
+        $(".scroller").mobiscroll().date();
+        var currYear = (new Date()).getFullYear();
+        //初始化日期控件
+        var opt = {
+            preset: 'datetime', //日期，可选：date\datetime\time\tree_list\image_text\select
+            theme: 'default', //皮肤样式，可选：default\android\android-ics light\android-ics\ios\jqm\sense-ui\wp light\wp
+            display: 'modal', //显示方式 ，可选：modal\inline\bubble\top\bottom
+            mode: 'scroller', //日期选择模式，可选：scroller\clickpick\mixed
+            lang:'zh',
+            dateFormat: 'yyyy-mm-dd', // 日期格式
+            setText: '确定', //确认按钮名称
+            cancelText: '取消',//取消按钮名籍我
+            dateOrder: 'yyyymmdd', //面板中日期排列格式
+            dayText: '日', monthText: '月', yearText: '年', //面板中年月日文字
+            showNow: false,
+            nowText: "今",
+            startYear:currYear, //开始年份
+            endYear:currYear + 100 //结束年份
+            //endYear:2099 //结束年份
+        };
+        $(".scroller").mobiscroll(opt);
+    });
+</script>
+</body>
+</html>

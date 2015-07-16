@@ -19,90 +19,88 @@
     //请假流程
     $.fn.leave = function(opts){
         var content2 = '<ul>'+
-                       '<li class="second">'+
-                       '<ul class="department">'+
-                       '<li onclick="Addsecond(this)">'+
-                       '<span class="company">研发部</span>'+
-                       '<i class="fa fa-angle-right fr"></i>'+
-                       '</li>'+
-                       '<li onclick="Addsecond(this)">'+
-                       '<span class="company">技术部</span>'+
-                       '<i class="fa fa-angle-right fr"></i>'+
-                       '</li>'+
-                       '<li class="last" onclick="Addsecond(this)">'+
-                       '<span class="company">市场部</span>'+
-                       '<i class="fa fa-angle-right fr"></i>'+
-                       '</li>'+
-                       '</ul>'+
-                       '</li>'+
+                           '<li class="second">'+
+                               '<ul class="department">'+
+                                   '<li onclick="Addsecond(this)">'+
+                                       '<span class="company">研发部</span>'+
+                                       '<i class="fa fa-angle-right fr"></i>'+
+                                   '</li>'+
+                                   '<li onclick="Addsecond(this)">'+
+                                       '<span class="company">技术部</span>'+
+                                       '<i class="fa fa-angle-right fr"></i>'+
+                                   '</li>'+
+                                   '<li class="last" onclick="Addsecond(this)">'+
+                                       '<span class="company">市场部</span>'+
+                                       '<i class="fa fa-angle-right fr"></i>'+
+                                   '</li>'+
+                               '</ul>'+
+                           '</li>'+
                        '</ul>';
 
         var content3 = '<ul>'+
-                       '<li class="three">'+
-                       '<ul class="personal_information">'+
-                       '<li onclick="Addthree(this)">'+
-                       '<img src="../images/daily/person_type.png" alt="" width="40"/>'+
-                       '<span class="name">陈小洁</span>'+
-                       '<span class="f12">cto</span>'+
-                       '<i class="fa fa-check-circle-o fr"></i>'+
-                       '</li>'+
-                       '<li onclick="Addthree(this)">'+
-                       '<img src="../images/daily/person_type.png" alt="" width="40"/>'+
-                       '<span class="name">高新</span>'+
-                       '<span class="f12">开发经理</span>'+
-                       '<i class="fa fa-check-circle-o fr"></i>'+
-                       '</li>'+
-                       '<li class="last" onclick="Addthree(this)">'+
-                       '<img src="../images/daily/person_type.png" alt="" width="40"/>'+
-                       '<span class="name">王洪波</span>'+
-                       '<span class="f12">前端开发</span>'+
-                       '<i class="fa fa-check-circle-o fr"></i>'+
-                       '</li>'+
-                       '</ul>'+
-                       '</li>'+
-                       '<li>'+
-                       '<ul>'+
-                       '<li class="second">'+
-                       '<ul class="department">'+
-                       '<li onclick="Addfoure(this)">'+
-                       '<span class="company">技术部</span>'+
-                       '<i class="fa fa-angle-right fr"></i>'+
-                       '</li>'+
-                       '<li class="last" onclick="Addfoure(this)">'+
-                       '<span class="company">市场部</span>'+
-                       '<i class="fa fa-angle-right fr"></i>'+
-                       '</li>'+
-                       '</ul>'+
-                       '</li>'+
-                       '</ul>'+
-                       '</li>'+
+                           '<li class="three">'+
+                               '<ul class="personal_information">'+
+                                   '<li onclick="Addthree(this)">'+
+                                       '<img src="../images/daily/person_type.png" alt="" width="40"/>'+
+                                       '<span class="name">陈小洁</span>'+
+                                       '<span class="f12">cto</span>'+
+                                       '<i class="fa fa-check-circle-o fr"></i>'+
+                                   '</li>'+
+                                   '<li onclick="Addthree(this)">'+
+                                       '<img src="../images/daily/person_type.png" alt="" width="40"/>'+
+                                       '<span class="name">高新</span>'+
+                                       '<span class="f12">开发经理</span>'+
+                                       '<i class="fa fa-check-circle-o fr"></i>'+
+                                   '</li>'+
+                                   '<li class="last" onclick="Addthree(this)">'+
+                                       '<img src="../images/daily/person_type.png" alt="" width="40"/>'+
+                                       '<span class="name">王洪波</span>'+
+                                       '<span class="f12">前端开发</span>'+
+                                       '<i class="fa fa-check-circle-o fr"></i>'+
+                                   '</li>'+
+                               '</ul>'+
+                           '</li>'+
+                           '<li>'+
+                               '<ul>'+
+                                   '<li class="second">'+
+                                       '<ul class="department">'+
+                                           '<li onclick="Addfoure(this)">'+
+                                               '<span class="company">技术部</span>'+
+                                               '<i class="fa fa-angle-right fr"></i>'+
+                                           '</li>'+
+                                           '<li class="last" onclick="Addfoure(this)">'+
+                                               '<span class="company">市场部</span>'+
+                                               '<i class="fa fa-angle-right fr"></i>'+
+                                           '</li>'+
+                                       '</ul>'+
+                                   '</li>'+
+                               '</ul>'+
+                           '</li>'+
                        '</ul>';
 
         var content4 = '<ul>'+
-                       '<li class="three">'+
-                       '<ul class="personal_information">'+
-                       '<li onclick="Addthree(this)">'+
-                       '<img src="../images/daily/person_type.png" alt="" width="40"/>'+
-                       '<span class="name">周梦媛</span>'+
-                       '<span class="f12">cto</span>'+
-                       '<i class="fa fa-check-circle-o fr"></i>'+
-                       '</li>'+
-                       '<li onclick="Addthree(this)">'+
-                       '<img src="../images/daily/person_type.png" alt="" width="40"/>'+
-                       '<span class="name">韩永华</span>'+
-                       '<span class="f12">开发经理</span>'+
-                       '<i class="fa fa-check-circle-o fr"></i>'+
-                       '</li>'+
-                       '<li class="last" onclick="Addthree(this)">'+
-                       '<img src="../images/daily/person_type.png" alt="" width="40"/>'+
-                       '<span class="name">刘唐</span>'+
-                       '<span class="f12">前端开发</span>'+
-                       '<i class="fa fa-check-circle-o fr"></i>'+
-                       '</li>'+
-                       '</ul>'+
-                       '</li>'+
-                       '<li>'+
-                       '</li>'+
+                           '<li class="three">'+
+                               '<ul class="personal_information">'+
+                                   '<li onclick="Addthree(this)">'+
+                                       '<img src="../images/daily/person_type.png" alt="" width="40"/>'+
+                                       '<span class="name">周梦媛</span>'+
+                                       '<span class="f12">cto</span>'+
+                                       '<i class="fa fa-check-circle-o fr"></i>'+
+                                   '</li>'+
+                                   '<li onclick="Addthree(this)">'+
+                                       '<img src="../images/daily/person_type.png" alt="" width="40"/>'+
+                                       '<span class="name">韩永华</span>'+
+                                       '<span class="f12">开发经理</span>'+
+                                       '<i class="fa fa-check-circle-o fr"></i>'+
+                                   '</li>'+
+                                   '<li class="last" onclick="Addthree(this)">'+
+                                       '<img src="../images/daily/person_type.png" alt="" width="40"/>'+
+                                       '<span class="name">刘唐</span>'+
+                                       '<span class="f12">前端开发</span>'+
+                                       '<i class="fa fa-check-circle-o fr"></i>'+
+                                   '</li>'+
+                               '</ul>'+
+                           '</li>'+
                        '</ul>';
         var defaults = {
             company  : "易优弧科技团队",
@@ -147,10 +145,10 @@
         };
         var opts = $.extend({}, defaults, opts);
         var content1 = '<ul>'+
-                       '<li class="first" onclick="Addfirst(this)">'+
-                       '<span class="company">'+opts.company+'</span>'+
-                       '<i class="fa fa-angle-right fr"></i>'+
-                       '</li>'+
+                           '<li class="first" onclick="Addfirst(this)">'+
+                               '<span class="company">'+opts.company+'</span>'+
+                               '<i class="fa fa-angle-right fr"></i>'+
+                           '</li>'+
                        '</ul>';
 
         opts.add_human_information.append(content1);
