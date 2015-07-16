@@ -267,7 +267,7 @@ button{outline: none;border: 0;}
 .cj_ul .zindex{position: relative;z-index: 5;color: #f58b7e;background: #fdebe8;}
 .cj_ul li{float: left;line-height: 46px;height: 46px;text-align: center;position: relative;font-size: 16px;color: #333;width: 122px;left: 350px;}
 .cj_ul li img{position: absolute;top: 0;left: 0;}
-.cj_ul_c li{position: relative;left: 500px;}
+.cj_ul_c li{position: relative;left: 450px;}
 .cj_ul_c1 li{position: relative;left: 350px;}
 .cj_ul li:hover{background: #fdebe8;color: #f58b7e;}
 .cj_ul li:hover img{display: block;}
@@ -294,7 +294,7 @@ select{outline: none;}
 .btn{width: 35px;height: 30px; border: 1px solid #ccc;border-left: 1px solid #e4e4e4;background: #fff;outline: none;border-radius: 0 5px 5px 0;}
 .block7{width: 80px;height: 29px;background: #fba85c;border-radius: 2px;font-size: 14px;line-height: 29px;text-align: center;color: #fff;position: relative;top: 2px;}
 .lid_p{width: 90%;text-align: center;height: 50px;line-height: 50px;color: #ee8170;margin-top: 20px;font-size: 22px;}
-.li_a{margin-left: 190px;width: 650px;}
+.li_a{margin-left: 245px;width: 650px;}
 .li_a a{font-size: 20px;}
 .li_a .ba{width: 100px;height: 30px;line-height: 30px;text-align: center;background: #fba85c;color: #fff;font-size: 14px;}
 .puls{display: inline-block;width: 20px;height: 20px;text-align: center;line-height: 20px;border-radius: 20px;background: #fdca9e;}
@@ -351,12 +351,12 @@ tr th,tr td{ text-align:center;font-size: 14px;border:1px solid #cccccc;color: #
 
 .shgl_i{margin-left: -200px;margin-top: -40px;}
 .yhgr2{position: relative;left: -1px;background: #fff;padding-bottom: 25px;}
-.yhgr_u{width: 256px;display: inline-block;position: absolute;top: 50px;}
-.yhgr_u li{width: 256px;height: 105px;border-bottom: 1px solid #d2d1d1;background: #f3f1f1;position: relative;}
+.yhgr_u{width: 256px;display: inline-block;position: absolute;top: 50px;padding: 0 0 200px 0;background: #dfdfdf;}
+.yhgr_u li{width: 256px;height: 155px;border-bottom: 1px solid #d2d1d1;position: relative;background: #f3f1f1;}
 .yhgr_u .first{border-radius: 10px 10px 0 0;}
-.yhgr_u .last{border-bottom: none;}
+
 .li_top{position: absolute;top: 10px;font-size: 15px;text-align: center;width: 100%;}
-.li_top .block{position: relative;width: 100%;}
+.li_top .block{position: relative;width: 100%;padding: 5px 0;}
 .active_img{position: absolute;left: 0;top: 0;}
 .li_bottom{position: absolute;bottom: 6px;font-size: 17px;color: #020202;width: 100%;text-align: center;}
 .li_top a{color: #6e6969;width: 100%;display: inline-block;}
@@ -503,7 +503,7 @@ tr th,tr td{ text-align:center;font-size: 14px;border:1px solid #cccccc;color: #
 .sale .active a{color: #fff;}
 .sale li a{display: inline-block;width: 100%;height: 40px;color: #726c6c;font-size: 16px;border-radius: 5px;line-height: 40px;}
 #tishi{width: 400px;height: 300px;position: fixed;top: -610px;background: #fafafa;z-index: 10000;left: 50%;margin-left: -200px;border: 5px solid #989898;}
-.ts_foot{margin:85px 0}
+
 .ts_head{width: 100%;height: 40px;background: #f2f2f2;line-height: 40px;font-size: 16px;text-indent: 10px;}
 .ts_body{width: 100%;text-align: center;margin-top: 10px;font-size: 18px;}
 .ts_foot{margin:10px 0;text-align: center;width: 100%;height: 30px;}
@@ -666,8 +666,8 @@ img{vertical-align:middle;}
 #focus ul{height:180px;position:absolute;}
 #focus ul li{float:left;width:1320px;height:215px;overflow:hidden;position:relative;}
 
-#focus ul li a{display: inline-block;width: 203px;height: 83px;background: transparent;float: left;}
-#focus ul li div{width: 812px;height: 166px;margin: -175px 215px;position: relative;z-index: 10;}
+#focus ul li a{display: inline-block;width: 220px;height: 83px;background: transparent;float: left;margin-right: 8px;}
+#focus ul li div{width: 925px;height: 166px;margin: -175px 166px;position: relative;z-index: 10;}
 #focus .btn{position:absolute;width:1300px;height:10px;padding:5px 10px;right:270px;bottom:10px;text-align:right;z-index: -20}
 #focus .btn span{display:inline-block;*display:inline;zoom:1;width:25px;height:10px;font-size:0;margin-left:5px;cursor:pointer;background:#fff;}
 #focus .btn span.on{background:#519ef5;}
@@ -697,6 +697,8 @@ img{vertical-align:middle;}
 .service li .middle{display: block;idth: 170px;margin: 0 0 0 95px;}
 .service li .address{margin: 0 0 0 95px;font-size: 16px;display: block;}
 .service>li>a{color: #f47868;margin: 0 0 0 95px;}
-
+@media screen and (max-width: 1300px) {
+   .fc_ul li img{width: 90px;position: relative;left: 9px;top: 10px;}
+}
 
 

@@ -80,12 +80,21 @@
         var opts = $.extend({}, defaults, opts);
         //$("div.meng").removeClass("hide");
         var content  = '<div class="meng">'+
-                       '<div id="'+opts.id+'"><div class="ts_head"><span>'+opts.title+'</span></div>'+
-                       '<div class="ts_body"><span style="color: #fc2626;">'+opts.text+'</span></div>'+
-                       '<div class="ts_foot">'+
-                       '<button class="inblock wr_a btn_dian" style="background: #fb9766;" id="btn_sure">确认</button><span class="inblock inblock0"></span>'+
-                       '<button class="inblock wr_a btn_dian" style="background: #969696;" id="btn_cancel">取消</button>'+
-                       '</div></div></div>';
+                           '<div id="'+opts.id+'">' +
+                               '<div class="ts_head">' +
+                                   '<span>'+opts.title+'</span>' +
+                               '</div>'+
+                               '<div class="ts_body">' +
+                                   '<span style="color: #fc2626;">'+opts.text+'</span>' +
+                               '</div>'+
+                               '<div class="pop_up_box_footer">' +
+                                   '<ul class="operation operation1">'+
+                                       '<li><input type="submit" value="取消"id="btn_cancel"/></li>'+
+                                       '<li><input type="submit" value="确认" class="last submit"id="btn_sure"/></li>'+
+                                   '</ul>'+
+                               '</div>'+
+                           '</div>' +
+                       '</div>';
         $(".w_rc").append(content);
         $("#" + opts.id).stop(true, false).animate({
             top:'250px'
@@ -133,11 +142,19 @@
         var opts = $.extend({}, defaults, opts);
         //$("div.meng").removeClass("hide");
         var content = '<div class="mask fail">'+
-                      '<div id="'+opts.id+'"><div class="pop_up_box_head"><img src="'+opts.src_fail+'" alt="" width="60"/>'+
-                      '<span>'+opts.title+'</span>'+
-                      '<div class="close"><i class="fa fa-remove"></i></div>'+
-                      '</div>'+
-                      '<div class="pop_up_box_content">'+opts.text_fail+'</div>'+
+                          '<div id="'+opts.id+'">' +
+                              '<div class="pop_up_box_head">' +
+                                  '<img src="'+opts.src_fail+'" alt="" width="60"/>'+
+                                  '<span>'+opts.title+'</span>'+
+                              '</div>'+
+                              '<div class="pop_up_box_content">'+opts.text_fail+'</div>'+
+                              '<div class="pop_up_box_footer">' +
+                              '<ul class="operation operation3">'+
+
+                                '<li><input type="submit" value="确认" class="last submit"id="btn_sure"/></li>'+
+                                '</ul>'+
+                                '</div>'+
+                          '</div>' +
                       '</div>';
         $(".content").append(content);
         $("#" + opts.id).stop(true, false).animate({
@@ -147,17 +164,18 @@
             $("#" + opts.id).addClass("dong");
         });
         //Button exit
-        $(".close").on("click", function(){
-            if(typeof opts.exit == "function") {
-                opts.exit();
+        $("#btn_sure").on("click", function(){
+            if(typeof opts.sure == "function") {
+                opts.sure();
             }
             $("#" + opts.id).animate({
-                top : '-250px'
+                top : '1250px'
             }, 300, function(){
                 $("#" + opts.id).remove();
                 $("#" + opts.id).removeClass("dong");
+                $("#" + opts.id).css({"top":"-200px"});
                 $("div.mask").addClass("hide");
             });
-        })
+        });
     }
 })(jQuery);

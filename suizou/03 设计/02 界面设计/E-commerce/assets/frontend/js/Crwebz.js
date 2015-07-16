@@ -246,7 +246,7 @@ $(".ccc_ul>li").each(function(){
 
 
 
-    var li = $(".li_a .ba");
+    var li = $(".li_a .scene");
     var bli = 0;
     li.each(function(i){
         $(this).on("click",function(){
