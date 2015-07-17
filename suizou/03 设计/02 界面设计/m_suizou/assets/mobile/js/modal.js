@@ -85,8 +85,8 @@
         var content = '<div class="mask fail">'+
                           '<div id="'+opts.id+'">' +
                               '<div class="pop_up_box_head">' +
-                              '<img src="'+opts.src_fail+'" alt="" width="60"/>'+
-                              '<span>'+opts.title+'</span>'+
+                                  '<img src="'+opts.src_fail+'" alt="" width="60"/>'+
+                                  '<span>'+opts.title+'</span>'+
                               '</div>'+
                               '<div class="pop_up_box_content">'+opts.text_fail+'</div>'+
                               '<div class="pop_up_box_footer">' +
