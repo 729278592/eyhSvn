@@ -87,4 +87,25 @@ document.write(unescape("%3Cscript src='" + _bdhmProtocol + "hm.baidu.com/h.js%3
     </div>
 </div></div><!--footer-->
 </body>
+<script>
+    var person = function(){
+        //变量作用域为函数内部，外部无法访问
+        var name = "default";
+        var that = this;
+        return {
+            getName : function(){
+                return this.name = name;
+            },
+            setName : function(newName){
+                name = newName;
+            },
+            name:name
+        }
+    }();
+
+    alert(person.name);//直接访问，结果为undefined
+    console.log(person.getName());
+    person.setName("abruzzi");
+    alert(person.getName());
+</script>
 </html>
