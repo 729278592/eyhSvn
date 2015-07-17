@@ -14,6 +14,7 @@
         .operation1 li input{height: 30px;font-size: 12px;position: relative;top: 13px;}
         .operation1 li:first-child input{border-radius: 0 0 0 5px;}
         .operation1 li:last-child input{border-radius: 0 0 5px 0;}
+        .content{top: 80px;}
     </style>
 </head>
 <body>
@@ -35,12 +36,14 @@
             </ul>
         </div>
         <div class="comment clearfix">
-            <a href="#"><img src="../images/daily/person.png" alt=""/></a>
+            <!--<a href="#"><img src="../images/daily/person.png" alt=""/></a>-->
             <span class="comment_details">
-                <span>陈小洁<span class="right">2014-11-27</span></span><br/>
-                <span class="color">评论陈小洁日报</span><br/>
-                <span>今天的工作做得很好,继续加油 <a href="#" class="right color">回复</a></span>
+                <!--<span>陈小洁<span class="right">2014-11-27</span></span><br/>-->
+                <!--<span class="color">评论陈小洁日报</span><br/>-->
+                <!--<span>今天的工作做得很好,继续加油 <a href="#" class="right color">回复</a></span>-->
             </span>
+            <span class="no_comment">暂无评论</span>
+
         </div>
        <ul class="operation"><!--操作-->
             <li><input type="submit" value="查看往期"/></li>
@@ -48,11 +51,10 @@
         </ul>
     </div>
     <!--<div class="copyright">易优弧</div>-->
-
 </div>
 <script src="../js/jquery-1.10.2.min.js"></script>
 <script src="../js/phone.js"></script>
-<script src="../js/modal.js"></script>
+<script src="../js/modal.js?"></script>
 <script>
     $(function(){
         var btn_sure = $(".submit");

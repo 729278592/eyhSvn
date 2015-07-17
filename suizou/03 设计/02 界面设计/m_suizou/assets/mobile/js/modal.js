@@ -18,17 +18,23 @@
 		//$("div.meng").removeClass("hide");
 
         var content = '<div class="mask fail">'+
-                      '<div id="'+opts.id+'"><div class="pop_up_box_head">'+
-                      '<span>'+opts.title+'</span>'+
-                      '<div class="close"><i class="fa fa-remove"></i></div>'+
-                      '</div>'+
-                      '<div class="pop_up_box_content"><textarea name="" id="2" cols="30" rows="4" style="resize: none;" class="textarea" placeholder="内容..."></textarea></div>'+
-                      '<div class="pop_up_box_footer">' +
-                      '<ul class="operation operation1">'+
-                      '<li><input type="submit" value="取消"id="btn_cancel"/></li>'+
-                      '<li><input type="submit" value="确认" class="last submit"id="btn_sure"/></li>'+
-                      '</ul>'+
-                      '</div>'+
+                          '<div id="'+opts.id+'">' +
+                              '<div class="pop_up_box_head">'+
+                                  '<span>'+opts.title+'</span>'+
+                                  '<div class="close">' +
+                                      '<i class="fa fa-remove"></i>' +
+                                  '</div>'+
+                              '</div>'+
+                              '<div class="pop_up_box_content">' +
+                                  '<textarea name="" id="2" cols="30" rows="4" style="resize: none;" class="textarea" placeholder="内容..."></textarea>' +
+                              '</div>'+
+                              '<div class="pop_up_box_footer">' +
+                                  '<ul class="operation operation1">'+
+                                      '<li><input type="submit" value="取消"id="btn_cancel"/></li>'+
+                                      '<li><input type="submit" value="确认" class="last submit"id="btn_sure"/></li>'+
+                                  '</ul>'+
+                              '</div>'+
+                          '</div>'+
                       '</div>';
 		$(".content").append(content);
 		$("#" + opts.id).stop(true, false).animate({
@@ -149,11 +155,10 @@
                               '</div>'+
                               '<div class="pop_up_box_content">'+opts.text_fail+'</div>'+
                               '<div class="pop_up_box_footer">' +
-                              '<ul class="operation operation3">'+
-
-                                '<li><input type="submit" value="确认" class="last submit"id="btn_sure"/></li>'+
-                                '</ul>'+
-                                '</div>'+
+                                  '<ul class="operation operation3">'+
+                                      '<li><input type="submit" value="确认" class="last submit"id="btn_sure"/></li>'+
+                                  '</ul>'+
+                              '</div>'+
                           '</div>' +
                       '</div>';
         $(".content").append(content);
