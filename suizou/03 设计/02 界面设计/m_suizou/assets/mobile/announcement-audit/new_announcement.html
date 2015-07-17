@@ -3,7 +3,7 @@
 <head>
     <meta charset="utf-8"/>
     <meta name="viewport" content="width=device-width; initial-scale=1.0; user-scalable=no;">
-    <title>新建请假</title>
+    <title>新建公告</title>
     <link rel="stylesheet" href="../css/global.css"/>
     <link rel="stylesheet" href="../css/font/css/font-awesome.min.css"/>
     <link rel="stylesheet" href="../../plugins/phone-date-time/css/mobiscroll.custom-2.5.0.min.css"/>
@@ -15,15 +15,28 @@
 <div class="content">
     <ul id="left">
         <li class="one">
-            <img src="../images/daily/xjrb.jpg" alt="" width="100%" height="50"/>
+            <div class="audit_list_head">
+                <div class="common">
+                    <ul class="state">
+                        <li class="active"><i class="fa fa-plus-circle"></i> 新建公告</li>
+                        <li><i class="fa fa-check-circle-o"></i> 我已发布</li>
+                    </ul>
+                </div>
+            </div>
+            <div class="common_style">
+                <span>公告类型</span>
+            </div>
             <div class="bg_fff common_style">
-                <span>请假事由</span>
+                <span>公告标题</span>
             </div>
             <div class="common_style">
                 <textarea name="" id="1" cols="30" rows="4" style="resize: none;" class="textarea" placeholder="说明..."></textarea>
             </div>
+            <div class="bg_fff common_style">
+                <span>公告内容</span>
+            </div>
             <div class="common_style">
-                <span>请假类型</span>
+                <textarea name="" id="2" cols="30" rows="4" style="resize: none;" class="textarea" placeholder="说明..."></textarea>
             </div>
             <div class="bg_fff common_style"style="padding: 5px 4%;">
                 <span >开始日期</span><input class="scroller" name="scroller" /><span class="fr" style="position: relative;top: 5px;"><i class="fa fa-angle-left"></i></span>
@@ -36,7 +49,7 @@
                 <span class="person">审批人:</span> <span>陈小洁、小彤</span>
             </div>
             <div class="common_style">
-                <span class="person">抄送人:</span>
+                <span class="person">接收部门:</span>
             </div>
             <div class="receive_person common_style clearfix">
                 <ul class="common">

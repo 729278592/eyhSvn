@@ -14,9 +14,6 @@
 				title  : "添加批注"
 		};
 		var opts = $.extend({}, defaults, opts);
-
-		//$("div.meng").removeClass("hide");
-
         var content = '<div class="mask fail">'+
                           '<div id="'+opts.id+'">' +
                               '<div class="pop_up_box_head">'+
@@ -29,7 +26,7 @@
                                   '<textarea name="" id="2" cols="30" rows="4" style="resize: none;" class="textarea" placeholder="内容..."></textarea>' +
                               '</div>'+
                               '<div class="pop_up_box_footer">' +
-                                  '<ul class="operation operation1">'+
+                                  '<ul class="confirm_btn">'+
                                       '<li><input type="submit" value="取消"id="btn_cancel"/></li>'+
                                       '<li><input type="submit" value="确认" class="last submit"id="btn_sure"/></li>'+
                                   '</ul>'+
@@ -75,35 +72,34 @@
 	};
     $.fn.dialog = function(opts){
         var defaults = {
-            id     : "tishi",
-            width  : "480px",
-            title  : "操作提示",
-            text   : "您确定进行此操作吗？",
-            sure   : null,
-            exit   : null
+            id             : "pop_up_box",
+            title          : "操作提示",
+            text_fail     : "提交失败 ! 请完善资料 !",
+            text_success  : "恭喜 提交成功!",
+            src_fail      : "../images/daily/fail.png",
+            src_success   : "../images/daily/success.png"
         };
 
         var opts = $.extend({}, defaults, opts);
         //$("div.meng").removeClass("hide");
-        var content  = '<div class="meng">'+
-                           '<div id="'+opts.id+'">' +
-                               '<div class="ts_head">' +
-                                   '<span>'+opts.title+'</span>' +
-                               '</div>'+
-                               '<div class="ts_body">' +
-                                   '<span style="color: #fc2626;">'+opts.text+'</span>' +
-                               '</div>'+
-                               '<div class="pop_up_box_footer">' +
-                                   '<ul class="operation operation1">'+
-                                       '<li><input type="submit" value="取消"id="btn_cancel"/></li>'+
-                                       '<li><input type="submit" value="确认" class="last submit"id="btn_sure"/></li>'+
-                                   '</ul>'+
-                               '</div>'+
-                           '</div>' +
-                       '</div>';
-        $(".w_rc").append(content);
+        var content = '<div class="mask fail">'+
+                          '<div id="'+opts.id+'">' +
+                              '<div class="pop_up_box_head">' +
+                              '<img src="'+opts.src_fail+'" alt="" width="60"/>'+
+                              '<span>'+opts.title+'</span>'+
+                              '</div>'+
+                              '<div class="pop_up_box_content">'+opts.text_fail+'</div>'+
+                              '<div class="pop_up_box_footer">' +
+                                  '<ul class="dialog_btn">'+
+                                  '<li><input type="submit" value="确认" class="last submit"id="btn_sure"/></li>'+
+                                  '</ul>'+
+                              '</div>'+
+                          '</div>' +
+                      '</div>';
+        $(".content").append(content);
         $("#" + opts.id).stop(true, false).animate({
-            top:'250px'
+            top:'50%',
+            marginTop:"-60px"
         },400,function(){
             $("#" + opts.id).addClass("dong");
         });
@@ -118,7 +114,7 @@
                 $("#" + opts.id).remove();
                 $("#" + opts.id).removeClass("dong");
                 $("#" + opts.id).css({"top":"-200px"});
-                $("div.meng").addClass("hide");
+                $("div.mask").addClass("hide");
             });
         });
         //Button exit
@@ -131,10 +127,9 @@
             }, 300, function(){
                 $("#" + opts.id).remove();
                 $("#" + opts.id).removeClass("dong");
-                $("div.meng").addClass("hide");
+                $("div.mask").addClass("hide");
             });
         })
-
     };
     $.fn.alert = function(opts){
         var defaults = {
@@ -155,7 +150,7 @@
                               '</div>'+
                               '<div class="pop_up_box_content">'+opts.text_fail+'</div>'+
                               '<div class="pop_up_box_footer">' +
-                                  '<ul class="operation operation3">'+
+                                  '<ul class="alert_btn">'+
                                       '<li><input type="submit" value="确认" class="last submit"id="btn_sure"/></li>'+
                                   '</ul>'+
                               '</div>'+
