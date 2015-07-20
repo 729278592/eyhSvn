@@ -28,7 +28,7 @@ a,button,input,img,table,ul,li,tr,td,div{-webkit-tap-highlight-color:rgba(0,0,0,
     .f_span{font-size: 20px;position: relative;top: -1em;display: inline-block;width: 100%;border-top: 1px solid #ccc;color: #202121;line-height: 3em;}
     /*打卡*/
     /*上班摇一摇*/
-    .c_wu{position: absolute;top: 3em;}
+    .c_wu{position: absolute;top: 3em;width: 640px;}
     .c_yao{position: absolute;top: 2em;left: 50%;margin-left: -103px;width: 32%;}
     .yaozi{position: absolute;top: 12.6em;left: 50%;margin-left: -203px;}
     .c_ca{position: absolute;top: 20.5em;width: 100%;}
@@ -85,7 +85,7 @@ a,button,input,img,table,ul,li,tr,td,div{-webkit-tap-highlight-color:rgba(0,0,0,
 
 
     /*日报详情*/
-    .person_daily_header{background: url("../images/daily/bg.png")100%;width: 100%;height: 110px;display: inline-block;line-height: 90px;}
+    .person_daily_header{background: url("../images/daily/bg.png")100%;width: 100%;height: 110px;display: inline-block;line-height: 90px;margin-bottom: 10px;}
     .person_daily_header span,.person_daily_header a{font-size: 16px;position: relative;left: 3%;}
     .person_daily_header a img,.common_name a img{width: 65px;border-radius: 65px;border: 1px solid #9d9ea1;}
     .person_daily_header span{left: 2%;}
@@ -179,18 +179,18 @@ a,button,input,img,table,ul,li,tr,td,div{-webkit-tap-highlight-color:rgba(0,0,0,
         100% {margin-top: -60px}}
     /*新建日报*/
     /*添加人信息*/
-    .registered_person_head{color: #f89980;}
+    .registered_person_head{color: #f89980;font-size: 16px;}
     .fr{float: right;position: relative;right: 5px;}
-    .add_human_information{background: #fff;padding: 0 4%;}
+    .add_human_information{background: #fff;padding: 0 4%;font-size: 16px;}
     .bb{border-bottom:1px solid #DADBDC;border-top: 0;}
     .add_human_information .second .last, .add_human_information .three .last{border-bottom: none;}
-    .add_human_information ul .first{padding: 10px 0;}
+    .add_human_information ul .first{padding: 12px 0;font-size: 16px;}
     .add_human_information ul li ul li{border-bottom: 1px solid #eee;padding: 12px 0;}
     .three ul li{padding: 4px 0;border-bottom:1px solid #DADBDC;}
     .three ul .last{border-bottom: none;}
     .three ul li .fa{position: relative;top: 10px;}
     .three ul li .fa-check-circle{color: #f89980;}
-    .f12{font-size: 14px;color: #bbb;position: relative;left: 25px;}
+    .f12{color: #bbb;position: relative;left: 25px;}
     .personal_information li .name{position: relative;left: 15px;}
     .left{width: 100%;}
     .left li{float: left;width: 100%;}
@@ -216,6 +216,13 @@ a,button,input,img,table,ul,li,tr,td,div{-webkit-tap-highlight-color:rgba(0,0,0,
         .s_last{width: 348px;}
         .c_cccu li{font-size: 0.9em;}
         .cc_h{margin-top: 0.5em;}
+       .c_wu{top: 3em;width: 100%;}
+    /*考勤*/
+}
+@media screen and (max-width: 640px) {
+    
+
+    .c_wu{width: 100%;}
     /*考勤*/
 }
 @media screen and (max-width: 568px) {
@@ -304,7 +311,7 @@ a,button,input,img,table,ul,li,tr,td,div{-webkit-tap-highlight-color:rgba(0,0,0,
     /*考勤*/
     /*日报*/
         .daily_list_head .daily .fa-search{top: 23px;left: 15px;}
-        .person_daily_header,.common_name{margin-top: -93px;}
+        .person_daily_header,.common_name{margin-top: -93px;height: 110px;}
         .person_daily_header a img,.common_name a img{width: 45px;}
     /*日报*/
 }

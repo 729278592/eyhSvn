@@ -15,17 +15,17 @@
 		};
 		var opts = $.extend({}, defaults, opts);
         var content = '<div class="mask fail">'+
-                          '<div id="'+opts.id+'">' +
+                          '<div id="'+opts.id+'">'+
                               '<div class="pop_up_box_head">'+
                                   '<span>'+opts.title+'</span>'+
                                   '<div class="close">' +
-                                      '<i class="fa fa-remove"></i>' +
+                                      '<i class="fa fa-remove"></i>'+
                                   '</div>'+
                               '</div>'+
-                              '<div class="pop_up_box_content">' +
+                              '<div class="pop_up_box_content">'+
                                   '<textarea name="" id="2" cols="30" rows="4" style="resize: none;" class="textarea" placeholder="内容..."></textarea>' +
                               '</div>'+
-                              '<div class="pop_up_box_footer">' +
+                              '<div class="pop_up_box_footer">'+
                                   '<ul class="confirm_btn">'+
                                       '<li><input type="submit" value="取消"id="btn_cancel"/></li>'+
                                       '<li><input type="submit" value="确认" class="last submit"id="btn_sure"/></li>'+
@@ -83,13 +83,13 @@
         var opts = $.extend({}, defaults, opts);
         //$("div.meng").removeClass("hide");
         var content = '<div class="mask fail">'+
-                          '<div id="'+opts.id+'">' +
-                              '<div class="pop_up_box_head">' +
+                          '<div id="'+opts.id+'">'+
+                              '<div class="pop_up_box_head">'+
                                   '<img src="'+opts.src_fail+'" alt="" width="60"/>'+
                                   '<span>'+opts.title+'</span>'+
                               '</div>'+
                               '<div class="pop_up_box_content">'+opts.text_fail+'</div>'+
-                              '<div class="pop_up_box_footer">' +
+                              '<div class="pop_up_box_footer">'+
                                   '<ul class="dialog_btn">'+
                                   '<li><input type="submit" value="确认" class="last submit"id="btn_sure"/></li>'+
                                   '</ul>'+
