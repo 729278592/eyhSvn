@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8"/>
+    <meta name="viewport" content="width=device-width; initial-scale=1.0; user-scalable=no;">
+    <title>审批记录-撤回申请</title>
+    <link rel="stylesheet" href="../css/font/css/font-awesome.min.css"/>
+    <link rel="stylesheet" href="../css/global.css?t=1"/>
+    <style>
+        .textarea{width:90%;}
+        .operation li{width: 33.3333%;position: relative;}
+        .operation li .xian1{position: absolute;top: 0;right: 0;}
+        .operation li input{background: #fff;color: #333;padding: 0;border: none;}
+    </style>
+</head>
+<body>
+
+<div class="content">
+    <div class="common_head">
+        <img src="../images/approval/examination_and_approval_wait.jpg" alt=""/>
+    </div>
+    <div class="common_name">
+        <span>
+            <a href="#"><img src="../images/daily/person.png" alt=""/></a>
+            <span>陈小洁</span>
+        </span>
+        <a href="#" class="btn">审批流程</a>
+    </div>
+    <div class="common_content">
+        <span class="common_introduction">审批详情:</span>
+        <div class="common">
+            <ul>
+                <li><span>审批主题</span><span class="right"><span>出差</span> <span>10:00</span> <span>星期四</span></span></li>
+                <li><span>提交时间</span><span class="right">2014-11-24</span></li>
+                <li><span>抄送人</span><span class="right">小彤</span></li>
+                <li><span>审批人</span><span class="right">陈小洁</span></li>
+                <li class="last"><span>审批说明</span><span class="right">出差</span></li>
+            </ul>
+        </div>
+        <ul class="operation"><!--操作-->
+            <li><input type="submit" value="催办提醒"/><img src="../images/leave/xian1.png" class="xian1" alt=""/></li>
+            <li><input type="submit" value="撤回申请" class="submit"/><img src="../images/leave/xian1.png" class="xian1" alt=""/></li>
+            <li><input type="submit" value="修改内容"/></li>
+        </ul>
+    </div>
+    <!--<div class="copyright">易优弧</div>-->
+</div>
+<script src="../js/jquery-1.10.2.min.js"></script>
+<script src="../js/phone.js"></script>
+<script src="../js/modal.js?"></script>
+<script>
+    $(function(){
+        var btn_sure = $(".submit");
+        btn_sure.on("click",function(){
+            $("#container").confirm({});
+        });
+    })
+</script>
+</body>
+</html>
