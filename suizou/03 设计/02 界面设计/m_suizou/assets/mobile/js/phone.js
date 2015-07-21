@@ -126,18 +126,21 @@
             return_second:function(obj1){
                 this.add_human_information.empty().append(content2);
                 this.registered_person_head.html('<i class="fa fa-arrow-left"></i> <span class="company">'+$(obj1).find(".company").text()+'</span>');
-                var that = this;
-                this.registered_person_head.on("click",function(){
-                    that.return_first()
-                });
+                this.registered_person_head.on("click",$.proxy(function(){this.return_first()},this));
+//                var that = this;
+//                this.registered_person_head.on("click",function(){
+//                    that.return_first()
+//                });
             },
             return_three:function(obj2){
                 this.add_human_information.empty().append(content3);
                 this.registered_person_head.html('<i class="fa fa-arrow-left"></i> <span class="company">'+$(obj2).find(".company").text()+'</span>');
-                var that = this;
-                this.registered_person_head.on("click",function(){
-                    that.return_second(obj2)
-                });
+
+                this.registered_person_head.on("click",$.proxy(function(){this.return_second(obj2)},this));
+//                var that = this;
+//                this.registered_person_head.on("click",function(){
+//                    that.return_second(obj2)
+//                });
             },
             faremove:function(){
                 this.display_effectyi()
