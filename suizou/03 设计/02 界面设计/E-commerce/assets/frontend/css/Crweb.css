@@ -434,7 +434,7 @@ tr th,tr td{ text-align:center;font-size: 14px;border:1px solid #cccccc;color: #
 .scene_list li div .use,.scene_list li div .detail{position: relative;top: 10px;cursor: pointer;}
 .scene_list li div i{color: #f8b57a;}
 .scene_list li div .detail{background: #9f9e9e;}
-.scene_list li .new{position: absolute;top:10px;left:260px;z-index: 100;-webkit-animation: yi 1s infinite;width: 25px;
+.scene_list li .new{position: absolute;top:10px;left:260px;z-index: 100;-webkit-animation: er 1s infinite;width: 25px;
     -moz-animation: er 1s infinite;
     -webkit-animation-iteration-count:3000;
     -moz-animation-iteration-count:3000;}
@@ -444,9 +444,9 @@ tr th,tr td{ text-align:center;font-size: 14px;border:1px solid #cccccc;color: #
     50% {top: 1px}
     100% {top: 5px}}
 @-moz-keyframes er {
-    0%  {top: 7px}
+    0%  {top: 9px}
     25% {top: 5px}
-    50% {top: 3px}
+    50% {top: 1px}
     100% {top: 5px}}
 .money{color: #fe685b;}
 .my_idiot_content{margin-left: 20px;}
