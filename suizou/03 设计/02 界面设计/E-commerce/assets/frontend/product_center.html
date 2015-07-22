@@ -214,7 +214,56 @@
 
                     </div>
                 </div>
-                <div class="recommended_packages center"></div>
+                <div class="recommended_packages center">
+                    <div class="recommended_packages_head">
+                        <span class="bullet">玩伴搭档子弹系列</span>
+                        <span class="package">推荐套餐</span>
+                    </div>
+                    <div class="recommended_packages_content">
+                        <ul>
+                            <li>
+                                <a href="#">
+                                    <img src="images/cfzx/data_line.jpg" alt=""/>
+                                </a>
+                                <img src="images/cfzx/plus.png" alt="" class="plus"><br/>
+                                <span>玩伴连接数据线</span><br/>
+                                <span class="f98">
+                                    <input type="checkbox"/>￥98.00
+                                </span>
+                            </li>
+                            <li>
+                                <a href="#">
+                                    <img src="images/cfzx/charging_line.jpg" alt=""/>
+                                </a>
+                                <img src="images/cfzx/plus.png" alt="" class="plus"/><br/>
+                                <span>玩伴连接数据线</span><br/>
+                                  <span class="f98">
+                                    <input type="checkbox"/>￥198.00
+                                </span>
+                            </li>
+                            <li>
+                                <a href="#">
+                                    <img src="images/cfzx/socket.jpg" alt=""/>
+                                </a>
+                                <img src="images/cfzx/sign.gif" alt="" class="sign"/><br/>
+                                <span>玩伴连接数据线</span><br/>
+                                 <span class="f98">
+                                    <input type="checkbox"/>68.00
+                                </span>
+                            </li>
+                            <li>
+                                <div class="buy">
+                                    <span>已选择3件配件</span><br/>
+                                    <span>搭配价 : <i class="f98">￥650.00</i></span><br/>
+                                    <span>获得优惠: ￥20.00</span><br/>
+
+                                    <input type="image" src="images/cfzx/buy.jpg"/>
+                                </div>
+
+                            </li>
+                        </ul>
+                    </div>
+                </div>
             </div>
         </div>
         <div class="cjzd">
@@ -401,23 +450,11 @@
 <script src="js/modal.js"></script>
 <script>
     $(function(){
-        var btn_save = $(".purchase_immediately"),
-            step = $(".plus").val(),
-            html = "",
-            liji = $(".lji");
+        var btn_save = $(".purchase_immediately")
         btn_save.on("click",function(){
-
-//            html = '<span class="block bolck1 position">'+step+'</span>';
-//            liji.html(html);
-//            $(".gw_ab .bolck1").remove()
-//            $(".position").animate({
-//                "left":"278px",
-//                "top":"-430px"
-//            },1000);
             $("#container").dialog({title:'账户登录'});
         })
     })
-
 </script>
 </body>
 </html>

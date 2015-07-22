@@ -98,11 +98,11 @@ a,button,input,img,table,ul,li,tr,td,div{-webkit-tap-highlight-color:rgba(0,0,0,
     .list_head ul,.common ul{padding: 0 2%;background: #fff;border: 1px solid #eee;}
     .list_head ul li,.common ul li{border-bottom: 1px dashed #d2d2d2;padding: 10px 0;font-size: 14px;color: #3f4040;width: 100%;}
     .common ul li span{position: relative;display: inline-block;}
-    .common ul li .type{width: 15%}
-    .common ul li .name{width: 20%;}
-    .common ul li .day{width: 30%;}
-    .common ul li .time{width: 25%;}
-    .common ul li .fa-angle-right{position: absolute;right: 30px;font-size: 20px;color: #f89f8b;}
+    .common ul li .type{width: 25%}
+    .common ul li .name{width: 32%;}
+    .common ul li .day{width: 40%;}
+
+    .common ul li .fa-angle-right{position: absolute;right: 5%;font-size: 20px;color: #f89f8b;}
     .common ul li .right{float: right;}
     .common_content .comment{width: 96%;padding: 2%;background: #fdfafa;border: 1px solid #dddbdb;margin-top: 10px;font-size: 14px;}
     .common_content .comment a>img{width: 60px;float: left;margin-top: 3px;border-radius: 65px;border: 1px solid #acabae;}
@@ -222,6 +222,9 @@ a,button,input,img,table,ul,li,tr,td,div{-webkit-tap-highlight-color:rgba(0,0,0,
     
 
     .c_wu{width: 100%;}
+    .common_list .list_head .fa-search{top: 40%;}
+    .common_list .list_head .search{width: 80%;left: 15%;}
+    .common ul li .day{width: 36%;}
     /*考勤*/
 }
 @media screen and (max-width: 568px) {
