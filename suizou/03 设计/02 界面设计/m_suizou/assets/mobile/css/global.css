@@ -222,7 +222,7 @@ a,button,input,img,table,ul,li,tr,td,div{-webkit-tap-highlight-color:rgba(0,0,0,
     
 
     .c_wu{width: 100%;}
-    .common_list .list_head .fa-search{top: 40%;}
+    .common_list .list_head .fa-search{top: 40%;left: 3.5%}
     .common_list .list_head .search{width: 80%;left: 15%;}
     .common ul li .day{width: 36%;}
     /*考勤*/
