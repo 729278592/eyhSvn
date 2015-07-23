@@ -7,8 +7,15 @@
     <link rel="stylesheet" href="css/Crweb.css"/>
     <link rel="stylesheet" href="css/font/css/font-awesome.min.css"/>
     <link rel="stylesheet" href="css/font/css/font-awesome-ie7.min.css"/>
+    <link href="plugins/jquery-jCountdown/jquery/jquery-ui-1.9.1.custom.min.css" rel="stylesheet" type="text/css">
+    <link href="plugins/jquery-jCountdown/jcountdown/jcountdown.css" rel="stylesheet" type="text/css">
+    <link href="plugins/jquery-jCountdown/index.css" rel="stylesheet" type="text/css">
     <style>
-        body{min-width:1170px; }
+        body{min-width:1170px;font-family: "微软雅黑";background: #fff;font-size: 30px;}
+        #content{padding: 0;display: inline-block;}
+        #content .page{background: none;box-shadow: none;}
+        .remaining_time{font-size: 24px;position: relative;top: -55px;left: 210px;color: #555;}
+
     </style>
     <!--[if IE 8]>
     <style>
@@ -57,7 +64,16 @@
     </div>
 <div class="content clearfix">
     <div class="activity center">
-        <div class="activity_countdown"></div>
+        <div class="activity_countdown">
+            <span class="remaining_time">距离产品上市时间</span>
+            <div id="content">
+                <div class="page">
+                    <div class="countdown">
+                    </div>
+                </div>
+            </div>
+
+        </div>
     </div>
     <div class="quiz center">
         <ul class="shopping_quiz">
@@ -153,9 +169,11 @@
         </div>
     </div>
 </div>
-<script src="js/jquery-1.10.2.min.js"></script>
 
+<script src="plugins/jquery-jCountdown/jquery/jquery-1.8.2.min.js"></script>
 <script src="js/Crwebz.js"></script>
-
+<script src="plugins/jquery-jCountdown/jquery/jquery-ui-1.9.1.custom.min.js"></script>
+<script src="plugins/jquery-jCountdown/jcountdown/jquery.jcountdown.min.js"></script>
+<script src="plugins/jquery-jCountdown/index.min.js"></script>
 </body>
 </html>

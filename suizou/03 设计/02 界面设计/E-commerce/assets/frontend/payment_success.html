@@ -131,8 +131,20 @@
     </div>
 </div>
 <script src="js/jquery-1.10.2.min.js"></script>
-<script type="text/javascript" src="js/koala.min.1.5.js"></script>
 <script src="js/Crwebz.js"></script>
-
+<script>
+    function delayURL(url) {
+        var delay = $(".dao").text();
+        if (delay > 0) {
+            --delay;
+            $(".dao").text(delay)
+        }
+        else {
+            window.top.location.href = url
+        }
+        setTimeout("delayURL('" + url + "')", 1000)
+    }
+    delayURL("index.html");
+</script>
 </body>
 </html>

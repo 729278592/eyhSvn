@@ -59,12 +59,10 @@ var yy = $(".yhgr_u li a");
     var u = $(".cj_ul1>li");
     o.each(function(i){
         $(this).on("click",function(){
-
             $(this).addClass("zindex");
             $(this).find("img").addClass("block").removeClass("hide")
             $(this).siblings().removeClass("zindex");
             $(this).siblings().find("img").addClass("hide").removeClass("block")
-
             u.eq(i).removeClass("hide").addClass("block");
             u.eq(i).siblings().removeClass("block").addClass("hide")
         })
@@ -157,19 +155,12 @@ var yy = $(".yhgr_u li a");
     });
 
 
-
-
-
-
-
-
-                $(".mlx span").on("click",function(){
+       $(".mlx span").on("click",function(){
             $(this).addClass("beise");
             $(this).siblings().removeClass("beise");
             $(this).prev().css({"borderRight":"1px solid transparent"});
             $(this).siblings().prev().css({"borderRight":"1px solid #b6b6b6"})
-        })
-
+        });
     $(".mlx .beise").prev().css({"borderRight":"1px solid transparent"});
 
 
@@ -266,8 +257,31 @@ $(".ccc_ul>li").each(function(){
            $(this).siblings().find("input:radio").get(0).checked = false;
        })
     });
+var rs = $(".recommended_packages_head span");
+    var rcu = $(".recommended_packages_content ul");
+    rs.each(function(i){
+        $(this).on("click",function(){
+            $(this).addClass("active");
+            $(this).siblings().removeClass("active");
+            rcu.eq(i).removeClass("hide");
+            rcu.eq(i).siblings().addClass("hide");
+        });
+    });
 
-
+var yml = $(".yhgr2 .menu li");
+var rc =  $(".right_content");
+var service = $(".right_content .service");
+    yml.each(function(i){
+        $(this).on("click",function(){
+            $(this).addClass("active");
+            $(this).find(".f87").removeClass("hide");
+            $(this).siblings().removeClass("active");
+            $(this).siblings().find(".f87").addClass("hide");
+            service.eq(i).removeClass("hide");
+            service.eq(i).siblings().addClass("hide");
+            rc.find("img").removeClass("hide");
+        })
+    });
 
     /*商品切换*/
     var animate_time=200;//动画时间：0.3秒
@@ -437,10 +451,5 @@ $(".ccc_ul>li").each(function(){
         //$("#focus .btn span").removeClass("on").eq(index).addClass("on"); //为当前的按钮切换到选中的效果
         $("#focus .btn span").stop(true,false).animate({"opacity":"0.4"},300).eq(index).stop(true,false).animate({"opacity":"1"},300); //为当前的按钮切换到选中的效果
     }
-
-
-
-
-
 });
 

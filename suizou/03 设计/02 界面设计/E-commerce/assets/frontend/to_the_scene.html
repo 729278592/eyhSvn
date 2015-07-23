@@ -8,6 +8,11 @@
     <link rel="stylesheet" href="css/font/css/font-awesome-ie7.min.css"/>
     <style>
         body{min-width:1170px; }
+        h1{ font-size:16px; color:#999; font-weight:normal; text-align:center; line-height:90px; border-top:1px dashed #ddd; margin-top:50px;}
+        .taskBoxLinks { float:left; width:300px; height:10px; font-size:0; line-height:0; background:#f2f2f2; border:1px solid #dedede;-moz-border-radius:6px;-webkit-border-radius:6px;border-radius:6px; position:relative; margin-top:8px; margin-right:10px; cursor:pointer;}
+        .taskBoxLinks h3,.taskBoxLinks h4{ position:absolute; left:-1px; top:-1px; height:10px; font-size:0; line-height:0; width:10%; background: #739e24; border:1px solid #739e24; -moz-border-radius:6px;-webkit-border-radius:6px;border-radius:6px; z-index:99;}
+        .taskBoxLinks h4 { border:1px solid #91cdea; background:#f5fafc; z-index:88;}
+        .taskBox{position: absolute;left:100px;top: 10px;}
         .form1{width: 100%;margin-top:20px;}
         .inpu3{left: 0;}
         .inpu1{width:260px;margin-bottom: 0;}
@@ -16,6 +21,8 @@
 
         #table .fa-heart:hover{cursor: not-allowed;}
         .time{width: 50px;height: 25px;line-height: 25px;text-align: center;border: 1px solid #dbdbdb;}
+        .cj_ul_c{background: #f9f6f9;border-bottom: 1px solid #bbbabb;}
+
     </style>
     <!--[if IE 8]>
     <style>
@@ -63,7 +70,15 @@
 
 </div>
 <div class="content clearfix">
-
+    <div class="scene_using_steps center">
+        <p>场景使用方法</p>
+        <ul class="scene_using">
+            <li></li>
+            <li></li>
+            <li></li>
+            <li></li>
+        </ul>
+    </div>
     <div class="sence_rank center">
         <div class="sence_rank_head"></div>
         <div class="sence_rank_content">
@@ -105,12 +120,11 @@
     </div>
     <div class="cjzd">
         <div class="center cjzd_c">
-            <ul class="cj_ul cj_ul_c" style="background: #f9f6f9;border-bottom: 1px solid #bbbabb;">
+            <ul class="cj_ul cj_ul_c">
                 <li class="zindex"><img src="images/xianshi.jpg" alt="" class="block"/>默认场景</li>
                 <li><img src="images/xianshi.jpg" alt="" class="hide"/>分享场景</li>
                 <li class="scene_customization"><img src="images/xianshi.jpg" alt="" class="hide"/>场景定制</li>
             </ul>
-
            <ul class="cj_ul1">
                 <li class="block">
                     <div class="scene clearfix">
@@ -335,7 +349,6 @@
                             </li>
                         </ul>
                     </div>
-
                </li>
                 <li class="hide">
                     <div class="li_div">
@@ -343,13 +356,102 @@
                         <div class="li_a">
                             <a href="#" class="block ba"><span class="puls">+</span></a>
                         </div>
+                        <div class="cjul_d">
+                                <span class="sjao"> <i class="fa fa-caret-down"></i>&nbsp;&nbsp;<span class="ms_head">自定义模式</span></span>
+                            </div>
+                        <div class="show_div">
+                                <div class="fang">
+                                    <i class="fa fa-star"></i>&nbsp;&nbsp;<span>启动方式</span>
+                                    <span class="block psanle"><input checked="" type="checkbox"><span>APP</span></span>
+                                    <span class="block psanle"><input checked="" type="checkbox"><span>按键</span></span>
+                                    <span class="block psanle"><input checked="" type="checkbox"><span>时间</span></span>
+                                    <span class="block psanle"><input type="checkbox"><span>被动红外</span></span>
+                                    <span class="block psanle"><input type="checkbox"><span>WIFI</span></span>
+
+                                    <div class="spilder">
+                                                            <span>
+                                                                <span style="text-indent: 5px;">时间</span> <img src="images/cjzd/clock.png" alt="">
+                                                            </span>
+                                        <div class="taskBox">
+                                            <div class="taskBoxLinks"><h3></h3><h4></h4></div>
+                                            <input type="text" class="time" value="2:00"/>
+                                            <!--<span>10%</span>-->
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="fang">
+                                    <i class="fa fa-star"></i>&nbsp;&nbsp;<span>参与设备</span>
+                                    <span class="block psanle"><input checked="" type="checkbox"><span>音响</span></span>
+                                    <span class="block psanle"><input type="checkbox"><span>照明</span></span>
+                                    <span class="block psanle"><input type="checkbox"><span>红外遥控</span></span>
+
+                                    <div class="spilder">
+                                                            <span>
+                                                                <span tyle="text-indent: 5px;">音量</span> <img src="images/cjzd/voice.png" alt="">
+                                                            </span>
+
+                                        <div class="taskBox">
+                                            <div class="taskBoxLinks"><h3 style="background:#48a8d1;border: 1px solid #48a8d1;"></h3>
+                                                <h4></h4></div>
+                                            <span>10%</span>
+                                        </div>
+                                    </div>
+                                    <div class="spilder">
+                                                            <span>
+                                                                 <span style="text-indent: 5px;">温度</span> <img src="images/cjzd/sun.png" alt="">
+                                                            </span>
+
+                                        <div class="taskBox">
+                                            <div class="taskBoxLinks"><h3 style="background:#f8e250;border: 1px solid #f8e250;"></h3>
+                                                <h4></h4></div>
+                                            <span>10%</span>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="fang">
+                                    <i class="fa fa-star"></i>&nbsp;&nbsp;<span>开机条件</span>
+                                    <span class="block psanle"><input type="checkbox"><span>湿温度</span></span>
+                                </div>
+                                <div class="fang">
+                                    <i class="fa fa-star"></i>&nbsp;&nbsp;<span>运行状态</span><br/>
+                                                <span class="block psanle">
+                                                    <span style="position: relative;left: 6px;top: 3px;font-size: 16px;">音源选择</span>&nbsp;&nbsp;
+                                                    <select name="" id="" class="yinyue">
+                                                        <option value="大">大城小爱</option>
+                                                        <option value="小">最炫民族风</option>
+                                                    </select><button class="btn"><i class="fa fa-search"></i></button>
+                                                    <span class="block block7">我的音乐</span><br/>
+                                                    <span style="position: relative;top: 6px;">
+                                                        <span style="position: relative;left: 6px;font-size: 16px;">音乐</span>&nbsp;&nbsp;
+                                                    </span>
+                                                    <span style="position: relative;left: 28px;top: 5px;">
+                                                        <span class="block psanle"><input type="checkbox"  checked/><span>声音渐大</span></span>
+                                                        <span class="block psanle"><input type="checkbox"  checked/><span>声音渐小</span></span>
+                                                        <span class="block psanle"><input type="checkbox"  checked/><span>亮度渐大</span></span>
+                                                    </span><br/>
+                                                    <span style="position: relative;left: 6px;font-size: 16px;">照明</span>
+                                                           <span style="position: relative;left: 36px;top: 5px;">
+                                                        <span class="block psanle"><input type="checkbox"  checked/><span>亮度渐小</span></span>
+                                                        <span class="block psanle"><input type="checkbox"  /><span>色彩,亮度变化</span></span>
+                                                    </span><br/>
+                                                    <span style="position: relative;left: 6px;font-size: 16px;">红外线遥控</span>
+                                                     <span style="position: relative;left: -12px;">
+                                                        <span class="block psanle"><input type="checkbox" /><span>空调控制在睡眠温度</span></span>
+                                                     </span>
+                                                </span>
+                                </div>
+                                <div class="cjul_d cjul_d1 cjul_d2">
+                                    <button class="c_btn seee">确认</button>
+                                    <button class="c_btn">取消</button>
+                                </div>
+                            </div>
                     </div>
                     <div class="fff1">
                         <div class="cc_h" style="height: 55px;">
                             <p class="lid_p lid_p1 ">分享的音乐</p>
                         </div>
                         <div class="zhong"></div>
-                        <table>
+                        <table class="table">
                             <thead>
                             <tr>
                                 <th>序号</th>
@@ -409,7 +511,7 @@
                             <span class="block">动漫</span>
                             <span class="block last">故事会</span>
                         </div>
-                        <table>
+                        <table class="table">
                             <thead>
                             <tr>
                                 <th>序号</th>
@@ -532,14 +634,13 @@
 <script src="js/huan_img.js"></script>
 <script src="js/Crwebz.js"></script>
 <script src="js/modal.js"></script>
-
 <script>
     $(function(){
         var btn_save = $(".scene_customization,.down_btn");
         btn_save.on("click",function(){
             $("#container").dialog({title:'账户登录'});
         })
-        var fa = $(".fa-heart,.fa-download");
+        var fa = $("table .fa-heart,.table .fa-download");
         fa.on("click",function(){
             if($(this).parent().is(".love")){
                 $(this).parent().removeClass("love")
@@ -561,6 +662,33 @@
             });
         });
     })
+</script>
+<script type="text/javascript">
+    $(document).ready( function() {
+        $('.taskBox').delegate('.taskBoxLinks','mousemove',function(e){
+            var $mouse = e.pageX - $(this).offset().left;
+            var $span = ($mouse/30)*10;
+            var zz =Math.floor($span);
+            $(this).find('h4').stop().animate({width:zz+'%'},50);
+            $(this).next('span').text(zz+'%');
+        }).delegate('.taskBoxLinks','mouseleave',function(){
+            $(this).find('h4').stop().animate({width:'10%'},50);
+            var $mouse = $(this).find('h3').width();
+            var $span = ($mouse/30)*10;
+            var zz = Math.floor($span)
+            if($span==100){
+                $(this).next('span').text(zz+'%');
+            }
+        }).delegate('.taskBoxLinks','click',function(e){
+            var $mouse = e.pageX - $(this).offset().left;
+            var $span = ($mouse/30)*10;
+            var zz = Math.floor($span);
+            $(this).find('h3').stop().animate({width:zz+'%'},100);
+            if($span==100){
+                $(this).next('span').text(zz+'%');
+            }
+        });
+    });
 </script>
 </body>
 </html>
