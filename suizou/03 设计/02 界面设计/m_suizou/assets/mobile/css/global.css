@@ -101,22 +101,16 @@ a,button,input,img,table,ul,li,tr,td,div{-webkit-tap-highlight-color:rgba(0,0,0,
     .common ul li .type{width: 25%}
     .common ul li .name{width: 32%;}
     .common ul li .day{width: 40%;}
-
     .common ul li .fa-angle-right{position: absolute;right: 5%;font-size: 20px;color: #f89f8b;}
     .common ul li .right{float: right;}
     .common_content .comment{width: 96%;padding: 2%;background: #fdfafa;border: 1px solid #dddbdb;margin-top: 10px;font-size: 14px;}
     .common_content .comment a>img{width: 60px;margin-top: 3px;border-radius: 65px;border: 1px solid #acabae;}
     .comment_details{position: relative;left: 5px;top: 5px;}
     .copyright{text-align: center;padding: 10px 0;font-size: 16px;color: #939398;}
-    .comment_details .right{float: right;position: relative;top: 5px;right: 10px;}
-
+    .comment_details .right{float: right;position: relative;top: 16px;right: 10px;}
     .common_contentf{position: relative;top: 10px;}
-    .comment_details .name{position: relative;top: -20px;}
-    .comment_details .comment_daily,.comment_details .comment_content{position: relative;left: 65px;top: -45px;}
-    .comment_details .comment_content a{position: relative;top: -45px;}
-
-    .comment_details .color{color: #f7927a;}
-    .comment_details a.color:hover{text-decoration: underline;}
+    .comment_details .name{position: relative;top: -15px;}
+    .comment_details .comment_content{position: relative;left: 65px;top: -25px;}
     .comment .no_comment{font-weight: bold;display: inline-block;width: 100%;text-align: center;position: relative;top: -22px;}
     /*日报详情*/
     /*我的日报列表*/
@@ -277,6 +271,8 @@ a,button,input,img,table,ul,li,tr,td,div{-webkit-tap-highlight-color:rgba(0,0,0,
         .person_daily_header,.common_name{margin-top: -95px;}
         .person_daily_header>span,.common_name>span{font-size: 16px;}
         .person_daily_header a img,.common_name a img{width: 55px;}
+    .common_content .comment a>img{width: 45px;}
+    .comment_details .comment_content{position: relative;left: 50px;top: -25px;}
     /*日报*/
 }
 @media screen and (max-width: 414px) {
