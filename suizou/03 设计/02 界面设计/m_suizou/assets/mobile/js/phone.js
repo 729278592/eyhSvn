@@ -1,4 +1,4 @@
-    var d = $(".daily .state>li,.audit .state>li,.common .state>li");
+    var d = $(".list_head .state>li,.audit .state>li,.common .state>li");
     var s = $(".state_daily>li");
     d.each(function(i){
         $(this).on("click",function(){
