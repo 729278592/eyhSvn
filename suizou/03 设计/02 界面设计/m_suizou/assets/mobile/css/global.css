@@ -110,14 +110,14 @@ a,button,input,img,table,ul,li,tr,td,div{-webkit-tap-highlight-color:rgba(0,0,0,
     .copyright{text-align: center;padding: 10px 0;font-size: 16px;color: #939398;}
     .comment_details .right{float: right;position: relative;top: 5px;right: 10px;}
 
-    .common_contentf{height: 85px;position: relative;top: 10px;}
+    .common_contentf{position: relative;top: 10px;}
     .comment_details .name{position: relative;top: -20px;}
     .comment_details .comment_daily,.comment_details .comment_content{position: relative;left: 65px;top: -45px;}
     .comment_details .comment_content a{position: relative;top: -45px;}
 
     .comment_details .color{color: #f7927a;}
     .comment_details a.color:hover{text-decoration: underline;}
-    .comment .no_comment{font-weight: bold;display: inline-block;width: 100%;text-align: center;}
+    .comment .no_comment{font-weight: bold;display: inline-block;width: 100%;text-align: center;position: relative;top: -22px;}
     /*日报详情*/
     /*我的日报列表*/
     .common_list,.common_list{width: 96%;padding: 1% 2%;position: relative;}
