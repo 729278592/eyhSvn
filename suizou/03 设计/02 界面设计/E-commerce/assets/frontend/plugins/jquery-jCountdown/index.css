@@ -54,8 +54,8 @@ body{
 }
 
 #content{
-	margin:0px;
-	padding:40px 0px 40px 0px;
+	margin-top: -7px;
+	padding:40px 0 40px 0;
 }
 
 #content>.page{
