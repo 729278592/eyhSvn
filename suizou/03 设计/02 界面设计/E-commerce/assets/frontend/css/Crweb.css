@@ -98,10 +98,10 @@ button{outline: none;border: 0;}
 .cb_b{width: 475px;height: 440px;margin-top:35px;position: relative;float: left;margin-left: 60px;}
 #container {width:475px;position:relative;}
 
-#slides .slidesNext,#slides .slidesPrevious {position:absolute;top:134px;left:20px;width:24px;height:25px;padding-top:32px;display:block;z-index:101;overflow:hidden;background:url(../images/index/navigation-previous.png) no-repeat 0 0}
-#slides .slidesNext {right:20px;left:auto;background:url(../images/index/navigation-next.png) no-repeat 0 0;}
+#slides .slidesNext,#slides .slidesPrevious {position:absolute;top:134px;left:20px;width:24px;height:25px;padding-top:32px;display:block;z-index:101;overflow:hidden;background:url(../plugins/jquery_slides/images/navigation-previous.png) no-repeat 0 0}
+#slides .slidesNext {right:20px;left:auto;background:url(../plugins/jquery_slides/images/navigation-next.png) no-repeat 0 0;}
 .cbb_m{width: 394px;height: 110px;margin: 10px auto;}
-.cbbm_y{width: 100%;height: 44px;border: 1px solid #f99282;border-radius: 5px;}
+.cbbm_y{width: 99.999%;height: 44px;border: 1px solid #f99282;border-radius: 5px;}
 .cbbm_y li{width: 33.33334%;height: 45px;float: left;position: relative}
 .cbbm_y li a{width: 100%;height: 100%;line-height: 44px;text-align: center;font-size: 14px;position: relative;top: -5px;color: #070202;}
 .cbbm_y li a>.fa{color: #e74d3d;font-size: 20px;position: relative;top: 3px;}
