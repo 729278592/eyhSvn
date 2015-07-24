@@ -564,6 +564,8 @@ tr th,tr td{ text-align:center;font-size: 14px;border:1px solid #cccccc;color: #
 /*子弹的推荐套餐*/
 .recommended_packages_content ul{width: 100%;height: 169px;float: left;font-size: 14px;}
 .recommended_packages_content ul li{float: left;width: 25%;height: 100%;text-align: center;}
+.recommended_packages_content .first li{width: 20%;}
+.recommended_packages_content .first li img{position: relative;left: -42px;}
 .recommended_packages_content ul li img{margin: 20px 50px 5px 0;}
 .recommended_packages_content ul li .plus,.recommended_packages_content ul li .sign{position: relative;left: 90px;}
 .recommended_packages_content ul li a{position: relative;left: 68px;}
