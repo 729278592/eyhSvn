@@ -258,11 +258,13 @@ button{outline: none;border: 0;}
 .caic_a{color: #fc9a40;font-size: 18px;position: relative;top:1px;}
 .cf_bold{color: #020202;font-size: 14px;font-weight: bold;}
 
-.scene_using_steps{padding: 20px 0;background: red;}
-.scene_using_steps p{font-size: 18px;width: 140px;height: 35px;line-height: 35px;background: #fd9f4d;color: #fff;margin: 0 auto;text-align: center;}
-.scene_using >li{float: left;}
+.scene_using_steps{padding: 20px 0;}
+.scene_using_steps .scene_using_steps_head{font-size: 18px;width: 140px;height: 35px;line-height: 35px;background: #fd9f4d;color: #fff;margin: 0 auto;text-align: center;}
 
-
+.scene_using_steps_content >li{float: left;text-align: center;font-size: 14px;margin-left: 100px;line-height: 21px;}
+.scene_using_steps_content >li p{font-size: 16px;font-weight: bold;margin: 5px 0;}
+.scene_using_steps_content >li .playmate{margin-left: 40px;}
+.scene_using_steps_content >li .collet{position: relative;left: 70px;}
 .sence_rank{margin-bottom: 20px;}
 .sence_rank_head{height: 108px;background: url("../images/cjzd/sence_rank_head_bg.jpg")}
 .sence_rank_content{width: 80%;margin: 0 auto;}

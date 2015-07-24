@@ -187,7 +187,11 @@ $(".ccc_ul>li").each(function(){
 });
 
 
-
+var plus = $("#plus");
+    var cs = $(".cjul_d,.show_div");
+    plus.on("click", function () {
+        cs.removeClass("hide")
+    });
 
     var span = $(".chiofu_rank_head span");
     var sdiv = $(".chiofu_rank_content_div");
