@@ -287,6 +287,11 @@ var service = $(".right_content .service");
         })
     });
 
+
+
+
+
+
     /*商品切换*/
     var animate_time=200;//动画时间：0.3秒
     var interval_time=3000;//播放间隔时间：5秒

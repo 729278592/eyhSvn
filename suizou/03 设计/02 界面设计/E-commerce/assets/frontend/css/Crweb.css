@@ -512,7 +512,7 @@ tr th,tr td{ text-align:center;font-size: 14px;border:1px solid #cccccc;color: #
 .block4:hover{background: rgba(255,255,255,0.8)}
 .fc_s{font-size: 18px;color: #3c886e;display: inline-block;width: 108px;text-align: center;}
 .fc_s1{font-size: 14px;color: #fff;position: relative;top: -15px;display: inline-block;width: 117px;left: -3px}
-.f2{background: #222222;width: 100%;margin-top: -10px;padding-bottom: 11px;}
+.f2{background: #222222;width: 100%;padding-bottom: 11px;}
 .f_c2{position: relative;float: left;}
 
 .fcc_ul{margin: 0 260px;}
@@ -768,6 +768,10 @@ img{vertical-align:middle;}
 .service li .middle{display: block;idth: 170px;margin: 0 0 0 95px;}
 .service li .address{margin: 0 0 0 95px;font-size: 16px;display: block;}
 .service>li>a{color: #f47868;margin: 0 0 0 95px;}
+
+
+
+
 @media screen and (max-width: 1300px) {
    .fc_ul li img{width: 90px;position: relative;left: 9px;top: 10px;}
 }
