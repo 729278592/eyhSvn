@@ -109,6 +109,22 @@ nl.each(function(i){
 
 
 
+var sls = $(".station_head li .station_name");
+var s = $(".station_name");
+var sl = $(".station_content li");
+sls.each(function(i){
+   $(this).hover(function(){
+       $(this).addClass("active");
+       $(this).parent().siblings().find(s).removeClass("active");
+       $(this).parent().parent().siblings().find(s).removeClass("active");
+       $(this).parent().parent().siblings(".station_content").find("li").addClass("hide");
+       sl.eq(i).removeClass("hide");
+       sl.eq(i).siblings().addClass("hide");
+   });
+});
+
+
+
 
 
 

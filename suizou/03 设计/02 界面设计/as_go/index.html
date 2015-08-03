@@ -6,11 +6,46 @@
     <title>首页</title>
     <link rel="stylesheet" href="plugins/bootstrap-3.3.5-dist/css/bootstrap.css?v=ee"/>
     <link rel="stylesheet" href="css/common.css?v=33"/>
+
+    <link rel="stylesheet" href="plugins/jquery-lb/css/reset.css"/>
+    <link rel="stylesheet" href="plugins/jquery-lb/css/index.css"/>
     <style>
+
         .header{position: fixed;z-index: 1000000;}
         .content{background: #f5f5f7;}
         .header:hover{background: rgba(0,0,0,.7);}
         .footer{position: relative;}
+        .ui-bnnerimg{
+            width: 83px;
+            height: 83px;
+            border-radius: 103px;border: 1px solid #979797;text-align: center;line-height: 83px;
+        }
+        .ui-banner .ui-banner-arrow.ui-banner-arrow-prev{
+            background: transparent url("plugins/jquery-lb/images/prev.jpg") no-repeat scroll 0 0;
+            height: 37px;
+            left: 30px;
+            top: 408px;
+            width: 37px;
+        }
+        .ui-banner .ui-banner-arrow.ui-banner-arrow-next{
+            background: transparent url("plugins/jquery-lb/images/next.jpg") no-repeat;
+            height: 37px;
+            top: 408px;
+            left: 75px;
+            width: 37px;
+        }
+        .hide{display: none;}
+        .ui-banner-slides .mask{background: rgba(20, 181, 143, 0.4);color: #fff;text-align: center;width: 100%;height: 100%;position: absolute;top: 0;padding:12% 20%;}
+        .ui-banner-slogans li{margin-bottom: 15px;position: relative;top: -10px;}
+        .w1200{
+            width: 1200px;
+            position: relative;
+            left: 50%;
+            margin-left: -600px;
+        }
+        .floatLeft {
+            float: left;
+        }
     </style>
 </head>
 <body class="home blog et_frontend_customizer gecko et_includes_sidebar">
@@ -68,8 +103,249 @@
                 <!--</ul>-->
                 <img src="images/place6.jpg" class="img-responsive" alt="Responsive image" style="width: 77%;position: relative;left: 50%;margin-left: -38.5%;margin-bottom: 15px;">
                 <p class="col-lg-12 title last">产品功能的介绍</p>
-                <img src="images/consultation.jpg" class="img-responsive" alt="Responsive image">
 
+                <!--滚动插件-->
+                <div class="index-new w1200 mt30">
+                    <div class="indexadd mt50 mb60">
+                        <div id="banners" class="ui-banner">
+                            <ul class="ui-banner-slides">
+                                <li>
+                                    <a href=""><img src="plugins/jquery-lb/images/app.jpg" /></a>
+                                    <div class="mask">
+                                        <img src="plugins/jquery-lb/images/icon1.png" alt=""/> <br/>
+                                        随走办公通讯录是能快快速导入人员名单是人员分配更加快速合理，能高效的查找人员的信息，所以通通讯录是移动办公最基础核心的类容，传 副本
+                                    </div>
+                                </li>
+                                <li>
+                                    <a href=""><img src="plugins/jquery-lb/images/app.jpg" /></a>
+                                    <div class="mask">
+                                        <img src="plugins/jquery-lb/images/icon1.png" alt=""/> <br/>
+                                        随走办公通讯录是能快快速导入人员名单是人员分配更加快速合理，能高效的查找人员的信息，所以通通讯录是移动办公最基础核心的类容，传 副本
+                                    </div>
+                                </li>
+                                <li>
+                                    <a href=""><img src="plugins/jquery-lb/images/app.jpg" /></a>
+                                    <div class="mask">
+                                        <img src="plugins/jquery-lb/images/icon1.png" alt=""/> <br/>
+                                        随走办公通讯录是能快快速导入人员名单是人员分配更加快速合理，能高效的查找人员的信息，所以通通讯录是移动办公最基础核心的类容，传 副本
+                                    </div>
+                                </li>
+                                <li>
+                                    <a href=""><img src="plugins/jquery-lb/images/app.jpg" /></a>
+                                    <div class="mask">
+                                        <img src="plugins/jquery-lb/images/icon1.png" alt=""/> <br/>
+                                        随走办公通讯录是能快快速导入人员名单是人员分配更加快速合理，能高效的查找人员的信息，所以通通讯录是移动办公最基础核心的类容，传 副本
+                                    </div>
+                                </li>
+                                <li>
+                                    <a href=""><img src="plugins/jquery-lb/images/app.jpg" /></a>
+                                    <div class="mask">
+                                        <img src="plugins/jquery-lb/images/icon1.png" alt=""/> <br/>
+                                        随走办公通讯录是能快快速导入人员名单是人员分配更加快速合理，能高效的查找人员的信息，所以通通讯录是移动办公最基础核心的类容，传 副本
+                                    </div>
+                                </li>
+                                <li>
+                                    <a href=""><img src="plugins/jquery-lb/images/app.jpg" /></a>
+                                    <div class="mask">
+                                        <img src="plugins/jquery-lb/images/icon1.png" alt=""/> <br/>
+                                        随走办公通讯录是能快快速导入人员名单是人员分配更加快速合理，能高效的查找人员的信息，所以通通讯录是移动办公最基础核心的类容，传 副本
+                                    </div>
+                                </li>
+                                <li>
+                                    <a href=""><img src="plugins/jquery-lb/images/app.jpg" /></a>
+                                    <div class="mask">
+                                        <img src="plugins/jquery-lb/images/icon1.png" alt=""/> <br/>
+                                        随走办公通讯录是能快快速导入人员名单是人员分配更加快速合理，能高效的查找人员的信息，所以通通讯录是移动办公最基础核心的类容，传 副本
+                                    </div>
+                                </li>
+                                <li>
+                                    <a href=""><img src="plugins/jquery-lb/images/app.jpg" /></a>
+                                    <div class="mask">
+                                        <img src="plugins/jquery-lb/images/icon1.png" alt=""/> <br/>
+                                        随走办公通讯录是能快快速导入人员名单是人员分配更加快速合理，能高效的查找人员的信息，所以通通讯录是移动办公最基础核心的类容，传 副本
+                                    </div>
+                                </li>
+                                <li>
+                                    <a href=""><img src="plugins/jquery-lb/images/app.jpg" /></a>
+                                    <div class="mask">
+                                        <img src="plugins/jquery-lb/images/icon1.png" alt=""/> <br/>
+                                        随走办公通讯录是能快快速导入人员名单是人员分配更加快速合理，能高效的查找人员的信息，所以通通讯录是移动办公最基础核心的类容，传 副本
+                                    </div>
+                                </li>
+                                <li>
+                                    <a href=""><img src="plugins/jquery-lb/images/app.jpg" /></a>
+                                    <div class="mask">
+                                        <img src="plugins/jquery-lb/images/icon1.png" alt=""/> <br/>
+                                        随走办公通讯录是能快快速导入人员名单是人员分配更加快速合理，能高效的查找人员的信息，所以通通讯录是移动办公最基础核心的类容，传 副本
+                                    </div>
+                                </li>
+                                <li>
+                                    <a href=""><img src="plugins/jquery-lb/images/app.jpg" /></a>
+                                    <div class="mask">
+                                        <img src="plugins/jquery-lb/images/icon1.png" alt=""/> <br/>
+                                        随走办公通讯录是能快快速导入人员名单是人员分配更加快速合理，能高效的查找人员的信息，所以通通讯录是移动办公最基础核心的类容，传 副本
+                                    </div>
+                                </li>
+                                <li>
+                                    <a href=""><img src="plugins/jquery-lb/images/app.jpg" /></a>
+                                    <div class="mask">
+                                        <img src="plugins/jquery-lb/images/icon1.png" alt=""/> <br/>
+                                        随走办公通讯录是能快快速导入人员名单是人员分配更加快速合理，能高效的查找人员的信息，所以通通讯录是移动办公最基础核心的类容，传 副本
+                                    </div>
+                                </li>
+                            </ul>
+                            <ul class="ui-banner-slogans">
+                                <li class="ui-line">
+                                    <div class="ullinehover">
+                                        <div class="ui-bnnerimg floatLeft">
+                                            <i class="glyphicon glyphicon-pencil"></i>
+                                        </div>
+                                        <div class="ui-bnnerp">
+                                            <p>
+                                                签到.<div class="ret "></div>
+                                            </p>
+                                        </div>
+                                    </div>
+                                </li>
+                                <li class="ui-line">
+                                    <div class="ullinehover">
+                                        <div class="ui-bnnerimg floatLeft">
+                                            <i class="glyphicon glyphicon-list-alt"></i>
+                                        </div>
+                                        <div class="ui-bnnerp">
+                                            <p>
+                                                签到0<div class="ret "></div>
+                                            </p>
+                                        </div>
+                                    </div>
+                                </li>
+                                <li class="ui-line">
+                                    <div class="ullinehover">
+                                        <div class="ui-bnnerimg floatLeft">
+                                            <i class="glyphicon glyphicon-pencil"></i>
+                                        </div>
+                                        <div class="ui-bnnerp">
+                                            <p>
+                                                签到1<div class="ret "></div>
+                                            </p>
+                                        </div>
+                                    </div>
+                                </li>
+                                <li class="ui-line">
+                                    <div class="ullinehover">
+                                        <div class="ui-bnnerimg floatLeft">
+                                            <i class="glyphicon glyphicon-pencil"></i>
+                                        </div>
+                                        <div class="ui-bnnerp">
+                                            <p>
+                                                签到2<div class="ret "></div>
+                                            </p>
+                                        </div>
+                                    </div>
+                                </li>
+                                <li class="ui-line">
+                                    <div class="ullinehover">
+                                        <div class="ui-bnnerimg floatLeft">
+                                            <i class="glyphicon glyphicon-pencil"></i>
+                                        </div>
+                                        <div class="ui-bnnerp floatRight">
+                                            <p>
+                                                签到3<div class="ret "></div>
+                                            </p>
+                                        </div>
+                                    </div>
+                                </li>
+                                <li class="ui-line">
+                                    <div class="ullinehover">
+                                        <div class="ui-bnnerimg floatLeft">
+                                            <i class="glyphicon glyphicon-pencil"></i>
+                                        </div>
+                                        <div class="ui-bnnerp">
+                                            <p>
+                                                签到4<div class="ret "></div>
+                                            </p>
+                                        </div>
+                                    </div>
+                                </li>
+                                <li class="ui-line">
+                                    <div class="ullinehover">
+                                        <div class="ui-bnnerimg floatLeft">
+                                            <i class="glyphicon glyphicon-pencil"></i>
+                                        </div>
+                                        <div class="ui-bnnerp">
+                                            <p>
+                                                签到5<div class="ret "></div>
+                                            </p>
+                                        </div>
+                                    </div>
+                                </li>
+                                <li class="ui-line">
+                                    <div class="ullinehover">
+                                        <div class="ui-bnnerimg floatLeft">
+                                            <i class="glyphicon glyphicon-pencil"></i>
+                                        </div>
+                                        <div class="ui-bnnerp">
+                                            <p>
+                                                签到6<div class="ret "></div>
+                                            </p>
+                                        </div>
+                                    </div>
+                                </li>
+                                <li class="ui-line">
+                                    <div class="ullinehover">
+                                        <div class="ui-bnnerimg floatLeft">
+                                            <i class="glyphicon glyphicon-pencil"></i>
+                                        </div>
+                                        <div class="ui-bnnerp">
+                                            <p>
+                                                签到7<div class="ret "></div>
+                                            </p>
+                                        </div>
+                                    </div>
+                                </li>
+                                <li class="ui-line">
+                                    <div class="ullinehover">
+                                        <div class="ui-bnnerimg floatLeft">
+                                            <i class="glyphicon glyphicon-pencil"></i>
+                                        </div>
+                                        <div class="ui-bnnerp">
+                                            <p>
+                                                签到8<div class="ret "></div>
+                                            </p>
+                                        </div>
+                                    </div>
+                                </li>
+                                <li class="ui-line">
+                                    <div class="ullinehover">
+                                        <div class="ui-bnnerimg floatLeft">
+                                            <i class="glyphicon glyphicon-pencil"></i>
+                                        </div>
+                                        <div class="ui-bnnerp">
+                                            <p>
+                                                签到9<div class="ret "></div>
+                                            </p>
+                                        </div>
+                                    </div>
+                                </li>
+                                <li class="ui-line">
+                                    <div class="ullinehover">
+                                        <div class="ui-bnnerimg floatLeft">
+                                            <i class="glyphicon glyphicon-pencil"></i>
+                                        </div>
+                                        <div class="ui-bnnerp">
+                                            <p>
+                                                签到0<div class="ret "></div>
+                                            </p>
+                                        </div>
+                                    </div>
+                                </li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+                <!--滚动插件-->
+
+                <img src="images/consultation.jpg" class="img-responsive" alt="Responsive image">
                 <div class="width100">
                     <div class="product js_product">
                         <ul class="product_ul clearfix">
@@ -368,4 +644,32 @@
 <script src="js/jquery-1.11.3.min.js"></script>
 <script src="plugins/bootstrap-3.3.5-dist/js/bootstrap.js"></script>
 <script src="js/as_go.js"></script>
+<script src="plugins/jquery-lb/js/jquery-ui-1.8.6.core.widget.js"></script>
+<script src="plugins/jquery-lb/js/jqueryui.bannerize.js"></script>
+<script type="text/javascript">
+    $(document).ready(function () {
+        $('#banners').bannerize({
+            shuffle: 1,
+            interval: "5"
+        });
+        $(".ui-line").hover(function () {
+            $(this).addClass("ui-line-hover");
+            $(this).find(".ui-bnnerp").addClass("ui-bnnerp-hover");
+        }, function () {
+            $(this).removeClass("ui-line-hover");
+            $(this).find(".ui-bnnerp").removeClass("ui-bnnerp-hover");
+        });
+        $(".ui-banner-slides li").hover(
+                function(){
+                    $(this).find(".mask").animate({
+                        "top":"100%"
+                    },200)
+                },
+                function(){
+                    $(this).find(".mask").animate({
+                        "top":"0%"
+                    },200)
+                });
+    });
+</script>
 </html>

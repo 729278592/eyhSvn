@@ -80,7 +80,7 @@ html[xmlns] .clearfix {display: block;}
 .width100{width: 100%;}
 .title_box{width: 100%;height: 100%;background: rgba(0,0,0,.5);position: absolute;top: 0;left: 0;text-align: center;color: #fff;font-size: 16px;}
 .title_box span{position: relative;top: 45%;}
-.product ul li .plus{width: 20px;height: 20px;background: rgba(0,0,0,.8);border-radius: 20px;line-height: 13px;text-align: center;color: #2691a7;position: absolute;top: 50%;margin-left: -10px;left: 50%;margin-top: -10px;font-size: 26px;}
+.product ul li .plus{width: 20px;height: 20px;background: rgba(0,0,0,.8);border-radius: 20px;line-height: 13px;text-align: center;color: #2691a7;position: absolute;top: 50%;margin-left: -10px;left: 50%;margin-top: -40px;font-size: 26px;}
 
 
 /*.place{width: 100%;margin: 0 auto;position: relative;left: 50%;margin-left: -30%;}*/
@@ -174,10 +174,7 @@ html[xmlns] .clearfix {display: block;}
 .page_content_right_footer>.last>li ul li{list-style: disc;font-size: 14px;}
 .page_content_right_footer>.last>li ul li a{color: #555;}
 .page_content_right_footer>.last .last{float: right;}
-.application_content{margin: 10px 0;}
-.se1{background: #41bff4;}
-.se2{background: #ffcc02;}
-.se3{background: #9ecd57;}
+
 .application_content li{width: 60px;height: 60px;border-radius: 60px;float: left;margin-right: 143px;}
 .application_content .last{margin-right: 0;}
 .application_content li a{display: inline-block;width: 100%;height: 100%;line-height: 60px;text-align: center;color: #fff;font-size: 20px;}
@@ -216,13 +213,20 @@ html[xmlns] .clearfix {display: block;}
 .recruitment_content .menu ul li a{display: inline-block;width: 100%;height: 50px;line-height: 50px;border: 1px solid #e0e0e2;border-bottom: transparent;}
 .recruitment_content .menu ul .active a{color: #fff;background: #3caee2;}
 .recruitment_content .menu ul .active a:hover{text-decoration: none;}
-.recruitment_pay{width: 50%;position: relative;left: 50%;margin-left: -25%;padding: 15px 0;background: red;}
+.common_content{width: 70%;position: relative;left: 50%;margin-left: -35%;padding: 15px 0;}
 
 
-.recruitment_pay .pay li div {display: inline-block;border: 1px solid #e0e0e2;width: 100%;padding-right: 10px;}
-.recruitment_pay .pay li div img{float: left;margin: 10px;}
-.recruitment_pay .station{padding: 0;}
-.recruitment_pay .station li .station_name {border: 1px solid #e0e0e2;width: 100%;text-align: center;padding: 6px 0;}
+.common_content .pay li div {display: inline-block;border: 1px solid #e0e0e2;width: 100%;padding-right: 10px;}
+.common_content .pay li div img{float: left;margin: 10px;}
+.common_content .station{padding: 0;}
+.common_content .station_head li .station_name {border: 1px solid #e0e0e2;width: 100%;text-align: center;padding: 6px 0;float: left;}
+.common_content .station_head li .station_name.active{background: #3dafe2;color: #fff;}
+.common_content .station_content{width: 100%;clear: both;margin: 20px 0;}
+.common_content .station_content li{position: relative;padding: 10px 15px;border: 1px solid #e0e0e2;}
+.common_content .station_content li .top1{position: absolute;top: -15px;}
+.common_content .station_content li .top2{position: absolute;top: -15px;left: 40%;}
+.common_content .station_content li .top3{position: absolute;top: -15px;right: 5%;}
+
 /*footer*/
 .footer{width: 100%;background: #323232;padding: 10px 0;position: absolute;bottom: 0;}
 {height: 50px;font-size: 14px;width: 100%;}
@@ -234,6 +238,13 @@ html[xmlns] .clearfix {display: block;}
 
 
 
+
+/*examination_approval of content*/
+.application .title{font-size: 18px;color: #333;}
+.application .scene{margin: 15px 0;}
+.application .scene>span{padding-right: 65px;}
+.application button{width: 150px;height: 35px;line-height: 35px;text-align: center;border-radius: 5px;background: #ff9c0e;border: none;color: #fff;}
+.application button.last{background: transparent;color: #ff9c0e;border: 1px solid #ff9c0e;margin-left: 10px;}
 @media screen and (max-width: 1350px) {
     .page_content_left .wrap{float: left;z-index: 100;margin-left: 15px;}
     .page_content_right{width: 100%;}
@@ -247,6 +258,7 @@ html[xmlns] .clearfix {display: block;}
     .superiority{width:80%;position: relative;left: 50%;margin-left: -40%;}
     .step li .glyphicon-menu-right{left: 55px;}
     .page_content_right_footer>.first ul li img{width: 80%;}
+    .common_content .station li{display: block;}
 }
 
 @media screen and (max-width: 1130px) {
@@ -265,7 +277,7 @@ html[xmlns] .clearfix {display: block;}
     .recruitment_content .menu{float: left;background: transparent;margin-top: 20px;}
     .recruitment_content .menu ul li a{width: 100px;height: 50px;}
     .recruitment_content .menu ul .last a{border-bottom: 1px solid #e0e0e2;}
-    .recruitment_pay{margin-left: -15%;margin-top: 20px;}
+    .common_content{margin-left: -25%;}
 }
 
 @media screen and (max-width: 768px) {
