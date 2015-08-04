@@ -21,12 +21,11 @@ wd.on("click",function(){
         c.addClass("active");
         c.parent().siblings().find("div").removeClass("active");
         c.parent().siblings().find(".menu").slideUp();
-
     }
 });
+
+
 wa.next().removeClass("hide");
-
-
 
 
 
@@ -58,7 +57,21 @@ var pl = $(".product_ul li");
             },200);
             $(this).find(".plus").fadeIn(500)
         });
+var ii = $(".item_div").parent();
+    ii.hover(
+        function(){
 
+            $(this).find(".item_box").animate({
+                "top":"0%"
+            },200);
+
+        },
+        function(){
+            $(this).find(".item_box").animate({
+                "top":"100%"
+            },200);
+
+        });
 var jp = $(".js_product");
 
 var m = $(".myCarousel");

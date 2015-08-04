@@ -109,7 +109,12 @@ var FormValidation = function () {
                         minlength: 2,
                         required: true
                     },
-                    email: {
+                    password: {
+                        required: true,
+                        minlength: 6,
+                        maxlength: 16
+                    },
+                    email:{
                         required: true,
                         email: true
                     },
@@ -119,7 +124,9 @@ var FormValidation = function () {
                     },
                     number: {
                         required: true,
-                        number: true
+                        number: true,
+                        minlength: 11,
+                        maxlength: 11
                     },
                     digits: {
                         required: true,
@@ -132,20 +139,21 @@ var FormValidation = function () {
                 },
 
                 invalidHandler: function (event, validator) { //display error alert on form submit              
-                    success2.hide();
-                    error2.show();
+//                    success2.hide();
+//                    error2.show();
                     Main.scrollTo(error2, -200);
                 },
 
                 errorPlacement: function (error, element) { // render error placement for each input type
                     var icon = $(element).parent('.input-icon').children('i');
                     icon.removeClass('fa-check').addClass("fa-warning");  
-                    icon.attr("data-original-title", error.text()).tooltip({'container': 'body'});
+                    icon.attr("data-original-title", error.text())
+                    //.tooltip({'container': 'body'});
                 },
 
                 highlight: function (element) { // hightlight error inputs
                     $(element)
-                        .closest('.form-group').removeClass("has-success").addClass('has-error'); // set error class to the control group   
+                        .closest('.form-group').removeClass("has-success").addClass('has-error'); // set error class to the control group
 
                 },
 
@@ -160,16 +168,16 @@ var FormValidation = function () {
                 },
 
                 submitHandler: function (form) {
-                    success2.show();
-                    error2.hide();
+//                    success2.show();
+//                    error2.hide();
                     form[0].submit(); // submit the form
                 }
             });
 
 
-    };
+    }
 
-//    // advance validation
+    // advance validation
 //    var handleValidation3 = function() {
 //        // for more info visit the official plugin documentation:
 //        // http://docs.jquery.com/Plugins/Validation
@@ -328,10 +336,10 @@ var FormValidation = function () {
         //main function to initiate the module
         init: function () {
 
-//            handleWysihtml5();
-//            handleValidation1();
+        //    handleWysihtml5();
+          //  handleValidation1();
             handleValidation2();
-//            handleValidation3();
+           // handleValidation3();
 
         }
 

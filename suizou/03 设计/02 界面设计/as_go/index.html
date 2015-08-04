@@ -6,46 +6,20 @@
     <title>首页</title>
     <link rel="stylesheet" href="plugins/bootstrap-3.3.5-dist/css/bootstrap.css?v=ee"/>
     <link rel="stylesheet" href="css/common.css?v=33"/>
-
     <link rel="stylesheet" href="plugins/jquery-lb/css/reset.css"/>
     <link rel="stylesheet" href="plugins/jquery-lb/css/index.css"/>
     <style>
-
         .header{position: fixed;z-index: 1000000;}
-        .content{background: #f5f5f7;}
         .header:hover{background: rgba(0,0,0,.7);}
         .footer{position: relative;}
-        .ui-bnnerimg{
-            width: 83px;
-            height: 83px;
-            border-radius: 103px;border: 1px solid #979797;text-align: center;line-height: 83px;
-        }
-        .ui-banner .ui-banner-arrow.ui-banner-arrow-prev{
-            background: transparent url("plugins/jquery-lb/images/prev.jpg") no-repeat scroll 0 0;
-            height: 37px;
-            left: 30px;
-            top: 408px;
-            width: 37px;
-        }
-        .ui-banner .ui-banner-arrow.ui-banner-arrow-next{
-            background: transparent url("plugins/jquery-lb/images/next.jpg") no-repeat;
-            height: 37px;
-            top: 408px;
-            left: 75px;
-            width: 37px;
-        }
+        .ui-bnnerimg{width: 83px;height: 83px;border-radius: 103px;border: 1px solid #979797;text-align: center;line-height: 83px;}
+        .ui-banner .ui-banner-arrow.ui-banner-arrow-prev{background: transparent url("plugins/jquery-lb/images/prev.jpg") no-repeat scroll 0 0;height: 37px;left: 30px;top: 408px;width: 37px;}
+        .ui-banner .ui-banner-arrow.ui-banner-arrow-next{background: transparent url("plugins/jquery-lb/images/next.jpg") no-repeat;height: 37px;top: 408px;left: 75px;width: 37px;}
         .hide{display: none;}
         .ui-banner-slides .mask{background: rgba(20, 181, 143, 0.4);color: #fff;text-align: center;width: 100%;height: 100%;position: absolute;top: 0;padding:12% 20%;}
         .ui-banner-slogans li{margin-bottom: 15px;position: relative;top: -10px;}
-        .w1200{
-            width: 1200px;
-            position: relative;
-            left: 50%;
-            margin-left: -600px;
-        }
-        .floatLeft {
-            float: left;
-        }
+        .w1200{width: 1200px;position: relative;left: 50%;margin-left: -600px;}
+        .floatLeft {float: left;}
     </style>
 </head>
 <body class="home blog et_frontend_customizer gecko et_includes_sidebar">
@@ -54,14 +28,14 @@
         <div class="container">
             <div class="row">
                 <ul class="fl col-lg-4 col-xs-6">
-                    <li class="first"><a href=""><img src="images/login.png" alt="" class="login"/></a></li>
-                    <li><a href="">首页</a></li>
-                    <li><a href="">产品</a></li>
-                    <li class="last"><a href="">关于我们</a></li>
+                    <li class="first"><a href="#"><img src="images/login.png" alt="" class="login"/></a></li>
+                    <li><a href="index.html">首页</a></li>
+                    <li><a href="product_introduction.html">产品</a></li>
+                    <li class="last"><a href="contact_us.html">关于我们</a></li>
                 </ul>
                 <ul class="fr col-lg-2 col-xs-6">
-                    <li class="first"><a href="#" class="active">注册</a></li>
-                    <li class="last"><a href="#">登陆</a></li>
+                    <li class="first"><a href="register.html" class="active">注册</a></li>
+                    <li class="last"><a href="login.html">登陆</a></li>
                 </ul>
             </div>
         </div>
@@ -77,30 +51,24 @@
                 <ul class="superiority clearfix">
                     <li class="col-lg-2">
                         <span class="title">思想</span>
-                        <span class="superiority_content">是法师法师法撒旦法士大夫撒发生法士大夫啥打法是否</span>
+                        <span class="superiority_content">我们是90团队，具有创新的思维，拒绝偏偏一律的流水创意更符合人们的使用与审美</span>
                     </li>
                     <li class="col-lg-2">
-                        <span class="title">思想</span>
-                        <span class="superiority_content">是法师法师法撒旦法士大夫撒发生法士大夫啥打法是否</span>
+                        <span class="title">专业</span>
+                        <span class="superiority_content">我们的团队都是专业的团队，人员配备都很完善，专业技能过硬</span>
                     </li>
                     <li class="col-lg-2">
-                        <span class="title">思想</span>
-                        <span class="superiority_content">是法师法师法撒旦法士大夫撒发生法士大夫啥打法是否</span>
+                        <span class="title">便捷</span>
+                        <span class="superiority_content">我们开发的移动办公软件，更就便捷、方便，更加简洁化的设计</span>
                     </li>
                     <li class="col-lg-2">
-                        <span class="title">思想</span>
-                        <span class="superiority_content">是法师法师法撒旦法士大夫撒发生法士大夫啥打法是否</span>
+                        <span class="title">服务</span>
+                        <span class="superiority_content">对于服务我们是真诚的对待每一位顾客，真心的换角度思考客户待解决的问题</span>
                     </li>
                 </ul>
                 <p class="col-lg-12 title">我们相信随走办公将给新一代办公人群带来全新的体验</p>
                 <p class="col-lg-12 title last">目的让办公变得更加的方便、快捷！</p>
-                <!--<ul class="place clearfix">-->
-                    <!--<li class="one"><img src="images/place1.jpg" class="img-responsive" alt="Responsive image"/></li>-->
-                    <!--<li class="tuo"><img src="images/place2.jpg" class="img-responsive" alt="Responsive image"/></li>-->
-                    <!--<li class="three"><img src="images/place3.jpg" class="img-responsive" alt="Responsive image"/></li>-->
-                    <!--<li class="four"><img src="images/place4.jpg" class="img-responsive" alt="Responsive image"/></li>-->
-                    <!--<li class="five"><img src="images/place5.jpg" class="img-responsive" alt="Responsive image"/></li>-->
-                <!--</ul>-->
+
                 <img src="images/place6.jpg" class="img-responsive" alt="Responsive image" style="width: 77%;position: relative;left: 50%;margin-left: -38.5%;margin-bottom: 15px;">
                 <p class="col-lg-12 title last">产品功能的介绍</p>
 
@@ -509,25 +477,48 @@
                         <div class="item">
                             <ul class="clearfix">
                                 <li>
-                                    <img src="images/icon_tu1.jpg"  class="img-responsive" alt="Responsive image"/>
+                                    <div class="item_div">
+                                        <img src="images/icon_tu1.jpg"  class="img-responsive" alt="Responsive image"/>
+                                        <div class="item_box">
+                                            <a href="#"><img src="images/details.png" alt=""/></a>
+                                        </div>
+                                    </div>
                                     <p class="title">线上交流会</p>
                                     <span>2015/7/5</span><br/>
                                     <span>活动主题是线上交流各个在本职工作的心得体会，相互交换信息资源促使大家共同发展</span>
                                 </li>
                                 <li>
-                                    <img src="images/icon_tu2.jpg"  class="img-responsive" alt="Responsive image"/>
+                                    <div class="item_div">
+                                        <img src="images/icon_tu2.jpg"  class="img-responsive" alt="Responsive image"/>
+                                        <div class="item_box">
+                                            <a href="#"><img src="images/details.png" alt=""/></a>
+                                        </div>
+                                    </div>
+
                                     <p class="title">线上交流会</p>
                                     <span>2015/7/5</span><br/>
                                     <span>活动主题是线上交流各个在本职工作的心得体会，相互交换信息资源促使大家共同发展</span>
                                 </li>
                                 <li>
-                                    <img src="images/icon_tu3.jpg"  class="img-responsive" alt="Responsive image"/>
+                                    <div class="item_div">
+                                        <img src="images/icon_tu3.jpg"  class="img-responsive" alt="Responsive image"/>
+                                        <div class="item_box">
+                                            <a href="#"><img src="images/details.png" alt=""/></a>
+                                        </div>
+                                    </div>
+
                                     <p class="title">线上交流会</p>
                                     <span>2015/7/5</span><br/>
                                     <span>活动主题是线上交流各个在本职工作的心得体会，相互交换信息资源促使大家共同发展</span>
                                 </li>
                                 <li class="last">
-                                    <img src="images/icon_tu4.jpg"  class="img-responsive" alt="Responsive image"/>
+                                    <div class="item_div">
+                                        <img src="images/icon_tu4.jpg"  class="img-responsive" alt="Responsive image"/>
+                                        <div class="item_box">
+                                            <a href="#"><img src="images/details.png" alt=""/></a>
+                                        </div>
+                                    </div>
+
                                     <p class="title">线上交流会</p>
                                     <span>2015/7/5</span><br/>
                                     <span>活动主题是线上交流各个在本职工作的心得体会，相互交换信息资源促使大家共同发展</span>
@@ -537,25 +528,48 @@
                         <div class="item active">
                             <ul class="clearfix">
                                 <li>
-                                    <img src="images/icon_tu1.jpg"  class="img-responsive" alt="Responsive image"/>
+                                    <div class="item_div">
+                                        <img src="images/icon_tu1.jpg"  class="img-responsive" alt="Responsive image"/>
+                                        <div class="item_box">
+                                            <a href="#"><img src="images/details.png" alt=""/></a>
+                                        </div>
+                                    </div>
                                     <p class="title">线上交流会</p>
                                     <span>2015/7/5</span><br/>
                                     <span>活动主题是线上交流各个在本职工作的心得体会，相互交换信息资源促使大家共同发展</span>
                                 </li>
                                 <li>
-                                    <img src="images/icon_tu2.jpg"  class="img-responsive" alt="Responsive image"/>
+                                    <div class="item_div">
+                                        <img src="images/icon_tu2.jpg"  class="img-responsive" alt="Responsive image"/>
+                                        <div class="item_box">
+                                            <a href="#"><img src="images/details.png" alt=""/></a>
+                                        </div>
+                                    </div>
+
                                     <p class="title">线上交流会</p>
                                     <span>2015/7/5</span><br/>
                                     <span>活动主题是线上交流各个在本职工作的心得体会，相互交换信息资源促使大家共同发展</span>
                                 </li>
                                 <li>
-                                    <img src="images/icon_tu3.jpg"  class="img-responsive" alt="Responsive image"/>
+                                    <div class="item_div">
+                                        <img src="images/icon_tu3.jpg"  class="img-responsive" alt="Responsive image"/>
+                                        <div class="item_box">
+                                            <a href="#"><img src="images/details.png" alt=""/></a>
+                                        </div>
+                                    </div>
+
                                     <p class="title">线上交流会</p>
                                     <span>2015/7/5</span><br/>
                                     <span>活动主题是线上交流各个在本职工作的心得体会，相互交换信息资源促使大家共同发展</span>
                                 </li>
                                 <li class="last">
-                                    <img src="images/icon_tu4.jpg"  class="img-responsive" alt="Responsive image"/>
+                                    <div class="item_div">
+                                        <img src="images/icon_tu4.jpg"  class="img-responsive" alt="Responsive image"/>
+                                        <div class="item_box">
+                                            <a href="#"><img src="images/details.png" alt=""/></a>
+                                        </div>
+                                    </div>
+
                                     <p class="title">线上交流会</p>
                                     <span>2015/7/5</span><br/>
                                     <span>活动主题是线上交流各个在本职工作的心得体会，相互交换信息资源促使大家共同发展</span>
@@ -565,25 +579,48 @@
                         <div class="item">
                             <ul class="clearfix">
                                 <li>
-                                    <img src="images/icon_tu1.jpg"  class="img-responsive" alt="Responsive image"/>
+                                    <div class="item_div">
+                                        <img src="images/icon_tu1.jpg"  class="img-responsive" alt="Responsive image"/>
+                                        <div class="item_box">
+                                            <a href="#"><img src="images/details.png" alt=""/></a>
+                                        </div>
+                                    </div>
                                     <p class="title">线上交流会</p>
                                     <span>2015/7/5</span><br/>
                                     <span>活动主题是线上交流各个在本职工作的心得体会，相互交换信息资源促使大家共同发展</span>
                                 </li>
                                 <li>
-                                    <img src="images/icon_tu2.jpg"  class="img-responsive" alt="Responsive image"/>
+                                    <div class="item_div">
+                                        <img src="images/icon_tu2.jpg"  class="img-responsive" alt="Responsive image"/>
+                                        <div class="item_box">
+                                            <a href="#"><img src="images/details.png" alt=""/></a>
+                                        </div>
+                                    </div>
+
                                     <p class="title">线上交流会</p>
                                     <span>2015/7/5</span><br/>
                                     <span>活动主题是线上交流各个在本职工作的心得体会，相互交换信息资源促使大家共同发展</span>
                                 </li>
                                 <li>
-                                    <img src="images/icon_tu3.jpg"  class="img-responsive" alt="Responsive image"/>
+                                    <div class="item_div">
+                                        <img src="images/icon_tu3.jpg"  class="img-responsive" alt="Responsive image"/>
+                                        <div class="item_box">
+                                            <a href="#"><img src="images/details.png" alt=""/></a>
+                                        </div>
+                                    </div>
+
                                     <p class="title">线上交流会</p>
                                     <span>2015/7/5</span><br/>
                                     <span>活动主题是线上交流各个在本职工作的心得体会，相互交换信息资源促使大家共同发展</span>
                                 </li>
                                 <li class="last">
-                                    <img src="images/icon_tu4.jpg"  class="img-responsive" alt="Responsive image"/>
+                                    <div class="item_div">
+                                        <img src="images/icon_tu4.jpg"  class="img-responsive" alt="Responsive image"/>
+                                        <div class="item_box">
+                                            <a href="#"><img src="images/details.png" alt=""/></a>
+                                        </div>
+                                    </div>
+
                                     <p class="title">线上交流会</p>
                                     <span>2015/7/5</span><br/>
                                     <span>活动主题是线上交流各个在本职工作的心得体会，相互交换信息资源促使大家共同发展</span>
