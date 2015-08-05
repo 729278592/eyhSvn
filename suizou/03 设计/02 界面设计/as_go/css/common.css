@@ -141,7 +141,7 @@ html[xmlns] .clearfix {display: block;}
 .background span{display: inline-block;width: 200px;height: 30px;}
 .background .definition{position: relative;top: 15px;font-size: 16px;}
 .background .introduction{font-size: 14px;position: relative;top: 10px;}
-.background .btn{width: 100px;height: 30px;text-align: center;background: #ff9702;border-radius: 2px;color: #fff;position: relative;top: 30px;line-height: 10px;}
+.background .btn{width: 100px;height: 30px;text-align: center;background: #ff9702;border-radius: 2px;color: #fff;position: relative;top: 30px;line-height: 15px;}
 .page_content_right_content,.page_content_right_footer>.first{padding: 10px 20px 5px 20px;background: #fff;border: 1px solid #dbdbdb;}
 .application{width: 100%;margin-bottom: 10px;position: relative;}
 .common_head{border-bottom: 1px dashed #dbdbdb;margin-bottom: 10px;font-size: 16px;}
@@ -220,6 +220,22 @@ html[xmlns] .clearfix {display: block;}
 
 
 
+/*about_us of content*/
+.about_us{}
+.about_us p{padding:.5%;position: relative;top: 10px;}
+.about_head{font-size: 18px;color: #3caee3;border-bottom: 1px solid #3caee3;padding-bottom: 10px;}
+.about_content{margin-bottom: 20px;}
+
+
+
+/*authorization_installation of content*/
+.authorization{width: 60%;position: relative;left: 50%;margin-left: -30%;padding: 20px 0;border: 1px solid #bccdce;
+    border-radius: 10px;text-align: center;background: #fff;margin-top: 200px;}
+.authorization .title{font-size: 20px;font-weight: bold;}
+.authorization .btn{width: 250px;height: 40px;background: #43afe0;text-align: center;color: #fff;border-radius: 10px;font-size: 16px;}
+
+
+
 /*footer*/
 .footer{width: 100%;background: #323232;padding: 10px 0;position: absolute;bottom: 0;}
 {height: 50px;font-size: 14px;width: 100%;}
@@ -230,11 +246,7 @@ html[xmlns] .clearfix {display: block;}
 .footer .fr{height: 50px;line-height: 50px;color: #fff;text-align: right;}
 
 
-/*about_us*/
-.about_us{}
-.about_us p{padding:.5%;position: relative;top: 10px;}
-.about_head{font-size: 18px;color: #3caee3;border-bottom: 1px solid #3caee3;padding-bottom: 10px;}
-.about_content{margin-bottom: 20px;}
+
 
 /*media*/
 @media screen and (min-width: 1770px) {
