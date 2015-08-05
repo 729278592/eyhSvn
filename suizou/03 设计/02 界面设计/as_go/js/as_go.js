@@ -29,19 +29,6 @@ wa.next().removeClass("hide");
 
 
 
-
-
-//var tb = document.getElementsByClassName("title_box")[0];
-//var step = 100;
-//tb.style.left="0px";
-//tb.onmouseover = function(){
-//    var that = this;
-//    step += step - 10;
-//    setInterval(function(){
-//        that.style.left = step + "%";
-//alert(step)
-//       },1000)
-//};
 var pl = $(".product_ul li");
     pl.hover(
         function(){
