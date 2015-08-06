@@ -7,25 +7,94 @@
     <link rel="stylesheet" href="css/font/css/font-awesome.min.css"/>
     <link rel="stylesheet" href="css/font/css/font-awesome-ie7.min.css"/>
     <style>
-        body{min-width:1170px; }
-        h1{ font-size:16px; color:#999; font-weight:normal; text-align:center; line-height:90px; border-top:1px dashed #ddd; margin-top:50px;}
-        .taskBoxLinks { float:left; width:300px; height:10px; font-size:0; line-height:0; background:#f2f2f2; border:1px solid #dedede;-moz-border-radius:6px;-webkit-border-radius:6px;border-radius:6px; position:relative; margin-top:8px; margin-right:10px; cursor:pointer;}
-        .taskBoxLinks h3,.taskBoxLinks h4{ position:absolute; left:-1px; top:-1px; height:10px; font-size:0; line-height:0; width:10%; background: #739e24; border:1px solid #739e24; -moz-border-radius:6px;-webkit-border-radius:6px;border-radius:6px; z-index:99;}
-        .taskBoxLinks h4 { border:1px solid #91cdea; background:#f5fafc; z-index:88;}
-        .taskBox{position: absolute;left:100px;top: 10px;}
-        .form1{width: 100%;margin-top:20px;}
-        .inpu3{left: 0;}
-        .inpu1{width:260px;margin-bottom: 0;}
-        .form1 a:hover{color: #f5796a;text-decoration: underline;}
-        .position{position: absolute;z-index: 10000;}
-        #table .fa-download:hover{cursor: not-allowed;}
-        .time{width: 50px;height: 25px;line-height: 25px;text-align: center;border: 1px solid #dbdbdb;}
-        .cj_ul_c{background: #f9f6f9;border-bottom: 1px solid #bbbabb;}
+        body {
+            min-width: 1170px;
+        }
+
+        h1 {
+            font-size: 16px;
+            color: #999;
+            font-weight: normal;
+            text-align: center;
+            line-height: 90px;
+            border-top: 1px dashed #ddd;
+            margin-top: 50px;
+        }
+
+        /*.taskBoxLinks {*/
+        /*float: left;*/
+        /*width: 300px;*/
+        /*height: 10px;*/
+        /*font-size: 0;*/
+        /*line-height: 0;*/
+        /*background: #f2f2f2;*/
+        /*border: 1px solid #dedede;*/
+        /*-moz-border-radius: 6px;*/
+        /*-webkit-border-radius: 6px;*/
+        /*border-radius: 6px;*/
+        /*position: relative;*/
+        /*margin-top: 8px;*/
+        /*margin-right: 10px;*/
+        /*cursor: pointer;*/
+        /*}*/
+
+        /*.taskBoxLinks h3, .taskBoxLinks h4 {*/
+        /*position: absolute;*/
+        /*left: -1px;*/
+        /*top: -1px;*/
+        /*height: 10px;*/
+        /*font-size: 0;*/
+        /*line-height: 0;*/
+        /*width: 10%;*/
+        /*background: #739e24;*/
+        /*border: 1px solid #739e24;*/
+        /*-moz-border-radius: 6px;*/
+        /*-webkit-border-radius: 6px;*/
+        /*border-radius: 6px;*/
+        /*z-index: 99;*/
+        /*}*/
+
+        /*.taskBoxLinks h4 {*/
+        /*border: 1px solid #91cdea;*/
+        /*background: #f5fafc;*/
+        /*z-index: 88;*/
+        /*}*/
+
+        /*.taskBox {*/
+        /*position: absolute;*/
+        /*left: 100px;*/
+        /*top: 10px;*/
+        /*}*/
+
+        .form1 { width: 100%; margin-top: 20px; }
+        .inpu3 { left: 0; }
+        .inpu1 { width: 260px; margin-bottom: 0; }
+        .form1 a:hover { color: #f5796a; text-decoration: underline; }
+        .position { position: absolute; z-index: 10000; }
+        #table .fa-download:hover { cursor: not-allowed; }
+        .time { width: 50px; height: 25px; line-height: 25px; text-align: center; border: 1px solid #dbdbdb; }
+        .cj_ul_c { background: #f9f6f9; border-bottom: 1px solid #bbbabb; }
+        .scene_head { width: 100%; height: 40px; line-height: 40px; text-align: center; font-size: 18px; }
+        .my_scene_header { background: #fae7db; }
+        .scene_DIY li{border-radius: 50px;}
+
+        .scene_DIY_head{background: #f1e8f1;}
+        .scene_shopping li{border-radius: 10px;}
+        .scene_shopping .active{background: #fff7f7;border-color: #f7c9cd;}
+        .scene_shopping_head{background: #e8f4fa;}
+        .operation{text-align: center;}
+        .li_div{background: #fdfbfd;padding: 10px 2.3% 20px;width: 95.4%;}
+        .scene_list .default,.scene_list .cloud_down,.scene_list .diy{float: right;position: relative;top: 0;left: -0px;}
+        .plus{margin-top: 28px;}
+        .scene_list .upload{position: relative;top: -60px;}
+        .creator,.sence_name{width: 375px;height: 25px;border-radius: 5px;padding-left: 5px;outline: none;border: 1px solid #ccc;}
 
     </style>
     <!--[if IE 8]>
     <style>
-        .br{top: -9px;}
+        .br {
+            top: -9px;
+        }
     </style>
     <![endif]-->
 </head>
@@ -34,9 +103,11 @@
 <div class="header">
     <div class="center h_center">
         <a href="#" class="c_a"><img src="images/index/logo.png" alt=""/></a>
+
         <div class="c_sou">
             <div class="block cs_s">
                 <input type="text" placeholder="请输入搜索内容" class="css_i"/>
+
                 <div class="css_r">
                     <a href="" class="block">
                         <i class="fa fa-caret-left"></i>
@@ -72,44 +143,287 @@
         <p class="scene_using_steps_head">场景使用方法</p>
         <ul class="scene_using_steps_content clearfix">
             <li>
-                <span>
-                    <img src="images/cjzd/icon1.png" alt="" class="playmate"/>
-                    <img src="images/cjzd/icon5.png" alt="" class="collet"/>
-                </span><br/>
+                    <span>
+                        <img src="images/cjzd/icon1.png" alt="" class="playmate"/>
+                        <img src="images/cjzd/icon5.png" alt="" class="collet"/>
+                    </span><br/>
+
                 <p>购买玩伴</p>
                 <span>亲爱的主人我已经来到你的</span><br/>
                 <span>家中，我会陪伴你</span>
             </li>
             <li>
-                <span>
-                    <img src="images/cjzd/icon2.png" alt="" class="playmate"/>
-                    <img src="images/cjzd/icon6.png" alt="" class="collet"/>
-                </span><br/>
+                    <span>
+                        <img src="images/cjzd/icon2.png" alt="" class="playmate"/>
+                        <img src="images/cjzd/icon6.png" alt="" class="collet"/>
+                    </span><br/>
+
                 <p>激活玩伴</p>
                 <span>简单操作，激活玩伴使其与玩</span><br/>
                 <span>伴相连接</span>
             </li>
             <li>
-                <span>
-                    <img src="images/cjzd/icon3.png" alt="" class="playmate"/>
-                    <img src="images/cjzd/icon6.png" alt="" class="collet"/>
-                </span><br/>
+                    <span>
+                        <img src="images/cjzd/icon3.png" alt="" class="playmate"/>
+                        <img src="images/cjzd/icon6.png" alt="" class="collet"/>
+                    </span><br/>
+
                 <p>场景设置</p>
                 <span>设置你想设置的场景，体验真实的</span><br/>
                 <span>场景体验</span>
             </li>
             <li>
-                <span>
-                    <img src="images/cjzd/icon4.png" alt=""/>
-                </span><br/>
+                    <span>
+                        <img src="images/cjzd/icon4.png" alt=""/>
+                    </span><br/>
+
                 <p>使用玩伴</p>
                 <span>场景全部设置好了，你将可以随</span><br/>
                 <span>心所欲的使用玩伴了</span>
             </li>
         </ul>
     </div>
+    <div class="center cjzd_c">
+        <div class="scene clearfix">
+            <div class="scene_head my_scene_header">我的场景</div>
+            <ul class="scene_list clearfix" style="background: #fdfaf7;">
+                <li>
+
+                    <img src="images/cjzd/get_up.png" alt=""/>
+
+                    <div>
+                        <span class="type">起床早读</span><br/>
+                        <span class="name">系统默认</span><br/>
+                        <span class="use">使用</span>
+                    </div>
+                    <div>
+
+                        <span class="down"><i class="fa fa-download"></i> 25次</span><br/>
+                        <span class="detail">详情</span>
+                    </div>
+                    <img src="images/cjzd/default.png" alt="" class="default"/>
+                </li>
+                <li>
+                    <img src="images/cjzd/clock.png" alt=""/>
+
+                    <div>
+                        <span class="type">闹钟模式</span><br/>
+                        <span class="name">陈小洁</span><br/>
+                        <span class="use">使用</span>
+                    </div>
+                    <div>
+
+                        <span class="down"><i class="fa fa-download"></i> 25次</span><br/>
+                        <span class="detail">详情</span>
+                    </div>
+                    <img src="images/cjzd/cloud_down.png" alt="" class="cloud_down"/>
+                </li>
+                <li>
+                    <img src="images/cjzd/sleep.png" alt=""/>
+
+                    <div>
+                        <span class="type">夜晚模式</span><br/>
+                        <span class="name">陈小洁</span><br/>
+                        <span class="use">使用</span>
+                    </div>
+                    <div>
+
+                        <span class="down"><i class="fa fa-download"></i> 25次</span><br/>
+                        <span class="detail">详情</span>
+                    </div>
+                    <img src="images/cjzd/DIY.png" alt="" class="diy"/>
+                </li>
+                <li>
+
+                    <img src="images/cjzd/get_up.png" alt=""/>
+
+                    <div>
+                        <span class="type">起床早读</span><br/>
+                        <span class="name">系统默认</span><br/>
+                        <span class="use">使用</span>
+                    </div>
+                    <div>
+
+                        <span class="down"><i class="fa fa-download"></i> 25次</span><br/>
+                        <span class="detail">详情</span>
+                    </div>
+                    <img src="images/cjzd/default.png" alt="" class="default"/>
+                </li>
+                <li>
+                    <img src="images/cjzd/clock.png" alt=""/>
+
+                    <div>
+                        <span class="type">闹钟模式</span><br/>
+                        <span class="name">陈小洁</span><br/>
+                        <span class="use">使用</span>
+                    </div>
+                    <div>
+
+                        <span class="down"><i class="fa fa-download"></i> 25次</span><br/>
+                        <span class="detail">详情</span>
+                    </div>
+                    <img src="images/cjzd/cloud_down.png" alt="" class="cloud_down"/>
+                </li>
+                <li>
+                    <img src="images/cjzd/sleep.png" alt=""/>
+
+                    <div>
+                        <span class="type">夜晚模式</span><br/>
+                        <span class="name">陈小洁</span><br/>
+                        <span class="use">使用</span>
+                    </div>
+                    <div>
+
+                        <span class="down"><i class="fa fa-download"></i> 25次</span><br/>
+                        <span class="detail">详情</span>
+                    </div>
+                    <img src="images/cjzd/DIY.png" alt="" class="diy"/>
+                </li>
+            </ul>
+        </div>
+    </div>
+    <div class="center cjzd_c" style="margin-top: -30px;">
+        <div class="scene clearfix scene_DIY">
+            <div class="scene_head scene_DIY_head">场景DIY</div>
+            <ul class="scene_list clearfix" style="background: #fdfbfd;">
+                <li>
+
+                    <img src="images/cjzd/get_up.png" alt=""/>
+
+                    <div>
+                        <span class="type">起床早读</span><br/>
+                        <span class="name">陈小洁</span><br/>
+                        <span class="use">使用</span>
+                    </div>
+                    <div>
+                        <span class="share">分享</span><br/>
+                        <span class="down"><i class="fa fa-download"></i> 25次</span><br/>
+                        <span class="detail">详情</span>
+                    </div>
+                    <input type="image" src="images/cjzd/upload.png"  class="upload"/>
+
+                </li>
+                <li>
+                    <img src="images/cjzd/clock.png" alt=""/>
+
+                    <div>
+                        <span class="type">闹钟模式</span><br/>
+                        <span class="name">陈小洁</span><br/>
+                        <span class="use">使用</span>
+                    </div>
+                    <div>
+                        <span class="share">分享</span><br/>
+                        <span class="down"><i class="fa fa-download"></i> 25次</span><br/>
+                        <span class="detail">详情</span>
+                    </div>
+                    <input type="image" src="images/cjzd/upload.png"  class="upload"/>
+                </li>
+                <li>
+                    <img src="images/cjzd/plus.png" alt="" class="plus"/>
+
+                </li>
+
+
+
+            </ul>
+            <div class="li_div">
+                <div class="show_div">
+                    <div class="fang">
+                        <i class="fa fa-star"></i>
+                        <span class="title">场景名称</span>
+                        <span class="block psanle">
+                            <input type="text" class="sence_name">
+                        </span>
+                    </div>
+                    <div class="fang">
+                        <i class="fa fa-star"></i>
+                        <span class="title">图标选择</span>
+                        <span class="block psanle">
+                            <input type="radio" name="upd"><img src="images/cjzd/upd1.png" alt=""/>&nbsp;
+                            <input type="radio" name="upd"><img src="images/cjzd/upd2.png" alt=""/>&nbsp;
+                            <input type="radio" name="upd"><img src="images/cjzd/upd3.png" alt=""/>&nbsp;
+                            <input type="radio" name="upd"><img src="images/cjzd/upd1.png" alt=""/>&nbsp;
+                            <input type="radio" name="upd"><img src="images/cjzd/upd2.png" alt=""/>&nbsp;
+                            <input type="radio" name="upd" checked><img src="images/cjzd/upd3.png" alt=""/>
+
+                            <input type="radio" name="upd"><select name="" id="" class="yinyue" style="margin-left: 0;">
+                                <option value="大">起床</option>
+                                <option value="小">睡觉</option>
+                            </select><button class="btn"><i class="fa fa-search"></i></button>
+                                   <span class="block block7">本地上传</span><br/>
+                        </span>
+                    </div>
+                    <div class="fang">
+                        <i class="fa fa-star"></i>
+                        <span class="title">创建者</span>
+                        <span class="block psanle">
+                            <input type="text" class="creator">
+                        </span>
+                    </div>
+                    <div class="fang">
+                        <i class="fa fa-star"></i>
+                        <span class="title">启动方式</span>
+                        <span class="block psanle"><input checked="" type="checkbox"><span>APP</span></span>
+                        <span class="block psanle"><input checked="" type="checkbox"><span>按键</span></span>
+                        <span class="block psanle"><input checked="" type="checkbox"><span>时间</span></span>
+                        <span class="block psanle"><input type="checkbox"><span>被动红外</span></span>
+                        <span class="block psanle"><input type="checkbox"><span>WIFI</span></span>
+                    </div>
+                    <div class="fang">
+                        <i class="fa fa-star"></i>
+                        <span class="title">参与设备</span>
+                        <span class="block psanle"><input checked="" type="checkbox"><span>音响</span></span>
+                        <span class="block psanle"><input type="checkbox"><span>照明</span></span>
+                        <span class="block psanle"><input type="checkbox"><span>红外遥控</span></span>
+                    </div>
+                    <div class="fang">
+                        <i class="fa fa-star"></i>
+                        <span class="title">开机条件</span>
+                        <span class="block psanle"><input type="checkbox"><span>湿温度</span></span>
+                    </div>
+                    <div class="fang">
+                        <i class="fa fa-star"></i>
+                        <span class="title">运行状态</span><br/>
+                        <span class="block psanle">
+                              <span style="position: relative;left: 6px;top: 3px;font-size: 15px;">音源选择</span>&nbsp;&nbsp;
+                                   <select name="" id="" class="yinyue">
+                                       <option value="大">大城小爱</option>
+                                       <option value="小">最炫民族风</option>
+                                   </select><button class="btn"><i class="fa fa-search"></i></button>
+                                   <span class="block block7">我的音乐</span><br/>
+                                   <span style="position: relative;top: 6px;">
+                                       <span style="position: relative;left: 6px;font-size: 15px;">音乐</span>&nbsp;&nbsp;
+                                   </span>
+                                   <span style="position: relative;left: 28px;top: 5px;">
+                                       <span class="block psanle"><input type="checkbox" checked/><span>声音渐大</span></span>
+                                       <span class="block psanle"><input type="checkbox" checked/><span>声音渐小</span></span>
+                                       <span class="block psanle"><input type="checkbox" checked/><span>亮度渐大</span></span>
+                                   </span><br/>
+                                   <span style="position: relative;left: 6px;font-size: 15px;">照明</span>
+                                   <span style="position: relative;left: 36px;top: 5px;">
+                                       <span class="block psanle"><input type="checkbox" checked/><span>亮度渐小</span></span>
+                                       <span class="block psanle"><input type="checkbox"/><span>色彩,亮度变化</span></span>
+                                   </span><br/>
+                                   <span style="position: relative;left: 6px;font-size: 15px;">红外线遥控</span>
+                                   <span style="position: relative;left: -9px;">
+                                       <span class="block psanle"><input type="checkbox"/><span>空调控制在睡眠温度</span>
+                                   </span>
+                            </span>
+                        </span>
+                    </div>
+                    <div class="operation">
+                        <button class="c_btn seee save">保存</button>
+                        <button class="c_btn cancel">取消</button>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+
+
     <div class="sence_rank center">
-        <div class="sence_rank_head"></div>
+        <div class="sence_rank_head">场景评比</div>
         <div class="sence_rank_content">
             <ul class="rank">
                 <li>
@@ -121,7 +435,7 @@
                 </li>
                 <li>
                     <img src="images/cjzd/head_portrait1.png" alt="" class="head_portrait"/>
-                    <span class="type">浪漫温馨</span>
+                    <span class="type">香甜入梦</span>
                     <span class="name">陈小洁</span>
                     <span class="down"><i class="fa fa-download"></i> <span>下载次数 <span class="times">60</span></span></span>
                     <input type="image" class="down_btn" src="images/cjzd/down.jpg"/>
@@ -147,517 +461,191 @@
             </div>
         </div>
     </div>
-    <div class="cjzd">
+
         <div class="center cjzd_c">
-            <ul class="cj_ul cj_ul_c">
-                <li class="zindex"><img src="images/xianshi.jpg" alt="" class="block"/>默认场景</li>
-                <li><img src="images/xianshi.jpg" alt="" class="hide"/>分享场景</li>
-                <li class="scene_customization"><img src="images/xianshi.jpg" alt="" class="hide"/>场景定制</li>
-            </ul>
-           <ul class="cj_ul1">
-                <li class="block">
-                    <div class="scene clearfix">
-                        <ul class="scene_list">
-                            <li>
-                                <img src="images/cjzd/new.png" alt="" class="new"/>
-                                <img src="images/cjzd/get_up.png" alt=""/>
-                                <div>
-                                    <span class="type">起床早读</span><br/>
-                                    <span class="name">陈小洁</span><br/>
-                                    <span class="use">使用</span>
-                                </div>
-                                <div>
-                                    <span class="share">分享</span><br/>
-                                    <span class="down"><i class="fa fa-download"></i> 25次</span><br/>
-                                    <span class="detail">详情</span>
-                                </div>
-                            </li>
-                            <li>
-                                <img src="images/cjzd/clock.png" alt=""/>
-                                <div>
-                                    <span class="type">闹钟模式</span><br/>
-                                    <span class="name">陈小洁</span><br/>
-                                    <span class="use">使用</span>
-                                </div>
-                                <div>
-                                    <span class="share">分享</span><br/>
-                                    <span class="down"><i class="fa fa-download"></i> 25次</span><br/>
-                                    <span class="detail">详情</span>
-                                </div>
-                            </li>
-                            <li>
-                                <img src="images/cjzd/sleep.png" alt=""/>
-                                <div>
-                                    <span class="type">夜晚模式</span><br/>
-                                    <span class="name">陈小洁</span><br/>
-                                    <span class="use">使用</span>
-                                </div>
-                                <div>
-                                    <span class="share">分享</span><br/>
-                                    <span class="down"><i class="fa fa-download"></i> 25次</span><br/>
-                                    <span class="detail">详情</span>
-                                </div>
-                            </li>
-                            <li>
-                                <img src="images/cjzd/new.png" alt="" class="new"/>
-                                <img src="images/cjzd/get_up.png" alt=""/>
-                                <div>
-                                    <span class="type">起床早读</span><br/>
-                                    <span class="name">陈小洁</span><br/>
-                                    <span class="use">使用</span>
-                                </div>
-                                <div>
-                                    <span class="share">分享</span><br/>
-                                    <span class="down"><i class="fa fa-download"></i> 25次</span><br/>
-                                    <span class="detail">详情</span>
-                                </div>
-                            </li>
-                            <li>
-                                <img src="images/cjzd/clock.png" alt=""/>
-                                <div>
-                                    <span class="type">闹钟模式</span><br/>
-                                    <span class="name">陈小洁</span><br/>
-                                    <span class="use">使用</span>
-                                </div>
-                                <div>
-                                    <span class="share">分享</span><br/>
-                                    <span class="down"><i class="fa fa-download"></i> 25次</span><br/>
-                                    <span class="detail">详情</span>
-                                </div>
-                            </li>
-                            <li>
-                                <img src="images/cjzd/sleep.png" alt=""/>
-                                <div>
-                                    <span class="type">夜晚模式</span><br/>
-                                    <span class="name">陈小洁</span><br/>
-                                    <span class="use">使用</span>
-                                </div>
-                                <div>
-                                    <span class="share">分享</span><br/>
-                                    <span class="down"><i class="fa fa-download"></i> 25次</span><br/>
-                                    <span class="detail">详情</span>
-                                </div>
-                            </li>
-                        </ul>
-                    </div>
-                    <div class="fff1">
+            <div class="scene clearfix scene_shopping">
+                <div class="scene_head scene_shopping_head">场景商城</div>
+                <ul class="scene_list clearfix" style="background: #fafcfd;">
+                    <li>
 
+                        <img src="images/cjzd/get_up.png" alt=""/>
 
-                        <p class="lid_p lid_p1" style="position: relative;top: 0px;">音频下载</p>
-                        <div class="mlx">
-                            <span class="block">摇滚</span>
-                            <span class="block">古典</span>
-                            <span class="block">爵士</span>
-                            <span class="block">民谣</span>
-                            <span class="block beise">流行</span>
-                            <span class="block">电子</span>
-                            <span class="block">原生配音</span>
-                            <span class="block">轻音乐</span>
-                            <span class="block">说唱</span>
-                            <span class="block">拉丁</span>
-                            <span class="block">动漫</span>
-                            <span class="block last">故事会</span>
+                        <div>
+                            <span class="type">起床早读</span><br/>
+                            <span class="name">陈小杰</span><br/>
+                            <span class="use">下载</span>
                         </div>
-                        <table id="table">
-                            <thead>
-                            <tr>
-                                <th>序号</th>
-                                <th>歌曲</th>
-                                <th>热度</th>
-                                <th>下载次数</th>
-                                <th>下载</th>
-                            </tr>
-                            </thead>
-                            <tbody>
-                            <tr>
-                                <td>01</td>
-                                <td>个人的秘密</td>
-                                <td><i class="fa fa-star"></i> <i class="fa fa-star"></i> <i class="fa fa-star"></i> <i class="fa fa-star"></i> <i class="fa fa-star"></i></td>
-                                <td>90次</td>
-                                <td class="love"><i class="fa fa-download"></i></td>
-                            </tr>
-                            <tr>
-                                <td>02</td>
-                                <td>匆匆那年</td>
-                                <td><i class="fa fa-star"></i> <i class="fa fa-star"></i> <i class="fa fa-star"></i> <i class="fa fa-star"></i> <i class="fa fa-star"></i></td>
-                                <td>80次</td>
-                                <td><i class="fa fa-download"></i></td>
-                            </tr>
-                            <tr>
-                                <td>03</td>
-                                <td>喜欢你</td>
-                                <td><i class="fa fa-star"></i> <i class="fa fa-star"></i> <i class="fa fa-star"></i> <i class="fa fa-star"></i> <i class="fa fa-star"></i></td>
-                                <td>70次</td>
-                                <td><i class="fa fa-download"></i></td>
-                            </tr>
-                            <tr>
-                                <td>04</td>
-                                <td>大城小爱</td>
-                                <td><i class="fa fa-star"></i> <i class="fa fa-star"></i> <i class="fa fa-star"></i> <i class="fa fa-star"></i> <i class="fa fa-star"></i></td>
-                                <td>65次</td>
-                                <td><i class="fa fa-download"></i></td>
-                            </tr>
-                            <tr>
-                                <td>05</td>
-                                <td>最炫名族风</td>
-                                <td><i class="fa fa-star"></i> <i class="fa fa-star"></i> <i class="fa fa-star"></i> <i class="fa fa-star"></i> <i class="fa fa-star"></i></td>
-                                <td>60次</td>
-                                <td><i class="fa fa-download"></i></td>
-                            </tr>
-                            <tr>
-                                <td>06</td>
-                                <td>大城小爱</td>
-                                <td><i class="fa fa-star"></i> <i class="fa fa-star"></i> <i class="fa fa-star"></i> <i class="fa fa-star"></i> <i class="fa fa-star"></i></td>
-                                <td>50次</td>
-                                <td><i class="fa fa-download"></i></td>
-                            </tr>
-                            </tbody>
-                        </table>
-                        <div class="fy">
-                            <input type="submit" class="pre1" value="上一页"/>
-                            <input type="submit" class="pre1" value="下一页"/>
-                        </div>
-                        <span class="prompt_login hide">只有在登录状态下才能进行此操作 <a href="login.html">赶快去登录吧</a></span>
-                    </div>
-                </li>
-                <li class="hide">
-                    <div class="scene clearfix">
-                        <ul class="scene_list">
-                            <li>
-                                <img src="images/cjzd/new.png" alt="" class="new"/>
-                                <img src="images/cjzd/get_up.png" alt=""/>
-                                <div>
-                                    <span class="type">起床早读</span><br/>
-                                    <span class="name">陈小洁</span><br/>
-                                    <span class="use">使用</span>
-                                </div>
-                                <div>
-                                    <span class="share">分享</span><br/>
-                                    <span class="down" style="visibility: hidden"><i class="fa fa-download"></i> 25次</span><br/>
-                                    <span class="detail">详情</span>
-                                </div>
-                            </li>
-                            <li>
-                                <img src="images/cjzd/clock.png" alt=""/>
-                                <div>
-                                    <span class="type">闹钟模式</span><br/>
-                                    <span class="name">陈小洁</span><br/>
-                                    <span class="use">使用</span>
-                                </div>
-                                <div>
-                                    <span class="share">分享</span><br/>
-                                    <span class="down" style="visibility: hidden"><i class="fa fa-download"></i> 25次</span><br/>
-                                    <span class="detail">详情</span>
-                                </div>
-                            </li>
-                            <li>
-                                <img src="images/cjzd/sleep.png" alt=""/>
-                                <div>
-                                    <span class="type">夜晚模式</span><br/>
-                                    <span class="name">陈小洁</span><br/>
-                                    <span class="use">使用</span>
-                                </div>
-                                <div>
-                                    <span class="share">分享</span><br/>
-                                    <span class="down" style="visibility: hidden"><i class="fa fa-download"></i> 25次</span><br/>
-                                    <span class="detail">详情</span>
-                                </div>
-                            </li>
-                            <li>
-                                <img src="images/cjzd/new.png" alt="" class="new"/>
-                                <img src="images/cjzd/get_up.png" alt=""/>
-                                <div>
-                                    <span class="type">起床早读</span><br/>
-                                    <span class="name">陈小洁</span><br/>
-                                    <span class="use">使用</span>
-                                </div>
-                                <div>
-                                    <span class="share">分享</span><br/>
-                                    <span class="down" style="visibility: hidden"><i class="fa fa-download"></i> 25次</span><br/>
-                                    <span class="detail">详情</span>
-                                </div>
-                            </li>
-                            <li>
-                                <img src="images/cjzd/clock.png" alt=""/>
-                                <div>
-                                    <span class="type">闹钟模式</span><br/>
-                                    <span class="name">陈小洁</span><br/>
-                                    <span class="use">使用</span>
-                                </div>
-                                <div>
-                                    <span class="share">分享</span><br/>
-                                    <span class="down" style="visibility: hidden"><i class="fa fa-download"></i> 25次</span><br/>
-                                    <span class="detail">详情</span>
-                                </div>
-                            </li>
-                            <li>
-                                <img src="images/cjzd/sleep.png" alt=""/>
-                                <div>
-                                    <span class="type">夜晚模式</span><br/>
-                                    <span class="name">陈小洁</span><br/>
-                                    <span class="use">使用</span>
-                                </div>
-                                <div>
-                                    <span class="share">分享</span><br/>
-                                    <span class="down" style="visibility: hidden"><i class="fa fa-download"></i> 25次</span><br/>
-                                    <span class="detail">详情</span>
-                                </div>
-                            </li>
-                        </ul>
-                    </div>
-                    <div class="fff1">
-                        <p class="lid_p lid_p1" style="position: relative;top: 0px;">音频下载</p>
-                        <div class="mlx">
-                            <span class="block">摇滚</span>
-                            <span class="block">古典</span>
-                            <span class="block">爵士</span>
-                            <span class="block">民谣</span>
-                            <span class="block beise">流行</span>
-                            <span class="block">电子</span>
-                            <span class="block">原生配音</span>
-                            <span class="block">轻音乐</span>
-                            <span class="block">说唱</span>
-                            <span class="block">拉丁</span>
-                            <span class="block">动漫</span>
-                            <span class="block last">故事会</span>
-                        </div>
-                        <table class="table">
-                            <thead>
-                            <tr>
-                                <th>序号</th>
-                                <th>歌曲</th>
-                                <th>热度</th>
-                                <th>下载次数</th>
-                                <th>下载</th>
-                            </tr>
-                            </thead>
-                            <tbody>
-                            <tr>
-                                <td>01</td>
-                                <td>个人的秘密</td>
-                                <td><i class="fa fa-star"></i> <i class="fa fa-star"></i> <i class="fa fa-star"></i> <i class="fa fa-star"></i> <i class="fa fa-star"></i></td>
-                                <td>90次</td>
-                                <td class="love"><i class="fa fa-download"></i></td>
-                            </tr>
-                            <tr>
-                                <td>02</td>
-                                <td>匆匆那年</td>
-                                <td><i class="fa fa-star"></i> <i class="fa fa-star"></i> <i class="fa fa-star"></i> <i class="fa fa-star"></i> <i class="fa fa-star"></i></td>
-                                <td>80次</td>
-                                <td><i class="fa fa-download"></i></td>
-                            </tr>
-                            <tr>
-                                <td>03</td>
-                                <td>喜欢你</td>
-                                <td><i class="fa fa-star"></i> <i class="fa fa-star"></i> <i class="fa fa-star"></i> <i class="fa fa-star"></i> <i class="fa fa-star"></i></td>
-                                <td>70次</td>
-                                <td><i class="fa fa-download"></i></td>
-                            </tr>
-                            <tr>
-                                <td>04</td>
-                                <td>大城小爱</td>
-                                <td><i class="fa fa-star"></i> <i class="fa fa-star"></i> <i class="fa fa-star"></i> <i class="fa fa-star"></i> <i class="fa fa-star"></i></td>
-                                <td>65次</td>
-                                <td><i class="fa fa-download"></i></td>
-                            </tr>
-                            <tr>
-                                <td>05</td>
-                                <td>最炫名族风</td>
-                                <td><i class="fa fa-star"></i> <i class="fa fa-star"></i> <i class="fa fa-star"></i> <i class="fa fa-star"></i> <i class="fa fa-star"></i></td>
-                                <td>60次</td>
-                                <td><i class="fa fa-download"></i></td>
-                            </tr>
-                            <tr>
-                                <td>06</td>
-                                <td>大城小爱</td>
-                                <td><i class="fa fa-star"></i> <i class="fa fa-star"></i> <i class="fa fa-star"></i> <i class="fa fa-star"></i> <i class="fa fa-star"></i></td>
-                                <td>50次</td>
-                                <td><i class="fa fa-download"></i></td>
-                            </tr>
-                            </tbody>
-                        </table>
-                        <div class="fy">
-                            <input type="submit" class="pre1" value="上一页"/>
-                            <input type="submit" class="pre1" value="下一页"/>
-                        </div>
-                    </div>
-               </li>
-                <li class="hide">
-                    <div class="li_div">
-                        <p class="lid_p">我的场景定制</p>
-                        <div class="li_a">
-                            <a href="javascript:void(0)" class="block ba" id="plus"><span class="puls">+</span></a>
-                        </div>
-                        <div class="cjul_d hide">
-                                <span class="sjao"> <i class="fa fa-caret-down"></i>&nbsp;&nbsp;<span class="ms_head">自定义模式</span></span>
-                            </div>
-                        <div class="show_div hide">
-                                <div class="fang">
-                                    <i class="fa fa-star"></i>&nbsp;&nbsp;<span>启动方式</span>
-                                    <span class="block psanle"><input checked="" type="checkbox"><span>APP</span></span>
-                                    <span class="block psanle"><input checked="" type="checkbox"><span>按键</span></span>
-                                    <span class="block psanle"><input checked="" type="checkbox"><span>时间</span></span>
-                                    <span class="block psanle"><input type="checkbox"><span>被动红外</span></span>
-                                    <span class="block psanle"><input type="checkbox"><span>WIFI</span></span>
+                        <div>
 
-                                    <div class="spilder">
-                                                            <span>
-                                                                <span style="text-indent: 5px;">时间</span> <img src="images/cjzd/clock.png" alt="">
-                                                            </span>
-                                        <div class="taskBox">
-                                            <div class="taskBoxLinks"><h3></h3><h4></h4></div>
-                                            <input type="text" class="time" value="2:00"/>
-                                            <!--<span>10%</span>-->
-                                        </div>
-                                    </div>
-                                </div>
-                                <div class="fang">
-                                    <i class="fa fa-star"></i>&nbsp;&nbsp;<span>参与设备</span>
-                                    <span class="block psanle"><input checked="" type="checkbox"><span>音响</span></span>
-                                    <span class="block psanle"><input type="checkbox"><span>照明</span></span>
-                                    <span class="block psanle"><input type="checkbox"><span>红外遥控</span></span>
-
-                                    <div class="spilder">
-                                                            <span>
-                                                                <span tyle="text-indent: 5px;">音量</span> <img src="images/cjzd/voice.png" alt="">
-                                                            </span>
-
-                                        <div class="taskBox">
-                                            <div class="taskBoxLinks"><h3 style="background:#48a8d1;border: 1px solid #48a8d1;"></h3>
-                                                <h4></h4></div>
-                                            <span>10%</span>
-                                        </div>
-                                    </div>
-                                    <div class="spilder">
-                                                            <span>
-                                                                 <span style="text-indent: 5px;">温度</span> <img src="images/cjzd/sun.png" alt="">
-                                                            </span>
-
-                                        <div class="taskBox">
-                                            <div class="taskBoxLinks"><h3 style="background:#f8e250;border: 1px solid #f8e250;"></h3>
-                                                <h4></h4></div>
-                                            <span>10%</span>
-                                        </div>
-                                    </div>
-                                </div>
-                                <div class="fang">
-                                    <i class="fa fa-star"></i>&nbsp;&nbsp;<span>开机条件</span>
-                                    <span class="block psanle"><input type="checkbox"><span>湿温度</span></span>
-                                </div>
-                                <div class="fang">
-                                    <i class="fa fa-star"></i>&nbsp;&nbsp;<span>运行状态</span><br/>
-                                                <span class="block psanle">
-                                                    <span style="position: relative;left: 6px;top: 3px;font-size: 16px;">音源选择</span>&nbsp;&nbsp;
-                                                    <select name="" id="" class="yinyue">
-                                                        <option value="大">大城小爱</option>
-                                                        <option value="小">最炫民族风</option>
-                                                    </select><button class="btn"><i class="fa fa-search"></i></button>
-                                                    <span class="block block7">我的音乐</span><br/>
-                                                    <span style="position: relative;top: 6px;">
-                                                        <span style="position: relative;left: 6px;font-size: 16px;">音乐</span>&nbsp;&nbsp;
-                                                    </span>
-                                                    <span style="position: relative;left: 28px;top: 5px;">
-                                                        <span class="block psanle"><input type="checkbox"  checked/><span>声音渐大</span></span>
-                                                        <span class="block psanle"><input type="checkbox"  checked/><span>声音渐小</span></span>
-                                                        <span class="block psanle"><input type="checkbox"  checked/><span>亮度渐大</span></span>
-                                                    </span><br/>
-                                                    <span style="position: relative;left: 6px;font-size: 16px;">照明</span>
-                                                           <span style="position: relative;left: 36px;top: 5px;">
-                                                        <span class="block psanle"><input type="checkbox"  checked/><span>亮度渐小</span></span>
-                                                        <span class="block psanle"><input type="checkbox"  /><span>色彩,亮度变化</span></span>
-                                                    </span><br/>
-                                                    <span style="position: relative;left: 6px;font-size: 16px;">红外线遥控</span>
-                                                     <span style="position: relative;left: -12px;">
-                                                        <span class="block psanle"><input type="checkbox" /><span>空调控制在睡眠温度</span></span>
-                                                     </span>
-                                                </span>
-                                </div>
-                                <div class="cjul_d cjul_d1 cjul_d2">
-                                    <button class="c_btn seee">确认</button>
-                                    <button class="c_btn">取消</button>
-                                </div>
-                            </div>
-                    </div>
-                    <div class="fff1">
-                        <p class="lid_p lid_p1" style="position: relative;top: 0px;">音频下载</p>
-                        <div class="mlx">
-                            <span class="block">摇滚</span>
-                            <span class="block">古典</span>
-                            <span class="block">爵士</span>
-                            <span class="block">民谣</span>
-                            <span class="block beise">流行</span>
-                            <span class="block">电子</span>
-                            <span class="block">原生配音</span>
-                            <span class="block">轻音乐</span>
-                            <span class="block">说唱</span>
-                            <span class="block">拉丁</span>
-                            <span class="block">动漫</span>
-                            <span class="block last">故事会</span>
+                            <span class="down"><i class="fa fa-download"></i> 25次</span><br/>
+                            <span class="detail">详情</span>
                         </div>
-                        <table class="table">
-                            <thead>
-                            <tr>
-                                <th>序号</th>
-                                <th>歌曲</th>
-                                <th>热度</th>
-                                <th>下载次数</th>
-                                <th>下载</th>
-                            </tr>
-                            </thead>
-                            <tbody>
-                            <tr>
-                                <td>01</td>
-                                <td>个人的秘密</td>
-                                <td><i class="fa fa-star"></i> <i class="fa fa-star"></i> <i class="fa fa-star"></i> <i class="fa fa-star"></i> <i class="fa fa-star"></i></td>
-                                <td>90次</td>
-                                <td class="love"><i class="fa fa-download"></i></td>
-                            </tr>
-                            <tr>
-                                <td>02</td>
-                                <td>匆匆那年</td>
-                                <td><i class="fa fa-star"></i> <i class="fa fa-star"></i> <i class="fa fa-star"></i> <i class="fa fa-star"></i> <i class="fa fa-star"></i></td>
-                                <td>80次</td>
-                                <td><i class="fa fa-download"></i></td>
-                            </tr>
-                            <tr>
-                                <td>03</td>
-                                <td>喜欢你</td>
-                                <td><i class="fa fa-star"></i> <i class="fa fa-star"></i> <i class="fa fa-star"></i> <i class="fa fa-star"></i> <i class="fa fa-star"></i></td>
-                                <td>70次</td>
-                                <td><i class="fa fa-download"></i></td>
-                            </tr>
-                            <tr>
-                                <td>04</td>
-                                <td>大城小爱</td>
-                                <td><i class="fa fa-star"></i> <i class="fa fa-star"></i> <i class="fa fa-star"></i> <i class="fa fa-star"></i> <i class="fa fa-star"></i></td>
-                                <td>65次</td>
-                                <td><i class="fa fa-download"></i></td>
-                            </tr>
-                            <tr>
-                                <td>05</td>
-                                <td>最炫名族风</td>
-                                <td><i class="fa fa-star"></i> <i class="fa fa-star"></i> <i class="fa fa-star"></i> <i class="fa fa-star"></i> <i class="fa fa-star"></i></td>
-                                <td>60次</td>
-                                <td><i class="fa fa-download"></i></td>
-                            </tr>
-                            <tr>
-                                <td>06</td>
-                                <td>大城小爱</td>
-                                <td><i class="fa fa-star"></i> <i class="fa fa-star"></i> <i class="fa fa-star"></i> <i class="fa fa-star"></i> <i class="fa fa-star"></i></td>
-                                <td>50次</td>
-                                <td><i class="fa fa-download"></i></td>
-                            </tr>
-                            </tbody>
-                        </table>
-                        <div class="fy">
-                        <input type="submit" class="pre1" value="上一页"/>
-                        <input type="submit" class="pre1" value="下一页"/>
+                        <img src="images/cjzd/cloud_down.png" alt="" class="cloud_down"/>
+                    </li>
+                    <li class="active">
+                        <img src="images/cjzd/clock.png" alt=""/>
+
+                        <div>
+                            <span class="type">闹钟模式</span><br/>
+                            <span class="name">陈小杰</span><br/>
+                            <span class="use">下载</span>
                         </div>
-                    </div>
-                </li>
-            </ul>
+                        <div>
+
+                            <span class="down"><i class="fa fa-download"></i> 25次</span><br/>
+                            <span class="detail">详情</span>
+                        </div>
+                        <img src="images/cjzd/cloud_down.png" alt="" class="cloud_down"/>
+                    </li>
+                    <li>
+                        <img src="images/cjzd/sleep.png" alt=""/>
+
+                        <div>
+                            <span class="type">夜晚模式</span><br/>
+                            <span class="name">陈小洁</span><br/>
+                            <span class="use">下载</span>
+                        </div>
+                        <div>
+
+                            <span class="down"><i class="fa fa-download"></i> 25次</span><br/>
+                            <span class="detail">详情</span>
+                        </div>
+                        <img src="images/cjzd/cloud_down.png" alt="" class="cloud_down"/>
+                    </li>
+                    <li>
+
+                        <img src="images/cjzd/get_up.png" alt=""/>
+
+                        <div>
+                            <span class="type">起床早读</span><br/>
+                            <span class="name">陈小杰</span><br/>
+                            <span class="use">下载</span>
+                        </div>
+                        <div>
+
+                            <span class="down"><i class="fa fa-download"></i> 25次</span><br/>
+                            <span class="detail">详情</span>
+                        </div>
+                        <img src="images/cjzd/cloud_down.png" alt="" class="cloud_down"/>
+                    </li>
+                    <li>
+                        <img src="images/cjzd/clock.png" alt=""/>
+
+                        <div>
+                            <span class="type">闹钟模式</span><br/>
+                            <span class="name">陈小洁</span><br/>
+                            <span class="use">下载</span>
+                        </div>
+                        <div>
+
+                            <span class="down"><i class="fa fa-download"></i> 25次</span><br/>
+                            <span class="detail">详情</span>
+                        </div>
+                        <img src="images/cjzd/cloud_down.png" alt="" class="cloud_down"/>
+                    </li>
+                    <li>
+                        <img src="images/cjzd/sleep.png" alt=""/>
+
+                        <div>
+                            <span class="type">夜晚模式</span><br/>
+                            <span class="name">陈小洁</span><br/>
+                            <span class="use">下载</span>
+                        </div>
+                        <div>
+
+                            <span class="down"><i class="fa fa-download"></i> 25次</span><br/>
+                            <span class="detail">详情</span>
+                        </div>
+                        <img src="images/cjzd/cloud_down.png" alt="" class="cloud_down"/>
+                    </li>
+                </ul>
+            </div>
+            <div class="fff1">
+                <p class="lid_p lid_p1" style="position: relative;top: 0;">音频下载</p>
+
+                <div class="mlx">
+                    <span class="block">摇滚</span>
+                    <span class="block">古典</span>
+                    <span class="block">爵士</span>
+                    <span class="block">民谣</span>
+                    <span class="block beise">流行</span>
+                    <span class="block">电子</span>
+                    <span class="block">原生配音</span>
+                    <span class="block">轻音乐</span>
+                    <span class="block">说唱</span>
+                    <span class="block">拉丁</span>
+                    <span class="block">动漫</span>
+                    <span class="block last">故事会</span>
+                </div>
+                <table id="table">
+                    <thead>
+                    <tr>
+                        <th>序号</th>
+                        <th>歌曲</th>
+                        <th>热度</th>
+                        <th>下载次数</th>
+                        <th>下载</th>
+                    </tr>
+                    </thead>
+                    <tbody>
+                    <tr>
+                        <td>01</td>
+                        <td>个人的秘密</td>
+                        <td><i class="fa fa-star"></i> <i class="fa fa-star"></i> <i class="fa fa-star"></i> <i
+                                class="fa fa-star"></i> <i class="fa fa-star"></i></td>
+                        <td>90次</td>
+                        <td class="love"><i class="fa fa-download"></i></td>
+                    </tr>
+                    <tr>
+                        <td>02</td>
+                        <td>匆匆那年</td>
+                        <td><i class="fa fa-star"></i> <i class="fa fa-star"></i> <i class="fa fa-star"></i> <i
+                                class="fa fa-star"></i> <i class="fa fa-star"></i></td>
+                        <td>80次</td>
+                        <td><i class="fa fa-download"></i></td>
+                    </tr>
+                    <tr>
+                        <td>03</td>
+                        <td>喜欢你</td>
+                        <td><i class="fa fa-star"></i> <i class="fa fa-star"></i> <i class="fa fa-star"></i> <i
+                                class="fa fa-star"></i> <i class="fa fa-star"></i></td>
+                        <td>70次</td>
+                        <td><i class="fa fa-download"></i></td>
+                    </tr>
+                    <tr>
+                        <td>04</td>
+                        <td>大城小爱</td>
+                        <td><i class="fa fa-star"></i> <i class="fa fa-star"></i> <i class="fa fa-star"></i> <i
+                                class="fa fa-star"></i> <i class="fa fa-star"></i></td>
+                        <td>65次</td>
+                        <td><i class="fa fa-download"></i></td>
+                    </tr>
+                    <tr>
+                        <td>05</td>
+                        <td>最炫名族风</td>
+                        <td><i class="fa fa-star"></i> <i class="fa fa-star"></i> <i class="fa fa-star"></i> <i
+                                class="fa fa-star"></i> <i class="fa fa-star"></i></td>
+                        <td>60次</td>
+                        <td><i class="fa fa-download"></i></td>
+                    </tr>
+                    <tr>
+                        <td>06</td>
+                        <td>大城小爱</td>
+                        <td><i class="fa fa-star"></i> <i class="fa fa-star"></i> <i class="fa fa-star"></i> <i
+                                class="fa fa-star"></i> <i class="fa fa-star"></i></td>
+                        <td>50次</td>
+                        <td><i class="fa fa-download"></i></td>
+                    </tr>
+                    </tbody>
+                </table>
+                <div class="fy">
+                    <input type="submit" class="pre1" value="上一页"/>
+                    <input type="submit" class="pre1" value="下一页"/>
+                </div>
+                <span class="prompt_login hide">只有在登录状态下才能进行此操作 <a href="login.html">赶快去登录吧</a></span>
+            </div>
         </div>
-    </div>
+
 </div>
 <div class="footer" style="position: relative;top:1px;">
     <div class="center f1">
@@ -666,7 +654,7 @@
                 <li>
                     <a href="use_character.html">
                         <img src="images/index/zheng.png" alt=""/>
-                        <span class="fc_s"style="color: #3c886e">正品保障</span><br/>
+                        <span class="fc_s" style="color: #3c886e">正品保障</span><br/>
                         <span class="fc_s1" style="color: #6eb996;">厂家直接发货</span>
                     </a>
                 </li>
@@ -687,8 +675,8 @@
                 <li>
                     <a href="#">
                         <img src="images/index/good.png" alt=""/>
-                        <span class="fc_s"style="color:#e35f5f;">好服务</span><br/>
-                        <span class="fc_s1"style="color: #e35f5f">7x24贴心服务</span>
+                        <span class="fc_s" style="color:#e35f5f;">好服务</span><br/>
+                        <span class="fc_s1" style="color: #e35f5f">7x24贴心服务</span>
                     </a>
                 </li>
             </ul>
@@ -702,7 +690,8 @@
                 <li><a href="brand_company.html" class="block block6">合作生态圈</a></li>
             </ul>
             <div class="copyright">
-                <p>深圳贯和通物联科技有限公司@  版权所有</p>
+                <p>深圳贯和通物联科技有限公司@ 版权所有</p>
+
                 <p>分享:
                     <a href="#" class="weibo"><i class="fa fa-weibo"></i></a>
                     <a href="#" class="weixin"><i class="fa fa-weixin"></i></a>
@@ -717,60 +706,34 @@
 <script src="js/Crwebz.js"></script>
 <script src="js/modal.js"></script>
 <script>
-    $(function(){
+    $(function () {
         var btn_save = $(".scene_customization,.down_btn");
-        btn_save.on("click",function(){
-            $("#container").dialog({title:'账户登录'});
+        btn_save.on("click", function () {
+            $("#container").dialog({title: '账户登录'});
         })
         var fa = $("table .fa-heart,.table .fa-download");
-        fa.on("click",function(){
-            if($(this).parent().is(".love")){
+        fa.on("click", function () {
+            if ($(this).parent().is(".love")) {
                 $(this).parent().removeClass("love")
-            }else{
+            } else {
                 $(this).parent().addClass("love")
             }
         });
-        $("#imgfor_con_roll a span").each(function(){
-            $(this).css({"background":"#000","opacity":".5"})
+        $("#imgfor_con_roll a span").each(function () {
+            $(this).css({"background": "#000", "opacity": ".5"})
         });
         var fa = $(".fa-download"),
                 p = $(".prompt_login");
-        fa.each(function(){
-            $(this).on("click",function(){
+        fa.each(function () {
+            $(this).on("click", function () {
                 p.removeClass("hide");
-                setTimeout(function(){
+                setTimeout(function () {
                     p.addClass("hide")
-                },3000)
+                }, 3000)
             });
         });
     })
 </script>
-<script type="text/javascript">
-    $(document).ready( function() {
-        $('.taskBox').delegate('.taskBoxLinks','mousemove',function(e){
-            var $mouse = e.pageX - $(this).offset().left;
-            var $span = ($mouse/30)*10;
-            var zz =Math.floor($span);
-            $(this).find('h4').stop().animate({width:zz+'%'},50);
-            $(this).next('span').text(zz+'%');
-        }).delegate('.taskBoxLinks','mouseleave',function(){
-            $(this).find('h4').stop().animate({width:'10%'},50);
-            var $mouse = $(this).find('h3').width();
-            var $span = ($mouse/30)*10;
-            var zz = Math.floor($span)
-            if($span==100){
-                $(this).next('span').text(zz+'%');
-            }
-        }).delegate('.taskBoxLinks','click',function(e){
-            var $mouse = e.pageX - $(this).offset().left;
-            var $span = ($mouse/30)*10;
-            var zz = Math.floor($span);
-            $(this).find('h3').stop().animate({width:zz+'%'},100);
-            if($span==100){
-                $(this).next('span').text(zz+'%');
-            }
-        });
-    });
-</script>
+
 </body>
 </html>

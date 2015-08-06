@@ -265,17 +265,17 @@ button{outline: none;border: 0;}
 .scene_using_steps_content >li .playmate{margin-left: 40px;}
 .scene_using_steps_content >li .collet{position: relative;left: 70px;}
 .sence_rank{margin-bottom: 20px;}
-.sence_rank_head{height: 108px;background: url("../images/cjzd/sence_rank_head_bg.jpg")}
-.sence_rank_content{width: 80%;margin: 0 auto;}
+.sence_rank_head{height: 40px;line-height: 40px;text-align: center;font-size: 18px;}
+.sence_rank_content{width: 100%;}
 .sence_rank_content .rank{width: 100%;}
-.sence_rank_content .rank li{width: 100%;padding: 10px 0;border-bottom: 1px dashed #333;font-size: 16px;color: #676767;}
+.sence_rank_content .rank li{width: 95.4%;border-top: 1px dashed #dcdcdc;font-size: 16px;color: #676767;padding: 10px 2.3%;}
 .sence_rank_content .rank .last{border-bottom: none;}
 .rank .head_portrait,.rank .type,.rank .name,.rank .down,.rank .down_btn{position: relative;}
 .rank .head_portrait{}
-.rank .type{left: 30px;}
-.rank .name{left: 200px;}
-.rank .down{left: 400px;}
-.rank .down_btn{left: 605px;top: 10px;}
+.rank .type{left: 15%;}
+.rank .name{left: 35%;}
+.rank .down{left: 50%;}
+.rank .down_btn{left: 67.7%;top: 10px;}
 .rank .times{color: #f8756b;}
 .cjzd{width: 100%;}
 .cjzd_c{position: relative;}
@@ -297,15 +297,16 @@ button{outline: none;border: 0;}
     background: -o-linear-gradient(left, #d5e2e5, #f3ebee);
     background: #f9f6f9;
 }
-.li_div{margin-left: 100px;}
+
 .cjul_d{color: #f17b6e;}
 .ms_head{font-size: 20px;position: relative;top: -5px;}
 .cjul_d1{color: #020202;margin-top: 20px;}
 .cjul_d2{margin-left: 400px;margin-bottom: 20px;}
 .show_div{position: relative;top: -5px;}
-.c_btn{width:80px;height: 30px;color: #333;line-height: 25px;text-align: center;margin-right: 20px;outline: none;border: 1px solid #ccc;font-family: "微软雅黑"}
-.seee{background: #faa455;color: #fff;}
+.c_btn{width:80px;height: 30px;color: #fff;line-height: 25px;text-align: center;margin-right: 20px;outline: none;font-family: "微软雅黑";border-radius: 5px;background: #b0b2b2;}
+.save{background: #f8756b;}
 .fang{font-size: 16px;color: #080302;margin-top: 10px;}
+.fang .title{display: inline-block;width: 70px;}
 .psanle{margin-right: 80px;margin-top: 10px;position: relative;left: 25px;font-size: 14px;}
 .spilder{margin: 5px 0 5px 25px;width: 100%;position: relative;}
 select{outline: none;}
@@ -425,12 +426,12 @@ tr th,tr td{ text-align:center;font-size: 14px;border:1px solid #cccccc;color: #
 .ck:hover{text-decoration: underline;}
 .my_choi_fu_content,.my_idiot_content,.my_order_content,.change_password_content,.financial_character_list_content,.my_scene_content{width: 96%;text-align: center;padding: 2%;font-size: 13px;}
 .financial_character_list_content,.my_scene_content{padding: 10px 0;width: 100%;}
-.scene{padding: 10px 10% ;width: 80%;}
+.scene{padding: 10px 0% ;width: 100%;}
 .financial_character_list_content>ul{width: 100%;}
 .financial_character_list_content >ul>li{width: 24.9%;float: left;background: #feefef;height: 55px;padding-top: 20px;border-right: 1px solid #ccc;}
 .financial_character_list_content>ul>.last{border: none;}
-.scene_list{width: 97.5%;padding-left:2.3%;margin-top: 2%;font-size: 14px;text-align: center;}
-.scene_list li{width: 31%;height: 130px;float: left;margin: 0 2% 2% 0;border: 1px solid #d8d8d8;position: relative;background: #fff;}
+.scene_list{width: 97.5%;padding-left:2.3%;font-size: 14px;text-align: center;overflow: hidden;}
+.scene_list li{width: 31%;height: 130px;float: left;margin: 0 2% 2% 0;border: 1px solid #d8d8d8;position: relative;background: #fff;margin-top: 2%;}
 .scene_list li img{position: relative;left:5px;top: -20px;}
 .scene_list li div{width: 70px;display: inline-block;margin-top: 33px;margin-left: 18px;}
 .scene_list li div .type,.scene_list li div .share{font-size: 16px;position: relative;top: -15px;}
@@ -625,7 +626,7 @@ tr th,tr td{ text-align:center;font-size: 14px;border:1px solid #cccccc;color: #
 .focus .shadow a {text-decoration: none;color: #fff;font-size: 15px;overflow: hidden;margin-left: 10px;font-family: "\5FAE\8F6F\96C5\9ED1";}
 .focus .fcon {position: relative;width: 100%;float: left;display: none;background: #000}
 .focus .fcon img {display: block;}
-.focus .fbg {position: absolute;bottom: 50px;left: 542px;height: 21px;text-align: center;z-index: 200;}
+.focus .fbg {position: absolute;bottom: 50px;left: 562px;height: 21px;text-align: center;z-index: 200;}
 .focus .fbg div {margin: 4px auto 0;overflow: hidden;zoom: 1;height: 14px}
 .focus .D1fBt a {position: relative;display: inline;width: 12px;height: 12px;border-radius: 7px;margin: 0 5px;color: #B0B0B0;font: 12px/15px "\5B8B\4F53";text-decoration: none;text-align: center;outline: 0;float: left;background: #D9D9D9;}
 .focus .D1fBt .current, .focus .D1fBt a:hover {background: #fbac1a;}
