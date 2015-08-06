@@ -85,7 +85,7 @@
         .operation{text-align: center;}
         .li_div{background: #fdfbfd;padding: 10px 2.3% 20px;width: 95.4%;}
         .scene_list .default,.scene_list .cloud_down,.scene_list .diy{float: right;position: relative;top: 0;left: -0px;}
-        .plus{margin-top: 28px;}
+        #plus{margin-top: 28px;}
         .scene_list .upload{position: relative;top: -60px;}
         .creator,.sence_name{width: 375px;height: 25px;border-radius: 5px;padding-left: 5px;outline: none;border: 1px solid #ccc;}
 
@@ -296,7 +296,7 @@
                         <span class="use">使用</span>
                     </div>
                     <div>
-                        <span class="share">分享</span><br/>
+
                         <span class="down"><i class="fa fa-download"></i> 25次</span><br/>
                         <span class="detail">详情</span>
                     </div>
@@ -312,14 +312,14 @@
                         <span class="use">使用</span>
                     </div>
                     <div>
-                        <span class="share">分享</span><br/>
+
                         <span class="down"><i class="fa fa-download"></i> 25次</span><br/>
                         <span class="detail">详情</span>
                     </div>
                     <input type="image" src="images/cjzd/upload.png"  class="upload"/>
                 </li>
                 <li>
-                    <img src="images/cjzd/plus.png" alt="" class="plus"/>
+                    <img src="images/cjzd/plus.png" alt="" id="plus"/>
 
                 </li>
 
@@ -327,7 +327,7 @@
 
             </ul>
             <div class="li_div">
-                <div class="show_div">
+                <div class="show_div hide">
                     <div class="fang">
                         <i class="fa fa-star"></i>
                         <span class="title">场景名称</span>
@@ -385,29 +385,33 @@
                         <i class="fa fa-star"></i>
                         <span class="title">运行状态</span><br/>
                         <span class="block psanle">
-                              <span style="position: relative;left: 6px;top: 3px;font-size: 15px;">音源选择</span>&nbsp;&nbsp;
-                                   <select name="" id="" class="yinyue">
-                                       <option value="大">大城小爱</option>
-                                       <option value="小">最炫民族风</option>
-                                   </select><button class="btn"><i class="fa fa-search"></i></button>
+
+                                   <span style="position: relative;top: 8px;">
+                                       <span style="position: relative;left: 6px;font-size: 15px;">音源选择</span>&nbsp;&nbsp;
+                                       <select name="" id="" class="yinyue">
+                                           <option value="大">大城小爱</option>
+                                           <option value="小">最炫民族风</option>
+                                       </select><button class="btn"><i class="fa fa-search"></i></button>
                                    <span class="block block7">我的音乐</span><br/>
+                                   </span>
                                    <span style="position: relative;top: 6px;">
                                        <span style="position: relative;left: 6px;font-size: 15px;">音乐</span>&nbsp;&nbsp;
                                    </span>
                                    <span style="position: relative;left: 28px;top: 5px;">
                                        <span class="block psanle"><input type="checkbox" checked/><span>声音渐大</span></span>
                                        <span class="block psanle"><input type="checkbox" checked/><span>声音渐小</span></span>
-                                       <span class="block psanle"><input type="checkbox" checked/><span>亮度渐大</span></span>
-                                   </span><br/>
-                                   <span style="position: relative;left: 6px;font-size: 15px;">照明</span>
-                                   <span style="position: relative;left: 36px;top: 5px;">
-                                       <span class="block psanle"><input type="checkbox" checked/><span>亮度渐小</span></span>
-                                       <span class="block psanle"><input type="checkbox"/><span>色彩,亮度变化</span></span>
+
                                    </span><br/>
                                    <span style="position: relative;left: 6px;font-size: 15px;">红外线遥控</span>
                                    <span style="position: relative;left: -9px;">
                                        <span class="block psanle"><input type="checkbox"/><span>空调控制在睡眠温度</span>
                                    </span>
+                            </span><br/>
+                            <span style="position: relative;left: 6px;font-size: 15px;">照明</span>
+                            <span style="position: relative;left: 36px;">
+                                 <span class="block psanle"><input type="checkbox" checked/><span>亮度渐大</span></span>
+                                 <span class="block psanle"><input type="checkbox" checked/><span>亮度渐小</span></span>
+                                 <span class="block psanle"><input type="checkbox"/><span>色彩,亮度变化</span></span>
                             </span>
                         </span>
                     </div>
