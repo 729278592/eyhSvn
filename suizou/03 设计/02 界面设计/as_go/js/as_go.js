@@ -1,12 +1,7 @@
 /**
  * Created by WHB on 2015/7/27.
  */
-
-
-
-/*
-左边产品页面菜单切换
-*/
+/*左边产品页面菜单切换*/
 var wd = $(".wrap div"),
     wa = $(".wrap .active");
 wd.on("click",function(){
@@ -14,7 +9,6 @@ wd.on("click",function(){
     if( c.is(".active")){
         c.next().slideUp();
         c.removeClass("active");
-
     }
    else{
         c.next().slideDown();
@@ -23,9 +17,31 @@ wd.on("click",function(){
         c.parent().siblings().find(".menu").slideUp();
     }
 });
-
-
 wa.next().removeClass("hide");
+
+
+
+/*套件菜单的控制*/
+var pw = $(".page_content_left .wrap"),
+    pfl = $(".header .fr .list"),
+    isdian = true;
+pfl.on("click",function(){
+    if(isdian == true){
+        pw.slideDown();
+        isdian = false;
+    }
+    else if(isdian == false){
+        pw.slideUp();
+        isdian = true;
+    }
+});
+var ww = parseInt(document.body.clientWidth);
+$(window).resize(function() {
+    if((ww>1375)&&($(".page_content_left .wrap").css("display")=="none")){
+        pw.slideDown();
+        isdian = false;
+    }
+});
 
 
 
@@ -51,33 +67,32 @@ var ii = $(".item_div").parent();
             $(this).find(".item_box").animate({
                 "top":"0%"
             },200);
-
         },
         function(){
             $(this).find(".item_box").animate({
                 "top":"100%"
             },200);
-
         });
-var jp = $(".js_product");
 
-var m = $(".myCarousel");
-var mi = $(".myCarousel .item");
-var mid = $(".myCarousel .item .describe")
+
+
+var jp = $(".js_product"),
+    m = $(".myCarousel"),
+    mi = $(".myCarousel .item"),
+    mid = $(".myCarousel .item .describe");
 pl.each(function(i){
     $(this).on("click",function(){
-        var src = $(this).find("img").attr("src");
-        var src_next = $(this).next().find("img").attr("src");
+       // var src = $(this).find("img").attr("src");
+       // var src_next = $(this).next().find("img").attr("src");
         jp.addClass("hide");
         m.removeClass("hide");
         mi.eq(i).addClass('active');
         mi.eq(i).siblings().removeClass("active");
-        mi.eq(i).find("img").attr({"src":src});
+       // mi.eq(i).find("img").attr({"src":src});
         mi.find("img").fadeIn(2000);
-        mi.eq(i).next().find("img").attr({"src":src_next});
-
+      //  mi.eq(i).next().find("img").attr({"src":src_next});
         mid.animate({
-            "top":"25%"
+            "top":"11%"
         },3000);
         var mc = $(".myCarousel .close");
         mc.on("click",function(){
@@ -94,8 +109,6 @@ pl.each(function(i){
 
 
 
-
-
 var nl = $(".nav-pills>li"),
     lt = $(".login_type");
 nl.each(function(i){
@@ -109,19 +122,59 @@ nl.each(function(i){
 
 
 
-var sls = $(".station_head li .station_name");
-var s = $(".station_name");
-var sl = $(".station_content li");
+var sls = $(".station_head li .station_name"),
+    s = $(".station_name"),
+    sl = $(".station_content li");
 sls.each(function(i){
-   $(this).hover(function(){
-       $(this).addClass("active");
-       $(this).parent().siblings().find(s).removeClass("active");
-       $(this).parent().parent().siblings().find(s).removeClass("active");
-       $(this).parent().parent().siblings(".station_content").find("li").addClass("hide");
-       sl.eq(i).removeClass("hide");
-       sl.eq(i).siblings().addClass("hide");
-   });
+    $(this).on("click",function(){
+        $(this).addClass("active");
+        $(this).parent().siblings().find(s).removeClass("active");
+        $(this).parent().parent().siblings().find(s).removeClass("active");
+        $(this).parent().parent().siblings(".station_content").find("li").slideUp();
+        sl.eq(i).slideDown();
+        sl.eq(i).siblings().css({"display":'none'});
+    });
 });
+
+
+/*index return top*/
+$(".we .top").hide();
+$(window).scroll(function(){  //jquery的scroll()方法
+    if($(this).scrollTop()>250){
+        $(".we .top").fadeIn(1000);}  //jquery的fadeIn()显示方法
+    else{$(".we .top").fadeOut(1000);}  //jquery的fadeIn()隐藏方法
+});
+var w = $(".we .last");
+w.click(function(){$("html,body").animate({scrollTop:0},"fast");return false;});
+w.mouseover(function(){
+    $(this).find("i").removeClass("fa-angle-up");
+    $(this).html("返回顶部");
+    $(this).find("i").css({"fontSize":"13px"})
+} );
+w.mouseout( function(){
+    $(this).find("i").addClass("fa-angle-up");
+    $(this).html('<i class="fa fa-angle-up" style="top: 3px;font-size: 30px;"></i>');
+    $(this).find("i").css({"fontSize":"30px"})
+});
+$(".message,.phone").hover(function(){
+   $(this).find(".qqgroup-show").removeClass("hide");
+        $(this).find(".telphone-show").removeClass("hide");
+},
+    function(){
+        $(this).find(".qqgroup-show").addClass("hide");
+        $(this).find(".telphone-show").addClass("hide");
+    }
+);
+var t = $(".tuo_code");
+t.hover(
+    function(){
+        $(this).find(".qrcode").removeClass("hide");
+},
+    function(){
+        $(this).find(".qrcode").addClass("hide");
+    }
+);
+
 
 
 
