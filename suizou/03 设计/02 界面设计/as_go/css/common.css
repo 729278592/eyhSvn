@@ -65,7 +65,7 @@ html[xmlns] .clearfix {display: block;}
 
 
 /*index of content*/
-.superiority{width: 88%;margin: 0 6%;}
+.superiority{width: 88%;margin: 0 6%;position: relative;left: 0.3%;}
 .superiority li{border: 1px solid #c1c1c1;padding: 10px 20px;float: left;margin:0 4.1%;position: relative;text-align: center;margin-bottom: 20px;}
 .superiority .title{position: absolute;top: -15px;left:10px;display: inline-block;width: 40px;height: 20px;background: #eeeeee;font-size: 18px;}
 .myCarousel,.myCarousel1,.product{width: 80%;position: relative;left: 50%;margin-left: -40%;margin-top: 20px;}
@@ -73,25 +73,25 @@ html[xmlns] .clearfix {display: block;}
 .carousel-control {position: absolute;top: 45%;left: 0;width: 40px;height: 40px;margin-top: -20px;font-size: 60px;font-weight: 100;line-height: 22px;color: #FFF;text-align: center;background: #222 none repeat scroll 0 0;border: 3px solid #FFF;border-radius: 23px;opacity: 0.5;}
 .myCarousel1>img{width: 100%;}
 .myCarousel .item .img{margin: 5.5% 0;position: relative;left: 8%;display: none;width: 50%;}
-.myCarousel .item .describe{position: absolute;top: -20%;left: 65%;color: #fff;width: 30%;}
+.myCarousel .item .describe{position: absolute;top: -20%;left: 60%;color: #fff;width: 30%;}
 .myCarousel .item .describe p{font-size: 18px;color: #ffd478;margin-top: 4%;}
 .item ul.product ul{width: 100%;}
 .item ul li,.product ul li{float: left;margin-right: 1.33%;margin-bottom:1.33%;width: 24%;position: relative;overflow: hidden;}
 .product ul li{width: 32.44%;overflow: hidden;}
 .product ul li:hover{cursor: pointer;}
 .item ul .last,.product ul .last{margin-right: 0;}
-.width100{width: 100%;}
+.width100{width: 100%;margin-top: -160px;}
 .title_box{width: 100%;height: 100%;background: rgba(0,0,0,.5);position: absolute;top: 0;left: 0;text-align: center;color: #fff;font-size: 16px;}
-.title_box span{position: relative;top: 35%;display: inline-block;}
-.title_box .title{font-size: 18px;margin-bottom: 10px;}
+.title_box span{position: relative;top: 48%;display: inline-block;}
+.title_box .title{font-size: 22px;margin-bottom: 10px;}
 .title_box .details{width: 90%;font-size: 14px;}
-.product ul li .plus{width: 20px;height: 20px;background: rgba(0,0,0,.8);border-radius: 20px;line-height: 13px;text-align: center;color: #2691a7;position: absolute;top: 40%;margin-left: -10px;left: 50%;margin-top: -40px;font-size: 26px;}
+.product ul li .plus{width: 30px;height: 30px;background: rgba(0,0,0,.8);border-radius: 20px;line-height: 25px;text-align: center;color: #2691a7;position: absolute;top: 50%;margin-left: -10px;left: 50%;margin-top: -40px;font-size: 30px;}
 .item_div{position: relative;overflow: hidden;height: 60%;width: 100%;}
 .item_box{background: rgba(255, 175, 2, 0.60);position: absolute;top: 100%;left: 0;text-align: center;width: 100%;height: 100%;}
 .item_box img{width: 25%;position: relative;top: 50%;margin-top: -12.5%;}
-.activity{margin:30px 0;}
+.activity{margin:30px 0 0 0;}
 .activity .height1px{width: 100%;height: 1px;background: #b3b3b3;}
-.activity p{text-align: center;font-size: 20px;width: 80px;height: 20px;background: #f5f5f7;margin: 0 auto;position: relative;top: -15px;color: #3a95cf;}
+.activity p{text-align: center;font-size: 20px;height: 20px;margin: 0 auto;}
 .myCarousel .close{position: absolute;top: 5px;right: 10px;width: 40px;height: 40px;text-align: center;line-height: 40px;background: #aaa;border-radius: 40px;color: #fff;}
 .item .title{font-size: 16px;color: #000;margin: 10px 0;}
 .page_footer{padding: 2% 0;background: #eeeeee;}
@@ -108,13 +108,13 @@ html[xmlns] .clearfix {display: block;}
 .we li>div{display: inline-block;text-align: center;line-height: 60px;width: 100%;height: 100%;color: #5aadf3;border: 2px solid #5aadf3;border-radius: 5px;}
 .we li>div:hover{background: #feaf19;color: #fff;border: 2px solid transparent;}
 .we li .fa{position: relative;top: -8px;font-size: 22px;}
+.we .top{cursor: pointer;}
 .miaoshu{position: relative;top: -51px;font-size: 13px;}
 .qqgroup-show {display: block;width: 195px;height: 97px;position: absolute;right: 51px;bottom: 230px;}
 .qqgroup-show-content {width: 185px;height: 97px;line-height: 20px;padding: 9px 15px 9px 7px;text-align: left;background: url(../images/scrolltop-qqgroup-bg.png) 0 0 no-repeat;}
 .telphone-show-content,.qqgroup-show-content {display: block;text-align: center;color: #3bade2;font-size: 12px;font-style: normal;}
 dt{position: relative;left: -50px;top: 20px;}
-dd {margin-left: 45px;}
-dd a {display: block;background: url(../images/qqgroup-join.png) center top no-repeat;color: #999;font-size: 12px;padding-top: 23px;text-align: center}
+dd {margin-left: 45px;color: #333;margin-top: 3px;}
 .t {margin: 0;padding: 0;text-align: center;height: 20px;line-height: 20px;color: #fff;}
 h4 {font-size: 1em;margin: 1.33em 0;}
 .telphone-show {isplay: block;width: 180px;height: 55px;position: absolute;right: 51px;bottom: 166px;}
@@ -122,6 +122,7 @@ h4 {font-size: 1em;margin: 1.33em 0;}
 b {line-height: 30px;font-weight: 700;}
 .qrcode {background: url(../images/qrcode-bg.png) no-repeat;width: 150px;height: 150px;position: fixed;right: 90px;bottom: 172px;z-index: -1;text-align: center;}
 .qrcode-pic{position: relative;top: 15px;}
+
 
 
 /*register of content*/
@@ -171,6 +172,7 @@ b {line-height: 30px;font-weight: 700;}
 .background .introduction{font-size: 14px;position: relative;top: 10px;}
 .background .btn{width: 100px;height: 30px;text-align: center;background: #ff9702;border-radius: 2px;color: #fff;position: relative;top: 30px;line-height: 15px;}
 .page_content_right_content,.page_content_right_footer>.contain_application{padding: 10px 20px 5px 20px;background: #fff;border: 1px solid #dbdbdb;}
+.page_content_right_content{margin-bottom: 15px;}
 .application{width: 100%;margin-bottom: 10px;position: relative;}
 .common_head{border-bottom: 1px dashed #dbdbdb;margin-bottom: 10px;font-size: 16px;}
 .application p{font-size: 14px;line-height: 25px;color: #555;}
@@ -178,15 +180,12 @@ b {line-height: 30px;font-weight: 700;}
 .application ul a.title{font-size: 14px;position: relative;top: 10px;}
 .application .application_li li{margin-bottom: 30px;position: relative;top: 20px;}
 .page_content_right_footer>.contain_application{margin-top: 10px;position: relative;z-index: 10;padding-bottom: 30px;}
-.page_content_right_footer>.contain_application ul{width: 99%;position: relative;left: 50%;margin-left: -49.5%;
-    text-align: center;}
-.page_content_right_footer>.contain_application ul li img{width: 50%;}
-
+.page_content_right_footer>.contain_application ul{width: 99%;position: relative;left: 50%;margin-left: -49.5%;text-align: center;}
+.page_content_right_footer>.contain_application ul li img{width: 30%;}
 .application_content li{width: 60px;height: 60px;border-radius: 60px;float: left;margin-right: 143px;}
 .application_content .last{margin-right: 0;}
 .application_content li a{display: inline-block;width: 100%;height: 100%;line-height: 60px;text-align: center;color: #fff;font-size: 20px;}
 .application_content li .block{width: 100%;font-size: 14px;text-align: center; position: relative;top: 10px;}
-
 
 
 
@@ -208,15 +207,14 @@ b {line-height: 30px;font-weight: 700;}
 .recruitment{}
 .recruitment_head{background: #f5f5f7;text-align: center;padding-bottom: 50px;}
 .recruitment_head span{line-height: 25px;font-size: 16px;position: relative;top: 10px;}
+.recruitment_head .last{position: relative;left: -32px;}
 .recruitment_content{}
 .recruitment_content .menu{height: 50px;background: #f5f5f7;text-align: center;}
 .recruitment_content .menu ul{width: 44%;position: relative;left: 50%;margin-left: -22%;height: 50px;}
 .recruitment_content .menu ul li{height: 50px;line-height: 50px;}
-.recruitment_content .menu ul li a{display: inline-block;width: 100%;height: 50px;line-height: 50px;border: 1px solid #e0e0e2;
-    border-bottom: transparent;font-size: 16px;}
+.recruitment_content .menu ul li a{display: inline-block;width: 100%;height: 50px;line-height: 50px;border: 1px solid #e0e0e2;border-bottom: transparent;font-size: 16px;color: #444;}
 .recruitment_content .menu ul .active a{color: #fff;background: #3caee2;}
 .recruitment_content .menu ul li a:hover{text-decoration: none;}
-
 
 
 
@@ -232,19 +230,27 @@ b {line-height: 30px;font-weight: 700;}
 .common_content .station_head li .station_name:hover{cursor: pointer;}
 .common_content .station_head li .station_name.active{background: #3dafe2;color: #fff;}
 .common_content .station_content{width: 100%;clear: both;margin: 20px 0;}
-.common_content .station_content li{position: relative;padding: 10px 15px;border: 1px solid #e0e0e2;display: none;}
+.common_content .station_content li{position: relative;display: none;}
+.common_content .station_content li>div{border: 1px solid #e0e0e2;padding: 15px;}
 .common_content .station_content .first{display: inline-block;}
-.common_content .station_content li .top1{position: absolute;top: -15px;left: 5%;}
-.common_content .station_content li .top2{position: absolute;top: -15px;left: 40%;}
-.common_content .station_content li .top3{position: absolute;top: -15px;right: 5%;}
+.common_content .station_content li .top1{position: absolute;top: -14px;left: 5%;}
+.common_content .station_content li .top2{position: absolute;top: -14px;left: 40%;}
+.common_content .station_content li .top3{position: absolute;top: -14px;right: 5%;}
+
 
 
 /*examination_approval of content*/
-.application .title{font-size: 18px;color: #333;}
-.application .scene{margin: 15px 0;}
+.application .title{font-size: 18px;color: #333;position: relative;top: 10px;}
+.application .scene{margin: 20px 0;}
 .application .scene>span{padding-right: 65px;}
 .application button{width: 150px;height: 35px;line-height: 35px;text-align: center;border-radius: 5px;background: #ff9c0e;border: none;color: #fff;}
 .application button.disabled{background: #f0f0f0;color: #222;margin-left: 10px;}
+.carousel-application img {position: relative;width: 50%;left: 50%;margin-left: -25%;}
+.application_head{border-bottom: 1px solid #e7e7e7;padding-bottom: 15px;}
+.application_head_img{float: left;}
+.application_head_content{position: relative;left: 15px;}
+.application .details{margin-top: 15px;}
+.picture_display{padding-bottom: 50px;}
 
 
 
@@ -258,8 +264,12 @@ b {line-height: 30px;font-weight: 700;}
 
 
 /*contact_us of content*/
-.company_information{text-align: center;margin-top: 15px;}
+.company_information{text-align: left;margin-top: 15px;}
 .company_information img{margin-right: 15px;}
+.company_information li>div{width: 360px;height: 100%;margin: 0 auto;}
+.company_information li .last{text-align: right;}
+.map div>p{width: 360px;margin: 30px auto;}
+.map_img{margin-left: 13%;}
 
 
 
@@ -280,8 +290,7 @@ b {line-height: 30px;font-weight: 700;}
 
 
 /*authorization_installation of content*/
-.authorization{width: 60%;position: relative;left: 50%;margin-left: -30%;padding: 50px 0;border: 1px solid #bccdce;
-    border-radius: 10px;text-align: center;background: #fff;margin-top: 200px;}
+.authorization{width: 60%;position: relative;left: 50%;margin-left: -30%;padding: 50px 0;border: 1px solid #bccdce;border-radius: 10px;text-align: center;background: #fff;margin-top: 200px;}
 .authorization .title{font-size: 20px;font-weight: bold;}
 .authorization .btn{width: 250px;height: 50px;background: #43afe0;text-align: center;color: #fff;border-radius: 10px;font-size: 20px;}
 
@@ -290,6 +299,7 @@ b {line-height: 30px;font-weight: 700;}
 /*retrieve_pwd of content*/
 .retrieve_pwd_head{text-align: center;background: #f5f5f5;height: 50px;line-height: 50px;position: absolute;top: -47px;width: 100%;left: 0;border-radius: 5px 5px 0 0;font-size: 18px;color: #5caeea;}
 .get_validation{background: #31b3f4;color: #fff;}
+
 
 
 /*footer*/
@@ -311,7 +321,6 @@ b {line-height: 30px;font-weight: 700;}
 }
 
 @media screen and (max-width: 1375px) {
-
     .page_content_right{width: 100%;}
     .header .fr .list{display: inline-block;}
     .page_content_left{width: 100%;}
@@ -327,8 +336,6 @@ b {line-height: 30px;font-weight: 700;}
 @media screen and (min-width: 1420px) {
     .product ul{width: 100%;}
 }
-
-
 
 @media screen and (max-width: 1200px) {
     .recommend .defalut{width: 50%;}
@@ -351,8 +358,6 @@ b {line-height: 30px;font-weight: 700;}
     .step li .glyphicon-menu-right{left: 40px;top: -45px;}
     .title_box span{font-size: 14px;top: 35%;}
     .page_content_right_footer>.last>li{padding: 8px 5% 50px;}
-
-
     .recruitment_content .menu{float: left;background: transparent;margin-top: 20px;}
     .recruitment_content .menu ul li a{width: 100px;height: 50px;}
     .recruitment_content .menu ul .last a{border-bottom: 1px solid #e0e0e2;}
