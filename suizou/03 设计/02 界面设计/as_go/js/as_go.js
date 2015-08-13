@@ -2,22 +2,22 @@
  * Created by WHB on 2015/7/27.
  */
 /*左边产品页面菜单切换*/
-var wd = $(".wrap div"),
-    wa = $(".wrap .active");
-wd.on("click",function(){
-    var c = $(this);
-    if( c.is(".active")){
-        c.next().slideUp();
-        c.removeClass("active");
-    }
-   else{
-        c.next().slideDown();
-        c.addClass("active");
-        c.parent().siblings().find("div").removeClass("active");
-        c.parent().siblings().find(".menu").slideUp();
-    }
-});
-wa.next().removeClass("hide");
+//var wd = $(".wrap div"),
+//    wa = $(".wrap .active");
+//wd.on("click",function(){
+//    var c = $(this);
+//    if( c.is(".active")){
+//        c.next().slideUp();
+//        c.removeClass("active");
+//    }
+//   else{
+//        c.next().slideDown();
+//        c.addClass("active");
+//        c.parent().siblings().find("div").removeClass("active");
+//        c.parent().siblings().find(".menu").slideUp();
+//    }
+//});
+//wa.next().removeClass("hide");
 
 
 
@@ -92,10 +92,11 @@ pl.each(function(i){
         mi.find("img").fadeIn(2000);
       //  mi.eq(i).next().find("img").attr({"src":src_next});
         mid.animate({
-            "top":"11%"
+            "top":"40%"
         },3000);
         var mc = $(".myCarousel .close");
         mc.on("click",function(){
+            $(this).queue
             mc.parent().addClass("hide");
             jp.removeClass("hide");
             mi.find("img").hide();

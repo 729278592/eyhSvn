@@ -44,7 +44,7 @@
     font-size: 20px;
     text-indent: 30px;
 }
-.ui-bnnerp .ret{width: 15px;height: 15px;border-radius: 15px;background: #ffaf02;position: absolute;right: -8px;z-index: 100;top: 37px;}
+.ui-bnnerp .ret{width: 15px;height: 15px;border-radius: 15px;background: #aaa;position: absolute;right: -8px;z-index: 100;top: 37px;}
 .ui-line{
 	zoom: 1;
     border-right: 1px solid #b4b4b4;

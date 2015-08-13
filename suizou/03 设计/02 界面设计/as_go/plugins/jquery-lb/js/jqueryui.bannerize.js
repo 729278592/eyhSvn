@@ -90,6 +90,7 @@
             self.slogans
                 .children(':eq(' + self.options.startAt + ')')
                 .addClass('ui-banner-current ui-banner-slogans-current')
+
                 .find(".ret").removeClass("hide")
                 .end()
                 .next()
@@ -260,6 +261,7 @@
                 .dequeue("banner");
         },
         _slideForward: function (step) {
+
             var self = this;
             self.slides.queue("banner", function (next) {
                 self.sliding = true;
