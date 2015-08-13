@@ -194,6 +194,60 @@ $(function(){
     });
 
 
+
+
+
+
+var il = $(".immediately_log");
+    var iN = $("#inputName");
+    var iP = $("#inputPassword");
+    var ne = $(".NameEmpty");
+    var pe = $(".PasswordEmpty");
+    var e  = $(".Exists");
+    var NE = $(".NotExists");
+    var eP = $(".errorPassword");
+    il.on("click",function(){
+        if((iN.val()=="")&&(iP.val()=="")){
+            ne.removeClass("hide");
+            pe.removeClass("hide")
+        }
+        else if((iN.val()=="")&&(iP.val()!="")){
+            ne.removeClass("hide");
+            pe.addClass("hide");
+            e.addClass("hide");
+            NE.addClass("hide");
+        }
+        else if((iN.val()!="")&&(iP.val()=="")){
+            ne.addClass("hide");
+            pe.removeClass("hide");
+            eP.addClass("hide");
+        }
+        else if((iN.val()!="")&&(iP.val()!="")){
+            ne.addClass("hide");
+            pe.addClass("hide");
+            e.addClass("hide");
+            NE.addClass("hide");
+            eP.addClass("hide");
+            $(this).val("正在登录中...");
+            if(iN.val()=="已存在"){
+                e.removeClass("hide");
+                NE.addClass("hide");
+            }
+            else if(iN.val()=="不存在"){
+                NE.removeClass("hide");
+                e.addClass("hide");
+            }
+            else if(iP.val()=="as"){
+                eP.removeClass("hide");
+            }else{
+                e.addClass("hide");
+                NE.addClass("hide");
+                eP.addClass("hide");
+            }
+        }
+    });
+
+
 })();
 
 

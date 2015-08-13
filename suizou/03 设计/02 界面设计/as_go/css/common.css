@@ -128,6 +128,8 @@ b {line-height: 30px;font-weight: 700;}
 
 
 /*register of content*/
+
+
 .retrieve_pwd,.form{width: 538px;position: absolute;left: 50%;top:50%;background: #fff;border-radius: 5px;margin: -200px -269px;padding: 50px 40px;}
 .forget_password{text-align: right;line-height: 27px;color: #5ab2da;}
 .forget_password a{color: #5ab2da;}
@@ -137,6 +139,7 @@ b {line-height: 30px;font-weight: 700;}
 .immediately_log,.immediately_revise,.immediately_retrieve{width: 80px;color: #fff;margin-left: 15px;}
 .immediately_log,.immediately_revise{background: #f68163;}
 .immediately_retrieve{background: #bebdbd;}
+.immediately_log{width: 120px;}
 .btn:hover, .btn:focus, .btn.focus {color: #fff;}
 .nav-pills{border-bottom: 1px solid #acb2b6;margin-bottom: 20px;font-size: 18px;}
 .nav-pills>li.active>a{border: none;border-bottom: 2px solid #2c9ee9;background: transparent !important;color: #2c9ee9;border-radius: 0;}
@@ -381,6 +384,11 @@ b {line-height: 30px;font-weight: 700;}
     .recruitment_content .menu ul li a{width: 100px;height: 50px;}
     .recruitment_content .menu ul .last a{border-bottom: 1px solid #e0e0e2;}
     .common_content{margin-left: -25%;}
+    .footer .fl{width: 60%;position: relative;left: 50%;margin-left: -30%;}
+    .footer .fl li{width: 25%;text-align:center;}
+    .footer .fr{text-align: center;margin-top: -20px;}
+    .re_h{position: relative;top:-12px;}
+
 }
 
 @media screen and (max-width: 768px) {

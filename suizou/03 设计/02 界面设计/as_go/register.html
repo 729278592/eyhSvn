@@ -8,8 +8,12 @@
     <link rel="stylesheet" href="css/common.css?v=ee"/>
     <link rel="stylesheet" href="css/font/css/font-awesome.min.css"/>
     <style>
-        .wrapper{background: url("images/login_bg.jpg")center center;background-size: cover;width: 100%;}
 
+.content{background: url("images/login_bg.jpg")no-repeat center;background-size:cover;width: 100%;
+    overflow: hidden;}
+        .form{width: 538px;position: relative;left: 50%
+        ;background: #fff;border-radius: 5px;margin: 70px -269px;padding: 50px 40px;}
+        .footer{position: relative;}
     </style>
 </head>
 <body>
@@ -40,12 +44,11 @@
             </div>
             <form action="#" id="form_sample_2" class="form-horizontal">
                 <div class="form-body">
-
                     <div class="form-group">
                         <label class="control-label col-md-3 col-md-offset-1">用户名<span class="required">
                                             * </span>
                         </label>
-                        <div class="col-md-7">
+                        <div class="col-md-8">
                             <div class="input-icon right">
                                 <i class="fa"></i>
                                 <input type="text" class="form-control" name="name" placeholder="请输入您的昵称"/>
@@ -56,7 +59,7 @@
                         <label class="control-label col-md-3 col-md-offset-1">密码 <span class="required">
                                             * </span>
                         </label>
-                        <div class="col-md-7">
+                        <div class="col-md-8">
                             <div class="input-icon right">
                                 <i class="fa"></i>
                                 <input type="text" class="form-control" name="password" placeholder="长度为6~16位字符,必须是首字母大写"/>
@@ -79,15 +82,15 @@
                     <div class="form-group">
                         <label class="control-label col-md-3 col-md-offset-1">企业所在地 <span class="required">
                                             * </span></label>
-                        <div class="col-md-7">
+                        <div class="col-md-8">
 
                             <select class="form-control form-control-w3">
                                 <option value="">请选择</option>
-                                <option value="">四川省</option>
+                                <option value="">四川省水电费</option>
                             </select>
                             <select class="form-control form-control-w3">
                                 <option value="">请选择</option>
-                                <option value="">广安市</option>
+                                <option value="">广安市收电费收费</option>
                             </select>
                             <select class="form-control form-control-w3">
                                 <option value="">请选择</option>
@@ -151,6 +154,12 @@
                             </div>
                         </div>
                     </div>
+
+
+
+
+
+
                 </div>
 
                 <div class="form-actions">
@@ -162,30 +171,27 @@
                 </div>
             </form>
         </div>
+
     </div>
     <div class="footer clearfix">
         <div class="container">
             <div class="row">
-                <ul class="fl col-lg-4 col-sm-5 col-xs-12">
+                <ul class="fl col-lg-4 col-md-4 col-xs-12">
                     <li><a href="about_us.html">关于我们</a></li>
                     <li><a href="talent_recruitment.html">招聘信息</a></li>
                     <li><a href="market_cooperation.html">市场合作</a></li>
                     <li><a href="contact_us.html">联系我们</a></li>
                 </ul>
-                <div class="fr col-lg-8 col-sm-8 col-xs-12">
+                <div class="fr col-lg-8 col-md-8 col-xs-12">
                     <span>©2014-2015 suizou.net All Rights Reserved　　渝ICP备14007819号-2</span>
-
                 </div>
             </div>
         </div>
     </div>
 </div>
 </body>
-<script src="js/jquery-1.11.3.min.map"></script>
 <script src="js/jquery-1.11.3.min.js"></script>
 <script src="js/as_go.js"></script>
-
-<script src="plugins/metic/js/jquery.slimscroll.js"></script>
 <script src="plugins/metic/js/jquery.validate.js"></script>
 <script src="plugins/metic/js/main.js"></script>
 <script src="plugins/metic/js/form-validation.js"></script>
