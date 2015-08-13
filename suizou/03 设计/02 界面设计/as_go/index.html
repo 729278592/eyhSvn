@@ -3,23 +3,29 @@
 <head lang="en">
     <meta charset="UTF-8">
     <title>首页</title>
-    <link rel="stylesheet" href="plugins/bootstrap-3.3.5-dist/css/bootstrap.css?v=ee"/>
+    <link rel="stylesheet" href="plugins/bootstrap-3.3.5-dist/css/bootstrap.css?v=e"/>
     <link rel="stylesheet" href="css/common.css?v=33"/>
     <link rel="stylesheet" href="css/font/css/font-awesome.css"/>
     <link rel="stylesheet" href="plugins/jquery-lb/css/reset.css"/>
     <link rel="stylesheet" href="plugins/jquery-lb/css/index.css"/>
     <style>
-        .header{position: fixed;z-index: 1000000;}
+        .header{position: fixed;z-index: 1000;}
         .header:hover{background: rgba(0,0,0,.7);}
         .footer{position: relative;}
-
         .ui-banner .ui-banner-arrow.ui-banner-arrow-prev{background: transparent url("plugins/jquery-lb/images/prev.jpg") no-repeat scroll 0 0;height: 37px;left: 30px;top: 408px;width: 37px;}
         .ui-banner .ui-banner-arrow.ui-banner-arrow-next{background: transparent url("plugins/jquery-lb/images/next.jpg") no-repeat;height: 37px;top: 408px;left: 75px;width: 37px;}
         .hide{display: none;}
-        .ui-banner-slides .mask{background: rgba(21, 255, 63, 0.5);color: #333;text-align: center;width: 100%;height: 100%;position: absolute;top: 0;padding:12% 20%;}
+        .ui-banner-slides .mask{background: rgba(186, 125, 68,.7);color: #333;text-align: center;width: 100%;height: 100%;position: absolute;top: 0;padding:12% 20%;}
+        .ui-banner-slides .mask img{margin: 20px 0;}
         .ui-banner-slogans li{margin-bottom: 15px;position: relative;top: -10px;}
         .w1200{width: 1200px;position: relative;left: 50%;margin-left: -600px;margin-bottom: 100px;margin-top: 80px;}
         .floatLeft {float: left;}
+        .myCarousel .carousel-control {position: absolute;width: 50px;height: 100px;border: none;border-radius: 0;}
+        .myCarousel .carousel-control img{position: relative;z-index: 5;}
+        .myCarousel .carousel-control.right {right: 0;}
+        .ui-banner-slogans-current .ui-bnnerp p{color: #feaf02;}
+        .ui-banner-slogans-current .ui-bnnerp .ret{background: #feaf02;}
+        .page_footer  a:focus {outline: none;outline-offset: -2px;}
     </style>
 </head>
 <body class="home blog et_frontend_customizer gecko et_includes_sidebar">
@@ -29,7 +35,7 @@
             <div class="row">
                 <ul class="fl col-lg-8 col-xs-6">
                     <li class="first"><a href="#"><img src="images/login.png" alt="" class="login"/></a></li>
-                    <li><a href="index.html">首页</a></li>
+                    <li class="active"><a href="index.html">首页</a></li>
                     <li><a href="mobile_office_suite.html">应用套件</a></li>
                     <li class="last"><a href="about_us.html">关于我们</a></li>
                 </ul>
@@ -43,7 +49,7 @@
     <div class="content">
         <div class="content_head">
             <img src="images/index_head1.jpg" class="img-responsive" alt="Responsive image">
-            <a href="" class="try"></a>
+            <a href="register.html" class="try"></a>
         </div>
         <div class="container-fluid">
             <div class="row">
@@ -71,12 +77,10 @@
                 <div class="width100">
                     <div class="product js_product">
                         <ul class="product_ul clearfix">
-
                             <li>
                                 <img src="images/tu1.jpg"  class="img-responsive" alt="Responsive image"/>
                                 <div class="title_box">
                                     <span class="title">微商崛起</span><br/>
-
                                 </div>
                                 <div class="plus">+</div>
                             </li>
@@ -84,7 +88,6 @@
                                 <img src="images/tu2.jpg"  class="img-responsive" alt="Responsive image"/>
                                 <div class="title_box">
                                     <span class="title">最火O2O</span><br/>
-
                                 </div>
                                 <div class="plus">+</div>
                             </li>
@@ -92,7 +95,6 @@
                                 <img src="images/tu3.jpg"  class="img-responsive" alt="Responsive image"/>
                                 <div class="title_box">
                                     <span class="title">地产/汽车</span><br/>
-
                                 </div>
                                 <div class="plus">+</div>
                             </li>
@@ -102,7 +104,6 @@
                                 <img src="images/tu4.jpg"  class="img-responsive" alt="Responsive image"/>
                                 <div class="title_box">
                                     <span class="title">传统零售</span><br/>
-
                                 </div>
                                 <div class="plus">+</div>
                             </li>
@@ -110,7 +111,6 @@
                                 <img src="images/tu5.jpg"  class="img-responsive" alt="Responsive image"/>
                                 <div class="title_box">
                                     <span class="title">传媒/广告</span><br/>
-
                                 </div>
                                 <div class="plus">+</div>
                             </li>
@@ -118,61 +118,68 @@
                                 <img src="images/tu6.jpg"  class="img-responsive" alt="Responsive image"/>
                                 <div class="title_box">
                                     <span class="title">服务行业</span><br/>
-
                                 </div>
                                 <div class="plus">+</div>
                             </li>
                         </ul>
                     </div>
                     <div class="carousel slide myCarousel hide">
-                        <div class="carousel-inner">
+                        <div class="carousel-inner clearfix">
                             <div class="item">
-                                <img src="images/tu1.jpg"  class="img-responsive img" alt="Responsive image"/>
+                                <img src="images/tu1.png"  class="img-responsive img" alt="Responsive image"/>
                                 <div class="describe">
+                                    <span class="title">微商崛起</span><br/>
                                     <span>微商：微营销过时了，但是微商崛起了，不光是要吸引粉丝，还要吸引事业合伙人，利用平时的时间，尽情发展自己的个人营销魅力，开始自己的事业。</span>
                                 </div>
                             </div>
                             <div class="item">
-                                <img src="images/tu2.jpg"  class="img-responsive img" alt="Responsive image"/>
+                                <img src="images/tu2.png"  class="img-responsive img" alt="Responsive image"/>
                                 <div class="describe">
+                                    <span class="title">最火O2O</span><br/>
                                     <span>O2O：最后一公里成了O2O的命脉，上门服务成了O2O的成功秘诀，如何更快更好的服务客户，利用服务号＋企业号，完美的解决上门O2O的痛点，让领导远程操控，让员工便捷接单，让体验做到极致，让用户离不开你</span>
                                 </div>
                             </div>
                             <div class="item">
-                                <img src="images/tu3.jpg"  class="img-responsive img" alt="Responsive image"/>
+                                <img src="images/tu3.png"  class="img-responsive img" alt="Responsive image"/>
                                 <div class="describe">
+                                    <span class="title">地产/汽车</span><br/>
                                     <span>地产：他们都一直在问一个问题，客户在哪里？客户在等待透明、极致的体验，如果服务好客户才是关键，让客户从粉丝变为真正的用户，让便捷的服务吸引住客户，使用随走，轻松粘住客户。</span>
                                 </div>
                             </div>
                             <div class="item">
-                                <img src="images/tu4.jpg"  class="img-responsive img" alt="Responsive image"/>
+                                <img src="images/tu4.png"  class="img-responsive img" alt="Responsive image"/>
                                 <div class="describe">
+                                    <span class="title">传统零售</span><br/>
                                     <span>零售：业绩不好统计？店铺太多不容易管理？营销活动如何圆满开展？上传下达不容易统一？我们给你定制解决方案，从员工管理到上下游关联企业，从营销开展到内部流程管理，不用下载不用安装，我们都给你解决。</span>
                                 </div>
                             </div>
                             <div class="item">
-                                <img src="images/tu5.jpg"  class="img-responsive img" alt="Responsive image"/>
+                                <img src="images/tu5.png"  class="img-responsive img" alt="Responsive image"/>
                                 <div class="describe">
+                                    <span class="title">传媒/广告</span><br/>
                                     <span>广告：不看广告看疗效？应该是看广告还要看疗效，从粗放到精细化管理，互联网＋必须得跨过这道坎。媒体转型、出版行业转型，靠的就是外部的营销、内部的整合分析，将用户牢牢把控在自己服务上。</span>
                                 </div>
                             </div>
                             <div class="item">
-                                <img src="images/tu6.jpg"  class="img-responsive img" alt="Responsive image"/>
+                                <img src="images/tu6.png"  class="img-responsive img" alt="Responsive image"/>
                                 <div class="describe">
+
+                                    <span class="title">服务行业</span><br/>
                                     <span>服务：内部流程繁琐？员工沟通不顺畅？不管是餐饮、还是摄影、还是猎头，缺的就是信息化这一课，通过信息化可以让服务部门联动起来，不光是业绩飙升，员工也更有激情了。</span>
                                 </div>
                             </div>
 
                         </div>
-                        <a class="left carousel-control" href=".myCarousel" data-slide="prev">‹</a>
-                        <a class="right carousel-control" href=".myCarousel" data-slide="next">›</a>
+                        <a class="left carousel-control" href=".myCarousel" data-slide="prev">
+                            <img src="images/pre.png" alt=""/>
+                        </a>
+                        <a class="right carousel-control" href=".myCarousel" data-slide="next">
+                            <img src="images/next.png" alt=""/>
+                        </a>
+
                         <button class="close"><i class="glyphicon glyphicon-remove"></i></button>
                     </div>
                 </div>
-
-
-
-
                 <img src="images/consultation.jpg" class="img-responsive" alt="Responsive image" style="margin-bottom:20px;">
                 <img src="images/place1.jpg" class="img-responsive" alt="Responsive image" style="width: 80%;position: relative;left: 50%;margin-left: -40%;margin-bottom: 20px;">
                 <p class="col-lg-12 title">产品功能的介绍</p>
@@ -183,110 +190,117 @@
                         <div id="banners" class="ui-banner">
                             <ul class="ui-banner-slides">
                                 <li>
-                                    <a href=""><img src="images/application/effect_chart1.png" /></a>
+                                   <img src="images/application/effect_chart1.png" />
                                     <div class="mask">
                                         <img src="plugins/jquery-lb/images/icon1.png" alt=""/> <br/>
-                                        随走办公通讯录是能快快速导入人员名单是人员分配更加快速合理，能高效的查找人员的信息，所以通通讯录是移动办公最基础核心的类容，传 副本
+                                        通过微信完成审批申请、审批审核、审批查看等事件，再也不用满世界找老板审批了。
                                     </div>
                                 </li>
                                 <li>
-                                    <a href=""><img src="images/application/effect_chart2.png" /></a>
+                                    <img src="images/application/effect_chart2.png" />
                                     <div class="mask">
                                         <img src="plugins/jquery-lb/images/icon2.png" alt=""/> <br/>
-                                        随走办公通讯录是能快快速导入人员名单是人员分配更加快速合理，能高效的查找人员的信息，所以通通讯录是移动办公最基础核心的类容，传 副本
+                                        通过微信发起事假、病假、年假、调休、出差等多种请假形式，请假审批，一键搞定。
                                     </div>
                                 </li>
                                 <li>
-                                    <a href=""><img src="images/application/effect_chart3.png" /></a>
+                                    <img src="images/application/effect_chart3.png" />
                                     <div class="mask">
                                         <img src="plugins/jquery-lb/images/icon3.png" alt=""/> <br/>
-                                        随走办公通讯录是能快快速导入人员名单是人员分配更加快速合理，能高效的查找人员的信息，所以通通讯录是移动办公最基础核心的类容，传 副本
+                                        通过微信完成指定时间、指定区域签到、签退等，告别考勤机，开启全新签到模式。
                                     </div>
                                 </li>
                                 <li>
-                                    <a href=""><img src="images/application/effect_chart4.png" /></a>
+                                    <img src="images/application/effect_chart4.png" />
                                     <div class="mask">
                                         <img src="plugins/jquery-lb/images/icon4.png" alt=""/> <br/>
-                                        随走办公通讯录是能快快速导入人员名单是人员分配更加快速合理，能高效的查找人员的信息，所以通通讯录是移动办公最基础核心的类容，传 副本
+                                        通过微信完成签到打卡、客户拜访汇报、外勤任务分派、外勤工作请示等事件，流程化的外勤任务管理工具。
                                     </div>
                                 </li>
                                 <li>
-                                    <a href=""><img src="images/application/effect_chart5.png" /></a>
+                                    <img src="images/application/effect_chart9.png" />
                                     <div class="mask">
                                         <img src="plugins/jquery-lb/images/icon5.png" alt=""/> <br/>
-                                        随走办公通讯录是能快快速导入人员名单是人员分配更加快速合理，能高效的查找人员的信息，所以通通讯录是移动办公最基础核心的类容，传 副本
+                                        通过微信制定日常工作计划，汇报日常工作（日报、周报、月报、工作总结），让工作更加有计划、有条理。
                                     </div>
                                 </li>
                                 <li>
-                                    <a href=""><img src="images/application/effect_chart12.png" /></a>
+                                    <img src="images/application/effect_chart12.png" />
                                     <div class="mask">
                                         <img src="plugins/jquery-lb/images/icon6.png" alt=""/> <br/>
-                                        随走办公通讯录是能快快速导入人员名单是人员分配更加快速合理，能高效的查找人员的信息，所以通通讯录是移动办公最基础核心的类容，传通通讯录查找比较麻烦，所哟移动办公通讯录是顺应98                                    </div>
-                                </li>
-                                <li>
-                                    <a href=""><img src="images/application/effect_chart5.png" /></a>
-                                    <div class="mask">
-                                        <img src="plugins/jquery-lb/images/icon7.png" alt=""/> <br/>
-                                        随走办公通讯录是能快快速导入人员名单是人员分配更加快速合理，能高效的查找人员的信息，所以通通讯录是移动办公最基础核心的类容，传 副本
+                                        通讯录是企微应用的基础，通过通讯录快速查看同事联系方式、设置常用联系人、常用群组，随时更新个人资料，把公司装进手机里。
                                     </div>
                                 </li>
                                 <li>
-                                    <a href=""><img src="images/application/effect_chart12.png" /></a>
+                                    <img src="images/application/effect_chart8.png" />
                                     <div class="mask">
-                                        <img src="plugins/jquery-lb/images/icon8.png" alt=""/> <br/>
-                                        随走办公通讯录是能快快速导入人员名单是人员分配更加快速合理，能高效的查找人员的信息，所以通通讯录是移动办公最基础核心的类容，传通通讯录查找比较麻烦，所哟移动办公通讯录是顺应98                                    </div>
+                                        <img src="plugins/jquery-lb/images/icon7.png" alt=""/> <br/>
+                                        随走办公通讯录是能快快速导入人员名单是人员分配更加快速合理，能高效的查找人员的信息，
+                                        所以通通讯录是移动办公最基础核心的类容，传 副本
+                                    </div>
                                 </li>
                                 <li>
-                                    <a href=""><img src="images/application/effect_chart5.png" /></a>
+                                    <img src="images/application/effect_chart7.png" />
+                                    <div class="mask">
+                                        <img src="plugins/jquery-lb/images/icon8.png" alt=""/> <br/>
+                                        通过微信在企业内部自由创建群组，实时聊天沟通，揭开团队协作新一页。
+                                    </div>
+                                </li>
+                                <li>
+                                    <img src="images/application/effect_chart4.png" />
                                     <div class="mask">
                                         <img src="plugins/jquery-lb/images/icon9.png" alt=""/> <br/>
                                         随走办公通讯录是能快快速导入人员名单是人员分配更加快速合理，能高效的查找人员的信息，所以通通讯录是移动办公最基础核心的类容，传 副本
                                     </div>
                                 </li>
                                 <li>
-                                    <a href=""><img src="images/application/effect_chart12.png" /></a>
+                                    <img src="images/application/effect_chart14.png" />
                                     <div class="mask">
                                         <img src="plugins/jquery-lb/images/icon10.png" alt=""/> <br/>
-                                        随走办公通讯录是能快快速导入人员名单是人员分配更加快速合理，能高效的查找人员的信息，所以通通讯录是移动办公最基础核心的类容，传通通讯录查找比较麻烦，所哟移动办公通讯录是顺应98                                    </div>
+                                        新产品上线、新制度出台、各类福利供员工选择。这就是企业内部获取民意的最佳渠道，员工和企业可以迅速融为一体，一同群策群力。
+                                    </div>
                                 </li>
                                 <li>
-                                    <a href=""><img src="images/application/effect_chart5.png" /></a>
+                                    <img src="images/application/effect_chart11.png" />
                                     <div class="mask">
                                         <img src="plugins/jquery-lb/images/icon11.png" alt=""/> <br/>
-                                        随走办公通讯录是能快快速导入人员名单是人员分配更加快速合理，能高效的查找人员的信息，所以通通讯录是移动办公最基础核心的类容，传 副本
+                                        通过微信完成问卷设计、问卷发布、问卷回收和自动统计功能，轻松完成在线调研或投票。
                                     </div>
                                 </li>
                                 <li>
-                                    <a href=""><img src="images/application/effect_chart12.png" /></a>
+                                    <img src="images/application/effect_chart16.png" />
                                     <div class="mask">
                                         <img src="plugins/jquery-lb/images/icon12.png" alt=""/> <br/>
-                                        随走办公通讯录是能快快速导入人员名单是人员分配更加快速合理，能高效的查找人员的信息，所以通通讯录是移动办公最基础核心的类容，传通通讯录查找比较麻烦，所哟移动办公通讯录是顺应98                                    </div>
+                                        通过微信随时随地查看客户资料、联系客户、新增和更新客户资料、新增上级及共享商机等，颠覆性的CRM，助你掌控商机。
+                                    </div>
                                 </li>
                                 <li>
-                                    <a href=""><img src="images/application/effect_chart5.png" /></a>
+                                   <img src="images/application/effect_chart6.png" />
                                     <div class="mask">
                                         <img src="plugins/jquery-lb/images/icon13.png" alt=""/> <br/>
-                                        随走办公通讯录是能快快速导入人员名单是人员分配更加快速合理，能高效的查找人员的信息，所以通通讯录是移动办公最基础核心的类容，传 副本
+                                        通过微信查询最新产品信息、进行产品搜索、对产品提出疑问等，企业在微信上的产品知识库。
                                     </div>
                                 </li>
                                 <li>
-                                    <a href=""><img src="images/application/effect_chart12.png" /></a>
+                                    <img src="images/application/effect_chart13.png" />
                                     <div class="mask">
                                         <img src="plugins/jquery-lb/images/icon14.png" alt=""/> <br/>
-                                        随走办公通讯录是能快快速导入人员名单是人员分配更加快速合理，能高效的查找人员的信息，所以通通讯录是移动办公最基础核心的类容，传通通讯录查找比较麻烦，所哟移动办公通讯录是顺应98                                    </div>
-                                </li>
-                                <li>
-                                    <a href=""><img src="images/application/effect_chart5.png" /></a>
-                                    <div class="mask">
-                                        <img src="plugins/jquery-lb/images/icon15.png" alt=""/> <br/>
-                                        随走办公通讯录是能快快速导入人员名单是人员分配更加快速合理，能高效的查找人员的信息，所以通通讯录是移动办公最基础核心的类容，传 副本
+                                        欢乐时光，全民娱乐，老板员工共同发起一段愉快之旅。可通过后台发布各类活动，大家一起在微信端参与和退出活动；支持外部分享设置，支持二维码扫一扫签到。
                                     </div>
                                 </li>
                                 <li>
-                                    <a href=""><img src="images/application/effect_chart12.png" /></a>
+                                    <img src="images/application/effect_chart5.png" />
+                                    <div class="mask">
+                                        <img src="plugins/jquery-lb/images/icon15.png" alt=""/> <br/>
+                                        通过微信完成公司动态发布、公告通知，员工生日关怀，工资发放通知等事件，重大消息，不再错过。
+                                    </div>
+                                </li>
+                                <li>
+                                    <img src="images/application/effect_chart15.png" />
                                     <div class="mask">
                                         <img src="plugins/jquery-lb/images/icon16.png" alt=""/> <br/>
-                                        随走办公通讯录是能快快速导入人员名单是人员分配更加快速合理，能高效的查找人员的信息，所以通通讯录是移动办公最基础核心的类容，传通通讯录查找比较麻烦，所哟移动办公通讯录是顺应98                                    </div>
+                                        通过微信完成问卷设计、问卷发布、问卷回收和自动统计功能，轻松完成在线调研或投票。
+                                    </div>
                                 </li>
                             </ul>
                             <ul class="ui-banner-slogans">
@@ -506,7 +520,6 @@
                                         </div>
                                     </div>
                                     <p class="title">全程支持</p>
-
                                     <span>从企业号注册到开通，我们全程支持</span>
                                 </li>
                                 <li>
@@ -516,9 +529,7 @@
                                             <a href="#"><img src="images/details.png" alt=""/></a>
                                         </div>
                                     </div>
-
                                     <p class="title">专业服务</p>
-
                                     <span>微信公众号、微信企业号专业咨询服务</span>
                                 </li>
                                 <li>
@@ -528,9 +539,7 @@
                                             <a href="#"><img src="images/details.png" alt=""/></a>
                                         </div>
                                     </div>
-
                                     <p class="title">运营支持</p>
-
                                     <span>专业运营团队，为你提供专案咨询</span>
                                 </li>
                                 <li class="last">
@@ -540,9 +549,7 @@
                                             <a href="#"><img src="images/details.png" alt=""/></a>
                                         </div>
                                     </div>
-
                                     <p class="title">私人定制</p>
-
                                     <span>有需求，随时提，我们会尽快满足您</span>
                                 </li>
                             </ul>
@@ -608,7 +615,6 @@
                                         </div>
                                     </div>
                                     <p class="title">全程支持</p>
-
                                     <span>从企业号注册到开通，我们全程支持</span>
                                 </li>
                                 <li>
@@ -618,9 +624,7 @@
                                             <a href="#"><img src="images/details.png" alt=""/></a>
                                         </div>
                                     </div>
-
                                     <p class="title">专业服务</p>
-
                                     <span>微信公众号、微信企业号专业咨询服务</span>
                                 </li>
                                 <li>
@@ -630,9 +634,7 @@
                                             <a href="#"><img src="images/details.png" alt=""/></a>
                                         </div>
                                     </div>
-
                                     <p class="title">运营支持</p>
-
                                     <span>专业运营团队，为你提供专案咨询</span>
                                 </li>
                                 <li class="last">
@@ -642,9 +644,7 @@
                                             <a href="#"><img src="images/details.png" alt=""/></a>
                                         </div>
                                     </div>
-
                                     <p class="title">私人定制</p>
-
                                     <span>有需求，随时提，我们会尽快满足您</span>
                                 </li>
                             </ul>
@@ -667,19 +667,17 @@
                         <li class="col-lg-4 col-sm-4 col-xs-4">
                             <span>
                                 <img src="images/problem.png" alt=""/><br/>
-
                                  <span class="title">常见问题</span><br/>
-                                     <p><a href="">1、如何注册随走?</a></p>
-                                     <p><a href="">2、如何安装应用?</a></p>
+                                 <p><a href="common_problem.html">1、如何注册随走?</a></p>
+                                 <p><a href="common_problem.html">2、如何安装应用?</a></p>
                             </span>
                         </li>
                         <li class="col-lg-4 col-sm-4 col-xs-4">
                             <span>
                                 <img src="images/character.png" alt=""/><br/>
-
                                  <span class="title">产品特性</span><br/>
-                                     <p><a href="">1、考勤打卡全面免费?</a></p>
-                                     <p style="position: relative;left: -13px;"><a href="">2、日报功能完善?</a></p>
+                                 <p><a href="product_features.html">1、考勤打卡全面免费?</a></p>
+                                 <p style="position: relative;left: -13px;"><a href="product_features.html">2、日报功能完善?</a></p>
                             </span>
                         </li>
                     </ul>
@@ -770,14 +768,16 @@
         $(".ui-banner-slides li").hover(
             function(){
                 $(this).find(".mask").animate({
-                        "top":"100%"
+                     "top":"100%"
                 },200)
             },
             function(){
                 $(this).find(".mask").animate({
-                        "top":"0%"
+                     "top":"0%"
                 },200)
             });
+
+
     });
 </script>
 </html>
