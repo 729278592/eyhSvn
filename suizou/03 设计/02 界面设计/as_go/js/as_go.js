@@ -1,24 +1,24 @@
 /**
  * Created by WHB on 2015/7/27.
  */
-$(function(){
+
 
     /*左边产品页面菜单切换*/
-    var wd = $(".wrap div"),
-        wa = $(".wrap .active");
-    wd.on("click",function(){
-        var c = $(this);
-        if( c.is(".active")){
-
-        }
-        else{
-            c.next().slideDown();
-            c.addClass("active");
-            c.parent().siblings().find("div").removeClass("active");
-            c.parent().siblings().find(".menu").slideUp();
-        }
-    });
-    wa.next().removeClass("hide");
+//    var wd = $(".wrap div"),
+//        wa = $(".wrap .active");
+//    wd.on("click",function(){
+//        var c = $(this);
+//        if( c.is(".active")){
+//
+//        }
+//        else{
+//            c.next().slideDown();
+//            c.addClass("active");
+//            c.parent().siblings().find("div").removeClass("active");
+//            c.parent().siblings().find(".menu").slideUp();
+//        }
+//    });
+//    wa.next().removeClass("hide");
 
 
 
@@ -28,21 +28,24 @@ $(function(){
         isdian = true;
     pfl.on("click",function(){
         if(isdian == true){
-            pw.slideDown();
+            pw.slideUp();
+            //$(".footer_suite").css({"position":"absolute"});
             isdian = false;
         }
         else if(isdian == false){
-            pw.slideUp();
-            isdian = true;
-        }
-    });
-    var ww = parseInt(document.body.clientWidth);
-    $(window).resize(function() {
-        if((ww>1375)&&($(".page_content_left .wrap").css("display")=="none")){
             pw.slideDown();
-            isdian = false;
+            isdian = true;
+           // $(".footer_suite").css({"position":"relative"});
         }
     });
+    var ww = document.body.clientWidth;
+$(window).on("resize",function(){
+    if(($(".page_content_left .wrap").css("display")=="none")){
+        pw.slideDown();
+        isdian = true;
+    }
+});
+
 
 
 
@@ -83,21 +86,17 @@ $(function(){
         mid = $(".myCarousel .item .describe");
     pl.each(function(i){
         $(this).on("click",function(){
-            // var src = $(this).find("img").attr("src");
-            // var src_next = $(this).next().find("img").attr("src");
             jp.addClass("hide");
             m.removeClass("hide");
             mi.eq(i).addClass('active');
             mi.eq(i).siblings().removeClass("active");
-            // mi.eq(i).find("img").attr({"src":src});
+
             mi.find("img").fadeIn(2000);
-            //  mi.eq(i).next().find("img").attr({"src":src_next});
             mid.animate({
                 "top":"40%"
             },3000);
             var mc = $(".myCarousel .close");
             mc.on("click",function(){
-                $(this).queue
                 mc.parent().addClass("hide");
                 jp.removeClass("hide");
                 mi.find("img").hide();
@@ -108,7 +107,6 @@ $(function(){
 
         });
     });
-
 
 
     var nl = $(".nav-pills>li"),
@@ -148,8 +146,7 @@ $(function(){
 //    }  //jquery的fadeIn()显示方法
 //    else{$(".we .top").fadeOut(1000);}  //jquery的fadeIn()隐藏方法
 //});
-    var w = $(".we .last");
-    w.click(function(){$("html,body").animate({scrollTop:0},"fast");return false;});
+
 //w.mouseover(function(){
 //    $(this).find("i").removeClass("fa-angle-up");
 //    $(this).html("返回顶部");
@@ -160,6 +157,8 @@ $(function(){
 //    $(this).html('<i class="fa fa-angle-up" style="top: 3px;font-size: 30px;"></i>');
 //    $(this).find("i").css({"fontSize":"30px"})
 //});
+    var w = $(".we .last");
+    w.click(function(){$("html,body").animate({scrollTop:0},"fast");return false;});
     $(".message,.phone").hover(function(){
             $(this).find(".qqgroup-show").removeClass("hide");
             $(this).find(".telphone-show").removeClass("hide");
@@ -185,7 +184,7 @@ $(function(){
 
     ql.find("p").on("click",function(){
         if($(this).next().css("display") == "none"){
-            $(this).next().slideDown()
+            $(this).next().slideDown();
             $(this).parent().siblings().find("div").slideUp()
         }
         else{
@@ -197,7 +196,7 @@ $(function(){
 
 
 
-
+/*login*/
 var il = $(".immediately_log");
     var iN = $("#inputName");
     var iP = $("#inputPassword");
@@ -248,7 +247,7 @@ var il = $(".immediately_log");
     });
 
 
-})();
+
 
 
 
