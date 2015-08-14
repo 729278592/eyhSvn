@@ -263,8 +263,9 @@ b {line-height: 30px;font-weight: 700;}
 .application .title{font-size: 18px;color: #333;position: relative;top: 10px;}
 .application .scene{margin: 20px 0;}
 .application .scene>span{padding-right: 65px;}
-.application button{width: 150px;height: 35px;line-height: 35px;text-align: center;border-radius: 5px;background: #ff9c0e;border: none;color: #fff;}
-.application button.disabled{background: #f0f0f0;color: #222;margin-left: 10px;}
+.application a{width: 150px;height: 35px;display: inline-block; line-height: 35px;text-align: center;border-radius: 5px;background: #ff9c0e;border: none;color: #fff;}
+.application a.handbook{background: #f0f0f0;color: #222;margin-left: 10px;}
+.application a:hover{text-decoration: none;}
 .carousel-application img {position: relative;width: 50%;left: 50%;margin-left: -25%;}
 .application_head{border-bottom: 1px solid #e7e7e7;padding-bottom: 15px;}
 .application_head_img{float: left;}
