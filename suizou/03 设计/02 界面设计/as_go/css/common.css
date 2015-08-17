@@ -105,7 +105,7 @@ html[xmlns] .clearfix {display: block;}
 .content_head{position: relative;margin-bottom: 20px;}
 .content_head .try{display: inline-block;width: 10%;height: 6%;background: transparent;position: absolute;text-align: center;color: #fff;left: 50%;top: 48%;margin-left: -1.3%;margin-top: -6.8%;}
 /*index return top*/
-.we{margin-right: 10px;position: fixed;right: 20px;z-index: 150;bottom: 20px;}
+.we{margin-right: 10px;position: fixed;right: 20px;z-index: 150;bottom: 80px;}
 .we li{width: 60px;height: 60px;margin-bottom: 12px;}
 .we li>div{display: inline-block;text-align: center;line-height: 60px;width: 100%;height: 100%;color: #5aadf3;border: 2px solid #5aadf3;border-radius: 5px;}
 .we li>div:hover{background: #feaf19;color: #fff;border: 2px solid transparent;}
@@ -135,7 +135,7 @@ b {line-height: 30px;font-weight: 700;}
 .forget_password a{color: #5ab2da;}
 .login_type p{text-align: center;margin: 20px 0 24px;}
 .login_type_img{margin: 0 160px;}
-.form-horizontal .control-label {text-align: left;}
+
 .immediately_log,.immediately_revise,.immediately_retrieve{width: 80px;color: #fff;margin-left: 15px;}
 .immediately_log,.immediately_revise{background: #f68163;}
 .immediately_retrieve{background: #bebdbd;}
@@ -252,7 +252,7 @@ b {line-height: 30px;font-weight: 700;}
 .common_content .station_content li{position: relative;display: none;}
 .common_content .station_content li>div{border: 1px solid #e0e0e2;padding: 15px;}
 .common_content .station_content li>div span{color: #6b6a6a;}
-.common_content .station_content .first{display: inline-block;}
+.common_content .station_content .first{display: inline-block;width: 100%;}
 .common_content .station_content li .top1{position: absolute;top: -14px;left: 5%;}
 .common_content .station_content li .top2{position: absolute;top: -14px;left: 40%;}
 .common_content .station_content li .top3{position: absolute;top: -14px;right: 5%;}
@@ -313,7 +313,7 @@ b {line-height: 30px;font-weight: 700;}
 
 
 /*authorization_installation of content*/
-.authorization{width: 60%;position: relative;left: 50%;margin-left: -30%;padding: 50px 0;border: 1px solid #bccdce;border-radius: 10px;text-align: center;background: #fff;margin-top: 200px;}
+.authorization{width: 60%;position: absolute;left: 50%;top: 50%;margin: -285px -30%;padding: 50px 0;border: 1px solid #bccdce;border-radius: 10px;text-align: center;background: #fff;}
 .authorization .title{font-size: 20px;font-weight: bold;}
 .authorization .btn{width: 250px;height: 50px;background: #43afe0;text-align: center;color: #fff;border-radius: 10px;font-size: 20px;}
 
@@ -339,7 +339,7 @@ b {line-height: 30px;font-weight: 700;}
 
 /*media*/
 @media screen and (max-width: 1919px) {
-    .footer{right: 17px;}
+
 }
 
 @media screen and (min-width: 1770px) {
