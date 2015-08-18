@@ -27,3 +27,10 @@ if (document.layers){
 }
 document.oncontextmenu=new Function("return false");
 <!--屏蔽网页右鍵,适用于 IE6,IE7,IE8,FireFox,谷歌Chrome浏览器 结束-->
+
+
+
+
+
+
+
