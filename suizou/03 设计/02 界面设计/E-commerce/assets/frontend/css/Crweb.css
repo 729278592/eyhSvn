@@ -426,11 +426,11 @@ tr th,tr td{ text-align:center;font-size: 14px;border:1px solid #cccccc;color: #
 .ck:hover{text-decoration: underline;}
 .my_choi_fu_content,.my_idiot_content,.my_order_content,.change_password_content,.financial_character_list_content,.my_scene_content{width: 96%;text-align: center;padding: 2%;font-size: 13px;}
 .financial_character_list_content,.my_scene_content{padding: 10px 0;width: 100%;}
-.scene{padding: 10px 0% ;width: 100%;}
+.scene{padding: 10px 0 ;width: 100%;}
 .financial_character_list_content>ul{width: 100%;}
 .financial_character_list_content >ul>li{width: 24.9%;float: left;background: #feefef;height: 55px;padding-top: 20px;border-right: 1px solid #ccc;}
 .financial_character_list_content>ul>.last{border: none;}
-.scene_list{width: 97.5%;padding-left:2.3%;font-size: 14px;text-align: center;overflow: hidden;}
+.scene_list{width: 97.5%;padding-left:2.5%;font-size: 14px;text-align: center;overflow: hidden;}
 .scene_list li{width: 31%;height: 130px;float: left;margin: 0 2% 2% 0;border: 1px solid #d8d8d8;position: relative;background: #fff;margin-top: 2%;}
 .scene_list li img{position: relative;left:5px;top: -20px;}
 .scene_list li div{width: 70px;display: inline-block;margin-top: 33px;margin-left: 18px;}
