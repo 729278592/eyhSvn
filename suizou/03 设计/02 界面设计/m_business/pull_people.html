@@ -40,10 +40,27 @@
             <div class="p-group">
                 <span>代理等级 : </span><span class="grade">总代</span>
             </div>
-            <input type="submit" value="提交" class="btn btn_confirm relative"/>
+            <input type="submit" value="提交" class="btn btn_submit relative"/>
         </form>
+        <div class="error_box">
 
+        </div>
     </div>
 </div>
+<script src="js/jquery-1.11.3.min.js"></script>
+<script src="js/error_box.js"></script>
+<script>
+    jQuery(document).ready(function() {
+        var btn_submit = $(".btn_submit");
+            btn_submit.on("click",function(){
+                ErrorBox.init();
+                $(this).attr({"disabled":"disabled"});
+                var that = $(this);
+                setTimeout(function(){
+                    that.removeAttr("disabled")
+                },3500)
+            });
+    });
+</script>
 </body>
 </html>
