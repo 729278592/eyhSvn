@@ -4,7 +4,7 @@
 var ErrorBox = function () {
     var errorbox = $(".error_box");
     var setTime = function(){
-        errorbox.addClass("swing");
+     // errorbox.addClass("swing");
         errorbox.fadeIn(500);
         setTimeout(function(){
             errorbox.fadeOut(500)
@@ -21,6 +21,7 @@ var ErrorBox = function () {
             quiltNumber();
         }
     };
+
     var quiltNumber = function(){
         var number = $("#QuiltNumber");
         var reg = /^0?(13[0-9]|15[012356789]|18[0236789]|14[57])[0-9]{8}$/;

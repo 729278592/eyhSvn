@@ -8,14 +8,14 @@ $(" .div-group:even").css({"background": "#efecec"});
 
 var dfa = $(".div-group .fa");
 dfa.closest(".div-group").on("click", function () {
-    if ($(this).next().css("display") == "none") {
-        $(this).next().slideDown();
+    if ($(this).next(".order-group").css("display") == "none") {
+        $(this).next(".order-group").slideDown();
         $(this).find(".fa").removeClass("fa-caret-left").addClass("fa-caret-down");
-        $(this).siblings(".div-group").next().slideUp()
+        $(this).siblings(".div-group").next(".order-group").slideUp();
         $(this).siblings(".div-group").find(".fa").removeClass("fa-caret-down").addClass("fa-caret-left");
     }
     else {
-        $(this).next().slideUp();
+        $(this).next(".order-group").slideUp();
         $(this).find(".fa").removeClass("fa-caret-down").addClass("fa-caret-left");
     }
 });
