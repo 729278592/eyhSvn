@@ -254,7 +254,8 @@ input.btn_submit{margin: 20px 0 20px -25%;}
 
 
 
-
+/*look-down*/
+.look_down{width: 22%;position: relative;left: 50%;margin: 100px 0 20px -12.5%;}
 @media screen and (max-width: 640px) {
 
 }
