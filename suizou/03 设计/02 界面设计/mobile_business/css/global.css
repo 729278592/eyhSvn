@@ -51,10 +51,11 @@ input.btn_submit{margin: 20px 0 20px -25%;}
 .goods-ul{width: 100%;margin-left: 2%;}
 .goods-ul li{width: 45%;float: left;padding: 1%;border: 1px solid #dbdbdb;margin-right: 3%;margin-bottom: 1%;}
 .goods-ul .last{margin-right: 0;}
-.goods-ul li p{padding-bottom: 3%;color: #999;}
+.goods-ul li p{padding-bottom: 3%;color: #999;width: 100%;overflow: hidden;
+    white-space: nowrap;text-overflow: ellipsis;}
 .goods-ul li .goods-img{width: 100%;}
 .goods-buy{width: 100%;position: relative;border-top: 1px dashed #aaa;padding: 2% 0 0 0;}
-.goods-buy .buy{padding: 3%;text-align: center;font-size: 12px;position: absolute;right: 0;top: 0px;background: #fdc457;color: #fff;border-radius: 3px;}
+.goods-buy .buy{padding: 3%;text-align: center;font-size: 12px;position: absolute;right: 0;top: 0;background: #fdc457;color: #fff;border-radius: 3px;}
 .goods-buy .money{color: #c53336;display: inline-block;width: 30%;font-size: 18px;}
 .shopping_card{position: fixed;right: 2%;bottom: 10%;}
 .mask{position: fixed;top: 0;bottom: 0;left: 0;right: 0;background: rgba(0,0,0,.5);max-width: 640px;margin: 0 auto;}
