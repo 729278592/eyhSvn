@@ -1,12 +1,10 @@
 
-
-
 .spinner-sprite, .spinner .decrease, .spinner .decrease[disabled], .spinner .increase, .spinner .value, .spinner .value.passive {
-	background: url('../images/spinner.png') no-repeat
+	background: url('../images/spinner-large.png') no-repeat
 }
 .spinner {
-	height: 25px;
-	width: 71px;
+	height: 42px;
+	width: 120px;
 	overflow: hidden;
     *zoom:1;
 	-webkit-box-shadow: 0 3px 3px -4px #aaa;
@@ -18,44 +16,52 @@
 	display: block;
 	float: left;
 	height: 100%;
-	line-height: 25px;
+	line-height: 44px;
 	margin: 0
 }
 .spinner button {
 	border: none;
-	width: 23px;
+	width: 40px;
 	color: #e5312a;
 	font: 22px Arial bold;
 	padding: 0;
 	outline: none
 }
 .spinner .decrease {
-	background-position: 0 -50px;
-	cursor: pointer;
-	text-indent: -10000px
+	background-position: 0 -83px;
+	text-indent: -10000px;
+    position: relative;
+    left: 3px;
+
 }
 .spinner .decrease[disabled] {
-	background-position: 0 -75px;
+	background-position: 2px -124px;
 	cursor: default
+    position: relative;
+    left: 1px;
 }
 .spinner .increase {
-	background-position: 0 0;
+	background-position: 0 0px;
 	cursor: pointer;
-	text-indent: -10000px
+	text-indent: -10000px;
+    position: relative;
+    left: -1px;
 }
 .spinner .value {
-	background-position: 0 -100px;
-	width: 24px;
-	height: 27px;
+	background-position: 1px -166px;
+	width: 40px;
+	height: 42px;
 	border: none;
 	font-family: Arial;
 	color: #ffffff;
-	padding: 0px
+	padding: 0;
 }
 .spinner .value.passive {
-	background-position: 0 -25px;
+	background-position: 0 -41px;
 	color: #919191
 }
 .spinner .error, .spinner .invalid {
 	background: #aa0000
 }
+
+
