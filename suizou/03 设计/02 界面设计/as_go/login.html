@@ -2,107 +2,135 @@
 <html>
 <head lang="en">
     <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width; initial-scale=1.0; user-scalable=no;">
     <title>登录</title>
     <link rel="stylesheet" href="plugins/bootstrap-3.3.5-dist/css/bootstrap.css?v=ee"/>
-    <link rel="stylesheet" href="css/common.css?v=ee"/>
+    <link rel="stylesheet" href="css/common.css?v=33"/>
+    <link rel="stylesheet" href="css/mobile_style.css"/>
     <style>
-        body{overflow-y: hidden;}
+        body,html{height: 100%;}
         .wrapper{height: 100%;min-height: 550px;}
-        .content{background: url("images/login_bg.jpg")no-repeat center;background-size:cover;width: 100%;overflow: hidden;height: 100%;}
-        .form{width: 538px;position: absolute;left: 50%;background: #fff;border-radius: 5px;margin:-100px -269px 0;padding: 50px 40px;top: 40%;}
+        .content{background: url("images/login_bg.jpg")no-repeat center;background-size:cover;width: 100%;overflow: hidden;position: relative;}
+        .form{max-width:538px;background: #fff;border-radius: 5px;margin:15% auto;padding: 50px 40px 10px;position: relative;}
+        @media screen and (min-width: 640px) {
+            html{overflow-y: hidden;}
+
+            .content{min-height: 880px;}
+        }
         .error{position: relative;top: 5px; color: red;}
+        @media screen and (max-width: 640px) {
+            .form{width:320px;padding: 10px 15px;}
+            .content{;height:91%;}
+
+        }
     </style>
 </head>
 <body>
-<div class="wrapper">
-    <div class="header">
-        <div class="container">
-            <div class="row">
-                <ul class="fl col-lg-8 col-xs-6">
-                    <li class="first"><a href="#"><img src="images/login.png" alt="" class="login"/></a></li>
+    <div class="wrapper">
+        <div class="header">
+            <div class="container">
+                <div class="row">
+                    <ul class="fl col-lg-8 col-xs-6">
+                        <li class="first"><a href="#"><img src="images/login.png" alt="" class="login"/></a></li>
+                        <li class=""><a href="index.html">首页</a></li>
+                        <li><a href="mobile_office_suite.html">应用套件</a></li>
+                        <li class="last"><a href="about_us.html">关于我们</a></li>
+                    </ul>
+                    <ul class="fr col-lg-2 col-xs-6">
+                        <li class="first"><a href="registration_form.html" class="active">注册</a></li>
+                        <li class="last"><a href="login.html">登录</a></li>
+                    </ul>
+                </div>
+            </div>
+            <div class="head_mobile">
+                <div>
+                    <a href="#"><img src="images/login.png" alt="" class="login"/></a>
+                        <span>
+                            <i class="glyphicon glyphicon-th-list"></i>
+                        </span>
+                </div>
+                <ul class="menu_mobile">
                     <li><a href="index.html">首页</a></li>
                     <li><a href="mobile_office_suite.html">应用套件</a></li>
-                    <li class="last"><a href="about_us.html">关于我们</a></li>
-                </ul>
-                <ul class="fr col-lg-2 col-xs-6">
-                    <li class="first"><a href="registration_form.html" class="active">注册</a></li>
+                    <li><a href="about_us.html">关于我们</a></li>
+                    <li><a href="registration_form.html">注册</a></li>
                     <li class="last"><a href="login.html">登录</a></li>
                 </ul>
             </div>
         </div>
-    </div>
-    <div class="content">
-        <div class="form clearfix">
-            <ul class="nav nav-pills nav-justified">
-                <li role="presentation" class="active">
-                    <a href="#">账户登录</a>
-                </li>
-                <li role="presentation">
-                    <a href="#">快速登录</a>
-                </li>
-            </ul>
-            <form class="form-horizontal login_type" onsubmit="return false">
-                <div class="form-group">
-                    <label for="inputName" class="col-sm-2 control-label">用户名</label>
-                    <div class="col-sm-10">
-                        <input type="name" class="form-control" id="inputName" placeholder="请输入您的昵称">
-                        <span class="error NameEmpty hide">请输入用户名</span>
-                        <span class="error Exists hide">您输入的用户名已存在</span>
-                        <span class="error NotExists hide">您输入的用户名未注册</span>
+        <div class="content">
+            <div class="form">
+                <ul class="nav nav-pills nav-justified">
+                    <li role="presentation" class="active">
+                        <a href="#">账户登录</a>
+                    </li>
+                    <li role="presentation">
+                        <a href="#">快速登录</a>
+                    </li>
+                </ul>
+                <form class="form-horizontal login_type" onsubmit="return false">
+                    <div class="form-group">
+                        <label for="inputName" class="col-sm-2 control-label">用户名</label>
+                        <div class="col-sm-10">
+                            <input type="text" class="form-control" id="inputName" placeholder="请输入您的昵称">
+                            <span class="error NameEmpty hide">请输入用户名</span>
+                            <span class="error Exists hide">您输入的用户名已存在</span>
+                            <span class="error NotExists hide">您输入的用户名未注册</span>
+                        </div>
                     </div>
-                </div>
-                <div class="form-group">
-                    <label for="inputPassword" class="col-sm-2 control-label">密码</label>
-                    <div class="col-sm-10">
-                        <input type="password" class="form-control" id="inputPassword" placeholder="长度为6~16字符">
-                        <span class="PasswordEmpty error hide">请输入用密码</span>
-                        <span class="error errorPassword hide">您输入的密码不正确，请再次输入</span>
+
+
+                    <div class="form-group">
+                        <label for="inputVerification" class="col-sm-2 control-label">验证码</label>
+                        <div class="col-sm-10">
+                            <input type="text" class="form-control verification" id="inputVerification" placeholder="请输入验证码">
+                            <img src="" alt="" class="col-sm-offset-1"/>
+                        </div>
 
                     </div>
-                </div>
-                <div class="form-group">
-                    <div class="col-sm-offset-2 col-sm-3 col-xs-3">
-                        <div class="checkbox">
-                            <label>
-                                <input type="checkbox"> 保持登录
-                            </label>
+                    <div class="form-group">
+                        <div class="col-sm-offset-2 col-sm-3 col-xs-5">
+                            <div class="checkbox">
+                                <label>
+                                    <input type="checkbox"> 保持登录
+                                </label>
+                            </div>
+                        </div>
+                        <div class="col-sm-offset-4 col-sm-3 col-xs-offset-2 col-xs-5">
+                            <div class="forget_password">
+                                <a href="retrieve_pwd_first.html">忘记密码 ?</a>
+
+                            </div>
                         </div>
                     </div>
-                    <div class="col-sm-offset-4 col-sm-3 col-xs-offset-6 col-xs-3">
-                        <div class="forget_password">
-                            <a href="retrieve_pwd_first.html">忘记密码 ?</a>
+                    <div class="form-group">
+                        <div class="col-sm-offset-4 col-sm-8">
+                            <input type="submit" class="btn immediately_log" value="立即登录">
                         </div>
                     </div>
+                </form>
+                <div class="hide login_type login_fast">
+                    <img src="images/login_type2.png" alt="" class="login_type_img"/>
+                    <p>请点击微信企业号图像进行授权登录</p>
                 </div>
-                <div class="form-group" style="position: relative;top: 20px;">
-                    <div class="col-sm-offset-4 col-sm-8">
-                        <input type="submit" class="btn immediately_log" value="立即登录">
-                    </div>
-                </div>
-            </form>
-            <div class="hide login_type">
-                <img src="images/login_type2.png" alt="" class="login_type_img"/>
-                <p>请点击微信企业号图像进行授权登录</p>
             </div>
-        </div>
 
-    </div>
-    <div class="footer clearfix">
-        <div class="container">
-            <div class="row">
-                <ul class="fl col-lg-4 col-md-4 col-xs-12">
+        </div>
+        <div class="footer clearfix">
+            <div class="fl">
+                <ul>
                     <li><a href="about_us.html">关于我们</a></li>
                     <li><a href="talent_recruitment.html">招聘信息</a></li>
                     <li><a href="market_cooperation.html">市场合作</a></li>
                     <li><a href="contact_us.html">联系我们</a></li>
                 </ul>
-                <div class="fr col-lg-8 col-md-8 col-xs-12">
-                    <span>©2014-2015 suizou.net All Rights Reserved　　渝ICP备14007819号-2</span>
-                </div>
+            </div>
+            <div class="fr">
+                <span class="first">©2014-2015 suizou.net All Rights Reserved</span>
+                <span class="last">　　渝ICP备14007819号-2</span>            　　
             </div>
         </div>
     </div>
-</div>
 </body>
 <script src="js/jquery-1.11.3.min.js"></script>
 <script src="js/as_go.js"></script>

@@ -2,15 +2,16 @@
 <html>
 <head lang="en">
     <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width; initial-scale=1.0; user-scalable=no;">
     <title>授权安装</title>
     <link rel="stylesheet" href="plugins/bootstrap-3.3.5-dist/css/bootstrap.css?v=ee"/>
     <link rel="stylesheet" href="css/common.css?v=ee"/>
+    <link rel="stylesheet" href="css/mobile_style.css"/>
     <style>
         body{overflow-y: hidden;}
         .wrapper{height: 100%;min-height: 650px;}
         .content{background: url("images/login_bg.jpg")no-repeat center;background-size:cover;width: 100%;overflow: hidden;height: 100%;}
         .authorization{width: 60%;position: relative;left: 50%;top: 50%;margin: -245px -30%;padding: 50px 0;border: 1px solid #bccdce;border-radius: 10px;text-align: center;background: #fff;}
-
     </style>
 </head>
 <body>
@@ -21,7 +22,7 @@
                 <ul class="fl col-lg-8 col-xs-6">
                     <li class="first"><a href="#"><img src="images/login.png" alt="" class="login"/></a></li>
                     <li><a href="index.html">首页</a></li>
-                    <li><a href="mobile_office_suite.html">应用套件</a></li>
+                    <li class="active"><a href="mobile_office_suite.html">应用套件</a></li>
                     <li class="last"><a href="about_us.html">关于我们</a></li>
                 </ul>
                 <ul class="fr col-lg-2 col-xs-6">
@@ -30,9 +31,24 @@
                 </ul>
             </div>
         </div>
+        <div class="head_mobile">
+            <div>
+                <a href="#"><img src="images/login.png" alt="" class="login"/></a>
+                <span>
+                    <i class="glyphicon glyphicon-th-list"></i>
+                </span>
+            </div>
+            <ul class="menu_mobile">
+                <li><a href="index.html">首页</a></li>
+                <li><a href="mobile_office_suite.html">应用套件</a></li>
+                <li><a href="about_us.html">关于我们</a></li>
+                <li><a href="registration_form.html">注册</a></li>
+                <li class="last"><a href="login.html">登录</a></li>
+            </ul>
+        </div>
     </div>
     <div class="content">
-        <div class="authorization">
+        <div class="authorization mobile_none">
             <p class="title">点击“立即授权安装”对应用进行授权才能完成安装。</p>
 
             <p style="font-size: 20px;margin: 15px 0;">您正在对套件“企业文化”进行授权！</p>
@@ -46,21 +62,23 @@
             <p style="font-size: 16px;margin-bottom: 10px;"><input type="checkbox" checked/> 我同意授权<strong>易优弧营销云</strong>托管我的应用</p>
             <button class="btn" type="button">立即授权安装</button>
         </div>
+        <div class="pc">
+            请到PC端去操作<br/>
 
+        </div>
     </div>
     <div class="footer clearfix">
-        <div class="container">
-            <div class="row">
-                <ul class="fl col-lg-4 col-md-4 col-xs-12">
-                    <li><a href="about_us.html">关于我们</a></li>
-                    <li><a href="talent_recruitment.html">招聘信息</a></li>
-                    <li><a href="market_cooperation.html">市场合作</a></li>
-                    <li><a href="contact_us.html">联系我们</a></li>
-                </ul>
-                <div class="fr col-lg-8 col-md-8 col-xs-12">
-                    <span>©2014-2015 suizou.net All Rights Reserved　　渝ICP备14007819号-2</span>
-                </div>
-            </div>
+        <div class="fl">
+            <ul>
+                <li><a href="about_us.html">关于我们</a></li>
+                <li><a href="talent_recruitment.html">招聘信息</a></li>
+                <li><a href="market_cooperation.html">市场合作</a></li>
+                <li><a href="contact_us.html">联系我们</a></li>
+            </ul>
+        </div>
+        <div class="fr">
+            <span class="first">©2014-2015 suizou.net All Rights Reserved</span>
+            <span class="last">　　渝ICP备14007819号-2</span>            　　
         </div>
     </div>
 </div>

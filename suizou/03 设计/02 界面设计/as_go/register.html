@@ -2,17 +2,30 @@
 <html>
 <head lang="en">
     <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width; initial-scale=1.0; user-scalable=no;">
     <title>注册</title>
     <link rel="stylesheet" href="plugins/bootstrap-3.3.5-dist/css/bootstrap.css?v=ee"/>
     <link rel="stylesheet" href="plugins/metic/css/components-rounded.css?v=ee"/>
     <link rel="stylesheet" href="css/common.css?v=ee"/>
     <link rel="stylesheet" href="css/font/css/font-awesome.min.css"/>
+    <link rel="stylesheet" href="css/mobile_style.css"/>
     <style>
-
-.content{background: url("images/login_bg.jpg")no-repeat center;background-size:cover;width: 100%;
-    overflow: hidden;}
-        .form{width: 538px;position: relative;left: 50%
-        ;background: #fff;border-radius: 5px;margin: 50px -269px 150px;padding: 50px 40px;}
+        .content{background: url("images/login_bg.jpg")no-repeat center;background-size:cover;overflow: hidden;}
+        .form{max-width:538px;background: #fff;border-radius: 5px;margin:5% auto;padding: 50px 40px 10px;position: relative;}
+        @media screen and (max-width: 992px) {
+            .footer{position: relative;width: 100%;}
+        }
+        @media screen and (min-width: 640px) {
+            .content{min-height: 880px;}
+        }
+        @media screen and (max-width: 640px) {
+            .form{width:320px;padding: 10px 15px;}
+            .footer{position: absolute;bottom: 0;}
+            .re_h{width: 300px;left: 0;top: -10px;background-size: 300px;line-height: 35px;}
+        }
+        @media screen and (max-width: 414px) {
+            .form{width:315px;margin:8% auto;}
+        }
 
     </style>
 </head>
@@ -23,7 +36,7 @@
             <div class="row">
                 <ul class="fl col-lg-8 col-xs-6">
                     <li class="first"><a href="#"><img src="images/login.png" alt="" class="login"/></a></li>
-                    <li><a href="index.html">首页</a></li>
+                    <li class="active"><a href="index.html">首页</a></li>
                     <li><a href="mobile_office_suite.html">应用套件</a></li>
                     <li class="last"><a href="about_us.html">关于我们</a></li>
                 </ul>
@@ -31,8 +44,22 @@
                     <li class="first"><a href="registration_form.html" class="active">注册</a></li>
                     <li class="last"><a href="login.html">登录</a></li>
                 </ul>
-
             </div>
+        </div>
+        <div class="head_mobile">
+            <div>
+                <a href="#"><img src="images/login.png" alt="" class="login"/></a>
+                    <span>
+                        <i class="glyphicon glyphicon-th-list"></i>
+                    </span>
+            </div>
+            <ul class="menu_mobile">
+                <li><a href="index.html">首页</a></li>
+                <li><a href="mobile_office_suite.html">应用套件</a></li>
+                <li><a href="about_us.html">关于我们</a></li>
+                <li><a href="registration_form.html">注册</a></li>
+                <li class="last"><a href="login.html">登录</a></li>
+            </ul>
         </div>
     </div>
     <div class="content">
@@ -174,7 +201,7 @@
         </div>
 
     </div>
-    <div class="footer clearfix">
+    <div class="footer mobile_none clearfix">
         <div class="container">
             <div class="row">
                 <ul class="fl col-lg-4 col-md-4 col-xs-12">

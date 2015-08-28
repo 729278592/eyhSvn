@@ -2,14 +2,19 @@
 <html>
 <head lang="en">
     <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width; initial-scale=1.0; user-scalable=no;">
     <title>联系我们</title>
     <link rel="stylesheet" href="plugins/bootstrap-3.3.5-dist/css/bootstrap.css?v=ee"/>
     <link rel="stylesheet" href="css/common.css?v=33"/>
+    <link rel="stylesheet" href="css/mobile_style.css"/>
     <style>
-        .footer{position: relative;width: 100%;}
         .content{background: #fff;}
+        .footer{position: relative;width: 100%;}
         @media screen and (max-width: 992px) {
-            .common_content{top: -50px;margin-left: -40%;}
+            .common_content{margin-left: -45%;width: 90%;}
+        }
+        @media screen and (max-width: 640px) {
+            .common_content{margin-left: -48%;width: 96%;}
         }
     </style>
 </head>
@@ -21,14 +26,29 @@
                 <ul class="fl col-lg-8 col-xs-6">
                     <li class="first"><a href="#"><img src="images/login.png" alt="" class="login"/></a></li>
                     <li><a href="index.html">首页</a></li>
-                    <li><a href="mobile_office_suite.html">应用套件</a></li>
-                    <li class="last active"><a href="about_us.html">关于我们</a></li>
+                    <li class=""><a href="mobile_office_suite.html">应用套件</a></li>
+                    <li class="active last"><a href="about_us.html">关于我们</a></li>
                 </ul>
                 <ul class="fr col-lg-2 col-xs-6">
                     <li class="first"><a href="registration_form.html" class="active">注册</a></li>
                     <li class="last"><a href="login.html">登录</a></li>
                 </ul>
             </div>
+        </div>
+        <div class="head_mobile">
+            <div>
+                <a href="#"><img src="images/login.png" alt="" class="login"/></a>
+                <span>
+                    <i class="glyphicon glyphicon-th-list"></i>
+                </span>
+            </div>
+            <ul class="menu_mobile">
+                <li><a href="index.html">首页</a></li>
+                <li><a href="mobile_office_suite.html">应用套件</a></li>
+                <li><a href="about_us.html">关于我们</a></li>
+                <li><a href="registration_form.html">注册</a></li>
+                <li class="last"><a href="login.html">登录</a></li>
+            </ul>
         </div>
     </div>
     <div class="content">
@@ -43,16 +63,16 @@
                     <div class="row">
                         <div class="menu">
                             <ul>
-                                <li class="col-lg-3 col-md-3">
+                                <li class="">
                                     <a href="about_us.html">随走简介</a>
                                 </li>
-                                <li class="col-lg-3 col-md-3">
+                                <li class="">
                                     <a href="talent_recruitment.html">人才招聘</a>
                                 </li>
-                                <li class="col-lg-3 col-md-3">
+                                <li class="">
                                     <a href="market_cooperation.html">市场合作</a>
                                 </li>
-                                <li class="active col-lg-3 col-md-3 last">
+                                <li class="active last">
                                     <a href="contact_us.html">联系我们</a>
                                 </li>
                             </ul>
@@ -80,24 +100,22 @@
                                     </div>
                                 </li>
                                 <li class="col-lg-6 col-md-6 col-sm-6 col-xs-6">
-                                    <div class="last" style="position: relative;left: 12px;">
+                                    <div class="last last-li">
                                         <img src="images/contact_person.png" alt=""/>
                                         <span>应聘工作：business#eyohu.com</span>
                                     </div>
                                 </li>
                             </ul>
-
                             <div class="map">
                                 <div class="col-lg-6 col-md-6 col-sm-6 col-xs-6">
                                     <p>
-                                        <img src="images/map.png" alt="" style="margin-left: 15px;"/>
-                                        <span style="position: relative;left: 20px;font-size: 16px;">重庆市九龙坡区奥体路1号中新城上城6栋11-10</span>
+                                        <img src="images/map.png" alt=""/>
+                                        <span >重庆市九龙坡区奥体路1号中新城上城6栋11-10</span>
                                     </p>
                                 </div>
-                                <div class="map_img">
+                                <div class="map_img visibility">
                                     <img src="images/map.jpg"  class="img-responsive" alt="Responsive image" style="clear: both;"/>
                                 </div>
-
                             </div>
                         </div>
                     </div>
@@ -106,18 +124,17 @@
         </div>
     </div>
     <div class="footer clearfix">
-        <div class="container">
-            <div class="row">
-                <ul class="fl col-lg-4 col-md-4 col-xs-12">
-                    <li><a href="about_us.html">关于我们</a></li>
-                    <li><a href="talent_recruitment.html">招聘信息</a></li>
-                    <li><a href="market_cooperation.html">市场合作</a></li>
-                    <li><a href="contact_us.html">联系我们</a></li>
-                </ul>
-                <div class="fr col-lg-8 col-md-8 col-xs-12">
-                    <span>©2014-2015 suizou.net All Rights Reserved　　渝ICP备14007819号-2</span>
-                </div>
-            </div>
+        <div class="fl">
+            <ul>
+                <li><a href="about_us.html">关于我们</a></li>
+                <li><a href="talent_recruitment.html">招聘信息</a></li>
+                <li><a href="market_cooperation.html">市场合作</a></li>
+                <li><a href="contact_us.html">联系我们</a></li>
+            </ul>
+        </div>
+        <div class="fr">
+            <span class="first">©2014-2015 suizou.net All Rights Reserved</span>
+            <span class="last">　　渝ICP备14007819号-2</span>            　　
         </div>
     </div>
 </div>

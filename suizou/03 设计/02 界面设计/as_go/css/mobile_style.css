@@ -1,0 +1,82 @@
+@charset "utf-8";
+@media screen and (max-width: 640px) {
+    .header{position: relative;z-index: 1000;max-width: 640px;}
+    .header .container,.we{display: none;}
+    .head_mobile {width: 100%;height: 50px;display: inline-block;position: relative;}
+    .head_mobile>div {width: 90%;position: relative;left: 50%;margin-left: -45%;height: 50px;text-align: center;line-height: 50px;}
+    .head_mobile .glyphicon-th-list{color: #fff;float: left;position: relative;top: 17px;}
+    .head_mobile .login {width: 90px;}
+
+    .menu_mobile {margin-left: -100%;display: none;position: fixed;left: 0;right: 0;top: 0;bottom: 0;background: rgba(0,0,0,.5);}
+    .menu_mobile li {width: 0;height: 50px;}
+    .menu_mobile li a {display: inline-block;width: 100%;height: 50px;line-height: 50px;font-size: 16px;color: #fff;border-bottom: 1px solid #aaa;background: rgba(0,0,0,.8);text-align: center;}
+    .menu_mobile li a:hover{text-decoration: none;}
+    .menu_mobile .last a {border-bottom: none;}
+    .content>.title{text-align: center;margin: 6% 0;font-size: 18px;font-weight: bold;}
+    .mobile_bg{width: 100%;display: inline-block;}
+    .superiority{width: 100%;left: 0;margin-left: 0;font-size: 14px;top: 5px;}
+    .superiority li{width: 44%;margin: 0 0 5% 4%;padding: 20px 1px 10px;}
+    .superiority .title{font-size: 18px;top: -13px;font-weight: bold;}
+    .last_right{margin-right: 0;}
+    .last_bottom{margin-bottom: 0;}
+    .myCarousel1,.myCarousel, .product {width: 99%;position: relative;left: 50%;margin-left: -49.5%;}
+    .product ul li{width: 46%;margin: 2%;}
+    .product ul .last{margin-right: 2%;}
+    .title_box_mobile{width: 100%;height: 100%;background: rgba(0,0,0,.5);position: absolute;top: 0;left: 0;text-align: center;color: #fff;font-size: 16px;}
+    .title_box_mobile span{position: relative;top: 42%;display: inline-block;}
+    .title_box_mobile .title{font-size: 16px;}
+    .title_box_mobile .details{width: 90%;font-size: 14px;}
+    .mobile_none{display: none;}
+    .visibility{visibility: hidden;}
+    .item ul li {loat: left;margin-left: 2%;margin-right: 0;margin-bottom: 4%;width: 47%;position: relative;overflow: hidden;}
+    .myCarousel .carousel-control {position: absolute;width: 5%;height: 14%;border: none;border-radius: 0;}
+    .myCarousel .carousel-control img{position: relative;z-index: 5;width: 100%;}
+    .myCarousel .carousel-control.right {right: 0;}
+    .myCarousel .close {position: absolute;top: 5px;right: 5px;width: 30px;height: 30px;text-align: center;border-radius: 50px;font-size: 20px;line-height: 30px;}
+    .myCarousel .item .describe{width: 36%;}
+    .myCarousel .item .img{margin: 10% 0 6% -3%;}
+    .myCarousel .item .describe .title{font-size: 18px;position: relative;top: -10px;color: #fcaf05;display: none;}
+    .myCarousel .item .describe span{font-size: 14px;position: relative;top: -20px;left: -10px;}
+    .footer .fl,.footer .fr{width: 100%;}
+    .footer .fr span{display: inline-block;
+        width: 100%;}
+
+    .page_content_right_footer>.contain_application ul li img {width: 80%;}
+    .company_information li{width: 100%;
+    }
+    .company_information li .last{text-align: left;position: relative;left: 8px;top: 10px;}
+    .company_information li>div{width: 100%;}
+    .w1200,.mt30,.mt60{margin-top: 0;margin-bottom: 0;}
+    .application  .application_head_content  a{width: 40%;}
+    .content_head .try{top: 37.1%;left: 40%;width: 25%;background: transparent;}
+    .carousel-application img {
+        width: 70%;
+        margin-left: -35%;
+    }
+    .pc{width: 60%;position: absolute;left: 50%;top: 30%;margin-left:-30%;margin-top: -30px;border: 1px solid #bccdce;border-radius: 10px;text-align: center;background: #fff;font-size: 20px;display: inline-block;height: 60px;line-height: 60px;}
+    .immediately_revise{margin-left: 50px;}
+
+}
+
+@media screen and (max-width: 494px) {
+    .background .btn {position: absolute;left: 32.5%;}
+    .bg_content>img {width: 30%;}
+}
+
+
+
+@media screen and (max-width: 413px) {
+    .superiority li{height: 90px;}
+
+}
+
+@media screen and (max-width: 413px) {
+    .myCarousel .item .describe span{left: -10px;}
+
+}
+
+
+
+
+
+

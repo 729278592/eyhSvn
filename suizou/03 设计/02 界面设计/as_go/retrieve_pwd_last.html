@@ -2,14 +2,30 @@
 <html>
 <head lang="en">
     <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width; initial-scale=1.0; user-scalable=no;">
     <title>找回密码成功</title>
     <link rel="stylesheet" href="plugins/bootstrap-3.3.5-dist/css/bootstrap.css?v=ee"/>
     <link rel="stylesheet" href="css/common.css?v=ee"/>
+    <link rel="stylesheet" href="css/mobile_style.css"/>
     <style>
-        body{overflow-y: hidden;}
+        body,html{height: 100%;}
         .wrapper{height: 100%;min-height: 550px;}
-        .content{background: url("images/login_bg.jpg")no-repeat center;background-size:cover;width: 100%;overflow: hidden;height: 100%;}
-        .retrieve_pwd{width: 538px;position: absolute;left: 50%;background: #fff;border-radius: 5px;margin:-20px -269px 0;padding: 50px 40px;top: 40%;}
+        .content{background: url("images/login_bg.jpg")no-repeat center;background-size:cover;width: 100%;overflow: hidden;height: 91%;position: relative;}
+        .retrieve_pwd{width:538px;background: #fff;border-radius: 5px;margin:15% auto;padding: 50px 40px 10px;position: relative;}
+        @media screen and (min-width: 640px) {
+            html{overflow-y: hidden;}
+            .content{min-height: 880px;}
+
+        }
+        @media screen and (max-width: 640px) {
+            .retrieve_pwd{width:80%;padding: 10px 15px;}
+       
+            .footer{position: relative;width: 100%;}
+            .content{height:80%;}
+        }
+        @media screen and (max-width: 320px) {
+            .retrieve_pwd{margin-top: 40%;}
+        }
     </style>
 </head>
 <body>
@@ -20,7 +36,7 @@
                 <ul class="fl col-lg-8 col-xs-6">
                     <li class="first"><a href="#"><img src="images/login.png" alt="" class="login"/></a></li>
                     <li><a href="index.html">首页</a></li>
-                    <li><a href="mobile_office_suite.html">应用套件</a></li>
+                    <li class=""><a href="mobile_office_suite.html">应用套件</a></li>
                     <li class="last"><a href="about_us.html">关于我们</a></li>
                 </ul>
                 <ul class="fr col-lg-2 col-xs-6">
@@ -29,14 +45,29 @@
                 </ul>
             </div>
         </div>
+        <div class="head_mobile">
+            <div>
+                <a href="#"><img src="images/login.png" alt="" class="login"/></a>
+                <span>
+                    <i class="glyphicon glyphicon-th-list"></i>
+                </span>
+            </div>
+            <ul class="menu_mobile">
+                <li><a href="index.html">首页</a></li>
+                <li><a href="mobile_office_suite.html">应用套件</a></li>
+                <li><a href="about_us.html">关于我们</a></li>
+                <li><a href="registration_form.html">注册</a></li>
+                <li class="last"><a href="login.html">登录</a></li>
+            </ul>
+        </div>
     </div>
     <div class="content">
-        <div class="clearfix retrieve_pwd">
+        <div class=" retrieve_pwd">
             <div class="col-lg-12 retrieve_pwd_head">找回密码</div>
             <form class="form-horizontal">
                 <div class="form-group">
                     <img src="images/success.png" alt="" style="float: left;margin-left: 40px;"/>
-                    <div style="margin:10px 0 0 160px;">
+                    <div style="margin:10px 0 0 30%;padding-right: 5%;">
                         <p>您的新登录密码已经设置成功。请记住他喔！</p>
                         <p><a href="index.html"style="color: #ff5123;">点击此处</a>，立即返回网站首页</p>
                         <p><span class="time" style="color: #fda150;">10</span>秒后，自动返回</p>
@@ -49,18 +80,17 @@
 
     </div>
     <div class="footer clearfix">
-        <div class="container">
-            <div class="row">
-                <ul class="fl col-lg-4 col-md-4 col-xs-12">
-                    <li><a href="about_us.html">关于我们</a></li>
-                    <li><a href="talent_recruitment.html">招聘信息</a></li>
-                    <li><a href="market_cooperation.html">市场合作</a></li>
-                    <li><a href="contact_us.html">联系我们</a></li>
-                </ul>
-                <div class="fr col-lg-8 col-md-8 col-xs-12">
-                    <span>©2014-2015 suizou.net All Rights Reserved　　渝ICP备14007819号-2</span>
-                </div>
-            </div>
+        <div class="fl">
+            <ul>
+                <li><a href="about_us.html">关于我们</a></li>
+                <li><a href="talent_recruitment.html">招聘信息</a></li>
+                <li><a href="market_cooperation.html">市场合作</a></li>
+                <li><a href="contact_us.html">联系我们</a></li>
+            </ul>
+        </div>
+        <div class="fr">
+            <span class="first">©2014-2015 suizou.net All Rights Reserved</span>
+            <span class="last">　　渝ICP备14007819号-2</span>            　　
         </div>
     </div>
 </div>
@@ -68,17 +98,17 @@
 <script src="js/jquery-1.11.3.min.js"></script>
 <script src="js/as_go.js"></script>
 <script>
-    function delayURL(url) {
-        var delay = $(".time").text();
-        if (delay > 0) {
-            --delay;
-            $(".time").text(delay)
-        }
-        else {
-            window.top.location.href = url
-        }
-        setTimeout("delayURL('" + url + "')", 1000)
-    }
-    delayURL("index.html");
+//    function delayURL(url) {
+//        var delay = $(".time").text();
+//        if (delay > 0) {
+//            --delay;
+//            $(".time").text(delay)
+//        }
+//        else {
+//            window.top.location.href = url
+//        }
+//        setTimeout("delayURL('" + url + "')", 1000)
+//    }
+//    delayURL("index.html");
 </script>
 </html>

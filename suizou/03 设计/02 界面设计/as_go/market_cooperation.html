@@ -2,13 +2,23 @@
 <html>
 <head lang="en">
     <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width; initial-scale=1.0; user-scalable=no;">
     <title>市场合作</title>
     <link rel="stylesheet" href="plugins/bootstrap-3.3.5-dist/css/bootstrap.css?v=ee"/>
     <link rel="stylesheet" href="css/common.css?v=33"/>
+    <link rel="stylesheet" href="css/mobile_style.css"/>
     <style>
-        .footer{position: relative;width: 100%;}
+
         .content{background: #fff;}
-        .common_content{padding-bottom: 11%;}
+
+        @media screen and (max-width: 992px) {
+
+            .common_content{margin-left: -35%;}
+        }
+        @media screen and (max-width: 640px) {
+            .common_content{margin-left: -48%;width: 96%;}
+            .footer{position: relative;width: 100%;}
+        }
     </style>
 </head>
 <body>
@@ -18,15 +28,30 @@
             <div class="row">
                 <ul class="fl col-lg-8 col-xs-6">
                     <li class="first"><a href="#"><img src="images/login.png" alt="" class="login"/></a></li>
-                    <li><a href="index.html">首页</a></li>
+                    <li class=""><a href="index.html">首页</a></li>
                     <li><a href="mobile_office_suite.html">应用套件</a></li>
-                    <li class="last active"><a href="about_us.html">关于我们</a></li>
+                    <li class="active last"><a href="about_us.html">关于我们</a></li>
                 </ul>
                 <ul class="fr col-lg-2 col-xs-6">
                     <li class="first"><a href="registration_form.html" class="active">注册</a></li>
                     <li class="last"><a href="login.html">登录</a></li>
                 </ul>
             </div>
+        </div>
+        <div class="head_mobile">
+            <div>
+                <a href="#"><img src="images/login.png" alt="" class="login"/></a>
+                <span>
+                    <i class="glyphicon glyphicon-th-list"></i>
+                </span>
+            </div>
+            <ul class="menu_mobile">
+                <li><a href="index.html">首页</a></li>
+                <li><a href="mobile_office_suite.html">应用套件</a></li>
+                <li><a href="about_us.html">关于我们</a></li>
+                <li><a href="registration_form.html">注册</a></li>
+                <li class="last"><a href="login.html">登录</a></li>
+            </ul>
         </div>
     </div>
     <div class="content">
@@ -41,31 +66,31 @@
                     <div class="row">
                         <div class="menu">
                             <ul>
-                                <li class="col-lg-3 col-md-3">
+                                <li class="">
                                     <a href="about_us.html">随走简介</a>
                                 </li>
-                                <li class="col-lg-3 col-md-3">
+                                <li class="">
                                     <a href="talent_recruitment.html">人才招聘</a>
                                 </li>
-                                <li class=" active col-lg-3 col-md-3">
+                                <li class="active">
                                     <a href="market_cooperation.html">市场合作</a>
                                 </li>
-                                <li class="col-lg-3 col-md-3 last">
+                                <li class=" last">
                                     <a href="contact_us.html">联系我们</a>
                                 </li>
                             </ul>
                         </div>
                         <div class="common_content"style="color: #555;">
                             <img src="images/hezuo.jpg"  class="img-responsive" alt="Responsive image" style="position: relative;top: -25px;"/>
-                            <p style="font-size: 18px;font-weight: bold;color: #3caee2;">合作伙伴</p><br/>
+                            <p style="font-size: 20px;font-weight: bold;color: #3caee2;">合作伙伴</p><br/>
                             <br/>
                             <span>随走希望能够结合更多不同服务领域的合作伙伴，通过资源整合，让更多创业企业获得不同的产品扶持，还能帮助合作伙伴迅速推广自身产品，获得更多宣传机会。</span><br/>
                             <br/>
                             <span>有意向的企业，请根据以下格式发送邮件至 <span class="color">business#eyohu.com</span>(5个工作日内回复，发邮件时请将"#"替换为"@")。</span><br/>
                             <br/>
-                            <span style="font-weight: bold;">标题:</span><span>#免费申请#企业名称</span><br/>
+                            <span style="font-weight: bold;font-size: 16px;color: #333;">标题:</span><span>#免费申请#企业名称</span><br/>
                             <br/>
-                            <span style="font-weight: bold;">正文:</span><br/>
+                            <span style="font-weight: bold;font-size: 16px;color: #333;">正文:</span><br/>
                             <span>企业介绍/项目介绍</span><br/>
                             <span>网站链接</span><br/>
                             <span>联系方式</span><br/>
@@ -77,18 +102,17 @@
         </div>
     </div>
     <div class="footer clearfix">
-        <div class="container">
-            <div class="row">
-                <ul class="fl col-lg-4 col-md-4 col-xs-12">
-                    <li><a href="about_us.html">关于我们</a></li>
-                    <li><a href="talent_recruitment.html">招聘信息</a></li>
-                    <li><a href="market_cooperation.html">市场合作</a></li>
-                    <li><a href="contact_us.html">联系我们</a></li>
-                </ul>
-                <div class="fr col-lg-8 col-md-8 col-xs-12">
-                    <span>©2014-2015 suizou.net All Rights Reserved　　渝ICP备14007819号-2</span>
-                </div>
-            </div>
+        <div class="fl">
+            <ul>
+                <li><a href="about_us.html">关于我们</a></li>
+                <li><a href="talent_recruitment.html">招聘信息</a></li>
+                <li><a href="market_cooperation.html">市场合作</a></li>
+                <li><a href="contact_us.html">联系我们</a></li>
+            </ul>
+        </div>
+        <div class="fr">
+            <span class="first">©2014-2015 suizou.net All Rights Reserved</span>
+            <span class="last">　　渝ICP备14007819号-2</span>            　　
         </div>
     </div>
 </div>
