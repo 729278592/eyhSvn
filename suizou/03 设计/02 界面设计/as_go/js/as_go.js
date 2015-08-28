@@ -22,25 +22,6 @@ $(function() {
 
 
     var pl = $(".product_ul li");
-    var wwd = parseInt($(window).width());
-
-    function re() {
-        if (wwd < 641) {
-            pl.find(".title_box").removeClass("title_box").addClass("title_box_mobile");
-        } else {
-            pl.find(".title_box").removeClass("title_box_mobile");
-        }
-    }
-
-    re();
-    $(window).on("resize",function(){
-        if (wwd<641){
-            window.location.reload()
-        }else{
-            window.location.reload()
-        }
-        re()
-    });
     pl.hover(
         function () {
             $(".title_box").show();
