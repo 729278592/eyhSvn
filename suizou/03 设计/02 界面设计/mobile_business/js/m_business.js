@@ -26,7 +26,7 @@ details();
 
 
 
-$(".btn_query").on("click",function(){
+$(".button").on("click",function(){
     $(".details").html('<div class="div-group">'+
                            '<span class="name">1 : 陈小洁</span>'+
                            '<span class="time">15/06/03</span>'+
