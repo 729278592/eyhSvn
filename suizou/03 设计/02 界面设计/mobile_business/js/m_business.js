@@ -2,23 +2,67 @@
  * Created by eyohu023 on 2015/8/14.
  */
 
-$(" .div-group:odd").css({"background": "#fff"});
-$(" .div-group:even").css({"background": "#efecec"});
 
 
-var dfa = $(".div-group .fa");
-dfa.closest(".div-group").on("click", function () {
-    if ($(this).next(".order-group").css("display") == "none") {
-        $(this).next(".order-group").slideDown();
-        $(this).find(".fa").removeClass("fa-caret-left").addClass("fa-caret-down");
-        $(this).siblings(".div-group").next(".order-group").slideUp();
-        $(this).siblings(".div-group").find(".fa").removeClass("fa-caret-down").addClass("fa-caret-left");
-    }
-    else {
-        $(this).next(".order-group").slideUp();
-        $(this).find(".fa").removeClass("fa-caret-down").addClass("fa-caret-left");
-    }
-});
+
+function details(){
+    $(".div-group:odd").css({"background": "#fff"});
+    $(".div-group:even").css({"background": "#efecec"});
+    var dfa = $(".div-group .fa");
+    dfa.closest(".div-group").on("click", function () {
+        if ($(this).next(".order-group").css("display") == "none") {
+            $(this).next(".order-group").slideDown();
+            $(this).find(".fa").removeClass("fa-caret-left").addClass("fa-caret-down");
+            $(this).siblings(".div-group").next(".order-group").slideUp();
+            $(this).siblings(".div-group").find(".fa").removeClass("fa-caret-down").addClass("fa-caret-left");
+        }
+        else {
+            $(this).next(".order-group").slideUp();
+            $(this).find(".fa").removeClass("fa-caret-down").addClass("fa-caret-left");
+        }
+    });
+}
+details();
+
+
+
+$(".btn_query").on("click",function(){
+    $(".details").html('<div class="div-group">'+
+                           '<span class="name">1 : 陈小洁</span>'+
+                           '<span class="time">15/06/03</span>'+
+                           '<span class="fr">'+
+                               '<span class="number">4000</span>盒'+
+                               '<span>'+
+                                   '<i class="fa fa-caret-left"></i>'+
+                               '</span>'+
+                           '</span>'+
+                       '</div>'+
+                       '<ul class="order-group">'+
+                           '<li class="clearfix">'+
+                               '<img src="images/icon1.jpg" alt=""/>'+
+                               '<span class="details">'+
+                                   '<p class="product relative">'+
+                                       '<span>[普莉拉]</span>&nbsp;<span>防晒</span>&nbsp;<span>防晒</span>&nbsp;<span>防晒</span>'+
+                                   '</p>'+
+                                   '<span class="number relative">数量 : x 3000</span><br/>'+
+                                   '<span class="money relative">￥ : 1058</span>'+
+                               '</span>'+
+                           '</li>'+
+                           '<li class="clearfix">'+
+                               '<img src="images/icon1.jpg" alt=""/>'+
+                               '<span class="details">'+
+                                   '<p class="product relative">'+
+                                       '<span>[普莉拉]</span>&nbsp;<span>防晒</span>&nbsp;<span>防晒</span>&nbsp;<span>防晒</span>'+
+                                   '</p>'+
+                                   '<span class="number relative">数量 : x 3000</span><br/>'+
+                                   '<span class="money relative">￥ : 1058</span>'+
+                               '</span>'+
+                           '</li>'+
+                       '</ul>');
+                        details();
+                });
+
+
 
 
 var ml = $(".menu li");

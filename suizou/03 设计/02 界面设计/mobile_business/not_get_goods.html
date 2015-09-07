@@ -9,6 +9,13 @@
     <style>
         label{display: block;margin-top: 3%;}
         .input{width: 68%;position: relative;left: 6%;}
+        @media screen and (min-width: 600px) {
+            .time{margin-left: 30%;}
+        }
+        @media screen and (max-width: 600px) {
+            .time{margin-left: 14%;}
+        }
+
     </style>
 </head>
 <body>
@@ -25,12 +32,13 @@
     <div class="div-ul">
         <div class="div-group">
             <span class="name">1 : 陈小洁</span>
-        <span class="fr">
-            <span class="number">4000</span>盒
-            <span>
-                <i class="fa fa-caret-left"></i>
+            <span class="time">15/06/03</span>
+            <span class="fr">
+                <span class="number">4000</span>盒
+                <span>
+                    <i class="fa fa-caret-left"></i>
+                </span>
             </span>
-        </span>
         </div>
         <ul class="order-group">
             <li class="clearfix">
@@ -63,6 +71,7 @@
         </ul>
         <div class="div-group">
             <span class="name">2 : 陈小洁</span>
+            <span class="time">15/06/03</span>
             <span class="fr">
                 <span class="number">5000</span>盒
                 <span>
@@ -101,11 +110,17 @@
         </ul>
     </div>
     <div class="div-ul hide">
+        <input type="tel" class="input" placeholder="请输入快递单号" style="left: 5px;"/>
+        <input type="button" value="查询" class="btn btn_query relative"/>
+        <i class="fa fa-search"></i>
+        <div class="details">
 
+        </div>
     </div>
 
 </div>
 <script src="js/jquery-1.11.3.min.js"></script>
 <script src="js/m_business.js"></script>
+
 </body>
 </html>
