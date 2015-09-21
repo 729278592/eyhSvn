@@ -2,78 +2,97 @@
 <html>
 <head lang="en">
     <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width; initial-scale=1.0; user-scalable=no;">
     <title>首页</title>
     <link rel="stylesheet" href="plugins/bootstrap-3.3.5-dist/css/bootstrap.css"/>
+    <link rel="stylesheet" href="plugins/font/css/font-awesome.min.css"/>
     <link rel="stylesheet" href="css/main.css"/>
+    <link rel="stylesheet" href="css/mobile.css?v=11"/>
     <style>
-        @media screen and (min-width: 1200px) {
-            .head-main{width: 96%;}
-        }
+        .mask{min-width: 1120px;}
     </style>
 </head>
 <body>
     <div class="wrapper">
         <div class="head">
             <div class="head-main">
-                <img src="images/logo.png" alt="" class="logo"/>
-                <ul class="head-menu">
+                <div class="pc-none mobile_block">
+                            <span>
+                                <i class="glyphicon glyphicon-th-list"></i>
+                            </span>
+                    <a href="#">
+                        <img src="images/mobile-logo.png" alt="" class="login"/>
+                    </a>
+                </div>
+                <img src="images/logo.png" alt="" class="logo mobile_none"/>
+                <ul class="head-menu mobile_none">
                     <li>
                         <a href="index.html" class="active">
-                            <span>
-                                  <i>
-                                      <img src="images/c-icon1.png" alt=""/>
-                                  </i>
-                            </span>首页
+                                <span>
+                                     <i>
+                                         <img src="images/c-icon1.png" alt=""/>
+                                         <!--<i class="fa fa-home"></i>-->
+                                     </i>
+                                </span>首页
                         </a>
                     </li>
                     <li>
                         <a href="housing_trust.html">
-                            <span>
-                               <i>
-                                   <img src="images/c-icon2.png" alt=""/>
-                               </i>
-                            </span>房屋托管
+                                <span>
+                                     <i>
+                                         <img src="images/c-icon2.png" alt=""/>
+                                         <!--<i class="fa fa-bars"></i>-->
+                                     </i>
+                                </span>房屋托管
                         </a>
                     </li>
                     <li>
                         <a href="people_know.html">
                             <span>
                                 <i>
-                                    <img src="images/c-icon3.png" alt=""style="position: relative;top: 1px;"/>
+                                   <img src="images/c-icon3.png" alt=""style="position: relative;top: 1px;"/>
+                                    <!--<i class="fa fa-book"></i>-->
                                 </i>
                             </span>小主须知
                         </a>
                     </li>
                     <li>
                         <a href="le_mall.html">
-                            <span>
-                                <i>
-                                    <img src="images/c-icon4.png" alt="" style="position: relative;top: 2px;"/>
-                                </i>
-                            </span>乐商城
+                                 <span>
+                                     <i>
+                                         <img src="images/c-icon4.png" alt="" style="position: relative;top: 2px;"/>
+                                         <!--<i class="fa fa-shopping-cart"></i>-->
+                                     </i>
+                                 </span>乐商城
                         </a>
                     </li>
                     <li>
                         <a href="logo.html">
-                            <span>
-                                <i>
-                                    <img src="images/c-icon5.png" alt=""/>
-                                </i>
-                            </span>用户登录
+                                <span>
+                                    <i>
+                                        <img src="images/c-icon5.png" alt=""/>
+                                        <!--<i class="fa fa-user"></i>-->
+                                    </i>
+                                </span>用户登录
                         </a>
                     </li>
+                </ul>
+                <ul class="menu_mobile pc-none">
+                    <li><a href="index.html">首页</a></li>
+                    <li><a href="housing_trust.html">房屋托管</a></li>
+                    <li class="last"><a href="logo.html">用户登录</a></li>
                 </ul>
             </div>
         </div>
         <div class="content">
-            <div class="content-head">
-                <img src="images/index.jpg"  class="img-responsive" alt="Responsive image" style="min-height: 550px;"/>
+            <div class="content-head mobile-ch">
+                <img src="images/index.jpg"  class="img-responsive pc-img" alt="Responsive image" />
                 <div class="ch-mask" style=""></div>
                 <div class="ch-mask-main">
                     <input type="text" class="form-control" placeholder="请输入您要找的房源区域/地址/路名...">
                     <!--<input type="button" class="btn btn-group" value="搜索"/>-->
                     <a href="search_housing.html"  class="btn btn-group">搜索</a>
-                    <p class="hotqu">
+                    <p class="hotqu mobile_none">
                         <span>热门小区 : </span>
                         <a href="#">柳湖景庭</a>
                         <a href="#">崧泽绿地</a>
@@ -85,7 +104,7 @@
             </div>
             <div class="content-main">
                 <div class="comon-head">热门房源推荐</div>
-                <ul class="w80 clearfix">
+                <ul class="w80 clearfix mobile_w80">
                     <li>
                         <a href="housing_information.html">
                             <img src="images/tu1.jpg" class="img-responsive img" alt="Responsive image"/>
@@ -115,7 +134,7 @@
                             <span class="rt-span">菜园新区</span>
                         </a>
                     </li>
-                    <li class="li4">
+                    <li class="li4 mobile_none">
                         <a href="housing_information.html">
                             <img src="images/tu4.jpg" class="img-responsive img" alt="Responsive image"/>
                             <span class="rb-span">菜园坝</span>
@@ -154,33 +173,37 @@
                         </a>
                     </li>
                     <li>
-                        <a href="#">
+                        <a href="housing_information.html">
                             <img src="images/tu7.jpg" class="img-responsive img" alt="Responsive image"/>
                             <span class="lt-span">大坪</span>
                         </a>
                     </li>
                     <li class="mr0">
-                        <a href="#">
+                        <a href="housing_information.html">
                             <img src="images/tu8.jpg" class="img-responsive img" alt="Responsive image"/>
                             <span class="rb-span">空港</span>
                         </a>
                     </li>
                 </ul>
-                <img src="images/lw.jpg" class="img-responsive" alt="Responsive image" style="margin-top: 20px;"/>
-                <div class="comon-head" style="background: #f4f4f4;">最新房源推荐 <p>实时更新</p></div>
-                <div style="background: #f4f4f4;padding-bottom: 2%;">
+                <img src="images/lw.jpg" class="img-responsive mobile_none" alt="Responsive image" style="margin-top: 20px;"/>
+                <div class="comon-head mobile_none" style="background: #f4f4f4;">最新房源推荐 <p>实时更新</p></div>
+                <div class="mobile_none" style="background: #f4f4f4;padding-bottom: 2%;">
                     <div class="w80">
                         <div id="myCarousel" class="carousel slide">
                             <div class="carousel-inner">
                                 <div class="item active">
                                     <ul class="item-ul clearfix">
                                         <li>
-                                            <img src="images/jiju1.jpg" class="img-responsive" alt="Responsive image"/>
-                                            <div class="information">
-                                                <img src="images/people.png" alt="" class="people-img"/>
-                                                <span>3室一厅</span><br/>
-                                                <span>陈小洁</span>
-                                            </div>
+                                            <a href="housing_information.html">
+                                                <img src="images/jiju1.jpg" class="img-responsive" alt="Responsive image"/>
+                                                <div class="information">
+                                                    <a href="personal_center.html">
+                                                        <img src="images/people.png" alt="" class="people-img"/>
+                                                    </a>
+                                                    <span>3室一厅</span><br/>
+                                                    <span>陈小洁</span>
+                                                </div>
+                                            </a>
                                             <div class="item-b">
                                                 <span class="title">南坪.星宇花园</span><br/>
                                                 <span class="main">周边最好的客厅主卧。休闲应有尽有</span>
@@ -191,12 +214,16 @@
                                             </div>
                                         </li>
                                         <li class="last">
-                                            <img src="images/jiju2.jpg" class="img-responsive" alt="Responsive image"/>
-                                            <div class="information">
-                                                <img src="images/people.png" alt=""/>
-                                                <span>3室一厅</span><br/>
-                                                <span>陈小洁</span>
-                                            </div>
+                                            <a href="housing_information.html">
+                                                <img src="images/jiju2.jpg" class="img-responsive" alt="Responsive image"/>
+                                                <div class="information">
+                                                    <a href="personal_center.html">
+                                                        <img src="images/people.png" alt=""/>
+                                                    </a>
+                                                    <span>3室一厅</span><br/>
+                                                    <span>陈小洁</span>
+                                                </div>
+                                            </a>
                                             <div class="item-b">
                                                 <span class="title">南坪.星宇花园</span><br/>
                                                 <span class="main">周边最好的客厅主卧。休闲应有尽有</span>
@@ -209,12 +236,16 @@
                                     </ul>
                                     <ul class="item-ul1 clearfix">
                                         <li>
-                                            <img src="images/jiju3.jpg" class="img-responsive" alt="Responsive image"/>
-                                            <div class="information">
-                                                <img src="images/people.png" alt="" class="people-img"/>
-                                                <span>3室一厅</span><br/>
-                                                <span>陈小洁</span>
-                                            </div>
+                                            <a href="housing_information.html">
+                                                <img src="images/jiju3.jpg" class="img-responsive" alt="Responsive image"/>
+                                                <div class="information">
+                                                    <a href="personal_center.html">
+                                                        <img src="images/people.png" alt="" class="people-img"/>
+                                                    </a>
+                                                    <span>3室一厅</span><br/>
+                                                    <span>陈小洁</span>
+                                                </div>
+                                            </a>
                                             <div class="item-b">
                                                 <span class="title">南坪.星宇花园</span><br/>
                                                 <span class="main">周边最好的客厅主卧。休闲应有尽有</span>
@@ -225,12 +256,16 @@
                                             </div>
                                         </li>
                                         <li>
-                                            <img src="images/jiju4.jpg" class="img-responsive" alt="Responsive image"/>
-                                            <div class="information">
-                                                <img src="images/people.png" alt="" class="people-img"/>
-                                                <span>3室一厅</span><br/>
-                                                <span>陈小洁</span>
-                                            </div>
+                                            <a href="housing_information.html">
+                                                <img src="images/jiju4.jpg" class="img-responsive" alt="Responsive image"/>
+                                                <div class="information">
+                                                    <a href="personal_center.html">
+                                                        <img src="images/people.png" alt="" class="people-img"/>
+                                                    </a>
+                                                    <span>3室一厅</span><br/>
+                                                    <span>陈小洁</span>
+                                                </div>
+                                            </a>
                                             <div class="item-b">
                                                 <span class="title">南坪.星宇花园</span><br/>
                                                 <span class="main">周边最好的客厅主卧。休闲应有尽有</span>
@@ -241,12 +276,16 @@
                                             </div>
                                         </li>
                                         <li class="last">
-                                            <img src="images/jiju5.jpg" class="img-responsive" alt="Responsive image"/>
-                                            <div class="information">
-                                                <img src="images/people.png" alt="" class="people-img"/>
-                                                <span>3室一厅</span><br/>
-                                                <span>陈小洁</span>
-                                            </div>
+                                            <a href="housing_information.html">
+                                                <img src="images/jiju5.jpg" class="img-responsive" alt="Responsive image"/>
+                                                <div class="information">
+                                                    <a href="personal_center.html">
+                                                        <img src="images/people.png" alt="" class="people-img"/>
+                                                    </a>
+                                                    <span>3室一厅</span><br/>
+                                                    <span>陈小洁</span>
+                                                </div>
+                                            </a>
                                             <div class="item-b">
                                                 <span class="title">南坪.星宇花园</span><br/>
                                                 <span class="main">周边最好的客厅主卧。休闲应有尽有</span>
@@ -261,12 +300,16 @@
                                 <div class="item">
                                     <ul class="item-ul clearfix">
                                         <li>
-                                            <img src="images/jiju1.jpg" class="img-responsive" alt="Responsive image"/>
-                                            <div class="information">
-                                                <img src="images/people.png" alt="" class="people-img"/>
-                                                <span>3室一厅</span><br/>
-                                                <span>陈小洁</span>
-                                            </div>
+                                            <a href="housing_information.html">
+                                                <img src="images/jiju1.jpg" class="img-responsive" alt="Responsive image"/>
+                                                <div class="information">
+                                                    <a href="personal_center.html">
+                                                        <img src="images/people.png" alt="" class="people-img"/>
+                                                    </a>
+                                                    <span>3室一厅</span><br/>
+                                                    <span>陈小洁</span>
+                                                </div>
+                                            </a>
                                             <div class="item-b">
                                                 <span class="title">南坪.星宇花园</span><br/>
                                                 <span class="main">周边最好的客厅主卧。休闲应有尽有</span>
@@ -277,12 +320,16 @@
                                             </div>
                                         </li>
                                         <li class="last">
-                                            <img src="images/jiju2.jpg" class="img-responsive" alt="Responsive image"/>
-                                            <div class="information">
-                                                <img src="images/people.png" alt="" class="people-img"/>
-                                                <span>3室一厅</span><br/>
-                                                <span>陈小洁</span>
-                                            </div>
+                                            <a href="housing_information.html">
+                                                <img src="images/jiju2.jpg" class="img-responsive" alt="Responsive image"/>
+                                                <div class="information">
+                                                    <a href="personal_center.html">
+                                                        <img src="images/people.png" alt=""/>
+                                                    </a>
+                                                    <span>3室一厅</span><br/>
+                                                    <span>陈小洁</span>
+                                                </div>
+                                            </a>
                                             <div class="item-b">
                                                 <span class="title">南坪.星宇花园</span><br/>
                                                 <span class="main">周边最好的客厅主卧。休闲应有尽有</span>
@@ -295,12 +342,16 @@
                                     </ul>
                                     <ul class="item-ul1 clearfix">
                                         <li>
-                                            <img src="images/jiju3.jpg" class="img-responsive" alt="Responsive image"/>
-                                            <div class="information">
-                                                <img src="images/people.png" alt=""/>
-                                                <span>3室一厅</span><br/>
-                                                <span>陈小洁</span>
-                                            </div>
+                                            <a href="housing_information.html">
+                                                <img src="images/jiju3.jpg" class="img-responsive" alt="Responsive image"/>
+                                                <div class="information">
+                                                    <a href="personal_center.html">
+                                                        <img src="images/people.png" alt="" class="people-img"/>
+                                                    </a>
+                                                    <span>3室一厅</span><br/>
+                                                    <span>陈小洁</span>
+                                                </div>
+                                            </a>
                                             <div class="item-b">
                                                 <span class="title">南坪.星宇花园</span><br/>
                                                 <span class="main">周边最好的客厅主卧。休闲应有尽有</span>
@@ -311,12 +362,16 @@
                                             </div>
                                         </li>
                                         <li>
-                                            <img src="images/jiju4.jpg" class="img-responsive" alt="Responsive image"/>
-                                            <div class="information">
-                                                <img src="images/people.png" alt=""/>
-                                                <span>3室一厅</span><br/>
-                                                <span>陈小洁</span>
-                                            </div>
+                                            <a href="housing_information.html">
+                                                <img src="images/jiju4.jpg" class="img-responsive" alt="Responsive image"/>
+                                                <div class="information">
+                                                    <a href="personal_center.html">
+                                                        <img src="images/people.png" alt="" class="people-img"/>
+                                                    </a>
+                                                    <span>3室一厅</span><br/>
+                                                    <span>陈小洁</span>
+                                                </div>
+                                            </a>
                                             <div class="item-b">
                                                 <span class="title">南坪.星宇花园</span><br/>
                                                 <span class="main">周边最好的客厅主卧。休闲应有尽有</span>
@@ -327,12 +382,16 @@
                                             </div>
                                         </li>
                                         <li class="last">
-                                            <img src="images/jiju5.jpg" class="img-responsive" alt="Responsive image"/>
-                                            <div class="information">
-                                                <img src="images/people.png" alt=""/>
-                                                <span>3室一厅</span><br/>
-                                                <span>陈小洁</span>
-                                            </div>
+                                            <a href="housing_information.html">
+                                                <img src="images/jiju5.jpg" class="img-responsive" alt="Responsive image"/>
+                                                <div class="information">
+                                                    <a href="personal_center.html">
+                                                        <img src="images/people.png" alt="" class="people-img"/>
+                                                    </a>
+                                                    <span>3室一厅</span><br/>
+                                                    <span>陈小洁</span>
+                                                </div>
+                                            </a>
                                             <div class="item-b">
                                                 <span class="title">南坪.星宇花园</span><br/>
                                                 <span class="main">周边最好的客厅主卧。休闲应有尽有</span>
@@ -347,12 +406,16 @@
                                 <div class="item">
                                     <ul class="item-ul clearfix">
                                         <li>
-                                            <img src="images/jiju1.jpg" class="img-responsive" alt="Responsive image"/>
-                                            <div class="information">
-                                                <img src="images/people.png" alt=""/>
-                                                <span>3室一厅</span><br/>
-                                                <span>陈小洁</span>
-                                            </div>
+                                            <a href="housing_information.html">
+                                                <img src="images/jiju1.jpg" class="img-responsive" alt="Responsive image"/>
+                                                <div class="information">
+                                                    <a href="personal_center.html">
+                                                        <img src="images/people.png" alt="" class="people-img"/>
+                                                    </a>
+                                                    <span>3室一厅</span><br/>
+                                                    <span>陈小洁</span>
+                                                </div>
+                                            </a>
                                             <div class="item-b">
                                                 <span class="title">南坪.星宇花园</span><br/>
                                                 <span class="main">周边最好的客厅主卧。休闲应有尽有</span>
@@ -363,12 +426,16 @@
                                             </div>
                                         </li>
                                         <li class="last">
-                                            <img src="images/jiju2.jpg" class="img-responsive" alt="Responsive image"/>
-                                            <div class="information">
-                                                <img src="images/people.png" alt=""/>
-                                                <span>3室一厅</span><br/>
-                                                <span>陈小洁</span>
-                                            </div>
+                                            <a href="housing_information.html">
+                                                <img src="images/jiju2.jpg" class="img-responsive" alt="Responsive image"/>
+                                                <div class="information">
+                                                    <a href="personal_center.html">
+                                                        <img src="images/people.png" alt=""/>
+                                                    </a>
+                                                    <span>3室一厅</span><br/>
+                                                    <span>陈小洁</span>
+                                                </div>
+                                            </a>
                                             <div class="item-b">
                                                 <span class="title">南坪.星宇花园</span><br/>
                                                 <span class="main">周边最好的客厅主卧。休闲应有尽有</span>
@@ -381,12 +448,16 @@
                                     </ul>
                                     <ul class="item-ul1 clearfix">
                                         <li>
-                                            <img src="images/jiju3.jpg" class="img-responsive" alt="Responsive image"/>
-                                            <div class="information">
-                                                <img src="images/people.png" alt=""/>
-                                                <span>3室一厅</span><br/>
-                                                <span>陈小洁</span>
-                                            </div>
+                                            <a href="housing_information.html">
+                                                <img src="images/jiju3.jpg" class="img-responsive" alt="Responsive image"/>
+                                                <div class="information">
+                                                    <a href="personal_center.html">
+                                                        <img src="images/people.png" alt="" class="people-img"/>
+                                                    </a>
+                                                    <span>3室一厅</span><br/>
+                                                    <span>陈小洁</span>
+                                                </div>
+                                            </a>
                                             <div class="item-b">
                                                 <span class="title">南坪.星宇花园</span><br/>
                                                 <span class="main">周边最好的客厅主卧。休闲应有尽有</span>
@@ -397,12 +468,16 @@
                                             </div>
                                         </li>
                                         <li>
-                                            <img src="images/jiju4.jpg" class="img-responsive" alt="Responsive image"/>
-                                            <div class="information">
-                                                <img src="images/people.png" alt=""/>
-                                                <span>3室一厅</span><br/>
-                                                <span>陈小洁</span>
-                                            </div>
+                                            <a href="housing_information.html">
+                                                <img src="images/jiju4.jpg" class="img-responsive" alt="Responsive image"/>
+                                                <div class="information">
+                                                    <a href="personal_center.html">
+                                                        <img src="images/people.png" alt="" class="people-img"/>
+                                                    </a>
+                                                    <span>3室一厅</span><br/>
+                                                    <span>陈小洁</span>
+                                                </div>
+                                            </a>
                                             <div class="item-b">
                                                 <span class="title">南坪.星宇花园</span><br/>
                                                 <span class="main">周边最好的客厅主卧。休闲应有尽有</span>
@@ -413,12 +488,16 @@
                                             </div>
                                         </li>
                                         <li class="last">
-                                            <img src="images/jiju5.jpg" class="img-responsive" alt="Responsive image"/>
-                                            <div class="information">
-                                                <img src="images/people.png" alt=""/>
-                                                <span>3室一厅</span><br/>
-                                                <span>陈小洁</span>
-                                            </div>
+                                            <a href="housing_information.html">
+                                                <img src="images/jiju5.jpg" class="img-responsive" alt="Responsive image"/>
+                                                <div class="information">
+                                                    <a href="personal_center.html">
+                                                        <img src="images/people.png" alt="" class="people-img"/>
+                                                    </a>
+                                                    <span>3室一厅</span><br/>
+                                                    <span>陈小洁</span>
+                                                </div>
+                                            </a>
                                             <div class="item-b">
                                                 <span class="title">南坪.星宇花园</span><br/>
                                                 <span class="main">周边最好的客厅主卧。休闲应有尽有</span>
@@ -440,7 +519,8 @@
                         </div>
                     </div>
                 </div>
-                <img src="images/index2.jpg" class="img-responsive" alt="Responsive image"/>
+                <img src="images/index2.jpg" class="img-responsive mobile_none" alt="Responsive image"/>
+                <img src="images/mobile-step.jpg" class="img-responsive pc-none" alt="Responsive image"/>
                 <!--<div class="flow-lay">-->
                     <!--<div class="flow-list">-->
                         <!--<span class="flow-icon01"><em>挑选房屋</em></span>-->
@@ -451,19 +531,15 @@
                     <!--</div>-->
                 <!--</div>-->
                 <div class="activity">
-                    <img src="images/active-bg.jpg" class="img-responsive" alt="Responsive image"/>
+                    <img src="images/active-bg.jpg" class="img-responsive mobile_none" alt="Responsive image"/>
                     <p class="title">乐窝最新活动</p>
-
-
-
-
-                    <div class="w80">
+                    <div class="w80 mobile_w80">
                         <div class="carousel slide myCarousel">
                             <div class="carousel-inner">
                                 <div class="item active">
-                                    <ul class="item-ul1 clearfix">
+                                    <ul class="item-ul1 mobile_iu clearfix">
                                         <li>
-                                            <img src="images/index-c.jpg" class="img-responsive" alt="Responsive image"/>
+                                            <img src="images/index-c1.jpg" class="img-responsive" alt="Responsive image"/>
                                             <div class="item-b">
                                                 <a href="#">
                                                     <span class="main">乐窝租客快乐出游</span>
@@ -473,7 +549,7 @@
                                                 </a>
                                             </div>
                                         </li>
-                                        <li>
+                                        <li class="mobile_none">
                                             <img src="images/index-c1.jpg" class="img-responsive" alt="Responsive image"/>
                                             <div class="item-b">
                                                 <a href="#">
@@ -484,7 +560,7 @@
                                                 </a>
                                             </div>
                                         </li>
-                                        <li class="last">
+                                        <li class="last mobile_none">
                                             <img src="images/index-c2.jpg" class="img-responsive" alt="Responsive image"/>
                                             <div class="item-b">
                                                 <a href="#">
@@ -498,7 +574,7 @@
                                     </ul>
                                 </div>
                                 <div class="item">
-                                    <ul class="item-ul1 clearfix">
+                                    <ul class="item-ul1 mobile_iu clearfix">
                                         <li>
                                             <img src="images/index-c.jpg" class="img-responsive" alt="Responsive image"/>
                                             <div class="item-b">
@@ -510,7 +586,7 @@
                                                 </a>
                                             </div>
                                         </li>
-                                        <li>
+                                        <li class="mobile_none">
                                             <img src="images/index-c1.jpg" class="img-responsive" alt="Responsive image"/>
                                             <div class="item-b">
                                                 <a href="#">
@@ -521,7 +597,7 @@
                                                 </a>
                                             </div>
                                         </li>
-                                        <li class="last">
+                                        <li class="last mobile_none">
                                             <img src="images/index-c2.jpg" class="img-responsive" alt="Responsive image"/>
                                             <div class="item-b">
                                                 <a href="#">
@@ -536,55 +612,56 @@
                                 </div>
                             </div>
                             <a class="left carousel-control" href=".myCarousel" data-slide="prev">
-                                <img src="images/pre1.png" alt=""/>
+                                <img src="images/pre1.png" alt="" class="mobile_none"/>
+                                <img src="images/pre2.png" alt="" class="pc-none"/>
                             </a>
                             <a class="right carousel-control" href=".myCarousel" data-slide="next">
-                                <img src="images/next1.png" alt=""/>
+                                <img src="images/next1.png" alt="" class="mobile_none"/>
+                                <img src="images/next2.png" alt="" class="pc-none"/>
                             </a>
                         </div>
                     </div>
-
-
-
-
                 </div>
             </div>
             <div class="content-foot">
-                <p class="content-foot-p">让我们一起建立信任的桥梁</p>
+                <p class="content-foot-p mobile_none">让我们一起建立信任的桥梁</p>
                 <ul class="bridge clearfix">
                     <li>
-                        <img class="icon" src="images/icon1.jpg" alt=""/>
-                        <p>
+                        <img class="icon" src="images/icon1.png" alt=""/>
+                        <p class="mobile_none">
                             <span>享受家一般的舒适</span><br/>
                             <span class="last">配套设施齐备</span>
                         </p>
-                        <img src="images/xian.jpg" alt="" class="xian"/>
+                        <span class="pc-none">乐窝舒适安逸</span>
+                        <img src="images/xian.jpg" alt="" class="xian mobile_none"/>
                     </li>
-                    <li>
-                        <img class="icon" src="images/icon2.jpg" alt=""/>
-                        <p>
+                    <li class="last">
+                        <img class="icon" src="images/icon2.png" alt=""/>
+                        <p class="mobile_none">
                             <span>房租价格经济实惠</span><br/>
                             <span class="last">价格比同公寓便宜很多</span>
                         </p>
-                        <img src="images/xian.jpg" alt="" class="xian"/>
+                        <span class="pc-none">价格经济实惠</span>
+                        <img src="images/xian.jpg" alt="" class="xian mobile_none"/>
                     </li>
                     <li>
-                        <img class="icon" src="images/icon3.jpg" alt=""/>
-                        <p>
+                        <img class="icon" src="images/icon3.png" alt=""/>
+                        <p class="mobile_none">
                             <span>价格比同公寓便宜很多</span><br/>
                             <span class="last">乐窝网信息经过核实安全</span>
                         </p>
-                        <img src="images/xian.jpg" alt="" class="xian"/>
+                        <span class="pc-none">信息安全可靠</span>
+                        <img src="images/xian.jpg" alt="" class="xian mobile_none"/>
                     </li>
-                    <li>
-                        <img class="icon" src="images/icon4.jpg" alt=""/>
-                        <p>
+                    <li class="last">
+                        <img class="icon" src="images/icon4.png" alt=""/>
+                        <p class="mobile_none">
                             <span>双方身份验证</span><br/>
                             <span class="last">安全可靠的在您身边</span>
                         </p>
+                        <span class="pc-none">双方身份验证</span>
                     </li>
                 </ul>
-
             </div>
         </div>
         <div class="footer clearfix">
@@ -594,7 +671,7 @@
                         <a href="people_know.html">小主须知</a>
                         <img src="images/bl.png" alt="" class="right"/>
                     </li>
-                    <li>
+                    <li class="mobile_none">
                         <a href="">加入我们</a>
                         <img src="images/bl.png" alt="" class="right"/>
                     </li>
@@ -604,19 +681,114 @@
                     </li>
                     <li>
                         <a href="contact_us.html">联系我们</a>
-                        <img src="images/bl.png" alt="" class="right"/>
-                    </li>>
+                    </li>
                 </ul>
             </div>
             <div class="fr">
                 <span class="first">渝ICP备15002338号-1　Copyright © 2014~2015 重庆乐拓资产管理有限公司 版权所有</span>            　　
             </div>
         </div>
+        <div class="mask hide mobile_none">
+            <div class="carousel slide myCarousel1">
+                <div class="carousel-inner">
+                    <div class="item">
+                        <img src="images/index-c2.jpg" class="img-responsive img" alt="Responsive image"/>
+                        <div class="describe">
+                            <p>
+                                <span class="title color">为什么要组织出去游玩</span><br/>
+                                <span>我们相信，彼此的信任是建立在使每个人放心的安全机制上。充分的身份验证机制，会保证我们平台更加安全可靠。 </span>
+                            </p>
+                            <p>
+                                <span class="title">为什么要组织出去游玩</span><br/>
+                                <span>我们相信，彼此的信任是建立在使每个人放心的安全机制上。充分的身份验证机制，会保证我们平台更加安全可靠。 </span>
+                            </p>
+                            <p>
+                                <span class="title">为什么要组织出去游玩</span><br/>
+                                <span>我们相信，彼此的信任是建立在使每个人放心的安全机制上。充分的身份验证机制，会保证我们平台更加安全可靠。 </span>
+                            </p>
+                            <p>
+                                <span class="title">为什么要组织出去游玩</span><br/>
+                                <span>我们相信，彼此的信任是建立在使每个人放心的安全机制上。充分的身份验证机制，会保证我们平台更加安全可靠。 </span>
+                            </p>
+                        </div>
+                    </div>
+                    <div class="item">
+                        <img src="images/index-c2.jpg" class="img-responsive img" alt="Responsive image"/>
+                        <div class="describe">
+                            <span class="title">最火O2O</span><br/>
+                            <span>O2O：最后一公里成了O2O的命脉，上门服务成了O2O的成功秘诀，如何更快更好的服务客户，利用服务号＋企业号，完美的解决上门O2O的痛点，让领导远程操控，让员工便捷接单，让体验做到极致，让用户离不开你</span>
+                        </div>
+                    </div>
+                    <div class="item">
+                        <img src="images/index-c2.jpg" class="img-responsive img" alt="Responsive image"/>
+                        <div class="describe">
+                            <span class="title">地产/汽车</span><br/>
+                            <span>地产：他们都一直在问一个问题，客户在哪里？客户在等待透明、极致的体验，如果服务好客户才是关键，让客户从粉丝变为真正的用户，让便捷的服务吸引住客户，使用随走，轻松粘住客户。</span>
+                        </div>
+                    </div>
+                    <div class="item">
+                        <img src="images/index-c2.jpg" class="img-responsive img" alt="Responsive image"/>
+                        <div class="describe">
+                            <span class="title">传统零售</span><br/>
+                            <span>零售：业绩不好统计？店铺太多不容易管理？营销活动如何圆满开展？上传下达不容易统一？我们给你定制解决方案，从员工管理到上下游关联企业，从营销开展到内部流程管理，不用下载不用安装，我们都给你解决。</span>
+                        </div>
+                    </div>
+                    <div class="item">
+                        <img src="images/index-c2.jpg" class="img-responsive img" alt="Responsive image"/>
+                        <div class="describe">
+                            <span class="title">传媒/广告</span><br/>
+                            <span>广告：不看广告看疗效？应该是看广告还要看疗效，从粗放到精细化管理，互联网＋必须得跨过这道坎。媒体转型、出版行业转型，靠的就是外部的营销、内部的整合分析，将用户牢牢把控在自己服务上。</span>
+                        </div>
+                    </div>
+                    <div class="item">
+                        <img src="images/index-c2.jpg" class="img-responsive img" alt="Responsive image"/>
+                        <div class="describe">
+                            <span class="title">服务行业</span><br/>
+                            <span>服务：内部流程繁琐？员工沟通不顺畅？不管是餐饮、还是摄影、还是猎头，缺的就是信息化这一课，通过信息化可以让服务部门联动起来，不光是业绩飙升，员工也更有激情了。</span>
+                        </div>
+                    </div>
+                </div>
+                <a class="left carousel-control" href=".myCarousel1" data-slide="prev">
+                    <img src="images/pre2.png" alt=""/>
+                </a>
+                <a class="right carousel-control" href=".myCarousel1" data-slide="next">
+                    <img src="images/next2.png" alt=""/>
+                </a>
+                <button class="close" id="close"><i class="glyphicon glyphicon-remove"></i></button>
+            </div>
+        </div>
     </div>
-    <script src="js/jquery-1.11.3.min.js"></script>
+    <script src="plugins/jquery/js/jquery-1.11.3.min.js"></script>
     <script src="plugins/bootstrap-3.3.5-dist/js/bootstrap.min.js"></script>
     <script src="plugins/picture_transparency/js/move.js"></script>
     <script src="js/lw_housing.js"></script>
     <script src="plugins/picture_transparency/js/getElementsByClassName.js"></script>
+    <script>
+        $(function() {
+            var ml = $(".mobile_iu li");
+            m = $(".myCarousel1"),
+                mi = $(".myCarousel1 .item"),
+                mid = $(".myCarousel1 .item .describe");
+            ml.each(function (i) {
+                $(this).on("click", function () {
+                    m.closest(".mask").removeClass("hide");
+                    mi.eq(i).addClass('active');
+                    mi.eq(i).siblings().removeClass("active");
+                    mi.find("img").fadeIn(2000);
+                    mid.animate({
+                        "top": "6%"
+                    }, 3000);
+                    var c = $("#close");
+                    c.on("click", function () {
+                        c.closest(".mask").addClass("hide");
+                        mi.find("img").hide();
+                        mid.animate({
+                            "top": "-20%"
+                        }, 0);
+                    });
+                });
+            });
+        })
+    </script>
 </body>
 </html>

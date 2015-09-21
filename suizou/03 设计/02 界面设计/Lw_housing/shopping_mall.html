@@ -19,7 +19,7 @@
                 <img src="images/logo.png" alt="" class="logo"/>
                 <ul class="head-menu">
                     <li>
-                        <a href="index.html" class="active">
+                        <a href="index.html">
                                             <span>
                                                   <i>
                                                       <img src="images/c-icon1.png" alt=""/>
@@ -68,51 +68,53 @@
         </div>
         <div class="content">
             <div class="w80">
-                <ul class="w-left">
-                    <li class="w-head">全部功能</li>
-                    <li>
-                        <a href="personal_center.html" style="line-height: 75px;">
-                            <i class="fa fa-users"></i>
-                            个人信息
-                        </a>
-                    </li>
-                    <li>
-                        <a href="case-pay.html">
-                            <i class="fa fa-pencil-square-o"></i>
-                            各项缴费
-                        </a>
-                    </li>
-                    <li>
-                        <a href="house-information.html">
-                            <i class="fa fa-money"></i>
-                            房屋信息
-                        </a>
-                    </li>
-                    <li>
-                        <a href="case_servers.html">
-                            <i class="fa fa-folder-o"></i>
-                            服务项目
-                        </a>
-                    </li>
-                    <li class="active">
-                        <a href="shopping_mall.html">
-                            <i class="fa fa-shopping-cart"></i>
-                            商城兑换
-                        </a>
-                    </li>
-                    <li>
-                        <a href="check_management.html">
-                            <i class="fa fa-gear"></i>
-                            退租管理
-                        </a>
-                    </li>
-                    <li class="last">
-                        <a href="legacy_items.html">
-                            <i class="fa fa-bars"></i>
-                            遗留物品
-                        </a>
-                    </li>
-                </ul>
+                <div class="w-left">
+                    <div class="w-head">全部功能</div>
+                    <ul class="menu">
+                        <li>
+                            <a href="personal_center.html" style="line-height: 75px;">
+                                <i class="fa fa-users"></i>
+                                个人信息
+                            </a>
+                        </li>
+                        <li>
+                            <a href="case-pay.html">
+                                <i class="fa fa-money "></i>
+                                各项缴费
+                            </a>
+                        </li>
+                        <li>
+                            <a href="house-information.html">
+                                <i class="fa fa-pencil-square-o"></i>
+                                房屋信息
+                            </a>
+                        </li>
+                        <li>
+                            <a href="case_servers.html">
+                                <i class="fa fa-folder-o"></i>
+                                服务项目
+                            </a>
+                        </li>
+                        <li class="active">
+                            <a href="shopping_mall.html">
+                                <i class="fa fa-shopping-cart"></i>
+                                商城兑换
+                            </a>
+                        </li>
+                        <li>
+                            <a href="check_management.html">
+                                <i class="fa fa-gear"></i>
+                                退租管理
+                            </a>
+                        </li>
+                        <li class="last">
+                            <a href="legacy_items.html">
+                                <i class="fa fa-bars"></i>
+                                遗留物品
+                            </a>
+                        </li>
+                    </ul>
+                </div>
                 <div class="w-right">
                     <p class="p-group title">项目服务</p>
                     <div class="wr-content">
@@ -145,8 +147,7 @@
                     </li>
                     <li>
                         <a href="contact_us.html">联系我们</a>
-                        <img src="images/bl.png" alt="" class="right"/>
-                    </li>>
+                    </li>
                 </ul>
             </div>
             <div class="fr">
@@ -160,7 +161,7 @@
             </div>
         </div>
     </div>
-<script src="js/jquery-1.11.3.min.js"></script>
+<script src="plugins/jquery/js/jquery-1.11.3.min.js"></script>
 <script>
     $(".btn-rnow").on("click",function(){
         $(".mask").removeClass("hide");

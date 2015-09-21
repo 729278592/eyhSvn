@@ -2,117 +2,156 @@
 <html>
 <head lang="en">
     <meta charset="UTF-8">
-    <title></title>
+    <meta name="viewport" content="width=device-width; initial-scale=1.0; user-scalable=no;">
+    <title>个人信息</title>
     <link rel="stylesheet" href="plugins/bootstrap-3.3.5-dist/css/bootstrap.css"/>
     <link rel="stylesheet" href="css/main.css"/>
     <link rel="stylesheet" href="plugins/font/css/font-awesome.min.css"/>
+    <link rel="stylesheet" href="css/mobile.css?v=11"/>
     <style>
-        body{background: #f1f1f1;}
+        body{background: #f1f1f1;height: 100%;}
         .footer{position: absolute;bottom: 0;}
+
     </style>
 </head>
 <body>
     <div class="wrapper">
         <div class="head">
             <div class="head-main">
-                <img src="images/logo.png" alt="" class="logo"/>
-                <ul class="head-menu">
-                    <li>
-                        <a href="index.html" class="active">
-                                    <span>
-                                          <i>
-                                              <img src="images/c-icon1.png" alt=""/>
-                                          </i>
-                                    </span>首页
-                        </a>
-                    </li>
-                    <li>
-                        <a href="housing_trust.html">
-                                    <span>
-                                       <i>
-                                           <img src="images/c-icon2.png" alt=""/>
-                                       </i>
-                                    </span>房屋托管
-                        </a>
-                    </li>
-                    <li>
-                        <a href="people_know.html">
-                                    <span>
-                                        <i>
-                                            <img src="images/c-icon3.png" alt=""style="position: relative;top: 1px;"/>
-                                        </i>
-                                    </span>小主须知
-                        </a>
-                    </li>
-                    <li>
-                        <a href="le_mall.html">
-                                    <span>
-                                        <i>
-                                            <img src="images/c-icon4.png" alt="" style="position: relative;top: 2px;"/>
-                                        </i>
-                                    </span>乐商城
-                        </a>
-                    </li>
-                    <li>
-                        <a href="logo.html">
-                                    <span>
-                                        <i>
-                                            <img src="images/c-icon5.png" alt=""/>
-                                        </i>
-                                    </span>用户登录
-                        </a>
-                    </li>
-                </ul>
+            <div class="pc-none mobile_block">
+                        <span>
+                            <i class="glyphicon glyphicon-th-list"></i>
+                        </span>
+                <a href="#">
+                    <img src="images/mobile-logo.png" alt="" class="login"/>
+                </a>
             </div>
+            <img src="images/logo.png" alt="" class="logo mobile_none"/>
+            <ul class="head-menu mobile_none">
+                <li>
+                    <a href="index.html">
+                            <span>
+                                 <i>
+                                     <img src="images/c-icon1.png" alt=""/>
+                                 </i>
+                            </span>首页
+                    </a>
+                </li>
+                <li>
+                    <a href="housing_trust.html">
+                            <span>
+                                 <i>
+                                     <img src="images/c-icon2.png" alt=""/>
+                                 </i>
+                            </span>房屋托管
+                    </a>
+                </li>
+                <li>
+                    <a href="people_know.html">
+                             <span>
+                                 <i>
+                                     <img src="images/c-icon3.png" alt=""style="position: relative;top: 1px;"/>
+                                 </i>
+                        </span>小主须知
+                    </a>
+                </li>
+                <li>
+                    <a href="le_mall.html">
+                             <span>
+                                 <i>
+                                     <img src="images/c-icon4.png" alt="" style="position: relative;top: 2px;"/>
+                                 </i>
+                             </span>乐商城
+                    </a>
+                </li>
+                <li>
+                    <a href="logo.html">
+                            <span>
+                                <i>
+                                    <img src="images/c-icon5.png" alt=""/>
+                                </i>
+                            </span>用户登录
+                    </a>
+                </li>
+            </ul>
+            <ul class="menu_mobile pc-none">
+                <li><a href="index.html">首页</a></li>
+                <li><a href="housing_trust.html">房屋托管</a></li>
+                <li class="last"><a href="logo.html">用户登录</a></li>
+            </ul>
+        </div>
         </div>
         <div class="content">
-            <div class="w80">
-                <ul class="w-left">
-                    <li class="w-head">全部功能</li>
+            <div class="w80 mobile_w80">
+                <ul class="w-top pc-none">
                     <li class="active">
-                        <a href="personal_center.html" style="line-height: 75px;">
-                            <i class="fa fa-users"></i>
+                        <a href="personal_center.html">
+                            <i class="fa fa-users"></i><br/>
                             个人信息
                         </a>
                     </li>
                     <li>
-                        <a href="case-pay.html">
-                            <i class="fa fa-pencil-square-o"></i>
-                            各项缴费
-                        </a>
-                    </li>
-                    <li>
                         <a href="house-information.html">
-                            <i class="fa fa-money"></i>
+                            <i class="fa fa-pencil-square-o"></i><br/>
                             房屋信息
                         </a>
                     </li>
                     <li>
-                        <a href="case_servers.html">
-                            <i class="fa fa-folder-o"></i>
-                            服务项目
-                        </a>
-                    </li>
-                    <li>
-                        <a href="shopping_mall.html">
-                            <i class="fa fa-shopping-cart"></i>
-                            商城兑换
-                        </a>
-                    </li>
-                    <li>
-                        <a href="check_management.html">
-                            <i class="fa fa-gear"></i>
-                            退租管理
-                        </a>
-                    </li>
-                    <li class="last">
-                        <a href="legacy_items.html">
-                            <i class="fa fa-bars"></i>
-                            遗留物品
+                        <a href="case-pay.html">
+                            <i class="fa fa-money "></i><br/>
+                            各项缴费
                         </a>
                     </li>
                 </ul>
-                <div class="w-right">
+                <div class="w-left mobile_none">
+                    <div class="w-head">全部功能</div>
+                    <ul class="menu">
+                        <li class="active">
+                            <a href="personal_center.html" style="line-height: 75px;">
+                                <i class="fa fa-users"></i>
+                                个人信息
+                            </a>
+                        </li>
+                        <li>
+                            <a href="case-pay.html">
+                                <i class="fa fa-money "></i>
+                                各项缴费
+                            </a>
+                        </li>
+                        <li>
+                            <a href="house-information.html">
+                                <i class="fa fa-pencil-square-o"></i>
+                                房屋信息
+                            </a>
+                        </li>
+                        <li>
+                            <a href="case_servers.html">
+                                <i class="fa fa-folder-o"></i>
+                                服务项目
+                            </a>
+                        </li>
+                        <li>
+                            <a href="shopping_mall.html">
+                                <i class="fa fa-shopping-cart"></i>
+                                商城兑换
+                            </a>
+                        </li>
+                        <li>
+                            <a href="check_management.html">
+                                <i class="fa fa-gear"></i>
+                                退租管理
+                            </a>
+                        </li>
+                        <li class="last">
+                            <a href="legacy_items.html">
+                                <i class="fa fa-bars"></i>
+                                遗留物品
+                            </a>
+                        </li>
+                    </ul>
+                </div>
+
+                <div class="w-right w-bottom">
                     <div class="wr-head">
                         <img src="images/ziliao.jpg" alt=""/>
                         <span>
@@ -121,14 +160,19 @@
                         </span>
                     </div>
                     <div class="wr-content">
-                        <div class="div-group" style="height: 30px;border-bottom: 1px solid #dbdbdb;">
-                            <span class="infomation">
+                        <ul class="caret-ul pc-none">
+                            <li class="active"><img src="images/top-img.png" alt=""/></li>
+                            <li><img src="images/top-img.png" alt=""/></li>
+                            <li><img src="images/top-img.png" alt=""/></li>
+                        </ul>
+                        <div class="div-group mobile_none" style="height: 30px;border-bottom: 1px solid #dbdbdb;">
+                            <span class="infomation ">
                                 个人资料
                             </span>
                         </div>
                         <div class="div-group">
                             <span class="span-group">当前头像</span>
-                            <img src="images/ziliao.jpg" alt="" style="width: 5%;"/>
+                            <img src="images/ziliao.jpg" class="ziliao" alt=""/>
                         </div>
                         <div class="div-group">
                             <span class="span-group">标签</span>
@@ -149,7 +193,7 @@
                         <div class="div-group">
                             <span class="span-group">性别</span>
                             <input type="radio" name="sex" checked/>男
-                            <input type="radio" name="sex" style="position: relative;left: 5%;"/>女
+                            <input type="radio" name="sex""/>女
                         </div>
                         <div class="div-group">
                             <span class="span-group">生日</span>
@@ -194,14 +238,14 @@
                 </div>
             </div>
         </div>
-        <div class="footer clearfix">
+        <div class="footer mobile_none clearfix">
             <div class="fl">
                 <ul>
                     <li>
                         <a href="people_know.html">小主须知</a>
                         <img src="images/bl.png" alt="" class="right"/>
                     </li>
-                    <li>
+                    <li class="mobile_none">
                         <a href="">加入我们</a>
                         <img src="images/bl.png" alt="" class="right"/>
                     </li>
@@ -211,8 +255,7 @@
                     </li>
                     <li>
                         <a href="contact_us.html">联系我们</a>
-                        <img src="images/bl.png" alt="" class="right"/>
-                    </li>>
+                    </li>
                 </ul>
             </div>
             <div class="fr">
@@ -220,6 +263,8 @@
             </div>
         </div>
     </div>
-<script src="js/jquery-1.11.3.min.js"></script>
+
+<script src="plugins/jquery/js/jquery-1.11.3.min.js"></script>
+<script src="js/lw_housing.js"></script>
 </body>
 </html>

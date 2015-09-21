@@ -2,19 +2,22 @@
 <html>
 <head lang="en">
     <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width; initial-scale=1.0; user-scalable=no;">
     <title>注册</title>
     <link rel="stylesheet" href="plugins/bootstrap-3.3.5-dist/css/bootstrap.css"/>
     <link rel="stylesheet" href="css/main.css"/>
     <link rel="stylesheet" href="plugins/font/css/font-awesome.min.css"/>
+    <link rel="stylesheet" href="css/mobile.css?v=11"/>
     <style>
-        @media screen and (max-width: 1400px) {
-            .head-main{width: 1024px;}
-        }
         @media screen and (max-width: 768px) {
             .col-sm-7 {
                 width: 58.33333333%;
                 float: left;
             }
+        }
+
+        @media screen and (max-width: 414px) {
+            body{overflow: hidden;}
         }
     </style>
 </head>
@@ -22,53 +25,71 @@
     <div class="wrapper">
         <div class="head">
             <div class="head-main">
-                <img src="images/logo.png" alt="" class="logo"/>
-                <ul class="head-menu">
+                <div class="pc-none mobile_block">
+                            <span>
+                                <i class="glyphicon glyphicon-th-list"></i>
+                            </span>
+                    <a href="#">
+                        <img src="images/mobile-logo.png" alt="" class="login"/>
+                    </a>
+                </div>
+                <img src="images/logo.png" alt="" class="logo mobile_none"/>
+                <ul class="head-menu mobile_none">
                     <li>
-                        <a href="index.html">
-                                        <span>
-                                              <i>
-                                                  <img src="images/c-icon1.png" alt=""/>
-                                              </i>
-                                        </span>首页
+                        <a href="index.html" class="active">
+                                <span>
+                                     <i>
+                                         <img src="images/c-icon1.png" alt=""/>
+                                         <!--<i class="fa fa-home"></i>-->
+                                     </i>
+                                </span>首页
                         </a>
                     </li>
                     <li>
                         <a href="housing_trust.html">
-                                        <span>
-                                           <i>
-                                               <img src="images/c-icon2.png" alt=""/>
-                                           </i>
-                                        </span>房屋托管
+                                <span>
+                                     <i>
+                                         <img src="images/c-icon2.png" alt=""/>
+                                         <!--<i class="fa fa-bars"></i>-->
+                                     </i>
+                                </span>房屋托管
                         </a>
                     </li>
                     <li>
                         <a href="people_know.html">
-                                        <span>
-                                            <i>
-                                                <img src="images/c-icon3.png" alt=""style="position: relative;top: 1px;"/>
-                                            </i>
-                                        </span>小主须知
+                            <span>
+                                <i>
+                                    <img src="images/c-icon3.png" alt=""style="position: relative;top: 1px;"/>
+                                    <!--<i class="fa fa-book"></i>-->
+                                </i>
+                            </span>小主须知
                         </a>
                     </li>
                     <li>
                         <a href="le_mall.html">
-                                        <span>
-                                            <i>
-                                                <img src="images/c-icon4.png" alt="" style="position: relative;top: 2px;"/>
-                                            </i>
-                                        </span>乐商城
+                                 <span>
+                                     <i>
+                                         <img src="images/c-icon4.png" alt="" style="position: relative;top: 2px;"/>
+                                         <!--<i class="fa fa-shopping-cart"></i>-->
+                                     </i>
+                                 </span>乐商城
                         </a>
                     </li>
                     <li>
-                        <a href="logo.html" class="active">
-                                        <span>
-                                            <i>
-                                                <img src="images/c-icon5.png" alt=""/>
-                                            </i>
-                                        </span>用户登录
+                        <a href="logo.html">
+                                <span>
+                                    <i>
+                                        <img src="images/c-icon5.png" alt=""/>
+                                        <!--<i class="fa fa-user"></i>-->
+                                    </i>
+                                </span>用户登录
                         </a>
                     </li>
+                </ul>
+                <ul class="menu_mobile pc-none">
+                    <li><a href="index.html">首页</a></li>
+                    <li><a href="housing_trust.html">房屋托管</a></li>
+                    <li class="last"><a href="logo.html">用户登录</a></li>
                 </ul>
             </div>
         </div>
@@ -98,10 +119,10 @@
                 </div>
                 <div class="form-group">
                     <div class="col-sm-7">
-                        <input type="text" class="form-control" placeholder="请输入验证码">
+                        <input type="text" id="mobile" class="form-control" placeholder="请输入验证码">
                     </div>
                     <div>
-                        <button class="code">立即获取</button>
+                        <input type="button" id="getting" class="code" value="获取验证码">
                     </div>
                 </div>
                 <div class="form-group">
@@ -118,7 +139,48 @@
             </form>
         </div>
     </div>
-<script src="js/jquery-1.11.3.min.js"></script>
-
+<script src="plugins/jquery/js/jquery-1.11.3.min.js"></script>
+<script src="plugins/jquery/js/jquery.cookie.js"></script>
+<script src="js/lw_housing.js"></script>
+    <script>
+        $(function(){
+            /*仿刷新：检测是否存在cookie*/
+//            if($.cookie("captcha")){
+//                var count = $.cookie("captcha");
+//                var btn = $('#getting');
+//                btn.val(count+'秒后可重新获取').attr('disabled',true).css('cursor','not-allowed');
+//                var resend = setInterval(function(){
+//                    count--;
+//                    if (count > 0){
+//                        btn.val(count+'秒后可重新获取').attr('disabled',true).css('cursor','not-allowed');
+//                        btn.addClass("active");
+//                        $.cookie("captcha", count, {path: '/', expires: (1/86400)*count});
+//                    }else {
+//                        clearInterval(resend);
+//                        btn.removeClass("active");
+//                        btn.val("获取验证码").removeClass('disabled').removeAttr('disabled style');
+//                    }
+//                }, 1000);
+//            }
+            /*点击改变按钮状态，已经简略掉ajax发送短信验证的代码*/
+            $('#getting').click(function(){
+                var btn = $(this);
+                var count = 60;
+                var resend = setInterval(function(){
+                    count--;
+                    if (count > 0){
+                        btn.val(count+"秒后可重新获取");
+                        btn.addClass("active");
+                        $.cookie("captcha", count, {path: '/', expires: (1/86400)*count});
+                    }else {
+                        clearInterval(resend);
+                        btn.removeClass("active");
+                        btn.val("获取验证码").removeAttr('disabled style');
+                    }
+                }, 1000);
+                btn.attr('disabled',true).css('cursor','not-allowed');
+            });
+        });
+    </script>
 </body>
 </html>

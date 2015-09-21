@@ -1,0 +1,63 @@
+<html>
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width; initial-scale=1.0; user-scalable=no;">
+    <title></title>
+    <link rel="stylesheet" href="css/idangerous.swiper.css">
+    <link rel="stylesheet" href="css/style.css">
+    <link rel="stylesheet" href="css/swiper-demos.css">
+    <link rel="stylesheet" href="css/bootstrap.css"/>
+    <script src="js/jquery-1.11.3.min.js"></script>
+    <script src="js/idangerous.swiper-1.9.1.min.js"></script>
+    <script src="js/idangerous.swiper.scrollbar-1.2.js"></script>
+    <script src="js/swiper-demos.js"></script>
+    <style>
+        body{min-width: 320px;max-width: 640px;}
+        .main {width: 100%;border: none;background: transparent;padding: 0;max-height: 445px;}
+        .home-device {width: 100%;position: relative;box-shadow:none;height: 100%;}
+        .pagination1 {position: absolute;bottom: 2%;z-index: 10;left: 50%;margin-left: -32px;}
+        .swiper-main,.swiper-container,.swiper-wrapper,.swiper-slide{ width: 100%;height: 100%;}
+    </style>
+</head>
+<body>
+    <div role="main" class="main" id="main">
+        <div class="home-device" id="home-device">
+            <a class="arrow-left" href="#"></a>
+            <a class="arrow-right" href="#"></a>
+            <div class="swiper-main">
+                <div class="swiper-container swiper1" style="cursor: -webkit-grab;">
+                    <div id="swiper-wrapper" class="swiper-wrapper" style=" transform: translate3d(-640px, 0px, 0px); transition-duration: 0.3s;">
+                        <div class="swiper-slide">
+                            <img src="images/index-c.jpg" class="img-responsive" alt="Responsive image"/>
+
+                        </div>
+                        <div class="swiper-slide">
+                            <img src="images/index-c.jpg" class="img-responsive" alt="Responsive image"/>
+                        </div>
+                        <div class="swiper-slide">
+                            <img src="images/index-c.jpg" class="img-responsive" alt="Responsive image"/>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="pagination pagination1">
+                <span class="swiper-pagination-switch swiper-active-switch swiper-activeslide-switch"></span>
+                <span class="swiper-pagination-switch"></span>
+                <span class="swiper-pagination-switch"></span>
+            </div>
+        </div>
+    </div>
+    <script>
+        window.onload = function() {
+            var oMain = document.getElementById("main");
+            var homeDevice = document.getElementById("home-device");
+            var Osw = document.getElementById("swiper-wrapper");
+            var oImg = document.getElementsByTagName("img")[0];
+            oMain.style.height = oImg.offsetHeight + "px";
+            window.onresize = function () {
+                location = location
+            };
+        }
+    </script>
+</body>
+</html>
