@@ -12,9 +12,10 @@ a:hover{cursor: pointer;text-decoration: none;}
 /*common*/
 
 .mask{position: fixed;left: 0;right: 0;top: 0;bottom: 0;background: rgba(0,0,0,.5);z-index: 1000;color: #333;filter:alpha(opacity=50)}
-.mask-content{text-align: center;background: #fff;width: 90%;position: absolute;left: 50%;top:50%;margin-left: -45%;color: #33a9d4;padding: 3% 0 1% 0;margin-top: -15%;}
+.mask-content{text-align: center
+;background: #fff;width: 90%;position: absolute;left: 50%;top:50%;margin-left: -45%;color: #33a9d4;padding: 3% 0 1% 0;margin-top: -15%;border-radius: 4px;}
 .mask-content .title{font-weight: bold;font-size: 18px;}
-table{border-collapse:collapse;width: 90%;margin: 20px auto;background: #fff;}
+table{border-collapse:collapse;width: 90%;margin: 10px auto;background: #fff;}
 tr th{background: #dbe3e9;font-weight: 200;}
 tr th,tr td{ text-align:center;font-size: 14px;border:1px solid #3d96b0;color: #3d96b0;height: 2.6em;}
 .people-img{border-right: 80px;width: 65px;}
@@ -280,7 +281,7 @@ a:link{text-decoration: none;}
 .form-group i{position: absolute;left: 14px;top: 10px;}
 .form  input.form-control{padding-left: 30px;border-radius: 0;font-size: 12px;height: 36px;}
 .form-control[type="password"]{border-left: 4px solid #f16a20;}
-.form-group .code{width: 120px;height: 36px;line-height: 36px;text-align: center;background: #4489dc;color: #fff;float: right;}
+.form-group .code{width: 110px;height: 36px;line-height: 36px;text-align: center;background: #4489dc;color: #fff;float: right;}
 .form-group .code:hover{opacity: 0.9;filter:alpha(opacity=90);}
 .form-group .active{background: #fff;color: #999;}
 input.btn-click{background: #f16a20;font-size: 12px;color: #fff;border-radius: 10px;padding-left: 0;}
@@ -308,7 +309,7 @@ input.btn-click:hover{background: #e16a20}
 .div-bg .step li{float: left;width: 14.25%;color: #fff;}
 .div-bg .step li img{margin: 20px 0;}
 .div-bg .type{font-size: 18px;color: #fff;padding: 5px 10px;border: 1px solid #fff;display: inline-block;width: 500px;margin: 20px 0;}
-
+.deposit{border-radius: 5px;}
 
 
 /*person-information*/
@@ -381,11 +382,11 @@ input.btn-click:hover{background: #e16a20}
 
 
 /*media*/
-
 @media screen and (max-width: 1600px) {
     .activity{padding-bottom: 15%;position: relative;}
     .w96{padding: 0 2%;}
 }
+
 @media screen and (min-width: 1400px) {
     .head,.content,.footer{min-width: 1400px;}
     body{overflow-x: hidden;}
@@ -413,10 +414,6 @@ input.btn-click:hover{background: #e16a20}
     .pc-none{display: none;}
 }
 
-
-@media screen and (max-width: 414px) {
-    .logBg,.logWrap{width: 320px;height: 380px;margin: -160px 0 0 -160px;}
-    .logReg,.logRegs{height: 420px;margin-top: -180px;}
+@media screen and (max-width: 640px) {
+    .mask-content{margin-top: -45%;}
 }
-
-
