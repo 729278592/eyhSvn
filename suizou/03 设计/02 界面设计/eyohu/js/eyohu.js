@@ -66,7 +66,7 @@ $(function() {
     }
 
 
-    $(".animate").css({"background":"#000","opacity":"0.5"})
+    $(".animate").css({"background":"rgba(0,0,0,0.5)"});
     $("#imgfor_con_roll>a").each(function(){
         $(this).hover(
             function(){
