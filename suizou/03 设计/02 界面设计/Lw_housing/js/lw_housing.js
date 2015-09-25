@@ -17,8 +17,8 @@ $(function(){
         mm.css({"display": "none"});
         mm.animate(mml.animate({"width": "0%"}));
     });
-    var winH = $(window).height();
-    if(winH<600){
-        $(".footer").css({"position":"relative","marginTop":"20px"});
-    }
+//    var winH = $(window).height();
+//    if(winH<600){
+//        $(".footer").css({"position":"relative","marginTop":"20px"});
+//    }
 });

@@ -1,10 +1,10 @@
 @charset "utf-8";
-@media screen and (max-width: 640px) {
+@media screen and (max-width: 639px) {
     html{max-width: 640px;}
     body{max-width: 640px;min-width: 310px;}
     .wrapper{width: 100%;}
     .head{width: 100%;}
-    .head-main{width: 96%;height: 100%;max-width: 640px;}
+    .head-main{width: 98%;height: 100%;max-width: 640px;padding: 0 0px;}
     .head-main>div{text-align: center;}
     .head-main .glyphicon{color: #fff;float: left;position: relative;top: 22px;}
     .login{width: 70px;}
@@ -15,6 +15,7 @@
     .menu_mobile .last a {border-bottom: none;}
     .mobile_w80{width: 100%;left: 0;margin-left: 0;margin-top: 0;}
     .mobile_w80>li{width: 100%;}
+    .w80>li .img{opacity: 100;filter:alpha(opacity=100);}
     .rb-span,.rt-span,.lt-span{display: inline-block;width: 90px;height: 30px;background: #fff;text-align: center;line-height: 31px;color: #fc924e;font-size: 18px;border-radius: 4px;}
     .activity .title{color: #55340e;top: 20%;font-size: 18px;text-indent: 25px;}
     .mobile_iu li{width: 100%;}
@@ -35,14 +36,45 @@
     .pc_deatils{width: 100%;margin-left: 0;position: relative;z-index: 100;font-size: 16px;max-width: 640px;height: 260px;}
     .pc_deatils li{border-bottom: 1px dashed #dbdbdb; padding: 10px 2%;width: 96%;position: relative;}
     .pc_deatils .staging{right: 0%;}
-    .tool{padding-left: 10%;text-align: left;margin-top: 1%;}
+    .tool{;text-align: left;margin-top: 1%;}
     .mobile_w80>.title{display:inline-block;width: 100%;height: 50px;line-height: 50px;background: #fff;text-align: center;color: #fba511;font-size: 20px;}
-    .tool .tool-group{width: 32.1%;margin-bottom: 1.5%;text-align: left;margin-left: .1%;}
+    .tool .tool-group{width: 32.1%;margin-bottom: 3.5%;text-align: center;margin-left: .1%;}
+    .tool .tool-group span{display: block;}
     .room{width: 100%;}
     .room li{width: 100%;}
+    .room-top1  .deatils{text-align: left;padding-left: 2%;width: 55%;float: left;}
+    .room-top2 .deatils{text-align: left;width: 145px;float: right;margin-right: 1%;}
     .room-left>div{margin-top: -90%;}
     .room-left .people-img{width: 50%;}
-    .room-information li{padding-top: 85px;}
+    .room-top .right,.room-top .left{margin: 10px 0;}
+    .room-top .deatils{position: relative;top: 20px;}
+    .room-top1 .people {
+        float: right;
+        margin-top: 1%;
+        margin-right: 15%;
+    }
+    .room-top2 .people {
+
+        margin-left: 13%;
+    }
+    .room-top .right .spans-img {
+        position: static;
+        display: inline-block;;
+
+        width: 85px;
+        float: right;
+        margin-right: 5%;
+    }
+    .room-top .left .spans-img {
+        position: static;
+        display: inline-block;;
+
+        width: 85px;
+        float: left;
+        margin-left: 10%;
+    }
+    .activity .item-b .main {font-size: 16px;}
+    .room-information li{padding-top: 115px;}
     .btn-fast{width: 180px;height: 60px;line-height: 60px;text-align: center;color: #fff;font-size: 20px;border-radius: 10px;background: #fba511;margin: 20px auto;display: block;}
     .footer{width: 100%;min-width: 320px;}
     .footer .fr{width: 90%;margin-left: 5%;position: relative;top: 10px;}
@@ -50,8 +82,8 @@
     .footer .fl ul {width: 240px;}
     .footer .fl ul li{width: 33.3%;}
     .mobile_none{display: none;!important;}
-    .input-search{position: absolute;top: 120px;left: 50%;z-index: 500;margin-left: -150px;width: 290px}
-    .content-right{width: 100%;z-index: 0;top: 60px;}
+    .input-search{position: absolute;top: 55px;z-index: 500;width: 100%;max-width: 640px;}
+    .content-right{width: 100%;z-index: 0;top: 95px;}
     .w-top{width: 100%;height: 70px;background: #fff;}
     .w-top li{float: left;width: 33.3%;border: none;height: 70px;}
     .w-top li a{width: 100%;height: 100%;text-align: center;display: inline-block;color: #666;}
@@ -72,7 +104,7 @@
     .pay li .span-img{display: inline-block;width: 20%;text-align: center;}
     .div-group .ziliao{width: 15%;}
     .content-head{position: relative;height: 320px;}
-    .content-head .pc-img{min-height: 320px;}
+    .content-head .mobile-img{min-height: 320px;max-height: 320px;width: 100%;}
     .mobile-ch{width: 100%;max-width: 640px;}
     .ch-mask{height: 80px;}
     .ch-mask-main{width: 90%;margin-left: -45%;bottom: 7%;}
@@ -82,6 +114,9 @@
     .head-main{width: 90%;}
     .room-left>div{margin-top: -50%;}
     .room-left .people-img{width: 45%;}
+    .mask-content{margin-top: 100px;}
+    .logBg, .logWrap{width: 320px;margin: -160px -160px;}
+    .logReg, .logRegs{margin-top: -180px;}
 }
 
 

@@ -96,9 +96,9 @@ window.onload = function() {
         oMain.style.height = oImg.offsetHeight + "px";
         homeDevice.style.height = oImg.offsetHeight + "px";
         Osw.style.height = oImg.offsetHeight + "px";
-        window.onresize = function () {
-            location.reload()
-        };
+//        window.onresize = function () {
+//            location.reload()
+//        };
 //        function init(){
 //            for (var i=0; i<oDiv.length; i++) {
 //                run(i)

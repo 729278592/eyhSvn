@@ -2,7 +2,9 @@
 <html>
 <head lang="en">
     <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width; initial-scale=1.0; user-scalable=no;">
+    <meta content="width=device-width,minimum-scale=1.0,maximum-scale=1.0,user-scalable=no" name="viewport" />
+
+
     <title>房屋搜索</title>
     <link rel="stylesheet" href="plugins/bootstrap-3.3.5-dist/css/bootstrap.css"/>
     <link rel="stylesheet" href="css/main.css?v=21"/>
@@ -16,6 +18,10 @@
         .ui-slider-horizontal .ui-slider-handle {top: -7px;}
         .ui-slider-horizontal .ui-slider-handle:hover{cursor: pointer;}
         .slider {margin: 12px 5px;}
+        @media screen and (max-width: 640px) {
+
+        }
+
     </style>
 </head>
 <body>
@@ -84,11 +90,11 @@
                 </ul>
                 <ul class="menu_mobile pc-none">
                     <li><a href="index.html">首页</a></li>
-                    <li><a href="housing_trust.html">房屋托管</a></li>
-                    <li class="last"><a href="logo.html">用户登录</a></li>
+                    <li class="last"><a href="logo.html">个人中心</a></li>
                 </ul>
             </div>
         </div>
+        <div class="pc-none" style="width: 100%;height: 36px;background: rgba(164,196,237,.8);"></div>
         <div class="content" id="content">
             <div class="content-left mobile_none">
                 <ul class="ul-information">
@@ -358,12 +364,9 @@
                 </ul>
             </div>
             <div class="content-right">
-                <div id="allmap" style="width: 100%;height: 100%;">
-
-                </div>
+                <div id="allmap" style="width: 100%;height: 100%;"></div>
             </div>
         </div>
-
         <div class="footer clearfix mobile_none" id="footer">
             <div class="fl">
                 <ul>
