@@ -3,14 +3,14 @@
     html{max-width: 640px;}
     body{max-width: 640px;min-width: 310px;}
     .wrapper{width: 100%;}
-    .head{width: 100%;}
+    .head{width: 100%;background: rgba(164,196,237,.8)}
     .head-main{width: 98%;height: 100%;max-width: 640px;padding: 0 0px;}
     .head-main>div{text-align: center;}
     .head-main .glyphicon{color: #fff;float: left;position: relative;top: 22px;}
     .login{width: 70px;}
     .menu_mobile {margin-left: -100%;display: none;position: fixed;left: 0;right: 0;top: -3px;bottom: 0;background: rgba(0,0,0,.5);z-index: 9999;}
     .menu_mobile li {width: 0;height: 50px;}
-    .menu_mobile li a {display: inline-block;width: 100%;height: 50px;line-height: 50px;font-size: 16px;color: #fff;border-bottom: 1px solid #aaa;background: rgba(0,0,0,.8);text-align: center;}
+    .menu_mobile li a {display: inline-block;width: 100%;height: 50px;line-height: 50px;font-size: 14px;color: #fff;border-bottom: 1px solid #aaa;background: rgba(0,0,0,.8);text-align: center;}
     .menu_mobile li a:hover{text-decoration: none;}
     .menu_mobile .last a {border-bottom: none;}
     .mobile_w80{width: 100%;left: 0;margin-left: 0;margin-top: 0;}
@@ -33,14 +33,14 @@
     .bridge li span{font-size: 16px;display: inline-block;width: 50%;}
     .bridge li .xian{position: absolute;top: 0;right: 0;height: 100%;width: 5px;}
     .bridge li.last{margin-right: 0;}
-    .pc_deatils{width: 100%;margin-left: 0;position: relative;z-index: 100;font-size: 16px;max-width: 640px;height: 260px;}
-    .pc_deatils li{border-bottom: 1px dashed #dbdbdb; padding: 10px 2%;width: 96%;position: relative;}
+    .pc_deatils{width: 100%;margin-left: 0;position: relative;z-index: 100;font-size: 16px;max-width: 640px;height: 310px;}
+    .pc_deatils li{border-bottom: 1px dashed #dbdbdb; padding: 10px 2%;width: 100%;position: relative;}
     .pc_deatils .staging{right: 0%;}
-    .tool{;text-align: left;margin-top: 1%;}
+    .tool{text-align: left;margin-top: .1%;}
     .mobile_w80>.title{display:inline-block;width: 100%;height: 50px;line-height: 50px;background: #fff;text-align: center;color: #fba511;font-size: 20px;}
     .tool .tool-group{width: 32.1%;margin-bottom: 3.5%;text-align: center;margin-left: .1%;}
     .tool .tool-group span{display: block;}
-    .room{width: 100%;}
+    .room{width: 100%;margin-bottom: 0;}
     .room li{width: 100%;}
     .room-top1  .deatils{text-align: left;padding-left: 2%;width: 55%;float: left;}
     .room-top2 .deatils{text-align: left;width: 145px;float: right;margin-right: 1%;}
@@ -74,7 +74,7 @@
         margin-left: 10%;
     }
     .activity .item-b .main {font-size: 16px;}
-    .room-information li{padding-top: 115px;}
+    .room-information li{padding-top: 105px;}
     .btn-fast{width: 180px;height: 60px;line-height: 60px;text-align: center;color: #fff;font-size: 20px;border-radius: 10px;background: #fba511;margin: 20px auto;display: block;}
     .footer{width: 100%;min-width: 320px;}
     .footer .fr{width: 90%;margin-left: 5%;position: relative;top: 10px;}
@@ -82,6 +82,7 @@
     .footer .fl ul {width: 240px;}
     .footer .fl ul li{width: 33.3%;}
     .mobile_none{display: none;!important;}
+    .pc_deatils  .mobile-last{border-bottom: none;}
     .input-search{position: absolute;top: 55px;z-index: 500;width: 100%;max-width: 640px;}
     .content-right{width: 100%;z-index: 0;top: 95px;}
     .w-top{width: 100%;height: 70px;background: #fff;}
