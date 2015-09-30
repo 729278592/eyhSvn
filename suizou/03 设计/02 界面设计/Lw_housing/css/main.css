@@ -281,9 +281,10 @@ a:link{text-decoration: none;}
 .form .fa{font-size: 16px;}
 .form .form-group{height: 34px;}
 .form .form-group .check{color: #666;}
+.form-group1{position: relative;top: -25px;}
 .form-group .col-sm-12,.form-group .col-sm-7{position: relative;padding:0;}
 .col-sm-7{padding: 0;}
-.form-group i{position: relative;top: -25px;left: 15px;}
+.form-group i{position: relative;top: 25px;left: 15px;}
 .form  input.form-control{padding-left: 30px;border-radius: 0;font-size: 12px;height: 36px;}
 .form-control[type="password"]{border-left: 4px solid #f16a20;}
 .form-group .code{width: 110px;height: 36px;line-height: 36px;text-align: center;background: #4489dc;color: #fff;float: right;}
