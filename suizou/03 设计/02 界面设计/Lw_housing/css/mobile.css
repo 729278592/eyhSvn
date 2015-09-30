@@ -98,6 +98,7 @@
     .caret-ul li{width: 33.333%;float: left;text-align: center;visibility: hidden;}
     .caret-ul li.active{visibility: visible;}
     .input-group,.select-group{width: 78%;background: #e7f1fd;}
+    .div-group .select{width: 20%;}
     .span-group {width: 20%;}
     .p-group{padding: 0 3%;}
     .p-group.title{font-size: 18px;color: #445c75;}

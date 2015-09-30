@@ -165,7 +165,7 @@
                             <li><img src="images/top-img.png" alt=""/></li>
                             <li><img src="images/top-img.png" alt=""/></li>
                         </ul>
-                        <div class="div-group mobile_none" style="height: 30px;border-bottom: 1px solid #dbdbdb;">
+                        <div class="div-group mobile_none" style="height: 31px;border-bottom: 1px solid #dbdbdb;">
                             <span class="infomation ">
                                 个人资料
                             </span>
@@ -195,23 +195,29 @@
                             <input type="radio" name="sex" checked/>男
                             <input type="radio" name="sex""/>女
                         </div>
+
+
+                        <!--<div class="div-group">-->
+                            <!--<span class="span-group">生日</span>-->
+                            <!--<select name="" id="" class="select">-->
+                                <!--<option value="年">年</option>-->
+                                <!--<option value="2015">2015</option>-->
+                                <!--<option value="2014">2014</option>-->
+                            <!--</select>-->
+                            <!--<select name="" id="" class="select">-->
+                                <!--<option value="月">月</option>-->
+                                <!--<option value="5">5</option>-->
+                                <!--<option value="4">4</option>-->
+                            <!--</select>-->
+                            <!--<select name="" id="" class="select">-->
+                                <!--<option value="日">日</option>-->
+                                <!--<option value="20">20</option>-->
+                                <!--<option value="19">19</option>-->
+                            <!--</select>-->
+                        <!--</div>-->
                         <div class="div-group">
                             <span class="span-group">生日</span>
-                            <select name="" id="" class="select">
-                                <option value="年">年</option>
-                                <option value="2015">2015</option>
-                                <option value="2014">2014</option>
-                            </select>
-                            <select name="" id="" class="select">
-                                <option value="月">月</option>
-                                <option value="5">5</option>
-                                <option value="4">4</option>
-                            </select>
-                            <select name="" id="" class="select">
-                                <option value="日">日</option>
-                                <option value="20">20</option>
-                                <option value="19">19</option>
-                            </select>
+                            <input type="text" class="input-group input-group-time" value=""  onClick="WdatePicker()"/>
                         </div>
                         <div class="div-group">
                             <span class="span-group">居住地</span>
@@ -266,5 +272,6 @@
 
 <script src="plugins/jquery/js/jquery-1.11.3.min.js"></script>
 <script src="js/lw_housing.js"></script>
+<script src="plugins/My97DatePicker/WdatePicker.js"></script>
 </body>
 </html>
