@@ -1,20 +1,19 @@
 <!DOCTYPE html>
 <html>
 <head lang="en">
+    <title>注册</title>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width; initial-scale=1.0; user-scalable=no;">
     <meta content="width=device-width,minimum-scale=1.0,maximum-scale=1.0,user-scalable=no" name="viewport" />
-
-    <title>注册</title>
     <link rel="stylesheet" href="plugins/bootstrap-3.3.5-dist/css/bootstrap.css"/>
     <link rel="stylesheet" href="css/main.css"/>
     <link rel="stylesheet" href="plugins/font/css/font-awesome.min.css"/>
+
     <link rel="stylesheet" href="css/mobile.css?v=11"/>
     <style>
         @media screen and (max-width: 768px) {
             .col-sm-7 {width: 58.33333333%;float: left;}
         }
-
     </style>
 </head>
 <body>
@@ -88,53 +87,57 @@
         <div class="logBg logReg"></div>
         <div class="logWrap logRegs">
             <form class="form" onsubmit="return false">
-                <p class="title">注册</p>
-                <div class="form-group form-group1">
-                    <div class="col-sm-12">
-                        <i class="fa fa-phone"></i>
-                        <input type="text" class="form-control"  placeholder="请输入您的昵称">
+                <div class="form-body">
+                    <p class="title">注册</p>
+                    <div class="form-group">
+                        <div class="col-sm-12">
+                            <i class="fa fa-phone"></i>
+                            <input type="text" class="form-control input-icon"  placeholder="请输入您的昵称">
+                        </div>
+                    </div>
+                    <div class="form-group">
+                        <div class="col-sm-12">
+                            <i class="fa fa-lock"></i>
+                            <input type="password" class="form-control input-icon" placeholder="请输密码">
 
+                        </div>
                     </div>
-                </div>
-                <div class="form-group form-group1">
-                    <div class="col-sm-12">
-                        <i class="fa fa-lock"></i>
-                        <input type="password" class="form-control" placeholder="请输密码">
+                    <div class="form-group">
+                        <div class="col-sm-12">
+                            <i class="fa fa-lock"></i>
+                            <input type="passwordrecord" class="form-control input-icon" placeholder="请再次输密码">
 
+                        </div>
                     </div>
-                </div>
-                <div class="form-group form-group1">
-                    <div class="col-sm-12">
-                        <i class="fa fa-lock"></i>
-                        <input type="passwordrecord" class="form-control" placeholder="请再次输密码">
-
+                    <div class="form-group">
+                        <div class="col-sm-7">
+                            <input type="text" id="mobile" class="form-control" placeholder="请输入验证码">
+                        </div>
+                        <div>
+                            <input type="button" id="getting" class="code" value="获取验证码">
+                        </div>
                     </div>
-                </div>
-                <div class="form-group">
-                    <div class="col-sm-7">
-                        <input type="text" id="mobile" class="form-control" placeholder="请输入验证码">
+                    <div class="form-group">
+                        <input type="checkbox"/>我已阅读并接受 <a href="#">《网站注册服务条款》</a>
                     </div>
-                    <div>
-                        <input type="button" id="getting" class="code" value="获取验证码">
+                    <div class="form-group">
+                        <div class="col-sm-12 ">
+                            <input type="submit" class="form-control btn-click" value="立即注册">
+                        </div>
                     </div>
-                </div>
-                <div class="form-group">
-                    <input type="checkbox"/>我已阅读并接受 <a href="#">《网站注册服务条款》</a>
-                </div>
-                <div class="form-group">
-                    <div class="col-sm-12 ">
-                        <input type="submit" class="form-control btn-click" value="立即注册">
+                    <div class="form-group">
+                        <a href="logo.html" class="right">已有账号? 立刻登录</a>
                     </div>
-                </div>
-                <div class="form-group">
-                    <a href="logo.html" class="right">已有账号? 立刻登录</a>
                 </div>
             </form>
+
         </div>
     </div>
 <script src="plugins/jquery/js/jquery-1.11.3.min.js"></script>
 <script src="plugins/jquery/js/jquery.cookie.js"></script>
 <script src="js/lw_housing.js"></script>
+    <script src="plugins/bootstrap-3.3.5-dist/js/bootstrap.min.js"></script>
+
     <script>
         $(function(){
             /*仿刷新：检测是否存在cookie*/
