@@ -95,12 +95,12 @@ a:link{text-decoration: none;}
 #myCarousel .carousel-control.left{left: -55px;background-image: none;}
 #myCarousel .carousel-control.right{right: -55px;background-image: none;}
 
-.myCarousel1{width: 80%;height:80%;position: absolute;left: 50%;top:50%;margin-left: -40%;margin-top: -20%;}
+.myCarousel1{width: 80%;position: absolute;left: 50%;top:50%;margin-left: -40%;margin-top: -15%;}
 .myCarousel1{background: url("../images/myCarousel1-bg.jpg")no-repeat center center;background-size: cover;margin-bottom: 1.01%;border-radius: 4px;}
 .myCarousel1 .carousel-control {position: absolute;top: 45%;width: 39px;height: 76px;text-align: center;}
 .myCarousel1>img{width: 80%;}
 .myCarousel1 .carousel-inner{width: 80%;height: 80%;background: #d5e9f9;position: relative;left: 50%;margin: 5% -40%;}
-.myCarousel1 .item .img{margin: 2% 0 16%;position: relative;left: 2%;display: none;width: 40%;}
+.myCarousel1 .item .img{margin: 2% 0;position: relative;left: 2%;display: none;width: 40%;}
 .myCarousel1 .item .describe{position: absolute;top: -20%;left:44%;color: #666;width: 54%;}
 .myCarousel1 .item .describe .title{font-size: 16px;position: relative;top: -10px;color: #3b3b3b;}
 .myCarousel1 .item .describe .color{color: #fcaf05;}
@@ -244,7 +244,7 @@ a:link{text-decoration: none;}
 .furniture .title{color: #3b5991;}
 .furniture .tool-group{color: #3b5991;}
 .furniture .tool-group img{width: 41px;}
-.room{width: 80%;margin-bottom: 10px;display: inline-block;}
+.room{width: 79.7%;margin-bottom: 10px;display: inline-block;}
 .room-group{width: 100%;}
 .room-information{width: 100%;}
 .room-information li{float: left;margin-top: 1%;margin-right: 1%;position: relative;}
