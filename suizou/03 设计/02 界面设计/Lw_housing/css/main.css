@@ -70,6 +70,13 @@ a:link{text-decoration: none;}
 .out-housing{position:absolute;top: 0;left: 0;right: 0;background: #efefef;border-bottom: none;padding: 3% 0;text-align: center;}
 .out-housing a img{border-radius: 80px;margin-bottom: 6px;width: 55px;}
 .out-housing .deatils{color: #55340e;font-size: 12px;}
+.out-housing .deatils-span{display: inline-block;width: 186px;height: 3em;
+    margin: 1em;}
+
+.deatils-span p {
+    margin: 0;
+    line-height: 1.5em;
+}
 .out-housing .address{color: #55340e;font-size: 16px;}
 .out-housing .caret-top{width: 0;height: 0;border: 15px solid #efefef;border-right-color: transparent;border-bottom-color: transparent;border-left-color: transparent;position: absolute;bottom: -30px;left: 50%;margin-left: -7px;}
 .item-ul{width: 100%;}

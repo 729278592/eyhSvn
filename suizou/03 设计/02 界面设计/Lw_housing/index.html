@@ -116,8 +116,9 @@
                                 </a>
                                 <span class="address">金科十年城</span>
                                 <p class="deatils">
-                                    <span>周边结合了购物.超市.医疗交通便利</span><br/>
-                                    <span>邻里之间关系和谐</span>
+                                    <div class="deatils-span">
+                                        <p>周边结合了购物.超市.医疗交通便利邻里之间关系和谐</p>
+                                    </div>
                                 </p>
                                 <div class="caret-top"></div>
                             </div>
@@ -144,8 +145,9 @@
                                 </a>
                                 <span class="address">大溪沟</span>
                                 <p class="deatils">
-                                    <span>低调复古的房间，回到家中，一本好书</span><br/>
-                                    <span>放你忘掉一天的烦劳</span>
+                                    <div class="deatils-span">
+                                        <p>低调复古的房间，回到家中，一本好书放你忘掉一天的烦劳</p>
+                                    </div>
                                 </p>
                                 <div class="caret-top"></div>
                             </div>
@@ -160,8 +162,9 @@
                                 </a>
                                 <span class="address">照母山</span>
                                 <p class="deatils">
-                                    <span>低调复古的房间，回到家中，一本好书</span><br/>
-                                    <span>放你忘掉一天的烦劳</span>
+                                    <div class="deatils-span">
+                                        <p>低调复古的房间，回到家中，一本好书放你忘掉一天的烦劳</p>
+                                    </div>
                                 </p>
                                 <div class="caret-top"></div>
                             </div>
@@ -760,11 +763,9 @@
     <script>
         $(function() {
             var ml = $(".mobile_iu li");
-
             m = $(".myCarousel1"),
                 mi = $(".myCarousel1 .item"),
                 mid = $(".myCarousel1 .item .describe");
-
             ml.each(function (i) {
                 $(this).on("click", function () {
 
@@ -785,7 +786,16 @@
                     });
                 });
             });
+
+            $(".deatils-span").each(function(i){
+                var divH = $(this).height();
+                var $p = $("p", $(this)).eq(0);
+                while ($p.outerHeight() > divH) {
+                    $p.text($p.text().replace(/(\s)*([a-zA-Z0-9]+|\W)(\.\.\.)?$/, "..."));
+                }
+            });
         })
     </script>
+
 </body>
 </html>
