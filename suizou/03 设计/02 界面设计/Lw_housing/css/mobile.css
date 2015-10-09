@@ -16,7 +16,7 @@
     .mobile_w80{width: 100%;left: 0;margin-left: 0;margin-top: 0;}
     .mobile_w80>li{width: 100%;}
     .w80>li .img{opacity: 100;filter:alpha(opacity=100);}
-    .rb-span,.rt-span,.lt-span{display: inline-block;width: 90px;height: 30px;background: #fff;text-align: center;line-height: 31px;color: #fc924e;font-size: 18px;border-radius: 4px;}
+    .rb-span,.rt-span,.lt-span{display: inline-block;width: 90px;height: 30px;background: #fff;text-align: center;line-height: 31px;color: #fc924e;font-size: 16px;border-radius: 4px;}
     .activity .title{color: #55340e;top: 20%;font-size: 18px;text-indent: 25px;}
     .mobile_iu li{width: 100%;}
     .activity .item-b{height: 50px;line-height: 50px;}
@@ -49,31 +49,10 @@
     .room-left .people-img{width: 50%;}
     .room-top .right,.room-top .left{margin: 10px 0;}
     .room-top .deatils{position: relative;top: 20px;}
-    .room-top1 .people {
-        float: right;
-        margin-top: 1%;
-        margin-right: 15%;
-    }
-    .room-top2 .people {
-
-        margin-left: 13%;
-    }
-    .room-top .right .spans-img {
-        position: static;
-        display: inline-block;;
-
-        width: 85px;
-        float: right;
-        margin-right: 5%;
-    }
-    .room-top .left .spans-img {
-        position: static;
-        display: inline-block;;
-
-        width: 85px;
-        float: left;
-        margin-left: 10%;
-    }
+    .room-top1 .people {float: right;margin-top: 1%;margin-right: 15%;}
+    .room-top2 .people {margin-left: 13%;}
+    .room-top .right .spans-img {position: static;display: inline-block;width: 85px;float: right;margin-right: 5%;}
+    .room-top .left .spans-img {position: static;display: inline-block;width: 85px;float: left;margin-left: 10%;}
     .activity .item-b .main {font-size: 16px;}
     .room-information li{padding-top: 105px;}
     .btn-fast{width: 180px;height: 60px;line-height: 60px;text-align: center;color: #fff;font-size: 20px;border-radius: 10px;background: #fba511;margin: 20px auto;display: block;}
@@ -107,13 +86,12 @@
     .pay li .span-img{display: inline-block;width: 20%;text-align: center;}
     .div-group .ziliao{width: 15%;}
     .content-head{position: relative;height: 320px;}
-    .content-head .mobile-img{min-height: 320px;max-height: 320px;width: 100%;}
+    .content-head .mobile-img{min-height: 320px;max-height: 320px;width: 100%;height:320px;}
     .mobile-ch{width: 100%;max-width: 640px;}
     .ch-mask{height: 80px;}
     .ch-mask-main{width: 90%;margin-left: -45%;bottom: 7%;}
     .ch-mask-main .form-control{width: 75%;}
     .ch-mask-main .btn-group{width: 20%;}
-    .footer{margin-top: -1px;}
     .head-main{width: 90%;}
     .room-left>div{margin-top: -50%;}
     .room-left .people-img{width: 45%;}
@@ -121,11 +99,12 @@
     .logBg, .logWrap{width: 320px;margin: -160px -160px;}
     .logReg, .logRegs{margin-top: -180px;}
     .mask .box{left: 0;margin-left: 0;}
+    .comon-head{line-height: 50px;}
+
+    .shop-list{margin-left: 0;}
+    .shop-list li{width: 100%;margin-right: 0%;}
 
 }
-
-
-
 
 @media screen and (max-width: 420px) {
     .bridge li span{width: 60%;font-size: 14px;}

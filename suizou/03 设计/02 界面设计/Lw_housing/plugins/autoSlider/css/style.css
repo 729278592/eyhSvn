@@ -29,4 +29,5 @@ p{word-wrap:break-word}
 @media screen and (max-width: 640px) {
     .silder .silder_list .mobile-img{display:inline-block;float:left;}
     .silder .silder_list .pc-img{display:none;}
+    .silder .silder_page{bottom: 90px;}
 }

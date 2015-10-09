@@ -43,12 +43,11 @@ input,button{outline: none;border: none;}
 a:link{text-decoration: none;}
 
 
-
 /*index*/
-.content-head{position: relative;height: 550px;}
-.content-head .pc-img{min-height: 550px;}
+.content-head{position: relative;height: 500px;}
+.content-head .pc-img{min-height: 500px;}
 .ch-mask{position: absolute;bottom: 0;left: 0;right: 0;background: #000;opacity: 0.4;filter:alpha(opacity=40);height: 20%;}
-.ch-mask-main{width: 40%;position: absolute;bottom: 4%;left: 50%;margin-left: -20%;}
+.ch-mask-main{width: 40%;position: absolute;bottom: 4%;left: 50%;margin-left: -20%;z-index: 1000;}
 .ch-mask-main .form-control{width: 84%;display: inline-block;color: #bd925d;font-size: 14px;height: 40px;}
 .ch-mask-main .btn-group{width: 13%;float: right;background: #fb924d;color: #fff;height: 40px;line-height: 25px;position: relative;left: -7px;}
 .ch-mask-main .btn-group:hover{opacity: 0.9;filter:(aplha=80);}
@@ -94,7 +93,6 @@ a:link{text-decoration: none;}
 #myCarousel .carousel-control {position: absolute;top: 53%;width: 39px;height: 76px;margin-top: -20px;font-size: 60px;font-weight: 100;line-height: 22px;color: #fff;text-align: center;background: transparent;}
 #myCarousel .carousel-control.left{left: -55px;background-image: none;}
 #myCarousel .carousel-control.right{right: -55px;background-image: none;}
-
 .myCarousel1{width: 80%;position: absolute;left: 50%;top:50%;margin-left: -40%;margin-top: -15%;}
 .myCarousel1{background: url("../images/myCarousel1-bg.jpg")no-repeat center center;background-size: cover;margin-bottom: 1.01%;border-radius: 4px;}
 .myCarousel1 .carousel-control {position: absolute;top: 45%;width: 39px;height: 76px;text-align: center;}
@@ -214,9 +212,8 @@ a:link{text-decoration: none;}
 /*le_mall*/
 .shop-list{width: 100%;margin-left: 1%;}
 .shop-list li{width: 31.33%;margin-right: 2%;float: left;margin-top: 1.7%;}
-.shop-list li a{display: inline-block;width: 100%;position: relative;height: 365px;}
-.shop-list li a img:hover{
-    opacity: 0.8;}
+.shop-list li a{display: inline-block;width: 100%;position: relative;}
+.shop-list li a img:hover{opacity: 0.8;}
 .shop-list li a .item-b{padding: 1% 2%;position: absolute;}
 .shop-list li a .item-b .main{width: 100%;color: #666;font-size: 12px;}
 .shop-list li a .item-b .main .title{color: #333;font-size: 14px;}
@@ -226,7 +223,6 @@ a:link{text-decoration: none;}
 
 
 /*housing_information*/
-
 .pc_deatils{margin-left: 990px;padding: 0 10px;height: 478px;position: absolute;top: 0;}
 .pc_deatils li{border-bottom: 1px dashed #dbdbdb; padding: 13px 0;position: relative;}
 .pc_deatils li .title{font-size: 16px;color: #333;font-weight: bold;}
@@ -252,7 +248,7 @@ a:link{text-decoration: none;}
 .room-information li{float: left;margin-top: 1%;margin-right: 1%;position: relative;}
 .room-information2 li{width: 49%;}
 .room-information3 li{width: 32.33%;}
-.room-left{position: absolute;left: 0;height: 100%;padding: 0 2%;background: #edeff5;top: 0;text-align: center;border: 1px solid #addced;border-right: none;}
+.room-left{position: absolute;left: 0;height: 100%;padding: 0 2%;background: #edeff5;top: 0;text-align: center;border: 1px solid #addced;border-right: none;width: 170px;}
 .room-left>div{position: relative;top: 50%;margin-top: -67%;}
 .room-left .yuyue,.room-top .yuyue{width: 80px;height: 25px;line-height: 25px;text-align: center;background: #fba511;color: #fff;border-radius: 3px;font-size: 12px;display: inline-block;}
 .room-top{position: absolute;top: 0;width: 100%;background: #edeff5;padding-right: 1%;border: 1px solid #addced;border-bottom: none;}

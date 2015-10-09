@@ -2,73 +2,96 @@
 <html>
 <head lang="en">
     <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width; initial-scale=1.0; user-scalable=no;">
     <title>乐商城</title>
     <link rel="stylesheet" href="plugins/bootstrap-3.3.5-dist/css/bootstrap.css"/>
     <link rel="stylesheet" href="css/main.css"/>
+    <link rel="stylesheet" href="css/mobile.css"/>
     <style>
         html,.wrapper{background: #f6f6f6;}
         .footer{position: absolute;bottom: 0;}
         @media screen and (max-width: 1400px){
-            .head,.content,.footer{min-width: 1100px;}
+
             .w80{width: 1100px;margin-left: -550px;}
+        }
+        @media screen and (max-width: 640px){
+            html{overflow: hidden;}
+            .content,.footer{max-width: 640px;width: 100%;}
+            .w80{max-width: 640px;width: 100%;margin-left: 0;left: 0;}
         }
     </style>
 </head>
 <body>
 <div class="wrapper">
     <div class="head">
-        <div class="head-main">
-            <img src="images/logo.png" alt="" class="logo"/>
-            <ul class="head-menu">
-                <li>
-                    <a href="index.html">
+    <div class="head-main">
+        <div class="pc-none mobile_block">
+                            <span>
+                                <i class="glyphicon glyphicon-th-list"></i>
+                            </span>
+            <a href="#">
+                <img src="images/mobile-logo.png" alt="" class="login"/>
+            </a>
+        </div>
+        <img src="images/logo.png" alt="" class="logo mobile_none"/>
+        <ul class="head-menu mobile_none">
+            <li>
+                <a href="index.html">
                         <span>
                              <i>
                                  <img src="images/hh1.png" alt=""/>
                              </i>
                         </span>首页
-                    </a>
-                </li>
-                <li>
-                    <a href="housing_trust.html">
+                </a>
+            </li>
+            <li>
+                <a href="housing_trust.html">
                                     <span>
                                        <i>
                                            <img src="images/hh2.png" alt=""/>
                                        </i>
                                     </span>房屋托管
-                    </a>
-                </li>
-                <li>
-                    <a href="people_know.html">
+                </a>
+            </li>
+            <li>
+                <a href="people_know.html">
                                     <span>
                                         <i>
                                             <img src="images/hh3.png" alt=""/>
                                             <!--<img src="images/c-icon3.png" alt=""style="position: relative;top: 1px;"/>-->
                                         </i>
                                     </span>小主须知
-                    </a>
-                </li>
-                <li>
-                    <a href="le_mall.html" class="active">
+                </a>
+            </li>
+            <li>
+                <a href="le_mall.html" class="active">
                                     <span>
                                         <i>
                                             <img src="images/hh4-1.png" alt=""/>
                                         </i>
                                     </span>乐商城
-                    </a>
-                </li>
-                <li>
-                    <a href="logo.html">
+                </a>
+            </li>
+            <li>
+                <a href="logo.html">
                                     <span>
                                         <i>
                                             <img src="images/hh5.png" alt=""/>
                                         </i>
                                     </span>用户登录
-                    </a>
-                </li>
-            </ul>
-        </div>
+                </a>
+            </li>
+        </ul>
+        <ul class="menu_mobile pc-none">
+            <li><a href="index.html">首页</a></li>
+            <li><a href="housing_trust.html">房屋托管</a></li>
+            <li><a href="le_mall.html">乐商城</a></li>
+            <li><a href="logo.html">个人中心</a></li>
+            <li><a href="index.html">服务</a></li>
+            <li class="last"><a href="index.html">公益</a></li>
+        </ul>
     </div>
+</div>
     <div class="content" id="content">
         <div class="w80"  id="w80">
             <ul class="shop-list clearfix" id="shop-list">
@@ -199,7 +222,7 @@
                     <a href="people_know.html">小主须知</a>
                     <img src="images/bl.png" alt="" class="right"/>
                 </li>
-                <li>
+                <li class="mobile_none">
                     <a href="">加入我们</a>
                     <img src="images/bl.png" alt="" class="right"/>
                 </li>
@@ -218,12 +241,16 @@
     </div>
 </div>
 <script src="plugins/jquery/js/jquery-1.11.3.min.js"></script>
+<script src="js/lw_housing.js"></script>
 <script>
     window.onload = function(){
         var shopList = document.getElementById("shop-list");
+        var shopListA = shopList.getElementsByTagName("a");
+        var shopListImg = shopList.getElementsByTagName("img");
         var footer = document.getElementById("footer");
         var w80 = document.getElementById("w80");
-        var Whi = $(window).height()
+
+        var Whi = $(window).height();
         if(shopList.offsetHeight>800){
             footer.style.position = "relative";
             w80.style.paddingBottom = "2%";

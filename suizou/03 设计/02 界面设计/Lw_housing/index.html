@@ -10,6 +10,10 @@
     <link rel="stylesheet" href="css/mobile.css?v=11"/>
     <style>
         .mask{min-width: 1120px;}
+
+        /*@media screen and (max-width: 640px) {*/
+            /*.footer{position: relative;top: -180px;}*/
+        /*}*/
     </style>
 </head>
 <body>
@@ -795,7 +799,6 @@
                 mid = $(".myCarousel1 .item .describe");
             ml.each(function (i) {
                 $(this).on("click", function () {
-
                     m.closest(".mask").removeClass("hide");
                     mi.eq(i).addClass('active');
                     mi.eq(i).siblings().removeClass("active");
@@ -813,31 +816,30 @@
                     });
                 });
             });
-
-            $(".deatils-span").each(function(i){
+            var ds = $(".deatils-span")
+            ds.each(function(i){
                 var divH = $(this).height();
                 var $p = $("p", $(this)).eq(0);
                 while ($p.outerHeight() > divH) {
                     $p.text($p.text().replace(/(\s)*([a-zA-Z0-9]+|\W)(\.\.\.)?$/, "..."));
                 }
             });
-
-
-            if($(window).width()<640){
-                $('.silder_list').css({"heigth":"320px"});
-                alert($('.silder').height())
-            }
-
-
-
-
-            $('.silder').imgSilder({
+            var si = $('.silder');
+            var sil = $('.silder_list')
+            si.imgSilder({
                 s_width:'100%', //容器宽度
-                s_height: $('.silder').find("img").height(), //容器高度
+                s_height: si.css({"height":"500px"}), //容器高度
+                s_height_list: sil.css({"height":"500px"}), //容器高度
                 is_showTit:true, // 是否显示图片标题 false :不显示，true :显示
-                s_times:2000, //设置滚动时间
+                s_times:5000, //设置滚动时间
                 css_link:'plugins/autoSlider/css/style.css'
             });
+            if($(window).width()<640){
+                si.imgSilder({
+                    s_height: si.css({"height":"320px"}),//容器高度
+                    s_height_list: sil.css({"height":"320px"}) //容器高度
+                });
+            }
         })
     </script>
 
