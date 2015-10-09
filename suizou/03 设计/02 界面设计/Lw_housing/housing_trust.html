@@ -6,7 +6,7 @@
     <title>房屋托管</title>
     <link rel="stylesheet" href="plugins/bootstrap-3.3.5-dist/css/bootstrap.css"/>
     <link rel="stylesheet" href="css/main.css?v=22"/>
-
+    <link rel="stylesheet" href="css/mobile.css"/>
     <style>
         .form-group{height: 34px;}
         .form-group .control-label{text-align: left;}
@@ -20,63 +20,90 @@
             .col-sm-6 {width: 50%;}
             .col-sm-offset-3 {margin-left: 25%;}
         }
+        @media screen and (max-width: 640px){
+
+            .content,.footer{max-width: 640px;width: 100%;}
+            .w60{max-width: 640px;width: 100%;margin-left: 0;left: 0;}
+            .box{min-width: 320px;}
+        }
+        @media screen and (max-width: 445px){
+            .col-sm-2 {padding: 0;}
+            .col-sm-3 {width: 73px;padding: 0;}
+            .col-sm-9{padding: 0;width: 60%;float: right;}
+        }
     </style>
 </head>
 <body>
 <div class="wrapper">
-<div class="head">
-    <div class="head-main">
-        <img src="images/logo.png" alt="" class="logo"/>
-        <ul class="head-menu">
-            <li>
-                <a href="index.html">
-                        <span>
-                             <i>
-                                 <img src="images/hh1.png" alt=""/>
-                             </i>
-                        </span>首页
-                </a>
-            </li>
-            <li>
-                <a href="housing_trust.html" class="active">
+    <div class="head">
+        <div class="head-main">
+            <div class="pc-none mobile_block">
                                     <span>
-                                       <i>
-                                           <img src="images/hh2-1.png" alt=""/>
-                                       </i>
-                                    </span>房屋托管
+                                        <i class="glyphicon glyphicon-th-list"></i>
+                                    </span>
+                <a href="#">
+                    <img src="images/mobile-logo.png" alt="" class="login"/>
                 </a>
-            </li>
-            <li>
-                <a href="people_know.html">
-                                    <span>
-                                        <i>
-                                            <img src="images/hh3.png" alt=""/>
-                                            <!--<img src="images/c-icon3.png" alt=""style="position: relative;top: 1px;"/>-->
-                                        </i>
-                                    </span>小主须知
-                </a>
-            </li>
-            <li>
-                <a href="le_mall.html">
-                                    <span>
-                                        <i>
-                                            <img src="images/hh4.png" alt=""/>
-                                        </i>
-                                    </span>乐商城
-                </a>
-            </li>
-            <li>
-                <a href="logo.html">
-                                    <span>
-                                        <i>
-                                            <img src="images/hh5.png" alt=""/>
-                                        </i>
-                                    </span>用户登录
-                </a>
-            </li>
-        </ul>
+            </div>
+            <img src="images/logo.png" alt="" class="logo mobile_none"/>
+            <ul class="head-menu mobile_none">
+                <li>
+                    <a href="index.html">
+                                <span>
+                                     <i>
+                                         <img src="images/hh1.png" alt=""/>
+                                     </i>
+                                </span>首页
+                    </a>
+                </li>
+                <li>
+                    <a href="housing_trust.html" class="active">
+                                            <span>
+                                               <i>
+                                                   <img src="images/hh2-1.png" alt=""/>
+                                               </i>
+                                            </span>房屋托管
+                    </a>
+                </li>
+                <li>
+                    <a href="people_know.html">
+                                            <span>
+                                                <i>
+                                                    <img src="images/hh3.png" alt=""/>
+                                                    <!--<img src="images/c-icon3.png" alt=""style="position: relative;top: 1px;"/>-->
+                                                </i>
+                                            </span>小主须知
+                    </a>
+                </li>
+                <li>
+                    <a href="le_mall.html">
+                                            <span>
+                                                <i>
+                                                    <img src="images/hh4-1.png" alt=""/>
+                                                </i>
+                                            </span>乐商城
+                    </a>
+                </li>
+                <li>
+                    <a href="logo.html">
+                                            <span>
+                                                <i>
+                                                    <img src="images/hh5.png" alt=""/>
+                                                </i>
+                                            </span>用户登录
+                    </a>
+                </li>
+            </ul>
+            <ul class="menu_mobile pc-none">
+                <li><a href="index.html">首页</a></li>
+                <li><a href="housing_trust.html">房屋托管</a></li>
+                <li><a href="le_mall.html">乐商城</a></li>
+                <li><a href="logo.html">个人中心</a></li>
+                <li><a href="index.html">服务</a></li>
+                <li class="last"><a href="index.html">公益</a></li>
+            </ul>
+        </div>
     </div>
-</div>
     <div class="content">
         <div class="c-div">
             <div class="w60">
@@ -184,7 +211,7 @@
                 <div class="form-group">
                     <label for="inputDetails" class="col-sm-2 control-label">备注</label>
                     <div class="col-sm-10">
-                        <textarea style="resize: none" name="" id="" cols="50" rows="10"  class="form-control" id="inputDetails" placeholder="请输入您有意向托管的小区或冬地址"></textarea>
+                        <textarea style="resize: none" name=""  cols="50" rows="10"  class="form-control" id="inputDetails" placeholder="请输入您有意向托管的小区或冬地址"></textarea>
                     </div>
                 </div>
                 <div class="form-group">

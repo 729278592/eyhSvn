@@ -503,6 +503,11 @@
     $(".close,.btn-default").on("click",function(){
         $(".mask").addClass("hide");
     })
+    var dl = $(".dialog-menu li");
+    dl.on("click",function(){
+        $(this).addClass("active");
+        $(this).siblings().removeClass('active')
+    })
 </script>
 </body>
 </html>

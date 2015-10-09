@@ -12,15 +12,12 @@ a:hover{cursor: pointer;text-decoration: none;}
 /*common*/
 
 .mask{position: fixed;left: 0;right: 0;top: 0;bottom: 0;background: rgba(0,0,0,.5);z-index: 1000;color: #333;filter:alpha(opacity=50)}
-.mask-content{text-align: center;width: 100%;color: #33a9d4;padding: 3% 0 1% 0;border-radius: 4px;}
+.mask-content{text-align: center;width: 100%;color: #33a9d4;padding: 2% 0 1% 0;border-radius: 4px;}
 .mask-content .title{font-weight: bold;font-size: 18px;}
-table{border-collapse:collapse;width: 100%;margin: 10px auto;background: #fff;}
-tr th{background: #dbe3e9;font-weight: 200;}
-tr th,tr td{ text-align:center;font-size: 14px;border:1px solid #3d96b0;color: #3d96b0;height: 2.6em;}
 .people-img{border-right: 80px;width: 55px;border-radius: 55px;}
-.mask .box{padding: 15px 15px;background: #fff;text-align: center;position: absolute;top: 50%;left: 50%;margin-left: -300px;margin-top: -250px;width: 100%;max-width: 640px;}
+.mask .box{padding: 1%;background: #fff;text-align: center;position: absolute;top: 50%;left: 50%;margin-left: -320px;margin-top: -250px;width: 100%;max-width: 640px;}
 .box-head{font-size: 20px;height: 50px;line-height: 50px;border-bottom: 1px dashed #dbdbdb;width: 100%;color: #333;}
-.box-content,.box-foot{margin-top: 20px;padding: 0 50px;}
+.box-content,.box-foot{margin-top: 20px;padding: 0 2%;}
 .box-foot .control-label,.box-content .control-label{line-height: 35px;}
 .btn-submit,.btn-ji,.btn-yi{width: 80px;height: 35px;line-height: 20px;background: #fca511;color: #fff;text-indent: 0;border-radius: 4px;margin-top: 15px;}
 .box-content .close{width: 30px;height: 30px;text-align: center;line-height: 25px;background: #000;color: #fff;position: absolute;right: 15px;top: 15px;border-radius: 30px;}
@@ -271,7 +268,7 @@ a:link{text-decoration: none;}
 .dialog-menu{background: #41cbc0;width: 100%;padding-left: 20px;}
 .dialog-menu li{float: left;color: #fff;font-size: 14px;}
 .dialog-menu li a{color: #fff;display: inline-block;padding: 10px 15px;}
-.dialog-menu li a.active{background: #fff;color: #40cbc0;}
+.dialog-menu li.active a{background: #fff;color: #40cbc0;}
 .dialog-menu li a:hover{text-decoration: underline;}
 .dialog-foot{padding: 15px;text-align: right;border-top: 1px solid #e5e5e5;}
 .borhood{padding: .5% 1.5%;}
@@ -348,7 +345,7 @@ input.btn-click:hover{background: #e16a20}
 .btn-fillin{width: 70px;height: 25px;line-height: 22px;text-align: center;border-radius: 2px;background: #a2b7c6;color: #fff;}
 .wr-head>span{position: relative;top: 30px;left: 15px;}
 .wr-head .phone{color: #666;font-size: 18px;}
-.wr-content{color: #666;font-size: 12px;}
+.wr-content{color: #666;font-size: 14px;}
 
 .wr-content span{display: inline-block;line-height: 30px;}
 .wr-content .infomation{display: inline-block;padding: 0 5px;border: 1px solid #dbdbdb;border-bottom-color:#fff;position: relative;z-index: 1;background: #fff;}
@@ -359,8 +356,9 @@ input.btn-click:hover{background: #e16a20}
 .input-group,.select-group{width: 50%;height: 30px;border:1px solid #dbdbdb;outline: none;display: inline-block;padding-left: 1%;}
 .input-group-time{width: 14%;}
 .div-group .select{width: 14%;margin-right: 2%;padding-left: 1%;height: 30px;}
-.btn-sure{width: 60px;height: 30px;background: #fca511;color: #fff;line-height: 30px;border-radius: 4px;}
+.btn-sure{width: 100px;height: 40px;line-height: 40px;background: #fca511;color: #fff;border-radius: 4px;}
 .p-group{color: #666;height: 60px;line-height: 60px;border-bottom: 1px dashed #dbdbdb;}
+.p-group.title{font-size: 16px;color: #333;}
 .div-group .prize{float: left;}
 .div-group .deatils{position: relative;top: 30px;left: 10px;display: inline-block;}
 .btn-rnow{width: 70px;height: 30px;line-height: 30px;text-align: center;background: #fca511;color: #fff;border-radius: 4px;position: relative;top: 20px;left: 150px;}
