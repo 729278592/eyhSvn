@@ -46,14 +46,14 @@ a:link{text-decoration: none;}
 
 /*index*/
 .content-head{position: relative;height: 550px;}
-.content-head .pc-img,.content-head .mobile-img{min-height: 550px;}
+.content-head .pc-img{min-height: 550px;}
 .ch-mask{position: absolute;bottom: 0;left: 0;right: 0;background: #000;opacity: 0.4;filter:alpha(opacity=40);height: 20%;}
 .ch-mask-main{width: 40%;position: absolute;bottom: 4%;left: 50%;margin-left: -20%;}
 .ch-mask-main .form-control{width: 84%;display: inline-block;color: #bd925d;font-size: 14px;height: 40px;}
 .ch-mask-main .btn-group{width: 13%;float: right;background: #fb924d;color: #fff;height: 40px;line-height: 25px;position: relative;left: -7px;}
 .ch-mask-main .btn-group:hover{opacity: 0.9;filter:(aplha=80);}
 .ch-mask-main .hotqu{color: #eee;margin-top: 3px;}
-.ch-mask-main .hotqu a{color: #eee;font-size:14px;padding: 0 6px;}
+.ch-mask-main .hotqu a{color: #eee;font-size:14px;padding: 0 5px;}
 .ch-mask-main .hotqu a:hover{color: #fb934e;}
 .comon-head{text-align: center;height: 60px;line-height: 60px;color: #b5854c;font-size: 18px;}
 .comon-head p{display: inline-block;border: 1px solid #dbaa6d;height: 35px;padding: 0 .6%;line-height: 35px;color:#dbaa6d; }
@@ -228,18 +228,20 @@ a:link{text-decoration: none;}
 /*housing_information*/
 
 .pc_deatils{margin-left: 990px;padding: 0 10px;height: 478px;position: absolute;top: 0;}
-.pc_deatils li{border-bottom: 1px dashed #dbdbdb; padding: 17px 0;position: relative;}
+.pc_deatils li{border-bottom: 1px dashed #dbdbdb; padding: 13px 0;position: relative;}
 .pc_deatils li .title{font-size: 16px;color: #333;font-weight: bold;}
-.pc_deatils li .information{display: inline-block;padding: 5px 13px;border: 1px solid #dbdbdb;font-size: 14px;}
+.information-div{display: inline-block;width: 70%;}
+.house-span{vertical-align: top;position: relative;top: 5px;}
+.pc_deatils li .information{display: inline-block;padding: 5px 13px;border: 1px solid #dbdbdb;font-size: 14px;margin-bottom: 5px;}
 .pc_deatils li .information:hover{border-color: #3b5991;}
 .pc_deatils li.last{border-bottom: none;}
 .pc_deatils li a{display: inline-block;width: 182px;height: 60px;line-height: 60px;text-align: center;border-radius: 5px;color: #fff;font-size: 14px;}
 .pc_deatils .now{background: #fba511;margin-right: 20px;}
 .pc_deatils .address,.w80>.deatils .staging{background: #e95757;}
-.pc_deatils .staging{height: 25px;line-height: 25px;font-size: 14px;float:right;width: 100px;background: red;}
+.pc_deatils .staging{height: 25px;line-height: 25px;font-size: 14px;float:right;width: 100px;background: red;margin-top: -3px;}
 .tool{width: 100%;background: #f2f2f2;padding: 10px 10px 5px;text-align: center;margin-top:490px;}
 .tool .title{color: #fba613;float: left;}
-.tool .tool-group{display: inline-block;width: 10.7%;clear: both;color: #666;position: relative;top: -5px;}
+.tool .tool-group{display: inline-block;width: 10.7%;clear: both;color: #666;position: relative;}
 .furniture{margin-top: 0;}
 .furniture .title{color: #3b5991;}
 .furniture .tool-group{color: #3b5991;}
@@ -267,6 +269,17 @@ a:link{text-decoration: none;}
 .information-content{text-align: center;padding-bottom: 40px;}
 .information-content .name{color: #125580;font-size: 18px;}
 .information-content .phone{font-size: 20px;color: #5c9eed;position: relative;top: 10px;left: 5px;}
+.dialog{width: 80%;background: #fff;    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.5);position: absolute;left: 50%;margin-left: -40%;top: 50px;border-radius: 8px;}
+.dialog-head{padding: 15px;border-bottom: 1px solid #e5e5e5;min-height: 16px;}
+.dialog-content{padding: 1%;width: 100%;position: relative;}
+.dialog-menu{background: #41cbc0;width: 100%;padding-left: 20px;}
+.dialog-menu li{float: left;color: #fff;font-size: 14px;}
+.dialog-menu li a{color: #fff;display: inline-block;padding: 10px 15px;}
+.dialog-menu li a.active{background: #fff;color: #40cbc0;}
+.dialog-menu li a:hover{text-decoration: underline;}
+.dialog-foot{padding: 15px;text-align: right;border-top: 1px solid #e5e5e5;}
+.borhood{padding: .5% 1.5%;}
+.borhood p{padding: .5% 0;}
 
 
 
@@ -375,8 +388,6 @@ input.btn-click:hover{background: #e16a20}
 .we-ul li a .fa{font-size: 20px;position: relative;top: 3px;}
 .about-us{width: 100%;margin-top: 20px;}
 .about-us li{float: left;width: 48%;margin-right: 2%;}
-
-
 
 
 

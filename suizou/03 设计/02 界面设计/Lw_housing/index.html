@@ -81,8 +81,34 @@
         </div>
         <div class="content">
             <div class="content-head mobile-ch">
-                <img src="images/index.jpg"  class="img-responsive pc-img mobile_none" alt="Responsive image" />
-                <img src="images/mobile-img.jpg" class="img-responsive mobile-img pc-none" alt="Responsive image"  alt=""/>
+                <div class="silder" >
+                    <div class="silder_list">
+                        <div>
+                            <a href="#">
+                                <img src="images/index.jpg"  class="img-responsive pc-img" alt="Responsive image" />
+                                <img src="images/mobile-img.jpg" class="img-responsive mobile-img" alt="Responsive image"/>
+                            </a>
+                        </div>
+                        <div>
+                            <a href="#">
+                                <img src="images/index.jpg"  class="img-responsive pc-img" alt="Responsive image" />
+                                <img src="images/mobile-img.jpg" class="img-responsive mobile-img " alt="Responsive image"/>
+                            </a>
+                        </div>
+                        <div>
+                            <a href="#">
+                                <img src="images/index.jpg"  class="img-responsive pc-img" alt="Responsive image" />
+                                <img src="images/mobile-img.jpg" class="img-responsive mobile-img" alt="Responsive image"/>
+                            </a>
+                        </div>
+                        <div>
+                            <a href="#">
+                                <img src="images/index.jpg"  class="img-responsive pc-img" alt="Responsive image" />
+                                <img src="images/mobile-img.jpg" class="img-responsive mobile-img" alt="Responsive image"/>
+                            </a>
+                        </div>
+                    </div>
+                </div>
                 <div class="ch-mask" style=""></div>
                 <div class="ch-mask-main">
                     <input type="text" class="form-control" placeholder="请输入您要找的房源区域/地址/路名...">
@@ -760,6 +786,7 @@
     <script src="plugins/bootstrap-3.3.5-dist/js/bootstrap.min.js"></script>
     <script src="plugins/picture_transparency/js/move.js"></script>
     <script src="js/lw_housing.js"></script>
+    <script src="plugins/autoSlider/js/jquery.img_silder.js"></script>
     <script>
         $(function() {
             var ml = $(".mobile_iu li");
@@ -793,6 +820,23 @@
                 while ($p.outerHeight() > divH) {
                     $p.text($p.text().replace(/(\s)*([a-zA-Z0-9]+|\W)(\.\.\.)?$/, "..."));
                 }
+            });
+
+
+            if($(window).width()<640){
+                $('.silder_list').css({"heigth":"320px"});
+                alert($('.silder').height())
+            }
+
+
+
+
+            $('.silder').imgSilder({
+                s_width:'100%', //容器宽度
+                s_height: $('.silder').find("img").height(), //容器高度
+                is_showTit:true, // 是否显示图片标题 false :不显示，true :显示
+                s_times:2000, //设置滚动时间
+                css_link:'plugins/autoSlider/css/style.css'
             });
         })
     </script>
