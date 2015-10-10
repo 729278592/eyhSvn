@@ -181,12 +181,12 @@ a:link{text-decoration: none;}
 .ul-information li.last{border-bottom: none;}
 
 .ul-house{margin-left: -0.5%;width: 99.2%;padding: 0 0.4%;}
-.ul-house li{width: 48%;margin-left: 2%;float: left;position: relative;margin-bottom: 1.5%;}
+.ul-house li{width: 47%;margin-left: 2.5%;float: left;position: relative;margin-bottom: 1.5%;}
 .ul-house li>a{display: inline-block;width: 100%;position: relative;}
-.ul-house li>a  .item-b{border: 1px solid #f0f0f0;border-top:none;padding: 1% 2%;}
+.ul-house li>a .item-b{border: 1px solid #f0f0f0;border-top:none;padding: 1% 2%;}
 .ul-house li>a .people{position: absolute;right: 1%;bottom: 10%;z-index: 100;border-radius: 100px;}
-.ul-house li>a .play{width: 35px;height: 35px;background: #000;border-radius: 35px;opacity: 0.6;filter: alpha(opacity=60);position: absolute;right: 2%;top: 4%;color: #fff;text-align: center;line-height: 38px;font-size: 20px;}
-.ul-house li>a .play:hover{opacity: 0.8;filter: alpha(opacity=80);font-size: 21px;cursor: pointer;}
+.ul-house li .play{width: 35px;height: 35px;background: #000;border-radius: 35px;opacity: 0.6;filter: alpha(opacity=60);position: absolute;right: 2%;top: 4%;color: #fff;text-align: center;line-height: 38px;font-size: 20px;z-index: 1000;}
+.ul-house li .play:hover{opacity: 0.8;filter: alpha(opacity=80);font-size: 21px;cursor: pointer;}
 
 
 

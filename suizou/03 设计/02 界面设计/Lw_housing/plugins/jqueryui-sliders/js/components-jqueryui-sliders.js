@@ -13,7 +13,7 @@ var ComponentsjQueryUISliders = function () {
                 range: true,
                 values: [17, 67],
                 slide: function (event, ui) {
-                    $("#slider-range-amount").text("$" + ui.values[0] + " - $" + ui.values[1]);
+                    $("#slider-range-amount").text("￥" + ui.values[0] + " - ￥" + ui.values[1]);
                 }
             });
             
@@ -39,11 +39,11 @@ var ComponentsjQueryUISliders = function () {
                 max: 500,
                 values: [75, 300],
                 slide: function (event, ui) {
-                    $("#slider-range-amount").text("$" + ui.values[0] + " - $" + ui.values[1]);
+                    $("#slider-range-amount").text("￥" + ui.values[0] + " - ￥" + ui.values[1]);
                 }
             });
 
-            $("#slider-range-amount").text("$" + $("#slider-range").slider("values", 0) + " - $" + $("#slider-range").slider("values", 1));
+            $("#slider-range-amount").text("￥" + $("#slider-range").slider("values", 0) + " - ￥" + $("#slider-range").slider("values", 1));
 
             //range max
 
