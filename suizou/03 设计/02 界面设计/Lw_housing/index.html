@@ -56,8 +56,8 @@
                     <li><a href="housing_trust.html">房屋托管</a></li>
                     <li><a href="le_mall.html">乐商城</a></li>
                     <li><a href="logo.html">个人中心</a></li>
-                    <li><a href="index.html">服务</a></li>
-                    <li class="last"><a href="index.html">公益</a></li>
+                    <li><a href="#">服务</a></li>
+                    <li class="last"><a href="#">公益</a></li>
                 </ul>
             </div>
         </div>
@@ -818,13 +818,11 @@
                     s_height_list: sil.css({"height":"320px"}) //容器高度
                 });
             }
-
-
-            if($(window).width()>640){
+            else{
                 var w = $(".head");
                 $(window).scroll(function () {
                     if ($(this).scrollTop() > 100) {
-                        w.css({"background":"rgba(0,0,0,.5)"})
+                        w.css({"background":"rgba(0,0,0,.6)"});
                     }
                     else {
                         w.css({"background":"rgba(0,0,0,0)"})
