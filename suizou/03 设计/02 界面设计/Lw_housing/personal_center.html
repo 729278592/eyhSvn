@@ -9,77 +9,54 @@
     <link rel="stylesheet" href="plugins/font/css/font-awesome.min.css"/>
     <link rel="stylesheet" href="css/mobile.css?v=11"/>
     <style>
-        body{background: #f1f1f1;height: 100%;}
+        body{background: #f1f1f1;height: 100%;min-height: 740px;}
         .footer{position: absolute;bottom: 0;}
-
     </style>
 </head>
 <body>
     <div class="wrapper">
         <div class="head">
             <div class="head-main">
-            <div class="pc-none mobile_block">
-                        <span>
-                            <i class="glyphicon glyphicon-th-list"></i>
-                        </span>
-                <a href="#">
-                    <img src="images/mobile-logo.png" alt="" class="login"/>
-                </a>
-            </div>
-            <img src="images/logo.png" alt="" class="logo mobile_none"/>
+                <div class="pc-none mobile_block">
+                                <span>
+                                    <i class="glyphicon glyphicon-th-list"></i>
+                                </span>
+                    <a href="#">
+                        <img src="images/mobile-logo.png" alt="" class="login"/>
+                    </a>
+                </div>
+                <img src="images/logo.png" alt="" class="logo mobile_none"/>
                 <ul class="head-menu mobile_none">
                     <li>
                         <a href="index.html">
-                        <span>
-                             <i>
-                                 <img src="images/hh1.png" alt=""/>
-                             </i>
-                        </span>首页
+                            首页
                         </a>
                     </li>
                     <li>
                         <a href="housing_trust.html">
-                                    <span>
-                                       <i>
-                                           <img src="images/hh2.png" alt=""/>
-                                       </i>
-                                    </span>房屋托管
-                        </a>
-                    </li>
-                    <li>
-                        <a href="people_know.html">
-                                    <span>
-                                        <i>
-                                            <img src="images/hh3.png" alt=""/>
-                                            <!--<img src="images/c-icon3.png" alt=""style="position: relative;top: 1px;"/>-->
-                                        </i>
-                                    </span>小主须知
+                            房屋托管
                         </a>
                     </li>
                     <li>
                         <a href="le_mall.html">
-                                    <span>
-                                        <i>
-                                            <img src="images/hh4.png" alt=""/>
-                                        </i>
-                                    </span>乐商城
+                            乐商城
                         </a>
                     </li>
                     <li>
                         <a href="logo.html">
-                                    <span>
-                                        <i>
-                                            <img src="images/hh5.png" alt=""/>
-                                        </i>
-                                    </span>用户登录
+                            注册/登录
                         </a>
                     </li>
                 </ul>
-            <ul class="menu_mobile pc-none">
-                <li><a href="index.html">首页</a></li>
-                <li class="last"><a href="logo.html">个人中心</a></li>
-            </ul>
-        </div>
+                <ul class="menu_mobile pc-none">
+                    <li><a href="index.html">首页</a></li>
+                    <li><a href="housing_trust.html">房屋托管</a></li>
+                    <li><a href="le_mall.html">乐商城</a></li>
+                    <li><a href="logo.html">个人中心</a></li>
+                    <li><a href="index.html">服务</a></li>
+                    <li class="last"><a href="index.html">公益</a></li>
+                </ul>
+            </div>
         </div>
         <div class="content">
             <div class="w80 mobile_w80">
@@ -153,7 +130,7 @@
 
                 <div class="w-right w-bottom">
                     <div class="wr-head">
-                        <img src="images/ziliao.jpg" alt=""/>
+                        <img src="images/no-people.png" alt=""/>
                         <span>
                             <span class="phone">15086677745</span><br/>
                             <button class="btn-fillin">完善资料</button>
@@ -166,80 +143,82 @@
                             <li><img src="images/top-img.png" alt=""/></li>
                         </ul>
                         <div class="div-group mobile_none" style="height: 31px;border-bottom: 1px solid #dbdbdb;">
-                            <span class="infomation ">
+                            <span class="infomation active">
                                 个人资料
                             </span>
+                            <span class="infomation">
+                                修改资料
+                            </span>
                         </div>
-                        <div class="div-group">
-                            <span class="span-group">当前头像</span>
-                            <img src="images/ziliao.jpg" class="ziliao" alt=""/>
+                        <div class="div">
+                            <div class="div-group">
+                                <span class="span-group">当前头像</span>
+                                <img src="images/no-people.png" class="ziliao" alt=""/>
+                            </div>
+                            <div class="div-group">
+                                <span class="span-group">标签</span>
+                                <select name="" id="" class="select-group">
+                                    <option value="我很帅气-哈哈">我很帅气-哈哈</option>
+                                    <option value="我很帅气-哈哈">我很帅气-哈哈</option>
+                                    <option value="我很帅气-哈哈">我很帅气-哈哈</option>
+                                </select>
+                            </div>
+                            <div class="div-group">
+                                <span class="span-group">昵称</span>
+                                <input type="text" class="input-group" value="大大"/>
+                            </div>
+                            <div class="div-group">
+                                <span class="span-group">真实姓名</span>
+                                <input type="text" class="input-group" value="大大"/>
+                            </div>
+                            <div class="div-group">
+                                <span class="span-group">性别</span>
+                                <input type="radio" name="sex" checked/>男　　
+                                <input type="radio" name="sex"/>女
+                            </div>
+                            <div class="div-group">
+                                <span class="span-group">生日</span>
+                                <input type="text" class="input-group input-group-time" value=""  onClick="WdatePicker()"/>
+                            </div>
+                            <div class="div-group">
+                                <span class="span-group">居住地</span>
+                                <select name="" id="1" class="select">
+                                    <option value=""></option>
+                                    <option value=""></option>
+                                    <option value=""></option>
+                                </select>
+                                <select name="" id="2" class="select">
+                                    <option value=""></option>
+                                    <option value=""></option>
+                                    <option value=""></option>
+                                </select>
+                                <select name="" id="3" class="select">
+                                    <option value=""></option>
+                                    <option value=""></option>
+                                    <option value=""></option>
+                                </select>
+                            </div>
+                            <p style="text-align: center;">
+                                <button class="btn-sure">确定</button>
+                            </p>
                         </div>
-                        <div class="div-group">
-                            <span class="span-group">标签</span>
-                            <select name="" id="" class="select-group">
-                                <option value="我很帅气-哈哈">我很帅气-哈哈</option>
-                                <option value="我很帅气-哈哈">我很帅气-哈哈</option>
-                                <option value="我很帅气-哈哈">我很帅气-哈哈</option>
-                            </select>
+                        <div class="div hide"style="position: relative;top: 20px;">
+                            <div class="div-group">
+                                <span class="span-group">现在密码</span>
+                                <input type="text" class="input-group" value=""/>
+                            </div>
+                            <div class="div-group">
+                                <span class="span-group">新密码</span>
+                                <input type="text" class="input-group" value=""/>
+                            </div>
+                            <div class="div-group">
+                                <span class="span-group">确认密码</span>
+                                <input type="text" class="input-group" value=""/>
+                            </div>
+                            <p style="text-align: center;margin-top: 70px;">
+                                <button class="btn-sure">确定</button>
+                            </p>
                         </div>
-                        <div class="div-group">
-                            <span class="span-group">昵称</span>
-                            <input type="text" class="input-group" value="大大"/>
-                        </div>
-                        <div class="div-group">
-                            <span class="span-group">真实姓名</span>
-                            <input type="text" class="input-group" value="大大"/>
-                        </div>
-                        <div class="div-group">
-                            <span class="span-group">性别</span>
-                            <input type="radio" name="sex" checked/>男　　
-                            <input type="radio" name="sex"/>女
-                        </div>
-
-
-                        <!--<div class="div-group">-->
-                            <!--<span class="span-group">生日</span>-->
-                            <!--<select name="" id="" class="select">-->
-                                <!--<option value="年">年</option>-->
-                                <!--<option value="2015">2015</option>-->
-                                <!--<option value="2014">2014</option>-->
-                            <!--</select>-->
-                            <!--<select name="" id="" class="select">-->
-                                <!--<option value="月">月</option>-->
-                                <!--<option value="5">5</option>-->
-                                <!--<option value="4">4</option>-->
-                            <!--</select>-->
-                            <!--<select name="" id="" class="select">-->
-                                <!--<option value="日">日</option>-->
-                                <!--<option value="20">20</option>-->
-                                <!--<option value="19">19</option>-->
-                            <!--</select>-->
-                        <!--</div>-->
-                        <div class="div-group">
-                            <span class="span-group">生日</span>
-                            <input type="text" class="input-group input-group-time" value=""  onClick="WdatePicker()"/>
-                        </div>
-                        <div class="div-group">
-                            <span class="span-group">居住地</span>
-                            <select name="" id="1" class="select">
-                                <option value=""></option>
-                                <option value=""></option>
-                                <option value=""></option>
-                            </select>
-                            <select name="" id="2" class="select">
-                                <option value=""></option>
-                                <option value=""></option>
-                                <option value=""></option>
-                            </select>
-                            <select name="" id="3" class="select">
-                                <option value=""></option>
-                                <option value=""></option>
-                                <option value=""></option>
-                            </select>
-                        </div>
-                        <p style="text-align: center">
-                            <button class="btn-sure">确定</button>
-                        </p>
                     </div>
                 </div>
             </div>
@@ -273,5 +252,17 @@
 <script src="plugins/jquery/js/jquery-1.11.3.min.js"></script>
 <script src="js/lw_housing.js"></script>
 <script src="plugins/My97DatePicker/WdatePicker.js"></script>
+    <script>
+        var di = $(".div-group .infomation");
+        var div = $(".div");
+        di.each(function(i){
+           $(this).on("click",function(){
+               $(this).addClass("active");
+               $(this).siblings().removeClass("active");
+               div.eq(i).removeClass("hide");
+               div.eq(i).siblings(".div").addClass("hide");
+           })
+        })
+    </script>
 </body>
 </html>

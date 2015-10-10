@@ -17,8 +17,14 @@ $(function(){
         mm.css({"display": "none"});
         mm.animate(mml.animate({"width": "0%"}));
     });
-//    var winH = $(window).height();
-//    if(winH<600){
-//        $(".footer").css({"position":"relative","marginTop":"20px"});
-//    }
+    var winH = $(window).width();
+
+    $(window).on("resize",function(){
+        if(winH>640){
+            mm.css({"display": "none"});
+        }
+    });
+    if($(window).height()<700){
+        $(".footer").css({"position":"relative","marginTop":"20px"})
+    }
 });
