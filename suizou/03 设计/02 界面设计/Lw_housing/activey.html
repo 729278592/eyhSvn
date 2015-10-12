@@ -9,7 +9,8 @@
     <link rel="stylesheet" href="css/main.css"/>
     <link rel="stylesheet" href="css/mobile.css?v=11"/>
     <style>
-        .wrapper{background: #fefefe;}
+        .wrapper{background: #eee;}
+
     </style>
 </head>
 <body>
@@ -21,7 +22,7 @@
                                 <i class="glyphicon glyphicon-th-list"></i>
                             </span>
                 <a href="#">
-                    <img src="images/mobile-logo.png" alt="" class="login"/>
+                    <img src="images/logo.png" alt="" class="login"/>
                 </a>
             </div>
             <ul class="menu_mobile pc-none">
@@ -54,10 +55,42 @@
                     </div>
                 </div>
             </li>
-            <li></li>
-            <li></li>
-            <li></li>
-            <li></li>
+            <li>
+                <img src="images/active1.jpg" class="img-responsive img" alt="Responsive image"/>
+                <div class="main">
+                    <p class="title">探望贫困的灾区儿童</p>
+                    <div class="main-details">
+                        灾区儿童一直以来都是我们关心关注的 目标，这一次组织一起去看他们...
+                    </div>
+                </div>
+            </li>
+            <li class="last">
+                <img src="images/active1.jpg" class="img-responsive img" alt="Responsive image"/>
+                <div class="main">
+                    <p class="title">探望贫困的灾区儿童</p>
+                    <div class="main-details">
+                        灾区儿童一直以来都是我们关心关注的 目标，这一次组织一起去看他们...
+                    </div>
+                </div>
+            </li>
+            <li>
+                <img src="images/active1.jpg" class="img-responsive img" alt="Responsive image"/>
+                <div class="main">
+                    <p class="title">探望贫困的灾区儿童</p>
+                    <div class="main-details">
+                        灾区儿童一直以来都是我们关心关注的 目标，这一次组织一起去看他们...
+                    </div>
+                </div>
+            </li>
+            <li class="last">
+                <img src="images/active1.jpg" class="img-responsive img" alt="Responsive image"/>
+                <div class="main">
+                    <p class="title">探望贫困的灾区儿童</p>
+                    <div class="main-details">
+                        灾区儿童一直以来都是我们关心关注的 目标，这一次组织一起去看他们...
+                    </div>
+                </div>
+            </li>
         </ul>
     </div>
 </div>
@@ -65,7 +98,7 @@
 <script src="js/lw_housing.js"></script>
 <script>
     var ds = $(".main-details");
-    ds.each(function(i){
+    ds.each(function(){
         var divH = $(this).height();
         var $p = $("p", $(this)).eq(0);
         while ($p.outerHeight() > divH) {
