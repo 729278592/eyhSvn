@@ -197,6 +197,27 @@ a:link{text-decoration: none;}
 .house-details .address{float: right;font-size: 12px;}
 .ul-house .main{width: 100%;}
 .w96{padding: 0 1.5%;color: #999;line-height: 30px;}
+
+
+
+.loadMap {width:360px;position:absolute;z-index:1000;top:50%;left: 50%;margin-left: -180px;margin-top: -103px;;}
+.loadpop {width:182px;height:182px;overflow:hidden;background:#fff;text-align:center;box-shadow:5px 15px 15px #ccc;position:relative;top:0;z-index:1;border-radius:182px;margin:0 auto;margin-bottom:24px;display: none;}
+.loadpop .loadIcon {position:absolute;bottom:-4px;right:-11px}
+.loadpop label {display:inline-block;margin-top:25px;width:100%;text-align:center;color:#764a1c;font-size:12px;margin-bottom:0}
+.loadpop label+label {margin-top:-5px!important}
+.loadpop .progressAnim i {display:inline-block;width:7px;height:7px;background:#76a930;border-radius:7px;margin-right:7px}
+.notHoust {width:360px;height:230px;background:url(../images/notSerachHouse.png) no-repeat;display: none;position:absolute;top:0}
+.notHoust .tishi {width:230px;margin:0 auto}
+.notHoust .tishi p {color:#ff5300;font-size:14px;font-weight:bold;padding-top:60px;margin:0}
+.notHoust .tishi label {color:#908e8e;font-size:12px}
+.notHoust .tishi .left_sub,.notHoust .tishi .right_sub {display:inline-block}
+.notHoust .tishi .left_sub label,.notHoust .tishi .right_sub label {display:block;color:#454545}
+.notHoust .tishi .left_sub label i,.notHoust .tishi .right_sub label i {display:inline-block;width:5px;height:5px;background:#ff5300;border-radius:5px;position:relative;top:-2px}
+.notHoust .tishi .left_sub button,.notHoust .tishi .right_sub button {margin-top:11px;width:72px;height:25px;border:2px solid red;background:#fff;font-size:12px;color:#ff5300;outline:none}
+.notHoust .tishi .right_sub {vertical-align:top}
+.housing {font-size:14px;color:#ff5300;font-weight:bold;text-align:center;margin-top:10px}
+
+
 /*.mapSo {line-height: 30px;height: 30px;background: #f18d00 url("../images/icon_12.png") no-repeat 18px center;border: 0;padding: 0;width: 108px;font-weight: bold;color: #fff;font-size: 16px;padding-left: 20px;cursor: pointer;}*/
 
 
@@ -382,6 +403,13 @@ input.btn-click:hover{background: #e16a20}
 
 
 
+/*activey*/
+.list{width: 96%;
+    margin-left: 2%;margin-top: 2%;}
+.list li{float: left;width: 49%;margin-right: 1%;}
+.list li.last{margin-right: 0;width: 50%;}
+.list li .title{font-size: 16px;color: #333;}
+.list li .main-details{font-size: 14px;color: #666;}
 /*footer*/
 .footer{background: #445c75;padding: 20px 0;width: 100%;font-size: 12px;}
 .footer .fl ul{width: 400px;margin: 0 auto;height: 20px;}

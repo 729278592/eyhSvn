@@ -3,6 +3,7 @@
     html{max-width: 640px;}
     body{max-width: 640px;min-width: 310px;}
     .wrapper{width: 100%;}
+    .wrapper{width: 100%;}
     .head{width: 100%;background: rgba(164,196,237,.8)}
     .head-main{width: 98%;height: 100%;max-width: 640px;padding: 0 0px;}
     .head-main>div{text-align: center;}

@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html>
+<head lang="en">
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width; initial-scale=1.0; user-scalable=no;">
+    <title>首页</title>
+    <link rel="stylesheet" href="plugins/bootstrap-3.3.5-dist/css/bootstrap.css"/>
+    <link rel="stylesheet" href="plugins/font/css/font-awesome.min.css"/>
+    <link rel="stylesheet" href="css/main.css"/>
+    <link rel="stylesheet" href="css/mobile.css?v=11"/>
+    <style>
+        .wrapper{background: #fefefe;}
+    </style>
+</head>
+<body>
+<div class="wrapper">
+    <div class="head">
+        <div class="head-main">
+            <div class="pc-none mobile_block">
+                            <span>
+                                <i class="glyphicon glyphicon-th-list"></i>
+                            </span>
+                <a href="#">
+                    <img src="images/mobile-logo.png" alt="" class="login"/>
+                </a>
+            </div>
+            <ul class="menu_mobile pc-none">
+                <li><a href="index.html">首页</a></li>
+                <li><a href="housing_trust.html">房屋托管</a></li>
+                <li><a href="le_mall.html">乐商城</a></li>
+                <li><a href="logo.html">个人中心</a></li>
+                <li><a href="#">服务</a></li>
+                <li class="last"><a href="#">公益</a></li>
+            </ul>
+        </div>
+    </div>
+    <div class="content">
+        <ul class="list clearfix">
+            <li>
+                <img src="images/active1.jpg" class="img-responsive img" alt="Responsive image"/>
+                <div class="main">
+                    <p class="title">探望贫困的灾区儿童</p>
+                    <div class="main-details">
+                        灾区儿童一直以来都是我们关心关注的 目标，这一次组织一起去看他们...
+                    </div>
+                </div>
+            </li>
+            <li class="last">
+                <img src="images/active1.jpg" class="img-responsive img" alt="Responsive image"/>
+                <div class="main">
+                    <p class="title">探望贫困的灾区儿童</p>
+                    <div class="main-details">
+                        灾区儿童一直以来都是我们关心关注的 目标，这一次组织一起去看他们...
+                    </div>
+                </div>
+            </li>
+            <li></li>
+            <li></li>
+            <li></li>
+            <li></li>
+        </ul>
+    </div>
+</div>
+<script src="plugins/jquery/js/jquery-1.11.3.min.js"></script>
+<script src="js/lw_housing.js"></script>
+<script>
+    var ds = $(".main-details");
+    ds.each(function(i){
+        var divH = $(this).height();
+        var $p = $("p", $(this)).eq(0);
+        while ($p.outerHeight() > divH) {
+            $p.text($p.text().replace(/(\s)*([a-zA-Z0-9]+|\W)(\.\.\.)?$/, "..."));
+        }
+    });
+</script>
+</body>
+</html>
