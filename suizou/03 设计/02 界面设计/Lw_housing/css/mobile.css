@@ -109,6 +109,8 @@
     .choice li{width: 100%;margin-right: 0;}
     .div-bg .type{width: 100%;max-width: 500px;}
     .deposit{width: 50%;}
+    .w80 .li4{width: 100%;height: 40%;}
+    .w80 .li4 img{height: 80%;}
 }
 
 @media screen and (max-width: 420px) {
