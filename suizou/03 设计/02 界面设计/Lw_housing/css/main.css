@@ -389,6 +389,7 @@ input.btn-click:hover{background: #e16a20}
 .leave-step li{float: left;width: 15%;text-align: center;color: #666;margin: 2% 0 0 0;}
 .leave-step li button{border: 1px solid #dbdbdb;background: #fff;width: 70px;height: 25px;line-height: 22px;color: #333;margin: 5px 0;}
 .box-sure{background: #fff;color: #fba511;padding: 2%;text-align: center;width: 300px;position: absolute;left: 50%;margin-left: -150px;top: 35%;border-radius: 10px;}
+.box-sure span{font-size: 18px;}
 .box-sure .smail{margin: 5% 10% 5% -5%;}
 
 
