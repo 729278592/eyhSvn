@@ -86,28 +86,28 @@ a:link{text-decoration: none;}
 #myCarousel .carousel-control {position: absolute;top: 53%;width: 39px;height: 76px;margin-top: -20px;font-size: 60px;font-weight: 100;line-height: 22px;color: #fff;text-align: center;background: transparent;}
 #myCarousel .carousel-control.left{left: -55px;background-image: none;}
 #myCarousel .carousel-control.right{right: -55px;background-image: none;}
-.myCarousel1{width: 70%;position: absolute;left: 50%;top:50%;margin-left: -35%;margin-top: -12%;}
-.myCarousel1{background: url("../images/myCarousel1-bg.jpg")no-repeat center center;background-size: cover;margin-bottom: 1.01%;border-radius: 4px;}
-.myCarousel1 .carousel-control {position: absolute;top: 45%;width: 39px;height: 76px;text-align: center;}
-.myCarousel1>img{width: 80%;}
-.myCarousel1 .carousel-inner{width: 85%;height: 80%;background: #d5e9f9;position: relative;left: 50%;margin: 5% -42.5%;}
-.myCarousel1 .item .img{margin: 2% 0;position: relative;left: 2%;display: none;width: 40%;}
-.myCarousel1 .item .describe{position: absolute;top: -20%;left:44%;color: #666;width: 54%;}
-.myCarousel1 .item .describe .title{font-size: 16px;position: relative;top: -10px;color: #3b3b3b;}
-.myCarousel1 .item .describe .color{color: #fcaf05;}
-.myCarousel1 .item .describe p{margin-bottom: 5%;}
-.myCarousel1 .item .describe span{font-size: 14px;margin-top: 2%;}
-.myCarousel1 .item ul.product ul{width: 100%;}
-.myCarousel1 .item ul li,.product ul li{float: left;margin-right: 1.33%;margin-bottom:1.33%;width: 24%;position: relative;overflow: hidden;}
+#myCarousel1{width: 70%;position: absolute;left: 50%;top:50%;margin-left: -35%;margin-top: -12%;}
+#myCarousel1{background: url("../images/myCarousel1-bg.jpg")no-repeat center center;background-size: cover;margin-bottom: 1.01%;border-radius: 4px;}
+#myCarousel1 .carousel-control {position: absolute;top: 45%;width: 39px;height: 76px;text-align: center;}
+#myCarousel1>img{width: 80%;}
+#myCarousel1 .carousel-inner{width: 85%;height: 80%;background: #d5e9f9;position: relative;left: 50%;margin: 5% -42.5%;}
+#myCarousel1 .item .img{margin: 2% 0;position: relative;left: 2%;display: none;width: 40%;}
+#myCarousel1 .item .describe{position: absolute;top: -20%;left:44%;color: #666;width: 54%;}
+#myCarousel1 .item .describe .title{font-size: 16px;position: relative;top: -10px;color: #3b3b3b;}
+#myCarousel1 .item .describe .color{color: #fcaf05;}
+#myCarousel1 .item .describe p{margin-bottom: 5%;}
+#myCarousel1 .item .describe span{font-size: 14px;margin-top: 2%;}
+#myCarousel1 .item ul.product ul{width: 100%;}
+#myCarousel1 .item ul li,.product ul li{float: left;margin-right: 1.33%;margin-bottom:1.33%;width: 24%;position: relative;overflow: hidden;}
 .product ul li{width: 32.44%;overflow: hidden;}
 .product ul li:hover{cursor: pointer;}
-.myCarousel1 .item ul .last,.product ul .last{margin-right: 0;}
-.myCarousel1 .close{position: absolute;top: 5px;right: 5px;width: 40px;height: 40px;text-align: center;
+#myCarousel1 .item ul .last,.product ul .last{margin-right: 0;}
+#myCarousel1 .close{position: absolute;top: 5px;right: 5px;width: 40px;height: 40px;text-align: center;
     line-height: 40px;background: #000;border-radius: 40px;color: #fff;opacity: .6;}
-.myCarousel1 .close:hover{opacity: 0.9;}
-.myCarousel1 .carousel-control{background: transparent;}
-.myCarousel1 .carousel-control.left {left: 2%;}
-.myCarousel1 .carousel-control.right {right: 2%;}
+#myCarousel1 .close:hover{opacity: 0.9;}
+#myCarousel1 .carousel-control{background: transparent;}
+#myCarousel1 .carousel-control.left {left: 2%;}
+#myCarousel1 .carousel-control.right {right: 2%;}
 
 .myCarousel .item{width: 31.9%;float: left;margin: 0 1.9% 0.4% 0;position: relative;}
 

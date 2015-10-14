@@ -549,7 +549,7 @@
                     <div class="w80 mobile_w80">
                         <div class="swiper-container swiper-container-horizontal">
                             <div class="swiper-wrapper" id="swiper-wrapper" style="transition-duration: 0ms; transform: translate3d(-370px, 0px, 0px);">
-                                <div class="swiper-slide swiper-slide-prev">
+                                <div class="swiper-slide">
                                     <img src="images/index-c1.jpg" class="img-responsive" alt="Responsive image"/><br/>
                                     <div class="item-bt">
                                         <span class="main-active" style="width: 300px;">乐窝活动-抽大奖！</span>
@@ -558,7 +558,7 @@
                                         </span>
                                     </div>
                                 </div>
-                                <div class="swiper-slide swiper-slide-active">
+                                <div class="swiper-slide">
                                     <img src="images/index-c2.jpg" class="img-responsive" alt="Responsive image"/><br/>
                                     <div class="item-bt">
                                         <span class="main-active" style="width: 300px;">乐窝活动-抽大奖！</span>
@@ -567,7 +567,7 @@
                                         </span>
                                     </div>
                                 </div>
-                                <div class="swiper-slide swiper-slide-next">
+                                <div class="swiper-slide">
                                     <img src="images/index-c3.jpg" class="img-responsive" alt="Responsive image"/><br/>
                                     <div class="item-bt">
                                         <span class="main-active" style="width: 300px;">乐窝活动-抽大奖！</span>
@@ -676,7 +676,7 @@
             </div>
         </div>
         <div class="mask hide mobile_none">
-            <div class="carousel slide myCarousel1">
+            <div class="carousel slide " id="myCarousel1">
                 <div class="carousel-inner">
                     <div class="item">
                         <img src="images/index-c1.jpg" class="img-responsive img" alt="Responsive image"/>
@@ -735,10 +735,10 @@
                         </div>
                     </div>
                 </div>
-                <a class="left carousel-control" href=".myCarousel1" data-slide="prev">
+                <a class="left carousel-control" href="#myCarousel1" data-slide="prev">
                     <img src="images/pre2.png" alt=""/>
                 </a>
-                <a class="right carousel-control" href=".myCarousel1" data-slide="next">
+                <a class="right carousel-control" href="#myCarousel1" data-slide="next">
                     <img src="images/next2.png" alt=""/>
                 </a>
                 <button class="close" id="close"><i class="glyphicon glyphicon-remove"></i></button>
@@ -820,8 +820,8 @@
                 });
             }
             var ml = $(".swiper-slide");
-            m = $(".myCarousel1"),mi = $(".myCarousel1 .item");
-            mid = $(".myCarousel1 .item .describe");
+            m = $("#myCarousel1"),mi = $("#myCarousel1 .item");
+            mid = $("#myCarousel1 .item .describe");
             ml.each(function (i) {
                 $(this).on("click", function () {
                     m.closest(".mask").removeClass("hide");
