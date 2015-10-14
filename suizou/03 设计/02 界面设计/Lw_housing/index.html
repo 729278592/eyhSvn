@@ -8,6 +8,7 @@
     <link rel="stylesheet" href="plugins/font/css/font-awesome.min.css"/>
     <link rel="stylesheet" href="css/main.css"/>
     <link rel="stylesheet" href="css/mobile.css?v=11"/>
+    <link rel="stylesheet" href="plugins/swiper/dist/css/swiper.min.css"/>
     <style>
         .mask{min-width: 1120px;}
         .head{position: fixed;background: rgba(0,0,0,0);z-index: 100;}
@@ -144,12 +145,12 @@
                             <span class="rb-span">菜园坝</span>
                         </a>
                     </li>
-                    <li class="li4 pc-none">
-                        <a href="housing_information.html">
-                            <img src="images/tu4_1.jpg" class="img-responsive img" alt="Responsive image"/>
-                            <span class="rb-span">菜园坝</span>
-                        </a>
-                    </li>
+                    <!--<li class="li4 pc-none">-->
+                        <!--<a href="housing_information.html">-->
+                            <!--<img src="images/tu4_1.jpg" class="img-responsive img" alt="Responsive image"/>-->
+                            <!--<span class="rb-span">菜园坝</span>-->
+                        <!--</a>-->
+                    <!--</li>-->
                     <li class="mr0">
                         <a href="housing_information.html">
                             <img src="images/tu5.jpg" class="img-responsive img" alt="Responsive image"/>
@@ -546,91 +547,65 @@
                     <img src="images/active-bg.jpg" class="img-responsive mobile_none" alt="Responsive image"/>
                     <p class="title">乐窝最新活动</p>
                     <div class="w80 mobile_w80">
-                        <div class="carousel slide myCarousel">
-                            <div class="carousel-inner">
-                                <div class="item active">
-                                    <ul class="item-ul1 mobile_iu clearfix">
-                                        <li>
-                                            <img src="images/index-c3.jpg" class="img-responsive" alt="Responsive image"/>
-                                            <div class="item-b">
-                                                <a href="#">
-                                                    <span class="main">乐窝活动-抽大奖！</span>
-                                                    <span class="details">
-                                                        <img src="images/more-than.png" alt=""/>
-                                                    </span>
-                                                </a>
-                                            </div>
-                                        </li>
-                                        <li class="mobile_none">
-                                            <img src="images/index-c1.jpg" class="img-responsive" alt="Responsive image"/>
-                                            <div class="item-b">
-                                                <a href="#">
-                                                    <span class="main">乐窝8月公益活动-洋人街</span>
-                                                    <span class="details">
-                                                        <img src="images/more-than.png" alt=""/>
-                                                    </span>
-                                                </a>
-                                            </div>
-                                        </li>
-                                        <li class="last mobile_none">
-                                            <img src="images/index-c2.jpg" class="img-responsive" alt="Responsive image"/>
-                                            <div class="item-b">
-                                                <a href="#">
-                                                    <span class="main">乐窝活动-BBQ</span>
-                                                    <span class="details">
-                                                        <img src="images/more-than.png" alt=""/>
-                                                    </span>
-                                                </a>
-                                            </div>
-                                        </li>
-                                    </ul>
+                        <div class="swiper-container swiper-container-horizontal">
+                            <div class="swiper-wrapper" id="swiper-wrapper" style="transition-duration: 0ms; transform: translate3d(-370px, 0px, 0px);">
+                                <div class="swiper-slide swiper-slide-prev">
+                                    <img src="images/index-c1.jpg" class="img-responsive" alt="Responsive image"/><br/>
+                                    <div class="item-bt">
+                                        <span class="main-active" style="width: 300px;">乐窝活动-抽大奖！</span>
+                                        <span class="details">
+                                            <img src="images/more-than.png" alt=""/>
+                                        </span>
+                                    </div>
                                 </div>
-                                <div class="item">
-                                    <ul class="item-ul1 mobile_iu clearfix">
-                                        <li class="mobile_none">
-                                            <img src="images/index-c3.jpg" class="img-responsive" alt="Responsive image"/>
-                                            <div class="item-b">
-                                                <a href="#">
-                                                    <span class="main">乐窝活动-抽大奖！</span>
-                                                    <span class="details">
-                                                        <img src="images/more-than.png" alt=""/>
-                                                    </span>
-                                                </a>
-                                            </div>
-                                        </li>
-                                        <li>
-                                            <img src="images/index-c1.jpg" class="img-responsive" alt="Responsive image"/>
-                                            <div class="item-b">
-                                                <a href="#">
-                                                    <span class="main">乐窝8月公益活动-洋人街</span>
-                                                    <span class="details">
-                                                        <img src="images/more-than.png" alt=""/>
-                                                    </span>
-                                                </a>
-                                            </div>
-                                        </li>
-                                        <li class="last mobile_none">
-                                            <img src="images/index-c2.jpg" class="img-responsive" alt="Responsive image"/>
-                                            <div class="item-b">
-                                                <a href="#">
-                                                    <span class="main">乐窝活动-BBQ</span>
-                                                    <span class="details">
-                                                        <img src="images/more-than.png" alt=""/>
-                                                    </span>
-                                                </a>
-                                            </div>
-                                        </li>
-                                    </ul>
+                                <div class="swiper-slide swiper-slide-active">
+                                    <img src="images/index-c2.jpg" class="img-responsive" alt="Responsive image"/><br/>
+                                    <div class="item-bt">
+                                        <span class="main-active" style="width: 300px;">乐窝活动-抽大奖！</span>
+                                        <span class="details">
+                                            <img src="images/more-than.png" alt=""/>
+                                        </span>
+                                    </div>
+                                </div>
+                                <div class="swiper-slide swiper-slide-next">
+                                    <img src="images/index-c3.jpg" class="img-responsive" alt="Responsive image"/><br/>
+                                    <div class="item-bt">
+                                        <span class="main-active" style="width: 300px;">乐窝活动-抽大奖！</span>
+                                        <span class="details">
+                                            <img src="images/more-than.png" alt=""/>
+                                        </span>
+                                    </div>
+                                </div>
+                                <div class="swiper-slide">
+                                    <img src="images/index-c1.jpg" class="img-responsive" alt="Responsive image"/><br/>
+                                    <div class="item-bt">
+                                        <span class="main-active" style="width: 300px;">乐窝活动-抽大奖！</span>
+                                        <span class="details">
+                                            <img src="images/more-than.png" alt=""/>
+                                        </span>
+                                    </div>
+                                </div>
+                                <div class="swiper-slide">
+                                    <img src="images/index-c2.jpg" class="img-responsive" alt="Responsive image"/><br/>
+                                    <div class="item-bt">
+                                        <span class="main-active" style="width: 300px;">乐窝活动-抽大奖！</span>
+                                        <span class="details">
+                                            <img src="images/more-than.png" alt=""/>
+                                        </span>
+                                    </div>
+                                </div>
+                                <div class="swiper-slide">
+                                    <img src="images/index-c3.jpg" class="img-responsive" alt="Responsive image"/><br/>
+                                    <div class="item-bt">
+                                        <span class="main-active" style="width: 300px;">乐窝活动-抽大奖！</span>
+                                        <span class="details">
+                                            <img src="images/more-than.png" alt=""/>
+                                        </span>
+                                    </div>
                                 </div>
                             </div>
-                            <a class="left carousel-control" href=".myCarousel" data-slide="prev">
-                                <img src="images/pre1.png" alt="" class="mobile_none"/>
-                                <img src="images/pre2.png" alt="" class="pc-none"/>
-                            </a>
-                            <a class="right carousel-control" href=".myCarousel" data-slide="next">
-                                <img src="images/next1.png" alt="" class="mobile_none"/>
-                                <img src="images/next2.png" alt="" class="pc-none"/>
-                            </a>
+                            <div class="swiper-button-next"></div>
+                            <div class="swiper-button-prev"></div>
                         </div>
                     </div>
                 </div>
@@ -704,7 +679,7 @@
             <div class="carousel slide myCarousel1">
                 <div class="carousel-inner">
                     <div class="item">
-                        <img src="images/index-c3.jpg" class="img-responsive img" alt="Responsive image"/>
+                        <img src="images/index-c1.jpg" class="img-responsive img" alt="Responsive image"/>
                         <div class="describe">
                             <p>
                                 <span class="title color">为什么要组织出去游玩</span><br/>
@@ -725,35 +700,35 @@
                         </div>
                     </div>
                     <div class="item">
-                        <img src="images/index-c1.jpg" class="img-responsive img" alt="Responsive image"/>
+                        <img src="images/index-c2.jpg" class="img-responsive img" alt="Responsive image"/>
                         <div class="describe">
                             <span class="title">最火O2O</span><br/>
                             <span>O2O：最后一公里成了O2O的命脉，上门服务成了O2O的成功秘诀，如何更快更好的服务客户，利用服务号＋企业号，完美的解决上门O2O的痛点，让领导远程操控，让员工便捷接单，让体验做到极致，让用户离不开你</span>
                         </div>
                     </div>
                     <div class="item">
-                        <img src="images/index-c2.jpg" class="img-responsive img" alt="Responsive image"/>
+                        <img src="images/index-c3.jpg" class="img-responsive img" alt="Responsive image"/>
                         <div class="describe">
                             <span class="title">地产/汽车</span><br/>
                             <span>地产：他们都一直在问一个问题，客户在哪里？客户在等待透明、极致的体验，如果服务好客户才是关键，让客户从粉丝变为真正的用户，让便捷的服务吸引住客户，使用随走，轻松粘住客户。</span>
                         </div>
                     </div>
                     <div class="item">
-                        <img src="images/index-c3.jpg" class="img-responsive img" alt="Responsive image"/>
+                        <img src="images/index-c1.jpg" class="img-responsive img" alt="Responsive image"/>
                         <div class="describe">
                             <span class="title">传统零售</span><br/>
                             <span>零售：业绩不好统计？店铺太多不容易管理？营销活动如何圆满开展？上传下达不容易统一？我们给你定制解决方案，从员工管理到上下游关联企业，从营销开展到内部流程管理，不用下载不用安装，我们都给你解决。</span>
                         </div>
                     </div>
                     <div class="item">
-                        <img src="images/index-c1.jpg" class="img-responsive img" alt="Responsive image"/>
+                        <img src="images/index-c2.jpg" class="img-responsive img" alt="Responsive image"/>
                         <div class="describe">
                             <span class="title">传媒/广告</span><br/>
                             <span>广告：不看广告看疗效？应该是看广告还要看疗效，从粗放到精细化管理，互联网＋必须得跨过这道坎。媒体转型、出版行业转型，靠的就是外部的营销、内部的整合分析，将用户牢牢把控在自己服务上。</span>
                         </div>
                     </div>
                     <div class="item">
-                        <img src="images/index-c2.jpg" class="img-responsive img" alt="Responsive image"/>
+                        <img src="images/index-c3.jpg" class="img-responsive img" alt="Responsive image"/>
                         <div class="describe">
                             <span class="title">服务行业</span><br/>
                             <span>服务：内部流程繁琐？员工沟通不顺畅？不管是餐饮、还是摄影、还是猎头，缺的就是信息化这一课，通过信息化可以让服务部门联动起来，不光是业绩飙升，员工也更有激情了。</span>
@@ -775,31 +750,10 @@
     <script src="plugins/picture_transparency/js/move.js"></script>
     <script src="js/lw_housing.js"></script>
     <script src="plugins/autoSlider/js/jquery.img_silder.js"></script>
+    <script src="plugins/swiper/dist/js/swiper.min.js"></script>
     <script>
         $(function() {
-            var ml = $(".mobile_iu li");
-            m = $(".myCarousel1"),
-                mi = $(".myCarousel1 .item");
-                mid = $(".myCarousel1 .item .describe");
-            ml.each(function (i) {
-                $(this).on("click", function () {
-                    m.closest(".mask").removeClass("hide");
-                    mi.eq(i).addClass('active');
-                    mi.eq(i).siblings().removeClass("active");
-                    mi.find("img").fadeIn(2000);
-                    mid.animate({
-                        "top": "6%"
-                    }, 3000);
-                    var c = $("#close");
-                    c.on("click", function () {
-                        c.closest(".mask").addClass("hide");
-                        mi.find("img").hide();
-                        mid.animate({
-                            "top": "-20%"
-                        }, 0);
-                    });
-                });
-            });
+            /*多行打省略号*/
             var ds = $(".deatils-span");
             ds.each(function(i){
                 var divH = $(this).height();
@@ -808,8 +762,11 @@
                     $p.text($p.text().replace(/(\s)*([a-zA-Z0-9]+|\W)(\.\.\.)?$/, "..."));
                 }
             });
+
+
+            /*顶部切换*/
             var si = $('.silder');
-            var sil = $('.silder_list')
+            var sil = $('.silder_list');
             si.imgSilder({
                 s_width:'100%', //容器宽度
                 s_height: si.css({"height":"500px"}), //容器高度
@@ -836,8 +793,59 @@
                 });
             }
 
+
+
+            /*活动切换*/
+            var swiper = new Swiper('.swiper-container', {
+                nextButton: '.swiper-button-next',
+                prevButton: '.swiper-button-prev',
+                slidesPerView: 3,
+                paginationClickable: true,
+                spaceBetween: 10,
+                loop: true,
+                autoplay: 3000,
+                autoplayDisableOnInteraction: false
+            });
+
+            if($(window).width()<640){
+                swiper = new Swiper('.swiper-container', {
+                    nextButton: '.swiper-button-next',
+                    prevButton: '.swiper-button-prev',
+                    slidesPerView: 1,
+                    paginationClickable: true,
+                    spaceBetween: 0,
+                    loop: true,
+                    autoplay: 3000,
+                    autoplayDisableOnInteraction: false
+                });
+            }
+            var ml = $(".swiper-slide");
+            m = $(".myCarousel1"),mi = $(".myCarousel1 .item");
+            mid = $(".myCarousel1 .item .describe");
+            ml.each(function (i) {
+                $(this).on("click", function () {
+                    m.closest(".mask").removeClass("hide");
+                    mi.eq(i).addClass('active');
+                    mi.eq(i).siblings().removeClass("active");
+                    mi.find("img").fadeIn(2000);
+                    mid.animate({
+                        "top": "6%"
+                    }, 3000);
+                    var c = $("#close");
+                    c.on("click", function () {
+                        c.closest(".mask").addClass("hide");
+                        mi.find("img").hide();
+                        mid.animate({
+                            "top": "-20%"
+                        }, 0);
+                    });
+                });
+            });
         })
     </script>
+    <script>
 
+
+    </script>
 </body>
 </html>

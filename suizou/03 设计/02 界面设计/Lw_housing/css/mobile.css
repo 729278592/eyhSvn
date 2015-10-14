@@ -115,7 +115,7 @@
 
 @media screen and (max-width: 420px) {
     .bridge li span{width: 60%;font-size: 14px;}
-    .content-foot{margin-top: 70%;}
+    .content-foot{margin-top: 75%;}
 }
 
 @media screen and (max-width: 432px) {
