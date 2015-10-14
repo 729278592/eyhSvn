@@ -1,4 +1,4 @@
-function move(obj,json){
+function move(obj,json,fn){
     clearInterval(obj.iTimer);
     var cur = 0;
     obj.iTimer = setInterval(function(){
@@ -24,7 +24,8 @@ function move(obj,json){
             }
         }
         if(ismove == true){
-            clearInterval(obj.iTimer)
+            clearInterval(obj.iTimer);
+            fn&&fn.call(obj)
         }
     },30)
 }

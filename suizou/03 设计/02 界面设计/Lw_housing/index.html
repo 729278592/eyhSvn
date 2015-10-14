@@ -12,14 +12,47 @@
     <style>
         .mask{min-width: 1120px;}
         .head{position: fixed;background: rgba(0,0,0,0);z-index: 100;}
+
+        .show-md{width: 100%;min-width: 1100px;background: #68a1cf;color: #fff;text-align: center;position: relative;}
+        .shoum-ul{width: 100%;margin-top: 100px;}
+        .shoum-ul li{float: left;width: 33.333%;text-align: center;}
+        .shoum-ul li span{display: inline-block;width: 100%;font-size: 18px;}
+        .shoum-ul li .title{font-size: 25px;}
+        .show-md p{margin-top: 100px;font-size: 18px;}
+        .show-md .close{position: absolute;right: 15px;top: 10px;color: #000;font-size: 30px;}
+        .va-middle{position: absolute;top: 50%;color: #fff;left: 50%;margin-left: -123px;margin-top: -88px;}
+        .va-middle .title{font-size: 60px;}
+        .va-middle .space-4{font-size: 18px;}
+        .va-middle .use-love{
+            padding: 9px 27px;
+            font-size: 16px;
+            background: rgba(0,0,0,0.4);
+            border-style: none;display: inline-block;
+            margin-top: 15px;
+            border-radius: 2px;
+            text-align: center;
+            vertical-align: middle;
+            font-weight: bold;
+            line-height: 1.43;
+            -webkit-user-select: none;
+            -moz-user-select: none;
+            -ms-user-select: none;
+            user-select: none;
+            white-space: nowrap;
+            cursor: pointer;}
+        .va-middle .use-love:hover{background: rgba(0,0,0,.7)}
+
         @media screen and (max-width: 639px) {
             .head {background: rgba(164, 196, 237, 1)}
+            #video{width: 100%;position: relative;}
+            .video{position: fixed;left:50%;top:20%;padding: 20px;border: 1px solid #dbdbdb;background: rgba(255,255,255,0.8);border-radius: 10px;width: 98%;margin-left: -49%;}
+            .mask #video .close{width: 20px;height: 20px;position: fixed;top: 51%;right: 1.2%;margin-left: 180px;margin-top: -140px;background: #fff;border-radius: 30px;text-align: center;line-height: 20px;z-index: 100;}
         }
     </style>
 </head>
 <body>
     <div class="wrapper">
-        <div class="head">
+        <div class="head" id="head">
             <div class="head-main">
                 <div class="pc-none mobile_block">
                             <span>
@@ -63,38 +96,102 @@
             </div>
         </div>
         <div class="content">
+            <div class="show-md hide" id="show-md">
+                <div class="close">×</div>
+                <ul class="shoum-ul clearfix">
+                    <li>
+                        <img src="images/show1.png" />
+
+                        <div>
+                            <span class="title">
+                                房东轻松收房租
+                            </span><br/>
+                            <span>
+                                格调装修、品牌家电、智能门锁
+                            </span>
+                        </div>
+                    </li>
+                    <li>
+                        <img src="images/show2.png" />
+                        <div>
+                            <span class="title">
+                                房东轻松收房租
+                            </span><br/>
+                            <span>
+                                格调装修、品牌家电、智能门锁
+                            </span>
+                        </div>
+                    </li>
+                    <li>
+                        <img src="images/show3.png" />
+                        <div>
+                            <span class="title">
+                                房东轻松收房租
+                            </span><br/>
+                            <span>
+                                格调装修、品牌家电、智能门锁
+                            </span>
+                        </div>
+                    </li>
+                </ul>
+                <p>您好 我是乐窝公寓,每一间房子都值得被认真对待！ </p>
+            </div>
             <div class="content-head mobile-ch">
                 <div class="silder" >
                     <div class="silder_list">
                         <div>
                             <a href="#">
-                                <img src="images/index.jpg"  class="img-responsive pc-img" alt="Responsive image" />
-                                <img src="images/mobile-img.jpg" class="img-responsive mobile-img" alt="Responsive image"/>
-                            </a>
-                        </div>
-                        <div>
-                            <a href="#">
                                 <img src="images/index1.jpg"  class="img-responsive pc-img" alt="Responsive image" />
-                                <img src="images/mobile-img.jpg" class="img-responsive mobile-img " alt="Responsive image"/>
+                                <img src="images/mobile-img.jpg" class="img-responsive mobile-img" alt="Responsive image"/>
                             </a>
                         </div>
                         <div>
                             <a href="#">
                                 <img src="images/index2.jpg"  class="img-responsive pc-img" alt="Responsive image" />
-                                <img src="images/mobile-img.jpg" class="img-responsive mobile-img" alt="Responsive image"/>
+                                <img src="images/mobile-img1.jpg" class="img-responsive mobile-img " alt="Responsive image"/>
                             </a>
                         </div>
                         <div>
                             <a href="#">
                                 <img src="images/index3.jpg"  class="img-responsive pc-img" alt="Responsive image" />
-                                <img src="images/mobile-img.jpg" class="img-responsive mobile-img" alt="Responsive image"/>
+                                <img src="images/mobile-img2.jpg" class="img-responsive mobile-img" alt="Responsive image"/>
                             </a>
                         </div>
+                        <div>
+                            <a href="#">
+                                <img src="images/index4.jpg"  class="img-responsive pc-img" alt="Responsive image" />
+                                <img src="images/mobile-img3.jpg" class="img-responsive mobile-img" alt="Responsive image"/>
+                            </a>
+                        </div>
+                        <div>
+                            <a href="#">
+                                <img src="images/index5.jpg"  class="img-responsive pc-img" alt="Responsive image" />
+                                <img src="images/mobile-img2.jpg" class="img-responsive mobile-img" alt="Responsive image"/>
+                            </a>
+                        </div>
+                        <div>
+                            <a href="#">
+                                <img src="images/index6.jpg"  class="img-responsive pc-img" alt="Responsive image" />
+                                <img src="images/mobile-img3.jpg" class="img-responsive mobile-img" alt="Responsive image"/>
+                            </a>
+                        </div>
+                    </div>
+                    <div class="va-middle">
+                        <h2 class="title">
+                            HI，年轻
+                        </h2>
+                        <div class="space-4">
+                            拼搏向上的年纪，你应该住得更好！
+                        </div>
+                        <button class="use-love">
+                            如何使用Loveto
+                        </button>
+
                     </div>
                 </div>
                 <div class="ch-mask" style=""></div>
                 <div class="ch-mask-main">
-                    <input type="text" class="form-control" placeholder="请输入您要找的房源区域/地址/路名...">
+                    <input type="text" class="form-control" placeholder="你想住哪儿?">
                     <!--<input type="button" class="btn btn-group" value="搜索"/>-->
                     <a href="search_housing.html"  class="btn btn-group">搜索</a>
                     <p class="hotqu mobile_none">
@@ -111,7 +208,11 @@
                 <div class="comon-head">热门房源推荐</div>
                 <ul class="w80 clearfix mobile_w80">
                     <li>
+                        <div class="play pc-none" src="http://mvvideo2.meitudata.com/56163e35cac069064.mp4">
+                            <i class="glyphicon glyphicon-triangle-right"></i>
+                        </div>
                         <a href="housing_information.html">
+
                             <img src="images/IMG_1496.jpg" class="img-responsive img" alt="Responsive image"/>
                             <span class="rb-span">聚丰江山里</span>
                         </a>
@@ -532,7 +633,7 @@
                         </div>
                     </div>
                 </div>
-                <img src="images/index2.jpg" class="img-responsive mobile_none" alt="Responsive image"/>
+                <img src="images/index-a.jpg" class="img-responsive mobile_none" alt="Responsive image"/>
                 <img src="images/mobile-step.jpg" class="img-responsive pc-none" alt="Responsive image" style="margin-top: -3px;"/>
                 <!--<div class="flow-lay">-->
                     <!--<div class="flow-list">-->
@@ -550,7 +651,7 @@
                         <div class="swiper-container swiper-container-horizontal">
                             <div class="swiper-wrapper" id="swiper-wrapper" style="transition-duration: 0ms; ">
                                 <div class="swiper-slide">
-                                    <img src="images/index-c1.jpg" class="img-responsive" alt="Responsive image"/><br/>
+                                    <img src="images/index-c2.jpg" class="img-responsive" alt="Responsive image"/><br/>
                                     <div class="item-bt">
                                         <span class="main-active" style="width: 300px;">乐窝活动-抽大奖！</span>
                                         <span class="details">
@@ -559,7 +660,7 @@
                                     </div>
                                 </div>
                                 <div class="swiper-slide">
-                                    <img src="images/index-c2.jpg" class="img-responsive" alt="Responsive image"/><br/>
+                                    <img src="images/index-c1.jpg" class="img-responsive" alt="Responsive image"/><br/>
                                     <div class="item-bt">
                                         <span class="main-active" style="width: 300px;">乐窝活动-抽大奖！</span>
                                         <span class="details">
@@ -675,11 +776,11 @@
                 <span class="first">渝ICP备15002338号-1　Copyright © 2014~2015 重庆乐拓资产管理有限公司 版权所有</span>            　　
             </div>
         </div>
-        <div class="mask hide mobile_none">
-            <div class="carousel slide " id="myCarousel1">
+        <div class="mask hide">
+            <div class="carousel slide hide" id="myCarousel1">
                 <div class="carousel-inner">
                     <div class="item">
-                        <img src="images/index-c1.jpg" class="img-responsive img" alt="Responsive image"/>
+                        <img src="images/index-c2.jpg" class="img-responsive img" alt="Responsive image"/>
                         <div class="describe">
                             <p>
                                 <span class="title color">为什么要组织出去游玩</span><br/>
@@ -700,7 +801,7 @@
                         </div>
                     </div>
                     <div class="item">
-                        <img src="images/index-c2.jpg" class="img-responsive img" alt="Responsive image"/>
+                        <img src="images/index-c1.jpg" class="img-responsive img" alt="Responsive image"/>
                         <div class="describe">
                             <span class="title">最火O2O</span><br/>
                             <span>O2O：最后一公里成了O2O的命脉，上门服务成了O2O的成功秘诀，如何更快更好的服务客户，利用服务号＋企业号，完美的解决上门O2O的痛点，让领导远程操控，让员工便捷接单，让体验做到极致，让用户离不开你</span>
@@ -742,6 +843,11 @@
                     <img src="images/next2.png" alt=""/>
                 </a>
                 <button class="close" id="close"><i class="glyphicon glyphicon-remove"></i></button>
+            </div>
+            <div id="video" class="hide pc-none">
+                <div class="close">×</div>
+                <video src="" controls="controls" class="video" autoplay="autoplay">
+                </video>
             </div>
         </div>
     </div>
@@ -794,7 +900,6 @@
             }
 
 
-
             /*活动切换*/
             var swiper = new Swiper('.swiper-container', {
                 nextButton: '.swiper-button-next',
@@ -806,25 +911,27 @@
                 autoplay: 3000,
                 autoplayDisableOnInteraction: false
             });
-
+            var bb = $(".use-love");
             if($(window).width()<640){
+                bb.addClass("hide");
                 swiper = new Swiper('.swiper-container', {
                     nextButton: '.swiper-button-next',
                     prevButton: '.swiper-button-prev',
                     slidesPerView: 1,
                     paginationClickable: true,
                     spaceBetween: 0,
-                    loop: true,
+//                    loop: true,
                     autoplay: 3000,
                     autoplayDisableOnInteraction: false
                 });
-            }
+            }else{bb.removeClass("hide")}
             var ss = $(".swiper-slide");
             var m1 = $("#myCarousel1"),m1i = $("#myCarousel1 .item");
             var m1id = $("#myCarousel1 .item .describe");
             ss.each(function (i) {
                 $(this).on("click", function () {
                     m1.closest(".mask").removeClass("hide");
+                    m1.removeClass("hide");
                     m1i.eq(i).addClass('active');
                     m1i.eq(i).siblings().removeClass("active");
                     m1i.find("img").fadeIn(2000);
@@ -832,11 +939,54 @@
                     var c = $("#close");
                     c.on("click", function () {
                         c.closest(".mask").addClass("hide");
+                        m1.addClass("hide");
                         m1i.find("img").hide();
                         m1id.animate({"top": "-20%"}, 0);
                     });
                 });
             });
+
+
+            /*顶部显示*/
+            var sm = $(".show-md");
+            var showMd = document.getElementById("show-md");
+            bb.on("click",function(){
+                sm.removeClass("hide");
+                $(".head").css({"positon":"absolute","top":"660px"});
+                move(showMd,{height:660})
+            });
+            $(window).on("scroll",function(){
+                $(".head").css({"positon":"fixed","top":"0"});
+                if ($(this).scrollTop() > 660) {
+                    move(showMd,{height:0});
+                    sm.addClass("hide");
+
+                }
+                else {
+
+                }
+            });
+            var sc = $(".show-md .close");
+            sc.on("click",function(){
+
+                move(showMd,{height:0},function(){
+                    $(".head").css({"positon":"fixed","top":"0"});
+                });
+                sm.removeClass("hide");
+            });
+
+            /*视频播放*/
+            $(".w80 li").delegate(".play", "click", function(){
+                var src = $(this).attr("src");
+                $(".mask").removeClass("hide");
+                $("#video").removeClass("hide");
+                $(".video").attr({autoplay:"autoplay",src:src})
+            });
+
+            $(".mask").delegate(".close","click",function(){
+                $(".mask").addClass("hide");
+                $(".video").attr({autoplay:"",src:""})
+            })
         })
     </script>
 </body>

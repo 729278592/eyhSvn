@@ -4,7 +4,7 @@
     body{max-width: 640px;min-width: 310px;}
     .wrapper{width: 100%;}
     .wrapper{width: 100%;}
-    .head{width: 100%;background: rgba(164,196,237,.8)}
+    .head{width: 100%;background: rgba(164,196,237,.8);}
     .head-main{width: 98%;height: 100%;max-width: 640px;padding: 0 0px;}
     .head-main>div{text-align: center;}
     .head-main .glyphicon{color: #fff;float: left;position: relative;top: 22px;}
@@ -15,10 +15,10 @@
     .menu_mobile li a:hover{text-decoration: none;}
     .menu_mobile .last a {border-bottom: none;}
     .mobile_w80{width: 100%;left: 0;margin-left: 0;margin-top: 0;}
-    .mobile_w80>li{width: 100%;}
+    .mobile_w80>li{width: 100%;position: relative;}
     .w80>li .img{opacity: 100;filter:alpha(opacity=100);}
     .rb-span,.rt-span,.lt-span{display: inline-block;width: 90px;height: 30px;background: #fff;text-align: center;line-height: 31px;color: #fc924e;font-size: 16px;border-radius: 4px;}
-    .activity .title{color: #55340e;top: 20%;font-size: 18px;text-indent: 25px;}
+    .activity .title{color: #55340e;top: 45%;font-size: 18px;text-indent: 25px;}
     .mobile_iu li{width: 100%;}
     .activity .item-b{height: 50px;line-height: 50px;}
     .activity .mobile_w80{margin-top: 40px;}
