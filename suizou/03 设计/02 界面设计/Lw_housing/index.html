@@ -659,7 +659,7 @@
                                 <div class="swiper-slide">
                                     <img src="images/index-c2.jpg" class="img-responsive" alt="Responsive image"/><br/>
                                     <div class="item-bt">
-                                        <span class="main-active" style="width: 300px;">乐窝活动-抽大奖！</span>
+                                        <span class="main-active" style="width: 300px;">小区锻炼</span>
                                         <span class="details">
                                             <img src="images/more-than.png" alt=""/>
                                         </span>
@@ -668,7 +668,7 @@
                                 <div class="swiper-slide">
                                     <img src="images/index-c1.jpg" class="img-responsive" alt="Responsive image"/><br/>
                                     <div class="item-bt">
-                                        <span class="main-active" style="width: 300px;">乐窝活动-抽大奖！</span>
+                                        <span class="main-active" style="width: 300px;">水上公园</span>
                                         <span class="details">
                                             <img src="images/more-than.png" alt=""/>
                                         </span>
@@ -677,7 +677,7 @@
                                 <div class="swiper-slide">
                                     <img src="images/index-c3.jpg" class="img-responsive" alt="Responsive image"/><br/>
                                     <div class="item-bt">
-                                        <span class="main-active" style="width: 300px;">乐窝活动-抽大奖！</span>
+                                        <span class="main-active" style="width: 300px;">南滨路夜跑</span>
                                         <span class="details">
                                             <img src="images/more-than.png" alt=""/>
                                         </span>
@@ -935,21 +935,24 @@
             var m1 = $("#myCarousel1"),m1i = $("#myCarousel1 .item");
             var m1id = $("#myCarousel1 .item .describe");
             ss.each(function (i) {
-                $(this).on("click", function () {
-                    m1.closest(".mask").removeClass("hide");
-                    m1.removeClass("hide");
-                    m1i.eq(i).addClass('active');
-                    m1i.eq(i).siblings().removeClass("active");
-                    m1i.find("img").fadeIn(2000);
-                    m1id.animate({"top": "6%"}, 3000);
-                    var c = $("#close");
-                    c.on("click", function () {
-                        c.closest(".mask").addClass("hide");
-                        m1.addClass("hide");
-                        m1i.find("img").hide();
-                        m1id.animate({"top": "-20%"}, 0);
+                if($(window).width()>640){
+                    $(this).on("click", function () {
+                        m1.closest(".mask").removeClass("hide");
+                        m1.removeClass("hide");
+                        m1i.eq(i).addClass('active');
+                        m1i.eq(i).siblings().removeClass("active");
+                        m1i.find("img").fadeIn(2000);
+                        m1id.animate({"top": "6%"}, 3000);
+                        var c = $("#close");
+                        c.on("click", function () {
+                            c.closest(".mask").addClass("hide");
+                            m1.addClass("hide");
+                            m1i.find("img").hide();
+                            m1id.animate({"top": "-20%"}, 0);
+                        });
                     });
-                });
+                }
+
             });
 
 
