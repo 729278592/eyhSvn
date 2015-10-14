@@ -13,6 +13,7 @@
         input.form-control {border-radius: 6px;}
         .video{position: absolute;left: 50%;top: 50%;margin-left: -240px;margin-top: -292px;padding: 50px;border: 1px solid #dbdbdb;background: rgba(255,255,255,0.8);border-radius: 10px;}
         .mp4 .close{width: 30px;height: 30px;position: absolute;top: 50%;left: 50%;margin-left: 310px;margin-top: -292px;background: #fff;border-radius: 30px;text-align: center;line-height: 30px;z-index: 100;}
+
         @media screen and (max-height: 768px) {
             .col-sm-2 {width: 16.66666667%;float: left;}
             .col-sm-10 {width: 83.33333333%;float: left;}
@@ -23,7 +24,6 @@
             .col-sm-offset-3 {margin-left: 25%;}
         }
         @media screen and (max-width: 640px){
-
             .content,.footer{max-width: 640px;width: 100%;}
             .w60{max-width: 640px;width: 100%;margin-left: 0;left: 0;}
             .box{min-width: 320px;}
@@ -287,11 +287,15 @@
         $(".player").removeClass("hide");
 
     });
-    $(".play").on("click",function(){
-        $(".mask").removeClass("hide");
-        $(".mp4").removeClass("hide");
-        $(".video").attr({"autoplay":"autoplay","src":"http://mvvideo2.meitudata.com/56163e35cac069064.mp4"});
-    });
+    if($(window).width()>640){
+        $(".play,#play").on("click",function(){
+            $(".mask").removeClass("hide");
+            $(".mp4").removeClass("hide");
+            $(".video").attr({"autoplay":"autoplay","src":"http://mvvideo2.meitudata.com/56163e35cac069064.mp4"});
+        });
+    }
+
+
     $(".mask").delegate(".close","click",function(){
         $(".mask").addClass("hide");
         $(".calculation").addClass("hide");

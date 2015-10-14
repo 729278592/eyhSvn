@@ -154,7 +154,7 @@ a:link{text-decoration: none;}
 .bridge li p{margin-top: 2%;font-size: 14px;}
 .bridge li p .last{font-size: 12px;}
 .bridge li .xian{position: absolute;top: 0;right: 0;height: 100%;width: 5px;}
-.logo{position: relative;top: 12px;width: 90px;}
+.logo{position: relative;top: 9px;width: 90px;}
 
 
 
@@ -259,11 +259,11 @@ a:link{text-decoration: none;}
 .room{width: 79.7%;margin-bottom: 10px;display: inline-block;}
 .room-group{width: 100%;}
 .room-information{width: 100%;}
-.room-information li{float: left;margin-top: 1%;margin-right: 1%;position: relative;}
+.room-information li{float: left;margin-top: 1%;margin-right: 1%;position: relative;padding-left: 120px;}
 .room-information2 li{width: 49%;}
 .room-information3 li{width: 32.33%;}
 .room-left{position: absolute;left: 0;height: 100%;padding: 0 2%;background: #edeff5;top: 0;text-align: center;border: 1px solid #addced;border-right: none;width: 170px;}
-.room-left>div{position: relative;top: 50%;margin-top: -67%;}
+.room-left>div{position: relative;top: 50%;margin-top: -55%;}
 .room-left .yuyue,.room-top .yuyue{width: 80px;height: 25px;line-height: 25px;text-align: center;background: #fba511;color: #fff;border-radius: 3px;font-size: 12px;display: inline-block;}
 .room-top{position: absolute;top: 0;width: 100%;background: #edeff5;padding-right: 1%;border: 1px solid #addced;border-bottom: none;}
 .room-top .people{float: right;margin-top: 1%;margin-right: 2%;}
@@ -330,7 +330,7 @@ input.btn-click:hover{background: #e16a20}
 .c-div{background: #dfe8f4;padding-top: 1px;}
 .w60{width: 1050px;position: relative;left: 50%;margin-left: -525px;}
 .choice{width: 100%;margin-left: 1%;margin-bottom: 30px;}
-.choice li{width: 48%;float: left;margin-right: 2%;position: relative;}
+.choice li{width: 48%;float: left;margin-right: 2%;position: relative;padding-bottom: 70px;}
 .choice .play{width: 70px;height: 70px;border-radius: 50px;background: rgba(0,0,0,.6);text-align: center;line-height: 75px;position: absolute;z-index: 1;left: 50%;top: 30%;margin-left: -25px;margin-bottom: -25px; color: #fff;font-size: 25px;filter:alpha(opacity=60);}
 .choice .play:hover{background: #000;cursor: pointer;}
 .choice-bottom{position: absolute;bottom: 0;left: 0;right: 0;height: 70px;background: #fff;text-align: center;}
