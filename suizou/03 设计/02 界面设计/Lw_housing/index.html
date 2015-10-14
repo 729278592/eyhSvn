@@ -12,15 +12,14 @@
     <style>
         .mask{min-width: 1120px;}
         .head{position: fixed;background: rgba(0,0,0,0);z-index: 100;}
-
         .show-md{width: 100%;min-width: 1100px;background: #68a1cf;color: #fff;text-align: center;position: relative;}
-        .shoum-ul{width: 100%;margin-top: 100px;}
+        .shoum-ul{width: 100%;margin-top: 100px;height: 0;}
         .shoum-ul li{float: left;width: 33.333%;text-align: center;}
         .shoum-ul li span{display: inline-block;width: 100%;font-size: 18px;}
         .shoum-ul li .title{font-size: 25px;}
-        .show-md p{margin-top: 100px;font-size: 18px;}
-        .show-md .close{position: absolute;right: 15px;top: 10px;color: #000;font-size: 30px;}
-        .va-middle{position: absolute;top: 50%;color: #fff;left: 50%;margin-left: -123px;margin-top: -88px;}
+        .show-md p{margin-top: 450px;font-size: 18px;}
+        .show-md .close{position: absolute;right: 15px;top: 40px;color: #000;font-size: 30px;}
+        .va-middle{position: absolute;top: 50%;color: #fff;left: 50%;margin-left: -140px;margin-top: -88px;}
         .va-middle .title{font-size: 60px;}
         .va-middle .space-4{font-size: 18px;}
         .va-middle .use-love{
@@ -43,7 +42,7 @@
         .va-middle .use-love:hover{background: rgba(0,0,0,.7)}
 
         @media screen and (max-width: 639px) {
-            .head {background: rgba(164, 196, 237, 1)}
+            .head {background: rgba(0,0,0, .4)}
             #video{width: 100%;position: relative;}
             .video{position: fixed;left:50%;top:20%;padding: 20px;border: 1px solid #dbdbdb;background: rgba(255,255,255,0.8);border-radius: 10px;width: 98%;margin-left: -49%;}
             .mask #video .close{width: 20px;height: 20px;position: fixed;top: 50%;right: 1.2%;margin-left: 180px;margin-top: -140px;background: #fff;border-radius: 30px;text-align: center;line-height: 20px;z-index: 100;}
@@ -224,6 +223,9 @@
                         </a>
                     </li>
                     <li>
+                        <div class="play pc-none" src="http://mvvideo2.meitudata.com/56163e35cac069064.mp4">
+                            <i class="glyphicon glyphicon-triangle-right"></i>
+                        </div>
                         <a href="housing_information.html">
                             <img src="images/IMG_1663.jpg" class="img-responsive img" alt="Responsive image"/>
                             <div class="out-housing">
