@@ -102,8 +102,7 @@ a:link{text-decoration: none;}
 .product ul li{width: 32.44%;overflow: hidden;}
 .product ul li:hover{cursor: pointer;}
 #myCarousel1 .item ul .last,.product ul .last{margin-right: 0;}
-#myCarousel1 .close{position: absolute;top: 5px;right: 5px;width: 40px;height: 40px;text-align: center;
-    line-height: 40px;background: #000;border-radius: 40px;color: #fff;opacity: .6;}
+#myCarousel1 .close{position: absolute;top: 5px;right: 5px;width: 40px;height: 40px;text-align: center;line-height: 40px;background: #000;border-radius: 40px;color: #fff;opacity: .6;}
 #myCarousel1 .close:hover{opacity: 0.9;}
 #myCarousel1 .carousel-control{background: transparent;}
 #myCarousel1 .carousel-control.left {left: 2%;}
@@ -203,7 +202,7 @@ a:link{text-decoration: none;}
 
 .loadMap {width:360px;position:absolute;z-index:1000;top:50%;left: 50%;margin-left: -180px;margin-top: -103px;;}
 .loadpop {width:182px;height:182px;overflow:hidden;background:#fff;text-align:center;box-shadow:5px 15px 15px #ccc;position:relative;top:0;z-index:1;border-radius:182px;margin:0 auto;margin-bottom:24px;display: none;}
-.loadpop .loadIcon {position:absolute;bottom:-4px;right:-11px}
+.loadpop .loadIcon {position:absolute;bottom:8px;right:-2px}
 .loadpop label {display:inline-block;margin-top:25px;width:100%;text-align:center;color:#764a1c;font-size:12px;margin-bottom:0}
 .loadpop label+label {margin-top:-5px!important}
 .loadpop .progressAnim i {display:inline-block;width:7px;height:7px;background:#76a930;border-radius:7px;margin-right:7px}
