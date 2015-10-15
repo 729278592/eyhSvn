@@ -11,7 +11,7 @@ a:hover{cursor: pointer;text-decoration: none;}
 
 /*common*/
 
-.mask{position: fixed;left: 0;right: 0;top: 0;bottom: 0;background: rgba(0,0,0,.5);z-index: 1000;color: #333;filter:alpha(opacity=50)}
+.mask{position: fixed;left: 0;right: 0;top: 0;bottom: 0;background: rgba(0,0,0,.5);z-index: 1000;color: #333;}
 .mask-content{text-align: center;width: 100%;color: #33a9d4;padding: 2% 0 1% 0;border-radius: 4px;}
 .mask-content .title{font-weight: bold;font-size: 18px;}
 .people-img{border-right: 80px;width: 55px;border-radius: 55px;}
@@ -107,7 +107,6 @@ a:link{text-decoration: none;}
 #myCarousel1 .carousel-control{background: transparent;}
 #myCarousel1 .carousel-control.left {left: 2%;}
 #myCarousel1 .carousel-control.right {right: 2%;}
-
 .myCarousel .item{width: 31.9%;float: left;margin: 0 1.9% 0.4% 0;position: relative;}
 
 /*.flow-lay {background: #f5c63c;height: 170px;}*/
@@ -145,8 +144,7 @@ a:link{text-decoration: none;}
 .myCarousel .left{left: 92%;background-image: none;}
 .myCarousel .right{left: 95%;background-image: none;}
 .carousel-control:focus{color: #fff;text-decoration: none;filter: alpha(opacity=100);outline: 0;opacity: 1;}
-.content-foot{width: 100%;padding: 2% 0;background: #6784a2;text-align: center;color: #fff;font-weight: 100;
-}
+.content-foot{width: 100%;padding: 2% 0;background: #6784a2;text-align: center;color: #fff;font-weight: 100;}
 .content-foot-p{font-size: 18px;}
 .bridge{margin-top: 2%;width: 80%;position: relative;left: 50%;margin-left: -100%;}
 .bridge li{width: 25%;position: relative;float: left;}
@@ -156,6 +154,25 @@ a:link{text-decoration: none;}
 .bridge li .xian{position: absolute;top: 0;right: 0;height: 100%;width: 5px;}
 .logo{position: relative;top: 9px;width: 90px;}
 
+
+.show-md{width: 100%;min-width: 1100px;background: #68a1cf;color: #fff;text-align: center;position: relative;}
+.shoum-ul{width: 100%;margin-top: 100px;height: 0;}
+.shoum-ul li{float: left;width: 33.333%;text-align: center;}
+.shoum-ul li span{display: inline-block;width: 100%;font-size: 18px;}
+.shoum-ul li .title{font-size: 25px;}
+.show-md p{margin-top: 450px;font-size: 18px;}
+.show-md .close{position: absolute;right: 15px;top: 40px;color: #000;font-size: 30px;}
+.va-middle{position: absolute;top: 50%;color: #fff;left: 50%;margin-left: -140px;margin-top: -88px;}
+.va-middle .title{font-size: 60px;}
+.va-middle .space-4{font-size: 18px;}
+.va-middle .use-love{
+    padding: 9px 27px;font-size: 16px;background: rgba(0,0,0,0.4);
+    border-style: none;display: inline-block;margin-top: 15px;border-radius: 2px;
+    text-align: center;vertical-align: middle;font-weight: bold;line-height: 1.43;
+    -webkit-user-select: none;-moz-user-select: none;-ms-user-select: none;user-select: none;
+    white-space: nowrap;cursor: pointer;}
+.va-middle .use-love:hover{background: rgba(0,0,0,.7)}
+.w80 li .play{width: 40px;height: 40px;line-height: 45px;}
 
 
 /*search_housing*/
@@ -181,7 +198,7 @@ a:link{text-decoration: none;}
 .ul-information li.last{border-bottom: none;}
 
 .ul-house{margin-left: -0.5%;width: 99.2%;padding: 0 0.4%;}
-.ul-house li{width: 47%;margin-left: 2.5%;float: left;position: relative;margin-bottom: 1.5%;}
+.ul-house li{width: 48%;margin-left: 2%;float: left;position: relative;margin-bottom: 1.5%;}
 .ul-house li>a{display: inline-block;width: 100%;position: relative;}
 .ul-house li>a .item-b{border: 1px solid #f0f0f0;border-top:none;padding: 1% 2%;}
 .ul-house li>a .people{position: absolute;right: 1%;bottom: 10%;z-index: 100;border-radius: 100px;}
@@ -196,7 +213,7 @@ a:link{text-decoration: none;}
 .house-details .price{font-size: 16px;}
 .house-details .address{float: right;font-size: 12px;}
 .ul-house .main{width: 100%;}
-.w96{padding: 0 1.5%;color: #999;line-height: 30px;}
+.w96{padding: 0 1.5%;color: #999;line-height: 30px;width: 100%;}
 
 
 
@@ -249,7 +266,7 @@ a:link{text-decoration: none;}
 .pc_deatils .now{background: #fba511;margin-right: 20px;}
 .pc_deatils .address,.w80>.deatils .staging{background: #e95757;}
 .pc_deatils .staging{height: 25px;line-height: 25px;font-size: 14px;float:right;width: 100px;background: red;margin-top: -3px;}
-.tool{width: 100%;background: #f2f2f2;padding: 10px 10px 5px;text-align: center;margin-top:490px;}
+.tool{width: 100%;background: #f2f2f2;padding: 10px;text-align: center;margin-top:490px;}
 .tool .title{color: #fba613;float: left;}
 .tool .tool-group{display: inline-block;width: 10.7%;clear: both;color: #666;position: relative;}
 .furniture{margin-top: 0;}
@@ -259,10 +276,10 @@ a:link{text-decoration: none;}
 .room{width: 79.7%;margin-bottom: 10px;display: inline-block;}
 .room-group{width: 100%;}
 .room-information{width: 100%;}
-.room-information li{float: left;margin-top: 1%;margin-right: 1%;position: relative;padding-left: 120px;}
+.room-information li{float: left;margin-top: 1%;margin-right: 1%;position: relative;padding-left: 160px;}
 .room-information2 li{width: 49%;}
 .room-information3 li{width: 32.33%;}
-.room-left{position: absolute;left: 0;height: 100%;padding: 0 2%;background: #edeff5;top: 0;text-align: center;border: 1px solid #addced;border-right: none;width: 170px;}
+.room-left{position: absolute;left: 0;height: 100%;padding: 0 5px;background: #edeff5;top: 0;text-align: center;border: 1px solid #addced;border-right: none;width: 170px;}
 .room-left>div{position: relative;top: 50%;margin-top: -55%;}
 .room-left .yuyue,.room-top .yuyue{width: 80px;height: 25px;line-height: 25px;text-align: center;background: #fba511;color: #fff;border-radius: 3px;font-size: 12px;display: inline-block;}
 .room-top{position: absolute;top: 0;width: 100%;background: #edeff5;padding-right: 1%;border: 1px solid #addced;border-bottom: none;}
@@ -434,6 +451,7 @@ input.btn-click:hover{background: #e16a20}
 @media screen and (min-width: 1400px) {
     .head,.content,.footer{min-width: 1400px;}
     body{overflow-x: hidden;}
+    .room-information li .img-responsive{width: 387px;height: 258px;}
 }
 
 @media screen and (max-width: 1400px) and (min-width: 640px) {
@@ -447,6 +465,7 @@ input.btn-click:hover{background: #e16a20}
     .pc_deatils .address,.w80>.deatils .staging{background: #e95757;}
     .middle-none{display: none;}
     .pc_deatils .staging{width: 80px;}
+    .room-information li .img-responsive{width: 270px;height: 180px;}
 }
 
 @media screen and (max-width: 720px) {

@@ -15,7 +15,7 @@ p{word-wrap:break-word}
 .silder .silder_list a{position:absolute; top:0;left:0;}
 
 .silder_list a{display:inline-block;float:left;}
-.silder .silder_page{text-align:right; margin:0 auto;right:1px; overflow:hidden;position:absolute; bottom:22%;left: 50%;margin-left: -22px;}
+.silder .silder_page{text-align:right; margin:0 auto;right:1px; overflow:hidden;position:absolute; bottom:22%;left: 50%;margin-left: -49px;}
 .silder .silder_page div{width:8px; font-size:12px; float:left; height:8px;margin:0 3px; background:#fff;display:inline-block;text-align:center;border-radius: 6px;}
 .silder .silder_page div.current{background: #519ef5;}
 .silder .silder_page div:hover{cursor:pointer;}
