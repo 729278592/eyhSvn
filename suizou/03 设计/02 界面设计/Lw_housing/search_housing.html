@@ -22,6 +22,12 @@
         .video{position: absolute;left: 50%;top: 50%;margin-left: -240px;margin-top: -292px;padding: 50px;border: 1px solid #dbdbdb;background: rgba(255,255,255,0.8);border-radius: 10px;}
         .mask .close{width: 30px;height: 30px;position: absolute;top: 50%;left: 50%;margin-left: 310px;margin-top: -292px;background: #fff;border-radius: 30px;text-align: center;line-height: 30px;z-index: 100;}
     </style>
+    <!--[if IE]>
+    <style>
+
+    </style>
+    <![endif]-->
+
 </head>
 <body>
     <div class="wrapper">
@@ -351,23 +357,23 @@
                             <img src="./images/load.png" />
                         </label>
                     </div>
-                    <!--<div class="notHoust">-->
-                        <!--<div class="tishi">-->
-                            <!--<p>这个位置没有找到符合条件的房子</p>-->
-                            <!--<label>您还可以</label>-->
-                            <!--<div class="pub-msg">-->
-                                <!--<div class="left_sub">-->
-                                    <!--<label><i></i> 拖动地图到其他位置</label>-->
-                                    <!--<label><i></i> 缩小地图</label>-->
-                                    <!--<button>确定</button>-->
-                                <!--</div>-->
-                                <!--<div class="right_sub">-->
-                                    <!--<label><i></i> 更换价格范围</label>-->
-                                    <!--<label><i></i> 更精确的搜索词</label>-->
-                                <!--</div>-->
-                            <!--</div>-->
-                        <!--</div>-->
-                    <!--</div>-->
+                    <div class="notHoust">
+                        <div class="tishi">
+                            <p>这个位置没有找到符合条件的房子</p>
+                            <label>您还可以</label>
+                            <div class="pub-msg">
+                                <div class="left_sub">
+                                    <label><i></i> 拖动地图到其他位置</label>
+                                    <label><i></i> 缩小地图</label>
+                                    <button>确定</button>
+                                </div>
+                                <div class="right_sub">
+                                    <label><i></i> 更换价格范围</label>
+                                    <label><i></i> 更精确的搜索词</label>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
                 </div>
                 <div id="allmap" style="width: 100%;height: 100%;"></div>
             </div>
@@ -404,7 +410,7 @@
     </div>
     <script src="plugins/jquery/js/jquery-1.11.3.min.js"></script>
     <script src="js/lw_housing.js"></script>
- 
+
     <script>
         /*底部显示正常所做的处理*/
         window.onload = function(){

@@ -68,6 +68,7 @@ a:link{text-decoration: none;}
 .out-housing .caret-top{width: 0;height: 0;border: 15px solid #efefef;border-right-color: transparent;border-bottom-color: transparent;border-left-color: transparent;position: absolute;bottom: -30px;left: 50%;margin-left: -7px;}
 .item-ul{width: 100%;}
 .item-ul li{width: 49.6%;float: left;margin: 0 0.4% 0.4% 0;position: relative;padding-bottom: 53px;}
+
 .item-ul .last{margin-right: 0;}
 .item-ul1{width: 100%;}
 .item-ul1 li{width: 31.9%;float: left;margin: 0 1.9% 0.4% 0;position: relative;padding-bottom: 53px;}
@@ -86,27 +87,9 @@ a:link{text-decoration: none;}
 #myCarousel .carousel-control {position: absolute;top: 53%;width: 39px;height: 76px;margin-top: -20px;font-size: 60px;font-weight: 100;line-height: 22px;color: #fff;text-align: center;background: transparent;}
 #myCarousel .carousel-control.left{left: -55px;background-image: none;}
 #myCarousel .carousel-control.right{right: -55px;background-image: none;}
-#myCarousel1{width: 70%;position: absolute;left: 50%;top:50%;margin-left: -35%;margin-top: -12%;}
-#myCarousel1{background: url("../images/myCarousel1-bg.jpg")no-repeat center center;background-size: cover;margin-bottom: 1.01%;border-radius: 4px}
-#myCarousel1 .carousel-control {position: absolute;top: 45%;width: 39px;height: 76px;text-align: center;}
-#myCarousel1>img{width: 80%;}
-#myCarousel1 .carousel-inner{width: 85%;height: 80%;background: #d5e9f9;position: relative;left: 50%;margin: 5% -42.5%;}
-#myCarousel1 .item .img{margin: 2% 0;position: relative;left: 2%;display: none;width: 40%;}
-#myCarousel1 .item .describe{position: absolute;top: -20%;left:44%;color: #666;width: 54%;}
-#myCarousel1 .item .describe .title{font-size: 16px;position: relative;top: -10px;color: #3b3b3b;}
-#myCarousel1 .item .describe .color{color: #fcaf05;}
-#myCarousel1 .item .describe p{margin-bottom: 5%;}
-#myCarousel1 .item .describe span{font-size: 14px;margin-top: 2%;}
-#myCarousel1 .item ul.product ul{width: 100%;}
-#myCarousel1 .item ul li,.product ul li{float: left;margin-right: 1.33%;margin-bottom:1.33%;width: 24%;position: relative;overflow: hidden;}
+
 .product ul li{width: 32.44%;overflow: hidden;}
 .product ul li:hover{cursor: pointer;}
-#myCarousel1 .item ul .last,.product ul .last{margin-right: 0;}
-#myCarousel1 .close{position: absolute;top: 5px;right: 5px;width: 40px;height: 40px;text-align: center;line-height: 40px;background: #000;border-radius: 40px;color: #fff;opacity: .6;}
-#myCarousel1 .close:hover{opacity: 0.9;}
-#myCarousel1 .carousel-control{background: transparent;}
-#myCarousel1 .carousel-control.left {left: 2%;}
-#myCarousel1 .carousel-control.right {right: 2%;}
 .myCarousel .item{width: 31.9%;float: left;margin: 0 1.9% 0.4% 0;position: relative;}
 
 /*.flow-lay {background: #f5c63c;height: 170px;}*/
@@ -160,7 +143,7 @@ a:link{text-decoration: none;}
 .shoum-ul li{float: left;width: 33.333%;text-align: center;}
 .shoum-ul li span{display: inline-block;width: 100%;font-size: 18px;}
 .shoum-ul li .title{font-size: 25px;}
-.show-md p{margin-top: 450px;font-size: 18px;}
+.show-md p{font-size: 18px;position: absolute;bottom: 100px;left: 50%;margin-left: -280px;}
 .show-md .close{position: absolute;right: 15px;top: 40px;color: #000;font-size: 30px;}
 .va-middle{position: absolute;top: 50%;color: #fff;left: 50%;margin-left: -140px;margin-top: -88px;}
 .va-middle .title{font-size: 60px;}
@@ -202,8 +185,8 @@ a:link{text-decoration: none;}
 .ul-house li>a{display: inline-block;width: 100%;position: relative;}
 .ul-house li>a .item-b{border: 1px solid #f0f0f0;border-top:none;padding: 1% 2%;}
 .ul-house li>a .people{position: absolute;right: 1%;bottom: 10%;z-index: 100;border-radius: 100px;}
-.w80 li .play,.ul-house li .play{width: 35px;height: 35px;background: #000;border-radius: 35px;opacity: 0.6;filter: alpha(opacity=60);position: absolute;right: 2%;top: 4%;color: #fff;text-align: center;line-height: 38px;font-size: 20px;z-index: 1000;}
-.w80 li .play:hover,.ul-house li .play:hover{opacity: 0.8;filter: alpha(opacity=80);font-size: 21px;cursor: pointer;}
+.room-information .play,.w80 li .play,.ul-house li .play{width: 35px;height: 35px;background: #000;border-radius: 35px;opacity: 0.6;filter: alpha(opacity=60);position: absolute;right: 2%;top: 4%;color: #fff;text-align: center;line-height: 38px;font-size: 20px;z-index: 1000;}
+.room-information .play,.w80 li .play:hover,.ul-house li .play:hover{opacity: 0.8;filter: alpha(opacity=80);font-size: 21px;cursor: pointer;}
 
 
 
@@ -279,6 +262,7 @@ a:link{text-decoration: none;}
 .room-information li{float: left;margin-top: 1%;margin-right: 1%;position: relative;padding-left: 160px;}
 .room-information2 li{width: 49%;}
 .room-information3 li{width: 32.33%;}
+.room-information .active-mask{position: absolute;left: 170px;top: 0;bottom: 0;right: 0;background: rgba(0,0,0,0.5)}
 .room-left{position: absolute;left: 0;height: 100%;padding: 0 5px;background: #edeff5;top: 0;text-align: center;border: 1px solid #addced;border-right: none;width: 170px;}
 .room-left>div{position: relative;top: 50%;margin-top: -55%;}
 .room-left .yuyue,.room-top .yuyue{width: 80px;height: 25px;line-height: 25px;text-align: center;background: #fba511;color: #fff;border-radius: 3px;font-size: 12px;display: inline-block;}
@@ -441,7 +425,7 @@ input.btn-click:hover{background: #e16a20}
 
 
 
-
+.head,.content,.footer{ width:expression(this.width>1100?1100:this.width); }
 /*media*/
 @media screen and (max-width: 1600px) {
     .activity{padding-bottom: 10%;position: relative;}

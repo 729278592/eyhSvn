@@ -7,19 +7,25 @@ window.onload = function() {
     function pcJs(){
         var oDiv1 = document.getElementById('div1');
         var oUl1 = document.getElementById('ul1');
+        var p = document.getElementById('p');
         var aLi1 = oUl1.getElementsByTagName('li');
         var aSpan1 = oDiv1.getElementsByTagName('span');
         var iLen1 = aLi1.length;
+        var iLen = iLen1-1;
+        var  topP = null;
         var  start1,a ;
         var iHeight1 = aLi1[0].offsetHeight;
-//      var left = document.getElementById("left");
-//      var right = document.getElementById("right");
-        oUl1.style.width = iLen1 * iHeight1 + 'px';
+        var iHeight2 = aSpan1[0].offsetHeight + 10;
+        var iWidth = aSpan1[0].offsetWidth + 10;
+
+      var left = document.getElementById("left");
+      var right = document.getElementById("right");
+
         function init(){
             for (var i=0; i<iLen1; i++) {
                 run(i)
             }
-            start1 = setInterval(stetime,5000);
+            start1 = setInterval(stetime,1000);
         }
         init();
         function getActive(){
@@ -46,22 +52,45 @@ window.onload = function() {
                 move(oUl1, {
                     top : -a * iHeight1
                 });
+
             };
         }
-//
+
 //        left.onclick = function(){
 //            a--;
 //            if(a<0){
-//                a = 3;
+//                a = iLen;
+//            }
+
+//            if(iLen1>4){
+//                topP = iLen1 - 4;
+//
+//                if(a>topP+1){
+//                    move(p, {
+//                        top : -((a-(topP+1)) * iHeight2)
+//                    });
+//                }
+//
 //            }
 //            getActive()
 //
-//        };
 //
+//        };
+
 //        right.onclick = function(){
 //            a++;
-//            if(a>3){
+//            if(a>iLen){
 //                a = 0;
+//            }
+//            if(iLen1>4){
+//                topP = iLen1 - 4;
+//
+//                if(a<topP+1){
+//                    move(p, {
+//                        top : ((a-(topP)) * iHeight2)
+//                    });
+//                }
+//
 //            }
 //            getActive()
 //        };
@@ -71,12 +100,36 @@ window.onload = function() {
         };
 
         oDiv1.onmouseout = function(){
-            start1 = setInterval(stetime,5000);
+            start1 = setInterval(stetime,1000);
         };
 
         function stetime(){
             ++a;
-            if(a>3){a = 0;}
+            if(a>iLen){a = 0;}
+            if($(window).width()>1400){
+                if(iLen1>4){
+                    topP = iLen1 - 4;
+                    if(a<topP+1){
+                        move(p, {
+                            top : -a * iHeight2
+                        });
+                    }
+
+                }
+            }
+
+            if(($(window).width()>640)&&($(window).width()<1400)){
+                p.style.width = iLen1 * iWidth + 'px';
+                if(iLen1>4){
+                    topP = iLen1 - 4;
+                    if(a<topP+1){
+                        move(p, {
+                            left : -a * iWidth
+                        });
+                    }
+
+                }
+            }
             getActive();
         }
     }

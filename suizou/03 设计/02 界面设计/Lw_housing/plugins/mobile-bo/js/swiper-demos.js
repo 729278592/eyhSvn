@@ -15,12 +15,12 @@ $(function(){
     });
     //Navigation arrows
     $('.arrow-left').click(function(e) {
-        e.preventDefault()
-        swiper.swipePrev()
+        e.preventDefault();
+        swiper.swipePrev();
     });
     $('.arrow-right').click(function(e) {
-        e.preventDefault()
-        swiper.swipeNext()
+        e.preventDefault();
+        swiper.swipeNext();
     });
     //Clickable pagination
     $('.pagination1 .swiper-pagination-switch').click(function(){

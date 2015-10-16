@@ -17,6 +17,17 @@
         .pagination1 {position: absolute;bottom: -1%;z-index: 10;left: 50%;margin-left: -32px;}
         .swiper-main,.swiper-container,.swiper-wrapper,.swiper-slide{ width: 100%;height: 100%;}
         .w80{overflow: hidden;}
+        .video{position: absolute;left: 50%;top: 50%;margin-left: -240px;margin-top: -292px;padding: 50px;border: 1px solid #dbdbdb;background: rgba(255,255,255,0.8);border-radius: 10px;}
+        #video .close{width: 30px;height: 30px;position: absolute;top: 50%;left: 50%;margin-left: 310px;margin-top: -292px;background: #fff;border-radius: 30px;text-align: center;line-height: 30px;z-index: 100;}
+        .carousel-house{width: 800px;height:587px;position: absolute;left: 50%;top:50%;margin-left: -400px;margin-top: -293px;background: rgba(0,0,0,0.8)}
+        #myCarousel1{width: 640px;height: 427px;margin: 80px auto;}
+        #myCarousel1 .carousel-control {position: absolute;top: 45%;width: 39px;height: 76px;text-align: center;}
+        #myCarousel1 .carousel-control{background: transparent;}
+        #myCarousel1 .carousel-control.left {left: -10%;}
+        #myCarousel1 .carousel-control.right {right: -10%;}
+        #myCarousel1 .close{position: absolute;top: -70px;right: -70px;width: 40px;height: 40px;text-align: center;line-height: 40px;background: #000;border-radius: 40px;color: #fff;opacity: .6;}
+        #myCarousel1 .close:hover{opacity: 0.9;}
+
     </style>
 </head>
 <body>
@@ -72,23 +83,45 @@
                 <li><img src="plugins/carousel/images/huan1.jpg" class="img-responsive img" alt="Responsive image"/></li>
                 <li><img src="plugins/carousel/images/huan1.jpg" class="img-responsive img" alt="Responsive image"/></li>
                 <li><img src="plugins/carousel/images/huan1.jpg" class="img-responsive img" alt="Responsive image"/></li>
+                <li><img src="plugins/carousel/images/huan1.jpg" class="img-responsive img" alt="Responsive image"/></li>
+                <li><img src="plugins/carousel/images/huan1.jpg" class="img-responsive img" alt="Responsive image"/></li>
+                <li><img src="plugins/carousel/images/huan1.jpg" class="img-responsive img" alt="Responsive image"/></li>
             </ul>
-            <p>
-                <span class="current">
-                    <img src="plugins/carousel/images/huan1.jpg" alt="" class="img"/>
-                </span>
-                <span>
-                    <img src="plugins/carousel/images/huan1.jpg" alt="" class="img"/>
-                </span>
-                <span>
-                     <img src="plugins/carousel/images/huan1.jpg" alt="" class="img"/>
-                </span>
-                <span>
-                     <img src="plugins/carousel/images/huan1.jpg" alt="" class="img"/>
-                </span>
-            </p>
-            <!--<div id="left">‹</div>-->
-            <!--<div id="right">›</div>-->
+            <div id="p-div">
+                <p id="p">
+                        <span class="current">
+                            <img src="plugins/carousel/images/huan1.jpg" alt="" class="img"/>
+
+                        </span>
+                        <span>
+                            <img src="plugins/carousel/images/huan1.jpg" alt="" class="img"/>
+
+                        </span>
+                        <span>
+                             <img src="plugins/carousel/images/huan1.jpg" alt="" class="img"/>
+
+                        </span>
+                        <span>
+                             <img src="plugins/carousel/images/huan1.jpg" alt="" class="img"/>
+
+                        </span>
+                        <span>
+                             <img src="plugins/carousel/images/huan1.jpg" alt="" class="img"/>
+
+                        </span>
+                         <span>
+                             <img src="plugins/carousel/images/huan1.jpg" alt="" class="img"/>
+
+                        </span>
+                         <span>
+                             <img src="plugins/carousel/images/huan1.jpg" alt="" class="img"/>
+
+                        </span>
+
+                </p>
+            </div>
+            <!--<div id="left" class="div-carousel">∨</div>-->
+            <!--<div id="right"class="div-carousel">∨</div>-->
         </div>
         <div role="main" class="main pc-none" id="main">
             <div class="home-device" id="home-device">
@@ -188,28 +221,32 @@
             <div class="room-group">
                 <ul class="room-information room-information2 clearfix">
                     <li>
-                        <img src="images/IMG_1783.jpg" class="img-responsive" alt="Responsive image"/>
-                        <div class="room-left mobile_none">
-                            <div>
-                                <img src="images/people.png" alt="" class="people-img"/> <br/>
-                                <span class="rooms-group">已租: A房间</span><br/>
-                                <span>女</span><br/>
-                                <span>幼师</span><br/>
-                                <span>编号：264646561656</span><br/>
-                                <img src="images/details1.png" alt="" class="deatils-img"/>
-                                <img src="images/details2.png" alt="" class="deatils-img"/>
-                                <img src="images/details3.png" alt="" class="deatils-img"/>
-                            </div>
+                        <div class="play" src="http://mvvideo2.meitudata.com/56163e35cac069064.mp4">
+                            <i class="glyphicon glyphicon-triangle-right"></i>
                         </div>
-                        <div class="room-top room-top1 pc-none clearfix">
-                            <div class="right">
-                                <img src="images/people.png" alt="" class="people people-img"/> <br/>
+                        <div class="li-div li-div-active">
+                            <img src="images/IMG_1783.jpg" class="img-responsive" alt="Responsive image active-img"/>
+                            <div class="room-left mobile_none">
+                                <div>
+                                    <img src="images/people.png" alt="" class="people-img"/> <br/>
+                                    <span class="rooms-group">已租: A房间</span><br/>
+                                    <span>女</span><br/>
+                                    <span>幼师</span><br/>
+                                    <span>编号：264646561656</span><br/>
+                                    <img src="images/details1.png" alt="" class="deatils-img"/>
+                                    <img src="images/details2.png" alt="" class="deatils-img"/>
+                                    <img src="images/details3.png" alt="" class="deatils-img"/>
+                                </div>
+                            </div>
+                            <div class="room-top room-top1 pc-none clearfix">
+                                <div class="right">
+                                    <img src="images/people.png" alt="" class="people people-img"/> <br/>
                                 <span class="spans-img">
                                      <img src="images/details1.png" alt="" class="deatils-img"/>
                                      <img src="images/details2.png" alt="" class="deatils-img"/>
                                      <img src="images/details3.png" alt="" class="deatils-img"/>
                                 </span>
-                            </div>
+                                </div>
                             <span class="deatils">
                                  <span class="rooms-group">已租: A房间</span><br/>
                                  <span>男</span><br/>
@@ -217,62 +254,73 @@
                                  <span>编号：264646561656</span><br/>
                             </span>
 
+                            </div>
+                            <div class="active-mask"></div>
                         </div>
                     </li>
                     <li>
-                        <img src="images/IMG_1788.jpg" class="img-responsive" alt="Responsive image"/>
-                        <div class="room-left mobile_none">
-                            <div>
-                                <img src="images/people.png" alt="" class="people-img"/> <br/>
+                        <div class="play" src="http://mvvideo1.meitudata.com/561639e704c586597.mp4">
+                            <i class="glyphicon glyphicon-triangle-right"></i>
+                        </div>
+                        <div class="li-div li-div-active">
+                            <img src="images/IMG_1788.jpg" class="img-responsive" alt="Responsive image"/>
+                            <div class="room-left mobile_none">
+                                <div>
+                                    <img src="images/people.png" alt="" class="people-img"/> <br/>
                                  <span class="deatils">
                                      <span class="rooms-group">未租: B房间</span><br/>
                                      <span>带飘窗,</span><span>单价</span><span>750/月</span><br/>
                                      <a href="#" class="yuyue">预约看房</a><br/>
                                 </span>
-                                <img src="images/details1.png" alt="" class="deatils-img"/>
-                                <img src="images/details2.png" alt="" class="deatils-img"/>
-                                <img src="images/details3.png" alt="" class="deatils-img"/>
+                                    <img src="images/details1.png" alt="" class="deatils-img"/>
+                                    <img src="images/details2.png" alt="" class="deatils-img"/>
+                                    <img src="images/details3.png" alt="" class="deatils-img"/>
+                                </div>
                             </div>
-                        </div>
-                        <div class="room-top room-top1 pc-none clearfix">
-                            <div class="right">
-                                <img src="images/people.png" alt="" class="people people-img"/> <br/>
+                            <div class="room-top room-top1 pc-none clearfix">
+                                <div class="right">
+                                    <img src="images/people.png" alt="" class="people people-img"/> <br/>
                                 <span class="spans-img">
                                      <img src="images/details1.png" alt="" class="deatils-img"/>
                                      <img src="images/details2.png" alt="" class="deatils-img"/>
                                      <img src="images/details3.png" alt="" class="deatils-img"/>
                                 </span>
-                            </div>
+                                </div>
                             <span class="deatils">
                                 <span class="rooms-group">未租: B房间</span><br/>
                                      <span>带飘窗,</span><span>单价</span><span>750/月</span><br/>
                                      <a href="#" class="yuyue">预约看房</a><br/>
                             </span>
+                            </div>
                         </div>
                     </li>
                     <li>
-                        <img src="images/IMG_1790.jpg" class="img-responsive" alt="Responsive image"/>
-                        <div class="room-left mobile_none">
-                            <div>
-                                <img src="images/people.png" alt="" class="people-img"/> <br/>
-                                <span class="rooms-group">已租: C房间</span><br/>
-                                <span>男</span><br/>
-                                <span>护士</span><br/>
-                                <span>编号：264646561656</span><br/>
-                                <img src="images/details1.png" alt="" class="deatils-img"/>
-                                <img src="images/details2.png" alt="" class="deatils-img"/>
-                                <img src="images/details3.png" alt="" class="deatils-img"/>
-                            </div>
+                        <div class="play" src="http://mvvideo2.meitudata.com/561639fdc88ec1412.mp4">
+                            <i class="glyphicon glyphicon-triangle-right"></i>
                         </div>
-                        <div class="room-top room-top1 pc-none clearfix">
-                            <div class="right">
-                                <img src="images/people.png" alt="" class="people people-img"/> <br/>
+                        <div class="li-div li-div-active">
+                            <img src="images/IMG_1790.jpg" class="img-responsive" alt="Responsive image"/>
+                            <div class="room-left mobile_none">
+                                <div>
+                                    <img src="images/people.png" alt="" class="people-img"/> <br/>
+                                    <span class="rooms-group">已租: C房间</span><br/>
+                                    <span>男</span><br/>
+                                    <span>护士</span><br/>
+                                    <span>编号：264646561656</span><br/>
+                                    <img src="images/details1.png" alt="" class="deatils-img"/>
+                                    <img src="images/details2.png" alt="" class="deatils-img"/>
+                                    <img src="images/details3.png" alt="" class="deatils-img"/>
+                                </div>
+                            </div>
+                            <div class="room-top room-top1 pc-none clearfix">
+                                <div class="right">
+                                    <img src="images/people.png" alt="" class="people people-img"/> <br/>
                                 <span class="spans-img">
                                      <img src="images/details1.png" alt="" class="deatils-img"/>
                                      <img src="images/details2.png" alt="" class="deatils-img"/>
                                      <img src="images/details3.png" alt="" class="deatils-img"/>
                                 </span>
-                            </div>
+                                </div>
                             <span class="deatils">
                                  <span class="rooms-group">已租: C房间</span><br/>
                                  <span>女</span><br/>
@@ -280,18 +328,24 @@
                                  <span>编号：264646561656</span><br/>
                             </span>
 
+                            </div>
                         </div>
                     </li>
                     <li>
-                        <img src="images/null.jpg" class="img-responsive" alt="Responsive image"/>
-                        <div class="room-left mobile_none">
-                            <div style="text-align: center;color: #eeaf25;margin-top: -10px;">
-                                家在各地，乐窝一直给你家的味道!
-                            </div>
+                        <div class="play" src="">
+                            <i class="glyphicon glyphicon-triangle-right"></i>
                         </div>
-                        <div class="room-top room-top1 pc-none clearfix">
-                            <div style="width: 100%;height: 100%;line-height: 107px;text-align: center;color: #eeaf25;">
-                                家在各地，乐窝一直给你家的味道!
+                        <div class="li-div">
+                            <img src="images/null.jpg" class="img-responsive" alt="Responsive image"/>
+                            <div class="room-left mobile_none">
+                                <div style="text-align: center;color: #eeaf25;margin-top: -10px;">
+                                    家在各地，乐窝一直给你家的味道!
+                                </div>
+                            </div>
+                            <div class="room-top room-top1 pc-none clearfix">
+                                <div style="width: 100%;height: 100%;line-height: 107px;text-align: center;color: #eeaf25;">
+                                    家在各地，乐窝一直给你家的味道!
+                                </div>
                             </div>
                         </div>
                     </li>
@@ -356,7 +410,7 @@
                     <img src="images/bl.png" alt="" class="right"/>
                 </li>
                 <li class="mobile_none">
-                    <a href="">加入我们</a>
+                    <a href="join_us.html">加入我们</a>
                     <img src="images/bl.png" alt="" class="right"/>
                 </li>
                 <li>
@@ -409,20 +463,49 @@
                 <button type="button" class="btn btn-default" data-dismiss="modal">关闭</button>
             </div>
         </div>
+        <div id="video" class="hide">
+            <div class="close">×</div>
+            <video src="" controls="controls" class="video" autoplay="autoplay">
+            </video>
+        </div>
+        <div class="carousel-house hide">
+            <div class="carousel slide" id="myCarousel1">
+                <div class="carousel-inner">
+                    <div class="item">
+                        <img src="images/IMG_1783.jpg" class="img-responsive img" alt="Responsive image"/>
+                    </div>
+                    <div class="item">
+                        <img src="images/IMG_1788.jpg" class="img-responsive img" alt="Responsive image"/>
+                    </div>
+                    <div class="item">
+                        <img src="images/IMG_1790.jpg" class="img-responsive img" alt="Responsive image"/>
+                    </div>
+                </div>
+                <a class="left carousel-control" href="#myCarousel1" data-slide="prev">
+                    <img src="images/pre2.png" alt=""/>
+                </a>
+                <a class="right carousel-control" href="#myCarousel1" data-slide="next">
+                    <img src="images/next2.png" alt=""/>
+                </a>
+                <button class="close" id="close"><i class="glyphicon glyphicon-remove"></i></button>
+            </div>
+        </div>
+
     </div>
 </div>
 <script src="plugins/jquery/js/jquery-1.11.3.min.js"></script>
 <script src="plugins/picture_transparency/js/move.js"></script>
+<script src="plugins/bootstrap-3.3.5-dist/js/bootstrap.min.js"></script>
 <script src="js/lw_housing.js"></script>
 <script src="plugins/mobile-bo/js/idangerous.swiper-1.9.1.min.js"></script>
 <script src="plugins/mobile-bo/js/idangerous.swiper.scrollbar-1.2.js"></script>
 <script src="plugins/mobile-bo/js/swiper-demos.js"></script>
 <script src="plugins/carousel/js/carousel.js"></script>
 <script>
-    $(".staging").on("click",function(){
-        $(".mask").removeClass("hide");
-        $(".box").removeClass("hide");
-    });
+//    $(".staging").on("click",function(){
+//        $(".mask").removeClass("hide");
+//        $(".box").removeClass("hide");
+//    });
     $(".address").on("click",function(){
         $(".mask").removeClass("hide");
         $(".dialog").removeClass("hide");
@@ -441,6 +524,40 @@
         $(this).addClass("active");
         $(this).siblings().removeClass('active')
     })
+
+    $(".room-information").delegate(".play", "click", function(){
+        var src = $(this).attr("src");
+        if(src){
+            $("#video").removeClass("hide");
+            $(".mask").removeClass("hide");
+            $(".video").attr({autoplay:"autoplay",src:src})
+        }else{
+            alert("占无视频")
+        }
+
+    });
+
+    $(".mask").delegate(".close","click",function(){
+        $("#video").addClass("hide");
+        $(".mask").addClass("hide");
+        $(".video").attr({autoplay:"",src:""})
+    });
+
+
+    var il = $(".room-information li .li-div-active");
+    var m1 = $(".carousel-house"),m1i = $("#myCarousel1 .item");
+    il.each(function (i) {
+        if($(window).width()>640){
+            $(this).on("click", function () {
+                m1.closest(".mask").removeClass("hide");
+                m1.removeClass("hide");
+                m1i.eq(i).addClass('active');
+                m1i.eq(i).siblings().removeClass("active");
+                m1i.find("img").fadeIn(2000);
+            });
+        }
+
+    });
 </script>
 </body>
 </html>
