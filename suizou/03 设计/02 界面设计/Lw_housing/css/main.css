@@ -27,9 +27,10 @@ a:hover{cursor: pointer;text-decoration: none;}
 .head-main{padding:0 20px;height: 100%;margin: 0 auto;position: relative;}
 .head-menu{position: absolute;right: 20px;top: 4px;}
 .head-menu li{float: left;height: 100%;margin-left: 19px;}
-.head-menu li a{display: inline-block;color: #fff;font-size: 14px;padding: 5px 20px;margin-top: 10px;}
-.head-menu li a.active{border: 1px solid #fff;}
-.head-menu li a:link{text-decoration: none;}
+.head-menu li a{color: #fff;}
+.head-menu li>a,.head-menu li .a-span{display: inline-block;color: #fff;font-size: 14px;padding: 5px 20px;margin-top: 10px;}
+.head-menu li>a.active{border: 1px solid #fff;}
+.head-menu li>a:link{text-decoration: none;}
 input,button{outline: none;border: none;}
 .right{float: right;}
 .left{float: left;}

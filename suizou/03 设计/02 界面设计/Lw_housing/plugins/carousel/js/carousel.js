@@ -25,7 +25,7 @@ window.onload = function() {
             for (var i=0; i<iLen1; i++) {
                 run(i)
             }
-            start1 = setInterval(stetime,1000);
+            start1 = setInterval(stetime,5000);
         }
         init();
         function getActive(){
@@ -100,7 +100,7 @@ window.onload = function() {
         };
 
         oDiv1.onmouseout = function(){
-            start1 = setInterval(stetime,1000);
+            start1 = setInterval(stetime,5000);
         };
 
         function stetime(){
@@ -117,7 +117,8 @@ window.onload = function() {
 
                 }
             }
-
+//            var pDiv = document.getElementById('p-div');
+//            pDiv.style.width = "724px";
             if(($(window).width()>640)&&($(window).width()<1400)){
                 p.style.width = iLen1 * iWidth + 'px';
                 if(iLen1>4){
