@@ -207,7 +207,7 @@
                 </div>
             </div>
             <div class="content-main">
-                <div class="comon-head">热门房源推荐</div>
+                <div class="comon-head" style="line-height: 50px;">热门房源推荐</div>
                 <ul class="w80 clearfix mobile_w80">
                     <li>
                         <div class="play pc-none" src="http://mvvideo2.meitudata.com/56163e35cac069064.mp4">
@@ -851,10 +851,12 @@
             /*顶部切换*/
             var si = $('.silder');
             var sil = $('.silder_list');
+
+//            alert($('.silder_list .pc-img').height())
             si.imgSilder({
                 s_width:'100%', //容器宽度
-                s_height: si.css({"height":"500px"}), //容器高度
-                s_height_list: sil.css({"height":"500px"}), //容器高度
+                s_height: si.css({"height":"500"}), //容器高度
+                s_height_list: sil.css({"height":"500"}), //容器高度
                 is_showTit:true, // 是否显示图片标题 false :不显示，true :显示
                 s_times:4000, //设置滚动时间
                 css_link:'plugins/autoSlider/css/style.css'

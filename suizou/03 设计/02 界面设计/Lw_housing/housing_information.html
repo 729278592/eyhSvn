@@ -27,7 +27,12 @@
         #myCarousel1 .carousel-control.right {right: -10%;}
         #myCarousel1 .close{position: absolute;top: -70px;right: -70px;width: 40px;height: 40px;text-align: center;line-height: 40px;background: #000;border-radius: 40px;color: #fff;opacity: .6;}
         #myCarousel1 .close:hover{opacity: 0.9;}
-
+        @media screen and (max-width: 639px) {
+            .head {background: rgba(0,0,0, .4)}
+            #video{width: 100%;position: relative;}
+            .video{position: fixed;left:50%;top:80%;padding: 20px;border: 1px solid #dbdbdb;background: rgba(255,255,255,0.8);border-radius: 10px;width: 98%;margin-left: -49%;}
+            .mask #video .close{width: 20px;height: 20px;position: fixed;top: 50%;right: 1.2%;margin-left: 180px;margin-top: -145px;background: #fff;border-radius: 30px;text-align: center;line-height: 20px;z-index: 100;}
+        }
     </style>
 </head>
 <body>
@@ -255,7 +260,7 @@
                             </span>
 
                             </div>
-                            <div class="active-mask"></div>
+                            <div class="active-mask mobile_none"></div>
                         </div>
                     </li>
                     <li>
@@ -560,6 +565,13 @@ window.onresize = function(){ location=location };
         }
 
     });
+    if($(window).width()<640){
+        $("#video").on("click",function(){
+            $("#video").addClass("hide");
+            $(".mask").addClass("hide");
+            $(".video").attr({autoplay:"",src:""})
+        })
+    }
 </script>
 </body>
 </html>
