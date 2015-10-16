@@ -39,7 +39,7 @@ a:link{text-decoration: none;}
 
 /*index*/
 .content-head{position: relative;height: 500px;}
-.content-head .pc-img{min-height: 396px;}
+.content-head .pc-img{min-height: 500px;}
 .ch-mask{position: absolute;bottom: 4px;left: 0;right: 0;background: #000;opacity: 0.4;filter:alpha(opacity=40);height: 20%;}
 .ch-mask-main{width: 40%;position: absolute;bottom: 4%;left: 50%;margin-left: -20%;z-index: 10;}
 .ch-mask-main .form-control{width: 84%;display: inline-block;color: #bd925d;font-size: 14px;height: 40px;}
@@ -257,7 +257,7 @@ a:link{text-decoration: none;}
 .furniture .title{color: #3b5991;}
 .furniture .tool-group{color: #3b5991;}
 .furniture .tool-group img{width: 41px;}
-.room{width: 79.7%;margin-bottom: 10px;display: inline-block;}
+.room{width: 79.7%;margin-bottom: 10px;display: inline-block;float: left;}
 .room-group{width: 100%;}
 .room-information{width: 100%;}
 .room-information li{float: left;margin-top: 1%;margin-right: 1%;position: relative;padding-left: 160px;}
