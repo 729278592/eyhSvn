@@ -380,7 +380,7 @@ input.btn-click:hover{background: #e16a20}
 .p-group.title{font-size: 16px;color: #333;}
 .div-group .prize{float: left;}
 .div-group .deatils{position: relative;top: 30px;left: 10px;display: inline-block;}
-.btn-rnow{width: 70px;height: 30px;line-height: 30px;text-align: center;background: #fca511;color: #fff;border-radius: 4px;position: relative;top: 20px;left: 150px;}
+.btn-rnow{width: 75px;height: 30px;line-height: 30px;text-align: center;background: #fca511;color: #fff;border-radius: 4px;position: relative;top: 20px;left: 150px;}
 .div-group .servers{display: inline-block;padding: 20px 8px;border: 1px solid #5494e1;}
 .w-right>.title{font-size: 18px;color: #678ab3;}
 .pay{border-bottom: 1px dashed #dbdbdb;height: 60px;line-height: 60px;}
@@ -388,7 +388,7 @@ input.btn-click:hover{background: #e16a20}
 .pay li button{width: 70px;height: 30px;line-height: 30px;text-align: center;color: #fff;border-radius: 4px;background: #fca511;font-size: 12px;display: inline-block;}
 .leave-step{width: 100%;position: relative;left: 50%;margin-left: -40%;}
 .leave-step li{float: left;width: 15%;text-align: center;color: #666;margin: 2% 0 0 0;}
-.leave-step li button{border: 1px solid #dbdbdb;background: #fff;width: 70px;height: 25px;line-height: 22px;color: #333;margin: 5px 0;}
+.leave-step li button{border: 1px solid #dbdbdb;background: #fff;width: 75px;height: 25px;line-height: 22px;color: #333;margin: 5px 0;}
 .box-sure{background: #fff;color: #fba511;padding: 2%;text-align: center;width: 300px;position: absolute;left: 50%;margin-left: -150px;top: 35%;border-radius: 10px;}
 .box-sure span{font-size: 18px;}
 .box-sure .smail{margin: 5% 10% 5% -5%;}

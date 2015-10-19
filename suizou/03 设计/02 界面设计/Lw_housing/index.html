@@ -38,15 +38,13 @@
             .mask #video .close{width: 20px;height: 20px;position: fixed;top: 50%;right: 1.2%;margin-left: 180px;margin-top: -145px;background: #fff;border-radius: 30px;text-align: center;line-height: 20px;z-index: 100;}
         }
     </style>
-
-
     <!--[if IE]>
         <style>
             .left.carousel-control,.right.carousel-control{filter:progid:DXImageTransform.Microsoft.gradient(startColorstr='#f4f4f4f4', endColorstr='#f4f4f4f4', GradientType=1)}
         </style>
     <![endif]-->
 </head>
-<body>
+<body  class="cms-home">
     <div class="wrapper">
         <div class="head" id="head">
             <div class="head-main">
@@ -682,33 +680,7 @@
                                         </span>
                                     </div>
                                 </div>
-                                <!--<div class="swiper-slide">-->
-                                    <!--<img src="images/index-c1.jpg" class="img-responsive" alt="Responsive image"/><br/>-->
-                                    <!--<div class="item-bt">-->
-                                        <!--<span class="main-active" style="width: 300px;">乐窝活动-抽大奖！</span>-->
-                                        <!--<span class="details">-->
-                                            <!--<img src="images/more-than.png" alt=""/>-->
-                                        <!--</span>-->
-                                    <!--</div>-->
-                                <!--</div>-->
-                                <!--<div class="swiper-slide">-->
-                                    <!--<img src="images/index-c2.jpg" class="img-responsive" alt="Responsive image"/><br/>-->
-                                    <!--<div class="item-bt">-->
-                                        <!--<span class="main-active" style="width: 300px;">乐窝活动-抽大奖！</span>-->
-                                        <!--<span class="details">-->
-                                            <!--<img src="images/more-than.png" alt=""/>-->
-                                        <!--</span>-->
-                                    <!--</div>-->
-                                <!--</div>-->
-                                <!--<div class="swiper-slide">-->
-                                    <!--<img src="images/index-c3.jpg" class="img-responsive" alt="Responsive image"/><br/>-->
-                                    <!--<div class="item-bt">-->
-                                        <!--<span class="main-active" style="width: 300px;">乐窝活动-抽大奖！</span>-->
-                                        <!--<span class="details">-->
-                                            <!--<img src="images/more-than.png" alt=""/>-->
-                                        <!--</span>-->
-                                    <!--</div>-->
-                                <!--</div>-->
+
                             </div>
                             <div class="swiper-button-next"></div>
                             <div class="swiper-button-prev"></div>
@@ -852,7 +824,6 @@
             var si = $('.silder');
             var sil = $('.silder_list');
 
-//            alert($('.silder_list .pc-img').height())
             si.imgSilder({
                 s_width:'100%', //容器宽度
                 s_height: si.css({"height":"500"}), //容器高度
@@ -928,6 +899,7 @@
 
 
             /*顶部显示*/
+            var bb = $(".use-love");
             var sm = $(".show-md");
             var showMd = document.getElementById("show-md");
             bb.on("click",function(){
