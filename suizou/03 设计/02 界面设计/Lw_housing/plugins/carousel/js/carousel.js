@@ -12,8 +12,8 @@ window.onload = function() {
         var aSpan1 = oDiv1.getElementsByTagName('span');
         var iLen1 = aLi1.length;
         var iLen = iLen1-1;
-        var  topP = null;
-        var  start1,a ;
+        var topP = null;
+        var start1,a ;
         var iHeight1 = aLi1[0].offsetHeight;
         var iHeight2 = aSpan1[0].offsetHeight + 10;
         var iWidth = aSpan1[0].offsetWidth + 10;
@@ -52,7 +52,28 @@ window.onload = function() {
                 move(oUl1, {
                     top : -a * iHeight1
                 });
+                if($(window).width()>1400){
+                    if(iLen1>4){
+                        topP = iLen1 - 4;
+                        if(a<topP+1){
+                            move(p, {
+                                top : -a * iHeight2
+                            });
+                        }
 
+                    }
+                }
+                if(($(window).width()>640)&&($(window).width()<1400)){
+                    p.style.width = iLen1 * iWidth + 'px';
+                    if(iLen1>4){
+                        topP = iLen1 - 4;
+                        if(a<topP+1){
+                            move(p, {
+                                left : -a * iWidth
+                            });
+                        }
+                    }
+                }
             };
         }
 
@@ -61,22 +82,34 @@ window.onload = function() {
 //            if(a<0){
 //                a = iLen;
 //            }
-
-//            if(iLen1>4){
-//                topP = iLen1 - 4;
 //
-//                if(a>topP+1){
-//                    move(p, {
-//                        top : -((a-(topP+1)) * iHeight2)
-//                    });
+//            if($(window).width()>1400){
+//                if(iLen1>4){
+//                    topP = iLen1 - 4;
+//                    if(a<topP+1){
+//                        move(p, {
+//                            top : -a * iHeight2
+//                        });
+//                    }
+//
 //                }
-//
+//            }
+//            if(($(window).width()>640)&&($(window).width()<1400)){
+//                p.style.width = iLen1 * iWidth + 'px';
+//                if(iLen1>4){
+//                    topP = iLen1 - 4;
+//                    if(a<topP+1){
+//                        move(p, {
+//                            left : -a * iWidth
+//                        });
+//                    }
+//                }
 //            }
 //            getActive()
 //
 //
 //        };
-
+//
 //        right.onclick = function(){
 //            a++;
 //            if(a>iLen){
@@ -114,7 +147,6 @@ window.onload = function() {
                             top : -a * iHeight2
                         });
                     }
-
                 }
             }
 //            var pDiv = document.getElementById('p-div');
@@ -128,7 +160,6 @@ window.onload = function() {
                             left : -a * iWidth
                         });
                     }
-
                 }
             }
             getActive();

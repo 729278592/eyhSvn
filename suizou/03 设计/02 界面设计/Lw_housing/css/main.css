@@ -40,7 +40,7 @@ a:link{text-decoration: none;}
 /*index*/
 .content-head{position: relative;height: 500px;}
 .content-head .pc-img{min-height: 500px;}
-.ch-mask{position: absolute;bottom: 4px;left: 0;right: 0;background: #000;opacity: 0.4;filter:alpha(opacity=40);height: 20%;}
+.ch-mask{position: absolute;bottom: 0px;left: 0;right: 0;background: #000;opacity: 0.4;filter:alpha(opacity=40);height: 20%;}
 .ch-mask-main{width: 40%;position: absolute;bottom: 4%;left: 50%;margin-left: -20%;z-index: 10;}
 .ch-mask-main .form-control{width: 84%;display: inline-block;color: #bd925d;font-size: 14px;height: 40px;}
 .ch-mask-main .btn-group{width: 13%;float: right;background: #fb924d;color: #fff;height: 40px;line-height: 25px;position: relative;left: -7px;}
@@ -170,7 +170,7 @@ a:link{text-decoration: none;}
 .operation .active a{color: #fff;}
 .content{position: relative;}
 .content-left {width: 60%;overflow-x: hidden;height: 100%;position: relative;z-index: 5;background: #fff;}
-.content-right {width: 40%;position: fixed;top: 60px;bottom: 0;right: 0;overflow: hidden;}
+.content-right {width: 40%;position: absolute;top: 0px;bottom: 0;right: 0;overflow: hidden;}
 
 .ul-information li{width: 100%;border-bottom: 1px solid #dbdbdb;padding: 10px 2%;}
 .ul-information li .active{background: #5d8ec8;color: #fff;}
@@ -194,8 +194,8 @@ a:link{text-decoration: none;}
 .house-details-bg{position: absolute;bottom:0px;width:100%;height: 70px;background: #000;opacity: 0.5;filter: alpha(opacity=50);}
 .house-details{position: absolute;bottom: 30px;color: #fff;padding: 2%;width: 98%;}
 .house-details:hover{opacity: 0.8;filter: alpha(opacity=80);}
-.house-details .price{font-size: 16px;}
-.house-details .address{float: right;font-size: 12px;}
+.house-details .price{font-size: 16px;display: inline-block;}
+.house-details .address{float: right;font-size: 12px;display: inline-block;width: 80%;text-align: right;text-overflow: ellipsis;overflow: hidden;white-space: nowrap;margin-top: 3px;}
 .ul-house .main{width: 100%;}
 .w96{padding: 0 1.5%;color: #999;line-height: 30px;width: 100%;}
 
