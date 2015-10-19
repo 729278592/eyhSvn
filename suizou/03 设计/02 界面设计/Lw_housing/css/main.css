@@ -303,17 +303,16 @@ a:link{text-decoration: none;}
 .head{position: relative;z-index: 2;}
 .logBg,.logWrap{width: 442px;height: 380px;position: absolute;z-index: 1;left: 50%;top: 50%;margin: -190px 0 0 -221px;padding: 20px;border-radius: 10px;}
 .logBg{background-color: #fff;opacity: 0.6;filter: alpha(opacity=60);}
-.logReg,.logRegs{height: 420px;margin-top: -210px;}
+.logReg,.logRegs{min-height: 420px;margin-top: -210px;}
 .form{width: 100%;height:100%;font-size: 12px;}
 .form .title{font-size: 18px;color:#f16b22;margin: 20px 0 20px 0;text-align: center; }
 .form .fa{font-size: 16px;}
-.form .form-group{height: 34px;position: relative;}
+
 .form .form-group .fa-phone{width: 10px;}
 .form .form-group .check{color: #666;}
 .form-group1{position: relative;top: -25px;}
 .form-group .col-sm-12,.form-group .col-sm-7{position: relative;padding:0;}
 .col-sm-7{padding: 0;}
-.form  input.form-control{border-radius: 0;font-size: 12px;height: 36px;}
 .form .form-group input[type="checkbox"]{position: relative;top: 3px;}
 .form-group .code{width: 110px;height: 36px;line-height: 36px;text-align: center;background: #4489dc;color: #fff;float: right;}
 .form-group .code:hover{opacity: 0.9;filter:alpha(opacity=90);}
@@ -460,6 +459,7 @@ input.btn-click:hover{background: #e16a20}
 
 @media screen and (min-width: 640px) {
     .pc-none{display: none;}
+    .form .form-group{height: 34px;position: relative;}
 }
 
 

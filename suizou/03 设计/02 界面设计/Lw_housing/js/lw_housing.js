@@ -51,7 +51,8 @@ $(function(){
     if (!supportPlaceholder) {
         for (var i = 0, len = inputs.length; i < len; i++) {
             var input = inputs[i], text = input.getAttribute('placeholder');
-            if (input.type === 'text' && text) {
+//            if (input.type === 'text' && text) {
+                if (((input.type == 'text')||(input.type == 'password')) && text) {
                 placeholder(input)
             }
         }
