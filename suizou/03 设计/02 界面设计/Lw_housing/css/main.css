@@ -177,6 +177,7 @@ a:link{text-decoration: none;}
 .ul-information li .title{display: inline-block;width: 80px;color: #333;font-size: 14px;}
 .common{display: inline-block;width: 90px;padding: 0 5px;color: #666;}
 .rental_mode{display: inline-block;width: 90px;height: 30px;line-height: 30px;color: #666;background: #f3f3f3;margin-right: 7.3%;font-size: 12px;text-align: center;}
+.ul-information li input{position: relative;top: 2px;}
 .ul-information li .address{padding-right: 18px;color: #666;}
 .ul-information li #cancel{width: 60px;height: 30px;text-align: center;line-height: 30px;background: #fb924d;color: #fff;}
 .ul-information li.last{border-bottom: none;}
@@ -307,14 +308,13 @@ a:link{text-decoration: none;}
 .form .title{font-size: 18px;color:#f16b22;margin: 20px 0 20px 0;text-align: center; }
 .form .fa{font-size: 16px;}
 .form .form-group{height: 34px;position: relative;}
+.form .form-group .fa-phone{width: 10px;}
 .form .form-group .check{color: #666;}
 .form-group1{position: relative;top: -25px;}
 .form-group .col-sm-12,.form-group .col-sm-7{position: relative;padding:0;}
 .col-sm-7{padding: 0;}
-.form-group i{position: relative;z-index: 1;display: inline-block;height: 38px;line-height: 38px;padding-left: 11px;}
-.form  input.form-control{padding-left: 30px;border-radius: 0;font-size: 12px;height: 36px;}
-input.input-top{margin-top: -38px;}
-.form-control[type="password"]{border-left: 4px solid #f16a20;}
+.form  input.form-control{border-radius: 0;font-size: 12px;height: 36px;}
+.form .form-group input[type="checkbox"]{position: relative;top: 3px;}
 .form-group .code{width: 110px;height: 36px;line-height: 36px;text-align: center;background: #4489dc;color: #fff;float: right;}
 .form-group .code:hover{opacity: 0.9;filter:alpha(opacity=90);}
 .form-group .active{background: #fff;color: #999;}
@@ -373,7 +373,7 @@ input.btn-click:hover{background: #e16a20}
 .div-group{margin: 15px;}
 .div-group .ziliao{width: 5%;border-radius: 80px;}
 .span-group{display: inline-block;width: 65px;}
-.input-group,.select-group{width: 50%;height: 30px;border:1px solid #dbdbdb;outline: none;display: inline-block;padding-left: 1%;}
+.input-group-input,.select-group{width: 50%;height: 30px;border:1px solid #dbdbdb;outline: none;display: inline-block;padding-left: 1%;}
 .input-group-time{width: 14%;}
 .div-group .select{width: 14%;margin-right: 2%;padding-left: 1%;height: 30px;}
 .btn-sure{width: 100px;height: 40px;line-height: 40px;background: #fca511;color: #fff;border-radius: 4px;}
