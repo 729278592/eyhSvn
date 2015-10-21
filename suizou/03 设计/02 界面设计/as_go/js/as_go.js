@@ -36,10 +36,10 @@ $(function() {
             }, 200);
             $(this).find(".plus").fadeIn(500)
         });
+
     var ii = $(".item_div").parent();
     ii.hover(
         function () {
-
             $(this).find(".item_box").animate({
                 "top": "0%"
             }, 200);
@@ -232,33 +232,33 @@ $(function() {
         }
     });
 
-    wcl.on("click", function () {
-        wc.slideUp();
-        wh.find("span").text($(this).text());
-
-        var text = wh.find("span").text();
-        if (text == "任务协同套件") {
-            window.location.href = "task_coordination_suite.html";
-        }
-        else if (text == "移动营销套件") {
-            window.location.href = "mobile_marketing_suite.html";
-        }
-        else if (text == "企业文化套件") {
-            window.location.href = "enterprise_culture_suite.html";
-        }
-        else if (text == "移动办公套件") {
-            window.location.href = "mobile_office_suite.html";
-        }
-        else if (text == "新手入门") {
-            window.location.href = "novice_entry.html";
-        }
-        else if (text == "常见问题") {
-            window.location.href = "common_problem.html";
-        }
-        else if (text == "产品特性") {
-            window.location.href = "product_features.html";
-        }
-    });
+//    wcl.on("click", function () {
+//        wc.slideUp();
+//        wh.find("span").text($(this).text());
+//
+//        var text = wh.find("span").text();
+//        if (text == "任务协同套件") {
+//            window.location.href = "task_coordination_suite.html";
+//        }
+//        else if (text == "移动营销套件") {
+//            window.location.href = "mobile_marketing_suite.html";
+//        }
+//        else if (text == "企业文化套件") {
+//            window.location.href = "enterprise_culture_suite.html";
+//        }
+//        else if (text == "移动办公套件") {
+//            window.location.href = "mobile_office_suite.html";
+//        }
+//        else if (text == "新手入门") {
+//            window.location.href = "novice_entry.html";
+//        }
+//        else if (text == "常见问题") {
+//            window.location.href = "common_problem.html";
+//        }
+//        else if (text == "产品特性") {
+//            window.location.href = "product_features.html";
+//        }
+//    });
 
 });
 

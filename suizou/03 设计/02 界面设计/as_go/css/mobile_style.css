@@ -1,12 +1,12 @@
 @charset "utf-8";
 @media screen and (max-width: 640px) {
+    .wrapper{overflow: hidden;}
     .header{position: relative;z-index: 1000;max-width: 640px;}
     .header .container,.we{display: none;}
     .head_mobile {width: 100%;height: 50px;display: inline-block;position: relative;}
     .head_mobile>div {width: 90%;position: relative;left: 50%;margin-left: -45%;height: 50px;text-align: center;line-height: 50px;}
     .head_mobile .glyphicon-th-list{color: #fff;float: left;position: relative;top: 17px;}
     .head_mobile .login {width: 90px;}
-
     .menu_mobile {margin-left: -100%;display: none;position: fixed;left: 0;right: 0;top: 0;bottom: 0;background: rgba(0,0,0,.5);}
     .menu_mobile li {width: 0;height: 50px;}
     .menu_mobile li a {display: inline-block;width: 100%;height: 50px;line-height: 50px;font-size: 16px;color: #fff;border-bottom: 1px solid #aaa;background: rgba(0,0,0,.8);text-align: center;}
@@ -37,25 +37,18 @@
     .myCarousel .item .img{margin: 10% 0 6% -3%;}
     .myCarousel .item .describe .title{font-size: 18px;position: relative;top: -10px;color: #fcaf05;display: none;}
     .myCarousel .item .describe span{font-size: 14px;position: relative;top: -20px;left: -10px;}
-    .footer .fl,.footer .fr{width: 100%;}
-    .footer .fr span{display: inline-block;
-        width: 100%;}
-
+    .footer .fl,.footer .fr{width: 100%;position: relative;top: 11px;}
+    .footer .fr span{display: inline-block;width: 100%;}
     .page_content_right_footer>.contain_application ul li img {width: 80%;}
-    .company_information li{width: 100%;
-    }
+    .company_information li{width: 100%;}
     .company_information li .last{text-align: left;position: relative;left: 8px;top: 10px;}
     .company_information li>div{width: 100%;}
     .w1200,.mt30,.mt60{margin-top: 0;margin-bottom: 0;}
     .application  .application_head_content  a{width: 40%;}
     .content_head .try{top: 37.1%;left: 40%;width: 25%;background: transparent;}
-    .carousel-application img {
-        width: 70%;
-        margin-left: -35%;
-    }
+    .carousel-application img {width: 70%;margin-left: -35%;}
     .pc{width: 60%;position: absolute;left: 50%;top: 30%;margin-left:-30%;margin-top: -30px;border: 1px solid #bccdce;border-radius: 10px;text-align: center;background: #fff;font-size: 20px;display: inline-block;height: 60px;line-height: 60px;}
     .immediately_revise{margin-left: 50px;}
-
 }
 
 @media screen and (max-width: 494px) {
@@ -63,18 +56,14 @@
     .bg_content>img {width: 30%;}
 }
 
-
-
 @media screen and (max-width: 413px) {
     .superiority li{height: 90px;}
-
-}
-
-@media screen and (max-width: 413px) {
     .myCarousel .item .describe span{left: -10px;}
-
 }
 
+@media screen and (max-width: 320px) {
+    .page_content_right_footer>.contain_application ul li img {width: 100%;}
+}
 
 
 

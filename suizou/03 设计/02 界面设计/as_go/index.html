@@ -193,7 +193,7 @@
                     <img src="images/place1.jpg" class="img-responsive mobile_none" alt="Responsive image" style="width: 80%;position: relative;left: 50%;margin-left: -40%;margin-bottom: 20px;">
                     <p class="col-lg-12 title">产品功能的介绍</p>
 
-                    <!--滚动插件-->
+                    <!--滚动插件开始-->
                     <div class="index-new w1200 mt30">
                         <div class="indexadd mt60 mb60">
                             <div id="banners" class="ui-banner">
@@ -538,8 +538,7 @@
                             </div>
                         </div>
                     </div>
-
-                    <!--滚动插件-->
+                    <!--滚动插件结束-->
 
                     <img src="images/suizou.jpg" class="img-responsive mobile_none" alt="Responsive image">
                     <div class="activity">
@@ -687,8 +686,8 @@
                                 <!--</ul>-->
                             <!--</div>-->
                         </div>
-                        <!--<a class="left carousel-control" href=".myCarousel1" data-slide="prev">‹</a>-->
-                        <!--<a class="right carousel-control" href=".myCarousel1" data-slide="next">›</a>-->
+                        <a class="left carousel-control" href=".myCarousel1" data-slide="prev">‹</a>
+                        <a class="right carousel-control" href=".myCarousel1" data-slide="next">›</a>
                     </div>
                     <div class="page_footer col-lg-12 mobile_none">
                         <ul class="clearfix">
@@ -795,8 +794,7 @@
     });
 </script>
 <script>
-
-    /*可是窗口大小改变就刷新页面*/
+    /*可视窗口大小改变就刷新页面*/
     var pl = $(".product_ul li");
     var wwd = parseInt($(window).width());
 
@@ -810,9 +808,9 @@
     re();
     $(window).on("resize",function(){
         if (wwd<641){
-            window.location.reload()
+            location = location
         }else{
-            window.location.reload()
+            location = location
         }
         re()
     });
