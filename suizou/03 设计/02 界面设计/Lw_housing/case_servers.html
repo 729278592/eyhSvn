@@ -15,6 +15,9 @@
             .w80{width: 1100px;margin-left: -550px;}
         }
     </style>
+    <!--[if IE 8]>mask{background: #000;filter: alpha(opacity=80);}
+    </style>
+    <![endif]-->
 </head>
 <body>
 <div class="wrapper">
@@ -145,6 +148,7 @@
             <span class="first">渝ICP备15002338号-1　Copyright © 2014~2015 重庆乐拓资产管理有限公司 版权所有</span>            　　
         </div>
     </div>
+    <div class="mask-bg hide"></div>
     <div class="mask hide">
         <div class="box player">
             <div class="box-head">维修申请</div>
@@ -172,11 +176,11 @@
 <script>
 
     $(".btn-rnow").on("click",function(){
-        $(".mask").removeClass("hide");
+        $(".mask-bg,.mask").removeClass("hide");
     });
 
     $(".close,.btn-submit").on("click",function(){
-        $(".mask").addClass("hide");
+        $(".mask-bg,.mask").addClass("hide");
     })
 </script>
 </body>

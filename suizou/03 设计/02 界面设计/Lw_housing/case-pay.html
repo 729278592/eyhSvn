@@ -13,6 +13,12 @@
         .footer{position: absolute;bottom: 0;}
         table .border-none td{border: none;}
     </style>
+    <!--[if IE 8]>
+    <style>
+        .head{background: #000;filter: alpha(opacity=60);}
+        .pc-none{display: none;}
+    </style>
+    <![endif]-->
 </head>
 <body>
     <div class="wrapper">
@@ -166,7 +172,24 @@
                             </li>
                         </ul>
                         <div class="mask-content hide">
-                            <img src="images/details-t.png" class="img-responsive" alt="Responsive image"/><br/>
+                            <ul class="ul-pay">
+                                <li class="li-img">
+                                    <p class="title">水费消费单</p>
+                                    <img src="images/details-t.png" class="img-responsive" alt=""/>
+                                </li>
+                                <li class="li-img last">
+                                    <p class="title">公摊电费消费单</p>
+                                    <img src="images/details-t.png" class="img-responsive" alt=""/>
+                                </li>
+                                <li class="li-img">
+                                    <p class="title">私人电费消费单</p>
+                                    <img src="images/details-t.png" class="img-responsive" alt=""/>
+                                </li>
+                                <li class="li-img last">
+                                    <p class="title">气费消费单</p>
+                                    <img src="images/details-t.png" class="img-responsive last" alt=""/>
+                                </li>
+                            </ul>
                             <button class="btn-sure">确定</button>
                         </div>
                     </div>

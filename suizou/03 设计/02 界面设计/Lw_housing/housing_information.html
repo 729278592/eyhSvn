@@ -8,41 +8,46 @@
     <link rel="stylesheet" href="css/main.css"/>
     <link rel="stylesheet" href="plugins/carousel/css/carousel.css"/>
     <link rel="stylesheet" href="css/mobile.css?v=11"/>
-    <link rel="stylesheet" href="plugins/mobile-bo/css/idangerous.swiper.css">
-    <link rel="stylesheet" href="plugins/mobile-bo/css/style.css">
+    <!--<link rel="stylesheet" href="plugins/mobile-bo/css/idangerous.swiper.css">-->
+    <!--<link rel="stylesheet" href="plugins/mobile-bo/css/style.css">-->
+    <link rel="stylesheet" href="plugins/swiper/dist/css/swiper.min.css"/>
     <style>
         .content{background: #fafafa;padding-top: 10px;}
-        .main {width: 100%;border: none;background: transparent;padding: 0;max-height: 382px;}
-        .home-device {width: 100%;position: relative;box-shadow:none;height: 100%;}
-        .pagination1 {position: absolute;bottom: -1%;z-index: 10;left: 50%;margin-left: -32px;}
-        .swiper-main,.swiper-container,.swiper-wrapper,.swiper-slide{ width: 100%;height: 100%;}
         .w80{overflow: hidden;}
         .video{position: absolute;left: 50%;top: 50%;margin-left: -240px;margin-top: -292px;padding: 50px;border: 1px solid #dbdbdb;background: rgba(255,255,255,0.8);border-radius: 10px;}
         #video .close{width: 30px;height: 30px;position: absolute;top: 50%;left: 50%;margin-left: 310px;margin-top: -292px;background: #fff;border-radius: 30px;text-align: center;line-height: 30px;z-index: 100;}
-        .carousel-house{width: 800px;height:587px;position: absolute;left: 50%;top:50%;margin-left: -400px;margin-top: -293px;background: rgba(0,0,0,0.8)}
-        #myCarousel1{width: 640px;height: 427px;margin: 80px auto;}
-        #myCarousel1 .carousel-control {position: absolute;top: 45%;width: 39px;height: 76px;text-align: center;}
-        #myCarousel1 .carousel-control{background: transparent;}
-        #myCarousel1 .carousel-control.left {left: -10%;}
-        #myCarousel1 .carousel-control.right {right: -10%;}
-        #myCarousel1 .close{position: absolute;top: -70px;right: -70px;width: 40px;height: 40px;text-align: center;line-height: 40px;background: #000;border-radius: 40px;color: #fff;opacity: .6;}
-        #myCarousel1 .close:hover{opacity: 0.9;}
+        /*.carousel-house{width: 800px;height:587px;position: absolute;left: 50%;top:50%;margin-left: -400px;margin-top: -293px;background: #000;opacity: 0.8;filter: alpha(opacity=80)}*/
+        /*#myCarousel1{width: 640px;height: 427px;margin: 80px auto;}*/
+        /*#myCarousel1 .carousel-control {position: absolute;top: 45%;width: 39px;height: 76px;text-align: center;}*/
+        /*#myCarousel1 .carousel-control{background: transparent;}*/
+        /*#myCarousel1 .carousel-control.left {left: -10%;}*/
+        /*#myCarousel1 .carousel-control.right {right: -10%;}*/
+        /*#myCarousel1 .close{position: absolute;top: -70px;right: -70px;width: 40px;height: 40px;text-align: center;line-height: 40px;background: #000;border-radius: 40px;color: #fff;opacity: .6;}*/
+        /*#myCarousel1 .close:hover{opacity: 0.9;}*/
         @media screen and (max-width: 639px) {
+            .content{padding-top: 0;}
+            .swiper-container{margin: 0;}
             .head {background: rgba(0,0,0, .4)}
             #video{width: 100%;position: relative;}
             .video{position: fixed;left:50%;top:80%;padding: 20px;border: 1px solid #dbdbdb;background: rgba(255,255,255,0.8);border-radius: 10px;width: 98%;margin-left: -49%;}
             .mask #video .close{width: 20px;height: 20px;position: fixed;top: 50%;right: 1.2%;margin-left: 180px;margin-top: -145px;background: #fff;border-radius: 30px;text-align: center;line-height: 20px;z-index: 100;}
         }
     </style>
+    <!--[if IE 8]>
+    <style>
+        .head{background: #000;filter: alpha(opacity=60);}
+        .pc-none{display: none;}
+    </style>
+    <![endif]-->
 </head>
 <body>
 <div class="wrapper">
     <div class="head">
         <div class="head-main">
             <div class="pc-none mobile_block">
-                                <span>
-                                    <i class="glyphicon glyphicon-th-list"></i>
-                                </span>
+                <span>
+                    <i class="glyphicon glyphicon-th-list"></i>
+                </span>
                 <a href="#">
                     <img src="images/logo.png" alt="" class="login"/>
                 </a>
@@ -83,78 +88,59 @@
     <div class="content">
         <div class="w80 pc_80 mobile_w80">
         <div id="div1">
+            <div class="play" src="http://mvvideo2.meitudata.com/56163e35cac069064.mp4">
+                <i class="glyphicon glyphicon-triangle-right"></i>
+            </div>
             <ul id="ul1">
-                <li><img src="plugins/carousel/images/huan1.jpg" class="img-responsive img" alt="Responsive image"/></li>
-                <li><img src="plugins/carousel/images/huan1.jpg" class="img-responsive img" alt="Responsive image"/></li>
-                <li><img src="plugins/carousel/images/huan1.jpg" class="img-responsive img" alt="Responsive image"/></li>
-                <li><img src="plugins/carousel/images/huan1.jpg" class="img-responsive img" alt="Responsive image"/></li>
-                <li><img src="plugins/carousel/images/huan1.jpg" class="img-responsive img" alt="Responsive image"/></li>
-                <li><img src="plugins/carousel/images/huan1.jpg" class="img-responsive img" alt="Responsive image"/></li>
-                <li><img src="plugins/carousel/images/huan1.jpg" class="img-responsive img" alt="Responsive image"/></li>
-                <li><img src="plugins/carousel/images/huan1.jpg" class="img-responsive img" alt="Responsive image"/></li>
-
+                <li><img src="images/IMG_1783.jpg" class="img-responsive img" alt="Responsive image"/></li>
+                <li><img src="images/IMG_1783.jpg" class="img-responsive img" alt="Responsive image"/></li>
+                <li><img src="images/IMG_1783.jpg" class="img-responsive img" alt="Responsive image"/></li>
+                <li><img src="images/IMG_1783.jpg" class="img-responsive img" alt="Responsive image"/></li>
+                <li><img src="images/IMG_1783.jpg" class="img-responsive img" alt="Responsive image"/></li>
             </ul>
             <div id="p-div">
                 <p id="p">
-                        <span class="current">
-                            <img src="plugins/carousel/images/huan1.jpg" alt="" class="img"/>
-                        </span>
-                        <span>
-                            <img src="plugins/carousel/images/huan1.jpg" alt="" class="img"/>
-                        </span>
-                        <span>
-                             <img src="plugins/carousel/images/huan1.jpg" alt="" class="img"/>
-                        </span>
-                        <span>
-                             <img src="plugins/carousel/images/huan1.jpg" alt="" class="img"/>
-                        </span>
-                        <span>
-                             <img src="plugins/carousel/images/huan1.jpg" alt="" class="img"/>
-                        </span>
-                         <span>
-                             <img src="plugins/carousel/images/huan1.jpg" alt="" class="img"/>
-                        </span>
-                         <span>
-                             <img src="plugins/carousel/images/huan1.jpg" alt="" class="img"/>
-                        </span>
-                     <span>
-                             <img src="plugins/carousel/images/huan1.jpg" alt="" class="img"/>
-                        </span>
-
+                    <span class="current">
+                        <img src="images/IMG_1783.jpg" alt="" class="img"/>
+                    </span>
+                    <span>
+                        <img src="images/IMG_1783.jpg" alt="" class="img"/>
+                    </span>
+                    <span>
+                         <img src="images/IMG_1783.jpg" alt="" class="img"/>
+                    </span>
+                    <span>
+                         <img src="images/IMG_1783.jpg" alt="" class="img"/>
+                    </span>
+                    <span>
+                         <img src="images/IMG_1783.jpg" alt="" class="img"/>
+                    </span>
                 </p>
             </div>
             <!--<div id="left" class="div-carousel">∨</div>-->
             <!--<div id="right"class="div-carousel">∨</div>-->
         </div>
-        <div role="main" class="main pc-none" id="main">
-            <div class="home-device" id="home-device">
-                <!--<a class="arrow-left" href="#"></a>-->
-                <!--<a class="arrow-right" href="#"></a>-->
-                <div class="swiper-main">
-                    <div class="swiper-container swiper1" style="cursor: -webkit-grab;">
-                        <div id="swiper-wrapper" class="swiper-wrapper" style=" transform: translate3d(-640px, 0px, 0px); transition-duration: 0.3s;">
-                            <div class="swiper-slide">
-                                <img src="plugins/carousel/images/huan1.jpg" class="img-responsive" alt="Responsive image"/>
-                            </div>
-                            <div class="swiper-slide">
-                                <img src="plugins/carousel/images/huan1.jpg" class="img-responsive" alt="Responsive image"/>
-                            </div>
-                            <div class="swiper-slide">
-                                <img src="plugins/carousel/images/huan1.jpg" class="img-responsive" alt="Responsive image"/>
-                            </div>
-                            <div class="swiper-slide">
-                                <img src="plugins/carousel/images/huan1.jpg" class="img-responsive" alt="Responsive image"/>
-                            </div>
-                        </div>
-                    </div>
+        <div class="swiper-container swiper-container-horizontal pc-none">
+            <div class="swiper-wrapper" id="swiper-wrapper" style="transition-duration: 0ms; ">
+                <div class="swiper-slide">
+                    <img src="images/IMG_1783.jpg" class="img-responsive" alt="Responsive image"/>
                 </div>
-                <div class="pagination pagination1" id="pagination">
-                    <span class="swiper-pagination-switch swiper-active-switch swiper-activeslide-switch"></span>
-                    <span class="swiper-pagination-switch"></span>
-                    <span class="swiper-pagination-switch"></span>
-                    <span class="swiper-pagination-switch"></span>
+                <div class="swiper-slide">
+                    <img src="images/IMG_1783.jpg" class="img-responsive" alt="Responsive image"/>
+                </div>
+                <div class="swiper-slide">
+                    <img src="images/IMG_1783.jpg" class="img-responsive" alt="Responsive image"/>
+                </div>
+                <div class="swiper-slide">
+                    <img src="images/IMG_1783.jpg" class="img-responsive" alt="Responsive image"/>
+                </div>
+                <div class="swiper-slide">
+                    <img src="images/IMG_1783.jpg" class="img-responsive" alt="Responsive image"/>
                 </div>
             </div>
+            <div class="swiper-pagination"></div>
+            <div class="swiper-button-next"></div>
+            <div class="swiper-button-prev"></div>
         </div>
         <ul class="pc_deatils">
             <li>
@@ -223,50 +209,53 @@
         <div class="room">
             <div class="room-group">
                 <ul class="room-information room-information2 clearfix">
-                    <li>
-                        <div class="play" src="http://mvvideo2.meitudata.com/56163e35cac069064.mp4">
-                            <i class="glyphicon glyphicon-triangle-right"></i>
-                        </div>
-                        <div class="li-div li-div-active">
-                            <img src="images/IMG_1783.jpg" class="img-responsive" alt="Responsive image active-img"/>
-                            <div class="room-left mobile_none">
-                                <div>
-                                    <img src="images/people.png" alt="" class="people-img"/> <br/>
-                                    <span class="rooms-group">已租: A房间</span><br/>
-                                    <span>女</span><br/>
-                                    <span>幼师</span><br/>
-                                    <span>编号：264646561656</span><br/>
-                                    <img src="images/details1.png" alt="" class="deatils-img"/>
-                                    <img src="images/details2.png" alt="" class="deatils-img"/>
-                                    <img src="images/details3.png" alt="" class="deatils-img"/>
-                                </div>
-                            </div>
-                            <div class="room-top room-top1 pc-none clearfix">
-                                <div class="right">
-                                    <img src="images/people.png" alt="" class="people people-img"/> <br/>
-                                <span class="spans-img">
-                                     <img src="images/details1.png" alt="" class="deatils-img"/>
-                                     <img src="images/details2.png" alt="" class="deatils-img"/>
-                                     <img src="images/details3.png" alt="" class="deatils-img"/>
-                                </span>
-                                </div>
-                            <span class="deatils">
-                                 <span class="rooms-group">已租: A房间</span><br/>
-                                 <span>男</span><br/>
-                                 <span>护士</span><br/>
-                                 <span>编号：264646561656</span><br/>
-                            </span>
+                    <!--<li>-->
+                        <!--<div class="play" src="http://mvvideo2.meitudata.com/56163e35cac069064.mp4">-->
+                            <!--<i class="glyphicon glyphicon-triangle-right"></i>-->
+                        <!--</div>-->
+                        <!--<div class="li-div li-div-active">-->
+                            <!--<img src="images/IMG_1783.jpg" class="img-responsive" alt="Responsive image active-img"/>-->
+                            <!--<div class="room-left mobile_none">-->
+                                <!--<div>-->
+                                    <!--<img src="images/people.png" alt="" class="people-img"/> <br/>-->
+                                    <!--<span class="rooms-group">已租: A房间</span><br/>-->
+                                    <!--<span>女</span><br/>-->
+                                    <!--<span>幼师</span><br/>-->
+                                    <!--<span>编号：264646561656</span><br/>-->
+                                    <!--<img src="images/details1.png" alt="" class="deatils-img"/>-->
+                                    <!--<img src="images/details2.png" alt="" class="deatils-img"/>-->
+                                    <!--<img src="images/details3.png" alt="" class="deatils-img"/>-->
+                                <!--</div>-->
+                            <!--</div>-->
+                            <!--<div class="room-top room-top1 pc-none clearfix">-->
+                                <!--<div class="right">-->
+                                    <!--<img src="images/people.png" alt="" class="people people-img"/> <br/>-->
+                                <!--<span class="spans-img">-->
+                                     <!--<img src="images/details1.png" alt="" class="deatils-img"/>-->
+                                     <!--<img src="images/details2.png" alt="" class="deatils-img"/>-->
+                                     <!--<img src="images/details3.png" alt="" class="deatils-img"/>-->
+                                <!--</span>-->
+                                <!--</div>-->
+                            <!--<span class="deatils">-->
+                                 <!--<span class="rooms-group">已租: A房间</span><br/>-->
+                                 <!--<span>男</span><br/>-->
+                                 <!--<span>护士</span><br/>-->
+                                 <!--<span>编号：264646561656</span><br/>-->
+                            <!--</span>-->
 
-                            </div>
-                            <div class="active-mask mobile_none"></div>
-                        </div>
-                    </li>
+                            <!--</div>-->
+                            <!--<div class="active-mask mobile_none"></div>-->
+                        <!--</div>-->
+                    <!--</li>-->
                     <li>
                         <div class="play" src="http://mvvideo1.meitudata.com/561639e704c586597.mp4">
                             <i class="glyphicon glyphicon-triangle-right"></i>
                         </div>
                         <div class="li-div li-div-active">
-                            <img src="images/IMG_1788.jpg" class="img-responsive" alt="Responsive image"/>
+                            <a href="house-details.html">
+                                <img src="images/IMG_1788.jpg" class="img-responsive" alt="Responsive image"/>
+
+                            </a>
                             <div class="room-left mobile_none">
                                 <div>
                                     <img src="images/miss.png" alt="" class="people-img"/> <br/>
@@ -283,17 +272,23 @@
                             <div class="room-top room-top1 pc-none clearfix">
                                 <div class="right">
                                     <img src="images/people.png" alt="" class="people people-img"/> <br/>
-                                <span class="spans-img">
-                                     <img src="images/details1.png" alt="" class="deatils-img"/>
-                                     <img src="images/details2.png" alt="" class="deatils-img"/>
-                                     <img src="images/details3.png" alt="" class="deatils-img"/>
-                                </span>
+                                    <span class="spans-img">
+                                         <img src="images/details1.png" alt="" class="deatils-img"/>
+                                         <img src="images/details2.png" alt="" class="deatils-img"/>
+                                         <img src="images/details3.png" alt="" class="deatils-img"/>
+                                    </span>
                                 </div>
                             <span class="deatils">
                                 <span class="rooms-group">未租: B房间</span><br/>
                                      <span>带飘窗,</span><span>单价</span><span>750/月</span><br/>
                                      <a href="#" class="yuyue">预约看房</a><br/>
                             </span>
+                            </div>
+                            <div class="active-mask mobile_none"></div>
+                            <div class="no-house">
+                                    <span>
+                                        对不起,此房间已出租
+                                    </span>
                             </div>
                         </div>
                     </li>
@@ -302,7 +297,9 @@
                             <i class="glyphicon glyphicon-triangle-right"></i>
                         </div>
                         <div class="li-div li-div-active">
-                            <img src="images/IMG_1790.jpg" class="img-responsive" alt="Responsive image"/>
+                            <a href="house-details.html">
+                                <img src="images/IMG_1790.jpg" class="img-responsive" alt="Responsive image"/>
+                            </a>
                             <div class="room-left mobile_none">
                                 <div>
                                     <img src="images/people.png" alt="" class="people-img"/> <br/>
@@ -429,6 +426,7 @@
             <span class="first">渝ICP备15002338号-1　Copyright © 2014~2015 重庆乐拓资产管理有限公司 版权所有</span>            　　
         </div>
     </div>
+    <div class="mask-bg hide"></div>
     <div class="mask hide">
         <div class="box hide">
             <div class="box-head">乐分期</div>
@@ -467,32 +465,32 @@
             </div>
         </div>
         <div id="video" class="hide">
-            <div class="close">×</div>
+            <div class="close mobile_none">×</div>
             <video src="" controls="controls" class="video" autoplay="autoplay">
             </video>
         </div>
-        <div class="carousel-house hide">
-            <div class="carousel slide" id="myCarousel1">
-                <div class="carousel-inner">
-                    <div class="item">
-                        <img src="images/IMG_1783.jpg" class="img-responsive img" alt="Responsive image"/>
-                    </div>
-                    <div class="item">
-                        <img src="images/IMG_1788.jpg" class="img-responsive img" alt="Responsive image"/>
-                    </div>
-                    <div class="item">
-                        <img src="images/IMG_1790.jpg" class="img-responsive img" alt="Responsive image"/>
-                    </div>
-                </div>
-                <a class="left carousel-control" href="#myCarousel1" data-slide="prev">
-                    <img src="images/pre2.png" alt=""/>
-                </a>
-                <a class="right carousel-control" href="#myCarousel1" data-slide="next">
-                    <img src="images/next2.png" alt=""/>
-                </a>
-                <button class="close" id="close"><i class="glyphicon glyphicon-remove"></i></button>
-            </div>
-        </div>
+        <!--<div class="carousel-house hide">-->
+            <!--<div class="carousel slide" id="myCarousel1">-->
+                <!--<div class="carousel-inner">-->
+                    <!--<div class="item">-->
+                        <!--<img src="images/IMG_1783.jpg" class="img-responsive img" alt="Responsive image"/>-->
+                    <!--</div>-->
+                    <!--<div class="item">-->
+                        <!--<img src="images/IMG_1788.jpg" class="img-responsive img" alt="Responsive image"/>-->
+                    <!--</div>-->
+                    <!--<div class="item">-->
+                        <!--<img src="images/IMG_1790.jpg" class="img-responsive img" alt="Responsive image"/>-->
+                    <!--</div>-->
+                <!--</div>-->
+                <!--<a class="left carousel-control" href="#myCarousel1" data-slide="prev">-->
+                    <!--<img src="images/pre2.png" alt=""/>-->
+                <!--</a>-->
+                <!--<a class="right carousel-control" href="#myCarousel1" data-slide="next">-->
+                    <!--<img src="images/next2.png" alt=""/>-->
+                <!--</a>-->
+                <!--<button class="close" id="close"><i class="glyphicon glyphicon-remove"></i></button>-->
+            <!--</div>-->
+        <!--</div>-->
 
     </div>
 </div>
@@ -500,76 +498,100 @@
 <script src="plugins/picture_transparency/js/move.js"></script>
 <script src="plugins/bootstrap-3.3.5-dist/js/bootstrap.min.js"></script>
 <script src="js/lw_housing.js"></script>
-<script src="plugins/mobile-bo/js/idangerous.swiper-1.9.1.min.js"></script>
-<script src="plugins/mobile-bo/js/idangerous.swiper.scrollbar-1.2.js"></script>
-<script src="plugins/mobile-bo/js/swiper-demos.js"></script>
+<!--<script src="plugins/mobile-bo/js/idangerous.swiper-1.9.1.min.js"></script>-->
+<!--<script src="plugins/mobile-bo/js/idangerous.swiper.scrollbar-1.2.js"></script>-->
+<!--<script src="plugins/mobile-bo/js/swiper-demos.js"></script>-->
 <script src="plugins/carousel/js/carousel.js"></script>
+<script src="plugins/swiper/dist/js/swiper.min.js"></script>
 <script>
 //    $(".staging").on("click",function(){
 //        $(".mask").removeClass("hide");
 //        $(".box").removeClass("hide");
 //    });
 
-window.onresize = function(){ location=location };
-    $(".address").on("click",function(){
-        $(".mask").removeClass("hide");
-        $(".dialog").removeClass("hide");
-
+    window.onresize = function(){ location=location };
+    var a = $(".address");
+    var mbm = $(".mask-bg,.mask");
+    var d = $(".dialog");
+    a.on("click",function(){
+        mbm.removeClass("hide");
+        d.removeClass("hide");
     });
-    $(".box .close").on("click",function(){
-        $(".mask").addClass("hide");
-        $(".box").addClass("hide");
+    var bc = $(".box .close");
+    var box = $(".box");
+    bc.on("click",function(){
+        mbm.addClass("hide");
+        box.addClass("hide");
     });
-    $(".dialog .close,.btn-default").on("click",function(){
-        $(".mask").addClass("hide");
-        $(".dialog").addClass("hide");
+    var dcb = $(".dialog .close,.btn-default")
+    dcb.on("click",function(){
+        mbm.addClass("hide");
+        d.addClass("hide");
     });
     var dl = $(".dialog-menu li");
     dl.on("click",function(){
         $(this).addClass("active");
         $(this).siblings().removeClass('active')
-    })
-
-    $(".room-information").delegate(".play", "click", function(){
+    });
+    var content = $(".content");
+   content.delegate(".play", "click", function(){
         var src = $(this).attr("src");
         if(src){
             $("#video").removeClass("hide");
-            $(".mask").removeClass("hide");
+            $(".mask-bg,.mask").removeClass("hide");
             $(".video").attr({autoplay:"autoplay",src:src})
         }else{
             alert("占无视频")
         }
-
     });
-
-    $(".mask").delegate(".close","click",function(){
-        $("#video").addClass("hide");
-        $(".mask").addClass("hide");
-        $(".video").attr({autoplay:"",src:""})
-    });
-
-
-    var il = $(".room-information li .li-div-active");
-    var m1 = $(".carousel-house"),m1i = $("#myCarousel1 .item");
-    il.each(function (i) {
-        if($(window).width()>640){
-            $(this).on("click", function () {
-                m1.closest(".mask").removeClass("hide");
-                m1.removeClass("hide");
-                m1i.eq(i).addClass('active');
-                m1i.eq(i).siblings().removeClass("active");
-                m1i.find("img").fadeIn(2000);
-            });
-        }
-
+    var v = $("#video");
+    var cv = $(".video");
+    v.delegate(".close","click",function(){
+        v.addClass("hide");
+        mbm.addClass("hide");
+        cv.attr({autoplay:"",src:""})
     });
     if($(window).width()<640){
-        $("#video").on("click",function(){
-            $("#video").addClass("hide");
-            $(".mask").addClass("hide");
-            $(".video").attr({autoplay:"",src:""})
+        v.on("click",function(){
+            v.addClass("hide");
+            mbm.addClass("hide");
+            cv.attr({autoplay:"",src:""})
         })
     }
+
+if($(window).width()<640){
+    swiper = new Swiper('.swiper-container', {
+        prevButton:'.swiper-button-prev',
+        nextButton:'.swiper-button-next',
+        slidesPerView: 1,
+        pagination:'.swiper-pagination',
+        paginationClickable: true,
+        spaceBetween: 0,
+        loop:true,
+        autoplay: 3000,
+        autoplayDisableOnInteraction: false
+    });
+}
+
+//    var il = $(".room-information li .li-div-active");
+//    var m1 = $(".carousel-house"),m1i = $("#myCarousel1 .item");
+//    var mb =  $(".mask-bg")
+//    il.each(function (i) {
+//        if($(window).width()>640){
+//            $(this).on("click", function () {
+//                mb.removeClass("hide");
+//                m1.closest(".mask").removeClass("hide");
+//                m1.removeClass("hide");
+//                m1i.eq(i).addClass('active');
+//                m1i.eq(i).siblings().removeClass("active");
+//                m1i.find("img").fadeIn(2000);
+//            });
+//            m1.delegate(".close","click",function(){
+//                mbm.addClass("hide");
+//                m1.addClass("hide");
+//            });
+//        }
+//    });
 </script>
 </body>
 </html>

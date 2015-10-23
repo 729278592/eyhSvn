@@ -20,6 +20,11 @@
             .w80{width: 1100px;margin-left: -550px;}
         }
     </style>
+    <!--[if IE 8]>
+    <style>
+        .head{background: #000;filter: alpha(opacity=60);}
+    </style>
+    <![endif]-->
 </head>
 <body>
     <div class="wrapper">
@@ -162,6 +167,7 @@
                 <span class="first">渝ICP备15002338号-1　Copyright © 2014~2015 重庆乐拓资产管理有限公司 版权所有</span>            　　
             </div>
         </div>
+        <div class="mask-bg hide"></div>
         <div class="mask hide">
             <div class="box-sure">
                 <!--<img src="images/smail.png" alt="" class="smail"><span>领取成功</span><br/>-->
@@ -175,10 +181,10 @@
 <script src="js/lw_housing.js"></script>
 <script>
     $(".btn-rnow").on("click",function(){
-        $(".mask").removeClass("hide");
+        $(".mask-bg,.mask").removeClass("hide");
     });
     $(".btn-sure").on("click",function(){
-        $(".mask").addClass("hide");
+        $(".mask-bg,.mask").addClass("hide");
     })
 </script>
 </body>
