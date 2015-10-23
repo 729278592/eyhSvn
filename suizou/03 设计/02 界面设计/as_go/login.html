@@ -8,20 +8,17 @@
     <link rel="stylesheet" href="css/common.css?v=33"/>
     <link rel="stylesheet" href="css/mobile_style.css"/>
     <style>
-        body,html{height: 100%;}
+        body,html{height: 100%;overflow: hidden;}
         .wrapper{height: 100%;min-height: 550px;}
-        .content{background: url("images/login_bg.jpg")no-repeat center;background-size:cover;width: 100%;overflow: hidden;position: relative;}
-        .form{max-width:538px;background: #fff;border-radius: 5px;margin:15% auto;padding: 50px 40px 10px;position: relative;}
-        @media screen and (min-width: 640px) {
-            html{overflow-y: hidden;}
+       .header{position: relative;z-index: 2;}
+        .content{position: fixed;top: 0;bottom: 0;left: 0;right: 0;background: url("images/login_bg.jpg")no-repeat}
+        .form{max-width:538px;background: #fff;border-radius: 5px;padding: 50px 40px 10px;position: absolute;
+               left: 50%;top: 50%;margin-left: -270px;margin-top: -213px; }
 
-            .content{min-height: 880px;}
-        }
-        .error{position: relative;top: 5px; color: red;}
+        .error{position: relative;top: -5px; color: red;left: 17.5%;}
         @media screen and (max-width: 640px) {
-            .form{width:320px;padding: 10px 15px;}
-            .content{;height:91%;}
-
+            .form{width:320px;padding: 10px 15px;top: 50%;margin-top: -143px;left: 50%;margin-left: -160px;}
+            .immediately_log{margin-left: 0;}
         }
     </style>
 </head>
@@ -69,13 +66,15 @@
                     </li>
                 </ul>
                 <form class="form-horizontal login_type" onsubmit="return false">
+                    <span class="error NameEmpty hide">请输入用户名</span>
+                    <span class="error Exists hide">您输入的用户名已存在</span>
+                    <span class="error NotExists hide">您输入的用户名未注册</span>
                     <div class="form-group">
+
                         <label for="inputName" class="col-sm-2 control-label">用户名</label>
                         <div class="col-sm-10">
                             <input type="text" class="form-control" id="inputName" placeholder="请输入您的昵称">
-                            <span class="error NameEmpty hide">请输入用户名</span>
-                            <span class="error Exists hide">您输入的用户名已存在</span>
-                            <span class="error NotExists hide">您输入的用户名未注册</span>
+
                         </div>
                     </div>
 
@@ -114,9 +113,8 @@
                     <p>请点击微信企业号图像进行授权登录</p>
                 </div>
             </div>
-
         </div>
-        <div class="footer clearfix">
+        <div class="footer mobile_none clearfix">
             <div class="fl">
                 <ul>
                     <li><a href="about_us.html">关于我们</a></li>
