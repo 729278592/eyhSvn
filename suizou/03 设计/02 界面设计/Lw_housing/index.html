@@ -798,37 +798,42 @@
             /*顶部显示*/
             var bb = $(".use-love");
             var sm = $(".show-md");
+            var h  = $(".head")
             var showMd = document.getElementById("show-md");
             bb.on("click",function(){
                 sm.removeClass("hide");
-                $(".head").css({"positon":"absolute","top":"660px"});
-                $(".show-md").animate({height:"660px"},500);
+                h.css({"positon":"absolute","top":"660px"});
+                sm.animate({height:"660px"},500);
             });
             $(window).on("scroll",function(){
-                $(".head").css({"positon":"fixed","top":"0"});
+                h.css({"positon":"fixed","top":"0"});
                 if ($(this).scrollTop() > 660) {
-                    $(".show-md").animate({height:"0px"},1);
+                    sm.animate({height:"0px"},1);
                     sm.addClass("hide");
                 }
             });
             var sc = $(".show-md .close");
             sc.on("click",function(){
-                $(".show-md").animate({height:"0px"},500,function(){
-                    $(".head").css({"positon":"fixed","top":"0"})
+                sm.animate({height:"0px"},500,function(){
+                    h.css({"positon":"fixed","top":"0"})
                 });
                 sm.removeClass("hide");
             });
 
             /*视频播放*/
-            $(".w80 li").delegate(".play", "click", function(){
+            var mbm = $(".mask-bg,.mask");
+            var  wl = $(".w80 li");
+            var v = $("#video");
+            var cv = $(".video")
+            wl.delegate(".play", "click", function(){
                 var src = $(this).attr("src");
-                $(".mask-bg,.mask").removeClass("hide");
-                $("#video").removeClass("hide");
-                $(".video").attr({autoplay:"autoplay",src:src})
+                mbm.removeClass("hide");
+                v.removeClass("hide");
+                cv.attr({autoplay:"autoplay",src:src})
             });
-            $(".mask-bg,.mask").delegate(".close","click",function(){
-                $(".mask-bg,.mask").addClass("hide");
-                $(".video").attr({autoplay:"",src:""})
+            mbm.delegate(".close","click",function(){
+                mbm.addClass("hide");
+                cv.attr({autoplay:"",src:""})
             });
 
             /*活动切换*/
@@ -857,10 +862,12 @@
             var mul = $("#marquee ul li");
             var m1 = $("#myCarousel1"),m1i = $("#myCarousel1 .item");
             var m1id = $("#myCarousel1 .item .describe");
+            var mb = $(".mask-bg");
+            var mu = $("#marquee ul")
             mul.each(function (i) {
                 if($(window).width()>640){
-                    $("#marquee ul").delegate("li","click", function () {
-                        $(".mask-bg").removeClass("hide");
+                    mu.delegate("li","click", function () {
+                        mb.removeClass("hide");
                         m1.closest(".mask").removeClass("hide");
                         m1.removeClass("hide");
                         m1i.eq(i).addClass('active');

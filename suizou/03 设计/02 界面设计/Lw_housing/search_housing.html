@@ -482,20 +482,23 @@
     <script src="plugins/jqueryui-sliders/js/components-jqueryui-sliders.js"></script>
     <script>
         jQuery(document).ready(function() {
-
             ComponentsjQueryUISliders.init();
         });
     </script>
     <script>
-        $(".ul-house li").delegate(".play", "click", function(){
+        var ul = $(".ul-house li");
+        var mbm = $(".mask,.mask-bg");
+        var v =  $(".video");
+        var m = $(".mask");
+        ul.delegate(".play", "click", function(){
             var src = $(this).attr("src");
-            $(".mask,.mask-bg").removeClass("hide");
-            $(".video").attr({autoplay:"autoplay",src:src})
+            mbm.removeClass("hide");
+           v.attr({autoplay:"autoplay",src:src})
         });
 
-        $(".mask").delegate(".close","click",function(){
-            $(".mask,.mask-bg").addClass("hide");
-            $(".video").attr({autoplay:"",src:""})
+        m.delegate(".close","click",function(){
+            mbm.addClass("hide");
+            v.attr({autoplay:"",src:""})
         })
     </script>
 </body>

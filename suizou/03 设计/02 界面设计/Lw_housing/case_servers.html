@@ -174,13 +174,15 @@
 <script src="plugins/jquery/js/jquery-1.11.3.min.js"></script>
 <script src="js/lw_housing.js"></script>
 <script>
-
-    $(".btn-rnow").on("click",function(){
-        $(".mask-bg,.mask").removeClass("hide");
+var br = $(".btn-rnow");
+var mbm = $(".mask-bg,.mask");
+var cb = $(".close,.btn-submit");
+    br.on("click",function(){
+        mbm.removeClass("hide");
     });
 
-    $(".close,.btn-submit").on("click",function(){
-        $(".mask-bg,.mask").addClass("hide");
+    cb.on("click",function(){
+        mbm.addClass("hide");
     })
 </script>
 </body>

@@ -11,9 +11,7 @@
         .footer{position: absolute;bottom: 0;}
         .div-group{margin-left: 0;}
         .btn-sure{width: 60px;height: 30px;line-height: 30px;position: relative;top: 20px;}
-        .div-group .prize {
-           float: none;
-        }
+        .div-group .prize {float: none;}
         .div-group img{width: 108px;height: 108px;}
         @media screen and (max-width: 1400px){
             .head,.content,.footer{min-width: 1100px;}
@@ -180,11 +178,14 @@
 <script src="plugins/jquery/js/jquery-1.11.3.min.js"></script>
 <script src="js/lw_housing.js"></script>
 <script>
-    $(".btn-rnow").on("click",function(){
-        $(".mask-bg,.mask").removeClass("hide");
+    var br = $(".btn-rnow");
+    var mbm = $(".mask-bg,.mask");
+    var bs = $(".btn-sure");
+    br.on("click",function(){
+        mbm.removeClass("hide");
     });
-    $(".btn-sure").on("click",function(){
-        $(".mask-bg,.mask").addClass("hide");
+    bs.on("click",function(){
+        mbm.addClass("hide");
     })
 </script>
 </body>
