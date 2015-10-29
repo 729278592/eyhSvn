@@ -1,13 +1,10 @@
 /**
  * Created by eyohu023 on 2015/8/14.
  */
-
-
-
+$(".div-group:odd").css({"background": "#fff"});
+$(".div-group:even").css({"background": "#efecec"});
 
 function details(){
-    $(".div-group:odd").css({"background": "#fff"});
-    $(".div-group:even").css({"background": "#efecec"});
     var dfa = $(".div-group .fa");
     dfa.closest(".div-group").on("click", function () {
         if ($(this).next(".order-group").css("display") == "none") {
@@ -60,9 +57,9 @@ $(".button").on("click",function(){
                            '</li>'+
                        '</ul>');
                         details();
+                        $(".details .div-group:odd").css({"background": "#fff"});
+                        $(".details .div-group:even").css({"background": "#efecec"});
                 });
-
-
 
 
 var ml = $(".menu li");
