@@ -147,8 +147,9 @@
 
             //to remove last line
             iObj.line.remove();
-
-
+            setTimeout(function(){
+                window.location.href = "index.html";
+            },500);
 
             if (iObj.rightPattern) {
                 if (pattern == iObj.rightPattern) {
