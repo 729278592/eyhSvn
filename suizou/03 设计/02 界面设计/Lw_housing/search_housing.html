@@ -440,11 +440,10 @@
             content.style.height =  winH - hHeight - fHeight + "px";
             window.onresize = function(){ location=location };
 
-
-
-
-            body.style.height = content.offsetHeight +  hHeight + fHeight;
-            content.style.height = content.offsetHeight + fHeight;
+            if($(window).height()<700){
+                $(".footer").css({"position":"relative","marginTop":"0px"})
+            }
+            content.style.height = $(window).height() - hHeight - fHeight;
             /*出租类型控制*/
             var pa = $(".ul-information");
             pa.find(".rental_mode").on("click",function(){
