@@ -160,7 +160,7 @@
     $(function(){
         /*代理块控制*/
       var jso = {"agent":{"name": "陈小洁", "title":"代理管理","boss":"王二","peopleImg": "../../assets/mobile/images/people.png","class1":"t-bg t-bg1","fuc1":"申请升级","fuc2":"申请取消","fuc3":"直属下级","url1":"apply-upgrade.html","url2":"cancel-agent.html","url3":"#"},
-                 "order":{"name": "张三", "title": "订单管理","boss":"王大" ,"peopleImg": "../../assets/mobile/images/people.png","class1":"t-bg t-bg1","fuc1":"我的订单","fuc2":"下单","fuc3":"暂无数据","url1":"my-order.html","url2":"chioce-production.html","url3":"#"},
+                 "order":{"name": "张三", "title": "订单管理","boss":"王大" ,"peopleImg": "../../assets/mobile/images/people.png","class1":"t-bg t-bg1","fuc1":"我的订单","fuc2":"下单","url1":"my-order.html","url2":"chioce-production.html"},
                  "balance":{"name": "李四", "title": "余额管理","boss":"王小","peopleImg": "../../assets/mobile/images/people.png","class1":"t-bg t-bg1","fuc1":"我的余额","fuc2":"对账中心","fuc3":"在线充值","url1":"my-balance.html","url2":"check-center.html","url3":"online-recharge.html"}
                 };
         var cm = $(".common-mangent");
@@ -173,6 +173,7 @@
                 ss = jso.agent;
             }else if($(this).find(cm).text()=="订单管理"){
                 ss = jso.order;
+                $(".mask").find(".management .last").addClass("hide")
             }else if($(this).find(cm).text()=="余额管理"){
                 ss = jso.balance;
             }
@@ -224,6 +225,9 @@
                             '</ul>'+
                        '</div>';
             m.append(str);
+            if($(this).find(cm).text()=="订单管理"){
+                $(".mask").find(".management .last").addClass("hide")
+            }
             $(".management").animate({left:"0%"},200,function(){
                 m.delegate($(".management"),"click",function(){
                     $(".management").animate({left:"-85%"},20,function(){
