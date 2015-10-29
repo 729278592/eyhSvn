@@ -211,7 +211,7 @@
                                         '</span>'+
                                     '</a>'+
                                 '</li>'+
-                                '<li class="last">'+
+                                '<li>'+
                                     '<a href="'+ss.url3+'">'+
                                         '<span class="type">'+
                                             '<span class="t-bg t-bg3"></span>'+
@@ -226,7 +226,7 @@
                        '</div>';
             m.append(str);
             if($(this).find(cm).text()=="订单管理"){
-                $(".mask").find(".management .last").addClass("hide")
+                m.find("li:last").addClass("hide")
             }
             $(".management").animate({left:"0%"},200,function(){
                 m.delegate($(".management"),"click",function(){
