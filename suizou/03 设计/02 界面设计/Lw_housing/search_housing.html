@@ -11,9 +11,10 @@
     <link href="plugins/jqueryui-sliders/css/jquery-ui-1.10.3.custom.min.css" rel="stylesheet"/>
     <style>
        html{overflow: hidden;}
+       body{position: relative;}
         .head-menu{margin-right: 1%;}
         .head-menu li{padding:0 2px;}
-        .footer{position: relative;z-index: 10;}
+        .footer{position: fixed;z-index: 10;bottom: 0;}
         .bg-blue {border:4px solid #f5f5f5 !important;background-image: none !important;background-color: #dce0e0 !important;}
         .ui-slider-horizontal .ui-slider-handle {top: -7px;}
         .ui-slider-horizontal .ui-slider-handle:hover{cursor: pointer;}
@@ -37,7 +38,7 @@
     <![endif]-->
 
 </head>
-<body>
+<body id="body">
     <div class="wrapper">
         <div class="head" id="head">
             <div class="head-main">
@@ -433,11 +434,17 @@
             var Head = document.getElementById("head");
             var Footer = document.getElementById("footer");
             var content = document.getElementById("content");
+            var body = document.getElementById("body");
             hHeight = Head.offsetHeight;
             fHeight = Footer.offsetHeight;
             content.style.height =  winH - hHeight - fHeight + "px";
             window.onresize = function(){ location=location };
 
+
+
+
+            body.style.height = content.offsetHeight +  hHeight + fHeight;
+            content.style.height = content.offsetHeight + fHeight;
             /*出租类型控制*/
             var pa = $(".ul-information");
             pa.find(".rental_mode").on("click",function(){
