@@ -1,0 +1,92 @@
+<!DOCTYPE html>
+<html>
+<head lang="en">
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width; initial-scale=1.0; user-scalable=no;">
+    <title>普莉拉</title>
+    <link rel="stylesheet" href="../../assets/mobile/css/global.css"/>
+    <link rel="stylesheet" href="../../assets/global/plugins/font/css/font-awesome.min.css"/>
+    <style>
+        body{background: #dcdcdc;}
+        .content{overflow: hidden;background: #dcdcdc;text-align: center;}
+    </style>
+</head>
+<body>
+<div class="wrapper">
+    <div class="head">
+        <div class="head-main">
+            <!--<a href="#" class="return"></a>-->
+            <span class="return"></span>
+            <span class="title">过敏表</span>
+        </div>
+    </div>
+    <div class="content">
+        <form action="" onsubmit="return false">
+            <div class="input-group">
+                <label for="QuiltName">
+                    <span class="requried">*</span>
+                    <input type="text" name="" class="input" id="QuiltName" placeholder="客户姓名 :"/>
+                </label>
+            </div>
+            <div class="input-group">
+                <label for="PhoneNumber">
+                    <span class="requried">*</span>
+                    <input type="tel" name="" class="input" id="PhoneNumber" placeholder="手机号码 :"/>
+                </label>
+            </div>
+            <div class="input-group">
+                <label for="Age">
+                    <span class="requried">*</span>
+                    <input type="text" name="" class="input" id="Age" placeholder="年龄 :"/>
+                </label>
+            </div>
+            <div class="input-group">
+                <label for="1">
+                    <span class="requried"></span>
+                    <input type="text" name="" class="input" id="1" placeholder="顾客购买产品对应的代理 :"/>
+                </label>
+            </div>
+            <div class="input-group">
+                <label for="2">
+                    <span class="requried"></span>
+                    <input type="text" name="" class="input" id="2" placeholder="长期未使用化妆品或者首次使用 :"/>
+                </label>
+            </div>
+            <div class="input-group">
+                <label for="3">
+                    <span class="requried"></span>
+                    <input type="text" name="" class="input" id="3" placeholder="首次使用普利拉产品 :"/>
+                </label>
+            </div>
+            <div class="input-group">
+                <label for="4">
+                    <span class="requried"></span>
+                    <input type="text" name="" class="input" id="4" placeholder="是否从其他产品使用转为本产品 :"/>
+                </label>
+            </div>
+
+            <input type="submit" value="提交" class="btn-f98"/>
+        </form>
+        <div class="error_box">
+
+        </div>
+    </div>
+</div>
+</body>
+<script src="../../assets/global/plugins/jquery/jquery-1.11.3.min.js"></script>
+<script src="../../assets/mobile/js/global.js"></script>
+<script src="../../assets/mobile/js/error.js"></script>
+<script>
+    jQuery(document).ready(function() {
+        var btn_submit = $(".btn-f98");
+        btn_submit.on("click",function(){
+            ErrorBox.init();
+            $(this).attr({"disabled":"disabled"});
+            var that = $(this);
+            setTimeout(function(){
+                that.removeAttr("disabled")
+            },3500)
+        });
+    });
+</script>
+</html>

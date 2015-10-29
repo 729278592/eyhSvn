@@ -1,0 +1,251 @@
+<!DOCTYPE html>
+<html>
+<head lang="en">
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width; initial-scale=1.0; user-scalable=no;">
+    <title>普莉拉</title>
+    <link rel="stylesheet" href="../../assets/mobile/css/global.css"/>
+    <link rel="stylesheet" href="../../assets/global/plugins/font/css/font-awesome.min.css"/>
+    <style>
+        .content{background: #f0f0f0;}
+        .m-head .details{width: 50%;margin-left: 5%;}
+    </style>
+</head>
+<body>
+    <div class="wrapper">
+        <!--<div class="head">-->
+            <!--<div class="head-main">-->
+                <!--<span class="return"></span>-->
+                <!--<span class="title">普莉拉</span>-->
+            <!--</div>-->
+        <!--</div>-->
+        <div class="content">
+             <div class="ch"> <!--内容标题-->
+                 <img src="../../assets/mobile/images/index-bg.jpg" alt=""/>
+             </div>
+            <ul class="menu clearfix">
+                <li>
+                    <span class="title">今日收入</span><br/>
+                    <span class="mc">0.00</span> <!--菜单内容-->
+                    <div class="rb"></div><!--右边框-->
+                </li>
+                <li>
+                    <span class="title">账本余额</span><br/>
+                    <span class="mc">0.00</span>
+                    <div class="rb"></div>
+                </li>
+                <li>
+                    <span class="title">本月签到<span class="day">0</span>天</span><br/>
+                    <button class="btn-attendance">已签到</button>
+                </li>
+            </ul>
+            <ul class="middle-menu clearfix">
+                <li>
+                    <a href="javascript:void(0)">
+                        <span class="icon icon1"></span><br/>
+                        <span class="title common-mangent agent">代理管理</span>
+                        <div class="rb"></div>
+                        <div class="bb"></div><!--下边框-->
+                    </a>
+                </li>
+                <li>
+                    <a href="chioce-production.html">
+                        <span class="icon icon2"></span><br/>
+                        <span class="title">下单</span>
+                        <div class="rb"></div>
+                        <div class="bb"></div><!--下边框-->
+                    </a>
+                </li>
+                <li>
+                    <a href="javascript:void(0)">
+                        <span class="icon icon3"></span><br/>
+                        <span class="title common-mangent order">订单管理</span>
+                        <div class="bb"></div><!--下边框-->
+                    </a>
+                </li>
+                <li>
+                    <a href="online-recharge.html">
+                        <span class="icon icon4"></span><br/>
+                        <span class="title common-mangent">充值</span>
+                        <div class="rb"></div>
+                    </a>
+                </li>
+                <li>
+                    <a href="javascript:void(0)">
+                        <span class="icon icon5"></span><br/>
+                        <span class="title common-mangent balance">余额管理</span>
+                        <div class="rb"></div>
+                    </a>
+                </li>
+                <li>
+                    <a href="submit-application.html">
+                        <span class="icon icon6"></span><br/>
+                        <span class="title">提交表单</span>
+                    </a>
+                </li>
+            </ul>
+            <ul class="comment-data">
+                <li>
+                    <span class="type">今日充值 (元)</span>
+                    <span class="fr">
+                       <span class="num">567.0</span>
+                    </span>
+                </li>
+                <li>
+                    <span class="type">累计充值 (元)</span>
+                    <span class="fr">
+                       <span class="num">440.0</span>
+                    </span>
+                </li>
+                <li>
+                    <span class="type">出货总金额 (元)</span>
+                    <span class="fr">
+                       <span class="num">300.0</span>
+                    </span>
+                </li>
+                <li>
+                    <span class="type">下级总金额 (元)</span>
+                    <span class="fr">
+                       <span class="num">200.0</span>
+                    </span>
+                </li>
+            </ul>
+            <a href="#" class="warning">余额警戒线说明?</a>
+        </div>
+        <div class="foot">
+            <ul class="f-menu">
+                <li class="active">
+                    <a href="index.html">
+                        <div class="bt"></div>
+                        <span>
+                            <i class="fa fa-home"></i>
+                        </span><br/>
+                        <span>首页</span>
+                        <div class="br"></div>
+                    </a>
+                </li>
+                <li>
+                    <a href="notification-center.html">
+                        <div class="bt"></div>
+                        <span>
+                            <i class="fa fa-comments-o"></i>
+                        </span><br/>
+                        <span>消息</span>
+                        <div class="br"></div>
+                    </a>
+                </li>
+                <li>
+                    <a href="index.html">
+                        <div class="bt"></div>
+                        <span>
+                            <i class="fa fa-dribbble"></i>
+                        </span><br/>
+                        <span>发现</span>
+                        <div class="br"></div>
+                    </a>
+                </li>
+                <li>
+                    <a href="my-balance.html">
+                        <div class="bt"></div>
+                        <span>
+                            <i class="fa fa-user"></i>
+                        </span><br/>
+                        <span>我</span>
+                    </a>
+                </li>
+            </ul>
+        </div>
+        <div class="mask hide">
+
+        </div>
+    </div>
+</body>
+<script src="../../assets/global/plugins/jquery/jquery-1.11.3.min.js"></script>
+<script src="../../assets/mobile/js/global.js"></script>
+<script>
+    $(function(){
+
+        /*代理块控制*/
+
+
+      var jso = {"agent":{"name": "陈小洁", "title":"代理管理","boss":"王二","peopleImg": "../../assets/mobile/images/people.png","class1":"t-bg t-bg1","fuc1":"申请升级","fuc2":"声请取消","fuc3":"在线下属"},
+                 "order":{"name": "张三", "title": "订单管理","boss":"王大" ,"peopleImg": "../../assets/mobile/images/people.png","class1":"t-bg t-bg1","fuc1":"我的订单","fuc2":"下单","fuc3":"暂无数据"},
+                 "balance":{"name": "李四", "title": "余额管理","boss":"王小","peopleImg": "../../assets/mobile/images/people.png","class1":"t-bg t-bg1","fuc1":"我的余额","fuc2":"对账中心","fuc3":"在线充值"}
+                };
+        var cm = $(".common-mangent");
+        var m = $(".mask");
+        var ma = $(".management");
+        cm.closest("li").on("click",function(){
+            m.removeClass("hide");
+           var ss = null;
+            if($(this).find(cm).text()=="代理管理"){
+                ss = jso.agent;
+            }else if($(this).find(cm).text()=="订单管理"){
+                ss = jso.order;
+
+
+            }else if($(this).find(cm).text()=="余额管理"){
+                ss = jso.balance;
+            }
+            var str = '<div class="management">'+
+                            '<div class="m-head clearfix">'+
+                                '<img src="'+ss.peopleImg+'" alt="" class="people"/>'+
+                                ' <span class="details">'+
+                                    '<span class="name">'+ss.name+'</span><br/>'+
+                                    '<span>上级: '+ss.boss+'</span>'+
+                                '</span>'+
+                            '</div>'+
+                            '<ul class="comment-data">'+
+                                '<li>'+
+                                    '<span class="type" style="font-size: 18px;">'+ss.title+'</span>'+
+                                '</li>'+
+                                '<li>'+
+                                    '<a href="apply-upgrade.html">'+
+                                        '<span class="type">'+
+                                            '<span class="'+ss.class1+'"></span>'+
+                                            '<span>'+ss.fuc1+'</span>'+
+                                        '</span>'+
+                                        '<span class="fr">'+
+                                            '<span class="more"></span>'+
+                                        '</span>'+
+                                    '</a>'+
+                                '</li>'+
+                                '<li>'+
+                                    '<a href="cancel-agent.html">'+
+                                        '<span class="type">'+
+                                            '<span class="t-bg t-bg2"></span>'+
+                                            '<span style="position: relative;top: -3px;">'+ss.fuc2+'</span>'+
+                                        '</span>'+
+                                        '<span class="fr">'+
+                                            '<span class="more"></span>'+
+                                        '</span>'+
+                                    '</a>'+
+                                '</li>'+
+                                '<li class="last">'+
+                                    '<a href="#">'+
+                                        '<span class="type">'+
+                                            '<span class="t-bg t-bg3"></span>'+
+                                            ' <span style="position: relative;top: -3px;">'+ss.fuc3+'</span>'+
+                                        '</span>'+
+                                        '<span class="fr">'+
+                                            '<span class="more"></span>'+
+                                        '</span>'+
+                                    '</a>'+
+                                '</li>'+
+                            '</ul>'+
+                       '</div>';
+            m.append(str);
+            $(".management").animate({left:"0%"},200,function(){
+                m.delegate($(".management"),"click",function(){
+                    $(".management").animate({left:"-85%"},20,function(){
+                        m.addClass("hide");
+                        $(".management").remove()
+                    });
+                })
+            })
+        });
+
+    })
+
+</script>
+</html>

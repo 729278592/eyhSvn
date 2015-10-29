@@ -1,0 +1,46 @@
+<!doctype html>
+<html>
+<head>
+    <title>普莉拉</title>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width; initial-scale=1.0; user-scalable=no;">
+    <link rel="stylesheet" href="../../assets/mobile/css/global.css"/>
+    <link href="../../assets/global/plugins/jquery-lock/css/patternLock.css"  rel="stylesheet" type="text/css" />
+    <style type="text/css">
+        body{margin: 0;padding: 0;background: #f0f0f0;position: relative;}
+        .wrapper{background: #f0f0f0;}
+        .patt-holder{background:#f0f0f0;}
+        .patt-wrap li{border: 3px solid #6f6d6b}
+        .patt-dots{background: #e56334;}
+        #patternContainer{position: relative;left: 50%;top: 50%;margin-left: -155px;margin-top: -155px;}
+        .hand-title{text-align: center;position: absolute;top: 105px;color: #666;left: 50%;margin-left: -48px;}
+        .pass{position: absolute;top: 70px;right: 10px;color:#f98d91;text-align: right;}
+    </style>
+</head>
+<body id="body">
+    <div class="wrapper" id="wrapper">
+        <div class="head">
+            <div class="head-main">
+                <!--<a href="#" class="return"></a>-->
+                <!--<span class="return"></span>-->
+                <span class="title">手势密码验证</span>
+            </div>
+        </div>
+        <p class="pass">管理手势密码</p>
+        <p class="hand-title">验证手势密码</p>
+        <div id="patternContainer"></div>
+    </div>
+</body>
+<script src="../../assets/global/plugins/jquery/jquery-1.11.3.min.js"></script>
+<script src="../../assets/global/plugins/jquery-lock/js/patternLock.js"></script>
+<script>
+    $(function(){
+        var body = document.getElementById("body");
+        var wrapper = document.getElementById("wrapper");
+        body.style.height = $(window).height() + "px";
+        wrapper.style.height = $(window).height() + "px";
+        var lock = new PatternLock("#patternContainer");
+    })
+</script>
+
+</html>

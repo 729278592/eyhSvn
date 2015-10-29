@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html>
+<head lang="en">
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width; initial-scale=1.0; user-scalable=no;">
+    <title>普莉拉</title>
+    <link rel="stylesheet" href="../../assets/mobile/css/global.css"/>
+    <link rel="stylesheet" href="../../assets/global/plugins/font/css/font-awesome.min.css"/>
+</head>
+<body>
+<div class="wrapper">
+    <div class="head">
+        <div class="head-main">
+            <!--<a href="#" class="return"></a>-->
+            <span class="return"></span>
+            <span class="title">对账中心</span>
+        </div>
+    </div>
+    <div class="content">
+        <ul class="check-menu clearfix">
+            <li class="active">
+                全部
+                <div class="br"></div>
+            </li>
+            <li>
+                现在下级
+                <div class="br"></div>
+            </li>
+            <li>
+                原下级
+            </li>
+        </ul>
+        <div class="c-foot">
+            <img src="../../assets/mobile/images/none.png" alt="" class="none"/><br/>
+            <span>近期无记录</span>
+        </div>
+    </div>
+</div>
+</body>
+<script src="../../assets/global/plugins/jquery/jquery-1.11.3.min.js"></script>
+<script src="../../assets/mobile/js/global.js"></script>
+<script>
+    var cl = $(".check-menu li");
+    cl.on("click",function(){
+        $(this).addClass("active");
+        $(this).siblings().removeClass("active");
+    })
+</script>
+</html>
