@@ -399,7 +399,7 @@ input.btn-click:hover{background: #e16a20}
 .p-group{color: #666;height: 60px;line-height: 60px;border-bottom: 1px dashed #dbdbdb;}
 .p-group.title{font-size: 16px;color: #333;}
 .div-group .prize{float: left;}
-.div-group .deatils{position: relative;top: 30px;left: 10px;display: inline-block;}
+.div-group .deatils{position: relative;top: 30px;left: 10px;display: inline-block;width: 400px;}
 .btn-rnow{width: 75px;height: 30px;line-height: 30px;text-align: center;background: #fca511;color: #fff;border-radius: 4px;position: relative;top: 20px;left: 150px;}
 .div-group .servers{display: inline-block;padding: 20px 8px;border: 1px solid #5494e1;}
 .w-right>.title{font-size: 18px;color: #678ab3;}
