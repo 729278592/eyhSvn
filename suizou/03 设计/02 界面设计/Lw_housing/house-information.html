@@ -12,6 +12,10 @@
         body{background: #f1f1f1;}
         .footer{position: absolute;bottom: 0;}
         .p-group span{display: inline-block;width: 15%;}
+        @media screen and (max-width: 640px) {
+            .p-group{height: 80px;line-height: 40px;}
+            .p-group span{width: 29%;text-align: center;}
+        }
     </style>
     <!--[if IE 8]>
     <style>
@@ -142,34 +146,39 @@
                         <li><img src="images/top-img.png" alt=""/></li>
                     </ul>
                     <p class="p-group title">房屋信息</p>
-                    <p class="p-group">
-                        <span>A房间</span>　
-                        <span>出租人：</span>　
-                        <span>张三</span>　
-                        <span>到期时间：</span>　
-                        <span>2015-6-5</span>
-                    </p>
-                    <p class="p-group">
-                        <span>B房间</span>　
-                        <span>出租人：</span>　
-                        <span>李四</span>　
-                        <span>到期时间：</span>　
-                        <span>2015-6-5</span>
-                    </p>
-                    <p class="p-group">
-                        <span>C房间</span>　
-                        <span>出租人：</span>　
-                        <span>王二</span>　
-                        <span>到期时间：</span>　
-                        <span>2015-6-5</span>
-                    </p>
-                    <p class="p-group">
-                        <span>D房间</span>　
-                        <span>出租人：</span>　
-                        <span>麻子</span>　
-                        <span>到期时间：</span>　
-                        <span>2015-6-5</span>
-                    </p>
+                    <div class="has-rental">
+                        <p class="p-group">
+                            <span>A房间</span>　
+                            <span>出租人：</span>　
+                            <span>张三</span>　
+                            <span>到期时间：</span>　
+                            <span>2015-6-5</span>
+                        </p>
+                        <p class="p-group">
+                            <span>B房间</span>　
+                            <span>出租人：</span>　
+                            <span>李四</span>　
+                            <span>到期时间：</span>　
+                            <span>2015-6-5</span>
+                        </p>
+                        <p class="p-group">
+                            <span>C房间</span>　
+                            <span>出租人：</span>　
+                            <span>王二</span>　
+                            <span>到期时间：</span>　
+                            <span>2015-6-5</span>
+                        </p>
+                        <p class="p-group">
+                            <span>D房间</span>　
+                            <span>出租人：</span>　
+                            <span>麻子</span>　
+                            <span>到期时间：</span>　
+                            <span>2015-6-5</span>
+                        </p>
+                    </div>
+                    <!--<div class="no-rental">-->
+                        <!--您还没租房-->
+                    <!--</div>-->
                 </div>
 
             </div>

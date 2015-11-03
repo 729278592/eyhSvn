@@ -398,6 +398,7 @@ input.btn-click:hover{background: #e16a20}
 .btn-sure{width: 100px;height: 40px;line-height: 40px;background: #fca511;color: #fff;border-radius: 4px;}
 .p-group{color: #666;height: 60px;line-height: 60px;border-bottom: 1px dashed #dbdbdb;}
 .p-group.title{font-size: 16px;color: #333;}
+.no-rental{width: 100%;text-align: center;margin-top: 200px;color: #ff0000;font-size: 18px;}
 .div-group .prize{float: left;}
 .div-group .deatils{position: relative;top: 30px;left: 10px;display: inline-block;width: 400px;}
 .btn-rnow{width: 75px;height: 30px;line-height: 30px;text-align: center;background: #fca511;color: #fff;border-radius: 4px;position: relative;top: 20px;left: 150px;}
@@ -405,6 +406,7 @@ input.btn-click:hover{background: #e16a20}
 .w-right>.title{font-size: 18px;color: #678ab3;}
 .pay{border-bottom: 1px dashed #dbdbdb;height: 60px;line-height: 60px;}
 .pay li{float: left;width: 20%;height: 60px;line-height: 60px;}
+
 .pay li button{width: 70px;height: 30px;line-height: 30px;text-align: center;color: #fff;border-radius: 4px;background: #fca511;font-size: 12px;display: inline-block;}
 .leave-step{width: 100%;position: relative;left: 50%;margin-left: -40%;}
 .leave-step li{float: left;width: 15%;text-align: center;color: #666;margin: 2% 0 0 0;}
