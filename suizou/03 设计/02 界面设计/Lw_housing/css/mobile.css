@@ -85,20 +85,12 @@
     .pay li{width: 47%;padding-left: 3%;text-align: left;}
     .pay li .span-img{display: inline-block;width: 20%;text-align: center;}
     .pay li:last-child{width: 94%;}
-
-
-
-
     .div-group .span-tou{display: inline-block;width: 60px;height: 60px;position: relative;background: #eee;}
-
     .div-group .span-tou .ziliao{width: 60px;height: 60px;padding: 2px;border: 1px solid #ddd;}
     .div-group .span-tou .title,.div-group .span-tou .ti-c{position: absolute;width: 100%;height: 20px;line-height: 20px;color: #fff;bottom: 0;font-size: 12px;text-align: center;display: inline-block;}
     .div-group .span-tou .ti-c{}
     .div-group .span-tou .title{background: #000;opacity: 0.5;filter: alpha(opacity=50);}
     .portlet{margin-top: 15%;width: 96%;position: absolute;left: 50%;margin-left: -48%;}
-
-
-
     .content-head{position: relative;height: 320px;}
     .content-head .mobile-img{min-height: 320px;max-height: 320px;width: 100%;height:320px;}
     .mobile-ch{width: 100%;max-width: 640px;}
@@ -115,26 +107,29 @@
     .logReg, .logRegs{margin-top: -180px;}
     .mask .box{left: 0;margin-left: 0;}
     .comon-head{line-height: 50px;}
-
     .shop-list{margin-left: 0;}
     .shop-list li{width: 100%;margin-right: 0;}
     .choice li{margin-right: 0;}
-
     .choice li{width: 100%;margin-right: 0;}
     .div-bg .type{width: 100%;max-width: 500px;}
     .deposit{width: 50%;}
     .w80 .li4{width: 100%;height: 40%;}
     .w80 .li4 img{height: 80%;}
     .room-information li{padding-left: 0;}
-
+    .shop-list li a .item-b .main .money{left: 66%;}
 }
 
 @media screen and (max-width: 420px) {
     .bridge li span{width: 60%;font-size: 14px;}
     .content-foot{margin-top: 75%;}
+    .shop-list li a .item-b .main .money{left: 62%;}
 }
 
 @media screen and (max-width: 432px) {
     .pc_deatils{height: 390px;}
     .information-div{width: 68%;}
+}
+
+@media screen and (max-width: 320px) {
+    .shop-list li a .item-b .main .money{left: 59%;}
 }

@@ -238,7 +238,7 @@ a:link{text-decoration: none;}
 .shop-list li a .item-b{padding: 3% 2%;position: absolute;}
 .shop-list li a .item-b .main{width: 100%;color: #666;font-size: 12px;}
 .shop-list li a .item-b .main .title{color: #333;font-size: 14px;}
-.shop-list li a .item-b .main .money{float: right;position: relative;top: -22px;font-size: 16px;right: 12%;}
+.shop-list li a .item-b .main .money{font-size: 14px;position: absolute;top: 12px;left: 289px;}
 .shop-list li a .item-b .main .money .num{color: #ff5300;}
 .shop-list .btn-change,.shop-list .btn-buy{padding: .5% 2%;background: #fca511;color: #fff;position: absolute;bottom: 10%;border-radius: 5px;font-size: 12px;}
 .shop-list .btn-change{right: 2%;}
@@ -462,6 +462,7 @@ input.btn-click:hover{background: #e16a20}
     body{overflow-x: hidden;}
     .room-information li .img-responsive{width: 387px;height: 258px;}
     .shop-list .btn-buy{right: 20%;}
+
 }
 
 @media screen and (max-width: 1400px) and (min-width: 640px) {
@@ -479,7 +480,7 @@ input.btn-click:hover{background: #e16a20}
     .middle-none{display: none;}
     .pc_deatils .staging{width: 80px;}
     .room-information li .img-responsive{width: 308px;height: 205px;}
-
+    .shop-list li a .item-b .main .money{left: 210px;top: 6px;}
 }
 
 @media screen and (max-width: 720px) {
