@@ -38,6 +38,7 @@ window.onload = function () {
         aSpan[i].index = i;
         a = 0;
         aSpan[i].onclick = function () {
+            clearInterval(start)
             for (var i = 0; i < iLen; i++) {
                 aSpan[i].className = '';
             }
