@@ -34,7 +34,7 @@ var yy = $(".yhgr_u li a");
     yy.each(function(){
     $(this).hover(function(){
         if($(this).parent().is(".active")){
-            $(this).parent().addClass("qq");
+            $(this).parent().addClass("多张图片透明以及分享");
         }else{
             $(this).parent().addClass("active");
             $(this).prev().removeClass("hide")
@@ -43,7 +43,7 @@ var yy = $(".yhgr_u li a");
         if($(this).parent().is(".active")){
             $(this).parent().removeClass("active");
             $(this).prev().addClass("hide");
-            if($(this).parent().is(".qq")){
+            if($(this).parent().is(".多张图片透明以及分享")){
                 $(this).parent().addClass("active");
                 $(this).prev().removeClass("hide")
             }
