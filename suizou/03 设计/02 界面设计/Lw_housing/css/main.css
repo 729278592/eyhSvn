@@ -396,7 +396,7 @@ input.btn-click:hover{background: #e16a20}
 
 .input-group-time{width: 14%;}
 .div-group .select{width: 14%;margin-right: 2%;padding-left: 1%;height: 30px;}
-.btn-sure{width: 100px;height: 40px;line-height: 40px;background: #fca511;color: #fff;border-radius: 4px;}
+.btn-sure{width: 100px;height: 40px;line-height: 40px;background: #fca511;color: #fff;border-radius: 4px;display: inline-block;}
 .p-group{color: #666;height: 60px;line-height: 60px;border-bottom: 1px dashed #dbdbdb;}
 .p-group.title{font-size: 16px;color: #333;}
 .no-rental{width: 100%;text-align: center;margin-top: 200px;color: #ff0000;font-size: 18px;}
@@ -459,6 +459,14 @@ input.btn-click:hover{background: #e16a20}
 .caret-top{width: 0;height: 0;border: 15px solid #f5f4f0;border-left-color: transparent;border-top-color: transparent;border-right-color: transparent;position: relative;left: 20px;}
 .roommate-list li .details{background: #f5f4f0;width: 94%;padding: 20px 3%;border-radius: 6px;color: #999;}
 .roommate-list li .phone{color: #fca511;font-size: 16px;}
+
+
+
+/*pay-success*/
+.pay-success{width: 400px;height: 100px;margin: 200px auto;text-align: center;color: #333;}
+.pay-success .title{color: #fca511;font-size: 20px;}
+.pay-success .money{color: #fca511;font-size: 16px;}
+
 /*footer*/
 .footer{background: #445c75;padding: 20px 0;width: 100%;font-size: 12px;}
 .footer .fl ul{width: 400px;margin: 0 auto;height: 20px;}
