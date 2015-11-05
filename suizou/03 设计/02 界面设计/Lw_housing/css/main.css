@@ -147,7 +147,7 @@ a:link{text-decoration: none;}
 .shoum-ul li{float: left;width: 33.333%;text-align: center;}
 .shoum-ul li span{display: inline-block;width: 100%;font-size: 18px;}
 .shoum-ul li .title{font-size: 25px;}
-.show-md p{font-size: 18px;position: absolute;bottom: 100px;left: 50%;margin-left: -280px;}
+.show-md p{font-size: 18px;position: absolute;bottom: 100px;left: 50%;margin-left: -225px;}
 .show-md .close{position: absolute;right: 15px;top: 40px;color: #000;font-size: 30px;}
 .va-middle{position: absolute;top: 50%;color: #fff;left: 50%;margin-left: -140px;margin-top: -88px;}
 .va-middle .title{font-size: 60px;}
