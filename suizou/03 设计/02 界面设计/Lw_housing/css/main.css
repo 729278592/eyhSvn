@@ -202,7 +202,7 @@ a:link{text-decoration: none;}
 .house-details:hover{opacity: 0.8;filter: alpha(opacity=80);}
 .house-details .price{font-size: 16px;display: inline-block;}
 .house-details .address{float: right;font-size: 12px;display: inline-block;width: 70%;text-align: right;text-overflow: ellipsis;overflow: hidden;white-space: nowrap;margin-top: 3px;}
-li .main{width: 50%;display: inline-block;white-space: nowrap;text-overflow: ellipsis;overflow: hidden;}
+li .main{width: 45%;display: inline-block;white-space: nowrap;text-overflow: ellipsis;overflow: hidden;}
 .w96{padding: 0 1.5%;color: #999;line-height: 30px;width: 100%;}
 
 
