@@ -1,0 +1,191 @@
+<!DOCTYPE html>
+<html>
+<head lang="en">
+    <meta charset="UTF-8">
+    <meta name="apple-mobile-web-app-capable" content="yes">
+    <meta name="apple-mobile-web-app-status-bar-style" content="black">
+    <meta name="format-detection" content="telephone=no, email=no">
+    <meta name="viewport" content="width=device-width; initial-scale=1.0; user-scalable=no;">
+    <link rel="stylesheet" href="plugins/font/css/font-awesome.min.css"/>
+    <link rel="stylesheet" href="css/global.css"/>
+    <link rel="stylesheet" href="plugins/mobile-bo/css/idangerous.swiper.css">
+    <link rel="stylesheet" href="plugins/mobile-bo/css/style.css">
+    <link rel="stylesheet" href="plugins/bootstrap-3.3.5-dist/css/bootstrap.min.css"/>
+    <title>牙白科</title>
+    <style>
+        .main {width: 100%;border: none;background: transparent;padding: 0;max-height: 382px;margin-bottom: 1.5%;}
+        .home-device {width: 100%;position: relative;box-shadow:none;height: 100%;}
+        .pagination1 {position: absolute;bottom: -8%;z-index: 10;left: 50%;margin-left: -32px;}
+        .swiper-main,.swiper-container,.swiper-wrapper,.swiper-slide{ width: 100%;height: 100%;}
+        .zindex{position: relative;z-index: -10;}
+        .img{position: relative;z-index: 10;}
+    </style>
+</head>
+<body>
+<section class="wrapper">
+    <div class="header"></div>
+    <div class="content">
+        <div class="content-main clearfix zindex" id="content-main">
+            <ul class="content-main-huan clearfix" id="content-main-huan">
+                <li id="active">
+                    <div role="main" class="main pc-none" id="main">
+                        <div class="home-device" id="home-device">
+                            <!--<a class="arrow-left" href="#"></a>-->
+                            <!--<a class="arrow-right" href="#"></a>-->
+                            <div class="swiper-main" id="swiper-main">
+                                <div class="swiper-container swiper1" style="cursor: -webkit-grab;">
+                                    <div id="swiper-wrapper" class="swiper-wrapper" style=" transform: translate3d(-640px, 0px, 0px); transition-duration: 0.3s;">
+                                        <div class="swiper-slide">
+                                            <img src="plugins/mobile-bo/images/huan1.jpg"/>
+                                        </div>
+                                        <div class="swiper-slide">
+                                            <img src="plugins/mobile-bo/images/huan1.jpg"/>
+                                        </div>
+                                        <div class="swiper-slide">
+                                            <img src="plugins/mobile-bo/images/huan1.jpg"/>
+                                        </div>
+                                        <div class="swiper-slide">
+                                            <img src="plugins/mobile-bo/images/huan1.jpg"/>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="pagination pagination1" id="pagination">
+                                <span class="swiper-pagination-switch swiper-active-switch swiper-activeslide-switch"></span>
+                                <span class="swiper-pagination-switch"></span>
+                                <span class="swiper-pagination-switch"></span>
+                                <span class="swiper-pagination-switch"></span>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="seavers clearfix">
+                        <div class="li2">
+                            <a href="suo.html">
+                                <img src="images/server1.jpg" class="img-responsive img" alt="Responsive image"/>
+                                <span class="title">找诊所</span>
+                            </a>
+                        </div>
+                        <div class="li1 last">
+                            <a href="ya.html">
+                                <img src="images/server2.jpg" class="img-responsive img" alt="Responsive image"/>
+                                <span class="title">牙白科</span>
+                            </a>
+                        </div>
+                        <div class="li1">
+                            <a href="xian.html">
+                                <img src="images/server3.jpg" class="img-responsive img" alt="Responsive image"/>
+                                <span class="title">在线商城</span>
+                            </a>
+                        </div>
+                        <div class="li2 last">
+                            <a href="suo.html">
+                                <img src="images/server4.jpg" class="img-responsive img" alt="Responsive image"/>
+                                <span class="title">找诊所</span>
+                            </a>
+                        </div>
+                        <div class="li3 last">
+                            <a href="">
+                                <img src="images/server5.jpg" class="img-responsive img" alt="Responsive image"/>
+                                <span class="title">服务项目</span>
+                            </a>
+                        </div>
+                    </div>
+                </li>
+                <li>
+                    <img src="images/3.jpg" alt=""/>
+                </li>
+                <li>
+                    <img src="images/2.jpg" alt=""/>
+                </li>
+                <li>
+                    <img src="images/4.jpg" alt=""/>
+                </li>
+            </ul>
+        </div>
+        <img src="images/5.jpg" class="img-responsive" alt="Responsive image"/>
+
+
+    </div>
+    <div class="footer">
+        <ul class="footer-main clearfix" id="footer-main">
+            <li class="li" rel="external">
+                <i class="fa fa-bars"></i><br/>
+                <span>首页</span>
+            </li>
+            <li class=" li" rel="external">
+                <i class="fa fa-plus-square"></i><br/>
+                <span>找诊所</span>
+            </li>
+            <div class="ul-div li" rel="external">
+                <a href="#">
+                    <img src="images/question.png" alt=""/>
+                </a>
+            </div>
+            <li class="li" rel="external">
+                <i class="fa fa-shopping-cart"></i><br/>
+                <span>线上商城</span>
+            </li>
+            <li class="li" rel="external">
+                <i class="fa fa-user"></i><br/>
+                <span>个人中心</span>
+            </li>
+        </ul>
+    </div>
+</section>
+<script src="plugins/jquery/jquery-1.11.3.min.js"></script>
+<script src="js/move.js"></script>
+<script src="plugins/mobile-bo/js/idangerous.swiper-1.9.1.min.js"></script>
+<script src="plugins/mobile-bo/js/swiper-demos.js"></script>
+<script>
+    window.onload = function(){
+        var contentMain = document.getElementById('content-main');
+        var contentMainHuan = document.getElementById("content-main-huan");
+        var oLi = contentMainHuan.getElementsByTagName("li");
+        var oActive = document.getElementById("active");
+        var footerMain = document.getElementById("footer-main");
+        var aLi = footerMain.getElementsByTagName("li");
+        var iLen1 = oLi.length;
+        var iWidth = oLi[0].offsetWidth;
+
+        contentMainHuan.style.width = iWidth * iLen1 + "px";
+
+
+        function init() {
+            for (var i = 0; i < iLen1; i++) {
+                run(i);
+
+            }
+        }
+        init();
+        function run(i) {
+            aLi[i].index = i;
+            aLi[i].onclick = function () {
+                for (var i = 0; i < iLen1; i++) {
+                    aLi[i].className = 'li';
+                    oLi[i].id = " ";
+                }
+                this.className = 'current';
+                oLi[this.index].id = "active";
+                $("#content-main").removeClass("zindex");
+                $(".img").addClass("img");
+
+                move(contentMainHuan, {left: -this.index * iWidth});
+            };
+        }
+        var oMain = document.getElementById("main");
+        var homeDevice = document.getElementById("home-device");
+        var Osw = document.getElementById("swiper-wrapper");
+        var oImg = Osw.getElementsByTagName("img")[0];
+        oMain.style.height = oImg.offsetHeight + "px";
+        homeDevice.style.height = oImg.offsetHeight + "px";
+        Osw.style.height = oImg.offsetHeight + "px";
+
+        contentMainHuan.style.height = oActive.offsetHeight + "px";
+        contentMain.style.height     = oActive.offsetHeight + "px";
+
+
+    }
+</script>
+
+</body>
+</html>

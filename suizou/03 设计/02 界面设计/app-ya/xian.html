@@ -1,0 +1,144 @@
+
+<!DOCTYPE html>
+<html>
+<head lang="en">
+    <meta charset="UTF-8">
+    <meta name="apple-mobile-web-app-capable" content="yes">
+    <meta name="apple-mobile-web-app-status-bar-style" content="black">
+    <meta name="format-detection" content="telephone=no, email=no">
+    <meta name="viewport" content="width=device-width; initial-scale=1.0; user-scalable=no;">
+    <link rel="stylesheet" href="plugins/font/css/font-awesome.min.css"/>
+    <link rel="stylesheet" href="css/global.css"/>
+    <link rel="stylesheet" href="plugins/mobile-bo/css/idangerous.swiper.css">
+    <link rel="stylesheet" href="plugins/mobile-bo/css/style.css">
+    <link rel="stylesheet" href="plugins/bootstrap-3.3.5-dist/css/bootstrap.min.css"/>
+    <title>牙白科</title>
+    <style>
+        .content-main-huan{ left: -300%; }
+    </style>
+</head>
+<body>
+<section class="wrapper">
+    <div class="header"></div>
+    <div class="content">
+        <div class="content-main clearfix" id="content-main">
+            <ul class="content-main-huan clearfix" id="content-main-huan">
+                <li id="active">
+                    <div class="silder" id="silder">
+                        <div class="silder_list" id="silder_list">
+                            <div>
+                                <a href="#">
+                                    <img src="plugins/autoSlider/images/huan1.jpg" alt=""/>
+                                </a>
+                            </div>
+                            <div>
+                                <a href="#">
+                                    <img src="plugins/autoSlider/images/huan2.jpg" alt=""/>
+                                </a>
+                            </div>
+                            <div>
+                                <a href="#">
+                                    <img src="plugins/autoSlider/images/huan1.jpg" alt=""/>
+                                </a>
+                            </div>
+                            <div>
+                                <a href="#">
+                                    <img src="plugins/autoSlider/images/huan2.jpg" alt=""/>
+                                </a>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="seavers clearfix">
+                        <div class="li2">
+                            <a href="#">
+                                <img src="images/server1.jpg" class="img-responsive img" alt="Responsive image"/>
+                                <span class="title">找诊所</span>
+                            </a>
+                        </div>
+                        <div class="li1 last">
+                            <a href="#">
+                                <img src="images/server2.jpg" class="img-responsive img" alt="Responsive image"/>
+                                <span class="title">牙百科</span>
+                            </a>
+                        </div>
+                        <div class="li1">
+                            <a href="#">
+                                <img src="images/server3.jpg" class="img-responsive img" alt="Responsive image"/>
+                                <span class="title">在线商城</span>
+                            </a>
+                        </div>
+                        <div class="li2 last">
+                            <a href="#">
+                                <img src="images/server4.jpg" class="img-responsive img" alt="Responsive image"/>
+                                <span class="title">个人预约</span>
+                            </a>
+                        </div>
+                        <div class="li3 last">
+                            <a href="#">
+                                <img src="images/server5.jpg" class="img-responsive img" alt="Responsive image"/>
+                                <span class="title">服务项目</span>
+                            </a>
+                        </div>
+                    </div>
+                </li>
+                <li>
+                    <img src="images/3.jpg" alt=""/>
+                </li>
+                <li>
+                    <img src="images/6.jpg" alt=""/>
+                </li>
+                <li>
+                    <img src="images/2.jpg" alt=""/>
+                </li>
+                <li>
+                    <img src="images/4.jpg" alt=""/>
+                </li>
+
+            </ul>
+        </div>
+
+    </div>
+    <div class="footer">
+        <ul class="footer-main clearfix" id="footer-main">
+            <li class="li" rel="external">
+                <i class="fa fa-bars"></i><br/>
+                <span>首页</span>
+            </li>
+            <li class=" li" rel="external">
+                <i class="fa fa-plus-square"></i><br/>
+                <span>找诊所</span>
+            </li>
+
+            <li class="ul-div li" rel="external">
+                <a href="#">
+                    <img src="images/question.png" alt=""/>
+                </a>
+            </li>
+            <li class="li current" rel="external">
+                <i class="fa fa-shopping-cart"></i><br/>
+                <span>线上商城</span>
+            </li>
+            <li class="li" rel="external">
+                <i class="fa fa-user"></i><br/>
+                <span>个人中心</span>
+            </li>
+        </ul>
+    </div>
+</section>
+<script src="plugins/jquery/jquery-1.11.3.min.js"></script>
+<script src="js/move.js"></script>
+<script src="js/common.js"></script>
+<script src="plugins/autoSlider/js/jquery.img_silder.js"></script>
+<script>
+    $(function(){
+        $('#silder').imgSilder({
+            s_width:'100%', //容器宽度
+            s_height: $('#silder').find("img").height(), //容器高度
+            is_showTit:true, // 是否显示图片标题 false :不显示，true :显示
+            s_times:5000, //设置滚动时间
+            css_link:'plugins/autoSlider/css/style.css'
+        });
+    });
+</script>
+</body>
+</html>

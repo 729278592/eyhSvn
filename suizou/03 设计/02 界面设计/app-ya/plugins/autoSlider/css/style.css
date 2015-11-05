@@ -1,0 +1,21 @@
+/* 初始化css */
+body,ol,ul,h1,h2,h3,h4,h5,h6,p,th,td,dl,dd,form,fieldset,legend,input,textarea,select{margin:0;padding:0}
+body{font:12px '宋体','Microsoft YaHei', Arial,Helvetica,sans-serif,'Arial Narrow',HELVETICA;background:#fff;-webkit-text-size-adjust:100%;}
+a{color:#000;text-decoration:none;display:inline-block;}
+a:hover{color:#3468F1;text-decoration:none}
+em{font-style:normal}
+li{list-style:none}
+img{border:0;vertical-align:middle}
+table{border-collapse:collapse;border-spacing:0}
+p{word-wrap:break-word}
+
+
+/*轮播*/
+.silder {width: 100%; overflow: hidden;text-align: center;margin: 0 auto 5px;position:relative;float:left;}
+.silder .silder_list { overflow:hidden;position: relative;}
+.silder .silder_list a{position:absolute; top:0;left:0;}
+.silder .silder_list a,.silder .silder_list img{display:inline-block;float:left;}
+.silder .silder_page{text-align:right; margin:0 auto;right:1px; overflow:hidden;position:absolute; bottom:5%;left: 50%;margin-left: -30px;}
+.silder .silder_page div{width:10px; font-size:12px; float:left; height:10px;line-height:16px;margin:0 5px; background:#aaa;display:inline-block;text-align:center;color:#000;border-radius: 16px;}
+.silder .silder_page div.current{background:#fff;color:#eee;}
+.silder .silder_page div:hover{cursor:pointer;}
