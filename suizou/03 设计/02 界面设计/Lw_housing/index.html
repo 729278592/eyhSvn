@@ -13,7 +13,7 @@
         .mask{min-width: 1120px;}
         .head{position: fixed;background: rgba(0,0,0,0);z-index: 100;}
         #myCarousel1{width: 70%;position: absolute;left: 50%;top:50%;margin-left: -35%;margin-top: -12%;}
-        #myCarousel1{background: url("images/myCarousel1-bg.jpg") no-repeat center center;background-size: cover;margin-bottom: 1.01%;border-radius: 4px}
+        #myCarousel1{background: url("images/myCarousel1-bg.jpg") no-repeat center center;background-size: cover;margin-bottom: 1.01%;border-radius: 4px;}
         #myCarousel1 .carousel-control {position: absolute;top: 45%;width: 39px;height: 76px;text-align: center;}
         #myCarousel1>img{width: 80%;}
         #myCarousel1 .carousel-inner{width: 85%;height: 80%;background: #d5e9f9;position: relative;left: 50%;margin: 5% -42.5%;}
@@ -58,9 +58,9 @@
         <div class="head" id="head">
             <div class="head-main">
                 <div class="pc-none mobile_block">
-                            <span>
-                                <i class="glyphicon glyphicon-th-list"></i>
-                            </span>
+                    <span>
+                        <i class="glyphicon glyphicon-th-list"></i>
+                    </span>
                     <a href="#">
                         <img src="images/logo.png" alt="" class="login"/>
                     </a>
@@ -823,7 +823,7 @@
                 sm.animate({height:"0px"},500,function(){
                     h.css({"positon":"fixed","top":"0"})
                 });
-                sm.removeClass("hide");
+                sm.addClass("hide");
             });
 
             /*视频播放*/
