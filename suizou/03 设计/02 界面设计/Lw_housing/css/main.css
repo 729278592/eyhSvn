@@ -453,7 +453,7 @@ input.btn-click:hover{background: #e16a20}
 .btn-share{float: right;}
 .btn-share{padding: 15px 30px;background: #fca511;color: #fff;border-radius: 4px;text-align: center;position: relative;top: -6px;}
 .fs-content{padding: 10px 25px;}
-.roommate-list{width: 98%;margin-left: 2%;}
+.roommate-list{width: 98%;margin-left: 2%;margin-bottom: 40px;}
 .roommate-list li{float: left;width:33.333%;position: relative;margin-bottom: 30px;}
 .roommate-list .visible-lg-block {display: block !important;}
 .caret-top{width: 0;height: 0;border: 15px solid #f5f4f0;border-left-color: transparent;border-top-color: transparent;border-right-color: transparent;position: relative;left: 20px;}
