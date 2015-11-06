@@ -99,51 +99,6 @@ window.onload = function() {
                 }
             };
         }
-//        left.onclick = function(){
-//            a--;
-//            if(a<0){
-//                a = iLen;
-//            }
-//            if($(window).width()>1400){
-//                if(iLen1>4){
-//                    topP = iLen1 - 4;
-//                    if(a<topP+1){
-//                        move(p, {
-//                            top : -a * iHeight2
-//                        });
-//                    }
-//
-//                }
-//            }
-//            if(($(window).width()>640)&&($(window).width()<1400)){
-//                p.style.width = iLen1 * iWidth + 'px';
-//                if(iLen1>4){
-//                    topP = iLen1 - 4;
-//                    if(a<topP+1){
-//                        move(p, {
-//                            left : -a * iWidth
-//                        });
-//                    }
-//                }
-//            }
-//            getActive()
-//        };
-//
-//        right.onclick = function(){
-//            a++;
-//            if(a>iLen){
-//                a = 0;
-//            }
-//            if(iLen1>4){
-//                topP = iLen1 - 4;
-//                if(a<topP+1){
-//                    move(p, {
-//                        top : ((a-(topP)) * iHeight2)
-//                    });
-//                }
-//            }
-//            getActive()
-//        };
 
         oDiv1.onmouseover = function(){
             clearInterval(start1)

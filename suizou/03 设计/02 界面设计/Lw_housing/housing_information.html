@@ -2,6 +2,7 @@
 <html>
 <head lang="en">
     <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1" />
     <meta name="viewport" content="width=device-width; initial-scale=1.0; user-scalable=no;">
     <title>房间信息</title>
     <link rel="stylesheet" href="plugins/bootstrap-3.3.5-dist/css/bootstrap.css"/>
@@ -24,6 +25,10 @@
         /*#myCarousel1 .carousel-control.right {right: -10%;}*/
         /*#myCarousel1 .close{position: absolute;top: -70px;right: -70px;width: 40px;height: 40px;text-align: center;line-height: 40px;background: #000;border-radius: 40px;color: #fff;opacity: .6;}*/
         /*#myCarousel1 .close:hover{opacity: 0.9;}*/
+        .input-group-input{width: 40%;border: 1px solid #dbdbdb;resize: none;padding: 5px 10px;color: #666;}
+        .span-group{font-weight: bold}
+        .mask .box{margin-top: -50px;}
+        .mask .box .close{position: absolute;right: 10px;top: 5px;}
         @media screen and (max-width: 639px) {
             .content{padding-top: 0;}
             .swiper-container{margin: 0;}
@@ -178,7 +183,7 @@
                 <span>联系电话：<span style="color: #fba511; font-weight: bold;">15086677754</span></span>
             </li>
             <li class="last mobile_none">
-                <a href="#" class="now">预约看房</a>
+                <a href="#" class="right-now">立即预约</a>
                 <a href="#" class="address">地理位置</a>
             </li>
         </ul>
@@ -214,46 +219,8 @@
         <div class="room">
             <div class="room-group">
                 <ul class="room-information room-information2 clearfix">
-                    <!--<li>-->
-                        <!--<div class="play" src="http://mvvideo2.meitudata.com/56163e35cac069064.mp4">-->
-                            <!--<i class="glyphicon glyphicon-triangle-right"></i>-->
-                        <!--</div>-->
-                        <!--<div class="li-div li-div-active">-->
-                            <!--<img src="images/IMG_1783.jpg" class="img-responsive" alt="Responsive image active-img"/>-->
-                            <!--<div class="room-left mobile_none">-->
-                                <!--<div>-->
-                                    <!--<img src="images/people.png" alt="" class="people-img"/> <br/>-->
-                                    <!--<span class="rooms-group">已租: A房间</span><br/>-->
-                                    <!--<span>女</span><br/>-->
-                                    <!--<span>幼师</span><br/>-->
-                                    <!--<span>编号：264646561656</span><br/>-->
-                                    <!--<img src="images/details1.png" alt="" class="deatils-img"/>-->
-                                    <!--<img src="images/details2.png" alt="" class="deatils-img"/>-->
-                                    <!--<img src="images/details3.png" alt="" class="deatils-img"/>-->
-                                <!--</div>-->
-                            <!--</div>-->
-                            <!--<div class="room-top room-top1 pc-none clearfix">-->
-                                <!--<div class="right">-->
-                                    <!--<img src="images/people.png" alt="" class="people people-img"/> <br/>-->
-                                <!--<span class="spans-img">-->
-                                     <!--<img src="images/details1.png" alt="" class="deatils-img"/>-->
-                                     <!--<img src="images/details2.png" alt="" class="deatils-img"/>-->
-                                     <!--<img src="images/details3.png" alt="" class="deatils-img"/>-->
-                                <!--</span>-->
-                                <!--</div>-->
-                            <!--<span class="deatils">-->
-                                 <!--<span class="rooms-group">已租: A房间</span><br/>-->
-                                 <!--<span>男</span><br/>-->
-                                 <!--<span>护士</span><br/>-->
-                                 <!--<span>编号：264646561656</span><br/>-->
-                            <!--</span>-->
-
-                            <!--</div>-->
-                            <!--<div class="active-mask mobile_none"></div>-->
-                        <!--</div>-->
-                    <!--</li>-->
                     <li>
-                        <div class="play" src="http://mvvideo1.meitudata.com/561639e704c586597.mp4">
+                        <div class="play" src="http://static.youku.com/v1.0.0579/v/swf/player_yknpsv.swf">
                             <i class="glyphicon glyphicon-triangle-right"></i>
                         </div>
                         <div class="li-div li-div-active">
@@ -433,7 +400,7 @@
     </div>
     <div class="mask-bg hide"></div>
     <div class="mask hide">
-        <div class="box hide">
+        <div class="box hide le-mall">
             <div class="box-head">乐分期</div>
             <div class="box-content">
                 <div class="close">×</div>
@@ -474,50 +441,39 @@
             <video src="" controls="controls" class="video" autoplay="autoplay">
             </video>
         </div>
-        <!--<div class="carousel-house hide">-->
-            <!--<div class="carousel slide" id="myCarousel1">-->
-                <!--<div class="carousel-inner">-->
-                    <!--<div class="item">-->
-                        <!--<img src="images/IMG_1783.jpg" class="img-responsive img" alt="Responsive image"/>-->
-                    <!--</div>-->
-                    <!--<div class="item">-->
-                        <!--<img src="images/IMG_1788.jpg" class="img-responsive img" alt="Responsive image"/>-->
-                    <!--</div>-->
-                    <!--<div class="item">-->
-                        <!--<img src="images/IMG_1790.jpg" class="img-responsive img" alt="Responsive image"/>-->
-                    <!--</div>-->
-                <!--</div>-->
-                <!--<a class="left carousel-control" href="#myCarousel1" data-slide="prev">-->
-                    <!--<img src="images/pre2.png" alt=""/>-->
-                <!--</a>-->
-                <!--<a class="right carousel-control" href="#myCarousel1" data-slide="next">-->
-                    <!--<img src="images/next2.png" alt=""/>-->
-                <!--</a>-->
-                <!--<button class="close" id="close"><i class="glyphicon glyphicon-remove"></i></button>-->
-            <!--</div>-->
-        <!--</div>-->
-
+        <div class="i-appoint box hide"><!--预约缴费内容-->
+            <div class="title">预约详情</div>
+            <div class="close" title="关闭">×</div>
+            <p>考虑是否是飞洒发来的开发收费时发生地方是发顺丰士大夫撒地方考虑是否是飞洒发来的开发收费时发生地方是发顺丰士大夫撒地方考虑是否是飞洒发来的开发收费时发生地方是发顺丰士大夫撒地方考虑是否是飞洒发来的开发收费时发生地方是发顺丰士大夫撒地方</p>
+            <div class="div-group">
+                <span class="span-group">缴费金额</span>
+                <input type="text" class="input-group-input" value="700"/>
+            </div>
+            <button class="btn-sure">提交</button>
+        </div>
     </div>
 </div>
 <script src="plugins/jquery/js/jquery-1.11.3.min.js"></script>
 <script src="plugins/picture_transparency/js/move.js"></script>
 <script src="plugins/bootstrap-3.3.5-dist/js/bootstrap.min.js"></script>
 <script src="js/lw_housing.js"></script>
-<!--<script src="plugins/mobile-bo/js/idangerous.swiper-1.9.1.min.js"></script>-->
-<!--<script src="plugins/mobile-bo/js/idangerous.swiper.scrollbar-1.2.js"></script>-->
-<!--<script src="plugins/mobile-bo/js/swiper-demos.js"></script>-->
 <script src="plugins/carousel/js/carousel.js"></script>
 <script src="plugins/swiper/dist/js/swiper.min.js"></script>
 <script>
-//    $(".staging").on("click",function(){
-//        $(".mask").removeClass("hide");
-//        $(".box").removeClass("hide");
-//    });
+
 
     window.onresize = function(){ location=location };
     var a = $(".address");
     var mbm = $(".mask-bg,.mask");
     var d = $(".dialog");
+
+
+    //    var lm = $(".le-mall");
+    //    var s =$(".staging")
+    //    s.on("click",function(){
+    //        mbm.removeClass("hide");
+    //        lm.removeClass("hide");
+    //    });
     a.on("click",function(){
         mbm.removeClass("hide");
         d.removeClass("hide");
@@ -537,6 +493,12 @@
     dl.on("click",function(){
         $(this).addClass("active");
         $(this).siblings().removeClass('active')
+    });
+    var rn = $(".right-now");
+    var ia = $(".i-appoint");
+    rn.on("click",function(){
+        mbm.removeClass("hide");
+        ia.removeClass("hide");
     });
     var content = $(".content");
    content.delegate(".play", "click", function(){

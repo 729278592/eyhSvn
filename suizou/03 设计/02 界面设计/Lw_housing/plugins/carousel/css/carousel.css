@@ -10,9 +10,7 @@
 .div-carousel:hover{background: rgba(0,0,0,.8);}
 #left{top: 5px;}
 #right{bottom: 5px;}
-#div1 .play{width: 35px;height: 35px;background: #000;border-radius: 35px;opacity: 0.6;filter: alpha(opacity=60);position: absolute;right: 190px;top: 10px;color: #fff;text-align: center;line-height: 38px;font-size: 20px;z-index: 1000;}
-
-
+#div1 .play{width: 50px;height: 50px;background: #000;border-radius: 50px;opacity: 0.6;filter: alpha(opacity=60);position: absolute;right: 190px;top: 10px;color: #fff;text-align: center;line-height: 51px;font-size: 20px;z-index: 1000;}
 
 
 @media screen and (max-width: 1400px) and (min-width: 640px) {
@@ -23,14 +21,12 @@
     #p-div{width: 724px;overflow: hidden;height: 110px;margin-left: 38px;position: absolute;top: 360px;}
     #div1 p { text-align: center; position: absolute;  bottom: 0;padding: 0;margin:0;top: 0;left: 0;height: 110px;}
     #div1 p span {width: 171px;height: 110px;  margin-left: 0; cursor: pointer;color: #333;line-height: 18px;margin-bottom: 13px;float: left;margin-right: 10px;}
-
 }
 
 
 
 @media screen and (max-width: 640px){
     #div1{display: none;}
-
 }
 
 /*#left,#right{top: 50%;margin-top: -20px;width: 30px;height: 30px;line-height: 30px;text-align: center;border-radius: 40px;color: #fff;position: absolute;font-size: 30px;background: #222 ;border: 3px solid #FFF;opacity: 0.5;filter:alpha(opacity=50);}*/
