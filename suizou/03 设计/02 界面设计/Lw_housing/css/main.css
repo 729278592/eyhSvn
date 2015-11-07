@@ -15,7 +15,7 @@ a:hover{cursor: pointer;text-decoration: none;}
 .mask-content{text-align: center;width: 100%;color: #33a9d4;padding: 2% 0 1% 0;border-radius: 4px;}
 .mask-content .title{font-weight: bold;font-size: 18px;}
 .ul-pay{width: 100%;}
-.mask-content .li-img{width: 49.25%;float: left;margin-right: 1.5%;margin-bottom: 1.5%;}
+.mask-content .li-img{width: 100%;margin-bottom: 1.5%;}
 .mask-content .last{margin-right: 0;}
 .people-img{border-right: 80px;width: 55px;border-radius: 55px;}
 .mask .box{padding: 1%;background: #fff;text-align: center;position: absolute;top: 50%;left: 50%;margin-left: -320px;margin-top: -250px;width: 100%;max-width: 640px;border-radius: 8px;}
@@ -409,16 +409,22 @@ input.btn-click:hover{background: #e16a20}
 .w-right>.title{font-size: 18px;color: #678ab3;}
 .pay{border-bottom: 1px dashed #dbdbdb;height: 60px;line-height: 60px;}
 .pay li{float: left;width: 20%;height: 60px;line-height: 60px;}
-
-.pay li button{width: 70px;height: 30px;line-height: 30px;text-align: center;color: #fff;border-radius: 4px;background: #fca511;font-size: 12px;display: inline-block;}
+.pay li button,#pc-pay,.rn-pay{width: 70px;height: 30px;line-height: 30px;text-align: center;color: #fff;border-radius: 4px;background: #fca511;font-size: 12px;display: inline-block;}
 .leave-step{width: 100%;position: relative;left: 50%;margin-left: -40%;}
 .leave-step li{float: left;width: 15%;text-align: center;color: #666;margin: 2% 0 0 0;}
 .leave-step li button{border: 1px solid #dbdbdb;background: #fff;width: 75px;height: 25px;line-height: 22px;color: #333;margin: 5px 0;}
 .box-sure{background: #fff;color: #fba511;padding: 2%;text-align: center;width: 300px;position: absolute;left: 50%;margin-left: -150px;top: 35%;border-radius: 10px;}
 .box-sure span{font-size: 18px;}
 .box-sure .smail{margin: 5% 10% 5% -5%;}
+.payment{width: 100%;border-bottom: 1px dashed #dbdbdb;}
 
-
+.payment li{float: left;width: 25%;text-align: center;}
+.payment li button{border: 1px solid #dbdbdb;background: #fff;border-radius: 4px;width: 70px;height: 30px;}
+.payment li .money{color: #666;}
+.payment li.active,.payment li.active .money{color: #fba511;}
+.payment li.active button{border-color: #fba511;}
+.wr-content>.title{font-size: 16px;margin: 10px 0;color: #333;}
+.p-btn{text-align: center;margin: 20px 0 10px;}
 
 /*about-us*/
 .we-ul li{width: 100%;height: 60px;}

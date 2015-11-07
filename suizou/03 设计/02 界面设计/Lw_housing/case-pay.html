@@ -148,23 +148,48 @@
                             <li><img src="images/top-img.png" alt=""/></li>
                             <li class="active"><img src="images/top-img.png" alt=""/></li>
                         </ul>
+                        <p class="title">房租费用</p>
+                        <ul class="payment clearfix">
+                            <li class="active">
+                                <button class="btn-month">一个月</button>
+                                <br/>
+                                <span class="money">1000元</span>
+                            </li>
+                            <li>
+                                <button class="btn-month">三个月</button>
+                                <br/>
+                                <span class="money">2800元</span>
+                            </li>
+                            <li>
+                                <button class="btn-month">六个月</button>
+                                <br/>
+                                <span class="money">5500元</span>
+                            </li>
+                            <li>
+                                <button class="btn-month">一年</button>
+                                <br/>
+                                <span class="money">10000元</span>
+                            </li>
+                            <p class="p-btn"><button class="rn-pay">立即缴费</button></p>
+                        </ul>
+
                         <ul class="pay">
                             <li>
-                            <span class="span-img">
-                                <img src="images/pay1.png" alt=""/>
-                            </span>
+                                <span class="span-img">
+                                    <img src="images/pay1.png" alt=""/>
+                                </span>
                                 <span>水费 : 100元</span>
                             </li>
                             <li>
-                            <span class="span-img">
-                                <img src="images/pay2.png" alt=""/>
-                            </span>
+                                <span class="span-img">
+                                    <img src="images/pay2.png" alt=""/>
+                                </span>
                                 <span>公摊电费 : 100元</span>
                             </li>
                             <li>
-                            <span class="span-img">
-                                <img src="images/pay2.png" alt=""/>
-                            </span>
+                                <span class="span-img">
+                                    <img src="images/pay2.png" alt=""/>
+                                </span>
                                 <span>私人电费 : 100元</span>
                             </li>
                             <li>
@@ -175,25 +200,25 @@
                             </li>
                             <li>
                                 <button id="pc-pay">缴费凭证</button>　
-                                <button id="rn-pay">立即缴费</button>
+                                <button class="rn-pay">立即缴费</button>
                             </li>
                         </ul>
                         <div class="mask-content hide">
                             <ul class="ul-pay">
                                 <li class="li-img">
-                                    <p class="title">水费消费单</p>
+                                    <!--<p class="title">水费消费单</p>-->
                                     <img src="images/details-t.png" class="img-responsive" alt=""/>
                                 </li>
                                 <li class="li-img last">
-                                    <p class="title">公摊电费消费单</p>
+                                    <!--<p class="title">公摊电费消费单</p>-->
                                     <img src="images/details-t.png" class="img-responsive" alt=""/>
                                 </li>
                                 <li class="li-img">
-                                    <p class="title">私人电费消费单</p>
+                                    <!--<p class="title">私人电费消费单</p>-->
                                     <img src="images/details-t.png" class="img-responsive" alt=""/>
                                 </li>
                                 <li class="li-img last">
-                                    <p class="title">气费消费单</p>
+                                    <!--<p class="title">气费消费单</p>-->
                                     <img src="images/details-t.png" class="img-responsive last" alt=""/>
                                 </li>
                             </ul>
@@ -227,16 +252,28 @@
                 <span class="first">渝ICP备15002338号-1　Copyright © 2014~2015 重庆乐拓资产管理有限公司 版权所有</span>            　　
             </div>
         </div>
-
     </div>
     <script src="plugins/jquery/js/jquery-1.11.3.min.js"></script>
     <script src="js/lw_housing.js"></script>
     <script>
-        $("#mobile-pay,#pc-pay").on("click",function(){
-            $(".mask-content").removeClass("hide");
-        });
-        $(".btn-sure").on("click",function(){
-            $(".mask-content").addClass("hide");
+
+        $(function(){
+            var mpp = $("#mobile-pay,#pc-pay");
+            var mc = $(".mask-content");
+            var bs = $(".btn-sure");
+            mpp.on("click",function(){
+                mc.removeClass("hide");
+            });
+            bs.on("click",function(){
+                mc.addClass("hide");
+            });
+
+
+            var plb = $(".payment li .btn-month");
+            plb.on("click",function(){
+                $(this).closest("li").addClass("active");
+                $(this).closest("li").siblings().removeClass("active");
+            })
         })
     </script>
 </body>
