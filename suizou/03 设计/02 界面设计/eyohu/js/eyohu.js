@@ -70,14 +70,14 @@ $(function() {
     $("#imgfor_con_roll>a").each(function(){
         $(this).hover(
             function(){
-                $(this).find(".animate").animate({
+                $(this).find(".animate,.span-bg").animate({
                     "top":"0px",
                     "left":"0px",
                     "height":"291px"
                 },200)
             },
             function(){
-                $(this).find(".animate").animate({
+                $(this).find(".animate,.span-bg").animate({
                     "top":"292px",
                     "left":"0px",
                     "height":"0"
@@ -114,10 +114,12 @@ $(function() {
         $(this).find("i").css({"fontSize":"30px"})
     });
     $(".message").on("click",function(){
-        $(".meng").removeClass("hide")
+        $(".mask").removeClass("hide");
+        $(".mask-bg").removeClass("hide");
     });
     $(".close").on("click",function(){
-        $(this).parent().parent().addClass("hide")
+        $(this).parent().parent().addClass("hide");
+        $(".mask-bg").addClass("hide");
     });
     var t =  $(".tuo_code");
     t.mouseover(function(){
@@ -129,7 +131,7 @@ $(function() {
     $(".team_content>li:odd").css({"borderRight":"none"});
 //    $(".team_content>li:even").find("p").css({"left":"10px"})
     $(".team_content>li:odd").find("p").css({"left":"30px"})
-    $(".team_content>li:even").find("span").css({"position":"relative","left":"109px"})
+    $(".team_content>li:even").find("span").css({"position":"relative","left":"109px"});
     $(".team_content>li:odd").find("span").css({"position":"relative","left":"-106px"})
 
 });

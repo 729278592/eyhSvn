@@ -60,9 +60,9 @@ var yy = $(".yhgr_u li a");
     o.each(function(i){
         $(this).on("click",function(){
             $(this).addClass("zindex");
-            $(this).find("img").addClass("block").removeClass("hide")
+            $(this).find("img").addClass("block").removeClass("hide");
             $(this).siblings().removeClass("zindex");
-            $(this).siblings().find("img").addClass("hide").removeClass("block")
+            $(this).siblings().find("img").addClass("hide").removeClass("block");
             u.eq(i).removeClass("hide").addClass("block");
             u.eq(i).siblings().removeClass("block").addClass("hide")
         })

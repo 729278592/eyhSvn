@@ -214,40 +214,44 @@
                                 <div id="imgfor_con_clu">
                                     <div id="imgfor_con_roll">
                                         <a href="javascript:void(0)"><img src="images/index/case_img1.png" alt=""/>
-                                                <span class="animate">
-                                                    <span>
-                                                        <span class="first">重庆某商业大厦</span><br/>
-                                                        <span class="second">是西南地区最高的建筑</span><br/>
-                                                        <button class="btn">了解更多</button>
-                                                    </span>
+                                            <span class="span-bg"></span>
+                                            <span class="animate">
+                                                <span>
+                                                    <span class="first">重庆某商业大厦</span><br/>
+                                                    <span class="second">是西南地区最高的建筑</span><br/>
+                                                    <button class="btn">了解更多</button>
                                                 </span>
+                                            </span>
                                         </a>
                                         <a href="javascript:void(0)"><img src="images/index/case_img1.png" alt=""/>
-                                                <span class="animate">
-                                                    <span>
-                                                        <span class="first">重庆某商业大厦</span><br/>
-                                                        <span class="second">是西南地区最高的建筑</span><br/>
-                                                        <button class="btn">了解更多</button>
-                                                    </span>
+                                            <span class="span-bg"></span>
+                                            <span class="animate">
+                                                <span>
+                                                    <span class="first">重庆某商业大厦</span><br/>
+                                                    <span class="second">是西南地区最高的建筑</span><br/>
+                                                    <button class="btn">了解更多</button>
                                                 </span>
+                                            </span>
                                         </a>
                                         <a href="javascript:void(0)"><img src="images/index/case_img1.png" alt=""/>
-                                                <span class="animate">
-                                                    <span>
-                                                       <span class="first">重庆某商业大厦</span><br/>
-                                                        <span class="second">是西南地区最高的建筑</span><br/>
-                                                        <button class="btn">了解更多</button>
-                                                    </span>
+                                            <span class="span-bg"></span>
+                                            <span class="animate">
+                                                <span>
+                                                   <span class="first">重庆某商业大厦</span><br/>
+                                                    <span class="second">是西南地区最高的建筑</span><br/>
+                                                    <button class="btn">了解更多</button>
                                                 </span>
+                                            </span>
                                         </a>
                                         <a href="javascript:void(0)"><img src="images/index/case_img1.png" alt=""/>
-                                                <span class="animate">
-                                                    <span>
-                                                        <span class="first">重庆某商业大厦</span><br/>
-                                                        <span class="second">是西南地区最高的建筑</span><br/>
-                                                        <button class="btn">了解更多</button>
-                                                    </span>
+                                            <span class="span-bg"></span>
+                                            <span class="animate">
+                                                <span>
+                                                    <span class="first">重庆某商业大厦</span><br/>
+                                                    <span class="second">是西南地区最高的建筑</span><br/>
+                                                    <button class="btn">了解更多</button>
                                                 </span>
+                                            </span>
                                         </a>
                                     </div>
                                 </div>
@@ -380,7 +384,8 @@
                 </div>
             </div>
         </div>
-        <div class="meng hide">
+        <div class="mask-bg hide"></div>
+        <div class="mask hide">
                 <div class="tijiao">
                     <div class="close">×</div>
                     <form action="" id="verification">
@@ -412,7 +417,6 @@
         </div>
     </div>
 </body>
-<script src="js/jquery-1.11.3.min.map"></script>
 <script src="js/jquery-1.11.3.min.js"></script>
 <script src="js/eyohu.js"></script>
 <script src="js/huan_img.js"></script>
@@ -426,6 +430,31 @@
             speed:"normal",
             timer:3000,
             steps:1
+        });
+
+
+        var hma = $(".header_content .menu a");
+        hma.each(function(){
+            $(this).hover(function(){
+                if($(this).parent().is(".active")){
+                    $(this).parent().addClass("has-active");
+                }else{
+                    $(this).parent().addClass("active");
+                    $(this).prev().removeClass("hide")
+                }
+            },function(){
+                if($(this).parent().is(".active")){
+                    $(this).parent().removeClass("active");
+                    $(this).prev().addClass("hide");
+                    if($(this).parent().is(".has-active")){
+                        $(this).parent().addClass("active");
+                        $(this).prev().removeClass("hide")
+                    };
+                }else{
+                    $(this).parent().addClass("active");
+                    $(this).prev().removeClass("hide")
+                }
+            })
         });
     });
 </script>

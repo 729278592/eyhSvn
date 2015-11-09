@@ -55,7 +55,7 @@ input,button,select{border: none;outline: none;}
 .middle-menu li .icon3{background-position: -42px -32px;}
 .middle-menu li .icon4{background-position: -84px -32px;}
 .middle-menu li .icon5{background-position: -122px -32px;}
-.middle-menu li .icon6{background-position:  -167px -34px;}
+.middle-menu li .icon6{background-position:  -0px -68px;}
 .middle-menu li .icon,.middle-menu li .title{display: inline-block;margin: 3px 0;}
 .comment-data{width: 100%;background: #fff;}
 .comment-data li{padding: 10px 4%;border-bottom: 1px solid #dbdbdb;position: relative;color: #666;}
