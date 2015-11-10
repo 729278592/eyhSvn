@@ -11,8 +11,7 @@ input,button{outline: none;border: none;}
 .right{float: right;}
 .left{float: left;}
 a:link{text-decoration: none;}
-.wrapper{width: 1560px;background: #282828;position: relative;margin: 0 auto;
-    overflow: hidden;}
+.wrapper{width: 1560px;background: #282828;position: relative;margin: 0 auto;overflow: hidden;}
 .content{position: relative;left: 0;margin-top: 80px;}
 .content-main{background: #e8e9ed;}
 .head{width: 1560px;height: 80px;position: fixed;background: rgba(0,0,0,0.6);z-index: 1000;}
@@ -34,7 +33,8 @@ a:link{text-decoration: none;}
 .weixin {position: relative;z-index: 99;margin-right: 10px;}
 .fl-ul3 li .weixin:hover .weixinB {transform: scale(1);}
 .weixinB {position: absolute;left: -165px;bottom: 0; background: #fff;
-    -webkit-transform-origin: 160px 150px;-moz-transform-origin: 160px 150px;transform-origin: 160px 150px;-webkit-transform: scale(0);
+    -webkit-transform-origin: 160px 150px;-moz-transform-origin: 160px 150px;
+    transform-origin: 160px 150px;-webkit-transform: scale(0);
     -moz-transform: scale(0);transform: scale(0);transition: .5s;padding: 8px;}
 .weixinB span { position: absolute;width: 14px;height: 21px;background: url(../images/weixinIco.png) no-repeat center center;right: -14px;bottom: 10px;}
 .fl-ul3 li .weibo:hover i{-webkit-animation: toTopFromBottom .3s forwards;-moz-animation: toTopFromBottom .3s forwards;animation: toTopFromBottom .3s forwards}

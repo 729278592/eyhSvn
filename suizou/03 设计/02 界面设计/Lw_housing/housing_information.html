@@ -493,7 +493,6 @@
     var mbm = $(".mask-bg,.mask");
     var d = $(".dialog");
 
-
     //    var lm = $(".le-mall");
     //    var s =$(".staging")
     //    s.on("click",function(){
@@ -527,7 +526,7 @@
         ia.removeClass("hide");
     });
     var content = $(".content");
-   content.delegate(".play", "click", function(){
+    content.delegate(".play", "click", function(){
         var src = $(this).attr("src");
         if(src){
             $("#video").removeClass("hide");
