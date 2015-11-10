@@ -7,9 +7,6 @@
     <link rel="stylesheet" href="../../assets/global/plugins/font/css/font-awesome.min.css"/>
     <link rel="stylesheet" href="../../assets/frontend/css/global.css"/>
     <link rel="stylesheet" href="../../assets/global/plugins/autoSlider/css/autoSlider.css"/>
-    <style>
-        .head{position: fixed;background: rgba(0,0,0,0.6);z-index: 1000;}
-    </style>
 </head>
 <body>
     <div class="wrapper">
@@ -51,45 +48,6 @@
             </div>
         </div>
         <div class="content">
-            <div class="show-md hide" id="show-md">
-                <div class="close">×</div>
-                <ul class="shoum-ul clearfix">
-                    <li>
-                        <img src="../../assets/frontend/images/show1.png" alt=""/>
-                        <div>
-                            <span class="title">
-                                自由之人
-                            </span><br/>
-                            <span>
-                                自由之人才有灵魂
-                            </span>
-                        </div>
-                    </li>
-                    <li>
-                        <img src="../../assets/frontend/images/show2.png" alt=""/>
-                        <div>
-                            <span class="title">
-                                自由工作
-                            </span><br/>
-                            <span>
-                                自由工作随心所欲
-                            </span>
-                        </div>
-                    </li>
-                    <li>
-                        <img src="../../assets/frontend/images/show3.png" alt=""/>
-                        <div>
-                            <span class="title">
-                                加入我们
-                            </span><br/>
-                            <span>
-                                诚信合作、透明规则
-                            </span>
-                        </div>
-                    </li>
-                </ul>
-                <p>您好，加入我们，带你装B带你飞。</p>
-            </div>
             <div class="content-main">
                 <div id="focus">
                     <div id="focus-main">
@@ -99,12 +57,7 @@
                         <div><img src="../../assets/global/plugins/autoSlider/images/slider2.jpg"/></div>
                         <div><img src="../../assets/global/plugins/autoSlider/images/slider1.jpg"/></div>
                     </div>
-                    <div class="va-middle">
-                        <div class="use-love-bg mobile_none"></div>
-                        <button class="use-love mobile_none">
-                            加入我们
-                        </button>
-                    </div>
+
                     <p>
                         <span class="current"></span>
                         <span></span>
@@ -126,7 +79,7 @@
                         </a>
                     </li>
                     <li>
-                        <a href="personal-journal.html" class="a-second">
+                        <a href="company-introduction.html" class="a-second">
                             <img src="../../assets/frontend/images/img2.jpg" alt=""/>
                             <div class="b-top">
                                 <p class="title">天使互联网广告商</p>
@@ -134,7 +87,7 @@
                         </a>
                     </li>
                     <li>
-                        <a href="#" class="a-last">
+                        <a href="company-introduction.html" class="a-last">
                             <img src="../../assets/frontend/images/img3.jpg" alt=""/>
                             <div class="b-bottom b-bottom1">
                                 <p class="title">ＷＷ又添联合办公</p>
@@ -258,20 +211,19 @@
                                 <a href="#" class="title">WitWork Sharing在线办公分享</a>
                             </li>
                             <li>
-                                <a href="#">原品咖啡</a><a href="">林卡咖啡</a>
-                                <a href="#">咖啡花</a><a href="#">逸美时光咖啡</a>
+                                <a href="#">原品咖啡</a><a href="">林卡咖啡</a><a href="#">咖啡花</a>
                             </li>
                             <li>
-                                <a href="#">MTE</a><a href="#">知竹茶馆</a>
+                                <a href="#">逸美时光咖啡</a><a href="#">MTE</a><a href="#">知竹茶馆</a>
                             </li>
                             <li>
-                                <a href="#">交大众创中心</a><a href="#" class="a-ibw">创投咖啡黄泥磅</a>
+                                <a href="#">交大众创中心</a><a href="#" class="">创投咖啡黄泥磅</a>
                             </li>
                             <li>
-                                <a href="#">重大众创中心</a><a href="#" class="a-ibw">罗曼酒庄</a>
+                                <a href="#">重大众创中心</a><a href="#" class="">罗曼酒庄</a>
                             </li>
                             <li>
-                                <a href="#">李众创</a><a href="#" class="a-ibw">正石拍摄</a>
+                                <a href="#">李众创</a><a href="#" class="">正石拍摄</a>
                             </li>
                             <li>
                                 <div class="weixin">
@@ -300,42 +252,5 @@
     <script src="../../assets/frontend/js/global.js"></script>
     <script src="../../assets/global/plugins/move/js/move.js"></script>
     <script src="../../assets/global/plugins/autoSlider/js/autoSlider.js"></script>
-    <script>
-        $(function(){
-            /*顶部显示*/
-            var bb = $(".use-love");
-            var sm = $(".show-md");
-            var h  = $(".head");
-            var showMd = document.getElementById("show-md");
-            bb.on("click",function(){
-                sm.removeClass("hide");
-                h.css({"positon":"absolute","top":"660px"});
-                sm.animate({height:"660px"},500);
-            });
-            $(window).on("scroll",function(){
-                h.css({"positon":"fixed","top":"0"});
-                if ($(this).scrollTop() > 660) {
-                    sm.animate({height:"0px"},1);
-                    sm.addClass("hide");
-                }
-            });
-            var sc = $(".show-md .close");
-            sc.on("click",function(){
-                sm.animate({height:"0px"},500,function(){
-                    h.css({"positon":"fixed","top":"0"});
-                    sm.addClass("hide");
-                });
 
-            });
-        });
-
-//        $(window).scroll(function () {
-//            if ($(this).scrollTop() > 100) {
-//                h.css({"background":"rgba(0,0,0,.6)"});
-//            }
-//            else {
-//                h.css({"background":"rgba(0,0,0,0)"})
-//            }
-//        });
-    </script>
 </html>
