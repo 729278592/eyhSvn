@@ -14,6 +14,15 @@
         body{background: #f1f1f1;height: 100%;min-height: 740px;}
         .footer{position: absolute;bottom: 0;}
         .input-group{width: 50%;height: 30px;border:1px solid #dbdbdb;outline: none;display: inline-block;padding-left: 1%;}
+        .form-horizontal .form-group {
+             margin-right: 0;
+             margin-left: 0;
+        }
+        @media screen and (min-width: 768px) {
+            .form-horizontal .form-group {
+                height: 34px;
+            }
+        }
         @media screen and (max-width: 640px) {
             .input-group{width: 78%;background: #e7f1fd;}
         }
@@ -176,53 +185,51 @@
                                     <span class="ti-c">修改头像</span>
                                 </span>
                             </div>
-                            <div class="div-group">
-                                <span class="span-group">标签</span>
-                                <select name="" id="" class="select-group">
-                                    <option value="我很帅气-哈哈">我很帅气-哈哈</option>
-                                    <option value="我很帅气-哈哈">我很帅气-哈哈</option>
-                                    <option value="我很帅气-哈哈">我很帅气-哈哈</option>
-                                </select>
-                            </div>
-                            <div class="div-group">
-                                <span class="span-group">昵称</span>
-                                <input type="text" class="input-group" value="大大"/>
-                            </div>
-                            <div class="div-group">
-                                <span class="span-group">真实姓名</span>
-                                <input type="text" class="input-group" value="大大"/>
-                            </div>
-                            <div class="div-group">
-                                <span class="span-group">性别</span>
-                                <input type="radio" name="sex" checked/>男　　
-                                <input type="radio" name="sex"/>女
-                            </div>
-                            <div class="div-group">
-                                <span class="span-group">生日</span>
-                                <input type="text" class="input-group input-group-time" value=""  onClick="WdatePicker()" readonly/>
-                            </div>
+                            <form class="form-horizontal">
+                                <div class="form-group">
+                                    <label class="col-sm-1 control-label">标签</label>
+                                    <div class="col-sm-6">
+                                        <select class="form-control">
+                                            <option>南岸</option>
+                                            <option>渝中</option>
+                                        </select>
+                                    </div>
+                                </div>
+                                <div class="form-group">
+                                    <label class="col-sm-1 control-label">昵称</label>
+                                    <div class="col-sm-6">
+                                        <input type="email" class="form-control"  placeholder="张三">
+                                    </div>
+                                </div>
+                                <div class="form-group">
+                                    <label class="col-sm-1 control-label">真实姓名</label>
+                                    <div class="col-sm-6">
+                                        <input type="email" class="form-control"  placeholder="张三">
+                                    </div>
+                                </div>
+                                <div class="form-group">
+                                    <label class="col-sm-1 control-label">性别</label>
+                                    <div class="col-sm-6">
+                                        <select class="form-control">
+                                            <option>男</option>
+                                            <option>女</option>
+                                        </select>
+                                    </div>
+                                </div>
 
-                            <div class="div-group">
-                                <span class="span-group">居住地</span>
-                                <select name="" id="1" class="select">
-                                    <option value=""></option>
-                                    <option value=""></option>
-                                    <option value=""></option>
-                                </select>
-                                <select name="" id="2" class="select">
-                                    <option value=""></option>
-                                    <option value=""></option>
-                                    <option value=""></option>
-                                </select>
-                                <select name="" id="3" class="select">
-                                    <option value=""></option>
-                                    <option value=""></option>
-                                    <option value=""></option>
-                                </select>
-                            </div>
-                            <p style="text-align: left;margin: 0 0 0 20px;">
-                                <button class="btn-sure">确定</button>
-                            </p>
+                                <div class="form-group">
+                                    <label class="col-sm-1 control-label">生日</label>
+                                    <div class="col-sm-6">
+                                        <input type="email" class="form-control"  placeholder="生日"onClick="WdatePicker()" readonly>
+                                    </div>
+                                </div>
+                                <div class="form-group">
+                                    <div class="col-sm-offset6 col-sm-2">
+                                        <button type="submit" class="btn btn-default">提交</button>
+                                    </div>
+                                </div>
+
+                            </form>
                         </div>
                         <div class="div hide"style="position: relative;top: 20px;">
                             <div class="div-group">
@@ -241,6 +248,9 @@
                                 <button class="btn-sure">确定</button>
                             </p>
                         </div>
+
+
+
                     </div>
                 </div>
             </div>
