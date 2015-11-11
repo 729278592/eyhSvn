@@ -381,6 +381,7 @@ input.btn-click:hover{background: #e16a20}
 .wr-content{color: #666;font-size: 14px;}
 .wr-content span{display: inline-block;line-height: 30px;}
 .wr-content .infomation{display: inline-block;padding: 0 5px;border: 1px solid #dbdbdb;position: relative;z-index: 1;background: #fff;top: -1px;}
+.wr-content .infomation:hover{cursor: pointer;}
 .wr-content .infomation.active{border-bottom-color:#fff;}
 .wr-content .address,.wr-content .time{border: none;width: 100px;border-bottom: 1px solid #aaa;padding-left: 5px;}
 
