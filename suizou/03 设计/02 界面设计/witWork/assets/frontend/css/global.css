@@ -44,7 +44,6 @@ a:link{text-decoration: none;}
 
 
 /*index*/
-
 .head-main,.content-main,.foot-main{width: 1205px;position: relative;left: 50%;margin-left:-602px;}
 .head-main{height: 80px;line-height: 80px;}
 .head-main .logo{width: 230px;height: 50px;background: url(../images/icon.png) no-repeat;background-position: 0 -46px;margin: 14px 40px 11px 0;}
