@@ -360,28 +360,29 @@ input.btn-click:hover{background: #e16a20}
 
 /*person-information*/
 .w-head{width: 255px;height: 60px;background: url("../images/ul_head.png") no-repeat;font-size: 18px;text-align: center;line-height: 60px;color: #fff;position: relative;z-index: 1;border-radius: 5px 5px 0 0;}
-.w-left,.we-ul{width: 255px;float: left;}
+.w-left,.we-ul{width: 255px;position: absolute;}
 .we-ul{background: #fff;}
+.w-left .menu{border-radius: 5px 5px 0 0;position: relative;top: -25px;background: #fff;}
+.w-left .menu>li{width:100%;height: 60px;font-size: 16px;}
+.w-left .menu>.last a{border-bottom: none;}
+.w-left .menu>li a{display: inline-block;height: 60px;border-left:2px solid transparent;width: 253px;border-bottom: 1px solid #e0e0e0;text-align: center;line-height: 60px;color: #333; }
+.w-left .menu>li a i{display: inline-block;width: 40px;text-align: left;}
+.w-left .menu>li.active a{border-left: 2px solid #fca511;color: #fca511;}
 
-.menu{border-radius: 5px 5px 0 0;position: relative;top: -25px;background: #fff;}
 
-.menu li{width:100%;height: 60px;font-size: 16px;}
-.menu .last a{border-bottom: none;}
-.menu li a{display: inline-block;height: 60px;border-left:2px solid transparent;width: 253px;border-bottom: 1px solid #e0e0e0;text-align: center;line-height: 60px;color: #333; }
-.menu li a i{display: inline-block;width: 40px;text-align: left;}
-.menu li.active a{border-left: 2px solid #fca511;color: #fca511;}
 .w-right{margin-left: 270px;background: #fff;margin-top: 20px;padding: 1% 1.1%;min-height: 455px;}
 .wr-head{height: 116px;width: 100%;padding: 8px 15px;background: #e8f2f9;}
 .wr-head img{float: left;}
 .btn-fillin{width: 70px;height: 25px;line-height: 22px;text-align: center;border-radius: 2px;background: #a2b7c6;color: #fff;}
+
 .wr-head>span{position: relative;top: 30px;left: 15px;}
 .wr-head .phone{color: #666;font-size: 18px;}
 .wr-content{color: #666;font-size: 14px;}
-
 .wr-content span{display: inline-block;line-height: 30px;}
 .wr-content .infomation{display: inline-block;padding: 0 5px;border: 1px solid #dbdbdb;position: relative;z-index: 1;background: #fff;top: -1px;}
 .wr-content .infomation.active{border-bottom-color:#fff;}
 .wr-content .address,.wr-content .time{border: none;width: 100px;border-bottom: 1px solid #aaa;padding-left: 5px;}
+
 .div-group{margin: 15px;}
 .div-group .span-tou{display: inline-block;width: 78px;height: 78px;position: relative;background: #eee;left: 21px;}
 .div-group .span-tou:hover .title{display: inline-block;}
@@ -394,7 +395,6 @@ input.btn-click:hover{background: #e16a20}
 .portlet{margin-top: 200px;width: 60%;position: absolute;left: 50%;margin-left: -30%;}
 .portlet #close{position: absolute;right: 5px;top: 5px;}
 .select-group,.input-group-input{width: 50%;height: 30px;border:1px solid #dbdbdb;outline: none;display: inline-block;padding-left: 1%;}
-
 .input-group-time{width: 14%;}
 .div-group .select{width: 14%;margin-right: 2%;padding-left: 1%;height: 30px;}
 .btn-sure{width: 100px;height: 40px;line-height: 40px;background: #fca511;color: #fff;border-radius: 4px;display: inline-block;}
@@ -417,7 +417,6 @@ input.btn-click:hover{background: #e16a20}
 .box-sure span{font-size: 18px;}
 .box-sure .smail{margin: 5% 10% 5% -5%;}
 .payment{width: 100%;border-bottom: 1px dashed #dbdbdb;}
-
 .payment li{float: left;width: 25%;text-align: center;}
 .payment li button{border: 1px solid #dbdbdb;background: #fff;border-radius: 4px;width: 70px;height: 30px;}
 .payment li .money{color: #666;}
@@ -425,6 +424,8 @@ input.btn-click:hover{background: #e16a20}
 .payment li.active button{border-color: #fba511;}
 .wr-content>.title{font-size: 16px;margin: 10px 0;color: #333;}
 .p-btn{text-align: center;margin: 20px 0 10px;}
+
+
 
 /*about-us*/
 .we-ul li{width: 100%;height: 60px;}
