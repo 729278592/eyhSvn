@@ -119,6 +119,8 @@
     .room-information li{padding-left: 0;}
     .shop-list li a .item-b .main .money{left: 66%;}
     .wr-content>.title{padding: 0 10px;}
+    .payment li{width: 50%;margin-top: 5px;}
+
 }
 
 @media screen and (max-width: 420px) {
