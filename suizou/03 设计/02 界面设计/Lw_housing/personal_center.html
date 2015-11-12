@@ -340,6 +340,10 @@
         });
     </script>
     <script>
+
+        if($(window).height()<700){
+            $(".footer").css({"position":"fixed"})
+        }
         var di = $(".div-group .infomation");
         var div = $(".div");
         di.each(function(i){
