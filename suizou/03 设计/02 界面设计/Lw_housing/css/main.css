@@ -56,6 +56,8 @@ a:link{text-decoration: none;}
 .comon-head{text-align: center;height: 60px;line-height: 60px;color: #b5854c;font-size: 18px;}
 .comon-head p{display: inline-block;border: 1px solid #dbaa6d;height: 35px;padding: 0 .6%;line-height: 35px;color:#dbaa6d; }
 .w80{width: 1400px;position: relative;left: 50%;margin-left: -700px;}
+.mb100{margin-bottom: 100px;}
+.mb50{margin-bottom: 50px;}
 .w80>li{width: 32.8%;float: left;margin: 0 0.4% 0.4% 0;height: 30%;position: relative;}
 .w80 .li4{width: 66%;}
 .w80 .mr0{margin-right: 0;}
@@ -411,6 +413,7 @@ input.btn-click:hover{background: #e16a20}
 .w-right>.title{font-size: 18px;color: #678ab3;}
 .pay{border-bottom: 1px dashed #dbdbdb;height: 60px;line-height: 60px;}
 .pay li{float: left;width: 20%;height: 60px;line-height: 60px;}
+.pay li:last-child{text-align: center;}
 .pay li button,#pc-pay,.rn-pay{width: 70px;height: 30px;line-height: 30px;text-align: center;color: #fff;border-radius: 4px;background: #fca511;font-size: 12px;display: inline-block;}
 .leave-step{width: 100%;position: relative;left: 50%;margin-left: -40%;}
 .leave-step li{float: left;width: 15%;text-align: center;color: #666;margin: 2% 0 0 0;}

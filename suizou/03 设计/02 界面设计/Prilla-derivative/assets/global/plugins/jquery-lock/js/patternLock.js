@@ -6,14 +6,12 @@
 */
 (function ($, window, document, undefined) {
     "use strict";
-
     var isTouchSupported = !!('ontouchstart' in window),
         touchStart = isTouchSupported ? "touchstart" : "mousedown",
         touchEnd = isTouchSupported ? "touchend" : "mouseup",
         touchMove = isTouchSupported ? "touchmove" : "mousemove",
         nullFunc = function () {},
         objectHolder = {};
-
 
     //internal functions
     function readyDom(iObj) {
@@ -48,8 +46,6 @@
         };
     }
 
-
-
     var startHandler = function (e, obj) {
             e.preventDefault();
             var iObj = objectHolder[obj.token];
@@ -69,14 +65,14 @@
             //set pattern offset
             var wrap = iObj.holder.find('.patt-wrap'),
                 offset = wrap.offset();
-            iObj.wrapTop = offset.top;
-            iObj.wrapLeft = offset.left;
+                iObj.wrapTop = offset.top;
+                iObj.wrapLeft = offset.left;
 
             //reset pattern
             obj.reset();
 
         },
-        moveHandler = function (e, obj) {
+        moveHandler  = function (e, obj) {
             e.preventDefault();
             var x = e.pageX || e.originalEvent.touches[0].pageX,
                 y = e.pageY || e.originalEvent.touches[0].pageY,
@@ -133,7 +129,7 @@
             }
 
         },
-        endHandler = function (e, obj) {
+        endHandler   = function (e, obj) {
             e.preventDefault();
             var iObj = objectHolder[obj.token],
                 pattern = iObj.patternAry.join('');
@@ -175,8 +171,8 @@
                 plotLn = option.radius * 2 + margin * 2,
                 qsntX = Math.ceil(xi / plotLn),
                 qsntY = Math.ceil(yi / plotLn),
-                remX = xi % plotLn,
-                remY = yi % plotLn;
+                remX  = xi % plotLn,
+                remY  = yi % plotLn;
 
             if (qsntX <= matrix[1] && qsntY <= matrix[0] && remX > margin * 2 && remY > margin * 2) {
                 idx = (qsntY - 1) * matrix[1] + qsntX;
@@ -279,7 +275,6 @@
         }
     };
 
-
     PatternLock.defaults = {
         matrix: [3, 3],
         margin: 20,
@@ -287,7 +282,6 @@
         patternVisible: true,
         lineOnMove: true
     };
-
 
     window.PatternLock = PatternLock;
 }(jQuery, window, document));
