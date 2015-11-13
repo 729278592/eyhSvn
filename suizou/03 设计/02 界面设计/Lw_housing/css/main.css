@@ -277,9 +277,9 @@ li .main{width: 45%;display: inline-block;white-space: nowrap;text-overflow: ell
 .room-information2 li{width: 49%;}
 .room-information3 li{width: 32.33%;}
 .w80 .active-mask,.ul-house .active-mask,.room-information .active-mask{background: #000;opacity: 0.6;filter: alpha(opacity=60);}
-.room-information .no-house,.room-information .active-mask{position: absolute;left: 170px;top: 0;bottom: 0;right: 0;}
-.ul-house .no-house,.ul-house .active-mask{position: absolute;left: 0;top: 0;bottom: 0;right: 0;}
-.w80 .no-house,.w80 .active-mask{position: absolute;left: 0;top: 0;bottom: 0;right: 0;}
+.room-information .no-house,.room-information .active-mask{position: absolute;left: 170px;top: 0;bottom: 0;right: 0;z-index: 1001;}
+.ul-house .no-house,.ul-house .active-mask{position: absolute;left: 0;top: 0;bottom: 0;right: 0;z-index: 1001;}
+.w80 .no-house,.w80 .active-mask{position: absolute;left: 0;top: 0;bottom: 0;right: 0;z-index: 1001;}
 .room-information .no-house{text-align: center;color: #fff;}
 .room-information .no-house span{position: absolute;left: 50%;top: 50%;margin-left: -65px;margin-top: -10px;}
 .room-left{position: absolute;left: 0;height: 100%;padding: 0 5px;background: #edeff5;top: 0;text-align: center;border: 1px solid #addced;border-right: none;width: 170px;}
