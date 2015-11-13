@@ -46,8 +46,8 @@ a:link{text-decoration: none;}
 .content-head .pc-img{min-height: 500px;}
 .ch-mask{position: absolute;bottom: 0px;left: 0;right: 0;background: #000;opacity: 0.4;filter:alpha(opacity=40);height: 20%;}
 .ch-mask-main{width: 40%;position: absolute;bottom: 4%;left: 50%;margin-left: -20%;z-index: 10;}
-.ch-mask-main .form-control{width: 84%;display: inline-block;color: #bd925d;font-size: 14px;height: 40px;background: rgba(255,255,255,.8);}
-.ch-mask-main .form-control:focus{background: rgba(255,255,255,1)}
+.ch-mask-main .form-control{width: 84%;display: inline-block;color: #fff;font-size: 14px;height: 40px;background: rgba(0,0,0,.2);}
+.ch-mask-main .form-control:focus{background: rgba(0,0,0,.2)}
 .ch-mask-main .btn-group{width: 13%;float: right;background: #fb924d;color: #fff;height: 40px;line-height: 25px;position: relative;left: -7px;}
 .ch-mask-main .btn-group:hover{opacity: 0.9;filter:(aplha=80);}
 .ch-mask-main .hotqu{color: #eee;margin-top: 3px;}
