@@ -31,7 +31,8 @@ input,button,select{border: none;outline: none;}
 .mask{position: fixed;left: 0;right: 0;top: 0;bottom: 0;background: rgba(0,0,0,.5)}
 .input-group{margin: 4% 0;text-align: center;}
 .requried{display: inline-block;width: 2%;color: #fcc991;}
-.input{width: 88%;height: 40px;line-height: 40px;padding-left: 2%;background: #fff;border-radius: 5px;font-family: "微软雅黑";font-size: 16px;}
+.input,.select-group{width: 88%;height: 40px;line-height: 40px;padding-left: 2%;background: #fff;border-radius: 5px;font-family: "微软雅黑";font-size: 16px;}
+.select-group{width: 90%;}
 .f0f{background: #f0f0f0;width: 100%;height: 10px;}
 
 

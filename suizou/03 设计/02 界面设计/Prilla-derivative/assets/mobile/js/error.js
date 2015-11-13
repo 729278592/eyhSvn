@@ -4,7 +4,6 @@
 var ErrorBox = function () {
     var errorbox = $(".error_box");
     var setTime = function(){
-     // errorbox.addClass("swing");
         errorbox.fadeIn(500);
         setTimeout(function(){
             errorbox.fadeOut(500)
@@ -40,6 +39,8 @@ var ErrorBox = function () {
 
     var quiltAge = function() {
         var age = $("#Age");
+//        var ProvincesCard = $("#ProvincesCard");
+//        var regCard = /^\d{6}(18|19|20)?\d{2}(0[1-9]|1[12])(0[1-9]|[12]\d|3[01])\d{3}(\d|X)$/i;
         if(age.val()==""){
             errorbox.text("年龄不能为空");
             setTime()
@@ -47,6 +48,17 @@ var ErrorBox = function () {
         else{
             errorbox.fadeOut(2000)
         }
+//        if(ProvincesCard.val()==""){
+//            errorbox.text("身份证号码不能为空");
+//            setTime()
+//        }
+//        else if(!regCard.test(ProvincesCard.val())){
+//            errorbox.text("身份证号码格式不正确");
+//            setTime()
+//        }
+//        else{
+//            errorbox.fadeOut(2000)
+//        }
     };
 
     return {
