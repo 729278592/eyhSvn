@@ -200,7 +200,6 @@
         option = iObj.option = $.extend({}, PatternLock.defaults, option);
         readyDom(iObj);
 
-
         //add class on holder
         holder.addClass('patt-holder');
 
