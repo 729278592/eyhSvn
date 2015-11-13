@@ -253,7 +253,7 @@ li .main{width: 45%;display: inline-block;white-space: nowrap;text-overflow: ell
 .pc_deatils{margin-left: 990px;padding: 0 10px;height: 478px;position: absolute;top: 0;}
 .pc_deatils li{border-bottom: 1px dashed #dbdbdb; padding: 13px 0;position: relative;}
 .pc_deatils li .title{font-size: 16px;color: #333;font-weight: bold;float: left;}
-.xq_deatils{display: inline-block;width:45%;white-space: nowrap;text-overflow: ellipsis;overflow: hidden;font-size: 14px;position: relative;}
+.xq_deatils{display: inline-block;width:45%;white-space: nowrap;text-overflow: ellipsis;overflow: hidden;font-size: 14px;position: relative;left: 15px;top: 2px;}
 .information-div{display: inline-block;width: 70%;}
 .house-span{vertical-align: top;position: relative;top: 5px;}
 .pc_deatils li .information{display: inline-block;padding: 5px 13px;border: 1px solid #dbdbdb;font-size: 14px;margin-bottom: 5px;}
