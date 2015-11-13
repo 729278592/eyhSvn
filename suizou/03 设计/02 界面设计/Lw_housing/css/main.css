@@ -473,7 +473,8 @@ input.btn-click:hover{background: #e16a20}
 .roommate-list li .details{background: #f5f4f0;width: 94%;padding: 20px 3%;border-radius: 6px;color: #999;}
 .roommate-list li .phone{color: #fca511;font-size: 16px;}
 .roommate-list li .money{color: #fba511;margin-top: 10px;}
-
+.roommate-list li .fa-weixin{color: #666;}
+.roommate-list li .fa-weixin:hover{color: #333;}
 
 /*pay-success*/
 .pay-success{width: 400px;height: 100px;margin: 200px auto;text-align: center;color: #333;}
