@@ -193,7 +193,7 @@ a:link{text-decoration: none;}
 .ul-house{margin-left: -0.5%;width: 99.2%;padding: 0 0.4%;}
 .ul-house li{width: 47.8%;margin-left: 2%;float: left;position: relative;margin-bottom: 1.5%;}
 .ul-house li>a{display: inline-block;width: 100%;position: relative;}
-.ul-house li>a .item-b{border: 1px solid #f0f0f0;border-top:none;padding: 1% 2%;}
+.ul-house li>a .item-b{border: 1px solid #f0f0f0;border-top:none;padding: 5px 2%;}
 .ul-house li>a .people{position: absolute;right: 1%;bottom: 10%;z-index: 100;border-radius: 100px;}
 .room-information .play,.w80 li .play,.ul-house li .play{width: 35px;height: 35px;background: #000;border-radius: 35px;opacity: 0.6;filter: alpha(opacity=60);position: absolute;right: 2%;top: 4%;color: #fff;text-align: center;line-height: 38px;font-size: 20px;z-index: 1000;}
 .room-information .play,.w80 li .play:hover,.ul-house li .play:hover{opacity: 0.8;filter: alpha(opacity=80);font-size: 21px;cursor: pointer;}
@@ -276,8 +276,10 @@ li .main{width: 45%;display: inline-block;white-space: nowrap;text-overflow: ell
 .room-information li .li-div img:hover{opacity: 0.8;filter: alpha(opacity=80);}
 .room-information2 li{width: 49%;}
 .room-information3 li{width: 32.33%;}
-.room-information .active-mask{background: #000;opacity: 0.6;filter: alpha(opacity=60);}
+.w80 .active-mask,.ul-house .active-mask,.room-information .active-mask{background: #000;opacity: 0.6;filter: alpha(opacity=60);}
 .room-information .no-house,.room-information .active-mask{position: absolute;left: 170px;top: 0;bottom: 0;right: 0;}
+.ul-house .no-house,.ul-house .active-mask{position: absolute;left: 0;top: 0;bottom: 0;right: 0;}
+.w80 .no-house,.w80 .active-mask{position: absolute;left: 0;top: 0;bottom: 0;right: 0;}
 .room-information .no-house{text-align: center;color: #fff;}
 .room-information .no-house span{position: absolute;left: 50%;top: 50%;margin-left: -65px;margin-top: -10px;}
 .room-left{position: absolute;left: 0;height: 100%;padding: 0 5px;background: #edeff5;top: 0;text-align: center;border: 1px solid #addced;border-right: none;width: 170px;}
