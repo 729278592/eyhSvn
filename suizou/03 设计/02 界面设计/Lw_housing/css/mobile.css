@@ -35,7 +35,7 @@
     .bridge li span{font-size: 16px;display: inline-block;width: 50%;}
     .bridge li .xian{position: absolute;top: 0;right: 0;height: 100%;width: 5px;}
     .bridge li.last{margin-right: 0;}
-    .pc_deatils{width: 100%;margin-left: 0;position: relative;z-index: 100;font-size: 16px;max-width: 640px;height: 312px;}
+    .pc_deatils{width: 100%;margin-left: 0;position: relative;z-index: 100;font-size: 16px;max-width: 640px;}
     .pc_deatils li{border-bottom: 1px dashed #dbdbdb; padding: 10px 2%;width: 100%;position: relative;}
     .pc_deatils .staging{right: 0%;}
     .tool{text-align: left;margin-top: .1%;}
@@ -130,7 +130,6 @@
 }
 
 @media screen and (max-width: 432px) {
-    .pc_deatils{height: 390px;}
     .information-div{width: 68%;}
 }
 
