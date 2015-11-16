@@ -160,9 +160,7 @@ a:link{text-decoration: none;}
     -webkit-user-select: none;-moz-user-select: none;-ms-user-select: none;user-select: none;
     white-space: nowrap;cursor: pointer;position: absolute;left: 50%;margin-left: -85px;margin-top: 30px;}
 .va-middle .use-love-bg{width: 170px;height: 40px;background: #000;opacity: 0.6;filter: alpha(opacity=60);}
-.va-middle .use-love{
-    padding: 9px 27px;background: transparent;
-   }
+.va-middle .use-love{width: 170px;height: 40px;background: transparent;}
 .va-middle .use-love:hover{background: rgba(0,0,0,.7)}
 .w80 li .play{width: 40px;height: 40px;line-height: 45px;}
 
@@ -426,7 +424,7 @@ input.btn-click:hover{background: #e16a20}
 .box-sure .smail{margin: 5% 10% 5% -5%;}
 .payment{width: 100%;border-bottom: 1px dashed #dbdbdb;}
 .payment li{float: left;width: 25%;text-align: center;}
-.payment li button{border: 1px solid #dbdbdb;background: #fff;border-radius: 4px;width: 70px;height: 30px;}
+.payment li button{border: 1px solid #dbdbdb;background: #fff;border-radius: 4px;width: 85px;height: 30px;}
 .payment li .money{color: #666;}
 .payment li.active,.payment li.active .money{color: #fba511;}
 .payment li.active button{border-color: #fba511;}
