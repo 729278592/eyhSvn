@@ -83,8 +83,8 @@
     .span-group {width: 20%;}
     .p-group{padding: 0 3%;}
     .p-group.title{font-size: 18px;color: #445c75;}
-    .pay li{width: 47%;padding-left: 3%;}
-    .pay li .span-img{display: inline-block;width: 20%;text-align: center;}
+    .pay li{width: 49%;padding: 0 0 0 3%;}
+    .pay li .span-img{display: inline-block;width: 17%;text-align: center;}
     .pay li:last-child{width: 94%;}
     .div-group .span-tou{display: inline-block;width: 60px;height: 60px;position: relative;background: #eee;}
     .div-group .span-tou .ziliao{width: 60px;height: 60px;padding: 2px;border: 1px solid #ddd;}

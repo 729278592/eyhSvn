@@ -382,7 +382,7 @@ input.btn-click:hover{background: #e16a20}
 .wr-head>span{position: relative;top: 30px;left: 15px;}
 .wr-head .phone{color: #666;font-size: 18px;}
 .wr-content{color: #666;font-size: 14px;}
-.wr-content span{display: inline-block;line-height: 30px;}
+.wr-content span:last-child{display: inline-block;line-height: 30px;width: 80%;}
 .wr-content .infomation{display: inline-block;padding: 0 5px;border: 1px solid #dbdbdb;position: relative;z-index: 1;background: #fff;top: -1px;}
 .wr-content .infomation:hover{cursor: pointer;}
 .wr-content .infomation.active{border-bottom-color:#fff;}
