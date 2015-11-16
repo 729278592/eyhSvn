@@ -115,11 +115,12 @@ a:link{text-decoration: none;}
 .activity .li2 a{display: inline-block;width: 260px;height: 273px;margin: 21px 21px 0 21px;}
 .activity li .br{width: 1px;height: 100%;background: #ddd;position:absolute;top: 0;right: 0;}
 .activity li .bb{width: 100%;height: 1px;position: absolute;left: 0;bottom: 0;background: #dbdbdb;}
-.activity .li3 p{font-size: 14px;color: #666;}
+.activity .li3 p{font-size: 14px;}
 .activity .li3 .div-p{padding: 60px 2% 0 10%;}
 .activity .li3 .li-con{width: 245px;margin-top: 20px;}
 .activity .li4 .li-con{width: 245px;margin-top: 5px;}
-.activity .li3 .title{font-size: 25px;font-weight: bold;color: #333;}
+.activity .li3 .title{font-size: 25px;font-weight: bold;}
+.activity .li3 .title-large{font-size: 36px;}
 .activity .li5{line-height: 294px;text-align: center;font-size: 36px;color: #fff;background: #f58303;font-weight: bold;}
 .activity .li6 img{width: 100%;height: 294px;}
 
