@@ -25,9 +25,10 @@
         .menu_mobile li a:hover{text-decoration: none;}
         .menu_mobile .last a {border-bottom: none;}
         @media screen and (max-width: 639px) {
-            #video{width: 100%;position: relative;}
-            .video{position: fixed;left:50%;top:20%;padding: 20px;border: 1px solid #dbdbdb;background: rgba(255,255,255,0.8);border-radius: 10px;width: 98%;margin-left: -49%;}
-            .mask #video .close{width: 20px;height: 20px;position: fixed;top: 50%;right: 1.2%;margin-left: 180px;margin-top: -145px;background: #fff;border-radius: 30px;text-align: center;line-height: 20px;z-index: 100;}
+            #video{position: absolute;left:50%;top:20%;padding: 20px;border: 1px solid #dbdbdb;
+                background: rgba(255,255,255,0.8);border-radius: 10px;width: 98%;margin-left: -49%;}
+            .video{width: 100%;}
+            .mask #video .close{width: 20px;height: 20px;position: absolute;background: #fff;border-radius: 30px;text-align: center;line-height: 20px;z-index: 100;top: 0;right: 0;}
         }
     </style>
 </head>
