@@ -12,7 +12,7 @@ window.onload = function() {
     var iLen1 = aLi1.length;
     var iLen = iLen1-1;
     var topP = null;
-    var start1,a ;
+    var a ;
     var iHeight1 = aLi1[0].offsetHeight;
     var iWidth1 = aLi1[0].offsetWidth;
     var iHeight2 = aSpan1[0].offsetHeight + 10;
