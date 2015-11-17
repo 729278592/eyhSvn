@@ -47,9 +47,7 @@ window.onload = function() {
             }
         }
         aSpan1[a].className = "current";
-        move(oUl1, {
-            left : -a * iWidth1
-        });
+        move(oUl1, {left : -a * iWidth1});
     }
 
     function run(i){
@@ -57,6 +55,7 @@ window.onload = function() {
         a = 0;
         aSpan1[i].onclick = function() {
             clearInterval(start1);
+            start1 = null;
             for (var i=0; i<iLen1; i++) {
                 aSpan1[i].className = '';
             }
@@ -94,15 +93,15 @@ window.onload = function() {
                         });
                     }
                 }
-                move(oUl1, {
-                    left : -a * iWidth1
-                });
+                move(oUl1,{left : -a * iWidth1});
             }
         };
     }
 
     oDiv1.onmouseover = function(){
-        clearInterval(start1)
+        console.log(a);
+        clearInterval(start1);
+        start1 = null;
     };
 
     oDiv1.onmouseout = function(){
@@ -114,15 +113,12 @@ window.onload = function() {
     }
     function stetime(){
         ++a;
-        if(a>iLen){
-            a = 0;}
+        if(a>iLen){a = 0;}
         if($(window).width()>1400){
             if(iLen1>4){
                 topP = iLen1 - 4;
                 if(a<topP+1){
-                    move(p, {
-                        top : -a * iHeight2
-                    });
+                    move(p, {top : -a * iHeight2});
                 }
             }
             getActive1400();
