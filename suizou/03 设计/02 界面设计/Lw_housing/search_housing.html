@@ -451,7 +451,9 @@
             hHeight = Head.offsetHeight;
             fHeight = Footer.offsetHeight;
             content.style.height =  winH - hHeight - fHeight + "px";
-            window.onresize = function(){ location=location };
+            if($(window).width()>640){
+                window.onresize = function(){ location=location };
+            }
 
             if($(window).height()<700){
                 $(".footer").css({"position":"relative","marginTop":"0px"})
