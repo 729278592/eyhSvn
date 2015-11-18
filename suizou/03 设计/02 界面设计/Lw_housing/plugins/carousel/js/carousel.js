@@ -3,7 +3,7 @@
  */
 
 
-window.onload = function() {
+$(function(){
     var oDiv1 = document.getElementById('div1');
     var oUl1 = document.getElementById('ul1');
     var p = document.getElementById('p');
@@ -12,7 +12,7 @@ window.onload = function() {
     var iLen1 = aLi1.length;
     var iLen = iLen1-1;
     var topP = null;
-    var a ;
+    var a;
     var iHeight1 = aLi1[0].offsetHeight;
     var iWidth1 = aLi1[0].offsetWidth;
     var iHeight2 = aSpan1[0].offsetHeight + 10;
@@ -138,5 +138,7 @@ window.onload = function() {
             getActive640()
         }
     }
+});
 
-};
+
+
