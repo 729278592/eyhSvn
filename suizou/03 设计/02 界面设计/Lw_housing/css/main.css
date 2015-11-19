@@ -83,7 +83,7 @@ a:link{text-decoration: none;}
 .out-housing .caret-top{width: 0;height: 0;border: 15px solid #efefef;border-right-color: transparent;border-bottom-color: transparent;border-left-color: transparent;position: absolute;bottom: -30px;left: 50%;margin-left: -7px;}
 .item-ul{width: 100%;}
 .item-ul li{width: 49.6%;float: left;margin: 0 0.4% 0.4% 0;position: relative;padding-bottom: 53px;}
-
+.select{width: 100%;border: 1px solid #dbdbdb;padding-left: 10px;height: 35px;line-height: 35px;}
 .item-ul .last{margin-right: 0;}
 .item-ul1{width: 100%;}
 .item-ul1 li{width: 31.9%;float: left;margin: 0 1.9% 0.4% 0;position: relative;padding-bottom: 53px;}

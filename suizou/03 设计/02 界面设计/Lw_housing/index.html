@@ -37,7 +37,7 @@
         .ul-information>li{text-align: center;}
         .ul-information>li input.Wdate{width: 49%;padding-left: 10px;border: 1px solid #ccc;position: relative;top: 10px;}
         .fand-house{width: 100%;height: 36px;text-align: center;line-height: 36px;background: #ff5b60;color: #fff;}
-        .rental_mode{width: 85px;margin-bottom: 5px;text-align: left;text-indent: 5px;}
+        .rental_mode{width: 85px;margin-bottom: 5px;margin-right: 0;padding: 0 2px;}
         .common {display: inline-block;padding: 0 1px;color: #666;margin-right: 0;}
         #video{position: absolute;left: 50%;top: 50%;margin-left: -240px;margin-top: -292px;padding: 50px;border: 1px solid #dbdbdb;background: rgba(255,255,255,0.8);border-radius: 10px;}
         #video .close{width: 30px;height: 30px;position: absolute;top:0;right:0;background: #fff;border-radius: 30px;text-align: center;line-height: 30px;z-index: 100;}
@@ -261,16 +261,15 @@
                                     <input type="checkbox" name="type" class=""/>
                                     标间小套一
                                 </span>
-                                <span class="rental_mode">
-                                    <input type="checkbox" name="type" class=""/>
-                                    整租
-                                </span>
+
                             </li>
                             <li>
-                                <input type="radio" name="_seq_roomie" value=""><span class="common">全部 </span>
-                                <input type="radio" name="_seq_roomie" value="1"><span class="common">全是妹子 </span>
-                                <input type="radio" name="_seq_roomie" value="2"><span class="common">全是汉子</span>
-                                <input type="radio" name="_seq_roomie" value="0"><span class="common">爱情公寓</span>
+                                <select name="" class="select">
+                                    <option value="全部">全部</option>
+                                    <option value="全是妹子">全是妹子</option>
+                                    <option value="全是汉子">全是汉子</option>
+                                    <option value="爱情公寓">爱情公寓</option>
+                                </select>
                             <li>
                                 <input id="d4311" class="Wdate" type="text" onFocus="WdatePicker({minDate:'%y-%M-{%d}'})" placeholder="入住" readonly/>
                                 <input id="d4312" class="Wdate" type="text" onFocus="WdatePicker({minDate:'#F{$dp.$D(\'d4311\')||\'%y-%M-{%d+1}\'}'})"placeholder="退房" readonly/>　　　
