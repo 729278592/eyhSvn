@@ -10,8 +10,6 @@
     <link rel="stylesheet" href="css/main.css"/>
     <link rel="stylesheet" href="plugins/carousel/css/carousel.css"/>
     <link rel="stylesheet" href="css/mobile.css?v=11"/>
-    <!--<link rel="stylesheet" href="plugins/mobile-bo/css/idangerous.swiper.css">-->
-    <!--<link rel="stylesheet" href="plugins/mobile-bo/css/style.css">-->
     <link rel="stylesheet" href="plugins/swiper/dist/css/swiper.min.css"/>
     <style>
         .content{background: #fafafa;padding-top: 10px;}
@@ -93,7 +91,7 @@
     <div class="content">
         <div class="w80 pc_80 mobile_w80">
         <div id="div1">
-            <div class="play" src="http://mvvideo2.meitudata.com/56163e35cac069064.mp4">
+            <div class="play" src = "http://mvvideo2.meitudata.com/56163e35cac069064.mp4">
                 <i class="glyphicon glyphicon-triangle-right"></i>
             </div>
             <ul id="ul1">
@@ -122,8 +120,6 @@
                     </span>
                 </p>
             </div>
-            <!--<div id="left" class="div-carousel">∨</div>-->
-            <!--<div id="right"class="div-carousel">∨</div>-->
         </div>
         <div class="swiper-container swiper-container-horizontal pc-none">
             <div class="swiper-wrapper" id="swiper-wrapper" style="transition-duration: 0ms; ">
@@ -163,7 +159,6 @@
                     <span class="information">C650</span>
                     <span class="information">A850</span>
                 </div>
-
             </li>
             <li>
                 <span>编号：246546565645 </span>
@@ -421,7 +416,6 @@
                     </p>
                     <p>小区描述：</p>
                 </div>
-
             </div>
             <div class="dialog-foot">
                 <button type="button" class="btn btn-default" data-dismiss="modal">关闭</button>
@@ -476,9 +470,9 @@
 <script src="plugins/carousel/js/carousel.js?v=33"></script>
 <script src="plugins/swiper/dist/js/swiper.min.js"></script>
 <script>
-
-
-    window.onresize = function(){ location=location };
+    if($(window).width()>640){
+        window.onresize = function(){ location=location };
+    }
     var a = $(".address");
     var mbm = $(".mask-bg,.mask");
     var d = $(".dialog");

@@ -11,7 +11,6 @@
     <link rel="stylesheet" href="css/mobile.css?v=11"/>
     <link rel="stylesheet" href="plugins/swiper/dist/css/swiper.min.css"/>
     <style>
-        .mask{min-width: 1120px;}
         .head{position: fixed;background: rgba(0,0,0,0);z-index: 100;}
         #myCarousel1{width: 70%;position: absolute;left: 50%;top:50%;margin-left: -35%;margin-top: -12%;}
         #myCarousel1{background: url("images/myCarousel1-bg.jpg") no-repeat center center;background-size: cover;margin-bottom: 1.01%;border-radius: 4px;}
@@ -35,14 +34,23 @@
         .w80>li>a{display: inline-block;position: relative;height: 100%;width: 100%;}
         .w80>li>a .a-span{display: inline-block;position: absolute;top: 0;bottom: 0;left: 0;right: 0;background: transparent;}
         .w80>li>a .a-span:hover{opacity: 0.6;filter: alpha(opacity=60);background: #000;}
+        .ul-information>li{text-align: center;}
+        .ul-information>li input.Wdate{width: 49%;padding-left: 10px;border: 1px solid #ccc;position: relative;top: 10px;}
+        .fand-house{width: 100%;height: 36px;text-align: center;line-height: 36px;background: #ff5b60;color: #fff;}
+        .rental_mode{width: 85px;margin-bottom: 5px;}
+        .common {display: inline-block;padding: 0 1px;color: #666;margin-right: 0;}
+        #video{position: absolute;left: 50%;top: 50%;margin-left: -240px;margin-top: -292px;padding: 50px;border: 1px solid #dbdbdb;background: rgba(255,255,255,0.8);border-radius: 10px;}
+        #video .close{width: 30px;height: 30px;position: absolute;top:0;right:0;background: #fff;border-radius: 30px;text-align: center;line-height: 30px;z-index: 100;}
         @media screen and (max-width: 639px) {
+            html{overflow-x: hidden;}
             .head {background: rgba(0,0,0, .4)}
             .footer{top: -20px;}
             .w80 li a .a-span:hover{background: transparent;}
-            #video{position: absolute;left:50%;top:20%;padding: 20px;border: 1px solid #dbdbdb;
-                background: rgba(255,255,255,0.8);border-radius: 10px;width: 98%;margin-left: -49%;}
+            #video{position: absolute;left:50%;top:20%;padding: 20px;border: 1px solid #dbdbdb;background: rgba(255,255,255,0.8);border-radius: 10px;width: 98%;margin-left: -49%;margin-top: 0;}
             .video{width: 100%;}
             .mask #video .close{width: 20px;height: 20px;position: absolute;background: #fff;border-radius: 30px;text-align: center;line-height: 20px;z-index: 100;top: 0;right: 0;}
+            .new-house .w80{margin-left: 0;left: 0;}
+            .item-ul1 .item-b{padding: 0.2% 2%;}
         }
     </style>
     <!--[if IE]>
@@ -212,9 +220,14 @@
                 </div>
                 <div class="ch-mask" style=""></div>
                 <div class="ch-mask-main">
-                    <input type="text" class="form-control" placeholder="你想住哪儿?">
-                    <!--<input type="button" class="btn btn-group" value="搜索"/>-->
-                    <a href="search_housing.html"  class="btn btn-group">搜索</a>
+                    <div class="mobile_none">
+                        <input type="text" class="form-control" placeholder="你想住哪儿?">
+                        <a href="search_housing.html"  class="btn btn-group">搜索</a>
+                    </div>
+                    <div class="pc-none modal-search-line">
+                        <span class="span-input">你想住哪儿?</span>
+                        <i class="fa fa-search search-i"></i>
+                    </div>
                     <p class="hotqu mobile_none">
                         <span>热门小区 : </span>
                         <a href="#">柳湖景庭</a>
@@ -223,6 +236,51 @@
                         <a href="#">塘泾南苑</a>
                         <a href="#">雍尚花园</a>
                     </p>
+                </div>
+                <div class="modal-search hide">
+                    <div class="panel-header">
+                        <a href="#" class="modal-close" data-behavior="modal-close">
+                            <span class="screen-reader-only">关闭</span>
+                            <span class="aria-hidden">×</span>
+                        </a>
+                        搜索
+                    </div>
+                    <div class="panel-content">
+                        <input type="text" class="form-control" placeholder="你想住哪儿?">
+                        <ul class="ul-information">
+                            <li>
+                                <span class="rental_mode">
+                                    <input type="checkbox" name="type" class=""/>
+                                    普通单间
+                                </span>
+                                <span class="rental_mode">
+                                    <input type="checkbox" name="type" class=""/>
+                                    主卧带独卫
+                                </span>
+                                <span class="rental_mode">
+                                    <input type="checkbox" name="type" class=""/>
+                                    标间小套一
+                                </span>
+                                <span class="rental_mode">
+                                    <input type="checkbox" name="type" class=""/>
+                                    整租
+                                </span>
+                            </li>
+                            <li>
+                                <input type="radio" name="_seq_roomie" value=""><span class="common">全部 </span>
+                                <input type="radio" name="_seq_roomie" value="1"><span class="common">全是妹子 </span>
+                                <input type="radio" name="_seq_roomie" value="2"><span class="common">全是汉子</span>
+                                <input type="radio" name="_seq_roomie" value="0"><span class="common">爱情公寓</span>
+                            <li>
+                                <input id="d4311" class="Wdate" type="text" onFocus="WdatePicker({minDate:'%y-%M-{%d}'})" placeholder="入住" readonly/>
+                                <input id="d4312" class="Wdate" type="text" onFocus="WdatePicker({minDate:'#F{$dp.$D(\'d4311\')||\'%y-%M-{%d+1}\'}'})"placeholder="退房" readonly/>　　　
+                            </li>
+                            <li class="last">
+                                <button class="fand-house">寻找住处</button>
+                            </li>
+
+                        </ul>
+                    </div>
                 </div>
             </div>
             <div class="content-main">
@@ -273,13 +331,13 @@
                             <span class="a-span"></span>
                         </a>
                     </li>
-                    <li class="pc-none">
+                    <li class="pc-none li4">
                         <a href="search_housing.html">
                             <img src="images/tu4_1.jpg" class="img-responsive img" alt="Responsive image"/>
                             <span class="rb-span">沙坪坝</span>
                         </a>
                     </li>
-                    <li class="mr0">
+                    <li class="mr0 mobile_none">
                         <a href="search_housing.html">
                             <img src="images/tu5.jpg" class="img-responsive img" alt="Responsive image"/>
                             <div class="out-housing">
@@ -297,7 +355,7 @@
                             <span class="a-span"></span>
                         </a>
                     </li>
-                    <li>
+                    <li class="mobile_none">
                         <a href="search_housing.html">
                             <img src="images/tu6.jpg" class="img-responsive img" alt="Responsive image"/>
                             <div class="out-housing">
@@ -332,13 +390,14 @@
                 </ul>
                 <img src="images/lw.jpg" class="img-responsive mobile_none" alt="Responsive image" style="margin-top: 20px;"/>
                 <div class="comon-head mobile_none" style="background: #f4f4f4;">最新房源推荐 <p>实时更新</p></div>
-                <div class="mobile_none" style="background: #f4f4f4;padding-bottom: 2%;">
+                <div style="background: #f4f4f4;padding-bottom: 2%;" class="new-house">
                     <div class="w80">
                         <div id="myCarousel" class="carousel slide">
                             <div class="carousel-inner">
                                 <div class="item active">
-                                    <ul class="item-ul clearfix">
+                                    <ul class="item-ul clearfix mobile_none">
                                         <li>
+
                                             <a href="housing_information.html">
                                                 <img src="images/jiju1.jpg" class="img-responsive" alt="Responsive image"/>
                                                 <div class="information">
@@ -379,18 +438,14 @@
                                             </div>
                                         </li>
                                     </ul>
-                                    <ul class="item-ul1 clearfix">
+                                    <ul class="item-ul1 clearfix" id="item-ul1">
                                         <li>
                                             <a href="housing_information.html">
                                                 <img src="images/jiju3.jpg" class="img-responsive" alt="Responsive image"/>
-                                                <div class="information">
-                                                    <!--<a href="personal_center.html">-->
-                                                        <!--<img src="images/people.png" alt="" class="people-img"/>-->
-                                                    <!--</a>-->
-                                                    <!--<span>3室一厅</span><br/>-->
-                                                    <!--<span>陈小洁</span>-->
-                                                </div>
                                             </a>
+                                            <div class="play" src="http://mvvideo2.meitudata.com/56163e35cac069064.mp4">
+                                                <i class="glyphicon glyphicon-triangle-right"></i>
+                                            </div>
                                             <div class="item-b">
                                                 <span class="title">南坪.星宇花园</span><br/>
                                                 <span class="main">周边最好的客厅主卧。休闲应有尽有</span>
@@ -403,13 +458,6 @@
                                         <li>
                                             <a href="housing_information.html">
                                                 <img src="images/jiju3.jpg" class="img-responsive" alt="Responsive image"/>
-                                                <div class="information">
-                                                    <!--<a href="personal_center.html">-->
-                                                        <!--<img src="images/people.png" alt="" class="people-img"/>-->
-                                                    <!--</a>-->
-                                                    <!--<span>3室一厅</span><br/>-->
-                                                    <!--<span>陈小洁</span>-->
-                                                </div>
                                             </a>
                                             <div class="item-b">
                                                 <span class="title">南坪.星宇花园</span><br/>
@@ -423,13 +471,6 @@
                                         <li class="last">
                                             <a href="housing_information.html">
                                                 <img src="images/jiju3.jpg" class="img-responsive" alt="Responsive image"/>
-                                                <div class="information">
-                                                    <!--<a href="personal_center.html">-->
-                                                        <!--<img src="images/people.png" alt="" class="people-img"/>-->
-                                                    <!--</a>-->
-                                                    <!--<span>3室一厅</span><br/>-->
-                                                    <!--<span>陈小洁</span>-->
-                                                </div>
                                             </a>
                                             <div class="item-b">
                                                 <span class="title">南坪.星宇花园</span><br/>
@@ -447,13 +488,6 @@
                                         <li>
                                             <a href="housing_information.html">
                                                 <img src="images/jiju1.jpg" class="img-responsive" alt="Responsive image"/>
-                                                <div class="information">
-                                                    <!--<a href="personal_center.html">-->
-                                                        <!--<img src="images/people.png" alt="" class="people-img"/>-->
-                                                    <!--</a>-->
-                                                    <!--<span>3室一厅</span><br/>-->
-                                                    <!--<span>陈小洁</span>-->
-                                                </div>
                                             </a>
                                             <div class="item-b">
                                                 <span class="title">南坪.星宇花园</span><br/>
@@ -467,13 +501,6 @@
                                         <li class="last">
                                             <a href="housing_information.html">
                                                 <img src="images/jiju2.jpg" class="img-responsive" alt="Responsive image"/>
-                                                <div class="information">
-                                                    <!--<a href="personal_center.html">-->
-                                                        <!--<img src="images/people.png" alt=""/>-->
-                                                    <!--</a>-->
-                                                    <!--<span>3室一厅</span><br/>-->
-                                                    <!--<span>陈小洁</span>-->
-                                                </div>
                                             </a>
                                             <div class="item-b">
                                                 <span class="title">南坪.星宇花园</span><br/>
@@ -489,13 +516,6 @@
                                         <li>
                                             <a href="housing_information.html">
                                                 <img src="images/jiju3.jpg" class="img-responsive" alt="Responsive image"/>
-                                                <div class="information">
-                                                    <!--<a href="personal_center.html">-->
-                                                        <!--<img src="images/people.png" alt="" class="people-img"/>-->
-                                                    <!--</a>-->
-                                                    <!--<span>3室一厅</span><br/>-->
-                                                    <!--<span>陈小洁</span>-->
-                                                </div>
                                             </a>
                                             <div class="item-b">
                                                 <span class="title">南坪.星宇花园</span><br/>
@@ -508,14 +528,7 @@
                                         </li>
                                         <li>
                                             <a href="housing_information.html">
-                                                <img src="images/jiju4.jpg" class="img-responsive" alt="Responsive image"/>
-                                                <div class="information">
-                                                    <!--<a href="personal_center.html">-->
-                                                        <!--<img src="images/people.png" alt="" class="people-img"/>-->
-                                                    <!--</a>-->
-                                                    <!--<span>3室一厅</span><br/>-->
-                                                    <!--<span>陈小洁</span>-->
-                                                </div>
+                                                <img src="images/jiju3.jpg" class="img-responsive" alt="Responsive image"/>
                                             </a>
                                             <div class="item-b">
                                                 <span class="title">南坪.星宇花园</span><br/>
@@ -528,14 +541,7 @@
                                         </li>
                                         <li class="last">
                                             <a href="housing_information.html">
-                                                <img src="images/jiju5.jpg" class="img-responsive" alt="Responsive image"/>
-                                                <div class="information">
-                                                    <!--<a href="personal_center.html">-->
-                                                        <!--<img src="images/people.png" alt="" class="people-img"/>-->
-                                                    <!--</a>-->
-                                                    <!--<span>3室一厅</span><br/>-->
-                                                    <!--<span>陈小洁</span>-->
-                                                </div>
+                                                <img src="images/jiju3.jpg" class="img-responsive" alt="Responsive image"/>
                                             </a>
                                             <div class="item-b">
                                                 <span class="title">南坪.星宇花园</span><br/>
@@ -746,7 +752,7 @@
                 </a>
                 <button class="close" id="close"><i class="glyphicon glyphicon-remove"></i></button>
             </div>
-            <div id="video" class="hide pc-none">
+            <div id="video" class="hide">
                 <div class="close">×</div>
                 <video src="" controls="controls" class="video" autoplay="autoplay">
                 </video>
@@ -754,12 +760,13 @@
         </div>
     </div>
     <script src="plugins/jquery/js/jquery-1.11.3.min.js"></script>
-    <script src="plugins/bootstrap-3.3.5-dist/js/bootstrap.min.js"></script>
     <script src="plugins/picture_transparency/js/move.js"></script>
     <script src="js/lw_housing.js"></script>
     <script src="plugins/autoSlider/js/jquery.img_silder.js"></script>
     <script src="plugins/swiper/dist/js/swiper.min.js"></script>
     <script src="plugins/jquery.kxbdmarquee/js/jquery.kxbdMarquee.js"></script>
+    <script src="plugins/My97DatePicker/WdatePicker.js"></script>
+    <script src="plugins/bootstrap-3.3.5-dist/js/bootstrap.min.js" type="text/javascript"></script>
     <script>
         (function(){$("#marquee").kxbdMarquee({direction:"right"});})();
         $(function() {
@@ -903,6 +910,37 @@
                         });
                     });
                 }
+            });
+
+            if($(window).width()<640){
+                $(".silder")[0].style.height = "568px";
+                $(".silder_list")[0].style.height = "568px";
+            }
+
+            /*出租类型控制*/
+            var pa = $(".ul-information");
+            pa.find(".rental_mode").on("click",function(){
+                if($(this).find("input:checkbox").get(0).className == ""){
+                    $(this).find("input:checkbox").get(0).checked = true;
+                    $(this).find("input:checkbox").get(0).className = "selected"
+                }
+                else if($(this).find("input:checkbox").get(0).className == "selected"){
+                    $(this).find("input:checkbox").get(0).checked = false;
+                    $(this).find("input:checkbox").get(0).className = "";
+                }
+            });
+
+            /*手机搜索控制*/
+            var phah = $(".panel-header .aria-hidden");
+            var ms = $(".modal-search");
+            var msl = $(".modal-search-line");
+            msl.on("click",function(){
+                ms.removeClass("hide")
+                $("html").css({overflow:"hidden"})
+            });
+            phah.on("click",function(){
+                ms.addClass("hide")
+                $("html").css({overflow:"scroll"})
             });
         })
     </script>
