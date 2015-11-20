@@ -20,6 +20,22 @@
         .span-group{font-weight: bold}
         .mask .box{margin-top: -320px;}
         .mask .box .close{position: absolute;right: 10px;top: 5px;}
+        .col-sm-6{padding: 0;}
+        .input-group-addon{background: transparent;border: none;padding: 6px 12px 6px 0;}
+        .btn-orange{background: #ff651c;color: #fff;border-radius: 0;}
+        .taxi {margin-left: 20px;line-height: 35px;}
+        .text-orange {color: #ff5300;}
+        .taxi .text {color: #555555;}
+        .bus-way-style{clear: both;position: relative;top: 10px;}
+        .bus-way-style .btn {position: relative;outline: none;border-radius: 0;background: #fff;border: 1px solid #aeaeae;}
+        .btn-sm {padding: 5px 10px;font-size: 12px;line-height: 1.5;border-radius: 3px;}
+        .bus-way-style .btn.selected  {color: #ffffff;background-color: #40cbc0;border-color: #34beb3;}
+        .bus-way-style .btn.selected .caret {color: #40cbc0;}
+        .bus-way-style .btn .caret {position: absolute;bottom: -5px;left: 45%;color: #fff;}
+        .subway-result {position: relative;top: 10px;line-height: 32px;}
+        .map_listitem {margin: 10px 0;padding: 10px 10px 10px 0;}
+        .subway-result .name {color: #40cbc0;font-weight: 700;}
+        .subway-result .time {color: #ff5300;}
         @media screen and (max-width: 639px) {
             .content{padding-top: 0;}
             .swiper-container{margin: 0;}
@@ -410,11 +426,64 @@
                     <li><a href="javascript:void(0)">景点</a><span>|</span></li>
                     <li><a href="javascript:void(0)">加油站</a></li>
                 </ul>
-                <div class="borhood">
+                <div class="borhood clearfix">
                     <p>
                         所在小区：<span id="ctl00_ContentPlaceHolder1_CommunityName">翡翠半岛国际社区</span>
                     </p>
                     <p>小区描述：</p>
+                    <div class="col-sm-6">
+                        <p class="input-group">
+                            <span class="input-group-addon">从这里到</span>
+                            <input  type="text" class="form-control ">
+                            <span class="input-group-btn">
+                                <button  class="btn  btn-orange" type="button">查询路线</button>
+                            </span>
+                        </p>
+                    </div>
+                    <div class="col-sm-5">
+                        <div class="taxi">
+                            <span class="f12 fb">打车费用：</span>
+                            <span class="text-orange fb"></span>
+                            <span class="text">(按最短路程计费)</span>
+                        </div>
+                    </div>
+                    <div class="bus-way-style">
+                        <button class="btn btn-sm selected">
+                            较快捷
+                            <span class="caret"></span>
+                        </button>
+                        <button class="btn btn-default btn-sm">
+                            不坐地铁
+                            <span class="caret"></span>
+                        </button>
+                        <button class="btn btn-default btn-sm">
+                            少换乘
+                            <span class="caret"></span>
+                        </button>
+                        <button class="btn btn-default btn-sm">
+                            少步行
+                            <span class="caret"></span>
+                        </button>
+                    </div>
+                    <div  class="subway-result">
+                        <div class="map_listitem" style="line-height: 20px;">
+                            <span class="name">推荐线路1</span><span class="time">（8.7公里50分钟）</span>
+                            <p><b>步行</b>约470米，到达<b>川师北大门</b>，乘坐<b>12路区间</b>，经过12站，到达<b>一环路南三段</b>，<b>步行</b>约530米，到达<b>终点</b>
+                            </p>
+                        </div>
+                        <div class="map_listitem" style="line-height: 20px;">
+                        <span class="name">推荐线路2</span><span class="time">（8.7公里50分钟）</span>
+                            <p><b>步行</b>约460米，到达<b>川师北大门</b>，乘坐<b>12路</b>，经过12站，到达<b>一环路南三段</b>，<b>步行</b>约530米，到达<b>终点</b>
+                            </p>
+                        </div>
+                        <div class="map_listitem" style="line-height: 20px;">
+                            <span class="name">推荐线路3</span><span class="time">（9.2公里1小时）</span>
+                            <p><b>步行</b>约460米，到达<b>川师北大门</b>，乘坐<b>79路</b>，经过13站，到达<b>倪家桥路东</b>，<b>步行</b>约200米，到达<b>倪家桥</b>，乘坐<b>地铁1号线</b>，经过1站，到达<b>省体育馆</b>，<b>步行</b>约510米，到达<b>终点</b>
+                            </p>
+                        </div>
+                    </div>
+
+
                 </div>
             </div>
             <div class="dialog-foot">
@@ -493,7 +562,7 @@
         mbm.addClass("hide");
         box.addClass("hide");
     });
-    var dcb = $(".dialog .close,.btn-default")
+    var dcb = $(".dialog .close,.dialog-foot .btn-default")
     dcb.on("click",function(){
         mbm.addClass("hide");
         d.addClass("hide");
@@ -535,7 +604,11 @@
         mbm.addClass("hide");
         cv.attr({autoplay:"",src:""})
     });
-
+    var bb = $(".bus-way-style .btn");
+        bb.on("click",function(){
+            $(this).addClass("selected");
+            $(this).siblings().removeClass("selected");
+        });
 if($(window).width()<640){
     swiper = new Swiper('.swiper-container', {
         prevButton:'.swiper-button-prev',
