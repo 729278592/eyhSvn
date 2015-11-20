@@ -611,6 +611,7 @@
     });
     mbm.delegate(".close","click",function(){
         mbm.addClass("hide");
+        v.addClass("hide");
         cv.attr({autoplay:"",src:""})
     });
     var bb = $(".bus-way-style .btn");
@@ -618,19 +619,19 @@
             $(this).addClass("selected");
             $(this).siblings().removeClass("selected");
         });
-if($(window).width()<640){
-    swiper = new Swiper('.swiper-container', {
-        prevButton:'.swiper-button-prev',
-        nextButton:'.swiper-button-next',
-        slidesPerView: 1,
-        pagination:'.swiper-pagination',
-        paginationClickable: true,
-        spaceBetween: 0,
-        loop:true,
-        autoplay: 3000,
-        autoplayDisableOnInteraction: false
-    });
-}
+    if($(window).width()<640){
+        swiper = new Swiper('.swiper-container', {
+            prevButton:'.swiper-button-prev',
+            nextButton:'.swiper-button-next',
+            slidesPerView: 1,
+            pagination:'.swiper-pagination',
+            paginationClickable: true,
+            spaceBetween: 0,
+            loop:true,
+            autoplay: 3000,
+            autoplayDisableOnInteraction: false
+        });
+    }
 </script>
 </body>
 </html>
