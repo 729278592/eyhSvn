@@ -36,6 +36,7 @@
         .map_listitem {margin: 10px 0;padding: 10px 10px 10px 0;}
         .subway-result .name {color: #40cbc0;font-weight: 700;}
         .subway-result .time {color: #ff5300;}
+        .mask-bg,.mask{overflow-x: hidden;overflow-y: auto;}
         @media screen and (max-width: 639px) {
             .content{padding-top: 0;}
             .swiper-container{margin: 0;}
@@ -415,17 +416,21 @@
             </div>
             <div class="dialog-content">
                 <ul class="dialog-menu clearfix">
-                    <li><a href="javascript:void(0)">餐饮</a><span>|</span></li>
-                    <li><a href="javascript:void(0)">超市</a><span>|</span></li>
-                    <li><a href="javascript:void(0)">影院</a><span>|</span></li>
-                    <li><a href="javascript:void(0)">酒店</a><span>|</span></li>
-                    <li><a href="javascript:void(0)">地铁站</a><span>|</span></li>
-                    <li><a href="javascript:void(0)">学校</a><span>|</span></li>
-                    <li><a href="javascript:void(0)">银行</a><span>|</span></li>
-                    <li><a href="javascript:void(0)">医院</a><span>|</span></li>
-                    <li><a href="javascript:void(0)">景点</a><span>|</span></li>
-                    <li><a href="javascript:void(0)">加油站</a></li>
+                    <li><a id="eat" href="javascript:void(0)">餐饮</a><span>|</span></li>
+                    <li><a id="supermarket" href="javascript:void(0)">超市</a><span>|</span></li>
+                    <li><a id="movie" href="javascript:void(0)">影院</a><span>|</span></li>
+                    <li><a id="hotel" href="javascript:void(0)">酒店</a><span>|</span></li>
+                    <li><a id="subway" href="javascript:void(0)">地铁站</a><span>|</span></li>
+                    <li><a id="school" href="javascript:void(0)">学校</a><span>|</span></li>
+                    <li><a id="bank" href="javascript:void(0)">银行</a><span>|</span></li>
+                    <li><a id="hospital" href="javascript:void(0)">医院</a><span>|</span></li>
+                    <li><a id="scenic" href="javascript:void(0)">景点</a><span>|</span></li>
+                    <li><a id="fillsta" href="javascript:void(0)">加油站</a></li>
                 </ul>
+                <div class="map" style="width: 100%; height: 300px; overflow: hidden;
+                	position: relative; z-index: 0; color: rgb(0, 0, 0); text-align: left;
+                	background-color: rgb(243, 241, 236);" id="mapDiv">
+                </div>
                 <div class="borhood clearfix">
                     <p>
                         所在小区：<span id="ctl00_ContentPlaceHolder1_CommunityName">翡翠半岛国际社区</span>
@@ -538,6 +543,8 @@
 <script src="js/lw_housing.js"></script>
 <script src="plugins/carousel/js/carousel.js?v=33"></script>
 <script src="plugins/swiper/dist/js/swiper.min.js"></script>
+<script type="text/javascript" src="http://api.map.baidu.com/api?v=2.0&ak=q0lvjEUGF5AOzHtbjn9YFtwl"></script>
+<script src="js/jquery.detailmap.js"></script>
 <script>
     if($(window).width()>640){
         window.onresize = function(){ location=location };
@@ -555,6 +562,7 @@
     a.on("click",function(){
         mbm.removeClass("hide");
         d.removeClass("hide");
+        $("html").css({overflow:"hidden"});
     });
     var bc = $(".box .close");
     var box = $(".box");
@@ -566,6 +574,7 @@
     dcb.on("click",function(){
         mbm.addClass("hide");
         d.addClass("hide");
+        $("html").css({overflow:"scroll"});
     });
     var dl = $(".dialog-menu li");
     dl.on("click",function(){
