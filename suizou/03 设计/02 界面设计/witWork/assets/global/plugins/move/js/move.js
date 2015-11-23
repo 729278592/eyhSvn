@@ -27,7 +27,7 @@ function move(obj,json,fn){
             clearInterval(obj.iTimer);
             fn&&fn.call(obj)
         }
-    },10)
+    },20)
 }
 function css(obj,attr){
     if(obj.currentStyle){
