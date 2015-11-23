@@ -57,7 +57,30 @@ $(function(){
         }
     }
 
+    /*index return top*/
+    $(".message,.phone,.weibo").hover(function () {
+            $(this).find(".qqgroup-show").removeClass("hide");
+            $(this).find(".qq img").attr({src:"images/qq1.png"});
+            $(this).find(".telphone-show").removeClass("hide");
+            $(this).find(".weibo-show").removeClass("hide");
+        },
+        function () {
+            $(this).find(".qqgroup-show").addClass("hide");
+            $(this).find(".telphone-show").addClass("hide");
+            $(this).find(".weibo-show").addClass("hide");
+            $(this).find(".qq img").attr({src:"images/qq.png"});
+        }
+    );
 
+    var t = $(".tuo_code");
+    t.hover(
+        function () {
+            $(this).find(".qrcode").removeClass("hide");
+        },
+        function () {
+            $(this).find(".qrcode").addClass("hide");
+        }
+    );
 
 
 });
