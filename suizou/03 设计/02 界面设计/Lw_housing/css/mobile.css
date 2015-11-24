@@ -20,6 +20,7 @@
     .mobile_w80>li.li4{width: 98.5%;}
     .w80>li .img{opacity: 1;filter:alpha(opacity=100);}
     .rb-span,.rt-span,.lt-span{display: inline-block;width: 70px;height: 30px;background: rgba(0,0,0,.5);text-align: center;line-height: 31px;color: #fc924e;font-size: 14px;border-radius: 4px;}
+    .rb-span,.rt-span,.lt-span{position: absolute;top: 50%;left: 50%;margin-left: -35px;margin-top: -15px;}
     .activity .title{color: #55340e;top: 45%;font-size: 18px;}
     .mobile_iu li{width: 100%;}
     .activity .item-b{height: 50px;line-height: 50px;}
