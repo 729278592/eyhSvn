@@ -442,7 +442,9 @@ tr th,tr td{ text-align:center;font-size: 14px;border:1px solid #cccccc;color: #
 .scene_list li div i{color: #f8b57a;}
 .scene_list li div .detail{background: #9f9e9e;}
 .scene_list li .new{position: absolute;top:10px;left:260px;z-index: 100;-webkit-animation: er 1s infinite;width: 25px;
+    animation: er 1s infinite;
     -moz-animation: er 1s infinite;
+    -webkit-animation: er 1s infinite;
     -webkit-animation-iteration-count:3000;
     -moz-animation-iteration-count:3000;}
 @-webkit-keyframes er {
