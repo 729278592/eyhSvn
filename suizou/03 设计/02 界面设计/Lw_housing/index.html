@@ -589,10 +589,10 @@
                                     </ul>
                                 </div>
                             </div>
-                            <a class="left carousel-control" href="#myCarousel" data-slide="prev">
+                            <a class="left carousel-control mobile_none" href="#myCarousel" data-slide="prev">
                                 <img src="images/pre.png" alt=""/>
                             </a>
-                            <a class="right carousel-control" href="#myCarousel" data-slide="next">
+                            <a class="right carousel-control mobile_none" href="#myCarousel" data-slide="next">
                                 <img src="images/next.png" alt=""/>
                             </a>
                         </div>
@@ -1017,12 +1017,12 @@
             var ms = $(".modal-search");
             var msl = $(".modal-search-line");
             msl.on("click",function(){
-                ms.removeClass("hide")
+                ms.removeClass("hide");
                 $("html").css({overflow:"hidden"})
             });
             phah.on("click",function(){
-                ms.addClass("hide")
-                $("html").css({overflow:"scroll"})
+                ms.addClass("hide");
+                $("html").css({overflowY:"scroll"})
             });
 
 
