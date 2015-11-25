@@ -291,7 +291,7 @@ h3, h5, h6{margin: 0.2rem 0 1rem 120px;}
 .mask-bg{background: #000;opacity: 0.6;filter: alpha(opacity=60);}
 /*media*/
 @media screen and (max-width: 1560px) {
-    .wrapper{width: 100%;background: #2c2c2c;}
+    .wrapper{width: 100%;background: #2c2c2c;overflow-x: scroll;}
     .head{width: 100%;}
     .foot{background: #2a2a2a;}
 }
