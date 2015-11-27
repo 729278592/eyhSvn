@@ -15,7 +15,7 @@
     .menu_mobile li a:hover{text-decoration: none;}
     .menu_mobile .last a {border-bottom: none;}
     .mobile_w80{width: 100%;left: 0;margin-left: 0.6%;margin-top: 0;}
-    .mobile_w80>li{width: 49%;position: relative;}
+    .mobile_w80>li{width: 49%;position: relative;margin-top: -0.8%;}
     .mobile_w80>li.no-house{display: none;}
     .mobile_w80>li.li4{width: 98.5%;}
     .w80>li .img{opacity: 1;filter:alpha(opacity=100);}
@@ -130,7 +130,7 @@
 @media screen and (max-width: 414px) {
     .item-ul1 li{height: 330px;}
     .item-ul1 li .img-responsive{height: 280px;}
-    .w80 .item-ul1 li .play{margin-top: -150px;margin-left: 150px;position: static;}
+    .w80 .item-ul1 li .play{margin-top: -170px;margin-left: 130px;position: static;}
 }
 
 @media screen and (max-width: 420px) {

@@ -10,7 +10,7 @@
 .div-carousel:hover{background: rgba(0,0,0,.8);}
 #left{top: 5px;}
 #right{bottom: 5px;}
-#div1 .play{width: 50px;height: 50px;background: #000;border-radius: 50px;opacity: 0.6;filter: alpha(opacity=60);position: absolute;right: 190px;top: 10px;color: #fff;text-align: center;line-height: 51px;font-size: 20px;z-index: 1000;}
+#div1 .play{width: 70px;height: 70px;background: #000;border-radius: 50px;opacity: 0.6;filter: alpha(opacity=60);position: absolute;right: 190px;top: 10px;color: #fff;text-align: center;line-height: 70px;font-size: 25px;z-index: 1000;}
 
 
 @media screen and (max-width: 1400px) and (min-width: 640px) {
