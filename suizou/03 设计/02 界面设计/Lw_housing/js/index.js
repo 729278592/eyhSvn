@@ -40,7 +40,7 @@
                 Methods.mouseout(_this);
                 Methods.left();
                 Methods.right();
-//                Methods.paginatioaClick();
+                Methods.paginatioaClick();
             },
             left:function(){
                 activeLeft.on("click",function(){
@@ -91,19 +91,20 @@
                     }
                 }
             },
-//            paginatioaClick:function(){
-//                activePaginatioA.each(function(i){
-//                    $(this).on("click",function(){
-//                        clearInterval(timerActive)
-//                        move(activeUl[0], {left : -i * liWidthActive},function(){
-//
-//                        });
-//                        activePaginatioA.eq(i).addClass("active");
-//                        activePaginatioA.eq(i).siblings().removeClass("active");
-//                    })
-//                });
-//
-//            },
+            paginatioaClick:function(){
+                activePaginatioA.each(function(i){
+                    $(this).on("click",function(){
+                        clearInterval(timerActive);
+                        inowActive = i;
+                        move(activeUl[0], {left : -inowActive * liWidthActive},function(){
+
+                        });
+                        activePaginatioA.eq(i).addClass("active");
+                        activePaginatioA.eq(i).siblings().removeClass("active");
+                    })
+                });
+
+            },
             mouseover:function(_this){
                 _this.on("mouseover",function(){
                     clearInterval(timerActive)
