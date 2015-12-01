@@ -8,7 +8,7 @@ $(function(){
         si.get(i).style.width ="1920px";
         function toResize(){
             var veiwidth = $(window).width();
-            if(veiwidth>1024){
+            if(veiwidth>1100){
                 si.get(i).style.left = -(parseInt(si.get(i).style.width) - veiwidth)/2 + "px"
             }
         }
