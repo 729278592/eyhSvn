@@ -44,7 +44,7 @@
             },
             left:function(){
                 activeLeft.on("click",function(){
-                    clearInterval(timerActive)
+                    clearInterval(timerActive);
                     Methods.autoPlay()
                 })
             },
@@ -99,8 +99,8 @@
                         move(activeUl[0], {left : -inowActive * liWidthActive},function(){
 
                         });
-                        activePaginatioA.eq(i).addClass("active");
-                        activePaginatioA.eq(i).siblings().removeClass("active");
+                        $(this).addClass("active");
+                        $(this).siblings().removeClass("active");
                     })
                 });
 
