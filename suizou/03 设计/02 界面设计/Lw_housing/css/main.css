@@ -115,8 +115,9 @@ a:link{text-decoration: none;}
 .we li .fa{position: relative;top: -8px;font-size: 22px;}
 .we li .qq{position: relative;top: -13px;}
 .miaoshu{position: relative;top: -51px;font-size: 13px;}
-.qqgroup-show {display: block;width: 195px;height: 90px;position: absolute;right: 51px;bottom: 230px;}
-.qqgroup-show-content {width: 185px;height: 90px;line-height: 20px;padding: 9px 15px 9px 7px;text-align: left;background: url(../images/scrolltop-qqgroup-bg.png) 0 0 no-repeat;}
+.qqgroup-show {display: block;width: 195px;height: 90px;position: absolute;right: 30px;bottom: 190px;}
+.qqgroup-show-content {width: 185px;height: 90px;line-height: 20px;padding: 9px 15px 9px 7px;text-align: left;background: url(../images/scrolltop-telphone-bg.png) 0 0 no-repeat;
+}
 .weibo-show-content,.telphone-show-content,.qqgroup-show-content {display: block;text-align: center;color: #3bade2;font-size: 12px;font-style: normal;}
 dt{position: relative;left: -50px;top: 25px;}
 dd {margin-left: 45px;color: #333;margin-top: 8px;}
