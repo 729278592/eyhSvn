@@ -43,7 +43,7 @@ a:link{text-decoration: none;}
 
 /*index*/
 .content-head{position: relative;height: 500px;}
-.content-head .pc-img{min-height: 500px;}
+.content-head .pc-img{min-height: 500px;position: relative;}
 .ch-mask{position: absolute;bottom: 0;left: 0;right: 0;background: #000;opacity: 0.4;filter:alpha(opacity=40);height: 20%;}
 .ch-mask-main{width: 40%;position: absolute;bottom: 4%;left: 50%;margin-left: -20%;z-index: 10;}
 .ch-mask-main .form-control,.ch-mask-main .span-input{width: 84%;display: inline-block;color: #fff;font-size: 14px;height: 40px;background: rgba(0,0,0,.2);}
@@ -191,7 +191,7 @@ b {line-height: 30px;font-weight: 700;}
 .va-middle .use-love-bg{width: 170px;height: 40px;background: #000;opacity: 0.6;filter: alpha(opacity=60);}
 .va-middle .use-love{width: 170px;height: 40px;background: transparent;}
 .va-middle .use-love:hover{background: rgba(0,0,0,.7);}
-.w80 .item-ul1 li .play{width: 70px;height: 70px;line-height: 70px;}
+.w80 .item-ul1 li .play{width: 55px;height: 55px;background: #000;border-radius: 55px;position: absolute;left: 50%;top: 50%;color: #fff;text-align: center;line-height: 60px;font-size: 25px;z-index: 1002;margin-top: -53px;margin-left: -28px;text-indent: 2px;}
 
 
 /*search_housing*/
@@ -222,10 +222,23 @@ b {line-height: 30px;font-weight: 700;}
 .ul-house li>a{display: inline-block;width: 100%;position: relative;}
 .ul-house li>a .item-b{border: 1px solid #f0f0f0;border-top:none;padding: 5px 2%;}
 .ul-house li>a .people{position: absolute;right: 1%;bottom: 10%;z-index: 100;border-radius: 100px;}
-.room-information .play,.w80 li .play,.ul-house li .play{width: 70px;height: 70px;background: #000;border-radius: 70px;opacity: 0.6;filter: alpha(opacity=60);position: absolute;right: 2%;top: 4%;color: #fff;text-align: center;line-height: 70px;font-size: 25px;z-index: 1000;}
-.room-information .play,.w80 li .play:hover,.ul-house li .play:hover{opacity: 0.8;filter: alpha(opacity=80);font-size: 21px;cursor: pointer;}
-
-
+.room-information .play,.w80 li .play,.ul-house li .play{opacity: 0.6;filter: alpha(opacity=60);cursor: pointer;width: 55px;height: 55px;background: #000;border-radius: 55px;position: absolute;left: 50%;top: 50%;color: #fff;text-align: center;line-height: 60px;font-size: 25px;z-index: 1002;margin-top: -28px;margin-left:58px;text-indent: 2px;}
+.room-information .play,.w80 li .play:hover,.ul-house li .play:hover{opacity: 1;filter: alpha(opacity=100);cursor: pointer;}
+.active-slider {width: 100%; position: relative; overflow: hidden;height: 500px;}
+.active-slider>.title{font-size: 24px;padding: 10px 0;text-align: center;color: #333;}
+.active-ul { position: absolute; left: 0;width: 100%;height: 500px;}
+.active-ul li {float: left; height: 500px;width: 1920px;}
+.active-left,.active-right{width: 45px;height: 100px;text-align: center;top: 50%;color: #fff;position: absolute;font-size: 30px;background: rgba(255,255,255,1);margin-top: -43px;background: url(../images/sprite.png) no-repeat;opacity: 0.5;}
+.active-left{left: 10px;background-position: 0 0;}
+.active-right{right: 10px;background-position: -50px 0;}
+.active-left:hover,.active-right:hover{cursor: pointer;opacity: 0.8;}
+.active-details{font-size: 14px;color: #666;background: #fff;height: 305px;padding: 0 20px 0 604px;}
+.active-details .title{font-size: 20px;color: #333;padding: 15px 0;}
+.active-details .ac-content{line-height: 25px;}
+.active-pagination{position: absolute;text-align: center;bottom: 110px;width: 100%;}
+.active-pagination a{display: inline-block;width: 8px;height: 8px;background: #ccc;border-radius: 8px;}
+.active-pagination a.active{background: #077bfa
+}
 
 .house-details-bg{position: absolute;bottom:0px;width:100%;height: 70px;background: #000;opacity: 0.5;filter: alpha(opacity=50);}
 .house-details{position: absolute;bottom: 30px;color: #fff;padding: 2%;width: 98%;}
@@ -378,8 +391,9 @@ input.btn-click:hover{background: #e16a20}
 .w60{width: 1050px;position: relative;left: 50%;margin-left: -525px;}
 .choice{width: 100%;margin-left: 1%;margin-bottom: 30px;}
 .choice li{width: 48%;float: left;margin-right: 2%;position: relative;padding-bottom: 70px;}
-.choice .play{width: 70px;height: 70px;border-radius: 50px;background: rgba(0,0,0,.6);text-align: center;line-height: 75px;position: absolute;z-index: 1;left: 50%;top: 30%;margin-left: -25px;margin-bottom: -25px; color: #fff;font-size: 25px;filter:alpha(opacity=60);}
-.choice .play:hover{background: #000;cursor: pointer;}
+.choice .play{opacity: 0.6;filter: alpha(opacity=60);cursor: pointer;width: 55px;height: 55px;background: #000;border-radius: 55px;position: absolute;left: 50%;top: 50%;color: #fff;text-align: center;line-height: 60px;font-size: 25px;z-index: 1002;margin-top: -60px;margin-left: -22px;text-indent: 2px;}
+.choice .play:hover{opacity: 1;filter: alpha(opacity=100);cursor: pointer;}
+
 .choice-bottom{position: absolute;bottom: 0;left: 0;right: 0;height: 70px;background: #fff;text-align: center;}
 .choice-bottom button{height: 35px;line-height: 35px;width: 35%;background: #f69d45;color: #fff;font-size: 16px;display: inline-block;margin-top: 15px;border-radius: 5px;}
 .div-bg{background: url("../images/t-bg.jpg") no-repeat center center;height: 500px;width: 100%;background-size: cover;text-align: center;overflow: hidden;}

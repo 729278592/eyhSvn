@@ -130,7 +130,7 @@
 @media screen and (max-width: 414px) {
     .item-ul1 li{height: 330px;}
     .item-ul1 li .img-responsive{height: 280px;}
-    .w80 .item-ul1 li .play{margin-top: -170px;margin-left: 130px;position: static;}
+    .w80 .item-ul1 li .play{background: #000;color: #fff;}
 }
 
 @media screen and (max-width: 420px) {
