@@ -26,10 +26,11 @@
         .menu_mobile li a:hover{text-decoration: none;}
         .menu_mobile .last a {border-bottom: none;}
         @media screen and (max-width: 639px) {
-            #video{position: absolute;left:50%;top:20%;padding: 20px;border: 1px solid #dbdbdb;
-                background: rgba(255,255,255,0.8);border-radius: 10px;width: 98%;margin-left: -49%;}
+            #video{position: absolute;left:50%;top:20%;padding: 20px;border: 1px solid #dbdbdb;background: rgba(255,255,255,0.8);border-radius: 10px;width: 98%;margin-left: -49%;}
             .video{width: 100%;}
             .mask #video .close{width: 20px;height: 20px;position: absolute;background: #fff;border-radius: 30px;text-align: center;line-height: 20px;z-index: 100;top: 0;right: 0;}
+            .room-information .play,.w80 li .play,.ul-house li .play{opacity: 0.6;filter: alpha(opacity=60);cursor: pointer;width: 55px;height: 55px;background: #000;border-radius: 55px;position: absolute;left: 50%;top: 50%;color: #fff;text-align: center;line-height: 60px;font-size: 25px;z-index: 1002;margin-top: -50px;margin-left:-28px;text-indent: 2px;}
+            .room-information .play,.w80 li .play:hover,.ul-house li .play:hover{opacity: 1;filter: alpha(opacity=100);cursor: pointer;}
         }
     </style>
 </head>
