@@ -2,7 +2,21 @@
  * Created by eyohu023 on 2015/9/2.
  */
 $(function(){
-
+    /*全屏图片居中*/
+    var si = $(".auto-img");
+    si.each(function(i){
+        si.get(i).style.width ="1920px";
+        function toResize(){
+            var veiwidth = $(window).width();
+            if(veiwidth>1024){
+                si.get(i).style.left = -(parseInt(si.get(i).style.width) - veiwidth)/2 + "px"
+            }
+        }
+        toResize();
+        $(window).on("resize",function(){
+            toResize()
+        });
+    });
     /*手机顶部页面切换*/
     var hg = $(".head-main .glyphicon-th-list");
     var mm = $(".menu_mobile");
