@@ -129,6 +129,9 @@ h4 {font-size: 1em;margin: 1.33em 0;}
 b {line-height: 30px;font-weight: 700;}
 .qrcode {background: url(../images/qrcode-bg.png) no-repeat;width: 150px;height: 150px;position: fixed;right: 90px;bottom: 80px;z-index: -1;text-align: center;}
 .qrcode-pic{position: relative;top: 15px;background: #5b5858;}
+
+
+
 /*.flow-lay {background: #f5c63c;height: 170px;}*/
 /*.flow-list {width: 1170px;margin: 0 auto;}*/
 /*.flow-list .flow-icon01 {float: left;padding: 42px 30px 0;background: url(../images/flowLine.png) no-repeat 95px 70px;}*/

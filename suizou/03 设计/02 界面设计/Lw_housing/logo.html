@@ -124,52 +124,52 @@
                 </div>
             </div>
             <div class="form-group">
-                <a href="#" class="left">忘记密码?</a>
+                <a href="forget-password.html" class="left">忘记密码?</a>
                 <a href="register.html" class="right">没账号? 立刻注册</a>
             </div>
         </form>
     </div>
-<script src="plugins/jquery/js/jquery-1.11.3.min.js"></script>
-<script src="js/lw_housing.js"></script>
-<script>
-    $(function(){
-        /*仿刷新：检测是否存在cookie*/
-//        if($.cookie("captcha")){
-//            var count = $.cookie("captcha");
-//            var btn = $('#getting');
-//            btn.val(count+'秒后可重新获取').attr('disabled',true).css('cursor','not-allowed');
-//            var resend = setInterval(function(){
-//                count--;
-//                if (count > 0){
-//                    btn.val(count+'秒后可重新获取').attr('disabled',true).css('cursor','not-allowed');
-//                    btn.addClass("active");
-//                    $.cookie("captcha", count, {path: '/', expires: (1/86400)*count});
-//                }else {
-//                    clearInterval(resend);
-//                    btn.removeClass("active");
-//                    btn.val("获取验证码").removeClass('disabled').removeAttr('disabled style');
-//                }
-//            }, 1000);
-//        }
-        /*点击改变按钮状态，已经简略掉ajax发送短信验证的代码*/
-        $('#getting').click(function(){
-            var btn = $(this);
-            var count = 60;
-            var resend = setInterval(function(){
-                count--;
-                if (count > 0){
-                    btn.val(count+"秒后可重新获取");
-                    btn.addClass("active");
-                    $.cookie("captcha", count, {path: '/', expires: (1/86400)*count});
-                }else {
-                    clearInterval(resend);
-                    btn.removeClass("active");
-                    btn.val("获取验证码").removeAttr('disabled style');
-                }
-            }, 1000);
-            btn.attr('disabled',true).css('cursor','not-allowed');
+    <script src="plugins/jquery/js/jquery-1.11.3.min.js"></script>
+    <script src="js/lw_housing.js"></script>
+    <script>
+        $(function(){
+            /*仿刷新：检测是否存在cookie*/
+            if($.cookie("captcha")){
+                var count = $.cookie("captcha");
+                var btn = $('#getting');
+                btn.val(count+'秒后可重新获取').attr('disabled',true).css('cursor','not-allowed');
+                var resend = setInterval(function(){
+                    count--;
+                    if (count > 0){
+                        btn.val(count+'秒后可重新获取').attr('disabled',true).css('cursor','not-allowed');
+                        btn.addClass("active");
+                        $.cookie("captcha", count, {path: '/', expires: (1/86400)*count});
+                    }else {
+                        clearInterval(resend);
+                        btn.removeClass("active");
+                        btn.val("获取验证码").removeClass('disabled').removeAttr('disabled style');
+                    }
+                }, 1000);
+            }
+            /*点击改变按钮状态，已经简略掉ajax发送短信验证的代码*/
+            $('#getting').click(function(){
+                var btn = $(this);
+                var count = 60;
+                var resend = setInterval(function(){
+                    count--;
+                    if (count > 0){
+                        btn.val(count+"秒后可重新获取");
+                        btn.addClass("active");
+                        $.cookie("captcha", count, {path: '/', expires: (1/86400)*count});
+                    }else {
+                        clearInterval(resend);
+                        btn.removeClass("active");
+                        btn.val("获取验证码").removeAttr('disabled style');
+                    }
+                }, 1000);
+                btn.attr('disabled',true).css('cursor','not-allowed');
+            });
         });
-    });
-</script>
+    </script>
 </body>
 </html>
