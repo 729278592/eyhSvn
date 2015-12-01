@@ -118,4 +118,4 @@
         };
         Methods.init($(this))
     };
-})(jQuery)
+})(jQuery);
