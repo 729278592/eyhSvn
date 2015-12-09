@@ -603,10 +603,10 @@ label.error {color: #EA5200;margin-bottom: 0;}
 .m-list{}
 .m-list li{background: #f3f3f3;height: 162px;margin-top: 10px;position: relative;}
 .m-list li>img{margin-right: 30px;}
-.m-list li .name{width: 80px;height: 26px;text-align: center;line-height: 26px;background: red;position: absolute;top: 20px;left: 213px;}
-.information{border-right: 1px solid #dbdbdb;margin-top: 50px;}
-.information p{line-height: 30px;margin-right: 30px;}
-.information.last{margin-left: 30px;border-right: none;}
+.m-list li .name{width: 80px;height: 26px;text-align: center;line-height: 26px;background: #babcba;position: absolute;top: 20px;left: 213px;color: #fff;}
+.information{border-right: 1px solid #dbdbdb;margin-top: 50px;color: #666;}
+.information p{line-height: 30px;margin-right: 80px;}
+.information.last{margin-left: 80px;border-right: none;}
 
 /*media*/
 @media screen and (max-width: 1024px) {
