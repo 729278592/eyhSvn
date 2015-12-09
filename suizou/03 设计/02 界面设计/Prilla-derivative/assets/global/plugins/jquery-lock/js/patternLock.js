@@ -1,17 +1,17 @@
 /*
-    patternLock.js v 0.2.0
-    Author: Sudhanshu Yadav
-    Copyright (c) 2013 Sudhanshu Yadav - ignitersworld.com , released under the MIT license.
-    Demo on: ignitersworld.com/lab/patternLock.html
+	patternLock.js v 0.1.2
+	Author: Sudhanshu Yadav
+	Copyright (c) 2013 Sudhanshu Yadav - ignitersworld.com , released under the MIT license.
+	Demo on: ignitersworld.com/lab/patternLock.html
 */
-(function ($, window, document, undefined) {
-    "use strict";
-    var isTouchSupported = !!('ontouchstart' in window),
+;(function () {
+    var isTouchSupported = !! ('ontouchstart' in window),
         touchStart = isTouchSupported ? "touchstart" : "mousedown",
         touchEnd = isTouchSupported ? "touchend" : "mouseup",
         touchMove = isTouchSupported ? "touchmove" : "mousemove",
         nullFunc = function () {},
         objectHolder = {};
+
 
     //internal functions
     function readyDom(iObj) {
@@ -19,8 +19,8 @@
             option = iObj.option,
             matrix = option.matrix,
             margin = option.margin,
-            radius = option.radius,
-            html = ['<ul class="patt-wrap" style="padding:' + margin + 'px">'];
+            radius = option.radius;
+        html = ['<ul class="patt-wrap" style="padding:' + margin + 'px">'];
         for (var i = 0, ln = matrix[0] * matrix[1]; i < ln; i++) {
             html.push('<li class="patt-circ" style="margin:' + margin + 'px; width : ' + (radius * 2) + 'px; height : ' + (radius * 2) + 'px; -webkit-border-radius: ' + radius + 'px; -moz-border-radius: ' + radius + 'px; border-radius: ' + radius + 'px; "><div class="patt-dots"></div></li>');
         }
@@ -38,42 +38,44 @@
     //return height and angle for lines
     function getLengthAngle(x1, x2, y1, y2) {
         var xDiff = x2 - x1,
-            yDiff = y2 - y1;
+            yDiff = y2 - y1
 
         return {
             length: Math.ceil(Math.sqrt(xDiff * xDiff + yDiff * yDiff)),
             angle: Math.round((Math.atan2(yDiff, xDiff) * 180) / Math.PI)
-        };
+        }
     }
 
+
+
     var startHandler = function (e, obj) {
-            e.preventDefault();
-            var iObj = objectHolder[obj.token];
+        e.preventDefault();
+		var iObj = objectHolder[obj.token];
 
-            //check if pattern is visible or not
-            if (!iObj.option.patternVisible) {
-                iObj.holder.addClass('patt-hidden');
-            }
+        //check if pattern is visible or not
+        if (!iObj.option.patternVisible) {
+            iObj.holder.addClass('patt-hidden');
+        }
 
-            //assign events
-            $(this).on(touchMove + '.pattern-move', function (e) {
-                moveHandler.call(this, e, obj);
-            });
-            $(document).one(touchEnd, function () {
-                endHandler.call(this, e, obj);
-            });
-            //set pattern offset
-            var wrap = iObj.holder.find('.patt-wrap'),
-                offset = wrap.offset();
-                iObj.wrapTop = offset.top;
-                iObj.wrapLeft = offset.left;
+        //assign events
+        $(this).on(touchMove + '.pattern-move', function (e) {
+            moveHandler.call(this, e, obj);
+        });
+        $(document).one(touchEnd, function () {
+            endHandler.call(this, e, obj);
+        });
+        //set pattern offset
+        var wrap = iObj.holder.find('.patt-wrap'),
+            offset = wrap.offset();
+        iObj.wrapTop = offset.top,
+        iObj.wrapLeft = offset.left;
 
-            //reset pattern
-            obj.reset();
+        //reset pattern
+        obj.reset();
 
-        },
-        moveHandler  = function (e, obj) {
-            e.preventDefault();
+    },
+        moveHandler = function (e, obj) {
+	        e.preventDefault();
             var x = e.pageX || e.originalEvent.touches[0].pageX,
                 y = e.pageY || e.originalEvent.touches[0].pageY,
                 iObj = objectHolder[obj.token],
@@ -103,8 +105,8 @@
                     //add start point for line
                     var margin = iObj.option.margin,
                         radius = iObj.option.radius,
-                        newX = (posObj.i - 1) * (2 * margin + 2 * radius) + 2 * margin + radius,
-                        newY = (posObj.j - 1) * (2 * margin + 2 * radius) + 2 * margin + radius;
+                        newX = (posObj.i - 1) * (2 * margin + 2 * radius) + 2 * margin + radius;
+                    newY = (posObj.j - 1) * (2 * margin + 2 * radius) + 2 * margin + radius;
 
                     if (patternAry.length != 1) {
                         //to fix line
@@ -129,23 +131,22 @@
             }
 
         },
-        endHandler   = function (e, obj) {
-            e.preventDefault();
+        endHandler = function (e, obj) {
+	        e.preventDefault();
             var iObj = objectHolder[obj.token],
+                li = iObj.pattCircle,
                 pattern = iObj.patternAry.join('');
-
+            
             //remove hidden pattern class and remove event
             iObj.holder.off('.pattern-move').removeClass('patt-hidden');
-
-            if (!pattern) return;
-
-            iObj.option.onDraw(pattern);
+			
+			if(!pattern) return;
+			
+			iObj.option.onDraw(pattern);
 
             //to remove last line
             iObj.line.remove();
-            setTimeout(function(){
-                window.location.href = "index.html";
-            },500);
+
 
             if (iObj.rightPattern) {
                 if (pattern == iObj.rightPattern) {
@@ -157,7 +158,7 @@
             }
         };
 
-    function InternalMethods() {}
+    function InternalMethods() {};
 
     InternalMethods.prototype = {
         constructor: InternalMethods,
@@ -168,11 +169,11 @@
                 yi = y - this.wrapTop,
                 idx = null,
                 margin = option.margin,
-                plotLn = option.radius * 2 + margin * 2,
-                qsntX = Math.ceil(xi / plotLn),
-                qsntY = Math.ceil(yi / plotLn),
-                remX  = xi % plotLn,
-                remY  = yi % plotLn;
+                plotLn = option.radius * 2 + margin * 2;
+            qsntX = Math.ceil(xi / plotLn),
+            qsntY = Math.ceil(yi / plotLn),
+            remX = xi % plotLn,
+            remY = yi % plotLn;
 
             if (qsntX <= matrix[1] && qsntY <= matrix[0] && remX > margin * 2 && remY > margin * 2) {
                 idx = (qsntY - 1) * matrix[1] + qsntX;
@@ -185,7 +186,7 @@
                 y: yi
             };
         }
-    };
+    }
 
     function PatternLock(selector, option) {
         var self = this,
@@ -200,10 +201,11 @@
         option = iObj.option = $.extend({}, PatternLock.defaults, option);
         readyDom(iObj);
 
-        //add class on holder
-        holder.addClass('patt-holder');
 
-        //change offset property of holder if it does not have any property
+        //add class on holder
+		holder.addClass('patt-holder');
+		
+		//change offset property of holder if it does not have any property
         if (holder.css('position') == "static") holder.css('position', 'relative');
 
         //assign event
@@ -214,12 +216,12 @@
         //handeling callback
         iObj.option.onDraw = option.onDraw || nullFunc;
 
-        //adding a mapper function  
+        //adding a mapper function	
         var mapper = option.mapper;
         if (typeof mapper == "object") {
             iObj.mapperFunc = function (idx) {
                 return mapper[idx];
-            };
+            }
         } else if (typeof mapper == "function") {
             iObj.mapperFunc = mapper;
         } else {
@@ -272,7 +274,8 @@
             iObj.onSuccess = success || nullFunc;
             iObj.onError = error || nullFunc;
         }
-    };
+    }
+
 
     PatternLock.defaults = {
         matrix: [3, 3],
@@ -282,5 +285,6 @@
         lineOnMove: true
     };
 
+
     window.PatternLock = PatternLock;
-}(jQuery, window, document));
+}());

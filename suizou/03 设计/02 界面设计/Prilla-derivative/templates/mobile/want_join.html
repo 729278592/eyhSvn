@@ -71,18 +71,18 @@
 </body>
 <script src="../../assets/global/plugins/jquery/jquery-1.11.3.min.js"></script>
 <script src="../../assets/mobile/js/global.js"></script>
-<!--<script src="../../assets/mobile/js/error.js"></script>-->
-<!--<script>-->
-    <!--jQuery(document).ready(function() {-->
-        <!--var btn_submit = $(".btn-f98");-->
-        <!--btn_submit.on("click",function(){-->
-            <!--ErrorBox.init();-->
-            <!--$(this).attr({"disabled":"disabled"});-->
-            <!--var that = $(this);-->
-            <!--setTimeout(function(){-->
-                <!--that.removeAttr("disabled")-->
-            <!--},3500)-->
-        <!--});-->
-    <!--});-->
-<!--</script>-->
+<script src="../../assets/mobile/js/error.js"></script>
+<script>
+    jQuery(document).ready(function() {
+        var btn_submit = $(".btn-f98");
+        btn_submit.on("click",function(){
+            ErrorBox.init();
+            $(this).attr({"disabled":"disabled"});
+            var that = $(this);
+            setTimeout(function(){
+                that.removeAttr("disabled")
+            },3500)
+        });
+    });
+</script>
 </html>
