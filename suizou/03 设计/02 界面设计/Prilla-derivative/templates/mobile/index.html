@@ -7,7 +7,7 @@
     <link rel="stylesheet" href="../../assets/mobile/css/global.css"/>
     <link rel="stylesheet" href="../../assets/global/plugins/font/css/font-awesome.min.css"/>
     <style>
-        .content{background: #f0f0f0;}
+        .content{background: #f0f0f0;padding-bottom: 50px;}
         .m-head .details{width: 50%;margin-left: 5%;}
     </style>
 </head>
@@ -107,7 +107,7 @@
             <a href="#" class="warning">余额警戒线说明?</a>
         </div>
         <div class="foot">
-            <ul class="f-menu">
+            <ul class="f-menu clearfix">
                 <li class="active">
                     <a href="index.html">
                         <div class="bt"></div>
@@ -154,89 +154,89 @@
         </div>
     </div>
 </body>
-<script src="../../assets/global/plugins/jquery/jquery-1.11.3.min.js"></script>
-<script src="../../assets/mobile/js/global.js"></script>
-<script>
-    $(function(){
-        /*代理块控制*/
-      var jso = {"agent":{"name": "陈小洁", "title":"代理管理","boss":"王二","peopleImg": "../../assets/mobile/images/people.png","class1":"t-bg t-bg1","fuc1":"申请升级","fuc2":"申请取消","fuc3":"直属下级","url1":"apply-upgrade.html","url2":"cancel-agent.html","url3":"#"},
-                 "order":{"name": "张三", "title": "订单管理","boss":"王大" ,"peopleImg": "../../assets/mobile/images/people.png","class1":"t-bg t-bg1","fuc1":"我的订单","fuc2":"下单","url1":"my-order.html","url2":"chioce-production.html"},
-                 "balance":{"name": "李四", "title": "余额管理","boss":"王小","peopleImg": "../../assets/mobile/images/people.png","class1":"t-bg t-bg1","fuc1":"我的余额","fuc2":"对账中心","fuc3":"在线充值","url1":"my-balance.html","url2":"check-center.html","url3":"online-recharge.html"}
-                };
-        var cm = $(".common-mangent");
-        var m = $(".mask");
-        var ma = $(".management");
-        cm.closest("li").on("click",function(){
-            m.removeClass("hide");
-            var ss = null;
-            if($(this).find(cm).text()=="代理管理"){
-                ss = jso.agent;
-            }else if($(this).find(cm).text()=="订单管理"){
-                ss = jso.order;
-                $(".mask").find(".management .last").addClass("hide")
-            }else if($(this).find(cm).text()=="余额管理"){
-                ss = jso.balance;
-            }
-            var str = '<div class="management">'+
-                            '<div class="m-head clearfix">'+
-                                '<img src="'+ss.peopleImg+'" alt="" class="people"/>'+
-                                ' <span class="details">'+
-                                    '<span class="name">'+ss.name+'</span><br/>'+
-                                    '<span>上级: '+ss.boss+'</span>'+
-                                '</span>'+
-                            '</div>'+
-                            '<ul class="comment-data">'+
-                                '<li>'+
-                                    '<span class="type" style="font-size: 18px;">'+ss.title+'</span>'+
-                                '</li>'+
-                                '<li>'+
-                                    '<a href="'+ss.url1+'">'+
-                                        '<span class="type">'+
-                                            '<span class="'+ss.class1+'"></span>'+
-                                            '<span>'+ss.fuc1+'</span>'+
-                                        '</span>'+
-                                        '<span class="fr">'+
-                                            '<span class="more"></span>'+
-                                        '</span>'+
-                                    '</a>'+
-                                '</li>'+
-                                '<li>'+
-                                    '<a href="'+ss.url2+'">'+
-                                        '<span class="type">'+
-                                            '<span class="t-bg t-bg2"></span>'+
-                                            '<span style="position: relative;top: -3px;">'+ss.fuc2+'</span>'+
-                                        '</span>'+
-                                        '<span class="fr">'+
-                                            '<span class="more"></span>'+
-                                        '</span>'+
-                                    '</a>'+
-                                '</li>'+
-                                '<li>'+
-                                    '<a href="'+ss.url3+'">'+
-                                        '<span class="type">'+
-                                            '<span class="t-bg t-bg3"></span>'+
-                                            ' <span style="position: relative;top: -3px;left: -5px;">'+ss.fuc3+'</span>'+
-                                        '</span>'+
-                                        '<span class="fr">'+
-                                            '<span class="more"></span>'+
-                                        '</span>'+
-                                    '</a>'+
-                                '</li>'+
-                            '</ul>'+
-                       '</div>';
-            m.append(str);
-            if($(this).find(cm).text()=="订单管理"){
-                m.find("li:last").addClass("hide")
-            }
-            $(".management").animate({left:"0%"},200,function(){
-                m.delegate($(".management"),"click",function(){
-                    $(".management").animate({left:"-85%"},20,function(){
-                        m.addClass("hide");
-                        $(".management").remove()
-                    });
+    <script src="../../assets/global/plugins/jquery/jquery-1.11.3.min.js"></script>
+    <script src="../../assets/mobile/js/global.js"></script>
+    <script>
+        $(function(){
+            /*代理块控制*/
+          var jso = {"agent":{"name": "陈小洁", "title":"代理管理","boss":"王二","peopleImg": "../../assets/mobile/images/people.png","class1":"t-bg t-bg1","fuc1":"申请升级","fuc2":"申请取消","fuc3":"直属下级","url1":"apply-upgrade.html","url2":"cancel-agent.html","url3":"#"},
+                     "order":{"name": "张三", "title": "订单管理","boss":"王大" ,"peopleImg": "../../assets/mobile/images/people.png","class1":"t-bg t-bg1","fuc1":"我的订单","fuc2":"下单","url1":"my-order.html","url2":"chioce-production.html"},
+                     "balance":{"name": "李四", "title": "余额管理","boss":"王小","peopleImg": "../../assets/mobile/images/people.png","class1":"t-bg t-bg1","fuc1":"我的余额","fuc2":"对账中心","fuc3":"在线充值","url1":"my-balance.html","url2":"check-center.html","url3":"online-recharge.html"}
+                    };
+            var cm = $(".common-mangent");
+            var m = $(".mask");
+            var ma = $(".management");
+            cm.closest("li").on("click",function(){
+                m.removeClass("hide");
+                var ss = null;
+                if($(this).find(cm).text()=="代理管理"){
+                    ss = jso.agent;
+                }else if($(this).find(cm).text()=="订单管理"){
+                    ss = jso.order;
+                    $(".mask").find(".management .last").addClass("hide")
+                }else if($(this).find(cm).text()=="余额管理"){
+                    ss = jso.balance;
+                }
+                var str = '<div class="management">'+
+                                '<div class="m-head clearfix">'+
+                                    '<img src="'+ss.peopleImg+'" alt="" class="people"/>'+
+                                    ' <span class="details">'+
+                                        '<span class="name">'+ss.name+'</span><br/>'+
+                                        '<span>上级: '+ss.boss+'</span>'+
+                                    '</span>'+
+                                '</div>'+
+                                '<ul class="comment-data">'+
+                                    '<li>'+
+                                        '<span class="type" style="font-size: 18px;">'+ss.title+'</span>'+
+                                    '</li>'+
+                                    '<li>'+
+                                        '<a href="'+ss.url1+'">'+
+                                            '<span class="type">'+
+                                                '<span class="'+ss.class1+'"></span>'+
+                                                '<span>'+ss.fuc1+'</span>'+
+                                            '</span>'+
+                                            '<span class="fr">'+
+                                                '<span class="more"></span>'+
+                                            '</span>'+
+                                        '</a>'+
+                                    '</li>'+
+                                    '<li>'+
+                                        '<a href="'+ss.url2+'">'+
+                                            '<span class="type">'+
+                                                '<span class="t-bg t-bg2"></span>'+
+                                                '<span style="position: relative;top: -3px;">'+ss.fuc2+'</span>'+
+                                            '</span>'+
+                                            '<span class="fr">'+
+                                                '<span class="more"></span>'+
+                                            '</span>'+
+                                        '</a>'+
+                                    '</li>'+
+                                    '<li>'+
+                                        '<a href="'+ss.url3+'">'+
+                                            '<span class="type">'+
+                                                '<span class="t-bg t-bg3"></span>'+
+                                                ' <span style="position: relative;top: -3px;left: -5px;">'+ss.fuc3+'</span>'+
+                                            '</span>'+
+                                            '<span class="fr">'+
+                                                '<span class="more"></span>'+
+                                            '</span>'+
+                                        '</a>'+
+                                    '</li>'+
+                                '</ul>'+
+                           '</div>';
+                m.append(str);
+                if($(this).find(cm).text()=="订单管理"){
+                    m.find("li:last").addClass("hide")
+                }
+                $(".management").animate({left:"0%"},200,function(){
+                    m.delegate($(".management"),"click",function(){
+                        $(".management").animate({left:"-85%"},20,function(){
+                            m.addClass("hide");
+                            $(".management").remove()
+                        });
+                    })
                 })
-            })
-        });
-    })
-</script>
+            });
+        })
+    </script>
 </html>

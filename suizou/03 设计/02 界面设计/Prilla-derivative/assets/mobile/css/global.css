@@ -74,11 +74,11 @@ textarea,input,button,select{border: none;outline: none;}
 .m-head{width: 92%;background: #f98d91;color: #fff;padding: 40px 4%;}
 .m-head .people{width: 25%;float: left;border-radius: 100px;}
 .m-head .details{display: inline-block;margin-top: 7%;}
-.foot{width: 100%;}
+.foot{width: 100%;position: fixed;bottom: 0;background: #fff;}
 .foot .f-menu{width: 100%;}
-.foot .f-menu li{width: 25%;float: left;}
-.foot .f-menu li.active a{color: #f98d91;}
-.foot .f-menu li a{display: inline-block;padding: 5px 0;text-align: center;width: 100%;position: relative;color: #666;}
+.foot .f-menu li{width: 25%;float: left;  background: -webkit-linear-gradient(top, #8cbde4, #bcd5e8, #3d84b5);background: -moz-linear-gradient(top, #8cbde4, #bcd5e8, #3d84b5);}
+.foot .f-menu li.active a{background: -webkit-linear-gradient(top, #acd5e8, #8cbde4, #8cbcd6);background: -moz-linear-gradient(top, #acd5e8, #8cbde4, #8cbcd6);}
+.foot .f-menu li a{display: inline-block;padding: 5px 0;text-align: center;width: 100%;position: relative;color: #fff;}
 .foot .f-menu li a .fa{position: relative;left: 3px;}
 .foot .f-menu li a .bt{width: 100%;height: 1px;position: absolute;top: 0;background: #dbdbdb;}
 .foot .f-menu li a .br{width: 1px;height: 100%;position: absolute;right: 0;background: #dbdbdb;top: 0;}
@@ -203,12 +203,23 @@ table tr td a{display: inline-block;width: 100%;height: 100%;color: #666;line-he
 .n-head{color: #f98e92;font-size: 18px;padding: 0 0 10px;border-bottom: 1px solid #dbdbdb;}
 .n-content p{line-height: 30px;}
 
+
+
+
 /*authorization*/
 .c_iim{position: absolute;left: 50%;margin-left: -80px;}
 .description{position: relative;top: 100px;}
 .description p{font-size: 18px;color: #b0c0c3;text-align: center;padding: 0 20px;}
 .description p .face{width: 80px;}
 .description .title{font-size: 25px;}
+
+
+
+
+/**/
+
+
+
 /*media*/
 @media screen and (max-width: 640px) {
     .details .spinner{margin-top: 12%;}
