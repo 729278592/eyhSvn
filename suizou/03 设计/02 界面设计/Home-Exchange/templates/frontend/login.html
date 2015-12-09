@@ -1,0 +1,117 @@
+<!DOCTYPE html>
+<html>
+<head lang="en">
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1" />
+    <title>登录</title>
+    <link rel="stylesheet" href="../../assets/global/plugins/bootstrap-3.3.5-dist/css/bootstrap.min.css"/>
+    <link rel="stylesheet" href="../../assets/global/plugins/font/css/font-awesome.min.css"/>
+    <link rel="stylesheet" href="../../assets/frontend/css/global.css"/>
+    <link rel="stylesheet" href="../../assets/global/plugins/metic/css/components-rounded.css"/>
+</head>
+<body>
+<div class="wrapper">
+    <div class="head">
+        <div class="head-bg"></div>
+        <div class="head-main">
+            <div class="logo left"></div>
+            <ul class="menu right clearfix" id="menu">
+                <div class="hover-active" id="hover-active"></div>
+                <li>
+                    <a href="index.html">
+                        首页
+                    </a>
+                </li>
+                <li>
+                    <a href="#">
+                        家庭服务
+                    </a>
+                </li>
+                <li>
+                    <a href="steward.html">
+                        牛管家
+                    </a>
+                </li>
+                <li>
+                    <a href="#">
+                        学家务
+                    </a>
+                </li>
+                <li>
+                    <a href="space-creation.html">
+                        众创空间
+                    </a>
+                </li>
+                <li>
+                    <a href="#">
+                        公益保障
+                    </a>
+                </li>
+                <li class="active">
+                    <a href="#">
+                        登录/注册
+                    </a>
+                </li>
+            </ul>
+        </div>
+    </div>
+    <div class="logBodyBg">
+        <img src="../../assets/frontend/images/rl_bg.jpg">
+    </div>
+    <div class="logBg"></div>
+    <div class="logWrap">
+        <div class="logBox">
+            <div class="clearfix log-head">
+                <img src="../../assets/frontend/images/logo.png" class="log-logo left">
+                <p class="title left">登录</p>
+            </div>
+            <form action="#" class="form" id="form_sample_1">
+                <div class="input-group">
+                        <span class="input-group-addon">
+                            <i class="fa fa-phone"></i>
+                        </span>
+                    <input type="text" class="form-control" placeholder="请输入电话号码" name="email">
+                </div>
+                <div class="input-group">
+                        <span class="input-group-addon">
+                            <i class="fa fa-lock"></i>
+                        </span>
+                    <input type="text" class="form-control" placeholder="请输入密码">
+                </div>
+
+                <div class="input-group" style="width:100%;">
+                    <div class="col-sm-8">
+                        <input type="text" id="mobile" class="form-control" placeholder="请输入验证码">
+                    </div>
+                    <div class="col-sm-4 right">
+                        <input type="button" id="getting" class="getcode" value="获取验证码">
+                    </div>
+                </div>
+                <p>
+                    <input type="checkbox"/>我已阅读并接受 <a href="#">《网站注册服务条款》</a>
+                </p>
+                <div class="form-group">
+                    <button class="form-control btn-click">立即登录</button>
+                </div>
+                <div class="form-group">
+                    <a href="register.html" class="right">无账号? 立刻注册</a>
+                </div>
+            </form>
+        </div>
+    </div>
+</div>
+</body>
+    <script src="../../assets/global/plugins/jquery/jquery-1.11.3.min.js"></script>
+    <script src="../../assets/global/plugins/move/js/move.js"></script>
+    <script src="../../assets/frontend/js/global.js"></script>
+    <script src="../../assets/global/plugins/bootstrap-3.3.5-dist/js/bootstrap.min.js"></script>
+    <script src="../../assets/global/plugins/metic/js/jquery.validate.js"></script>
+    <script src="../../assets/global/plugins/metic/js/main.js"></script>
+    <script src="../../assets/global/plugins/metic/js/form-validation.js"></script>
+    <script type="text/javascript">
+        jQuery(document).ready(function() {
+            Main.init(); // init metronic core components
+            FormValidation.init();
+        });
+    </script>
+</html>
