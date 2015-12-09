@@ -202,6 +202,13 @@ table tr td a{display: inline-block;width: 100%;height: 100%;color: #666;line-he
 .notification{padding: 2%;width: 96%;border: 1px solid #dbdbdb;border-radius: 6px;margin-bottom: 10px;}
 .n-head{color: #f98e92;font-size: 18px;padding: 0 0 10px;border-bottom: 1px solid #dbdbdb;}
 .n-content p{line-height: 30px;}
+
+/*authorization*/
+.c_iim{position: absolute;left: 50%;margin-left: -80px;}
+.description{position: relative;top: 100px;}
+.description p{font-size: 18px;color: #b0c0c3;text-align: center;padding: 0 20px;}
+.description p .face{width: 80px;}
+.description .title{font-size: 25px;}
 /*media*/
 @media screen and (max-width: 640px) {
     .details .spinner{margin-top: 12%;}
