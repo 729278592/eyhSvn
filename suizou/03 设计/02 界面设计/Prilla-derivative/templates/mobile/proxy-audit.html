@@ -8,7 +8,8 @@
     <link rel="stylesheet" href="../../assets/global/plugins/font/css/font-awesome.min.css"/>
     <style>
         body{background: #dcdcdc;}
-        .content{overflow: hidden;background: #dcdcdc;text-align: center;}
+        .content{overflow: hidden;text-align: center;}
+        .select-group{position: relative;left: 3px;}
     </style>
 </head>
 <body>
@@ -17,7 +18,7 @@
         <div class="head-main">
             <!--<a href="#" class="return"></a>-->
             <span class="return"></span>
-            <span class="title">审核取消代理</span>
+            <span class="title">代理审核</span>
         </div>
     </div>
     <div class="content">
@@ -30,29 +31,39 @@
             </div>
             <div class="input-group">
                 <p>
-                    <span class="title">微信: </span>
+                    <span class="title">电话: </span>
                     <span class="p-c">132220</span>
                 </p>
             </div>
             <div class="input-group">
                 <p>
-                    <span class="title">等级: </span>
+                    <span class="title">身份证: </span>
                     <span class="p-c">美白天使</span>
                 </p>
             </div>
             <div class="input-group">
+                <select name="" id="" class="select-group">
+                    <option value="高级">高级</option>
+                    <option value="中级">高级</option>
+                    <option value="低级">高级</option>
+                </select>
+            </div>
+            <div class="input-group">
                 <p>
-                    <span class="title">电话: </span>
-                    <span class="p-c">13678478463</span>
+                    <span class="title">代理人姓名: </span>
+                    <span class="p-c">张三</span>
                 </p>
             </div>
             <div class="input-group">
                 <p>
-                    <span class="title">剩余余额: </span>
-                    <span class="p-c num">240</span>
+                    <span class="title">代理人电话: </span>
+                    <span class="p-c">132220</span>
                 </p>
             </div>
-            <input type="submit" value="提交" class="btn-f98"/>
+            <div>
+                <button class="btn-money sure-mony">审核通过</button>
+                <button class="btn-money not-money">审核不通过</button>
+            </div>
         </form>
     </div>
 </div>

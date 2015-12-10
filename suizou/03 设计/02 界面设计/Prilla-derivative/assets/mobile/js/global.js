@@ -19,4 +19,10 @@ $(function(){
     pb.on("click", function () {
         m.addClass("hide");
     });
+
+
+    var j = $(".junior");
+    $(".junior:odd").css({"background": "#fff"});
+    $(".junior:even").css({"background": "#efecec"});
+
 });
