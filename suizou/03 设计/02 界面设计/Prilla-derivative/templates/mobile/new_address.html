@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html>
+<head lang="en">
+    <meta charset="UTF-8">
+    <title>PULRA</title>
+    <meta name="viewport" content="width=device-width; initial-scale=1.0; user-scalable=no;">
+    <link rel="stylesheet" href="../../assets/mobile/css/global.css"/>
+    <link rel="stylesheet" href="../../assets/global/plugins/font/css/font-awesome.min.css"/>
+    <style>
+        body{background: #dcdcdc;}
+        .content{overflow: hidden;background: #dcdcdc;text-align: center;}
+        .apply-name,.apply-phone{text-align: left;color: #666;margin:1% 6%}
+    </style>
+</head>
+<body>
+<div class="wrapper">
+    <div class="head">
+        <div class="head-main">
+            <!--<a href="#" class="return"></a>-->
+            <span class="return"></span>
+            <span class="title">新增地址</span>
+        </div>
+    </div>
+    <div class="content">
+        <p class="apply-name">申请人: 陈小洁</p>
+        <p class="apply-phone">电话号码: 13678478463</p>
+        <form action="" onsubmit="return false" class="form">
+            <div class="input-group">
+                <span class="requried">*</span>
+                <select name="" class="select-group">
+                    <option value="省份">省份</option>
+                    <option value="四川">四川</option>
+                    <option value="广东">广东</option>
+                </select>
+            </div>
+            <div class="input-group">
+                <span class="requried">*</span>
+                <select name="" class="select-group">
+                    <option value="市区">市区</option>
+                    <option value="广安">广安</option>
+                    <option value="南充">南充</option>
+                </select>
+            </div>
+            <div class="input-group">
+                <span class="requried">*</span>
+                <select name="" class="select-group">
+                    <option value="县级">县级</option>
+                    <option value="武胜">武胜</option>
+                    <option value="邻水">邻水</option>
+                </select>
+            </div>
+            <div class="input-group">
+                <label>
+                    <span class="requried">*</span>
+                    <input type="tel" name="" class="input" placeholder="详细地址:"/>
+                </label>
+            </div>
+            <div class="input-group">
+                <label>
+                    <span class="requried">*</span>
+                    <input type="tel" name="" class="input"  placeholder="收货时间:"/>
+                </label>
+            </div>
+            <input type="submit" value="提交" class="btn-f98"/>
+        </form>
+        <div class="error_box">
+
+        </div>
+    </div>
+</div>
+    <script src="../../assets/global/plugins/jquery/jquery-1.11.3.min.js"></script>
+    <script src="../../assets/mobile/js/global.js"></script>
+</body>
+</html>

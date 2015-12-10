@@ -6,6 +6,7 @@
     <title>PULRA</title>
     <link rel="stylesheet" href="../../assets/mobile/css/global.css"/>
     <link rel="stylesheet" href="../../assets/global/plugins/font/css/font-awesome.min.css"/>
+    <link rel="stylesheet" href="../../assets/global/plugins/jquery-spinner/css/jquery.spinner.large.css"/>
 </head>
 <body>
     <div class="wrapper">
@@ -29,7 +30,7 @@
                             <span class="agent-money">代理价 :￥5800</span>
                         </span><br/>
                         <span class="btn relative">
-                            <a href="online-order.html" class="btn-f98">点击下单</a>
+                            <a class="btn-f98">加入购物车</a>
                         </span>
                 </span>
                 </li>
@@ -44,14 +45,42 @@
                             <span class="agent-money">代理价 :￥5800</span>
                         </span><br/>
                         <span class="btn relative">
-                           <a href="online-order.html" class="btn-f98">点击下单</a>
+                            <a class="btn-f98">加入购物车</a>
                         </span>
                 </span>
                 </li>
             </ul>
         </div>
+        <div class="mask hide">
+            <div class="purchase_process">
+                <div class="shopping-goods">
+                    <div class="div-img">
+                        <img src="../../assets/mobile/images/goods1.jpg" alt=""  class="goods-img"/>
+                    </div>
+                    <span class="money">￥:8000</span>
+                    <span class="inventory_number">库存2000件</span>
+                </div>
+                <div class="shopping">
+                    <span>购买数量</span>
+                    <input type="text" class="spinnerExample"/>
+                </div>
+                <ul class="operation">
+                    <li>
+                        <button class="plus-buy">继续购物</button>
+                    </li>
+                    <li>
+                        <button class="active">结算</button>
+                    </li>
+                </ul>
+            </div>
+
+        </div>
     </div>
 </body>
-<script src="../../assets/global/plugins/jquery/jquery-1.11.3.min.js"></script>
-<script src="../../assets/mobile/js/global.js"></script>
+    <script src="../../assets/global/plugins/jquery/jquery-1.11.3.min.js"></script>
+    <script src="../../assets/mobile/js/global.js"></script>
+    <script src="../../assets/global/plugins/jquery-spinner/js/jquery.spinner.js"></script>
+    <script type="text/javascript">
+        $('.spinnerExample').spinner({});
+    </script>
 </html>
