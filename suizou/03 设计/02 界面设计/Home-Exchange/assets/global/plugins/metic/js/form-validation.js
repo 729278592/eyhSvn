@@ -65,7 +65,7 @@ var FormValidation = function () {
                 },
 
                 unhighlight: function (element) { // revert the change done by hightlight
-                    $(element).closest('.input-group').removeClass('has-error'); // set error class to the control group
+                    $(element).closest('.input-group').removeClass('has-error mt'); // set error class to the control group
                 },
 
                 success: function (label) {
