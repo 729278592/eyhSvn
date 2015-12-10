@@ -9,7 +9,6 @@
     <link rel="stylesheet" href="../../assets/global/plugins/jquery-spinner/css/jquery.spinner.large.css"/>
     <style>
         .div-content .money{position: relative;top: 10px;}
-        .div-content .money span{color: #f98f93;}
         .input-group input{background: #f0f0f0;}
     </style>
 </head>
@@ -19,7 +18,7 @@
         <div class="head-main">
             <!--<a href="#" class="return"></a>-->
             <span class="return"></span>
-            <span class="title">在线充值</span>
+            <span class="title">审核充值</span>
         </div>
     </div>
     <div class="content">
@@ -28,21 +27,21 @@
                 <p>免费声明: 此功能只是辅助上级管理与下级的账目,与公司财务未发生任何关系,请代理们尽量严谨的审核充值金额,我公司对代理间因充值产生的纠纷不负责任。</p>
             </div>
         </div>
-        <div class="div-content clearfix">
-            <span class="money">当前余额 <span>0.0</span></span>
-            <a href="recharge-list.html" class="fr btn-f98 btn-reg">查看充值记录>></a>
+        <div class="recharge-data">
+            <p class="title">共有1个数据</p>
+            <div class="recharge-c">
+                <p>充值金额: <span class="num">200</span></p>
+                <p>状态: 待审核</p>
+                <p>时间: 2015/4/20 9:46:04</p>
+                <p style="color: #7ec78b;">睡觉睡觉姐姐(省级代理)</p>
+                <button class="btn-money sure-mony">确认收款</button>
+                <button class="btn-money not-money">未收到款项</button>
+            </div>
         </div>
-        <div class="input-group">
-            <label for="Address">
-                <input type="text" name="" class="input" id="Address" placeholder="请输入充值金额"/>
-            </label>
-        </div>
-        <div class="c-foot">
-            <button class="btn-f98">立即充值</button>
-        </div><!--充值底部-->
+        <p style="text-align: center;color: #333;font-size: 14px;">...没有更多数据</p>
     </div>
 </div>
 </body>
-<script src="../../assets/global/plugins/jquery/jquery-1.11.3.min.js"></script>
-<script src="../../assets/mobile/js/global.js"></script>
+    <script src="../../assets/global/plugins/jquery/jquery-1.11.3.min.js"></script>
+    <script src="../../assets/mobile/js/global.js"></script>
 </html>
