@@ -115,11 +115,11 @@ a.btn-f98{display: inline-block;}
 .operation li .active{background: #fcad32;}
 .mask .spinner{position: absolute;top: 25%;right: 3.2%;}
 .recharge_details{display: inline-block;width: 100%;height: 100%;}
-
+.mask .purchase_process .close{float: right;margin-right: 15px;margin-top: -20px;color: #666;font-size: 24px;}
 
 
 .production-group .check{float: left;font-size: 25px;color: #ff8680;display: inline-block;margin-top: 10%;position: relative;left: -10px;}
-.p-boss{font-size: 14px;width: 94%;margin: 0 3%;}
+.p-boss{font-size: 14px;width: 94%;margin: 0 3%;margin-bottom: 50px;}
 .p-boss .check{position: relative;top: 3px;left: -10px;}
 /*cancel-agent*/
 .c-head{padding: 10px 4%;width: 92%;color: #f98d91;font-size: 18px;border-bottom: 1px solid #dbdbdb;}
