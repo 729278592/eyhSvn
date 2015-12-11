@@ -182,10 +182,13 @@ a.btn-f98{display: inline-block;}
 
 
 /*my-order*/
+table.switch{ border-collapse:collapse;width: 100%;margin: 0 auto;background: #fff;}
+table.switch tr td{ text-align:center;font-size: 14px;border:1px solid #ccc;height: 2.6em;color: #666;}
+table.switch tr td.active{background: #fcad32;color: #fff;border: 1px solid transparent;}
 table{ border-collapse:collapse;width: 100%;margin: 0 auto;background: #fff;}
-tr th,tr td{ text-align:center;font-size: 14px;border:1px solid #ccc;height: 2.6em;color: #666;}
+tr td{ text-align:center;font-size: 14px;border:1px solid #ccc;height: 2.6em;color: #666;}
 .ul-btn{width: 100%;}
-.ul-btn li{float: left;width: 30%;border-bottom: none;position: relative;top: 0px;margin-right: 4.5%;}
+.ul-btn li{float: left;width: 30%;border-bottom: none;position: relative;top: 0;margin-right: 4.5%;}
 .ul-btn li a{color: #fff;width: 100%;height: 30px;border-radius: 4px;font-size: 14px;font-family: "微软雅黑";display: inline-block;text-align: center;line-height: 30px;background: #c3bebb;}
 .ul-btn li.active a{background: #f98d91;}
 .ul-btn li:last-child{margin-right: 0;}
@@ -195,7 +198,8 @@ tr th,tr td{ text-align:center;font-size: 14px;border:1px solid #ccc;height: 2.6
 .b-content{padding: 20px 3%;width: 94%;border-bottom: 1px solid #dbdbdb;color: #666;}
 .b-content .money{font-size: 18px;color: #f98d91;margin-top: 10%;}
 .b-foot{padding: 4% 3%;width: 94%;color: #666;border-bottom: 1px solid #dbdbdb;}
-
+.switch-div{display: none;width: 100%;}
+.switch-div.active{display: inline-block;}
 
 
 /**/

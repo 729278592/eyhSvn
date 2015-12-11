@@ -76,33 +76,35 @@ var yy = $(".yhgr_u li a");
         });
 
     /*Addition and subtraction of the quantity of goods*/
-    var p = $(".plus"),
-        bq = $(".btn3"),
-        bo = $(".btn2"),
-        i = p.val();
-        p.val(1);
-    if(i == 1){
-        bq.addClass("to_disabled");
-    }
-    bo.on("click",function(){
-        p.val(++i)
-        if(i>1){
-            bq.removeClass("to_disabled");
-        }
+//    var p = $(".plus"),
+//        bq = $(".btn3"),
+//        bo = $(".btn2"),
+//        i = p.val();
+//        p.val(1);
+//    if(p.val() == 1){
+//        bq.addClass("to_disabled");
+//    }
+//    bo.on("click",function(){
+//        p.val(++i);
+//        if(i>1){
+//            bq.removeClass("to_disabled");
+//        }
+//
+//    });
+//
+//    bq.on("click",function(){
+//         if(i > 1){
+//            p.val(--i);
+//            $(this).removeClass("to_disabled");
+//             if(i == 1){
+//                 $(this).addClass("to_disabled");
+//                 p.val(1);
+//             }
+//        }
+//    });
 
-    });
 
-    bq.on("click",function(){
-         if(i > 1){
-            p.val(--i);
-            $(this).removeClass("to_disabled");
-             if(i == 1){
-                 $(this).addClass("to_disabled");
-                 p.val(1);
-             }
-        }
 
-    });
 
 
 

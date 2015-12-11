@@ -506,5 +506,73 @@
         })
     })
 </script>
+<script>
+    (function($){
+        var methods = {
+            init:function(_this){
+                spinner = _this.find(".plus");
+                btn3 = _this.find(".btn3");
+                btn2 = _this.find(".btn2");
+                iNow = 1;
+                methods.clickPlus();
+                methods.clickjian();
+                methods.keydown();
+                spinner.val(iNow);
+                if(spinner.val() == 1){
+                    btn3.addClass("to_disabled");
+                }
+            },
+            clickPlus:function(){
+                btn2.on("click",function(){
+                    iNow = spinner.val();
+                    ++iNow;
+                    spinner.val(iNow);
+                    if(iNow>1){
+                        btn3.removeClass("to_disabled");
+                    }
+                });
+            },
+            clickjian:function(){
+                btn3.on("click",function(){
+                    iNow = spinner.val();
+                    if(iNow > 1){
+                        spinner.val(--iNow);
+                        $(this).removeClass("to_disabled");
+                        if(iNow == 1){
+                            $(this).addClass("to_disabled");
+                            spinner.val(1);
+                        }
+                    }
+                });
+            },
+            keydown:function(){
+                spinner.keypress(function(event) {
+                    var keyCode = event.which;
+                    iNow = spinner.val();
+                    if (keyCode >= 48 && keyCode <=57){
+                        if(keyCode==48||keyCode == 49){
+                            btn3.addClass("to_disabled");
+                        }
+                        else if(keyCode >= 50 && keyCode <=57){
+                            btn3.removeClass("to_disabled");
+                        }
+                    }
+                    else if(keyCode == 45){
+                        setTimeout(function(){
+                            spinner.val(1)
+                        },1000)
+                    }
+                    else{
+                        alert("只能输入数字哦");
+                        return false;
+                    }
+                }).focus(function() {
+                    this.style.imeMode='disabled';
+                });
+            }
+        };
+        methods.init($(".cs_span"))
+    })(jQuery);
+</script>
 </body>
 </html>
