@@ -132,7 +132,7 @@ a.btn-f98{display: inline-block;}
 /*order-details*/
 .order-group{width: 100%;position: relative;}
 .order-bg{width: 100%;float: left;}
-.order-group .details{width: 100%;}
+.order-group .details{width: 100%;margin-bottom: 20px;}
 .order-group .details .title{display: inline-block;width: 70px;height: 70px;background: #f6f4f4;text-align: center;border-radius: 70px;color: #666;line-height: 70px;font-size: 20px;position: relative;left: 20px;top: -30px;}
 .order-group .details .details-content{display: inline-block;width: 400px;height: 150px;background: #f6f4f4;position: relative;border-radius: 8px;left: 55px;top: 10px;}
 .order-group .details .details-content .fa{font-size: 80px;position: absolute;left: -27px;top: 45px;color: #f6f4f4;}
@@ -321,6 +321,12 @@ table tr td a{display: inline-block;width: 100%;height: 100%;color: #666;line-he
 @media screen and (max-width: 568px) {
     .production-group li .details span{padding:0 2.4%;}
     .production-group li .money span{padding: 0;font-size: 14px;}
+    .order-group .details{margin-bottom: 20px;}
+    .order-group .details .title{width: 70px;height: 70px;line-height: 70px;font-size: 20px;left: 10px;top: -30px;}
+    .order-group .details .details-content{width: 400px;height: 150px;border-radius: 8px;left: 45px;top: 10px;}
+    .order-group .details .details-content .fa{font-size: 80px;left: -27px;top: 45px;}
+    .order-group .details .details-content p{padding: 15px 40px 0;border-radius: 4px;font-size: 18px;}
+
 }
 
 @media screen and (max-width: 480px) {
@@ -333,6 +339,11 @@ table tr td a{display: inline-block;width: 100%;height: 100%;color: #666;line-he
     .details .spinner{margin-left: 32%;}
     .address-group{font-size: 14px;}
     .production-group .check{margin-top: 15%;}
+    .order-group .details{margin-bottom: 20px;}
+    .order-group .details .title{width: 55px;height: 55px;line-height: 55px;font-size: 18px;left: 10px;top: -30px;}
+    .order-group .details .details-content{width: 300px;height: 130px;border-radius: 8px;left: 45px;top: 10px;}
+    .order-group .details .details-content .fa{font-size: 80px;left: -25px;top: 25px;}
+    .order-group .details .details-content p{padding: 10px 40px 0;border-radius: 4px;font-size: 16px;}
 }
 
 
@@ -345,11 +356,20 @@ table tr td a{display: inline-block;width: 100%;height: 100%;color: #666;line-he
     .m-head .details{margin-top: 6%;font-size: 14px;}
     .details .spinner{margin-left: 38%;}
     .mask .spinner {position: absolute;top: 15%;}
+    .order-group .details{margin-bottom: 20px;}
+    .order-group .details .title{width: 55px;height: 55px;line-height: 55px;font-size: 18px;left: 10px;top: -30px;}
+    .order-group .details .details-content{width: 260px;height: 130px;border-radius: 8px;left: 45px;top: 10px;}
+    .order-group .details .details-content .fa{font-size: 80px;left: -25px;top: 25px;}
+    .order-group .details .details-content p{padding: 10px 20px 0;border-radius: 4px;font-size: 16px;}
 }
 
 @media screen and (max-width: 375px) {
     .address-group .address{width: 87%;left: 12%;}
     .address-group .people{position: absolute;top: 13px;left: 15%;}
+    .order-group .details .title{width: 55px;height: 55px;line-height: 55px;font-size: 18px;left: -5px;top: -30px;}
+    .order-group .details .details-content{width: 240px;height: 130px;border-radius: 8px;left: 28px;top: 5px;}
+    .order-group .details .details-content .fa{font-size: 80px;left: -25px;top: 25px;}
+    .order-group .details .details-content p{padding: 6px 20px 0;border-radius: 4px;font-size: 16px;}
 }
 
 @media screen and (max-width: 360px) {
@@ -365,4 +385,8 @@ table tr td a{display: inline-block;width: 100%;height: 100%;color: #666;line-he
 
 @media screen and (max-width: 320px) {
     .details .spinner{margin-top: 8%;}
+    .order-group .details .title{width: 55px;height: 55px;line-height: 55px;font-size: 18px;left: -5px;top: -30px;}
+    .order-group .details .details-content{width: 210px;height: 130px;border-radius: 8px;left: 28px;top: 0px;}
+    .order-group .details .details-content .fa{font-size: 80px;left: -25px;top: 25px;}
+    .order-group .details .details-content p{padding: 6px 10px 0;border-radius: 4px;font-size: 16px;}
 }
