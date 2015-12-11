@@ -119,12 +119,8 @@ a.btn-f98{display: inline-block;}
 
 
 .production-group .check{float: left;font-size: 25px;color: #ff8680;display: inline-block;margin-top: 10%;position: relative;left: -10px;}
-.total_quantity,.total{font-size: 18px;font-weight: bold;width: 94%;margin: 0 3%;}
-.order-group .check{float: left;font-size: 25px;color: #ff8680;display: inline-block;margin-top: 10%;position: relative;left: -10px;}
-.total_quantity,.total{padding:1% 0;font-size: 18px;font-weight: bold;}
-.total{color: #ff8680;}
 .p-boss{font-size: 14px;width: 94%;margin: 0 3%;}
-
+.p-boss .check{position: relative;top: 3px;left: -10px;}
 /*cancel-agent*/
 .c-head{padding: 10px 4%;width: 92%;color: #f98d91;font-size: 18px;border-bottom: 1px solid #dbdbdb;}
 .c-content{padding: 10px 4%;width: 92%;color: #666;border-bottom: 1px solid #dbdbdb;}
@@ -136,12 +132,14 @@ a.btn-f98{display: inline-block;}
 /*order-details*/
 .order-group{width: 100%;position: relative;}
 .order-bg{width: 100%;float: left;}
-.details{width: 100%;}
-.details .title{display: inline-block;width: 13.1%;height: 13.1%;background: red;text-align: center;border-radius: 78px;}
-
-
-
-
+.order-group .details{width: 100%;}
+.order-group .details .title{display: inline-block;width: 70px;height: 70px;background: #f6f4f4;text-align: center;border-radius: 70px;color: #666;line-height: 70px;font-size: 20px;position: relative;left: 20px;top: -30px;}
+.order-group .details .details-content{display: inline-block;width: 400px;height: 150px;background: #f6f4f4;position: relative;border-radius: 8px;left: 55px;top: 10px;}
+.order-group .details .details-content .fa{font-size: 80px;position: absolute;left: -27px;top: 45px;color: #f6f4f4;}
+.order-group .details .details-content p{padding: 15px 40px 0;border-radius: 4px;font-size: 18px;}
+.order-group .total .title{background: #f9ca8d;}
+.order-group .total .details-content{background: #f9ca8d;}
+.order-group .total .details-content .fa{color: #f9ca8d;}
 /*check-center*/
 .check-menu{width: 94%;margin: 15px 3%;border: 1px solid #f98d91;border-radius: 4px;text-align: center;}
 .check-menu li{width: 33.333%;color: #f98d91;padding: 10px 0;float: left;position: relative;}
@@ -161,7 +159,7 @@ a.btn-f98{display: inline-block;}
 .form{margin-bottom: 20px;}
 
 /*apply-upgrade*/
-.details .spinner{margin-left: 163px;margin-top: 10%;}
+.details .spinner{margin-left: 183px;margin-top: 10%;}
 .prompt{background: #eeecec;width: 96%;padding: 2%;}
 .prompt-p{width: 96%;border: 1px solid #f98d91;color: #ff6965;padding: 2%;border-radius: 4px;}
 .prompt-p p{line-height: 25px;font-size: 16px;}
@@ -222,7 +220,7 @@ table tr td a{display: inline-block;width: 100%;height: 100%;color: #666;line-he
 .div-title a span{font-size: 14px;color: #666;}
 .div-title a .more{display: inline-block;width: 25px;height: 25px;;background: url("../images/icon.png") no-repeat;background-position: -70px -4px;}
 .div-title a .money{color: #f98e92;}
-
+.address-details,.div-content .address {padding-left: 23px;}
 
 
 /*notification-center*/
@@ -273,7 +271,7 @@ table tr td a{display: inline-block;width: 100%;height: 100%;color: #666;line-he
 .address-group .phone{position: absolute;right: 6%;top: 15px;}
 .address-group .fa{position: absolute;right: 2%;top: 30%;font-size: 30px;color: #666;}
 .address-group .people{position: absolute;top: 13px;}
-.address-group .address{;position:relative;bottom: 0;width: 88%;display: inline-block;left: 9%;}
+.address-group .address{;position:relative;bottom: 0;width: 88%;display: inline-block;left: 9%;padding: 0;}
 .address-group .default{color: #ff0404;font-size: 14px;position: absolute;top: 55%;left: 3.5%;}
 .add_address{position: fixed;left: 0;right: 0;bottom:0;background: #fc6b32;text-align: center;color: #fff;font-size: 18px;padding: 3% 0;display: inline-block;max-width: 640px;}
 .span-address{display: inline-block;width: 8%;height: 100%;}
@@ -345,7 +343,7 @@ table tr td a{display: inline-block;width: 100%;height: 100%;color: #666;line-he
     .production-group li .btn{top: 32px;left: 10px;}
     .production-group li .money span{padding: 0;font-size: 14px;}
     .m-head .details{margin-top: 6%;font-size: 14px;}
-    .details .spinner{margin-left: 33%;}
+    .details .spinner{margin-left: 38%;}
     .mask .spinner {position: absolute;top: 15%;}
 }
 
