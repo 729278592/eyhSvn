@@ -645,7 +645,7 @@ table{ border-collapse:collapse;width: 96%;margin: 10px auto;}
 tr th,tr td{ text-align:center;font-size: 14px;border:1px solid #fbb432;color: #565656;height: 2.6em;}
 .keep-commont{position: relative;width: 660px;height: 290px;}
 .keep-mask-bg,.keep-mask{position: absolute;width: 120px;height: 100px;padding: 15px;top: 0;left: 0;}
-.keep-mask-bg{background: #000;opacity: 0.6;filter:alpha(opacity=60);}
+.keep-mask-bg{background: #23bfa8;opacity: 0.6;filter:alpha(opacity=60);}
 .keep-mask{color: #fff;line-height: 22px;font-size: 14px;}
 .reserve{width: 330px;}
 .reserve>.title{width: 310px;background: #52ba92;color: #fff;height: 45px;line-height: 45px;padding: 0 10px;}
@@ -674,7 +674,7 @@ tr th,tr td{ text-align:center;font-size: 14px;border:1px solid #fbb432;color: #
 .reserve-indormation>.total-title{padding-bottom: 0;}
 .textarea{background: #fff;width: 290px;border: none;padding: 5px 10px;height:70px;color: #666;border-radius: 4px;}
 .div-order{width: 100%;text-align: center;}
-.btn-order{width: 60}
+.btn-order{width: 100px;height:34px;line-height: 34px;background: #fbb432;color: #fff;border-radius: 4px;}
 /*media*/
 @media screen and (max-width: 1024px) {
     .wrapper{overflow-x: scroll;}
