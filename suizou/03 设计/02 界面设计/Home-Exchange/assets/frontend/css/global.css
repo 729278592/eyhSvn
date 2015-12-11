@@ -651,6 +651,7 @@ tr th,tr td{ text-align:center;font-size: 14px;border:1px solid #fbb432;color: #
 .reserve>.title{width: 310px;background: #52ba92;color: #fff;height: 45px;line-height: 45px;padding: 0 10px;}
 .reserve-indormation{background: #edf7f3;width: 310px;padding: 0 10px;padding-bottom: 30px;}
 .reserve-indormation>.title{padding: 10px 0;color: #999;font-size: 14px;}
+.reserve-indormation>.pt0{padding-top: 0;}
 .reserve-date{width: 100%;}
 .div-wdate{width: 198px;height: 40px;background: #fff;position: relative;}
 .div-wdate .Wdate{border: none;background: transparent;width: 198px;height: 40px;line-height: 40px;position: relative;z-index: 5;padding-left: 10px;}
@@ -670,12 +671,32 @@ tr th,tr td{ text-align:center;font-size: 14px;border:1px solid #fbb432;color: #
 .btn-plus{position: absolute;top: 1px;right: 0;border-left: 1px solid #d0d0d0;}
 .btn-reduce{position: absolute;top: 1px;left: 0;border-right: 1px solid #d0d0d0;}
 .to_disabled{color: #ccc;cursor: not-allowed;}
-.total{margin: 10px 0;}
+.total{margin: 10px 0;font-size: 18px;}
 .reserve-indormation>.total-title{padding-bottom: 0;}
-.textarea{background: #fff;width: 290px;border: none;padding: 5px 10px;height:70px;color: #666;border-radius: 4px;}
+.reserve-indormation .textarea{background: #fff;width: 290px;border: none;padding: 5px 10px;height:70px;color: #333;border-radius: 4px;}
 .div-order{width: 100%;text-align: center;}
 .btn-order{width: 100px;height:34px;line-height: 34px;background: #fbb432;color: #fff;border-radius: 4px;}
+
+
+
+/*homeServices-nursingworkers*/
+.nursingworkers{background: #fff;padding: 10px;width: 1004px;}
+.nw-details{background: #fff;width: 100%;}
+.nwd-div{padding: 10px;width: 640px;background: #fafafa;}
+.nwd-div img{float: left;margin-right: 25px;}
+.operation-div{position: relative;height: 281px;margin-bottom: 10px;}
+.operation-div .title{width: 90px;height: 30px;line-height: 30px;border:1px solid #dbdbdb;text-align: center;color: #333;position: absolute;top: 10px;left: 385px;}
+.operation-div p{font-size: 14px;color: #999;position: relative;top: 50px;margin-bottom: 10px;}
+.patient-input{width: 300px;height: 40px;padding-left: 10px;}
+.js-btn{margin-top: 15px;}
+.js-btn button{width: 48.5%;background: #fff;height: 40px;line-height: 40px;text-align: center;color: #666;}
+.js-btn button.active{background: #52ba92;color: #fff;}
+.btn-man{margin-right: 1%;}
+.brn-woman{}
+
+
+
 /*media*/
 @media screen and (max-width: 1024px) {
-    .wrapper{overflow-x: scroll;}
+    body{overflow-x: scroll;}
 }

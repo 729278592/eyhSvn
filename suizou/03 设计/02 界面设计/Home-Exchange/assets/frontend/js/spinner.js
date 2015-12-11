@@ -44,6 +44,12 @@
                         reduce.removeClass("to_disabled");
                     }
                     methods.totalMoney();
+                    if(spinneriNow>opts.maxNum){
+                        spinner.val('购买数量不能超过'+opts.maxNum+'哦');
+                        spinner.addClass("cuo");
+                        total.text("NaN");
+                    }
+
                     methods.isNaN();
                 });
             },
@@ -58,6 +64,7 @@
                             spinner.val(opts.defineNum);
                         }
                     }
+
                     methods.totalMoney();
                     methods.isNaN();
                 });
@@ -93,7 +100,7 @@
                     if(spinneriNow>opts.maxNum){
                         spinner.val('购买数量不能超过'+opts.maxNum+'哦');
                         spinner.addClass("cuo");
-                        total.text(" ");
+                        total.text("NaN");
                     }
                 })
             }
