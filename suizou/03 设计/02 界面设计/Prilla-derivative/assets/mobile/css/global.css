@@ -245,7 +245,7 @@ table tr td a{display: inline-block;width: 100%;height: 100%;color: #666;line-he
 .recharge-data{width: 96%;margin:2% auto;border: 1px solid #dbdbdb;border-radius: 4px;}
 .recharge-data .title{width: 96%;padding: 2%;font-size: 14px;color: #333;}
 .recharge-c{width: 96%;padding: 2%;color: #666;font-size: 14px;border-top: 1px solid #dbdbdb;}
-.recharge-c p{line-height: 22px;}
+.recharge-c p{line-height: 25px;}
 .recharge-c p .num{color: #f98e92;}
 .btn-money{width: 90px;height: 26px;background: #f98e92;color: #fff;font-size: 14px;border-radius: 4px;}
 .sure-mony{margin-right: 10px;}
