@@ -198,12 +198,12 @@ tr td{ text-align:center;font-size: 14px;border:1px solid #ccc;height: 2.6em;col
 .b-foot{padding: 4% 3%;width: 94%;color: #666;border-bottom: 1px solid #dbdbdb;}
 .switch-div{display: none;width: 100%;}
 .switch-div.active{display: inline-block;}
-.company{width: 320px;background: #fff;position: absolute;top: 50%;text-align: center;left: 50%;margin-left: -160px;}
+.company{width: 320px;background: #fff;position: absolute;top: 50%;text-align: center;left: 50%;margin-left: -160px;margin-top: -83px;}
 .conmpany-head{width: 100%;background: #f98d91;height: 34px;line-height: 34px;color: #fff;position: relative;}
 .conmpany-head .close{color: #fff;position: absolute;right: 10px;top: 0;}
 .conmpany-content{width: 100%;margin: 30px 0;color: #666;font-size: 14px;}
-.express-input{width: 200px;height: 34px;line-height:34px;padding-left: 10px;background: #f1f1f1;border-radius: 4px;}
-
+.express-input{width: 200px;height: 34px;line-height:34px;padding-left: 10px;background: #f1f1f1;border-radius: 4px;margin-bottom: 10px;}
+.conmpany-content .information{display: inline-block;width: 80px;text-align: left;}
 
 
 /**/
