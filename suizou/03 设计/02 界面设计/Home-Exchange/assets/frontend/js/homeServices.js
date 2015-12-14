@@ -8,8 +8,16 @@
             rentalMode = _this.find(".rental_mode");
             radio      = _this.find("input:radio");
             checkbox   = _this.find("input:checkbox");
+            btnClear   = $(".btn-clear");
             Method.radioClick();
             Method.checkboxClick();
+            Method.clearClick()
+        },
+        clearClick:function(){
+            btnClear.on("click",function(){
+                rentalMode.find("input").removeClass("selected");
+                rentalMode.removeClass("active");
+            })
         },
         radioClick:function(){
             radio.parent(rentalMode).on("click",function(){
@@ -44,11 +52,6 @@
             })
         }
     };
-    Method.init($(".search-terms"));
-//    var bc = $(".btn-clear");
-//    bc.on("click",function(){
-//        rentalMode.find("input").removeClass("selected");
-//        rentalMode.removeClass("active");
-//    })
+    Method.init($(".search-terms,.service-type"));
 })(jQuery);
 

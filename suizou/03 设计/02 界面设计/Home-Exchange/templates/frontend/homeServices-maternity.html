@@ -57,42 +57,43 @@
         <div class="content">
             <div class="content-main">
                 <div class="server-type">
-                    <ul class="search-terms">
-                        <li class="clearfix">
-                            <div class="left">
-                                <i class="fa fa-home"></i>
-                                <span class="title">服务区域</span>
-                                <select name="">
-                                    <option value="南坪">南坪</option>
-                                    <option value="渝中">渝中</option>
-                                    <option value="渝北">渝北</option>
-                                </select>
-                            </div>
-                            <div class="right">
-                                <i class="fa fa-users"></i>
-                                <span style="width: 40px;display: inline-block;">籍贯</span>
-                                <select name="">
-                                    <option value="不限">不限</option>
-                                    <option value="四川">四川</option>
-                                    <option value="广东">广东</option>
-                                    <option value="贵州">贵州</option>
-                                </select>
-                            </div>
-                        </li>
-                        <li>
-                            <i class="fa fa-money"></i>
-                            <span class="title">价格</span>
-                            <div class="slider-money">
-                                <div id="slider-range" class="bg-blue">
+                    <form action="#">
+                        <ul class="search-terms">
+                            <li class="clearfix">
+                                <div class="left">
+                                    <i class="fa fa-home"></i>
+                                    <span class="title">服务区域</span>
+                                    <select name="">
+                                        <option value="南坪">南坪</option>
+                                        <option value="渝中">渝中</option>
+                                        <option value="渝北">渝北</option>
+                                    </select>
                                 </div>
-                                <div>
-                                    Value: <span id="slider-range-amount"></span>
+                                <div class="right">
+                                    <i class="fa fa-users"></i>
+                                    <span style="width: 40px;display: inline-block;">籍贯</span>
+                                    <select name="">
+                                        <option value="不限">不限</option>
+                                        <option value="四川">四川</option>
+                                        <option value="广东">广东</option>
+                                        <option value="贵州">贵州</option>
+                                    </select>
                                 </div>
-                            </div>
-                        </li>
-                        <li>
-                            <i class="fa fa-bars"></i>
-                            <span class="title">服务内容</span>
+                            </li>
+                            <li>
+                                <i class="fa fa-money"></i>
+                                <span class="title">价格</span>
+                                <div class="slider-money">
+                                    <div id="slider-range" class="bg-blue">
+                                    </div>
+                                    <div>
+                                        Value: <span id="slider-range-amount"></span>
+                                    </div>
+                                </div>
+                            </li>
+                            <li>
+                                <i class="fa fa-bars"></i>
+                                <span class="title">服务内容</span>
                             <span class="rental_mode w110">
                                 <input type="checkbox" name="type" class=""/>
                                 不限
@@ -113,10 +114,10 @@
                                 <input type="checkbox" name="type" class=""/>
                                 小便护理及睡眠护理
                             </span>
-                        </li>
-                        <li>
-                            <i class="fa fa-bars"></i>
-                            <span class="title">性别</span>
+                            </li>
+                            <li>
+                                <i class="fa fa-bars"></i>
+                                <span class="title">性别</span>
                             <span class="rental_mode w110">
                                 <input type="radio" name="type" class=""/>
                                 不限
@@ -129,10 +130,10 @@
                                 <input type="radio" name="type" class=""/>
                                 女
                             </span>
-                        </li>
-                        <li>
-                            <i class="fa fa-bars"></i>
-                            <span class="title">经验</span>
+                            </li>
+                            <li>
+                                <i class="fa fa-bars"></i>
+                                <span class="title">经验</span>
                             <span class="rental_mode w110">
                                 <input type="checkbox" name="type" class=""/>
                                 不限
@@ -149,10 +150,10 @@
                                 <input type="checkbox" name="type" class=""/>
                                 三年以上
                             </span>
-                        </li>
-                        <li>
-                            <i class="fa fa-bars"></i>
-                            <span class="title">专业内容</span>
+                            </li>
+                            <li>
+                                <i class="fa fa-bars"></i>
+                                <span class="title">专业内容</span>
                             <span class="rental_mode w110">
                                 <input type="checkbox" name="type" class=""/>
                                 不限
@@ -169,12 +170,13 @@
                                 <input type="checkbox" name="type" class=""/>
                                 家政服务三级
                             </span>
-                        </li>
-                    </ul>
-                    <div class="operation-btn">
-                        <button class="btn-screen">筛选</button>
-                        <button class="btn-clear">清空</button>
-                    </div>
+                            </li>
+                        </ul>
+                        <div class="operation-btn">
+                            <input type="submit" value="筛选" class="btn-screen"/>
+                            <input type="reset"  value="清空" class="btn-clear"/>
+                        </div>
+                    </form>
                     <div class="m-title">月嫂</div>
                     <ul class="m-list">
                         <li>

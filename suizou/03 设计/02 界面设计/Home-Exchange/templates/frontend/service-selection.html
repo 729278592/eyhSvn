@@ -3,7 +3,7 @@
 <head lang="en">
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1" />
-    <title>保洁</title>
+    <title>服务选择</title>
     <link rel="stylesheet" href="../../assets/global/plugins/font/css/font-awesome.min.css"/>
     <link rel="stylesheet" href="../../assets/frontend/css/global.css"/>
 </head>
@@ -20,7 +20,7 @@
                             首页
                         </a>
                     </li>
-                    <li>
+                    <li class="active">
                         <a href="#">
                             家庭服务
                         </a>
@@ -30,7 +30,7 @@
                             牛管家
                         </a>
                     </li>
-                    <li class="active">
+                    <li>
                         <a href="#">
                             学家务
                         </a>
@@ -55,86 +55,128 @@
         </div>
         <div class="content">
             <div class="content-main">
-                <img src="../../assets/frontend/images/keeper1.jpg" />
-                <div class="keeper clearfix">
-                    <div class="keep-details left">
-                        <div class="div-table">
-                            <p class="title">
-                                <span class="left">参考使用时间</span>
-                                <span class="right">25/小时,2小时起</span>
-                            </p>
-                            <table>
-                                <tbody>
-                                <tr>
-                                    <td>房屋面积</td>
-                                    <td>≤60m²</td>
-                                    <td>60-140m²</td>
-                                    <td>≥140m²</td>
-                                </tr>
-                                <tr>
-                                    <td>参考耗时</td>
-                                    <td>2-3.5小时</td>
-                                    <td>2.5-4小时</td>
-                                    <td>5小时起</td>
-                                </tr>
-                                <tr>
-                                    <td>参考费用</td>
-                                    <td>80元</td>
-                                    <td>120元</td>
-                                    <td>220元</td>
-                                </tr>
-                                </tbody>
-                            </table>
-                        </div>
-                        <div class="keep-commont">
-                            <div class="keep-mask-bg"></div>
-                            <div class="keep-mask">我们的保洁服务人员将会最快速、最认真、最完善的完成您的任务</div>
-                            <img src="../../assets/frontend/images/keeper2.jpg" />
+                <div class="service-select">
+                    <div class="service-type">
+                        <p class="st-head">衣柜整理</p>
+                        <div class="st-content">
+                            <span class="rental_mode w110">
+                                <input type="checkbox" name="type" class=""/>
+                                衣柜整理
+                            </span>
+                            <span class="rental_mode w110">
+                                <input type="checkbox" name="type" class=""/>
+                                衣物整理
+                            </span>
+                            <span class="rental_mode w110">
+                                <input type="checkbox" name="type" class=""/>
+                                植物代养
+                             </span>
+                            <span class="rental_mode w110">
+                                <input type="checkbox" name="type" class=""/>
+                                衣柜翻新
+                            </span>
+                            <span class="rental_mode w110">
+                                <input type="checkbox" name="type" class=""/>
+                                衣柜保养
+                            </span>
+                            <span class="rental_mode w110">
+                                <input type="checkbox" name="type" class=""/>
+                                生活费用代缴
+                            </span>
                         </div>
                     </div>
-                    <div class="reserve right">
+                    <div class="service-type">
+                        <p class="st-head">保洁服务</p>
+                        <div class="st-content">
+                            <span class="rental_mode w110">
+                                <input type="checkbox" name="type" class=""/>
+                                清洁房间
+                            </span>
+                            <span class="rental_mode w110">
+                                <input type="checkbox" name="type" class=""/>
+                                地板整理
+                            </span>
+                            <span class="rental_mode w110">
+                                <input type="checkbox" name="type" class=""/>
+                                灯具清洗
+                             </span>
+                            <span class="rental_mode w110">
+                                <input type="checkbox" name="type" class=""/>
+                                瓷砖护理
+                            </span>
+                        </div>
+                    </div>
+                    <div class="service-type">
+                        <p class="st-head">植物代养</p>
+                        <div class="st-content">
+                            <span class="rental_mode w110">
+                                <input type="checkbox" name="type" class=""/>
+                                植物修剪
+                            </span>
+                            <span class="rental_mode w110">
+                                <input type="checkbox" name="type" class=""/>
+                                植物日常浇水
+                            </span>
+                            <span class="rental_mode w110">
+                                <input type="checkbox" name="type" class=""/>
+                                植物施肥
+                             </span>
+                            <span class="rental_mode w110">
+                                <input type="checkbox" name="type" class=""/>
+                                植物脸
+                            </span>
+                        </div>
+                    </div>
+                    <div class="service-type">
+                        <p class="st-head">皮具护理</p>
+                        <div class="st-content">
+                            <span class="rental_mode w110">
+                                <input type="checkbox" name="type" class=""/>
+                                皮具翻新
+                            </span>
+                            <span class="rental_mode w110">
+                                <input type="checkbox" name="type" class=""/>
+                                皮具修复
+                            </span>
+                            <span class="rental_mode w110">
+                                <input type="checkbox" name="type" class=""/>
+                                皮具保养
+                            </span>
+                        </div>
+                    </div>
+                    <div class="reserve service-reserve">
                         <p class="title">在线预订</p>
-                        <div class="reserve-indormation">
+                        <div class="reserve-indormation rs-indormation">
                             <p class="title">请输入您需要服务的时间</p>
                             <div class="reserve-date clearfix">
                                 <div class="div-wdate left">
                                     <input id="d4311" class="Wdate" type="text" placeholder="2015-10-10" onFocus="WdatePicker({minDate:'%y-%M-{%d}'})"/>
                                     <i class="fa fa-calendar"></i>
                                 </div>
-                                <select name="" id="" class="select-time right">
+                                <select name="" class="select-time">
+                                    <option value="时间">时间</option>
+                                    <option value="2015-10-10">2015-10-10</option>
+                                    <option value="2015-10-10">2015-10-10</option>
+                                </select>
+                                <select name="" class="select-time">
                                     <option value="时间">时间</option>
                                     <option value="2015-10-10">2015-10-10</option>
                                     <option value="2015-10-10">2015-10-10</option>
                                 </select>
                             </div>
-                            <p class="title" style="padding-top: 0;">请输选择时间　　单位: 小时　　价格: <span class="num unit-price">50</span>元/小时</p>
-                            <span class="s-spinner">
-                                <input type="text" class="spinner"/>
-                                <button class="btn-common btn-plus">+</button>
-                                <button class="btn-common btn-reduce" disabled="disabled">-</button>
-                            </span>
-                            <p class="title total-title">总价 : <span class="num total">0</span></p>
-                            <p class="title">更多需求</p>
-                            <textarea style="resize: none" name=""  cols="50" rows="3" class="textarea"   placeholder="您可以在这里备注需求"></textarea>
-                            <p class="title">
-                                <input type="checkbox"/> 我已经阅读并同意《家服汇用户使用协议》
-                            </p>
+                            <p class="title" style="padding-top: 0;">请输入您需要服务的地址</p>
+                            <input type="text" class="w100" placeholder="请输入您所在的街道小区"/>
+                            <input type="text" class="w100" placeholder="请输入您所在的楼层、门牌号"/>
+                            <div class="select-num clearfix">
+                                <span class="right">
+                                    您选中的选项共<span class="num">5</span>项 实付款: <span class="num">￥35000.00</span>
+                                </span>
+                            </div>
                             <div class="div-order">
                                 <input type="submit" value="下单" class="btn-order"/>
                             </div>
                         </div>
                     </div>
-                </div>
-                <div class="server-step">
-                    <p class="title">服务流程</p>
-                    <img src="../../assets/frontend/images/step-img.png" class="step-img"/>
-                </div>
-                <div class="tool clearfix">
-                    <p class="title">专业保洁工具</p>
-                    <img src="../../assets/frontend/images/keeper3.jpg" class="left w510"/>
-                    <img src="../../assets/frontend/images/keeper3.jpg" class="right w510"/>
-                    <img src="../../assets/frontend/images/keeper5.jpg" class="mt5"/>
-                    <img src="../../assets/frontend/images/keeper5.jpg" class="mt5"/>
                 </div>
             </div>
         </div>
@@ -217,16 +259,7 @@
     </div>
 </body>
     <script type="text/javascript" src="../../assets/global/plugins/jquery/jquery-1.11.3.min.js"></script>
-    <script src="../../assets/global/plugins/My97DatePicker/WdatePicker.js"></script>
     <script src="../../assets/global/plugins/move/js/move.js"></script>
     <script src="../../assets/frontend/js/global.js"></script>
-    <script src="../../assets/frontend/js/spinner.js"></script>
-    <script type="text/javascript">
-        (function($){
-            $(".s-spinner").spinner({
-                defaultNum:0,
-                maxNum:100
-            })
-        })(jQuery)
-    </script>
+    <script src="../../assets/frontend/js/homeServices.js"></script>
 </html>
