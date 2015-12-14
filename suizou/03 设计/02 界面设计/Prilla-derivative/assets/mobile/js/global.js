@@ -47,20 +47,4 @@ $(function(){
         });
     }
     deliveryStatusSwitch();
-
-
-
-    /*快递订单控制*/
-    function expressShow(){
-        var bg = $(".btn-goods");
-        var m = $(".mask");
-        var cc = $(".conmpany-head .close");
-        bg.on("click",function(){
-            m.removeClass("hide")
-        });
-        cc.on("click",function(){
-            m.addClass("hide")
-        })
-    }
-    expressShow()
 });

@@ -209,6 +209,7 @@
                 <div class="conmpany-content">
                     <span class="information">公司名称</span> <input type="text" class="express-input" placeholder="请输入公司名称"/>
                     <span class="information">快递订单号</span> <input type="text" class="express-input" placeholder="请输入快递单号"/>
+                    <button class="btn-sure">确定</button>
                 </div>
             </div>
         </div>
@@ -216,4 +217,19 @@
 </body>
     <script src="../../assets/global/plugins/jquery/jquery-1.11.3.min.js"></script>
     <script src="../../assets/mobile/js/global.js"></script>
+    <script>
+        /*快递订单控制*/
+        function expressShow(){
+            var bg = $(".btn-goods");
+            var m = $(".mask");
+            var cc = $(".conmpany-head .close,.conmpany-content .btn-sure");
+            bg.on("click",function(){
+                m.removeClass("hide")
+            });
+            cc.on("click",function(){
+                m.addClass("hide")
+            })
+        }
+        expressShow()
+    </script>
 </html>
