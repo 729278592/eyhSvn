@@ -1,0 +1,12 @@
+hatch：孵化
+homeServices-keeper：家庭服务保洁
+homeServices-leathershoes：家庭服务皮鞋护理
+homeServices-maternity：家庭服务月嫂
+homeServices-nanny：家庭服务保姆
+homeServices-nursingworkers：家庭服务护工
+homeServices-wardrobe：家庭服务衣柜整理
+maternity-details：月嫂详情
+publish-project：新建项目
+space-creation：总创空间
+steward：牛管家
+train：家务培训

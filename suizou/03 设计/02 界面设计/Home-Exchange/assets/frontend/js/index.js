@@ -57,42 +57,42 @@
     };
 
     /*服务内容切换*/
-            var scl  =  $(".sever-content>li");
-            var omla = $(".order-meun li a");
-            omla.each(function(){
-                $(this).on("click",function(ev){
-                    ev.preventDefault();
-                    clearInterval(timerServers);
-                    scl.html('<div class="serversSlider left">'+
-                                '<div class="servers-slider">'+
-                                    '<ul class="servers-ul clearfix">'+
-                                        '<li>'+
-                                            '<img src="../../assets/frontend/images/servers-img1.jpg" alt=""/>'+
-                                        '</li>'+
-                                        '<li>'+
-                                            '<img src="../../assets/frontend/images/servers-img1.jpg" alt=""/>'+
-                                        '</li>'+
-                                        '<li>'+
-                                            '<img src="../../assets/frontend/images/servers-img1.jpg" alt=""/>'+
-                                        '</li>'+
-                                    '</ul>'+
-                                '</div>'+
-                                '<div class="servers-pagination">'+
-                                    '<a href="javascript:void(0)" class="active">'+
-                                        '<img src="../../assets/frontend/images/pagination-img1.jpg" alt=""/>'+
-                                    '</a>'+
-                                    '<a href="javascript:void(0)">'+
-                                        '<img src="../../assets/frontend/images/pagination-img1.jpg" alt=""/>'+
-                                    '</a>'+
-                                    '<a href="javascript:void(0)" class="last">'+
-                                        '<img src="../../assets/frontend/images/pagination-img1.jpg" alt=""/>'+
-                                    '</a>'+
-                                '</div>'+
-                            '</div>'
-                    );
-                    $(".serversSlider").serversSlider({});
-                })
-            });
+    var scl  =  $(".sever-content>li");
+    var omla = $(".order-meun li a");
+    omla.each(function(){
+        $(this).on("click",function(ev){
+            ev.preventDefault();
+            clearInterval(timerServers);
+            scl.html('<div class="serversSlider left">'+
+                        '<div class="servers-slider">'+
+                            '<ul class="servers-ul clearfix">'+
+                                '<li>'+
+                                    '<img src="../../assets/frontend/images/servers-img1.jpg" alt=""/>'+
+                                '</li>'+
+                                '<li>'+
+                                    '<img src="../../assets/frontend/images/servers-img1.jpg" alt=""/>'+
+                                '</li>'+
+                                '<li>'+
+                                    '<img src="../../assets/frontend/images/servers-img1.jpg" alt=""/>'+
+                                '</li>'+
+                            '</ul>'+
+                        '</div>'+
+                        '<div class="servers-pagination">'+
+                            '<a href="javascript:void(0)" class="active">'+
+                                '<img src="../../assets/frontend/images/pagination-img1.jpg" alt=""/>'+
+                            '</a>'+
+                            '<a href="javascript:void(0)">'+
+                                '<img src="../../assets/frontend/images/pagination-img1.jpg" alt=""/>'+
+                            '</a>'+
+                            '<a href="javascript:void(0)" class="last">'+
+                                '<img src="../../assets/frontend/images/pagination-img1.jpg" alt=""/>'+
+                            '</a>'+
+                        '</div>'+
+                    '</div>'
+            );
+            $(".serversSlider").serversSlider({});
+        })
+    });
 
     /*服务幻灯切换*/
     $.fn.serversSlider = function(options){
@@ -153,7 +153,7 @@
             },
             mouseover:function(_this){
                 _this.on("mouseover",function(){
-                    clearInterval(timerServers)
+                    clearInterval(timerServers);
                 })
             },
             mouseout:function(_this){
@@ -409,8 +409,4 @@
         );
     }
     weHover()
-
-
-
-
 })(jQuery);
