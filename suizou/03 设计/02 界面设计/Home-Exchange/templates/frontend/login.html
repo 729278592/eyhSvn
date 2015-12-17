@@ -61,22 +61,38 @@
         <div class="logBg"></div>
         <div class="logWrap">
             <div class="logBox">
-                <div class="clearfix log-head">
-                    <img src="../../assets/frontend/images/logo.png" class="log-logo left">
-                    <p class="title left">登录</p>
-                </div>
+                <ul class="register-ul clearfix">
+                    <li class="active">个人登录</li>
+                    <li class="mr0">企业登录</li>
+                </ul>
                 <form action="#" class="form" id="form_sample_1">
-                    <div class="input-group">
+                    <div class="div-form active">
+                        <div class="input-group">
                             <span class="input-group-addon">
                                 <i class="fa fa-phone"></i>
                             </span>
-                        <input type="text" class="form-control" placeholder="请输入电话号码" name="email">
-                    </div>
-                    <div class="input-group">
+                            <input type="text" class="form-control" placeholder="请输入电话号码" name="email">
+                        </div>
+                        <div class="input-group">
                             <span class="input-group-addon">
                                 <i class="fa fa-lock"></i>
                             </span>
-                        <input type="text" class="form-control" placeholder="请输入密码">
+                            <input type="text" class="form-control" placeholder="公司名称">
+                        </div>
+                    </div>
+                    <div class="div-form">
+                        <div class="input-group">
+                            <span class="input-group-addon">
+                                <i class="fa fa-phone"></i>
+                            </span>
+                            <input type="text" class="form-control" placeholder="公司名称" name="email">
+                        </div>
+                        <div class="input-group">
+                            <span class="input-group-addon">
+                                <i class="fa fa-lock"></i>
+                            </span>
+                            <input type="text" class="form-control" placeholder="请输入电话号码">
+                        </div>
                     </div>
 
                     <div class="input-group" style="width:100%;">
@@ -112,6 +128,17 @@
         jQuery(document).ready(function() {
             Main.init(); // init metronic core components
             FormValidation.init();
+        });
+
+        var rul = $(".register-ul li");
+        var df = $(".div-form");
+        rul.each(function(i){
+            $(this).on("click",function(){
+                $(this).addClass("active");
+                $(this).siblings(rul).removeClass("active");
+                df.eq(i).addClass("active");
+                df.eq(i).siblings(df).removeClass("active");
+            })
         });
     </script>
 </html>

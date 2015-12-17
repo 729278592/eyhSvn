@@ -10,3 +10,6 @@ publish-project：新建项目
 space-creation：总创空间
 steward：牛管家
 train：家务培训
+plant-generation-details:植物代养
+public-protection:公益保障
+person-center:个人中心

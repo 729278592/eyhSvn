@@ -52,6 +52,6 @@
             })
         }
     };
-    Method.init($(".search-terms,.service-type"));
+    Method.init($(".search-terms,.service-type,.com_list"));
 })(jQuery);
 

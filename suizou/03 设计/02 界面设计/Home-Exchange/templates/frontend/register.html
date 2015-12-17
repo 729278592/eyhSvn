@@ -68,30 +68,57 @@
         <div class="logBg regBg"></div>
         <div class="logWrap reWrap">
             <div class="logBox">
-                <div class="clearfix log-head">
-                    <img src="../../assets/frontend/images/logo.png" class="log-logo left">
-                    <p class="title left">注册</p>
-                </div>
+                <ul class="register-ul clearfix">
+                    <li class="active">个人注册</li>
+                    <li class="mr0">企业注册</li>
+                </ul>
                 <form action="#" class="form" id="form_sample_1">
-                    <div class="input-group">
+                    <div class="div-form active">
+                        <div class="input-group">
                         <span class="input-group-addon">
                             <i class="fa fa-phone"></i>
                         </span>
-                        <input type="text" class="form-control" placeholder="请输入电话号码" name="email">
-                    </div>
-                    <div class="input-group">
+                            <input type="text" class="form-control" placeholder="请输入电话号码" name="email">
+                        </div>
+                        <div class="input-group">
                         <span class="input-group-addon">
                             <i class="fa fa-lock"></i>
                         </span>
-                        <input type="text" class="form-control" placeholder="请输入密码">
-                    </div>
-                    <div class="input-group">
+                            <input type="text" class="form-control" placeholder="请输入密码">
+                        </div>
+                        <div class="input-group">
                         <span class="input-group-addon">
                             <i class="fa fa-lock"></i>
                         </span>
-                        <input type="text" class="form-control" placeholder="请再次输入密码">
+                            <input type="text" class="form-control" placeholder="请再次输入密码">
+                        </div>
                     </div>
-
+                    <div class="div-form">
+                        <div class="input-group">
+                            <span class="input-group-addon">
+                                <i class="fa fa-home"></i>
+                            </span>
+                            <input type="text" class="form-control" placeholder="公司名称">
+                        </div>
+                        <div class="input-group">
+                            <span class="input-group-addon">
+                                <i class="fa fa-user"></i>
+                            </span>
+                            <input type="text" class="form-control" placeholder="法定代表人">
+                        </div>
+                        <div class="input-group">
+                            <span class="input-group-addon">
+                                <i class="fa fa-phone"></i>
+                            </span>
+                            <input type="text" class="form-control" placeholder="请输入手机号">
+                        </div>
+                        <div class="input-group">
+                            <span class="input-group-addon">
+                                <i class="fa fa-lock"></i>
+                            </span>
+                            <input type="text" class="form-control" placeholder="请再次输入密码">
+                        </div>
+                    </div>
 
                     <div class="input-group" style="width:100%;">
                         <div class="col-sm-8">
@@ -144,6 +171,17 @@
                     }
                 }, 1000);
                 btn.attr('disabled',true).css('cursor','not-allowed');
+            });
+
+            var rul = $(".register-ul li");
+            var df = $(".div-form");
+            rul.each(function(i){
+                $(this).on("click",function(){
+                    $(this).addClass("active");
+                    $(this).siblings(rul).removeClass("active");
+                    df.eq(i).addClass("active");
+                    df.eq(i).siblings(df).removeClass("active");
+                })
             });
 
         })

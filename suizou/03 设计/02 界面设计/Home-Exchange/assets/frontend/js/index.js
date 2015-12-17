@@ -175,7 +175,7 @@
             init:function(_this){
                 activeLeft  = _this.find(".active-left");
                 activeRight = _this.find(".active-right");
-                activeUl = $(".active-ul");
+                activeUl = _this.find(".active-ul");
                 oLiActive = _this.find("li");
                 liWidthActive = oLiActive[0].offsetWidth;
                 activeUlWidth = activeUl.offset().width;
