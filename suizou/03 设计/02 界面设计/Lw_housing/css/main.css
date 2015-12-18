@@ -425,7 +425,7 @@ input.btn-click:hover{background: #e16a20}
 .w-right{margin-left: 270px;background: #fff;margin-top: 20px;padding: 1% 1.1%;min-height: 455px;}
 .wr-head{height: 116px;width: 100%;padding: 8px 15px;background: #e8f2f9;}
 .wr-head img{float: left;width: 73px;height: 73px;border-radius: 50%;}
-.btn-fillin{width: 70px;height: 25px;line-height: 22px;text-align: center;border-radius: 2px;background: #a2b7c6;color: #fff;}
+.btn-fillin{width: 85px;height: 25px;line-height: 22px;text-align: center;border-radius: 2px;background: #a2b7c6;color: #fff;}
 
 .wr-head>span{position: relative;top: 30px;left: 15px;}
 .wr-head .phone{color: #666;font-size: 18px;}
