@@ -13,3 +13,5 @@ train：家务培训
 plant-generation-details:植物代养
 public-protection:公益保障
 person-center:个人中心
+recruitment-details:社区招募
+recruitment-details:社区详情

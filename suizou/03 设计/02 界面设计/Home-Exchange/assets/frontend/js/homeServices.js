@@ -15,8 +15,8 @@
         },
         clearClick:function(){
             btnClear.on("click",function(){
-                rentalMode.find("input").removeClass("selected");
                 rentalMode.removeClass("active");
+                rentalMode.find("input").removeClass("selected");
             })
         },
         radioClick:function(){

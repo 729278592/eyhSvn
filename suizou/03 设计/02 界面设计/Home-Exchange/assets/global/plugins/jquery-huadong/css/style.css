@@ -8,6 +8,7 @@
 .cms-home .products-grid LI.last { BORDER-RIGHT-STYLE: none; WIDTH: 204px }
 .cms-home .product-image-block { POSITION: relative; MARGIN: 0px auto; WIDTH: 204px }
 .cms-home .products-grid .product-image { MARGIN: 0px auto 10px; WIDTH: 204px; DISPLAY: block; HEIGHT: 311px }
+.cms-home .products-grid .product-image img{width: 198px;height: 311px;}
 .cms-home .products-grid .product-name { POSITION: absolute; TEXT-ALIGN: left; PADDING-BOTTOM: 15px; MARGIN: 0px auto; PADDING-LEFT: 15px; WIDTH: 155px; BOTTOM: 0px; PADDING-RIGHT: 0px; DISPLAY: none; PADDING-TOP: 15px; LEFT: 0px }
 .cms-home .products-grid .product-name A { TEXT-DECORATION: none }
 .cms-home .products-grid .product-name A:hover { TEXT-DECORATION: underline }
