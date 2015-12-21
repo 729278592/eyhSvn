@@ -591,12 +591,13 @@ tr th,tr td{ text-align:center;font-size: 14px;border:1px solid #cccccc;color: #
 
 /*footer*/
 .footer{width: 100%;background: #322614;padding: 10px 0 20px;min-width: 1240px;}
+
 .foot-menu{font-size: 14px;width: 604px;margin: 0 auto;height: 39px;}
 .foot-menu li{width: 120px;text-align: center;padding: 10px 0;float: left;}
 .foot-menu li a{width: 100%;border-right: 1px solid #a39582;color: #a39582;display: inline-block;}
 .foot-menu li a:hover{color: #fff;}
 .foot-menu li.br0 a{border-right: 0;}
-.copyright{color: #a39582;font-size: 14px;text-align: center;width: 100%;}
+.copyright{color: #a39582;font-size: 14px;text-align: center;width: 604px;margin: 0 auto;}
 
 
 
