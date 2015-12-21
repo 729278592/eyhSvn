@@ -1,0 +1,197 @@
+<!DOCTYPE html>
+<html>
+<head lang="en">
+    <meta charset="UTF-8">
+    <title>个人财符申请</title>
+    <link rel="stylesheet" href="css/Crweb.css"/>
+    <link rel="stylesheet" href="plugins/bootstrap-3.3.5-dist/css/bootstrap.min.css"/>
+    <link rel="stylesheet" href="css/font/css/font-awesome.min.css"/>
+    <link rel="stylesheet" href="css/font/css/font-awesome-ie7.min.css"/>
+    <link rel="stylesheet" href="plugins/metic/css/components-rounded.css?v=ee"/>
+    <style>
+        .content{background: #f9f5f6;margin: 15px 0 0 0;}
+        .header{position: fixed;z-index: 3;top: 0;}
+        .form-control.col-md-3{width: 30%;margin-right: 20px;}
+        .form-control.col-md-3.mr0{margin-right: 0;}
+        .col-md-2{text-align: left;}
+
+        @media screen and (max-width: 992px) {
+            .footer{position: relative;width: 100%;}
+        }
+        @media screen and (min-width: 640px) {
+            .content{min-height: 880px;}
+        }
+        @media screen and (max-width: 640px) {
+            .form{width:320px;padding: 10px 15px;}
+            .footer{position: absolute;bottom: 0;}
+            .re_h{width: 300px;left: -6px;top: -10px;background-size: 300px;line-height: 35px;}
+        }
+        @media screen and (max-width: 414px) {
+            .form{width:315px;margin:8% auto;}
+        }
+
+    </style>
+</head>
+<body>
+<div class="wapper">
+    <div class="header">
+        <div class="head-main">
+            <img src="images/logo.png" alt="logo" class="left logo"/>
+            <ul class="head-menu right">
+                <li><a href="index.html">首页</a></li>
+                <li class="active"><a href="shencai.html">财符中心</a></li>
+                <li><a href="zhihui.html">智慧场景</a></li>
+                <li><a href="product_center.html">产品中心</a></li>
+                <li><a href="http://www.sskill.com/bbs">论坛</a></li>
+                <li><a href="#">注册/登陆</a></li>
+                <li>
+                    <a href="#" class="shoppingCart">
+                        <i class="fa fa-shopping-cart"></i>
+                        <span class="number">1</span>
+                    </a>
+                </li>
+            </ul>
+        </div>
+    </div>
+    <div class="content">
+        <div class="logBodyBg">
+            <img src="images/shen-bg.jpg">
+        </div>
+        <div class="logBg"></div>
+        <div class="logWrap">
+            <div class="logBox">
+                <p class="title">财符申请</p>
+                <form action="#" id="form_sample_2" class="form-horizontal">
+                    <div class="form-body">
+                        <div class="form-group">
+                            <label class="control-label col-md-2">
+                                <span class="required">* </span>姓名
+                            </label>
+                            <div class="col-md-10">
+                                    <input type="text" class="form-control" name="name" placeholder="请输入您的姓名"/>
+                            </div>
+                        </div>
+                        <div class="form-group">
+                            <label class="control-label col-md-2">
+                                <span class="required">* </span>电话
+                            </label>
+                            <div class="col-md-10">
+                                <input type="text" class="form-control" name="name" placeholder="请输入您的电话"/>
+                            </div>
+                        </div>
+                        <div class="form-group">
+                            <label class="control-label col-md-2">
+                                <span class="required">* </span>邮箱
+                            </label>
+                            <div class="col-md-10">
+                                <input type="text" class="form-control" name="name" placeholder="请输入您的邮箱"/>
+                            </div>
+                        </div>
+                        <div class="form-group">
+                            <label class="control-label col-md-2">
+                                <span class="required">* </span>行业
+                            </label>
+                            <div class="col-md-10">
+                                <input type="text" class="form-control" name="name" placeholder="请输入您的职业"/>
+                            </div>
+                        </div>
+                        <div class="form-group">
+                            <label class="control-label col-md-2" style="margin-top: -6px;">
+                                <span class="required">* </span>性别
+                            </label>
+                            <div class="col-md-10">
+                                <span class="col-md-2">
+                                    <input type="checkbox"/> 男
+                                </span>
+                                <span class="col-md-2">
+                                    <input type="checkbox"/> 女
+                                </span>
+                            </div>
+                        </div>
+                        <div class="form-group">
+                            <label class="control-label col-md-2" style="margin-top: -6px;">
+                                <span class="required">* </span>生日
+                            </label>
+                            <div class="col-md-10">
+
+                                <select class="form-control col-md-3">
+                                    <option value="">请选择</option>
+                                    <option value="">2015</option>
+                                </select>
+                                <select class="form-control col-md-3">
+                                    <option value="">请选择</option>
+                                    <option value="">12</option>
+                                </select>
+                                <select class="form-control col-md-3 mr0">
+                                    <option value="">请选择</option>
+                                    <option value="">20</option>
+                                </select>
+                            </div>
+                        </div>
+                        <div class="form-group">
+                            <label class="control-label col-md-2" style="margin-top: -6px;">
+                                <span class="required">* </span>居住地
+                            </label>
+                            <div class="col-md-10">
+
+                                <select class="form-control col-md-3">
+                                    <option value="">请选择</option>
+                                    <option value="">四川省</option>
+                                </select>
+                                <select class="form-control col-md-3">
+                                    <option value="">请选择</option>
+                                    <option value="">广安市</option>
+                                </select>
+                                <select class="form-control col-md-3 mr0">
+                                    <option value="">请选择</option>
+                                    <option value="">武胜县</option>
+                                </select>
+                            </div>
+                        </div>
+                        <div class="form-group">
+                            <label class="control-label col-md-2 res">
+                                <span class="required">* </span>用户名
+                            </label>
+                            <div class="col-md-10">
+                                <input type="checkbox"/> 我一阅读并接受  <span style="color: #f16a21;">《财符申请条款》</span>
+                            </div>
+                        </div>
+                        <div class="form-group">
+                            <div class="col-md-12">
+                                <input type="text" class="form-control btn-shen1"  value="申请" style="background: #f16a21;text-align: center;color: #fff;height: 45px;line-height: 45px;"/>
+                            </div>
+                        </div>
+
+
+                    </div>
+
+                </form>
+            </div>
+        </div>
+    </div>
+    <div class="footer">
+        <div class="center">
+            <ul class="foot-menu">
+                <li><a href="our.html">公司简介</a></li>
+                <li><a href="#">人才招聘</a></li>
+                <li><a href="#">融资合作</a></li>
+                <li><a href="#">关于我们</a></li>
+                <li class="br0"><a href="#">联系我们</a></li>
+            </ul>
+            <p class="copyright">渝ICP备15002338号-1 Copyright © 2014~2015 深圳贯和通物联科技有限公司 版权所有</p>
+        </div>
+    </div>
+</div>
+<script src="js/jquery-1.10.2.min.js"></script>
+<script src="plugins/metic/js/jquery.validate.js"></script>
+<script src="plugins/metic/js/main.js"></script>
+<script src="plugins/metic/js/form-validation.js"></script>
+
+<script>
+    jQuery(document).ready(function() {
+        FormValidation.init();
+        Main.init();
+    });
+</script>
+</body>
+</html>
