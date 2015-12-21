@@ -35,7 +35,7 @@
                     <li><a href="zhihui.html">智慧场景</a></li>
                     <li class="active"><a href="product_center.html">产品中心</a></li>
                     <li><a href="http://www.sskill.com/bbs">论坛</a></li>
-                    <li><a href="#">注册/登陆</a></li>
+                    <li class="regs"><a href="#">注册/登陆</a></li>
                     <li>
                         <a href="#" class="shoppingCart">
                             <i class="fa fa-shopping-cart"></i>
@@ -444,7 +444,7 @@
 <script src="js/modal.js"></script>
 <script>
     $(function(){
-        var btn_save = $(".purchase_immediately")
+        var btn_save = $(".purchase_immediately,.regs");
         btn_save.on("click",function(){
             $("#container").dialog({title:'账户登录'});
         })

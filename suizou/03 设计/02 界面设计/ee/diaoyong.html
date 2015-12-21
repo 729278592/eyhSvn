@@ -6,8 +6,18 @@
     <link rel="stylesheet" href="css/Crweb.css"/>
     <link rel="stylesheet" href="css/font/css/font-awesome.min.css"/>
     <link rel="stylesheet" href="css/font/css/font-awesome-ie7.min.css"/>
+
     <style>
+        body{min-width:1170px; background: #f9f5f6;}
         .content{background: #f9f5f6;margin: -5px 0 0 0;}
+
+        .footer{position: relative;z-index: 10;}
+        .cj_ul1>li{padding: 0;background: transparent;}
+        .form1{width: 100%;margin-top:20px;}
+        .inpu3{left: 0;}
+        .inpu1{width:260px;margin-bottom: 0;}
+        .form1 a:hover{color: #f5796a;text-decoration: underline;}
+        .position{position: absolute;z-index: 10000;}
     </style>
 </head>
 <body>
@@ -21,7 +31,7 @@
                 <li class="active"><a href="zhihui.html">智慧场景</a></li>
                 <li><a href="product_center.html">产品中心</a></li>
                 <li><a href="http://www.sskill.com/bbs">论坛</a></li>
-                <li><a href="#">注册/登陆</a></li>
+                <li class="regs"><a href="#">注册/登陆</a></li>
                 <li>
                     <a href="#" class="shoppingCart">
                         <i class="fa fa-shopping-cart"></i>
@@ -50,5 +60,14 @@
 </div>
 <script src="js/jquery-1.10.2.min.js"></script>
 <script src="js/index.js"></script>
+<script src="js/modal.js"></script>
+<script>
+    $(function(){
+        var btn_save = $(".purchase_immediately,.regs");
+        btn_save.on("click",function(){
+            $("#container").dialog({title:'账户登录'});
+        })
+    })
+</script>
 </body>
 </html>
