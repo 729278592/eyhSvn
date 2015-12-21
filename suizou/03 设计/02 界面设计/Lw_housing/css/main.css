@@ -241,8 +241,7 @@ b {line-height: 30px;font-weight: 700;}
 .active-details .ac-content{line-height: 25px;}
 .active-pagination{position: absolute;text-align: center;bottom: 110px;width: 100%;}
 .active-pagination a{display: inline-block;width: 8px;height: 8px;background: #ccc;border-radius: 8px;}
-.active-pagination a.active{background: #077bfa
-}
+.active-pagination a.active{background: #077bfa}
 
 .house-details-bg{position: absolute;bottom:0px;width:100%;height: 70px;background: #000;opacity: 0.5;filter: alpha(opacity=50);}
 .house-details{position: absolute;bottom: 30px;color: #fff;padding: 2%;width: 98%;}
