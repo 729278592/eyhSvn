@@ -2,9 +2,9 @@
 /*common*/
 body,html{margin:0;padding:0;font-size:30px;color:#000;font-family:"Microsoft YaHei","微软雅黑";height:100%;}
 body{overflow-x: hidden;}
-@media screen and (max-width: 1170px){
-    body{width: 1170px;}
-    .wapper{overflow-x:scroll;width: 1170px;}
+@media screen and (max-width: 1240px){
+    body{min-width: 1240px;}
+    .wapper{overflow-x:scroll;}
 }
 p{margin: 0;padding: 0;}
 ul,li,img{margin:0;padding:0;list-style:none;border:none; vertical-align:middle;}
@@ -23,7 +23,7 @@ input{outline: none;}
 button{outline: none;border: 0;}
 /*common*/
 /*header*/
-.header{width: 100%;background: #fcb755;}
+.header{width: 100%;background: #fcb755;min-width: 1240px;}
 .head-main{width: 1240px;height: 60px;margin: 0 auto;}
 .head-main .logo{margin-top: 7px;}
 .head-menu{margin-top: 12px;}
@@ -132,7 +132,7 @@ button{outline: none;border: 0;}
 
 /*content*/
 .shadow{color: white}
-.content{width: 100%;position: relative;top: 4px;}
+.content{width: 100%;position: relative;top: 4px;min-width: 1240px;}
 .c_huan{width: 1241px;height: 515px;}
 .tu5{width: 179px;height: 118px;position: absolute;top: -13px;right: 0;}
 .c_huan .tu_i{width: 179px;height: 118px;}
@@ -590,7 +590,7 @@ tr th,tr td{ text-align:center;font-size: 14px;border:1px solid #cccccc;color: #
 
 
 /*footer*/
-.footer{width: 100%;background: #322614;padding: 10px 0 20px;}
+.footer{width: 100%;background: #322614;padding: 10px 0 20px;min-width: 1240px;}
 .foot-menu{font-size: 14px;width: 604px;margin: 0 auto;height: 39px;}
 .foot-menu li{width: 120px;text-align: center;padding: 10px 0;float: left;}
 .foot-menu li a{width: 100%;border-right: 1px solid #a39582;color: #a39582;display: inline-block;}
