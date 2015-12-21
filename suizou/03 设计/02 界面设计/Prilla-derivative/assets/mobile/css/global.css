@@ -63,6 +63,7 @@ textarea,input,button,select{border: none;outline: none;}
 .comment-data li{padding: 10px 4%;border-bottom: 1px solid #dbdbdb;position: relative;color: #666;}
 .comment-data li a{display: inline-block;width: 100%;height: 30px;line-height: 30px;}
 .comment-data li .type{position: relative;left: 2%;color: #333;}
+.comment-data li .type .fa{display: inline-block;width: 15px;}
 .comment-data li .type .t-bg{display: inline-block;width: 30px;background: url("../images/icon.png") no-repeat;}
 .comment-data li .type .t-bg1{background-position: -2px -3px;height: 19px;}
 .comment-data li .type .t-bg2{background-position: -38px -3px;height: 25px;position: relative;top: 3px;}

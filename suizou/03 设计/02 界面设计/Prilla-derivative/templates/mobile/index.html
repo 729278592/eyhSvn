@@ -159,9 +159,9 @@
     <script>
         $(function(){
             /*代理块控制*/
-          var jso = {"agent":{"name": "陈小洁", "title":"代理管理","boss":"王二","peopleImg": "../../assets/mobile/images/people.png","class1":"t-bg t-bg1","fuc1":"申请升级","fuc2":"申请取消","fuc3":"直属下级","url1":"apply-upgrade.html","url2":"cancel-agent.html","url3":"#"},
-                     "order":{"name": "张三", "title": "订单管理","boss":"王大" ,"peopleImg": "../../assets/mobile/images/people.png","class1":"t-bg t-bg1","fuc1":"我的订单","fuc2":"下单","url1":"my-order.html","url2":"chioce-production.html"},
-                     "balance":{"name": "李四", "title": "余额管理","boss":"王小","peopleImg": "../../assets/mobile/images/people.png","class1":"t-bg t-bg1","fuc1":"我的余额","fuc2":"对账中心","fuc3":"在线充值","url1":"my-balance.html","url2":"check-center.html","url3":"online-recharge.html"}
+          var jso = {"agent":{"name": "陈小洁", "title":"代理管理","boss":"王二","peopleImg": "../../assets/mobile/images/people.png","class1":"fa fa-caret-right w30","fuc1":"申请升级","fuc2":"申请取消","fuc3":"直属下级","url1":"apply-upgrade.html","url2":"cancel-agent.html","url3":"#"},
+                     "order":{"name": "张三", "title": "订单管理","boss":"王大" ,"peopleImg": "../../assets/mobile/images/people.png","class1":"fa fa-caret-right w30","fuc1":"我的订单","fuc2":"下单","url1":"my-order.html","url2":"chioce-production.html"},
+                     "balance":{"name": "李四", "title": "余额管理","boss":"王小","peopleImg": "../../assets/mobile/images/people.png","class1":"fa fa-caret-right w30","fuc1":"我的余额","fuc2":"对账中心","fuc3":"在线充值","url1":"my-balance.html","url2":"check-center.html","url3":"online-recharge.html"}
                     };
             var cm = $(".common-mangent");
             var m = $(".mask");
@@ -203,7 +203,7 @@
                                     '<li>'+
                                         '<a href="'+ss.url2+'">'+
                                             '<span class="type">'+
-                                                '<span class="t-bg t-bg2"></span>'+
+                                            '<span class="'+ss.class1+'"></span>'+
                                                 '<span style="position: relative;top: -3px;">'+ss.fuc2+'</span>'+
                                             '</span>'+
                                             '<span class="fr">'+
@@ -214,7 +214,7 @@
                                     '<li>'+
                                         '<a href="'+ss.url3+'">'+
                                             '<span class="type">'+
-                                                '<span class="t-bg t-bg3"></span>'+
+                                            '<span class="'+ss.class1+'"></span>'+
                                                 ' <span style="position: relative;top: -3px;left: -5px;">'+ss.fuc3+'</span>'+
                                             '</span>'+
                                             '<span class="fr">'+
