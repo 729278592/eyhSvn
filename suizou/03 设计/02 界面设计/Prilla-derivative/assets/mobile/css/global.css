@@ -63,7 +63,7 @@ textarea,input,button,select{border: none;outline: none;}
 .comment-data li{padding: 10px 4%;border-bottom: 1px solid #dbdbdb;position: relative;color: #666;}
 .comment-data li a{display: inline-block;width: 100%;height: 30px;line-height: 30px;}
 .comment-data li .type{position: relative;left: 2%;color: #333;}
-.comment-data li .type .fa{display: inline-block;width: 15px;}
+.comment-data li .type .fa{display: inline-block;width: 15px;color: #666;}
 .comment-data li .type .t-bg{display: inline-block;width: 30px;background: url("../images/icon.png") no-repeat;}
 .comment-data li .type .t-bg1{background-position: -2px -3px;height: 19px;}
 .comment-data li .type .t-bg2{background-position: -38px -3px;height: 25px;position: relative;top: 3px;}
@@ -87,7 +87,7 @@ textarea,input,button,select{border: none;outline: none;}
 
 
 /*chioce-production*/
-.production-group{width: 100%;}
+.production-group{width: 100%;margin-bottom: 50px;}
 .production-group>li{width: 94%;padding: 3%;border-bottom: 1px solid #eee;}
 .production-group li img{float: left;}
 .production-group li .details{font-size: 16px;color: #999;}
@@ -120,7 +120,7 @@ a.btn-f98{display: inline-block;}
 
 
 .production-group .check{float: left;font-size: 25px;color: #ff8680;display: inline-block;margin-top: 10%;position: relative;left: -10px;}
-.p-boss{font-size: 14px;width: 94%;margin: 0 3%;margin-bottom: 50px;}
+.p-boss{font-size: 14px;width: 94%;margin: 0 3%;}
 .p-boss .check{position: relative;top: 3px;left: -10px;}
 /*cancel-agent*/
 .c-head{padding: 10px 4%;width: 92%;color: #f98d91;font-size: 18px;border-bottom: 1px solid #dbdbdb;}
