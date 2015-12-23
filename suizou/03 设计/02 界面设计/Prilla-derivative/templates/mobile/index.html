@@ -159,10 +159,40 @@
     <script>
         $(function(){
             /*代理块控制*/
-          var jso = {"agent":{"name": "陈小洁", "title":"代理管理","boss":"王二","peopleImg": "../../assets/mobile/images/people.png","class1":"fa fa-caret-right w30","fuc1":"申请升级","fuc2":"申请取消","fuc3":"直属下级","url1":"apply-upgrade.html","url2":"cancel-agent.html","url3":"#"},
-                     "order":{"name": "张三", "title": "订单管理","boss":"王大" ,"peopleImg": "../../assets/mobile/images/people.png","class1":"fa fa-caret-right w30","fuc1":"我的订单","fuc2":"下单","url1":"my-order.html","url2":"chioce-production.html"},
-                     "balance":{"name": "李四", "title": "余额管理","boss":"王小","peopleImg": "../../assets/mobile/images/people.png","class1":"fa fa-caret-right w30","fuc1":"我的余额","fuc2":"对账中心","fuc3":"在线充值","url1":"my-balance.html","url2":"check-center.html","url3":"online-recharge.html"}
-                    };
+            var jso = {
+                "agent":{
+                    "name": "张三",
+                    "title":"代理管理",
+                    "boss":"麻子",
+                    "peopleImg": "../../assets/mobile/images/people.png",
+                    "class1":"fa fa-caret-right w30",
+                    "menus":[
+                        {"func":"申请升级","url":"apply-upgrade.html"}
+                    ]
+                },
+                "order":{
+                    "name": "李四",
+                    "title": "订单管理",
+                    "boss":"麻子",
+                    "peopleImg": "../../assets/mobile/images/people.png",
+                    "class1":"fa fa-caret-right w30",
+                    "menus":[
+                        {"func":"我的订单","url":"my-order.html"}
+                    ]
+                },
+                "balance":{
+                    "name": "王二",
+                    "title": "余额管理",
+                    "boss":"麻子",
+                    "peopleImg": "../../assets/mobile/images/people.png",
+                    "class1":"fa fa-caret-right w30",
+                    "menus":[
+                        {"func":"我的余额","url":"my-balance.html"},
+                        {"func":"在线充值","url":"online-recharge.html"}
+                    ]
+                }
+            };
+
             var cm = $(".common-mangent");
             var m = $(".mask");
             var ma = $(".management");
@@ -173,61 +203,36 @@
                     ss = jso.agent;
                 }else if($(this).find(cm).text()=="订单管理"){
                     ss = jso.order;
-                    $(".mask").find(".management .last").addClass("hide")
                 }else if($(this).find(cm).text()=="余额管理"){
                     ss = jso.balance;
                 }
                 var str = '<div class="management">'+
-                                '<div class="m-head clearfix">'+
-                                    '<img src="'+ss.peopleImg+'" alt="" class="people"/>'+
-                                    ' <span class="details">'+
-                                        '<span class="name">'+ss.name+'</span><br/>'+
-                                        '<span>上级: '+ss.boss+'</span>'+
-                                    '</span>'+
-                                '</div>'+
-                                '<ul class="comment-data">'+
-                                    '<li>'+
-                                        '<span class="type" style="font-size: 18px;">'+ss.title+'</span>'+
-                                    '</li>'+
-                                    '<li>'+
-                                        '<a href="'+ss.url1+'">'+
-                                            '<span class="type">'+
-                                                '<span class="'+ss.class1+'"></span>'+
-                                                '<span>'+ss.fuc1+'</span>'+
-                                            '</span>'+
-                                            '<span class="fr">'+
-                                                '<span class="more"></span>'+
-                                            '</span>'+
-                                        '</a>'+
-                                    '</li>'+
-                                    '<li>'+
-                                        '<a href="'+ss.url2+'">'+
-                                            '<span class="type">'+
-                                            '<span class="'+ss.class1+'"></span>'+
-                                                '<span style="position: relative;top: -3px;">'+ss.fuc2+'</span>'+
-                                            '</span>'+
-                                            '<span class="fr">'+
-                                                '<span class="more"></span>'+
-                                            '</span>'+
-                                        '</a>'+
-                                    '</li>'+
-                                    '<li>'+
-                                        '<a href="'+ss.url3+'">'+
-                                            '<span class="type">'+
-                                            '<span class="'+ss.class1+'"></span>'+
-                                                ' <span style="position: relative;top: -3px;left: -5px;">'+ss.fuc3+'</span>'+
-                                            '</span>'+
-                                            '<span class="fr">'+
-                                                '<span class="more"></span>'+
-                                            '</span>'+
-                                        '</a>'+
-                                    '</li>'+
-                                '</ul>'+
-                           '</div>';
+                              '<div class="m-head clearfix">'+
+                                  '<img src="'+ss.peopleImg+'" alt="" class="people"/>'+
+                                  ' <span class="details">'+
+                                      '<span class="name">'+ss.name+'</span><br/>'+
+                                      '<span>上级: '+ss.boss+'</span>'+
+                                  '</span>'+
+                              '</div>'+
+                              '<ul class="comment-data">'+
+                              '<li>'+
+                                  '<span class="type" style="font-size: 18px;">'+ss.title+'</span>'+
+                              '</li>';
+                   for(var i=0; i<ss.menus.length; i++){
+                       str += '<li>'+
+                                  '<a href="'+ss.menus[i].url+'">'+
+                                      '<span class="type">'+
+                                          '<span class="'+ss.class1+'"></span>'+
+                                          '<span>'+ss.menus[i].func+'</span>'+
+                                      '</span>'+
+                                      '<span class="fr">'+
+                                          '<span class="more"></span>'+
+                                      '</span>'+
+                                  '</a>'+
+                              '</li>';
+                   }
+                str += '</ul></div>';
                 m.append(str);
-                if($(this).find(cm).text()=="订单管理"){
-                    m.find("li:last").addClass("hide")
-                }
                 $(".management").animate({left:"0%"},200,function(){
                     m.delegate($(".management"),"click",function(){
                         $(".management").animate({left:"-85%"},20,function(){
@@ -239,7 +244,9 @@
             });
             var w = $(".warning");
             w.on("click",function(){
-                alert("收费沙发水电费水电费玩儿玩儿问题而儿童二位\r收费沙发水电费水电费玩儿玩儿问题而儿童二位")
+                var aa = "收费沙发水电费水电费玩儿玩儿问\n收费沙发水电费水电费玩儿玩儿问题而儿童二位";
+                alert( aa.replace(/\n/g,"\n") );
+
             })
         })
     </script>
