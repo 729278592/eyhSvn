@@ -89,7 +89,7 @@ textarea,input,button,select{border: none;outline: none;}
 .production-group{width: 100%;margin-bottom: 50px;}
 .production-group>li{width: 94%;padding: 3%;border-bottom: 1px solid #eee;}
 .production-group li img{float: left;}
-.production-group .fa-check{display: inline-block;width: 100%;height: 100%;position: absolute;z-index: 10;color: transparent;background: #dbdbdb;font-size: 12px;line-height: 16px;text-align: center;}
+.production-group .fa-check{display: inline-block;width: 100%;height: 100%;z-index: 10;color: transparent;background: #dbdbdb;font-size: 12px;line-height: 16px;text-align: center;position: absolute;}
 .production-group .fa-check.active{color: #666;}
 .production-group li .details{font-size: 16px;color: #999;}
 .production-group li .details span{padding:0 4.2%;}
@@ -119,7 +119,7 @@ a.btn-f98{display: inline-block;}
 .recharge_details{display: inline-block;width: 100%;height: 100%;}
 .mask .purchase_process .close{float: right;margin-right: 15px;margin-top: -20px;color: #666;font-size: 24px;}
 
-.production-group .check{font-size: 25px;color: #ff8680;display: inline-block;z-index: -10;}
+.production-group .check{z-index: -10;position: relative;top: -1px;left: -2px;}
 .production-group label{z-index: 5;width: 16px;height: 16px;background: transparent;display: inline-block;float: left;margin-top: 10%;position: relative;left: -5px;border: 1px solid #999;}
 .p-boss{font-size: 14px;width: 94%;margin: 0 3%;}
 .p-boss .check{position: relative;top: 3px;left: -10px;}
