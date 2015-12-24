@@ -497,10 +497,5 @@
     weHover();
 
 
-    var bf = $(".base-lei");
-    bf.on("click",function(e){
-        alert(33)
-        e.preventDefault();
-        window.location.href = "case-details.html"
-    });
+
 })(jQuery);

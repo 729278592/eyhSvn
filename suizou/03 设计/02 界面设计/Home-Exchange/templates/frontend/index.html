@@ -418,7 +418,7 @@
                         <div class="anythingSlider">
                             <ul id="slider_list" class="products-grid">
                                 <li class="item first">
-                                    <a class=product-image title="Lorem ipsum dolor sit" href="#">
+                                    <a class=product-image title="Lorem ipsum dolor sit" href="javascript:;">
                                         <img alt="Lorem ipsum dolor sit" src="../../assets/global/plugins/jquery-huadong/images/base-slider2.jpg">
                                         <div class="base-mask-bg"></div>
                                         <div class="base-mask">
@@ -501,6 +501,12 @@
                                     </div>
                                 </li>
                             </ul>
+                            <script>
+                                var bf = $(".base-lei");
+                                bf.on("click",function(){
+                                    window.location.href = "case-details.html"
+                                });
+                            </script>
                         </div>
                     </div>
                     <div id=left_but class="box-left">
