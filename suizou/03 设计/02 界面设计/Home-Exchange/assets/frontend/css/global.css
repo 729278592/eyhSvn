@@ -4,7 +4,7 @@ html{overflow-y:auto;overflow-x:hidden;min-width:100%;}
 body,p{margin: 0;padding: 0;}
 ul,li,img{margin:0;padding:0;list-style:none;border:none; vertical-align:middle;}
 a{color:#000;text-decoration:none;}
-a,button{cursor: pointer;}
+a,button,#left_but,#right_but,.rental_mode,label,.btn-screen,.btn-clear,.btn-order,.si-ul li,.level li,.train-menu li,.tt-ul li,.technology-type li,.ac-mune li{cursor: pointer;}
 .clearfix:after {content: ".";display: block;clear: both;visibility: hidden;line-height: 0;height: 0;}
 .clearfix{display: inline-block;}
 textarea,select,input,button{outline: none;border: none;}
@@ -555,7 +555,7 @@ li .main{width: 100%;display: inline-block;white-space: nowrap;text-overflow: el
 .copyright{background: #231905;padding: 10px 0;color: #bab9b9;}
 .com-ul-list{width: 100%;}
 .com-ul-list li{width: 96%;height: 110px;background: #fff;margin-top: 10px;padding: 10px 2%;}
-.com-ul-list li img{margin-right: 20px;}
+                                         .com-ul-list li img{margin-right: 20px;}
 .list-details{margin-top: 25px;}
 .list-details p{font-size: 14px;text-align: left;line-height: 28px;}
 .list-details .type{display: inline-block;width: 60px;}
@@ -1119,7 +1119,7 @@ tr th,tr td{ text-align:center;font-size: 14px;border:1px solid #fbb432;color: #
 .services-mask-bg,.services-mask{position: absolute;height: 30px;line-height: 30px;bottom: 0;}
 .services-mask-bg{left: 0;right: 0;background: #000;opacity: 0.6;filter:alpha(opacity=60);}
 .services-mask{left: 10px;right: 10px;color: #fff;font-size: 14px;text-align: right;}
-.hd-mask-bg{position: absolute;left: 0;right: 0;top: 0;bottom: 0;background: #000;opacity: 0.6;filter:alpha(opacity=60);}
+.hd-mask-bg{position: absolute;left: 0;right: 0;top: 0;bottom: 0;background: #000;opacity: 0.8;filter:alpha(opacity=80);}
 .hd-mask{position: absolute;top: 0;right: 0;bottom: 0;left:0;color: #fff;}
 .hd-mask .title{display: inline-block;width: 100px;}
 .hs-div1{width: 550px;margin: 15px auto;}
@@ -1127,7 +1127,6 @@ tr th,tr td{ text-align:center;font-size: 14px;border:1px solid #fbb432;color: #
  text-align: center;color: #fff;font-size: 16px;border:1px solid #fff;position: absolute;right: 10px;top: 10px;}
 .hd-mask>div{display: none;}
 .hd-mask>div.active{display: block;}
-
 
 
 /*chioce-server*/
