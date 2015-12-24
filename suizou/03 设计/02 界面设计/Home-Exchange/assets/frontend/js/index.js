@@ -88,6 +88,92 @@
                                 '<img src="../../assets/frontend/images/pagination-img1.jpg" alt=""/>'+
                             '</a>'+
                         '</div>'+
+                    '</div>'+
+                    '<div class="left Sdetails">'+
+                        '<p class="title">'+
+                            '<span class="large">小牛深度居家保洁－4小时</span>'+
+                            '<span class="small">最低199元</span>'+
+                        '</p>'+
+                        '<p>全程无死角/水质检测/家具及地板精养/电器清理</p>'+
+                        '<table class="de-table">'+
+                            '<tr>'+
+                                '<th>'+
+                                    '<span class="large-week">周日</span><br/>'+
+                                    '<span>11.06</span>'+
+                                '</th>'+
+                                '<th>'+
+                                    '<span class="large-week">周以</span><br/>'+
+                                    '<span>11.07</span>'+
+                                '</th>'+
+                                '<th>'+
+                                    '<span class="large-week">周二</span><br/>'+
+                                    '<span>11.08</span>'+
+                                '</th>'+
+                                '<th>'+
+                                    '<span class="large-week">周三</span><br/>'+
+                                    '<span>11.09</span>'+
+                                '</th>'+
+                                '<th>'+
+                                    '<span class="large-week">周四</span><br/>'+
+                                    '<span>11.10</span>'+
+                                '</th>'+
+                                '<th>'+
+                                    '<span class="large-week">周五</span><br/>'+
+                                    '<span>11.11</span>'+
+                                '</th>'+
+                                '<th>'+
+                                    '<span class="large-week">周六</span><br/>'+
+                                    '<span>11.12</span>'+
+                                '</th>'+
+                            '</tr>'+
+                            '<tr>'+
+                                '<td>'+
+                                    '<p class="hasno">'+
+                                        '<span>已满</span><br/>'+
+                                        '<span>199元</span>'+
+                                    '</p>'+
+                                '</td>'+
+                                '<td>'+
+                                    '<p class="hasno">'+
+                                        '<span>已满</span><br/>'+
+                                        '<span>199元</span>'+
+                                    '</p>'+
+                                '</td>'+
+                                '<td>'+
+                                    '<p class="hasno">'+
+                                        '<span>已满</span><br/>'+
+                                        '<span>199元</span>'+
+                                    '</p>'+
+                                '</td>'+
+                                '<td>'+
+                                    '<p class="hasno">'+
+                                        '<span>已满</span><br/>'+
+                                        '<span>199元</span>'+
+                                    '</p>'+
+                                '</td>'+
+                                '<td>'+
+                                    '<p class="hasno">'+
+                                        '<span>已满</span><br/>'+
+                                        '<span>199元</span>'+
+                                    '</p>'+
+                                '</td>'+
+                                '<td>'+
+                                    '<p>'+
+                                        '<span>已满</span><br/>'+
+                                        '<span>199元</span>'+
+                                    '</p>'+
+                                '</td>'+
+                                '<td>'+
+                                    '<p>'+
+                                        '<span>已满</span><br/>'+
+                                        '<span>199元</span>'+
+                                    '</p>'+
+                                '</td>'+
+                            '</tr>'+
+                        '</table>'+
+                        '<p style="text-align: center;">'+
+                            '<button class="btn-buy">立即订购</button>'+
+                        '</p>'+
                     '</div>'
             );
             $(".serversSlider").serversSlider({});
@@ -176,7 +262,7 @@
                 activeLeft  = _this.find(".active-left");
                 activeRight = _this.find(".active-right");
                 activeUl = _this.find(".active-ul");
-                oLiActive = _this.find("li");
+                oLiActive = _this.find(".item");
                 liWidthActive = oLiActive[0].offsetWidth;
                 activeUlWidth = activeUl.offset().width;
                 activeUlWidth = liWidthActive*oLiActive.size() + "px";
@@ -191,7 +277,7 @@
             },
             left:function(){
                 activeLeft.on("click",function(){
-                    Methods.autoPlay()
+                    Methods.autoPlay();
                 })
             },
             right:function(){
@@ -199,12 +285,12 @@
                     if(btnActive == true){
                         if(inowActive==0){
                             inowActive = oLiActive.size()-1;
-                            move(activeUl[0], {left : -inowActive * liWidthActive},function(){
+                            move(activeUl.get(0), {left : -inowActive * liWidthActive},function(){
                                 btnActive = true;
                             });
                         }else{
                             inowActive--;
-                            move(activeUl[0], {left : -inowActive * liWidthActive},function(){
+                            move(activeUl.get(0), {left : -inowActive * liWidthActive},function(){
                                 btnActive = true;
                             });
                         }
@@ -216,13 +302,13 @@
                     btnActive = false;
                     if(inowActive == oLiActive.size()-1){
                         inowActive = 0;
-                        move(activeUl[0], {left : -inowActive * liWidthActive},function(){
+                        move(activeUl.get(0), {left : -inowActive * liWidthActive},function(){
                             btnActive = true;
                         });
                         btnActive = true;
                     }else{
                         inowActive++;
-                        move(activeUl[0], {left : -inowActive * liWidthActive},function(){
+                        move(activeUl.get(0), {left : -inowActive * liWidthActive},function(){
                             btnActive = true;
                         });
                     }

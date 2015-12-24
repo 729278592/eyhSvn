@@ -16,7 +16,7 @@
         clearClick:function(){
             btnClear.on("click",function(){
                 rentalMode.removeClass("active");
-                rentalMode.find("input").removeClass("selected");
+                rentalMode.find("input").attr({checked:false}).removeClass("checked");
             })
         },
         radioClick:function(){
@@ -24,12 +24,12 @@
                 var tfr = $(this).find(radio).get(0);
                 if(tfr.className == ""){
                     tfr.checked = true;
-                    tfr.className = "selected";
-                    $(this).siblings(rentalMode).find(radio).removeClass("selected");
+                    tfr.className = "checked";
+                    $(this).siblings(rentalMode).find(radio).removeClass("checked");
                     $(this).siblings(rentalMode).removeClass("active");
                     $(this).addClass("active");
                 }
-                else if(tfr.className == "selected"){
+                else if(tfr.className == "checked"){
                     tfr.checked = false;
                     tfr.className = "";
                     $(this).removeClass("active");
@@ -41,10 +41,10 @@
                 var tfg = $(this).find(checkbox).get(0);
                 if(tfg.className == ""){
                     tfg.checked = true;
-                    tfg.className = "selected";
+                    tfg.className = "checked";
                     $(this).addClass("active");
                 }
-                else if(tfg.className == "selected"){
+                else if(tfg.className == "checked"){
                     tfg.checked = false;
                     tfg.className = "";
                     $(this).removeClass("active");

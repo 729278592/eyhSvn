@@ -6,6 +6,7 @@
         var define = {
             defineNum:0,
             maxNum:100,
+            one:25,
             isNum:"只能输入数字哦"
         };
         var opts = $.extend({},define,optinos);
@@ -46,9 +47,9 @@
                     }
                     methods.totalMoney();
                     if(spinneriNow>opts.maxNum){
-                        spinner.val('购买数量不能超过'+opts.maxNum+'哦');
-                        spinner.addClass("cuo");
-                        total.text("NaN");
+                        spinner.val(opts.maxNum);
+                        total.text(opts.maxNum*unitPrice.text());
+                        alert('购买数量不能超过'+opts.maxNum+'哦');
                     }
                     methods.isNaN();
                 });
@@ -73,7 +74,7 @@
                 });
             },
             keydown:function(){/*键盘输入购买数量*/
-                spinner.keydown(function(event) {
+                spinner.keyup(function(event) {
                     var keyCode = event.which;
                     spinneriNow = spinner.val();
                     if(keyCode==48||keyCode == 96){
@@ -111,9 +112,11 @@
                         return false;
                     }
                     if(spinneriNow>opts.maxNum){
-                        spinner.val('购买数量不能超过'+opts.maxNum+'哦');
-                        spinner.addClass("cuo");
-                        total.text("NaN");
+                        spinner.val(opts.maxNum);
+//                        spinner.addClass("cuo");
+                        total.text(opts.maxNum*unitPrice.text());
+                        alert('购买数量不能超过'+opts.maxNum+'哦');
+
                     }
                 })
             }

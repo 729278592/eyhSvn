@@ -1,5 +1,7 @@
 /*头部滑动*/
 (function($) {
+
+
     /*全屏图片居中*/
     var si = $(".auto-img");
     si.each(function(i){
@@ -20,7 +22,7 @@
     var doc = document, inputs = doc.getElementsByTagName('input'), supportPlaceholder = 'placeholder'in doc.createElement('input'), placeholder = function (input) {
         var text = input.getAttribute('placeholder'), defaultValue = input.defaultValue;
         if (defaultValue == '') {
-            input.value = text
+            input.value = text;
         }
         input.onfocus = function () {
             if (input.value === text) {

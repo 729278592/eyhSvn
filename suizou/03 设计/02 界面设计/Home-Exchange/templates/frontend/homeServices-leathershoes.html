@@ -101,11 +101,14 @@
                                 </select>
                             </div>
                             <p class="title" style="padding-top: 0;">请输鞋子双数　　　单位: 双　　　价格: <span class="num unit-price">25</span>元/双</p>
-                            <span class="s-spinner">
-                                <input type="text" class="spinner"/>
-                                <button class="btn-common btn-plus">+</button>
-                                <button class="btn-common btn-reduce" disabled="disabled">-</button>
-                            </span>
+                            <div class="clearfix services-type">
+                                <span class="span-title left">鞋子双数:</span>
+                                <span class="s-spinner right">
+                                    <input type="text" class="spinner"/>
+                                    <button class="btn-common btn-plus">+</button>
+                                    <button class="btn-common btn-reduce" disabled="disabled">-</button>
+                                </span>
+                            </div>
                             <p class="title">请选择您鞋柜的尺寸</p>
                             <p class="p-select">
                                 <select name="" class="select-num">
@@ -129,19 +132,13 @@
                                 <a href="order-pay.html" class="btn-order">下单</a>
                                 <!--<input type="submit" value="下单" class="btn-order"/>-->
                             </div>
-                            <p class="title ta">
-                                部分服务需要现场协商,差额部分追加下单
-                            </p>
-                            <div class="div-order">
-                                <input type="submit" value="追加下单" class="btn-order"/>
-                            </div>
                         </div>
                     </div>
                 </div>
                 <div class="related-services">
                     <div class="rs-head">相关服务</div>
-                    <ul class="rs-ul clearfix">
-                        <li>
+                    <ul class="rs-ul clearfix js-active">
+                        <li class="item">
                             <a href="#">
                                 <img src="../../assets/frontend/images/leathershoes2.jpg" />
                             </a>
@@ -149,7 +146,7 @@
                             <p>是的范德萨发生地方</p>
                             <i class="fa fa-check right active"></i>
                         </li>
-                        <li>
+                        <li class="item">
                             <a href="#">
                                 <img src="../../assets/frontend/images/leathershoes2.jpg" />
                             </a>
@@ -157,7 +154,7 @@
                             <p>是的范德萨发生地方</p>
                             <i class="fa fa-check right"></i>
                         </li>
-                        <li>
+                        <li class="item">
                             <a href="#">
                                 <img src="../../assets/frontend/images/leathershoes2.jpg" />
                             </a>
@@ -165,7 +162,7 @@
                             <p>是的范德萨发生地方</p>
                             <i class="fa fa-check right"></i>
                         </li>
-                        <li>
+                        <li class="item">
                             <a href="#">
                                 <img src="../../assets/frontend/images/leathershoes2.jpg" />
                             </a>
@@ -176,77 +173,84 @@
                     </ul>
 
                 </div>
-                <div class="server-exrample">
-                    <ul class="se-ul clearfix">
-                        <li class="active">
-                            <span>服务规范</span>
-                        </li>
-                        <li>
-                            <span>注意事项</span>
-                        </li>
-                        <li>
-                            <span>案例展示</span>
-                        </li>
-                        <li class="mr0">
-                            <span>工具展示</span>
-                        </li>
-                    </ul>
-                    <div class="se-div active">
-                        <p class="title">低价尊享各项服务内容</p>
-                        <ul class="clearfix con-details">
-                            <li>
-                                <img src="../../assets/frontend/images/scul1.png" alt=""/>
-                                <p class="title">卧室</p>
-                                <p>床铺整理、物品整理、家具表面清洁、内窗玻璃清洁、门及门框清洁、地面清洁、垃圾清理</p>
+                <div class="clearfix">
+                    <div class="server-exrample left">
+                        <ul class="se-ul clearfix">
+                            <li class="active">
+                                <span>服务规范</span>
                             </li>
                             <li>
-                                <img src="../../assets/frontend/images/scul1.png" alt=""/>
-                                <p class="title">卧室</p>
-                                <p>床铺整理、物品整理、家具表面清洁、内窗玻璃清洁、门及门框清洁、地面清洁、垃圾清理</p>
+                                <span>注意事项</span>
                             </li>
                             <li>
-                                <img src="../../assets/frontend/images/scul1.png" alt=""/>
-                                <p class="title">卧室</p>
-                                <p>床铺整理、物品整理、家具表面清洁、内窗玻璃清洁、门及门框清洁、地面清洁、垃圾清理</p>
+                                <span>案例展示</span>
                             </li>
-                            <li>
-                                <img src="../../assets/frontend/images/scul1.png" alt=""/>
-                                <p class="title">卧室</p>
-                                <p>床铺整理、物品整理、家具表面清洁、内窗玻璃清洁、门及门框清洁、地面清洁、垃圾清理</p>
+                            <li class="mr0">
+                                <span>工具展示</span>
                             </li>
                         </ul>
-                    </div>
-                    <div class="se-div">
-                        <div class="tool-change">
-                            <div class="tool-details left">
-                                <p class="title">衣橱整理师工具</p>
-                                <p>
-                                    建立正确的舒服舒服法国家的热土看看记录人借口借口离开就是广东发鬼地方个人体有如同阳光狐疑的法规的个人体
-                                </p>
-                            </div>
-                            <img src="../../assets/frontend/images/wardrobe4.jpg"/>
+                        <div class="se-div active">
+                            <p class="title">低价尊享各项服务内容</p>
+                            <ul class="clearfix con-details">
+                                <li>
+                                    <img src="../../assets/frontend/images/scul1.png" alt=""/>
+                                    <p class="title">卧室</p>
+                                    <p>床铺整理、物品整理、家具表面清洁、内窗玻璃清洁、门及门框清洁、地面清洁、垃圾清理</p>
+                                </li>
+                                <li>
+                                    <img src="../../assets/frontend/images/scul1.png" alt=""/>
+                                    <p class="title">卧室</p>
+                                    <p>床铺整理、物品整理、家具表面清洁、内窗玻璃清洁、门及门框清洁、地面清洁、垃圾清理</p>
+                                </li>
+                                <li>
+                                    <img src="../../assets/frontend/images/scul1.png" alt=""/>
+                                    <p class="title">卧室</p>
+                                    <p>床铺整理、物品整理、家具表面清洁、内窗玻璃清洁、门及门框清洁、地面清洁、垃圾清理</p>
+                                </li>
+                            </ul>
                         </div>
                     </div>
-                    <div class="se-div">
-                        <div class="tool-change">
-                            <div class="tool-details left">
-                                <p class="title">衣橱整理师工具</p>
-                                <p>
-                                    建立正确的舒服舒服法国家的热土看看记录人借口借口离开就是广东发鬼地方个人体有如同阳光狐疑的法规的个人体
-                                </p>
-                            </div>
-                            <img src="../../assets/frontend/images/wardrobe4.jpg"/>
+                    <div class="right commont">
+                        <div class="com-head">
+                            <p>评论</p>
                         </div>
-                    </div>
-                    <div class="se-div">
-                        <div class="tool-change">
-                            <div class="tool-details left">
-                                <p class="title">衣橱整理师工具</p>
-                                <p>
-                                    建立正确的舒服舒服法国家的热土看看记录人借口借口离开就是广东发鬼地方个人体有如同阳光狐疑的法规的个人体
-                                </p>
+                        <div class="com-content">
+                            <div class="com-div">
+                                <a href="#" class="left">
+                                    <img src="../../assets/frontend/images/scp-img1.jpg" alt="">
+                                </a>
+                                <div class="left com-details">
+                                    <p class="name">张三</p>
+                                    <p>阿姨的服务很好阿姨的服务很好阿</p>
+                                </div>
                             </div>
-                            <img src="../../assets/frontend/images/wardrobe4.jpg"/>
+                            <div class="com-div">
+                                <a href="#" class="left">
+                                    <img src="../../assets/frontend/images/scp-img1.jpg" alt="">
+                                </a>
+                                <div class="left com-details">
+                                    <p class="name">张三</p>
+                                    <p>阿姨的服务很好阿姨的服务很好阿</p>
+                                </div>
+                            </div>
+                            <div class="com-div">
+                                <a href="#" class="left">
+                                    <img src="../../assets/frontend/images/scp-img1.jpg" alt="">
+                                </a>
+                                <div class="left com-details">
+                                    <p class="name">张三</p>
+                                    <p>阿姨的服务很好阿姨的服务很好阿</p>
+                                </div>
+                            </div>
+                            <div class="com-div">
+                                <a href="#" class="left">
+                                    <img src="../../assets/frontend/images/scp-img1.jpg" alt="">
+                                </a>
+                                <div class="left com-details">
+                                    <p class="name">张三</p>
+                                    <p>阿姨的服务很好阿姨的服务很好阿</p>
+                                </div>
+                            </div>
                         </div>
                     </div>
                 </div>
@@ -335,28 +339,13 @@
     <script src="../../assets/frontend/js/global.js"></script>
     <script src="../../assets/frontend/js/spinner.js"></script>
     <script src="../../assets/global/plugins/My97DatePicker/WdatePicker.js"></script>
+    <script src="../../assets/frontend/js/serveice.js?v=445"></script>
     <script type="text/javascript">
         (function($){
             $(".s-spinner").spinner({
                 defaultNum:0,
                 maxNum:100
             });
-
-            var rul = $(".se-ul li");
-            var rl = $(".se-div");
-            rul.each(function(i){
-                $(this).on("click",function(){
-                    $(this).addClass("active");
-                    $(this).siblings().removeClass("active");
-                    rl.eq(i).addClass("active");
-                    rl.eq(i).siblings(rl).removeClass("active");
-                })
-            });
-            var rlf = $(".rs-ul li .fa-check");
-            rlf.on("click",function(){
-                $(this).addClass("active");
-                $(this).parent("li").siblings("li").find(".fa-check").removeClass("active")
-            })
         })(jQuery)
     </script>
 </html>

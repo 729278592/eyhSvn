@@ -123,11 +123,14 @@
                                 </select>
                             </div>
                             <p class="title" style="padding-top: 0;">请输选择时间　　单位: 小时　　价格: <span class="num unit-price">25</span>元/小时</p>
-                            <span class="s-spinner">
-                                <input type="text" class="spinner"/>
-                                <button class="btn-common btn-plus">+</button>
-                                <button class="btn-common btn-reduce" disabled="disabled">-</button>
-                            </span>
+                            <div class="clearfix services-type">
+                                <span class="span-title left">保洁时间:</span>
+                                <span class="s-spinner right">
+                                    <input type="text" class="spinner"/>
+                                    <button class="btn-common btn-plus">+</button>
+                                    <button class="btn-common btn-reduce" disabled="disabled">-</button>
+                                </span>
+                            </div>
                             <p class="title total-title">总价 : <span class="num total">0</span></p>
                             <p class="title">更多需求</p>
                             <textarea style="resize: none" name=""  cols="50" rows="3" class="textarea"   placeholder="您可以在这里备注需求"></textarea>
@@ -138,12 +141,6 @@
                                 <a href="order-pay.html" class="btn-order">下单</a>
                                 <!--<input type="submit" value="下单" class="btn-order"/>-->
                             </div>
-                            <p class="title ta">
-                                部分服务需要现场协商,差额部分追加下单
-                            </p>
-                            <div class="div-order">
-                                <input type="submit" value="追加下单" class="btn-order"/>
-                            </div>
                         </div>
                     </div>
                 </div>
@@ -153,9 +150,9 @@
                 </div>
                 <div class="tool clearfix">
                     <p class="title">服务套餐</p>
-                    <div class="active-slider servpackSlider">
-                        <ul class="active-ul servpack-slider clearfix">
-                            <li>
+                    <div class="active-slider servpackSlider" id="servpackSlider1">
+                        <ul class="active-ul servpack-slider js-active clearfix">
+                            <li class="item">
                                 <div>
                                     <a href="#">
                                         <img src="../../assets/frontend/images/hsList1.jpg" alt="" class="step-img"/>
@@ -190,7 +187,7 @@
                                     <span class="num">￥ : 2000/人</span>
                                 </div>
                             </li>
-                            <li>
+                            <li class="item">
                                 <div>
                                     <a href="#">
                                         <img src="../../assets/frontend/images/hsList1.jpg" alt="" class="step-img"/>
@@ -226,15 +223,83 @@
                                 </div>
                             </li>
                         </ul>
-                        <div class="active-left servpack-left">‹</div>
-                        <div class="active-right servpack-right">›</div>
+                        <!--<div class="active-left servpack-left">‹</div>-->
+                        <!--<div class="active-right servpack-right">›</div>-->
                     </div>
                 </div>
                 <div class="service-introduction">
                     <p class="title">其他服务介绍</p>
-                    <div class="active-slider servpackSlider serviceSlider">
-                        <ul class="active-ul servpack-slider service-slider clearfix">
-                            <li>
+                    <div class="active-slider servpackSlider serviceSlider" id="servpackSlider2">
+                        <ul class="active-ul servpack-slider service-slider js-active clearfix">
+                            <li class="item">
+                                <div>
+                                    <a href="#">
+                                        <img src="../../assets/frontend/images/hsList1.jpg" alt="" class="step-img"/>
+                                        <i class="fa fa-check right active"></i>
+                                    </a>
+                                    <p>
+                                        <span>室内家居保洁-4小时</span><br/>
+                                        <span>房屋的基础打理</span>
+                                    </p>
+                                    <span class="num">￥ : 2000/人</span>
+                                </div>
+                                <div>
+                                    <a href="#">
+                                        <img src="../../assets/frontend/images/hsList1.jpg" alt="" class="step-img"/>
+                                        <i class="fa fa-check right"></i>
+                                    </a>
+                                    <p>
+                                        <span>室内家居保洁-4小时</span><br/>
+                                        <span>房屋的基础打理</span>
+                                    </p>
+                                    <span class="num">￥ : 2000/人</span>
+                                </div>
+                                <div class="mr0">
+                                    <a href="#">
+                                        <img src="../../assets/frontend/images/hsList1.jpg" alt="" class="step-img"/>
+                                        <i class="fa fa-check right active"></i>
+                                    </a>
+                                    <p>
+                                        <span>室内家居保洁-5小时</span><br/>
+                                        <span>房屋的基础打理</span>
+                                    </p>
+                                    <span class="num">￥ : 2000/人</span>
+                                </div>
+                                <div class="mb0">
+                                    <a href="#">
+                                        <img src="../../assets/frontend/images/hsList1.jpg" alt="" class="step-img"/>
+                                        <i class="fa fa-check right"></i>
+                                    </a>
+                                    <p>
+                                        <span>室内家居保洁-4小时</span><br/>
+                                        <span>房屋的基础打理</span>
+                                    </p>
+                                    <span class="num">￥ : 2000/人</span>
+                                </div>
+                                <div class="mb0">
+                                    <a href="#">
+                                        <img src="../../assets/frontend/images/hsList1.jpg" alt="" class="step-img"/>
+                                        <i class="fa fa-check right"></i>
+                                    </a>
+                                    <p>
+                                        <span>室内家居保洁-4小时</span><br/>
+                                        <span>房屋的基础打理</span>
+                                    </p>
+                                    <span class="num">￥ : 2000/人</span>
+                                </div>
+                                <div class="mr0 mb0">
+                                    <a href="#">
+                                        <img src="../../assets/frontend/images/hsList1.jpg" alt="" class="step-img"/>
+                                        <i class="fa fa-check right"></i>
+                                    </a>
+                                    <p>
+                                        <span>室内家居保洁-5小时</span><br/>
+                                        <span>房屋的基础打理</span>
+                                    </p>
+                                    <span class="num">￥ : 2000/人</span>
+                                </div>
+                            </li>
+                            <li class="item">
                                 <div>
                                     <a href="#">
                                         <img src="../../assets/frontend/images/hsList1.jpg" alt="" class="step-img"/>
@@ -307,45 +372,85 @@
                         <div class="active-right servpack-right service-right">›</div>
                     </div>
                 </div>
-                <div class="server-exrample">
-                    <ul class="se-ul clearfix">
-                        <li class="active">
-                            <span>服务规范</span>
-                        </li>
-                        <li>
-                            <span>注意事项</span>
-                        </li>
-                        <li>
-                            <span>案例展示</span>
-                        </li>
-                        <li class="mr0">
-                            <span>工具展示</span>
-                        </li>
-                    </ul>
-                    <div class="se-div active">
-                        <p class="title">低价尊享各项服务内容</p>
-                        <ul class="clearfix con-details">
-                            <li>
-                                <img src="../../assets/frontend/images/scul1.png" alt=""/>
-                                <p class="title">卧室</p>
-                                <p>床铺整理、物品整理、家具表面清洁、内窗玻璃清洁、门及门框清洁、地面清洁、垃圾清理</p>
+                <div class="clearfix">
+                    <div class="server-exrample left">
+                        <ul class="se-ul clearfix">
+                            <li class="active">
+                                <span>服务规范</span>
                             </li>
                             <li>
-                                <img src="../../assets/frontend/images/scul1.png" alt=""/>
-                                <p class="title">卧室</p>
-                                <p>床铺整理、物品整理、家具表面清洁、内窗玻璃清洁、门及门框清洁、地面清洁、垃圾清理</p>
+                                <span>注意事项</span>
                             </li>
                             <li>
-                                <img src="../../assets/frontend/images/scul1.png" alt=""/>
-                                <p class="title">卧室</p>
-                                <p>床铺整理、物品整理、家具表面清洁、内窗玻璃清洁、门及门框清洁、地面清洁、垃圾清理</p>
+                                <span>案例展示</span>
                             </li>
-                            <li>
-                                <img src="../../assets/frontend/images/scul1.png" alt=""/>
-                                <p class="title">卧室</p>
-                                <p>床铺整理、物品整理、家具表面清洁、内窗玻璃清洁、门及门框清洁、地面清洁、垃圾清理</p>
+                            <li class="mr0">
+                                <span>工具展示</span>
                             </li>
                         </ul>
+                        <div class="se-div active">
+                            <p class="title">低价尊享各项服务内容</p>
+                            <ul class="clearfix con-details">
+                                <li>
+                                    <img src="../../assets/frontend/images/scul1.png" alt=""/>
+                                    <p class="title">卧室</p>
+                                    <p>床铺整理、物品整理、家具表面清洁、内窗玻璃清洁、门及门框清洁、地面清洁、垃圾清理</p>
+                                </li>
+                                <li>
+                                    <img src="../../assets/frontend/images/scul1.png" alt=""/>
+                                    <p class="title">卧室</p>
+                                    <p>床铺整理、物品整理、家具表面清洁、内窗玻璃清洁、门及门框清洁、地面清洁、垃圾清理</p>
+                                </li>
+                                <li>
+                                    <img src="../../assets/frontend/images/scul1.png" alt=""/>
+                                    <p class="title">卧室</p>
+                                    <p>床铺整理、物品整理、家具表面清洁、内窗玻璃清洁、门及门框清洁、地面清洁、垃圾清理</p>
+                                </li>
+                            </ul>
+                        </div>
+                    </div>
+                    <div class="right commont">
+                        <div class="com-head">
+                            <p>评论</p>
+                        </div>
+                        <div class="com-content">
+                            <div class="com-div">
+                                <a href="#" class="left">
+                                    <img src="../../assets/frontend/images/scp-img1.jpg" alt="">
+                                </a>
+                                <div class="left com-details">
+                                    <p class="name">张三</p>
+                                    <p>阿姨的服务很好阿姨的服务很好阿</p>
+                                </div>
+                            </div>
+                            <div class="com-div">
+                                <a href="#" class="left">
+                                    <img src="../../assets/frontend/images/scp-img1.jpg" alt="">
+                                </a>
+                                <div class="left com-details">
+                                    <p class="name">张三</p>
+                                    <p>阿姨的服务很好阿姨的服务很好阿</p>
+                                </div>
+                            </div>
+                            <div class="com-div">
+                                <a href="#" class="left">
+                                    <img src="../../assets/frontend/images/scp-img1.jpg" alt="">
+                                </a>
+                                <div class="left com-details">
+                                    <p class="name">张三</p>
+                                    <p>阿姨的服务很好阿姨的服务很好阿</p>
+                                </div>
+                            </div>
+                            <div class="com-div">
+                                <a href="#" class="left">
+                                    <img src="../../assets/frontend/images/scp-img1.jpg" alt="">
+                                </a>
+                                <div class="left com-details">
+                                    <p class="name">张三</p>
+                                    <p>阿姨的服务很好阿姨的服务很好阿</p>
+                                </div>
+                            </div>
+                        </div>
                     </div>
                 </div>
             </div>
@@ -426,6 +531,10 @@
                 <span>版权所有：重庆至尚科技发展有限公司 CopyRight@2014-2019 备案号：渝ICP备15005428号-</span>　
             </div>
         </div>
+        <!--<div class="mask-bg"></div>-->
+        <!--<div class="mask">-->
+
+        <!--</div>-->
     </div>
 </body>
     <script type="text/javascript" src="../../assets/global/plugins/jquery/jquery-1.11.3.min.js"></script>
@@ -434,26 +543,16 @@
     <script src="../../assets/frontend/js/global.js"></script>
     <script src="../../assets/frontend/js/spinner.js"></script>
     <script src="../../assets/frontend/js/index.js?v=444"></script>
+    <script src="../../assets/frontend/js/serveice.js?v=445"></script>
     <script type="text/javascript">
         (function($){
             $(".s-spinner").spinner({
                 defaultNum:0,
                 maxNum:100
             });
-            var rul = $(".se-ul li");
-            var rl = $(".se-div");
-            rul.each(function(i){
-                $(this).on("click",function(){
-                    $(this).addClass("active");
-                    $(this).siblings().removeClass("active");
-                    rl.eq(i).addClass("active");
-                    rl.eq(i).siblings(rl).removeClass("active");
-                })
-            })
-//            $(".servpackSlider").activeSlider({
-//                setActive:5000
-//            });
-
+            $("#servpackSlider2").activeSlider({
+                setActive:5000
+            });
         })(jQuery)
     </script>
 </html>
