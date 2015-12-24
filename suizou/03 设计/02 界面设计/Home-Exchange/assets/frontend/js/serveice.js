@@ -29,9 +29,10 @@ var jai = $(".js-active .item img");
 var mb = $(".mask-bg,.mask");
  var mf = $(".mask .fa-remove");
 jai.each(function(){
-   $(this).on("click",function(){
+   $(this).on("click",function(e){
 //       $(this).attr(src);
 //       alert($(this).attr(src))
+       e.preventDefault();
        mb.removeClass("hide");
 
 //       var str = '<div class="mask-bg hide"></div>'+

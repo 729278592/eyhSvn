@@ -16,6 +16,7 @@
 .cms-home .products-grid BUTTON.button { PADDING-BOTTOM: 0; BORDER-RIGHT-WIDTH: 0; MARGIN: 0; PADDING-LEFT: 0; WIDTH: auto; PADDING-RIGHT: 0; BACKGROUND: none transparent scroll repeat 0% 0%; BORDER-TOP-WIDTH: 0; BORDER-BOTTOM-WIDTH: 0; OVERFLOW: visible; BORDER-LEFT-WIDTH: 0; CURSOR: pointer; PADDING-TOP: 0 }
 .cms-home .products-grid BUTTON.button SPAN { TEXT-ALIGN: center; PADDING-BOTTOM: 0; TEXT-TRANSFORM: none; PADDING-LEFT: 0; PADDING-RIGHT: 0; FONT: 11px/16px Arial, Helvetica, sans-serif; WHITE-SPACE: nowrap; BACKGROUND: none transparent scroll repeat 0% 0%; FLOAT: left; HEIGHT: 16px; COLOR: #020202; PADDING-TOP: 0 }
 .cms-home .products-grid BUTTON.button SPAN SPAN { PADDING-BOTTOM: 0; PADDING-LEFT: 0; PADDING-RIGHT: 0; BACKGROUND: none transparent scroll repeat 0% 0%; PADDING-TOP: 0 }
+.ch-head{width: 1000px;height: 35px;line-height: 35px;background: #52ba92;padding-left: 14px;color: #fff;font-size: 16px;margin-left: 6px;}
 .std .subtitle { PADDING-BOTTOM: 0; PADDING-LEFT: 0; PADDING-RIGHT: 0; PADDING-TOP: 0 }
 .std OL.ol { LIST-STYLE-POSITION: outside; LIST-STYLE-TYPE: decimal; PADDING-LEFT: 1.5em }
 .std UL.disc { LIST-STYLE-POSITION: outside; LIST-STYLE-TYPE: disc; MARGIN: 0 0 10px; PADDING-LEFT: 18px }
@@ -43,9 +44,10 @@
 #left_but { width: 45px;height: 45px;position: absolute;top: 50%;margin-top: -17px;background: #fbb432;left: -50px;border-radius: 100%;line-height: 40px;text-align: center;color: #fff;font-size: 30px;}
 #right_but {width: 45px;height: 45px;position: absolute;top: 50%;margin-top: -17px;background: #fbb432;right: -50px;border-radius: 100%;line-height: 40px;text-align: center;color: #fff;font-size: 30px;}
 .base-mask-bg,.base-mask{position: absolute;left: 3px;right: 3px;bottom: 0;height: 30px;line-height: 30px;color: #fff;transition:0.5s ease all;-webkit-transition:0.5s ease all ;-moz-transition:0.5s ease all;}
-.base-mask{left: 15px;right: 15px;}
+.base-mask{left: 15px;right: 15px;z-index: 999;}
 .base-mask-bg{background: #000;opacity: 0.5;filter:alpha(opacity=50);}
 .base-lei{width: 60px;height: 60px;background: #fbb432;border-radius: 60px;line-height: 60px;text-align: center;color: #fff;font-size: 30px;position: absolute;left: 50%;top: 50%;margin-left: -30px;margin-top: -80px;display: none;transition:10s all ease;-webkit-transition:10s all ease;-moz-transition:10s all ease;}
+.base-lei a{color: #fff;}
 .cms-home .products-grid LI:hover .base-mask-bg,.cms-home .products-grid LI:hover .base-mask{bottom: 0;height: 100%;line-height: 311px;}
 .cms-home .products-grid LI:hover .base-lei{display: inline-block;}
 

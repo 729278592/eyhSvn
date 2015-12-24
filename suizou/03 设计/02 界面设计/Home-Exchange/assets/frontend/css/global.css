@@ -361,7 +361,7 @@ b {line-height: 30px;font-weight: 700;}
 
 
 
-.sc-content{width: 100%;background: #fff;}
+.sc-content{width: 100%;background: #fff;margin-top: 15px;}
 .ac-mune{width: 100%;}
 .ac-mune li{float: left;width: 80px;border-right: 1px solid #dbdbdb;height: 34px;line-height: 34px;text-align: center;font-size: 14px;color: #666;}
 .ac-mune li.active{background: #f8c15b;color: #fff;}
@@ -381,6 +381,18 @@ b {line-height: 30px;font-weight: 700;}
 .sc-title{width: 1004px;padding-left: 20px;height: 40px;line-height: 40px;color: #fff;background: #98d2b9;}
 .btn-fa{width: 70px;height: 30px;background: #fca613;line-height: 30px;text-align: center;color: #fff;display: inline-block;margin: 5px;font-size: 14px;}
 
+.technology{width: 100%;background: #fff;margin-bottom: 15px;height: 360px;}
+.technology-type{width: 100%;border-bottom: 1px solid #dbdbdb;}
+.technology-type li{width: 75px;height: 35px;line-height: 35px;color: #666;text-align: center;
+    border-right: 1px solid #dbdbdb;float: left;}
+.technology-type li.active{background: #f8c15b;color: #fff;font-size: 14px;}
+.technology-type li.br0{border-right: 0;}
+.technology-content{padding: 15px;width: 994px;}
+.technology-content>img{margin-right: 15px;}
+.tcc-p{margin: 10px 0 60px;font-size: 14px;color: #666;}
+.tcc-p .tc-num{display: inline-block;width: 40px;height: 40px;text-align: center;line-height: 40px;
+    font-size: 20px;color: #333;border: 1px solid #dbdbdb;vertical-align: top;float: left;}
+.tccp-con{position: relative;left: 10px;}
 /*train*/
 .hot-train{width: 100%;padding: 15px 0;position: relative;}
 .hot-ul{width: 100%}
@@ -730,8 +742,8 @@ tr th,tr td{ text-align:center;font-size: 14px;border:1px solid #fbb432;color: #
 .div-wdate{width: 198px;height: 40px;background: #fff;position: relative;}
 .div-wdate .Wdate{border: none;background: transparent;width: 198px;height: 40px;line-height: 40px;position: relative;z-index: 5;padding-left: 10px;}
 .div-wdate .fa{position: absolute;right: 10px;top: 10px;color: #52ba92;}
-.server-step{width: 100%;background: #50cbd5;height: 300px;text-align: center;overflow: hidden;margin-top: 10px;}
-.server-step .title{width: 140px;height: 34px;line-height: 34px;border: 1px solid #fff;color: #fff;margin: 20px auto;}
+.server-step{width: 100%;background: #50cbd5;height: 260px;text-align: center;overflow: hidden;margin-top: 10px;}
+.server-step .title{width: 140px;height: 34px;line-height: 34px;border: 1px solid #fff;color: #fff;margin: 20px auto 5px;}
 .server-step1{height: 248px;background: transparent;}
 .server-step1 img{margin-top: 0;}
 .step-img{margin-top: 30px;}
@@ -989,6 +1001,31 @@ tr th,tr td{ text-align:center;font-size: 14px;border:1px solid #fbb432;color: #
 .r-div{text-align: center;margin-right: 15px;}
 .r-details{width: 980px;margin-top: 20px;}
 
+.server-info{width: 984px;padding: 15px 20px;background: #fff;margin-top: 10px;}
+.si-ul{width: 100%;border-bottom: 1px solid #dbdbdb;}
+.si-ul li{height: 34px;line-height: 34px;padding: 0 30px;background: #9c9b99;color: #fff;float: left;margin-right: 6px;font-size: 14px;}
+.si-ul li.active{background: #52ba92;}
+.condition{width: 100%;}
+.condition p{width: 100%;font-size: 12px;color: #666;line-height: 25px;}
+.condition p.title{font-size: 20px;color: #52ba92;margin: 10px 0;}
+.condition p.name{font-size: 14px;color: #333;}
+
+
+
+.server-level{background: #fff;margin-top: 10px;width: 600px;}
+.level{width: 100%;border-bottom: 1px solid #dbdbdb;}
+.level li{width: 70px;height: 40px;line-height: 40px;border-right: 1px solid #dbdbdb;color: #666;text-align: center;float: left;font-size: 14px;}
+.level li.active{background: #956406;color: #fff;}
+.level li.br0{border-right: 0;}
+.level-con{padding: 15px 25px;}
+.level-con .title{font-size: 20px;color: #956406;margin: 11px 0;}
+.level-con p{font-size: 14px;color: #666;line-height: 25px;}
+.le-ul{width: 553px}
+.le-ul li{float: left;border: 1px solid #dbdbdb;width: 242px;height: 36px;line-height: 36px;padding: 0 10px;font-size: 14px;color: #999;margin:15px 5px;text-align: center;}
+.le-ul li .fa{font-size: 25px;color:#956406;position: relative;top: 2px;left: -20px;}
+
+
+
 /*homeServices*/
 .hs-div{width: 100%;background: #f6f3ee;position: relative;}
 .hs-menu{width: 220px;}
@@ -1090,6 +1127,9 @@ tr th,tr td{ text-align:center;font-size: 14px;border:1px solid #fbb432;color: #
  text-align: center;color: #fff;font-size: 16px;border:1px solid #fff;position: absolute;right: 10px;top: 10px;}
 .hd-mask>div{display: none;}
 .hd-mask>div.active{display: block;}
+
+
+
 /*chioce-server*/
 .server-c{width: 100%;background: #fff;}
 .sc-head{height: 30px;line-height: 30px;text-indent: 10px;width: 1004px;margin: 0 auto;
@@ -1156,7 +1196,7 @@ tr th,tr td{ text-align:center;font-size: 14px;border:1px solid #fbb432;color: #
 .order-pay{width: 1024px;height: 892px;background: url("../images/pay-bg.jpg")}
 .div-input{position: relative;top: 200px;left: 150px;}
 
-.type-div{display: none;min-height: 358px;width: 745px;background: #f6f3ee;}
+.type-div{display: none;min-height: 358px;width: 745px;background: #f6f3ee;height: 740px;}
 .type-div.active{display: inline-block;}
 .my-coupon{width: 745px;padding: 5px;background: #fff;}
 .dc-head{width: 735px;border-bottom: 1px solid #dbdbdb;}
@@ -1182,6 +1222,7 @@ tr th,tr td{ text-align:center;font-size: 14px;border:1px solid #fbb432;color: #
 .ac_ul li{float: left;width:20%;height: 30px;text-align: center;line-height: 30px; }
 .shopping_head{height: 30px;line-height: 30px;background: #ebf8fe;font-size: 12px;text-indent: 2px;width: 735px;}
 .shopping_head .fa-trash-o{position: relative;top: 2px;right: 10px;font-size: 24px;}
+.shopping_head .fa-trash-o:hover{cursor: pointer;}
 .shopping_content{margin: 0 auto 10px auto;width: 735px;border-collapse:collapse;}
 .shopping_content tr td{padding: 10px 0;text-align: center;border: 1px solid #c9e3ee;border-left: none;}
 .shopping_content tr td.first{width: 30%;}
@@ -1202,6 +1243,10 @@ tr th,tr td{ text-align:center;font-size: 14px;border:1px solid #fbb432;color: #
 .pay-a{display: inline-block;width: 120px;height: 30px;margin: 310px 200px;}
 .pay-type{width: 1024px;height: 1000px;background: url("../images/pay-type.jpg")}
 .pay-next{display: inline-block;width: 120px;height: 30px;line-height: 30px;text-align: center;color: #fff;margin:960px 430px;}
+
+
+
+
 
 
 /*media*/

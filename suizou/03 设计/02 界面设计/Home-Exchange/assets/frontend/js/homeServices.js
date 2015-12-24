@@ -52,6 +52,6 @@
             })
         }
     };
-    Method.init($(".search-terms,.service-type,.com_list"));
+    Method.init($(".search-terms,.service-type,.com_list,.hd-mask"));
 })(jQuery);
 

@@ -7,7 +7,6 @@
     <link rel="stylesheet" href="../../assets/global/plugins/font/css/font-awesome.min.css"/>
     <link rel="stylesheet" href="../../assets/frontend/css/global.css"/>
     <style>
-        .foot{position: fixed;bottom: 0;z-index: 10;}
         body{background: #f6f3ee;padding-top: 1px;}
         .head-main .menu li:hover a { color: #333;}
     </style>
@@ -237,11 +236,5 @@
         (function($){
             $(".nav").sliderUpDown({})
         })(jQuery);
-        $(document).ready(function(){
-            var content = $(".content");
-            var body = $("body").height();
-            var footer = $(".foot").height();
-            content.css({"paddingBottom":footer})
-        });
     </script>
 </html>
