@@ -1247,6 +1247,38 @@ tr th,tr td{ text-align:center;font-size: 14px;border:1px solid #fbb432;color: #
 
 
 
+/*serverPerson-details*/
+.maternity-infor{padding: 20px 20px 10px;width: 984px;background: #fff;}
+.mi-ul{width: 100%;}
+.mi-ul li{float: left;width: 305px;height: 240px;margin-right: 15px;}
+.mi-ul .li1{background: url("../images/m-infor1.jpg");}
+.mi-ul li.li2{background: #52ba92;text-align: center;color: #fff;font-size: 14px;}
+.mi-ul li.li2 .title,.pj .title{display: inline-block;width: 80px;height: 30px;border: 1px solid #dbdbdb;font-size: 16px;line-height: 30px;margin: 25px 0 20px;text-align: center;}
+.mi-ul li.li3{background: #fbb432;color: #fff;font-size: 14px;margin-right: 0;padding: 0 19px;}
+.mi-ul .li2 p{width: 260px;margin: 6px auto;height: 24px;line-height: 24px;}
+.mi-ul .li2 p>span{display: inline-block;width: 110px;text-align: left;}
+.mi-ul .li2 p .fa,.mi-ul .li3 p .fa{font-size: 20px;color: #333;display: inline-block;width: 20px;}
+.mi-ul li p .type{}
+.mi-ul li.li3 p{height: 24px;line-height: 24px;padding: 2px 30px;}
+.mi-ul li.li3 p.first{margin-top: 80px;}
+
+.work-infor{width: 100%;margin-top: 15px;}
+.wi-left .title{text-indent: 30px;width: 625px;height: 35px;line-height: 35px;background: #50cbd5;color: #fff;}
+.work-table{border-collapse:collapse;width: 625px;background: #3aa9b9;}
+.work-table tr td{color: #fff;}
+.work-table tr td .fa{color: #fbb433;font-size: 20px;position: relative;top: 3px;}
+.work-table tr td{ text-align:center;font-size: 14px;border:1px solid #dbdbdb;}
+.wi-left{float: left}
+.pj{float: right;background: #413f4e;color: #fff;font-size: 14px;padding: 0 19px;width: 305px;height: 192px;}
+.pj p{height: 26px;line-height: 26px;width: 220px;position: relative;left: 30px;margin: 6px 0;}
+.pj p.title{margin-bottom: 0;}
+.pj p .fa{display: inline-block;width: 18px;height: 18px;line-height: 18px;text-align: center;
+    border-radius: 18px;background: #707070;color: #fff;font-size: 12px;}
+.pj p .fa.active{background:#52ba92; }
+.pj p>span{display: inline-block;width: 90px;text-align: left;}
+.com-infor{width: 100%;height: 211px;background: url("../images/company-infor.jpg");margin-top: 15px;}
+.com-infor li{float: left;width: 492px;height: 103px;line-height: 103px;text-indent: 110px;color: #fff;font-size: 16px;}
+
 
 /*media*/
 
