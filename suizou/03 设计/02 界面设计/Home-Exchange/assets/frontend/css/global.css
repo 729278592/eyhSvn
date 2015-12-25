@@ -1077,7 +1077,7 @@ tr th,tr td{ text-align:center;font-size: 14px;border:1px solid #fbb432;color: #
 .large-num{font-size: 40px;}
 .large-words{position: relative;top: -40px;left: 105px;font-size: 26px;}
 .bonus-div .btn-get{width: 100%;height: 43px;text-align: center;color: #fff;line-height: 43px;position: relative;top: -23px;background: transparent;}
-.discount-lidt{width: 830px;height: 495px;}
+.discount-lidt{width: 830px;height: 495px;background: url("../images/xx7.jpg")}
 .rn-ul{width: 100%;}
 .rn-ul li{width: 272px;height: 145px;border: 1px solid #dbdbdb;float: left;position: relative;margin-right: 4px;}
 .rn-ul li.mr0{margin-right: 0;}
