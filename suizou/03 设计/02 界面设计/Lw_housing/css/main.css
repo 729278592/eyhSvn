@@ -278,8 +278,8 @@ li .main{width: 45%;display: inline-block;white-space: nowrap;text-overflow: ell
 
 /*le_mall*/
 .shop-list{width: 100%;margin-left: 1%;}
-.shop-list li{width: 31.33%;margin-right: 2%;float: left;margin-top: 1.7%;}
-.shop-list li a{display: inline-block;width: 100%;position: relative;}
+.shop-list li{width: 31.33%;margin-right: 2%;float: left;margin-top: 1.7%;position: relative;padding-bottom: 26.5%;}
+.shop-list li a{display: inline-block;width: 100%;position: absolute;top: 0;bottom: 0;left: 0;right: 0;}
 .shop-list li a img:hover{opacity: 0.8;}
 .shop-list li a .item-b{padding: 3% 2%;position: absolute;}
 .shop-list li a .item-b .main{width: 100%;color: #666;font-size: 12px;}
@@ -586,6 +586,11 @@ input.btn-click:hover{background: #e16a20}
 @media screen and (min-width: 640px) {
     .pc-none{display: none;}
     .form .form-group{height: 34px;position: relative;}
+}
+
+@media screen and (max-width: 640px) {
+    .shop-list li{width: 100%;margin-right: 2%;float: left;margin-top: 1.7%;position: relative;padding-bottom: 82%;}
+    .shop-list li a{display: inline-block;width: 100%;position: absolute;top: 0;bottom: 0;left: 0;right: 0;}
 }
 
 

@@ -11,7 +11,9 @@
     <link rel="stylesheet" href="css/mobile.css?v=11"/>
     <link rel="stylesheet" href="plugins/swiper/dist/css/swiper.min.css"/>
     <style>
-        .head{position: fixed;background: rgba(0,0,0,0);z-index: 100;}
+        .head{position: fixed;}
+        .head-mask{background: #000;opacity: 0.5;filter:alpha(opacity=50);}
+        .head,.head-mask{position: fixed;top: 0;width: 100%;z-index: 999;}
         #myCarousel1{width: 70%;position: absolute;left: 50%;top:50%;margin-left: -35%;margin-top: -12%;}
         #myCarousel1{background: url("images/myCarousel1-bg.jpg") no-repeat center center;background-size: cover;margin-bottom: 1.01%;border-radius: 4px;}
         #myCarousel1 .carousel-control {position: absolute;top: 45%;width: 39px;height: 76px;text-align: center;}
@@ -70,6 +72,7 @@
 </head>
 <body  class="cms-home">
     <div class="wrapper">
+        <div class="head-mask"></div>
         <div class="head" id="head">
             <div class="head-main">
                 <div class="pc-none mobile_block">

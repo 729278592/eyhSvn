@@ -99,7 +99,6 @@ $(function(){
     }
 
     oDiv1.onmouseover = function(){
-        console.log(a);
         clearInterval(start1);
         start1 = null;
     };
