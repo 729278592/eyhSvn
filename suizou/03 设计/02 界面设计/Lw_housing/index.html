@@ -782,7 +782,7 @@
             <div class="carousel slide hide" id="myCarousel1">
                 <div class="carousel-inner">
                     <div class="item">
-                        <img src="images/index-c2.jpg" class="img-responsive img" alt="Responsive image"/>
+                        <img src="images/index-c1.jpg" class="img-responsive img" alt="Responsive image"/>
                         <div class="describe">
                             <p>
                                 <span class="title color">小区锻炼</span><br/>
@@ -791,7 +791,34 @@
                         </div>
                     </div>
                     <div class="item">
+                        <img src="images/index-c2.jpg" class="img-responsive img" alt="Responsive image"/>
+                        <div class="describe">
+                            <p>
+                                <span class="title color">水上公园</span><br/>
+                                <span>七夕前一周，乐窝组织七夕泳池烧烤派对，我们一起在洋人街水上世界尽情嗨。大家穿着乐窝的服装，赚足了回头率。水上世界的总总趣事，让此刻每一个人脸上都挂满了笑容。</span>
+                            </p>
+                        </div>
+                    </div>
+                    <div class="item">
+                        <img src="images/index-c3.jpg" class="img-responsive img" alt="Responsive image"/>
+                        <div class="describe">
+                            <p>
+                                <span class="title color">南滨路夜跑</span><br/>
+                                <span>管家邀约乐窝小伙伴，一起夜跑，一起挥洒汗水，一起对压力说拜拜。略带昏黄的灯光下，年轻的躯体在夜间奔跑，肆意绽放着无悔的青春，我想那是属于青春的痕迹。</span>
+                            </p>
+                        </div>
+                    </div>
+                    <div class="item">
                         <img src="images/index-c1.jpg" class="img-responsive img" alt="Responsive image"/>
+                        <div class="describe">
+                            <p>
+                                <span class="title color">小区锻炼</span><br/>
+                                <span>有时候，我们总是会觉得生活太过于孤独和乏味，那只是你未曾发现身边的乐趣。闲暇时光，邀约乐窝的小伙伴，一起漫步在夜色中，谈天说地、八卦撕逼各种嗨。</span>
+                            </p>
+                        </div>
+                    </div>
+                    <div class="item">
+                        <img src="images/index-c2.jpg" class="img-responsive img" alt="Responsive image"/>
                         <div class="describe">
                             <p>
                                 <span class="title color">水上公园</span><br/>
@@ -936,10 +963,9 @@
             var m1 = $("#myCarousel1"),m1i = $("#myCarousel1 .item");
             var m1id = $("#myCarousel1 .item .describe");
             var mb = $(".mask-bg");
-            var mu = $("#marquee ul")
             mul.each(function (i) {
                 if($(window).width()>640){
-                    mu.delegate("li","click", function () {
+                    $(this).on("click", function () {
                         mb.removeClass("hide");
                         m1.closest(".mask").removeClass("hide");
                         m1.removeClass("hide");
