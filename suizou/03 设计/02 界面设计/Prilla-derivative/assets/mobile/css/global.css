@@ -316,6 +316,26 @@ table tr td a{display: inline-block;width: 100%;height: 100%;color: #666;line-he
 
 
 
+
+/*account_information*/
+.content-bg{position: absolute;z-index: 1;left: 0;top: 60px;overflow: hidden;bottom: 0;right: 0;}
+.content-bg img{width: 100%; height: 100%;}
+.account-details{position: absolute;top: 60px;right: 0;bottom: 0;left: 0;z-index: 10;}
+.chapter{width: 120px;position: absolute;bottom: 15px;right: 15px;z-index: 999;}
+.account-content{position: absolute;width: 310px;top: 50%;left: 50%;margin-left: -160px;margin-top: -75px;padding-left: 10px;}
+.account-content>.title {font-size: 26px;text-align: center;position: relative;top: 10px;}
+.account-content p{
+    width: 100%;display: inline-block;
+    font-family: "微软雅黑";
+    background-image: -webkit-linear-gradient(top, #f18660, #e4efb2, #718660);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+}
+.account-content .type{font-size: 14px;margin: 20px 0 0 0;}
+.first-party,.second-party{margin-left: 45px;}
+.first-party p,.second-party p{font-size: 14px;}
+.first-party p .name{font-size: 18px;}
+
 /*media*/
 @media screen and (max-width: 640px) {
     .details .spinner{margin-top: 12%;}
