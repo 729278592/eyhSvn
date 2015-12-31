@@ -152,7 +152,7 @@ b {line-height: 30px;font-weight: 700;}
 /*em{font-style: normal}*/
 
 
-.activity{padding-bottom: 8%;position: relative;top: -2px;}
+.activity{padding-bottom: 4%;position: relative;top: -2px;}
 .activity .item-ul1{position: relative;}
 .activity .item-ul1 img:hover{opacity: 0.9;}
 .activity .title{font-size: 18px;color: #5aadf3;position: absolute;top: 7%;left: 50%;margin-left: -54px;}
@@ -493,11 +493,11 @@ input.btn-click:hover{background: #e16a20}
 
 
 /*activey*/
-#marquee{width:1380px;height:320px;overflow:hidden; }
-#marquee ul li{float:left; padding:0 1px;width: 460px;height: 320px;position: relative;}
+#marquee{width:1380px;height:307px;overflow:hidden; }
+#marquee ul li{float:left; padding:0 1px;width: 460px;height: 307px;position: relative;}
 #marquee ul li .item-bt{position: absolute;bottom: 0;}
 #marquee ul li img{display:block;width: 100%;}
-#marquee ul li>img{width: 640px;height: 445px;}
+#marquee ul li>img{width: 460px;height: 307px;}
 .list{width: 96%;margin-left: 2.5%;margin-top: 2%;padding-bottom: 2%;}
 .list li{float: left;width: 49%;margin-right: 1%;border: 1px solid #dbdbdb;margin-bottom: 1%;}
 .list li .main{padding: 1% 2%;}
@@ -546,7 +546,7 @@ input.btn-click:hover{background: #e16a20}
 
 /*media*/
 @media screen and (max-width: 1600px) {
-    .activity{padding-bottom: 10%;position: relative;}
+    .activity{padding-bottom: 8%;position: relative;}
     .w96{padding: 0 2%;}
     .pc_deatils li .right-now,.pc_deatils li .address,.pc_deatils li .bohao{width: 100px;height: 40px;line-height: 40px;text-align: center;border-radius: 5px;color: #fff;font-size: 14px;}
     .pc_deatils li .bohao{background: #ff0202;display: inline-block;}
@@ -579,7 +579,7 @@ input.btn-click:hover{background: #e16a20}
     .room-information li .img-responsive{width: 308px;height: 205px;}
     .shop-list li a .item-b .main .money{left: 210px;top: 6px;}
     .activity {padding-bottom: 15%;}
-    #marquee ul li{float:left; padding:0 1px;width: 460px;height: 320px;position: relative;}
+    #marquee ul li{float:left; padding:0 1px;width: 460px;height: 307px;position: relative;}
     #marquee ul li .item-bt{position: absolute;bottom: 0;}
     #marquee ul li img{display:block;}
 }
