@@ -17,7 +17,9 @@
             toResize()
         });
     });
-    $.fn.activeSlider = function(options){
+
+
+    var SerSlider = function (serSlider,options){
         var defaul = {
             setActive:5000
         };
@@ -116,6 +118,9 @@
                 })
             }
         };
-        Methods.init($(this))
+        Methods.init(serSlider)
     };
+    new SerSlider($(".active-slider"),{
+        setActive:5000
+    });
 })(jQuery);

@@ -889,10 +889,10 @@
             });
 
             /*顶部切换*/
-//
             if($(window).width()<640){
 
             }
+
             else{
                 var w = $(".head");
                 $(window).scroll(function () {
@@ -1013,11 +1013,6 @@
             phah.on("click",function(){
                 ms.addClass("hide");
             });
-            (function($){
-                $(".active-slider").activeSlider({
-                    setActive:5000
-                });
-            })(jQuery)
             function getIE()
             {
                 if(navigator.appName == "Microsoft Internet Explorer")
