@@ -99,7 +99,22 @@
 		scrollAmount:3,		//步长
 		scrollDelay:20		//时长
 	};
-
+    function getIE()
+    {
+        if(navigator.appName == "Microsoft Internet Explorer")
+        {
+            if(navigator.appVersion.match(/8./i)=='8.')
+            {
+                $.fn.kxbdMarquee.defaults={
+                    isEqual:true,		//所有滚动的元素长宽是否相等,true,false
+                    loop: 0,			//循环滚动次数，0时无限
+                    direction: "left",	//滚动方向，"left","right","up","down"
+                    scrollAmount:10,		//步长
+                    scrollDelay:20		//时长
+                };
+            }
+        }
+    }getIE()
 
 
 	$.fn.kxbdMarquee.setDefaults=function(settings) {
