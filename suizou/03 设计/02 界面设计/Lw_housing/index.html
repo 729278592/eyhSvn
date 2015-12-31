@@ -87,8 +87,8 @@
                         <img src="images/logo.png" alt="" class="login"/>
                     </a>
                 </div>
-                <img src="images/logo.png" alt="" class="logo mobile_none"/>
-                <ul class="head-menu mobile_none">
+                <img src="images/logo.png" alt="" class="logo mobile_none ie8"/>
+                <ul class="head-menu mobile_none id8">
                     <li>
                         <a href="index.html" class="active">
                             首页
@@ -210,8 +210,8 @@
                         <div class="space-4">
                             拼搏向上的年纪，你应该住得更好！
                         </div>
-                        <div class="use-love-bg mobile_none"></div>
-                        <button class="use-love mobile_none">
+                        <div class="use-love-bg  ie8"></div>
+                        <button class="use-love mobile_none ie8">
                             Loveto怎么玩?
                         </button>
 
@@ -1018,7 +1018,24 @@
                     setActive:5000
                 });
             })(jQuery)
+            function getIE()
+            {
+                if(navigator.appName == "Microsoft Internet Explorer")
+                {
+                    if(navigator.appVersion.match(/8./i)=='8.')
+                    {
+                        $(".ie8").remove();
+                    }
+                }
+            }getIE()
+
+
+
         })
+    </script>
+    <script>
+
+          
     </script>
 </body>
 </html>
