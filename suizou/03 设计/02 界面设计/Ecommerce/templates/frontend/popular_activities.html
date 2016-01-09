@@ -1,0 +1,157 @@
+<!DOCTYPE html>
+<html>
+<head lang="en">
+    <meta charset="UTF-8">
+
+    <title>热门活动</title>
+    <link rel="stylesheet" href="../../assets/frontend/css/global.css"/>
+    <link rel="stylesheet" href="../../assets/global/plugins/font/css/font-awesome.min.css"/>
+    <link href="../../assets/global/plugins/jquery-jCountdown/jquery/jquery-ui-1.9.1.custom.min.css" rel="stylesheet" type="text/css">
+    <link href="../../assets/global/plugins/jquery-jCountdown/jcountdown/jcountdown.css" rel="stylesheet" type="text/css">
+    <link href="../../assets/global/plugins/jquery-jCountdown/index.css" rel="stylesheet" type="text/css">
+    <style>
+        body{min-width:1170px;font-family: "微软雅黑";background: #fff;font-size: 30px;}
+        #content{padding: 0;display: inline-block;}
+        #content .page{background: none;box-shadow: none;}
+        .remaining_time{font-size: 24px;position: relative;top: -55px;left: 210px;color: #555;}
+        .content{background: #f9f5f6;margin: -5px 0 0 0;}
+        .content{margin-top: 0;}
+        .video-js{margin: 150px auto;}
+        .cj_ul1>li{padding: 0;background: transparent;}
+        .form1{width: 100%;margin-top:20px;}
+        .inpu3{left: 0;}
+        .inpu1{width:260px;margin-bottom: 0;}
+        .form1 a:hover{color: #f5796a;text-decoration: underline;}
+        .position{position: absolute;z-index: 10000;}
+    </style>
+</head>
+<body>
+<div class="wapper">
+    <div class="header">
+        <div class="head-main">
+            <img src="../../assets/frontend/images/logo.png" alt="logo" class="left logo"/>
+            <ul class="head-menu right">
+                <li><a href="index.html">首页</a></li>
+                <li><a href="chiof-opertion.html">财符中心</a></li>
+                <li><a href="zhihui.html">智慧场景</a></li>
+                <li><a href="product_center.html">产品中心</a></li>
+                <li><a href="http://www.sskill.com/bbs">论坛</a></li>
+                <li class="regs"><a href="#">注册/登陆</a></li>
+                <li>
+                    <a href="#" class="shoppingCart">
+                        <i class="fa fa-shopping-cart"></i>
+                        <span class="number">1</span>
+                    </a>
+                </li>
+            </ul>
+        </div>
+    </div>
+    <div class="content clearfix">
+        <div class="activity center">
+            <div class="activity_countdown">
+                <span class="remaining_time">距离产品上市时间</span>
+
+                <div id="content">
+                    <div class="page">
+                        <div class="countdown">
+                        </div>
+                    </div>
+                </div>
+
+            </div>
+        </div>
+        <div class="quiz center">
+            <ul class="shopping_quiz">
+                <li>
+                    <div class="shopping_quiz_head">玩伴猜价</div>
+                    <div class="shopping_quiz_content">
+                        <img src="../../assets/frontend/images/shopping_one.png" alt="" class="shoppins"/>
+                        <span>笨蛋1号是一款全新的智能多能的家用产品，具有功能多样化，产品人性化灯特点</span>
+                        <span class="pretty">至臻完美，只为你的选择!</span>
+                        <span class="price">￥ ？</span>
+                        <span> <input type="image" src="../../assets/frontend/images/quzi_btn.jpg"/></span>
+
+                    </div>
+                </li>
+                <li>
+                    <div class="shopping_quiz_head">玩伴猜价</div>
+                    <div class="shopping_quiz_content">
+                        <img src="../../assets/frontend/images/shopping_two.png" alt="" class="shoppins"/>
+                        <span>笨蛋1号是一款全新的智能多能的家用产品，具有功能多样化，产品人性化灯特点</span>
+                        <span class="pretty">至臻完美，只为你的选择!</span>
+                        <span class="price">￥ ？</span>
+                        <span> <input type="image" src="../../assets/frontend/images/quzi_btn.jpg"/></span>
+
+                    </div>
+                </li>
+                <li>
+                    <div class="shopping_quiz_head">玩伴猜价</div>
+                    <div class="shopping_quiz_content">
+                        <img src="../../assets/frontend/images/shopping_two.png" alt="" class="shoppins"/>
+                        <span>笨蛋1号是一款全新的智能多能的家用产品，具有功能多样化，产品人性化灯特点</span>
+                        <span class="pretty">至臻完美，只为你的选择!</span>
+                        <span class="price">￥ ？</span>
+                        <span> <input type="image" src="../../assets/frontend/images/quzi_btn.jpg"/></span>
+
+                    </div>
+                </li>
+            </ul>
+        </div>
+        <div class="bonus center">
+            <input type="image" src="../../assets/frontend/images/receive_btn.jpg" class="receive_btn"/>
+        </div>
+    </div>
+    <div class="footer">
+        <div class="center">
+            <ul class="foot-menu">
+                <li><a href="our.html">公司简介</a></li>
+                <li><a href="#">人才招聘</a></li>
+                <li><a href="#">融资合作</a></li>
+                <li><a href="#">关于我们</a></li>
+                <li class="br0"><a href="#">联系我们</a></li>
+            </ul>
+            <p class="copyright">渝ICP备15002338号-1 Copyright © 2014~2015 深圳贯和通物联科技有限公司 版权所有</p>
+        </div>
+    </div>
+</div>
+    <script src="../../assets/global/plugins/jquery-jCountdown/jquery/jquery-1.8.2.min.js"></script>
+    <script src="../../assets/global/plugins/jquery-jCountdown/jquery/jquery-ui-1.9.1.custom.min.js"></script>
+    <script src="../../assets/global/plugins/jquery-jCountdown/jcountdown/jquery.jcountdown.min.js"></script>
+    <script src="../../assets/frontend/js/modal.js"></script>
+    <script>
+        $(function(){
+            var btn_save = $(".purchase_immediately,.regs");
+            btn_save.on("click",function(){
+                $("#container").dialog({title:'账户登录'});
+            })
+        })
+    </script>
+    <script type="text/javascript">
+        $(function(){
+            var b = new Date;
+            var b = -b.getTimezoneOffset() / 60;
+            var i = '2016/10/10 6:00:00';
+            var config = {
+                timeText: i, //倒计时时间
+                timeZone: b, //时区
+                style: "slide", //显示的样式，可选值有flip,slide,metal,crystal
+                color: "black", //显示的颜色，可选值white,black
+                width: 0, //倒计时宽度
+                textGroupSpace: 1, //天、时、分、秒之间间距
+                textSpace: 0, //数字之间间距
+                reflection: !1, //是否显示倒影
+                reflectionOpacity: 10, //倒影透明度
+                reflectionBlur: 0, //倒影模糊程度
+                dayTextNumber: 3, //倒计时天数数字个数
+                displayDay: 0, //是否显示天数
+                displayHour: !0, //是否显示小时数
+                displayMinute: !0, //是否显示分钟数
+                displaySecond: !0, //是否显示秒数
+                displayLabel: !0, //是否显示倒计时底部label
+                onFinish: function() {}
+            };
+            $(".countdown").jCountdown(config);
+        });
+    </script>
+</body>
+</html>
