@@ -20,7 +20,7 @@ function heightAuto(){
 }
 heightAuto();
 var mbm = $(".mask,.mask-bg");
-var tul = $(".td-ul li");
+var tul = $(".td-ul li.item");
 var by = $(".btn-yue");
 var d = $(".dailog");
 tul.each(function(i){
@@ -31,7 +31,32 @@ tul.each(function(i){
     })
 
 });
+$(".btn-sleep").on("click",function(){
+    mbm.removeClass("hide");
+    $(".dailog.sleep").removeClass("hide");
+    heightAuto();
+});
+$(".btn-week").on("click",function(){
+    mbm.removeClass("hide");
+    $(".dailog.week").removeClass("hide");
+    heightAuto();
+});
+$(".btn-ye").on("click",function(){
+    mbm.removeClass("hide");
+    $(".dailog.ye").removeClass("hide");
+    heightAuto();
+});
+$(".btn-lic").on("click",function(){
+    mbm.removeClass("hide");
+    $(".dailog.lic").removeClass("hide");
+    heightAuto();
+});
 
+$(".btn-dangerous").on("click",function(){
+    mbm.removeClass("hide");
+    $(".dailog.dangerous").removeClass("hide");
+    heightAuto();
+});
 var dg = $(".div-group");
 var fcr = $(".fa-caret-right");
 var dtn = $(".div-group>.type-name");
