@@ -148,6 +148,28 @@ var ComponentsjQueryUISliders = function () {
                 }
             });
             $("#slider-range-min-amount12").text($("#slider-range-min12").slider("value"));
+
+            $("#slider-range-min13").slider({
+                range: "min",
+                value: 40,
+                min: 1,
+                max: 100,
+                slide: function (event, ui) {
+                    $("#slider-range-min-amount13").text( ui.value);
+                }
+            });
+            $("#slider-range-min-amount13").text($("#slider-range-min13").slider("value"));
+
+            $("#slider-range-min14").slider({
+                range: "min",
+                value: 40,
+                min: 1,
+                max: 100,
+                slide: function (event, ui) {
+                    $("#slider-range-min-amount14").text( ui.value);
+                }
+            });
+            $("#slider-range-min-amount14").text($("#slider-range-min14").slider("value"));
         }
     };
 }();
