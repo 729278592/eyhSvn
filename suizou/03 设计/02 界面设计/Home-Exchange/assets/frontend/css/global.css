@@ -1,5 +1,5 @@
 @charset "utf-8";
-body,html{font-family: Microsoft YaHei,Arial, Helvetica, sans-serif;}
+body,html{font-family: Microsoft YaHei,Arial, Helvetica, sans-serif;-webkit-font-smoothing: antialiased;}
 html{overflow-y:auto;overflow-x:hidden;min-width:100%;}
 body,p{margin: 0;padding: 0;}
 ul,li,img{margin:0;padding:0;list-style:none;border:none; vertical-align:middle;}
