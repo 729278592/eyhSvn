@@ -1,7 +1,5 @@
 /*头部滑动*/
 (function($) {
-
-
     /*全屏图片居中*/
     var si = $(".auto-img");
     si.each(function(i){

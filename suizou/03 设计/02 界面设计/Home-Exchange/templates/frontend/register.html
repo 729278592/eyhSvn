@@ -4,15 +4,14 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1" />
     <title>注册</title>
-    <link rel="stylesheet" href="../../assets/global/plugins/bootstrap-3.3.5-dist/css/bootstrap.min.css"/>
+    <link rel="stylesheet" href="../../assets/global/plugins/bootstrap-3.3.5/css/bootstrap.min.css"/>
     <link rel="stylesheet" href="../../assets/global/plugins/font/css/font-awesome.min.css"/>
     <link rel="stylesheet" href="../../assets/frontend/css/global.css"/>
-    <link rel="stylesheet" href="../../assets/global/plugins/metic/css/components-rounded.css"/>
+    <link rel="stylesheet" href="../../assets/frontend/css/validate-error.css"/>
     <!--[if IE 8]>
     <style>
         .col-sm-8{width: 66.66666667%;float: left;}
-        .col-sm-4 {
-            width: 33.33333333%;float: left;}
+        .col-sm-4 {width: 33.33333333%;float: left;}
     </style>
     <![endif]-->
 </head>
@@ -129,7 +128,10 @@
                         </div>
                     </div>
                     <p>
-                        <input type="checkbox"/>我已阅读并接受 <a href="#">《网站注册服务条款》</a>
+                        <label>
+                            <input type="checkbox"/>我已阅读并接受
+                        </label>
+                         <a href="#">《网站注册服务条款》</a>
                     </p>
                     <div class="form-group">
                         <button type="submit" class="form-control btn-click">立即注册</button>
@@ -145,7 +147,7 @@
     <script src="../../assets/global/plugins/jquery/jquery-1.11.3.min.js"></script>
     <script src="../../assets/global/plugins/move/js/move.js"></script>
     <script src="../../assets/frontend/js/global.js"></script>
-    <script src="../../assets/global/plugins/bootstrap-3.3.5-dist/js/bootstrap.min.js"></script>
+    <script src="../../assets/global/plugins/bootstrap-3.3.5/js/bootstrap.min.js"></script>
     <script src="../../assets/global/plugins/metic/js/jquery.validate.js"></script>
     <script src="../../assets/global/plugins/metic/js/main.js"></script>
     <script src="../../assets/global/plugins/metic/js/form-validation.js"></script>
@@ -163,7 +165,7 @@
                     if (count > 0){
                         btn.val(count+"秒后可重新获取");
                         btn.addClass("active");
-                        $.cookie("captcha", count, {path: '/', expires: (1/86400)*count});
+//                        $.cookie("captcha", count, {path: '/', expires: (1/86400)*count});
                     }else {
                         clearInterval(resend);
                         btn.removeClass("active");
@@ -177,13 +179,13 @@
             var df = $(".div-form");
             rul.each(function(i){
                 $(this).on("click",function(){
+                    console.log($(".logBox").get(0).offsetHeight);
                     $(this).addClass("active");
                     $(this).siblings(rul).removeClass("active");
                     df.eq(i).addClass("active");
                     df.eq(i).siblings(df).removeClass("active");
                 })
             });
-
-        })
+        });
     </script>
 </html>

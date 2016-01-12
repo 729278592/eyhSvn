@@ -95,7 +95,6 @@
                     }
                     else if(keyCode == 8){
                         spinner.removeClass("cuo");
-
                         if((spinneriNow==opts.defineNum)||(spinneriNow==" ")){
                             reduce.addClass("to_disabled");
                             reduce.attr({"disabled":"disabled"});
@@ -106,17 +105,17 @@
                         }
                     }
                     else{
-                        spinner.val(opts.isNum);
-                        spinner.addClass("cuo");
-                        total.text("NaN");
+                        alert(opts.isNum);
+                        spinner.val(opts.defineNum);
+//                      spinner.addClass("cuo");
+                        total.text(opts.one*opts.defineNum);
                         return false;
                     }
                     if(spinneriNow>opts.maxNum){
                         spinner.val(opts.maxNum);
-//                        spinner.addClass("cuo");
+//                      spinner.addClass("cuo");
                         total.text(opts.maxNum*unitPrice.text());
                         alert('购买数量不能超过'+opts.maxNum+'哦');
-
                     }
                 })
             }

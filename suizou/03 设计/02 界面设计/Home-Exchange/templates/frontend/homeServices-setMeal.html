@@ -125,7 +125,10 @@
             <p class="title">更多需求</p>
             <textarea style="resize: none" name=""  cols="50" rows="3" class="textarea"   placeholder="您可以在这里备注需求"></textarea>
             <p class="title">
-                <input type="checkbox"/> 我已经阅读并同意《家服汇用户使用协议》
+                <label>
+                    <input type="checkbox"/> 我已经阅读并同意
+                </label>
+                <a href="#">《家服汇用户使用协议》</a>
             </p>
             <div class="div-order">
                 <a href="order-pay.html" class="btn-order">下单</a>
@@ -136,52 +139,34 @@
 </div>
 <div class="server-step">
     <p class="title">服务流程</p>
-    <img src="../../assets/frontend/images/step-img.png" class="step-img"/>
+    <ul class="server-ul">
+        <li>
+            <img src="../../assets/frontend/images/s-icon1.png" alt="网页下单"/>
+            <span>网页下单</span>
+        </li>
+        <li>
+            <img src="../../assets/frontend/images/s-icon2.png" alt="结算"/>
+            <span>结算</span>
+        </li>
+        <li>
+            <img src="../../assets/frontend/images/s-icon3.png" alt="上门服务"/>
+            <span>上门服务</span>
+        </li>
+        <li>
+            <img src="../../assets/frontend/images/s-icon4.png" alt="评价"/>
+            <span>评价</span>
+        </li>
+    </ul>
 </div>
 <div class="tool clearfix">
     <p class="title">服务套餐</p>
     <div class="active-slider servpackSlider" id="servpackSlider1">
-        <ul class="active-ul servpack-slider js-active clearfix">
+        <ul class="active-ul servpack-slider js-check clearfix">
             <li class="item">
                 <div>
                     <a href="#">
                         <img src="../../assets/frontend/images/hsList1.jpg" alt="" class="step-img"/>
                         <i class="fa fa-check right active"></i>
-                    </a>
-                    <p>
-                        <span>室内家居保洁-4小时</span><br/>
-                        <span>房屋的基础打理</span>
-                    </p>
-                    <span class="num">￥ : 2000/人</span>
-                </div>
-                <div>
-                    <a href="#">
-                        <img src="../../assets/frontend/images/hsList1.jpg" alt="" class="step-img"/>
-                        <i class="fa fa-check right"></i>
-                    </a>
-                    <p>
-                        <span>室内家居保洁-4小时</span><br/>
-                        <span>房屋的基础打理</span>
-                    </p>
-                    <span class="num">￥ : 2000/人</span>
-                </div>
-                <div class="mr0">
-                    <a href="#">
-                        <img src="../../assets/frontend/images/hsList1.jpg" alt="" class="step-img"/>
-                        <i class="fa fa-check right"></i>
-                    </a>
-                    <p>
-                        <span>室内家居保洁-4小时</span><br/>
-                        <span>房屋的基础打理</span>
-                    </p>
-                    <span class="num">￥ : 2000/人</span>
-                </div>
-            </li>
-            <li class="item">
-                <div>
-                    <a href="#">
-                        <img src="../../assets/frontend/images/hsList1.jpg" alt="" class="step-img"/>
-                        <i class="fa fa-check right"></i>
                     </a>
                     <p>
                         <span>室内家居保洁-4小时</span><br/>
@@ -220,7 +205,7 @@
 <div class="service-introduction">
     <p class="title">其他服务介绍</p>
     <div class="active-slider servpackSlider serviceSlider" id="servpackSlider2">
-        <ul class="active-ul servpack-slider service-slider js-active clearfix">
+        <ul class="active-ul servpack-slider service-slider js-check js-active clearfix">
             <li class="item">
                 <div>
                     <a href="#">
@@ -554,16 +539,13 @@
     <script src="../../assets/global/plugins/move/js/move.js"></script>
     <script src="../../assets/frontend/js/global.js"></script>
     <script src="../../assets/frontend/js/spinner.js"></script>
-    <script src="../../assets/frontend/js/index.js?v=444"></script>
+    <script src="../../assets/frontend/js/activity.js?v=444"></script>
     <script src="../../assets/frontend/js/serveice.js?v=445"></script>
     <script type="text/javascript">
         (function($){
             $(".s-spinner").spinner({
                 defaultNum:0,
                 maxNum:100
-            });
-            $("#servpackSlider2").activeSlider({
-                setActive:5000
             });
         })(jQuery)
     </script>

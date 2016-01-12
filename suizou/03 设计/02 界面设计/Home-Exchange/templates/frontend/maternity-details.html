@@ -200,7 +200,10 @@
                             <p class="title pt0">更多需求 </p>
                             <input type="text" class="w100" placeholder="您可以在这里备注需求"/>
                             <p class="title pt0">
-                                <input type="checkbox"/> 我已经阅读并同意《家服汇用户使用协议》
+                                <label>
+                                    <input type="checkbox"/> 我已经阅读并同意
+                                </label>
+                                <a href="#">《家服汇用户使用协议》</a>
                             </p>
                             <div class="div-order">
                                 <input type="submit" value="下单" class="btn-order"/>
@@ -319,7 +322,6 @@
                     </div>
                 </div>
             </div>
-
         </div>
         <div class="foot clearfix">
             <div class="foot-main ">
@@ -403,10 +405,18 @@
     <script src="../../assets/global/plugins/My97DatePicker/WdatePicker.js"></script>
     <script src="../../assets/global/plugins/move/js/move.js"></script>
     <script src="../../assets/frontend/js/global.js"></script>
+    <script src="../../assets/frontend/js/spinner.js"></script>
+    <script type="text/javascript">
+        (function($){
+            $(".s-spinner").spinner({
+                defaultNum:0,
+                maxNum:100
+            });
+        })(jQuery)
+    </script>
     <script>
         <!--
         (function($){
-
             var rul = $(".rh-ul li");
             var rl = $(".r-ul");
             rul.each(function(i){

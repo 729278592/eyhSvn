@@ -2,59 +2,81 @@
  * Created by eyohu023 on 2015/11/26.
  */
 (function($){
-
-    /*最新小区百叶窗效果*/
-    $.fn.baye =function(options){
-        var defaulBai = {
-            setBai:4000,
-            setBai1:30
+    /*服务幻灯切换*/
+    var SerSlider = function (serSlider,options){
+        var serversDefaul = {
+            setsSlider:5000
         };
-        var opts = $.extend({},defaulBai,options);
-        var MethodsBai = {
+        var serversOpts = $.extend({},serversDefaul,options);
+        var serversMethods = {
             init:function(_this){
-                aDiv = $(".baiye");
-                inowBai = 0;
-                timerBai = null;
-                btnBai = true;
-                timerBai1 = null;
-                MethodsBai.mouseover(_this);
-                MethodsBai.mouseout(_this);
-                MethodsBai.toShow();
+                serversPaginationA = _this.find("a");
+                serversUl = _this.find(".servers-ul");
+                oLiServers = _this.find("li");
+                liWidthservers = oLiServers.get(0).offsetWidth;
+                serversUlWidth = serversUl.offset().width;
+                serversUlWidth = liWidthservers*oLiServers.size() + "px";
+                serversUl.width(serversUlWidth);
+                timerServers = setInterval(serversMethods.autoPlay,serversOpts.setsSlider);
+                inowServers = 0;
+                btnServers = true;
+                serversMethods.mouseover(_this);
+                serversMethods.mouseout(_this);
+                serversMethods.paginatioaClick();
             },
-            toShow:function(){
-                timerBai1 = setInterval(MethodsBai.toChange,opts.setBai);
-            },
-            toChange:function(){
-                timerBai = setInterval(function(){
-                    if(inowBai == aDiv.length){
-                        clearInterval(timerBai);
-                        inowBai = 0;
-                        btnBai = !btnBai;
-                    }else if(btnBai){
-                        move(aDiv[inowBai],{top:0},function(){
-                            inowBai++;
+            autoPlay:function(){
+                if(btnServers == true){
+                    btnServers = false;
+                    if(inowServers == oLiServers.size()-1){
+                        inowServers = 0;
+                        serversPaginationA.eq(inowServers).addClass("active");
+                        serversPaginationA.eq(inowServers).siblings().removeClass("active");
+                        move(serversUl[0], {left : -inowServers * liWidthservers},function(){
+                            btnServers = true;
+                        });
+                        btnServers = true;
+                    }else{
+
+                        inowServers++;
+                        serversPaginationA.eq(inowServers).addClass("active");
+                        serversPaginationA.eq(inowServers).siblings().removeClass("active");
+                        move(serversUl[0], {left : -inowServers * liWidthservers},function(){
+                            btnServers = true;
                         });
                     }
-                    else{
-                        move(aDiv[inowBai],{top:-30},function(){
-                            inowBai++;
+                }
+            },
+            paginatioaClick:function(){
+                serversPaginationA.each(function(i){
+                    $(this).on("click",function(){
+                        clearInterval(timerServers);
+                        inowServers = i;
+                        move(serversUl[0], {left : -inowServers * liWidthservers},function(){
+
                         });
-                    }
-                },opts.setBai1);
+                        $(this).addClass("active");
+                        $(this).siblings().removeClass("active");
+                    })
+                });
             },
             mouseover:function(_this){
                 _this.on("mouseover",function(){
-                    clearInterval(timerBai1)
+                    clearInterval(timerServers);
                 })
             },
             mouseout:function(_this){
                 _this.on("mouseout",function(){
-                    timerBai1 = setInterval(MethodsBai.toChange,opts.setBai);
+                    timerServers = setInterval(serversMethods.autoPlay,serversOpts.setsSlider);
                 })
             }
         };
-        MethodsBai.init($(this))
+        serversMethods.init(serSlider)
     };
+    new SerSlider($(".serversSlider"),{
+        setsSlider:5000
+    });
+
+
 
     /*服务内容切换*/
     var scl  =  $(".sever-content>li");
@@ -176,160 +198,74 @@
                         '</p>'+
                     '</div>'
             );
-            $(".serversSlider").serversSlider({});
+            new SerSlider($(".serversSlider"),{
+                setsSlider:5000
+            })
         })
     });
 
-    /*服务幻灯切换*/
-    $.fn.serversSlider = function(options){
-        var serversDefaul = {
-            setsSlider:5000
-        };
-        var serversOpts = $.extend({},serversDefaul,options);
-        var serversMethods = {
-            init:function(_this){
-                serversPaginationA = _this.find("a");
-                serversUl = _this.find(".servers-ul");
-                oLiServers = _this.find("li");
-                liWidthservers = oLiServers[0].offsetWidth;
-                serversUlWidth = serversUl.offset().width;
-                serversUlWidth = liWidthservers*oLiServers.size() + "px";
-                serversUl.width(serversUlWidth);
-                timerServers = setInterval(serversMethods.autoPlay,serversOpts.setsSlider);
-                inowServers = 0;
-                btnServers = true;
-                serversMethods.mouseover(_this);
-                serversMethods.mouseout(_this);
-                serversMethods.paginatioaClick();
-            },
-            autoPlay:function(){
-                if(btnServers == true){
-                    btnServers = false;
-                    if(inowServers == oLiServers.size()-1){
-                        inowServers = 0;
-                        serversPaginationA.eq(inowServers).addClass("active");
-                        serversPaginationA.eq(inowServers).siblings().removeClass("active");
-                        move(serversUl[0], {left : -inowServers * liWidthservers},function(){
-                            btnServers = true;
-                        });
-                        btnServers = true;
-                    }else{
 
-                        inowServers++;
-                        serversPaginationA.eq(inowServers).addClass("active");
-                        serversPaginationA.eq(inowServers).siblings().removeClass("active");
-                        move(serversUl[0], {left : -inowServers * liWidthservers},function(){
-                            btnServers = true;
+
+    /*最新小区百叶窗效果*/
+    var Baye = function(baye,options){
+        var defaulBai = {
+            setBai:4000,
+            setBai1:30
+        };
+        var opts = $.extend({},defaulBai,options);
+        var MethodsBai = {
+            init:function(_this){
+                aDiv = $(".baiye");
+                inowBai = 0;
+                timerBai = null;
+                btnBai = true;
+                timerBai1 = null;
+                MethodsBai.mouseover(_this);
+                MethodsBai.mouseout(_this);
+                MethodsBai.toShow();
+            },
+            toShow:function(){
+                timerBai1 = setInterval(MethodsBai.toChange,opts.setBai);
+            },
+            toChange:function(){
+                timerBai = setInterval(function(){
+                    if(inowBai == aDiv.length){
+                        clearInterval(timerBai);
+                        inowBai = 0;
+                        btnBai = !btnBai;
+                    }else if(btnBai){
+                        move(aDiv[inowBai],{top:0},function(){
+                            inowBai++;
                         });
                     }
-                }
-            },
-            paginatioaClick:function(){
-                serversPaginationA.each(function(i){
-                    $(this).on("click",function(){
-                        clearInterval(timerServers);
-                        inowServers = i;
-                        move(serversUl[0], {left : -inowServers * liWidthservers},function(){
-
+                    else{
+                        move(aDiv[inowBai],{top:-30},function(){
+                            inowBai++;
                         });
-                        $(this).addClass("active");
-                        $(this).siblings().removeClass("active");
-                    })
-                });
+                    }
+                },opts.setBai1);
             },
             mouseover:function(_this){
                 _this.on("mouseover",function(){
-                    clearInterval(timerServers);
+                    clearInterval(timerBai1)
                 })
             },
             mouseout:function(_this){
                 _this.on("mouseout",function(){
-                    timerServers = setInterval(serversMethods.autoPlay,serversOpts.setsSlider);
+                    timerBai1 = setInterval(MethodsBai.toChange,opts.setBai);
                 })
             }
         };
-        serversMethods.init($(this))
+        MethodsBai.init(baye)
     };
+    new Baye($(".new-quarters"),{
+        setBai:4000,
+        setBai1:30
+    });
 
-    /*活动切换*/
-    $.fn.activeSlider = function(options){
-        var defaul = {
-            setActive:5000
-        };
-        var opts = $.extend({},defaul,options);
-        var Methods = {
-            init:function(_this){
-                activeLeft  = _this.find(".active-left");
-                activeRight = _this.find(".active-right");
-                activeUl = _this.find(".active-ul");
-                oLiActive = _this.find(".item");
-                liWidthActive = oLiActive[0].offsetWidth;
-                activeUlWidth = activeUl.offset().width;
-                activeUlWidth = liWidthActive*oLiActive.size() + "px";
-                activeUl.width(activeUlWidth);
-                timerActive = setInterval(Methods.autoPlay,opts.setActive);
-                inowActive = 0;
-                btnActive = true;
-                Methods.mouseover(_this);
-                Methods.mouseout(_this);
-                Methods.left();
-                Methods.right();
-            },
-            left:function(){
-                activeLeft.on("click",function(){
-                    Methods.autoPlay();
-                })
-            },
-            right:function(){
-                activeRight.on("click",function(){
-                    if(btnActive == true){
-                        if(inowActive==0){
-                            inowActive = oLiActive.size()-1;
-                            move(activeUl.get(0), {left : -inowActive * liWidthActive},function(){
-                                btnActive = true;
-                            });
-                        }else{
-                            inowActive--;
-                            move(activeUl.get(0), {left : -inowActive * liWidthActive},function(){
-                                btnActive = true;
-                            });
-                        }
-                    }
-                })
-            },
-            autoPlay:function(){
-                if(btnActive == true){
-                    btnActive = false;
-                    if(inowActive == oLiActive.size()-1){
-                        inowActive = 0;
-                        move(activeUl.get(0), {left : -inowActive * liWidthActive},function(){
-                            btnActive = true;
-                        });
-                        btnActive = true;
-                    }else{
-                        inowActive++;
-                        move(activeUl.get(0), {left : -inowActive * liWidthActive},function(){
-                            btnActive = true;
-                        });
-                    }
-                }
-            },
-            mouseover:function(_this){
-                _this.on("mouseover",function(){
-                    clearInterval(timerActive)
-                })
-            },
-            mouseout:function(_this){
-                _this.on("mouseout",function(){
-                    timerActive = setInterval(Methods.autoPlay,opts.setActive);
-                })
-            }
-        };
-        Methods.init($(this))
-    };
 
     /*保障切换*/
-    $.fn.securitySlider = function(options){
+    var SecuritySlider = function(securitySlider,options){
         var securityDefaults = {
             setSecurity:5000
         };
@@ -341,7 +277,7 @@
                 securityoLi    = _this.find("li");
                 securityDiv    = _this.find(".security-div");
                 securityslider = $(".security-slider");
-                securityliWidth = securityoLi[0].offsetWidth;
+                securityliWidth = securityoLi.get(0).offsetWidth;
                 securitysliderWidth =securityliWidth*securityoLi.size() + "px";
                 securityslider.width(securitysliderWidth);
                 securityBtn = true;
@@ -355,11 +291,13 @@
             },
             left:function(){
                 securityLeft.on("click",function(){
-                    securityMethods.autoPlay()
+                    clearInterval(securityTimer);
+                    securityMethods.autoPlay();
                 })
             },
             right:function(){
                 securityRight.on("click",function(){
+                    clearInterval(securityTimer);
                     if(securityBtn == true){
                         if(securityInow==0){
                             securityInow = securityoLi.size()-securityNum;
@@ -397,13 +335,13 @@
             },
             mouseover:function(){
                 securityDiv.on("mouseover",function(){
-                    clearInterval(securityTimer)
+                    clearInterval(securityTimer);
                 });
                 securityLeft.on("mouseover",function(){
-                    clearInterval(securityTimer)
+                    clearInterval(securityTimer);
                 });
                 securityRight.on("mouseover",function(){
-                    clearInterval(securityTimer)
+                    clearInterval(securityTimer);
                 });
             },
             mouseout:function(){
@@ -418,68 +356,148 @@
                 });
             }
         };
-        securityMethods.init($(this))
+        securityMethods.init(securitySlider)
     };
+    new SecuritySlider($(".security"),{
+        setSecurity:5000
+    });
+
+
+    /*活动切换*/
+    var ActiveSlider = function(activeSlider,options){
+        var defaul = {
+            setActive:5000
+        };
+        var opts = $.extend({},defaul,options);
+        var Methods = {
+            init:function(_this){
+                activeLeft  = _this.find(".active-left");
+                activeRight = _this.find(".active-right");
+                activeUl = _this.find(".active-ul");
+                oLiActive = _this.find(".item");
+                liWidthActive = oLiActive[0].offsetWidth;
+                activeUlWidth = activeUl.offset().width;
+                activeUlWidth = liWidthActive*oLiActive.size() + "px";
+                activeUl.width(activeUlWidth);
+                timerActive = setInterval(Methods.autoPlay,opts.setActive);
+                inowActive = 0;
+                btnActive = true;
+                Methods.mouseover(_this);
+                Methods.mouseout(_this);
+                Methods.left();
+                Methods.right();
+            },
+            left:function(){
+                activeLeft.on("click",function(){
+                    Methods.autoPlay();
+                    clearInterval(timerActive)
+                })
+            },
+            right:function(){
+                activeRight.on("click",function(){
+                    clearInterval(timerActive)
+                    if(btnActive == true){
+                        if(inowActive==0){
+                            inowActive = oLiActive.size()-1;
+                            move(activeUl.get(0), {left : -inowActive * liWidthActive},function(){
+                                btnActive = true;
+                            });
+                        }else{
+                            inowActive--;
+                            move(activeUl.get(0), {left : -inowActive * liWidthActive},function(){
+                                btnActive = true;
+                            });
+                        }
+                    }
+                })
+            },
+            autoPlay:function(){
+                if(btnActive == true){
+                    btnActive = false;
+                    if(inowActive == oLiActive.size()-1){
+                        inowActive = 0;
+                        move(activeUl.get(0), {left : -inowActive * liWidthActive},function(){
+                            btnActive = true;
+                        });
+                        btnActive = true;
+                    }else{
+                        inowActive++;
+                        move(activeUl.get(0), {left : -inowActive * liWidthActive},function(){
+                            btnActive = true;
+                        });
+                    }
+                }
+            },
+            mouseover:function(_this){
+                _this.on("mouseover",function(){
+                    clearInterval(timerActive);
+                })
+            },
+            mouseout:function(_this){
+                _this.on("mouseout",function(){
+                    timerActive = setInterval(Methods.autoPlay,opts.setActive);
+                })
+            }
+        };
+        Methods.init(activeSlider)
+    };
+    new ActiveSlider($(".active-slider"),{
+        setActive:5000
+    });
+
 
     /*返回顶部&&联系我们的操作*/
-    $.BackToTop = {
-        defaults: {
-            text : 'Back to top',
+    var BackToTop = function(_this,options){
+        defaults = {
             autoShow : true,
             timeEffect : 500,
             effectScroll : 'linear',
             appearMethod : 'slide'
-        },
-        init:function(options){
-            /* vars **/
-            opts = $.extend({}, $.BackToTop.defaults ,options);
-            $.BackToTop._constructLink();
-
-            if(opts.autoShow) {
-                $(window).scroll(function(){
-                    if($(this).scrollTop() != 0) {
-                        switch (opts.appearMethod) {
-                            case 'fade' : aBack.fadeIn('fast'); break;
-                            case 'slide' : aBack.slideDown('fast'); break;
-                            default : aBack.show();
+        };
+        var opts = $.extend({}, defaults,options);
+        var backTotopMethod = {
+            init:function(_this){
+                backTotopMethod.Click(_this);
+                _this.hide();
+                if(opts.autoShow) {
+                    $(window).scroll(function(){
+                        if($(this).scrollTop() != 0) {
+                            switch (opts.appearMethod) {
+                                case 'fade' : _this.fadeIn('fast'); break;
+                                case 'slide' : _this.slideDown('fast'); break;
+                                default : _this.show();
+                            }
                         }
-                    }
-                    else {
-                        switch (opts.appearMethod) {
-                            case 'fade' : aBack.fadeOut('fast'); break;
-                            case 'slide' : aBack.slideUp('fast'); break;
-                            default : aBack.hide();
+                        else {
+                            switch (opts.appearMethod) {
+                                case 'fade' : _this.fadeOut('fast'); break;
+                                case 'slide' : _this.slideUp('fast'); break;
+                                default : _this.hide();
+                            }
                         }
-                    }
-                });
-            }
+                    });
+                }
+            },
 
-            $('#BackToTop').click(function(e) {
-                e.preventDefault();
-                $('body,html').animate({scrollTop:0},opts.timeEffect,opts.effectScroll);
-            });
-            $('#BackToTop').hover(function(){
-                $(this).html('返回顶部');
-            },function(){
-                $(this).html(opts.text);
-            });
-        },
-
-        _constructLink:function() {
-            aBack = $('<div />',{
-                id : 'BackToTop',
-                class:'weibo',
-                href : '#body',
-                html : opts.text
-            }).appendTo('.we .top');
-            if(!opts.autoShow) aBack.show();
-        }
-
+            Click:function(_this){
+               $(".we").delegate(_this,"click",function(){
+                   $('body,html').animate({scrollTop:0},opts.timeEffect,opts.effectScroll);
+               });
+           }
+        };
+        backTotopMethod.init(_this)
     };
+    new BackToTop($(".weibo"),{
+        autoShow : true,
+        appearMethod : 'fade',
+        timeEffect : 500,
+        effectScroll :  'linear',
+        autoShowOffset :  '0',
+        opacity :  1,
+        top :  100
+    });
 
-    BackToTop = function(options) {
-        $.BackToTop.init(options);
-    };
+
     function weHover(){
         var mpt = $(".message,.phone,.tuo_code");
         mpt.hover(function () {
@@ -495,7 +513,4 @@
         );
     }
     weHover();
-
-
-
 })(jQuery);
