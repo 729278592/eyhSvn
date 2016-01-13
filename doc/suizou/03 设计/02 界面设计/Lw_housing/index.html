@@ -218,7 +218,7 @@
                     </div>
                 </div>
 
-                <div class="swiper-container swiper-container-horizontal pc-none" style="margin-top: 0;">
+                <div class="swiper-container swiper-container-horizontal pc-none" id="swiper-container1" style="margin-top: 0;">
                     <div class="swiper-wrapper" style="transition-duration: 0ms; ">
                         <div class="swiper-slide">
                             <img src="images/mobile-img1.jpg" class="img-responsive mobile-img" alt="Responsive image"/>
@@ -593,7 +593,7 @@
                     <img src="images/active-bg.jpg" class="img-responsive mobile_none" alt="Responsive image"/>
                     <p class="title">乐窝最新活动</p>
                     <div class="w80 mobile_w80">
-                        <div class="swiper-container swiper-container-horizontal pc-none">
+                        <div class="swiper-container swiper-container-horizontal pc-none" id="swiper-container2">
                             <div class="swiper-wrapper" id="swiper-wrapper" style="transition-duration: 0ms; ">
                                 <div class="swiper-slide">
                                     <img src="images/index-c2.jpg" class="img-responsive" alt="Responsive image"/><br/>
@@ -950,8 +950,9 @@
             if($(window).width()<640){
                 var bb = $(".use-love");
                     bb.addClass("hide");
-                $('.swiper-container').each(function(i){
-                    swiper = new Swiper($(this).eq(i), {
+                $('#swiper-container1').each(function(i){
+                    var that = $(this).eq(i);
+                    swiper = new Swiper(that, {
                         prevButton:'.swiper-button-prev',
                         nextButton:'.swiper-button-next',
                         slidesPerView: 1,
@@ -962,8 +963,20 @@
                         autoplay: 3000,
                         autoplayDisableOnInteraction: false
                     })
+                });
+                $('#swiper-container2').each(function(i){
+                    var that = $(this).eq(i);
+                    swiper = new Swiper(that, {
+                        prevButton:'.swiper-button-prev',
+                        nextButton:'.swiper-button-next',
+                        slidesPerView: 1,
+                        spaceBetween: 0,
+                        loop:true,
+                        autoplay: 3000,
+                        autoplayDisableOnInteraction: false
+                    })
+                });
 
-                })
             }else{bb.removeClass("hide")}
             var mul = $("#marquee ul li");
             var m1 = $("#myCarousel1"),m1i = $("#myCarousel1 .item");
