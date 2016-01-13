@@ -622,7 +622,6 @@
                                         </span>
                                     </div>
                                 </div>
-
                             </div>
                             <div class="swiper-button-next"></div>
                             <div class="swiper-button-prev"></div>
@@ -951,17 +950,20 @@
             if($(window).width()<640){
                 var bb = $(".use-love");
                     bb.addClass("hide");
-                swiper = new Swiper('.swiper-container', {
-                    prevButton:'.swiper-button-prev',
-                    nextButton:'.swiper-button-next',
-                    slidesPerView: 1,
-                    pagination:'.swiper-pagination',
-                    paginationClickable: true,
-                    spaceBetween: 0,
-                    loop:true,
-                    autoplay: 3000,
-                    autoplayDisableOnInteraction: false
-                });
+                $('.swiper-container').each(function(i){
+                    swiper = new Swiper($(this).eq(i), {
+                        prevButton:'.swiper-button-prev',
+                        nextButton:'.swiper-button-next',
+                        slidesPerView: 1,
+                        pagination:'.swiper-pagination',
+                        paginationClickable: true,
+                        spaceBetween: 0,
+                        loop:true,
+                        autoplay: 3000,
+                        autoplayDisableOnInteraction: false
+                    })
+
+                })
             }else{bb.removeClass("hide")}
             var mul = $("#marquee ul li");
             var m1 = $("#myCarousel1"),m1i = $("#myCarousel1 .item");
@@ -1003,6 +1005,8 @@
                 }
             });
 
+
+
             /*手机搜索控制*/
             var phah = $(".panel-header .aria-hidden");
             var ms = $(".modal-search");
@@ -1023,14 +1027,7 @@
                     }
                 }
             }getIE()
-
-
-
         })
-    </script>
-    <script>
-
-          
     </script>
 </body>
 </html>
