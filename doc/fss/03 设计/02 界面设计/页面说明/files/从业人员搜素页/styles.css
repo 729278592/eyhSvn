@@ -3,7 +3,7 @@
   background-image:none;
   position:static;
   left:auto;
-  width:2100px;
+  width:1800px;
   margin-left:0;
   margin-right:0;
   text-align:left;
@@ -14,7 +14,7 @@
 }
 #u0 {
   position:absolute;
-  left:300px;
+  left:0px;
   top:0px;
   width:1562px;
   height:1715px;
@@ -36,7 +36,7 @@
 }
 #u2 {
   position:absolute;
-  left:1090px;
+  left:790px;
   top:500px;
   width:230px;
   height:200px;
@@ -59,7 +59,7 @@
 }
 #u4 {
   position:absolute;
-  left:1280px;
+  left:980px;
   top:510px;
   width:10px;
   height:10px;
@@ -81,7 +81,7 @@
 }
 #u6 {
   position:absolute;
-  left:1290px;
+  left:990px;
   top:510px;
   width:200px;
   height:10px;
@@ -109,7 +109,7 @@
 }
 #u7 {
   position:absolute;
-  left:1500px;
+  left:1200px;
   top:500px;
   width:600px;
   height:75px;
