@@ -1,143 +1,127 @@
 /**
- * Created by eyohu023 on 2015/9/9.
+ * Created by WHB on 2015/9/9.
  */
 
-
-$(function(){
-    var oDiv1 = document.getElementById('div1');
-    var oUl1 = document.getElementById('ul1');
-    var p = document.getElementById('p');
-    var aLi1 = oUl1.getElementsByTagName('li');
-    var aSpan1 = oDiv1.getElementsByTagName('span');
-    var iLen1 = aLi1.length;
-    var iLen = iLen1-1;
-    var topP = null;
-    var a;
-    var iHeight1 = aLi1[0].offsetHeight;
-    var iWidth1 = aLi1[0].offsetWidth;
-    var iHeight2 = aSpan1[0].offsetHeight + 10;
-    var iWidth = aSpan1[0].offsetWidth + 10;
-    var left = document.getElementById("left");
-    var right = document.getElementById("right");
-
-    function init(){
-        for (var i=0; i<iLen1; i++) {
-            run(i)
-        }
-        start1 = setInterval(stetime,5000);
-    }
-    init();
-
-    function getActive1400(){
-        for(var i = 0;i<aSpan1.length;i++){
-            for(var i = 0;i<aSpan1.length;i++){
-                aSpan1[i].className = "";
-            }
-        }
-        aSpan1[a].className = "current";
-        move(oUl1, {
-            top : -a * iHeight1
-        });
-    }
-
-    function getActive640(){
-        for(var i = 0;i<aSpan1.length;i++){
-            for(var i = 0;i<aSpan1.length;i++){
-                aSpan1[i].className = "";
-            }
-        }
-        aSpan1[a].className = "current";
-        move(oUl1, {left : -a * iWidth1});
-    }
-
-    function run(i){
-        aSpan1[i].index = i;
-        a = 0;
-        aSpan1[i].onclick = function() {
-            clearInterval(start1);
-            start1 = null;
-            for (var i=0; i<iLen1; i++) {
-                aSpan1[i].className = '';
-            }
-            this.className = 'current';
-            a = this.index;
-            if($(window).width()>1400){
-                if(iLen1>4){
-                    topP = iLen1 - 4;
-                    if(a<topP+1){
-                        move(p, {
-                            top : -a * iHeight2
-                        });
-                    }else{
-                        move(p, {
-                            top : -topP * iHeight2
-                        });
+(function($) {
+    if($(window).width()>1600){
+        var Methods = {
+            init:function(_this){
+                sliderTop = _this.find(".slider-top");
+                sliderBottom = _this.find(".slider-bottom");
+                Ul  = _this.find("#ul1");
+                oLi = _this.find("li");
+                aSpan = _this.find("span");
+                op = _this.find("#p");
+                pDiv = _this.find("#p-div");
+                aSpanHeight = aSpan.get(0).offsetHeight + 13;
+                op.height(aSpanHeight*aSpan.size());
+                num = Math.ceil(pDiv.get(0).offsetHeight/ aSpanHeight);
+                str = op.get(0).offsetHeight/ aSpanHeight;
+                inowActive = 0;
+                btnActive = true;
+                Methods.Top();
+                Methods.Bottom();
+                Methods.spanClick();
+            },
+            Top:function(){
+                sliderBottom.on("click",function(){
+                    if(btnActive == true){
+                        if(inowActive == aSpan.size()-1){
+                            inowActive=0;
+                            aSpan.eq(inowActive).addClass("current");
+                            aSpan.eq(inowActive).siblings(aSpan).removeClass("current");
+                            oLi.eq(inowActive).show();
+                            oLi.eq(inowActive).animate({opacity:"1"},100);
+                            oLi.eq(inowActive).siblings(oLi).hide();
+                            oLi.eq(inowActive).siblings(oLi).animate({opacity:"0"},100);
+                            move(op.get(0), {top : -inowActive * aSpanHeight},function(){
+                                btnActive = true;
+                            });
+                        }else if((str-num)<=inowActive&&inowActive<aSpan.size()-1){
+                            inowActive++;
+                            oLi.eq(inowActive).show();
+                            oLi.eq(inowActive).animate({opacity:"1"},100);
+                            oLi.eq(inowActive).siblings(oLi).hide();
+                            oLi.eq(inowActive).siblings(oLi).animate({opacity:"0"},100);
+                            aSpan.eq(inowActive).addClass("current");
+                            aSpan.eq(inowActive).siblings(aSpan).removeClass("current");
+                            move(op.get(0), {top : -(str-num) * aSpanHeight},function(){
+                                btnActive = true;
+                            });
+                        }
+                        else{
+                            inowActive++;
+                            oLi.eq(inowActive).show();
+                            oLi.eq(inowActive).animate({opacity:"1"},100);
+                            oLi.eq(inowActive).siblings(oLi).hide();
+                            oLi.eq(inowActive).siblings(oLi).animate({opacity:"0"},100);
+                            aSpan.eq(inowActive).addClass("current");
+                            aSpan.eq(inowActive).siblings(aSpan).removeClass("current");
+                            move(op.get(0),{top : -inowActive * aSpanHeight},function(){
+                                btnActive = true;
+                            });
+                        }
                     }
-                }
-                move(oUl1, {
-                    top : -a * iHeight1
+                })
+            },
+            Bottom:function(){
+                sliderTop.on("click",function(){
+                    if(btnActive == true){
+                        if(inowActive==0){
+                            inowActive = aSpan.size()-1;
+                            oLi.eq(inowActive).show();
+                            oLi.eq(inowActive).animate({opacity:"1"},100);
+                            oLi.eq(inowActive).siblings(oLi).hide();
+                            oLi.eq(inowActive).siblings(oLi).animate({opacity:"0"},100);
+                            aSpan.eq(inowActive).addClass("current");
+                            aSpan.eq(inowActive).siblings(aSpan).removeClass("current");
+                            move(op.get(0), {top : -(str-num) * aSpanHeight },function(){
+                                btnActive = true;
+                            });
+                        }else if((str-num)<inowActive&&inowActive<=aSpan.size()-1){
+                            inowActive--;
+                            oLi.eq(inowActive).show();
+                            oLi.eq(inowActive).animate({opacity:"1"},100);
+                            oLi.eq(inowActive).siblings(oLi).hide();
+                            oLi.eq(inowActive).siblings(oLi).animate({opacity:"0"},100);
+                            aSpan.eq(inowActive).addClass("current");
+                            aSpan.eq(inowActive).siblings(aSpan).removeClass("current");
+                            move(op.get(0), {top : -(str-num) * aSpanHeight},function(){
+                                btnActive = true;
+                            });
+                        }
+                        else{
+                            inowActive--;
+                            oLi.eq(inowActive).show();
+                            oLi.eq(inowActive).animate({opacity:"1"},100);
+                            oLi.eq(inowActive).siblings(oLi).hide();
+                            oLi.eq(inowActive).siblings(oLi).animate({opacity:"0"},100);
+                            aSpan.eq(inowActive).addClass("current");
+                            aSpan.eq(inowActive).siblings(aSpan).removeClass("current");
+                            move(op.get(0), {top : -inowActive * aSpanHeight},function(){
+                                btnActive = true;
+                            });
+                        }
+                    }
+                })
+            },
+            spanClick:function(){
+                aSpan.each(function(i){
+                    $(this).on("click",function(){
+                        if(btnActive == true){
+                            inowActive = i;
+                            aSpan.eq(i).addClass("current");
+                            aSpan.eq(i).siblings(aSpan).removeClass("current");
+                            oLi.eq(i).show();
+                            oLi.eq(i).animate({opacity:"1"},100);
+                            oLi.eq(i).siblings(oLi).hide();
+                            oLi.eq(i).siblings(oLi).animate({opacity:"0"},100);
+                        }
+                    })
                 });
             }
-            if(($(window).width()>640)&&($(window).width()<1400)){
-                oUl1.style.width = iLen1 * iWidth1 + 'px';
-                p.style.width = iLen1 * iWidth + 'px';
-                if(iLen1>4){
-                    topP = iLen1 - 4;
-                    if(a<topP+1){
-                        move(p, {
-                            left : -a * iWidth
-                        });
-                    }else{
-                        move(p, {
-                            left : -topP * iWidth
-                        });
-                    }
-                }
-                move(oUl1,{left : -a * iWidth1});
-            }
         };
+        Methods.init($())
     }
 
-    oDiv1.onmouseover = function(){
-        clearInterval(start1);
-        start1 = null;
-    };
-
-    oDiv1.onmouseout = function(){
-        start1 = setInterval(stetime,5000);
-    };
-
-    if(($(window).width()>640)&&($(window).width()<1400)) {
-        oUl1.style.width = iLen1 * iWidth1 + 'px';
-    }
-    function stetime(){
-        ++a;
-        if(a>iLen){a = 0;}
-        if($(window).width()>1400){
-            if(iLen1>4){
-                topP = iLen1 - 4;
-                if(a<topP+1){
-                    move(p, {top : -a * iHeight2});
-                }
-            }
-            getActive1400();
-        }
-
-        if(($(window).width()>640)&&($(window).width()<1400)){
-            oUl1.style.width = iLen1 * iWidth1 + 'px';
-            p.style.width = iLen1 * iWidth + 'px';
-            if(iLen1>4){
-                topP = iLen1 - 4;
-                if(a<topP+1){
-                    move(p, {
-                        left : -a * iWidth
-                    });
-                }
-            }
-            getActive640()
-        }
-    }
-});
-
-
-
+})(jQuery);
