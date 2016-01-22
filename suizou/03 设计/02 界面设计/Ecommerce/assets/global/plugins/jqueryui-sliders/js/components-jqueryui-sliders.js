@@ -170,6 +170,17 @@ var ComponentsjQueryUISliders = function () {
                 }
             });
             $("#slider-range-min-amount14").text($("#slider-range-min14").slider("value"));
+
+            $("#slider-range-min16").slider({
+                range: "min",
+                value: 40,
+                min: 1,
+                max: 100,
+                slide: function (event, ui) {
+                    $("#slider-range-min-amount14").text( ui.value);
+                }
+            });
+            $("#slider-range-min-amount16").text($("#slider-range-min16").slider("value"));
         }
     };
 }();
