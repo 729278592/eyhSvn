@@ -142,41 +142,5 @@
     ellipsisShow();
 
 
-    /*搜索条件控制*/
-    var bs = $(".btn-search1");
-    var hmb = $(".hd-mask-bg,.hd-mask");
-    var hmc = $(".hd-mask .fa-remove");
-    bs.on("click",function(){
-        hmb.removeClass("hide")
-    });
-    hmc.on("click",function(){
-        hmb.addClass("hide")
-    });
-
-    var sil1 = $(".server-input .label-input1 input");
-    var sil2 = $(".server-input .label-input2 input");
-    var sb = $(".server-input>label .btn-search1");
-    var hd = $(".hd-mask>div");
-    sb.on("click",function(){
-        if(sil1.is(":checked")){
-            hd.eq(0).addClass("active");
-            hd.eq(0).siblings(hd).removeClass("active");
-        }
-        else if(sil2.is(":checked")){
-            hd.eq(1).addClass("active");
-            hd.eq(1).siblings(hd).removeClass("active");
-        }
-    });
-
-    var ib = $(".input-search .button");
-    ib.on("click",function(e){
-        e.preventDefault();
-        if(sil1.is(":checked")){
-            window.location.href = "homeServices-nanny.html"
-        }
-        else if(sil2.is(":checked")){
-            window.location.href = "chioce-server1.html"
-        }
-    })
 })(jQuery);
 

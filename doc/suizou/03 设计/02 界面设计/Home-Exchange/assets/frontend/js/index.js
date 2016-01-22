@@ -120,84 +120,78 @@
                         '<table class="de-table">'+
                             '<tr>'+
                                 '<th>'+
-                                    '<span class="large-week">周日</span><br/>'+
+                                    '<span class="large-week">周五</span><br/>'+
                                     '<span>11.06</span>'+
                                 '</th>'+
                                 '<th>'+
-                                    '<span class="large-week">周以</span><br/>'+
+                                    '<span class="large-week">周六</span><br/>'+
                                     '<span>11.07</span>'+
                                 '</th>'+
                                 '<th>'+
-                                    '<span class="large-week">周二</span><br/>'+
+                                    '<span class="large-week">周日</span><br/>'+
                                     '<span>11.08</span>'+
                                 '</th>'+
                                 '<th>'+
-                                    '<span class="large-week">周三</span><br/>'+
+                                    '<span class="large-week">周一</span><br/>'+
                                     '<span>11.09</span>'+
                                 '</th>'+
                                 '<th>'+
-                                    '<span class="large-week">周四</span><br/>'+
+                                    '<span class="large-week">周二</span><br/>'+
                                     '<span>11.10</span>'+
                                 '</th>'+
                                 '<th>'+
-                                    '<span class="large-week">周五</span><br/>'+
+                                    '<span class="large-week">周三</span><br/>'+
                                     '<span>11.11</span>'+
                                 '</th>'+
                                 '<th>'+
-                                    '<span class="large-week">周六</span><br/>'+
+                                    '<span class="large-week">周四</span><br/>'+
                                     '<span>11.12</span>'+
                                 '</th>'+
                             '</tr>'+
                             '<tr>'+
                                 '<td>'+
-                                    '<p class="hasno">'+
-                                        '<span>已满</span><br/>'+
-                                        '<span>199元</span>'+
-                                    '</p>'+
+                                    '<label>'+
+                                        '<input type="checkbox"/>'+
+                                    '</label>'+
                                 '</td>'+
                                 '<td>'+
-                                    '<p class="hasno">'+
-                                        '<span>已满</span><br/>'+
-                                        '<span>199元</span>'+
-                                    '</p>'+
+                                    '<label>'+
+                                        '<input type="checkbox"/>'+
+                                    '</label>'+
                                 '</td>'+
                                 '<td>'+
-                                    '<p class="hasno">'+
-                                        '<span>已满</span><br/>'+
-                                        '<span>199元</span>'+
-                                    '</p>'+
+                                    '<label>'+
+                                        '<input type="checkbox"/>'+
+                                    '</label>'+
                                 '</td>'+
                                 '<td>'+
-                                    '<p class="hasno">'+
-                                        '<span>已满</span><br/>'+
-                                        '<span>199元</span>'+
-                                    '</p>'+
+                                    '<label>'+
+                                        '<input type="checkbox"/>'+
+                                    '</label>'+
                                 '</td>'+
                                 '<td>'+
-                                    '<p class="hasno">'+
-                                        '<span>已满</span><br/>'+
-                                        '<span>199元</span>'+
-                                    '</p>'+
+                                    '<label>'+
+                                        '<input type="checkbox"/>'+
+                                    '</label>'+
                                 '</td>'+
                                 '<td>'+
-                                    '<p>'+
-                                        '<span>已满</span><br/>'+
-                                        '<span>199元</span>'+
-                                    '</p>'+
+                                    '<label>'+
+                                        '<input type="checkbox"/>'+
+                                    '</label>'+
                                 '</td>'+
                                 '<td>'+
-                                    '<p>'+
-                                        '<span>已满</span><br/>'+
-                                        '<span>199元</span>'+
-                                    '</p>'+
+                                    '<label>'+
+                                        '<input type="checkbox"/>'+
+                                    '</label>'+
                                 '</td>'+
                             '</tr>'+
                         '</table>'+
+                        '<div class="server-address">社区服务区域 : 渝中、江北、南坪、沙坪坝、巴南区</div>'+
                         '<p style="text-align: center;">'+
-                            '<button class="btn-buy">立即订购</button>'+
+                            '<button class="btn-buy">立刻订购</button>'+
                         '</p>'+
                     '</div>'
-            );
+            )
             new SerSlider($(".serversSlider"),{
                 setsSlider:5000
             })
@@ -395,7 +389,7 @@
             },
             right:function(){
                 activeRight.on("click",function(){
-                    clearInterval(timerActive)
+                    clearInterval(timerActive);
                     if(btnActive == true){
                         if(inowActive==0){
                             inowActive = oLiActive.size()-1;
