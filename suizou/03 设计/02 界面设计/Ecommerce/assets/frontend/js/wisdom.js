@@ -58,7 +58,7 @@ $(".btn-dangerous").on("click",function(){
     heightAuto();
 });
 var dg = $(".div-group");
-var fcr = $(".fa-caret-right");
+var fcr = $(".fa-caret-down");
 var dtn = $(".div-group>.type-name");
 var lu = $(".light-ul");
 dg.each(function(){

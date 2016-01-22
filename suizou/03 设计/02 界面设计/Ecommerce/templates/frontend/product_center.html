@@ -15,13 +15,6 @@
         .form1 a:hover{color: #f5796a;text-decoration: underline;}
         .position{position: absolute;z-index: 10000;}
     </style>
-    <!--[if IE 8]>
-    <style>
-        .br{top: -9px;}
-        .btn2{top: 2px;}
-        .btn3{top: 24px;}
-    </style>
-    <![endif]-->
 </head>
 <body>
     <div class="wapper">
@@ -442,271 +435,271 @@
     <script src="../../assets/frontend/js/global.js"></script>
     <script src="../../assets/frontend/js/index.js"></script>
     <script src="../../assets/frontend/js/modal.js"></script>
-<script>
-    $(function(){
-        var btn_save = $(".purchase_immediately,.regs");
-        btn_save.on("click",function(){
-            $("#container").dialog({title:'账户登录'});
-        })
-        var o  = $(".cj_ul").find("li");
-        var u = $(".cj_ul1>li");
-        o.each(function(i){
-            $(this).on("click",function(){
-                $(this).addClass("zindex");
-                $(this).find("img").addClass("block").removeClass("hide");
-                $(this).siblings().removeClass("zindex");
-                $(this).siblings().find("img").addClass("hide").removeClass("block");
-                u.eq(i).removeClass("hide").addClass("block");
-                u.eq(i).siblings().removeClass("block").addClass("hide")
+    <script>
+        $(function(){
+            var btn_save = $(".purchase_immediately,.regs");
+            btn_save.on("click",function(){
+                $("#container").dialog({title:'账户登录'});
             })
-        });
-        var w = $(".wish"),
-                wn = $(".wished_number"),
-                wnt = wn.text();
-        w.on("click",function(){
-            ++wnt;
-            wn.text(wnt)
-        });
+            var o  = $(".cj_ul").find("li");
+            var u = $(".cj_ul1>li");
+            o.each(function(i){
+                $(this).on("click",function(){
+                    $(this).addClass("zindex");
+                    $(this).find("img").addClass("block").removeClass("hide");
+                    $(this).siblings().removeClass("zindex");
+                    $(this).siblings().find("img").addClass("hide").removeClass("block");
+                    u.eq(i).removeClass("hide").addClass("block");
+                    u.eq(i).siblings().removeClass("block").addClass("hide")
+                })
+            });
+            var w = $(".wish"),
+                    wn = $(".wished_number"),
+                    wnt = wn.text();
+            w.on("click",function(){
+                ++wnt;
+                wn.text(wnt)
+            });
 
 
 
-        /*商品切换*/
-        var animate_time=200;//动画时间：0.3秒
-        var interval_time=3000;//播放间隔时间：5秒
-        var picnumber=$(".scrollpic li").size()-1;//计算广告的数量
-        var slideclick = 0;//初始化
-        //循环函数
-        function autoplay(){
-            slideclick++;
-            if(slideclick<=picnumber){
-                $(".scrollpic li").eq(slideclick).trigger("dblclick");
-            }else{
-                $(".scrollpic li").eq(0).trigger("dblclick");
-                slideclick = 0
-            }
-        }
-        //设置循环时间，自动开始循环
-        var auto_setInterval = setInterval(autoplay,interval_time);
-        //悬停广告区域时播放停止
-        $(".focus1").hover(function(){
-            clearInterval(auto_setInterval);
-        },function(){
-            auto_setInterval = setInterval(autoplay,interval_time);
-        });
-        //小图点击时，开始动画
-        $(".scrollpic li").dblclick(function(){
-            slideclick=$(".scrollpic li").index($(this));
-            $(".scrollpic li").removeClass("current");
-            $(this).addClass("current");
-            //大图上移
-            $(".focus1 .focuspic").animate({"marginLeft":slideclick*-392},{duration:animate_time,queue:false});
-            //控制缩略图显示个数
-            if(slideclick<picnumber){
-                if(slideclick==0||slideclick==1){
-                    $(".scrollpic ul").animate({"marginLeft":"0px"},{duration:animate_time,queue:false});
+            /*商品切换*/
+            var animate_time=200;//动画时间：0.3秒
+            var interval_time=3000;//播放间隔时间：5秒
+            var picnumber=$(".scrollpic li").size()-1;//计算广告的数量
+            var slideclick = 0;//初始化
+            //循环函数
+            function autoplay(){
+                slideclick++;
+                if(slideclick<=picnumber){
+                    $(".scrollpic li").eq(slideclick).trigger("dblclick");
                 }else{
-                    $(".scrollpic ul").animate({"marginLeft":(slideclick-1)*-108},{duration:animate_time,queue:false});//显示最后4张图片不在滚动
+                    $(".scrollpic li").eq(0).trigger("dblclick");
+                    slideclick = 0
                 }
             }
-            //判断上下按钮是否可点击
-            if(slideclick==0){
-                $(".scrollbox #prev").addClass("disabled");
-                $(".scrollbox #next").removeClass("disabled");
-            }else if(slideclick==picnumber){
-                $(".scrollbox #prev").removeClass("disabled");
-                $(".scrollbox #next").addClass("disabled");
-            }else{
-                $(".scrollbox #prev").removeClass("disabled");
-                $(".scrollbox #next").removeClass("disabled");
-            }
-        });
-        //鼠标在小图上悬停时，相关移动
-        $(".scrollpic li").mouseover(function(){
-            var slidebtn_hover_chi = $(".scrollpic li").index($(this));
-            $(".scrollpic li").removeClass("current");
-            $(this).addClass("current");
-            $(".focuspic").animate({"marginLeft":slidebtn_hover_chi*-392},{duration:animate_time,queue:false});
-            if(slidebtn_hover_chi!=slideclick);
-            slideclick=slidebtn_hover_chi;
-            //判断上下按钮是否可点击
-            if(slideclick==0){
-                $(".scrollbox #prev").addClass("disabled");
-                $(".scrollbox #next").removeClass("disabled");
-            }else if(slideclick==picnumber){
-                $(".scrollbox #prev").removeClass("disabled");
-                $(".scrollbox #next").addClass("disabled");
-            }else{
-                $(".scrollbox #prev").removeClass("disabled");
-                $(".scrollbox #next").removeClass("disabled");
-            }
-        });
+            //设置循环时间，自动开始循环
+            var auto_setInterval = setInterval(autoplay,interval_time);
+            //悬停广告区域时播放停止
+            $(".focus1").hover(function(){
+                clearInterval(auto_setInterval);
+            },function(){
+                auto_setInterval = setInterval(autoplay,interval_time);
+            });
+            //小图点击时，开始动画
+            $(".scrollpic li").dblclick(function(){
+                slideclick=$(".scrollpic li").index($(this));
+                $(".scrollpic li").removeClass("current");
+                $(this).addClass("current");
+                //大图上移
+                $(".focus1 .focuspic").animate({"marginLeft":slideclick*-392},{duration:animate_time,queue:false});
+                //控制缩略图显示个数
+                if(slideclick<picnumber){
+                    if(slideclick==0||slideclick==1){
+                        $(".scrollpic ul").animate({"marginLeft":"0px"},{duration:animate_time,queue:false});
+                    }else{
+                        $(".scrollpic ul").animate({"marginLeft":(slideclick-1)*-108},{duration:animate_time,queue:false});//显示最后4张图片不在滚动
+                    }
+                }
+                //判断上下按钮是否可点击
+                if(slideclick==0){
+                    $(".scrollbox #prev").addClass("disabled");
+                    $(".scrollbox #next").removeClass("disabled");
+                }else if(slideclick==picnumber){
+                    $(".scrollbox #prev").removeClass("disabled");
+                    $(".scrollbox #next").addClass("disabled");
+                }else{
+                    $(".scrollbox #prev").removeClass("disabled");
+                    $(".scrollbox #next").removeClass("disabled");
+                }
+            });
+            //鼠标在小图上悬停时，相关移动
+            $(".scrollpic li").mouseover(function(){
+                var slidebtn_hover_chi = $(".scrollpic li").index($(this));
+                $(".scrollpic li").removeClass("current");
+                $(this).addClass("current");
+                $(".focuspic").animate({"marginLeft":slidebtn_hover_chi*-392},{duration:animate_time,queue:false});
+                if(slidebtn_hover_chi!=slideclick);
+                slideclick=slidebtn_hover_chi;
+                //判断上下按钮是否可点击
+                if(slideclick==0){
+                    $(".scrollbox #prev").addClass("disabled");
+                    $(".scrollbox #next").removeClass("disabled");
+                }else if(slideclick==picnumber){
+                    $(".scrollbox #prev").removeClass("disabled");
+                    $(".scrollbox #next").addClass("disabled");
+                }else{
+                    $(".scrollbox #prev").removeClass("disabled");
+                    $(".scrollbox #next").removeClass("disabled");
+                }
+            });
 
-        //点击向上按钮时
-        $(".scrollbox #prev").click(function(){
-            slideclick=slideclick-1;
-            if(slideclick<0){
-                slideclick=0;
-            }
-            $(".scrollpic li").eq(slideclick).trigger("dblclick");
-        });
-
-        //点击向下按钮时
-        $(".scrollbox #next").click(function(){
-            slideclick=slideclick+1;
-            if(slideclick<=picnumber){
-                slideclick=picnumber;
+            //点击向上按钮时
+            $(".scrollbox #prev").click(function(){
+                slideclick=slideclick-1;
+                if(slideclick<0){
+                    slideclick=0;
+                }
                 $(".scrollpic li").eq(slideclick).trigger("dblclick");
-                $(".scrollpic ul").animate({"marginLeft":(slideclick-2)*-108},{duration:animate_time,queue:false});// 缩略图最后滚动的左侧距离位置 正好4张缩略图显示
-            }else{
-                $(".scrollpic li").eq(0).trigger("dblclick");
-                slideclick = 0
-            }
-            $(".scrollpic li").eq(slideclick).trigger("dblclick");
-        });
-        var ds = $(".data span"),
-                ac = $(".address_content_content div");
-        ds.each(function(i){
-            $(this).on("click",function(){
-                $(this).addClass("active")
-                $(this).siblings().removeClass("active")
-                ac.eq(i).removeClass("hide");
-                ac.eq(i).siblings().addClass("hide")
-            })
-        });
-        /*
-         *
-         *banner图片切换
-         *
-         */
-        var sWidth = $("#focus").width(); //获取焦点图的宽度（显示面积）
-        var len = $("#focus ul li").length; //获取焦点图个数
-        var index = 0;
-        var picTimer;
+            });
 
-        //以下代码添加数字按钮和按钮后的半透明条，还有上一页、下一页两个按钮
-        var btn = "<div class='btn'>";
-
-        btn += "</div><div class='preNext pre'></div><div class='preNext next'></div>";
-        $("#focus").append(btn);
-        $("#focus .btnBg").css("opacity",0.5);
-
-        //为小按钮添加鼠标滑入事件，以显示相应的内容
-        $("#focus .btn span").css("opacity",0.4).mouseover(function() {
-            index = $("#focus .btn span").index(this);
-            showPics(index);
-        }).eq(0).trigger("mouseover");
-
-        //上一页、下一页按钮透明度处理
-        $("#focus .preNext").css("opacity",0.2).hover(function() {
-            $(this).stop(true,false).animate({"opacity":"0.5"},300);
-        },function() {
-            $(this).stop(true,false).animate({"opacity":"0.2"},300);
-        });
-
-        //上一页按钮
-        $("#focus .pre").click(function() {
-            index -= 1;
-            if(index == -1) {index = len - 1;}
-            showPics(index);
-        });
-
-        //下一页按钮
-        $("#focus .next").click(function() {
-            index += 1;
-            if(index == len) {index = 0;}
-            showPics(index);
-        });
-
-        //本例为左右滚动，即所有li元素都是在同一排向左浮动，所以这里需要计算出外围ul元素的宽度
-        $("#focus ul").css("width",sWidth * (len));
-
-        //鼠标滑上焦点图时停止自动播放，滑出时开始自动播放
-        $("#focus").hover(function() {
-            clearInterval(picTimer);
-        },function() {
-            picTimer = setInterval(function() {
-                showPics(index);
-                index++;
-                if(index == len) {index = 0;}
-            },4000); //此4000代表自动播放的间隔，单位：毫秒
-        }).trigger("mouseleave");
-
-        //显示图片函数，根据接收的index值显示相应的内容
-        function showPics(index) { //普通切换
-            var nowLeft = -index*sWidth; //根据index值计算ul元素的left值
-            $("#focus ul").stop(true,false).animate({"left":nowLeft},300); //通过animate()调整ul元素滚动到计算出的position
-            //$("#focus .btn span").removeClass("on").eq(index).addClass("on"); //为当前的按钮切换到选中的效果
-            $("#focus .btn span").stop(true,false).animate({"opacity":"0.4"},300).eq(index).stop(true,false).animate({"opacity":"1"},300); //为当前的按钮切换到选中的效果
-        }
-    })
-</script>
-<script>
-    (function($){
-        var methods = {
-            init:function(_this){
-                spinner = _this.find(".plus");
-                btn3 = _this.find(".btn3");
-                btn2 = _this.find(".btn2");
-                iNow = 1;
-                methods.clickPlus();
-                methods.clickjian();
-                methods.keydown();
-                spinner.val(iNow);
-                if(spinner.val() == 1){
-                    btn3.addClass("to_disabled");
+            //点击向下按钮时
+            $(".scrollbox #next").click(function(){
+                slideclick=slideclick+1;
+                if(slideclick<=picnumber){
+                    slideclick=picnumber;
+                    $(".scrollpic li").eq(slideclick).trigger("dblclick");
+                    $(".scrollpic ul").animate({"marginLeft":(slideclick-2)*-108},{duration:animate_time,queue:false});// 缩略图最后滚动的左侧距离位置 正好4张缩略图显示
+                }else{
+                    $(".scrollpic li").eq(0).trigger("dblclick");
+                    slideclick = 0
                 }
-            },
-            clickPlus:function(){
-                btn2.on("click",function(){
-                    iNow = spinner.val();
-                    ++iNow;
+                $(".scrollpic li").eq(slideclick).trigger("dblclick");
+            });
+            var ds = $(".data span"),
+                    ac = $(".address_content_content div");
+            ds.each(function(i){
+                $(this).on("click",function(){
+                    $(this).addClass("active")
+                    $(this).siblings().removeClass("active")
+                    ac.eq(i).removeClass("hide");
+                    ac.eq(i).siblings().addClass("hide")
+                })
+            });
+            /*
+             *
+             *banner图片切换
+             *
+             */
+            var sWidth = $("#focus").width(); //获取焦点图的宽度（显示面积）
+            var len = $("#focus ul li").length; //获取焦点图个数
+            var index = 0;
+            var picTimer;
+
+            //以下代码添加数字按钮和按钮后的半透明条，还有上一页、下一页两个按钮
+            var btn = "<div class='btn'>";
+
+            btn += "</div><div class='preNext pre'></div><div class='preNext next'></div>";
+            $("#focus").append(btn);
+            $("#focus .btnBg").css("opacity",0.5);
+
+            //为小按钮添加鼠标滑入事件，以显示相应的内容
+            $("#focus .btn span").css("opacity",0.4).mouseover(function() {
+                index = $("#focus .btn span").index(this);
+                showPics(index);
+            }).eq(0).trigger("mouseover");
+
+            //上一页、下一页按钮透明度处理
+            $("#focus .preNext").css("opacity",0.2).hover(function() {
+                $(this).stop(true,false).animate({"opacity":"0.5"},300);
+            },function() {
+                $(this).stop(true,false).animate({"opacity":"0.2"},300);
+            });
+
+            //上一页按钮
+            $("#focus .pre").click(function() {
+                index -= 1;
+                if(index == -1) {index = len - 1;}
+                showPics(index);
+            });
+
+            //下一页按钮
+            $("#focus .next").click(function() {
+                index += 1;
+                if(index == len) {index = 0;}
+                showPics(index);
+            });
+
+            //本例为左右滚动，即所有li元素都是在同一排向左浮动，所以这里需要计算出外围ul元素的宽度
+            $("#focus ul").css("width",sWidth * (len));
+
+            //鼠标滑上焦点图时停止自动播放，滑出时开始自动播放
+            $("#focus").hover(function() {
+                clearInterval(picTimer);
+            },function() {
+                picTimer = setInterval(function() {
+                    showPics(index);
+                    index++;
+                    if(index == len) {index = 0;}
+                },4000); //此4000代表自动播放的间隔，单位：毫秒
+            }).trigger("mouseleave");
+
+            //显示图片函数，根据接收的index值显示相应的内容
+            function showPics(index) { //普通切换
+                var nowLeft = -index*sWidth; //根据index值计算ul元素的left值
+                $("#focus ul").stop(true,false).animate({"left":nowLeft},300); //通过animate()调整ul元素滚动到计算出的position
+                //$("#focus .btn span").removeClass("on").eq(index).addClass("on"); //为当前的按钮切换到选中的效果
+                $("#focus .btn span").stop(true,false).animate({"opacity":"0.4"},300).eq(index).stop(true,false).animate({"opacity":"1"},300); //为当前的按钮切换到选中的效果
+            }
+        })
+    </script>
+    <script>
+        (function($){
+            var methods = {
+                init:function(_this){
+                    spinner = _this.find(".plus");
+                    btn3 = _this.find(".btn3");
+                    btn2 = _this.find(".btn2");
+                    iNow = 1;
+                    methods.clickPlus();
+                    methods.clickjian();
+                    methods.keydown();
                     spinner.val(iNow);
-                    if(iNow>1){
-                        btn3.removeClass("to_disabled");
+                    if(spinner.val() == 1){
+                        btn3.addClass("to_disabled");
                     }
-                });
-            },
-            clickjian:function(){
-                btn3.on("click",function(){
-                    iNow = spinner.val();
-                    if(iNow > 1){
-                        spinner.val(--iNow);
-                        $(this).removeClass("to_disabled");
-                        if(iNow == 1){
-                            $(this).addClass("to_disabled");
-                            spinner.val(1);
-                        }
-                    }
-                });
-            },
-            keydown:function(){
-                spinner.keypress(function(event) {
-                    var keyCode = event.which;
-                    iNow = spinner.val();
-                    if (keyCode >= 48 && keyCode <=57){
-                        if(keyCode==48||keyCode == 49){
-                            btn3.addClass("to_disabled");
-                        }
-                        else if(keyCode >= 50 && keyCode <=57){
+                },
+                clickPlus:function(){
+                    btn2.on("click",function(){
+                        iNow = spinner.val();
+                        ++iNow;
+                        spinner.val(iNow);
+                        if(iNow>1){
                             btn3.removeClass("to_disabled");
                         }
-                    }
-                    else if(keyCode == 45){
-                        setTimeout(function(){
-                            spinner.val(1)
-                        },1000)
-                    }
-                    else{
-                        alert("只能输入数字哦");
-                        return false;
-                    }
-                }).focus(function() {
-                    this.style.imeMode='disabled';
-                });
-            }
-        };
-        methods.init($(".cs_span"))
-    })(jQuery);
-</script>
+                    });
+                },
+                clickjian:function(){
+                    btn3.on("click",function(){
+                        iNow = spinner.val();
+                        if(iNow > 1){
+                            spinner.val(--iNow);
+                            $(this).removeClass("to_disabled");
+                            if(iNow == 1){
+                                $(this).addClass("to_disabled");
+                                spinner.val(1);
+                            }
+                        }
+                    });
+                },
+                keydown:function(){
+                    spinner.keypress(function(event) {
+                        var keyCode = event.which;
+                        iNow = spinner.val();
+                        if (keyCode >= 48 && keyCode <=57){
+                            if(keyCode==48||keyCode == 49){
+                                btn3.addClass("to_disabled");
+                            }
+                            else if(keyCode >= 50 && keyCode <=57){
+                                btn3.removeClass("to_disabled");
+                            }
+                        }
+                        else if(keyCode == 45){
+                            setTimeout(function(){
+                                spinner.val(1)
+                            },1000)
+                        }
+                        else{
+                            alert("只能输入数字哦");
+                            return false;
+                        }
+                    }).focus(function() {
+                        this.style.imeMode='disabled';
+                    });
+                }
+            };
+            methods.init($(".cs_span"))
+        })(jQuery);
+    </script>
 </body>
 </html>
