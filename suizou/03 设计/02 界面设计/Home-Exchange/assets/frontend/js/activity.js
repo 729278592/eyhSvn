@@ -78,7 +78,7 @@
         };
         Methods.init(activeSlider)
     };
-    new ActiveSlider($("#servpackSlider2"),{
+    new ActiveSlider($(".server"),{
         setActive:5000
     });
 })(jQuery);
