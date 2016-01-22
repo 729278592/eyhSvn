@@ -52,6 +52,12 @@ $(".btn-lic").on("click",function(){
     heightAuto();
 });
 
+$(".btn-lic1").on("click",function(){
+    mbm.removeClass("hide");
+    $(".dailog.lic1").removeClass("hide");
+    heightAuto();
+});
+
 $(".btn-dangerous").on("click",function(){
     mbm.removeClass("hide");
     $(".dailog.dangerous").removeClass("hide");
