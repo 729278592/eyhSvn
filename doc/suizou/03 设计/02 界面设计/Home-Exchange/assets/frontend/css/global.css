@@ -411,7 +411,9 @@ b {line-height: 30px;font-weight: 700;}
 .hot-details .deatils-p{height: 34px;}
 .hr-img{position: absolute;right: 1px;top: 0;}
 .train-type{width: 816px;background: #f6f3ee;padding: 15px 0;}
-.train-type>.content-main{width: 814px;}
+.train-type>.content-main{width: 814px;margin-top: 10px;}
+.train-type.bg>form{background: #fff;}
+.train-type.bg>form>.search-terms>li{width: 800px;padding-left: 16px;}
 .tt-ul{width: 816px;}
 .tt-ul li{width: 135px;border-right: 1px solid #dbdbdb;background: #857e74;float: left;height: 40px;line-height: 40px;color: #fff;text-align: center;font-size: 14px;}
 .tt-ul li.active{color: #fab432;}
