@@ -1,18 +1,7 @@
 /**
  * Created by eyohu023 on 2015/12/22.
  */
-function clickActive(){
-    var aif = $(".js-check .item .fa-check");
-    aif.on("click",function(e){
-        e.preventDefault();
-        if($(this).hasClass("active")){
-            $(this).removeClass('active');
-        }else{
-            $(this).addClass('active');
-        }
-    });
-}
-clickActive();
+
 
 var rul = $(".se-ul li");
 var rl = $(".se-div");
