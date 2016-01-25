@@ -178,14 +178,27 @@
             var rul = $(".register-ul li");
             var df = $(".div-form");
             rul.each(function(i){
+                var that = $(this);
+                regHeight();
+
                 $(this).on("click",function(){
                     console.log($(".logBox").get(0).offsetHeight);
                     $(this).addClass("active");
                     $(this).siblings(rul).removeClass("active");
                     df.eq(i).addClass("active");
                     df.eq(i).siblings(df).removeClass("active");
-                })
+                    regHeight()
+                });
+              function regHeight(){
+                  if(that.parent().find("li.active").text() == "个人注册"){
+                      $(".regBg").css({height:"450px"})
+                  }else {
+
+                      $(".regBg").css({height:"500px"})
+                  }
+              }
             });
+
         });
     </script>
 </html>
