@@ -55,7 +55,6 @@
             </div>
         </div>
         <div class="content">
-
             <div class="content-main">
                 <div class="server-type">
                     <ul class="search-terms">
@@ -65,28 +64,26 @@
                                 <a href="community-chioce.html" class="button cw-icon"><i class="fa fa-search"></i></a>
                             </div>
                         </li>
-                        <li class="clearfix">
-                            <div class="left">
-                                <i class="fa fa-home"></i>
-                                <span class="title">服务区域</span>
-                                <select name="">
-                                    <option value="南坪">南坪</option>
-                                    <option value="渝中">渝中</option>
-                                    <option value="渝北">渝北</option>
-                                </select>
-                            </div>
-                            <div class="right">
-                                <i class="fa fa-bars"></i>
-                                <span class="title">牛管家</span>
-                                <span class="rental_mode w110">
-                                    <input type="checkbox" name="type" class=""/>
-                                    有
-                                </span>
-                                <span class="rental_mode w110">
-                                    <input type="checkbox" name="type" class=""/>
-                                    没有
-                                </span>
-                            </div>
+                        <li class="ml20">
+                            <i class="fa fa-home"></i>
+                            <span class="title">服务区域</span>
+                            <select name="">
+                                <option value="南坪">南坪</option>
+                                <option value="渝中">渝中</option>
+                                <option value="渝北">渝北</option>
+                            </select>
+                        </li>
+                        <li class="ml20">
+                            <i class="fa fa-bars"></i>
+                            <span class="title">牛管家</span>
+                            <span class="rental_mode w110">
+                                <input type="checkbox" name="type" class=""/>
+                                有
+                            </span>
+                            <span class="rental_mode w110">
+                                <input type="checkbox" name="type" class=""/>
+                                没有
+                            </span>
                         </li>
                     </ul>
                     <div class="operation-btn">
@@ -581,24 +578,5 @@
         jQuery(document).ready(function() {
             ComponentsjQueryUISliders.init();
         });
-//        var sl = $(".sc-menu li");
-//        var s = $(".sc-list");
-//        sl.each(function(i){
-//            $(this).on("click",function(){
-//                $(this).addClass("active");
-//                $(this).siblings(sl).removeClass("active");
-//                s.eq(i).addClass("active");
-//                s.eq(i).siblings(s).removeClass("active");
-//            })
-//        })
-    </script>
-    <script type="text/javascript" src="http://api.map.baidu.com/api?v=2.0&ak=q0lvjEUGF5AOzHtbjn9YFtwl"></script>
-    <script type="text/javascript">
-        // 百度地图API功能
-        var map = new BMap.Map("allmap");    // 创建Map实例
-        map.centerAndZoom(new BMap.Point(116.404, 39.915), 11);  // 初始化地图,设置中心点坐标和地图级别
-        map.addControl(new BMap.MapTypeControl());   //添加地图类型控件
-        map.setCurrentCity("北京");          // 设置地图显示的城市 此项是必须设置的
-        map.enableScrollWheelZoom(true);     //开启鼠标滚轮缩放
     </script>
 </html>
