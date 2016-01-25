@@ -845,14 +845,15 @@ tr th,tr td{ text-align:center;font-size: 14px;border:1px solid #fbb432;color: #
 
 .reserve-date{width: 100%;}
 .div-wdate{width: 198px;height: 40px;background: #fff;position: relative;}
-.div-wdate .Wdate{border: none;background: transparent;width: 198px;height: 40px;line-height: 40px;position: relative;z-index: 5;padding-left: 10px;}
+.div-wdate .Wdate{border: none;background: transparent;width: 188px;height: 36px;line-height: 36px;position: relative;z-index: 5;padding-left: 10px;}
 .div-wdate .fa{position: absolute;right: 10px;top: 10px;color: #52ba92;}
-.server-step{width: 100%;background: #fbb432;height: 227px;text-align: center;margin-top: 10px;padding-top: 1px;}
+.server-step{width: 100%;background: #fbb432;height: 200px;text-align: center;margin-top: 10px;padding-top: 1px;}
 .server-step.bg1{background: #8a3356;height: 180px;}
 .server-step.bg2{background: #d6c1a8;height: 180px;}
 .server-ul{margin: 0;}
 .server-ul li{width:116px;height: 116px;float: left;margin-left: 110px;position: relative;}
 .server-ul li .service-infor{display: none;}
+.server-ul li:hover{cursor: hand;}
 .server-ul li:hover .service-infor{display: inline-block;}
 .server-ul li img{width: 85px;}
 .server-ul li span{display: inline-block;width: 100%;text-align: center;margin-top: 10px;font-size: 14px;color: #fff;}
@@ -860,20 +861,24 @@ tr th,tr td{ text-align:center;font-size: 14px;border:1px solid #fbb432;color: #
 .service-mask-bg{background: #000;opacity: 0.5;filter:alpha(opacity=50);}
 .service-mask-bg1,.service-mask1{height: 100px;}
 .service-mask-bg2,.service-mask2{height: 460px;}
-.service-mask-bg3,.service-mask3{height: 260px;left: -545px;}
-.service-mask-bg4,.service-mask4{height: 320px;left: -545px;}
+.service-mask-bg3,.service-mask3{height: 250px;left: -545px;}
+.service-mask-bg4,.service-mask4{height: 310px;left: -545px;}
 .service-mask{color: #efefef;text-align: left;}
 .serviceStepInfor{font-size: 14px;line-height: 20px;text-indent: 28px;padding: 3px 0;}
 .caret-mask-bg,.caret-mask{width: 0;height: 0;position: absolute;left: -40px;top: 25px;}
 .service-mask3 .caret-mask-bg{left: 540px;}
 .service-mask4 .caret-mask-bg{left: 540px;}
 .caret-mask-bg{border: 20px solid #000; opacity : 0.5;filter: alpha(opacity=50);border-top-color: transparent;border-bottom-color:transparent;border-left-color: transparent;}
-.service-mask .small-title{border: 1px solid #fff;font-size: 14px;display: inline-block;margin: 10px 0 5px;width: 88px;height: 27px;text-align: center;line-height: 27px;}
+.service-mask .small-title{border: 1px solid #efefef;font-size: 14px;display: inline-block;margin: 10px 0 5px;width: 88px;height: 27px;text-align: center;line-height: 27px;}
 .service-mask4 .caret-mask-bg,.service-mask3 .caret-mask-bg{border: 20px solid #000; opacity : 0.5;filter: alpha(opacity=50);border-top-color: transparent;border-bottom-color:transparent;border-right-color: transparent;}
 
-
-
-
+.order-chioce{width: 100%;margin-top: 20px;}
+.order-chioce .div-wdate{margin-left: 32px;}
+.order-chioce .Wdate{border: 1px solid #dbdbdb;}
+.order-chioce .select-time{border: 1px solid #dbdbdb;margin-left: 30px;}
+.order-chioce .area-input{height: 36px;line-height: 36px;border: 1px solid #dbdbdb;border-right: none;margin-left: 30px;padding-left: 10px;}
+.order-chioce .area-span{height: 38px;line-height: 38px;border: 1px solid #dbdbdb;display: inline-block;padding: 0 15px;color: #666;}
+.order-chioce .btn-order{margin-left: 30px;height: 38px;line-height: 38px;}
 .server-step>.title{width: 120px;height: 34px;line-height: 34px;border: 1px solid #fff;color: #fff;
     margin: 20px auto 5px;}
 .server-step1{height: 248px;background: transparent;}
