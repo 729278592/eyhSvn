@@ -60,147 +60,444 @@
                 <div class="server-chioce">
                     <ul class="sch-menu clearfix">
                         <li class="active">
+<<<<<<< .mine
+                            <p>日常居家保洁</p>
+=======
                             <p>日常基础保洁</p>
+>>>>>>> .r1905
                         </li>
                         <li>
-                            <p>单项服务</p>
+                            <p>家务套餐</p>
                         </li>
                         <li class="mr0">
+<<<<<<< .mine
+                            <p>单项家务</p>
+=======
                             <p>家务套餐</p>
+>>>>>>> .r1905
                         </li>
                     </ul>
                 </div>
-                <div class="keeper clearfix">
-                    <div class="keep-details left">
-                        <div class="keep-commont">
-                            <div class="keep-mask-bg"></div>
-                            <div class="keep-mask">我们的保洁服务人员将会最快速、最认真、最完善的完成您的任务</div>
-                            <img src="../../assets/frontend/images/keeper2.jpg" />
+                <div class="keeper clearfix jsActive">
+                    <div class="active">
+                        <div class="keep-details left">
+                            <div class="keep-commont">
+                                <div class="keep-mask-bg"></div>
+                                <div class="keep-mask">我们的保洁服务人员将会最快速、最认真、最完善的完成您的任务</div>
+                                <img src="../../assets/frontend/images/keeper2.jpg" />
+                            </div>
+                            <div class="area-infor">
+                                <div class="title">服务介绍</div>
+                                <ul class="area-menu clearfix">
+                                    <li>
+                                        <div class="area-num area-num1">
+                                            60m²
+                                        </div>
+                                        <p>2小时</p>
+                                    </li>
+                                    <li>
+                                        <div class="area-num area-num2">
+                                            60m²~80m²
+                                        </div>
+                                        <p>4小时</p>
+                                    </li>
+                                    <li>
+                                        <div class="area-num area-num3">
+                                            80m²~100m²
+                                        </div>
+                                        <p>5小时</p>
+                                    </li>
+                                    <li>
+                                        <div class="area-num area-num4">
+                                            150m²
+                                        </div>
+                                        <p>8小时</p>
+                                    </li>
+                                </ul>
+                                <p>
+                                    基础保洁服务是家服汇推出的专业家庭日常保洁服务，采用小时制下单为收费标准。服务人员均通过标准化管理、规范化的培训流程、专业化保洁工具为广大用户提供最便捷、快速、高效的保洁服务体验。
+                                </p>
+
+                                <p>
+                                    <span class="type">服务费用 :</span>
+                                    40元/次，2小时起
+                                </p>
+
+                                <p>
+                                    <span class="type">适合范围 :</span>
+                                    本服务仅适用于日常家庭室内保洁，不可用于学校、办公室、商铺、出租房、新装房、长期未入住房、集体宿舍等类型房屋的保洁。
+                                    本服务包含的服务范围有：地面、踢脚线清理；家具、家电表面除尘；油烟机表面擦洗；玻璃、厨房、浴室墙面、台面。油烟机内部清洗等项目不再服务范围内。
+                                </p>
+                            </div>
                         </div>
-                        <div class="area-infor">
-                            <div class="title">服务介绍</div>
-                            <ul class="area-menu clearfix">
-                                <li>
-                                    <div class="area-num area-num1">
-                                        60m²
+                        <div class="reserve right">
+                            <p class="title">基本服务在线预订</p>
+                            <div class="reserve-indormation">
+                                <p class="title">请输入您需要服务的时间</p>
+                                <div class="reserve-date clearfix">
+                                    <div class="div-wdate left">
+                                        <input id="d4311" class="Wdate inputDisable" type="text" placeholder="2015-10-10" onFocus="WdatePicker({minDate:'%y-%M-{%d}'})"/>
+                                        <i class="fa fa-calendar"></i>
                                     </div>
-                                    <p>2小时</p>
+                                    <select name="" class="select-time right inputDisable">
+                                        <option value="时间">时间</option>
+                                        <option value="12:00">1:00</option>
+                                        <option value="13:00">2:00</option>
+                                        <option value="12:00">3:00</option>
+                                        <option value="13:00">4:00</option>
+                                        <option value="12:00">5:00</option>
+                                        <option value="13:00">6:00</option>
+                                    </select>
+                                </div>
+                                <p class="title pt0">请输入房间面积</p>
+                                <div class="div-inputs div-inputs2">
+                                    <input type="text inputDisable" placeholder="100"/>
+                                    <span class="right">m²</span>
+                                </div>
+                                <p class="title">请输入保洁时间</p>
+                                <div class="clearfix services-type">
+                                    <span class="s-spinner">
+                                        <input type="text" class="spinner inputDisable"/>
+                                        <button class="btn-common btn-plus">+</button>
+                                        <span class="hours">小时</span>
+                                    </span>
+                                </div>
+                                <p class="title">更多需求</p>
+                                <textarea style="resize: none" name=""  cols="50" rows="3" class="textarea inputDisable"   placeholder="您可以在这里备注需求"></textarea>
+                                <p class="title total-title pt0">￥ <span class="num total">0</span></p>
+                                <p class="title">
+                                <span class="jsDisabledType">
+                                    <label>
+                                        <input type="checkbox"/> 立即支付
+                                    </label>
+                                </span>
+                                </p>
+                                <p class="title pt0">请输入姓名</p>
+                                <div class="div-inputs div-inputs1 bg">
+                                    <input type="text" placeholder="陈洁" disabled="disabled"/>
+                                </div>
+                                <p class="title">请输入联系方式</p>
+                                <div class="div-inputs div-inputs1 bg">
+                                    <input type="text" placeholder="13678478463" disabled="disabled"/>
+                                </div>
+                                <p class="title">请输入金额</p>
+                                <div class="div-inputs div-inputs1 br1">
+                                    <input type="text" placeholder="500" disabled="disabled"/>
+                                    <span class="right">元</span>
+                                </div>
+                                <p class="title">
+                                    <label>
+                                        <input type="checkbox"/> 我已经阅读并同意
+                                    </label>
+                                    <a href="#">《家服汇用户使用协议》</a>
+                                </p>
+                                <div class="div-order">
+                                    <a href="order-pay.html" class="btn-order">下单</a>
+                                    <!--<input type="submit" value="下单" class="btn-order"/>-->
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div>
+                        <div class="div-table">
+                            <ul class="ulActivy clearfix">
+                                <li class="active first"><span class="time-span">限时优惠</span> <br/><span class="time">(1.28~2.18)</span></li>
+                                <li>家务包月卡</li>
+                                <li class="br0">家务包年卡</li>
+                            </ul>
+                            <div class="active activeTable">
+                                <table>
+                                    <tbody>
+                                    <tr>
+                                        <td>10小时</td>
+                                        <td><span class="num">赠</span> 冰箱精细1次/等是清洁1次、厨房深度清洁1次</td>
+                                        <td class="num">￥250元 <br/><button class="btn-buy">购买</button></td>
+                                    </tr>
+                                    <tr>
+                                        <td>10小时</td>
+                                        <td><span class="num">赠</span> 冰箱精细1次/等是清洁1次、厨房深度清洁1次</td>
+                                        <td class="num">￥250元 <br/><button class="btn-buy">购买</button></td>
+                                    </tr>
+                                    <tr>
+                                        <td>10小时</td>
+                                        <td><span class="num">赠</span> 冰箱精细1次/等是清洁1次、厨房深度清洁1次</td>
+                                        <td class="num">￥250元 <br/><button class="btn-buy">购买</button></td>
+                                    </tr>
+                                    <tr>
+                                        <td>10小时</td>
+                                        <td><span class="num">赠</span> 冰箱精细1次/等是清洁1次、厨房深度清洁1次</td>
+                                        <td class="num">￥250元 <br/><button class="btn-buy">购买</button></td>
+                                    </tr>
+                                    </tbody>
+
+                                </table>
+                                <p class="p-foot">
+                                    以上价格是以40元/小时计费,2小时起步,若是活动,再商议
+                                </p>
+                            </div>
+                            <div class="activeTable">
+                                <table>
+                                    <tbody>
+                                    <tr>
+                                        <td>10小时</td>
+                                        <td><span class="num">赠</span> 冰箱精细1次/等是清洁1次、厨房深度清洁1次</td>
+                                        <td class="num">￥250元 <br/><button class="btn-buy">购买</button></td>
+                                    </tr>
+                                    <tr>
+                                        <td>20小时</td>
+                                        <td><span class="num">赠</span> 冰箱精细1次/等是清洁1次、厨房深度清洁1次</td>
+                                        <td class="num">￥250元 <br/><button class="btn-buy">购买</button></td>
+                                    </tr>
+                                    <tr>
+                                        <td>30小时</td>
+                                        <td><span class="num">赠</span> 冰箱精细1次/等是清洁1次、厨房深度清洁1次</td>
+                                        <td class="num">￥250元 <br/><button class="btn-buy">购买</button></td>
+                                    </tr>
+                                    <tr>
+                                        <td>40小时</td>
+                                        <td><span class="num">赠</span> 冰箱精细1次/等是清洁1次、厨房深度清洁1次</td>
+                                        <td class="num">￥250元 <br/><button class="btn-buy">购买</button></td>
+                                    </tr>
+                                    </tbody>
+
+                                </table>
+                                <p class="p-foot">
+                                    以上价格是以40元/小时计费,2小时起步,若是活动,再商议
+                                </p>
+                            </div>
+                            <div class="activeTable">
+                                <table>
+                                    <tbody>
+                                    <tr>
+                                        <td>20小时</td>
+                                        <td><span class="num">赠</span> 冰箱精细1次/等是清洁1次、厨房深度清洁1次</td>
+                                        <td class="num">￥250元 <br/><button class="btn-buy">购买</button></td>
+                                    </tr>
+                                    <tr>
+                                        <td>20小时</td>
+                                        <td><span class="num">赠</span> 冰箱精细1次/等是清洁1次、厨房深度清洁1次</td>
+                                        <td class="num">￥250元 <br/><button class="btn-buy">购买</button></td>
+                                    </tr>
+                                    <tr>
+                                        <td>20小时</td>
+                                        <td><span class="num">赠</span> 冰箱精细1次/等是清洁1次、厨房深度清洁1次</td>
+                                        <td class="num">￥250元 <br/><button class="btn-buy">购买</button></td>
+                                    </tr>
+                                    <tr>
+                                        <td>20小时</td>
+                                        <td><span class="num">赠</span> 冰箱精细1次/等是清洁1次、厨房深度清洁1次</td>
+                                        <td class="num">￥250元 <br/><button class="btn-buy">购买</button></td>
+                                    </tr>
+                                    </tbody>
+
+                                </table>
+                                <p class="p-foot">
+                                    以上价格是以40元/小时计费,2小时起步,若是活动,再商议
+                                </p>
+                            </div>
+                        </div>
+                    </div>
+                    <div>
+                        <div class="servpackSlider">
+                            <ul class=" servpack-slider js-active js-check clearfix">
+                                <li class="item clearfix">
+                                    <div>
+                                        <a href="homeServices-setMeal.html">
+                                            <img src="../../assets/frontend/images/hsList1.jpg" alt="" class="step-img"/>
+                                        </a>
+                                        <p>
+                                            <span>室内家居保洁-4小时</span><br/>
+                                            <span>房屋的基础打理</span>
+                                        </p>
+                                        <span class="num">￥ : 2000/人</span>
+                                    </div>
+                                    <div>
+                                        <a href="homeServices-setMeal.html">
+                                            <img src="../../assets/frontend/images/hsList1.jpg" alt="" class="step-img"/>
+
+                                        </a>
+                                        <p>
+                                            <span>室内家居保洁-4小时</span><br/>
+                                            <span>房屋的基础打理</span>
+                                        </p>
+                                        <span class="num">￥ : 2000/人</span>
+                                    </div>
+                                    <div>
+                                        <a href="homeServices-setMeal.html">
+                                            <img src="../../assets/frontend/images/hsList1.jpg" alt="" class="step-img"/>
+
+                                        </a>
+                                        <p>
+                                            <span>室内家居保洁-4小时</span><br/>
+                                            <span>房屋的基础打理</span>
+                                        </p>
+                                        <span class="num">￥ : 2000/人</span>
+                                    </div>
+                                    <div class="mr0">
+                                        <a href="homeServices-setMeal.html">
+                                            <img src="../../assets/frontend/images/hsList1.jpg" alt="" class="step-img"/>
+
+                                        </a>
+                                        <p>
+                                            <span>室内家居保洁-4小时</span><br/>
+                                            <span>房屋的基础打理</span>
+                                        </p>
+                                        <span class="num">￥ : 2000/人</span>
+                                    </div>
                                 </li>
-                                <li>
-                                    <div class="area-num area-num2">
-                                        60m²~80m²
+                                <li class="item clearfix">
+                                    <div>
+                                        <a href="homeServices-setMeal.html">
+                                            <img src="../../assets/frontend/images/hsList1.jpg" alt="" class="step-img"/>
+
+                                        </a>
+                                        <p>
+                                            <span>室内家居保洁-4小时</span><br/>
+                                            <span>房屋的基础打理</span>
+                                        </p>
+                                        <span class="num">￥ : 2000/人</span>
                                     </div>
-                                    <p>4小时</p>
-                                </li>
-                                <li>
-                                    <div class="area-num area-num3">
-                                        80m²~100m²
+                                    <div>
+                                        <a href="homeServices-setMeal.html">
+                                            <img src="../../assets/frontend/images/hsList1.jpg" alt="" class="step-img"/>
+
+                                        </a>
+                                        <p>
+                                            <span>室内家居保洁-4小时</span><br/>
+                                            <span>房屋的基础打理</span>
+                                        </p>
+                                        <span class="num">￥ : 2000/人</span>
                                     </div>
-                                    <p>5小时</p>
-                                </li>
-                                <li>
-                                    <div class="area-num area-num4">
-                                        150m²
+                                    <div>
+                                        <a href="homeServices-setMeal.html">
+                                            <img src="../../assets/frontend/images/hsList1.jpg" alt="" class="step-img"/>
+
+                                        </a>
+                                        <p>
+                                            <span>室内家居保洁-4小时</span><br/>
+                                            <span>房屋的基础打理</span>
+                                        </p>
+                                        <span class="num">￥ : 2000/人</span>
                                     </div>
-                                    <p>8小时</p>
+                                    <div class="mr0">
+                                        <a href="homeServices-setMeal.html">
+                                            <img src="../../assets/frontend/images/hsList1.jpg" alt="" class="step-img"/>
+
+                                        </a>
+                                        <p>
+                                            <span>室内家居保洁-4小时</span><br/>
+                                            <span>房屋的基础打理</span>
+                                        </p>
+                                        <span class="num">￥ : 2000/人</span>
+                                    </div>
                                 </li>
                             </ul>
-                            <p>
-                                家服汇推出的专业家庭保洁服务，首创4小时标准服务制，雇佣式的员工管理、规范化的培训流程专业的保洁工具为您提供最佳的保洁体验。为
-                            </p>
-
-                            <p>
-                                <span class="type">服务费用 :</span>
-                                40元/次，2小时起
-                            </p>
-
-                            <p>
-                                <span class="type">适合范围 :</span>
-                                本产品仅适用于日常家庭室内保洁，不可用于学校、办公室、商铺 、出租房、新装修房、长期未入住房、集体宿舍楼等房子类型保洁。
-                            </p>
                         </div>
                     </div>
-                    <div class="reserve right">
-                        <p class="title">基本服务在线预订</p>
-                        <div class="reserve-indormation">
-                            <p class="title">请输入您需要服务的时间</p>
-                            <div class="reserve-date clearfix">
-                                <div class="div-wdate left">
-                                    <input id="d4311" class="Wdate" type="text" placeholder="2015-10-10" onFocus="WdatePicker({minDate:'%y-%M-{%d}'})"/>
-                                    <i class="fa fa-calendar"></i>
-                                </div>
-                                <select name="" id="" class="select-time right">
-                                    <option value="时间">时间</option>
-                                    <option value="2015-10-10">2015-10-10</option>
-                                    <option value="2015-10-10">2015-10-10</option>
-                                </select>
-                            </div>
-                            <p class="title pt0">请输入房间面积</p>
-                            <div class="div-inputs">
-                                <input type="text" placeholder="100"/>
-                                <span class="right">m²</span>
-                            </div>
-                            <p class="title">请输选择时间　　单位: 小时　　价格: <span class="num unit-price">40</span>元/小时</p>
-                            <div class="clearfix services-type">
-                                <span class="span-title left">保洁时间:</span>
-                                <span class="s-spinner right">
-                                    <input type="text" class="spinner"/>
-                                    <button class="btn-common btn-plus">+</button>
-                                    <button class="btn-common btn-reduce" disabled="disabled">-</button>
-                                </span>
-                            </div>
-                            <p class="title">更多需求</p>
-                            <textarea style="resize: none" name=""  cols="50" rows="3" class="textarea"   placeholder="您可以在这里备注需求"></textarea>
-                            <p class="title total-title pt0">￥ <span class="num total">0</span></p>
-                            <p class="title">
-                                <label>
-                                    <input type="checkbox"/> 立即支付
-                                </label>
-                            </p>
-                            <p class="title pt0">请输姓名</p>
-                            <div class="div-inputs bg">
-                                <input type="text" placeholder="陈洁"/>
-                            </div>
-                            <p class="title">请输联系方式</p>
-                            <div class="div-inputs bg">
-                                <input type="text" placeholder="13678478463"/>
-                            </div>
-                            <p class="title">请输金额</p>
-                            <div class="div-inputs br1">
-                                <input type="text" placeholder="500"/>
-                                <span class="right">元</span>
-                            </div>
-                            <p class="title">
-                                <label>
-                                    <input type="checkbox"/> 我已经阅读并同意
-                                </label>
-                                <a href="#">《家服汇用户使用协议》</a>
-                            </p>
-                            <div class="div-order">
-                                <a href="order-pay.html" class="btn-order">下单</a>
-                                <!--<input type="submit" value="下单" class="btn-order"/>-->
-                            </div>
-                        </div>
-                    </div>
+
+
                 </div>
                 <div class="server-step">
-                    <p class="title">服务流程</p>
-                    <ul class="server-ul">
+                    <!--<p class="title">服务流程</p>-->
+                    <ul class="server-ul clearfix">
                         <li>
-                            <img src="../../assets/frontend/images/s-icon1.png" alt="网页下单"/>
-                            <span>网页下单</span>
+                            <img src="../../assets/frontend/images/s-icon1.png" alt=""/>
+                            <span>适用范围</span>
+                            <div class="service-infor">
+                                <div class="service-mask-bg service-mask-bg1"></div>
+                                <div class="service-mask service-mask1">
+                                    <div class="caret-mask-bg"></div>
+                                    <div class="caret-mask"></div>
+                                    <p class="title">适用范围 : </p>
+                                    <p class="serviceStepInfor">
+                                        本服务仅适用于日常家庭室内保洁，不可用于学校、办公室、商铺、出租房、新装房、长期未入住房、集体宿舍等类型房屋的保洁。
+                                        本服务包含的服务范围有：地面、踢脚线清理；家具、家电表面除尘；油烟机表面擦洗；玻璃、厨房、浴室墙面、台面。油烟机内部清洗等项目不再服务范围内。
+                                    </p>
+                                </div>
+                            </div>
                         </li>
                         <li>
-                            <img src="../../assets/frontend/images/s-icon2.png" alt="结算"/>
-                            <span>结算</span>
+                            <img src="../../assets/frontend/images/s-icon2.png" alt=""/>
+                            <span>服务标准</span>
+                            <div class="service-infor">
+                                <div class="service-mask-bg service-mask-bg2"></div>
+                                <div class="service-mask service-mask2">
+                                    <div class="caret-mask-bg"></div>
+                                    <div class="caret-mask"></div>
+                                    <p class="title">服务标准 : </p>
+                                    <p class="small-title">6区31项：</p>
+                                    <p class="serviceStepInfor">
+                                        我们把服务细分为6区31项，每一区的打扫顺序、涵盖内容都进行了标准、专业的划分，偷工减料？您不答应，我们也绝对不允许
+                                    </p>
+                                    <p class="small-title">6区：</p>
+                                    <p class="serviceStepInfor">
+                                        1、厨房（油烟机、燃气灶、橱柜、调味组、洗菜池、厨房整体台面、整体地面、垃圾桶）； <br/>
+                                        2、卫生间（洗漱台、淋浴房、马桶、地面、垃圾桶）； <br/>
+                                        3、客厅（窗户、沙发、茶几、地面、垃圾桶、客厅家具、客厅家电）； <br/>
+                                        4、卧室（窗户、床、梳妆台、衣柜、地面、卧室家电）； <br/>
+                                        5、餐厅（餐桌椅、地面）； <br/>
+                                        6、阳台（玻璃、地面、洗衣机）； <br/>
+                                    </p>
+
+                                    <p class="small-title">验收标准：</p>
+
+                                    <p class="serviceStepInfor">
+                                        地面干净，离开时带走垃圾；室内整体光亮无尘，玻璃光亮物品整齐归位；厨房清洁无油烟，浴室光洁无水渍。
+                                    </p>
+                                    <p class="small-title"> 注明：</p>
+
+                                    <p class="serviceStepInfor">
+                                        橱柜内部（含内部陈设物品）、字画、古董、宗教陈设、易损易碎摆件、天花板、吊灯吊顶等不在基础保洁服务范围之内。如您有以上范围内的保洁服务需求，请致电客服或直接在我们的网站上了解其他相关保洁单项服务。
+                                    </p>
+                                </div>
+                            </div>
                         </li>
                         <li>
-                            <img src="../../assets/frontend/images/s-icon3.png" alt="上门服务"/>
-                            <span>上门服务</span>
+                            <img src="../../assets/frontend/images/s-icon3.png" alt=""/>
+                            <span>服务保障</span>
+                            <div class="service-infor">
+                                <div class="service-mask-bg service-mask-bg3"></div>
+                                <div class="service-mask service-mask3">
+                                    <div class="caret-mask-bg"></div>
+                                    <div class="caret-mask"></div>
+                                    <p class="title">服务保障 : </p>
+                                    <p class="serviceStepInfor">我们给您带来的不仅是服务，还有安全感。</p>
+                                    <p class="serviceStepInfor">我们渴望得到用户的信赖。</p>
+                                    <p class="serviceStepInfor">我们尽量满足用户所有的挑剔。</p>
+                                    <p class="serviceStepInfor">作为一个有责任心的家庭生活服务平台。</p>
+                                    <p class="serviceStepInfor">我们恳请您放心的将家务交给我们因为 ，家服汇更有保障。</p>
+                                    <p class="serviceStepInfor">
+                                        服务人员未按约定时间上门服务（迟到一小时以上）订单（如何）赔付；服务时常未满订单时间且未尽用户同意，服务人员擅自早退，订单时常（如何）补偿；未按要求完成服务项目，订单（如何）赔付。
+                                        家服汇“保障”0风险保障服务更全面、赔保金额更合理、审批流程更快捷保险赔付机制、赔付范围、赔付流程）
+                                    </p>
+                                </div>
+                            </div>
                         </li>
                         <li>
-                            <img src="../../assets/frontend/images/s-icon4.png" alt="评价"/>
-                            <span>评价</span>
+                            <img src="../../assets/frontend/images/s-icon4.png" alt=""/>
+                            <span>个性服务</span>
+                            <div class="service-infor">
+                                <div class="service-mask-bg service-mask-bg4"></div>
+                                <div class="service-mask service-mask4">
+                                    <div class="caret-mask-bg"></div>
+                                    <div class="caret-mask"></div>
+                                    <p class="title">个性服务 : </p>
+                                    <p class="small-title">下单：</p>
+                                    <p class="serviceStepInfor">
+                                        用户根据服务参考选定服务之后，通过在线支付完成服务下单（支付接口PC端采用支付宝和银联，移动端采用微支付）。
+                                    </p>
+                                    <p class="small-title">订单更改：</p>
+                                    <p class="serviceStepInfor">
+                                        可在个人账户--我的订单--操作更改栏目中更改订单服务的时间，请在订单服务前24小时提交更改（服务时间、地点、联系人）。
+                                    </p>
+
+                                    <p class="small-title">订单取消：</p>
+
+                                    <p class="serviceStepInfor">
+                                        可在个人账户--我的订单--操作取消订单服务。提前12小时取消订单的，服务金额将100%返还；提前6小时取消订单的，服务金额将返还60%；提前3小时取消订单的，将不退款。
+                                    </p>
+                                </div>
+                            </div>
                         </li>
                     </ul>
                 </div>
@@ -212,7 +509,6 @@
                                 <div>
                                     <a href="homeServices-setMeal.html">
                                         <img src="../../assets/frontend/images/hsList1.jpg" alt="" class="step-img"/>
-                                        <i class="fa fa-check right active"></i>
                                     </a>
                                     <p>
                                         <span>室内家居保洁-4小时</span><br/>
@@ -223,7 +519,6 @@
                                 <div>
                                     <a href="homeServices-setMeal.html">
                                         <img src="../../assets/frontend/images/hsList1.jpg" alt="" class="step-img"/>
-                                        <i class="fa fa-check right"></i>
                                     </a>
                                     <p>
                                         <span>室内家居保洁-4小时</span><br/>
@@ -234,7 +529,6 @@
                                 <div>
                                     <a href="homeServices-setMeal.html">
                                         <img src="../../assets/frontend/images/hsList1.jpg" alt="" class="step-img"/>
-                                        <i class="fa fa-check right"></i>
                                     </a>
                                     <p>
                                         <span>室内家居保洁-4小时</span><br/>
@@ -245,7 +539,6 @@
                                 <div class="mr0">
                                     <a href="homeServices-setMeal.html">
                                         <img src="../../assets/frontend/images/hsList1.jpg" alt="" class="step-img"/>
-                                        <i class="fa fa-check right"></i>
                                     </a>
                                     <p>
                                         <span>室内家居保洁-4小时</span><br/>
@@ -258,7 +551,6 @@
                                 <div>
                                     <a href="homeServices-setMeal.html">
                                         <img src="../../assets/frontend/images/hsList1.jpg" alt="" class="step-img"/>
-                                        <i class="fa fa-check right active"></i>
                                     </a>
                                     <p>
                                         <span>室内家居保洁-4小时</span><br/>
@@ -269,7 +561,6 @@
                                 <div>
                                     <a href="homeServices-setMeal.html">
                                         <img src="../../assets/frontend/images/hsList1.jpg" alt="" class="step-img"/>
-                                        <i class="fa fa-check right"></i>
                                     </a>
                                     <p>
                                         <span>室内家居保洁-4小时</span><br/>
@@ -280,7 +571,6 @@
                                 <div>
                                     <a href="homeServices-setMeal.html">
                                         <img src="../../assets/frontend/images/hsList1.jpg" alt="" class="step-img"/>
-                                        <i class="fa fa-check right"></i>
                                     </a>
                                     <p>
                                         <span>室内家居保洁-4小时</span><br/>
@@ -291,7 +581,6 @@
                                 <div class="mr0">
                                     <a href="homeServices-setMeal.html">
                                         <img src="../../assets/frontend/images/hsList1.jpg" alt="" class="step-img"/>
-                                        <i class="fa fa-check right"></i>
                                     </a>
                                     <p>
                                         <span>室内家居保洁-4小时</span><br/>
@@ -306,12 +595,12 @@
                 <div class="service-introduction">
                     <p class="title">其他保洁服务</p>
                     <div class="servpackSlider">
-                        <ul class=" servpack-slider js-active js-check clearfix">
+                        <ul class=" servpack-slider js-active1 js-check clearfix">
                             <li class="item clearfix">
                                 <div>
                                     <a href="homeServices-setMeal.html">
                                         <img src="../../assets/frontend/images/hsList1.jpg" alt="" class="step-img"/>
-                                        <i class="fa fa-check right active"></i>
+                                        
                                     </a>
                                     <p>
                                         <span>室内家居保洁-4小时</span><br/>
@@ -322,7 +611,7 @@
                                 <div>
                                     <a href="homeServices-setMeal.html">
                                         <img src="../../assets/frontend/images/hsList1.jpg" alt="" class="step-img"/>
-                                        <i class="fa fa-check right"></i>
+                                        
                                     </a>
                                     <p>
                                         <span>室内家居保洁-4小时</span><br/>
@@ -333,7 +622,7 @@
                                 <div>
                                     <a href="homeServices-setMeal.html">
                                         <img src="../../assets/frontend/images/hsList1.jpg" alt="" class="step-img"/>
-                                        <i class="fa fa-check right"></i>
+                                        
                                     </a>
                                     <p>
                                         <span>室内家居保洁-4小时</span><br/>
@@ -344,7 +633,7 @@
                                 <div class="mr0">
                                     <a href="homeServices-setMeal.html">
                                         <img src="../../assets/frontend/images/hsList1.jpg" alt="" class="step-img"/>
-                                        <i class="fa fa-check right"></i>
+                                        
                                     </a>
                                     <p>
                                         <span>室内家居保洁-4小时</span><br/>
@@ -357,7 +646,7 @@
                                 <div>
                                     <a href="homeServices-setMeal.html">
                                         <img src="../../assets/frontend/images/hsList1.jpg" alt="" class="step-img"/>
-                                        <i class="fa fa-check right active"></i>
+                                        
                                     </a>
                                     <p>
                                         <span>室内家居保洁-4小时</span><br/>
@@ -368,7 +657,7 @@
                                 <div>
                                     <a href="homeServices-setMeal.html">
                                         <img src="../../assets/frontend/images/hsList1.jpg" alt="" class="step-img"/>
-                                        <i class="fa fa-check right"></i>
+                                        
                                     </a>
                                     <p>
                                         <span>室内家居保洁-4小时</span><br/>
@@ -379,7 +668,7 @@
                                 <div>
                                     <a href="homeServices-setMeal.html">
                                         <img src="../../assets/frontend/images/hsList1.jpg" alt="" class="step-img"/>
-                                        <i class="fa fa-check right"></i>
+                                        
                                     </a>
                                     <p>
                                         <span>室内家居保洁-4小时</span><br/>
@@ -390,7 +679,7 @@
                                 <div class="mr0">
                                     <a href="homeServices-setMeal.html">
                                         <img src="../../assets/frontend/images/hsList1.jpg" alt="" class="step-img"/>
-                                        <i class="fa fa-check right"></i>
+                                        
                                     </a>
                                     <p>
                                         <span>室内家居保洁-4小时</span><br/>
@@ -405,33 +694,29 @@
                 <div class="package">
                     <p class="title">相关推荐</p>
                     <div class="servpackSlider">
-                        <ul class=" servpack-slider js-active js-check clearfix">
+                        <ul class=" servpack-slider   clearfix">
                             <li class="item clearfix">
                                 <div>
-                                    <a href="homeServices-setMeal.html">
+                                    <a href="homeServices-maternity.html">
                                         <img src="../../assets/frontend/images/hsList1.jpg" alt="" class="step-img"/>
-                                        <i class="fa fa-check right active"></i>
                                     </a>
                                     <span class="type">月嫂</span><br/>
                                 </div>
                                 <div>
-                                    <a href="homeServices-setMeal.html">
+                                    <a href="homeServices-wardrobe.html">
                                         <img src="../../assets/frontend/images/hsList1.jpg" alt="" class="step-img"/>
-                                        <i class="fa fa-check right"></i>
                                     </a>
                                     <span class="type">衣柜</span><br/>
                                 </div>
                                 <div>
-                                    <a href="homeServices-setMeal.html">
+                                    <a href="homeServices-nursingworkers.html">
                                         <img src="../../assets/frontend/images/hsList1.jpg" alt="" class="step-img"/>
-                                        <i class="fa fa-check right"></i>
                                     </a>
                                     <span class="type">护工</span><br/>
                                 </div>
                                 <div class="mr0">
-                                    <a href="homeServices-setMeal.html">
+                                    <a href="homeServices-leathershoes.html">
                                         <img src="../../assets/frontend/images/hsList1.jpg" alt="" class="step-img"/>
-                                        <i class="fa fa-check right"></i>
                                     </a>
                                     <span class="type">皮鞋</span><br/>
                                 </div>
@@ -450,23 +735,45 @@
                                 <div class="detaisl-slider">
                                     <ul class="clearfix ser-ul">
                                         <li>
-                                            <p class="title">特级护理</p>
-                                            <p>1、涵盖三星级护理服务范围（1-5）条内容。</p>
-                                            <p>2、每天帮助病人全身擦澡一次，更换污单，污衣裤。</p>
-                                            <p>3、为病人喂饭、清洗碗筷、定时</p>
-                                            <p>1、涵盖三星级护理服务范围（1-5）条内容。</p>
-                                            <p>2、每天帮助病人全身擦澡一次，更换污单，污衣裤。</p>
-                                            <p>3、为病人喂饭、清洗碗筷、定时</p>
-                                            <p>3、为病人喂饭、清洗碗筷、定时</p>
+                                            <p>
+                                                服务全程不偷懒、不拖时： <br/>
+                                                按房间分：次卧室--主卧室--书房保洁--客厅--餐厅--厨房--卫生间 <br/>
+                                                按工程量分：先上后下--先里后外--先易后难--先简后繁--先大后小--先急后缓 <br/>
+                                                玻璃擦洗：擦玻璃框--擦玻璃--空调--窗台--床头柜--衣架--电脑办公桌--电线盒--踢脚线--门--地面。
+                                            </p>
+                                            <p>
+                                                分类保洁布，分区使用更卫生： <br/>
+                                                保洁布规范化分区域使用，不同颜色、不同材质的保洁布适用于不同区域、干湿分离、避免交叉污染，更加干净卫生。
+                                            </p>
+                                            <p>
+                                                统一培训，持证上岗： <br/>
+                                                每一位服务人员上岗前都经过专业化的培训、实操、见习、考核。
+                                                定期为从业人员进行在岗培训，持续提升服务技能。
+                                            </p>
+
                                         </li>
                                         <li></li>
                                         <li></li>
                                     </ul>
                                 </div>
-                                <div class="d-left" id="d-left"></div>
-                                <div class="d-right" id="d-right"></div>
+                                <div class="d-left"></div>
+                                <div class="d-right"></div>
                             </div>
-                            <div></div>
+                            <div>
+                                <div class="detaisl-slider">
+                                    <ul class="clearfix ser-ul">
+                                        <li>
+                                            <p>
+                                                您可以通过PC端和手机端实时进行线上点评，也可以通过我们的客服电话反馈服务意见；我们保证用户的每一列不满意投诉都会在1小时内得到回应，24小时内得到解决。
+                                            </p>
+                                        </li>
+                                        <li></li>
+                                        <li></li>
+                                    </ul>
+                                </div>
+                                <div class="d-left"></div>
+                                <div class="d-right"></div>
+                            </div>
                         </div>
                     </div>
                     <div class="right commont">
@@ -611,11 +918,8 @@
                 defaultNum:0,
                 maxNum:100
             });
-            var sm = $(".sch-menu li");
-            sm.on("click",function(){
-                $(this).addClass("active");
-                $(this).siblings(sm).removeClass("active");
-            })
+
+
         })(jQuery)
     </script>
 </html>
