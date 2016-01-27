@@ -17,19 +17,18 @@ $(function(){
 
 
     function maskShow(){
-        var jai = $(".js-active1 .item img");
+        var jai = $(".js-active1 .item img,.nws-infor .btn-look");
         var m = $(".mask");
         var w   = $(".wrapper");
         jai.each(function(){
             $(this).on("click",function(e){
-                console.log();
                 e.preventDefault();
                 var str = '<div class="mask-bg"></div>'+
                           '<div class="mask">'+
                               '<div class="mask-content">'+
                                   '<i class="fa fa-remove"></i>'+
                                   '<div class="left">'+
-                                      '<img src="'+$(this).attr('src')+'" alt="">'+
+                                      '<img src="'+$(this).closest(".item").find("img").attr('src')+'" alt="">'+
                                   '</div>'+
                                   '<div class="mask-p left">'+
                                       '<p class="title">'+
