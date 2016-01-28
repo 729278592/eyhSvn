@@ -6,6 +6,7 @@
     <title>家庭服务</title>
     <link rel="stylesheet" href="../../assets/global/plugins/font/css/font-awesome.min.css"/>
     <link rel="stylesheet" href="../../assets/frontend/css/global.css"/>
+    <link rel="stylesheet" href="../../assets/global/plugins/countDown/css/countDown.css"/>
 </head>
 <body>
     <div class="wrapper">
@@ -394,7 +395,12 @@
                                 <li>
                                     <div class="sale-details">
                                         <p class="title">小牛深度居家保洁优惠</p>
-                                        <img src="../../assets/frontend/images/time-less.jpg" alt=""/>
+                                        <p class="counttitle">距离结束</p>
+                                        <div class="colockbox" id="demo02">
+                                            <span class="hour">-</span>
+                                            <span class="minute">-</span>
+                                            <span class="second">-</span>
+                                        </div>
                                         <p><span class="fs16">￥ : 299.0元</span>　<span class="fs14">再送30通兑积分</span></p>
                                     </div>
                                     <button class="btn-rorder">立即下单</button>
@@ -640,6 +646,13 @@
     <script src="../../assets/global/plugins/move/js/move.js"></script>
     <script src="../../assets/frontend/js/global.js"></script>
     <script src="../../assets/frontend/js/homeServices.js"></script>
+    <script src="../../assets/global/plugins/countDown/js/countDown.js"></script>
+    <script type="text/javascript">
+        $(function(){
+//            countDown("2015/8/10 23:59:59","#demo01 .day","#demo01 .hour","#demo01 .minute","#demo01 .second");
+            countDown("2016/1/30 9:59:59",null,"#demo02 .hour","#demo02 .minute","#demo02 .second");
+        });
+    </script>
     <script>
         $(".server-name").on("click",function(){
             if($(this).parent().find(".hs-menu").css("display") == "none"){
@@ -647,7 +660,6 @@
                 $(this).find(".fa").removeClass("fa-caret-right").addClass("fa-caret-down");
                 $(this).parent().siblings(".s-type").find(".hs-menu").slideUp();
                 $(this).parent().siblings(".s-type").find(".fa").removeClass("fa-caret-down").addClass("fa-caret-right");
-            }else{
             }
         })
     </script>
