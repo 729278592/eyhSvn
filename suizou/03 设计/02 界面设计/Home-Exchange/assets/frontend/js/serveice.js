@@ -3,8 +3,8 @@
  */
 
 $(function(){
-    var rul = $(".se-ul li");
-    var rl = $(".se-div");
+    var rul = $(".se-ul li,.server-types li,.sca-ul li");
+    var rl = $(".se-div,.bonus.joined-money,.scSlider1");
     rul.each(function(i){
         $(this).on("click",function(){
             $(this).addClass("active");
