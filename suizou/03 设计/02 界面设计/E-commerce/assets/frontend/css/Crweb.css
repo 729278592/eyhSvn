@@ -393,6 +393,7 @@ tr th,tr td{ text-align:center;font-size: 14px;border:1px solid #cccccc;color: #
 .li_bottom{position: absolute;bottom: 6px;font-size: 17px;color: #020202;width: 100%;text-align: center;}
 .li_top a{color: #6e6969;width: 100%;display: inline-block;}
 .li_top .active a{color: #fe685b;}
+
 .cen_content{width: 960px;display: inline-block;position: relative;left: 278px;margin-top: 50px;border:1px solid #dbdbdb;}
 .cen_content_head{width: 100%;height: 165px;background: #fee9e7;overflow: hidden;}
 .cen_content_head .information{width: 765px;height: 80px;background: #fffaf9;margin: 32px 55px 32px 100px;padding: 10px 0;}
@@ -461,6 +462,8 @@ tr th,tr td{ text-align:center;font-size: 14px;border:1px solid #cccccc;color: #
 .my_idiot_content{margin-left: 20px;}
 .current_earnings{text-align: left;text-indent: 10px;position: relative;top: -7px;font-size: 16px;}
 .change_password_content{position: relative;top:30px;}
+
+
 .address_content{width: 100%;font-size: 13px;}
 .address_content_head{width: 96%;padding: 1% 2%;border-bottom: 1px solid #dfdfdf;}
 .data{position: relative;top: 5px;}
