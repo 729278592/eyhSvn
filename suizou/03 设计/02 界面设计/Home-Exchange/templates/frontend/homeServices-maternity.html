@@ -177,8 +177,49 @@
                                 </label>
                             </p>
                             <div class="div-order">
-                                <a href="order-pay.html" class="btn-order">下单</a>
-                                <!--<input type="submit" value="下单" class="btn-order"/>-->
+                                <a href="homeServices-maternitySearch.html" class="btn-order btn-mother">找个好孕妈妈go》</a>
+                                <button class="btn-order btn-order1">平台</button>
+                                <div class="ma-dailog hide">
+                                    <i class="fa fa-caret-down"></i>
+                                    <div class="ma-infor">
+                                        <p>
+                                            <span class="type">籍贯:</span>
+                                            <select name="">
+                                                <option value="四川">四川</option>
+                                                <option value="广东">广东</option>
+                                                <option value="西藏">西藏</option>
+                                            </select>
+                                        </p>
+
+                                        <p>
+                                            <span class="type">语言:</span>
+                                            <select name="">
+                                                <option value="汉语">汉语</option>
+                                                <option value="粤语">粤语</option>
+                                                <option value="藏语">藏语</option>
+                                            </select>
+                                        </p>
+
+                                        <p>
+                                            <span class="type">属相:</span>
+                                            <select name="">
+                                                <option value="猪">猪</option>
+                                                <option value="牛">牛</option>
+                                                <option value="羊">羊</option>
+                                            </select>
+                                        </p>
+
+                                        <p>
+                                            <span class="type">经验:</span>
+                                            <select name="" id="">
+                                                <option value="一年">一年</option>
+                                                <option value="两年">两年</option>
+                                                <option value="三年">三年</option>
+                                            </select>
+                                        </p>
+                                    </div>
+                                    <button class="btn-submit">提交</button>
+                                </div>
                             </div>
                         </div>
                     </div>
@@ -882,4 +923,15 @@
 <script src="../../assets/frontend/js/global.js"></script>
 <script src="../../assets/frontend/js/serveice.js"></script>
 <script src="../../assets/frontend/js/activity.js"></script>
+<script>
+    var bo = $(".btn-order1");
+    var ma = $(".ma-dailog");
+    var mb =$(".ma-dailog .btn-submit");
+    bo.on("click",function(){
+        ma.removeClass("hide")
+    });
+    mb.on("click",function(){
+        ma.addClass("hide")
+    })
+</script>
 </html>
