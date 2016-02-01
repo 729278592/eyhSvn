@@ -36,7 +36,6 @@
                         });
                         btnServers = true;
                     }else{
-
                         inowServers++;
                         serversPaginationA.eq(inowServers).addClass("active");
                         serversPaginationA.eq(inowServers).siblings().removeClass("active");

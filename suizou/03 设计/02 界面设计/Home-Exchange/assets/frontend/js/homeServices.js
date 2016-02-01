@@ -152,9 +152,5 @@
     new SerSlider($(".serversSlider"),{
         setsSlider:5000
     });
-
-
-
-
 })(jQuery);
 
