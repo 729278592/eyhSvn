@@ -158,19 +158,22 @@
                                 <button class="btn-type right mb10">中级</button>
                                 <button class="btn-type left">低级</button>
                             </div>
-                            <p class="title pt0">请选择医院及科室</p>
-                            <p class="js-select clearfix">
-                                <select name="" class="left">
-                                    <option value="重庆市中医院">重庆市中医院</option>
-                                    <option value="重庆市中医院">重庆市中医院</option>
-                                    <option value="重庆市中医院">重庆市中医院</option>
+                            <p class="title pt0">请输入您需要服务的时间</p>
+                            <div class="reserve-date clearfix">
+                                <div class="div-wdate left">
+                                    <input id="d4311" class="Wdate" type="text" placeholder="2015-10-10"  onfocus="  WdatePicker({ dateFmt: 'yyyy-MM', isShowToday: false, isShowClear: false })"/>
+                                    <i class="fa fa-calendar"></i>
+                                </div>
+                                <select name="" class="select-time right inputDisable">
+                                    <option value="时间">时间</option>
+                                    <option value="12:00">1:00</option>
+                                    <option value="13:00">2:00</option>
+                                    <option value="12:00">3:00</option>
+                                    <option value="13:00">4:00</option>
+                                    <option value="12:00">5:00</option>
+                                    <option value="13:00">6:00</option>
                                 </select>
-                                <select name="" class="right">
-                                    <option value="心脏科">心脏科</option>
-                                    <option value="心脏科">心脏科</option>
-                                    <option value="心脏科">心脏科</option>
-                                </select>
-                            </p>
+                            </div>
                             <p class="title">
                                 <label>
                                     <input type="checkbox"/> 我已经阅读并同意《家服汇用户使用协议》
@@ -227,7 +230,9 @@
                 <div>
                     <div class="keep-details left">
                         <div class="rank-mother clearfix">
-                            <img src="../../assets/frontend/images/ma1.jpg" class="left ma-img"/>
+                            <a href="#">
+                                <img src="../../assets/frontend/images/ma1.jpg" class="left ma-img"/>
+                            </a>
                             <div class="swg-infor left">
                                 <p class="title">
                                     <span>高级</span>
@@ -249,7 +254,9 @@
                             </div>
                         </div>
                         <div class="rank-mother clearfix">
-                            <img src="../../assets/frontend/images/ma1.jpg" class="left ma-img"/>
+                            <a href="#">
+                                <img src="../../assets/frontend/images/ma1.jpg" class="left ma-img"/>
+                            </a>
                             <div class="swg-infor left">
                                 <p class="title">
                                     <span>中级</span>
@@ -271,7 +278,9 @@
                             </div>
                         </div>
                         <div class="rank-mother clearfix">
-                            <img src="../../assets/frontend/images/ma1.jpg" class="left ma-img"/>
+                            <a href="#">
+                                <img src="../../assets/frontend/images/ma1.jpg" class="left ma-img"/>
+                            </a>
                             <div class="swg-infor left">
                                 <p class="title">
                                     <span>低级</span>
@@ -302,27 +311,71 @@
                                 <button class="btn-type right mb10">中级</button>
                                 <button class="btn-type left">低级</button>
                             </div>
-                            <p class="title pt0">请选择医院及科室</p>
-                            <p class="js-select clearfix">
-                                <select name="" class="left">
-                                    <option value="重庆市中医院">重庆市中医院</option>
-                                    <option value="重庆市中医院">重庆市中医院</option>
-                                    <option value="重庆市中医院">重庆市中医院</option>
+                            <p class="title pt0">请输入您需要服务的时间</p>
+                            <div class="reserve-date clearfix">
+                                <div class="div-wdate left">
+                                    <input id="d4311" class="Wdate" type="text" placeholder="2015-10-10"  onfocus="  WdatePicker({ dateFmt: 'yyyy-MM', isShowToday: false, isShowClear: false })"/>
+                                    <i class="fa fa-calendar"></i>
+                                </div>
+                                <select name="" class="select-time right inputDisable">
+                                    <option value="时间">时间</option>
+                                    <option value="12:00">1:00</option>
+                                    <option value="13:00">2:00</option>
+                                    <option value="12:00">3:00</option>
+                                    <option value="13:00">4:00</option>
+                                    <option value="12:00">5:00</option>
+                                    <option value="13:00">6:00</option>
                                 </select>
-                                <select name="" class="right">
-                                    <option value="心脏科">心脏科</option>
-                                    <option value="心脏科">心脏科</option>
-                                    <option value="心脏科">心脏科</option>
-                                </select>
-                            </p>
+                            </div>
                             <p class="title">
                                 <label>
                                     <input type="checkbox"/> 我已经阅读并同意《家服汇用户使用协议》
                                 </label>
                             </p>
                             <div class="div-order">
-                                <a href="order-pay.html" class="btn-order">下单</a>
-                                <!--<input type="submit" value="下单" class="btn-order"/>-->
+                                <a href="homeServices-maternitySearch.html" class="btn-order btn-mother">找个好孕妈妈go》</a>
+                                <button class="btn-order btn-order1">平台</button>
+                                <div class="ma-dailog hide">
+                                    <i class="fa fa-caret-down"></i>
+                                    <div class="ma-infor">
+                                        <p>
+                                            <span class="type">籍贯:</span>
+                                            <select name="">
+                                                <option value="四川">四川</option>
+                                                <option value="广东">广东</option>
+                                                <option value="西藏">西藏</option>
+                                            </select>
+                                        </p>
+
+                                        <p>
+                                            <span class="type">语言:</span>
+                                            <select name="">
+                                                <option value="汉语">汉语</option>
+                                                <option value="粤语">粤语</option>
+                                                <option value="藏语">藏语</option>
+                                            </select>
+                                        </p>
+
+                                        <p>
+                                            <span class="type">属相:</span>
+                                            <select name="">
+                                                <option value="猪">猪</option>
+                                                <option value="牛">牛</option>
+                                                <option value="羊">羊</option>
+                                            </select>
+                                        </p>
+
+                                        <p>
+                                            <span class="type">经验:</span>
+                                            <select name="" id="">
+                                                <option value="一年">一年</option>
+                                                <option value="两年">两年</option>
+                                                <option value="三年">三年</option>
+                                            </select>
+                                        </p>
+                                    </div>
+                                    <button class="btn-submit">提交</button>
+                                </div>
                             </div>
                         </div>
                     </div>
@@ -330,7 +383,9 @@
                 <div>
                     <div class="keep-details left">
                         <div class="rank-mother clearfix">
-                            <img src="../../assets/frontend/images/ma1.jpg" class="left ma-img"/>
+                            <a href="#">
+                                <img src="../../assets/frontend/images/ma1.jpg" class="left ma-img"/>
+                            </a>
                             <div class="swg-infor left">
                                 <p class="title">
                                     <span>高级</span>
@@ -352,7 +407,9 @@
                             </div>
                         </div>
                         <div class="rank-mother clearfix">
-                            <img src="../../assets/frontend/images/ma1.jpg" class="left ma-img"/>
+                            <a href="#">
+                                <img src="../../assets/frontend/images/ma1.jpg" class="left ma-img"/>
+                            </a>
                             <div class="swg-infor left">
                                 <p class="title">
                                     <span>中级</span>
@@ -374,7 +431,9 @@
                             </div>
                         </div>
                         <div class="rank-mother clearfix">
-                            <img src="../../assets/frontend/images/ma1.jpg" class="left ma-img"/>
+                            <a href="#">
+                                <img src="../../assets/frontend/images/ma1.jpg" class="left ma-img"/>
+                            </a>
                             <div class="swg-infor left">
                                 <p class="title">
                                     <span>低级</span>
@@ -405,27 +464,71 @@
                                 <button class="btn-type right mb10">中级</button>
                                 <button class="btn-type left">低级</button>
                             </div>
-                            <p class="title pt0">请选择医院及科室</p>
-                            <p class="js-select clearfix">
-                                <select name="" class="left">
-                                    <option value="重庆市中医院">重庆市中医院</option>
-                                    <option value="重庆市中医院">重庆市中医院</option>
-                                    <option value="重庆市中医院">重庆市中医院</option>
+                            <p class="title pt0">请输入您需要服务的时间</p>
+                            <div class="reserve-date clearfix">
+                                <div class="div-wdate left">
+                                    <input id="d4311" class="Wdate" type="text" placeholder="2015-10-10"  onfocus="  WdatePicker({ dateFmt: 'yyyy-MM', isShowToday: false, isShowClear: false })"/>
+                                    <i class="fa fa-calendar"></i>
+                                </div>
+                                <select name="" class="select-time right inputDisable">
+                                    <option value="时间">时间</option>
+                                    <option value="12:00">1:00</option>
+                                    <option value="13:00">2:00</option>
+                                    <option value="12:00">3:00</option>
+                                    <option value="13:00">4:00</option>
+                                    <option value="12:00">5:00</option>
+                                    <option value="13:00">6:00</option>
                                 </select>
-                                <select name="" class="right">
-                                    <option value="心脏科">心脏科</option>
-                                    <option value="心脏科">心脏科</option>
-                                    <option value="心脏科">心脏科</option>
-                                </select>
-                            </p>
+                            </div>
                             <p class="title">
                                 <label>
                                     <input type="checkbox"/> 我已经阅读并同意《家服汇用户使用协议》
                                 </label>
                             </p>
                             <div class="div-order">
-                                <a href="order-pay.html" class="btn-order">下单</a>
-                                <!--<input type="submit" value="下单" class="btn-order"/>-->
+                                <a href="homeServices-maternitySearch.html" class="btn-order btn-mother">找个好孕妈妈go》</a>
+                                <button class="btn-order btn-order1">平台</button>
+                                <div class="ma-dailog hide">
+                                    <i class="fa fa-caret-down"></i>
+                                    <div class="ma-infor">
+                                        <p>
+                                            <span class="type">籍贯:</span>
+                                            <select name="">
+                                                <option value="四川">四川</option>
+                                                <option value="广东">广东</option>
+                                                <option value="西藏">西藏</option>
+                                            </select>
+                                        </p>
+
+                                        <p>
+                                            <span class="type">语言:</span>
+                                            <select name="">
+                                                <option value="汉语">汉语</option>
+                                                <option value="粤语">粤语</option>
+                                                <option value="藏语">藏语</option>
+                                            </select>
+                                        </p>
+
+                                        <p>
+                                            <span class="type">属相:</span>
+                                            <select name="">
+                                                <option value="猪">猪</option>
+                                                <option value="牛">牛</option>
+                                                <option value="羊">羊</option>
+                                            </select>
+                                        </p>
+
+                                        <p>
+                                            <span class="type">经验:</span>
+                                            <select name="" id="">
+                                                <option value="一年">一年</option>
+                                                <option value="两年">两年</option>
+                                                <option value="三年">三年</option>
+                                            </select>
+                                        </p>
+                                    </div>
+                                    <button class="btn-submit">提交</button>
+                                </div>
                             </div>
                         </div>
                     </div>
@@ -433,7 +536,9 @@
                 <div>
                     <div class="keep-details left">
                         <div class="rank-mother clearfix">
-                            <img src="../../assets/frontend/images/ma1.jpg" class="left ma-img"/>
+                            <a href="#">
+                                <img src="../../assets/frontend/images/ma1.jpg" class="left ma-img"/>
+                            </a>
                             <div class="swg-infor left">
                                 <p class="title">
                                     <span>高级</span>
@@ -455,7 +560,9 @@
                             </div>
                         </div>
                         <div class="rank-mother clearfix">
-                            <img src="../../assets/frontend/images/ma1.jpg" class="left ma-img"/>
+                            <a href="#">
+                                <img src="../../assets/frontend/images/ma1.jpg" class="left ma-img"/>
+                            </a>
                             <div class="swg-infor left">
                                 <p class="title">
                                     <span>中级</span>
@@ -477,7 +584,9 @@
                             </div>
                         </div>
                         <div class="rank-mother clearfix">
-                            <img src="../../assets/frontend/images/ma1.jpg" class="left ma-img"/>
+                            <a href="#">
+                                <img src="../../assets/frontend/images/ma1.jpg" class="left ma-img"/>
+                            </a>
                             <div class="swg-infor left">
                                 <p class="title">
                                     <span>低级</span>
@@ -508,27 +617,71 @@
                                 <button class="btn-type right mb10">中级</button>
                                 <button class="btn-type left">低级</button>
                             </div>
-                            <p class="title pt0">请选择医院及科室</p>
-                            <p class="js-select clearfix">
-                                <select name="" class="left">
-                                    <option value="重庆市中医院">重庆市中医院</option>
-                                    <option value="重庆市中医院">重庆市中医院</option>
-                                    <option value="重庆市中医院">重庆市中医院</option>
+                            <p class="title pt0">请输入您需要服务的时间</p>
+                            <div class="reserve-date clearfix">
+                                <div class="div-wdate left">
+                                    <input id="d4311" class="Wdate" type="text" placeholder="2015-10-10"  onfocus="  WdatePicker({ dateFmt: 'yyyy-MM', isShowToday: false, isShowClear: false })"/>
+                                    <i class="fa fa-calendar"></i>
+                                </div>
+                                <select name="" class="select-time right inputDisable">
+                                    <option value="时间">时间</option>
+                                    <option value="12:00">1:00</option>
+                                    <option value="13:00">2:00</option>
+                                    <option value="12:00">3:00</option>
+                                    <option value="13:00">4:00</option>
+                                    <option value="12:00">5:00</option>
+                                    <option value="13:00">6:00</option>
                                 </select>
-                                <select name="" class="right">
-                                    <option value="心脏科">心脏科</option>
-                                    <option value="心脏科">心脏科</option>
-                                    <option value="心脏科">心脏科</option>
-                                </select>
-                            </p>
+                            </div>
                             <p class="title">
                                 <label>
                                     <input type="checkbox"/> 我已经阅读并同意《家服汇用户使用协议》
                                 </label>
                             </p>
                             <div class="div-order">
-                                <a href="order-pay.html" class="btn-order">下单</a>
-                                <!--<input type="submit" value="下单" class="btn-order"/>-->
+                                <a href="homeServices-maternitySearch.html" class="btn-order btn-mother">找个好孕妈妈go》</a>
+                                <button class="btn-order btn-order1">平台</button>
+                                <div class="ma-dailog hide">
+                                    <i class="fa fa-caret-down"></i>
+                                    <div class="ma-infor">
+                                        <p>
+                                            <span class="type">籍贯:</span>
+                                            <select name="">
+                                                <option value="四川">四川</option>
+                                                <option value="广东">广东</option>
+                                                <option value="西藏">西藏</option>
+                                            </select>
+                                        </p>
+
+                                        <p>
+                                            <span class="type">语言:</span>
+                                            <select name="">
+                                                <option value="汉语">汉语</option>
+                                                <option value="粤语">粤语</option>
+                                                <option value="藏语">藏语</option>
+                                            </select>
+                                        </p>
+
+                                        <p>
+                                            <span class="type">属相:</span>
+                                            <select name="">
+                                                <option value="猪">猪</option>
+                                                <option value="牛">牛</option>
+                                                <option value="羊">羊</option>
+                                            </select>
+                                        </p>
+
+                                        <p>
+                                            <span class="type">经验:</span>
+                                            <select name="" id="">
+                                                <option value="一年">一年</option>
+                                                <option value="两年">两年</option>
+                                                <option value="三年">三年</option>
+                                            </select>
+                                        </p>
+                                    </div>
+                                    <button class="btn-submit">提交</button>
+                                </div>
                             </div>
                         </div>
                     </div>
@@ -920,6 +1073,7 @@
 </body>
 <script type="text/javascript" src="../../assets/global/plugins/jquery/jquery-1.11.3.min.js"></script>
 <script src="../../assets/global/plugins/move/js/move.js"></script>
+<script src="../../assets/global/plugins/My97DatePicker/WdatePicker.js"></script>
 <script src="../../assets/frontend/js/global.js"></script>
 <script src="../../assets/frontend/js/serveice.js"></script>
 <script src="../../assets/frontend/js/activity.js"></script>
