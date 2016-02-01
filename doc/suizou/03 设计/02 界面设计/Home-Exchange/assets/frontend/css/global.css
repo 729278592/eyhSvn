@@ -1006,7 +1006,7 @@ label.error {color: #EA5200;margin-bottom: 0;}
 
 
 .ma-dailog{width: 300px;font-size: 14px;color: #666;position: absolute;background: #f6fff9;text-align: left;
-    padding-bottom: 10px;top: -245px;left: 10px;}
+    padding-bottom: 10px;top: -245px;left: 10px;z-index: 999;}
 .ma-dailog .fa{font-size: 26px;color: #f6fff9;position: absolute;bottom: -17px;left: 70%;}
 .ma-infor{padding: 15px;}
 .ma-infor p{margin-bottom: 10px;}
