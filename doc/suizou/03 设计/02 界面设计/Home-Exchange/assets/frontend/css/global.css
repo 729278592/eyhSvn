@@ -24,17 +24,10 @@ a:link{text-decoration: none;}
 .content.pb20{padding-bottom: 20px;}
 
 /*面包屑导航*/
-.breadcrumbs-one{display:inline-block;overflow:hidden;border-color:#f5f5f5 #e5e5e5 #ccc;border-style:solid;border-width:1px;border-radius:5px;background:#eee;box-shadow:0 0 2px rgba(0,0,0,.2);margin-bottom: 20px;}
+.breadcrumbs-one{display:inline-block;overflow:hidden;margin-bottom: 20px;}
 .breadcrumbs-one li{float:left}
-.breadcrumbs-one a{position:relative;float:left;padding:3px 20px;background-color:#ddd;background-image:linear-gradient(to right,#f5f5f5,#ddd);color:#444;text-decoration:none;ext-shadow:0 1px 0 hsla(0,0%,100%,.5);font-size:14px}
-.breadcrumbs-one li:first-child a{padding-left:1em;border-radius:5px 0 0 5px}
-.breadcrumbs-one a:hover{background:#fff}
-.breadcrumbs-one a:after,.breadcrumbs-one a:before{position:absolute;top:50%;right:-1em;margin-top:-1.5em;border-top:1.5em solid transparent;border-bottom:1.5em solid transparent;border-left:1em solid;content:""}
-.breadcrumbs-one a:after{z-index:2;border-left-color:#ddd}
-.breadcrumbs-one a:before{right:-1.1em;z-index:1;border-left-color:#ccc}
-.breadcrumbs-one a:hover:after{border-left-color:#fff}
-.breadcrumbs-one .current,.breadcrumbs-one .current:hover{background:0 0;font-weight:700}
-.breadcrumbs-one .current:after,.breadcrumbs-one .current:before{content:normal}
+.breadcrumbs-one a{position:relative;text-decoration:none;text-shadow:0 1px 0 hsla(0,0%,100%,.5);color: #666;padding: 1px;font-size: 16px;}
+.breadcrumbs-one a:hover{text-decoration: underline;}
 .breadcrumbs-one.margin{margin: 10px 0 0 0;}
 /*index*/
 .content.pt0{padding-top: 0;}
