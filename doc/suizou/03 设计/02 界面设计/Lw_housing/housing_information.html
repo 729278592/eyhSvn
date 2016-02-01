@@ -8,12 +8,12 @@
     <title>房间信息</title>
     <link rel="stylesheet" href="plugins/bootstrap-3.3.5-dist/css/bootstrap.css"/>
     <link rel="stylesheet" href="plugins/font/css/font-awesome.min.css"/>
-    <link rel="stylesheet" href="css/main.css"/>
+    <link rel="stylesheet" href="css/main.css?v=22"/>
     <link rel="stylesheet" href="plugins/carousel/css/carousel.css"/>
     <link rel="stylesheet" href="css/mobile.css?v=11"/>
     <link rel="stylesheet" href="plugins/swiper/dist/css/swiper.min.css"/>
     <style>
-        .content{background: #fafafa;padding-top: 10px;}
+        .content{padding-top: 10px;}
         .w80{overflow: hidden;}
         #video{position: absolute;left: 50%;top: 50%;margin-left: -240px;margin-top: -292px;padding: 50px;border: 1px solid #dbdbdb;background: rgba(255,255,255,0.8);border-radius: 10px;}
         #video .close{width: 30px;height: 30px;position: absolute;top:0;right:0;background: #fff;border-radius: 30px;text-align: center;line-height: 30px;z-index: 100;}
@@ -47,8 +47,12 @@
             .video{width: 100%;}
             .mask #video .close{width: 20px;height: 20px;position: absolute;background: #fff;border-radius: 30px;text-align: center;line-height: 20px;z-index: 100;top: 0;right: 0;}
             .mask .i-appoint{overflow-y: scroll;position: fixed;margin-top: 0;top: 0;bottom: 0;left: 0;right: 0;padding: 3%;}
-            .room-information .play,.w80 li .play,.ul-house li .play{opacity: 0.6;filter: alpha(opacity=60);cursor: pointer;width: 55px;height: 55px;background: #000;border-radius: 55px;position: absolute;left: 50%;top: 50%;color: #fff;text-align: center;line-height: 60px;font-size: 25px;z-index: 1002;margin-top: 27px;margin-left:-28px;text-indent: 2px;}
-            .room-information .play,.w80 li .play:hover,.ul-house li .play:hover{opacity: 1;filter: alpha(opacity=100);cursor: pointer;}
+            .house-video{position: relative;}
+            .house-video .play,.room-information .play,.w80 li .play,.ul-house li .play{opacity: 0.6;filter: alpha(opacity=60);cursor: pointer;width: 55px;height: 55px;background: #000;border-radius: 55px;position: absolute;left: 50%;top: 50%;color: #fff;text-align: center;line-height: 60px;font-size: 25px;z-index: 1002;margin-top: -70px;margin-left:-28px;text-indent: 2px;}
+            .house-video .play{margin-top: -50px;}
+            .house-video .play:hover,.room-information .play,.w80 li .play:hover,.ul-house li .play:hover{opacity: 1;filter: alpha(opacity=100);cursor: pointer;}
+            .mobile-map,.content-right{height: 430px;position: relative;}
+            .content-right{top: 0;bottom: 0;right: 0;left: 0;position: absolute;}
         }
     </style>
     <!--[if IE 8]>
@@ -110,281 +114,360 @@
     </div>
     <div class="content">
         <div class="w80 pc_80 mobile_w80">
-        <div id="div1">
-            <div class="play" src = "http://mvvideo2.meitudata.com/56163e35cac069064.mp4">
-                <i class="glyphicon glyphicon-triangle-right"></i>
+            <div id="div1">
+                <div class="play" src = "http://mvvideo2.meitudata.com/56163e35cac069064.mp4">
+                    <i class="glyphicon glyphicon-triangle-right"></i>
+                </div>
+                <ul id="ul1">
+                    <li class="first"><img src="images/IMG_1783.jpg" class="img-responsive img" alt="Responsive image"/></li>
+                    <li><img src="images/IMG_1790.jpg" class="img-responsive img" alt="Responsive image"/></li>
+                    <li><img src="images/IMG_1788.jpg" class="img-responsive img" alt="Responsive image"/></li>
+                    <li><img src="images/IMG_1663.jpg" class="img-responsive img" alt="Responsive image"/></li>
+                    <li><img src="images/IMG_1507.jpg" class="img-responsive img" alt="Responsive image"/></li>
+                </ul>
+                <div id="p-div">
+                    <p id="p">
+                        <span class="current">
+                            <img src="images/IMG_1783.jpg" alt="" class="img"/>
+                        </span>
+                        <span>
+                            <img src="images/IMG_1790.jpg" alt="" class="img"/>
+                        </span>
+                        <span>
+                             <img src="images/IMG_1788.jpg" alt="" class="img"/>
+                        </span>
+                        <span>
+                             <img src="images/IMG_1663.jpg" alt="" class="img"/>
+                        </span>
+                        <span>
+                             <img src="images/IMG_1507.jpg" alt="" class="img"/>
+                        </span>
+                    </p>
+                </div>
+                <div class="slider-mask-bg slider-bg-top"></div>
+                <div class="slider-mask-bg slider-bg-bottom"></div>
+                <div class="btn-slider slider-top">
+                    上一页
+                </div>
+                <div class="btn-slider slider-bottom">
+                    下一页
+                </div>
             </div>
-            <ul id="ul1">
-                <li class="first"><img src="images/IMG_1783.jpg" class="img-responsive img" alt="Responsive image"/></li>
-                <li><img src="images/IMG_1783.jpg" class="img-responsive img" alt="Responsive image"/></li>
-                <li><img src="images/IMG_1783.jpg" class="img-responsive img" alt="Responsive image"/></li>
-                <li><img src="images/IMG_1783.jpg" class="img-responsive img" alt="Responsive image"/></li>
-                <li><img src="images/IMG_1783.jpg" class="img-responsive img" alt="Responsive image"/></li>
+            <div class="swiper-container swiper-container-horizontal pc-none">
+                <div class="swiper-wrapper" id="swiper-wrapper" style="transition-duration: 0ms; ">
+                    <div class="swiper-slide">
+                        <img src="images/IMG_1783.jpg" class="img-responsive" alt="Responsive image"/>
+                    </div>
+                    <div class="swiper-slide">
+                        <img src="images/IMG_1783.jpg" class="img-responsive" alt="Responsive image"/>
+                    </div>
+                    <div class="swiper-slide">
+                        <img src="images/IMG_1783.jpg" class="img-responsive" alt="Responsive image"/>
+                    </div>
+                    <div class="swiper-slide">
+                        <img src="images/IMG_1783.jpg" class="img-responsive" alt="Responsive image"/>
+                    </div>
+                    <div class="swiper-slide">
+                        <img src="images/IMG_1783.jpg" class="img-responsive" alt="Responsive image"/>
+                    </div>
+                </div>
+                <div class="swiper-pagination"></div>
+                <div class="swiper-button-next"></div>
+                <div class="swiper-button-prev"></div>
+            </div>
+            <ul class="pc_deatils">
+                <li>
+                    <span class="title">[南岸区-星宇花园]</span>
+                    <span class="xq_deatils">绿色花园绿色花园绿色花园绿色花园绿色花园</span><!--小区描述-->
+                </li>
+                <li>
+                    <span class="house-span">房间的详情:</span>
+                    <div class="information-div">
+                        <span class="information">A850</span>
+                        <span class="information">B750</span>
+                        <span class="information">C650</span>
+                        <span class="information">A850</span>
+                        <span class="information">B750</span>
+                        <span class="information">C650</span>
+                        <span class="information">A850</span>
+                    </div>
+                </li>
+                <li>
+                    <span>编号：246546565645 </span>
+                </li>
+                <li>
+                    租金：<span style="color: #fba511; font-weight: bold;">¥600-800</span>元/月
+                </li>
+                <li>
+                    服务费：<span style="color: #fba511; font-weight: bold;">85</span>元/月　<a href="#" class="service-bz">什么是服务费?</a>
+                </li>
+                <li>
+                    <span>房屋概述：16.0m²-3/4层</span>
+                </li>
+                <li>
+                    <span>小区地址：南岸区星宇花园</span>
+                </li>
+                <li>
+                    <span>公交路线：</span>
+                </li>
+                <li class="mobile-last">
+                    <span>联系电话：<a href="tel:18166342735"><span style="color: #fba511; font-weight: bold;">18166342735</span></a></span>            </li>
+                <li class="last ">
+                    <button  class="right-now">立即预定</button>
+                    <button  class="address">地理位置</button>
+                    <a href="tel:18166342735"  class="bohao pc-none">一键拨号</a>
+                </li>
             </ul>
-            <div id="p-div">
-                <p id="p">
-                    <span class="current">
-                        <img src="images/IMG_1783.jpg" alt="" class="img"/>
-                    </span>
-                    <span>
-                        <img src="images/IMG_1783.jpg" alt="" class="img"/>
-                    </span>
-                    <span>
-                         <img src="images/IMG_1783.jpg" alt="" class="img"/>
-                    </span>
-                    <span>
-                         <img src="images/IMG_1783.jpg" alt="" class="img"/>
-                    </span>
-                    <span>
-                         <img src="images/IMG_1783.jpg" alt="" class="img"/>
-                    </span>
-                </p>
-            </div>
-            <div class="slider-mask-bg slider-bg-top"></div>
-            <div class="slider-mask-bg slider-bg-bottom"></div>
-            <div class="btn-slider slider-top">
-                <i class="fa fa-angle-up"></i>
-            </div>
-            <div class="btn-slider slider-bottom">
-                <i class="fa fa-angle-down"></i>
-            </div>
-        </div>
-        <div class="swiper-container swiper-container-horizontal pc-none">
-            <div class="swiper-wrapper" id="swiper-wrapper" style="transition-duration: 0ms; ">
-                <div class="swiper-slide">
-                    <img src="images/IMG_1783.jpg" class="img-responsive" alt="Responsive image"/>
-                </div>
-                <div class="swiper-slide">
-                    <img src="images/IMG_1783.jpg" class="img-responsive" alt="Responsive image"/>
-                </div>
-                <div class="swiper-slide">
-                    <img src="images/IMG_1783.jpg" class="img-responsive" alt="Responsive image"/>
-                </div>
-                <div class="swiper-slide">
-                    <img src="images/IMG_1783.jpg" class="img-responsive" alt="Responsive image"/>
-                </div>
-                <div class="swiper-slide">
-                    <img src="images/IMG_1783.jpg" class="img-responsive" alt="Responsive image"/>
-                </div>
-            </div>
-            <div class="swiper-pagination"></div>
-            <div class="swiper-button-next"></div>
-            <div class="swiper-button-prev"></div>
-        </div>
-        <ul class="pc_deatils">
-            <li>
-                <span class="title">[南岸区-星宇花园]</span>
-                <span class="xq_deatils">绿色花园绿色花园绿色花园绿色花园绿色花园</span><!--小区描述-->
-            </li>
-            <li>
-                <span class="house-span">房间的详情:</span>
-                <div class="information-div">
-                    <span class="information">A850</span>
-                    <span class="information">B750</span>
-                    <span class="information">C650</span>
-                    <span class="information">A850</span>
-                    <span class="information">B750</span>
-                    <span class="information">C650</span>
-                    <span class="information">A850</span>
-                </div>
-            </li>
-            <li>
-                <span>编号：246546565645 </span>
-            </li>
-            <li>
-                租金：<span style="color: #fba511; font-weight: bold;">¥600-800</span>元/月<a href="#" class="staging">乐分期</a>
-            </li>
+            <div class="clearfix house-infor">
+                <div class="left house-infors">
+                    <ul class="house-menu mobile_none clearfix">
+                        <li class="active">
+                            房间详情
+                            <i class="fa fa-caret-down"></i>
+                        </li>
+                        <li>房屋视频</li>
+                        <li>地理位置</li>
+                        <li>户型圈</li>
+                        <li class="mr0">扫码关注</li>
+                    </ul>
+                    <div class="title">
+                        房间配置
+                    </div>
+                    <ul class="houseing-infor">
+                        <li>
+                            <div>面积 : 160m²</div>
+                            <div>楼层 : 3/4层</div>
+                            <div>入住人数 : 2人</div>
+                        </li>
+                        <li>
+                            <div>飘窗 : <i class="fa fa-check"></i></div>
+                            <div>阳台 : <i class="fa fa-check"></i></div>
+                            <div>独卫 : <i class="fa fa-check"></i></div>
+                            <div>空调 : <i class="fa fa-check"></i></div>
+                        </li>
+                        <li class="bb0">
+                            <span class="house-title">房屋特色 :</span>
+                            <span class="house-span1">
+                                筑风格和装饰艺术,以及特定的文化氛围,让顾客获得富有个性的文化感受；同时将服务项目融入主题,以个性的服务取代一般化的服务,让顾客获得欢乐、知识和刺激。历史、文化、城市、自然、神话童话故事等可成为酒店借以发挥的主题
+                            </span>
+                        </li>
+                    </ul>
+                    <div class="title">
+                        标配设备
+                    </div>
+                    <span class="tool-title">公共区域有</span><br/>
+                    <div class="tool clearfix">
+                        <span class="tool-group">
+                            <img src="images/tool1.png" alt=""/> <span>wifi</span>
+                        </span>
+                        <span class="tool-group">
+                            <img src="images/tool2.png" alt=""/> <span>储物柜</span>
+                        </span>
+                        <span class="tool-group">
+                            <img src="images/tool3.png" alt=""/> <span>餐桌</span>
+                        </span>
+                        <span class="tool-group">
+                            <img src="images/tool4.png" alt=""/> <span>冰箱</span>
+                        </span>
+                        <span class="tool-group">
+                            <img src="images/tool5.png" alt=""/> <span>洗衣机</span>
+                        </span>
+                        <span class="tool-group">
+                            <img src="images/tool7.png" alt=""/> <span>微波炉</span>
+                        </span>
+                        <span class="tool-group mb0">
+                            <img src="images/tool6.png" alt=""/> <span>热水器</span>
+                        </span>
+                        <span class="tool-group mb0">
+                            <img src="images/tool9.png" alt=""/> <span>厨房9件套</span>
+                        </span>
+                    </div>
+                    <span class="tool-title furniture-title">房间都有</span><br/>
 
-            <li>
-                <span>小区地址：南岸区星宇花园</span>
-            </li>
-            <li class="mobile-last">
-                <span>联系电话：<a href="tel:18166342735"><span style="color: #fba511; font-weight: bold;">18166342735</span></a></span>            </li>
-            <li class="last ">
-                <button  class="right-now">立即预约</button>
-                <button  class="address mobile_none">地理位置</button>
-                <a href="tel:18166342735"  class="bohao pc-none">一键拨号</a>
-            </li>
-        </ul>
-        <span class="title pc-none">公共区域有</span>
-        <div class="tool">
-            <span class="title mobile_none">公共区域有</span><br/>
-            <span class="tool-group">
-                <img src="images/tool1.png" alt=""/> <span>wifi</span>
-            </span>
-            <span class="tool-group">
-                <img src="images/tool2.png" alt=""/> <span>公共储物柜</span>
-            </span>
-            <span class="tool-group">
-                <img src="images/tool3.png" alt=""/> <span>餐桌</span>
-            </span>
-            <span class="tool-group">
-                <img src="images/tool4.png" alt=""/> <span>冰箱</span>
-            </span>
-            <span class="tool-group">
-                <img src="images/tool5.png" alt=""/> <span>洗衣机</span>
-            </span>
-            <span class="tool-group">
-                <img src="images/tool7.png" alt=""/> <span>微波炉</span>
-            </span>
-            <span class="tool-group">
-                <img src="images/tool6.png" alt=""/> <span>热水器</span>
-            </span>
-            <span class="tool-group">
-                <img src="images/tool9.png" alt=""/> <span>厨房9件套</span>
-            </span>
-        </div>
-        <span class="title pc-none">户型展示</span>
-        <div class="room">
-            <div class="room-group">
-                <ul class="room-information room-information2 clearfix">
-                    <li>
-                        <div class="play" src="http://static.youku.com/v1.0.0579/v/swf/player_yknpsv.swf">
-                            <i class="glyphicon glyphicon-triangle-right"></i>
+                    <div class="tool furniture clearfix">
+                        <span class="tool-group">
+                            <img src="images/tool10.png" alt=""/> <span>床</span>
+                        </span>
+                        <span class="tool-group">
+                            <img src="images/tool11.png" alt=""/> <span>衣柜</span>
+                        </span>
+                        <span class="tool-group">
+                            <img src="images/tool12.png" alt=""/> <span>电脑桌</span>
+                        </span>
+
+                        <span class="tool-group">
+                            <img src="images/tool14.png" alt=""/> <span>穿衣镜</span>
+                        </span>
+                        <span class="tool-group">
+
+                            <img src="images/tool16.png" alt=""/> <span>鞋架</span>
+                        </span>
+                        <span class="tool-group">
+                            <img src="images/tool15.png" alt=""/> <span>衣物挂钩</span>
+                        </span>
+                         <span class="tool-group mb0">
+                            <img src="images/tool19.png" alt=""/> <span>搁物板</span>
+                        </span>
+                        <span class="tool-group mb0">
+                            <img src="images/tool18.png" alt=""/> <span>床头柜</span>
+                        </span>
+                    </div>
+                </div>
+                <div class="information left mobile_none">
+                    <div class="information-head">
+                        联系管家
+                    </div>
+                    <div class="information-content">
+                        <img src="images/houser.jpg" alt="" style="margin: 8% 4%; width: 179px;height: 207px;"/><br/>
+                        <span class="name">轮子</span><br/>
+                        <span class="hide">房源数量 : 间 服务青客 : 人 近30天出房</span>
+                        <img src="images/phone.jpg" alt="" style="margin-top: 10px;"/><span class="phone">15086677745</span>
+                        <hr/>
+                    <span style="color: #999;">
+                        <span>由衷欢迎您与您的家人朋友入住我们的别墅/公寓,我们将竭诚为您服务！</span><br/>
+                    </span>
+                    </div>
+                </div>
+
+            </div>
+
+            <span class="title fx-title pc-none">户型展示</span>
+            <div class="apartment-display pc-none">
+                <img src="images/fxzs-img.jpg" class="img-responsive" alt="Responsive image"/>
+            </div>
+            <div class="title fx-title pc-none">房屋视频</div>
+            <div class="house-video pc-none">
+                <div class="play" src="http://static.youku.com/v1.0.0579/v/swf/player_yknpsv.swf">
+                    <i class="glyphicon glyphicon-triangle-right"></i>
+                </div>
+                <img src="images/IMG_1790.jpg" class="img-responsive" alt="Responsive image"/>
+            </div>
+
+
+            <div class="title fx-title pc-none">地理位置</div>
+            <div class="mobile-map pc-none">
+                <div class="content-right">
+                    <div class="loadMap">
+                        <div class="loadpop">
+                            <label>请稍候</label>
+                            <label>正在实时搜索中...</label>
+                            <label class="progressAnim"> <img src="./images/loading.gif" /> </label>
+                            <label class="loadIcon">
+                                <img src="./images/load.png" />
+                            </label>
                         </div>
-                        <div class="li-div li-div-active">
+                        <div class="notHoust">
+                            <div class="tishi">
+                                <p>这个位置没有找到符合条件的房子</p>
+                                <label>您还可以</label>
+                                <div class="pub-msg">
+                                    <div class="left_sub">
+                                        <label><i></i> 拖动地图到其他位置</label>
+                                        <label><i></i> 缩小地图</label>
+                                        <button>确定</button>
+                                    </div>
+                                    <div class="right_sub">
+                                        <label><i></i> 更换价格范围</label>
+                                        <label><i></i> 更精确的搜索词</label>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div id="allmap" style="width: 100%;height: 100%;"></div>
+                </div>
+            </div>
+
+
+            <div class="that-title">其他房间</div>
+            <div class="room">
+                <div class="room-group">
+                    <ul class="room-information clearfix">
+                        <li class="mt0">
+                            <div class="play hide" src="http://static.youku.com/v1.0.0579/v/swf/player_yknpsv.swf">
+                                <i class="glyphicon glyphicon-triangle-right"></i>
+                            </div>
                             <a href="house-details.html">
                                 <img src="images/IMG_1788.jpg" class="img-responsive" alt="Responsive image"/>
+                                <div class="active-mask">
+                                    <img src="images/rent.png" alt="" class="rent"/>
+                                </div>
+                                <div class="not-house"></div>
                             </a>
-                            <div class="room-left mobile_none">
-                                <div>
-                                    <img src="images/miss.png" alt="" class="people-img"/> <br/>
-                                 <span class="deatils">
-                                     <span class="rooms-group">未租: B房间</span><br/>
-                                     <span>带飘窗,</span><span>单价</span><span>750/月</span><br/>
-                                     <a href="#" class="yuyue">预约看房</a><br/>
-                                </span>
-                                    <img src="images/details1.png" alt="" class="deatils-img"/>
-                                    <img src="images/details2.png" alt="" class="deatils-img"/>
-                                    <img src="images/details3.png" alt="" class="deatils-img"/>
-                                </div>
+                            <div class="bottom-ts">
+                                <p>A房间 <span class="span-block"><span class="money">800</span>元/月(16m²)</span></p><br/>
+                                <p>配置 : <span class="jj">飘窗</span><span class="jj">阳台</span></p>
+                                <img src="images/people.jpg" alt="" class="people"/>
                             </div>
-                            <div class="room-top room-top1 pc-none clearfix">
-                                <div class="right">
-                                    <img src="images/people.png" alt="" class="people people-img"/> <br/>
-                                    <span class="spans-img">
-                                         <img src="images/details1.png" alt="" class="deatils-img"/>
-                                         <img src="images/details2.png" alt="" class="deatils-img"/>
-                                         <img src="images/details3.png" alt="" class="deatils-img"/>
-                                    </span>
-                                </div>
-                            <span class="deatils">
-                                <span class="rooms-group">未租: B房间</span><br/>
-                                <span>带飘窗,</span><span>单价</span><span>750/月</span><br/>
-                                <a href="#" class="yuyue">预约看房</a><br/>
-                            </span>
+                        </li>
+                        <li class="mobile_none" >
+                            <div class="play" src="http://static.youku.com/v1.0.0579/v/swf/player_yknpsv.swf">
+                                <i class="glyphicon glyphicon-triangle-right"></i>
                             </div>
-                            <div class="active-mask"></div>
-                            <div class="not-house"></div>
-                        </div>
-                    </li>
-                    <li>
-                        <div class="play" src="http://mvvideo2.meitudata.com/561639fdc88ec1412.mp4">
-                            <i class="glyphicon glyphicon-triangle-right"></i>
-                        </div>
-                        <div class="li-div li-div-active">
                             <a href="house-details.html">
                                 <img src="images/IMG_1790.jpg" class="img-responsive" alt="Responsive image"/>
                             </a>
-                            <div class="room-left mobile_none">
-                                <div>
-                                    <img src="images/people.png" alt="" class="people-img"/> <br/>
-                                    <span class="rooms-group">已租: C房间</span><br/>
-                                    <span>男</span><br/>
-                                    <span>护士</span><br/>
-                                    <span>编号：264646561656</span><br/>
-                                    <img src="images/details1.png" alt="" class="deatils-img"/>
-                                    <img src="images/details2.png" alt="" class="deatils-img"/>
-                                    <img src="images/details3.png" alt="" class="deatils-img"/>
-                                </div>
+                            <div class="bottom-ts">
+                                <p>A房间 <span class="span-block"><span class="money">800</span>元/月(16m²)</span></p><br/>
+                                <p>配置 : <span class="jj">飘窗</span><span class="jj">阳台</span></p>
                             </div>
-                            <div class="room-top room-top1 pc-none clearfix">
-                                <div class="right">
-                                    <img src="images/people.png" alt="" class="people people-img"/> <br/>
-                                <span class="spans-img">
-                                     <img src="images/details1.png" alt="" class="deatils-img"/>
-                                     <img src="images/details2.png" alt="" class="deatils-img"/>
-                                     <img src="images/details3.png" alt="" class="deatils-img"/>
-                                </span>
-                                </div>
-                            <span class="deatils">
-                                 <span class="rooms-group">已租: C房间</span><br/>
-                                 <span>女</span><br/>
-                                 <span>幼师</span><br/>
-                                 <span>编号：264646561656</span><br/>
-                            </span>
-
+                        </li>
+                        <li class="mr0 mobile_none">
+                            <div class="play" src="http://static.youku.com/v1.0.0579/v/swf/player_yknpsv.swf">
+                                <i class="glyphicon glyphicon-triangle-right"></i>
                             </div>
-                        </div>
-                    </li>
-                    <li>
-                        <div class="play" src="">
-                            <i class="glyphicon glyphicon-triangle-right"></i>
-                        </div>
-                        <div class="li-div">
-                            <img src="images/null.jpg" class="img-responsive" alt="Responsive image"/>
-                            <div class="room-left mobile_none">
-                                <div style="text-align: center;color: #eeaf25;margin-top: -10px;">
-                                    家在各地，乐窝一直给你家的味道!
-                                </div>
+                            <a href="house-details.html">
+                                <img src="images/IMG_1783.jpg" class="img-responsive" alt="Responsive image"/>
+                            </a>
+                            <div class="bottom-ts">
+                                <p>A房间 <span class="span-block"><span class="money">800</span>元/月(16m²)</span></p><br/>
+                                <p>配置 : <span class="jj">飘窗</span><span class="jj">阳台</span></p>
                             </div>
-                            <div class="room-top room-top1 pc-none clearfix">
-                                <div style="width: 100%;height: 100%;line-height: 107px;text-align: center;color: #eeaf25;">
-                                    家在各地，乐窝一直给你家的味道!
-                                </div>
+                        </li>
+                        <li>
+                            <div class="play" src="http://static.youku.com/v1.0.0579/v/swf/player_yknpsv.swf">
+                                <i class="glyphicon glyphicon-triangle-right"></i>
                             </div>
-                        </div>
-                    </li>
-                </ul>
+                            <a href="house-details.html">
+                                <img src="images/IMG_1663.jpg" class="img-responsive" alt="Responsive image"/>
+                            </a>
+                            <div class="bottom-ts">
+                                <p>A房间 <span class="span-block"><span class="money">800</span>元/月(16m²)</span></p><br/>
+                                <p>配置 : <span class="jj">飘窗</span><span class="jj">阳台</span></p>
+                            </div>
+                        </li>
+                        <li class="mobile_none">
+                            <div class="play" src="http://static.youku.com/v1.0.0579/v/swf/player_yknpsv.swf">
+                                <i class="glyphicon glyphicon-triangle-right"></i>
+                            </div>
+                            <a href="house-details.html">
+                                <img src="images/IMG_1507.jpg" class="img-responsive" alt="Responsive image"/>
+                            </a>
+                            <div class="bottom-ts">
+                                <p>A房间 <span class="span-block"><span class="money">800</span>元/月(16m²)</span></p><br/>
+                                <p>配置 : <span class="jj">飘窗</span><span class="jj">阳台</span></p>
+                            </div>
+                        </li>
+                        <li class="mr0 mobile_none">
+                            <div class="play hide" src="http://static.youku.com/v1.0.0579/v/swf/player_yknpsv.swf">
+                                <i class="glyphicon glyphicon-triangle-right"></i>
+                            </div>
+                            <a href="house-details.html">
+                                <img src="images/IMG_1496.jpg" class="img-responsive" alt="Responsive image"/>
+                                <div class="active-mask">
+                                    <img src="images/rent.png" alt="" class="rent"/>
+                                </div>
+                                <div class="not-house"></div>
+                            </a>
+                            <div class="bottom-ts">
+                                <p>A房间 <span class="span-block"><span class="money">800</span>元/月(16m²)</span></p><br/>
+                                <p>配置 : <span class="jj">飘窗</span><span class="jj">阳台</span></p>
+                                <img src="images/miss.png" alt="" class="people"/>
+                            </div>
+                        </li>
+                    </ul>
+                </div>
             </div>
-        </div>
-        <div class="information mobile_none">
-            <div class="information-head">
-                管家信息
-            </div>
-            <div class="information-content">
-                <img src="images/houser.jpg" alt="" style="margin: 8% 4%; width: 179px;height: 207px;"/><br/>
-                <span class="name">轮子</span><br/>
-                <img src="images/phone.jpg" alt="" style="margin-top: 10px;"/><span class="phone">15086677745</span>
-                <hr class="middle-none"/>
-                <span class="middle-none" style="color: #999;">
-                    <span>由衷欢迎您与您的家人朋友入住我们的别墅/公寓,我们将竭诚为您服务！</span><br/>
-                </span>
-            </div>
-        </div>
-        <span class="title pc-none">房间都有</span>
-        <div class="tool furniture" style="clear: both;">
-            <span class="title mobile_none">房间都有</span><br/>
-            <span class="tool-group">
-                <img src="images/tool10.png" alt=""/> <span>床</span>
-            </span>
-            <span class="tool-group">
-                <img src="images/tool11.png" alt=""/> <span>衣柜</span>
-            </span>
-            <span class="tool-group">
-                <img src="images/tool12.png" alt=""/> <span>电脑桌</span>
-            </span>
-
-            <span class="tool-group">
-                <img src="images/tool14.png" alt=""/> <span>穿衣镜</span>
-            </span>
-            <span class="tool-group">
-
-                <img src="images/tool16.png" alt=""/> <span>鞋架</span>
-            </span>
-            <span class="tool-group">
-                <img src="images/tool15.png" alt=""/> <span>衣物挂钩</span>
-            </span>
-             <span class="tool-group">
-                <img src="images/tool19.png" alt=""/> <span>搁物板</span>
-            </span>
-            <span class="tool-group">
-                <img src="images/tool17.png" alt=""/> <span>空调</span>
-            </span>
-            <span class="tool-group">
-                <img src="images/tool18.png" alt=""/> <span>床头柜</span>
-            </span>
-        </div>
         </div>
     </div>
     <div class="footer clearfix">
@@ -555,93 +638,112 @@
 <script src="plugins/swiper/dist/js/swiper.min.js"></script>
 <script type="text/javascript" src="http://api.map.baidu.com/api?v=2.0&ak=q0lvjEUGF5AOzHtbjn9YFtwl"></script>
 <script src="js/jquery.detailmap.js"></script>
+<script type="text/javascript" src="http://api.map.baidu.com/api?v=2.0&ak=q0lvjEUGF5AOzHtbjn9YFtwl"></script>
 <script>
-    if($(window).width()>640){
-        window.onresize = function(){ location=location };
-    }
-    var a = $(".address");
-    var mbm = $(".mask-bg,.mask");
-    var d = $(".dialog");
 
-    //    var lm = $(".le-mall");
-    //    var s =$(".staging")
-    //    s.on("click",function(){
-    //        mbm.removeClass("hide");
-    //        lm.removeClass("hide");
-    //    });
-    a.on("click",function(){
-        mbm.removeClass("hide");
-        d.removeClass("hide");
-        $("html").css({overflow:"hidden"});
-    });
-    var bc = $(".box .close");
-    var box = $(".box");
-    bc.on("click",function(){
-        mbm.addClass("hide");
-        box.addClass("hide");
-    });
-    var dcb = $(".dialog .close,.dialog-foot .btn-default")
-    dcb.on("click",function(){
-        mbm.addClass("hide");
-        d.addClass("hide");
-        $("html").css({overflow:"scroll"});
-    });
-    var dl = $(".dialog-menu li");
-    dl.on("click",function(){
-        $(this).addClass("active");
-        $(this).siblings().removeClass('active')
-    });
-    var rn = $(".right-now");
-    var ia = $(".i-appoint");
-    rn.on("click",function(){
-        mbm.removeClass("hide");
-        ia.removeClass("hide");
-    });
-    var content = $(".content");
-    content.delegate(".play", "click", function(){
-        var src = $(this).attr("src");
-        if(src){
-            $("#video").removeClass("hide");
-            $(".mask-bg,.mask").removeClass("hide");
-            $(".video").attr({autoplay:"autoplay",src:src})
-        }else{
-            alert("占无视频")
-        }
-    });
-    /*视频播放*/
-    var mbm = $(".mask-bg,.mask");
-    var wl = $(".w80 li");
-    var v = $("#video");
-    var cv = $(".video");
-    wl.delegate(".play", "click", function(){
-        var src = $(this).attr("src");
-        mbm.removeClass("hide");
-        v.removeClass("hide");
-        cv.attr({autoplay:"autoplay",src:src})
-    });
-    mbm.delegate(".close","click",function(){
-        mbm.addClass("hide");
-        v.addClass("hide");
-        cv.attr({autoplay:"",src:""})
-    });
-    var bb = $(".bus-way-style .btn");
+    $(function(){
+        // 百度地图API功能
+        var map = new BMap.Map("allmap");    // 创建Map实例
+        map.centerAndZoom(new BMap.Point(116.404, 39.915), 11);  // 初始化地图,设置中心点坐标和地图级别
+        map.addControl(new BMap.MapTypeControl());   //添加地图类型控件
+        map.setCurrentCity("北京");          // 设置地图显示的城市 此项是必须设置的
+        map.enableScrollWheelZoom(true);     //开启鼠标滚轮缩放
+    })
+</script>
+<script>
+    $(function(){
+        //    if($(window).width()>640){
+//        window.onresize = function(){ location=location };
+//    }
+        var a = $(".address");
+        var mbm = $(".mask-bg,.mask");
+        var d = $(".dialog");
+
+        //    var lm = $(".le-mall");
+        //    var s =$(".staging")
+        //    s.on("click",function(){
+        //        mbm.removeClass("hide");
+        //        lm.removeClass("hide");
+        //    });
+        a.on("click",function(){
+            mbm.removeClass("hide");
+            d.removeClass("hide");
+            $("html").css({overflow:"hidden"});
+        });
+        var bc = $(".box .close");
+        var box = $(".box");
+        bc.on("click",function(){
+            mbm.addClass("hide");
+            box.addClass("hide");
+        });
+        var dcb = $(".dialog .close,.dialog-foot .btn-default")
+        dcb.on("click",function(){
+            mbm.addClass("hide");
+            d.addClass("hide");
+            $("html").css({overflow:"scroll"});
+        });
+        var dl = $(".dialog-menu li");
+        dl.on("click",function(){
+            $(this).addClass("active");
+            $(this).siblings().removeClass('active')
+        });
+        var rn = $(".right-now");
+        var ia = $(".i-appoint");
+        rn.on("click",function(){
+            mbm.removeClass("hide");
+            ia.removeClass("hide");
+        });
+        var content = $(".content");
+        content.delegate(".play", "click", function(){
+            var src = $(this).attr("src");
+            if(src){
+                $("#video").removeClass("hide");
+                $(".mask-bg,.mask").removeClass("hide");
+                $(".video").attr({autoplay:"autoplay",src:src})
+            }else{
+                alert("占无视频")
+            }
+        });
+        /*视频播放*/
+        var mbm = $(".mask-bg,.mask");
+        var wl = $(".w80 li");
+        var v = $("#video");
+        var cv = $(".video");
+        wl.delegate(".play", "click", function(){
+            var src = $(this).attr("src");
+            mbm.removeClass("hide");
+            v.removeClass("hide");
+            cv.attr({autoplay:"autoplay",src:src})
+        });
+        mbm.delegate(".close","click",function(){
+            mbm.addClass("hide");
+            v.addClass("hide");
+            cv.attr({autoplay:"",src:""})
+        });
+        var bb = $(".bus-way-style .btn");
         bb.on("click",function(){
             $(this).addClass("selected");
             $(this).siblings().removeClass("selected");
         });
-    if($(window).width()<640){
-        swiper = new Swiper('.swiper-container', {
-            prevButton:'.swiper-button-prev',
-            nextButton:'.swiper-button-next',
-            slidesPerView: 1,
-            pagination:'.swiper-pagination',
-            paginationClickable: true,
-            spaceBetween: 0,
-            loop:true,
-            autoplay: 3000,
-            autoplayDisableOnInteraction: false
-        });
-    }
+        if($(window).width()<640){
+            swiper = new Swiper('.swiper-container', {
+                prevButton:'.swiper-button-prev',
+                nextButton:'.swiper-button-next',
+                slidesPerView: 1,
+                pagination:'.swiper-pagination',
+                paginationClickable: true,
+                spaceBetween: 0,
+                loop:true,
+                autoplay: 3000,
+                autoplayDisableOnInteraction: false
+            });
+        }
+
+        if($(window).height()<700){
+            $(".footer").css({"position":"relative","marginTop":"0"})
+        }
+    });
+
 </script>
 
 </body>

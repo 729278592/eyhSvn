@@ -3,7 +3,6 @@
  */
 
 (function($) {
-    if($(window).width()>1600){
         var Methods = {
             init:function(_this){
                 sliderTop = _this.find(".slider-top");
@@ -121,7 +120,5 @@
                 });
             }
         };
-        Methods.init($())
-    }
-
+        Methods.init($("#div1"));
 })(jQuery);
