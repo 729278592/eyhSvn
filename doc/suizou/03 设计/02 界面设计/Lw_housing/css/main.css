@@ -110,7 +110,7 @@ a:link{text-decoration: none;}
 .myCarousel .item{width: 31.9%;float: left;margin: 0 1.9% 0.4% 0;position: relative;}
 
 
-.we{margin-right: 10px;position: fixed;right: 20px;z-index: 150;bottom: 80px;}
+.we{margin-right: 10px;position: fixed;right: 20px;z-index: 9999;bottom: 80px;}
 .we li{width: 60px;height: 60px;margin-bottom: 12px;}
 .we li:hover{cursor: pointer;}
 .we li>div{display: inline-block;text-align: center;line-height: 60px;width: 100%;height: 100%;color: #36a2df;border: 2px solid #36a2df;border-radius: 5px;}
