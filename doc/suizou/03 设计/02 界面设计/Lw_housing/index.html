@@ -873,7 +873,7 @@
                 </a>
                 <button class="close" id="close"><i class="glyphicon glyphicon-remove"></i></button>
             </div>
-            <div id="video" class="hide">
+            <div class="hide video">
                 <div class="close">×</div>
                 <iframe width="100%" height="100%" src="" frameborder=0 allowfullscreen></iframe>
             </div>
@@ -958,7 +958,7 @@
             /*视频播放*/
             var mbm = $(".mask-bg,.mask");
             var  wl = $(".w80 li");
-            var v = $("#video");
+            var v = $(".video");
             var cv = $("iframe");
             wl.delegate(".play", "click", function(){
                 var src = $(this).attr("src");
