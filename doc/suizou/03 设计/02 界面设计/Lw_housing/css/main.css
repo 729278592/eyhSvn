@@ -43,7 +43,7 @@ a:link{text-decoration: none;}
 
 /*index*/
 .content-head{position: relative;height: 500px;}
-.content-head .pc-img{min-height: 500px;position: relative;}
+.content-head .pc-img{min-height: 500px;position: relative;height: 500px;}
 .ch-mask{position: absolute;bottom: 0;left: 0;right: 0;background: #000;opacity: 0.4;filter:alpha(opacity=40);height: 20%;}
 .ch-mask-main{width: 40%;position: absolute;bottom: 4%;left: 50%;margin-left: -20%;z-index: 10;}
 .ch-mask-main .form-control,.ch-mask-main .span-input{width: 84%;display: inline-block;color: #fff;font-size: 14px;height: 40px;background: rgba(0,0,0,.2);}
@@ -97,7 +97,7 @@ a:link{text-decoration: none;}
 .item-ul1 .item-b{padding:2% 2%;}
 .item-ul li a img:hover,.item-ul1 li a img:hover{opacity: 0.8;}
 .item-b .title{font-size: 16px;color: #55340e;}
-.item-b .time{color: #666;}
+.item-b .time{color: #ff6965;}
 .item-b .main-active{color: #c8b5a1;display: inline-block;width: 60%;font-size: 12px;}
 .item-b .more{color: #c8b5a1;position: absolute;right: 10px;bottom: 5px;font-size: 12px;}
 .item-b .more:hover{color: #55340e;}
@@ -589,6 +589,11 @@ input.btn-click:hover{background: #e16a20}
 .roommate-list li .money{color: #fba511;margin-top: 10px;}
 .roommate-list li .fa-weixin{color: #666;}
 .roommate-list li .fa-weixin:hover{color: #333;}
+.serversMoney-infor{position: absolute;width: 350px;background: #fff;padding: 15px;margin-left: -175px;left: 50%;top: 50%;}
+.serversMoney-infor p{font-size: 14px;color: #666;line-height: 20px;}
+.serversMoney-infor p.title{font-size: 16px;font-weight: bold;}
+.serversMoney-infor .close{position: absolute;right: 5px;top: 5px;background: 20px;height: 20px;width:20px;background: #666;color: #fff;border-radius: 20px;line-height: 20px;text-align: center;font-size: 16px;}
+
 
 /*pay-success*/
 .pay-success{width: 400px;height: 100px;margin: 200px auto;text-align: center;color: #333;}
