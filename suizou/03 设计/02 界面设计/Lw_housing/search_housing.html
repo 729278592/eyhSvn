@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html>
+<html xmlns="http://www.w3.org/1999/html">
 <head lang="en">
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1" />
@@ -111,24 +111,27 @@
                         <span>沙坪坝</span>
                     </li>
                     <li>
-                        <img src="images/w3.png" alt=""/>
-                        <span class="title">户型</span>
-                        <span class="rental_mode">
-                            <input type="checkbox" name="type" class=""/>
-                            普通单间
-                        </span>
-                        <span class="rental_mode">
-                            <input type="checkbox" name="type" class=""/>
-                            主卧带独卫
-                        </span>
-                        <span class="rental_mode">
-                            <input type="checkbox" name="type" class=""/>
-                            标间小套一
-                        </span>
-                        <span class="rental_mode">
-                            <input type="checkbox" name="type" class=""/>
-                            整租
-                        </span>
+                        <form action="">
+                            <img src="images/w3.png" alt=""/>
+                            <span class="title">户型</span>
+                            <label class="rental_mode">
+                                <input type="checkbox" name="type" class=""/>
+                                普通单间
+                            </label>
+                            <label class="rental_mode">
+                                <input type="checkbox" name="type" class=""/>
+                                主卧带独卫
+                            </label>
+                            <label class="rental_mode">
+                                <input type="checkbox" name="type" class=""/>
+                                标间小套一
+                            </label>
+                            <label class="rental_mode">
+                                <input type="checkbox" name="type" class=""/>
+                                整租
+                            </label>
+                            <input type="reset" value="重置"/>
+                        </form>
                     </li>
                     <li>
 
@@ -473,17 +476,7 @@
             }
             content.style.height = $(window).height() - hHeight - fHeight;
             /*出租类型控制*/
-            var pa = $(".ul-information");
-            pa.find(".rental_mode").on("click",function(){
-                if($(this).find("input:checkbox").get(0).className == ""){
-                    $(this).find("input:checkbox").get(0).checked = true;
-                    $(this).find("input:checkbox").get(0).className = "selected"
-                }
-                else if($(this).find("input:checkbox").get(0).className == "selected"){
-                    $(this).find("input:checkbox").get(0).checked = false;
-                    $(this).find("input:checkbox").get(0).className = "";
-                }
-            });
+         
 
             /*显示更多搜索条件*/
             var m = $("#more");
