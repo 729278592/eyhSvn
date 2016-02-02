@@ -40,7 +40,7 @@
             .content{padding-top: 0;}
             .swiper-container{margin: 0;}
             .head {background: rgba(0,0,0, .4)}
-            .mask #video .close{width: 20px;height: 20px;position: absolute;background: #fff;border-radius: 30px;text-align: center;line-height: 20px;z-index: 100;top: 10px;right: 10px;}
+            .mask .video .close{width: 20px;height: 20px;position: absolute;background: #fff;border-radius: 30px;text-align: center;line-height: 20px;z-index: 100;top: 10px;right: 10px;}
             .mask .i-appoint{overflow-y: scroll;position: fixed;margin-top: 0;top: 0;bottom: 0;left: 0;right: 0;padding: 3%;}
             .house-video{position: relative;}
             .house-video .play,.room-information .play,.w80 li .play,.ul-house li .play{opacity: 0.6;filter: alpha(opacity=60);cursor: pointer;width: 55px;height: 55px;background: #000;border-radius: 55px;position: absolute;left: 50%;top: 50%;color: #fff;text-align: center;line-height: 60px;font-size: 25px;z-index: 1002;margin-top: -70px;margin-left:-28px;text-indent: 2px;}
@@ -114,28 +114,28 @@
                     <i class="glyphicon glyphicon-triangle-right"></i>
                 </div>
                 <ul id="ul1">
-                    <li class="first"><img src="images/IMG_1783.jpg" class="img-responsive img" alt="Responsive image"/></li>
-                    <li><img src="images/IMG_1790.jpg" class="img-responsive img" alt="Responsive image"/></li>
-                    <li><img src="images/IMG_1788.jpg" class="img-responsive img" alt="Responsive image"/></li>
-                    <li><img src="images/IMG_1663.jpg" class="img-responsive img" alt="Responsive image"/></li>
-                    <li><img src="images/IMG_1507.jpg" class="img-responsive img" alt="Responsive image"/></li>
+                    <li class="first"><img src="images/IMG_1783.jpg" class="img-responsive img" alt="Responsive image" title="Responsive image"/></li>
+                    <li><img src="images/IMG_1790.jpg" class="img-responsive img" alt="Responsive image" title="Responsive image"/></li>
+                    <li><img src="images/IMG_1788.jpg" class="img-responsive img" alt="Responsive image" title="Responsive image"/></li>
+                    <li><img src="images/IMG_1663.jpg" class="img-responsive img" alt="Responsive image" title="Responsive image"/></li>
+                    <li><img src="images/IMG_1507.jpg" class="img-responsive img" alt="Responsive image" title="Responsive image"/></li>
                 </ul>
                 <div id="p-div">
                     <p id="p">
                         <span class="current">
-                            <img src="images/IMG_1783.jpg" alt="" class="img"/>
+                            <img src="images/IMG_1783.jpg" alt="Responsive image" class="img" title="Responsive image"/>
                         </span>
                         <span>
-                            <img src="images/IMG_1790.jpg" alt="" class="img"/>
+                            <img src="images/IMG_1790.jpg" alt="Responsive image" class="img" title="Responsive image"/>
                         </span>
                         <span>
-                             <img src="images/IMG_1788.jpg" alt="" class="img"/>
+                             <img src="images/IMG_1788.jpg" alt="Responsive image" class="img" title="Responsive image"/>
                         </span>
                         <span>
-                             <img src="images/IMG_1663.jpg" alt="" class="img"/>
+                             <img src="images/IMG_1663.jpg" alt="Responsive image" class="img" title="Responsive image"/>
                         </span>
                         <span>
-                             <img src="images/IMG_1507.jpg" alt="" class="img"/>
+                             <img src="images/IMG_1507.jpg" alt="Responsive image" class="img" title="Responsive image"/>
                         </span>
                     </p>
                 </div>
@@ -209,7 +209,7 @@
                     <span>联系电话：<a href="tel:18166342735"><span style="color: #fba511; font-weight: bold;">18166342735</span></a></span>            </li>
                 <li class="last ">
                     <button  class="right-now">立即预定</button>
-                    <button  class="address">地理位置</button>
+                    <button  class="address mobile_none">地理位置</button>
                     <a href="tel:18166342735"  class="bohao pc-none">一键拨号</a>
                 </li>
             </ul>
@@ -220,110 +220,133 @@
                             房间详情
                             <i class="fa fa-caret-down"></i>
                         </li>
-                        <li>房屋视频</li>
-                        <li>地理位置</li>
-                        <li>户型圈</li>
-                        <li class="mr0">扫码关注</li>
+                        <li>房屋视频<i class="fa fa-caret-down"></i></li>
+                        <li>地理位置<i class="fa fa-caret-down"></i></li>
+                        <li>户型圈<i class="fa fa-caret-down"></i></li>
+                        <li class="mr0">扫码关注<i class="fa fa-caret-down"></i></li>
                     </ul>
-                    <div class="title">
-                        房间配置
-                    </div>
-                    <ul class="houseing-infor">
-                        <li>
-                            <div>面积 : 160m²</div>
-                            <div>楼层 : 3/4层</div>
-                            <div>入住人数 : 2人</div>
+
+                    <ul class="active-type">
+                        <li class="active">
+                            <div class="title">
+                                房间配置
+                            </div>
+                            <ul class="houseing-infor">
+                                <li>
+                                    <div>面积 : 160m²</div>
+                                    <div>楼层 : 3/4层</div>
+                                    <div>入住人数 : 2人</div>
+                                </li>
+                                <li>
+                                    <div>飘窗 : <i class="fa fa-check"></i></div>
+                                    <div>阳台 : <i class="fa fa-check"></i></div>
+                                    <div>独卫 : <i class="fa fa-check"></i></div>
+                                    <div>空调 : <i class="fa fa-remove"></i></div>
+                                </li>
+                                <li class="bb0">
+                                    <span class="house-title">房屋特色 :</span>
+                                <span class="house-span1">
+                                    筑风格和装饰艺术,以及特定的文化氛围,让顾客获得富有个性的文化感受；同时将服务项目融入主题,以个性的服务取代一般化的服务,让顾客获得欢乐、知识和刺激。历史、文化、城市、自然、神话童话故事等可成为酒店借以发挥的主题
+                                </span>
+                                    </li>
+                                </ul>
+                                <div class="title">
+                                    标配设备
+                                </div>
+                                <span class="tool-title">公共区域有</span><br/>
+                            <div class="tool clearfix">
+                                <span class="tool-group">
+                                    <img src="images/tool1.png" alt=""/> <span>wifi</span>
+                                </span>
+                                <span class="tool-group">
+                                    <img src="images/tool2.png" alt=""/> <span>储物柜</span>
+                                </span>
+                                <span class="tool-group">
+                                    <img src="images/tool3.png" alt=""/> <span>餐桌</span>
+                                </span>
+                                <span class="tool-group">
+                                    <img src="images/tool4.png" alt=""/> <span>冰箱</span>
+                                </span>
+                                <span class="tool-group">
+                                    <img src="images/tool5.png" alt=""/> <span>洗衣机</span>
+                                </span>
+                                <span class="tool-group">
+                                    <img src="images/tool7.png" alt=""/> <span>微波炉</span>
+                                </span>
+                                <span class="tool-group mb0">
+                                    <img src="images/tool6.png" alt=""/> <span>热水器</span>
+                                </span>
+                                <span class="tool-group mb0">
+                                    <img src="images/tool9.png" alt=""/> <span>厨房9件套</span>
+                                </span>
+                                    </div>
+                                    <span class="tool-title furniture-title">房间都有</span><br/>
+                                    <div class="tool furniture clearfix">
+                                <span class="tool-group">
+                                    <img src="images/tool10.png" alt=""/> <span>床</span>
+                                </span>
+                                <span class="tool-group">
+                                    <img src="images/tool11.png" alt=""/> <span>衣柜</span>
+                                </span>
+                                <span class="tool-group">
+                                    <img src="images/tool12.png" alt=""/> <span>电脑桌</span>
+                                </span>
+
+                                <span class="tool-group">
+                                    <img src="images/tool14.png" alt=""/> <span>穿衣镜</span>
+                                </span>
+                                <span class="tool-group">
+
+                                    <img src="images/tool16.png" alt=""/> <span>鞋架</span>
+                                </span>
+                                <span class="tool-group">
+                                    <img src="images/tool15.png" alt=""/> <span>衣物挂钩</span>
+                                </span>
+                                 <span class="tool-group mb0">
+                                    <img src="images/tool19.png" alt=""/> <span>搁物板</span>
+                                </span>
+                                <span class="tool-group mb0">
+                                    <img src="images/tool18.png" alt=""/> <span>床头柜</span>
+                                </span>
+                            </div>
                         </li>
                         <li>
-                            <div>飘窗 : <i class="fa fa-check"></i></div>
-                            <div>阳台 : <i class="fa fa-check"></i></div>
-                            <div>独卫 : <i class="fa fa-check"></i></div>
-                            <div>空调 : <i class="fa fa-check"></i></div>
+                            <div class="video video1">
+                                <div class="close">×</div>
+                                <iframe width="100%" height="100%" src="http://player.youku.com/embed/XNTgwNjc5OTAw" frameborder=0 allowfullscreen></iframe>
+                            </div>
                         </li>
-                        <li class="bb0">
-                            <span class="house-title">房屋特色 :</span>
-                            <span class="house-span1">
-                                筑风格和装饰艺术,以及特定的文化氛围,让顾客获得富有个性的文化感受；同时将服务项目融入主题,以个性的服务取代一般化的服务,让顾客获得欢乐、知识和刺激。历史、文化、城市、自然、神话童话故事等可成为酒店借以发挥的主题
-                            </span>
+                        <li>
+                            <div class="map-img">
+                                <img src="images/map-img.png" class="img-responsive" alt="Responsive image"/>
+                            </div>
+                        </li>
+                        <li>
+                            <div class="apartment-display">
+                                <img src="images/fxzs-img.jpg" class="img-responsive" alt="Responsive image"/>
+                            </div>
+                        </li>
+                        <li>
+                            <img src="images/qr_code.jpg" alt="" class="qr_code"/>
                         </li>
                     </ul>
-                    <div class="title">
-                        标配设备
-                    </div>
-                    <span class="tool-title">公共区域有</span><br/>
-                    <div class="tool clearfix">
-                        <span class="tool-group">
-                            <img src="images/tool1.png" alt=""/> <span>wifi</span>
-                        </span>
-                        <span class="tool-group">
-                            <img src="images/tool2.png" alt=""/> <span>储物柜</span>
-                        </span>
-                        <span class="tool-group">
-                            <img src="images/tool3.png" alt=""/> <span>餐桌</span>
-                        </span>
-                        <span class="tool-group">
-                            <img src="images/tool4.png" alt=""/> <span>冰箱</span>
-                        </span>
-                        <span class="tool-group">
-                            <img src="images/tool5.png" alt=""/> <span>洗衣机</span>
-                        </span>
-                        <span class="tool-group">
-                            <img src="images/tool7.png" alt=""/> <span>微波炉</span>
-                        </span>
-                        <span class="tool-group mb0">
-                            <img src="images/tool6.png" alt=""/> <span>热水器</span>
-                        </span>
-                        <span class="tool-group mb0">
-                            <img src="images/tool9.png" alt=""/> <span>厨房9件套</span>
-                        </span>
-                    </div>
-                    <span class="tool-title furniture-title">房间都有</span><br/>
 
-                    <div class="tool furniture clearfix">
-                        <span class="tool-group">
-                            <img src="images/tool10.png" alt=""/> <span>床</span>
-                        </span>
-                        <span class="tool-group">
-                            <img src="images/tool11.png" alt=""/> <span>衣柜</span>
-                        </span>
-                        <span class="tool-group">
-                            <img src="images/tool12.png" alt=""/> <span>电脑桌</span>
-                        </span>
-
-                        <span class="tool-group">
-                            <img src="images/tool14.png" alt=""/> <span>穿衣镜</span>
-                        </span>
-                        <span class="tool-group">
-
-                            <img src="images/tool16.png" alt=""/> <span>鞋架</span>
-                        </span>
-                        <span class="tool-group">
-                            <img src="images/tool15.png" alt=""/> <span>衣物挂钩</span>
-                        </span>
-                         <span class="tool-group mb0">
-                            <img src="images/tool19.png" alt=""/> <span>搁物板</span>
-                        </span>
-                        <span class="tool-group mb0">
-                            <img src="images/tool18.png" alt=""/> <span>床头柜</span>
-                        </span>
-                    </div>
                 </div>
                 <div class="information left mobile_none">
                     <div class="information-head">
                         联系管家
                     </div>
                     <div class="information-content">
-                        <img src="images/houser.jpg" alt="" style="margin: 8% 4%; width: 179px;height: 207px;"/><br/>
+                        <a href="#"><img src="images/houser.jpg" alt="管家信息" title="管家信息" style="margin: 8% 4%; width: 179px;height: 207px;"/></a><br/>
                         <span class="name">轮子</span><br/>
                         <span class="hide">房源数量 : 间 服务青客 : 人 近30天出房</span>
-                        <img src="images/phone.png" alt="" style="margin-top: 10px;"/><span class="phone">15086677745</span>
+                        <img src="images/phone.png" alt="联系电话" title="联系电话" style="margin-top: 10px;"/><span class="phone">15086677745</span>
                         <hr/>
-                    <span style="color: #999;">
-                        <span>由衷欢迎您与您的家人朋友入住我们的别墅/公寓,我们将竭诚为您服务！</span><br/>
-                    </span>
+                        <span style="color: #999;">
+                            <span>由衷欢迎您与您的家人朋友入住我们的别墅/公寓,我们将竭诚为您服务！</span><br/>
+                        </span>
                     </div>
                 </div>
-
             </div>
 
             <span class="title fx-title pc-none">户型展示</span>
@@ -346,9 +369,9 @@
                         <div class="loadpop">
                             <label>请稍候</label>
                             <label>正在实时搜索中...</label>
-                            <label class="progressAnim"> <img src="./images/loading.gif" /> </label>
+                            <label class="progressAnim"> <img src="./images/loading.gif"/> </label>
                             <label class="loadIcon">
-                                <img src="./images/load.png" />
+                                <img src="./images/load.png" alt="" title=""/>
                             </label>
                         </div>
                         <div class="notHoust">
@@ -372,18 +395,21 @@
                     <div id="allmap" style="width: 100%;height: 100%;"></div>
                 </div>
             </div>
-
-
-            <div class="that-title">其他房间</div>
+            <div class="that-title">
+                其他房间
+                <span class="right pc-none">
+                    <i class="fa fa-caret-right"></i>
+                </span>
+            </div>
             <div class="room">
                 <div class="room-group">
-                    <ul class="room-information clearfix">
-                        <li class="mt0">
+                    <ul class="room-information mobile_none clearfix">
+                        <li>
                             <div class="play hide" src="http://player.youku.com/embed/XNTgwNjc5OTAw">
                                 <i class="glyphicon glyphicon-triangle-right"></i>
                             </div>
-                            <a href="house-details.html">
-                                <img src="images/IMG_1788.jpg" class="img-responsive" alt="Responsive image"/>
+                            <a href="javascript:void(0)">
+                                <img src="images/IMG_1788.jpg" class="img-responsive" alt="Responsive image" title="Responsive image"/>
                                 <div class="active-mask">
                                     <img src="images/rent.png" alt="" class="rent"/>
                                 </div>
@@ -395,24 +421,24 @@
                                 <img src="images/people.jpg" alt="" class="people"/>
                             </div>
                         </li>
-                        <li class="mobile_none" >
+                        <li >
                             <div class="play" src="http://player.youku.com/embed/XNTgwNjc5OTAw">
                                 <i class="glyphicon glyphicon-triangle-right"></i>
                             </div>
-                            <a href="house-details.html">
-                                <img src="images/IMG_1790.jpg" class="img-responsive" alt="Responsive image"/>
+                            <a href="#">
+                                <img src="images/IMG_1790.jpg" class="img-responsive" alt="Responsive image" title="Responsive image"/>
                             </a>
                             <div class="bottom-ts">
                                 <p>A房间 <span class="span-block"><span class="money">800</span>元/月(16m²)</span></p><br/>
                                 <p>配置 : <span class="jj">飘窗</span><span class="jj">阳台</span></p>
                             </div>
                         </li>
-                        <li class="mr0 mobile_none">
+                        <li class="mr0">
                             <div class="play" src="http://player.youku.com/embed/XNTgwNjc5OTAw">
                                 <i class="glyphicon glyphicon-triangle-right"></i>
                             </div>
-                            <a href="house-details.html">
-                                <img src="images/IMG_1783.jpg" class="img-responsive" alt="Responsive image"/>
+                            <a href="#">
+                                <img src="images/IMG_1783.jpg" class="img-responsive" alt="Responsive image" title="Responsive image"/>
                             </a>
                             <div class="bottom-ts">
                                 <p>A房间 <span class="span-block"><span class="money">800</span>元/月(16m²)</span></p><br/>
@@ -423,32 +449,32 @@
                             <div class="play" src="http://player.youku.com/embed/XNTgwNjc5OTAw">
                                 <i class="glyphicon glyphicon-triangle-right"></i>
                             </div>
-                            <a href="house-details.html">
-                                <img src="images/IMG_1663.jpg" class="img-responsive" alt="Responsive image"/>
+                            <a href="#">
+                                <img src="images/IMG_1663.jpg" class="img-responsive" alt="Responsive image" title="Responsive image"/>
                             </a>
                             <div class="bottom-ts">
                                 <p>A房间 <span class="span-block"><span class="money">800</span>元/月(16m²)</span></p><br/>
                                 <p>配置 : <span class="jj">飘窗</span><span class="jj">阳台</span></p>
                             </div>
                         </li>
-                        <li class="mobile_none">
+                        <li>
                             <div class="play" src="http://player.youku.com/embed/XNTgwNjc5OTAw">
                                 <i class="glyphicon glyphicon-triangle-right"></i>
                             </div>
-                            <a href="house-details.html">
-                                <img src="images/IMG_1507.jpg" class="img-responsive" alt="Responsive image"/>
+                            <a href="#">
+                                <img src="images/IMG_1507.jpg" class="img-responsive" alt="Responsive image" title="Responsive image"/>
                             </a>
                             <div class="bottom-ts">
                                 <p>A房间 <span class="span-block"><span class="money">800</span>元/月(16m²)</span></p><br/>
                                 <p>配置 : <span class="jj">飘窗</span><span class="jj">阳台</span></p>
                             </div>
                         </li>
-                        <li class="mr0 mobile_none">
+                        <li class="mr0">
                             <div class="play hide" src="http://player.youku.com/embed/XNTgwNjc5OTAw">
                                 <i class="glyphicon glyphicon-triangle-right"></i>
                             </div>
-                            <a href="house-details.html">
-                                <img src="images/IMG_1496.jpg" class="img-responsive" alt="Responsive image"/>
+                            <a href="javascript:void(0)">
+                                <img src="images/IMG_1496.jpg" class="img-responsive" alt="Responsive image" title="Responsive image"/>
                                 <div class="active-mask">
                                     <img src="images/rent.png" alt="" class="rent"/>
                                 </div>
@@ -457,7 +483,91 @@
                             <div class="bottom-ts">
                                 <p>A房间 <span class="span-block"><span class="money">800</span>元/月(16m²)</span></p><br/>
                                 <p>配置 : <span class="jj">飘窗</span><span class="jj">阳台</span></p>
-                                <img src="images/miss.png" alt="" class="people"/>
+                                <img src="images/miss.png" alt="" class="people" title=""/>
+                            </div>
+                        </li>
+                    </ul>
+                    <ul class="room-information mobile-room pc-none clearfix">
+                        <li class="active">
+                            <div class="play hide" src="http://player.youku.com/embed/XNTgwNjc5OTAw">
+                                <i class="glyphicon glyphicon-triangle-right"></i>
+                            </div>
+                            <a href="javascript:void(0)">
+                                <img src="images/IMG_1788.jpg" class="img-responsive" alt="Responsive image" title="Responsive image"/>
+                                <div class="active-mask">
+                                    <img src="images/rent.png" alt="" class="rent"/>
+                                </div>
+                                <div class="not-house"></div>
+                            </a>
+                            <div class="bottom-ts">
+                                <p>A房间 <span class="span-block"><span class="money">800</span>元/月(16m²)</span></p><br/>
+                                <p>配置 : <span class="jj">飘窗</span><span class="jj">阳台</span></p>
+                                <img src="images/people.jpg" alt="" class="people"/>
+                            </div>
+                        </li>
+                        <li class="active" >
+                            <div class="play" src="http://player.youku.com/embed/XNTgwNjc5OTAw">
+                                <i class="glyphicon glyphicon-triangle-right"></i>
+                            </div>
+                            <a href="#">
+                                <img src="images/IMG_1790.jpg" class="img-responsive" alt="Responsive image" title="Responsive image"/>
+                            </a>
+                            <div class="bottom-ts">
+                                <p>A房间 <span class="span-block"><span class="money">800</span>元/月(16m²)</span></p><br/>
+                                <p>配置 : <span class="jj">飘窗</span><span class="jj">阳台</span></p>
+                            </div>
+                        </li>
+                        <li>
+                            <div class="play" src="http://player.youku.com/embed/XNTgwNjc5OTAw">
+                                <i class="glyphicon glyphicon-triangle-right"></i>
+                            </div>
+                            <a href="#">
+                                <img src="images/IMG_1783.jpg" class="img-responsive" alt="Responsive image" title="Responsive image"/>
+                            </a>
+                            <div class="bottom-ts">
+                                <p>A房间 <span class="span-block"><span class="money">800</span>元/月(16m²)</span></p><br/>
+                                <p>配置 : <span class="jj">飘窗</span><span class="jj">阳台</span></p>
+                            </div>
+                        </li>
+                        <li>
+                            <div class="play" src="http://player.youku.com/embed/XNTgwNjc5OTAw">
+                                <i class="glyphicon glyphicon-triangle-right"></i>
+                            </div>
+                            <a href="#">
+                                <img src="images/IMG_1663.jpg" class="img-responsive" alt="Responsive image" title="Responsive image"/>
+                            </a>
+                            <div class="bottom-ts">
+                                <p>A房间 <span class="span-block"><span class="money">800</span>元/月(16m²)</span></p><br/>
+                                <p>配置 : <span class="jj">飘窗</span><span class="jj">阳台</span></p>
+                            </div>
+                        </li>
+                        <li>
+                            <div class="play" src="http://player.youku.com/embed/XNTgwNjc5OTAw">
+                                <i class="glyphicon glyphicon-triangle-right"></i>
+                            </div>
+                            <a href="#">
+                                <img src="images/IMG_1507.jpg" class="img-responsive" alt="Responsive image" title="Responsive image"/>
+                            </a>
+                            <div class="bottom-ts">
+                                <p>A房间 <span class="span-block"><span class="money">800</span>元/月(16m²)</span></p><br/>
+                                <p>配置 : <span class="jj">飘窗</span><span class="jj">阳台</span></p>
+                            </div>
+                        </li>
+                        <li>
+                            <div class="play hide" src="http://player.youku.com/embed/XNTgwNjc5OTAw">
+                                <i class="glyphicon glyphicon-triangle-right"></i>
+                            </div>
+                            <a href="javascript:void(0)">
+                                <img src="images/IMG_1496.jpg" class="img-responsive" alt="Responsive image" title="Responsive image"/>
+                                <div class="active-mask">
+                                    <img src="images/rent.png" alt="" class="rent"/>
+                                </div>
+                                <div class="not-house"></div>
+                            </a>
+                            <div class="bottom-ts">
+                                <p>A房间 <span class="span-block"><span class="money">800</span>元/月(16m²)</span></p><br/>
+                                <p>配置 : <span class="jj">飘窗</span><span class="jj">阳台</span></p>
+                                <img src="images/miss.png" alt="" class="people" title=""/>
                             </div>
                         </li>
                     </ul>
@@ -569,8 +679,6 @@
                             </p>
                         </div>
                     </div>
-
-
                 </div>
             </div>
             <div class="dialog-foot">
@@ -612,7 +720,7 @@
                 <button class="btn-sure">提交</button>
             </div>
         </div>
-        <div id="video" class="hide">
+        <div class="video hide">
             <div class="close">×</div>
             <iframe width="100%" height="100%" src="" frameborder=0 allowfullscreen></iframe>
         </div>
@@ -685,7 +793,7 @@
         content.delegate(".play", "click", function(){
             var src = $(this).attr("src");
             if(src){
-                $("#video").removeClass("hide");
+                $(".video").removeClass("hide");
                 $(".mask-bg,.mask").removeClass("hide");
                 $(".video").attr({autoplay:"autoplay",src:src})
             }else{
@@ -695,7 +803,7 @@
         /*视频播放*/
         var mbm = $(".mask-bg,.mask");
         var wl = $(".w80");
-        var v = $("#video");
+        var v = $(".video");
         var cv = $("iframe");
         wl.delegate(".play", "click", function(){
             var src = $(this).attr("src");
@@ -730,6 +838,27 @@
         if($(window).height()<700){
             $(".footer").css({"position":"relative","marginTop":"0"})
         }
+
+        /*当行切换*/
+        var hl  = $(".house-menu li");
+        var atl = $(".active-type>li");
+        hl.each(function(i){
+            $(this).on("click",function(){
+                $(this).addClass("active");
+                $(this).siblings(hl).removeClass("active");
+                atl.eq(i).addClass("active");
+                atl.eq(i).siblings(atl).removeClass("active");
+            })
+        });
+
+        var ttf = $(".that-title .fa");
+        var mrl = $(".mobile-room li");
+        ttf.on("click",function(){
+            if (mrl.css("display") == "none") {
+                mrl.addClass("active");
+            }
+        });
+
     });
 
 </script>

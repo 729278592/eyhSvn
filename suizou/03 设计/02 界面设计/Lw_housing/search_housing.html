@@ -130,7 +130,7 @@
                                 <input type="checkbox" name="type" class=""/>
                                 整租
                             </label>
-                            <input type="reset" value="重置"/>
+                            <input type="reset" value="重置" class="reset"/>
                         </form>
                     </li>
                     <li>
@@ -448,7 +448,7 @@
         </div>
         <div class="mask-bg hide"></div>
         <div class="mask hide">
-            <div id="video" class="hide">
+            <div class="hide video">
                 <div class="close">×</div>
                 <iframe width="100%" height="100%" src="" frameborder=0 allowfullscreen></iframe>
             </div>
@@ -476,11 +476,12 @@
             }
             content.style.height = $(window).height() - hHeight - fHeight;
             /*出租类型控制*/
-         
+
 
             /*显示更多搜索条件*/
             var m = $("#more");
             var c = $("#cancel");
+            var pa = $(".ul-information");
             m.on("click",function(){
                 if (pa.find("li.hide")) {
                     pa.find("li.hide").removeClass("hide").addClass("ss");
@@ -521,7 +522,7 @@
         ul.delegate(".play", "click", function(){
             var src = $(this).attr("src");
             mbm.removeClass("hide");
-            $("#video").removeClass("hide");
+            $(".video").removeClass("hide");
            v.attr({autoplay:"autoplay",src:src})
         });
 
