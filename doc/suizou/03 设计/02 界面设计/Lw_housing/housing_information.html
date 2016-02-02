@@ -314,6 +314,7 @@
                             <div class="video video1">
                                 <iframe width="100%" height="100%" src="http://player.youku.com/embed/XNTgwNjc5OTAw" frameborder=0 allowfullscreen></iframe>
                             </div>
+                            <div class="noe-video hide">亲,还没上传视屏哦!</div>
                         </li>
                         <li>
                             <div class="map-img">
@@ -778,7 +779,7 @@
             <div class="close">×</div>
             <iframe width="100%" height="100%" src="" frameborder=0 allowfullscreen></iframe>
         </div>
-        <div class="serversMoney-infor">
+        <div class="serversMoney-infor hide">
             <p class="title">什么是服务费？</p>
             <p>服务费为每月月租的10%，其中包含以下项目：</p>
             <p>1 光钎WiFi随便用</p>
@@ -904,7 +905,7 @@
             $(".footer").css({"position":"relative","marginTop":"0"})
         }
 
-        /*当行切换*/
+        /*导航切换*/
         var hl  = $(".house-menu li");
         var atl = $(".active-type>li");
         hl.each(function(i){
@@ -923,10 +924,14 @@
                 mrl.addClass("active");
             }
         });
+
+
         /*服务费介绍*/
         var sb = $(".service-bz");
+        var si = $(".serversMoney-infor");
         sb.on("click",function(e){
             mbm.removeClass("hide");
+            si.removeClass("hide")
             e.preventDefault();
         })
 
