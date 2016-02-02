@@ -176,7 +176,7 @@
                     <span class="xq_deatils">绿色花园绿色花园绿色花园绿色花园绿色花园</span><!--小区描述-->
                 </li>
                 <li>
-                    <span class="house-span">房间的详情:</span>
+                    <span class="house-span">房间:</span>
                     <div class="information-div">
                         <span class="information">A850</span>
                         <span class="information">B750</span>
@@ -194,7 +194,7 @@
                     租金：<span style="color: #fba511; font-weight: bold;">¥600-800</span>元/月
                 </li>
                 <li>
-                    服务费：<span style="color: #fba511; font-weight: bold;">85</span>元/月　<a href="#" class="service-bz">什么是服务费?</a>
+                    服务费：<span style="color: #fba511; font-weight: bold;">85</span>元/月　<a href="javascript:void(0)" class="service-bz">什么是服务费?</a>
                 </li>
                 <li>
                     <span>房屋概述：16.0m²-3/4层</span>
@@ -779,6 +779,17 @@
             <div class="close">×</div>
             <iframe width="100%" height="100%" src="" frameborder=0 allowfullscreen></iframe>
         </div>
+        <div class="serversMoney-infor">
+            <p class="title">什么是服务费？</p>
+            <p>服务费为每月月租的10%，其中包含以下项目：</p>
+            <p>1 光钎WiFi随便用</p>
+            <p>2 每月两次公共区域无死角清洁</p>
+            <p>3 家具家电自然损坏上门修理</p>
+            <p>4 管家贴心服务</p>
+            <p>5 享受乐窝每月各种联谊活动，认识无数美女帅哥</p>
+            <p>6 优先享受乐窝其他服务</p>
+            <div class="close">×</div>
+        </div>
     </div>
 </div>
 <script src="plugins/jquery/js/jquery-1.11.3.min.js"></script>
@@ -913,6 +924,12 @@
                 mrl.addClass("active");
             }
         });
+        /*服务费介绍*/
+        var sb = $(".service-bz");
+        sb.on("click",function(e){
+            mbm.removeClass("hide");
+            e.preventDefault();
+        })
 
     });
 
