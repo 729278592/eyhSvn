@@ -415,7 +415,7 @@ li .main{width: 45%;display: inline-block;white-space: nowrap;text-overflow: ell
 .houseing-infor li>div .fa-remove{background: #ff6965;}
 .houseing-infor li.bb0{border-bottom: 0;}
 .house-span1{display: inline-block;width: 90%;}
-.house-title{position: relative;top: -20px;}
+.house-title{position: relative;vertical-align: top;}
 
 
 
