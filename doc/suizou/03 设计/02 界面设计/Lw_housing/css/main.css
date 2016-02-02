@@ -96,6 +96,7 @@ a:link{text-decoration: none;}
 .item-ul1 li{width: 31.9%;float: left;margin: 0 1.9% 0.4% 0;position: relative;padding-bottom: 60px;}
 .item-ul1 .last{margin-right: 0;}
 .item .infor-mask-bg,.item .infor-mask{position: absolute;top: 0;bottom: 60px;right: 0;left: 0;z-index: 10;}
+.item-ul1 li .infor-mask,.item-ul1 li .infor-mask-bg{bottom: 64px;}
 .item .infor-mask-bg{opacity: 0.6; filter: alpha(opacity=60);background: #000;}
 .item-b{position: absolute;bottom:0;width:100%;background: #fff;}
 .item-ul .item-b{padding:1% 2%;}
@@ -353,6 +354,7 @@ li .main{width: 45%;display: inline-block;white-space: nowrap;text-overflow: ell
 .room-information li .img-responsive{width: 455px;height: 304px;}
 .room-information li .rent,.item .infor-mask .rent,.ul-house .active-mask .rent{position: absolute;left: 50%;top: 50%;margin-top: -35px;margin-left: -60px;width: 30%;}
 .ul-house .active-mask .rent{margin-top: -30px;margin-left: -50px;}
+.item-ul1 li .infor-mask .rent{margin-left: -62px;margin-top: -30px;}
 .item .infor-mask .rent{margin-top: -47px;margin-left: -82px;}
 .room-information li .bottom-ts{border: 1px solid #a7c4e3;background: #ededed;height: 86px;}
 .room-information li .bottom-ts p{font-size: 14px;color: #333;}
