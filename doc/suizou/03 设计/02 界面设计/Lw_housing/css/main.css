@@ -611,6 +611,7 @@ input.btn-click:hover{background: #e16a20}
 @media screen and (max-width: 1600px) {
     .activity{padding-bottom: 8%;position: relative;}
     .w96{padding: 0 2%;}
+    .video1{margin-left: -430px;margin-top: -284px;}
 
 
 }
