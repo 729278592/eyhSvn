@@ -366,8 +366,6 @@ li .main{width: 45%;display: inline-block;white-space: nowrap;text-overflow: ell
 
 
 
-
-
 .w80 .active-mask,.ul-house .active-mask,.room-information .active-mask{background: #000;opacity: 0.6;filter: alpha(opacity=60);}
 .room-information .not-house,.room-information .active-mask{position: absolute;left: 170px;top: 0;bottom: 0;right: 0;z-index: 1001;}
 .ul-house .not-house,.ul-house .active-mask{position: absolute;left: 0;top: 0;bottom: 36px;right: 0;z-index: 1001;}
