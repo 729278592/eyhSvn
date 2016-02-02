@@ -327,10 +327,10 @@ li .main{width: 45%;display: inline-block;white-space: nowrap;text-overflow: ell
 .furniture .tool-group{color: #3b5991;}
 .furniture .tool-group img{width: 40px;}
 .that-title{width: 100%;text-indent: 25px;color: #fff;margin: 5px 0 0;background: #6784a2;padding: 10px 0;}
-.apartment-display{position: relative;top: 23px;left: 120px;}
+.apartment-display{position: relative;top: 23px;width: 640px;height: 427px;margin: 0 auto;}
 .qr_code{position: relative;left: 300px;top: 100px;}
-.map-img{position: relative;top: 23px;left: 150px;}
-
+.map-img{position: relative;top: 23px;width: 640px;height: 427px;margin: 0 auto;}
+.map-img img{width: 100%;}
 
 .room{width: 100%;margin-bottom: 10px;display: inline-block;float: left;}
 .room-group{width: 100%;}
@@ -406,7 +406,7 @@ li .main{width: 45%;display: inline-block;white-space: nowrap;text-overflow: ell
 .house-menu li.active .fa{display: inline-block}
 .house-menu li .fa{position: absolute;bottom: -19px;color: #6784a2;font-size: 30px;left: 105px;}
 .house-infors>.title,.active-type>li>.title{width: 100%;text-indent: 25px;color: #fff;margin: 15px 0 5px;background: #99c9f1;padding: 10px 0;}
-.active-type>li{display: none;}
+.active-type>li{display: none;width: 100%;}
 .active-type>li.active{display: inline-block;}
 .houseing-infor{width: 100%;}
 .houseing-infor li{width: 100%;padding: 10px 6px;border-bottom: 1px dashed #dbdbdb;}
