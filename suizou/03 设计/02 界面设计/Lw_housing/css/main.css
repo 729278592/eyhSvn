@@ -8,7 +8,7 @@ a:hover{cursor: pointer;text-decoration: none;}
 .clearfix{display: inline-block;}
 .video{width: 100%;max-width: 640px;position: absolute;left: 50%;top: 50%;margin-left: -240px;margin-top: -192px;background: rgba(255,255,255,0.8);height: 380px;}
 .video .close{width: 20px;height: 20px;position: absolute;top:5px;right:10px;background: #fff;border-radius: 20px;text-align: center;line-height: 20px;z-index: 999;opacity: .8;}
-.video1{margin-left: -430px;margin-top: -290px;}
+.video1{margin-left: -430px;margin-top: -355px;}
 /*common*/
 .mask-bg,.mask{position: fixed;left: 0;right: 0;top: 0;bottom: 0;z-index: 1002;color: #333;}
 .mask-bg{background: #000;opacity: 0.6;filter: alpha(opacity=60);}
@@ -328,9 +328,9 @@ li .main{width: 45%;display: inline-block;white-space: nowrap;text-overflow: ell
 .furniture .tool-group img{width: 40px;}
 .that-title{width: 100%;text-indent: 25px;color: #fff;margin: 5px 0 0;background: #6784a2;padding: 10px 0;}
 .apartment-display{position: relative;top: 23px;width: 640px;height: 427px;margin: 0 auto;}
-.qr_code{position: relative;left: 300px;top: 100px;}
+.qr_code{position: relative;top: 100px;display: block;width: 258px;height: 258px;margin: 0 auto;}
 .map-img{position: relative;top: 23px;width: 640px;height: 427px;margin: 0 auto;}
-.map-img img{width: 100%;}
+.map-img img{width: 100%;height: 427px;}
 
 .room{width: 100%;margin-bottom: 10px;display: inline-block;float: left;}
 .room-group{width: 100%;}
