@@ -10,7 +10,6 @@
     <style>
         body{background: #f1f1f1;}
         .footer{position: absolute;bottom: 0;}
-        .information-content{width: 100%;text-align: left;padding: 20px 0;}
         @media screen and (max-width: 1400px){
             .head,.content,.footer{min-width: 1100px;}
             .w80{width: 1100px;margin-left: -550px;}
@@ -63,7 +62,7 @@
                 <ul class="menu">
                     <li>
                         <a href="personal_center.html" style="line-height: 75px;">
-                            <i class="fa fa-users"></i>
+                            <i class="fa fa-user"></i>
                             个人信息
                         </a>
                     </li>
@@ -71,6 +70,12 @@
                         <a href="case-pay.html">
                             <i class="fa fa-money "></i>
                             各项缴费
+                        </a>
+                    </li>
+                    <li>
+                        <a href="order-infor.html">
+                            <i class="fa fa-book"></i>
+                            缴费记录
                         </a>
                     </li>
                     <li>
@@ -103,26 +108,42 @@
                             遗留物品
                         </a>
                     </li>
-                    <li>
+                    <li class="active">
                         <a href="order-infor.html">
-                            <i class="fa fa-bars"></i>
+                            <i class="fa fa-th"></i>
                             订单信息
                         </a>
                     </li>
-                    <li class="active last">
+                    <li class="last">
                         <a href="housekeeping-infor.html">
-                            <i class="fa fa-bars"></i>
+                            <i class="fa fa-user"></i>
                             管家信息
                         </a>
                     </li>
                 </ul>
             </div>
             <div class="w-right">
-                <ul class="order-menu">
-                    <li></li>
-                    <li></li>
-                    <li></li>
-                </ul>
+                <p class="p-group title">订单信息</p>
+                <table class="order-table">
+                    <thead>
+                        <tr>
+                            <th>商品</th>
+                            <th>时间</th>
+                            <th>价格</th>
+                            <th>订单类型</th>
+                            <th>订单状态</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr>
+                            <td><img src="images/lw.jpg" class="order-img"/></td>
+                            <td><span class="time">2015-5-5</span></td>
+                            <td><span class="money">500元</span></td>
+                            <td><span class="type">购买、兑换</span></td>
+                            <td><span class="statues">已购买</span></td>
+                        </tr>
+                    </tbody>
+                </table>
             </div>
         </div>
     </div>
@@ -175,18 +196,6 @@
 </div>
 <script src="plugins/jquery/js/jquery-1.11.3.min.js"></script>
 <script src="js/lw_housing.js"></script>
-<script>
-    var br = $(".btn-rnow");
-    var mbm = $(".mask-bg,.mask");
-    var cb = $(".close,.btn-submit");
-    br.on("click",function(){
-        mbm.removeClass("hide");
-    });
-
-    cb.on("click",function(){
-        mbm.addClass("hide");
-    })
-</script>
 </body>
 
 </html>

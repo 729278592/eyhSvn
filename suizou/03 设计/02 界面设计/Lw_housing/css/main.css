@@ -494,13 +494,14 @@ input.btn-click:hover{background: #e16a20}
 .w-left .menu>li.active a{border-left: 2px solid #fca511;color: #fca511;}
 
 
-.w-right{margin-left: 270px;background: #fff;margin-top: 20px;padding: 1% 1.1%;min-height: 455px;}
+.w-right{margin-left: 270px;background: #fff;margin-top: 20px;padding: 1% 1.1%;min-height: 635px;}
 
 
-.order-menu{}
-.order-menu li{}
-
-
+.order-table{}
+.order-table{ border-collapse:collapse;width: 96%;margin: 10px auto;}
+.order-table tr th{}
+.order-table tr th,.order-table tr td{ text-align:center;font-size: 14px;border:1px solid #dbdbdb;color: #565656;height: 2.6em;padding: 10px 0;}
+.order-table .order-img{width: 60px;height: 80px;}
 
 .wr-head{height: 116px;width: 100%;padding: 8px 15px;background: #e8f2f9;}
 .wr-head img{float: left;width: 73px;height: 73px;border-radius: 50%;}
