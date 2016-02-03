@@ -41,12 +41,14 @@ $(function(){
         }
     });
 
+    /*底部处理*/
+    var windoeHeight = $(window).outerHeight(true);
+    var headHeight = $(".head").outerHeight(true);
+    var footHeight = $(".footer").outerHeight(true);
+    var cm = $(".content");
+    var contentHeight = cm.outerHeight(true);
     function heightAuto(){
-        var windoeHeight = $(window).outerHeight(true);
-        var headHeight = $(".head").outerHeight(true);
-        var footHeight = $(".footer").outerHeight(true);
-        var cm = $(".content");
-        var contentHeight = cm.outerHeight(true);
+
         if((contentHeight+footHeight+headHeight)<windoeHeight){
             cm.get(0).style.height = windoeHeight-headHeight-footHeight + "px";
             $("html").css({"overflow-y":"hidden"});
@@ -55,10 +57,13 @@ $(function(){
             cm.css({"height":"auto"});
         }
     }
-    heightAuto();
-    $(window).on("resize",function(){
+    if(cm){
         heightAuto();
-    });
+        $(window).on("resize",function(){
+            heightAuto();
+        });
+    }
+
 
     /*IE支持placeholder属性*/
     var doc = document, inputs = doc.getElementsByTagName('input'), supportPlaceholder = 'placeholder'in doc.createElement('input'), placeholder = function (input) {
