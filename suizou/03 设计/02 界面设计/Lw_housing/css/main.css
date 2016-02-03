@@ -673,6 +673,7 @@ input.btn-click:hover{background: #e16a20}
     .room-information li .img-responsive{width: 357.8px;height: 238.7px;}
     .head,.content,.footer{min-width: 1100px;}
     .w80{width: 1100px;margin-left: -550px;}
+    .shop-list li>div .item-b .main .money{left: 212px;}
     #marquee{width:1100px;}
     #marquee ul li{width: 400px;}
     #marquee ul li .item-bt{bottom: 42px;}
