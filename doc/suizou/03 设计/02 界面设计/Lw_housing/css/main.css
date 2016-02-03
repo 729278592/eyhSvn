@@ -226,10 +226,14 @@ b {line-height: 30px;font-weight: 700;}
 .content-right {width: 40%;position: absolute;top: 0;bottom: 0;right: 0;overflow: hidden;}
 
 .ul-information>li{width: 100%;border-bottom: 1px solid #dbdbdb;padding: 10px 2%;}
-.ul-information>li.city-proper>span{display: inline-block;padding: 0 30px 0 0;}
+.ul-information>li.city-proper>span{display: inline-block;padding: 0 26px 0 0;}
 .ul-information>li.city-proper>span:hover{cursor: pointer;}
 .ul-information>li .active{background: #5d8ec8;color: #fff;}
 .ul-information>li .title{display: inline-block;width: 80px;color: #333;font-size: 14px;position: relative;top: 3px;}
+.ul-information>li .city-div{display: inline-block;}
+.ul-information>li .city-head{width: 113px;vertical-align: top;}
+.ul-information>li .city-content{width: 80%;}
+.ul-information>li .city-content .common{font-size: 12px;}
 .common{display: inline-block;padding: 0 5px;color: #666;margin-right: 10px;}
 .rental_mode{display: inline-block;width: 90px;height: 30px;line-height: 30px;color: #666;background: #f3f3f3;margin-right: 1%;font-size: 12px;text-align: center;}
 .rental_mode:hover{cursor: pointer;}
@@ -307,8 +311,7 @@ li .main{width: 45%;display: inline-block;white-space: nowrap;text-overflow: ell
 .shop-list .btn-change,.shop-list .btn-buy{padding: .5% 2%;background: #fca511;color: #fff;position: absolute;bottom: 10%;border-radius: 5px;font-size: 12px;}
 .shop-list .btn-change{right: 2%;}
 .shop-list .btn-buy{right: 22%;}
-
-
+.shopping-infor{width: 100%;}
 
 /*housing_information*/
 .pc_deatils{margin-left: 990px;padding: 0 10px;position: absolute;top: 0;}

@@ -81,22 +81,16 @@
     </div>
     <div class="content" id="content">
         <div class="w80"  id="w80">
-            <ul class="shop-list clearfix" id="shop-list">
-                <li>
-                    <a href="#">
-                        <img src="images/shopping1.jpg" class="img-responsive img" alt="Responsive image"/>
-                        <div class="item-b">
-                            <span class="main">
-                                <span class="title">贴心小熊</span><br/>
-                                <span>兑换条件：签约为6个月以上</span>
-                                <button class="btn-buy">立即购买</button>
-                                <button class="btn-change">立即兑换</button>
-                                <span class="money">单价：<span class="num">￥102</span> </span>
-                            </span>
-                        </div>
-                    </a>
-                </li>
-            </ul>
+            <div class="shopping-infor clearfix">
+                <img src="images/shopping1.jpg" class="img-responsive img left" alt="Responsive image"/>
+                <div class="sInfor left">
+                    <span class="title">贴心小熊</span><br/>
+                    <span>兑换条件：签约为6个月以上</span>
+                    <button class="btn-buy">立即购买</button>
+                    <button class="btn-change">立即兑换</button>
+                    <span class="money">单价：<span class="num">￥102</span> </span>
+                </div>
+            </div>
         </div>
     </div>
     <div class="footer clearfix" id="footer">
@@ -131,7 +125,10 @@
         var shopList = document.getElementById("shop-list");
         var footer = document.getElementById("footer");
         var w80 = document.getElementById("w80");
-        if(shopList.offsetHeight>800){
+        if(shopList.offsetHeight<700){
+            footer.style.position = "absolute";
+        }
+        else{
             footer.style.position = "relative";
             w80.style.paddingBottom = "2%";
         }
