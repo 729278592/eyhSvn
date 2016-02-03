@@ -49,7 +49,7 @@ $(function(){
     var contentHeight = cm.outerHeight(true);
     function heightAuto(){
         if((contentHeight+footHeight+headHeight)<windoeHeight){
-            cm.get(0).style.height = windoeHeight-headHeight-footHeight + "px";
+            cm.css({height:windoeHeight-headHeight-footHeight+"px"});
             $("html").css({"overflow-y":"hidden"});
         }else{
             $("html").css({"overflow-y":"auto"});
