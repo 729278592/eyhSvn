@@ -502,7 +502,7 @@ input.btn-click:hover{background: #e16a20}
 .order-table tr th{}
 .order-table tr th,.order-table tr td{ text-align:center;font-size: 14px;border:1px solid #dbdbdb;color: #565656;height: 2.6em;padding: 10px 0;}
 .order-table .order-img{width: 60px;height: 80px;}
-
+.order-table a.statues{display: inline-block;padding: 5px 10px;background: #fba85c;color: #fff;border-radius: 2px;}
 .wr-head{height: 116px;width: 100%;padding: 8px 15px;background: #e8f2f9;}
 .wr-head img{float: left;width: 73px;height: 73px;border-radius: 50%;}
 .btn-fillin{width: 85px;height: 25px;line-height: 22px;text-align: center;border-radius: 2px;background: #a2b7c6;color: #fff;}
