@@ -692,7 +692,7 @@ input.btn-click:hover{background: #e16a20}
     .house-menu li .fa{left:75px;}
     .item-ul1 li .infor-mask, .item-ul1 li .infor-mask-bg {bottom: 60px;}
 }
-@media screen and (max-width: 1100px) {
+@media screen and (max-width: 1200px) {
     #myCarousel .carousel-control.right,#myCarousel .right-bg{right: 5px;}
     #myCarousel .carousel-control.left,#myCarousel .left-bg{left: 0;}
     #myCarousel .left-bg,#myCarousel .right-bg{background: #000;opacity: 0.5;filter:alpha(opacity=50);}
