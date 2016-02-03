@@ -83,7 +83,7 @@
         <div class="w80"  id="w80">
             <ul class="shop-list clearfix" id="shop-list">
                 <li>
-                    <a href="#">
+                    <a href="shopping-infor.html">
                         <img src="images/shopping1.jpg" class="img-responsive img" alt="Responsive image"/>
                         <div class="item-b">
                             <span class="main">
@@ -97,7 +97,7 @@
                     </a>
                 </li>
                 <li>
-                    <a href="#">
+                    <a href="shopping-infor.html">
                         <img src="images/shopping2.jpg" class="img-responsive img" alt="Responsive image"/>
                         <div class="item-b">
                             <span class="main">
@@ -110,7 +110,7 @@
                     </a>
                 </li>
                 <li>
-                    <a href="#">
+                    <a href="shopping-infor.html">
                         <img src="images/shopping3.jpg" class="img-responsive img" alt="Responsive image"/>
                         <div class="item-b">
                             <span class="main">
@@ -123,7 +123,7 @@
                     </a>
                 </li>
                 <li>
-                    <a href="#">
+                    <a href="shopping-infor.html">
                         <img src="images/shopping4.jpg" class="img-responsive img" alt="Responsive image"/>
                         <div class="item-b">
                             <span class="main">
@@ -136,7 +136,7 @@
                     </a>
                 </li>
                 <li>
-                    <a href="#">
+                    <a href="shopping-infor.html">
                         <img src="images/shopping5.jpg" class="img-responsive img" alt="Responsive image"/>
                         <div class="item-b">
                             <span class="main">
@@ -149,7 +149,7 @@
                     </a>
                 </li>
                 <li>
-                    <a href="#">
+                    <a href="shopping-infor.html">
                         <img src="images/shopping6.jpg" class="img-responsive img" alt="Responsive image"/>
                         <div class="item-b">
                             <span class="main">
@@ -162,7 +162,7 @@
                     </a>
                 </li>
                 <li>
-                    <a href="#">
+                    <a href="shopping-infor.html">
                         <img src="images/shopping4.jpg" class="img-responsive img" alt="Responsive image"/>
                         <div class="item-b">
                             <span class="main">
@@ -175,7 +175,7 @@
                     </a>
                 </li>
                 <li>
-                    <a href="#">
+                    <a href="shopping-infor.html">
                         <img src="images/shopping5.jpg" class="img-responsive img" alt="Responsive image"/>
                         <div class="item-b">
                             <span class="main">
@@ -188,7 +188,7 @@
                     </a>
                 </li>
                 <li>
-                    <a href="#">
+                    <a href="shopping-infor.html">
                         <img src="images/shopping6.jpg" class="img-responsive img" alt="Responsive image"/>
                         <div class="item-b">
                             <span class="main">
@@ -235,7 +235,10 @@
         var shopList = document.getElementById("shop-list");
         var footer = document.getElementById("footer");
         var w80 = document.getElementById("w80");
-        if(shopList.offsetHeight>800){
+        if(shopList.offsetHeight<700){
+            footer.style.position = "absolute";
+        }
+        else{
             footer.style.position = "relative";
             w80.style.paddingBottom = "2%";
         }
