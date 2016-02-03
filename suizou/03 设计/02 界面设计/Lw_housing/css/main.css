@@ -527,7 +527,7 @@ input.btn-click:hover{background: #e16a20}
 .wr-head .phone{color: #666;font-size: 18px;}
 .wr-content{color: #666;font-size: 14px;}
 .wr-content span{display: inline-block;line-height: 30px;}
-.wr-content span img{height: 28px;}
+.wr-content span img{height: 28px;width: 30px;}
 .wr-content .infomation{display: inline-block;padding: 0 5px;border: 1px solid #dbdbdb;position: relative;z-index: 1;background: #fff;top: -1px;font-family: "微软雅黑";}
 .btn-default{font-family: "微软雅黑";}
 .wr-content .infomation:hover{cursor: pointer;}
