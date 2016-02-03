@@ -13,8 +13,6 @@
         .form-group{height: 34px;}
         .form-group .control-label{text-align: left;}
         input.form-control {border-radius: 6px;}
-        #video{position: absolute;left: 50%;top: 50%;margin-left: -240px;margin-top: -292px;padding: 50px;border: 1px solid #dbdbdb;background: rgba(255,255,255,0.8);border-radius: 10px;}
-        #video .close{width: 30px;height: 30px;position: absolute;top:0;right:0;background: #fff;border-radius: 30px;text-align: center;line-height: 30px;z-index: 100;}
 
         @media screen and (max-height: 768px) {
             .col-sm-2 {width: 16.66666667%;float: left;}
@@ -29,8 +27,6 @@
             .content,.footer{max-width: 640px;width: 100%;}
             .w60{max-width: 640px;width: 100%;margin-left: 0;left: 0;}
             .box{min-width: 320px;}
-            #video{position: absolute;left:50%;top:20%;padding: 20px;border: 1px solid #dbdbdb;background: rgba(255,255,255,0.8);border-radius: 10px;width: 98%;margin-left: -49%;margin-top: 0;}
-            .video{width: 100%;}
             .mask #video .close{width: 20px;height: 20px;position: absolute;background: #fff;border-radius: 30px;text-align: center;line-height: 20px;z-index: 100;top: 0;right: 0;}
         }
         @media screen and (max-width: 445px){
@@ -114,7 +110,7 @@
                     </li>
                     <li>
                         <img src="images/tuo1.jpg"  class="img-responsive" alt="Responsive image"/>
-                        <div class="play">
+                        <div class="play "src="http://player.youku.com/embed/XNTgwNjc5OTAw">
                             <i class="glyphicon glyphicon-triangle-right"></i>
                         </div>
                         <div class="choice-bottom">
@@ -338,10 +334,9 @@
                 </div>
             </div>
         </div>
-        <div class="mp4 hide" id="video">
+        <div class="hide video">
             <div class="close">×</div>
-                <video src="" controls="controls" class="video" autoplay="">
-            </video>
+            <iframe width="100%" height="100%" src="" frameborder=0 allowfullscreen></iframe>
         </div>
     </div>
 </div>
@@ -349,13 +344,10 @@
 <script src="js/lw_housing.js"></script>
 <script>
     var c   = $("#calculation");
-    var v   = $("#video");
-    var cv  = $(".video");
     var mbm = $(".mask-bg,.mask");
     var p   = $(".player");
     var d   = $(".deposit");
     var m   = $(".mask");
-    var pp  = $(".play,#play");
     var cc  = $(".calculation");
     c.on("click",function(){
         mbm.removeClass("hide");
@@ -367,22 +359,20 @@
         p.removeClass("hide");
     });
 
-    pp.on("click",function(){
+
+    var  wl = $(".choice li");
+    var v = $(".video");
+    var cv = $("iframe");
+    wl.delegate(".play", "click", function(){
+        var src = $(this).attr("src");
         mbm.removeClass("hide");
         v.removeClass("hide");
-        cv.attr({"autoplay":"autoplay","src":"http://mvvideo2.meitudata.com/56163e35cac069064.mp4"});
+        cv.attr({autoplay:"autoplay",src:src})
     });
-
-    if($(window).width()<640){
-
-    }
-
-    m.delegate(".close","click",function(){
+    mbm.delegate(".close","click",function(){
         mbm.addClass("hide");
-        cc.addClass("hide");
-        p.addClass("hide");
         v.addClass("hide");
-        cv.attr({"autoplay":" ","src":""});
+        cv.attr({autoplay:"",src:""})
     });
 
 </script>

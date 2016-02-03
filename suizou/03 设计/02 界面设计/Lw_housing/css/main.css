@@ -37,7 +37,7 @@ a:hover{cursor: pointer;text-decoration: none;}
 .head-menu{position: absolute;right: 20px;top: 4px;}
 .head-menu li{float: left;height: 100%;margin-left: 19px;}
 .head-menu li a{color: #fff;}
-.head-menu li>a,.head-menu li .a-span{display: inline-block;color: #fff;font-size: 14px;padding: 5px 20px;margin-top: 10px;}
+.head-menu li>a,.head-menu li .a-span{display: inline-block;color: #fff;font-size: 14px;padding: 5px 20px;margin-top: 10px;font-family: "微软雅黑";}
 .head-menu li>a.active{border: 1px solid #fff;}
 .head-menu li>a:link{text-decoration: none;}
 input,button{outline: none;border: none;}
@@ -315,10 +315,11 @@ li .main{width: 45%;display: inline-block;white-space: nowrap;text-overflow: ell
 .shop-list .btn-change{right: 2%;}
 .shop-list .btn-buy{right: 22%;}
 .shopping-infor{width: 100%;margin-top: 15px;}
-.shopping-infor>img{width: 100%;max-width: 640px;}
+.shopping-infor>img{width: 100%;max-width: 478px;}
 .sInfor{margin:20px;}
+.sInfor .bg-cfcf{background: #f6f6f6;width: 500px;padding: 10px 10px 1px 10px;margin-bottom: 10px;}
 .sInfor p{margin-bottom: 10px;font-size: 14px;}
-.sInfor .title{font-size: 18px;}
+.sInfor .title{font-size: 20px;font-weight: bold;}
 .sInfor button{background: #f0a30a;color: #fff;font-size: 12px;padding: 5px 10px;border-radius: 4px;}
 .sInfor .btn-buy{}
 .sInfor .btn-change{}
@@ -516,7 +517,7 @@ input.btn-click:hover{background: #e16a20}
 .w-left .menu>li.active a{border-left: 2px solid #fca511;color: #fca511;}
 
 
-.w-right{margin-left: 270px;background: #fff;margin-top: 20px;padding: 1% 1.1%;min-height: 635px;}
+.w-right{margin-left: 270px;background: #fff;padding: 1% 1.1%;min-height: 635px;}
 
 
 .order-table{}
@@ -615,7 +616,7 @@ input.btn-click:hover{background: #e16a20}
 
 
 /*find-shareroom*/
-.fs-head{padding: 25px;margin-top: 20px;}
+.fs-head{padding: 25px;}
 .fs-head .title{float: left;font-size: 26px;color: #333;position: relative;top: 6px;}
 .btn-share{float: right;}
 .btn-share{padding: 15px 30px;background: #fca511;color: #fff;border-radius: 4px;text-align: center;position: relative;top: -6px;}

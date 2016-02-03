@@ -150,6 +150,10 @@
     .num-infor .phone-img{margin-top: 10px;width: 35px;}
     .shopping-infor{margin-top: 0;}
     .sInfor{margin-bottom:0;}
+    .shopping-infor>img{width: 100%;max-width: 640px;}
+    #myCarousel .carousel-control.left, #myCarousel .left-bg, #myCarousel .carousel-control.right, #myCarousel .right-bg{display: none;}
+    .item-ul1 li .img-responsive,.item-ul li .img-responsive{width: 100%;}
+    .item-ul1 li .infor-mask, .item-ul1 li .infor-mask-bg{bottom: 49px;}
 }
 
 @media screen and (max-width: 414px) {
