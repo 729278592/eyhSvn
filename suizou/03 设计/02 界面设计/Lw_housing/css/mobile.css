@@ -68,7 +68,7 @@
     .input-search{position: absolute;top: 55px;z-index: 500;width: 100%;max-width: 640px;}
     .content-right{width: 100%;z-index: 0;top: 0;}
     .w-top{width: 100%;height: 70px;background: #fff;}
-    .w-top li{float: left;width: 33.3%;border: none;height: 70px;}
+    .w-top li{float: left;width:25%;border: none;height: 70px;}
     .w-top li a{width: 100%;height: 100%;text-align: center;display: inline-block;color: #666;}
     .w-top li a i{display: inline-block;width: 30px;height: 30px;line-height: 30px;border: 1px solid #666;border-radius: 30px;margin-top: 10px;}
     .w-top li.active a {color: #fca511;}
@@ -143,7 +143,11 @@
     .footer .fl li a{font-size: 16px;}
     .footer .fr{position: relative;top: 15px;}
     .apartment-display{width: 100%;left: 0;top: 0;height: auto;}
-
+    .houser{margin: 0 4%; width: 109px; float: left;height: auto;}
+    .num-infor{}
+    .num-infor .name{}
+    .num-infor .phone{font-size: 16px;}
+    .num-infor .phone-img{margin-top: 10px;width: 35px;}
 }
 
 @media screen and (max-width: 414px) {
