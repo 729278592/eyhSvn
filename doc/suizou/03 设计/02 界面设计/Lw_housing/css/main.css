@@ -10,12 +10,11 @@ a:hover{cursor: pointer;text-decoration: none;}
 .video .close{width: 20px;height: 20px;position: absolute;top:5px;right:10px;background: #fff;border-radius: 20px;text-align: center;line-height: 20px;z-index: 999;opacity: .8;}
 .video1{margin-left: -468px;margin-top: -355px;}
 .noe-video{color: #ff6965;font-size: 24px;text-align: center;margin-top: 220px;}
-
-
+a::selection,button::selection{background:transparent;}
 
 
 /*common*/
-.mask-bg,.mask{position: fixed;left: 0;right: 0;top: 0;bottom: 0;z-index: 1002;color: #333;}
+.mask-bg,.mask{position: fixed;left: 0;right: 0;top: 0;bottom: 0;z-index: 1000002;color: #333;}
 .mask-bg{background: #000;opacity: 0.6;filter: alpha(opacity=60);}
 .mask-content{text-align: center;width: 100%;color: #33a9d4;padding: 2% 0 1% 0;border-radius: 4px;}
 .mask-content .title{font-weight: bold;font-size: 18px;}
