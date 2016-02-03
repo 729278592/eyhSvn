@@ -317,13 +317,19 @@ li .main{width: 45%;display: inline-block;white-space: nowrap;text-overflow: ell
 .shopping-infor{width: 100%;margin-top: 15px;}
 .shopping-infor>img{width: 100%;max-width: 640px;}
 .sInfor{margin:20px;}
-.sInfor p{margin-bottom: 10px;font-size: 16px;}
-.sInfor .title{font-size: 20px;}
+.sInfor p{margin-bottom: 10px;font-size: 14px;}
+.sInfor .title{font-size: 18px;}
 .sInfor button{background: #f0a30a;color: #fff;font-size: 12px;padding: 5px 10px;border-radius: 4px;}
 .sInfor .btn-buy{}
 .sInfor .btn-change{}
 .sInfor .money{}
 .sInfor .money .num{color: #f0a30a;}
+.production{width: 100%;margin-top: 20px;}
+.production-head{padding: 10px 20px;background: #d1d81a;color: #fff;font-size: 16px;}
+.production-content{color: #666;padding: 15px;}
+.production-content p{margin-bottom: 5px;}
+.production-content p .type{display: inline-block;width: 50px;}
+
 
 /*housing_information*/
 .pc_deatils{margin-left: 990px;padding: 0 10px;position: absolute;top: 0;}
