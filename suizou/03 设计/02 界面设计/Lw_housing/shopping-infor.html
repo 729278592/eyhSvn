@@ -81,7 +81,7 @@
     </div>
     <div class="content" id="content">
         <div class="w80"  id="w80">
-            <div class="shopping-infor clearfix">
+            <div class="shopping-infor clearfix" id="shopping-infor">
                 <img src="images/shopping1.jpg" class="img-responsive img left" alt="Responsive image"/>
                 <div class="sInfor left">
                     <p>
@@ -134,7 +134,7 @@
 <script src="js/lw_housing.js"></script>
 <script>
     window.onload = function(){
-        var shopList = document.getElementById("shop-list");
+        var shopList = document.getElementById("shopping-infor");
         var footer = document.getElementById("footer");
         var w80 = document.getElementById("w80");
         if(shopList.offsetHeight<700){
