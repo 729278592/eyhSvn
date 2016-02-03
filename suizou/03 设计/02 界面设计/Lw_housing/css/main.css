@@ -314,15 +314,16 @@ li .main{width: 45%;display: inline-block;white-space: nowrap;text-overflow: ell
 .shop-list .btn-change,.shop-list .btn-buy{padding: .5% 2%;background: #fca511;color: #fff;position: absolute;bottom: 10%;border-radius: 5px;font-size: 12px;}
 .shop-list .btn-change{right: 2%;}
 .shop-list .btn-buy{right: 22%;}
-.shopping-infor{width: 100%;}
+.shopping-infor{width: 100%;margin-top: 15px;}
 .shopping-infor>img{width: 100%;max-width: 640px;}
 .sInfor{margin:20px;}
-.sInfor .title{}
-.sInfor button{}
+.sInfor p{margin-bottom: 10px;font-size: 16px;}
+.sInfor .title{font-size: 20px;}
+.sInfor button{background: #f0a30a;color: #fff;font-size: 12px;padding: 5px 10px;border-radius: 4px;}
 .sInfor .btn-buy{}
 .sInfor .btn-change{}
 .sInfor .money{}
-.sInfor .money .num{}
+.sInfor .money .num{color: #f0a30a;}
 
 /*housing_information*/
 .pc_deatils{margin-left: 990px;padding: 0 10px;position: absolute;top: 0;}
