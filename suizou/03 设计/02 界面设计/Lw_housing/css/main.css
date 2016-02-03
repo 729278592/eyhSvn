@@ -304,13 +304,13 @@ li .main{width: 45%;display: inline-block;white-space: nowrap;text-overflow: ell
 /*le_mall*/
 .shop-list{width: 100%;margin-left: 1%;}
 .shop-list li{width: 31.33%;margin-right: 2%;float: left;margin-top: 1.7%;position: relative;padding-bottom: 26.5%;}
-.shop-list li a{display: inline-block;width: 100%;position: absolute;top: 0;bottom: 0;left: 0;right: 0;}
+.shop-list li>div{display: inline-block;width: 100%;position: absolute;top: 0;bottom: 0;left: 0;right: 0;}
 .shop-list li a img:hover{opacity: 0.8;}
-.shop-list li a .item-b{padding: 3% 2%;position: absolute;}
-.shop-list li a .item-b .main{width: 100%;color: #666;font-size: 12px;}
-.shop-list li a .item-b .main .title{color: #333;font-size: 14px;}
-.shop-list li a .item-b .main .money{font-size: 14px;position: absolute;top: 12px;left: 289px;}
-.shop-list li a .item-b .main .money .num{color: #ff5300;}
+.shop-list li>div .item-b{padding: 3% 2%;position: absolute;}
+.shop-list li>div .item-b .main{width: 100%;color: #666;font-size: 12px;}
+.shop-list li>div .item-b .main .title{color: #333;font-size: 14px;}
+.shop-list li>div .item-b .main .money{font-size: 14px;position: absolute;top: 12px;left: 289px;}
+.shop-list li>div .item-b .main .money .num{color: #ff5300;}
 .shop-list .btn-change,.shop-list .btn-buy{padding: .5% 2%;background: #fca511;color: #fff;position: absolute;bottom: 10%;border-radius: 5px;font-size: 12px;}
 .shop-list .btn-change{right: 2%;}
 .shop-list .btn-buy{right: 22%;}
