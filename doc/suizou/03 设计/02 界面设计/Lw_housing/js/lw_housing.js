@@ -40,7 +40,7 @@ $(function(){
             mm.css({"display": "none"});
         }
     });
-    if($(window).height()<700){
+    if($(window).height()<715){
         $(".footer").css({"position":"relative","marginTop":"20px"})
     }
 
