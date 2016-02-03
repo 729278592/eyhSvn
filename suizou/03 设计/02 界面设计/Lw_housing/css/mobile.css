@@ -148,7 +148,8 @@
     .num-infor .name{}
     .num-infor .phone{font-size: 16px;}
     .num-infor .phone-img{margin-top: 10px;width: 35px;}
-    .shopping-infor{margin-top: 0px;}
+    .shopping-infor{margin-top: 0;}
+    .sInfor{margin-bottom:0;}
 }
 
 @media screen and (max-width: 414px) {

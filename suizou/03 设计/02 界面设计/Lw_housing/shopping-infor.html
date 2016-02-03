@@ -11,7 +11,6 @@
     <link rel="stylesheet" href="css/mobile.css"/>
     <style>
         html,.wrapper{background: #f6f6f6;}
-        .footer{position: absolute;bottom: 0;}
         @media screen and (max-width: 1400px){
 
             .w80{width: 1100px;margin-left: -550px;}
@@ -100,7 +99,34 @@
                         <button class="btn-buy">立即购买</button>
                         <button class="btn-change">立即兑换</button>
                     </p>
+                </div>
+                <div class="left production">
+                    <p class="production-head">产品参数</p>
+                    <div class="production-content">
+                        <p>
+                            <span class="type">品牌 :</span>
+                            贝合
+                        </p>
+                        <p>
+                            <span class="type">品牌 :</span>
+                            贝合
+                        </p>
 
+                        <p>
+                            <span class="type">品牌 :</span>
+                            贝合
+                        </p>
+
+                        <p>
+                            <span class="type">品牌 :</span>
+                            贝合
+                        </p>
+
+                        <p>
+                            <span class="type">品牌 :</span>
+                            贝合
+                        </p>
+                    </div>
                 </div>
             </div>
         </div>
@@ -132,19 +158,5 @@
 </div>
 <script src="plugins/jquery/js/jquery-1.11.3.min.js"></script>
 <script src="js/lw_housing.js"></script>
-<script>
-    window.onload = function(){
-        var shopList = document.getElementById("shopping-infor");
-        var footer = document.getElementById("footer");
-        var w80 = document.getElementById("w80");
-        if(shopList.offsetHeight<700){
-            footer.style.position = "absolute";
-        }
-        else{
-            footer.style.position = "relative";
-            w80.style.paddingBottom = "2%";
-        }
-    }
-</script>
 </body>
 </html>

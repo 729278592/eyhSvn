@@ -14,7 +14,6 @@
         .wrapper,.w80,.head{width: 100%;max-width: 640px;min-width: 0;}
         .head{background: #b6cff0;}
         .w80 li{border: 1px solid #dbdbdb;margin-bottom: 0;width: 100%;max-width: 640px;}
-        .w80 .li4{width: 100%;}
         .house-details{padding: 0 2%;bottom: 37px;}
         .item-b{height: 30px;line-height: 30px;padding: 0 10px;}
         .head-main>div{text-align: center;}
@@ -25,13 +24,10 @@
         .menu_mobile li a {display: inline-block;width: 100%;height: 50px;line-height: 50px;font-size: 14px;color: #fff;border-bottom: 1px solid #aaa;background: rgba(0,0,0,.8);text-align: center;}
         .menu_mobile li a:hover{text-decoration: none;}
         .menu_mobile .last a {border-bottom: none;}
-        @media screen and (max-width: 639px) {
-            #video{position: absolute;left:50%;top:20%;padding: 20px;border: 1px solid #dbdbdb;background: rgba(255,255,255,0.8);border-radius: 10px;width: 98%;margin-left: -49%;}
-            .video{width: 100%;}
-            .mask #video .close{width: 20px;height: 20px;position: absolute;background: #fff;border-radius: 30px;text-align: center;line-height: 20px;z-index: 100;top: 0;right: 0;}
-            .room-information .play,.w80 li .play,.ul-house li .play{opacity: 0.6;filter: alpha(opacity=60);cursor: pointer;width: 55px;height: 55px;background: #000;border-radius: 55px;position: absolute;left: 50%;top: 50%;color: #fff;text-align: center;line-height: 60px;font-size: 25px;z-index: 1002;margin-top: -50px;margin-left:-28px;text-indent: 2px;}
-            .room-information .play,.w80 li .play:hover,.ul-house li .play:hover{opacity: 1;filter: alpha(opacity=100);cursor: pointer;}
-        }
+        .w80 .active-mask{
+            opacity: 0.6;}
+        .w80 .not-house, .w80 .active-mask{bottom: 70px;}
+
     </style>
 </head>
 <body>
@@ -59,7 +55,7 @@
     <div class="content">
         <ul class="w80 clearfix mobile_w80">
             <li>
-                <div class="play" src="http://mvvideo2.meitudata.com/56163e35cac069064.mp4">
+                <div class="play" src="http://player.youku.com/embed/XNTgwNjc5OTAw">
                     <i class="glyphicon glyphicon-triangle-right"></i>
                 </div>
                 <a href="housing_information.html">
@@ -78,7 +74,7 @@
                 <div class="not-house"></div>
             </li>
             <li>
-                <div class="play" src="http://mvvideo2.meitudata.com/56163e35cac069064.mp4">
+                <div class="play" src="http://player.youku.com/embed/XNTgwNjc5OTAw">
                     <i class="glyphicon glyphicon-triangle-right"></i>
                 </div>
                 <a href="housing_information.html">
@@ -183,10 +179,9 @@
     </div>
     <div class="mask-bg hide"></div>
     <div class="mask hide">
-        <div id="video" class="hide">
+        <div class="hide video">
             <div class="close">×</div>
-            <video src="" controls="controls" class="video" autoplay="autoplay">
-            </video>
+            <iframe width="100%" height="100%" src="" frameborder=0 allowfullscreen></iframe>
         </div>
     </div>
 </div>
@@ -194,20 +189,21 @@
 <script src="js/lw_housing.js"></script>
 <script>
     /*视频播放*/
-    var mbm = $(".mask-bg,.mask");
-    var  wl = $(".w80 li");
-    var v = $("#video");
-    var cv = $(".video");
-    wl.delegate(".play", "click", function(){
+    var ml = $(".mobile_w80 li");
+    var mbm = $(".mask,.mask-bg");
+    var v =  $("iframe");
+    var m = $(".mask");
+    ml.delegate(".play", "click", function(){
         var src = $(this).attr("src");
         mbm.removeClass("hide");
-        v.removeClass("hide");
-        cv.attr({autoplay:"autoplay",src:src})
+        $(".video").removeClass("hide");
+        v.attr({autoplay:"autoplay",src:src})
     });
-    mbm.delegate(".close","click",function(){
+
+    m.delegate(".close","click",function(){
         mbm.addClass("hide");
-        cv.attr({autoplay:"",src:""})
-    });
+        v.attr({autoplay:"",src:""})
+    })
 </script>
 </body>
 </html>
