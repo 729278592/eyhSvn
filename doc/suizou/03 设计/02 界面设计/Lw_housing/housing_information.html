@@ -927,13 +927,22 @@
 
 
         /*服务费介绍*/
+        function heightAuto(){
+            $(".serversMoney-infor");
+            var ht = -parseInt($(".serversMoney-infor").outerHeight(true))/2+"px";
+            $(".serversMoney-infor").get(0).style.marginTop = ht;
+        }
         var sb = $(".service-bz");
         var si = $(".serversMoney-infor");
         sb.on("click",function(e){
             mbm.removeClass("hide");
             si.removeClass("hide");
             e.preventDefault();
-        })
+            heightAuto()
+        });
+
+
+
     });
 </script>
 </body>
