@@ -276,7 +276,6 @@ li .main{width: 45%;display: inline-block;white-space: nowrap;text-overflow: ell
 .w96{padding: 0 1.5%;color: #999;line-height: 30px;width: 100%;}
 
 
-
 .loadMap {width:360px;position:absolute;z-index:1000;top:50%;left: 50%;margin-left: -180px;margin-top: -103px;;}
 .loadpop {width:182px;height:182px;overflow:hidden;background:#fff;text-align:center;box-shadow:5px 15px 15px #ccc;position:relative;top:0;z-index:1;border-radius:182px;margin:0 auto;margin-bottom:24px;display: none;}
 .loadpop .loadIcon {position:absolute;bottom:8px;right:-2px}
