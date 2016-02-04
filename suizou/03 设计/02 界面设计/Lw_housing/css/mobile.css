@@ -151,9 +151,9 @@
     #myCarousel .carousel-control.left, #myCarousel .left-bg, #myCarousel .carousel-control.right, #myCarousel .right-bg{display: none;}
     .item-ul1 li .img-responsive,.item-ul li .img-responsive{width: 100%;}
     .item-ul1 li .infor-mask, .item-ul1 li .infor-mask-bg{bottom: 49px;}
-    .video{left: 0;margin-left: 0;height: 100%;margin-top: 0;top: 0;}
-    .video iframe{width: 100%;max-width: 640px;height: 320px;position: absolute;top: 50%;margin-top: -160px;}
-    .video .close{top:132px;}
+    .video{left: 0;margin-left: 0;height: 320px;margin-top: -160px;}
+    /*.video iframe{width: 100%;max-width: 640px;height: 320px;position: absolute;top: 50%;margin-top: -160px;}*/
+    /*.video .close{top:132px;}*/
 }
 
 @media screen and (max-width: 414px) {
