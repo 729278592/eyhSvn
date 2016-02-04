@@ -42,6 +42,7 @@
         .rental_mode{width: 85px;margin-bottom: 5px;margin-right: 0;padding: 0 2px;}
         .common {display: inline-block;padding: 0 1px;color: #666;margin-right: 0;}
         .room-information .play,.w80 li .play,.ul-house li .play{opacity: 0.6;filter: alpha(opacity=60);cursor: pointer;width: 55px;height: 55px;background: #000;border-radius: 55px;position: absolute;left: 50%;top: 50%;color: #fff;text-align: center;line-height: 60px;font-size: 25px;z-index: 1002;margin-top: -28px;margin-left:-28px;text-indent: 2px;}
+
         @media screen and (max-width: 639px) {
             html{overflow-x: hidden;}
             .head {background: rgba(0,0,0, .4)}
@@ -49,6 +50,8 @@
             .w80 li a .a-span:hover{background: transparent;}
             .new-house .w80{margin-left: 0;left: 0;}
             .item-ul1 .item-b{padding: 0.2% 2%;}
+
+
             #marquee ul li>img {
                 width: 640px;
                 height: 427px;
@@ -254,6 +257,8 @@
                         </div>
                     </div>
                     <div class="swiper-pagination"></div>
+                    <div class="swiper-button-next"></div>
+                    <div class="swiper-button-prev"></div>
                 </div>
                 <div class="ch-mask" style=""></div>
                 <div class="ch-mask-main">
@@ -424,6 +429,7 @@
                         </a>
                     </li>
                 </ul>
+
                 <img src="images/lw.jpg" class="img-responsive mobile_none" alt="Responsive image" style="margin-top: 20px;" title="Responsive image"/>
                 <div class="comon-head" style="background: #f4f4f4;">最新房源推荐 <p>实时更新</p></div>
                 <div style="background: #f4f4f4;padding-bottom: 2%;" class="new-house">
@@ -441,7 +447,7 @@
                                                     <img src="images/rent.png" alt="" class="rent"/>
                                                 </div>
                                             </a>
-                                            <div class="play hide" src="http://player.youku.com/embed/XNTgwNjc5OTAw">
+                                            <div class="play hide" src="http://yuntv.letv.com/bcloud.html?uu=6mgaqg1zfo&amp;vu=f0711b5e52&amp;auto_play=1&amp;gpcflag=1&amp;width=620&amp;height=380">
                                                 <i class="glyphicon glyphicon-triangle-right"></i>
                                             </div>
                                             <div class="item-b">
@@ -488,8 +494,10 @@
                                             <div class="play" src="http://player.youku.com/embed/XNTgwNjc5OTAw">
                                                 <i class="glyphicon glyphicon-triangle-right"></i>
                                             </div>
+
+
                                             <div class="item-b">
-                                                <span class="title">南坪.星宇花园</span>
+                                                <span class="title">南坪.星宇花园1</span>
                                                 <span class="time right">800元/月</span><br/>
                                                 <span class="main">周边最好的客厅主卧。休闲应有尽有</span>
                                                 <a href="housing_information.html" class="more">
@@ -499,9 +507,17 @@
                                             </div>
                                         </li>
                                         <li>
-                                            <a href="housing_information.html">
-                                                <img src="images/jiju3.jpg" class="img-responsive" alt="Responsive image" title="房间详情"/>
+                                            <a href="javascript:video(0)">
+                                                <img src="images/jiju1.jpg" class="img-responsive" alt="Responsive image" title="房间详情"/>
+                                                <div class="infor-mask-bg">
+                                                </div>
+                                                <div class="infor-mask">
+                                                    <img src="images/rent.png" alt="" class="rent"/>
+                                                </div>
                                             </a>
+                                            <div class="play" src="http://yuntv.letv.com/bcloud.html?uu=6mgaqg1zfo&amp;vu=f0711b5e52&amp;auto_play=1&amp;gpcflag=1&amp;width=620&amp;height=380">
+                                                <i class="glyphicon glyphicon-triangle-right"></i>
+                                            </div>
                                             <div class="item-b">
                                                 <span class="title">南坪.星宇花园</span>
                                                 <span class="time right">800元/月</span><br/>
@@ -563,7 +579,8 @@
                                                 <img src="images/jiju3.jpg" class="img-responsive" alt="Responsive image" title="房间详情"/>
                                             </a>
                                             <div class="item-b">
-                                                  <span class="title">南坪.星宇花园</span>                                                 <span class="time right">800元/月</span><br/>
+                                                <span class="title">南坪.星宇花园</span>
+                                                <span class="time right">800元/月</span><br/>
                                                 <span class="main">周边最好的客厅主卧。休闲应有尽有</span>
                                                 <a href="housing_information.html" class="more">
                                                     MORE+
@@ -576,7 +593,8 @@
                                                 <img src="images/jiju3.jpg" class="img-responsive" alt="Responsive image" title="房间详情"/>
                                             </a>
                                             <div class="item-b">
-                                                  <span class="title">南坪.星宇花园</span>                                                 <span class="time right">800元/月</span><br/>
+                                                <span class="title">南坪.星宇花园</span>
+                                                <span class="time right">800元/月</span><br/>
                                                 <span class="main">周边最好的客厅主卧。休闲应有尽有</span>
                                                 <a href="housing_information.html" class="more">
                                                     MORE+
@@ -880,11 +898,12 @@
                 </a>
                 <button class="close" id="close"><i class="glyphicon glyphicon-remove"></i></button>
             </div>
-            <div class="hide video">
+            <div class="video hide">
                 <div class="close">×</div>
-                <iframe width="100%" height="100%" src="" frameborder=0 allowfullscreen></iframe>
-            </div>
+                <iframe width="100%" height="100%" src="http://player.youku.com/embed/XNTgwNjc5OTAw" frameborder=0 allowfullscreen></iframe>
+            </div>;
         </div>
+
     </div>
     <script src="plugins/jquery/js/jquery-1.11.3.min.js"></script>
     <script src="plugins/picture_transparency/js/move.js"></script>
@@ -923,7 +942,6 @@
             if($(window).width()<640){
 
             }
-
             else{
                 var w = $(".head");
                 $(window).scroll(function () {
@@ -939,7 +957,7 @@
             /*顶部显示*/
             var bb = $(".use-love");
             var sm = $(".show-md");
-            var h  = $(".head")
+            var h  = $(".head");
             var showMd = document.getElementById("show-md");
             bb.on("click",function(){
                 sm.removeClass("hide");
@@ -964,26 +982,28 @@
 
             /*视频播放*/
             var mbm = $(".mask-bg,.mask");
-            var  wl = $(".w80 li");
+            var wl = $(".w80 li");
+            var m = $(".mask");
             var v = $(".video");
             var cv = $("iframe");
             wl.delegate(".play", "click", function(){
                 var src = $(this).attr("src");
                 mbm.removeClass("hide");
                 v.removeClass("hide");
-                cv.attr({autoplay:"autoplay",src:src})
+                cv.attr({autoplay:"autoplay",src:src});
             });
             mbm.delegate(".close","click",function(){
                 mbm.addClass("hide");
-                cv.attr({autoplay:"",src:""})
+                cv.attr({autoplay:"",src:""});
                 v.addClass("hide");
             });
-
             /*活动切换*/
             if($(window).width()<640){
                 var bb = $(".use-love");
                     bb.addClass("hide");
                 swiper = new Swiper('#swiper-container1', {
+                    prevButton:'.swiper-button-prev',
+                    nextButton:'.swiper-button-next',
                     slidesPerView: 1,
                     pagination:'.swiper-pagination',
                     paginationClickable: true,
