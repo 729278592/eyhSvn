@@ -814,19 +814,10 @@
 </script>
 <script>
     $(function(){
-        //    if($(window).width()>640){
-//        window.onresize = function(){ location=location };
-//    }
         var a = $(".address");
         var mbm = $(".mask-bg,.mask");
         var d = $(".dialog");
 
-        //    var lm = $(".le-mall");
-        //    var s =$(".staging")
-        //    s.on("click",function(){
-        //        mbm.removeClass("hide");
-        //        lm.removeClass("hide");
-        //    });
         a.on("click",function(){
             mbm.removeClass("hide");
             d.removeClass("hide");
@@ -866,6 +857,9 @@
                 alert("占无视频")
             }
         });
+
+
+
         /*视频播放*/
         var mbm = $(".mask-bg,.mask");
         var wl = $(".w80");
@@ -900,10 +894,10 @@
                 autoplayDisableOnInteraction: false
             });
         }
-
         if($(window).height()<700){
             $(".footer").css({"position":"relative","marginTop":"0"})
         }
+
 
         /*导航切换*/
         var hl  = $(".house-menu li");
@@ -916,7 +910,6 @@
                 atl.eq(i).siblings(atl).removeClass("active");
             })
         });
-
         var ttf = $(".that-title .fa");
         var mrl = $(".mobile-room li");
         ttf.on("click",function(){
@@ -940,9 +933,6 @@
             e.preventDefault();
             heightAuto()
         });
-
-
-
     });
 </script>
 </body>
