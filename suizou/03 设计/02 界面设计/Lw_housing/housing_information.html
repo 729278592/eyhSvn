@@ -879,8 +879,8 @@
         });
         mbm.delegate(".close","click",function(){
             mbm.addClass("hide");
-            v.addClass("hide");
-            cv.attr({autoplay:"",src:""})
+            $(this).parent().addClass("hide");
+            $(this).next("iframe").attr({autoplay:"",src:""})
         });
         var bb = $(".bus-way-style .btn");
         bb.on("click",function(){
