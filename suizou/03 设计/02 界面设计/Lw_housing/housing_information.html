@@ -516,7 +516,7 @@
                                 <p>配置 : <span class="jj">飘窗</span><span class="jj">阳台</span></p>
                             </div>
                         </li>
-                        <li>
+                        <li class="">
                             <div class="play" src="http://yuntv.letv.com/bcloud.html?uu=6mgaqg1zfo&vu=8e7c52117c&pu=b778877a45&auto_play=1&gpcflag=1&width=100%&height=320">
                                 <i class="glyphicon glyphicon-triangle-right"></i>
                             </div>
@@ -528,7 +528,7 @@
                                 <p>配置 : <span class="jj">飘窗</span><span class="jj">阳台</span></p>
                             </div>
                         </li>
-                        <li>
+                        <li class="">
                             <div class="play" src="http://yuntv.letv.com/bcloud.html?uu=6mgaqg1zfo&vu=8e7c52117c&pu=b778877a45&auto_play=1&gpcflag=1&width=100%&height=320">
                                 <i class="glyphicon glyphicon-triangle-right"></i>
                             </div>
@@ -540,7 +540,7 @@
                                 <p>配置 : <span class="jj">飘窗</span><span class="jj">阳台</span></p>
                             </div>
                         </li>
-                        <li>
+                        <li class="">
                             <div class="play" src="http://yuntv.letv.com/bcloud.html?uu=6mgaqg1zfo&vu=8e7c52117c&pu=b778877a45&auto_play=1&gpcflag=1&width=100%&height=320">
                                 <i class="glyphicon glyphicon-triangle-right"></i>
                             </div>
@@ -552,7 +552,7 @@
                                 <p>配置 : <span class="jj">飘窗</span><span class="jj">阳台</span></p>
                             </div>
                         </li>
-                        <li>
+                        <li class="">
                             <div class="play hide" src="http://yuntv.letv.com/bcloud.html?uu=6mgaqg1zfo&vu=8e7c52117c&pu=b778877a45&auto_play=1&gpcflag=1&width=100%&height=320">
                                 <i class="glyphicon glyphicon-triangle-right"></i>
                             </div>
@@ -911,10 +911,17 @@
         var ttf = $(".that-title .fa");
         var mrl = $(".mobile-room li");
         ttf.on("click",function(){
-            if (mrl.css("display") == "none") {
-                mrl.addClass("active");
+            if (mrl.is(':hidden')) {
+                mrl.show();
+                $(this).removeClass("fa-caret-right").addClass("fa-caret-down");
+            }
+            else{
+                mrl.not(".active").hide();
+                $(this).removeClass("fa-caret-down").addClass("fa-caret-right");
             }
         });
+
+
 
 
         /*服务费介绍*/

@@ -608,7 +608,8 @@ input.btn-click:hover{background: #e16a20}
     overflow: hidden;}
 .list li.last{margin-right: 0;}
 .list li .title{font-size: 14px;color: #333;}
-.list li .main-details{font-size: 12px;color: #666;}
+.list li .main-details{font-size: 12px;color: #666;-o-text-overflow: ellipsis;text-overflow: ellipsis;
+    overflow: hidden;white-space: nowrap}
 
 
 /*find-roomate*/
