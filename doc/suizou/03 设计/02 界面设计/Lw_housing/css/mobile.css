@@ -154,6 +154,7 @@
     .video{left: 0;margin-left: 0;height: 320px;margin-top: -160px;}
     .serversMoney-infor{left: 0;margin-left: 0;}
     .video iframe{max-width:640px;}
+    .overflow{overflow: hidden;height: 100%;}
 }
 
 @media screen and (max-width: 414px) {

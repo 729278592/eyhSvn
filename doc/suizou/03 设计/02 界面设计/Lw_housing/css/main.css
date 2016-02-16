@@ -7,14 +7,14 @@ a:hover{cursor: pointer;text-decoration: none;}
 .clearfix:after {content: ".";display: block;clear: both;visibility: hidden;line-height: 0;height: 0;}
 .clearfix{display: inline-block;}
 .video{width: 100%;max-width: 640px;position: fixed;left: 50%;top: 50%;margin-left: -320px;margin-top: -160px;background: rgba(0,0,0,0.6);height: 320px;}
-.video .close{width: 20px;height: 20px;position: absolute;top:5px;right:5px;background: #fff;border-radius: 20px;text-align: center;line-height: 20px;opacity: .8;}
+.video .close{width: 20px;height: 20px;position: absolute;top:5px;right:5px;background: #fff;border-radius: 20px;text-align: center;line-height: 20px;opacity: .8;z-index: 10000;}
 .video1{margin-left: -468px;margin-top: -325px;position: absolute;}
 .noe-video{color: #ff6965;font-size: 24px;text-align: center;margin-top: 220px;}
 a::selection,button::selection{background:transparent;}
 .wrapper{position: relative;}
 
 /*common*/
-.mask-bg,.mask{position: fixed;left: 0;right: 0;top: 0;bottom: 0;z-index: 1000002;color: #333;}
+.mask-bg,.mask,.video-mask{position: fixed;left: 0;right: 0;top: 0;bottom: 0;z-index: 1000002;color: #333;}
 .mask-bg{background: #000;opacity: 0.6;filter: alpha(opacity=60);}
 .mask-content{text-align: center;width: 100%;color: #33a9d4;padding: 2% 0 1% 0;border-radius: 4px;}
 .mask-content .title{font-weight: bold;font-size: 18px;}

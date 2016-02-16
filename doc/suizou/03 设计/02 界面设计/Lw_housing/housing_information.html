@@ -774,9 +774,10 @@
                 <button class="btn-sure">提交</button>
             </div>
         </div>
-        <div class="video hide">
-            <div class="close">×</div>
-            <iframe width="100%" class="iframe-video" height="100%" src="" frameborder=0 allowfullscreen></iframe>
+        <div class="video-mask hide">
+            <div class="video">
+                <iframe width="100%" class="iframe-video" height="100%" src="" frameborder=0 allowfullscreen></iframe>
+            </div>
         </div>
         <div class="serversMoney-infor hide">
             <p class="title">什么是服务费？</p>
@@ -826,7 +827,7 @@
             mbm.addClass("hide");
             box.addClass("hide");
         });
-        var dcb = $(".dialog .close,.dialog-foot .btn-default")
+        var dcb = $(".dialog .close,.dialog-foot .btn-default");
         dcb.on("click",function(){
             mbm.addClass("hide");
             d.addClass("hide");
@@ -863,17 +864,21 @@
         var wl = $(".w80");
         var v = $(".video");
         var cv = $("iframe");
+        var m = $(".mask");
         wl.delegate(".play", "click", function(){
             var src = $(this).attr("src");
             mbm.removeClass("hide");
-            v.removeClass("hide");
-            iv.attr({autoplay:"autoplay",src:src})
+            $(".video-mask").removeClass("hide");
+            iv.attr({autoplay:"autoplay",src:src});
+            $("html,body,.wrapper,.mask").addClass("overflow");
         });
-        mbm.delegate(".close","click",function(){
+        $(".video-mask").on("click",function(){
             mbm.addClass("hide");
-            $(this).parent().addClass("hide");
-            $(this).next("iframe").attr({autoplay:"",src:""})
+            iv.attr({autoplay:"",src:""});
+            $(".video-mask").addClass("hide");
+            $("html,body,.wrapper,.mask").removeClass("overflow");
         });
+
         var bb = $(".bus-way-style .btn");
         bb.on("click",function(){
             $(this).addClass("selected");
@@ -938,6 +943,11 @@
             e.preventDefault();
             heightAuto()
         });
+        var sc = $(".serversMoney-infor .close");
+        sc.on("click",function(){
+            mbm.addClass("hide");
+            si.addClass("hide");
+        })
     });
 </script>
 </body>

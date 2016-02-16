@@ -334,9 +334,10 @@
                 </div>
             </div>
         </div>
-        <div class="hide video">
-            <div class="close">×</div>
-            <iframe width="100%" height="100%" src="" frameborder=0 allowfullscreen></iframe>
+        <div class="video-mask hide">
+            <div class="video">
+                <iframe width="100%" class="iframe-video" height="100%" src="" frameborder=0 allowfullscreen></iframe>
+            </div>
         </div>
     </div>
 </div>
@@ -366,15 +367,19 @@
     wl.delegate(".play", "click", function(){
         var src = $(this).attr("src");
         mbm.removeClass("hide");
-        v.removeClass("hide");
+        $(".video-mask").removeClass("hide");
         cv.attr({autoplay:"autoplay",src:src})
     });
     mbm.delegate(".close","click",function(){
         mbm.addClass("hide");
-        v.addClass("hide");
-        cv.attr({autoplay:"",src:""})
+        $(this).closest(".box").addClass("hide");
     });
-
+    $(".video-mask").on("click",function(){
+        mbm.addClass("hide");
+        cv.attr({autoplay:"",src:""});
+        $(".video-mask").addClass("hide");
+        $("html,body,.wrapper,.mask").removeClass("overflow");
+    });
 </script>
 </body>
 </html>
