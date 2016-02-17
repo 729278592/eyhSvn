@@ -51,6 +51,7 @@ $(function(){
         if((contentHeight+footHeight+headHeight)<windoeHeight){
             cm.css({height:windoeHeight-headHeight-footHeight+"px"});
             $("html").css({"overflow-y":"hidden"});
+
         }else{
             $("html").css({"overflow-y":"auto"});
             cm.css({"height":"auto"});
