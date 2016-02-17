@@ -155,6 +155,8 @@
     .serversMoney-infor{left: 0;margin-left: 0;}
     .video iframe{max-width:640px;}
     .overflow{overflow: hidden;height: 100%;}
+    .active-rent li a .active-mask .rent{position:absolute;widrh:80px;left:50%;margin-left:-83px;top:50%;margin-top:-50px;}
+    .pc_deatils li .bohao{background: #76a4d4;display: inline-block;}
 }
 
 @media screen and (max-width: 414px) {

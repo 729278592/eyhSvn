@@ -345,7 +345,7 @@ li .main{width: 45%;display: inline-block;white-space: nowrap;text-overflow: ell
 .pc_deatils .right-now{background: #fba511;margin-right: 10px;}
 .pc_deatils li .address{margin-right: 10px;}
 .pc_deatils li .right-now,.pc_deatils li .address,.pc_deatils li .bohao{width: 100px;height: 40px;line-height: 40px;text-align: center;border-radius: 5px;color: #fff;font-size: 14px;}
-.pc_deatils li .bohao{background: #76a4d4;display: inline-block;}
+
 .pc_deatils .address,.w80>.deatils .staging{background: #e95757;}
 .pc_deatils .staging{height: 25px;line-height: 25px;font-size: 14px;float:right;width: 100px;background: red;
     margin-top: -3px;display: inline-block;text-align: center;color: #fff;border-radius: 5px;}
@@ -373,9 +373,10 @@ li .main{width: 45%;display: inline-block;white-space: nowrap;text-overflow: ell
 .room-information li .li-div .img-responsive:hover{opacity: 0.8;filter: alpha(opacity=80);width: 455px;height: 304px;}
 .room-information li .img-responsive{width: 455px;height: 304px;}
 .room-information li .rent,.item .infor-mask .rent,.ul-house .active-mask .rent{position: absolute;left: 50%;top: 50%;margin-top: -35px;margin-left: -60px;width: 30%;}
-.ul-house .active-mask .rent{margin-top: -30px;margin-left: -50px;}
+.room-information li .rent{margin-left: -70px;margin-top:-30px;}
+.ul-house .active-mask .rent{margin-top: -55px;margin-left: -80px;}
 .item-ul1 li .infor-mask .rent{margin-left: -62px;margin-top: -30px;}
-.item .infor-mask .rent{margin-top: -47px;margin-left: -82px;}
+.item .infor-mask .rent{margin-top: -10px;margin-left: -70px;width:133px;}
 .room-information li .bottom-ts{border: 1px solid #a7c4e3;background: #ededed;height: 86px;border-top: none;}
 .room-information li .bottom-ts p{font-size: 14px;color: #333;}
 .bottom-ts p{padding: 5px;position: relative;top: 15px;left: 15px;display: inline-block;}
@@ -660,8 +661,6 @@ input.btn-click:hover{background: #e16a20}
     .activity{padding-bottom: 8%;position: relative;}
     .w96{padding: 0 2%;}
     .video1{margin-left: -430px;margin-top: -254px;}
-
-
 }
 
 @media screen and (min-width: 1400px) {
