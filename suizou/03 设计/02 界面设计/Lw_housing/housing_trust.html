@@ -110,11 +110,11 @@
                     </li>
                     <li>
                         <img src="images/tuo1.jpg"  class="img-responsive" alt="Responsive image"/>
-                        <div class="play "src="http://yuntv.letv.com/bcloud.html?uu=6mgaqg1zfo&vu=8e7c52117c&pu=b778877a45&auto_play=1&gpcflag=1&width=100%&height=320&max-width=640">
+                        <div class="play" src="http://yuntv.letv.com/bcloud.html?uu=6mgaqg1zfo&vu=8e7c52117c&pu=b778877a45&auto_play=1&gpcflag=1&width=100%&height=320">
                             <i class="glyphicon glyphicon-triangle-right"></i>
                         </div>
                         <div class="choice-bottom">
-                            <button id="play">团队介绍</button>
+                            <button id="play" src="http://yuntv.letv.com/bcloud.html?uu=6mgaqg1zfo&vu=8e7c52117c&pu=b778877a45&auto_play=1&gpcflag=1&width=100%&height=320">团队介绍</button>
                         </div>
                     </li>
                 </ul>
@@ -361,10 +361,10 @@
     });
 
 
-    var  wl = $(".choice li");
+    var wl = $(".choice li,.choice-bottom");
     var v = $(".video");
     var cv = $("iframe");
-    wl.delegate(".play", "click", function(){
+    wl.delegate(".play,#play", "click", function(){
         var src = $(this).attr("src");
         mbm.removeClass("hide");
         $(".video-mask").removeClass("hide");
