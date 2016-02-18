@@ -198,8 +198,9 @@ a:link{text-decoration: none;}
 .security .securityleft,.securityleft-bg{left: 0;}
 .security .securityright,.securityright-bg{right: 0;}
 .security .securityright:hover,.security .securityleft:hover{background: rgba(0,0,0,0.8);}
-.s-details{padding: 10px 10px 0 10px;background: #fff;color: #999;width: 313px;font-size: 14px;height: 80px;}
-
+.s-details{padding: 10px 10px 0 10px;background: #fff;color: #999;width: 313px;font-size: 14px;height: 80px;
+   }
+.s-details p{line-height: 20px;}
 
 .we{margin-right: 10px;position: fixed;right: 20px;z-index: 150;bottom: 80px;}
 .we li{width: 60px;height: 60px;margin-bottom: 12px;}

@@ -1,7 +1,7 @@
 /**
  * Created by eyohu023 on 2015/9/2.
  */
-$(function(){
+
     /*全屏图片居中*/
     var si = $(".auto-img");
     si.each(function(i){
@@ -115,4 +115,4 @@ $(function(){
             $(this).find(".qrcode").addClass("hide");
         }
     );
-});
+
