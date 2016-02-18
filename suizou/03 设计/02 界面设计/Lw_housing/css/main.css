@@ -598,6 +598,7 @@ input.btn-click:hover{background: #e16a20}
 /*activey*/
 #marquee{width:1380px;height:307px;overflow:hidden; }
 #marquee ul li{float:left; padding:0 1px;width: 460px;height: 307px;position: relative;}
+#marquee ul li>img:hover{cursor: pointer;}
 #marquee ul li .item-bt{position: absolute;bottom: 0;}
 #marquee ul li img{display:block;width: 100%;}
 #marquee ul li>img{width: 460px;height: 307px;}

@@ -70,7 +70,7 @@
 
     /*space-creation.html*/
     /*两行文字大省略号*/
-    var ds = $(".deatils-p");
+    var ds = $(".deatils-p,.s-details");
     ds.each(function(){
         var divH = $(this).height();
         var $p = $("p", $(this)).eq(0);
