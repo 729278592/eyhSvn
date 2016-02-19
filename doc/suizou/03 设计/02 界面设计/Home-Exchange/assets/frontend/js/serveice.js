@@ -244,5 +244,62 @@ $(function(){
     $(".server-ul li").hover(function(){},
         function(){
             $(this).find(".service-infor").hide();
-        })
+        });
+
+
+
+    /*护理时间选择*/
+    var select2 = $(".select2");
+    var date = new Date();
+    var str1;
+    var num1,num;
+    $(".jsActive>div.active").delegate(".btn-sureTime","click",function(){
+        $(this).closest(".chiocetime").addClass("hide");
+    });
+    $(".select1").on("change",function(){
+        num1 = parseInt($(".select1 option:selected").text());
+        num  = parseInt($(".select1 option:last").text())-num1;
+        str1 = "";
+        for(var i = 0;i<num;i++){
+            str1 += ' <option value="">'+ ++num1 +':00</option>';
+        }
+        select2.html(str1);
+    });
+
+    function getFirstAndLastMonthDay( year, month){
+        var firstdate = year + '-' + month + '-01';
+        var day = new Date(year,month,0);
+        var lastdate = year + '-' + month + '-' + day.getDate();//获取当月最后一天日期
+        //给文本控件赋值。同下
+        var date = new Date();
+        var str = '<div class="time-date">'+
+            '<div class="head-time">'+date.getFullYear()+'年'+(date.getMonth()+1)+'月'+'</div>'+
+            '<ul class="time-menu clearfix">';
+        for(var i = 1; i<=day.getDate() ;i++){
+            str += '<li>'+i+'</li>'
+        }
+        str += '</ul></div>';
+        $(".after").after(str);
+        var tml = $(".time-menu li");
+        var tl = tml.eq(date.getDate()-1);
+        var cc = $(".chiocetime");
+        var text = tl.text();
+        var next = tl.nextAll();
+        var prev = tl.prevAll();
+        if(text==date.getDate()){
+            tl.addClass("active");
+            next.addClass("next-active");
+            prev.addClass("prev-active");
+        }
+        next.each(function(i){
+            $(this).on("click",function(e){
+                e.stopPropagation();
+                cc.removeClass("hide");
+            })
+        });
+//        $("html").on("click",function(){
+//            cc.addClass("hide")
+//        })
+    }
+    getFirstAndLastMonthDay(date.getFullYear(),(date.getMonth()+1));
 });
