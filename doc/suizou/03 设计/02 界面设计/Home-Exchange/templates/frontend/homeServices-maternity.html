@@ -49,7 +49,6 @@
                     <a href="login.html">
                         登录
                     </a>
-
                 </li>
             </ul>
         </div>
@@ -158,26 +157,41 @@
                                 <button class="btn-type right mb10">中级</button>
                                 <button class="btn-type left">低级</button>
                             </div>
-                            <p class="title pt0">请输入您需要服务的时间</p>
-                            <div class="reserve-date clearfix">
-                                <div class="div-wdate left">
-                                    <input id="d4311" class="Wdate" type="text" placeholder="2015-10-10"  onfocus="  WdatePicker({ dateFmt: 'yyyy-MM', isShowToday: false, isShowClear: false })"/>
-                                    <i class="fa fa-calendar"></i>
-                                </div>
-                                <select name="" class="select-time right inputDisable">
-                                    <option value="时间">时间</option>
-                                    <option value="12:00">1:00</option>
-                                    <option value="13:00">2:00</option>
-                                    <option value="12:00">3:00</option>
-                                    <option value="13:00">4:00</option>
-                                    <option value="12:00">5:00</option>
-                                    <option value="13:00">6:00</option>
+                            <p class="title pt0 after">请输入您需要服务的时间</p>
+                            <div class="chiocetime hide">
+                                <p class="title">请输入护理时间</p>
+                                <select name="" class="select1">
+                                    <option value="9:00">9:00</option>
+                                    <option value="10:00">10:00</option>
+                                    <option value="11:00">11:00</option>
+                                    <option value="12:00">12:00</option>
+                                    <option value="13:00">13:00</option>
+                                    <option value="14:00">14:00</option>
+                                    <option value="15:00">15:00</option>
+                                    <option value="16:00">16:00</option>
+                                    <option value="17:00">17:00</option>
+                                    <option value="18:00">18:00</option>
                                 </select>
+                                <span>到</span>
+                                <select name="" class="select2">
+                                    <option value="10:00">10:00</option>
+                                    <option value="11:00">11:00</option>
+                                    <option value="12:00">12:00</option>
+                                    <option value="13:00">13:00</option>
+                                    <option value="14:00">14:00</option>
+                                    <option value="15:00">15:00</option>
+                                    <option value="16:00">16:00</option>
+                                    <option value="17:00">17:00</option>
+                                    <option value="18:00">18:00</option>
+                                </select>
+                                <button class="btn-sureTime">确定</button>
                             </div>
+
                             <p class="title">
                                 <label>
-                                    <input type="checkbox"/> 我已经阅读并同意《家服汇用户使用协议》
+                                    <input type="checkbox"/> 我已经阅读并同意
                                 </label>
+                                <a href="#">《家服汇用户使用协议》</a>
                             </p>
                             <div class="div-order">
                                 <a href="homeServices-maternitySearch.html" class="btn-order btn-mother">找个好孕妈妈go》</a>
@@ -367,7 +381,7 @@
 
                                         <p>
                                             <span class="type">经验:</span>
-                                            <select name="" id="">
+                                            <select name="">
                                                 <option value="一年">一年</option>
                                                 <option value="两年">两年</option>
                                                 <option value="三年">三年</option>
@@ -465,21 +479,6 @@
                                 <button class="btn-type left">低级</button>
                             </div>
                             <p class="title pt0">请输入您需要服务的时间</p>
-                            <div class="reserve-date clearfix">
-                                <div class="div-wdate left">
-                                    <input id="d4311" class="Wdate" type="text" placeholder="2015-10-10"  onfocus="  WdatePicker({ dateFmt: 'yyyy-MM', isShowToday: false, isShowClear: false })"/>
-                                    <i class="fa fa-calendar"></i>
-                                </div>
-                                <select name="" class="select-time right inputDisable">
-                                    <option value="时间">时间</option>
-                                    <option value="12:00">1:00</option>
-                                    <option value="13:00">2:00</option>
-                                    <option value="12:00">3:00</option>
-                                    <option value="13:00">4:00</option>
-                                    <option value="12:00">5:00</option>
-                                    <option value="13:00">6:00</option>
-                                </select>
-                            </div>
                             <p class="title">
                                 <label>
                                     <input type="checkbox"/> 我已经阅读并同意《家服汇用户使用协议》
@@ -1087,5 +1086,62 @@
     mb.on("click",function(){
         ma.addClass("hide")
     })
+</script>
+
+<script>
+    var select2 = $(".select2");
+    var date = new Date();
+    var str1;
+    var num1,num;
+    $(".jsActive>div.active").delegate(".btn-sureTime","click",function(){
+        $(this).closest(".chiocetime").addClass("hide");
+    });
+    $(".select1").on("change",function(){
+        num1 = parseInt($(".select1 option:selected").text());
+        num  = parseInt($(".select1 option:last").text())-num1;
+        str1 = "";
+        for(var i = 0;i<num;i++){
+            str1 += ' <option value="">'+ ++num1 +':00</option>';
+        }
+        select2.html(str1);
+    });
+
+    function getFirstAndLastMonthDay( year, month){
+        var firstdate = year + '-' + month + '-01';
+        var day = new Date(year,month,0);
+        var lastdate = year + '-' + month + '-' + day.getDate();//获取当月最后一天日期
+        //给文本控件赋值。同下
+        var date = new Date();
+        var str = '<div class="time-date">'+
+                '<div class="head-time">'+date.getFullYear()+'年'+(date.getMonth()+1)+'月'+'</div>'+
+                '<ul class="time-menu clearfix">';
+        for(var i = 1; i<=day.getDate() ;i++){
+            str += '<li>'+i+'</li>'
+        }
+        str += '</ul></div>';
+        $(".after").after(str);
+        var tml = $(".time-menu li");
+        var tl = tml.eq(date.getDate()-1);
+        var cc = $(".chiocetime");
+        var text = tl.text();
+        var next = tl.nextAll();
+        var prev = tl.prevAll();
+        if(text==date.getDate()){
+            tl.addClass("active");
+            next.addClass("next-active");
+            prev.addClass("prev-active");
+        }
+        next.each(function(i){
+            $(this).on("click",function(e){
+                e.stopPropagation();
+                cc.removeClass("hide");
+            })
+        });
+//        $("html").on("click",function(){
+//            cc.addClass("hide")
+//        })
+    }
+    getFirstAndLastMonthDay(date.getFullYear(),(date.getMonth()+1));
+
 </script>
 </html>
