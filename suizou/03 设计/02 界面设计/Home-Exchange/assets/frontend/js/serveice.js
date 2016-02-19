@@ -201,7 +201,6 @@ $(function(){
         });
     });
 
-
     var ft = $(".fl-type");
     var bt = $(".btn-type");
     ft.each(function(){
@@ -210,6 +209,9 @@ $(function(){
            $(this).siblings(bt).removeClass("active");
        })
     });
+
+
+
     /*表单的控制*/
     var jdt = $(".jsDisabledType");
     var di = $(".div-inputs1");
@@ -233,4 +235,14 @@ $(function(){
             dw.css({background:"#fff"})
         }
     });
-})
+
+
+    /*服务信息的详情*/
+    $(".server-ul li .btn-infor").on("click",function(){
+        $(this).next(".service-infor").show();
+    });
+    $(".server-ul li").hover(function(){},
+        function(){
+            $(this).find(".service-infor").hide();
+        })
+});

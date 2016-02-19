@@ -29,8 +29,8 @@
                 if(isNaN(spinneriNow)){
                     spinner.val(opts.defineNum);
                     spinner.removeClass("cuo");
-                    reduce.addClass("to_disabled");
                     total.text(opts.defineNum);
+                    reduce.addClass("to_disabled");
                 }
             },
             totalMoney:function(){
