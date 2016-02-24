@@ -1188,6 +1188,10 @@ p>label>input{position: relative;top: 2px;}
 .communit-input .input-search{width: 100%;left: 0;margin-bottom: 5px;}
 .communit-input .input-search .text{width: 75.5%;border-radius: 0;}
 .communit-input .input-search .cw-icon{width: 23.5%;border-radius: 0;background: #fbb432;height: 38px;font-size: 14px;}
+
+
+
+
 /*homeServices-nursingworkers*/
 .nursingworkers{background: #fff;padding: 10px 10px 0 10px;width: 1004px;}
 .nursingworkers.pl0{width: 1014px;padding-left: 0;}
@@ -1797,6 +1801,15 @@ tr th,tr td{ text-align:center;font-size: 14px;border:1px solid #fbb432;color: #
 .span-s1:hover{cursor: pointer;}
 .span-s1.active{color: #fab432;}
 .sca-ul1{margin-bottom: 10px;}
+
+
+
+
+.disaster-area{font-size: 14px;color: #999;width: 100%;background: #fff;}
+.gybz-infor{position: relative;left:15px;top: 15px;width: 40%;display: inline-block;}
+.gybz-infor>.title{font-size: 18px;font-family: "微软雅黑";color: #333;margin-bottom: 20px;}
+.gybz-infor p{line-height: 26px;}
+
 
 
 /*media*/
