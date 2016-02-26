@@ -833,6 +833,7 @@ label.error {color: #EA5200;margin-bottom: 0;}
 .div-table table{ border-collapse:collapse;width: 96%;margin: 10px auto;}
 .div-table table tr th,.div-table table tr td{ text-align:center;font-size: 14px;border:1px solid #fbb432;color: #565656;height: 2.6em;}
 .div-table table tr td{padding: 5px 0;}
+.div-table table tr td .at-input{width: 40%;height: 26px;border: 1px solid #dbdbdb;padding-left: 10px;line-height: 26px;}
 .div-table table tr td .btn-buy{padding: 5px 20px;color: #fff;background: #fbb432;border-radius: 4px;}
 .keep-commont{position: relative;width: 660px;height: 290px;}
 .keep-commont>.title{width: 650px;height: 40px;padding-left: 10px;line-height: 40px;color: #fff;background: #52ba92;}
@@ -849,7 +850,7 @@ label.error {color: #EA5200;margin-bottom: 0;}
 .reserve>.title.bg5{background: #68b586;}
 .reserve-indormation{background: #f1eee7;width: 310px;padding: 0 10px;padding-bottom: 30px;}
 .reserve-indormation.bf1{background: #e4f3fa;}
-.reserve-indormation>.title{padding: 10px 0;color: #999;font-size: 14px;}
+.reserve-indormation>.title,.active-div>.title{padding: 10px 0;color: #999;font-size: 14px;}
 .reserve-indormation>.title a{color: #fbb433;}
 .reserve-indormation>.title a:hover{cursor: pointer;}
 .reserve-indormation>.pt0{padding-top: 0;}
@@ -860,6 +861,13 @@ p>label>input{position: relative;top: 2px;}
 .fl-type .btn-type.active{background: #28b1de;color: #fff;}
 .fl-type .btn-type.mb10{margin-bottom: 10px;}
 .fl-type.bg5 .btn-type.active{background: #68b586;}
+
+.keeper-stype{width: 100%;margin-top: 10px;}
+.keeper-stype li{width: 45%;margin-right: 10%;float: left;height: 34px;line-height: 34px;}
+.keeper-stype li.mr{margin-right: 0;}
+.keeper-stype li button{width: 100%;height: 100%;color: #666;background: #d6d6d6;font-family: "微软雅黑";}
+.keeper-stype li button:hover{cursor: pointer;}
+.keeper-stype li.active button{background: #fca613;color: #fff;}
 
 .fl-infor{width: 100%;height:322px;margin-top: 15px;}
 .picture-infor{height: 100%;width: 670px;float: left;}
@@ -941,17 +949,17 @@ p>label>input{position: relative;top: 2px;}
 .tool .mt5{margin-top: 5px;}
 .tool .w510{width: 510px;}
 .topFrame {border: none;min-width: 1200px;width: 100%;height: 60px;overflow:hidden;}
-.select-time{height: 40px;line-height: 40px;background: #fff;border: none;width: 105px;padding-left: 5px;color: #999;}
+.select-time{padding:11.5px 0;line-height: 40px;background: #fff;border: none;width: 105px;padding-left: 5px;color: #999;}
 .services-type{width: 100%;color: #666;font-size: 14px;line-height: 40px;}
 .s-spinner{width: 310px;height: 40px;position: relative;display: inline-block;right: 1px;}
-.s-spinner .hours{width: 67px;height: 42px;line-height: 42px;text-align: center;background: #fff;color: #666;display: inline-block;}
+.s-spinner .hours{width: 65px;height: 42px;line-height: 42px;text-align: center;background: #fff;color: #666;display: inline-block;}
 .s-spinner .spinner{width: 238px;height: 40px;line-height: 40px;color: #666;text-align: center;font-size: 14px;}
 .s-spinnerw100 .spinner{width: 310px;}
 .s-spinnerw100 .btn-plus{right: 0;border-right: none;}
 .spinner.cuo{color: red;}
 .btn-common{width: 42px;height: 42px;font-size: 16px;outline: none;background: #fff;}
 .btn-plus{position: absolute;top: 0;right: 65px;border-left: 1px solid #d0d0d0;border-right: 1px solid #d0d0d0;}
-.btn-reduce{position: absolute;top: 1px;left: 0;border-right: 1px solid #d0d0d0;}
+.btn-reduce{position: absolute;top: 0;left: 0;border-right: 1px solid #d0d0d0;}
 .to_disabled{color: #ccc;cursor: not-allowed;}
 .total{margin: 10px 0;font-size: 18px;}
 .reserve-indormation>.total-title{padding-bottom: 0;}

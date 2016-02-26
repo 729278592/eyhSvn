@@ -109,15 +109,13 @@ $(function(){
                     '</div>'+
                     '<select name="" id="" class="select-time left">'+
                     '<option value="时间">时间</option>'+
-                    '<option value="12:00">1:00</option>'+
-                    '<option value="13:00">2:00</option>'+
-                    '<option value="12:00">3:00</option>'+
-                    '<option value="13:00">4:00</option>'+
-                    '<option value="12:00">5:00</option>'+
-                    '<option value="13:00">6:00</option>'+
+                    '<option value="8:00">8:00</option>'+
+                    '<option value="10:00">10:00</option>'+
+                    '<option value="13:00">13:00</option>'+
+                    '<option value="16:00">16:00</option>'+
                     '</select>'+
                     '<input class="area-input left" placeholder="请输入房屋面积"/><span class="area-span left">m²</span>'+
-                    '<input type="submit" value="加入购物车" class="btn-order"/>'+
+                    '<input type="submit" value="下单" class="btn-order"/>'+
                     '</div>'+
                     '</div>'+
                     '</div>';
@@ -212,11 +210,11 @@ $(function(){
 
 
 
-    /*表单的控制*/
+    /*保洁表单的控制*/
     var jdt = $(".jsDisabledType");
     var di = $(".div-inputs1");
-    var id = $(".inputDisable");
-    var dw = $(".div-wdate,.select-time,.s-spinner .hours,.btn-plus,.div-inputs2 input,.div-inputs2,.s-spinner .spinner,.reserve-indormation .textarea");
+    var id = $(".inputDisable,.keeper-stype li button");
+    var dw = $(".div-wdate,.select-time,.s-spinner .hours,.btn-plus,.btn-reduce ,.div-inputs2 input,.div-inputs2,.s-spinner .spinner,.reserve-indormation .textarea");
     jdt.click(function(){
         if($(this).find("input")[0].checked==true){
             di.find("input").removeAttr("disabled");
@@ -224,7 +222,8 @@ $(function(){
             di.addClass("active");
             id.attr("disabled","disabled");
             id.addClass("disabl");
-            dw.css({background:"#d6d6d6"})
+            dw.css({background:"#d6d6d6"});
+            $(".btn-plus,.btn-reduce").attr("disabled","disabled");
         }
         else{
             di.find("input").attr("disabled","disabled");
@@ -232,14 +231,29 @@ $(function(){
             di.removeClass("active");
             id.removeAttr("disabled");
             id.removeClass("disabl");
-            dw.css({background:"#fff"})
+            dw.css({background:"#fff"});
+            $(".btn-plus,.btn-reduce").removeAttr("disabled");
         }
     });
 
 
+    $(".keeper-stype li").each(function(i){
+        $(this).on("click",function(){
+            $(this).addClass("active");
+            $(this).siblings().removeClass("active");
+            if($(".keeper-stype li").eq(1).hasClass("active")){
+                $(".active-div").addClass("hide");
+            }else{
+                $(".active-div").removeClass("hide");
+            }
+
+        });
+
+    });
+
     /*服务信息的详情*/
-    $(".server-ul li .btn-infor").on("click",function(){
-        $(this).next(".service-infor").show();
+    $(".server-ul li img").on("click",function(){
+        $(this).parent().find(".service-infor").show();
     });
     $(".server-ul li").hover(function(){},
         function(){

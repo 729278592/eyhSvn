@@ -133,12 +133,10 @@
                                     </div>
                                     <select name="" class="select-time right inputDisable">
                                         <option value="时间">时间</option>
-                                        <option value="12:00">1:00</option>
-                                        <option value="13:00">2:00</option>
-                                        <option value="12:00">3:00</option>
-                                        <option value="13:00">4:00</option>
-                                        <option value="12:00">5:00</option>
-                                        <option value="13:00">6:00</option>
+                                        <option value="8:00">8:00</option>
+                                        <option value="10:00">10:00</option>
+                                        <option value="13:00">13:00</option>
+                                        <option value="16:00">16:00</option>
                                     </select>
                                 </div>
                                 <p class="title pt0">请输入房间面积</p>
@@ -146,13 +144,20 @@
                                     <input type="text" placeholder="100"/>
                                     <span class="right">m²</span>
                                 </div>
-                                <p class="title">请输入保洁时间</p>
-                                <div class="clearfix services-type">
+                                <ul class="keeper-stype clearfix">
+                                    <li class="active"><button>钟点保洁</button></li>
+                                    <li class="mr"><button>大扫除</button></li>
+                                </ul>
+                                <div class="active-div">
+                                    <p class="title">请输入保洁时间</p>
+                                    <div class="clearfix services-type">
                                     <span class="s-spinner">
+                                        <button class="btn-common btn-reduce">-</button>
                                         <input type="text" class="spinner inputDisable"/>
                                         <button class="btn-common btn-plus">+</button>
                                         <span class="hours">小时</span>
                                     </span>
+                                    </div>
                                 </div>
                                 <p class="title">更多需求</p>
                                 <textarea style="resize: none" name=""  cols="50" rows="3" class="textarea inputDisable"   placeholder="您可以在这里备注需求"></textarea>
@@ -203,22 +208,22 @@
                                     <tr>
                                         <td>10小时</td>
                                         <td><span class="num">赠</span> 冰箱精细1次/等是清洁1次、厨房深度清洁1次</td>
-                                        <td class="num">￥250元 <br/><button class="btn-buy">购买</button></td>
+                                        <td class="num">￥250元 <br/><button class="btn-buy">下单</button></td>
                                     </tr>
                                     <tr>
                                         <td>10小时</td>
                                         <td><span class="num">赠</span> 冰箱精细1次/等是清洁1次、厨房深度清洁1次</td>
-                                        <td class="num">￥250元 <br/><button class="btn-buy">购买</button></td>
+                                        <td class="num">￥250元 <br/><button class="btn-buy">下单</button></td>
                                     </tr>
                                     <tr>
                                         <td>10小时</td>
                                         <td><span class="num">赠</span> 冰箱精细1次/等是清洁1次、厨房深度清洁1次</td>
-                                        <td class="num">￥250元 <br/><button class="btn-buy">购买</button></td>
+                                        <td class="num">￥250元 <br/><button class="btn-buy">下单</button></td>
                                     </tr>
                                     <tr>
                                         <td>10小时</td>
                                         <td><span class="num">赠</span> 冰箱精细1次/等是清洁1次、厨房深度清洁1次</td>
-                                        <td class="num">￥250元 <br/><button class="btn-buy">购买</button></td>
+                                        <td class="num">￥250元 <br/><button class="btn-buy">下单</button></td>
                                     </tr>
                                     </tbody>
 
@@ -231,27 +236,26 @@
                                 <table>
                                     <tbody>
                                     <tr>
-                                        <td>10小时</td>
-                                        <td><span class="num">赠</span> 冰箱精细1次/等是清洁1次、厨房深度清洁1次</td>
-                                        <td class="num">￥250元 <br/><button class="btn-buy">购买</button></td>
+                                        <td>包月</td>
+                                        <td><input type="text" class="at-input"/></td>
+                                        <td class="num">￥250元 <br/><button class="btn-buy">下单</button></td>
                                     </tr>
                                     <tr>
-                                        <td>20小时</td>
-                                        <td><span class="num">赠</span> 冰箱精细1次/等是清洁1次、厨房深度清洁1次</td>
-                                        <td class="num">￥250元 <br/><button class="btn-buy">购买</button></td>
+                                        <td>包季节</td>
+                                        <td><input type="text" class="at-input"/></td>
+                                        <td class="num">￥250元 <br/><button class="btn-buy">下单</button></td>
                                     </tr>
                                     <tr>
-                                        <td>30小时</td>
-                                        <td><span class="num">赠</span> 冰箱精细1次/等是清洁1次、厨房深度清洁1次</td>
-                                        <td class="num">￥250元 <br/><button class="btn-buy">购买</button></td>
+                                        <td>包半年</td>
+                                        <td><input type="text" class="at-input"/></td>
+                                        <td class="num">￥250元 <br/><button class="btn-buy">下单</button></td>
                                     </tr>
                                     <tr>
-                                        <td>40小时</td>
-                                        <td><span class="num">赠</span> 冰箱精细1次/等是清洁1次、厨房深度清洁1次</td>
-                                        <td class="num">￥250元 <br/><button class="btn-buy">购买</button></td>
+                                        <td>包全年</td>
+                                        <td><input type="text" class="at-input"/></td>
+                                        <td class="num">￥250元 <br/><button class="btn-buy">下单</button></td>
                                     </tr>
                                     </tbody>
-
                                 </table>
                                 <p class="p-foot">
                                     以上价格是以40元/小时计费,2小时起步,若是活动,再商议
@@ -263,22 +267,22 @@
                                     <tr>
                                         <td>20小时</td>
                                         <td><span class="num">赠</span> 冰箱精细1次/等是清洁1次、厨房深度清洁1次</td>
-                                        <td class="num">￥250元 <br/><button class="btn-buy">购买</button></td>
+                                        <td class="num">￥250元 <br/><button class="btn-buy">下单</button></td>
                                     </tr>
                                     <tr>
                                         <td>20小时</td>
                                         <td><span class="num">赠</span> 冰箱精细1次/等是清洁1次、厨房深度清洁1次</td>
-                                        <td class="num">￥250元 <br/><button class="btn-buy">购买</button></td>
+                                        <td class="num">￥250元 <br/><button class="btn-buy">下单</button></td>
                                     </tr>
                                     <tr>
                                         <td>20小时</td>
                                         <td><span class="num">赠</span> 冰箱精细1次/等是清洁1次、厨房深度清洁1次</td>
-                                        <td class="num">￥250元 <br/><button class="btn-buy">购买</button></td>
+                                        <td class="num">￥250元 <br/><button class="btn-buy">下单</button></td>
                                     </tr>
                                     <tr>
                                         <td>20小时</td>
                                         <td><span class="num">赠</span> 冰箱精细1次/等是清洁1次、厨房深度清洁1次</td>
-                                        <td class="num">￥250元 <br/><button class="btn-buy">购买</button></td>
+                                        <td class="num">￥250元 <br/><button class="btn-buy">下单</button></td>
                                     </tr>
                                     </tbody>
 
@@ -294,7 +298,7 @@
                             <ul class=" servpack-slider js-active js-check clearfix">
                                 <li class="item clearfix">
                                     <div>
-                                        <a href="homeServices-setMeal.html">
+                                        <a href="javascript:void(0);">
                                             <img src="../../assets/frontend/images/hsList1.jpg" alt="" class="step-img"/>
                                         </a>
                                         <p>
@@ -304,9 +308,8 @@
                                         <span class="num">￥ : 2000/人</span>
                                     </div>
                                     <div>
-                                        <a href="homeServices-setMeal.html">
+                                        <a href="javascript:void(0);">
                                             <img src="../../assets/frontend/images/hsList1.jpg" alt="" class="step-img"/>
-
                                         </a>
                                         <p>
                                             <span>室内家居保洁-4小时</span><br/>
@@ -315,9 +318,8 @@
                                         <span class="num">￥ : 2000/人</span>
                                     </div>
                                     <div>
-                                        <a href="homeServices-setMeal.html">
+                                        <a href="javascript:void(0);">
                                             <img src="../../assets/frontend/images/hsList1.jpg" alt="" class="step-img"/>
-
                                         </a>
                                         <p>
                                             <span>室内家居保洁-4小时</span><br/>
@@ -326,9 +328,8 @@
                                         <span class="num">￥ : 2000/人</span>
                                     </div>
                                     <div class="mr0">
-                                        <a href="homeServices-setMeal.html">
+                                        <a href="javascript:void(0);">
                                             <img src="../../assets/frontend/images/hsList1.jpg" alt="" class="step-img"/>
-
                                         </a>
                                         <p>
                                             <span>室内家居保洁-4小时</span><br/>
@@ -339,9 +340,8 @@
                                 </li>
                                 <li class="item clearfix">
                                     <div>
-                                        <a href="homeServices-setMeal.html">
+                                        <a href="javascript:void(0);">
                                             <img src="../../assets/frontend/images/hsList1.jpg" alt="" class="step-img"/>
-
                                         </a>
                                         <p>
                                             <span>室内家居保洁-4小时</span><br/>
@@ -350,9 +350,8 @@
                                         <span class="num">￥ : 2000/人</span>
                                     </div>
                                     <div>
-                                        <a href="homeServices-setMeal.html">
+                                        <a href="javascript:void(0);">
                                             <img src="../../assets/frontend/images/hsList1.jpg" alt="" class="step-img"/>
-
                                         </a>
                                         <p>
                                             <span>室内家居保洁-4小时</span><br/>
@@ -361,9 +360,8 @@
                                         <span class="num">￥ : 2000/人</span>
                                     </div>
                                     <div>
-                                        <a href="homeServices-setMeal.html">
+                                        <a href="javascript:void(0);">
                                             <img src="../../assets/frontend/images/hsList1.jpg" alt="" class="step-img"/>
-
                                         </a>
                                         <p>
                                             <span>室内家居保洁-4小时</span><br/>
@@ -372,9 +370,8 @@
                                         <span class="num">￥ : 2000/人</span>
                                     </div>
                                     <div class="mr0">
-                                        <a href="homeServices-setMeal.html">
+                                        <a href="javascript:void(0);">
                                             <img src="../../assets/frontend/images/hsList1.jpg" alt="" class="step-img"/>
-
                                         </a>
                                         <p>
                                             <span>室内家居保洁-4小时</span><br/>
@@ -395,7 +392,6 @@
                         <li>
                             <img src="../../assets/frontend/images/s-icon1.png" alt=""/>
                             <span>适用范围</span>
-                            <button class="btn-infor">查看详情</button>
                             <div class="service-infor">
                                 <div class="service-mask-bg service-mask-bg1"></div>
                                 <div class="service-mask service-mask1">
@@ -412,7 +408,6 @@
                         <li>
                             <img src="../../assets/frontend/images/s-icon2.png" alt=""/>
                             <span>服务标准</span>
-                            <button class="btn-infor">查看详情</button>
                             <div class="service-infor">
                                 <div class="service-mask-bg service-mask-bg2"></div>
                                 <div class="service-mask service-mask2">
@@ -449,7 +444,6 @@
                         <li>
                             <img src="../../assets/frontend/images/s-icon3.png" alt=""/>
                             <span>服务保障</span>
-                            <button class="btn-infor">查看详情</button>
                             <div class="service-infor">
                                 <div class="service-mask-bg service-mask-bg3"></div>
                                 <div class="service-mask service-mask3">
@@ -471,7 +465,6 @@
                         <li>
                             <img src="../../assets/frontend/images/s-icon4.png" alt=""/>
                             <span>个性服务</span>
-                            <button class="btn-infor">查看详情</button>
                             <div class="service-infor">
                                 <div class="service-mask-bg service-mask-bg4"></div>
                                 <div class="service-mask service-mask4">
@@ -503,7 +496,7 @@
                         <ul class=" servpack-slider js-active js-check clearfix">
                             <li class="item clearfix">
                                 <div>
-                                    <a href="homeServices-setMeal.html">
+                                    <a href="javascript:void(0);">
                                         <img src="../../assets/frontend/images/hsList1.jpg" alt="" class="step-img"/>
                                     </a>
                                     <p>
@@ -513,7 +506,7 @@
                                     <span class="num">￥ : 2000/人</span>
                                 </div>
                                 <div>
-                                    <a href="homeServices-setMeal.html">
+                                    <a href="javascript:void(0);">
                                         <img src="../../assets/frontend/images/hsList1.jpg" alt="" class="step-img"/>
                                     </a>
                                     <p>
@@ -523,7 +516,7 @@
                                     <span class="num">￥ : 2000/人</span>
                                 </div>
                                 <div>
-                                    <a href="homeServices-setMeal.html">
+                                    <a href="javascript:void(0);">
                                         <img src="../../assets/frontend/images/hsList1.jpg" alt="" class="step-img"/>
                                     </a>
                                     <p>
@@ -533,7 +526,7 @@
                                     <span class="num">￥ : 2000/人</span>
                                 </div>
                                 <div class="mr0">
-                                    <a href="homeServices-setMeal.html">
+                                    <a href="javascript:void(0);">
                                         <img src="../../assets/frontend/images/hsList1.jpg" alt="" class="step-img"/>
                                     </a>
                                     <p>
@@ -545,7 +538,7 @@
                             </li>
                             <li class="item clearfix">
                                 <div>
-                                    <a href="homeServices-setMeal.html">
+                                    <a href="javascript:void(0);">
                                         <img src="../../assets/frontend/images/hsList1.jpg" alt="" class="step-img"/>
                                     </a>
                                     <p>
@@ -555,7 +548,7 @@
                                     <span class="num">￥ : 2000/人</span>
                                 </div>
                                 <div>
-                                    <a href="homeServices-setMeal.html">
+                                    <a href="javascript:void(0);">
                                         <img src="../../assets/frontend/images/hsList1.jpg" alt="" class="step-img"/>
                                     </a>
                                     <p>
@@ -565,7 +558,7 @@
                                     <span class="num">￥ : 2000/人</span>
                                 </div>
                                 <div>
-                                    <a href="homeServices-setMeal.html">
+                                    <a href="javascript:void(0);">
                                         <img src="../../assets/frontend/images/hsList1.jpg" alt="" class="step-img"/>
                                     </a>
                                     <p>
@@ -575,7 +568,7 @@
                                     <span class="num">￥ : 2000/人</span>
                                 </div>
                                 <div class="mr0">
-                                    <a href="homeServices-setMeal.html">
+                                    <a href="javascript:void(0);">
                                         <img src="../../assets/frontend/images/hsList1.jpg" alt="" class="step-img"/>
                                     </a>
                                     <p>
@@ -596,7 +589,6 @@
                                 <div>
                                     <a href="homeServices-setMeal.html">
                                         <img src="../../assets/frontend/images/hsList1.jpg" alt="" class="step-img"/>
-                                        
                                     </a>
                                     <p>
                                         <span>室内家居保洁-4小时</span><br/>
@@ -607,7 +599,6 @@
                                 <div>
                                     <a href="homeServices-setMeal.html">
                                         <img src="../../assets/frontend/images/hsList1.jpg" alt="" class="step-img"/>
-                                        
                                     </a>
                                     <p>
                                         <span>室内家居保洁-4小时</span><br/>
@@ -618,7 +609,6 @@
                                 <div>
                                     <a href="homeServices-setMeal.html">
                                         <img src="../../assets/frontend/images/hsList1.jpg" alt="" class="step-img"/>
-                                        
                                     </a>
                                     <p>
                                         <span>室内家居保洁-4小时</span><br/>
@@ -629,7 +619,6 @@
                                 <div class="mr0">
                                     <a href="homeServices-setMeal.html">
                                         <img src="../../assets/frontend/images/hsList1.jpg" alt="" class="step-img"/>
-                                        
                                     </a>
                                     <p>
                                         <span>室内家居保洁-4小时</span><br/>
@@ -642,7 +631,6 @@
                                 <div>
                                     <a href="homeServices-setMeal.html">
                                         <img src="../../assets/frontend/images/hsList1.jpg" alt="" class="step-img"/>
-                                        
                                     </a>
                                     <p>
                                         <span>室内家居保洁-4小时</span><br/>
@@ -653,7 +641,6 @@
                                 <div>
                                     <a href="homeServices-setMeal.html">
                                         <img src="../../assets/frontend/images/hsList1.jpg" alt="" class="step-img"/>
-                                        
                                     </a>
                                     <p>
                                         <span>室内家居保洁-4小时</span><br/>
@@ -664,7 +651,6 @@
                                 <div>
                                     <a href="homeServices-setMeal.html">
                                         <img src="../../assets/frontend/images/hsList1.jpg" alt="" class="step-img"/>
-                                        
                                     </a>
                                     <p>
                                         <span>室内家居保洁-4小时</span><br/>
@@ -675,7 +661,6 @@
                                 <div class="mr0">
                                     <a href="homeServices-setMeal.html">
                                         <img src="../../assets/frontend/images/hsList1.jpg" alt="" class="step-img"/>
-                                        
                                     </a>
                                     <p>
                                         <span>室内家居保洁-4小时</span><br/>
