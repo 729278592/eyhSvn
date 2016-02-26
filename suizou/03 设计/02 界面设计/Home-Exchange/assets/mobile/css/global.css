@@ -164,25 +164,42 @@ a:hover{text-decoration: none;}
 .money-infor li{width: 33%;border-right: 1px solid #dbdbdb;font-size: 16px;color: #333;text-align: center;float: left;}
 .money-infor li.br0{border-right: 0;}
 .money-infor li span{}
-.money-infor li .num{color: #fcac25;}
-
+.money-infor li .num,.order-menu li .num{color: #fcac25;}
+.order-menu li .num1{color: #53ba93;}
+.order-menu li .num2{color: #333;}
 .order-menu{width: 100%;}
-.order-menu.bg-fff li{background: #fff;}
+.order-menu.bg-fff li,.order-menu.fff{background: #fff;}
 .order-menu.pt15 li:first-child{padding-top: 1.5%;}
 .order-menu li{padding: 0 2% 0;width: 100%;position: relative;margin: 2% 0 0 0;}
+.order-menu li .fa{position: absolute;right: 4%;font-size: 24px;}
 .order-menu li img{margin-right: 3%;width: 30%;}
+.order-menu li .clean{width: 50%;}
 .order-menu li .title{font-size: 20px;}
 .order-menu li .btn-comment{padding: 5px 5%;border-radius: 4px;background: #fbb432;color: #fff;position: absolute;bottom: 8%;right: 2%;}
+.order-menu li .btn-comment.bg-ccc{background: #b2b1b0;}
+.order-menu li .btn-comment.left{left: 52%;}
 .order-menu li p{font-size: 14px;}
 .order-menu li .order-infor{color: #666;}
 
+
+.swiper-wrapper .swiper-slide{position: relative;}
+.clean-mask{position: absolute;padding: 15px;background: rgba(30, 188, 158, 0.60);color: #fff;font-size: 14px;z-index: 100;top: 5%;left: 2%;width: 26%;max-height: 120px;}
 
 
 .mask{position: fixed;top: 0;bottom: 0;left: 0;right: 0;background: rgba(0,0,0,.5);max-width: 640px;margin: 0 auto;}
 
 
-
-
+/*clean-menu*/
+.clean-title{width: 100%;padding:1.5% 3%;font-size: 18px;color: #825708;border-bottom: 1px solid #825708;}
+.clean-infor{width: 100%;padding: 1% 3% 0;}
+.clean-infor p{font-size: 14px;color: #666;}
+.clean-list{width: 96%;margin: 1% 2%;}
+.clean-list li{width: 18%;margin-right: 2%;float: left;background: #eee;border-radius: 10px;color: #333;font-size: 16px;text-align: center;padding: 1% 0;}
+.clean-list li.mr0{margin-right: 0;}
+.pay-infor{width: 100%;margin-top: 2%;}
+.pay-infor .last-money{text-decoration: line-through;font-size: 18px;}
+.pay-infor .now-money{color: #ff580b;font-size: 18px;}
+.pay-infor .btn-order{padding: 5px 25px;color: #fff;border-radius: 4px;background: #ff580b;}
 
 
 
@@ -221,6 +238,8 @@ a:hover{text-decoration: none;}
     .service-menu li .title{font-size: 14px;}
     .person-infor p{font-size: 14px;line-height: 20px;}
     .order-menu li .title{font-size: 17px;}
+    .clean-list li{font-size: 14px;}
+    .clean-mask{font-size: 12px;}
 }
 
 
