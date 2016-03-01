@@ -242,9 +242,9 @@ $(function(){
             $(this).addClass("active");
             $(this).siblings().removeClass("active");
             if($(".keeper-stype li").eq(1).hasClass("active")){
-                $(".active-div").addClass("hide");
+                $(".active-div .rear").addClass("hide");
             }else{
-                $(".active-div").removeClass("hide");
+                $(".active-div .rear").removeClass("hide");
             }
         });
 

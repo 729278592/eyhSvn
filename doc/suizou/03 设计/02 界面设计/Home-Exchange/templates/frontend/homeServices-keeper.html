@@ -139,24 +139,27 @@
                                         <option value="16:00">16:00</option>
                                     </select>
                                 </div>
-                                <p class="title pt0">请输入房间面积</p>
-                                <div class="div-inputs div-inputs2">
-                                    <input type="text" placeholder="100"/>
-                                    <span class="right">m²</span>
-                                </div>
+
                                 <ul class="keeper-stype clearfix">
                                     <li class="active"><button>钟点保洁</button></li>
                                     <li class="mr"><button>大扫除</button></li>
                                 </ul>
                                 <div class="active-div">
-                                    <p class="title">请输入保洁时间</p>
-                                    <div class="clearfix services-type">
-                                    <span class="s-spinner">
-                                        <button class="btn-common btn-reduce">-</button>
-                                        <input type="text" class="spinner inputDisable"/>
-                                        <button class="btn-common btn-plus">+</button>
-                                        <span class="hours">小时</span>
-                                    </span>
+                                    <p class="title pt0">请输入房间面积</p>
+                                    <div class="div-inputs div-inputs2">
+                                        <input type="text" placeholder="100"/>
+                                        <span class="right">m²</span>
+                                    </div>
+                                    <div class="rear">
+                                        <p class="title">请输入保洁时间</p>
+                                        <div class="clearfix services-type">
+                                        <span class="s-spinner">
+                                            <button class="btn-common btn-reduce">-</button>
+                                            <input type="text" class="spinner inputDisable"/>
+                                            <button class="btn-common btn-plus">+</button>
+                                            <span class="hours">小时</span>
+                                        </span>
+                                    </div>
                                     </div>
                                 </div>
                                 <p class="title">更多需求</p>
@@ -198,11 +201,14 @@
                     <div>
                         <div class="div-table">
                             <ul class="ulActivy clearfix">
-                                <li class="active first"><span class="time-span">限时优惠</span> <br/><span class="time">(1.28~2.18)</span></li>
-                                <li>家务包月卡</li>
+                                <li class="active first">家务包月卡</li>
+                                <li><span class="time-span">限时优惠</span> <br/><span class="time">(1.28~2.18)</span></li>
                                 <li class="br0">家务包年卡</li>
                             </ul>
-                            <div class="active activeTable">
+                            <div class="active activeTable clearfix">
+                                <p class="head-input">
+                                    请输入您的房屋面积 <input type="text" class="at-input"> ㎡
+                                </p>
                                 <table>
                                     <tbody>
                                     <tr>
@@ -231,37 +237,39 @@
                                 <p class="p-foot">
                                     以上价格是以40元/小时计费,2小时起步,若是活动,再商议
                                 </p>
+
                             </div>
-                            <div class="activeTable">
-                                <table>
-                                    <tbody>
-                                    <tr>
-                                        <td>包月</td>
-                                        <td><span class="num">赠</span> 冰箱精细1次/等是清洁1次、厨房深度清洁1次</td>
-                                        <td class="num"><input type="text" class="at-input"/> ㎡ ￥2500元 <button class="btn-buy">下单</button></td>
-                                    </tr>
-                                    <tr>
-                                        <td>包季节</td>
-                                        <td><span class="num">赠</span> 冰箱精细1次/等是清洁1次、厨房深度清洁1次</td>
-                                        <td class="num"><input type="text" class="at-input"/> ㎡ ￥250元 <button class="btn-buy">下单</button></td>
-                                    </tr>
-                                    <tr>
-                                        <td>包半年</td>
-                                        <td><span class="num">赠</span> 冰箱精细1次/等是清洁1次、厨房深度清洁1次</td>
-                                        <td class="num"><input type="text" class="at-input"/> ㎡ ￥250元 <button class="btn-buy">下单</button></td>
-                                    </tr>
-                                    <tr>
-                                        <td>包全年</td>
-                                        <td><span class="num">赠</span> 冰箱精细1次/等是清洁1次、厨房深度清洁1次</td>
-                                        <td class="num"><input type="text" class="at-input"/> ㎡ ￥250元 <button class="btn-buy">下单</button></td>
-                                    </tr>
-                                    </tbody>
-                                </table>
-                                <p class="p-foot">
-                                    以上价格是以40元/小时计费,2小时起步,若是活动,再商议
-                                </p>
+                            <div class="activeTable clearfix">
+                                <!--<table>-->
+                                    <!--<tbody>-->
+                                    <!--<tr>-->
+                                        <!--<td>10小时</td>-->
+                                        <!--<td><span class="num">赠</span> 冰箱精细1次/等是清洁1次、厨房深度清洁1次</td>-->
+                                        <!--<td class="num">￥250元 <br/><button class="btn-buy">下单</button></td>-->
+                                    <!--</tr>-->
+                                    <!--<tr>-->
+                                        <!--<td>10小时</td>-->
+                                        <!--<td><span class="num">赠</span> 冰箱精细1次/等是清洁1次、厨房深度清洁1次</td>-->
+                                        <!--<td class="num">￥250元 <br/><button class="btn-buy">下单</button></td>-->
+                                    <!--</tr>-->
+                                    <!--<tr>-->
+                                        <!--<td>10小时</td>-->
+                                        <!--<td><span class="num">赠</span> 冰箱精细1次/等是清洁1次、厨房深度清洁1次</td>-->
+                                        <!--<td class="num">￥250元 <br/><button class="btn-buy">下单</button></td>-->
+                                    <!--</tr>-->
+                                    <!--<tr>-->
+                                        <!--<td>10小时</td>-->
+                                        <!--<td><span class="num">赠</span> 冰箱精细1次/等是清洁1次、厨房深度清洁1次</td>-->
+                                        <!--<td class="num">￥250元 <br/><button class="btn-buy">下单</button></td>-->
+                                    <!--</tr>-->
+                                    <!--</tbody>-->
+
+                                <!--</table>-->
+                                <!--<p class="p-foot">-->
+                                    <!--以上价格是以40元/小时计费,2小时起步,若是活动,再商议-->
+                                <!--</p>-->
                             </div>
-                            <div class="activeTable">
+                            <div class="activeTable clearfix">
                                 <table>
                                     <tbody>
                                     <tr>
@@ -383,8 +391,6 @@
                             </ul>
                         </div>
                     </div>
-
-
                 </div>
                 <div class="server-step">
                     <!--<p class="title">服务流程</p>-->
