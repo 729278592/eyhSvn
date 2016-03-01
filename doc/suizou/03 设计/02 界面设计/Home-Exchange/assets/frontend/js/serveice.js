@@ -241,11 +241,13 @@ $(function(){
         $(this).on("click",function(){
             $(this).addClass("active");
             $(this).siblings().removeClass("active");
-            if($(".keeper-stype li").eq(1).hasClass("active")){
-                $(".active-div .rear").addClass("hide");
-            }else{
-                $(".active-div .rear").removeClass("hide");
-            }
+            $(".active-div").eq(i).addClass("active");
+            $(".active-div").eq(i).siblings(".active-div").removeClass("active");
+//            if($(".keeper-stype li").eq(1).hasClass("active")){
+//                $(".active-div .rear").addClass("hide");
+//            }else{
+//                $(".active-div .rear").removeClass("hide");
+//            }
         });
 
     });
