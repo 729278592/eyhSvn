@@ -5,6 +5,7 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1" />
     <title>保洁</title>
     <link rel="stylesheet" href="../../assets/global/plugins/font/css/font-awesome.min.css"/>
+    <link rel="stylesheet" href="../../assets/global/plugins/jquery-spinner/css/jquery.spinner.css"/>
     <link rel="stylesheet" href="../../assets/frontend/css/global.css"/>
 </head>
 <body>
@@ -128,7 +129,7 @@
                                 <p class="title">请输入您需要服务的时间</p>
                                 <div class="reserve-date clearfix">
                                     <div class="div-wdate left">
-                                        <input id="d4311" class="Wdate inputDisable" type="text" placeholder="2015-10-10" onFocus="WdatePicker({minDate:'%y-%M-{%d}'})"/>
+                                        <input id="d4311" class="Wdate inputDisable" type="text" onFocus="WdatePicker({minDate:'%y-%M-{%d}'})"/>
                                         <i class="fa fa-calendar"></i>
                                     </div>
                                     <select name="" class="select-time right inputDisable">
@@ -158,12 +159,8 @@
                                     <div class="rear">
                                         <p class="title">请输入保洁时间</p>
                                         <div class="clearfix services-type">
-                                        <span class="s-spinner">
-                                            <button class="btn-common btn-reduce">-</button>
-                                            <input type="text" class="spinner inputDisable"/>
-                                            <button class="btn-common btn-plus">+</button>
-                                            <span class="hours">小时</span>
-                                        </span>
+                                            <input type="text" class="spinnerExample"/>
+                                            <span class="right company">m²</span>
                                         </div>
                                     </div>
                                 </div>
@@ -918,18 +915,15 @@
     </div>
 </body>
     <script type="text/javascript" src="../../assets/global/plugins/jquery/jquery-1.11.3.min.js"></script>
-    <script src="../../assets/global/plugins/My97DatePicker/WdatePicker.js"></script>
     <script src="../../assets/global/plugins/move/js/move.js"></script>
     <script src="../../assets/frontend/js/global.js"></script>
     <script src="../../assets/frontend/js/spinner.js"></script>
     <script src="../../assets/frontend/js/serveice.js?v=445"></script>
+    <script src="../../assets/global/plugins/My97DatePicker/WdatePicker.js"></script>
+    <script src="../../assets/global/plugins/jquery-spinner/js/jquery.spinner.js"></script>
     <!--<script src="../../assets/frontend/js/activity.js?v=444"></script>-->
     <script type="text/javascript">
-        (function($){
-            $(".s-spinner").spinner({
-                defaultNum:0,
-                maxNum:100
-            });
-        })(jQuery)
+        $('.spinnerExample').spinner({});
     </script>
+</body>
 </html>
