@@ -1134,7 +1134,7 @@ p>label>input{position: relative;top: 2px;}
 .server .si-left.bg5,.server .si-right.bg5{background: #52ba92;}
 .div-inputs{width: 100%;background: #fff;color: #666;padding: 6px 0;}
 .div-inputs input{width: 220px;padding: 10px;border-right: 1px solid #dbdbdb;height: 10px;}
-.div-inputs select{width: 220px;padding: 6.5px 10px;border-right: 1px solid #dbdbdb;color: #666;}
+.div-inputs select{width: 100%;padding: 6.5px 10px;color: #666;}
 .div-inputs span{position: relative;top: 6px;right: 25px;}
 .div-inputs.bg,.div-inputs.br1{background: #d6d6d6;padding: 0;}
 .div-inputs.bg input{width: 300px;border-right: 0;background: #d6d6d6;padding: 15px 0 15px 10px;}
