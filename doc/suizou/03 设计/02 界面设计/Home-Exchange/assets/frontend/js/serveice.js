@@ -246,19 +246,28 @@ $(function(){
             }else{
                 $(".active-div").removeClass("hide");
             }
-
         });
 
     });
 
     /*服务信息的详情*/
-    $(".server-ul li img").on("click",function(){
-        $(this).parent().find(".service-infor").show();
-    });
-    $(".server-ul li").hover(function(){},
-        function(){
-            $(this).find(".service-infor").hide();
+    $(".server-ul li img").each(function(i){
+        $(this).on("click",function(){
+            $(".service-step-bg,.service-step").removeClass("hide");
+            $(".seavice-menu li").eq(i).addClass("active");
+            $(".seavice-menu li").eq(i).siblings().removeClass("active");
         });
+    });
+
+    $(".service-div .fa").on("click",function(){
+        $(this).closest(".service-step").addClass("hide");
+        $(this).closest(".service-step").prev().addClass("hide");
+    });
+
+//    $(".server-ul li").hover(function(){},
+//        function(){
+//            $(this).find(".service-infor").hide();
+//        });
 
 
 
