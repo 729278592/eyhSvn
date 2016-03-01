@@ -213,8 +213,8 @@ $(function(){
     /*保洁表单的控制*/
     var jdt = $(".jsDisabledType");
     var di = $(".div-inputs1");
-    var id = $(".inputDisable,.keeper-stype li button");
-    var dw = $(".div-wdate,.select-time,.s-spinner .hours,.btn-plus,.btn-reduce ,.div-inputs2 input,.div-inputs2,.s-spinner .spinner,.reserve-indormation .textarea");
+    var id = $(".inputDisable,.keeper-stype li button,.div-inputs2 input,.div-inputs2 select");
+    var dw = $(".div-wdate,.select-time,.s-spinner .hours,.btn-plus,.btn-reduce ,.div-inputs2 input,.div-inputs2,.s-spinner .spinner,.reserve-indormation .textarea,.div-inputs2 select");
     jdt.click(function(){
         if($(this).find("input")[0].checked==true){
             di.find("input").removeAttr("disabled");

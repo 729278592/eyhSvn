@@ -4,12 +4,12 @@
 (function($){
     $.fn.spinner = function(optinos){
         var define = {
-            defineNum:0,
+            defineNum:5,
             maxNum:100,
             one:25,
             isNum:"只能输入数字哦"
-        };
-        var opts = $.extend({},define,optinos);
+            },
+        opts = $.extend({},define,optinos);
         var methods = {
             init:function(_this){
                 spinner   = _this.find(".spinner");
