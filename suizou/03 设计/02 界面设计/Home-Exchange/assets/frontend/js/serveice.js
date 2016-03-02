@@ -161,17 +161,7 @@ $(function(){
 
 
 
-    /*保洁里的活动切换*/
-    var ul = $(".ulActivy li");
-    var at = $(".activeTable");
-    ul.each(function(i){
-        $(this).on("click",function(){
-            $(this).addClass("active");
-            $(this).siblings(ul).removeClass("active");
-            at.eq(i).addClass("active");
-            at.eq(i).siblings(at).removeClass("active");
-        });
-    });
+
 
 
     /*售后服务切换*/
@@ -209,55 +199,24 @@ $(function(){
     });
 
 
-
-    /*保洁表单的控制*/
-    var jdt = $(".jsDisabledType");
-    var di = $(".div-inputs1");
-    var id = $(".inputDisable,.keeper-stype li button,.div-inputs2 input,.div-inputs2 select");
-    var dw = $(".div-wdate,.select-time,.s-spinner .hours,.btn-plus,.btn-reduce ,.div-inputs2 input,.div-inputs2,.s-spinner .spinner,.reserve-indormation .textarea,.div-inputs2 select");
-    jdt.click(function(){
-        if($(this).find("input")[0].checked==true){
-            di.find("input").removeAttr("disabled");
-            di.find("input").addClass("active");
-            di.addClass("active");
-            id.attr("disabled","disabled");
-            id.addClass("disabl");
-            dw.css({background:"#d6d6d6"});
-            $(".btn-plus,.btn-reduce").attr("disabled","disabled");
-        }
-        else{
-            di.find("input").attr("disabled","disabled");
-            di.find("input").removeClass("active");
-            di.removeClass("active");
-            id.removeAttr("disabled");
-            id.removeClass("disabl");
-            dw.css({background:"#fff"});
-            $(".btn-plus,.btn-reduce").removeAttr("disabled");
-        }
-    });
-
-
-    $(".keeper-stype li").each(function(i){
-        $(this).on("click",function(){
-            $(this).addClass("active");
-            $(this).siblings().removeClass("active");
-            $(".active-div").eq(i).addClass("active");
-            $(".active-div").eq(i).siblings(".active-div").removeClass("active");
-//            if($(".keeper-stype li").eq(1).hasClass("active")){
-//                $(".active-div .rear").addClass("hide");
-//            }else{
-//                $(".active-div .rear").removeClass("hide");
-//            }
+    /*未知元素高度垂直居中*/
+    function heightAuto(){
+        var d = $(".seavice-menu");
+        d.each(function(){
+            var ht = -$(this).get(0).offsetHeight/2+"px";
+            $(this).get(0).style.marginTop = ht;
         });
+    }
 
-    });
 
+    heightAuto();
     /*服务信息的详情*/
-    $(".server-ul li img").each(function(i){
-        $(this).on("click",function(){
+    $(".server-ul li").each(function(i){
+        $(this).find("img").on("click",function(){
             $(".service-step-bg,.service-step").removeClass("hide");
-            $(".seavice-menu li").eq(i).addClass("active");
-            $(".seavice-menu li").eq(i).siblings().removeClass("active");
+            $(".seavice-menu>li").eq(i).addClass("active");
+            $(".seavice-menu>li").eq(i).siblings().removeClass("active");
+            heightAuto();
         });
     });
 
@@ -327,4 +286,11 @@ $(function(){
 //        })
     }
     getFirstAndLastMonthDay(date.getFullYear(),(date.getMonth()+1));
+
+
+    /*服务流程蒙版控制*/
+    $(".wrapper").delegate(".close-serice","click",function(){
+        $(this).closest(".service-step").addClass("hide");
+        $(this).closest(".service-step").prev().addClass("hide");
+    })
 });

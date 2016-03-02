@@ -7,6 +7,9 @@
     <link rel="stylesheet" href="../../assets/global/plugins/font/css/font-awesome.min.css"/>
     <link rel="stylesheet" href="../../assets/global/plugins/jquery-spinner/css/jquery.spinner.css"/>
     <link rel="stylesheet" href="../../assets/frontend/css/global.css"/>
+    <!--[if IE 8]>
+
+    <![endif]-->
 </head>
 <body>
     <div class="wrapper">
@@ -80,46 +83,57 @@
                                 <img src="../../assets/frontend/images/keeper2.jpg" />
                             </div>
                             <div class="area-infor">
-                                <div class="title">服务介绍</div>
-                                <ul class="area-menu clearfix">
-                                    <li>
-                                        <div class="area-num area-num1">
-                                            60m²
-                                        </div>
-                                        <p>2小时</p>
-                                    </li>
-                                    <li>
-                                        <div class="area-num area-num2">
-                                            60m²~80m²
-                                        </div>
-                                        <p>4小时</p>
-                                    </li>
-                                    <li>
-                                        <div class="area-num area-num3">
-                                            80m²~100m²
-                                        </div>
-                                        <p>5小时</p>
-                                    </li>
-                                    <li>
-                                        <div class="area-num area-num4">
-                                            150m²
-                                        </div>
-                                        <p>8小时</p>
-                                    </li>
-                                </ul>
+                                <div class="div-table">
+                                    <p class="title">
+                                        <span class="left">钟点保洁参考使用时间</span>
+                                    </p>
+                                    <table>
+                                        <tbody>
+                                        <tr>
+                                            <td>房屋面积</td>
+                                            <td><60m²</td>
+                                            <td><80m²</td>
+                                            <td><100m²</td>
+                                            <td><150m²</td>
+                                        </tr>
+                                        <tr>
+                                            <td>室卫耗时</td>
+                                            <td>2小时</td>
+                                            <td>3小时</td>
+                                            <td>4小时起</td>
+                                            <td>6小时起</td>
+                                        </tr>
+                                        <tr>
+                                            <td>费用</td>
+                                            <td>80/元</td>
+                                            <td>120/元</td>
+                                            <td>160/元</td>
+                                            <td>240/元</td>
+                                        </tr>
+                                        </tbody>
+
+                                    </table>
+                                    <p class="p-foot">
+                                        以上价格是以40元/小时计费,2小时起步,若是活动,再商议
+                                    </p>
+                                </div>
+                                <p class="stype-title">
+                                    钟点保洁范围 :
+                                </p>
                                 <p>
-                                    基础保洁服务是家服汇推出的专业家庭日常保洁服务，采用小时制下单为收费标准。服务人员均通过标准化管理、规范化的培训流程、专业化保洁工具为广大用户提供最便捷、快速、高效的保洁服务体验。
+                                    地面、踢脚线清理；家具、家电表面除尘；油烟机表面擦洗；厨房、浴室墙面、台面。玻璃、   油烟机内部清洗等项目不再服务范围内。
+                                </p>
+
+                                <p class="stype-title">
+                                    大扫除范围 :
                                 </p>
 
                                 <p>
-                                    <span class="type">服务费用 :</span>
-                                    40元/次，2小时起
+                                    地面、踢脚线清理；家具、家电表面除尘；油烟机表面擦洗；厨房、浴室墙面、台面。室内外玻璃擦洗。(按照2元/平米计算，最低70平
                                 </p>
-
-                                <p>
-                                    <span class="type">适合范围 :</span>
-                                    本服务仅适用于日常家庭室内保洁，不可用于学校、办公室、商铺、出租房、新装房、长期未入住房、集体宿舍等类型房屋的保洁。
-                                    本服务包含的服务范围有：地面、踢脚线清理；家具、家电表面除尘；油烟机表面擦洗；玻璃、厨房、浴室墙面、台面。油烟机内部清洗等项目不再服务范围内。
+                                <p class="prompt">
+                                    注：家服汇推出专业的钟点保洁服务和大扫除保洁服务，钟点保洁服务采用小时制下单为收费标准，大扫除保洁以保洁面积为收费标准。服务人
+                                    员均通过标准化管理、规范化的培训流程、专业化保洁工具为广大用户提供最便捷、快速高效的保洁服务体验。
                                 </p>
                             </div>
                         </div>
@@ -129,7 +143,7 @@
                                 <p class="title">请输入您需要服务的时间</p>
                                 <div class="reserve-date clearfix">
                                     <div class="div-wdate left">
-                                        <input id="d4311" class="Wdate inputDisable" type="text" onFocus="WdatePicker({minDate:'%y-%M-{%d}'})"/>
+                                        <input id="d4311" class="Wdate inputDisable removePlaceholder" type="text" placeholder="2015-4-4" onFocus="WdatePicker({minDate:'%y-%M-{%d}'})"/>
                                         <i class="fa fa-calendar"></i>
                                     </div>
                                     <select name="" class="select-time right inputDisable">
@@ -691,29 +705,29 @@
                 <div class="package">
                     <p class="title">相关推荐</p>
                     <div class="servpackSlider">
-                        <ul class=" servpack-slider   clearfix">
+                        <ul class=" servpack-slider heiAuto  clearfix">
                             <li class="item clearfix">
                                 <div>
                                     <a href="homeServices-maternity.html">
-                                        <img src="../../assets/frontend/images/hsList1.jpg" alt="" class="step-img"/>
+                                        <img src="../../assets/frontend/images/service-n.jpg" alt="" class="step-img"/>
                                     </a>
                                     <span class="type">月嫂</span><br/>
                                 </div>
                                 <div>
                                     <a href="homeServices-wardrobe.html">
-                                        <img src="../../assets/frontend/images/hsList1.jpg" alt="" class="step-img"/>
+                                        <img src="../../assets/frontend/images/service-w.jpg" alt="" class="step-img"/>
                                     </a>
                                     <span class="type">衣柜</span><br/>
                                 </div>
                                 <div>
                                     <a href="homeServices-nursingworkers.html">
-                                        <img src="../../assets/frontend/images/hsList1.jpg" alt="" class="step-img"/>
+                                        <img src="../../assets/frontend/images/service-f.jpg" alt="" class="step-img"/>
                                     </a>
                                     <span class="type">护工</span><br/>
                                 </div>
                                 <div class="mr0">
                                     <a href="homeServices-leathershoes.html">
-                                        <img src="../../assets/frontend/images/hsList1.jpg" alt="" class="step-img"/>
+                                        <img src="../../assets/frontend/images/service-p.jpg" alt="" class="step-img"/>
                                     </a>
                                     <span class="type">皮鞋</span><br/>
                                 </div>
@@ -901,16 +915,244 @@
         </div>
         <div class="service-step-bg hide"></div>
         <div class="service-step hide">
-            <div class="service-div">
-                <i class="fa fa-remove"></i>
-                <ul class="seavice-menu">
-                    <li></li>
-                    <li></li>
-                    <li></li>
-                    <li></li>
-                    <li></li>
-                </ul>
-            </div>
+            <ul class="seavice-menu">
+                <li>
+                    <div class="service-head">
+                        <span class="title">
+                            适用范围:
+                        </span>
+                        <img src="../../assets/frontend/images/close.png" class="right close-serice"/>
+                    </div>
+                    <div class="service-content">
+                        <p class="title">
+                            本服务仅使用与日常家庭保洁 <span class="num">不用于</span>
+                        </p>
+                        <ul class="clearfix keeper-menu">
+                            <li>
+                                <img src="../../assets/frontend/images/keeper-close1.png"/><br/>
+                                <span class="name">学校</span>
+                            </li>
+                            <li>
+                                <img src="../../assets/frontend/images/keeper-close2.png"/><br/>
+                                <span class="name">办公室</span>
+                            </li>
+                            <li>
+                                <img src="../../assets/frontend/images/keeper-close3.png"/><br/>
+                                <span class="name">商铺</span>
+                            </li>
+                            <li>
+                                <img src="../../assets/frontend/images/keeper-close4.png"/><br/>
+                                <span class="name">新装房</span>
+                            </li>
+                            <li class="mr0">
+                                <img src="../../assets/frontend/images/keeper-close5.png"/><br/>
+                                <span class="name">集体宿舍</span>
+                            </li>
+                        </ul>
+                    </div>
+                    <div class="service-content bb0 mh360">
+                        <p class="title">
+                            本服务包含的服务范围有
+                        </p>
+                        <ul class="clearfix keeper-menu">
+                            <li>
+                                <img src="../../assets/frontend/images/keeper-check1.png"/><br/>
+                                <span class="name">地面</span>
+                            </li>
+                            <li>
+                                <img src="../../assets/frontend/images/keeper-check2.png"/><br/>
+                                <span class="name">踢脚线清理</span>
+                            </li>
+                            <li>
+                                <img src="../../assets/frontend/images/keeper-check3.png"/><br/>
+                                <span class="name">家具</span>
+                            </li>
+                            <li>
+                                <img src="../../assets/frontend/images/keeper-check4.png"/><br/>
+                                <span class="name">家电表面除尘</span>
+                            </li>
+                            <li>
+                                <img src="../../assets/frontend/images/keeper-check5.png"/><br/>
+                                <span class="name">油烟机表面擦洗</span>
+                            </li>
+                            <li class="mr0">
+                                <img src="../../assets/frontend/images/keeper-check6.png"/><br/>
+                                <span class="name">玻璃</span>
+                            </li>
+                            <li>
+                                <img src="../../assets/frontend/images/keeper-check7.png"/><br/>
+                                <span class="name">厨房</span>
+                            </li>
+                            <li>
+                                <img src="../../assets/frontend/images/keeper-check8.png"/><br/>
+                                <span class="name">浴室墙面</span>
+                            </li>
+                            <li>
+                                <img src="../../assets/frontend/images/keeper-check9.png"/><br/>
+                                <span class="name">台面</span>
+                            </li>
+                            <li>
+                                <img src="../../assets/frontend/images/keeper-check10.png"/><br/>
+                                <span class="name">家电表面除尘</span>
+                            </li>
+                            <li>
+                                <img src="../../assets/frontend/images/keeper-check11.png"/><br/>
+                                <span class="name">油烟机内部清洗</span>
+                            </li>
+                            <li class="mr0">
+                                <img src="../../assets/frontend/images/keeper-check12.png"/><br/>
+                                <span class="name">等项目</span>
+                            </li>
+
+                        </ul>
+                    </div>
+                </li>
+                <li>
+                    <div class="service-head">
+                        <span class="title">
+                            服务标准:
+                        </span>
+                        <img src="../../assets/frontend/images/close.png" class="right close-serice"/>
+                    </div>
+                    <img src="../../assets/frontend/images/service-standard.jpg"/>
+                    <div class="service-content bb-d1 clearfix">
+                        <div class="left">
+                            <div class="icon-content">
+                                <img src="../../assets/frontend/images/standar-icon1.png"/>
+                                <div class="icon-infor">
+                                    <p class="title num">厨房</p>
+                                    <p>油烟机、燃气灶、橱柜、调味组、洗菜池、厨房整体台面、整体地面、垃圾桶</p>
+                                </div>
+                            </div>
+                            <div class="icon-content">
+                                <img src="../../assets/frontend/images/standar-icon2.png"/>
+                                <div class="icon-infor">
+                                    <p class="title num">卫生间</p>
+                                    <p>洗漱台、淋浴房、马桶、地面、垃圾桶</p>
+                                </div>
+                            </div>
+                            <div class="icon-content">
+                                <img src="../../assets/frontend/images/standar-icon3.png"/>
+                                <div class="icon-infor">
+                                    <p class="title num">客厅</p>
+                                    <p>窗户、沙发、茶几、地面、垃圾桶、客厅家具、客厅家电</p>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="left pr0">
+                            <div class="icon-content">
+                                <img src="../../assets/frontend/images/standar-icon4.png"/>
+                                <div class="icon-infor">
+                                    <p class="title num">卧室</p>
+                                    <p>窗户、床、梳妆台、衣柜、地面、卧室家电</p>
+                                </div>
+                            </div>
+                            <div class="icon-content">
+                                <img src="../../assets/frontend/images/standar-icon5.png"/>
+                                <div class="icon-infor">
+                                    <p class="title num">餐厅</p>
+                                    <p>餐桌椅、地面</p>
+                                </div>
+                            </div>
+                            <div class="icon-content">
+                                <img src="../../assets/frontend/images/standar-icon6.png"/>
+                                <div class="icon-infor">
+                                    <p class="title num">阳台</p>
+                                    <p>玻璃、地面、洗衣机</p>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="service-content bb0">
+                        <p class="title-p">验收标准:</p>
+                        <p class="p-infor">
+                            <img src="../../assets/frontend/images/caret-yuan.png"/><span> 地面干净</span>　
+                            <img src="../../assets/frontend/images/caret-yuan.png"/><span> 离开时带走垃圾</span>　
+                            <img src="../../assets/frontend/images/caret-yuan.png"/><span> 室内整体光亮无尘</span>　
+                            <img src="../../assets/frontend/images/caret-yuan.png"/><span> 玻璃光亮物品整齐归位</span>　
+                            <img src="../../assets/frontend/images/caret-yuan.png"/><span> 厨房清洁无油烟</span>　
+                            <img src="../../assets/frontend/images/caret-yuan.png"/><span> 浴室光洁无水渍</span>
+                        </p>
+                        <p class="p-prompt"><span class="num">*</span> 注明：橱柜内部（含内部陈设物品）、字画、古董、宗教陈设、易损易碎摆件、天花板、
+                            吊灯吊顶等不在基础保洁服务范围之内。如您有以上范围内的保洁需求,请致电客服或直接在我们的网站上了解其他相关保洁单项服务。</p>
+                    </div>
+                </li>
+                <li>
+                    <div class="service-head">
+                        <span class="title">
+                            服务保障:
+                        </span>
+                        <img src="../../assets/frontend/images/close.png" class="right close-serice"/>
+                    </div>
+                    <div class="service-content clearfix">
+                        <p class="left">
+                            <span>我们给您带来的不仅是服务，还有安全感。</span><br/>
+                            <span>我们渴望得到用户的信赖</span><br/>
+                            <span>我们尽量满足用户所有的挑剔</span><br/>
+                            <span>作为一个有责任心的家庭生活服务平台</span><br/>
+                            <span>我们恳求您</span><span></span><span></span><br/>
+                            <span>放心的将家务交给我们</span><br/>
+                            <span>因为,家服汇更有保障</span>
+                        </p>
+                        <img src="../../assets/frontend/images/service-save1.jpg" class="right"/>
+                    </div>
+                    <div class="service-content bb0 clearfix">
+
+                        <img src="../../assets/frontend/images/service-save2.jpg" class="left save"/>
+                        <p class="left infor-save">
+                            <span><img src="../../assets/frontend/images/caret-yuan.png"/>
+                                服务人员未按约定时间上门服务（迟到一小时以上）订单（如何）赔付；
+                            </span><br/>
+
+                            <span><img src="../../assets/frontend/images/caret-yuan.png"/>
+                                服务时常未满订单时间且未尽用户同意，服务人员擅自早退，订单时常(如何)补偿;
+                            </span><br/>
+
+                            <span><img src="../../assets/frontend/images/caret-yuan.png"/>
+                                未按要求完成反应物业项目，订单(如何)赔付。
+                            </span><br/>
+                            <span><img src="../../assets/frontend/images/caret-yuan.png"/>
+                                家服汇"保障"0风险;
+                            </span><br/>
+                            <span><img src="../../assets/frontend/images/caret-yuan.png"/>
+                                保障服务更全面、赔保金额更合理、审批流程更快捷 <br/>(保险赔付机制、赔付范围、赔付流程);
+                            </span><br/>
+                        </p>
+                    </div>
+                </li>
+                <li>
+                    <div class="service-head">
+                        <span class="title">
+                            订单须知:
+                        </span>
+                        <img src="../../assets/frontend/images/close.png" class="right close-serice"/>
+                    </div>
+                    <div class="service-content bb0">
+
+                        <div class="konw-div">
+                            <img src="../../assets/frontend/images/service-konw1.png"/>
+                            <div class="konw-infor">
+                                <p class="num title">下单</p>
+                                <p class="bottom">用户根据服务参考选定服务之后，通过在线支付完成服务下单（支付接口PC端采用支付宝和银联，移动端采用微支付）。</p>
+                            </div>
+                        </div>
+                        <div class="konw-div">
+                            <img src="../../assets/frontend/images/service-konw2.png"/>
+                            <div class="konw-infor">
+                                <p class="num title">订单更改 </p>
+                                <p class="bottom">可在个人账户--我的订单--操作更改栏目中更改订单服务的时间，请在订单服务前24小时提交更改（服务时间、地点、联系人。</p>
+                            </div>
+                        </div>
+                        <div class="konw-div bb0">
+                            <img src="../../assets/frontend/images/service-konw3.png" />
+                            <div class="konw-infor">
+                                <p class="num title">订单取消</p>
+                                <p class="bottom">可在个人账户--我的订单--操作取消订单服务。提前12小时取消订单的，服务金额将100%返还；提前6小时取消订单的，服务金额将返还60%;提前3小时取消订单的,将不退款。</p>
+                            </div>
+                        </div>
+                    </div>
+                </li>
+            </ul>
         </div>
     </div>
 </body>
@@ -923,5 +1165,59 @@
     <!--<script src="../../assets/frontend/js/activity.js?v=444"></script>-->
     <script type="text/javascript">
         $('.spinnerExample').spinner({});
+    </script>
+    <script>
+        /*保洁类型控制*/
+        $(".keeper-stype li").each(function(i){
+            $(this).on("click",function(){
+                $(this).addClass("active");
+                $(this).siblings().removeClass("active");
+                $(".active-div").eq(i).addClass("active");
+                $(".active-div").eq(i).siblings(".active-div").removeClass("active");
+    //            if($(".keeper-stype li").eq(1).hasClass("active")){
+    //                $(".active-div .rear").addClass("hide");
+    //            }else{
+    //                $(".active-div .rear").removeClass("hide");
+    //            }
+            });
+
+        });
+
+        /*保洁里的活动切换*/
+        var ul = $(".ulActivy li");
+        var at = $(".activeTable");
+        ul.each(function(i){
+            $(this).on("click",function(){
+                $(this).addClass("active");
+                $(this).siblings(ul).removeClass("active");
+                at.eq(i).addClass("active");
+                at.eq(i).siblings(at).removeClass("active");
+            });
+        });
+        /*保洁表单的控制*/
+        var jdt = $(".jsDisabledType");
+        var di = $(".div-inputs1");
+        var id = $(".inputDisable,.keeper-stype li button,.div-inputs2 input,.div-inputs2 select");
+        var dw = $(".div-wdate,.select-time,.s-spinner .hours,.btn-plus,.btn-reduce ,.div-inputs2 input,.div-inputs2,.s-spinner .spinner,.reserve-indormation .textarea,.div-inputs2 select");
+        jdt.click(function(){
+            if($(this).find("input")[0].checked==true){
+                di.find("input").removeAttr("disabled");
+                di.find("input").addClass("active");
+                di.addClass("active");
+                id.attr("disabled","disabled");
+                id.addClass("disabl");
+                dw.css({background:"#d6d6d6"});
+                $(".btn-plus,.btn-reduce").attr("disabled","disabled");
+            }
+            else{
+                di.find("input").attr("disabled","disabled");
+                di.find("input").removeClass("active");
+                di.removeClass("active");
+                id.removeAttr("disabled");
+                id.removeClass("disabl");
+                dw.css({background:"#fff"});
+                $(".btn-plus,.btn-reduce").removeAttr("disabled");
+            }
+        });
     </script>
 </html>
