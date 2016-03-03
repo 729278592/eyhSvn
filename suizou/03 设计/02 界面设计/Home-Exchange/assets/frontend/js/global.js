@@ -16,8 +16,6 @@
         });
     });
 
-
-
     /*ie8浏览器的处理*/
     function getIE()
     {
@@ -30,7 +28,6 @@
         }
     }
     getIE();
-
 
     /*IE支持placeholder属性*/
     var doc = document, inputs = doc.getElementsByTagName('input'), supportPlaceholder = 'placeholder'in doc.createElement('input'), placeholder = function (input) {

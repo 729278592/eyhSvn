@@ -16,7 +16,7 @@
         clearClick:function(){
             btnClear.on("click",function(){
                 rentalMode.removeClass("active");
-                rentalMode.find("input").attr({checked:false}).removeClass("checked");
+//                rentalMode.find("input").attr({checked:false}).removeClass("checked");
             })
         },
         radioClick:function(){

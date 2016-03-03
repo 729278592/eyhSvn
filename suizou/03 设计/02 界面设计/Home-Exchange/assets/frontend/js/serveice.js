@@ -5,12 +5,24 @@
 $(function(){
     var rul = $(".se-ul li,.server-types li,.sca-ul li");
     var rl = $(".se-div,.bonus.joined-money,.scSlider1");
+    function ellipsisShow(){
+        var ds = $(".deatils-p");
+        ds.each(function(){
+            var divH = $(this).height();
+            var $p = $("p", $(this)).eq(0);
+            while ($p.outerHeight() > divH) {
+                $p.text($p.text().replace(/(\s)*([a-zA-Z0-9]+|\W)(\.\.\.)?$/, "..."));
+            }
+        });
+    }
+
     rul.each(function(i){
         $(this).on("click",function(){
             $(this).addClass("active");
             $(this).siblings().removeClass("active");
             rl.eq(i).addClass("active");
             rl.eq(i).siblings(rl).removeClass("active");
+            ellipsisShow();
         })
     });
 

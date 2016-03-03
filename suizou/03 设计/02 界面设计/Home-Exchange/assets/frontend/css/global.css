@@ -885,6 +885,7 @@ label.error {color: #EA5200;margin-bottom: 0;}
 .n-list{width: 100%;}
 .n-list li{height: 162px;position: relative;border-bottom: 1px dashed #dbdbdb;border-right: 1px dashed #dbdbdb;float: left;width: 491px;padding: 15px 0;}
 .n-list li.last{border-right: none;width: 466px;padding-left: 25px;}
+.n-list li.bb0{border-bottom: none;}
 .n-list li>img{margin-right: 30px;}
 .n-list li .name{width: 80px;height: 26px;text-align: center;line-height: 26px;background: #babcba;position: absolute;top: 30px;left: 213px;color: #fff;}
 .n-list li.last .name{left: 238px;}
@@ -1922,7 +1923,18 @@ a.fbtn-return {position: relative;left: 10px;color: #fff;}
 .gybz-infor p{line-height: 26px;}
 .register-ul li:hover{cursor: pointer;}
 
-
+/*分页*/
+.paging{position: relative;left: 50%;margin-top: 20px;}
+.page-pre,.page-next{float: left;padding: 0 15px;border-radius: 4px;background: #9a9a9a;color: #fff;font-size: 28px;}
+.page-next{margin-left: 5px;}
+.page-menu{float: left;margin-right: 4px;}
+.page-menu li{float: left;border-radius: 4px;background: #f2f2f2;margin-left: 5px;color: #666;width: 40px;height: 30px;text-align: center;line-height: 30px;font-size: 12px;}
+.page-menu li.active{background: #ff6702;color: #fff;}
+.page-pre:hover,.page-next:hover{cursor: pointer;}
+.page-menu li:hover{cursor: pointer;}
+.page-num{border: 1px solid #ccc;text-align: center;width: 50px;height: 25px;line-height: 25px;color: #666;font-size: 12px;}
+.btn-jump{width: 50px;height: 30px;text-align: center;background: #ff6702;font-size: 12px;color: #fff;}
+.page-num:focus{color: #ff6702;}
 /*media*/
 @media screen and (max-width: 1024px) {
     body{overflow-x: scroll;}
