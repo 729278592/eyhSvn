@@ -678,11 +678,12 @@ li .main{width: 100%;display: inline-block;white-space: nowrap;text-overflow: el
 
 
 .objective-menu{width: 100%;width: 90%\0;margin: 0 5%\0;position: relative;left: 3.5%\0;}
-.objective-menu li{margin-bottom: 15px;font-size: 14px;color: #666;width: 18%;width: 18%\0;margin-right: 4%;margin-right: 2%\0;height: 199px;background: url("../images/objective-bg.jpg") no-repeat;background-size: 100%;float: left;padding: 15px 2%;}
+.objective-menu li{margin-bottom: 40px;font-size: 14px;color: #666;width: 18%;width: 18%\0;margin-right: 4%;margin-right: 2%\0;height: 199px;background: url("../images/objective-bg.jpg") no-repeat;background-size: 100%;float: left;padding: 15px 2%;position: relative;}
 .objective-menu li.mr0{margin-right: 0;}
 .ob-infor{margin-top: 10px;width: 90%\0;}
 .ob-infor .large-span{font-size: 22px;color: #fbb664;}
-.objective-menu li .h1{}
+.objective-menu li .num-span{position: absolute;bottom: -30px;color: #999;}
+.objective-menu li .h1{display: inline-block;width: 30px;height: 1px;background: #999;position: relative;top: -5px;left: -10px;}
 
 
 .service-content>p.left{width: 364px;font-size: 14px;color: #666;}
@@ -1672,6 +1673,7 @@ tr th,tr td{ text-align:center;font-size: 14px;border:1px solid #fbb432;color: #
 .sch-menu.bg5 li.active p{background: #fff;color: #52ba92;}
 .area-infor{width: 100%;margin-top: 10px;}
 .area-infor .title{width: 640px;text-indent: 20px;color: #666;background: #cccccc;}
+.area-infor>.title{padding: 6px 0;width: 100%;}
 .area-infor .title.bg1{background: #8b3357;}
 .area-infor .title.bg2{background: #d6c1a7;}
 .area-infor .title.bg5{background: #52ba92;}

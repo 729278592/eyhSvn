@@ -269,16 +269,18 @@ $(function(){
                         $(this).closest(".chiocetime").addClass("hide");
                 });
 
-
-                $(".reserve").eq(i).delegate(".select1","change",function(){
-                    num1 = parseInt($(".select1 option:selected").text());
-                    num  = parseInt($(".select1 option:last").text())-num1;
-                    str1 = "";
-                    for(var i = 0;i<num;i++){
-                        str1 += '<option value="">'+ ++num1 +':00</option>';
-                    }
-                    select2.html(str1);
+                $(".select1").each(function(){
+                    $(this).closest(".reserve").delegate(".select1","change",function(){
+                        num1 = parseInt($(this).find("option:selected").text());
+                        num  = parseInt($(this).find("option:last").text())-num1;
+                        str1 = "";
+                        for(var i = 0;i<num;i++){
+                            str1 += '<option value="">'+ ++num1 +':00</option>';
+                        }
+                        $(this).closest(".reserve").find(".select2").html(str1);
+                    })
                 });
+
             });
         });
 
