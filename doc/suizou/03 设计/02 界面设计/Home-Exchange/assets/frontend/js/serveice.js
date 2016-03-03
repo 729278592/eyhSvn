@@ -227,13 +227,9 @@ $(function(){
 
 
     /*护理时间选择*/
-    var select2 = $(".select2");
     var date = new Date();
     var str1;
     var num1,num;
-
-
-
     function getFirstAndLastMonthDay( year, month){
         var day = new Date(year,month,0);
         //给文本控件赋值。同下
