@@ -15,7 +15,7 @@ $(function(){
     });
 
 
-
+    /*服务蒙版控制*/
     function maskShow(){
         var jai = $(".js-active1 .item img,.nws-infor .btn-look");
         var m = $(".mask");
@@ -71,9 +71,6 @@ $(function(){
         });
     }
     maskShow();
-
-
-
     function maskShow1(){
         var jai = $(".js-active .item img");
         var m = $(".mask");
@@ -160,10 +157,6 @@ $(function(){
     });
 
 
-
-
-
-
     /*售后服务切换*/
     var cil = $(".chioce-infors li");
     var sd = $(".ser-div>div");
@@ -189,6 +182,7 @@ $(function(){
         });
     });
 
+
     var ft = $(".fl-type");
     var bt = $(".btn-type");
     ft.each(function(){
@@ -207,9 +201,9 @@ $(function(){
             $(this).get(0).style.marginTop = ht;
         });
     }
-
-
     heightAuto();
+
+
     /*服务信息的详情*/
     $(".server-ul li").each(function(i){
         $(this).find("img").on("click",function(){
@@ -237,23 +231,11 @@ $(function(){
     var date = new Date();
     var str1;
     var num1,num;
-    $(".jsActive>div.active").delegate(".btn-sureTime","click",function(){
-        $(this).closest(".chiocetime").addClass("hide");
-    });
-    $(".select1").on("change",function(){
-        num1 = parseInt($(".select1 option:selected").text());
-        num  = parseInt($(".select1 option:last").text())-num1;
-        str1 = "";
-        for(var i = 0;i<num;i++){
-            str1 += ' <option value="">'+ ++num1 +':00</option>';
-        }
-        select2.html(str1);
-    });
+
+
 
     function getFirstAndLastMonthDay( year, month){
-        var firstdate = year + '-' + month + '-01';
         var day = new Date(year,month,0);
-        var lastdate = year + '-' + month + '-' + day.getDate();//获取当月最后一天日期
         //给文本控件赋值。同下
         var date = new Date();
         var str = '<div class="time-date">'+
@@ -264,23 +246,42 @@ $(function(){
         }
         str += '</ul></div>';
         $(".after").after(str);
-        var tml = $(".time-menu li");
-        var tl = tml.eq(date.getDate()-1);
-        var cc = $(".chiocetime");
-        var text = tl.text();
-        var next = tl.nextAll();
-        var prev = tl.prevAll();
-        if(text==date.getDate()){
-            tl.addClass("active");
-            next.addClass("next-active");
-            prev.addClass("prev-active");
-        }
-        next.each(function(i){
-            $(this).on("click",function(e){
-                e.stopPropagation();
-                cc.removeClass("hide");
-            })
+        var tm = $(".time-menu");
+        tm.each(function(i){
+            var tl = tm.eq(i).find("li").eq(date.getDate()-1);
+            var cc = $(".chiocetime");
+            var text = tl.text();
+            var next = tl.nextAll();
+            var prev = tl.prevAll();
+            if(text==date.getDate()){
+                tl.addClass("active");
+                next.addClass("next-active");
+                prev.addClass("prev-active");
+            }
+            next.each(function(){
+                $(this).on("click",function(e){
+                    e.stopPropagation();
+                    $(this).closest(".reserve").find(cc).removeClass("hide");
+                })
+            });
+                $(".reserve").each(function(i){
+                    $(".reserve").eq(i).delegate(".btn-sureTime","click",function(){
+                        $(this).closest(".chiocetime").addClass("hide");
+                });
+
+
+                $(".reserve").eq(i).delegate(".select1","change",function(){
+                    num1 = parseInt($(".select1 option:selected").text());
+                    num  = parseInt($(".select1 option:last").text())-num1;
+                    str1 = "";
+                    for(var i = 0;i<num;i++){
+                        str1 += '<option value="">'+ ++num1 +':00</option>';
+                    }
+                    select2.html(str1);
+                });
+            });
         });
+
 //        $("html").on("click",function(){
 //            cc.addClass("hide")
 //        })
