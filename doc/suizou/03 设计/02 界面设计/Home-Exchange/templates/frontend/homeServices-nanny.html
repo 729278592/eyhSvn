@@ -291,7 +291,7 @@
                                 </p>
                             </div>
                         </li>
-                        <li>
+                        <li class="bb0">
                             <a href="serverPerson-details.html" class="list-div">
                                 <img src="../../assets/frontend/images/m-img1.jpg" alt=""/>
                                 <div class="list-mask-bg"></div>
@@ -318,7 +318,7 @@
                                 </p>
                             </div>
                         </li>
-                        <li class="last">
+                        <li class="last bb0">
                             <a href="serverPerson-details.html" class="list-div">
                                 <img src="../../assets/frontend/images/m-img1.jpg" alt=""/>
                                 <div class="list-mask-bg"></div>
@@ -347,6 +347,20 @@
                             </div>
                         </li>
                     </ul>
+                    <div class="paging clearfix">
+                        <!--<p class="page-pre"><i class="fa fa-caret-left"></i></p>-->
+                        <ul class="page-menu clearfix">
+                            <li class="active">1</li>
+                            <li>2</li>
+                            <li>3</li>
+                            <li>4</li>
+                            <li>...</li>
+                            <li>20</li>
+                        </ul>
+                        <input type="text" class="page-num" placeholder="1"/>
+                        <button type="button" class="btn-jump">跳转</button>
+                        <!--<p class="page-next"><i class="fa fa-caret-right"></i></p>-->
+                    </div>
                 </div>
             </div>
         </div>
@@ -437,6 +451,8 @@
     <script>
         jQuery(document).ready(function() {
             ComponentsjQueryUISliders.init();
+            var ml = $(".paging").width()/2;
+            $(".paging").get(0).style.marginLeft = -ml+"px";
         });
     </script>
 </html>
