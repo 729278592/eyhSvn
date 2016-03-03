@@ -46,7 +46,7 @@
                     </a>
                 </li>
                 <li>
-                    <a href="login.html">
+                    <a href="person-login.html">
                         登录
                     </a>
                 </li>
@@ -163,18 +163,18 @@
                                     <input id="d4311" class="Wdate" type="text" placeholder="2015-10-10" onfocus="  WdatePicker({ dateFmt: 'yyyy-MM', isShowToday: false, isShowClear: false })">
                                     <i class="fa fa-calendar"></i>
                                 </div>
-                                <select name="" class="select-time right inputDisable">
-                                    <option value="时间">时间</option>
-                                    <option value="12:00">1:00</option>
-                                    <option value="13:00">2:00</option>
-                                    <option value="12:00">3:00</option>
-                                    <option value="13:00">4:00</option>
-                                    <option value="12:00">5:00</option>
-                                    <option value="13:00">6:00</option>
-                                </select>
+                                <!--<select name="" class="select-time right inputDisable">-->
+                                <!--<option value="时间">时间</option>-->
+                                <!--<option value="12:00">1:00</option>-->
+                                <!--<option value="13:00">2:00</option>-->
+                                <!--<option value="12:00">3:00</option>-->
+                                <!--<option value="13:00">4:00</option>-->
+                                <!--<option value="12:00">5:00</option>-->
+                                <!--<option value="13:00">6:00</option>-->
+                                <!--</select>-->
                             </div>
                             <p class="title pt0 after">预约面试时间</p>
-                            <div class="chiocetime hide">
+                            <div class="chiocetime hide top320">
                                 <p class="title">请输入护理时间</p>
                                 <select name="" class="select1">
                                     <option value="9:00">9:00</option>
@@ -207,10 +207,10 @@
                                     <span class="maked"></span>不可预约
                                 </li>
                                 <li>
-                                    <span class="making"></span>可预约
+                                    <span class="no-make"></span>可预约
                                 </li>
                                 <li>
-                                    <span class="no-make"></span>预约中
+                                    <span class="making"></span>预约中
                                 </li>
                             </ul>
 
@@ -352,164 +352,68 @@
                                 <button class="btn-type right mb10">中级</button>
                                 <button class="btn-type left">低级</button>
                             </div>
-                            <p class="title pt0">请输入您需要服务的时间</p>
+                            <p class="title pt0">我的预产期</p>
                             <div class="reserve-date clearfix">
                                 <div class="div-wdate left">
-                                    <input id="d4311" class="Wdate" type="text" placeholder="2015-10-10"  onfocus="  WdatePicker({ dateFmt: 'yyyy-MM', isShowToday: false, isShowClear: false })"/>
+                                    <input id="d4311" class="Wdate" type="text" placeholder="2015-10-10" onfocus="  WdatePicker({ dateFmt: 'yyyy-MM', isShowToday: false, isShowClear: false })">
                                     <i class="fa fa-calendar"></i>
                                 </div>
-                                <select name="" class="select-time right inputDisable">
-                                    <option value="时间">时间</option>
-                                    <option value="12:00">1:00</option>
-                                    <option value="13:00">2:00</option>
-                                    <option value="12:00">3:00</option>
-                                    <option value="13:00">4:00</option>
-                                    <option value="12:00">5:00</option>
-                                    <option value="13:00">6:00</option>
+                                <!--<select name="" class="select-time right inputDisable">-->
+                                <!--<option value="时间">时间</option>-->
+                                <!--<option value="12:00">1:00</option>-->
+                                <!--<option value="13:00">2:00</option>-->
+                                <!--<option value="12:00">3:00</option>-->
+                                <!--<option value="13:00">4:00</option>-->
+                                <!--<option value="12:00">5:00</option>-->
+                                <!--<option value="13:00">6:00</option>-->
+                                <!--</select>-->
+                            </div>
+                            <p class="title pt0 after">预约面试时间</p>
+                            <div class="chiocetime hide top320">
+                                <p class="title">请输入护理时间</p>
+                                <select name="" class="select1">
+                                    <option value="9:00">9:00</option>
+                                    <option value="10:00">10:00</option>
+                                    <option value="11:00">11:00</option>
+                                    <option value="12:00">12:00</option>
+                                    <option value="13:00">13:00</option>
+                                    <option value="14:00">14:00</option>
+                                    <option value="15:00">15:00</option>
+                                    <option value="16:00">16:00</option>
+                                    <option value="17:00">17:00</option>
+                                    <option value="18:00">18:00</option>
                                 </select>
+                                <span>到</span>
+                                <select name="" class="select2">
+                                    <option value="10:00">10:00</option>
+                                    <option value="11:00">11:00</option>
+                                    <option value="12:00">12:00</option>
+                                    <option value="13:00">13:00</option>
+                                    <option value="14:00">14:00</option>
+                                    <option value="15:00">15:00</option>
+                                    <option value="16:00">16:00</option>
+                                    <option value="17:00">17:00</option>
+                                    <option value="18:00">18:00</option>
+                                </select>
+                                <button class="btn-sureTime">确定</button>
                             </div>
+                            <ul class="make-appointment clearfix">
+                                <li>
+                                    <span class="maked"></span>不可预约
+                                </li>
+                                <li>
+                                    <span class="no-make"></span>可预约
+                                </li>
+                                <li>
+                                    <span class="making"></span>预约中
+                                </li>
+                            </ul>
+
                             <p class="title">
                                 <label>
-                                    <input type="checkbox"/> 我已经阅读并同意《家服汇用户使用协议》
+                                    <input type="checkbox"/> 我已经阅读并同意
                                 </label>
-                            </p>
-                            <div class="div-order">
-                                <a href="homeServices-maternitySearch.html" class="btn-order btn-mother">找个好孕妈妈go》</a>
-                                <button class="btn-order btn-order1">平台</button>
-                                <div class="ma-dailog hide">
-                                    <i class="fa fa-caret-down"></i>
-                                    <div class="ma-infor">
-                                        <p>
-                                            <span class="type">籍贯:</span>
-                                            <select name="">
-                                                <option value="四川">四川</option>
-                                                <option value="广东">广东</option>
-                                                <option value="西藏">西藏</option>
-                                            </select>
-                                        </p>
-
-                                        <p>
-                                            <span class="type">语言:</span>
-                                            <select name="">
-                                                <option value="汉语">汉语</option>
-                                                <option value="粤语">粤语</option>
-                                                <option value="藏语">藏语</option>
-                                            </select>
-                                        </p>
-
-                                        <p>
-                                            <span class="type">属相:</span>
-                                            <select name="">
-                                                <option value="猪">猪</option>
-                                                <option value="牛">牛</option>
-                                                <option value="羊">羊</option>
-                                            </select>
-                                        </p>
-
-                                        <p>
-                                            <span class="type">经验:</span>
-                                            <select name="">
-                                                <option value="一年">一年</option>
-                                                <option value="两年">两年</option>
-                                                <option value="三年">三年</option>
-                                            </select>
-                                        </p>
-                                    </div>
-                                    <button class="btn-submit">提交</button>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-                <div>
-                    <div class="keep-details left">
-                        <div class="rank-mother clearfix">
-                            <a href="#">
-                                <img src="../../assets/frontend/images/ma1.jpg" class="left ma-img"/>
-                            </a>
-                            <div class="swg-infor left">
-                                <p class="title">
-                                    <span>高级</span>
-                                    <span class="c67">10800元/月</span>
-                                </p>
-                                <p class="small-infor c67">
-                                    全心全意照顾孩子与孕妇
-                                </p>
-                                <p>1、贴心包</p>
-
-                                <p>2、科学喂养</p>
-
-                                <p>3、婴儿日常护理</p>
-
-                                <p>4、婴儿早期教育</p>
-
-                                <p>5、产妇护理</p>
-
-                            </div>
-                        </div>
-                        <div class="rank-mother clearfix">
-                            <a href="#">
-                                <img src="../../assets/frontend/images/ma1.jpg" class="left ma-img"/>
-                            </a>
-                            <div class="swg-infor left">
-                                <p class="title">
-                                    <span>中级</span>
-                                    <span class="c67">10800元/月</span>
-                                </p>
-                                <p class="small-infor c67">
-                                    全心全意照顾孩子与孕妇
-                                </p>
-                                <p>1、贴心包</p>
-
-                                <p>2、科学喂养</p>
-
-                                <p>3、婴儿日常护理</p>
-
-                                <p>4、婴儿早期教育</p>
-
-                                <p>5、产妇护理</p>
-
-                            </div>
-                        </div>
-                        <div class="rank-mother clearfix">
-                            <a href="#">
-                                <img src="../../assets/frontend/images/ma1.jpg" class="left ma-img"/>
-                            </a>
-                            <div class="swg-infor left">
-                                <p class="title">
-                                    <span>低级</span>
-                                    <span class="c67">10800元/月</span>
-                                </p>
-                                <p class="small-infor c67">
-                                    全心全意照顾孩子与孕妇
-                                </p>
-                                <p>1、贴心包</p>
-
-                                <p>2、科学喂养</p>
-
-                                <p>3、婴儿日常护理</p>
-
-                                <p>4、婴儿早期教育</p>
-
-                                <p>5、产妇护理</p>
-
-                            </div>
-                        </div>
-                    </div>
-                    <div class="reserve right">
-                        <p class="title bg5">基本护理在线预约</p>
-                        <div class="reserve-indormation bf1">
-                            <p class="title">级别选项</p>
-                            <div class="fl-type clearfix bg5">
-                                <button class="btn-type active left mb10">高级</button>
-                                <button class="btn-type right mb10">中级</button>
-                                <button class="btn-type left">低级</button>
-                            </div>
-                            <p class="title pt0">请输入您需要服务的时间</p>
-                            <p class="title">
-                                <label>
-                                    <input type="checkbox"/> 我已经阅读并同意《家服汇用户使用协议》
-                                </label>
+                                <a href="#">《家服汇用户使用协议》</a>
                             </p>
                             <div class="div-order">
                                 <a href="homeServices-maternitySearch.html" class="btn-order btn-mother">找个好孕妈妈go》</a>
@@ -637,77 +541,187 @@
                     <div class="reserve right">
                         <p class="title bg5">基本护理在线预约</p>
                         <div class="reserve-indormation bf1">
-                            <p class="title">级别选项</p>
-                            <div class="fl-type clearfix bg5">
-                                <button class="btn-type active left mb10">高级</button>
-                                <button class="btn-type right mb10">中级</button>
-                                <button class="btn-type left">低级</button>
-                            </div>
-                            <p class="title pt0">请输入您需要服务的时间</p>
-                            <div class="reserve-date clearfix">
-                                <div class="div-wdate left">
-                                    <input id="d4311" class="Wdate" type="text" placeholder="2015-10-10"  onfocus="  WdatePicker({ dateFmt: 'yyyy-MM', isShowToday: false, isShowClear: false })"/>
-                                    <i class="fa fa-calendar"></i>
-                                </div>
-                                <select name="" class="select-time right inputDisable">
-                                    <option value="时间">时间</option>
-                                    <option value="12:00">1:00</option>
-                                    <option value="13:00">2:00</option>
-                                    <option value="12:00">3:00</option>
-                                    <option value="13:00">4:00</option>
-                                    <option value="12:00">5:00</option>
-                                    <option value="13:00">6:00</option>
+                            <p class="title pt0 after">预约面试时间</p>
+                            <div class="chiocetime hide top320">
+                                <p class="title">请输入护理时间</p>
+                                <select name="" class="select1">
+                                    <option value="9:00">9:00</option>
+                                    <option value="10:00">10:00</option>
+                                    <option value="11:00">11:00</option>
+                                    <option value="12:00">12:00</option>
+                                    <option value="13:00">13:00</option>
+                                    <option value="14:00">14:00</option>
+                                    <option value="15:00">15:00</option>
+                                    <option value="16:00">16:00</option>
+                                    <option value="17:00">17:00</option>
+                                    <option value="18:00">18:00</option>
                                 </select>
+                                <span>到</span>
+                                <select name="" class="select2">
+                                    <option value="10:00">10:00</option>
+                                    <option value="11:00">11:00</option>
+                                    <option value="12:00">12:00</option>
+                                    <option value="13:00">13:00</option>
+                                    <option value="14:00">14:00</option>
+                                    <option value="15:00">15:00</option>
+                                    <option value="16:00">16:00</option>
+                                    <option value="17:00">17:00</option>
+                                    <option value="18:00">18:00</option>
+                                </select>
+                                <button class="btn-sureTime">确定</button>
                             </div>
+                            <ul class="make-appointment clearfix">
+                                <li>
+                                    <span class="maked"></span>不可预约
+                                </li>
+                                <li>
+                                    <span class="no-make"></span>可预约
+                                </li>
+                                <li>
+                                    <span class="making"></span>预约中
+                                </li>
+                            </ul>
+
                             <p class="title">
                                 <label>
-                                    <input type="checkbox"/> 我已经阅读并同意《家服汇用户使用协议》
+                                    <input type="checkbox"/> 我已经阅读并同意
                                 </label>
+                                <a href="#">《家服汇用户使用协议》</a>
                             </p>
                             <div class="div-order">
-                                <a href="homeServices-maternitySearch.html" class="btn-order btn-mother">找个好孕妈妈go》</a>
-                                <button class="btn-order btn-order1">平台</button>
-                                <div class="ma-dailog hide">
-                                    <i class="fa fa-caret-down"></i>
-                                    <div class="ma-infor">
-                                        <p>
-                                            <span class="type">籍贯:</span>
-                                            <select name="">
-                                                <option value="四川">四川</option>
-                                                <option value="广东">广东</option>
-                                                <option value="西藏">西藏</option>
-                                            </select>
-                                        </p>
+                                <a href="order-pay.html" class="btn-order">下单</a>
+                                <!--<input type="submit" value="下单" class="btn-order"/>-->
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div>
+                    <div class="keep-details left">
+                        <div class="rank-mother clearfix">
+                            <a href="#">
+                                <img src="../../assets/frontend/images/ma1.jpg" class="left ma-img"/>
+                            </a>
+                            <div class="swg-infor left">
+                                <p class="title">
+                                    <span>高级</span>
+                                    <span class="c67">10800元/月</span>
+                                </p>
+                                <p class="small-infor c67">
+                                    全心全意照顾孩子与孕妇
+                                </p>
+                                <p>1、贴心包</p>
 
-                                        <p>
-                                            <span class="type">语言:</span>
-                                            <select name="">
-                                                <option value="汉语">汉语</option>
-                                                <option value="粤语">粤语</option>
-                                                <option value="藏语">藏语</option>
-                                            </select>
-                                        </p>
+                                <p>2、科学喂养</p>
 
-                                        <p>
-                                            <span class="type">属相:</span>
-                                            <select name="">
-                                                <option value="猪">猪</option>
-                                                <option value="牛">牛</option>
-                                                <option value="羊">羊</option>
-                                            </select>
-                                        </p>
+                                <p>3、婴儿日常护理</p>
 
-                                        <p>
-                                            <span class="type">经验:</span>
-                                            <select name="" id="">
-                                                <option value="一年">一年</option>
-                                                <option value="两年">两年</option>
-                                                <option value="三年">三年</option>
-                                            </select>
-                                        </p>
-                                    </div>
-                                    <button class="btn-submit">提交</button>
-                                </div>
+                                <p>4、婴儿早期教育</p>
+
+                                <p>5、产妇护理</p>
+
+                            </div>
+                        </div>
+                        <div class="rank-mother clearfix">
+                            <a href="#">
+                                <img src="../../assets/frontend/images/ma1.jpg" class="left ma-img"/>
+                            </a>
+                            <div class="swg-infor left">
+                                <p class="title">
+                                    <span>中级</span>
+                                    <span class="c67">10800元/月</span>
+                                </p>
+                                <p class="small-infor c67">
+                                    全心全意照顾孩子与孕妇
+                                </p>
+                                <p>1、贴心包</p>
+
+                                <p>2、科学喂养</p>
+
+                                <p>3、婴儿日常护理</p>
+
+                                <p>4、婴儿早期教育</p>
+
+                                <p>5、产妇护理</p>
+
+                            </div>
+                        </div>
+                        <div class="rank-mother clearfix">
+                            <a href="#">
+                                <img src="../../assets/frontend/images/ma1.jpg" class="left ma-img"/>
+                            </a>
+                            <div class="swg-infor left">
+                                <p class="title">
+                                    <span>低级</span>
+                                    <span class="c67">10800元/月</span>
+                                </p>
+                                <p class="small-infor c67">
+                                    全心全意照顾孩子与孕妇
+                                </p>
+                                <p>1、贴心包</p>
+
+                                <p>2、科学喂养</p>
+
+                                <p>3、婴儿日常护理</p>
+
+                                <p>4、婴儿早期教育</p>
+
+                                <p>5、产妇护理</p>
+
+                            </div>
+                        </div>
+                    </div>
+                    <div class="reserve right">
+                        <p class="title bg5">基本护理在线预约</p>
+                        <div class="reserve-indormation bf1">
+                            <p class="title pt0 after">预约面试时间</p>
+                            <div class="chiocetime hide top320">
+                                <p class="title">请输入护理时间</p>
+                                <select name="" class="select1">
+                                    <option value="9:00">9:00</option>
+                                    <option value="10:00">10:00</option>
+                                    <option value="11:00">11:00</option>
+                                    <option value="12:00">12:00</option>
+                                    <option value="13:00">13:00</option>
+                                    <option value="14:00">14:00</option>
+                                    <option value="15:00">15:00</option>
+                                    <option value="16:00">16:00</option>
+                                    <option value="17:00">17:00</option>
+                                    <option value="18:00">18:00</option>
+                                </select>
+                                <span>到</span>
+                                <select name="" class="select2">
+                                    <option value="10:00">10:00</option>
+                                    <option value="11:00">11:00</option>
+                                    <option value="12:00">12:00</option>
+                                    <option value="13:00">13:00</option>
+                                    <option value="14:00">14:00</option>
+                                    <option value="15:00">15:00</option>
+                                    <option value="16:00">16:00</option>
+                                    <option value="17:00">17:00</option>
+                                    <option value="18:00">18:00</option>
+                                </select>
+                                <button class="btn-sureTime">确定</button>
+                            </div>
+                            <ul class="make-appointment clearfix">
+                                <li>
+                                    <span class="maked"></span>不可预约
+                                </li>
+                                <li>
+                                    <span class="no-make"></span>可预约
+                                </li>
+                                <li>
+                                    <span class="making"></span>预约中
+                                </li>
+                            </ul>
+                            <p class="title">
+                                <label>
+                                    <input type="checkbox"/> 我已经阅读并同意
+                                </label>
+                                <a href="#">《家服汇用户使用协议》</a>
+                            </p>
+                            <div class="div-order">
+                                <a href="order-pay.html" class="btn-order">下单</a>
+                                <!--<input type="submit" value="下单" class="btn-order"/>-->
                             </div>
                         </div>
                     </div>

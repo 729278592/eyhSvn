@@ -102,5 +102,4 @@
         $(this).siblings().find("a").removeClass("active");
     });
 
-
 })(jQuery);
