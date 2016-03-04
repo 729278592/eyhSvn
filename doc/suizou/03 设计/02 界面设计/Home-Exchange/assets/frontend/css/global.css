@@ -1804,11 +1804,11 @@ tr th,tr td{ text-align:center;font-size: 14px;border:1px solid #fbb432;color: #
 .order-list{width: 100%;}
 .list-title{font-size: 16px;color: #444;text-indent: 23px;margin: 15px 0 6px;}
 .order-menu{width: 100%;background: #f3f3f3;padding: 5px 0;}
-.order-menu li{padding: 3px 0;color: #666;border-right: 1px solid #dbdbdb;width: 102px;text-align: center;float: left;font-size: 14px;}
+.order-menu li{padding: 3px 0;color: #666;border-right: 1px solid #dbdbdb;width: 185px;text-align: center;float: left;font-size: 14px;}
 .order-menu li.br0{border-right: none;}
 .gz-infor{width: 931px;border: 1px solid #dbdbdb;border-top: none;overflow: hidden;}
 .gz-menu{width: 100%;margin-top: 10px;}
-.gz-menu li{width: 103px;color: #999;float: left;font-size: 14px;}
+.gz-menu li{width: 186px;color: #999;float: left;font-size: 14px;}
 .gz-menu li p{width: 100%;line-height: 26px;text-align: center;}
 .gz-menu li p input{position: relative;top: 2px;}
 .par-infor{width: 100%;padding: 6px 0;background: #f3f3f3;color: #666;font-size: 14px;}
