@@ -21,18 +21,18 @@
         },
         radioClick:function(){
             radio.parent(rentalMode).on("click",function(){
-                var tfr = $(this).find(radio).get(0);
-                if(tfr.className == ""){
-                    tfr.checked = true;
-                    tfr.className = "checked";
-                    $(this).siblings(rentalMode).find(radio).removeClass("checked");
+                var tfr = $(this).get(0);
+                if(tfr.find("input")[0].checked==true){
+//                    tfr.checked = true;
+//                    tfr.className = "checked";
+//                    $(this).siblings(rentalMode).find(radio).removeClass("checked");
+                    $(this).removeClass("active");
+                }
+                else{
+//                    tfr.checked = false;
+//                    tfr.className = "";
                     $(this).siblings(rentalMode).removeClass("active");
                     $(this).addClass("active");
-                }
-                else if(tfr.className == "checked"){
-                    tfr.checked = false;
-                    tfr.className = "";
-                    $(this).removeClass("active");
                 }
             })
         },
