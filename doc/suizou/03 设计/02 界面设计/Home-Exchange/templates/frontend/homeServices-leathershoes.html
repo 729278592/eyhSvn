@@ -5,6 +5,7 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1" />
     <title>皮鞋护理</title>
     <link rel="stylesheet" href="../../assets/global/plugins/font/css/font-awesome.min.css"/>
+    <link rel="stylesheet" href="../../assets/global/plugins/jquery-spinner/css/jquery.spinner.css"/>
     <link rel="stylesheet" href="../../assets/frontend/css/global.css"/>
 </head>
 <body>
@@ -99,22 +100,32 @@
                                         <p>擦亮鞋面</p>
                                     </li>
                                 </ul>
-                                <p>
-                                    家服汇推出的专业家庭保洁服务，首创4小时标准服务制，雇佣式的员工管理、规范化的培训流程专业的保洁工具为您提供最佳的保洁体验。为
-                                </p>
-                                <p>
-                                    <span class="type">服务费用 :</span>
-                                    40元/次，2小时起
+                                <p class="stype-title">
+                                    服务介绍 :
                                 </p>
 
                                 <p>
-                                    <span class="type">适合范围 :</span>
-                                    本产品仅适用于日常家庭室内保洁，不可用于学校、办公室、商铺 、出租房、新装修房、长期未入住房、集体宿舍楼等房子类型保洁。
+                                    家服汇平台面向广大社区推出全新品牌服务“鞋先生”，我们的技师均经过专业的培训和考核。随身携带德国进口擦鞋工具上门为用户解决社区找不到优质鞋垫为自己爱写作专业护理的烦恼。
+                                    通过对皮鞋的专业护理和擦拭,用户陈旧已久的皮鞋将会焕然一新；在进口鞋油及药剂的辅助下，还可以使用户摆脱脚臭的烦恼,为用户的品质生活增添新的光彩。
                                 </p>
-                                <p>
-                                    <span class="type">服务标准 :</span>
-                                    皮鞋无尘、光亮、网面干净、鞋子清香、炒作区域整洁无垢、垃圾离开时带走
+                                <p class="stype-title">
+                                    星级标准 :
                                 </p>
+
+                                <p class="p-list lear-list">
+                                    <span><img src="../../assets/frontend/images/lear-caret.png">　专用抗菌毛巾(保护皮革,擦拭中做到0损伤)</span>
+                                </p>
+
+                                <p class="p-list lear-list">
+                                    <span><img src="../../assets/frontend/images/lear-caret.png">　法国依云原装进口喷雾剂（在清洁鞋面时，纯天然矿泉水不含任何杂质与真菌，彻底润洁鞋面）</span>
+                                </p>
+                                <p class="p-infors">德国WOLY原装进口产品</p>
+                                <p class="ti10">中性清洗液 <span class="small-span">（高品质重环保的中性洗液能彻底清除鞋面顽固污渍）</span></p>
+                                <p class="ti10">滋养油 <span class="small-span">（高品质重环保的滋养油能让爱鞋的皮革受到加倍滋养，软化皮革延长使用寿命）</span></p>
+                                <p class="ti10">鞋油 <span class="small-span">（高品质重环保的鞋油能够起到对爱鞋划伤之处有明显的补色和简单修复功能，让陈旧的鞋子焕然一新）</span></p>
+                                <p class="ti10">马毛刷 <span class="small-span">（天然马毛在皮鞋掸亮过程中起到让鞋面更加亮泽的作用）</span></p>
+                                <p class="ti10">鞋蜡 <span class="small-span">（纯天然蜂蜡在鞋面形成一道防水、防尘、防油脂的保护膜，加倍呵护您的爱鞋）</span></p>
+                                <p class="ti10">芳香剂 <span class="small-span">（纯天然花香，让您摆脱臭鞋烦恼，出门更有自信）</span></p>
                             </div>
                         </div>
                         <div class="reserve right">
@@ -122,11 +133,8 @@
                             <div class="reserve-indormation">
                                 <p class="title">请输入皮鞋双数</p>
                                 <div class="clearfix services-type">
-                                <span class="s-spinner s-spinnerw100 right">
-                                    <input type="text" class="spinner"/>
-                                    <button class="btn-common btn-plus">+</button>
-                                    <button class="btn-common btn-reduce" disabled="disabled">-</button>
-                                </span>
+                                    <input type="text" class="spinnerExample"/>
+                                    <span class="right company">双</span>
                                 </div>
                                 <p class="title">总计<span class="num">1双</span></p>
                                 <p class="title pt0">预计余额费用<span class="num">25元</span></p>
@@ -180,7 +188,7 @@
                                     <a href="#">《家服汇用户使用协议》</a>
                                 </p>
                                 <div class="div-order">
-                                    <a href="order-pay.html" class="btn-order">下单</a>
+                                    <a href="order-pay.html" class="btn-order bg1">下单</a>
                                     <!--<input type="submit" value="下单" class="btn-order"/>-->
                                 </div>
                             </div>
@@ -238,15 +246,12 @@
                         <div class="reserve right">
                             <p class="title bg1">在线预订</p>
                             <div class="reserve-indormation">
-                                <p class="title">请输入皮鞋双数</p>
+                                <p class="title">请输入鞋柜长度</p>
                                 <div class="clearfix services-type">
-                                <span class="s-spinner s-spinnerw100 right">
-                                    <input type="text" class="spinner"/>
-                                    <button class="btn-common btn-plus">+</button>
-                                    <button class="btn-common btn-reduce" disabled="disabled">-</button>
-                                </span>
+                                    <input type="text" class="spinnerExample"/>
+                                    <span class="right company">米</span>
                                 </div>
-                                <p class="title">总计<span class="num">1双</span></p>
+                                <p class="title">总计<span class="num">1米</span></p>
                                 <p class="title pt0">预计余额费用<span class="num">25元</span></p>
                                 <p class="title pt0 after">请选择服务时间(酒红色域为可预约)</p>
                                 <div class="chiocetime hide">
@@ -470,33 +475,11 @@
                 <div class="clearfix">
                     <div class="server-exrample left">
                         <ul class="chioce-infors clearfix bg1">
-                            <li class="active">护理职责</li>
-                            <li>护理常识</li>
-                            <li>护理常识</li>
+                            <li class="active">星级标准</li>
+                            <li>售后保证</li>
                         </ul>
                         <div class="ser-div">
                             <div class="active">
-                                <div class="detaisl-slider">
-                                    <ul class="clearfix ser-ul">
-                                        <li>
-                                            <p>1、预约时间，造型师现场测量衣柜。</p>
-                                            <p>2、统计衣服数据。</p>
-                                            <p>3、手绘衣柜平面图。</p>
-                                            <p>4、规划衣橱。</p>
-                                            <p>5、造型师再次上门开始整理。</p>
-                                            <p>6、衣服陈列。</p>
-                                            <p>7、拍照录入：将整理好的衣橱拍照贴标签，制作电子相册。</p>
-                                            <p>8、项目移交：将衣橱移交给顾客。</p>
-                                            <p>9、管理培训：培训顾客如何维护好衣橱。</p>
-                                        </li>
-                                        <li></li>
-                                        <li></li>
-                                    </ul>
-                                </div>
-                                <div class="d-left"></div>
-                                <div class="d-right"></div>
-                            </div>
-                            <div>
                                 <div class="detaisl-slider">
                                     <ul class="clearfix ser-ul">
                                         <li>
@@ -807,16 +790,12 @@
     <script type="text/javascript" src="../../assets/global/plugins/jquery/jquery-1.11.3.min.js"></script>
     <script src="../../assets/global/plugins/move/js/move.js"></script>
     <script src="../../assets/frontend/js/global.js"></script>
-    <script src="../../assets/frontend/js/spinner.js"></script>
+    <!--<script src="../../assets/frontend/js/spinner.js"></script>-->
     <script src="../../assets/global/plugins/My97DatePicker/WdatePicker.js"></script>
+    <script src="../../assets/global/plugins/jquery-spinner/js/jquery.spinner.js"></script>
     <script src="../../assets/frontend/js/serveice.js?v=445"></script>
     <script src="../../assets/frontend/js/activity.js"></script>
     <script type="text/javascript">
-        (function($){
-            $(".s-spinner").spinner({
-                defaultNum:0,
-                maxNum:100
-            });
-        })(jQuery)
+        $('.spinnerExample').spinner({});
     </script>
 </html>
