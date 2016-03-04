@@ -20,35 +20,33 @@
             })
         },
         radioClick:function(){
-            radio.parent(rentalMode).on("click",function(){
-                var tfr = $(this).get(0);
-                if(tfr.find("input")[0].checked==true){
-//                    tfr.checked = true;
-//                    tfr.className = "checked";
-//                    $(this).siblings(rentalMode).find(radio).removeClass("checked");
-                    $(this).removeClass("active");
-                }
-                else{
-//                    tfr.checked = false;
-//                    tfr.className = "";
-                    $(this).siblings(rentalMode).removeClass("active");
-                    $(this).addClass("active");
-                }
+            radio.parent(rentalMode).each(function(){
+                $(this).on("click",function(){
+                    if($(this).find("input:radio")[0].checked==true){
+                        $(this).siblings(rentalMode).removeClass("active");
+                        $(this).addClass("active");
+                        $(this).find("input :radio").attr("checked", false);
+                    }
+                    else{
+                        $(this).removeClass("active");
+                        $(this).find("input :radio").attr("checked", true);
+                    }
+                })
             })
         },
         checkboxClick:function(){
-            checkbox.parent(rentalMode).on("click",function(){
-                var tfg = $(this).find(checkbox).get(0);
-                if(tfg.className == ""){
-                    tfg.checked = true;
-                    tfg.className = "checked";
-                    $(this).addClass("active");
-                }
-                else if(tfg.className == "checked"){
-                    tfg.checked = false;
-                    tfg.className = "";
-                    $(this).removeClass("active");
-                }
+            checkbox.parent(rentalMode).each(function(){
+                $(this).on("click",function(){
+                    if($(this).find("input:checkbox")[0].checked==true){
+
+                        $(this).addClass("active");
+                        $(this).find("input :radio").attr("checked", false);
+                    }
+                    else{
+                        $(this).removeClass("active");
+                        $(this).find("input :radio").attr("checked", true);
+                    }
+                })
             })
         }
     };
