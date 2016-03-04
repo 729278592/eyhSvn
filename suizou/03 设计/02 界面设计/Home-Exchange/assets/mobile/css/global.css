@@ -23,7 +23,7 @@ a,button,input,img,table,ul,li,tr,td,div{-webkit-tap-highlight-color:rgba(0,0,0,
 textarea,input,button,select{border: none;outline: none;}
 .hidden{visibility: hidden;}
 .wrapper{width: 100%;background: #fff;max-width: 640px;margin: 0 auto;position: relative;}
-.content{width: 100%;padding-bottom: 60px;}
+.content{width: 100%;padding-bottom: 72px;}
 .content.bg-ecec{background: #ececec;padding-top: 1px;}
 .foot{}
 .mask{position: fixed;left: 0;right: 0;top: 0;bottom: 0;background: rgba(0,0,0,.5)}
@@ -200,12 +200,50 @@ a:hover{text-decoration: none;}
 .pay-infor .last-money{text-decoration: line-through;font-size: 18px;}
 .pay-infor .now-money{color: #ff580b;font-size: 18px;}
 .pay-infor .btn-order{padding: 5px 25px;color: #fff;border-radius: 4px;background: #ff580b;}
+.keeper-no{width: 100%;}
+.keeper-no li{float:left;width: 18%;margin-right: 2.5%;text-align: center;}
+.keeper-no li img{width: 80%;}
+.keeper-no li span{display:inline-block;width: 100%;padding: 5px 0;}
+.keeper-no li.mr0{margin-right: 0;}
+.charge-infor{width: 100%;padding: 1% 3% 0;}
+.charge-infor p{line-height: 25px;font-size: 14px;color: #666;}
+.charge-infor>.title{color: #fca613;font-size: 16px;}
+.order-step{width: 100%;margin-top: 10px;padding-left: 4.5%;}
+.order-step li{width: 25%;float: left;}
+.order-step li span{display: inline-block;width: 80%;height: 30px;border-radius: 30px;font-size: 14px;color: #fff;
+text-align: center;line-height: 30px;background: #f9a003;}
+.order-step li .fa{font-size: 24px;display: inline-block;width: 10%;text-align: center;height: 34px;position: relative;top: 5px;left: 1%;color: #666;}
+.prompt{font-size: 16px;color: #666;padding: 2% 3%;}
+.charge-infor p span{display: inline-block;width: 65%;color: #666;vertical-align: top;}
+.charge-infor p .title{width: 33%;color: #333;}
+.charge-infor1 p{line-height: 20px;margin-top: 6px;}
+.sale-service{font-size: 14px;color: #666;padding: 2% 3%;}
 
 
-
-
-
-
+/*change_address*/
+.add{display: inline-block;text-align: center;position: relative;margin-bottom: 10px;}
+.add>img{width: 100%;}
+.add .add-btn{display: inline-block;width: 50px;height: 50px;background: #ff6863;line-height: 50px;color: #fff;font-size: 30px;border-radius: 100%;margin-right: 10px;}
+.add-span{position: absolute;top: 37%;font-size: 18px;font-weight: bold;}
+.add-span1{left: 10%;font-size: 16px;color: #666;}
+.add-span2{right: 10%;}
+.add-span2 .btn-address{background: #52ba92;color: #fff;font-size: 14px;width: 80px;height: 34px;line-height: 34px;font-family: "微软雅黑";border-radius: 6px;}
+.address-img{width: 20%;}
+.address-group{padding: 2% 3.2%;background: #fff;position: relative;font-size: 16px;color: #999;border-bottom: 1px solid #dbdbdb;}
+.address-group .phone{position: absolute;right: 6%;top: 15px;color: #666;}
+.address-group .fa{position: absolute;right: 2%;top: 30%;font-size: 30px;color: #666;}
+.address-group .people{position: absolute;top: 13px;color: #666;}
+.address-group .address{;position:relative;bottom: 0;width: 95%;display: inline-block;padding: 0;color: #666;}
+.address-group .address1{font-size: 12px;color: #999;}
+.address-group .default{color: #ff0404;font-size: 14px;position: absolute;top: 55%;left: 3.5%;}
+.add_address{position: fixed;left: 0;right: 0;bottom:0;background: #fc6b32;text-align: center;color: #fff;font-size: 18px;padding: 3% 0;display: inline-block;max-width: 640px;}
+.span-address{display: inline-block;width: 8%;height: 100%;}
+.btn-menu{width: 100%;}
+.btn-menu li{width: 50%;float: left;}
+.btn-menu li button{display: inline-block;text-align: center;padding: 5% 0;color: #fff;font-size: 14px;width: 100%;font-family: "微软雅黑";}
+.btn-menu li .btn-remove{background: #fbb432;}
+.btn-menu li .btn-save{background: #f04102;}
+.height-con{background: #fff;}
 
 
 
@@ -240,6 +278,13 @@ a:hover{text-decoration: none;}
     .order-menu li .title{font-size: 17px;}
     .clean-list li{font-size: 14px;}
     .clean-mask{font-size: 12px;}
+    .order-step li span{font-size: 12px;}
+    .content{padding-bottom: 60px;}
+    .news-menu li p,.service-head .title{font-size: 14px;}
+    .service-head .title{top: -6px;}
+    .add-span{top: 30%;}
+    .address-img{width: 16%;}
+    .address-group .address{margin: 8px 0;}
 }
 
 
@@ -256,5 +301,5 @@ a:hover{text-decoration: none;}
 }
 
 @media screen and (max-width: 320px) {
-
+    .add-span{top: 26%;}
 }
