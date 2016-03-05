@@ -5,6 +5,7 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1" />
     <title>月嫂</title>
     <link rel="stylesheet" href="../../assets/global/plugins/font/css/font-awesome.min.css"/>
+    <link rel="stylesheet" href="../../assets/global/plugins/jquery-spinner/css/jquery.spinner.css"/>
     <link rel="stylesheet" href="../../assets/frontend/css/global.css"/>
 </head>
 <body>
@@ -94,6 +95,7 @@
                                 </p>
 
                                 <p><img src="../../assets/frontend/images/ma-caret.png"/> 婴儿习惯培养（动作、运用能力</p>
+                                <br/>
                                 <p>备注 : 初级月嫂具有1年以上工作经验</p>
                             </div>
                         </div>
@@ -122,7 +124,8 @@
                                 <p><img src="../../assets/frontend/images/ma-caret.png"/>
                                     婴儿习惯培养（动作、运用能力）
                                 </p>
-                                <p>备注 : 初级月嫂具有1年以上工作经验</p>
+                                <br/>
+                                <p>备注 : 中级月嫂具有2年以上工作经验</p>
                             </div>
                         </div>
                         <div class="rank-mother clearfix">
@@ -139,7 +142,6 @@
                                 </p>
                                 <p><img src="../../assets/frontend/images/ma-caret.png"/> 产妇居室清洁
 
-
                                 </p>
 
                                 <p><img src="../../assets/frontend/images/ma-caret.png"/>
@@ -151,7 +153,8 @@
                                 <p><img src="../../assets/frontend/images/ma-caret.png"/>
                                     婴儿习惯培养（动作、运用能力、语言能力、感知能力）
                                 </p>
-                                <p>备注 : 初级月嫂具有1年以上工作经验</p>
+                                <br/>
+                                <p>备注 : 高级月嫂具有3年以上工作经验</p>
                             </div>
                         </div>
                         <div class="more-infor">
@@ -308,6 +311,7 @@
 
                                 <p>3、幼儿生活护理</p>
                                 <p>4、幼儿日常生活与保健</p>
+                                <br/>
                                 <p>备注：初级育婴师具有1年以上工作经验</p>
                             </div>
                         </div>
@@ -334,7 +338,8 @@
                                 <p>3、幼儿生活护理</p>
                                 <p>4、幼儿日常生活与保健</p>
                                 <p>5、幼儿日常生活习惯培养</p>
-                                <p>备注：初级育婴师具有2年以上工作经验</p>
+                                <br/>
+                                <p>备注：中级育婴师具有2年以上工作经验</p>
                             </div>
                         </div>
                         <div class="rank-mother clearfix">
@@ -361,7 +366,8 @@
                                 <p>4、幼儿日常生活与保健</p>
                                 <p>5、幼儿日常生活习惯培养</p>
                                 <p>5、幼儿早期教育培养</p>
-                                <p>备注：初级育婴师具有3年以上工作经验</p>
+                                <br/>
+                                <p>备注：高级育婴师具有3年以上工作经验</p>
                             </div>
                         </div>
                         <div class="more-infor">
@@ -529,8 +535,9 @@
                         <p class="title bg5">基本护理在线预约</p>
                         <div class="reserve-indormation bf1">
                             <p class="title">请输入服务次数</p>
-                            <div class="num-input clearfix">
-                                <input type="text" class="left w100" placeholder="次">
+                            <div class="clearfix services-type">
+                                <input type="text" class="spinnerExample"/>
+                                <span class="right company">次</span>
                             </div>
                             <p class="title pt0 after">预约面试时间</p>
                             <div class="chiocetime hide top320">
@@ -595,8 +602,9 @@
                         <p class="title bg5">基本护理在线预约</p>
                         <div class="reserve-indormation bf1">
                             <p class="title">请输入服务次数</p>
-                            <div class="num-input clearfix">
-                                <input type="text" class="left w100" placeholder="次">
+                            <div class="clearfix services-type">
+                                <input type="text" class="spinnerExample"/>
+                                <span class="right company">次</span>
                             </div>
                             <p class="title pt0 after">预约面试时间</p>
                             <div class="chiocetime hide top320">
@@ -1118,11 +1126,15 @@
 </div>
 </body>
 <script type="text/javascript" src="../../assets/global/plugins/jquery/jquery-1.11.3.min.js"></script>
+<script src="../../assets/global/plugins/jquery-spinner/js/jquery.spinner.js"></script>
 <script src="../../assets/global/plugins/move/js/move.js"></script>
 <script src="../../assets/global/plugins/My97DatePicker/WdatePicker.js"></script>
 <script src="../../assets/frontend/js/global.js"></script>
 <script src="../../assets/frontend/js/serveice.js"></script>
 <script src="../../assets/frontend/js/activity.js"></script>
+<script type="text/javascript">
+    $('.spinnerExample').spinner({});
+</script>
 <script>
     var bo = $(".btn-order1");
     var ma = $(".ma-dailog");
