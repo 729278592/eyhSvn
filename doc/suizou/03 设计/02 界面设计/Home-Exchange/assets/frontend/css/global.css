@@ -978,7 +978,7 @@ p>label>input{position: relative;top: 2px;}
 .num-input{width: 100%;}
 .num-input span{display: inline-block;height: 40px;font-size: 14px;color: #666;width: 15%;line-height: 40px;}
 .num-input input{width: 83%;height: 40px;line-height: 40px;padding-left: 2%;}
-
+.num-input input.w100{width: 303px;}
 
 .keeper-stype{width: 100%;margin-top: 10px;}
 .keeper-stype li{width: 45%;margin-right: 10%;float: left;height: 34px;line-height: 34px;}
@@ -1294,9 +1294,10 @@ p>label>input{position: relative;top: 2px;}
 .chiocetime{border: 1px solid #dbdbdb;color: #666;padding: 5px 10px;background: #fff;width: 150px;z-index: 1000;position: absolute;top: 230px;right: 80px;}
 .chiocetime.top320{top: 320px;}
 .chiocetime.top280{top: 195px;}
-.chiocetime p.title{color:#67cbff;font-size: 14px;margin-bottom: 10px;}
+.chiocetime p.title{color:#67cbff;font-size: 14px;margin-bottom: 10px;text-align: center;}
 .hide{display: none;}
 .select1,.select2{width: 59px;border: 1px solid #dbdbdb;}
+.select1.auto{margin: 0 0 0 43px;}
 .btn-sureTime{padding: 5px 10px;background: #67cbff;color: #fff;margin: 5px 0 0 50px;border-radius: 2px;}
 .make-appointment{width: 100%;text-align: center;margin: 10px 0 0 0;}
 .make-appointment li{float: left;width: 33%;color: #666;font-size: 14px;}
