@@ -217,7 +217,7 @@ $(function(){
 
 
     /*服务信息的详情*/
-    $(".server-ul li").each(function(i){
+    $(".server-ul li,.nus-list li").each(function(i){
         $(this).find("img").on("click",function(){
             $(".service-step-bg,.service-step").removeClass("hide");
             $(".seavice-menu>li").eq(i).addClass("active");
