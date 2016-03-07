@@ -3,6 +3,8 @@
  */
 (function($){
     /*条件赛选的控制*/
+    var maxPrice   =$("#maxPrice:hidden").val();
+    var minPrice   =$("#minPrice:hidden").val();
     var Method = {
         init:function(_this){
             rentalMode = _this.find(".rental_mode");
@@ -10,8 +12,6 @@
             checkbox   = _this.find("input:checkbox");
             btnClear   = $(".btn-clear");
             noAction   = _this.find(".no-action");
-            maxPrice   =$("#maxPrice:hidden").val();
-            minPrice   =$("#minPrice:hidden").val();
             Method.radioClick();
             Method.checkboxClick();
             Method.clearClick()
