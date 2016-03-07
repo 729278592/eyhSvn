@@ -5,7 +5,7 @@ body,p,html{margin: 0;padding: 0;}
 ul,li,img{margin:0;padding:0;list-style:none;border:none; vertical-align:middle;}
 a{color:#000;text-decoration:none;}
 a,button,#left_but,#right_but,.rental_mode,label,.btn-screen,.btn-clear,.btn-order,.si-ul li,.level li,.train-menu li,.tt-ul li,.technology-type li,.ac-mune li,.fa-remove,.js-active li .fa{cursor: pointer;}
-a::selection,button::selection{background:transparent;}
+a::selection,button::selection,.sc-menu li::selection{background:transparent;}
 .clearfix:after {content: ".";display: block;clear: both;visibility: hidden;line-height: 0;height: 0;}
 .clearfix{display: inline-block;}
 textarea,select,input,button{outline: none;border: none;}
@@ -835,6 +835,7 @@ label.error {color: #EA5200;margin-bottom: 0;}
 .search-terms li.ml20{margin-left: 16%;}
 .search-terms li>.left{width: 490px;}
 .search-terms li>.right{width: 446px;}
+.search-terms li>.right.w490{width: 490px;}
 .hd-mask .fa,.search-terms li .fa{font-size: 16px;}
 .hd-mask select,.search-terms li select{width: 367px;background: #edefed;border: none;outline: none;padding: 9px 0 9px 8px;}
 .search-terms li{color: #666;}
@@ -1792,7 +1793,7 @@ tr th,tr td{ text-align:center;font-size: 14px;border:1px solid #fbb432;color: #
 .server-c{width: 100%;background: #fff;margin-top: 10px;}
 .sc-head{height: 30px;line-height: 30px;text-indent: 10px;width: 1004px;margin: 0 auto;background: #f3f3f3;color: #666;}
 .sc-menu{width: 100%;border-bottom: 1px solid #dbdbdb;background: #fff;}
-.sc-menu li{border-right: 1px solid #dbdbdb;color: #666;width: 80px;text-align: center;height: 30px;line-height: 30px;float: left;}
+.sc-menu li{border-right: 1px solid #dbdbdb;color: #666;width: 80px;text-align: center;height: 30px;line-height: 30px;float: left;font-size: 14px;}
 .sc-menu li:hover{cursor: pointer;}
 .sc-menu li.active{background: #63c38e;color: #fff;}
 .sc-menu li.mr0{border-right: 0;}
@@ -1817,6 +1818,7 @@ tr th,tr td{ text-align:center;font-size: 14px;border:1px solid #fbb432;color: #
 /*personal-center*/
 .person-menu{width: 256px;display: inline-block;background: #fff;}
 .person-menu li{width: 256px;height: 105px;border-bottom: 1px solid #d2d1d1;position: relative;background: #fff;}
+.person-menu li.bb0{border-bottom: none;}
 .person-menu .first{border-radius: 10px 10px 0 0;}
 .person-menu li.last{height: 40px;border-bottom: none;}
 .li_top{position: absolute;top: 10px;font-size: 15px;text-align: center;width: 100%;}
@@ -1826,10 +1828,10 @@ tr th,tr td{ text-align:center;font-size: 14px;border:1px solid #fbb432;color: #
 .li_top a{color: #6e6969;width: 100%;display: inline-block;}
 .li_top .active a{color: #fe685b;}
 .li_bottom.active,.person-menu li a.active{color: #fba85c;}
-.person-right{width: 745px;background: #fff;margin-left: 290px;}
+.person-right{width: 735px;background: #fff;margin-left: 290px;}
 .person-ul{padding: 10px;width: 715px;background: #fff;}
 .person-ul>p{color: #666;}
-.person-ul li{border-bottom: 1px solid #dbdbdb;padding: 5px 10px;width: 705px;}
+.person-ul li{border-bottom: 1px solid #dbdbdb;padding: 5px 10px 5px 0;width: 705px;}
 .consumption-infor{font-size: 14px;position: relative;top: 10px;left: 150px;}
 .person-ul li>img{margin-right: 15px;}
 .person-ul li .btn-details{width: 80px;height: 30px;line-height: 30px;text-align: center;background: #63c38e;border-radius: 4px;color: #fff;}
@@ -1846,7 +1848,7 @@ tr th,tr td{ text-align:center;font-size: 14px;border:1px solid #fbb432;color: #
 .personal-infor p{margin: 20px 0;font-size: 14px;color: #666;}
 .personal-infor p .type{display: inline-block;width: 60px;}
 .personal-infor p .text{width: 200px;height: 26px;line-height: 26px;padding-left: 10px;border: 1px solid #dbdbdb;}
-.personal-infor p select{width: 80px;border: 1px solid #dbdbdb;height: 25px;line-height: 25px;}
+.personal-infor p select{width: 80px;border: 1px solid #dbdbdb;height: 25px;line-height: 25px;color: #666;}
 .btn-sure{width: 70px;height: 30px;background: #fca715;border-radius: 4px;color: #fff;text-align: center;margin: 0 auto;display: block;}
 
 
@@ -1884,9 +1886,9 @@ tr th,tr td{ text-align:center;font-size: 14px;border:1px solid #fbb432;color: #
 .par-infor>div .input{width: 80px;height: 22px;text-align: center;color: #666;margin: 0 5px;}
 .par-infor>div input.checkbox{position: relative;top: 2px;}
 .par-infor>div .money{font-size: 16px;}
-.gz-infor .btn-submit{margin: 15px 15px 15px 0;border-radius: 4px;font-family: "微软雅黑";width: 96px;height: 35px;}
+.gz-infor .btn-submit{margin: 15px 15px 15px 0;border-radius: 4px;font-family: "微软雅黑";width: 96px;height: 35px;background: #fbb434;}
 
-.type-div{display: none;min-height: 358px;width: 745px;background: #f6f3ee;height: 740px;}
+.type-div{display: none;min-height: 358px;width: 735px;background: #f6f3ee;height: 740px;}
 .type-div.active{display: inline-block;}
 .my-coupon{width: 745px;padding: 5px;background: #fff;}
 .dc-head{width: 735px;border-bottom: 1px solid #dbdbdb;}
@@ -1894,8 +1896,8 @@ tr th,tr td{ text-align:center;font-size: 14px;border:1px solid #fbb432;color: #
 .dc-head li.active{color: #ff4502;border-bottom-color: #ff4502;}
 .dc-head li.last{float: right;margin-right: 0;}
 .dc-head li.last a{color: #999;}
-.coupon-chioce{border: 1px solid #dbdbdb;width: 735px;margin-top: 15px;}
-.cc-ul{background: #f3f3f3;width: 735px;}
+.coupon-chioce{border: 1px solid #dbdbdb;width: 743px;margin-top: 15px;}
+.cc-ul{background: #f3f3f3;width: 743px;}
 .cc-ul li{float: left;color: #666;width: 20%;text-align: center;font-size: 14px;}
 .cc-ul li span{display: inline-block;width: 100%;height: 24px;line-height: 24px;margin: 5px 0;border-right: 1px solid #dbdbdb;}
 .cc-ul li.active{background: #fbb437;color: #fff;}

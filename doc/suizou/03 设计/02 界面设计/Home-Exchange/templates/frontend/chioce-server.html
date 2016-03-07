@@ -57,62 +57,64 @@
         <div class="content">
             <div class="content-main">
                 <div class="server-type">
-                    <ul class="search-terms">
-                        <li class="clearfix">
-                            <div class="left">
-                                <img src="../../assets/frontend/images/ser-icon1.png" alt="" class="ser-icon"/>
-                                <span class="title">服务区域</span>
-                                <select name="">
-                                    <option value="南坪">南坪</option>
-                                    <option value="渝中">渝中</option>
-                                    <option value="渝北">渝北</option>
-                                </select>
-                            </div>
-                            <div class="right">
-                                <img src="../../assets/frontend/images/ser-icon4.png" alt="" class="ser-icon"/>
-                                <span class="title">所在小区</span>
-                                <select name="">
-                                    <option value="南坪">南坪</option>
-                                    <option value="渝中">渝中</option>
-                                    <option value="渝北">渝北</option>
-                                </select>
-                            </div>
-                        </li>
-                        <li class="clearfix">
-                            <div class="left">
-                                <img src="../../assets/frontend/images/ser-icon2.png" alt="" class="ser-icon"/>
-                                <span class="title">规模</span>
-                                <span class="rental_mode w110">
-                                    <input type="checkbox" name="type" class=""/>
-                                    不限
-                                </span>
-                                <span class="rental_mode w110">
-                                    <input type="checkbox" name="type" class=""/>
-                                    公司
-                                </span>
-                                <span class="rental_mode w110">
-                                    <input type="checkbox" name="type" class=""/>
-                                    个人
-                                </span>
-                            </div>
-                            <div class="right">
-                                <img src="../../assets/frontend/images/ser-icon3.png" alt="" class="ser-icon"/>
-                                <span class="title">上门服务</span>
-                                <span class="rental_mode w110">
-                                    <input type="checkbox" name="type" class=""/>
-                                    上门
-                                </span>
-                                <span class="rental_mode w110">
-                                    <input type="checkbox" name="type" class=""/>
-                                    不上门
-                                </span>
-                            </div>
-                        </li>
-                    </ul>
-                    <div class="operation-btn">
-                        <button class="btn-screen">筛选</button>
-                        <button class="btn-clear">清空</button>
-                    </div>
+                    <form action="#">
+                        <ul class="search-terms">
+                            <li class="clearfix">
+                                <div class="left">
+                                    <img src="../../assets/frontend/images/ser-icon1.png" alt="" class="ser-icon"/>
+                                    <span class="title">服务区域</span>
+                                    <select name="">
+                                        <option value="南坪">南坪</option>
+                                        <option value="渝中">渝中</option>
+                                        <option value="渝北">渝北</option>
+                                    </select>
+                                </div>
+                                <div class="right w490">
+                                    <img src="../../assets/frontend/images/ser-icon4.png" alt="" class="ser-icon"/>
+                                    <span class="title">所在小区</span>
+                                    <select name="">
+                                        <option value="南坪">南坪</option>
+                                        <option value="渝中">渝中</option>
+                                        <option value="渝北">渝北</option>
+                                    </select>
+                                </div>
+                            </li>
+                            <li class="clearfix">
+                                <div class="left">
+                                    <img src="../../assets/frontend/images/ser-icon2.png" alt="" class="ser-icon"/>
+                                    <span class="title">规模</span>
+                                    <label class="rental_mode w110">
+                                        <input type="checkbox" name="type" class=""/>
+                                        不限
+                                    </label>
+                                    <label class="rental_mode w110">
+                                        <input type="checkbox" name="type" class=""/>
+                                        公司
+                                    </label>
+                                    <label class="rental_mode w110">
+                                        <input type="checkbox" name="type" class=""/>
+                                        个人
+                                    </label>
+                                </div>
+                                <div class="right">
+                                    <img src="../../assets/frontend/images/ser-icon3.png" alt="" class="ser-icon"/>
+                                    <span class="title">上门服务</span>
+                                    <label class="rental_mode w110">
+                                        <input type="checkbox" name="type" class=""/>
+                                        上门
+                                    </label>
+                                    <label class="rental_mode w110">
+                                        <input type="checkbox" name="type" class=""/>
+                                        不上门
+                                    </label>
+                                </div>
+                            </li>
+                        </ul>
+                        <div class="operation-btn">
+                            <input  class="btn-screen" value="筛选" type="text"/>
+                            <input  class="btn-clear" value="清空" type="text"/>
+                        </div>
+                    </form>
                 </div>
                 <div class="server-c">
                     <ul class="sc-menu clearfix">
