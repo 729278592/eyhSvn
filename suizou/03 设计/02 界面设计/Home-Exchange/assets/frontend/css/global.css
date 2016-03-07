@@ -633,7 +633,7 @@ li .main{width: 100%;display: inline-block;white-space: nowrap;text-overflow: el
 .nav-us li a p,.foot-nav li a p{width: 100%;height: 20px;}
 .nav-us li a p.first{color: #a39582;}
 .nav-us li a p.last{color: #fff;}
-.nav-us li a:hover,.foot-nav li a:hover{top: -22px;}
+.nav-us li a:hover,.foot-nav li a:hover{top: -20px;}
 .nav-us li{margin-top: 10px;border-right: none;font-size: 14px;}
 .foot-nav li a p.first{color: #fff;}
 .foot-nav li a p.last{color: #a39582;}
