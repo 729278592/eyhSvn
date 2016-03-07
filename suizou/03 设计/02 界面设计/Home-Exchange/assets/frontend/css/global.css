@@ -1767,7 +1767,7 @@ tr th,tr td{ text-align:center;font-size: 14px;border:1px solid #fbb432;color: #
 .area-menu li .le2{background: url(../images/le-img2.png);}
 .area-menu li .le3{background: url(../images/le-img3.png);}
 .area-menu li .le4{background: url(../images/le-img4.png);}
-.area-menu li .le5{background: url(../images/le-img5.png);}
+.area-menu li .le5{background: url(../images/le-img5.png);background-size: 85px 85px;}
 .area-menu li .le6{background: url(../images/le-img6.png);background-size: 85px 85px;}
 .area-menu li .le7{background: url(../images/le-img7.png);background-size: 85px 85px;}
 .area-menu li .le8{background: url(../images/le-img8.png);background-size: 85px 85px;}
