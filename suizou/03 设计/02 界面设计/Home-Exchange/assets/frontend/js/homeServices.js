@@ -9,6 +9,9 @@
             radio      = _this.find("input:radio");
             checkbox   = _this.find("input:checkbox");
             btnClear   = $(".btn-clear");
+            noAction   = _this.find(".no-action");
+            maxPrice   =$("#maxPrice:hidden").val();
+            minPrice   =$("#minPrice:hidden").val();
             Method.radioClick();
             Method.checkboxClick();
             Method.clearClick()
@@ -16,7 +19,16 @@
         clearClick:function(){
             btnClear.on("click",function(){
                 rentalMode.removeClass("active");
-//                rentalMode.find("input").attr({checked:false}).removeClass("checked");
+                noAction.addClass("active");
+                rentalMode.find("input").attr({checked:false});
+                noAction.find("input").attr({checked:true});
+                $("#slider-range").slider({
+                    range: true,
+                    min: 0,
+                    max: 3000,
+                    values: [minPrice, maxPrice]
+                });
+                $("#slider-range-amount").text("￥" + minPrice + " - ￥" + maxPrice);
             })
         },
         radioClick:function(){
