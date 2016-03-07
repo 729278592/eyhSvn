@@ -948,7 +948,7 @@ label.error {color: #EA5200;margin-bottom: 0;}
 .p-list{line-height: 22px;}
 .p-list span{width: 50%;font-size: 14px;color: #666;display: inline-block;float: left;}
 .small-span{color: #999;}
-.area-infor>p.p-infors{font-size: 16px;color: #333;margin:10px 0;}
+.area-infor>p.p-infors{font-size: 16px;color: #333;margin-bottom: 10px;position: relative;top: 5px;}
 .area-infor>p.ti10{position: relative;left: 20px;line-height: 22px;}
 .lear-list span{width: 100%;}
 .area-infor>.prompt{color: #999;margin-top: 30px;}
@@ -1762,6 +1762,10 @@ tr th,tr td{ text-align:center;font-size: 14px;border:1px solid #fbb432;color: #
 .area-menu li .le2{background: url(../images/le-img2.png);}
 .area-menu li .le3{background: url(../images/le-img3.png);}
 .area-menu li .le4{background: url(../images/le-img4.png);}
+.area-menu li .le5{background: url(../images/le-img5.png);background-size: 85px 85px;}
+.area-menu li .le6{background: url(../images/le-img6.png);background-size: 85px 85px;}
+.area-menu li .le7{background: url(../images/le-img7.png);background-size: 85px 85px;}
+.area-menu li .le8{background: url(../images/le-img8.png);background-size: 85px 85px;}
 .area-menu li .wa1{background: url(../images/wa-img1.png);background-size: 85px 85px;}
 .area-menu li .wa2{background: url(../images/wa-img2.png);background-size: 85px 85px;}
 .area-menu li .wa3{background: url(../images/wa-img3.png);background-size: 85px 85px;}
