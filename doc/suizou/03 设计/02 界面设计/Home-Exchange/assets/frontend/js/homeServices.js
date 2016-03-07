@@ -22,13 +22,15 @@
                 noAction.addClass("active");
                 rentalMode.find("input").attr({checked:false});
                 noAction.find("input").attr({checked:true});
-                $("#slider-range").slider({
-                    range: true,
-                    min: 0,
-                    max: 3000,
-                    values: [minPrice, maxPrice]
-                });
-                $("#slider-range-amount").text("￥" + minPrice + " - ￥" + maxPrice);
+                if($("#slider-range").get(0)){
+                    $("#slider-range").slider({
+                        range: true,
+                        min: 0,
+                        max: 3000,
+                        values: [minPrice, maxPrice]
+                    });
+                    $("#slider-range-amount").text("￥" + minPrice + " - ￥" + maxPrice);
+                }
             })
         },
         radioClick:function(){
