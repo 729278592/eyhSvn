@@ -8,7 +8,7 @@ a,button,#left_but,#right_but,.rental_mode,label,.btn-screen,.btn-clear,.btn-ord
 a::selection,button::selection,.sc-menu li::selection{background:transparent;}
 .clearfix:after {content: ".";display: block;clear: both;visibility: hidden;line-height: 0;height: 0;}
 .clearfix{display: inline-block;}
-textarea,select,input,button{outline: none;border: none;}
+textarea,select,input,button{outline: none;border: none;font-family: "微软雅黑";}
 .hide{display: none;}
 .right{float: right;}
 .left{float: left;}
@@ -1100,7 +1100,7 @@ p>label>input{position: relative;top: 2px;}
 .to_disabled{color: #ccc;cursor: not-allowed;}
 .total{margin: 10px 0;}
 .reserve-indormation>.total-title{padding-bottom: 0;font-size: 22px;color: #fbb433;}
-.reserve-indormation .textarea{background: #fff;width: 290px;border: none;padding: 5px 10px;height:70px;color: #333;border-radius: 4px;}
+.reserve-indormation .textarea{background: #fff;width: 290px;border: none;padding: 5px 10px;height:70px;color: #333;border-radius: 4px;font-family: "微软雅黑";}
 .div-order{width: 100%;text-align: center;position: relative;}
 .btn-order{width: 100px;height:34px;line-height: 34px;background: #fbb432;color: #fff;border-radius: 4px;display: inline-block;text-align: center;}
 .btn-order.bg1{background: #a53a68;}
@@ -1756,7 +1756,7 @@ tr th,tr td{ text-align:center;font-size: 14px;border:1px solid #fbb432;color: #
 .area-infor>p .type{color: #fb6555;display: inline-block;width: 75px;}
 .area-menu{margin-top: 20px;margin-left: 13px;}
 .area-menu li{float: left;border: 1px solid #fab432;padding: 5px 26px;margin: 0 0 0 15px;text-align: center;}
-.area-menu20 li{padding: 30px 11px;margin: 0 0 0 15px;}
+.area-menu20 li{padding: 0px 11px;margin: 0 0 0 15px;}
 .area-menu li .area-num{width: 85px;height: 85px;text-align: center;line-height: 86px;color: #fff;font-size: 12px;}
 .area-menu li span.fb5{color: #fb6555;display: block;margin-top: 5px;font-size: 14px;}
 .area-menu li .area-num1{background: url(../images/area-img1.png);}
@@ -1793,6 +1793,7 @@ tr th,tr td{ text-align:center;font-size: 14px;border:1px solid #fbb432;color: #
 .area-menu.bg1 li{border-color: #8b3357;}
 .area-menu.bg2 li>p{color: #d6c1a8;border-top-color: #d6c1a8;}
 .area-menu.bg2 li{border-color: #d6c1a8;}
+.area-menu.bg2.area-menu20 li{border-color: transparent;}
 .area-menu.bg5 li>p{color: #52ba92;border-top-color: #d6c1a8;}
 .area-menu.bg5 li{border-color: #52ba92;}
 
