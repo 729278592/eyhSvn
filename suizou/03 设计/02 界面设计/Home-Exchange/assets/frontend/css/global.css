@@ -1862,7 +1862,7 @@ tr th,tr td{ text-align:center;font-size: 14px;border:1px solid #fbb432;color: #
 .person-ul>p{color: #666;}
 .person-ul li{padding: 5px 10px 5px 0;width: 725px;}
 .person-ul li div.infor-table{display: none;}
-.person-ul li div.infor-table.auto{width: 100%;text-align: center;}
+.person-ul li div.infor-table.auto{width: 100%;text-align: center;margin-top: 80px;}
 .person-ul li div.infor-table.auto .personal-infor{display: inline-block;}
 .person-ul li div.active{display: inline-block;}
 .consumption-infor{font-size: 14px;position: relative;top: 10px;left: 150px;}
