@@ -91,50 +91,16 @@ $(function(){
         jai.each(function(){
             $(this).on("click",function(e){
                 e.preventDefault();
-                var commonInfor = $(this).next(".common-infor.hide");
-                var commonName  = commonInfor.find(".commonInfor").text();
-                var commonNum   = commonInfor.find(".common-num").text();
-                var commonContent  = commonInfor.find(".common-content").html();
+                var commonInfor = $(this).next(".common-infor.hide").html();
+
                 var str =   '<div class="mask-bg"></div>'+
                             '<div class="mask">'+
                                 '<div class="mask-content">'+
-                                    '<i class="fa fa-remove"></i>'+
-                                    '<div class="left">'+
-                                        '<img src="'+$(this).attr('src')+'" alt="">'+
-                                    '</div>'+
-                                    '<div class="mask-p left">'+
-                                        '<p class="title">'+
-                                            '<span class="name">'+commonName+'</span><span class="num">'+commonNum+'</span>'+
-                                        '</p>'+
-                                        '<div class="common-content">'+commonContent+'</div>'+
-                                        '</p>'+
-                                    '</div>'+
-                                    '<div class="order-chioce left">' +
-                                        '<div class="div-wdate left">' +
-                                            '<input id="d4311" class="Wdate" type="text" placeholder="2015-10-10" onFocus="WdatePicker()"/>'+
-                                            '<i class="fa fa-calendar"></i>' +
-                                        '</div>'+
-                                        '<select name="" id="" class="select-time left">'+
-                                            '<option value="时间">时间</option>'+
-                                            '<option value="8:00">8:00</option>'+
-                                            '<option value="10:00">10:00</option>'+
-                                            '<option value="13:00">13:00</option>'+
-                                            '<option value="16:00">16:00</option>'+
-                                        '</select>'+
-                                        '<input class="area-input left" placeholder="请输入房屋面积"/><span class="area-span left">m²</span>'+
-                                        '<input type="submit" value="下单" class="btn-order"/>'+
-                                    '</div>'+
+                                    commonInfor+
                                 '</div>'+
                             '</div>';
                 w.append(str);
-                function heightAuto(){
-                    var d = $(".mask-content");
-                    d.each(function(){
-                        var ht = -$(this).get(0).offsetHeight/2+"px";
-                        $(this).get(0).style.marginTop = ht;
-                    });
-                }
-                heightAuto();
+
                 var ds = $(".server-infors");
                 ds.each(function(){
                     var divH = $(this).height();

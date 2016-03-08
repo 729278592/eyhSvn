@@ -730,12 +730,12 @@ li .main{width: 100%;display: inline-block;white-space: nowrap;text-overflow: el
 .server-input>label{width: 30%;text-align: center;float: left;}
 .server-input>label.last{text-align: right;}
 .server-input>label .btn-search1{background: transparent;font-size: 16px;}
-.mask-content{width: 800px;background: #fff;position: absolute;left: 50%;top: 50%;margin-left: -425px;padding: 25px;}
+.mask-content{width: 800px;background: #fff;position: absolute;left: 50%;top: 50%;margin-left: -425px;padding: 25px;height: 320px;margin-top: -160px;}
 .mask-content>.fa-remove{position: absolute;right: 5px;top: 5px;display: inline-block;width: 20px;height: 20px;color: #999;border-radius: 20px;border: 1px solid #666;font-size: 12px;text-align: center;line-height: 20px;}
 .mask-content>.fa-remove:hover{color: #666;border-color: #333;}
 .mask-content img{width: 400px;margin-right: 15px;}
 .mask-p{width: 370px;font-size: 14px;color: #333;}
-.common-content{overflow-y: auto;overflow-x: hidden;min-height: 200px;max-height: 200px;position: relative;top: 10px;}
+.common-content{overflow-y: auto;overflow-x: hidden;position: relative;top: 10px;height: 220px;}
 .mask-p{}
 .mask-p p{margin-top: 10px;color: #666;}
 .mask-p p.title{padding: 5px;border: 1px solid #dbdbdb;display: inline-block;color: #333;margin-top: 0;}
@@ -1858,9 +1858,13 @@ tr th,tr td{ text-align:center;font-size: 14px;border:1px solid #fbb432;color: #
 .li_top .active a{color: #fe685b;}
 .li_bottom.active,.person-menu li a.active{color: #fba85c;}
 .person-right{width: 735px;background: #fff;margin-left: 270px;}
-.person-ul{padding: 10px;width: 100%;background: #fff;}
+.person-ul{padding: 10px;width: 100%;background: #fff;min-height: 615px;}
 .person-ul>p{color: #666;}
-.person-ul li{border-bottom: 1px solid #dbdbdb;padding: 5px 10px 5px 0;width: 725px;}
+.person-ul li{padding: 5px 10px 5px 0;width: 725px;}
+.person-ul li div.infor-table{display: none;}
+.person-ul li div.infor-table.auto{width: 100%;text-align: center;}
+.person-ul li div.infor-table.auto .personal-infor{display: inline-block;}
+.person-ul li div.active{display: inline-block;}
 .consumption-infor{font-size: 14px;position: relative;top: 10px;left: 150px;}
 .person-ul li>img{margin-right: 15px;}
 .person-ul li .btn-details{width: 80px;height: 30px;line-height: 30px;text-align: center;background: #63c38e;border-radius: 4px;color: #fff;}
@@ -1871,12 +1875,15 @@ tr th,tr td{ text-align:center;font-size: 14px;border:1px solid #fbb432;color: #
 .person-ul .li2 p .type{display: inline-block;width: 80px;}
 .person-ul .li2 .gai{color: #63c38e;}
 .btn-person{width: 80px;height: 30px;line-height: 30px;text-align: center;background: #b8b4b3;border-radius: 4px;color: #fff;}
+.btn-person:hover{cursor: pointer;}
+.btn-person.active{background: #63c38e;}
 .person-ul .li3{padding: 25px 10px;}
 .person-ul .li3 .upload{margin-right:10px; }
 .personal-infor{margin-top: 30px;}
-.personal-infor p{margin: 20px 0;font-size: 14px;color: #666;}
+.personal-infor.mt0{margin-top: 0;}
+.personal-infor p{margin: 15px 0;font-size: 14px;color: #666;}
 .personal-infor p .type{display: inline-block;width: 60px;}
-.personal-infor p .text{width: 200px;height: 26px;line-height: 26px;padding-left: 10px;border: 1px solid #dbdbdb;}
+.personal-infor p .text,.personal-infor p .text.Wdate{width: 280px;height: 26px;line-height: 26px;padding-left: 10px;border: 1px solid #dbdbdb;color: #666;}
 .personal-infor p select{width: 80px;border: 1px solid #dbdbdb;height: 25px;line-height: 25px;color: #666;}
 .btn-sure{width: 70px;height: 30px;background: #fca715;border-radius: 4px;color: #fff;text-align: center;margin: 0 auto;display: block;}
 
