@@ -1870,7 +1870,7 @@ tr th,tr td{ text-align:center;font-size: 14px;border:1px solid #fbb432;color: #
 .person-ul li .btn-details{width: 80px;height: 30px;line-height: 30px;text-align: center;background: #63c38e;border-radius: 4px;color: #fff;}
 .person-ul li .title{margin: 10px 0 5px 0;}
 .person-ul .li2 p{width: 660px;padding: 0 20px ;height: 25px;line-height: 25px;background: #fff;color: #666;margin-top: 10px;font-size: 14px;}
-.person-ul .li2{padding-bottom: 20px;}
+.person-ul .li2{padding-bottom: 20px;border-bottom: 1px solid #dbdbdb;}
 .person-ul .li2 p.active{background:#f5f3f4; }
 .person-ul .li2 p .type{display: inline-block;width: 80px;}
 .person-ul .li2 .gai{color: #63c38e;}
@@ -1924,7 +1924,7 @@ tr th,tr td{ text-align:center;font-size: 14px;border:1px solid #fbb432;color: #
 .par-infor>div .money{font-size: 16px;}
 .gz-infor .btn-submit{margin: 15px 15px 15px 0;border-radius: 4px;font-family: "微软雅黑";width: 96px;height: 35px;background: #fbb434;}
 
-.type-div{min-height: 358px;width: 100%;background: #f6f3ee;height: 740px;}
+.type-div{min-height: 358px;width: 100%;background: #f6f3ee;}
 .my-coupon{width: 745px;padding: 5px;background: #fff;}
 .dc-head{width: 735px;border-bottom: 1px solid #dbdbdb;}
 .dc-head li{float: left;color: #666;border-bottom: 1px solid transparent;padding: 6px 0 3px ;margin-right: 10px;}
