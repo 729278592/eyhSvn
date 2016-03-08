@@ -87,10 +87,14 @@ $(function(){
         var jai = $(".js-active .item img");
         var m = $(".mask");
         var w   = $(".wrapper");
+
         jai.each(function(){
             $(this).on("click",function(e){
-                console.log();
                 e.preventDefault();
+                var commonInfor = $(this).next(".common-infor.hide");
+                var commonName  = commonInfor.find(".commonInfor").text();
+                var commonNum   = commonInfor.find(".common-num").text();
+                var commonContent  = commonInfor.find(".common-content").html();
                 var str =   '<div class="mask-bg"></div>'+
                             '<div class="mask">'+
                                 '<div class="mask-content">'+
@@ -100,19 +104,9 @@ $(function(){
                                     '</div>'+
                                     '<div class="mask-p left">'+
                                         '<p class="title">'+
-                                            '<span class="name">家具保养</span><span class="num">10元</span>/m²'+
+                                            '<span class="name">'+commonName+'</span><span class="num">'+commonNum+'</span>'+
                                         '</p>'+
-                                        '<p><span class="list">①</span><span class="type-name">防范于未然</span></p>'+
-                                        '<p class="server-infors"><span>大多是的真皮沙发在购买的时候都会送你一个保养蜡，如果不送的话，自己可以去买。沙发安装完成后，就要给真皮沙发打一层蜡</span></p>'+
-                                        '<p><span class="list">②</span><span class="type-name">常清洁</span></p>'+
-                                        '<p class="server-infors"><span>真皮沙发需要经常的清洁一下，推荐依然是用保养蜡，如果没这么多时间打蜡的话，可以考虑用软布擦拭一下</span></p>'+
-                                        '<p><span class="list">③</span><span class="type-name">尽量少用水</span></p>'+
-                                        '<p class="server-infors"><span>真皮虽然防水，但是千万不要经常用水去清洁它，偶尔用水的话，也要尽快的擦干，否则的话会让真皮沙发慢慢的变硬</span></p>'+
-                                        '<p><span class="list">④</span><span class="type-name">冰袋清洁</span></p>'+
-                                        '<p class="server-infors"><span><span class="span-num">1、</span><span class="span-infor">厨房（油烟机、燃气灶、橱柜、调味组、洗菜池、厨房整体台面、整体地面、垃圾桶）;</span></span><br/>' +
-                                                                  '<span>2、卫生间（洗漱台、淋浴房、马桶、地面、垃圾桶）;</span><br/>'+
-                                                                  '<span><span class="span-num">3、</span><span class="span-infor">客厅（窗户、沙发、茶几、地面、垃圾桶、客厅家具、客厅家电）;</span></span><br/>'+
-                                                                  '<span>4、卧室（窗户、床、梳妆台、衣柜、地面、卧室家电）;</span><br/>'+
+                                        '<div class="common-content">'+commonContent+'</div>'+
                                         '</p>'+
                                     '</div>'+
                                     '<div class="order-chioce left">' +

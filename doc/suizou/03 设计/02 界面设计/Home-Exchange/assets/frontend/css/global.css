@@ -734,7 +734,8 @@ li .main{width: 100%;display: inline-block;white-space: nowrap;text-overflow: el
 .mask-content>.fa-remove{position: absolute;right: 5px;top: 5px;display: inline-block;width: 20px;height: 20px;color: #999;border-radius: 20px;border: 1px solid #666;font-size: 12px;text-align: center;line-height: 20px;}
 .mask-content>.fa-remove:hover{color: #666;border-color: #333;}
 .mask-content img{width: 400px;margin-right: 15px;}
-.mask-p{width: 370px;font-size: 14px;color: #333;max-height: 291px;overflow-y: auto;overflow-x: hidden;min-height: 291px;}
+.mask-p{width: 370px;font-size: 14px;color: #333;}
+.common-content{overflow-y: auto;overflow-x: hidden;min-height: 200px;max-height: 200px;position: relative;top: 10px;}
 .mask-p{}
 .mask-p p{margin-top: 10px;color: #666;}
 .mask-p p.title{padding: 5px;border: 1px solid #dbdbdb;display: inline-block;color: #333;margin-top: 0;}
