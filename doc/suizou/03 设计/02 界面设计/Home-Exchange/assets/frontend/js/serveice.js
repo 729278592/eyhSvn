@@ -109,7 +109,11 @@ $(function(){
                                         '<p><span class="list">③</span><span class="type-name">尽量少用水</span></p>'+
                                         '<p class="server-infors"><span>真皮虽然防水，但是千万不要经常用水去清洁它，偶尔用水的话，也要尽快的擦干，否则的话会让真皮沙发慢慢的变硬</span></p>'+
                                         '<p><span class="list">④</span><span class="type-name">冰袋清洁</span></p>'+
-                                        '<p class="server-infors"><span>这个主要是口香糖粘到沙发上，如果当时没有发现，等发现的时候口香糖已经变干，这个时候尽量的用冰袋冰敷一会口香糖，然后拿</span></p>'+
+                                        '<p class="server-infors"><span><span class="span-num">1、</span><span class="span-infor">厨房（油烟机、燃气灶、橱柜、调味组、洗菜池、厨房整体台面、整体地面、垃圾桶）;</span></span><br/>' +
+                                                                  '<span>2、卫生间（洗漱台、淋浴房、马桶、地面、垃圾桶）;</span><br/>'+
+                                                                  '<span><span class="span-num">3、</span><span class="span-infor">客厅（窗户、沙发、茶几、地面、垃圾桶、客厅家具、客厅家电）;</span></span><br/>'+
+                                                                  '<span>4、卧室（窗户、床、梳妆台、衣柜、地面、卧室家电）;</span><br/>'+
+                                        '</p>'+
                                     '</div>'+
                                     '<div class="order-chioce left">' +
                                         '<div class="div-wdate left">' +

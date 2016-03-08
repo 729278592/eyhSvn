@@ -2,19 +2,19 @@
  * Created by eyohu023 on 2015/12/23.
  */
 /*左部导航切换*/
-function personMenu(){
-    var lta = $(".person-menu li .li_top a");
-    var td = $(".type-div");
-    lta.each(function(i){
-        $(this).on("click",function(){
-            $(this).addClass("active");
-            $(this).closest(".person-menu li").siblings("li").find(lta).removeClass("active");
-            td.eq(i).addClass("active");
-            td.eq(i).siblings(td).removeClass("active")
-        })
-    });
-}
-personMenu();
+//function personMenu(){
+//    var lta = $(".person-menu li .li_top a");
+//    var td = $(".type-div");
+//    lta.each(function(i){
+//        $(this).on("click",function(){
+//            $(this).addClass("active");
+//            $(this).closest(".person-menu li").siblings("li").find(lta).removeClass("active");
+//            td.eq(i).addClass("active");
+//            td.eq(i).siblings(td).removeClass("active")
+//        })
+//    });
+//}
+//personMenu();
 
 /*优惠券内容切换*/
 function youHuiJuan(){
