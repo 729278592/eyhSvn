@@ -793,6 +793,7 @@ li .main{width: 100%;display: inline-block;white-space: nowrap;text-overflow: el
 body,html{height: 100%;}
 .register-ul{width: 100%;}
 .register-ul li{width: 181px;border-right: 1px solid #666;height: 35px;line-height: 35px;text-align: center;font-size: 16px;color: #666;float: left;}
+.register-ul li.w100{width: 100%;text-align: center;border-right: none;}
 .register-ul li a{display: inline-block;width: 100%;height: 100%;}
 .register-ul li.active a{color: #f16a21;}
 .register-ul li.mr0{border-right: 0;}
