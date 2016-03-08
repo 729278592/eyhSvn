@@ -76,46 +76,47 @@
     });
 
 
-
     /*服务内容切换*/
     var scl  =  $(".sever-content>li");
     var omla = $(".order-meun li a");
     omla.each(function(){
         $(this).on("click",function(ev){
+            imgs0 = $(this).find("img").eq(0).attr("src");
+            imgs1 = $(this).find("img.hide").eq(0).attr("src");
+            imgs2 = $(this).find("img.hide").eq(1).attr("src");
+            dataTitle = $(this).find("img").attr("dataTitle");
+            dataContent = $(this).find("img").attr("dataContent");
+            dataCommunity = $(this).find("img").attr("dataCommunity");
             ev.preventDefault();
             clearInterval(timerServers);
             scl.html('<div class="serversSlider left">'+
                         '<div class="servers-slider">'+
                             '<ul class="servers-ul clearfix">'+
                                 '<li>'+
-                                    '<img src="../../assets/frontend/images/servers-img1.jpg" alt=""/>'+
+                                    '<img src= "'+imgs0+'" alt=""/>'+
                                 '</li>'+
                                 '<li>'+
-                                    '<img src="../../assets/frontend/images/servers-img1.jpg" alt=""/>'+
+                                    '<img src= "'+imgs1+'" alt=""/>'+
                                 '</li>'+
                                 '<li>'+
-                                    '<img src="../../assets/frontend/images/servers-img1.jpg" alt=""/>'+
+                                    '<img src= "'+imgs2+'" alt=""/>'+
                                 '</li>'+
                             '</ul>'+
                         '</div>'+
                         '<div class="servers-pagination">'+
                             '<a href="javascript:void(0)" class="active">'+
-                                '<img src="../../assets/frontend/images/pagination-img1.jpg" alt=""/>'+
                             '</a>'+
                             '<a href="javascript:void(0)">'+
-                                '<img src="../../assets/frontend/images/pagination-img1.jpg" alt=""/>'+
                             '</a>'+
                             '<a href="javascript:void(0)" class="last">'+
-                                '<img src="../../assets/frontend/images/pagination-img1.jpg" alt=""/>'+
                             '</a>'+
                         '</div>'+
                     '</div>'+
                     '<div class="left Sdetails">'+
                         '<p class="title">'+
-                            '<span class="large">小牛深度居家保洁－4小时</span>'+
-                            '<span class="small">最低199元</span>'+
+                            '<span class="large">'+dataTitle+'</span>'+
                         '</p>'+
-                        '<p>全程无死角/水质检测/家具及地板精养/电器清理</p>'+
+                        '<p>'+dataContent+'</p>'+
                         '<table class="de-table">'+
                             '<tr>'+
                                 '<th>'+
@@ -185,18 +186,17 @@
                                 '</td>'+
                             '</tr>'+
                         '</table>'+
-                        '<div class="server-address">社区服务区域 : 渝中、江北、南坪、沙坪坝、巴南区</div>'+
+                        '<div class="server-address">社区服务区域 :'+dataCommunity+'</div>'+
                         '<p style="text-align: center;">'+
                             '<button class="btn-buy">立刻订购</button>'+
                         '</p>'+
                     '</div>'
-            )
+            );
             new SerSlider($(".serversSlider"),{
                 setsSlider:5000
             })
         })
     });
-
 
 
     /*最新小区百叶窗效果*/
