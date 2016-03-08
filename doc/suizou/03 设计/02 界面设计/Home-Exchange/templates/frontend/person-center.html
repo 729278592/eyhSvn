@@ -120,7 +120,6 @@
                                 <img src="../../assets/frontend/images/person-img1.png" alt="" class="left"/>
                                 <div class="left">
                                     <p class="title">陈小洁下午好!</p>
-                                    <p><button class="btn-details">基本资料</button></p>
                                 </div>
                                 <div class="left consumption-infor">
                                     <p>积分: <span class="num">99</span>分</p>
@@ -131,99 +130,94 @@
                                 </div>
                             </li>
                             <li class="li2">
-                                <p class="active">
-                                <span class="left">
-                                     <span class="type">联系电话 :</span>
-                                     <span>13678478463</span>
-                                </span>
-                                    <span class="gai right">修改</span>
-                                </p>
                                 <p>
-                                <span class="left">
-                                     <span class="type">用户名 :</span>
-                                     <span>张三</span>
-                                </span>
-                                    <span class="gai right">修改</span>
-                                </p>
-                                <p>
-                                <span class="left">
-                                     <span class="type">密　码 :</span>
-                                     <span>5566887</span>
-                                </span>
-                                    <span class="gai right">修改</span>
-                                </p>
-                                <p>
-                                    <button class="btn-person">个人资料</button>
+                                    <button class="btn-person active">完善资料</button>
+                                    <button class="btn-person">修改资料</button>
                                 </p>
                             </li>
                             <li class="clearfix li3">
-                                <img src="../../assets/frontend/images/uplode.png" alt="" class="left upload"/>
-                                <div class="left personal-infor">
-                                    <p>
-                                        <span class="type">姓名:</span>
-                                        <input type="text" class="text"placeholder="请输入姓名"/>
-                                    </p>
-                                    <p>
-                                        <span class="type">性别:</span>
-                                        <label>
-                                            <input type="radio" name="sex" checked/>男
-                                        </label>
-                                        <label>
-                                            <input type="radio" name="sex"/>女
-                                        </label>
-                                    </p>
-                                    <p>
-                                        <span class="type">生日:</span>
-                                        <select name="">
-                                            <option value="2015">2015</option>
-                                            <option value="2015">2015</option>
-                                            <option value="2015">2015</option>
-                                        </select> 年
-                                        <select name="">
-                                            <option value="12">12</option>
-                                            <option value="11">11</option>
-                                            <option value="10">10</option>
-                                        </select> 月
-                                        <select name="">
-                                            <option value="5">5</option>
-                                            <option value="6">6</option>
-                                            <option value="7">7</option>
-                                        </select> 日
-                                    </p>
-                                    <p>
-                                        <span class="type">身份:</span>
-                                        <label>
-                                            <input type="radio" name="type" checked/>学生
-                                        </label>
-                                        <label>
-                                            <input type="radio" name="type"/>在职
-                                        </label>
-                                        <label>
-                                            <input type="radio" name="type"/>自由职业
-                                        </label>
-                                        <label>
-                                            <input type="radio" name="type"/>其他
-                                        </label>
-                                    </p>
-                                    <p>
-                                        <span class="type">居住地:</span>
-                                        <select name="">
-                                            <option value="四川省">四川省</option>
-                                            <option value="广东省">广东省</option>
-                                            <option value="福建省">福建省</option>
-                                        </select> 省
-                                        <select name="">
-                                            <option value="广安市">广安市</option>
-                                            <option value="佛山市">佛山市</option>
-                                            <option value="安徽市">安徽市</option>
-                                        </select> 市
-                                        <select name="">
-                                            <option value="武胜县">武胜县</option>
-                                            <option value="邻水县">邻水县</option>
-                                            <option value="管啊县">管啊县</option>
-                                        </select> 县
-                                    </p>
-                                    <button class="btn-sure">保存</button>
+                                <div class="active infor-table">
+                                    <img src="../../assets/frontend/images/uplode.png" alt="" class="left upload"/>
+                                    <div class="left personal-infor">
+                                        <form action="#">
+                                            <p>
+                                                <span class="type">姓名 :</span>
+                                                <input type="text" class="text"placeholder="请输入姓名"/>
+                                            </p>
+                                            <p>
+                                                <span class="type">性别 :</span>
+                                                <label>
+                                                    <input type="radio" name="sex" checked/>男
+                                                </label>
+                                                <label>
+                                                    <input type="radio" name="sex"/>女
+                                                </label>
+                                            </p>
+                                            <p>
+                                                <span class="type">生日 :</span>
+                                                <input id="d4311" class="Wdate text inputDisable removePlaceholder" type="text" placeholder="2015-4-4" onFocus="WdatePicker({minDate:'%y-%M-{%d}'})"/>
+                                            </p>
+                                            <p>
+                                                <span class="type">身份:</span>
+                                                <label>
+                                                    <input type="radio" name="type" checked/>学生
+                                                </label>
+                                                <label>
+                                                    <input type="radio" name="type"/>在职
+                                                </label>
+                                                <label>
+                                                    <input type="radio" name="type"/>自由职业
+                                                </label>
+                                                <label>
+                                                    <input type="radio" name="type"/>其他
+                                                </label>
+                                            </p>
+                                            <p>
+                                                <span class="type">居住地:</span>
+                                                <select name="">
+                                                    <option value="四川省">四川省</option>
+                                                    <option value="广东省">广东省</option>
+                                                    <option value="福建省">福建省</option>
+                                                </select> 省
+                                                <select name="">
+                                                    <option value="广安市">广安市</option>
+                                                    <option value="佛山市">佛山市</option>
+                                                    <option value="安徽市">安徽市</option>
+                                                </select> 市
+                                                <select name="">
+                                                    <option value="武胜县">武胜县</option>
+                                                    <option value="邻水县">邻水县</option>
+                                                    <option value="管啊县">管啊县</option>
+                                                </select> 县
+                                            </p>
+                                            <input type="submit" class="btn-sure" value="保存"/>
+                                        </form>
+                                    </div>
+                                </div>
+                                <div class="infor-table auto">
+                                    <div class="personal-infor mt0">
+                                        <form action="#">
+                                            <p>
+                                                <span class="type">用户名:</span>
+                                                <input type="text" class="text" placeholder="请输入用户名"/>
+                                            </p>
+                                            <p>
+                                                <span class="type">现在密码:</span>
+                                                <input type="text" class="text" placeholder="请输入现在密码"/>
+                                            </p>
+                                            <p>
+                                                <span class="type">新密码:</span>
+                                                <input type="text" class="text" placeholder="请输入新密码"/>
+                                            </p>
+                                            <p>
+                                                <span class="type">确认密码:</span>
+                                                <input type="text" class="text" placeholder="请输入密码"/>
+                                            </p>
+                                            <input type="submit" class="btn-sure" value="保存"/>
+                                        </form>
+                                    </div>
+
+
                                 </div>
                             </li>
                         </ul>
@@ -313,4 +307,19 @@
     <script src="../../assets/global/plugins/move/js/move.js"></script>
     <script src="../../assets/frontend/js/global.js"></script>
     <script src="../../assets/frontend/js/personCenter.js"></script>
+    <script src="../../assets/global/plugins/My97DatePicker/WdatePicker.js"></script>
+    <script>
+        $(".btn-sure").on("click",function(){
+            alert("提交成功");
+        });
+        $(".btn-person").each(function(i){
+            $(this).on("click",function(){
+                $(this).addClass("active");
+                $(this).siblings(".btn-person").removeClass("active");
+                $(".infor-table").eq(i).addClass("active");
+                $(".infor-table").eq(i).siblings(".infor-table").removeClass("active");
+            })
+        })
+
+    </script>
 </html>
