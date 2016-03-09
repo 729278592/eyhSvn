@@ -1864,7 +1864,9 @@ tr th,tr td{ text-align:center;font-size: 14px;border:1px solid #fbb432;color: #
 .person-ul li div.infor-table{display: none;}
 .person-ul li div.infor-table.auto{width: 100%;margin-top: 40px;}
 .person-ul li div.infor-table.auto .personal-infor{display: inline-block;}
-.person-ul li div.infor-table.auto .personal-infor form{width:357px;margin:0 180px;}
+.person-ul li div.infor-table.auto .personal-infor form,.personal-infor .address-form{width:371px;margin:0 166px;}
+
+
 .person-ul li div.active{display: inline-block;}
 .consumption-infor{font-size: 14px;position: relative;top: 10px;left: 150px;}
 .person-ul li>img{margin-right: 15px;}
@@ -1881,7 +1883,7 @@ tr th,tr td{ text-align:center;font-size: 14px;border:1px solid #fbb432;color: #
 .person-ul .li3{padding: 25px 10px;}
 .person-ul .li3 .upload{margin-right:10px; }
 .personal-infor{margin-top: 30px;}
-.personal-infor .address-form{margin-left: 40px;margin-bottom: 40px;}
+.personal-infor .address-form{margin-bottom: 40px;}
 .personal-infor.mt0{margin-top: 0;}
 .personal-infor p{margin: 15px 0;font-size: 14px;color: #666;}
 .personal-infor p span.required{color: #f04102;}
