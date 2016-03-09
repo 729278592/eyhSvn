@@ -1857,7 +1857,7 @@ tr th,tr td{ text-align:center;font-size: 14px;border:1px solid #fbb432;color: #
 .li_top a{color: #6e6969;width: 100%;display: inline-block;}
 .li_top .active a{color: #fe685b;}
 .li_bottom.active,.person-menu li a.active{color: #fba85c;}
-.person-right{width: 735px;background: #fff;margin-left: 270px;}
+.person-right{width: 735px;background: #fff;margin-left: 270px;overflow: hidden;min-height: 635px;}
 .person-ul{padding: 10px;width: 100%;background: #fff;}
 .person-ul>p{color: #666;}
 .person-ul li{padding: 5px 10px 5px 0;width: 725px;}
@@ -1881,13 +1881,17 @@ tr th,tr td{ text-align:center;font-size: 14px;border:1px solid #fbb432;color: #
 .person-ul .li3{padding: 25px 10px;}
 .person-ul .li3 .upload{margin-right:10px; }
 .personal-infor{margin-top: 30px;}
+.personal-infor .address-form{margin-left: 40px;margin-bottom: 40px;}
 .personal-infor.mt0{margin-top: 0;}
 .personal-infor p{margin: 15px 0;font-size: 14px;color: #666;}
-.personal-infor p .type{display: inline-block;width: 60px;}
+.personal-infor p span.required{color: #f04102;}
+.personal-infor p .type{display: inline-block;width: 75px;}
+.personal-infor p .typeTextarea{vertical-align: top;}
 .personal-infor p .text,.personal-infor p .text.Wdate{width: 280px;height: 26px;line-height: 26px;padding-left: 10px;border: 1px solid #dbdbdb;color: #666;}
+.personal-infor p .textarea{border: 1px solid #dbdbdb;width: 278px;padding-left: 10px;}
 .personal-infor p select{width: 80px;border: 1px solid #dbdbdb;height: 25px;line-height: 25px;color: #666;}
 .btn-sure{width: 70px;height: 30px;background: #fca715;border-radius: 4px;color: #fff;text-align: center;margin: 0 auto;display: block;}
-
+.btn-sure.ml40{margin-left:80px;}
 
 .order-pay{width: 100%;background: #fff;padding-top: 1px;padding-bottom: 50px;}
 .order-infor{width: 933px;margin:15px auto 0;}
@@ -1961,9 +1965,21 @@ tr th,tr td{ text-align:center;font-size: 14px;border:1px solid #fbb432;color: #
 .pay-next{display: inline-block;width: 120px;height: 30px;line-height: 30px;text-align: center;color: #fff;margin:960px 430px;}
 
 
-
-
-
+/*shiooing-address*/
+.address-list{margin: 10px auto 50px;width: 705px;border-collapse:collapse;}
+.address-list tr th{background: #efefef;}
+.address-list tr td,.address-list tr th{border: 1px solid #dbdbdb;}
+.address-list tr td a{color:#53ba93;}
+.address-div{margin: 0 50px;}
+.address-list tr td .btn-modify,.address-list tr td .btn-remove,.address-list tr td .btn-add{
+    display: inline-block;padding: 5px 20px;border-radius: 4px;color: #fff;font-family: "微软雅黑";}
+.address-list tr td .btn-modify{background: #53ba93;}
+.address-list tr td .btn-remove{background: #f04102;}
+.personal-infor a.btn-add{background: #fbb433;display: inline-block;padding: 6px 15px;font-size:14px;
+    border-radius: 4px;color: #fff;font-family: "微软雅黑";}
+.address-list tr td .btn-modify:hover{cursor: pointer;}
+.address-list tr td .btn-remove:hover{cursor: pointer;}
+.personal-infor .btn-add:hover{cursor: pointer;}
 /*serverPerson-details*/
 .maternity-infor{padding: 20px 20px 10px;width: 984px;background: #fff;}
 .mi-ul{width: 100%;}
