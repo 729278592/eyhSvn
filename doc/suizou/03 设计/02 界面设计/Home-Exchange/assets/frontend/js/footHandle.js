@@ -20,4 +20,4 @@
     heightAuto();
     $(window).on("resize",function(){
         heightAuto();
-    })
+    });
