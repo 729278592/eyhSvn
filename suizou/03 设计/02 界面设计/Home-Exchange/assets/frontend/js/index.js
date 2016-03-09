@@ -95,22 +95,22 @@
                                 '<li>'+
                                     '<img src= "'+imgs0+'" alt=""/>'+
                                 '</li>'+
-                                '<li>'+
-                                    '<img src= "'+imgs1+'" alt=""/>'+
-                                '</li>'+
-                                '<li>'+
-                                    '<img src= "'+imgs2+'" alt=""/>'+
-                                '</li>'+
+//                                '<li>'+
+//                                    '<img src= "'+imgs1+'" alt=""/>'+
+//                                '</li>'+
+//                                '<li>'+
+//                                    '<img src= "'+imgs2+'" alt=""/>'+
+//                                '</li>'+
                             '</ul>'+
                         '</div>'+
-                        '<div class="servers-pagination">'+
-                            '<a href="javascript:void(0)" class="active">'+
-                            '</a>'+
-                            '<a href="javascript:void(0)">'+
-                            '</a>'+
-                            '<a href="javascript:void(0)" class="last">'+
-                            '</a>'+
-                        '</div>'+
+//                        '<div class="servers-pagination">'+
+//                            '<a href="javascript:void(0)" class="active">'+
+//                            '</a>'+
+//                            '<a href="javascript:void(0)">'+
+//                            '</a>'+
+//                            '<a href="javascript:void(0)" class="last">'+
+//                            '</a>'+
+//                        '</div>'+
                     '</div>'+
                     '<div class="left Sdetails">'+
                         '<p class="title">'+
