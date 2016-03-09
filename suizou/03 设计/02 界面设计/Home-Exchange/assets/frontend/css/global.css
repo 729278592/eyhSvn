@@ -735,7 +735,7 @@ li .main{width: 100%;display: inline-block;white-space: nowrap;text-overflow: el
 .mask-content>.fa-remove:hover{color: #666;border-color: #333;}
 .mask-content img{width: 400px;margin-right: 15px;}
 .mask-p{width: 370px;font-size: 14px;color: #333;}
-.common-content{overflow-y: auto;overflow-x: hidden;height: 220px;margin-top: 10px;}
+.common-content{overflow-y: auto;overflow-x: hidden;position: relative;top: 10px;height: 220px;}
 .mask-p{}
 .mask-p p{margin-top: 10px;color: #666;}
 .mask-p p.title{padding: 5px;border: 1px solid #dbdbdb;display: inline-block;color: #333;margin-top: 0;}
@@ -1862,8 +1862,9 @@ tr th,tr td{ text-align:center;font-size: 14px;border:1px solid #fbb432;color: #
 .person-ul>p{color: #666;}
 .person-ul li{padding: 5px 10px 5px 0;width: 725px;}
 .person-ul li div.infor-table{display: none;}
-.person-ul li div.infor-table.auto{width: 100%;text-align: center;margin-top: 80px;}
+.person-ul li div.infor-table.auto{width: 100%;margin-top: 40px;}
 .person-ul li div.infor-table.auto .personal-infor{display: inline-block;}
+.person-ul li div.infor-table.auto .personal-infor form{width:357px;margin:0 180px;}
 .person-ul li div.active{display: inline-block;}
 .consumption-infor{font-size: 14px;position: relative;top: 10px;left: 150px;}
 .person-ul li>img{margin-right: 15px;}
