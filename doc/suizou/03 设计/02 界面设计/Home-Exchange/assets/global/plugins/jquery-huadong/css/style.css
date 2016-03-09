@@ -12,11 +12,11 @@
 .cms-home .products-grid .product-name { POSITION: absolute; TEXT-ALIGN: left; PADDING-BOTTOM: 15px; MARGIN: 0 auto; PADDING-LEFT: 15px; WIDTH: 155px; BOTTOM: 0; PADDING-RIGHT: 0; DISPLAY: none; PADDING-TOP: 15px; LEFT: 0 }
 .cms-home .products-grid .product-name A { TEXT-DECORATION: none }
 .cms-home .products-grid .product-name A:hover { TEXT-DECORATION: underline }
-.cms-home .indent-col-main { POSITION: relative; width: 1020px; margin: 0 auto; }
+.cms-home .indent-col-main { POSITION: relative; width: 1024px; margin: 0 auto; }
 .cms-home .products-grid BUTTON.button { PADDING-BOTTOM: 0; BORDER-RIGHT-WIDTH: 0; MARGIN: 0; PADDING-LEFT: 0; WIDTH: auto; PADDING-RIGHT: 0; BACKGROUND: none transparent scroll repeat 0% 0%; BORDER-TOP-WIDTH: 0; BORDER-BOTTOM-WIDTH: 0; OVERFLOW: visible; BORDER-LEFT-WIDTH: 0; CURSOR: pointer; PADDING-TOP: 0 }
 .cms-home .products-grid BUTTON.button SPAN { TEXT-ALIGN: center; PADDING-BOTTOM: 0; TEXT-TRANSFORM: none; PADDING-LEFT: 0; PADDING-RIGHT: 0; FONT: 11px/16px Arial, Helvetica, sans-serif; WHITE-SPACE: nowrap; BACKGROUND: none transparent scroll repeat 0% 0%; FLOAT: left; HEIGHT: 16px; COLOR: #020202; PADDING-TOP: 0 }
 .cms-home .products-grid BUTTON.button SPAN SPAN { PADDING-BOTTOM: 0; PADDING-LEFT: 0; PADDING-RIGHT: 0; BACKGROUND: none transparent scroll repeat 0% 0%; PADDING-TOP: 0 }
-.ch-head{width: 1000px;height: 35px;line-height: 35px;background: #52ba92;padding-left: 14px;color: #fff;font-size: 16px;margin-left: 6px;}
+.ch-head{width: 1010px;height: 35px;line-height: 35px;background: #52ba92;padding-left: 14px;color: #fff;font-size: 16px;}
 .std .subtitle { PADDING-BOTTOM: 0; PADDING-LEFT: 0; PADDING-RIGHT: 0; PADDING-TOP: 0 }
 .std OL.ol { LIST-STYLE-POSITION: outside; LIST-STYLE-TYPE: decimal; PADDING-LEFT: 1.5em }
 .std UL.disc { LIST-STYLE-POSITION: outside; LIST-STYLE-TYPE: disc; MARGIN: 0 0 10px; PADDING-LEFT: 18px }
