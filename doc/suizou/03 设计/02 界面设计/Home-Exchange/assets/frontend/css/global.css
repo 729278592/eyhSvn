@@ -808,11 +808,11 @@ li .main{width: 100%;display: inline-block;white-space: nowrap;text-overflow: el
 .abstract{background: #fff;width: 608px;padding-left: 15px;}
 .abstract p{color: #333;padding: 10px 0;font-size: 16px;}
 .ch-head{width: 100%;}
-.abstract p .title{color: #666;display: inline-block;width: 100px;}
+.abstract p .title{color: #666;display: inline-block;width: 110px;}
 .case-img{height: 252px;}
 .ch-conten{background: #fff;padding: 10px 30px;margin-bottom: 10px;}
 .chc-head{border-bottom: 1px dashed #dbdbdb;font-size: 16px;color: #333;padding-bottom: 5px;}
-.chc-head .fa{font-size: 26px;}
+.chc-head .fa{font-size: 20px;}
 .chc-content{font-size: 14px;color: #666;padding-top: 5px;}
 .div-btn{text-align: center;padding:10px 0 25px;}
 
@@ -1899,7 +1899,7 @@ tr th,tr td{ text-align:center;font-size: 14px;border:1px solid #fbb432;color: #
 .person-ul li div.infor-table{display: none;}
 .person-ul li div.infor-table.auto{width: 100%;margin-top: 40px;}
 .person-ul li div.infor-table.auto .personal-infor{display: inline-block;}
-.person-ul li div.infor-table.auto .personal-infor form,.personal-infor .address-form{width:371px;margin:0 166px;}
+.person-ul li div.infor-table.auto .personal-infor form,.personal-infor .address-form{width:375px;margin:0 166px;}
 
 
 .person-ul li div.active{display: inline-block;}
