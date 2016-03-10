@@ -800,7 +800,7 @@ body,html{height: 100%;}
 .wrapper{width: 100%;height: 100%;min-height: 600px;}
 .logBodyBg{width: 100%;height: 100%;position: fixed;z-index: 1;left: 0;top: 0;overflow: hidden;min-width: 1024px;}
 .logBodyBg img{width: 100%; height: 100%;}
-.logBg,.logWrap{width: 442px;height: 300px;position: absolute;z-index: 2;left: 50%;top: 50%;margin: -140px 0 0 -221px;border-radius: 8px;}
+.logBg,.logWrap{width: 442px;height: 330px;position: absolute;z-index: 2;left: 50%;top: 50%;margin: -140px 0 0 -221px;border-radius: 8px;}
 .reWrap{margin-top: -180px;height: 460px;}
 .logBg{background-color: #fff;opacity: 0.8;filter: alpha(opacity=80);}
 .regBg,.regWrap{height: 500px;margin: -220px 0 0 -221px;}
@@ -828,7 +828,7 @@ input.btn-click:hover{background: #e16a20}
 .col-sm-8,.col-sm-4{padding: 0;}
 label.error {color: #EA5200;margin-bottom: 0;}
 .form .mt{margin-top: 10px;}
-
+.form-group.h54{height: 20px;margin-bottom: 5px;}
 
 
 /*homeServices-server-type*/
@@ -1257,7 +1257,7 @@ p>label>input{position: relative;top: 2px;}
 .si-menu li.item{float: left;height: 198px;width: 1004px;}
 .si-menu .item>div{width: 328px;height: 188px;float: left;margin-right: 10px;margin-bottom: 10px;}
 .si-menu .item>div.mr0{margin-right: 0;}
-.si-menu .item>div img{float: left;}
+.si-menu .item>div img{float: left;width: 184px;}
 .nws-infor{float: left;font-size: 14px;color: #999;border: 1px solid #dbdbdb;border-left: none;width: 143px;height: 186px;text-align: center;}
 .nws-infor div.deatils-p{margin: 20px 5% 10px;padding: 10px 0;width: 90%;}
 .nws-infor p.title{font-size: 14px;color: #666;margin-top: 20px;width: 100%;overflow: hidden;white-space: nowrap;text-overflow: ellipsis}
@@ -1874,6 +1874,7 @@ tr th,tr td{ text-align:center;font-size: 14px;border:1px solid #fbb432;color: #
 .person-ul li .title{margin: 20px 0 5px 0;}
 .person-ul .li2 p{width: 660px;padding: 0 20px ;height: 25px;line-height: 25px;background: #fff;color: #666;margin-top: 10px;font-size: 14px;}
 .person-ul .li2{padding-bottom: 20px;border-bottom: 1px solid #dbdbdb;}
+.person-ul .pt10{padding-bottom: 10px;}
 .person-ul .li2 p.active{background:#f5f3f4; }
 .person-ul .li2 p .type{display: inline-block;width: 80px;}
 .person-ul .li2 .gai{color: #63c38e;}
@@ -1932,6 +1933,7 @@ tr th,tr td{ text-align:center;font-size: 14px;border:1px solid #fbb432;color: #
 .gz-infor .btn-submit{margin: 15px 15px 15px 0;border-radius: 4px;font-family: "微软雅黑";width: 96px;height: 35px;background: #fbb434;}
 
 .type-div{min-height: 358px;width: 100%;background: #f6f3ee;}
+.type-div.bgfff{background: #fff;}
 .my-coupon{width: 745px;padding: 5px;background: #fff;}
 .dc-head{width: 735px;border-bottom: 1px solid #dbdbdb;}
 .dc-head li{float: left;color: #666;border-bottom: 1px solid transparent;padding: 6px 0 3px ;margin-right: 10px;}
@@ -1982,6 +1984,17 @@ tr th,tr td{ text-align:center;font-size: 14px;border:1px solid #fbb432;color: #
 .address-list tr td .btn-modify:hover{cursor: pointer;}
 .address-list tr td .btn-remove:hover{cursor: pointer;}
 .personal-infor .btn-add:hover{cursor: pointer;}
+
+
+/*prepaid-balance*/
+.charge-list{width: 100%;}
+.charge-list li{width: 30%;text-align: center;font-size: 14px;color: #666;float: left;}
+.charge-list li select{border: 1px solid #dbdbdb;width: 90px;padding: 5px 0 5px 10px;}
+.charge-list li .btn-charge{display: inline-block;padding: 6px 20px;border-radius: 4px;background: #fbb432;color: #fff;font-size: 14px;font-family: "微软雅黑";}
+
+
+
+
 /*serverPerson-details*/
 .maternity-infor{padding: 20px 20px 10px;width: 984px;background: #fff;}
 .mi-ul{width: 100%;}
