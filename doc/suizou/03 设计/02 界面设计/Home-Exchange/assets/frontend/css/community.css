@@ -1,6 +1,7 @@
 .active-slider {width: 100%; position: relative; overflow: hidden;height: 354px;}
 .active-slider #active-ul { position: absolute; left: 0;width: 100%;}
 .active-slider #active-ul li {float: left;width: 1903px;}
+.active-slider.h550 #active-ul li{width: 1024px;}
 .active-slider .active-left,.active-slider .active-right{width: 45px;height: 80px;text-align: center;top: 50%;color: #fff;position: absolute;font-size: 30px;background: rgba(255,255,255,1);margin-top: -43px;background: url(../images/sprite.png) no-repeat;opacity: 0.5;}
 .active-slider .active-left{left: 10px;background-position: 0 -10px;}
 .active-slider .active-right{right: 10px;background-position: -50px -10px;}
