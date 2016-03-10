@@ -572,8 +572,7 @@ b {line-height: 30px;font-weight: 700;}
 .joined-money .bonus-div .large-words{left: 104px;font-size: 20px;top: -25px;font-weight: bold;}
 .joined-money .bonus-div .btn-get{height: 30px;top: -8px;font-family: "微软雅黑";line-height: 30px;margin: 0;left: 2px;}
 .servpackSlider.w715{padding-bottom: 0;}
-.w715 .servpack-slider li{width: 715px;padding: 0;}
-.w715 .servpack-slider li>div{width: 220px;margin-left: 14px;margin-right: 0;margin-bottom: 14px;}
+.w715 .servpack-slider li{width: 220px;margin-left: 14px;margin-right: 0;margin-bottom: 14px;padding: 0;float: left;}
 
 .w715 .servpack-slider li img{width:220px;}
 .message.list-active{width: 299px;margin-left: 10px;background: #fff;}
@@ -1212,7 +1211,7 @@ p>label>input{position: relative;top: 2px;}
 .community-d .title{padding-bottom: 3px;}
 .community-d.last{margin-left: 35px;padding-right: 0;border-right: 0;}
 .message{width: 240px;background: #f8f7f7;margin-bottom: 6px;}
-.community-message p.more,.message p.more{position: relative;right: 10px;top: -4px;}
+.community-message p.more,.message p.more{position: relative;right: 10px;padding-bottom: 10px;}
 .message p.more a{font-size: 14px;color: #666;}
 .message p.more a:hover{color:#f5798d;}
 .hot-message,.community-message{width: 100%;margin-bottom: 23px;}
