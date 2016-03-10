@@ -906,7 +906,11 @@ label.error {color: #EA5200;margin-bottom: 0;}
 .ser-div{width: 100%;max-height: 335px;overflow-y: auto;}
 .ser-div>div{display: none;position: relative;width: 100%;}
 .ser-div>div.active{display: inline-block;}
-.detaisl-slider{width: 500px;margin: 0 auto;height: 335px;text-align: center;}
+.detaisl-slider{width: 630px;margin: 0 auto;height: 335px;text-align: center;}
+.detaisl-slider .customer-service{width: 100%;margin-top: 10px;}
+.detaisl-slider .customer-infor{font-size: 14px;color: #666;margin-top: 10px;text-align: left;}
+.detaisl-slider .customer-infor img{vertical-align: top;position: relative;top: 7px;}
+.detaisl-slider .customer-infor span{display: inline-block;width: 615px;}
 .ser-ul{position: relative;top: 40px;}
 .ser-ul.pt15{top: 5px;}
 .ser-ul li{float: left;}
