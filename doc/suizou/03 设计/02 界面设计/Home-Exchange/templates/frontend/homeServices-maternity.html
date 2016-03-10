@@ -1153,7 +1153,7 @@
     </script>
     <script>
 
-        var maternityContent = $(".maternity-content")
+        var maternityContent = $(".maternity-content");
         /*预约面试弹窗控制*/
         maternityContent.delegate(".mc-head .fa-remove","click",function(){
             $(".maternity-bg,.maternity").addClass("hide");
@@ -1162,6 +1162,8 @@
             e.preventDefault();
             $(".maternity-bg,.maternity").removeClass("hide");
             $(".maternity-content").html($(this).next(".maternity-div").html());
+            var ht = -maternityContent.get(0).offsetHeight/2+"px";
+            maternityContent.get(0).style.marginTop = ht;
         });
 
 
