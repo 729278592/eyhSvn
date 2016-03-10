@@ -182,9 +182,11 @@ a:link{text-decoration: none;}
 .active-div{background: #f6f2ed;display: none;width: 100%;}
 .active-div.active{display: inline-block;}
 .active-slider {width: 1024px; position: relative; overflow: hidden;height: 365px;}
+.active-slider.h550{height: 550px;margin-bottom: 10px;}
 #servpackSlider1 .active-ul li{padding: 0 0 0 20px;width: 1004px;}
 .active-slider>.title{font-size: 24px;padding: 10px 0;text-align: center;color: #333;}
 .active-ul { position: absolute; left: 0;}
+.active-slider.h550 .active-ul li{height: 550px;}
 .active-ul li {float: left;width: 1024px; height: 305px;}
 .active-left,.active-right{width: 30px;height: 30px;line-height: 25px;text-align: center;top: 8px;color: #fff;position: absolute;font-size: 30px;background: #63c38e;border: 3px solid #FFF;}
 .active-left{right: 35px;}
@@ -842,7 +844,7 @@ input.btn-click:hover{background: #e16a20}
 label.error {color: #EA5200;margin-bottom: 0;}
 .form .mt{margin-top: 10px;}
 .form-group.h54{height: 20px;margin-bottom: 5px;}
-.input-group .form-control.w66{width: 65.6666%;padding-left: 1%;}
+.input-group .form-control.w66{width: 65.6666%;padding-left: 1%;line-height: 30px;}
 .input-group span.c6{color: #666;font-size: 14px;}
 /*homeServices-server-type*/
 .server-type{background: #fff;padding: 20px;}
@@ -1920,7 +1922,10 @@ tr th,tr td{ text-align:center;font-size: 14px;border:1px solid #fbb432;color: #
 .btn-Csure,.btn-cancle{display: inline-block;padding: 8px 25px;border-radius: 3px;background: #fca715;color: #fff;
     position: relative;top: 15px;}
 .btn-Csure{left: 40px;}
-.btn-cancle{left: 160px;}
+.btn-cancle{left: 160px;background: #dbdbdb;}
+.btn-cancle:active{color: #fff;}
+.btn-cancle:visited{color: #fff;}
+.form a.btn-cancle:hover{text-decoration: none;!important;}
 
 
 
