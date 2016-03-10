@@ -41,7 +41,28 @@
         }
     });
 
+    /*底部处理*/
+    var windoeHeight = $(window).outerHeight(true);
+    var headHeight = $(".head").outerHeight(true);
+    var footHeight = $(".footer").outerHeight(true);
+    var cm = $(".content");
+    var contentHeight = cm.outerHeight(true);
+    function heightAuto(){
+        if((contentHeight+footHeight+headHeight)<windoeHeight){
+            cm.css({height:windoeHeight-headHeight-footHeight+"px"});
+            $("html").css({"overflow-y":"hidden"});
 
+        }else{
+            $("html").css({"overflow-y":"auto"});
+            cm.css({"height":"auto"});
+        }
+    }
+    if(cm){
+        heightAuto();
+        $(window).on("resize",function(){
+            heightAuto();
+        });
+    }
 
 
     /*IE支持placeholder属性*/
