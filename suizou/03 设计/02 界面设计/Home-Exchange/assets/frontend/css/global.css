@@ -1403,7 +1403,7 @@ p>label>input{position: relative;top: 2px;}
 .operation-div p{font-size: 14px;color: #999;position: relative;top: 50px;margin-bottom: 10px;}
 .patient-input{width: 300px;height: 40px;padding-left: 10px;}
 .js-select{margin-top: 0;width: 100%;}
-.js-select select{width: 46%;background: #fff;height: 40px;line-height: 40px;text-align: center;color: #666;padding-left: 1%;}
+.js-select select{width: 46%;background: #fff;text-align: center;color: #666;padding-left: 1%;padding: 10px 0 10px 1%;}
 .js-select select{background: #fff;color: #67cbff;}
 
 .our-advantage{background: #fff;padding: 20px;width: 984px;margin-top: 10px;}
