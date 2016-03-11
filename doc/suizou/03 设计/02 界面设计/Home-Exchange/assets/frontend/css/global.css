@@ -798,7 +798,7 @@ li .main{width: 100%;display: inline-block;white-space: nowrap;text-overflow: el
 
 
 /*hatch*/
-.abstract{background: #fff;width: 608px;padding-left: 15px;}
+.abstract{background: #fff;width: 604px;    padding: 3px 0 3px 15px;}
 .abstract p{color: #333;padding: 10px 0;font-size: 16px;}
 .ch-head{width: 100%;}
 .abstract p .title{color: #666;display: inline-block;width: 110px;}
