@@ -209,7 +209,7 @@ a:link{text-decoration: none;}
 .active-details{font-size: 14px;color: #666;background: #fff;height: 305px;padding: 0 20px 0 604px;}
 .active-details .title{font-size: 20px;color: #333;padding: 15px 0;}
 .active-details .ac-content{line-height: 25px;}
-.security{padding: 0 0 25px 0;position: relative;background: #f6f2ed;}
+.security{padding: 0 0 20px 0;position: relative;background: #f6f2ed;}
 .security .title{font-size: 24px;padding: 0 0 10px 0;text-align: center;color: #333;}
 .security .content-main{width: 1023px;height: 311px;}
 .security-div{overflow: hidden;width: 1023px;height: 321px;position: relative;}
