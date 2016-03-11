@@ -1,5 +1,5 @@
 
-.colockbox{width:283px;height:76px;margin:10px auto 0;background:url(../images/colockbg.png) no-repeat;}
-.colockbox span{float:left;display:block;width:58px;height:48px;line-height:48px;font-size:26px;text-align:center;color:#ffffff;margin:0 17px 0 0;}
+.colockbox{width:283px;height:76px;margin:10px auto 0;background:url(../images/colockbg.png) no-repeat;border-radius: 4px;}
+.colockbox span{float:left;display:block;width:58px;height:48px;line-height:48px;font-size:22px;text-align:center;color:#ffffff;margin:0 17px 0 0;}
 .colockbox span.second{margin:0;}
-#demo02{width:208px;background-position:-75px 0;}
+#demo01,#demo02,#demo03,#demo04{width:208px;background-position:-75px 0;}
