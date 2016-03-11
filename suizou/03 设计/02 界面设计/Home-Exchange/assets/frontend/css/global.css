@@ -942,7 +942,7 @@ label.error {color: #EA5200;margin-bottom: 0;}
 .n-list li>img{margin-right: 30px;}
 .n-list li .name{width: 80px;height: 26px;text-align: center;line-height: 26px;background: #babcba;position: absolute;top: 30px;left: 213px;color: #fff;}
 .n-list li.last .name{left: 238px;}
-.n-list li .information{margin: -110px 0 0 212px;color: #666;}
+.n-list li .information{margin: -110px 0 0 212px;color: #666;margin-top: -89px\0;}
 .n-list li .information p{line-height: 30px;margin-right: 40px;font-size: 14px;}
 .n-list li .information p .fa{color: #333;display: inline-block;width: 20px;}
 .n-list li .information.last{margin-left: 80px;border-right: none;}
