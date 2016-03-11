@@ -409,6 +409,7 @@ b {line-height: 30px;font-weight: 700;}
 .scd-details{width: 290px;}
 .scd-ul li .time{width: 64px;border: 1px solid #666;color: #666;margin-right: 20px;text-align: center;padding: 12px 0;}
 .scd-ul li .title{font-size: 16px;color: #666;margin-bottom: 10px;}
+.scd-ul li .title a{color: #666;}
 .scd-ul li.on .title{color: #f8c15b;}
 .scd-ul li.on .time{border-color: #f8c15b;color: #f8c15b;}
 .scd-ul li.on p{color: #a88c61;}
@@ -425,7 +426,7 @@ b {line-height: 30px;font-weight: 700;}
 .technology-content>img{margin-right: 15px;}
 .tcc-p{margin: 10px 0 60px;font-size: 14px;color: #666;}
 .tcc-p .tc-num{display: inline-block;width: 40px;height: 40px;text-align: center;line-height: 40px;font-size: 20px;color: #333;border: 1px solid #dbdbdb;vertical-align: top;float: left;}
-.tccp-con{position: relative;left: 10px;}
+.tccp-con{position: relative;left: 10px;color: #666;}
 
 
 
