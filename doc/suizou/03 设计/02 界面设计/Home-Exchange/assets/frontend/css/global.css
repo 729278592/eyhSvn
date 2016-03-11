@@ -1559,6 +1559,8 @@ tr th,tr td{ text-align:center;font-size: 14px;border:1px solid #fbb432;color: #
 
 /*maternity-details*/
 .maternity-details{padding: 20px;background: #fff;margin-bottom: 10px;width: 984px;}
+.maternity-details .btn-interview{background: #53ba93;color: #fff;font-size: 14px;border-radius: 4px;display: block;width: 80px;height: 34px;text-align: center;line-height: 34px;margin: 10px auto;}
+.maternity-details .btn-interview:hover{cursor: pointer;}
 .maternity-details .md1{margin-right: 20px}
 .md-img{width: 198px;}
 .md-img p{width: 100%;text-align: center;margin: 10px 0 5px;}
