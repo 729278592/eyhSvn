@@ -1010,6 +1010,7 @@ label.error {color: #EA5200;margin-bottom: 0;}
 .reserve>.title.bg2{background: #d6c1a8;}
 .reserve>.title.bg5{background: #68b586;}
 .reserve-indormation{background: #f1eee7;width: 310px;padding: 0 10px;padding-bottom: 30px;}
+.reserve-indormation .text{width: 300px;height: 40px;line-height: 40px;padding-left: 10px;}
 .reserve-indormation.bf1{background: #e4f3fa;}
 .reserve-indormation>.title,.active-div .title{padding: 10px 0;color: #999;font-size: 14px;}
 .reserve-indormation>.title.num{color: #fbb433;}
