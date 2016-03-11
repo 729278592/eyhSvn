@@ -60,13 +60,13 @@
         init: function (_this) {
             ha = $("#hover-active");
             iWidth = ha.width();
-            li = _this.find("li");
+            Oli = _this.find("li");
             active = _this.find("li.active");
             ha[0].style.left = active.offset().left -_this.offset().left +"px";
             Methods.hover(_this)
         },
         hover:function(_this){
-            li.each(function(i){
+            Oli.each(function(i){
                 $(this).hover(
                     function(){
                         move(ha[0],{left : i * iWidth},function(){
