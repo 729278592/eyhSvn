@@ -955,6 +955,7 @@ label.error {color: #EA5200;margin-bottom: 0;}
 /*homeservices-keeper*/
 .keeper{background: #fff;padding: 10px;width: 1004px;}
 .keep-details{width: 660px;}
+.keep-details .crs .ma7{width:100%;}
 .div-table>.title{width: 984px;background: #fbb432;color: #fff;height: 45px;line-height: 45px;padding: 0 10px;}
 .div-table>.ulActivy{width: 984px;background: #fbb432;color: #fff;padding: 0 10px;}
 .div-table>.ulActivy li{float: left;border-right: 1px solid #fff;color: #9a281f;text-align: center;padding: 0px 40px;height: 40px;line-height: 40px;}
@@ -1367,7 +1368,7 @@ p>label>input{position: relative;top: 2px;}
 .crs>div{text-align: center;}
 .crs-menu{padding-left: 120px;width: 500px;margin-bottom: 10px;}
 .crs-menu li{float: left;width: 50%;font-size: 16px;color: #666;padding-top: 30px;}
-#js,#js1{font-size: 16px;color: #666;}
+#js,#js1{font-size: 14px;color: #666;}
 #js span,#js1 span{color: #52ba92;}
 .community{width: 100%;padding: 20px 0;background: #52ba92;}
 .com-ul{width: 100%;}
@@ -1802,6 +1803,7 @@ tr th,tr td{ text-align:center;font-size: 14px;border:1px solid #fbb432;color: #
 .area-infor>p{font-size: 14px;color: #666;width: 89%;margin: 0 5.5%;}
 .area-infor>p .type{color: #fb6555;display: inline-block;width: 75px;}
 .area-menu{margin-top: 20px;margin-left: 13px;}
+.area-menu.ml15{margin-left: -15px;}
 .area-menu li{float: left;border: 1px solid #fab432;padding: 5px 26px;margin: 0 0 0 15px;text-align: center;}
 .area-menu20 li{padding: 0px 11px;margin: 0 0 0 15px;}
 .area-menu li .area-num{width: 85px;height: 85px;text-align: center;line-height: 86px;color: #fff;font-size: 12px;}
@@ -1841,10 +1843,19 @@ tr th,tr td{ text-align:center;font-size: 14px;border:1px solid #fbb432;color: #
 .area-menu.bg2 li>p{color: #d6c1a8;border-top-color: #d6c1a8;}
 .area-menu.bg2 li{border-color: #d6c1a8;}
 .area-menu.bg2.area-menu20 li{border-color: transparent;}
-.area-menu.bg5 li>p{color: #52ba92;border-top-color: #d6c1a8;}
+.area-menu.bg5 li>p{color: #52ba92;border-top-color: #52ba92;}
 .area-menu.bg5 li{border-color: #52ba92;}
 
 
+.area-menu li .man1{background: url(../images/ma-img1.png);background-size: 85px 85px;}
+.area-menu li .man2{background: url(../images/ma-img2.png);background-size: 85px 85px;}
+.area-menu li .man3{background: url(../images/ma-img3.png);background-size: 85px 85px;}
+.area-menu li .man4{background: url(../images/ma-img4.png);background-size: 85px 85px;}
+.area-menu li .man5{background: url(../images/ma-img5.png);background-size: 85px 85px;}
+
+
+.man-infor{width: 620px;margin: 10px 0 10px 5px;}
+.man-infor li{width: 111px;float: left;margin-right: 13px;font-size: 12px;color: #666;text-align: center;}
 
 /*chioce-server*/
 .server-c{width: 100%;background: #fff;margin-top: 10px;}
