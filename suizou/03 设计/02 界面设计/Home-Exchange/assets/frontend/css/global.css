@@ -804,6 +804,7 @@ li .main{width: 100%;display: inline-block;white-space: nowrap;text-overflow: el
 .abstract p .title{color: #666;display: inline-block;width: 110px;}
 .case-img{height: 252px;}
 .ch-conten{background: #fff;padding: 10px 30px;margin-bottom: 10px;}
+.ch-conten.mb0{margin-bottom: 0;}
 .chc-head{border-bottom: 1px dashed #dbdbdb;font-size: 16px;color: #333;padding-bottom: 5px;}
 .chc-head .fa{font-size: 20px;}
 .chc-content{font-size: 14px;color: #666;padding-top: 5px;}
