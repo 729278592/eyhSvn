@@ -1902,7 +1902,7 @@ tr th,tr td{ text-align:center;font-size: 14px;border:1px solid #fbb432;color: #
 .person-ul li div.infor-table.auto .personal-infor form,.personal-infor .address-form{width:375px;margin:0 166px;}
 .person-ul li div.active{display: inline-block;}
 .consumption-infor{font-size: 14px;position: relative;top: 10px;left: 150px;}
-.person-ul li>img{margin-right: 15px;}
+.person-ul li>img{margin-right: 15px;width: 75px;height: 80px;}
 .person-ul li .btn-details{width: 80px;height: 30px;line-height: 30px;text-align: center;background: #63c38e;border-radius: 4px;color: #fff;}
 .person-ul li .title{margin: 20px 0 5px 0;}
 .person-ul .li2 p{width: 660px;padding: 0 20px ;height: 25px;line-height: 25px;background: #fff;color: #666;margin-top: 10px;font-size: 14px;}
@@ -2008,7 +2008,7 @@ tr th,tr td{ text-align:center;font-size: 14px;border:1px solid #fbb432;color: #
 .wr-content span{display:inline-block;line-height:30px}
 .span-group{display:inline-block;width:65px;color:#666;font-size:14px}
 .div-group .span-tou{position:relative;left:15px;display:inline-block;width:5pc;height:78px;background:#eee}
-.div-group .span-tou .ziliao{padding:2px;width:73px;height:73px;border:1px solid #ddd;border-radius:50%}
+.div-group .span-tou .ziliao{padding:2px;width:73px;height:72px;border:1px solid #ddd;border-radius:50%}
 .div-group .span-tou .ziliao:hover{cursor:pointer}
 .div-group .span-tou:hover .ti-c{display:inline-block}
 .div-group .span-tou .title{margin:0;background:#000;opacity:.5;filter:alpha(opacity=50)}
