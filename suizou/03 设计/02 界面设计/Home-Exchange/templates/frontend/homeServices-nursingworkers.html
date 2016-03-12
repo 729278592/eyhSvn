@@ -6,6 +6,7 @@
     <title>护工</title>
     <link rel="stylesheet" href="../../assets/global/plugins/font/css/font-awesome.min.css"/>
     <link rel="stylesheet" href="../../assets/frontend/css/global.css"/>
+    <link rel="stylesheet" href="../../assets/global/plugins/jquery-spinner/css/jquery.spinner.css"/>
     <style>
         .mask-content{width: 710px;height: 308px;margin-left: -360px;}
         .common-content{height: 265px;}
@@ -282,7 +283,7 @@
                                             <option value="心脏科">心脏科</option>
                                         </select>
                                     </p>
-                                    <p class="title">护理方式</p>
+                                    <p class="title pt0">护理方式</p>
                                     <div class="fl-type clearfix">
                                         <button class="btn-type btn-type1 active left">非签约护理</button>
                                         <button class="btn-type btn-type1 right">签约护理</button>
@@ -322,21 +323,35 @@
                                                         <option value="18:00">18:00</option>
                                                     </select>
                                                 </div>
+                                                <p class="title pt0 pb10">请输入保洁时间</p>
+                                                <div class="clearfix services-type">
+                                                    <input type="text" class="spinnerExample"/>
+                                                    <span class="right company">小时</span>
+                                                </div>
                                             </li>
                                             <li>
-                                                <div class="reserve-date ">
-                                                    <div class="div-wdate w50 w100">
-                                                        <input id="d4311" class="Wdate text inputDisable removePlaceholder" type="text" placeholder="2015-4-4" onFocus="WdatePicker({minDate:'%y-%M-{%d}'})"/>
-                                                        <i class="fa fa-calendar"></i>
-                                                    </div> 到
-                                                    <div class="div-wdate w50 w100">
-                                                        <input id="d4311" class="Wdate text inputDisable removePlaceholder" type="text" placeholder="2015-4-4" onFocus="WdatePicker({minDate:'%y-%M-{%d}'})"/>
+                                                <div class="reserve-date clearfix">
+                                                    <div class="div-wdate w50  left">
+                                                        <input id="d4311" class="Wdate inputDisable removePlaceholder" type="text" placeholder="2015-4-4" onfocus="WdatePicker({minDate:'%y-%M-{%d}'})">
                                                         <i class="fa fa-calendar"></i>
                                                     </div>
+                                                    <select name="" class="select-time right inputDisable">
+                                                        <option value="时间">时间</option>
+                                                        <option value="8:00">8:00</option>
+                                                        <option value="10:00">10:00</option>
+                                                        <option value="13:00">13:00</option>
+                                                        <option value="16:00">16:00</option>
+                                                    </select>
+                                                </div>
+                                                <p class="title pt0 pb10">请输入保洁时间</p>
+                                                <div class="clearfix services-type">
+                                                    <input type="text" class="spinnerExample"/>
+                                                    <span class="right company">天</span>
                                                 </div>
                                             </li>
                                         </ul>
                                     </div>
+
                                     <p class="title">注 : </p>
                                     <p class="title pt0">白天预约 : 20元/小时 晚上预约 : 30元/小时</p>
                                     <p class="title pt0 num">已选 : </p>
@@ -1973,6 +1988,10 @@
     <script src="../../assets/frontend/js/global.js"></script>
     <script src="../../assets/frontend/js/serveice.js"></script>
     <script src="../../assets/global/plugins/My97DatePicker/WdatePicker.js"></script>
+    <script src="../../assets/global/plugins/jquery-spinner/js/jquery.spinner.js"></script>
+    <script type="text/javascript">
+        $('.spinnerExample').spinner({});
+    </script>
     <!--<script src="../../assets/frontend/js/activity.js"></script>-->
     <script>
         $(".fl-type .btn-type1").each(function(i){
