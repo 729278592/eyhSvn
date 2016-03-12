@@ -1870,8 +1870,7 @@ tr th,tr td{ text-align:center;font-size: 14px;border:1px solid #fbb432;color: #
 .sc-menu li:hover{cursor: pointer;}
 .sc-menu li.active{background: #63c38e;color: #fff;}
 .sc-menu li.mr0{border-right: 0;}
-.sc-list{display: none;width: 96%;margin:0 2% 2%;}
-.sc-list.active{display: inline-block;}
+.sc-list{width: 96%;margin:0 2% 2%;}
 .sc-list li{float: left;margin-left: 16px;margin-top: 20px;}
 .sc-list li a{display: inline-block;width: 100%;height: 100%;}
 .sc-list li .sc-details{width: 215px;padding: 10px 5px;background: #f2f2f2;}
