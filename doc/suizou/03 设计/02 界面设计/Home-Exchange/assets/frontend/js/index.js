@@ -87,6 +87,7 @@
             dataTitle = $(this).find("img").attr("dataTitle");
             dataContent = $(this).find("img").attr("dataContent");
             dataCommunity = $(this).find("img").attr("dataCommunity");
+            dataHerf = $(this).find("img").attr("dataHerf");
             ev.preventDefault();
             clearInterval(timerServers);
             scl.html('<div class="serversSlider left">'+
@@ -188,7 +189,7 @@
                         '</table>'+
                         '<div class="server-address">社区服务区域 :'+dataCommunity+'</div>'+
                         '<p style="text-align: center;">'+
-                            '<button class="btn-buy">立刻订购</button>'+
+                            '<a href='+dataHerf+' class="btn-buy">立刻订购</a>'+
                         '</p>'+
                     '</div>'
             );
