@@ -1022,6 +1022,17 @@ p>label>input{position: relative;top: 2px;}
 .fl-type .btn-type.mb10{margin-bottom: 10px;}
 .fl-type.bg5 .btn-type.active{background: #68b586;}
 
+
+.chioce-time{width: 310px;}
+.chioce-time .time-menus{width: 100%;}
+.chioce-time .time-menus li{width: 100%;display: none;font-size: 14px;color: #666;}
+.chioce-time .time-menus li .reserve-date{margin-bottom: 10px;}
+.chioce-time .time-menus li.active{display: inline-block;}
+.chioce-time .time-menus li .reserve-date select{width: 143px;padding: 10px 0 10px 10px;color: #666;}
+.chioce-time .time-menus li .div-wdate.w50{width: 46.4%;display: inline-block;}
+
+
+
 .num-input{width: 100%;}
 .num-input span{display: inline-block;height: 40px;font-size: 14px;color: #666;width: 15%;line-height: 40px;}
 .num-input input{width: 83%;height: 40px;line-height: 40px;padding-left: 2%;}
@@ -1060,6 +1071,8 @@ p>label>input{position: relative;top: 2px;}
 .reserve-date .select-time{padding: 10.5px 0;}
 .div-wdate{width: 198px;height: 40px;background: #fff;position: relative;}
 .div-wdate .Wdate{border: none;background: transparent;width: 188px;height: 36px;line-height: 36px;position: relative;z-index: 5;padding-left: 10px;}
+.div-wdate.w100{width: 310px;}
+.div-wdate .Wdate.text{width: 300px;}
 .div-wdate .fa{position: absolute;right: 10px;top: 10px;color: #52ba92;}
 .server-step{width: 100%;background: #fbb432;height: 150px;text-align: center;margin-top: 10px;padding-top: 1px;}
 .server-step.bg1{background: #8a3356;}
@@ -1942,7 +1955,8 @@ tr th,tr td{ text-align:center;font-size: 14px;border:1px solid #fbb432;color: #
 .personal-infor p .text,.personal-infor p .text.Wdate{width: 280px;height: 26px;line-height: 26px;padding-left: 10px;border: 1px solid #dbdbdb;color: #666;}
 .personal-infor p .textarea{border: 1px solid #dbdbdb;width: 278px;padding-left: 10px;}
 .personal-infor p select{width: 80px;border: 1px solid #dbdbdb;height: 25px;line-height: 25px;color: #666;}
-.btn-sure{width: 70px;height: 30px;background: #fca715;border-radius: 4px;color: #fff;text-align: center;margin: 0 auto;display: block;}
+.btn-sure,.btn-saveAddress{width: 70px;height: 30px;background: #fca715;border-radius: 4px;color: #fff;text-align: center;margin: 0 auto;display: block;}
+.btn-saveAddress{width: 90px;height: 34px;line-height: 34px;}
 .btn-sure.ml40{margin-left:80px;}
 .order-pay{width: 100%;background: #fff;padding-top: 1px;padding-bottom: 50px;}
 .order-infor{width: 933px;margin:15px auto 0;}
@@ -1966,7 +1980,7 @@ tr th,tr td{ text-align:center;font-size: 14px;border:1px solid #fbb432;color: #
 .div-input p select.select-time{position: relative;left: -38px;padding: 0;}
 .div-input p textarea{width: 698px;border: 1px solid #dbdbdb;height: 70px;font-family: "微软雅黑";padding-left: 10px;}
 .div-input .textarea-p .type{position: relative;top: -65px;}
-.div-input .btn-save{padding: 8px 20px;border-radius: 4px;background: #fbb433;color: #fff;font-size: 14px;font-family: "微软雅黑";position: relative;left: 100px;}
+.div-input .btn-save,.div-input .btn-address{padding: 8px 20px;border-radius: 4px;background: #fbb433;color: #fff;font-size: 14px;font-family: "微软雅黑";position: relative;left: 100px;}
 .order-list{width: 100%;}
 .list-title{font-size: 16px;color: #444;text-indent: 23px;margin: 15px 0 6px;}
 .order-menu{width: 100%;background: #f3f3f3;padding: 5px 0;}
@@ -2029,6 +2043,21 @@ tr th,tr td{ text-align:center;font-size: 14px;border:1px solid #fbb432;color: #
 .div-group .span-tou:hover .title{display:inline-block}
 .wr-content span img{width:30px;height:28px}
 .div-group .span-tou .ti-c,.div-group .span-tou .title{position:absolute;bottom:0;display:none;width:100%;height:20px;color:#fff;text-align:center;font-size:9pt;line-height:20px}
+
+
+
+.address-infor{width: 600px;border-radius: 4px 4px 0 0;background: #fff;color: #fff;position: absolute;left: 50%;margin-left: -300px;top: 40%;}
+.address-head{width: 100%;text-align: center;padding: 10px 0;border-radius: 4px 4px 0 0;background: #fbb432;}
+.address-head .fa-remove{font-size: 14px;color: #fff;position: absolute;right: 15px;top: 13px;}
+.address-head .fa-remove:hover{cursor: pointer;}
+.address-content{padding: 15px 25px;}
+.address-content .address-lists{font-size: 14px;color: #666;margin: 10px 0;display: block;}
+.address-content .address-lists .span-address{display: inline-block;width: 520px;}
+
+
+
+
+
 
 /*shiooing-address*/
 .address-list{margin: 10px auto 50px;width: 705px;border-collapse:collapse;}

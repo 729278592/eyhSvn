@@ -284,49 +284,59 @@
                                     </p>
                                     <p class="title">护理方式</p>
                                     <div class="fl-type clearfix">
-                                        <button class="btn-type active left">非签约护理</button>
-                                        <button class="btn-type right">签约护理</button>
+                                        <button class="btn-type btn-type1 active left">非签约护理</button>
+                                        <button class="btn-type btn-type1 right">签约护理</button>
                                     </div>
-                                    <p class="title pt0 after">请选择护理时间</p>
-                                    <div class="chiocetime top280 hide">
-                                        <p class="title">请输入护理时间</p>
-                                        <select name="" class="select1">
-                                            <option value="9:00">9:00</option>
-                                            <option value="10:00">10:00</option>
-                                            <option value="11:00">11:00</option>
-                                            <option value="12:00">12:00</option>
-                                            <option value="13:00">13:00</option>
-                                            <option value="14:00">14:00</option>
-                                            <option value="15:00">15:00</option>
-                                            <option value="16:00">16:00</option>
-                                            <option value="17:00">17:00</option>
-                                            <option value="18:00">18:00</option>
-                                        </select>
-                                        <span>到</span>
-                                        <select name="" class="select2">
-                                            <option value="10:00">10:00</option>
-                                            <option value="11:00">11:00</option>
-                                            <option value="12:00">12:00</option>
-                                            <option value="13:00">13:00</option>
-                                            <option value="14:00">14:00</option>
-                                            <option value="15:00">15:00</option>
-                                            <option value="16:00">16:00</option>
-                                            <option value="17:00">17:00</option>
-                                            <option value="18:00">18:00</option>
-                                        </select>
-                                        <button class="btn-sureTime">确定</button>
+                                    <div class="chioce-time">
+                                        <ul class="time-menus">
+                                            <li class="active">
+                                                <div class="reserve-date ">
+                                                    <div class="div-wdate w100">
+                                                        <input id="d4311" class="Wdate text inputDisable removePlaceholder" type="text" placeholder="2015-4-4" onFocus="WdatePicker({minDate:'%y-%M-{%d}'})"/>
+                                                        <i class="fa fa-calendar"></i>
+                                                    </div>
+                                                </div>
+                                                <div class="reserve-date">
+                                                    <select name="" class="select1">
+                                                        <option value="9:00">9:00</option>
+                                                        <option value="10:00">10:00</option>
+                                                        <option value="11:00">11:00</option>
+                                                        <option value="12:00">12:00</option>
+                                                        <option value="13:00">13:00</option>
+                                                        <option value="14:00">14:00</option>
+                                                        <option value="15:00">15:00</option>
+                                                        <option value="16:00">16:00</option>
+                                                        <option value="17:00">17:00</option>
+                                                        <option value="18:00">18:00</option>
+                                                    </select>
+                                                    <span>到</span>
+                                                    <select name="" class="select2">
+                                                        <option value="10:00">10:00</option>
+                                                        <option value="11:00">11:00</option>
+                                                        <option value="12:00">12:00</option>
+                                                        <option value="13:00">13:00</option>
+                                                        <option value="14:00">14:00</option>
+                                                        <option value="15:00">15:00</option>
+                                                        <option value="16:00">16:00</option>
+                                                        <option value="17:00">17:00</option>
+                                                        <option value="18:00">18:00</option>
+                                                    </select>
+                                                </div>
+                                            </li>
+                                            <li>
+                                                <div class="reserve-date ">
+                                                    <div class="div-wdate w50 w100">
+                                                        <input id="d4311" class="Wdate text inputDisable removePlaceholder" type="text" placeholder="2015-4-4" onFocus="WdatePicker({minDate:'%y-%M-{%d}'})"/>
+                                                        <i class="fa fa-calendar"></i>
+                                                    </div> 到
+                                                    <div class="div-wdate w50 w100">
+                                                        <input id="d4311" class="Wdate text inputDisable removePlaceholder" type="text" placeholder="2015-4-4" onFocus="WdatePicker({minDate:'%y-%M-{%d}'})"/>
+                                                        <i class="fa fa-calendar"></i>
+                                                    </div>
+                                                </div>
+                                            </li>
+                                        </ul>
                                     </div>
-                                    <ul class="make-appointment clearfix">
-                                        <li>
-                                            <span class="maked"></span>不可预约
-                                        </li>
-                                        <li>
-                                            <span class="no-make"></span>可预约
-                                        </li>
-                                        <li>
-                                            <span class="making"></span>预约中
-                                        </li>
-                                    </ul>
                                     <p class="title">注 : </p>
                                     <p class="title pt0">白天预约 : 20元/小时 晚上预约 : 30元/小时</p>
                                     <p class="title pt0 num">已选 : </p>
@@ -1962,5 +1972,16 @@
     <script src="../../assets/global/plugins/move/js/move.js"></script>
     <script src="../../assets/frontend/js/global.js"></script>
     <script src="../../assets/frontend/js/serveice.js"></script>
+    <script src="../../assets/global/plugins/My97DatePicker/WdatePicker.js"></script>
     <!--<script src="../../assets/frontend/js/activity.js"></script>-->
+    <script>
+        $(".fl-type .btn-type1").each(function(i){
+            $(this).on("click",function(){
+                $(this).addClass("active");
+                $(this).siblings(".btn-type").removeClass("active");
+                $(".chioce-time .time-menus").find("li").eq(i).addClass("active");
+                $(".chioce-time .time-menus").find("li").eq(i).siblings("li").removeClass("active");
+            })
+        })
+    </script>
 </html>
