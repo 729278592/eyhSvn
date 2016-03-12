@@ -870,8 +870,13 @@ label.error {color: #EA5200;margin-bottom: 0;}
 .hd-mask .fa,.search-terms li .fa{font-size: 16px;}
 .hd-mask select,.search-terms li select{width: 367px;background: #edefed;border: none;outline: none;padding: 9px 0 9px 8px;}
 .search-terms li{color: #666;}
+.search-terms li .chioce-name{float: left;}
+.search-terms li .service-chioce{width: 850px;float: left;overflow: hidden;}
+.search-terms li .service-chioce .rental_mode{margin-bottom: 15px;}
+.search-terms li .service-chioce .mr0{margin-right: 0;}
 .search-terms li .title{display: inline-block;width: 70px;text-align: left;}
 .search-terms li .ser-icon{width: 24px;}
+.search-terms li .ser-icon.fa{width: 26px;position: relative;left: 8px;color: #000;}
 .slider-money{display: inline-block;width: 830px;position: relative;top: 5px;}
 .bg-blue {border: 3px solid #f5f5f5 !important;background-image: none !important;background-color: #dce0e0 !important;}
 .ui-slider-horizontal {height: .2em;margin-bottom: 5px;}
@@ -2052,7 +2057,7 @@ tr th,tr td{ text-align:center;font-size: 14px;border:1px solid #fbb432;color: #
 .work-table{border-collapse:collapse;width: 625px;background: #3aa9b9;}
 .work-table tr td{color: #fff;}
 .work-table tr td .fa{color: #fbb433;font-size: 20px;position: relative;top: 3px;}
-.work-table tr td{ text-align:center;font-size: 14px;border:1px solid #dbdbdb;}
+.work-table tr td{ text-align:center;font-size: 14px;border:1px solid #dbdbdb;width: 5px;}
 .wi-left{float: left}
 .pj{float: right;background: #413f4e;color: #fff;font-size: 14px;padding: 0 19px;width: 305px;height: 192px;}
 .pj p{height: 26px;line-height: 26px;width: 220px;position: relative;left: 30px;margin: 6px 0;}
