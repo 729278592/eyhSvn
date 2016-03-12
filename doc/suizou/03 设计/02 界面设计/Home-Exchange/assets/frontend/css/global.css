@@ -1128,6 +1128,7 @@ p>label>input{position: relative;top: 2px;}
 .step-img.mt0{margin-top: 0;}
 .tool{background: #fff;width: 100%;margin-top: 10px;}
 .tool .servpack-slider li{margin-left: 13px;margin-right: 0;}
+.tool .servpack-slider li p>span,.tool .servpack-slider li span.num{color: red;}
 .package .servpack-slider li{margin-left: 13px;margin-right: 0;}
 .tool-change{width: 100%;height: 465px;background: #fff;}
 .tool-details{width: 300px;padding: 30px;margin-right: 50px;}
@@ -2087,9 +2088,10 @@ tr th,tr td{ text-align:center;font-size: 14px;border:1px solid #fbb432;color: #
 .maternity-infor{padding: 20px 20px 10px;width: 984px;background: #fff;}
 .mi-ul{width: 100%;}
 .mi-ul li{float: left;width: 305px;height: 240px;margin-right: 15px;}
-.mi-ul .li1{background: url("../images/m-infor1.jpg");}
+.mi-ul .li1{width: 305px;height: 240px;}
 .mi-ul li.li2{background: #52ba92;text-align: center;color: #fff;font-size: 14px;}
-.mi-ul li.li2 .title,.pj .title{display: inline-block;width: 80px;height: 30px;border: 1px solid #dbdbdb;font-size: 16px;line-height: 30px;margin: 25px 0 20px;text-align: center;}
+.mi-ul li.li2 .title,.mi-ul li.li3 .title,.pj .title{display: inline-block;width: 80px;height: 30px;border: 1px solid #dbdbdb;font-size: 16px;line-height: 30px;margin: 25px 0 20px;text-align: center;}
+.mi-ul li.li3 p.title{padding: 0;position: relative;left: 110px;}
 .mi-ul li.li3{background: #fbb432;color: #fff;font-size: 14px;margin-right: 0;padding: 0 19px;}
 .mi-ul .li2 p{width: 260px;margin: 6px auto;height: 24px;line-height: 24px;}
 .mi-ul .li2 p>span{display: inline-block;width: 110px;text-align: left;}
