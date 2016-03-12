@@ -1905,6 +1905,13 @@ tr th,tr td{ text-align:center;font-size: 14px;border:1px solid #fbb432;color: #
 .person-ul>p{color: #666;}
 .person-ul li{padding: 5px 10px 5px 0;width: 715px;}
 .person-ul li div.infor-table{display: none;}
+.person-ul li div.infor-table.w100{width: 100%;}
+.person-ul li div.infor-table.w100 .personal-infor{width: 100%;margin-top: 0;}
+.person-ul li div.infor-table.w100 .personal-infor .btn-sure{margin-top: 80px;}
+.btn-sure:hover{cursor: pointer;}
+.person-ul li div.infor-table.w100 .personal-infor p .text{width: 600px;}
+.person-ul li div.infor-table.w100 .personal-infor p select{width: 175px;}
+.person-ul li div.infor-table.w100 .personal-infor label{width: 100px;display: inline-block;}
 .person-ul li div.infor-table.auto{width: 100%;margin-top: 40px;}
 .person-ul li div.infor-table.auto .personal-infor{display: inline-block;}
 .person-ul li div.infor-table.auto .personal-infor form,.personal-infor .address-form{width:375px;margin:0 166px;}
@@ -1925,6 +1932,7 @@ tr th,tr td{ text-align:center;font-size: 14px;border:1px solid #fbb432;color: #
 .person-ul .li3{padding: 25px 5px;}
 .person-ul .li3 .upload{margin-right:10px; }
 .personal-infor{margin-top: 30px;}
+.personal-info .pi-form{width: 100%;}
 .personal-infor .address-form{margin-bottom: 40px;}
 .personal-infor.mt0{margin-top: 0;}
 .personal-infor p{margin: 15px 0;font-size: 14px;color: #666;}
@@ -2011,7 +2019,16 @@ tr th,tr td{ text-align:center;font-size: 14px;border:1px solid #fbb432;color: #
 .pay-next{display: inline-block;width: 120px;height: 30px;line-height: 30px;text-align: center;color: #fff;margin:960px 430px;}
 .shopping_content .last a{color:#fba85c;}
 .shopping{min-height:197px;}
-
+.wr-content span{display:inline-block;line-height:30px}
+.span-group{display:inline-block;width:65px;color:#666;font-size:14px}
+.div-group .span-tou{position:relative;left:15px;display:inline-block;width:5pc;height:78px;background:#eee}
+.div-group .span-tou .ziliao{padding:2px;width:73px;height:73px;border:1px solid #ddd;border-radius:50%}
+.div-group .span-tou .ziliao:hover{cursor:pointer}
+.div-group .span-tou:hover .ti-c{display:inline-block}
+.div-group .span-tou .title{margin:0;background:#000;opacity:.5;filter:alpha(opacity=50)}
+.div-group .span-tou:hover .title{display:inline-block}
+.wr-content span img{width:30px;height:28px}
+.div-group .span-tou .ti-c,.div-group .span-tou .title{position:absolute;bottom:0;display:none;width:100%;height:20px;color:#fff;text-align:center;font-size:9pt;line-height:20px}
 
 /*shiooing-address*/
 .address-list{margin: 10px auto 50px;width: 705px;border-collapse:collapse;}
