@@ -1661,6 +1661,7 @@ tr th,tr td{ text-align:center;font-size: 14px;border:1px solid #fbb432;color: #
 .hss-ul li a .fa{font-size: 26px;}
 .input-search.absolute{position: absolute;top: 10px;z-index: 999;width: 760px;left: 242px;}
 .input-search.absolute .text{background: rgba(255,255,255,0.5);width: 88%;}
+.input-search.absolute .text:focus{background: rgba(255,255,255,1)}
 .input-search.absolute .button{width: 8%;}
 .hsSlider{width: 804px;height: 500px;margin-right: 0;margin-top: -75px;background: #fff;}
 .hs-slider{width: 804px;height: 336px;margin-top: 75px;}
