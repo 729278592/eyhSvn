@@ -102,7 +102,7 @@ a:link{text-decoration: none;}
 .Sdetails .large{font-size: 22px;}
 .Sdetails .small{font-size: 14px;position: relative;left: 15px;}
 .Sdetails p{color: #999a98;text-align: left;font-size: 14px;line-height: 35px;}
-.Sdetails .btn-buy{width: 120px;height: 36px;line-height: 36px;text-align: center;background: #ff6735;border-radius: 4px;font-size: 16px;color: #fff;margin-top: 30px;font-family: "微软雅黑";}
+.Sdetails .btn-buy{width: 120px;height: 36px;line-height: 36px;text-align: center;background: #ff6735;border-radius: 4px;font-size: 16px;color: #fff;margin-top: 30px;font-family: "微软雅黑";display: inline-block;}
 .de-table{ border-collapse:collapse;width: 100%;margin: 10px auto;}
 .de-table tr th{background: #fff7ea;color: #fbb432;font-size: 14px;font-weight: 100;}
 .server-address {width: 716px;margin: -10px auto; border:1px solid #f1e5d2;border-top: none;font-size: 14px;color: #666;padding: 6px 0;text-align: left;text-indent: 20px;}
@@ -1994,7 +1994,7 @@ tr th,tr td{ text-align:center;font-size: 14px;border:1px solid #fbb432;color: #
 .shopping_head .fa-trash-o{position: relative;top: 2px;right: 10px;font-size: 24px;}
 .shopping_head .fa-trash-o:hover{cursor: pointer;}
 .shopping_content{margin: 0 auto 10px auto;width: 100%;border-collapse:collapse;}
-.shopping_content tr td{padding: 10px 0;text-align: center;border: 1px solid #c9e3ee;border-left: none;}
+.shopping_content tr td{padding: 10px 0;text-align: center;border: 1px solid #c9e3ee;border-left: none;width:20%;}
 .shopping_content tr td.first{width: 30%;}
 .shopping_content .last{border-right: none;}
 .shopping_content img{vertical-align: middle;}
