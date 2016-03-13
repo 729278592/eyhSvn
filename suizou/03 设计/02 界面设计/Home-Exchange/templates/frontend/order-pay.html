@@ -71,48 +71,36 @@
                         填写并核对订单信息
                     </div>
                     <div class="div-input">
-                        <p>
+                        <div>
                             <span class="large-title">1.雇主信息</span> <span class="small-title">( <span class="required">*</span>为必填内容 )</span>
-                        </p>
-                        <p>
-                            <span class="type">
-                                <span class="required">*</span> 联系人 :
+                        </div>
+                        <div class="clearfix">
+                            <span class="type left">
+                                <span class="required">*</span> 默认收货地址 :
                             </span>　
-                            <input type="text" placeholder="陈洁"/>
-                        </p>
-                        <p>
-                            <span class="type">
-                                <span class="required">*</span> 所在地区 :
-                            </span>　
-                            <select name="" >
-                                <option value="重庆市">重庆市</option>
-                                <option value="重庆市">重庆市</option>
-                                <option value="重庆市">重庆市</option>
-                            </select>
-                            <select name="" >
-                                <option value="南岸区">南岸区</option>
-                                <option value="南岸区">南岸区</option>
-                                <option value="南岸区">南岸区</option>
-                            </select>
-                            <select name="" >
-                                <option value="珊瑚路">珊瑚路</option>
-                                <option value="珊瑚路">珊瑚路</option>
-                                <option value="珊瑚路">珊瑚路</option>
-                            </select>
-                        </p>
-                        <p>
-                            <span class="type">
-                                <span class="required">*</span> 详细地址 :
-                            </span>　
-                            <input type="text" placeholder="重庆市巴南区"/>
-                        </p>
-                        <p>
-                            <span class="type">
-                                <span class="required">*</span> 手机号码 :
-                            </span>　
-                            <input type="text" placeholder="150055447"/>
-                        </p>
-                        <p>
+                            <div class="address-lists left">
+                                <p>
+                                    <span class="address-details">重庆袁家岗</span>
+                                    <span class="right btn-modifly" dataType="修改地址">修改</span>
+                                </p>
+                                <p>
+                                    <span class="address-details">重庆袁家岗</span>
+                                    <span class="right btn-modifly" dataType="修改地址">修改</span>
+                                </p>
+                                <p>
+                                    <span class="address-details">重庆袁家岗</span>
+                                    <span class="right btn-modifly" dataType="修改地址">修改</span>
+                                </p>
+                                <p>
+                                    <span class="address-details">重庆袁家岗</span>
+                                    <span class="right btn-modifly" dataType="修改地址">修改</span>
+                                </p>
+                            </div>
+                        </div>
+                        <div>
+                            <button type="button" class="btn-address">新增地址</button>
+                        </div>
+                        <div>
                             <span class="type">
                                 <span class="required">*</span> 上门时间 :
                             </span>　
@@ -124,16 +112,14 @@
                                 <option value="13:00">13:00</option>
                                 <option value="16:00">16:00</option>
                             </select>
-                        </p>
-                        <p class="textarea-p">
+                        </div>
+                        <div class="textarea-p">
                             <span class="type">
                                  补充说明 :
                             </span>　
-                            <textarea style="resize: none" name=""  cols="50" rows="10"  class="textarea"
-                                      placeholder="请认真仔细,提前给我信息"></textarea>
-                        </p>
+                            <textarea style="resize: none" name=""  cols="50" rows="10"  class="textarea"placeholder="请认真仔细,提前给我信息"></textarea>
+                        </div>
                         <button class="btn-save">保存信息</button>
-                        <button class="btn-address">选择地址</button>
                     </div>
                     <div class="order-list">
                         <p class="list-title">2.服务清单</p>
@@ -265,26 +251,48 @@
     <div class="mask hide">
         <div class="address-infor">
             <div class="address-head">
-                现有地址
+                <span class="opreation-type">修改地址</span>
                 <i class="fa fa-remove"></i>
             </div>
             <div class="address-content">
-                <label class="address-lists">
-                    <input type="radio" name="address"/>
-                    <span class="span-address">重庆市渝中区袁家岗长江二路</span>
-                </label>
-                <label class="address-lists">
-                    <input type="radio" name="address"/>
-                    <span class="span-address">重庆市渝中区袁家岗长江二路</span>
-                </label>
-                <label class="address-lists">
-                    <input type="radio" name="address"/>
-                    <span class="span-address">重庆市渝中区袁家岗长江二路</span>
-                </label>
-                <label class="address-lists">
-                    <input type="radio" name="address"/>
-                    <span class="span-address">重庆市渝中区袁家岗长江二路</span>
-                </label>
+                <p>
+                    <span class="type">
+                        <span class="required">*</span> 联系人 :
+                    </span>　
+                    <input type="text" placeholder="陈洁"/>
+                </p>
+                <p>
+                    <span class="type">
+                        <span class="required">*</span> 所在地区 :
+                    </span>　
+                    <select name="" >
+                        <option value="重庆市">重庆市</option>
+                        <option value="重庆市">重庆市</option>
+                        <option value="重庆市">重庆市</option>
+                    </select>
+                    <select name="" >
+                        <option value="南岸区">南岸区</option>
+                        <option value="南岸区">南岸区</option>
+                        <option value="南岸区">南岸区</option>
+                    </select>
+                    <select name="" >
+                        <option value="珊瑚路">珊瑚路</option>
+                        <option value="珊瑚路">珊瑚路</option>
+                        <option value="珊瑚路">珊瑚路</option>
+                    </select>
+                </p>
+                <p>
+                    <span class="type">
+                        <span class="required">*</span> 详细地址 :
+                    </span>　
+                    <input type="text" placeholder="重庆市巴南区"/>
+                </p>
+                <p>
+                    <span class="type">
+                        <span class="required">*</span> 手机号码 :
+                    </span>　
+                    <input type="text" placeholder="150055447"/>
+                </p>
                 <button type="button" class="btn-saveAddress">保存地址</button>
             </div>
         </div>
@@ -295,6 +303,7 @@
     <script src="../../assets/global/plugins/My97DatePicker/WdatePicker.js"></script>
     <script>
         $(function(){
+            /*元素未知高度垂直居中*/
             function heightAuto(){
                 var d = $(".address-infor");
                 d.each(function(){
@@ -302,7 +311,20 @@
                     $(this).get(0).style.marginTop = ht;
                 });
             }
+
+
+            /*新增地址*/
             $(".btn-address").on("click",function(){
+                $(".mask,.mask-bg").removeClass("hide");
+                $(".opreation-type").text($(this).text());
+                heightAuto();
+            });
+
+
+            /*修改地址*/
+            $(".btn-modifly").on("click",function(){
+                var dataType = $(this).attr("dataType");
+                $(".opreation-type").text(dataType);
                 $(".mask,.mask-bg").removeClass("hide");
                 heightAuto();
             });
