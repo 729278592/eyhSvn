@@ -493,10 +493,12 @@ b {line-height: 30px;font-weight: 700;}
 .sca-ul li.br0{border-right: 0;}
 .sca-ul li.active{background: #fab432;color: #fff;}
 .severs-case>.title{text-align: center;font-size: 24px;display: inline-block;border: 1px solid #dbdbdb;width: 390px;height: 50px;margin: 10px 316px;line-height: 50px;color: #666;}
+.scu-div .title span.title-block{display:inline-block;width:75%;overflow: hidden;white-space: nowrap;text-overflow: ellipsis;}
 .scSlider{position: relative;height: 300px;width: 800px;margin: 0 auto;}
 .sc-slider{overflow: hidden;width: 760px;height: 261px;position: relative;margin: 0 auto;}
 .sc-ul{position: absolute;left: 0;}
 .sc-ul li{float: left;width: 225px;margin-right: 42px;}
+.sc-ul li a img{width:225px;height:160px;}
 .sc-right,.sc-left{position: absolute;width: 36px;height: 36px;text-align: center;color: #fff;font-size: 30px;line-height: 32px;background: #63c38e;top: 50%;margin-top: -18px;}
 .sc-left{left: -40px;}
 .sc-right{right: -40px;}
@@ -1864,10 +1866,8 @@ tr th,tr td{ text-align:center;font-size: 14px;border:1px solid #fbb432;color: #
 .sc-list li a img{width: 225px;height: 160px;}
 .sc-list li .sc-details{width: 215px;padding: 10px 5px;background: #f2f2f2;}
 .sc-list li .sc-details p{font-size: 14px;color: #999;}
-.sc-list li .sc-details .title{font-size: 16px;color: #333;border-bottom: 1px solid #dbdbdb;padding-bottom: 5px;margin-bottom: 5px;overflow: hidden;
-    white-space: nowrap;
-    text-overflow: ellipsis;width: 100%;}
-.sc-list1{display: none;}
+.sc-list li .sc-details .title{font-size: 16px;color: #333;border-bottom: 1px solid #dbdbdb;padding-bottom: 5px;margin-bottom: 5px;overflow: hidden;white-space:
+nowrap;text-overflow: ellipsis;width: 100%;}.sc-list1{display: none;}
 .sc-list1.active{display: inline-block;}
 .sc-list1 li{float: left;padding: 15px;width: 481px;border-bottom: 1px solid #dbdbdb;border-right: 1px solid #dbdbdb;}
 .sc-list1 li.br0{border-right: 0;}
@@ -1945,23 +1945,23 @@ tr th,tr td{ text-align:center;font-size: 14px;border:1px solid #fbb432;color: #
 .form a.btn-cancle:hover{text-decoration: none;!important;}
 .div-input{position: relative;border: 1px solid #dbdbdb;padding:20px;width: 891px;border-top: 0;}
 .order-head{width: 100%;padding: 8px 0;font-size: 14px;text-indent: 15px;color: #666;background: #f3f3f3;margin-top: 10px;}
-.div-input>div .large-title{color: #333;}
-.div-input>div .address-lists{width: 760px;position: relative;left: 15px;}
-.div-input>div .address-lists>p{margin-bottom: 10px;}
-.div-input>div .small-title{color: #999;font-size: 12px;}
-.div-input>div .required{position: relative;top: 2px;color: #ff4502;font-size: 12px;}
-.div-input>div .type{font-size: 14px;display: inline-block;width: 110px;color: #666;text-align: right;}
-.div-input>div,.address-conten>p{margin:0 0 12px 0;}
-.div-input>div input{width: 700px;height: 24px;padding-left: 10px;line-height: 24px;border: 1px solid #dbdbdb;font-family: "微软雅黑";}
-.div-input>div input.Wdate{width: 590px;color: #666;}
-.div-input>div select{width: 150px;border: 1px solid #dbdbdb;height: 28px;font-family: "微软雅黑";color: #666;}
-.div-input>div select.select-time{position: relative;padding: 0;}
-.div-input>div textarea{width: 745px;border: 1px solid #dbdbdb;height: 70px;font-family: "微软雅黑";padding-left: 10px;}
-.div-input>div .address-details{font-size: 14px;color: #666;}
-.div-input>div .btn-modifly{display: inline-block;font-size: 14px;color: #2ab1de;}
-.div-input>div .btn-modifly:hover{text-decoration: underline;cursor: pointer;}
+.div-input #form1>div .large-title{color: #333;}
+.div-input .address-lists{width: 760px;position: relative;left: 15px;}
+.div-input #form1>div .address-lists>p{margin-bottom: 10px;}
+.div-input #form1>div.small-title{color: #999;font-size: 12px;}
+.div-input #form1>div.required{position: relative;top: 2px;color: #ff4502;font-size: 12px;}
+.div-input div .type{font-size: 14px;display: inline-block;width: 110px;color: #666;text-align: right;}
+.div-input #form1>div,.address-content>p{margin:0 0 12px 0;}
+.div-input #form1>div input{width: 700px;height: 24px;padding-left: 10px;line-height: 24px;border: 1px solid #dbdbdb;font-family: "微软雅黑";}
+.div-input #form1>div input.Wdate{width: 590px;color: #666;}
+.div-input div select{width: 150px;border: 1px solid #dbdbdb;height: 28px;font-family: "微软雅黑";color: #666;}
+.div-input div select.select-time{position: relative;padding: 0;}
+.div-input #form1>div textarea{width: 745px;border: 1px solid #dbdbdb;height: 70px;font-family: "微软雅黑";padding-left: 10px;}
+.div-input #form1>div .address-details{font-size: 14px;color: #666;}
+.div-input #form1>div .btn-modifly{display: inline-block;font-size: 14px;color: #2ab1de;}
+.div-input #form1>div .btn-modifly:hover{text-decoration: underline;cursor: pointer;}
 
-
+.monry-pay{float:right;position:relative;right:20px;}
 
 
 
