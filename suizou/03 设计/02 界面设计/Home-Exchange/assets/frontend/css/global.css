@@ -1925,8 +1925,11 @@ nowrap;text-overflow: ellipsis;width: 100%;}.sc-list1{display: none;}
 .personal-infor .address-form{margin-bottom: 40px;}
 .personal-infor.mt0{margin-top: 0;}
 .personal-infor p{margin: 15px 0;font-size: 14px;color: #666;}
+.personal-infor p.top0 .type{vertical-align: top;}
 .personal-infor p span.required{color: #f04102;}
 .personal-infor p .type{display: inline-block;width: 75px;}
+.personal-infor p .span-block{display: inline-block;}
+.personal-infor p .span-block input{display: inline-block;margin-bottom: 10px;}
 .personal-infor p .typeTextarea{vertical-align: top;}
 .personal-infor p .text,.personal-infor p .text.Wdate{width: 280px;height: 26px;line-height: 26px;padding-left: 10px;border: 1px solid #dbdbdb;color: #666;}
 .personal-infor p .textarea{border: 1px solid #dbdbdb;width: 278px;padding-left: 10px;}
