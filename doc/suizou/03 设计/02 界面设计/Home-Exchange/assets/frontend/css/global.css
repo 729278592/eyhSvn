@@ -2172,6 +2172,10 @@ a.fbtn-return {position: relative;left: 10px;color: #fff;}
 .homeAgreement-infor p{text-indent: 28px;}
 .homeAgreement-infor p.title{font-size: 16px;font-weight: bold;color: #333;text-indent: 0;margin-top: 20px;}
 .homeAgreement-infor p.small-title{font-size: 12px;color: #999;}
+.orderInfor-list{ border-collapse:collapse;width: 100%;background: #fff;}
+.orderInfor-list tr td,.orderInfor-list tr th{ text-align:center;font-size: 14px;border:none;}
+.orderInfor-list tr th{background: #f3f3f3;}
+
 /*media*/
 @media screen and (max-width: 1024px) {
     body{overflow-x: scroll;}
