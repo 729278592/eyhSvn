@@ -1956,6 +1956,7 @@ nowrap;text-overflow: ellipsis;width: 100%;}.sc-list1{display: none;}
 .div-input div .type{font-size: 14px;display: inline-block;width: 110px;color: #666;text-align: right;}
 .div-input #form1>div,.address-content>p{margin:0 0 12px 0;}
 .div-input #form1>div input{width: 700px;height: 24px;padding-left: 10px;line-height: 24px;border: 1px solid #dbdbdb;font-family: "微软雅黑";}
+.div-input #form1>div input.radio{width: auto;height: auto;padding: 0;line-height: 0;}
 .div-input #form1>div input.Wdate{width: 590px;color: #666;}
 .div-input div select{width: 150px;border: 1px solid #dbdbdb;height: 28px;font-family: "微软雅黑";color: #666;}
 .div-input div select.select-time{position: relative;padding: 0;}
