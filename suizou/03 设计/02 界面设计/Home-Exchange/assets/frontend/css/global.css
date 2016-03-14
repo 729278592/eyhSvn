@@ -1896,7 +1896,7 @@ nowrap;text-overflow: ellipsis;width: 100%;}.sc-list1{display: none;}
 .person-ul li div.infor-table{display: none;}
 .person-ul li div.infor-table.w100{width: 100%;}
 .person-ul li div.infor-table.w100 .personal-infor{width: 100%;margin-top: 0;}
-.person-ul li div.infor-table.w100 .personal-infor .btn-sure{margin-top: 80px;}
+.person-ul li div.infor-table.w100 .personal-infor .btn-sure{margin-top: 50px;}
 .btn-sure:hover{cursor: pointer;}
 .person-ul li div.infor-table.w100 .personal-infor p .text{width: 600px;}
 .person-ul li div.infor-table.w100 .personal-infor p select{width: 175px;}
@@ -1929,7 +1929,7 @@ nowrap;text-overflow: ellipsis;width: 100%;}.sc-list1{display: none;}
 .personal-infor p span.required{color: #f04102;}
 .personal-infor p .type{display: inline-block;width: 75px;}
 .personal-infor p .span-block{display: inline-block;}
-.personal-infor p .span-block input{display: inline-block;margin-bottom: 10px;}
+.personal-infor p .span-block select{display: inline-block;margin-bottom: 10px;width: 290px;padding: 5px 0 5px 10px;height: auto;}
 .personal-infor p .typeTextarea{vertical-align: top;}
 .personal-infor p .text,.personal-infor p .text.Wdate{width: 280px;height: 26px;line-height: 26px;padding-left: 10px;border: 1px solid #dbdbdb;color: #666;}
 .personal-infor p .textarea{border: 1px solid #dbdbdb;width: 278px;padding-left: 10px;}
