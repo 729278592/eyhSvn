@@ -1929,7 +1929,7 @@ nowrap;text-overflow: ellipsis;width: 100%;}.sc-list1{display: none;}
 .personal-infor p span.required{color: #f04102;}
 .personal-infor p .type{display: inline-block;width: 75px;}
 .personal-infor p .span-block{display: inline-block;}
-.personal-infor p .span-block select{display: inline-block;margin-bottom: 10px;width: 290px;padding: 5px 0 5px 10px;height: auto;}
+.personal-infor p .span-block select{display: inline-block;margin-bottom: 10px;width: 95px;padding: 5px 0 5px 10px;height: auto;}
 .personal-infor p .typeTextarea{vertical-align: top;}
 .personal-infor p .text,.personal-infor p .text.Wdate{width: 280px;height: 26px;line-height: 26px;padding-left: 10px;border: 1px solid #dbdbdb;color: #666;}
 .personal-infor p .textarea{border: 1px solid #dbdbdb;width: 278px;padding-left: 10px;}
