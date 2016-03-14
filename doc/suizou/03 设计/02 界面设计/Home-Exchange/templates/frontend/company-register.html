@@ -1,0 +1,163 @@
+<!DOCTYPE html>
+<html>
+<head lang="en">
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1" />
+    <title>企业注册</title>
+    <link rel="stylesheet" href="../../assets/global/plugins/bootstrap-3.3.5/css/bootstrap.min.css"/>
+    <link rel="stylesheet" href="../../assets/global/plugins/font/css/font-awesome.min.css"/>
+    <link rel="stylesheet" href="../../assets/frontend/css/global.css"/>
+    <link rel="stylesheet" href="../../assets/frontend/css/validate-error.css"/>
+    <!--[if IE 8]>
+    <style>
+        .col-sm-8{width: 66.66666667%;float: left;}
+        .col-sm-4 {width: 33.33333333%;float: left;}
+    </style>
+    <![endif]-->
+</head>
+<body>
+<div class="wrapper">
+    <div class="head">
+        <div class="head-bg"></div>
+        <div class="head-main">
+            <div class="logo left"></div>
+            <ul class="menu right clearfix" id="menu">
+                <div class="hover-active" id="hover-active"></div>
+                <li>
+                    <a href="index.html">
+                        首页
+                    </a>
+                </li>
+                <li>
+                    <a href="homeServices.html">
+                        家庭服务
+                    </a>
+                </li>
+                <li>
+                    <a href="my-community.html">
+                        我的社区
+                    </a>
+                </li>
+                <li>
+                    <a href="train.html">
+                        在线培训
+                    </a>
+                </li>
+                <li>
+                    <a href="space-creation.html">
+                        众创空间
+                    </a>
+                </li>
+                <li>
+                    <a href="public-protection.html">
+                        公益保障
+                    </a>
+                </li>
+                <li class="active">
+                    <a href="person-login.html">
+                        注册
+                    </a>
+                </li>
+            </ul>
+        </div>
+    </div>
+    <div class="logBodyBg">
+        <img src="../../assets/frontend/images/rl_bg.jpg">
+    </div>
+    <div class="logBg regBg"></div>
+    <div class="logWrap reWrap">
+        <div class="logBox regBox">
+            <ul class="register-ul clearfix">
+                <li class=""><a href="person-register.html">个人注册</a></li>
+                <li class="mr0 active"><a href="company-register.html">企业注册</a></li>
+            </ul>
+            <form action="#" class="form" id="form_sample_1">
+                <div class="div-form active">
+                    <div class="input-group">
+                            <span class="input-group-addon">
+                                <i class="fa fa-phone"></i>
+                            </span>
+                        <input type="text" class="form-control" placeholder="请输入电话号码" name="email">
+                    </div>
+                    <div class="input-group">
+                            <span class="input-group-addon">
+                                <i class="fa fa-lock"></i>
+                            </span>
+                        <input type="text" class="form-control" placeholder="请输入密码">
+                    </div>
+                    <div class="input-group">
+                            <span class="input-group-addon">
+                                <i class="fa fa-lock"></i>
+                            </span>
+                        <input type="text" class="form-control" placeholder="请再次输入密码">
+                    </div>
+                    <div class="input-group">
+                            <span class="input-group-addon">
+                                <i class="fa fa-bars"></i>
+                            </span>
+                        <input type="text" class="form-control" placeholder="请输入企业/个人名字">
+                    </div>
+                </div>
+
+
+                <div class="input-group" style="width:100%;">
+                    <div class="col-sm-8 col-xs-8 col-lg-8">
+                        <input type="text" id="mobile" class="form-control" placeholder="请输入验证码">
+                    </div>
+                    <div class="col-sm-4 col-xs-4 col-lg-4 right">
+                        <input type="button" id="getting" class="getcode" value="获取验证码">
+                    </div>
+                </div>
+                <p>
+                    <label>
+                        <input type="checkbox"/>我已阅读并接受
+                    </label>
+                    <a href="registration-agreement.html">《网站注册服务条款》</a>
+                </p>
+                <div class="form-group">
+                    <button type="submit" class="form-control btn-click">立即注册</button>
+                </div>
+                <div class="form-group">
+                    <a href="person-login.html" class="right">已有账号? 立刻登录</a>
+                </div>
+            </form>
+        </div>
+    </div>
+</div>
+</body>
+<script src="../../assets/global/plugins/jquery/jquery-1.11.3.min.js"></script>
+<script src="../../assets/global/plugins/move/js/move.js"></script>
+<script src="../../assets/frontend/js/global.js"></script>
+<script src="../../assets/global/plugins/bootstrap-3.3.5/js/bootstrap.min.js"></script>
+<script src="../../assets/global/plugins/metic/js/jquery.validate.js"></script>
+<script src="../../assets/global/plugins/metic/js/main.js"></script>
+<script src="../../assets/global/plugins/metic/js/form-validation.js"></script>
+<script type="text/javascript">
+    jQuery(document).ready(function() {
+        Main.init(); // init metronic core components
+        FormValidation.init();
+    });
+    $(function(){
+        $('#getting').click(function(){
+            var btn = $(this);
+            var count = 60;
+            var resend = setInterval(function(){
+                count--;
+                if (count > 0){
+                    btn.val(count+"秒后可重新获取");
+                    btn.addClass("active");
+//                        $.cookie("captcha", count, {path: '/', expires: (1/86400)*count});
+                }else {
+                    clearInterval(resend);
+                    btn.removeClass("active");
+                    btn.val("获取验证码").removeAttr('disabled style');
+                }
+            }, 1000);
+            btn.attr('disabled',true).css('cursor','not-allowed');
+        });
+
+
+
+    });
+</script>
+</html>
