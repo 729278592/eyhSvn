@@ -64,8 +64,8 @@
     <div class="logBodyBg">
         <img src="../../assets/frontend/images/rl_bg.jpg">
     </div>
-    <div class="logBg regBg"></div>
-    <div class="logWrap reWrap">
+    <div class="logBg regBg companyHeight"></div>
+    <div class="logWrap reWrap companyHeight">
         <div class="logBox regBox">
             <ul class="register-ul clearfix">
                 <li class=""><a href="person-register.html">个人注册</a></li>
@@ -92,14 +92,23 @@
                         <input type="text" class="form-control" placeholder="请再次输入密码">
                     </div>
                     <div class="input-group">
+                        <span class="input-group-addon">
+                            <i class="fa fa-recycle"></i>
+                        </span>
+                        <select name="" class="form-control">
+                            <option value="请选择公司类型">请输入公司类型</option>
+                            <option value="渠道商">渠道商</option>
+                            <option value="展示企业">展示企业</option>
+                            <!--<option value="服务企业">服务企业</option>-->
+                        </select>
+                    </div>
+                    <div class="input-group">
                             <span class="input-group-addon">
                                 <i class="fa fa-bars"></i>
                             </span>
-                        <input type="text" class="form-control" placeholder="请输入企业/个人名字">
+                        <input type="text" class="form-control" placeholder="请输入个人名字">
                     </div>
                 </div>
-
-
                 <div class="input-group" style="width:100%;">
                     <div class="col-sm-8 col-xs-8 col-lg-8">
                         <input type="text" id="mobile" class="form-control" placeholder="请输入验证码">
