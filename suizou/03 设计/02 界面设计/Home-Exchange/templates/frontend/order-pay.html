@@ -85,34 +85,64 @@
                                         <label>
                                             <input type="radio" class="radio" name="radio" checked/>
                                             <span class="type-people">张三</span>
-                                            <span class="address-details">重庆袁家岗</span>
+                                            <span class="address-details">
+                                                <span class="privoce">重庆</span>
+                                                <span class="city">渝中区</span>
+                                                <span class="areas">袁家岗</span>
+                                                <span class="details-areas">袁家岗</span>
+                                            </span>
                                             <span class="type-phone">13111111111</span>
                                         </label>
                                         <span class="right btn-modifly" dataType="修改地址">修改</span>
                                     </p>
                                     <p>
                                         <label>
-                                            <input type="radio" class="radio" name="radio" checked/>
+                                            <input type="radio" class="radio" name="radio"/>
                                             <span class="type-people">张三</span>
-                                            <span class="address-details">重庆袁家岗</span>
+                                             <span class="address-details">
+                                                <span class="privoce">重庆</span>
+                                                <span class="city">渝中区</span>
+                                                <span class="areas">袁家岗</span>
+                                            </span>
                                             <span class="type-phone">13111111111</span>
                                         </label>
                                         <span class="right btn-modifly" dataType="修改地址">修改</span>
                                     </p>
                                     <p>
                                         <label>
-                                            <input type="radio" class="radio" name="radio" checked/>
+                                            <input type="radio" class="radio" name="radio"/>
                                             <span class="type-people">张三</span>
-                                            <span class="address-details">重庆袁家岗</span>
+                                             <span class="address-details">
+                                                <span class="privoce">重庆</span>
+                                                <span class="city">渝中区</span>
+                                                <span class="areas">袁家岗</span>
+                                            </span>
                                             <span class="type-phone">13111111111</span>
                                         </label>
                                         <span class="right btn-modifly" dataType="修改地址">修改</span>
                                     </p>
                                     <p>
                                         <label>
-                                            <input type="radio" class="radio" name="radio" checked/>
+                                            <input type="radio" class="radio" name="radio"/>
                                             <span class="type-people">张三</span>
-                                            <span class="address-details">重庆袁家岗</span>
+                                             <span class="address-details">
+                                                <span class="privoce">重庆</span>
+                                                <span class="city">渝中区</span>
+                                                <span class="areas">袁家岗</span>
+                                            </span>
+                                            <span class="type-phone">13111111111</span>
+                                        </label>
+                                        <span class="right btn-modifly" dataType="修改地址">修改</span>
+                                    </p>
+                                    <p>
+                                        <label>
+                                            <input type="radio" class="radio" name="radio"/>
+                                            <span class="type-people">张三</span>
+                                            <span class="address-details">
+                                                <span class="privoce">重庆</span>
+                                                <span class="city">渝中区</span>
+                                                <span class="areas">袁家岗</span>
+                                            </span>
                                             <span class="type-phone">13111111111</span>
                                         </label>
                                         <span class="right btn-modifly" dataType="修改地址">修改</span>
@@ -306,26 +336,26 @@
                     <span class="type">
                         <span class="required">*</span> 联系人 :
                     </span>　
-                    <input type="text" placeholder="陈洁"/>
+                    <input type="text" placeholder="陈洁" class="nameText"/>
                 </p>
                 <p>
                     <span class="type">
                         <span class="required">*</span> 所在地区 :
                     </span>　
-                    <select name="" >
+                    <select name="" class="select-s">
                         <option value="重庆市">重庆市</option>
-                        <option value="重庆市">重庆市</option>
-                        <option value="重庆市">重庆市</option>
+                        <option value="重庆市">重庆市1</option>
+                        <option value="重庆市">重庆市2</option>
                     </select>
-                    <select name="" >
+                    <select name="" class="select-q">
                         <option value="南岸区">南岸区</option>
-                        <option value="南岸区">南岸区</option>
-                        <option value="南岸区">南岸区</option>
+                        <option value="南岸区">南岸区1</option>
+                        <option value="南岸区">南岸区2</option>
                     </select>
-                    <select name="" >
+                    <select name="" class="select-x">
                         <option value="珊瑚路">珊瑚路</option>
-                        <option value="珊瑚路">珊瑚路</option>
-                        <option value="珊瑚路">珊瑚路</option>
+                        <option value="珊瑚路">珊瑚路1</option>
+                        <option value="珊瑚路">珊瑚路2</option>
                     </select>
                 </p>
                 <p>
@@ -338,7 +368,7 @@
                     <span class="type">
                         <span class="required">*</span> 手机号码 :
                     </span>　
-                    <input type="text" placeholder="150055447"/>
+                    <input type="text" placeholder="150055447" class="phoneText"/>
                 </p>
                 <button type="button" class="btn-saveAddress">保存地址</button>
             </div>
@@ -359,22 +389,69 @@
                 });
             }
 
-
             /*新增地址*/
             $(".btn-address").on("click",function(){
                 $(".mask,.mask-bg").removeClass("hide");
                 $(".opreation-type").text($(this).text());
+                $(".btn-saveAddress").addClass("btn-plusAddrss");
                 heightAuto();
+            });
+
+
+            $(".mask,.mask-bg").delegate(".btn-plusAddrss","click",function(){
+                var nameText = $(this).closest(".address-content").find(".nameText").val();
+                var phoneText = $(this).closest(".address-content").find(".phoneText").val();
+                var selects = $(this).closest(".address-content").find(".select-s option:selected").text();
+                var selectq = $(this).closest(".address-content").find(".select-q option:selected").text();
+                var selectx = $(this).closest(".address-content").find(".select-x option:selected").text();
+                var textareas = $(this).closest(".address-content").find(".textarea").val();
+                var str = ' <p>'+
+                                '<label>'+
+                                    '<input type="radio" class="radio" name="radio" checked/>'+
+                                    '<span class="type-people">'+nameText+'</span>'+
+                                    '<span class="address-details">'+
+                                        '<span class="privoce">'+selects+'</span>'+
+                                        '<span class="city">'+selectq+'</span>'+
+                                        '<span class="areas">'+selectx+'</span>'+
+                                        '<span class="details-areas">'+textareas+'</span>'+
+                                    '</span>'+
+                                    '<span class="type-phone">'+phoneText+'</span>'+
+                                '</label>'+
+                                '<span class="right btn-modifly" dataType="修改地址">修改</span>'+
+                            '</p>';
+                $(".div-input .address-lists").append(str);
+                $(this).closest(".mask").addClass("hide");
+                $(this).closest(".mask").prev(".mask-bg").addClass("hide");
+                $(".btn-saveAddress").removeClass("btn-plusAddrss").reset;
             });
 
 
             /*修改地址*/
-            $(".btn-modifly").on("click",function(){
+            $(".div-input .address-lists").delegate(".btn-modifly","click",function(){
                 var dataType = $(this).attr("dataType");
+                $(this).closest("p").addClass("active");
+                $(this).closest("p").siblings("p").removeClass("active");
                 $(".opreation-type").text(dataType);
                 $(".mask,.mask-bg").removeClass("hide");
                 heightAuto();
             });
+
+            $(".btn-saveAddress").on("click",function(){
+                var pActive = $(".div-input .address-lists p.active");
+                var nameText = $(this).closest(".address-content").find(".nameText").val();
+                var phoneText = $(this).closest(".address-content").find(".phoneText").val();
+                var selects = $(this).closest(".address-content").find(".select-s option:selected").text();
+                var selectq = $(this).closest(".address-content").find(".select-q option:selected").text();
+                var selectx = $(this).closest(".address-content").find(".select-x option:selected").text();
+                var textareas = $(this).closest(".address-content").find(".textarea").val();
+                pActive.find(".type-people").text(nameText);
+                pActive.find(".address-details").text(selects+selectq+selectx+textareas);
+                pActive.find(".type-phone").text(phoneText);
+                $(this).closest(".mask").addClass("hide");
+                $(this).closest(".mask").prev(".mask-bg").addClass("hide");
+                pActive.removeClass("active");
+            });
+
             $(".mask,.mask-bg").delegate(".fa-remove","click",function(){
                 $(this).closest(".mask").addClass("hide");
                 $(this).closest(".mask").prev(".mask-bg").addClass("hide");
