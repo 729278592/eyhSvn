@@ -14,7 +14,6 @@
           else if (getValue(field) != container.data('lastValidValue')) validateAndTrigger(field)
         });
       textField.wrap(container);
-
       var increaseButton = $('<button class="increase">+</button>').click(function () { changeValue(1) });
       var decreaseButton = $('<button class="decrease">-</button>').click(function () { changeValue(-1) });
 
@@ -55,7 +54,6 @@
       }
 
       function isInvalid(value) { return isNaN(+value) || value < options.min; }
-
       function getValue(field) {
         field = field || textField;
         return parseInt(field.val() || 0, 10)
