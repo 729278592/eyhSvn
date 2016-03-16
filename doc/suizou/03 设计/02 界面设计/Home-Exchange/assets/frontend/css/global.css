@@ -832,6 +832,7 @@ body,html{height: 100%;}
 .regBg.companyHeight,.logWrap.companyHeight{height: 560px;margin-top: -250px;}
 .logWrap.companyHeight .regBox{margin: 50px 40px;}
 .logBox{overflow: hidden;margin: 20px 40px;}
+.logBox.margin8{margin: 8px 40px;}
 .regBox{margin: 0 40px;}
 .log-logo{width: 100px;}
 .logBox .title{font-size: 20px;color: #f16a20;width: 262px;height: 44px;line-height: 44px;text-indent: 50px;}
