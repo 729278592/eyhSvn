@@ -81,13 +81,13 @@
     var omla = $(".order-meun li a");
     omla.each(function(){
         $(this).on("click",function(ev){
-            imgs0 = $(this).find("img").eq(0).attr("src");
-            imgs1 = $(this).find("img.hide").eq(0).attr("src");
-            imgs2 = $(this).find("img.hide").eq(1).attr("src");
-            dataTitle = $(this).find("img").attr("dataTitle");
-            dataContent = $(this).find("img").attr("dataContent");
-            dataCommunity = $(this).find("img").attr("dataCommunity");
-            dataHerf = $(this).find("img").attr("dataHerf");
+            imgs0 = $(this).find(".div-group").eq(0).attr("src");
+//            imgs1 = $(this).find("img.hide").eq(0).attr("src");
+//            imgs2 = $(this).find("img.hide").eq(1).attr("src");
+            dataTitle = $(this).find(".div-group").attr("dataTitle");
+            dataContent = $(this).find(".div-group").attr("dataContent");
+            dataCommunity = $(this).find(".div-group").attr("dataCommunity");
+            dataHerf = $(this).find(".div-group").attr("dataHerf");
             ev.preventDefault();
             clearInterval(timerServers);
             scl.html('<div class="serversSlider left">'+
