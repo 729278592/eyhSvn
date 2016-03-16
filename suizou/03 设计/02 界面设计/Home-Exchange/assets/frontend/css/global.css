@@ -1971,7 +1971,7 @@ nowrap;text-overflow: ellipsis;width: 100%;}.sc-list1{display: none;}
 .div-input #form1>div .address-lists>p{margin-bottom: 10px;}
 .div-input .address-lists p label{width: 93%;display: inline-block;}
 .div-input .address-lists p label>span{display: inline-block;width: 14%;font-size: 14px;color: #666;}
-.div-input .address-lists p label>span.type-people{width: 8%;}
+.div-input .address-lists p label>span.type-people{width: 10%;overflow: hidden;white-space: nowrap;text-overflow: ellipsis;}
 .div-input #form1>div.small-title{color: #999;font-size: 12px;}
 .div-input #form1>div .required{position: relative;top: 2px;color: #ff4502;font-size: 12px;}
 .div-input div .type{font-size: 14px;display: inline-block;width: 110px;color: #666;text-align: right;}
