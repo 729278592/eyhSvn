@@ -235,11 +235,15 @@
                             </table>
                             <div class="par-infor">
                                 <div>
-                                    <label>
+                                    <label class="label-select">
                                         <input type="checkbox" class="checkbox"/>
                                         <span>使用点券</span>
-                                    </label> <input type="text" class="input"/>
-                                    <span class="num">-￥0.00</span>
+                                    </label> 
+                                    <select name="" class="select">
+                                        <option value="请选择">请选择</option>
+                                        <option value="保洁优惠券">保洁优惠券</option>
+                                        <option value="春节慢100减10">春节慢100减10</option>
+                                    </select>
                                 </div>
                                 <div class="right right10">
                                     <span>实付款 :</span>
@@ -460,7 +464,19 @@
             $(".mask,.mask-bg").delegate(".fa-remove","click",function(){
                 $(this).closest(".mask").addClass("hide");
                 $(this).closest(".mask").prev(".mask-bg").addClass("hide");
+            });
+
+
+            $(".label-select").click(function(){
+                if($(this).find("input")[0].checked==true){
+                    $(this).next(".select").attr("disabled","disabled");
+                    $(this).next(".select").addClass("active");
+                }
+                else{
+                    $(this).next(".select").removeClass("active");
+                    $(this).next(".select").removeAttr("disabled");
+                }
             })
-        })
+        });
     </script>
 </html>

@@ -844,7 +844,7 @@ body,html{height: 100%;}
 .logBodyBg{width: 100%;height: 100%;position: fixed;z-index: 1;left: 0;top: 0;overflow: hidden;min-width: 1024px;}
 .logBodyBg img{width: 100%; height: 100%;}
 .logBg,.logWrap{width: 442px;height: 330px;position: absolute;z-index: 2;left: 50%;top: 50%;margin: -140px 0 0 -221px;border-radius: 8px;}
-.logWrap.h250,.logBg.h250{height: 250px;}
+.logWrap.h250,.logBg.h250{height: 320px;}
 .reWrap{margin-top: -180px;height: 460px;}
 .logBg{background-color: #fff;opacity: 0.8;filter: alpha(opacity=80);}
 .regBg,.regWrap{height: 500px;margin: -220px 0 0 -221px;}
@@ -2020,7 +2020,8 @@ nowrap;text-overflow: ellipsis;width: 100%;}.sc-list1{display: none;}
 .par-infor{width: 100%;padding: 6px 0;background: #f3f3f3;color: #666;font-size: 14px;}
 .par-infor>div{display: inline-block;margin-left: 60px;}
 .par-infor>div.right10{position: relative;right: 6.5%;}
-.par-infor>div .input{width: 80px;height: 22px;text-align: center;color: #666;margin: 0 5px;}
+.par-infor>div .select{width: 120px;text-align: center;color: #666;margin: 0 5px;padding: 5px 0;}
+.par-infor>div .select.active{background: #dbdbdb;}
 .par-infor>div input.checkbox{position: relative;top: 2px;}
 .par-infor>div .money{font-size: 16px;}
 .gz-infor .btn-submit{margin: 15px 15px 15px 0;border-radius: 4px;font-family: "微软雅黑";width: 96px;height: 35px;background: #fbb434;}
