@@ -367,10 +367,10 @@ button{outline: none;border: 0;}
 
 
 .cj_ul .zindex{position: relative;z-index: 5;color: #f58b7e;background: #fdebe8;}
-.cj_ul li{float: left;line-height: 46px;height: 46px;text-align: center;position: relative;font-size: 16px;color: #fff;width: 122px;left: 350px;}
+.cj_ul li{float: left;line-height: 46px;height: 46px;text-align: center;position: relative;font-size: 16px;color: #fff;width: 122px;left: 0;}
 .cj_ul li img{position: absolute;top: 0;left: 0;}
 .cj_ul_c li{position: relative;left: 440px;}
-.cj_ul_c1 li{position: relative;left: 350px;}
+.cj_ul_c1 li{position: relative;left: 0;}
 .cj_ul li:hover{background: #fdebe8;color: #f58b7e;}
 .cj_ul li:hover img{display: block;}
 .cj_ul1{width: 100%;position: relative;}
@@ -424,6 +424,7 @@ tr th,tr td{ text-align:center;font-size: 14px;border:1px solid #cccccc;color: #
 .overview img,.function img,.product_story img,.to_configure img{width: 1240px;}
 
 .parameter>li{border-bottom: 1px solid #b1b1b1;width: 1230px;font-size: 20px;color: #070202;position: relative;padding-left: 10px;}
+.parameter>li.bb0{border-bottom: 1px solid transparent;}
 .p_head,.cp_img,.details{display: inline-block;position: relative;}
 .p_head{font-size: 18px;color: #ee7163;top: 20px;position: absolute;}
 .cp_img{top: 50px;left: 300px;padding-bottom: 60px;}

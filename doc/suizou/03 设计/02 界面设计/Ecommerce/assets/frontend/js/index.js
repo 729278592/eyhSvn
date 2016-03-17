@@ -2,7 +2,6 @@
  * Created by eyohu023 on 2015/11/26.
  */
 (function($){
-
     /*全屏图片居中*/
     var ai = $(".auto-img");
     ai.each(function(){
@@ -19,8 +18,6 @@
             toResize()
         });
     });
-
-
 
 
     var ActiveSlider = function(activeSlider,options){
@@ -146,85 +143,4 @@
     new ActiveSlider($("#active-slider"),{
         setActive:5000
     });
-
-
-
-//    new ActiveSlider($(".wealth-slider"),{
-//        setActive:5000
-//    });
-
-    /*返回顶部&&联系我们的操作*/
-    $.BackToTop = {
-        defaults: {
-            text : 'Back to top',
-            autoShow : true,
-            timeEffect : 500,
-            effectScroll : 'linear',
-            appearMethod : 'slide'
-        },
-        init:function(options){
-            /* vars **/
-            opts = $.extend({}, $.BackToTop.defaults ,options);
-            $.BackToTop._constructLink();
-
-            if(opts.autoShow) {
-                $(window).scroll(function(){
-                    if($(this).scrollTop() != 0) {
-                        switch (opts.appearMethod) {
-                            case 'fade' : aBack.fadeIn('fast'); break;
-                            case 'slide' : aBack.slideDown('fast'); break;
-                            default : aBack.show();
-                        }
-                    }
-                    else {
-                        switch (opts.appearMethod) {
-                            case 'fade' : aBack.fadeOut('fast'); break;
-                            case 'slide' : aBack.slideUp('fast'); break;
-                            default : aBack.hide();
-                        }
-                    }
-                });
-            }
-
-            $('#BackToTop').click(function(e) {
-                e.preventDefault();
-                $('body,html').animate({scrollTop:0},opts.timeEffect,opts.effectScroll);
-            });
-            $('#BackToTop').hover(function(){
-                $(this).html('返回顶部');
-            },function(){
-                $(this).html(opts.text);
-            });
-        },
-
-        _constructLink:function() {
-            aBack = $('<div />',{
-                id : 'BackToTop',
-                class:'weibo',
-                href : '#body',
-                html : opts.text
-            }).appendTo('.we .top');
-            if(!opts.autoShow) aBack.show();
-        }
-
-    };
-
-    BackToTop = function(options) {
-        $.BackToTop.init(options);
-    };
-    function weHover(){
-        var mpt = $(".message,.phone,.tuo_code");
-        mpt.hover(function () {
-                $(this).find(".qqgroup-show").removeClass("hide");
-                $(this).find(".telphone-show").removeClass("hide");
-                $(this).find(".qrcode").removeClass("hide");
-            },
-            function () {
-                $(this).find(".qqgroup-show").addClass("hide");
-                $(this).find(".telphone-show").addClass("hide");
-                $(this).find(".qrcode").addClass("hide");
-            }
-        );
-    }
-    weHover()
 })(jQuery);
