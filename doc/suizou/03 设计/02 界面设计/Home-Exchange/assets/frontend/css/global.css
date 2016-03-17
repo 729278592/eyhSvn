@@ -1981,7 +1981,7 @@ nowrap;text-overflow: ellipsis;width: 100%;}.sc-list1{display: none;}
 .div-input{position: relative;border: 1px solid #dbdbdb;padding:20px;width: 891px;border-top: 0;}
 .order-head{width: 100%;padding: 8px 0;font-size: 14px;text-indent: 15px;color: #666;background: #f3f3f3;margin-top: 10px;}
 .div-input #form1>div .large-title{color: #333;}
-.div-input .address-lists{width: 760px;position: relative;left: 15px;height: 124px;overflow-y: auto;}
+.div-input .address-lists{width: 760px;position: relative;left: 15px;max-height: 124px;overflow-y: auto;}
 .div-input #form1>div .address-lists>p{margin-bottom: 10px;}
 .div-input .address-lists p label{width: 93%;display: inline-block;}
 .div-input .address-lists p label>span{display: inline-block;width: 14%;font-size: 14px;color: #666;}
@@ -2094,7 +2094,7 @@ nowrap;text-overflow: ellipsis;width: 100%;}.sc-list1{display: none;}
 /*shiooing-address*/
 .address-list{margin: 10px auto 50px;width: 705px;border-collapse:collapse;}
 .address-list tr th{background: #efefef;}
-.address-list tr td,.address-list tr th{border: 1px solid #dbdbdb;}
+.address-list tr td,.address-list tr th{border: 1px solid #dbdbdb;width: 15%;padding: 0.5%;}
 .address-list tr td a{color:#53ba93;}
 .address-div{margin: 0 50px;}
 .address-list tr td .btn-modify,.address-list tr td .btn-remove,.address-list tr td .btn-add{display: inline-block;padding: 5px 20px;border-radius: 4px;color: #fff;font-family: "微软雅黑";}
