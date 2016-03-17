@@ -455,7 +455,7 @@ label.error{color: #fb6454;}
 
 .li_top{position: absolute;top: 10px;font-size: 15px;text-align: center;width: 100%;}
 .li_top .block{position: relative;width: 100%;padding: 5px 0;}
-.active_img{position: absolute;left: 0;top: 0;}
+.active_img{position: absolute;left: 0;top: 8px;}
 .li_bottom{position: absolute;bottom: 6px;font-size: 17px;color: #020202;width: 100%;text-align: center;}
 .li_top a{color: #6e6969;width: 100%;display: inline-block;}
 .li_top .active a{color: #fe685b;}
