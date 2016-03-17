@@ -491,7 +491,6 @@
         top :  100
     });
 
-
     function weHover(){
         var mpt = $(".message,.phone,.tuo_code");
         mpt.hover(function () {
@@ -507,6 +506,7 @@
         );
     }
     weHover();
+
 
     /*搜索条件选择*/
     $(".chioce-menu li").on("click",function(){
