@@ -507,4 +507,9 @@
         );
     }
     weHover();
+
+
+    $(".chioce-menu li").on("click",function(){
+        $(".chioce-style .title span").text($(this).text())
+    })
 })(jQuery);
