@@ -523,6 +523,7 @@
         });
     </script>
     <script>
+        /*左边导航切换*/
         $(".server-name").on("click",function(){
             if($(this).parent().find(".hs-menu").css("display") == "none"){
                 $(this).parent().find(".hs-menu").slideDown();
@@ -530,6 +531,11 @@
                 $(this).parent().siblings(".s-type").find(".hs-menu").slideUp();
                 $(this).parent().siblings(".s-type").find(".fa").removeClass("fa-caret-down").addClass("fa-caret-right");
             }
+        });
+
+        /*搜索条件选择*/
+        $(".chioce-menu li").on("click",function(){
+            $(".chioce-style .title span").text($(this).text())
         })
     </script>
 </html>
