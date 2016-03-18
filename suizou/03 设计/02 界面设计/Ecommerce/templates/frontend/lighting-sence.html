@@ -5,6 +5,8 @@
     <title>智慧场景-更多-详情</title>
     <link rel="stylesheet" href="../../assets/global/plugins/font/css/font-awesome.min.css"/>
     <link rel="stylesheet" href="../../assets/frontend/css/global.css"/>
+    <link rel="stylesheet" href="../../assets/global/plugins/jquery.minicolors/jquery.minicolors.css">
+    <link rel="stylesheet" href="../../assets/global/plugins/jqueryui-sliders/css/jquery-ui-1.10.3.custom.min.css"/>
     <style>
         body{min-width:1170px;font-family: "微软雅黑";background: #fff;font-size: 30px;}
         #content{padding: 0;display: inline-block;}
@@ -42,7 +44,636 @@
         </div>
     </div>
     <div class="content senceList">
+        <img src="../../assets/frontend/../../assets/frontend/images/zhihui.jpg" alt="" class="wisdom"/>
         <div class="center">
+            <div class="zh-content">
+                <ul class="type-menu clearfix">
+                    <li class="active">
+                        <i class="fa fa-home"></i>
+                        卧室
+                    </li>
+                    <li>
+                        <i class="fa fa-home"></i>
+                        客厅
+                    </li>
+                    <li>
+                        <i class="fa fa-home"></i>
+                        书房
+                    </li>
+                    <li>
+                        <i class="fa fa-home"></i>
+                        更多
+                    </li>
+                </ul>
+                <div class="active type-div">
+                    <ul class="td-ul">
+                        <li class="item">
+                            <div class="type left">
+                                <i class="fa fa-home"></i>
+                                        <span class="block">
+                                            照明场景
+                                        </span>
+                            </div>
+                            <div class="left td-div">
+                                <div class="type-debugging">
+                                    <div class="content-wisdom">
+                                        <label class="active">
+                                            <input type="radio" name="rank" checked="checked"/>低
+                                        </label>
+                                    </div>
+                                </div>
+                                <div class="type-debugging">
+                                    <div class="content-wisdom">
+                                        <label>
+                                            <input type="radio" name="rank"/>中
+                                        </label>
+                                    </div>
+                                </div>
+                                <div class="type-debugging">
+                                    <div class="content-wisdom">
+                                        <label>
+                                            <input type="radio" name="rank"/>高
+                                        </label>
+                                    </div>
+                                </div>
+                                <div class="type-debugging">
+                                    <div class="content-wisdom">
+                                        <a href="javascript:void(0);" class="btn-yue">调阅</a>
+                                        <a href="zhihui-tu.html" class="btn-yong">调用</a>
+                                    </div>
+                                </div>
+                            </div>
+                        </li>
+                        <li class="item">
+                            <div class="type left">
+                                <i class="fa fa-bars"></i>
+                                        <span class="block">
+                                            气氛场景
+                                        </span>
+                            </div>
+                            <div class="left td-div">
+                                <div class="type-debugging">
+                                    <div class="content-wisdom">
+                                        <label>
+                                            <input type="checkbox"/>气氛1
+                                        </label>
+                                    </div>
+                                </div>
+                                <div class="type-debugging">
+                                    <div class="content-wisdom">
+                                        <label>
+                                            <input type="checkbox"/>气氛2
+                                        </label>
+                                    </div>
+                                </div>
+                                <div class="type-debugging">
+                                    <div class="content-wisdom">
+                                        <label>
+                                            <input type="checkbox"/>气氛3
+                                        </label>
+                                    </div>
+                                </div>
+                                <div class="type-debugging">
+                                    <div class="content-wisdom">
+                                        <a href="javascript:void(0);" class="btn-yue">调阅</a>
+                                        <a href="zhihui-tu.html" class="btn-yong">调用</a>
+                                    </div>
+                                </div>
+                            </div>
+                        </li>
+                        <li class="item" >
+                            <div class="type left">
+                                <i class="fa fa-chain"></i>
+                                        <span class="block">
+                                            入睡起床
+                                        </span>
+                            </div>
+                            <div class="left td-div">
+                                <div class="type-debugging">
+                                    <div class="content-wisdom">
+                                        <label class="active">
+                                            <input type="radio" name="sleep" checked/>入睡
+                                        </label>
+                                    </div>
+                                </div>
+                                <div class="type-debugging">
+                                    <div class="content-wisdom">
+                                        <label>
+                                            <input type="radio" name="sleep"/>起床
+                                        </label>
+                                    </div>
+                                </div>
+                                <div class="type-debugging">
+                                    <div class="content-wisdom">
+                                        <label>
+                                            <input type="radio" name="sleep"/>起夜
+                                        </label>
+                                    </div>
+                                </div>
+                                <div class="type-debugging">
+                                    <div class="content-wisdom">
+                                        <a href="javascript:void(0);" class="btn-yue">调阅</a>
+                                        <a href="zhihui-tu.html" class="btn-yong">调用</a>
+                                    </div>
+                                </div>
+                            </div>
+                        </li>
+                        <li class="item">
+                            <div class="type left">
+                                <i class="fa fa-area-chart"></i>
+                                        <span class="block">
+                                            离场场景
+                                        </span>
+                            </div>
+                            <div class="left td-div">
+                                <div class="type-debugging">
+                                    <div class="content-wisdom">
+                                        <label class="active">
+                                            <input type="radio" name="equipment" checked/>侦测
+                                        </label>
+                                    </div>
+                                </div>
+                                <div class="type-debugging">
+                                    <div class="content-wisdom">
+                                        <label>
+                                            <input type="radio" name="equipment"/>路灯
+                                        </label>
+                                    </div>
+                                </div>
+                                <div class="type-debugging">
+                                    <div class="content-wisdom">
+                                        <label>
+                                            <input type="radio" name="equipment"/>安防
+                                        </label>
+                                    </div>
+                                </div>
+                                <div class="type-debugging">
+                                    <div class="content-wisdom">
+                                        <a href="javascript:void(0);" class="btn-yue">调阅</a>
+                                        <a href="zhihui-tu.html" class="btn-yong">调用</a>
+                                    </div>
+                                </div>
+                            </div>
+                        </li>
+                    </ul>
+                </div>
+                <div class="type-div">
+                    <ul class="td-ul">
+                        <li class="item">
+                            <div class="type left">
+                                <i class="fa fa-home"></i>
+                                        <span class="block">
+                                            照明场景
+                                        </span>
+                            </div>
+                            <div class="left td-div">
+                                <div class="type-debugging">
+                                    <div class="content-wisdom">
+                                        <label class="active">
+                                            <input type="radio" name="rank1" checked/>低
+                                        </label>
+                                    </div>
+                                </div>
+                                <div class="type-debugging">
+                                    <div class="content-wisdom">
+                                        <label>
+                                            <input type="radio" name="rank1"/>中
+                                        </label>
+                                    </div>
+                                </div>
+                                <div class="type-debugging">
+                                    <div class="content-wisdom">
+                                        <label>
+                                            <input type="radio" name="rank1"/>高
+                                        </label>
+                                    </div>
+                                </div>
+                                <div class="type-debugging">
+                                    <div class="content-wisdom">
+                                        <a href="javascript:void(0);" class="btn-yue">调阅</a>
+                                        <a href="zhihui-tu.html" class="btn-yong">调用</a>
+                                    </div>
+                                </div>
+                            </div>
+                        </li>
+                        <li class="item">
+                            <div class="type left">
+                                <i class="fa fa-bars"></i>
+                                        <span class="block">
+                                            气氛场景
+                                        </span>
+                            </div>
+                            <div class="left td-div">
+                                <div class="type-debugging">
+                                    <div class="content-wisdom">
+                                        <label>
+                                            <input type="checkbox"/>气氛1
+                                        </label>
+                                    </div>
+                                </div>
+                                <div class="type-debugging">
+                                    <div class="content-wisdom">
+                                        <label>
+                                            <input type="checkbox"/>气氛2
+                                        </label>
+                                    </div>
+                                </div>
+                                <div class="type-debugging">
+                                    <div class="content-wisdom">
+                                        <label>
+                                            <input type="checkbox"/>气氛3
+                                        </label>
+                                    </div>
+                                </div>
+                                <div class="type-debugging">
+                                    <div class="content-wisdom">
+                                        <a href="javascript:void(0);" class="btn-yue">调阅</a>
+                                        <a href="zhihui-tu.html" class="btn-yong">调用</a>
+                                    </div>
+                                </div>
+                            </div>
+                        </li>
+                        <li class="item">
+                            <div class="type left">
+                                <i class="fa fa-chain"></i>
+                                        <span class="block">
+                                            入睡起床
+                                        </span>
+                            </div>
+                            <div class="left td-div">
+                                <div class="type-debugging">
+                                    <div class="content-wisdom">
+                                        <label class="active">
+                                            <input type="radio" name="sleep1" checked/>入睡
+                                        </label>
+                                    </div>
+                                </div>
+                                <div class="type-debugging">
+                                    <div class="content-wisdom">
+                                        <label>
+                                            <input type="radio" name="sleep1"/>起床
+                                        </label>
+                                    </div>
+                                </div>
+                                <div class="type-debugging">
+                                    <div class="content-wisdom">
+                                        <label>
+                                            <input type="radio" name="sleep1"/>起夜
+                                        </label>
+                                    </div>
+                                </div>
+                                <div class="type-debugging">
+                                    <div class="content-wisdom">
+                                        <a href="javascript:void(0);" class="btn-yue">调阅</a>
+                                        <a href="zhihui-tu.html" class="btn-yong">调用</a>
+                                    </div>
+                                </div>
+                            </div>
+                        </li>
+                        <li class="item">
+                            <div class="type left">
+                                <i class="fa fa-area-chart"></i>
+                                        <span class="block">
+                                            离场场景
+                                        </span>
+                            </div>
+                            <div class="left td-div">
+                                <div class="type-debugging">
+                                    <div class="content-wisdom">
+                                        <label class="active">
+                                            <input type="radio" name="equipment1" checked/>侦测
+                                        </label>
+                                    </div>
+                                </div>
+                                <div class="type-debugging">
+                                    <div class="content-wisdom">
+                                        <label>
+                                            <input type="radio" name="equipment1"/>路灯
+                                        </label>
+                                    </div>
+                                </div>
+                                <div class="type-debugging">
+                                    <div class="content-wisdom">
+                                        <label>
+                                            <input type="radio" name="equipment1"/>安防
+                                        </label>
+                                    </div>
+                                </div>
+                                <div class="type-debugging">
+                                    <div class="content-wisdom">
+                                        <a href="javascript:void(0);" class="btn-yue">调阅</a>
+                                        <a href="zhihui-tu.html" class="btn-yong">调用</a>
+                                    </div>
+                                </div>
+                            </div>
+                        </li>
+                    </ul>
+                </div>
+                <div class="type-div">
+                    <ul class="td-ul">
+                        <li class="item">
+                            <div class="type left">
+                                <i class="fa fa-home"></i>
+                                        <span class="block">
+                                            照明场景
+                                        </span>
+                            </div>
+                            <div class="left td-div">
+                                <div class="type-debugging">
+                                    <div class="content-wisdom">
+                                        <label class="active">
+                                            <input type="radio" name="rank2" checked/>低
+                                        </label>
+                                    </div>
+                                </div>
+                                <div class="type-debugging">
+                                    <div class="content-wisdom">
+                                        <label>
+                                            <input type="radio" name="rank2"/>中
+                                        </label>
+                                    </div>
+                                </div>
+                                <div class="type-debugging">
+                                    <div class="content-wisdom">
+                                        <label>
+                                            <input type="radio" name="rank2"/>高
+                                        </label>
+                                    </div>
+                                </div>
+                                <div class="type-debugging">
+                                    <div class="content-wisdom">
+                                        <a href="javascript:void(0);" class="btn-yue">调阅</a>
+                                        <a href="zhihui-tu.html" class="btn-yong">调用</a>
+                                    </div>
+                                </div>
+                            </div>
+                        </li>
+                        <li class="item">
+                            <div class="type left">
+                                <i class="fa fa-bars"></i>
+                                        <span class="block">
+                                            气氛场景
+                                        </span>
+                            </div>
+                            <div class="left td-div">
+                                <div class="type-debugging">
+                                    <div class="content-wisdom">
+                                        <label>
+                                            <input type="checkbox"/>气氛1
+                                        </label>
+                                    </div>
+                                </div>
+                                <div class="type-debugging">
+                                    <div class="content-wisdom">
+                                        <label>
+                                            <input type="checkbox"/>气氛2
+                                        </label>
+                                    </div>
+                                </div>
+                                <div class="type-debugging">
+                                    <div class="content-wisdom">
+                                        <label>
+                                            <input type="checkbox"/>气氛3
+                                        </label>
+                                    </div>
+                                </div>
+                                <div class="type-debugging">
+                                    <div class="content-wisdom">
+                                        <a href="javascript:void(0);" class="btn-yue">调阅</a>
+                                        <a href="zhihui-tu.html" class="btn-yong">调用</a>
+                                    </div>
+                                </div>
+                            </div>
+                        </li>
+                        <li class="item">
+                            <div class="type left">
+                                <i class="fa fa-chain"></i>
+                                        <span class="block">
+                                            入睡起床
+                                        </span>
+                            </div>
+                            <div class="left td-div">
+                                <div class="type-debugging">
+                                    <div class="content-wisdom">
+                                        <label class="active">
+                                            <input type="radio" name="sleep2" checked/>入睡
+                                        </label>
+                                    </div>
+                                </div>
+                                <div class="type-debugging">
+                                    <div class="content-wisdom">
+                                        <label>
+                                            <input type="radio" name="sleep2"/>起床
+                                        </label>
+                                    </div>
+                                </div>
+                                <div class="type-debugging">
+                                    <div class="content-wisdom">
+                                        <label>
+                                            <input type="radio" name="sleep2"/>起夜
+                                        </label>
+                                    </div>
+                                </div>
+                                <div class="type-debugging">
+                                    <div class="content-wisdom">
+                                        <a href="javascript:void(0);" class="btn-yue">调阅</a>
+                                        <a href="zhihui-tu.html" class="btn-yong">调用</a>
+                                    </div>
+                                </div>
+                            </div>
+                        </li>
+                        <li class="item">
+                            <div class="type left">
+                                <i class="fa fa-area-chart"></i>
+                                        <span class="block">
+                                            离场场景
+                                        </span>
+                            </div>
+                            <div class="left td-div">
+                                <div class="type-debugging">
+                                    <div class="content-wisdom">
+                                        <label class="active">
+                                            <input type="radio" name="equipment2" checked/>侦测
+                                        </label>
+                                    </div>
+                                </div>
+                                <div class="type-debugging">
+                                    <div class="content-wisdom">
+                                        <label>
+                                            <input type="radio" name="equipment2"/>路灯
+                                        </label>
+                                    </div>
+                                </div>
+                                <div class="type-debugging">
+                                    <div class="content-wisdom">
+                                        <label>
+                                            <input type="radio" name="equipment2"/>安防
+                                        </label>
+                                    </div>
+                                </div>
+                                <div class="type-debugging">
+                                    <div class="content-wisdom">
+                                        <a href="javascript:void(0);" class="btn-yue">调阅</a>
+                                        <a href="zhihui-tu.html" class="btn-yong">调用</a>
+                                    </div>
+                                </div>
+                            </div>
+                        </li>
+                    </ul>
+                </div>
+                <div class="type-div">
+                    <ul class="td-ul">
+                        <li class="item">
+                            <div class="type left">
+                                <i class="fa fa-home"></i>
+                                        <span class="block">
+                                            照明场景
+                                        </span>
+                            </div>
+                            <div class="left td-div">
+                                <div class="type-debugging">
+                                    <div class="content-wisdom">
+                                        <label class="active">
+                                            <input type="radio" name="rank3" checked/>低
+                                        </label>
+                                    </div>
+                                </div>
+                                <div class="type-debugging">
+                                    <div class="content-wisdom">
+                                        <label>
+                                            <input type="radio" name="rank3"/>中
+                                        </label>
+                                    </div>
+                                </div>
+                                <div class="type-debugging">
+                                    <div class="content-wisdom">
+                                        <label>
+                                            <input type="radio" name="rank3"/>高
+                                        </label>
+                                    </div>
+                                </div>
+                                <div class="type-debugging">
+                                    <div class="content-wisdom">
+                                        <a href="javascript:void(0);" class="btn-yue">调阅</a>
+                                        <a href="zhihui-tu.html" class="btn-yong">调用</a>
+                                    </div>
+                                </div>
+                            </div>
+                        </li>
+                        <li class="item">
+                            <div class="type left">
+                                <i class="fa fa-bars"></i>
+                                        <span class="block">
+                                            气氛场景
+                                        </span>
+                            </div>
+                            <div class="left td-div">
+                                <div class="type-debugging">
+                                    <div class="content-wisdom">
+                                        <label>
+                                            <input type="checkbox"/>气氛1
+                                        </label>
+                                    </div>
+                                </div>
+                                <div class="type-debugging">
+                                    <div class="content-wisdom">
+                                        <label>
+                                            <input type="checkbox"/>气氛2
+                                        </label>
+                                    </div>
+                                </div>
+                                <div class="type-debugging">
+                                    <div class="content-wisdom">
+                                        <label>
+                                            <input type="checkbox"/>气氛3
+                                        </label>
+                                    </div>
+                                </div>
+                                <div class="type-debugging">
+                                    <div class="content-wisdom">
+                                        <a href="javascript:void(0);" class="btn-yue">调阅</a>
+                                        <a href="zhihui-tu.html" class="btn-yong">调用</a>
+                                    </div>
+                                </div>
+                            </div>
+                        </li>
+                        <li class="item">
+                            <div class="type left">
+                                <i class="fa fa-chain"></i>
+                                        <span class="block">
+                                            入睡起床
+                                        </span>
+                            </div>
+                            <div class="left td-div">
+                                <div class="type-debugging">
+                                    <div class="content-wisdom">
+                                        <label class="active">
+                                            <input type="radio" name="sleep3" checked/>入睡
+                                        </label>
+                                    </div>
+                                </div>
+                                <div class="type-debugging">
+                                    <div class="content-wisdom">
+                                        <label>
+                                            <input type="radio" name="sleep3"/>起床
+                                        </label>
+                                    </div>
+                                </div>
+                                <div class="type-debugging">
+                                    <div class="content-wisdom">
+                                        <label>
+                                            <input type="radio" name="sleep3"/>起夜
+                                        </label>
+                                    </div>
+                                </div>
+                                <div class="type-debugging">
+                                    <div class="content-wisdom">
+                                        <a href="javascript:void(0);" class="btn-yue">调阅</a>
+                                        <a href="zhihui-tu.html" class="btn-yong">调用</a>
+                                    </div>
+                                </div>
+                            </div>
+                        </li>
+                        <li class="item">
+                            <div class="type left">
+                                <i class="fa fa-area-chart"></i>
+                                        <span class="block">
+                                            离场场景
+                                        </span>
+                            </div>
+                            <div class="left td-div">
+                                <div class="type-debugging">
+                                    <div class="content-wisdom">
+                                        <label class="active">
+                                            <input type="radio" name="equipment3" checked/>侦测
+                                        </label>
+                                    </div>
+                                </div>
+                                <div class="type-debugging">
+                                    <div class="content-wisdom">
+                                        <label>
+                                            <input type="radio" name="equipment3"/>路灯
+                                        </label>
+                                    </div>
+                                </div>
+                                <div class="type-debugging">
+                                    <div class="content-wisdom">
+                                        <label>
+                                            <input type="radio" name="equipment3"/>安防
+                                        </label>
+                                    </div>
+                                </div>
+                                <div class="type-debugging">
+                                    <div class="content-wisdom">
+                                        <a href="javascript:void(0);" class="btn-yue">调阅</a>
+                                        <a href="zhihui-tu.html" class="btn-yong">调用</a>
+                                    </div>
+                                </div>
+                            </div>
+                        </li>
+                    </ul>
+                </div>
+            </div>
             <div class="my-sence">
                 <p class="title">
                     <span>我的场景</span>
@@ -169,17 +800,1311 @@
             <p class="copyright">渝ICP备15002338号-1 Copyright © 2014~2015 深圳贯和通物联科技有限公司 版权所有</p>
         </div>
     </div>
+    <div class="mask-bg hide"></div>
+    <div class="mask hide">
+    <div class="dailog hide">
+    <div class="product-light">
+        <img src="../../assets/frontend/images/light.jpg" alt=""/>
+    </div>
+    <div class="div-group w800">
+        <i class="fa fa-star"></i>
+        <span class="type-name">场景名称</span>
+        <label>
+            <input type="text" value="早晨读书" class="text-input"/>
+        </label>
+    </div>
+    <div class="div-group w800">
+        <i class="fa fa-star"></i>
+        <span class="type-name">创建者</span>
+        <label>
+            <input type="text" value="陈小洁" class="text-input"/>
+        </label>
+    </div>
+    <div class="div-group ptb0">
+        <ul class="sence-ul">
+            <li class="w800">
+                <i class="fa fa-star"></i>
+                <span class="type-name">触发方式</span>
+                <div class="div-label">
+                    <label>
+                        <span class="sence-name">按键A</span>
+                    </label>
+                    <label>
+                        <span class="sence-name">按键B</span>
+                    </label>
+                    <label>
+                        <span class="sence-name">按键C</span>
+                    </label>
+                    <label>
+                        <span class="sence-name">按键D</span>
+                    </label>
+                </div>
+            </li>
+            <li class="w800">
+                <div class="div-label">
+                    <label>
+                        <!--<input type="checkbox" checked/>-->
+                        <span class="sence-name">被动红外A</span>
+                    </label>
+                    <label>
+                        <span class="sence-name">被动红外B</span>
+                    </label>
+                    <label>
+                        <span class="sence-name">被动红外C</span>
+                    </label>
+                </div>
+            </li>
+            <li>
+                <div class="div-label">
+                    <label>
+                        <span class="sence-name">时间</span>
+                    </label>
+                                        <span class="block">
+                                            <button class="btn-plus"><i class="fa fa-plus"></i></button>
+                                        </span>
+                </div>
+            </li>
+            <div class="chiove-infor hide">
+                                    <span class="bgfff">
+                                        <i class="fa fa-angle-up"></i>
+                                    </span>
+                <label>
+                    <input type="checkbox" checked/>
+                    <span class="sence-name">时间</span>
+                </label>
+                <label>
+                    <input type="checkbox"/>
+                    <span class="sence-name">APP</span>
+                </label>
+                <label>
+                    <input type="checkbox"/>
+                    <span class="sence-name">WiFi</span>
+                </label>
+            </div>
+        </ul>
+    </div>
+    <div class="div-group ptb0">
+        <ul class="sence-ul">
+            <li>
+                <i class="fa fa-star"></i>
+                <span class="type-name">参与功能</span>
+                <div class="div-label">
+                    <label>
+
+                        <span class="sence-name">灯光</span>
+                    </label>
+                    <label>
+
+                        <span class="sence-name">音乐</span>
+                    </label>
+                    <label>
+
+                        <span class="sence-name">空调</span>
+                    </label>
+                                        <span class="block">
+                                            <button class="btn-plus"><i class="fa fa-plus"></i></button>
+                                        </span>
+                </div>
+            </li>
+            <div class="chiove-infor hide">
+                                    <span class="bgfff">
+                                        <i class="fa fa-angle-up"></i>
+                                    </span>
+                <label>
+                    <input type="checkbox" checked/>
+                    <span class="sence-name">灯光</span>
+                </label>
+                <label>
+                    <input type="checkbox" checked/>
+                    <span class="sence-name">音乐</span>
+                </label>
+                <label>
+                    <input type="checkbox" checked/>
+                    <span class="sence-name">空调</span>
+                </label>
+            </div>
+        </ul>
+    </div>
+    <div class="div-group ptb0">
+        <ul class="sence-ul">
+            <li>
+                <i class="fa fa-star"></i>
+                <span class="type-name">开启条件</span>
+                <div class="div-label">
+                    <label>
+                        <span class="sence-name">达到开机温度</span>
+                    </label>
+                                        <span class="block">
+                                            <button class="btn-plus"><i class="fa fa-plus"></i></button>
+                                        </span>
+                </div>
+            </li>
+            <div class="chiove-infor hide">
+                                    <span class="bgfff">
+                                        <i class="fa fa-angle-up"></i>
+                                    </span>
+                <label>
+                    <input type="checkbox" checked/>
+                    <span class="sence-name">达到开机温度</span>
+                </label>
+            </div>
+        </ul>
+    </div>
+    <div class="div-group">
+        <i class="fa fa-star"></i>
+        <span class="type-name hover">运行状态　<i class="fa fa-caret-down"></i></span>
+        <ul class="light-ul">
+            <li>
+                <div class="color-pickup ml150">
+                    <label>
+                        <span class="sence-name">色彩选择 :</span>
+                    </label>
+                    <input type="text" class="demo" data-control="hue" value="#f6a828">
+                </div>
+                <span class="type-name">灯光</span>
+                <label>
+                    <span class="sence-name">亮度 :</span>
+                </label>
+                <div class="div-slider">
+                    <div id="slider-range-min0" class="slider bg-yellow"></div>
+                    <div class="slider-value">
+                        <span id="slider-range-min-amount0">120</span>
+                    </div>
+                </div>
+
+                <div class="ml150">
+                    <p>亮度渐变时间 :</p>
+                    <label>
+                        <span class="sence-name">t1渐强 :</span>
+                    </label>
+                    <input type="text" placeholder="59" class="w59"/> 分　
+                    <input type="text" placeholder="59" class="w59"/> 秒　　　
+                    <label>
+                        <span class="sence-name">t1渐弱 :</span>
+                    </label>
+                    <input type="text" placeholder="59" class="w59"/> 分　
+                    <input type="text" placeholder="59" class="w59"/> 秒　
+                </div>
+
+            </li>
+            <li>
+                <span class="type-name">音乐</span>
+                <div class="ml150">
+                    <label>
+
+                        <span class="sence-name">音源选择 :</span>
+                    </label>
+                    <div class="div-music">
+                        <input type="text" class="input-music"/><button class="btn-search"><i class="fa fa-search"></i></button><button class="btn-music">我的音乐</button>
+                    </div>
+                </div>
+
+                <div class="ml150">
+                    <label>
+
+                        <span class="sence-name">音量 :</span>
+                    </label>
+                </div>
+                <div class="div-slider">
+                    <div id="slider-range-min1" class="slider bg-yellow"></div>
+                    <div class="slider-value">
+                        <span id="slider-range-min-amount1">120</span>
+                    </div>
+                </div>
+                <div class="ml150">
+                    <p>音量渐变时间 :</p>
+                    <label>
+                        <span class="sence-name">t1渐强 :</span>
+                    </label>
+                    <input type="text" placeholder="59" class="w59"/> 分　
+                    <input type="text" placeholder="59" class="w59"/> 秒　　　
+                    <label>
+                        <span class="sence-name">t1渐弱 :</span>
+                    </label>
+                    <input type="text" placeholder="59" class="w59"/> 分　
+                    <input type="text" placeholder="59" class="w59"/> 秒
+                </div>
+            </li>
+            <li class="bb0">
+                <span class="type-name">空调</span>
+                <label>
+
+                    <span class="sence-name">温度 :</span>
+                </label>
+                <div class="div-slider">
+                    <div id="slider-range-min2" class="slider bg-yellow"></div>
+                    <div class="slider-value">
+                        <span id="slider-range-min-amount2">120</span>
+                    </div>
+                </div>
+                <div class="ml150">
+                    <p>温度渐变时间 :</p>
+                    <label>
+                        <span class="sence-name">t1渐强 :</span>
+                    </label>
+                    <input type="text" placeholder="59" class="w59"/> 分　
+                    <input type="text" placeholder="59" class="w59"/> 秒　　　
+                    <label>
+                        <span class="sence-name">t1渐弱 :</span>
+                    </label>
+                    <input type="text" placeholder="59" class="w59"/> 分　
+                    <input type="text" placeholder="59" class="w59"/> 秒
+                </div>
+            </li>
+        </ul>
+
+    </div>
+    <div class="div-btn">
+        <button class="btn-cancle">取消</button>
+        <button class="btn-compelet">完成</button>
+    </div>
+    </div>
+    <div class="dailog hide">
+    <div class="div-group">
+        <i class="fa fa-star"></i>
+        <span class="type-name">场景名称1</span>
+        <label>
+            <span class="sence-name">早晨读书</span>
+        </label>
+    </div>
+    <div class="div-group">
+        <i class="fa fa-star"></i>
+        <span class="type-name">创建者</span>
+        <label>
+            <span class="sence-name">陈小洁</span>
+        </label>
+    </div>
+    <div class="div-group ptb0">
+        <ul class="sence-ul">
+            <li>
+                <i class="fa fa-star"></i>
+                <span class="type-name">触发方式</span>
+                <div class="div-label">
+                    <label>
+                        <input type="checkbox" checked/>
+                        <span class="sence-name">按键A</span>
+                    </label>
+                    <label>
+
+                        <span class="sence-name">按键B</span>
+                    </label>
+                    <label>
+
+                        <span class="sence-name">按键C</span>
+                    </label>
+                    <label>
+
+                        <span class="sence-name">按键D</span>
+                    </label>
+                </div>
+            </li>
+            <li>
+                <div class="div-label">
+                    <label>
+                        <input type="checkbox" checked/>
+                        <span class="sence-name">被动红外A</span>
+                    </label>
+                    <label>
+
+                        <span class="sence-name">被动红外B</span>
+                    </label>
+                    <label>
+
+                        <span class="sence-name">被动红外C</span>
+                    </label>
+
+                </div>
+            </li>
+            <li>
+                <div class="div-label">
+                    <label>
+
+                        <span class="sence-name">时间</span>
+                    </label>
+                    <label>
+                        <button class="btn-plus"><i class="fa fa-plus"></i></button>
+                    </label>
+                </div>
+            </li>
+        </ul>
+    </div>
+    <div class="div-group">
+        <i class="fa fa-star"></i>
+        <span class="type-name">参与功能</span>
+        <label>
+
+            <span class="sence-name">灯光</span>
+        </label>
+        <label>
+
+            <span class="sence-name">音乐</span>
+        </label>
+        <label>
+
+            <span class="sence-name">空调</span>
+        </label>
+        <label>
+            <button class="btn-plus"><i class="fa fa-plus"></i></button>
+        </label>
+    </div>
+    <div class="div-group">
+        <i class="fa fa-star"></i>
+        <span class="type-name">开启条件</span>
+        <label>
+
+            <span class="sence-name">达到开机温度</span>
+        </label>
+        <label>
+            <button class="btn-plus"><i class="fa fa-plus"></i></button>
+        </label>
+    </div>
+    <div class="div-group">
+        <i class="fa fa-star"></i>
+        <span class="type-name hover">运行状态　<i class="fa fa-caret-down"></i></span>
+        <ul class="light-ul">
+            <li>
+                <span class="type-name">彩灯</span>
+                <label>
+
+                    <span class="sence-name">亮度 :</span>
+                </label>
+                <div class="div-slider">
+                    <div id="slider-range-min3" class="slider bg-yellow"></div>
+                    <div class="slider-value">
+                        <span id="slider-range-min-amount3">120</span>
+                    </div>
+                </div>
+                <div class="ml150">
+                    <p>亮度渐变时间 :</p>
+                    <label>
+                        <span class="sence-name">t1渐强 :</span>
+                    </label>
+                    <input type="text" placeholder="59" class="w59"/> 分　
+                    <input type="text" placeholder="59" class="w59"/> 秒　　　
+                    <label>
+                        <span class="sence-name">t1渐弱 :</span>
+                    </label>
+                    <input type="text" placeholder="59" class="w59"/> 分　
+                    <input type="text" placeholder="59" class="w59"/> 秒
+                </div>
+                <div class="color-pickup ml150">
+                    <label>
+                        <span class="sence-name">色彩选择 :</span>
+                    </label>
+                    <input type="text" class="demo" data-control="hue" value="#f6a828">
+                </div>
+            </li>
+            <li>
+                <span class="type-name">流彩</span>
+                <label>
+
+                    <span class="sence-name">亮度 :</span>
+                </label>
+                <div class="div-slider">
+                    <div id="slider-range-min12" class="slider bg-yellow"></div>
+                    <div class="slider-value">
+                        <span id="slider-range-min-amount12">120</span>
+                    </div>
+                </div>
+                <div class="ml150">
+                    <p>变换模式 :</p>
+                    <label class="w200">
+
+                        <span class="sence-name w150">渐变(变为相邻颜色) :</span>
+                    </label>
+                    <label>
+
+                        <span class="sence-name">跳变 :</span>
+                    </label>
+                    <label>
+                        <span class="sence-name">tempo节拍t :</span>
+                    </label>
+                    <input type="text" placeholder="59" class="w59"/> 分　
+                    <input type="text" placeholder="59" class="w59"/> 秒
+                </div>
+
+            </li>
+            <li>
+                <span class="type-name">音乐</span>
+                <label>
+
+                    <span class="sence-name">音量 :</span>
+                </label>
+                <div class="div-slider">
+                    <div id="slider-range-min4" class="slider bg-yellow"></div>
+                    <div class="slider-value">
+                        <span id="slider-range-min-amount4">120</span>
+                    </div>
+                </div>
+                <div class="ml150">
+                    <p>音量渐变时间 :</p>
+                    <label>
+                        <span class="sence-name">t1渐强 :</span>
+                    </label>
+                    <input type="text" placeholder="59" class="w59"/> 分　
+                    <input type="text" placeholder="59" class="w59"/> 秒　　　
+
+                    <label>
+                        <span class="sence-name">t1渐弱 :</span>
+                    </label>
+                    <input type="text" placeholder="59" class="w59"/> 分　
+                    <input type="text" placeholder="59" class="w59"/> 秒
+                </div>
+
+            </li>
+            <li class="bb0">
+                <span class="type-name">空调</span>
+                <label>
+
+                    <span class="sence-name">运行温度 :</span>
+                </label>
+            </li>
+        </ul>
+    </div>
+    <div class="div-btn">
+        <button class="btn-cancle">取消</button>
+        <button class="btn-compelet">完成</button>
+    </div>
+    </div>
+    <div class="dailog hide">
+        <div class="div-group">
+            <i class="fa fa-star"></i>
+            <span class="type-name">场景名称4</span>
+            <label>
+                <span class="sence-name">早晨读书</span>
+            </label>
+        </div>
+        <div class="div-group">
+            <i class="fa fa-star"></i>
+            <span class="type-name">创建者</span>
+            <label>
+                <span class="sence-name">陈小洁</span>
+            </label>
+        </div>
+        <div class="div-group ptb0">
+            <ul class="sence-ul">
+                <li>
+                    <i class="fa fa-star"></i>
+                    <span class="type-name">触发方式</span>
+                    <div class="div-label">
+                        <label>
+                            <input type="checkbox" checked/>
+                            <span class="sence-name">按键A</span>
+                        </label>
+                        <label>
+
+                            <span class="sence-name">按键B</span>
+                        </label>
+                        <label>
+
+                            <span class="sence-name">按键C</span>
+                        </label>
+                        <label>
+
+                            <span class="sence-name">按键D</span>
+                        </label>
+                    </div>
+                </li>
+                <li>
+                    <div class="div-label">
+                        <label>
+                            <input type="checkbox" checked/>
+                            <span class="sence-name">被动红外A</span>
+                        </label>
+                        <label>
+
+                            <span class="sence-name">被动红外B</span>
+                        </label>
+                        <label>
+
+                            <span class="sence-name">被动红外C</span>
+                        </label>
+
+                    </div>
+                </li>
+                <li>
+                    <div class="div-label">
+                        <label>
+
+                            <span class="sence-name">时间</span>
+                        </label>
+                        <label>
+                            <button class="btn-plus"><i class="fa fa-plus"></i></button>
+                        </label>
+                    </div>
+                </li>
+            </ul>
+        </div>
+        <div class="div-group">
+            <i class="fa fa-star"></i>
+            <span class="type-name">参与功能</span>
+            <label>
+
+                <span class="sence-name">灯光</span>
+            </label>
+            <label>
+
+                <span class="sence-name">音乐</span>
+            </label>
+            <label>
+                <span class="sence-name">空调</span>
+            </label>
+            <label>
+                <button class="btn-plus"><i class="fa fa-plus"></i></button>
+            </label>
+        </div>
+        <div class="div-group">
+            <i class="fa fa-star"></i>
+            <span class="type-name">开启条件</span>
+            <label>
+
+                <span class="sence-name">达到开机温度</span>
+            </label>
+            <label>
+                <button class="btn-plus"><i class="fa fa-plus"></i></button>
+            </label>
+        </div>
+        <div class="div-group">
+            <i class="fa fa-star"></i>
+            <span class="type-name hover">运行状态　<i class="fa fa-caret-down"></i></span>
+            <ul class="light-ul">
+                <li>
+                    <span class="type-name">灯光</span>
+                    <label>
+
+                        <span class="sence-name">亮度 :</span>
+                    </label>
+                    <div class="div-slider">
+                        <div id="slider-range-min6" class="slider bg-yellow"></div>
+                        <div class="slider-value">
+                            <span id="slider-range-min-amount6">120</span>
+                        </div>
+                    </div>
+                    <div class="ml150">
+                        <p>亮度渐变时间 :</p>
+                        <label>
+
+                            <span class="sence-name">t1渐强 :</span>
+                        </label>
+                        <input type="text" placeholder="59" class="w59"/> 分　
+                        <input type="text" placeholder="59" class="w59"/> 秒　　　
+                        <label>
+                            <span class="sence-name">t1渐弱 :</span>
+                        </label>
+                        <input type="text" placeholder="59" class="w59"/> 分　
+                        <input type="text" placeholder="59" class="w59"/> 秒
+                    </div>
+
+                </li>
+                <li>
+                    <span class="type-name">音乐</span>
+                    <label>
+
+                        <span class="sence-name">音量 :</span>
+                    </label>
+                    <div class="div-slider">
+                        <div id="slider-range-min7" class="slider bg-yellow"></div>
+                        <div class="slider-value">
+                            <span id="slider-range-min-amount7">120</span>
+                        </div>
+                    </div>
+                    <div class="ml150">
+                        <p>音量渐变时间 :</p>
+                        <label>
+
+                            <span class="sence-name">t1渐强 :</span>
+                        </label>
+                        <input type="text" placeholder="59" class="w59"/> 分　
+                        <input type="text" placeholder="59" class="w59"/> 秒　　
+                        <label>
+                            <span class="sence-name">t1渐弱 :</span>
+                        </label>
+                        <input type="text" placeholder="59" class="w59"/> 分　
+                        <input type="text" placeholder="59" class="w59"/> 秒
+                    </div>
+
+                </li>
+                <li class="bb0">
+                    <span class="type-name">空调</span>
+                    <label>
+
+                        <span class="sence-name">温度 :</span>
+                    </label>
+                    <div class="div-slider">
+                        <div id="slider-range-min8" class="slider bg-yellow"></div>
+                        <div class="slider-value">
+                            <span id="slider-range-min-amount8">120</span>
+                        </div>
+                    </div>
+                    <div class="ml150">
+                        <p>温度渐变时间 :</p>
+                        <label>
+                            <span class="sence-name">t1渐强 :</span>
+                        </label>
+                        <input type="text" placeholder="59" class="w59"/> 分　
+                        <input type="text" placeholder="59" class="w59"/> 秒　　　
+                        <label>
+                            <span class="sence-name">t1渐弱 :</span>
+                        </label>
+                        <input type="text" placeholder="59" class="w59"/> 分　
+                        <input type="text" placeholder="59" class="w59"/> 秒
+                    </div>
+                </li>
+            </ul>
+        </div>
+        <div class="div-btn">
+            <button class="btn-cancle">取消</button>
+            <button class="btn-compelet">完成</button>
+        </div>
+    </div>
+    <div class="dailog hide">
+        <div class="div-group">
+            <i class="fa fa-star"></i>
+            <span class="type-name">场景名称5</span>
+            <label>
+                <span class="sence-name">早晨读书</span>
+            </label>
+        </div>
+        <div class="div-group">
+            <i class="fa fa-star"></i>
+            <span class="type-name">创建者</span>
+            <label>
+                <span class="sence-name">陈小洁</span>
+            </label>
+        </div>
+        <div class="div-group ptb0">
+            <ul class="sence-ul">
+                <li>
+                    <i class="fa fa-star"></i>
+                    <span class="type-name">触发方式</span>
+                    <div class="div-label">
+                        <label>
+                            <input type="checkbox" checked/>
+                            <span class="sence-name">按键A</span>
+                        </label>
+                        <label>
+
+                            <span class="sence-name">按键B</span>
+                        </label>
+                        <label>
+
+                            <span class="sence-name">按键C</span>
+                        </label>
+                        <label>
+
+                            <span class="sence-name">按键D</span>
+                        </label>
+                    </div>
+                </li>
+                <li>
+                    <div class="div-label">
+                        <label>
+
+                            <span class="sence-name">时间</span>
+                        </label>
+                        <label>
+                            <button class="btn-plus"><i class="fa fa-plus"></i></button>
+                        </label>
+                    </div>
+                </li>
+            </ul>
+        </div>
+        <div class="div-group">
+            <i class="fa fa-star"></i>
+            <span class="type-name">参与功能</span>
+            <label>
+
+                <span class="sence-name">灯光</span>
+            </label>
+            <label>
+
+                <span class="sence-name">音乐</span>
+            </label>
+            <label>
+                <button class="btn-plus"><i class="fa fa-plus"></i></button>
+            </label>
+        </div>
+        <!--<div class="div-group">-->
+        <!--<i class="fa fa-star"></i>-->
+        <!--<span class="type-name">开启条件</span>-->
+
+        <!--</div>-->
+        <div class="div-group">
+            <i class="fa fa-star"></i>
+            <span class="type-name hover">运行状态　<i class="fa fa-caret-down"></i></span>
+            <ul class="light-ul">
+                <li>
+                    <div class="color-pickup ml150">
+                        <label>
+
+                            <span class="sence-name">色彩选择 :</span>
+                        </label>
+                        <input type="text" class="demo" data-control="hue" value="#f6a828">
+                    </div>
+
+                    <span class="type-name">灯光</span>
+
+                    <label>
+                        <span class="sence-name">亮度 :</span>
+                    </label>
+                    <div class="div-slider">
+                        <div id="slider-range-min9" class="slider bg-yellow"></div>
+                        <div class="slider-value">
+                            <span id="slider-range-min-amount9">120</span>
+                        </div>
+                    </div>
+                    <div class="ml150">
+                        <p>亮度渐变时间 :</p>
+                        <label>
+                            <span class="sence-name">t1渐强 :</span>
+                        </label>
+                        <input type="text" placeholder="59" class="w59"/> 分　
+                        <input type="text" placeholder="59" class="w59"/> 秒　　　
+                        <label>
+                            <span class="sence-name">t1渐弱 :</span>
+                        </label>
+                        <input type="text" placeholder="59" class="w59"/> 分　
+                        <input type="text" placeholder="59" class="w59"/> 秒
+                    </div>
+                    <div class="ml150">
+                        <p>变换模式 :</p>
+                        <label class="w200">
+
+                            <span class="sence-name w150">渐变(变为相邻颜色) :</span>
+                        </label>
+                        <label>
+
+                            <span class="sence-name">跳变 :</span>
+                        </label>
+                        <label>
+
+                            <span class="sence-name">tempo节拍t :</span>
+                        </label>
+                        <input type="text" placeholder="59" class="w59"/> 分　
+                        <input type="text" placeholder="59" class="w59"/> 秒
+                    </div>
+                </li>
+                <li class="bb0">
+                    <span class="type-name">音乐</span>
+                    <label>
+
+                        <span class="sence-name">音量 :</span>
+                    </label>
+                    <div class="div-slider">
+                        <div id="slider-range-min10" class="slider bg-yellow"></div>
+                        <div class="slider-value">
+                            <span id="slider-range-min-amount10">120</span>
+                        </div>
+                    </div>
+                    <div class="ml150">
+                        <p>音量渐变时间 :</p>
+                        <label>
+
+                            <span class="sence-name">t1渐强 :</span>
+                        </label>
+                        <input type="text" placeholder="59" class="w59"/> 分　
+                        <input type="text" placeholder="59" class="w59"/> 秒　　　
+
+                        <label>
+
+                            <span class="sence-name">t1渐弱 :</span>
+                        </label>
+                        <input type="text" placeholder="59" class="w59"/> 分　
+                        <input type="text" placeholder="59" class="w59"/> 秒
+                    </div>
+
+                </li>
+            </ul>
+        </div>
+        <div class="div-btn">
+            <button class="btn-cancle">取消</button>
+            <button class="btn-compelet">完成</button>
+        </div>
+    </div>
+    <div class="dailog hide">
+        <div class="div-group">
+            <i class="fa fa-star"></i>
+            <span class="type-name">场景名称1</span>
+            <label>
+                <span class="sence-name">早晨读书</span>
+            </label>
+        </div>
+        <div class="div-group">
+            <i class="fa fa-star"></i>
+            <span class="type-name">创建者</span>
+            <label>
+                <span class="sence-name">陈小洁</span>
+            </label>
+        </div>
+        <div class="div-group ptb0">
+            <ul class="sence-ul">
+                <li>
+                    <i class="fa fa-star"></i>
+                    <span class="type-name">触发方式</span>
+                    <div class="div-label">
+                        <label>
+                            <input type="checkbox" checked/>
+                            <span class="sence-name">被动红外A</span>
+                        </label>
+                        <label>
+
+                            <span class="sence-name">被动红外B</span>
+                        </label>
+                        <label>
+
+                            <span class="sence-name">被动红外C</span>
+                        </label>
+
+                    </div>
+                </li>
+            </ul>
+        </div>
+        <div class="div-group">
+            <i class="fa fa-star"></i>
+            <span class="type-name">参与功能</span>
+            <label>
+
+                <span class="sence-name">灯光</span>
+            </label>
+            <label>
+                <button class="btn-plus"><i class="fa fa-plus"></i></button>
+            </label>
+        </div>
+        <!--<div class="div-group">-->
+        <!--<i class="fa fa-star"></i>-->
+        <!--<span class="type-name">开启条件</span>-->
+        <!--<label>-->
+        <!--<input type="checkbox"/>-->
+        <!--<span class="sence-name">达到开机温度</span>-->
+        <!--</label>-->
+        <!--<label>-->
+        <!--<button class="btn-plus"><i class="fa fa-plus"></i></button>-->
+        <!--</label>-->
+        <!--</div>-->
+        <div class="div-group">
+            <i class="fa fa-star"></i>
+            <span class="type-name hover">运行状态　<i class="fa fa-caret-down"></i></span>
+            <ul class="light-ul">
+                <li class="bb0">
+                    <span class="type-name">灯光</span>
+                    <label>
+
+                        <span class="sence-name">亮度 :</span>
+                    </label>
+                    <div class="div-slider">
+                        <div id="slider-range-min11" class="slider bg-yellow"></div>
+                        <div class="slider-value">
+                            <span id="slider-range-min-amount11">120</span>
+                        </div>
+                    </div>
+                    <div class="ml150">
+                        <p>亮度渐变时间 :</p>
+                        <label>
+
+                            <span class="sence-name">t1渐强 :</span>
+                        </label>
+                        <input type="text" placeholder="59" class="w59"/> 分　
+                        <input type="text" placeholder="59" class="w59"/> 秒　　　
+
+                        <label>
+
+                            <span class="sence-name">t1渐弱 :</span>
+                        </label>
+                        <input type="text" placeholder="59" class="w59"/> 分　
+                        <input type="text" placeholder="59" class="w59"/> 秒
+                    </div>
+
+                </li>
+            </ul>
+        </div>
+        <div class="div-btn">
+            <button class="btn-cancle">取消</button>
+            <button class="btn-compelet">完成</button>
+        </div>
+    </div>
+    <div class="dailog lic1 hide">
+        <div class="div-group">
+            <i class="fa fa-star"></i>
+            <span class="type-name">场景名称</span>
+            <label>
+                <span class="sence-name">早晨读书</span>
+            </label>
+        </div>
+        <div class="div-group">
+            <i class="fa fa-star"></i>
+            <span class="type-name">创建者</span>
+            <label>
+                <span class="sence-name">陈小洁</span>
+            </label>
+        </div>
+        <div class="div-group">
+            <i class="fa fa-star"></i>
+            <span class="type-name">参与功能</span>
+            <label>
+
+                <span class="sence-name">灯光</span>
+            </label>
+            <label>
+
+                <span class="sence-name">音乐</span>
+            </label>
+            <label>
+
+                <span class="sence-name">空调</span>
+            </label>
+            <label>
+                <button class="btn-plus"><i class="fa fa-plus"></i></button>
+            </label>
+        </div>
+        <div class="div-group">
+            <i class="fa fa-star"></i>
+            <span class="type-name hover">运行状态　<i class="fa fa-caret-down"></i></span>
+            <!--<ul class="light-ul">-->
+            <!--<li class="bb0">-->
+            <!--<span class="type-name">灯光</span>-->
+            <!--<label>-->
+
+            <!--<span class="sence-name">亮度 :</span>-->
+            <!--</label>-->
+            <!--<div class="div-slider">-->
+            <!--<div id="slider-range-min16" class="slider bg-yellow"></div>-->
+            <!--<div class="slider-value">-->
+            <!--<span id="slider-range-min-amount16">120</span>-->
+            <!--</div>-->
+            <!--</div>-->
+            <!--<div class="ml150">-->
+            <!--<p>亮度渐变时间 :</p>-->
+            <!--<label>-->
+
+            <!--<span class="sence-name">t1渐强 :</span>-->
+            <!--</label>-->
+            <!--<select name="">-->
+            <!--<option value="59">59</option>-->
+            <!--<option value="59">59</option>-->
+            <!--<option value="59">59</option>-->
+            <!--</select> 分　-->
+            <!--<select name="">-->
+            <!--<option value="59">59</option>-->
+            <!--<option value="59">59</option>-->
+            <!--<option value="59">59</option>-->
+            <!--</select> 秒　　　-->
+
+            <!--<label>-->
+
+            <!--<span class="sence-name">t1渐弱 :</span>-->
+            <!--</label>-->
+            <!--<select name="">-->
+            <!--<option value="59">59</option>-->
+            <!--<option value="59">59</option>-->
+            <!--<option value="59">59</option>-->
+            <!--</select> 分　-->
+            <!--<select name="">-->
+            <!--<option value="59">59</option>-->
+            <!--<option value="59">59</option>-->
+            <!--<option value="59">59</option>-->
+            <!--</select> 秒-->
+            <!--</div>-->
+            <!--</li>-->
+            <!--</ul>-->
+        </div>
+        <div class="div-btn">
+            <button class="btn-cancle">取消</button>
+            <button class="btn-compelet">完成</button>
+        </div>
+    </div>
+    <div class="dailog lic hide">
+        <div class="div-group">
+            <i class="fa fa-star"></i>
+            <span class="type-name">场景名称</span>
+            <label>
+                <span class="sence-name">早晨读书</span>
+            </label>
+        </div>
+        <div class="div-group">
+            <i class="fa fa-star"></i>
+            <span class="type-name">创建者</span>
+            <label>
+                <span class="sence-name">陈小洁</span>
+            </label>
+        </div>
+        <div class="div-group ptb0">
+            <ul class="sence-ul">
+                <li>
+                    <i class="fa fa-star"></i>
+                    <span class="type-name">触发方式</span>
+                    <div class="div-label">
+                        <label>
+                            <input type="checkbox" checked/>
+                            <span class="sence-name">被动红外A</span>
+                        </label>
+                        <label>
+
+                            <span class="sence-name">被动红外B</span>
+                        </label>
+                        <label>
+
+                            <span class="sence-name">被动红外C</span>
+                        </label>
+
+                    </div>
+                </li>
+            </ul>
+        </div>
+        <!--<div class="div-group">-->
+        <!--<i class="fa fa-star"></i>-->
+        <!--<span class="type-name">参与功能</span>-->
+        <!--<label>-->
+        <!--<input type="checkbox"/>-->
+        <!--<span class="sence-name">灯光</span>-->
+        <!--</label>-->
+        <!--<label>-->
+        <!--<input type="checkbox"/>-->
+        <!--<span class="sence-name">音乐</span>-->
+        <!--</label>-->
+        <!--<label>-->
+        <!--<button class="btn-plus"><i class="fa fa-plus"></i></button>-->
+        <!--</label>-->
+        <!--</div>-->
+        <!--<div class="div-group">-->
+        <!--<i class="fa fa-star"></i>-->
+        <!--<span class="type-name">开启条件</span>-->
+        <!--<label>-->
+        <!--<input type="checkbox"/>-->
+        <!--<span class="sence-name">达到开机温度</span>-->
+        <!--</label>-->
+        <!--<label>-->
+        <!--<button class="btn-plus"><i class="fa fa-plus"></i></button>-->
+        <!--</label>-->
+        <!--</div>-->
+        <div class="div-group">
+            <i class="fa fa-star"></i>
+            <span class="type-name">参与功能</span>
+            <label>
+
+                <span class="sence-name">灯光</span>
+            </label>
+            <label>
+                <button class="btn-plus"><i class="fa fa-plus"></i></button>
+            </label>
+        </div>
+        <div class="div-group">
+            <i class="fa fa-star"></i>
+            <span class="type-name hover">运行状态　<i class="fa fa-caret-down"></i></span>
+            <ul class="light-ul">
+                <li class="bb0">
+                    <span class="type-name">灯光</span>
+                    <label>
+
+                        <span class="sence-name">亮度 :</span>
+                    </label>
+                    <div class="div-slider">
+                        <div id="slider-range-min13" class="slider bg-yellow"></div>
+                        <div class="slider-value">
+                            <span id="slider-range-min-amount13">120</span>
+                        </div>
+                    </div>
+                    <div class="ml150">
+                        <p>亮度渐变时间 :</p>
+                        <label>
+
+                            <span class="sence-name">t1渐强 :</span>
+                        </label>
+                        <input type="text" placeholder="59" class="w59"/> 分　
+                        <input type="text" placeholder="59" class="w59"/> 秒　　　
+
+                        <label>
+
+                            <span class="sence-name">t1渐弱 :</span>
+                        </label>
+                        <select name="">
+                            <option value="59">59</option>
+                            <option value="59">59</option>
+                            <option value="59">59</option>
+                        </select> 分　
+                        <select name="">
+                            <option value="59">59</option>
+                            <option value="59">59</option>
+                            <option value="59">59</option>
+                        </select> 秒
+                    </div>
+                </li>
+            </ul>
+        </div>
+        <div class="div-btn">
+            <button class="btn-cancle">取消</button>
+            <button class="btn-compelet">完成</button>
+        </div>
+    </div>
+    <div class="dailog dangerous hide">
+        <div class="div-group">
+            <i class="fa fa-star"></i>
+            <span class="type-name">场景名称1</span>
+            <label>
+                <span class="sence-name">早晨读书</span>
+            </label>
+        </div>
+        <div class="div-group">
+            <i class="fa fa-star"></i>
+            <span class="type-name">创建者</span>
+            <label>
+                <span class="sence-name">陈小洁</span>
+            </label>
+        </div>
+        <div class="div-group ptb0">
+            <ul class="sence-ul">
+                <li>
+                    <i class="fa fa-star"></i>
+                    <span class="type-name">触发方式</span>
+                    <div class="div-label">
+                        <label>
+                            <input type="checkbox" checked/>
+                            <span class="sence-name">Wifi</span>
+                        </label>
+                    </div>
+                </li>
+            </ul>
+        </div>
+        <div class="div-group">
+            <i class="fa fa-star"></i>
+            <span class="type-name">参与功能</span>
+            <label>
+
+                <span class="sence-name">有无人探测</span>
+            </label>
+            <label>
+
+                <span class="sence-name">时温度探测</span>
+            </label>
+            <label>
+
+                <span class="sence-name">照明探测</span>
+            </label>
+            <label>
+                <button class="btn-plus"><i class="fa fa-plus"></i></button>
+            </label>
+        </div>
+        <!--<div class="div-group">-->
+        <!--<i class="fa fa-star"></i>-->
+        <!--<span class="type-name">开启条件</span>-->
+        <!--<label>-->
+        <!--<input type="checkbox"/>-->
+        <!--<span class="sence-name">达到开机温度</span>-->
+        <!--</label>-->
+        <!--<label>-->
+        <!--<button class="btn-plus"><i class="fa fa-plus"></i></button>-->
+        <!--</label>-->
+        <!--</div>-->
+        <div class="div-group">
+            <i class="fa fa-star"></i>
+            <span class="type-name hover">运行状态　<i class="fa fa-caret-down"></i></span>
+            <ul class="light-ul">
+                <li class="bb0">
+                    <span class="type-name">灯光</span>
+                    <label>
+
+                        <span class="sence-name">亮度 :</span>
+                    </label>
+                    <div class="div-slider">
+                        <div id="slider-range-min14" class="slider bg-yellow"></div>
+                        <div class="slider-value">
+                            <span id="slider-range-min-amount14">120</span>
+                        </div>
+                    </div>
+                    <div class="ml150">
+                        <p>亮度渐变时间 :</p>
+                        <label>
+
+                            <span class="sence-name">t1渐强 :</span>
+                        </label>
+                        <select name="">
+                            <option value="59">59</option>
+                            <option value="59">59</option>
+                            <option value="59">59</option>
+                        </select> 分　
+                        <select name="">
+                            <option value="59">59</option>
+                            <option value="59">59</option>
+                            <option value="59">59</option>
+                        </select> 秒　　　
+
+                        <label>
+
+                            <span class="sence-name">t1渐弱 :</span>
+                        </label>
+                        <select name="">
+                            <option value="59">59</option>
+                            <option value="59">59</option>
+                            <option value="59">59</option>
+                        </select> 分　
+                        <select name="">
+                            <option value="59">59</option>
+                            <option value="59">59</option>
+                            <option value="59">59</option>
+                        </select> 秒
+                    </div>
+
+                </li>
+            </ul>
+        </div>
+        <div class="div-group">
+            <i class="fa fa-star"></i>
+            <span class="type-name">报警</span>
+            <label class="w200">
+                <input type="checkbox" checked disabled/>
+                <span class="sence-name">有人报警</span>
+            </label>
+            <label>
+
+                <span class="sence-name">高温报警</span>
+            </label>
+        </div>
+        <div class="div-btn">
+            <button class="btn-cancle">取消</button>
+            <button class="btn-compelet">完成</button>
+        </div>
+    </div>
+    </div>
 </div>
     <script type="text/javascript" src="../../assets/global/plugins/jquery/jquery-1.11.3.min.js"></script>
+    <script src="../../assets/global/plugins/jqueryui-sliders/js/jquery-ui-1.10.3.custom.min.js"></script>
+    <script src="../../assets/global/plugins/jqueryui-sliders/js/components-jqueryui-sliders.js"></script>
+    <script src="../../assets/global/plugins/jquery.minicolors/jquery.minicolors.js"></script>
+    <script src="../../assets/global/plugins/move/js/move.js"></script>
     <script src="../../assets/frontend/js/global.js"></script>
+    <script src="../../assets/frontend/js/wisdom.js"></script>
     <script src="../../assets/frontend/js/modal.js"></script>
+    <script src="../../assets/frontend/js/input-type.js"></script>
     <script>
         $(function(){
             var btn_save = $(".purchase_immediately,.regs");
             btn_save.on("click",function(){
                 $("#container").dialog({title:'账户登录'});
-            })
+            });
         })
+    </script>
+    <script>
+        jQuery(document).ready(function() {
+            ComponentsjQueryUISliders.init();
+            $('.demo').each( function() {
+                var that = $(this);
+                $(this).minicolors({
+                    control: $(this).attr('data-control') || 'hue',
+                    defaultValue: $(this).attr('data-defaultValue') || '',
+                    inline: $(this).attr('data-inline') === 'true',
+                    letterCase: $(this).attr('data-letterCase') || 'lowercase',
+                    opacity: $(this).attr('data-opacity'),
+                    position: $(this).attr('data-position') || 'bottom left',
+                    change: function(hex, opacity) {
+                        if( !hex ) return;
+                        if( opacity ) hex += ', ' + opacity;
+                        try {
+                            that.closest(".color-pickup").siblings(".div-slider").find(".ui-widget-header").css({background:hex})
+                        } catch(e) {}
+                    },
+                    theme: 'bootstrap'
+                });
+            });
+        });
     </script>
 </body>
 </html>
