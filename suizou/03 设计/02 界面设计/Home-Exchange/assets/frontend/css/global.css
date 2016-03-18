@@ -2094,7 +2094,7 @@ nowrap;text-overflow: ellipsis;width: 100%;}.sc-list1{display: none;}
 /*shiooing-address*/
 .address-list{margin: 10px auto 50px;width: 705px;border-collapse:collapse;}
 .address-list tr th{background: #efefef;}
-.address-list tr td,.address-list tr th{border: 1px solid #dbdbdb;width: 15%;padding: 0.5%;}
+.address-list tr td,.address-list tr th{border: 1px solid #dbdbdb;}
 .address-list tr td a{color:#53ba93;}
 .address-div{margin: 0 50px;}
 .address-list tr td .btn-modify,.address-list tr td .btn-remove,.address-list tr td .btn-add{display: inline-block;padding: 5px 20px;border-radius: 4px;color: #fff;font-family: "微软雅黑";}
