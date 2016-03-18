@@ -10,6 +10,7 @@ input,button{outline: none;border: none;}
 .hide{display: none;}
 .right{float: right;}
 .left{float: left;}
+a[href], input[type='submit'], input[type='image'], label[for], select, button, .pointer {cursor: pointer;}
 a:link{text-decoration: none;}
 .wrapper{width: 1560px;background: #282828;position: relative;margin: 0 auto;overflow: hidden;}
 .content{position: relative;left: 0;margin-top: 80px;}
