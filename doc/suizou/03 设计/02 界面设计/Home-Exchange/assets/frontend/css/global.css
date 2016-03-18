@@ -850,8 +850,8 @@ body,html{height: 100%;}
 .reWrap{margin-top: -180px;height: 460px;}
 .logBg{background-color: #fff;opacity: 0.8;filter: alpha(opacity=80);}
 .regBg,.regWrap{height: 500px;margin: -220px 0 0 -221px;}
-.regBg.companyHeight,.logWrap.companyHeight{height: 560px;margin-top: -250px;}
-.logWrap.companyHeight .regBox{margin: 50px 40px;}
+.regBg.companyHeight,.logWrap.companyHeight{height: 610px;margin-top: -300px;}
+.logWrap.companyHeight .regBox{margin: 30px 40px;}
 .logBox{overflow: hidden;margin: 20px 40px;}
 .logBox.margin8{margin: 8px 40px;}
 .regBox{margin: 0 40px;}
