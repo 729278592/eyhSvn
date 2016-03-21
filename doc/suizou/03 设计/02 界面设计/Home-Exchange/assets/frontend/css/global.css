@@ -842,7 +842,7 @@ body,html{height: 100%;}
 .register-ul li a{display: inline-block;width: 100%;height: 100%;}
 .register-ul li.active a{color: #f16a21;}
 .register-ul li.mr0{border-right: 0;}
-.wrapper{width: 100%;height: 100%;min-height: 600px;}
+.wrapper{width: 100%;height: 100%;min-height: 650px;}
 .logBodyBg{width: 100%;height: 100%;position: fixed;z-index: 1;left: 0;top: 0;overflow: hidden;min-width: 1024px;}
 .logBodyBg img{width: 100%; height: 100%;}
 .logBg,.logWrap{width: 442px;height: 330px;position: absolute;z-index: 2;left: 50%;top: 50%;margin: -140px 0 0 -221px;border-radius: 8px;}
@@ -1998,7 +1998,7 @@ nowrap;text-overflow: ellipsis;width: 100%;}.sc-list1{display: none;}
 .div-input div select{width: 150px;border: 1px solid #dbdbdb;height: 28px;font-family: "微软雅黑";color: #666;}
 .div-input div select.select-time{position: relative;padding: 0;}
 .div-input #form1>div textarea{width: 745px;border: 1px solid #dbdbdb;height: 70px;font-family: "微软雅黑";padding-left: 10px;}
-.div-input #form1>div .address-details{font-size: 14px;color: #666;width: 70%;overflow: hidden;white-space: nowrap;text-overflow: ellipsis;}
+.div-input #form1>div .address-details{font-size: 14px;color: #666;width: 70%;overflow: hidden;white-space: nowrap;text-overflow: ellipsis;padding-left: 2%;}
 .div-input #form1>div .btn-modifly{display: inline-block;font-size: 14px;color: #2ab1de;position: relative;right: 15px;}
 .div-input #form1>div .btn-modifly:hover{text-decoration: underline;cursor: pointer;}
 

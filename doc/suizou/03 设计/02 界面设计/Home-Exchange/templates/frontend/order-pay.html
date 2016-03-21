@@ -466,12 +466,12 @@
 
             $(".label-select").click(function(){
                 if($(this).find("input")[0].checked==true){
-                    $(this).next(".select").attr("disabled","disabled");
-                    $(this).next(".select").addClass("active");
-                }
-                else{
                     $(this).next(".select").removeClass("active");
                     $(this).next(".select").removeAttr("disabled");
+                }
+                else{
+                    $(this).next(".select").attr("disabled","disabled");
+                    $(this).next(".select").addClass("active");
                 }
             })
         });
