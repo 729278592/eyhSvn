@@ -288,7 +288,7 @@ b {line-height: 30px;font-weight: 700;}
 .nav{border: 1px solid #dbdbdb;width: 255px;background: #fff;}
 .nav-div{width: 255px;text-align: center;border-bottom: none;}
 .nav-p{width: 100%;height: 60px;line-height: 60px;border-bottom: 1px solid #dbdbdb;color:#333;}
-.nav-p .fa{font-size: 30px;position: relative;top: 5px;left: -40px;color: #333;}
+.nav-div .nav-p .fa{font-size: 30px;position: relative;top: 5px;left: -40px;color: #333;color: #333\0;}
 .nav-p span{}
 .nav-p:hover{background: #fbb432;color: #fff;}
 .nav-p:hover .fa{color: #fff;}
@@ -305,13 +305,16 @@ b {line-height: 30px;font-weight: 700;}
 .nav-div.on p .fa{color: #fff;}
 .nav-div .menu li.last{border-bottom: none;}
 .w-right{margin-left: 270px;background: #fff;margin-top: 20px;padding: 3%;min-height: 455px;margin-bottom: 50px;}
-.w-right .title{font-size: 20px;padding:0 0 15px 0;border-bottom: 1px solid #dbdbdb;}
+.w-right>.title{font-size: 18px;padding:0 0 15px 0;border-bottom: 1px solid #dbdbdb;}
 .contactUs-img{width: 100%;margin-top: 20px;}
 .contact-type li{border-bottom: 1px solid #dbdbdb;padding: 15px 0;color: #666;}
 .contact-type li img{width: 40px;}
-
-
-
+.assurance-infor{font-size: 14px;line-height: 22px;color: #666;margin-top: 15px;}
+.advantage-infor{font-size: 14px;color: #666;margin: 20px 0;}
+.advantage-infor .title{font-size: 16px;color: #333;}
+.advantage-infor .title.ti2{text-indent: 32px;color: #666;}
+.advantage-infor a,.advantage-infor span{color: #fca613;}
+.advantage-infor a{text-decoration: underline;}
 
 
 /*steward*/
@@ -842,7 +845,7 @@ body,html{height: 100%;}
 .register-ul li a{display: inline-block;width: 100%;height: 100%;}
 .register-ul li.active a{color: #f16a21;}
 .register-ul li.mr0{border-right: 0;}
-.wrapper{width: 100%;height: 100%;min-height: 650px;}
+.wrapper{width: 100%;height: 100%;min-height: 750px;}
 .logBodyBg{width: 100%;height: 100%;position: fixed;z-index: 1;left: 0;top: 0;overflow: hidden;min-width: 1024px;}
 .logBodyBg img{width: 100%; height: 100%;}
 .logBg,.logWrap{width: 442px;height: 330px;position: absolute;z-index: 2;left: 50%;top: 50%;margin: -140px 0 0 -221px;border-radius: 8px;}
@@ -1464,7 +1467,7 @@ p>label>input{position: relative;top: 2px;}
 .nuw-menu1{width: 608px;}
 .nuw-menu1 li{width: 100%;}
 .nuw-menu1 li.active{}
-.nuw-menu1 li .nw3{}
+.nuw-menu1 li .nw3{width: 609px;height: 300px;}
 .not-service{color: #bb0000;text-align: center;}
 .nw-group{width: 100%;margin-top: 10px;}
 .nw-group img{margin: 10px 20px;}
@@ -1481,7 +1484,7 @@ p>label>input{position: relative;top: 2px;}
 .nu-infor .nu-title .title{color: #333;}
 .nu-infor .nu-title .bg{color: #68ccff;}
 .nu-list{width: 96%;margin: 0 2%;}
-.nu-list li{width: 30%;float: left;text-align: center;font-size: 14px;color: #666;margin-right: 5%;margin-bottom: 20px;}
+.nu-list li{width: 30%;float: left;text-align: center;font-size: 14px;color: #666;margin-right: 5%;margin-bottom: 25px;}
 .nu-list li span{display: inline-block;width: 100%;}
 .nu-list li.mr0{margin-right: 0;}
 
@@ -1998,7 +2001,7 @@ nowrap;text-overflow: ellipsis;width: 100%;}.sc-list1{display: none;}
 .div-input div select{width: 150px;border: 1px solid #dbdbdb;height: 28px;font-family: "微软雅黑";color: #666;}
 .div-input div select.select-time{position: relative;padding: 0;}
 .div-input #form1>div textarea{width: 745px;border: 1px solid #dbdbdb;height: 70px;font-family: "微软雅黑";padding-left: 10px;}
-.div-input #form1>div .address-details{font-size: 14px;color: #666;width: 70%;overflow: hidden;white-space: nowrap;text-overflow: ellipsis;padding-left: 2%;}
+.div-input #form1>div .address-details{font-size: 14px;color: #666;width: 68%;overflow: hidden;white-space: nowrap;text-overflow: ellipsis;padding-left: 2%;}
 .div-input #form1>div .btn-modifly{display: inline-block;font-size: 14px;color: #2ab1de;position: relative;right: 15px;}
 .div-input #form1>div .btn-modifly:hover{text-decoration: underline;cursor: pointer;}
 
@@ -2189,8 +2192,19 @@ a.fbtn-return {position: relative;left: 10px;color: #fff;}
 .gybz-infor>.title{font-size: 18px;font-family: "微软雅黑";color: #333;margin-bottom: 20px;}
 .gybz-infor p{line-height: 26px;}
 .register-ul li:hover{cursor: pointer;}
-
 .person-ul .li2 p a.btn-add {padding: 3px 10px;display: inline-block;background: #fbb433;color: #fff;border-radius: 4px;}
+
+
+/*service-Information.html*/
+.service-content.w100{width: 663px;}
+.service-content.w100 .konw-infor p.bottom {
+    position: relative;
+    top: 0px;
+    width: 580px;
+}
+.service-content.w100 .konw-div{display: table;padding: 30px 0;}
+.service-content.w100 .konw-div img,.service-content.w100 .konw-div .konw-infor{vertical-align: middle;display: table-cell;}
+.service-content.w100 .konw-div img{top: 0;}
 
 /*分页*/
 .paging{position: relative;left: 50%;margin-top: 20px;}
