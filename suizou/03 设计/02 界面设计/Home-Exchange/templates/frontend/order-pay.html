@@ -161,7 +161,7 @@
                             <span class="type">
                                 <span class="required">*</span> 上门时间 :
                             </span>　
-                                <input id="d4311" class="Wdate inputDisable removePlaceholder" type="text" placeholder="2015-4-4" onFocus="WdatePicker({minDate:'%y-%M-{%d}'})"/>
+                                <input id="d4311" class="Wdate inputDisable removePlaceholder" type="text" placeholder="2015-4-4" onFocus="WdatePicker()"/>
                                 <select name="" class="select-time right inputDisable">
                                     <option value="时间">时间</option>
                                     <option value="8:00">8:00</option>
@@ -236,11 +236,18 @@
                                         <input type="checkbox" class="checkbox"/>
                                         <span>使用点券</span>
                                     </label> 
-                                    <select name="" class="select">
+                                    <select name="" class="select active" disabled="disabled">
                                         <option value="请选择">请选择</option>
                                         <option value="保洁优惠券">保洁优惠券</option>
                                         <option value="春节慢100减10">春节慢100减10</option>
                                     </select>
+                                </div>
+                                <div>
+                                    <label>
+                                        <input type="checkbox" class="checkbox">
+                                        <span>使用电子钱包 : </span>
+                                    </label>
+                                    <span class="num">-￥0.00</span>
                                 </div>
                                 <div class="right right10">
                                     <span>实付款 :</span>

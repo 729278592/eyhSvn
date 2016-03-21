@@ -9,15 +9,14 @@
 //        var sliderUpDownOpts = $.extend({}, sliderUpDownDefaults, options);
         var sliderUpDownMethods = {
             init:function(_this){
-                navDiv = _this.find(".nav-div p");
+                navDiv = _this.find(".nav-div .nav-p");
                 sliderUpDownMethods.onClick();
             },
             onClick:function(){
                 navDiv.on("click",function(){
                     if($(this).parent().find(".menu").css("display") == "none"){
                         $(this).parent().find(".menu").slideDown().end().closest(".nav-div").addClass("on");
-                        $(this).parent().siblings(".nav-div").find(".menu").slideUp().end().closest(".nav-div").removeClass("on")
-
+                        $(this).parent().siblings(".nav-div").find(".menu").slideUp().end().closest(".nav-div").removeClass("on");
                     }else{
                         $(this).parent().find(".menu").slideUp()
                     }
