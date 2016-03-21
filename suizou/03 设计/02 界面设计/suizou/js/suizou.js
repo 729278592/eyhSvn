@@ -2,38 +2,38 @@ $(function(){
     $(".wft_logo").on("click",function(){
 
         if(($(".user").val()=="")&&($(".password").val()=="")){
-            $(".error1").removeClass("hide")
-            $(".error2").removeClass("hide")
+            $(".error1").removeClass("hide");
+            $(".error2").removeClass("hide");
         }
         else if(($(".user").val()=="")&&($(".password").val()!="")){
-            $(".error1").removeClass("hide")
-            $(".error2").addClass("hide")
+            $(".error1").removeClass("hide");
+            $(".error2").addClass("hide");
         }
         else if(($(".user").val()!="")&&($(".password").val()=="")){
-            $(".error1").addClass("hide")
-            $(".error2").removeClass("hide")
+            $(".error1").addClass("hide");
+            $(".error2").removeClass("hide");
         }
         else if(($(".user").val()!="")&&($(".password").val()!="")){
-            $(".error1").addClass("hide")
-            $(".error2").addClass("hide")
+            $(".error1").addClass("hide");
+            $(".error2").addClass("hide");
         }
-    })
+    });
     $(".wft_logo").on("click",function(){
         $(this).val("正在登录中...")
-    })
+    });
     $(".cl_li2").on("click",function(){
         $(".meng").css({"display":"block"})
-    })
+    });
     $(".bbtn").on("click",function(){
         $(".meng").css({"display":"none"})
-    })
+    });
     $(".cl_li3").hover(function(){
         $(".meng1").removeClass("hide")
     },function(){
         $(".meng1").addClass("hide")
-    })
+    });
     if (navigator.userAgent.indexOf('Firefox') >= 0){
-        $(".c_login").css({"position":"relative","top":"-25px"})
+        $(".c_login").css({"position":"relative","top":"-25px"});
         $(".shuru1").css({"left":"0"})
 
     }
@@ -115,10 +115,10 @@ $(function(){
         },
         highlight: function(element, errorClass) {
             $(element).css({"position":"relative","top":"-12px"})
-            $(".rcp_sp").css({"top":"-12px"})
-            $(".inblock").css({"top":"38px"})
-            $(".sh_in").css({"top":"-12px"})
-            $(".ab_im").css({"top":"-6px"})
+            $(".rcp_sp").css({"top":"-12px"});
+            $(".inblock").css({"top":"38px"});
+            $(".sh_in").css({"top":"-12px"});
+            $(".ab_im").css({"top":"-6px"});
         },
         onfocusout: function(element){
             $(element).valid();
