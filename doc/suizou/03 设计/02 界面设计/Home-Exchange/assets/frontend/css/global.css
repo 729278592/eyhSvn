@@ -2101,8 +2101,12 @@ nowrap;text-overflow: ellipsis;width: 100%;}.sc-list1{display: none;}
 .address-content .address-lists .span-address{display: inline-block;width: 520px;}
 
 
-
-
+/*pay-success*/
+.paySuccess{width: 300px;height: 250px;margin: 100px auto 0 auto;}
+.paySuccess span{font-size: 15px;color: #585656;}
+.tiz_s{margin: -70px 0 0 100px;}
+.tiz_s a{color: #f57869;text-decoration: underline;}
+.paySuccess .countdown{color: #fd9f4d;}
 
 
 /*shiooing-address*/
