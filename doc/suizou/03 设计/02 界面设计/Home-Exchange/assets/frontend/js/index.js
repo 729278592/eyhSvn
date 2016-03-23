@@ -2,7 +2,7 @@
  * Created by eyohu023 on 2015/11/26.
  */
 (function($){
-    /*服务内容切换*/
+    /*服务快速下单让时间控制*/
     var scl  =  $(".sever-content>li");
     var omla = $(".order-meun li");
     var date = new Date();
