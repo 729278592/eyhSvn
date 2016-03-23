@@ -165,15 +165,6 @@
                                     <td>1</td>
                                     <td>499</td>
                                     <td class="last">
-                                        <div class="comment hide">
-                                            <form action="">
-                                                <div class="comment-head">评论 <i class="fa fa-remove right"></i></div>
-                                                <div class="comment-content">
-                                                    <textarea style="resize: none;" name="" rows="5"></textarea>
-                                                    <input type="submit" class="btn-CommentSubmit" value="提交"/>
-                                                </div>
-                                            </form>
-                                        </div>
                                         <button type="button" class="bgfbb hide btn-confirm">确认完成</button>
                                         <button type="button" class="bgfbb btn-pay">付款</button>
                                     </td>
@@ -193,15 +184,6 @@
                                     <td>1</td>
                                     <td>499</td>
                                     <td class="last">
-                                        <div class="comment hide">
-                                            <form action="">
-                                                <div class="comment-head">评论 <i class="fa fa-remove right"></i></div>
-                                                <div class="comment-content">
-                                                    <textarea style="resize: none;" name="" rows="5"></textarea>
-                                                    <input type="submit" class="btn-CommentSubmit" value="提交"/>
-                                                </div>
-                                            </form>
-                                        </div>
                                         <button type="button" class="bgfbb hide btn-confirm">确认完成</button>
                                         <button type="button" class="bgfbb btn-pay">付款</button>
                                     </td>
@@ -212,6 +194,18 @@
                 </div>
             </div>
         </div>
+    </div>
+</div>
+<div class="mask-bg hide"></div>
+<div class="mask hide">
+    <div class="comment hide">
+        <form action="">
+            <div class="comment-head">评论 <i class="fa fa-remove right"></i></div>
+            <div class="comment-content">
+                <textarea style="resize: none;" name="" rows="5"></textarea>
+                <input type="submit" class="btn-CommentSubmit" value="提交"/>
+            </div>
+        </form>
     </div>
 </div>
 <div class="foot clearfix">
@@ -297,19 +291,22 @@
 <script src="../../assets/frontend/js/personCenter.js"></script>
 <script src="../../assets/frontend/js/footHandle.js"></script>
 <script>
-    $("button.btn-pay").on("click",function(){
-        $(this).addClass("hide");
-        $(this).parent().find(".btn-confirm").removeClass("hide");
-    });
-    $(".shopping_content .last").delegate(".btn-confirm","click",function(){
-        $(this).prev(".comment").removeClass("hide");
+    $(function(){
+        $("button.btn-pay").on("click",function(){
+            $(this).addClass("hide");
+            $(this).parent().find(".btn-confirm").removeClass("hide");
+        });
 
-    });
+        $(".shopping_content .last").delegate(".btn-confirm","click",function(){
+            $(".mask-bg,.mask,.comment").removeClass("hide");
+        });
 
-    $(".shopping_content .last").delegate(".fa","click",function(){
-        $(this).closest(".comment").addClass("hide");
-
-    });
+        $(".mask").delegate(".fa-remove","click",function(){
+            $(this).closest(".comment").addClass("hide");
+            $(this).closest(".mask").addClass("hide");
+            $(this).closest(".mask").prev(".mask-bg").addClass("hide");
+        });
+    })
 </script>
 </body>
 </html>
