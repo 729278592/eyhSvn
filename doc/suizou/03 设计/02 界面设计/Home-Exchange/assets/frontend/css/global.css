@@ -97,7 +97,8 @@ a:link{text-decoration: none;}
 .fast-order .title{font-size: 24px;color: #ff6634;}
 .fast-order .small-title{color: #666;font-size: 14px;padding-bottom: 15px;}
 .sever-content{padding: 20px;border: 1px solid #fbb432;border-radius: 8px;width: 984px;}
-.sever-content>li{float: left;width: 100%;}
+.sever-content>li{float: left;width: 100%;display: none;}
+.sever-content>li.active{display: inline-block;}
 .serversSlider{width: 235px;height: 300px;position: relative;margin-right: 30px;}
 .serversSlider .input-search{position: absolute;top: 0;z-index: 100;width: 90%;left: 5%;}
 .serversSlider .input-search .text{border: 1px solid #dbdbdb;width: 85%;font-size: 14px;}

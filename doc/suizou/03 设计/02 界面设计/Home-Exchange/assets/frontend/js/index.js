@@ -2,255 +2,27 @@
  * Created by eyohu023 on 2015/11/26.
  */
 (function($){
-    /*服务幻灯切换*/
-//    var SerSlider = function (serSlider,options){
-//        var serversDefaul = {
-//            setsSlider:5000
-//        };
-//        var serversOpts = $.extend({},serversDefaul,options);
-//        var serversMethods = {
-//            init:function(_this){
-//                serversPaginationA = _this.find("a");
-//                serversUl = _this.find(".servers-ul");
-//                oLiServers = _this.find("li");
-//                liWidthservers = oLiServers.get(0).offsetWidth;
-//                serversUlWidth = serversUl.offset().width;
-//                serversUlWidth = liWidthservers*oLiServers.size() + "px";
-//                serversUl.width(serversUlWidth);
-//                timerServers = setInterval(serversMethods.autoPlay,serversOpts.setsSlider);
-//                inowServers = 0;
-//                btnServers = true;
-//                serversMethods.mouseover(_this);
-//                serversMethods.mouseout(_this);
-//                serversMethods.paginatioaClick();
-//            },
-//            autoPlay:function(){
-//                if(btnServers == true){
-//                    btnServers = false;
-//                    if(inowServers == oLiServers.size()-1){
-//                        inowServers = 0;
-//                        serversPaginationA.eq(inowServers).addClass("active");
-//                        serversPaginationA.eq(inowServers).siblings().removeClass("active");
-//                        move(serversUl[0], {left : -inowServers * liWidthservers},function(){
-//                            btnServers = true;
-//                        });
-//                        btnServers = true;
-//                    }else{
-//                        inowServers++;
-//                        serversPaginationA.eq(inowServers).addClass("active");
-//                        serversPaginationA.eq(inowServers).siblings().removeClass("active");
-//                        move(serversUl[0], {left : -inowServers * liWidthservers},function(){
-//                            btnServers = true;
-//                        });
-//                    }
-//                }
-//            },
-//            paginatioaClick:function(){
-//                serversPaginationA.each(function(i){
-//                    $(this).on("click",function(){
-//                        clearInterval(timerServers);
-//                        inowServers = i;
-//                        move(serversUl[0], {left : -inowServers * liWidthservers},function(){
-//
-//                        });
-//                        $(this).addClass("active");
-//                        $(this).siblings().removeClass("active");
-//                    })
-//                });
-//            },
-//            mouseover:function(_this){
-//                _this.on("mouseover",function(){
-//                    clearInterval(timerServers);
-//                })
-//            },
-//            mouseout:function(_this){
-//                _this.on("mouseout",function(){
-//                    timerServers = setInterval(serversMethods.autoPlay,serversOpts.setsSlider);
-//                })
-//            }
-//        };
-//        serversMethods.init(serSlider)
-//    };
-//    new SerSlider($(".serversSlider"),{
-//        setsSlider:5000
-//    });
-
-
     /*服务内容切换*/
     var scl  =  $(".sever-content>li");
-    var omla = $(".order-meun li a");
+    var omla = $(".order-meun li");
     var date = new Date();
-    var str1 = '<div class="serversSlider left">'+
-                   '<div class="servers-slider">'+
-                       '<ul class="servers-ul clearfix">'+
-                           '<li>'+
-                               '<img src= "../../assets/frontend/images/serimg1.jpg" alt=""/>'+
-                           '</li>'+
-                       '</ul>'+
-                   '</div>'+
-               '</div>'+
-               '<div class="left Sdetails">'+
-                   '<p class="title">'+
-                       '<span class="large">日常居家保洁</span>'+
-                   '</p>'+
-                   '<p>全程无死角/新房开荒/家具及地板精养/电器清理</p>'+
-                   '<table class="de-table">'+
-                       '<tr>';
-              for(var i=0; i<7; i++){
-                  var pluDay = date.getDay();
-                  var week = "周" + "日一二三四五六日一二三四五六".charAt((pluDay+i));
-                  var day = (date.getMonth()+1)+"."+(date.getDate()+i) ;
-                  str1 += '<th>'+
-                              '<span class="large-week">'+week+'</span><br/>'+
-                              '<span>'+day+'</span>'+
-                          '</th>';
-              }
-              str1 += '</tr>'+
-                      '<tr>'+
-                          '<td>'+
-                              '<label>'+
-                                  '<input type="checkbox"/>'+
-                              '</label>'+
-                          '</td>'+
-                          '<td>'+
-                              '<label>'+
-                                   '<input type="checkbox"/>'+
-                              '</label>'+
-                          '</td>'+
-                          '<td>'+
-                              '<label>'+
-                                   '<input type="checkbox"/>'+
-                              '</label>'+
-                          '</td>'+
-                          '<td>'+
-                              '<label>'+
-                                  '<input type="checkbox"/>'+
-                              '</label>'+
-                          '</td>'+
-                          '<td>'+
-                              '<label>'+
-                                  '<input type="checkbox"/>'+
-                              '</label>'+
-                          '</td>'+
-                          '<td>'+
-                              '<label>'+
-                                  '<input type="checkbox"/>'+
-                              '</label>'+
-                          '</td>'+
-                          '<td>'+
-                              '<label>'+
-                                  '<input type="checkbox"/>'+
-                              '</label>'+
-                          '</td>'+
-                      '</tr>'+
-                 '</table>'+
-                  '<div class="server-address">社区服务区域 :大渡口区、九龙坡区、沙坪坝区</div>'+
-                      '<p style="text-align: center;">'+
-                          '<a href="homeServices-keeper.html" class="btn-buy">立刻订购</a>'+
-                      '</p>'+
-              '</div>';
-               scl.html(str1);
-
-
-    omla.each(function(){
-        $(this).on("click",function(ev){
-            imgs0 = $(this).find(".div-group").eq(0).attr("src");
-//            imgs1 = $(this).find("img.hide").eq(0).attr("src");
-//            imgs2 = $(this).find("img.hide").eq(1).attr("src");
-            dataTitle = $(this).find(".div-group").attr("dataTitle");
-            dataContent = $(this).find(".div-group").attr("dataContent");
-            dataCommunity = $(this).find(".div-group").attr("dataCommunity");
-            dataHerf = $(this).find(".div-group").attr("dataHerf");
-            ev.preventDefault();
-//            clearInterval(timerServers);
-
-            var str ='<div class="serversSlider left">'+
-                        '<div class="servers-slider">'+
-                            '<ul class="servers-ul clearfix">'+
-                                '<li>'+
-                                    '<img src= "'+imgs0+'" alt=""/>'+
-                                '</li>'+
-//                                '<li>'+
-//                                    '<img src= "'+imgs1+'" alt=""/>'+
-//                                '</li>'+
-//                                '<li>'+
-//                                    '<img src= "'+imgs2+'" alt=""/>'+
-//                                '</li>'+
-                            '</ul>'+
-                        '</div>'+
-//                        '<div class="servers-pagination">'+
-//                            '<a href="javascript:void(0)" class="active">'+
-//                            '</a>'+
-//                            '<a href="javascript:void(0)">'+
-//                            '</a>'+
-//                            '<a href="javascript:void(0)" class="last">'+
-//                            '</a>'+
-//                        '</div>'+
-                    '</div>'+
-                    '<div class="left Sdetails">'+
-                        '<p class="title">'+
-                            '<span class="large">'+dataTitle+'</span>'+
-                        '</p>'+
-                        '<p>'+dataContent+'</p>'+
-                        '<table class="de-table">'+
-                            '<tr>';
-                      for(var i=0; i<7; i++){
-                          var pluDay = date.getDay();
-                          var week = "周" + "日一二三四五六日一二三四五六".charAt((pluDay+i));
-                          var day = (date.getMonth()+1)+"."+(date.getDate()+i) ;
-                          str += '<th>'+
-                                     '<span class="large-week">'+week+'</span><br/>'+
-                                     '<span>'+day+'</span>'+
-                                  '</th>';
-                          }
-                     str += '</tr>'+
-                            '<tr>'+
-                                '<td>'+
-                                    '<label>'+
-                                        '<input type="checkbox"/>'+
-                                    '</label>'+
-                                '</td>'+
-                                '<td>'+
-                                    '<label>'+
-                                        '<input type="checkbox"/>'+
-                                    '</label>'+
-                                '</td>'+
-                                '<td>'+
-                                    '<label>'+
-                                        '<input type="checkbox"/>'+
-                                    '</label>'+
-                                '</td>'+
-                                '<td>'+
-                                    '<label>'+
-                                        '<input type="checkbox"/>'+
-                                    '</label>'+
-                                '</td>'+
-                                '<td>'+
-                                    '<label>'+
-                                        '<input type="checkbox"/>'+
-                                    '</label>'+
-                                '</td>'+
-                                '<td>'+
-                                    '<label>'+
-                                        '<input type="checkbox"/>'+
-                                    '</label>'+
-                                '</td>'+
-                                '<td>'+
-                                    '<label>'+
-                                        '<input type="checkbox"/>'+
-                                    '</label>'+
-                                '</td>'+
-                            '</tr>'+
-                        '</table>'+
-                        '<div class="server-address">社区服务区域 :'+dataCommunity+'</div>'+
-                        '<p style="text-align: center;">'+
-                            '<a href='+dataHerf+' class="btn-buy">立刻订购</a>'+
-                        '</p>'+
-                    '</div>';
-            scl.html(str);
-//            new SerSlider($(".serversSlider"),{
-//                setsSlider:5000
-//            })
+    omla.each(function(i){
+        var str =' ';
+        for(var a=0; a<7; a++){
+            var pluDay = date.getDay();
+            var week = "周" + "日一二三四五六日一二三四五六".charAt((pluDay+a));
+            var day = (date.getMonth()+1)+"."+(date.getDate()+a) ;
+            str += '<th>'+
+                       '<span class="large-week">'+week+'</span><br/>'+
+                       '<span>'+day+'</span>'+
+                   '</th>';
+        }
+        str += ' ';
+        scl.eq(0).find(".check-tr").html(str);
+        $(this).on("click",function(){
+            scl.eq(i).addClass("active");
+            scl.eq(i).siblings("li").removeClass("active");
+            scl.eq(i).find(".check-tr").html(str);
         })
     });
 
