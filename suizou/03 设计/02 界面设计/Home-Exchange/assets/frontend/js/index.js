@@ -6,23 +6,35 @@
     var scl  =  $(".sever-content>li");
     var omla = $(".order-meun li");
     var date = new Date();
+    var day,week,str,str1;
     omla.each(function(i){
-        var str =' ';
-        for(var a=0; a<7; a++){
+        str ='<tr>';
+        for(var a=1; a<8; a++){
             var pluDay = date.getDay();
-            var week = "周" + "日一二三四五六日一二三四五六".charAt((pluDay+a));
-            var day = (date.getMonth()+1)+"."+(date.getDate()+a) ;
+            week = "周" + "日一二三四五六日一二三四五六".charAt((pluDay+a));
+            day = (date.getMonth()+1)+"."+(date.getDate()+a) ;
             str += '<th>'+
                        '<span class="large-week">'+week+'</span><br/>'+
                        '<span>'+day+'</span>'+
                    '</th>';
         }
-        str += ' ';
-        scl.eq(0).find(".check-tr").html(str);
+        str += '</tr>';
+        str1 = '<tr>';
+        for(var b=1; b<8; b++){
+            day =date.getFullYear() +"-"+ (date.getMonth()+1)+"-"+(date.getDate()+b) ;
+            str1 +='<td>'+
+                        '<label>'+
+                            '<input type="radio" value='+day+' name="radio"/>'+
+                        '</label>'+
+                    '</td>';
+        }
+            str1 += '</tr>';
+
+        scl.eq(0).find(".de-table").html(str+str1);
         $(this).on("click",function(){
             scl.eq(i).addClass("active");
             scl.eq(i).siblings("li").removeClass("active");
-            scl.eq(i).find(".check-tr").html(str);
+            scl.eq(i).find(".de-table").html(str+str1);
         })
     });
 

@@ -2204,8 +2204,8 @@ a.btn:hover{text-decoration: none;}
 a.fbtn-return {position: relative;left: 10px;color: #fff;}
 .disaster-area{font-size: 14px;color: #999;width: 100%;background: #fff;}
 .gybz-infor{position: relative;left:15px;top: 15px;width: 40%;display: inline-block;}
-.gybz-infor>.title{font-size: 18px;font-family: "微软雅黑";color: #333;margin-bottom: 20px;}
-.gybz-infor p{line-height: 26px;}
+.gybz-infor>.title{font-size: 18px;font-family: "微软雅黑";color: #333;margin-bottom: 20px;text-indent: 0;}
+.gybz-infor p{line-height: 26px;text-indent: 28px;}
 .register-ul li:hover{cursor: pointer;}
 .person-ul .li2 p a.btn-add {padding: 3px 10px;display: inline-block;background: #fbb433;color: #fff;border-radius: 4px;}
 
