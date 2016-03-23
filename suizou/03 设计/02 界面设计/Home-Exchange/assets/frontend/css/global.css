@@ -431,6 +431,7 @@ b {line-height: 30px;font-weight: 700;}
 .scd-details{width: 290px;}
 .scd-ul li .time{width: 64px;border: 1px solid #666;color: #666;margin-right: 20px;text-align: center;padding: 12px 0;}
 .scd-ul li .title{font-size: 16px;color: #666;margin-bottom: 10px;}
+.scd-ul li .scd-details p{text-indent: 28px;}
 .scd-ul li .title a{color: #666;}
 .scd-ul li.on .title{color: #f8c15b;}
 .scd-ul li.on .time{border-color: #f8c15b;color: #f8c15b;}
@@ -445,9 +446,13 @@ b {line-height: 30px;font-weight: 700;}
 .technology-type li.active{background: #f8c15b;color: #fff;font-size: 14px;}
 .technology-type li.br0{border-right: 0;}
 .technology-content{padding: 15px;width: 994px;}
+.technology-content .tc-c{overflow-y: auto;height: 300px;overflow-x: hidden;}
+.technology-content .tc-c p{width: 96%;}
 .technology-content>img{margin-right: 15px;}
-.tcc-p{margin: 10px 0 60px;font-size: 14px;color: #666;}
+.tcc-p{margin: 0 0 30px;font-size: 14px;color: #666;}
+.tcc-p .title{font-size: 16px;color: #333;}
 .tcc-p .tc-num{display: inline-block;width: 40px;height: 40px;text-align: center;line-height: 40px;font-size: 20px;color: #333;border: 1px solid #dbdbdb;vertical-align: top;float: left;}
+.tcc-p a{width: 92%;display: inline-block;}
 .tccp-con{position: relative;left: 10px;color: #666;}
 
 
@@ -2066,7 +2071,7 @@ nowrap;text-overflow: ellipsis;width: 100%;}.sc-list1{display: none;}
 .comment .comment-content{width: 100%;padding: 20px 20px 5px 20px;}
 .comment-content textarea{width: 410px;display: inline-block;border: 1px solid #dbdbdb;padding-left: 5px;color: #666;margin-bottom: 5px;}
 .comment-content .btn-CommentSubmit{padding: 5px 20px;background: #fba85c;color: #fff;}
-.shopping_content button.bgfbb{background: #fba85c;font-size: 14px;color: #fff;border-radius: 4px;width: 80px;height: 30px;line-height: 30px;text-align: center;}
+.shopping_content button.bgfbb{background: #fba85c;font-size: 14px;color: #fff;border-radius: 4px;width: 65px;height: 30px;line-height: 30px;text-align: center;}
 .shopping_content img{vertical-align: middle;}
 .order-title{width: 705px;height: 30px;line-height: 30px;padding: 0 5px;border-bottom: 1px solid #dbdbdb;margin-bottom: 10px;}
 .input1,.input2{width: 60px;height: 24px;line-height: 24px;padding-left: 5px;border: 1px solid #dbdbdb;margin: 255px 86px;}
@@ -2101,13 +2106,8 @@ nowrap;text-overflow: ellipsis;width: 100%;}.sc-list1{display: none;}
 .address-content .address-lists .span-address{display: inline-block;width: 520px;}
 
 
-/*pay-success*/
-.paySuccess{width: 300px;height: 250px;margin: 100px auto 0 auto;}
-.paySuccess span{font-size: 15px;color: #585656;}
-.tiz_s{margin: -70px 0 0 100px;}
-.tiz_s .title{font-size: 20px;color: #f57869;position: relative;top: -5px;}
-.tiz_s a{color: #f57869;text-decoration: underline;}
-.paySuccess .countdown{color: #fd9f4d;}
+
+
 
 
 /*shiooing-address*/
