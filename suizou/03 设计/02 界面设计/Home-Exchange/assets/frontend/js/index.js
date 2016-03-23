@@ -28,7 +28,7 @@
                         '</label>'+
                     '</td>';
         }
-            str1 += '</tr>';
+        str1 += '</tr>';
 
         scl.eq(0).find(".de-table").html(str+str1);
         $(this).on("click",function(){
@@ -38,6 +38,19 @@
         })
     });
 
+
+//    $(".btn-buy").on("click",function(e){
+//        e.preventDefault();
+//        var time = $(".de-table tr input:checked").val();
+//        var url = $(this).attr("dataUrl");
+//
+//        if(time==undefined){
+//            alert("请选择服务时间");
+//        }
+//        else{
+//            window.location.href = url+"?"+time;
+//        }
+//    });
 
     /*最新小区百叶窗效果*/
     var Baye = function(baye,options){
