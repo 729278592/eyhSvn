@@ -2060,7 +2060,7 @@ nowrap;text-overflow: ellipsis;width: 100%;}.sc-list1{display: none;}
 .shopping_content tr td{padding: 10px 0;text-align: center;border: 1px solid #c9e3ee;border-left: none;width:20%;}
 .shopping_content tr td.first{width: 30%;}
 .shopping_content .last{border-right: none;position: relative;}
-.comment{width: 460px;position: absolute;left: 50%;background: #fff;text-align: left;z-index: 10;border: 1px solid #dbdbdb;top: 50%;margin-left: -230px;margin-top: -80px;}
+.comment{width: 460px;position: absolute;left: 50%;background: #fff;text-align: left;z-index: 10;border: 1px solid #dbdbdb;top: 50%;margin-left: -230px;margin-top: -92px;}
 .comment .comment-head{width: 445px;height: 30px;line-height: 30px;padding-left: 15px;background: #fba85c;color: #fff;font-size: 14px;}
 .comment .comment-head .fa{position: relative;right: 10px;top: 7px;color: #fff;}
 .comment .comment-content{width: 100%;padding: 20px 20px 5px 20px;}
