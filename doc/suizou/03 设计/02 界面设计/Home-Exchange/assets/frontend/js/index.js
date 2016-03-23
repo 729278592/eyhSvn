@@ -44,11 +44,12 @@
 //        var time = $(".de-table tr input:checked").val();
 //        var url = $(this).attr("dataUrl");
 //
-//        if(time==undefined){
-//            alert("请选择服务时间");
+//
+//        if(time){
+//            window.location.href = url+"?"+time;
 //        }
 //        else{
-//            window.location.href = url+"?"+time;
+//            alert("请选择服务时间");
 //        }
 //    });
 
