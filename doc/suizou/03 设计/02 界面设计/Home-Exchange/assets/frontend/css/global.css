@@ -7,7 +7,7 @@ a{color:#000;text-decoration:none;}
 .cc-ul li,.dc-head li,a,button,#left_but,#right_but,.rental_mode,label,.btn-screen,.btn-clear,.btn-order,.level li,.train-menu li,.tt-ul li,.technology-type li,.ac-mune li,.fa-remove,.js-active li .fa{cursor: pointer;}
 a::selection,button::selection,.sc-menu li::selection{background:transparent;}
 .clearfix:after {content: ".";display: block;clear: both;visibility: hidden;line-height: 0;height: 0;}
-.clearfix{display: inline-block;}
+.clearfix{display: inline-block;*display: inline;*zoom: 1;}
 textarea,select,input,button{outline: none;border: none;font-family: "微软雅黑";}
 .hide{display: none;}
 .right{float: right;}
@@ -78,7 +78,7 @@ a:link{text-decoration: none;}
 .chioce-style:hover .chioce-menu{display: inline-block;}
 .chioce-style .chioce-menu li{width: 100%;height: 36px;line-height: 36px;background: #fbb433;border-top: 1px solid #dbdbdb;}
 .chioce-style .chioce-menu li:hover{cursor: pointer;color: #fff;background: #fac433;}
-.chioce-style.absolute{position: absolute;top: 11px;left: 230px;}
+.chioce-style.absolute{position: absolute;top: 11px;left: 240px;}
 
 
 .ch-mask-main .btn-search{width: 13%;background: #63c48e;color: #fff;height: 36px;line-height: 36px;text-align: center;font-size: 14px;border-radius: 4px;}
@@ -104,7 +104,7 @@ a:link{text-decoration: none;}
 .serversSlider .input-search .text{border: 1px solid #dbdbdb;width: 85%;font-size: 14px;}
 .serversSlider .input-search a{height: 38px;width: 8.6%;display: inline-block;text-align: center;}
 .servers-slider{width: 235px;height: 300px;overflow: hidden;position: relative;}
-.servers-ul{position: absolute;left: 0;}
+.servers-ul{position: absolute;left: 0;top: 0;}
 .servers-ul li{width: 235px;height: 300px;float: left;border-radius: 8px;}
 .servers-ul li img{width: 100%;height: 100%;}
 .servers-pagination{position: absolute;bottom: 10px;left: 50%;margin-left: -19px;}
@@ -1073,7 +1073,7 @@ p>label>input{position: relative;top: 2px;}
 .num-input input{width: 83%;height: 40px;line-height: 40px;padding-left: 2%;}
 .num-input input.w100{width: 303px;}
 .keeper-stype{width: 100%;margin-top: 10px;}
-.keeper-stype li{width: 45%;margin-right: 10%;float: left;height: 34px;line-height: 34px;}
+.keeper-stype li{width: 45%;margin-right: 10%;*margin-right:9%;float: left;height: 34px;line-height: 34px;}
 .keeper-stype li.mr{margin-right: 0;}
 .keeper-stype li button{width: 100%;height: 100%;color: #666;background: #d6d6d6;font-family: "微软雅黑";}
 .keeper-stype li button:hover{cursor: pointer;}
@@ -1098,7 +1098,7 @@ p>label>input{position: relative;top: 2px;}
 .nus-list li.mr0{margin-right: 0;}
 .reserve-date{width: 100%;}
 .chioce-time .time-menus li .title.pb10{padding-bottom: 10px;color: #666;}
-.reserve-date .select-time{padding: 10.5px 0;}
+.reserve-date .select-time{padding: 10.5px 0;*height: 40px;}
 .div-wdate{width: 198px;height: 40px;background: #fff;position: relative;}
 .div-wdate .Wdate{border: none;background: transparent;width: 188px;height: 36px;line-height: 36px;position: relative;z-index: 5;padding-left: 10px;}
 .div-wdate.w100{width: 310px;}
@@ -1172,7 +1172,9 @@ p>label>input{position: relative;top: 2px;}
 .topFrame {border: none;min-width: 1200px;width: 100%;height: 60px;overflow:hidden;}
 .select-time{padding:9.5px 0;line-height: 40px;background: #fff;border: none;width: 105px;padding-left: 5px;color: #999;}
 .services-type{width: 100%;color: #666;font-size: 14px;line-height: 40px;}
-.services-type .company{display: inline-block;width: 49px;width:48px\0;height: 42px;text-align: center;line-height: 42px;background: #fff;border-left: 1px solid #dbdbdb;}
+.services-type .company{float: left;width: 49px;width:48px\0;height: 42px;text-align: center;line-height: 42px;background: #fff;border-left: 1px solid #dbdbdb;*zoom:1;*display:inline;}
+.services-type .spinner{float: left;}
+
 .s-spinner{width: 310px;height: 40px;position: relative;display: inline-block;right: 1px;}
 .s-spinner .hours{width: 65px;height: 42px;line-height: 42px;text-align: center;background: #fff;color: #666;display: inline-block;}
 .s-spinner .spinner{width: 238px;height: 40px;line-height: 40px;color: #666;text-align: center;font-size: 14px;}
@@ -1711,14 +1713,14 @@ tr th,tr td{ text-align:center;font-size: 14px;border:1px solid #fbb432;color: #
 .hss-ul li a{color: #fff;font-size: 14px;border-right: 1px solid #dbdbdb;display: inline-block;width: 100%;height: 40px;text-align: center;padding: 17px 0;}
 .hss-ul li a.last{border-right: none;}
 .hss-ul li a .fa{font-size: 26px;}
-.input-search.absolute{position: absolute;top: 10px;z-index: 999;width: 680px;left: 332px;}
+.input-search.absolute{position: absolute;top: 10px;z-index: 999;width: 680px;left: 340px;}
 .input-search.absolute .text{background: rgba(255,255,255,0.5);width: 88%;border-radius: 0;}
 .input-search.absolute .text:focus{background: rgba(255,255,255,1)}
 .input-search.absolute .button{width: 8%;}
 .hsSlider{width: 804px;height: 500px;margin-right: 0;margin-top: -75px;background: #fff;}
-.hs-slider{width: 804px;height: 336px;margin-top: 75px;}
-.hs-ul li{width: 804px;height: 336px;}
-.hs-ul li>img{width: 804px;height: 336px;}
+.hs-slider{width: 804px;height: 500px;margin-top: 75px;}
+.hs-ul li{width: 804px;height: 500px;}
+.hs-ul li>img{width: 804px;height: 500px;}
 .hs-pagination{height: 150px;padding: 5px 0 0 0;background: #fff;    position: absolute;bottom: 10px;left: 0;width: 805px;}
 .hs-pagination>a{width: 259px;height: 150px;border: none;margin-left: 7px;position: relative;display: inline-block;border-radius: 8px;float: left;background: #fff;}
 .hs-pagination>a img{width: 260px;height: 150px;}
