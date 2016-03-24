@@ -17,7 +17,9 @@
             cm.css({"height":"auto"});
         }
     }
-    heightAuto();
-    $(window).on("resize",function(){
+    $(function(){
         heightAuto();
+        $(window).on("resize",function(){
+            heightAuto();
+        })
     });
