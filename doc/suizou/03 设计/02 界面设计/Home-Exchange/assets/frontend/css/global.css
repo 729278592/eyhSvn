@@ -1245,8 +1245,8 @@ p>label>input{position: relative;top: 2px;}
 .com-content a{display: inline-block;width: 66px;height: 67px;margin-right: 10px;}
 .com-content a img{width: 66px;height: 67px;}
 .com-content p.name{font-size: 14px;}
-.com-details{width: 175px;}
-.com-details p{height: 40px;line-height: 20px;font-size: 14px;width: 175px;overflow: hidden;white-space: pre-line;text-overflow: ellipsis;}
+.com-details{width: 170px;}
+.com-details p{height: 40px;line-height: 20px;font-size: 14px;width: 170px;overflow: hidden;white-space: pre-line;text-overflow: ellipsis;}
 .com-details p.name{height: 20px;}
 .com-div .time{position: relative;top: 40px;}
 .communityHotInfor{width: 460px;margin: 10px 10px 0 10px;clear: both;}
