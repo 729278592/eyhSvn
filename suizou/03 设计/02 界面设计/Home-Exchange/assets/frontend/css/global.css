@@ -1085,7 +1085,7 @@ p>label>input{position: relative;top: 2px;}
 .picture-infor>div p{color: #fff;font-size: 14px;line-height: 30px;}
 .picture-infor>div img{margin-top: 15px;}
 .picture-infor>div p.title{font-size: 18px;margin-top: 80px;}
-.hz-infor{float: left;width: 325px;padding: 20px 0 0 15px;}
+.hz-infor{float: left;width: 325px;padding: 20px 0 0 15px;height: 370px;overflow-y: auto;overflow-x: hidden;}
 .hz-infor p{font-size: 14px;color: #666;line-height: 22px;}
 .hz-infor p.title{padding: 5px 0;width:100%;font-size: 16px;color: #67ccff;border: 1px solid #dbdbdb;display: inline-block;margin-bottom: 5px;text-align: center;font-weight: bold;font-family: "微软雅黑";}
 .hz-infor p .title-small{color: #67ccff;}
