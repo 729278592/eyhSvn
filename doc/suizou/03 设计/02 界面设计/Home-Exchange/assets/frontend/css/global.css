@@ -1722,10 +1722,10 @@ tr th,tr td{ text-align:center;font-size: 14px;border:1px solid #fbb432;color: #
 .hs-slider{width: 804px;height: 500px;margin-top: 75px;}
 .hs-ul li{width: 804px;height: 500px;}
 .hs-ul li>img{width: 804px;height: 500px;}
-.hs-pagination{height: 150px;padding: 5px 0 0 0;background: #fff;    position: absolute;bottom: 10px;left: 0;width: 805px;}
-.hs-pagination>a{width: 259px;height: 150px;border: none;margin-left: 7px;position: relative;display: inline-block;border-radius: 8px;float: left;background: #fff;}
+.hs-pagination{height: 20px;padding: 5px 0 0 0;position: absolute;bottom: 0px;width: 60px;left: 50%;margin-left: -30px;}
+.hs-pagination>a{width: 10px;height: 10px;border-radius:10px;border: none;margin-left: 7px;position: relative;display: inline-block;float: left;background: #fff;}
 .hs-pagination>a img{width: 260px;height: 150px;}
-
+.hs-pagination>a.active{background: #fbb434;}
 .hs-pagination>a.active .hs-mask-bg,.hs-pagination>a.active .hs-mask{display: inline-block;}
 .hs-mask-bg,.hs-mask{position: absolute;left: 0;right: 0;top: 0;bottom: 0;display: none;}
 .hs-mask-bg{opacity: 0.4;filter:alpha(opacity=40);background: #000;}
