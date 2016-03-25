@@ -936,6 +936,7 @@ label.error {color: #EA5200;margin-bottom: 0;}
 .m-list li .name{width: 80px;height: 26px;text-align: center;line-height: 26px;background: #babcba;position: relative;top: -145px;left: 213px;color: #fff;}
 .m-list li .information{border-right: 1px solid #dbdbdb;color: #666;margin: -135px 0 0 212px;}
 .m-list li .information p{line-height: 30px;margin-right: 80px;font-size: 14px;}
+.m-list li .information p span.num{display: inline-block;max-width: 150px;}
 .m-list li .information p .fa{color: #333;display: inline-block;width: 20px;}
 .m-list li .information.last{border-right: none;margin: -135px 0 0 602px;}
 .ourgood{width: 904px;background: #fff;padding: 15px 60px;margin-top: 15px;}
