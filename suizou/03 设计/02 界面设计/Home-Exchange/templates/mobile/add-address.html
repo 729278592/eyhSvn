@@ -71,8 +71,8 @@
             </div>
         </div>
         <ul class="btn-menu clearfix">
-            <li><button class="btn-remove">删除</button></li>
-            <li><button class="btn-save">保存</button></li>
+            <li><button class="btn-remove" type="button">删除</button></li>
+            <li><button class="btn-save" type="button">保存</button></li>
         </ul>
     </div>
 
@@ -122,30 +122,6 @@
 </div>
 <script src="../../assets/global/plugins/jquery/jquery-1.11.3.min.js"></script>
 <script src="../../assets/mobile/js/global.js"></script>
-<script>
-    /*底部处理*/
-    var windoeHeight = $(window).outerHeight(true);
-    var headHeight = $(".head").outerHeight(true);
-    var footHeight = $(".foot").outerHeight(true);
-    var bm = $(".btn-menu").outerHeight(true);
-    var cm = $(".height-con");
-    var pb = cm[0].style.paddingBottom;
-    var contentHeight = cm.outerHeight(true);
-    function heightAuto(){
-        if((contentHeight+footHeight)<windoeHeight){
-            cm.css({height:windoeHeight-footHeight-bm+"px"});
-            $("html").css({"overflow-y":"hidden"});
-        }else{
-            $("html").css({"overflow-y":"auto"});
-            cm.css({"height":"auto"});
-        }
-    }
-    if(cm){
-        heightAuto();
-        $(window).on("resize",function(){
-            heightAuto();
-        });
-    }
-</script>
+<script src="../../assets/mobile/js/btnHandle.js"></script>
 </body>
 </html>
