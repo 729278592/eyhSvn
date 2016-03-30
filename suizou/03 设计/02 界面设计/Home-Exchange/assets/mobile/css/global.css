@@ -83,7 +83,7 @@ a:hover{text-decoration: none;}
 .service-head img{position: relative;top: -8px;width: 5%;}
 .service-head .dot{display: inline-block;width: 2px;height: 30px;background: #fca511;position: relative;top: 4px;}
 .service-head .title{font-size: 20px;position: relative;top: -4px;color: #666;}
-.service-head a{color: #666;position: relative;top: 12px;}
+.service-head a{color: #666;position: relative;top: 9px;}
 .service-head a.top0{top: 0;display: inline-block;width: 100%;height: 100%;}
 .mobile-phone{width: 100%;padding: 0 4%;background: #1cbc9d;}
 .mobile-phone li{border-bottom: 1px dashed #fff;height: 40px;line-height: 40px;width: 100%;}
@@ -115,7 +115,7 @@ a:hover{text-decoration: none;}
 .train-menu li img{width: 40%;margin-right: 10px;}
 .train-menu li .train-infor{width: 55%;color: #666;font-size: 14px;}
 .train-menu li .train-infor .title{font-size: 16px;color: #333;margin-bottom: 4px;}
-.train-menu li .train-infor p .num{color: #ff580b;}
+.train-menu li .train-infor p .num{color: #ff580b;display: inline-block;overflow: hidden;white-space: nowrap;text-overflow: ellipsis;max-width: 42px;position: relative;top: 6px;}
 .train-menu li .train-infor .fa{}
 .train-menu li .train-infor .p-ti,.order-menu li .order-infor .p-ti{width: 100%;height: 44px;}
 .train-menu li .train-infor .p-ti span{width: 95%;display: inline-block;line-height: 17px;}
@@ -181,7 +181,7 @@ a:hover{text-decoration: none;}
 .order-menu li .title{font-size: 20px;color: #ad9072;}
 .order-menu li .title.color5{color: #53ba93;}
 .order-menu li .title.color2{color: #fbb432;}
-.order-menu li .title.color2{color: #d6c1a9;}
+
 .order-menu li .btn-comment{padding: 5px 0;border-radius: 4px;background: #fbb432;color: #fff;position: absolute;bottom: 8%;right: 2%;display: inline-block;width: 60px;text-align: center;}
 .order-menu li .btn-comment.bg-ccc{background: #b2b1b0;font-size: 12px;}
 .order-menu li .btn-comment.left{left: 52%;}
@@ -194,7 +194,7 @@ a:hover{text-decoration: none;}
 .order-menu li p.clearfix{margin: 5px 0;}
 
 .swiper-wrapper .swiper-slide{position: relative;}
-.clean-mask{position: absolute;padding: 15px;background: rgba(30, 188, 158, 0.60);color: #fff;font-size: 14px;z-index: 100;top: 5%;left: 2%;width: 26%;max-height: 120px;}
+.clean-mask{position: absolute;padding: 5px;background: rgba(30, 188, 158, 0.60);color: #fff;font-size: 14px;z-index: 100;top: 10%;left: 2%;width: 26%;max-height: 120px;}
 
 .img-responsive{width: 100%;}
 .mask{position: fixed;top: 0;bottom: 0;left: 0;right: 0;background: rgba(0,0,0,.5);max-width: 640px;margin: 0 auto;}
@@ -602,6 +602,7 @@ body{    line-height: 1.6;}
     .add-span{top: 30%;}
     .address-img{width: 16%;}
     .address-group .address{margin: 8px 0;}
+    .seavice-infor .title{font-size: 16px;}
 }
 
 
@@ -614,6 +615,7 @@ body{    line-height: 1.6;}
     .address-group .address{width: 87%;left: 12%;}
     .address-group .people{position: absolute;top: 13px;left: 15%;}
     .form-group .code{text-indent: -3px;}
+    .service-head .title.fs12{font-size: 12px;}
 }
 
 @media screen and (max-width: 360px) {
