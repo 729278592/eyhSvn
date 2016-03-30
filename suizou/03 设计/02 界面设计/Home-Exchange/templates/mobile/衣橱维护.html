@@ -1,0 +1,196 @@
+<!DOCTYPE html>
+<html>
+<head lang="en">
+    <meta charset="UTF-8">
+    <title>衣橱维护</title>
+    <meta name="viewport" content="width=device-width; initial-scale=1.0; user-scalable=no;">
+    <link rel="stylesheet" href="../../assets/global/plugins/font/css/font-awesome.min.css"/>
+    <link rel="stylesheet" href="../../assets/global/plugins/bootstrap-3.3.5/css/bootstrap.min.css"/>
+    <link rel="stylesheet" href="../../assets/mobile/css/global.css"/>
+</head>
+<body>
+<div class="wrapper">
+    <div class="content bg-fff">
+        <img src="../../assets/mobile/images/wardrobe-img2.jpg" class="img-responsive"/>
+        <div class="reserve">
+            <p class="title bgfff">衣橱维护</p>
+            <p class="title bg2">在线预订</p>
+            <div class="reserve-indormation">
+                <p class="title">请选择服务时间</p>
+                <div class="reserve-date clearfix">
+                    <div class="div-wdate left">
+                        <input name="serviceDate" class="Wdate inputDisable" type="text" value="2016-03-29" onFocus="WdatePicker({minDate:'%y-%M-{%d+1}'})"/>
+                        <i class="fa fa-calendar"></i>
+                    </div>
+                    <select name="serviceTime" id="serviceTime2" class="select-time right inputDisable">
+                        <option value="">时间</option>
+                        <option value="8:00">8:00</option>
+                        <option value="10:00">10:00</option>
+                        <option value="13:00">13:00</option>
+                        <option value="16:00">16:00</option>
+                    </select>
+                </div>
+
+                <p class="title">请输入鞋柜长度</p>
+                <div class="clearfix services-type">
+                    <input type="text" class="spinnerExample"/>
+                    <span class="right company">小时</span>
+                </div>
+                <p class="title pt0">最小预订：<span class="num">2小时</span></p>
+                <p class="title pt0">单价：<span class="num">20元</span></p>
+
+
+                <p class="title pt0">更多需求</p>
+                <textarea style="resize: none" name=""  cols="50" rows="3" class="textarea"   placeholder="您可以在这里备注需求"></textarea>
+                <p class="title total-title pt0">￥ : <span class="num total">0</span></p>
+                <p class="title pt0">
+                    <label>
+                        <input type="checkbox"/> 我已经阅读并同意
+                    </label>
+                    <a href="#">《家服汇用户使用协议》</a>
+                </p>
+                <div class="div-order">
+                    <a href="#" class="btn-order">下单</a>
+                    <!--<input type="submit" value="下单" class="btn-order"/>-->
+                </div>
+            </div>
+        </div>
+        <div class="h10 bgfff"></div>
+        <div class="service-head">
+            <span class="dot"></span>
+            <img src="../../assets/mobile/images/order.png" />
+            <span class="title">服务介绍</span>
+        </div>
+        <div class="pd2">
+            <ul class="area-menu bg2 clearfix">
+                <li>
+                    <div class="area-num">
+                        <img src="../../assets/mobile/images/wa-img1.png" class="img-responsive"/>
+                    </div>
+                    <p>测量衣柜</p>
+                </li>
+                <li>
+                    <div class="area-num">
+                        <img src="../../assets/mobile/images/wa-img2.png" class="img-responsive"/>
+                    </div>
+                    <p>统计衣服</p>
+                </li>
+                <li>
+                    <div class="area-num">
+                        <img src="../../assets/mobile/images/wa-img3.png" class="img-responsive"/>
+                    </div>
+                    <p>衣服陈列</p>
+                </li>
+                <li class="mr0">
+                    <div class="area-num">
+                        <img src="../../assets/mobile/images/wa-img4.png" class="img-responsive"/>
+                    </div>
+                    <p>管理培训</p>
+                </li>
+            </ul>
+            <p class="title-infor">
+                家服汇重新定义衣物收纳的慨念，为用户建立正确的收纳理念，做好衣物的具体分类，使用适当的收纳工具进行合理的空间分区；同时还可根据用户的实际生活情况设计服饰搭配。不仅帮助用户最大化的利用自己的衣橱空间,还为用户的时尚搭配提出合理化建议。
+            </p>
+        </div>
+        <div class="service-head">
+            <span class="dot"></span>
+            <img src="../../assets/mobile/images/home.png" />
+            <span class="title">服务标准</span>
+        </div>
+        <div class="pd2">
+            <p>
+                家服汇高端私人形象设计师上门服务。其提出的服饰搭配意见和建议均是根据其多年的造型设计经验和根据用户实际情况为基础设计。
+            </p>
+        </div>
+        <div class="service-head">
+            <span class="dot"></span>
+            <img src="../../assets/mobile/images/hand.png" />
+            <span class="title">服务说明</span>
+        </div>
+        <div class="pd2">
+            <p>
+                在换季之时，购买过衣橱整理服务的用户可购买衣橱整理维护服务，我们的专业造型师将为您的衣橱重新做一次精细化的整理维护。
+            </p>
+        </div>
+        <div class="service-head">
+            <span class="dot"></span>
+            <img src="../../assets/mobile/images/star.png" />
+            <span class="title">星际标准</span>
+        </div>
+        <div class="pd2">
+            <p class="p-list">
+                <span><img src="../../assets/frontend/images/wa-caret.png">　预约时间，造型师现场测量衣柜</span>
+            </p>
+            <p class="p-list">
+                <span><img src="../../assets/frontend/images/wa-caret.png">　统计衣服数据</span>
+            </p>
+            <p class="p-list">
+                <span><img src="../../assets/frontend/images/wa-caret.png">　<span>造型师上门统计衣服数据</span></span>
+            </p>
+            <p class="p-list">
+                <span><img src="../../assets/frontend/images/wa-caret.png">　根据季节划分衣物</span>
+            </p>
+            <p class="p-list">
+                <span><img src="../../assets/frontend/images/wa-caret.png">　根据用户个人形象、气质、个性、喜好色调等进行服饰搭配设计</span>
+            </p>
+            <p class="p-list">
+                <span><img src="../../assets/frontend/images/wa-caret.png">　搭配好服装后拍照制作电子画册方便用户随时查看搭配方式</span>
+            </p>
+            <p class="p-list">
+                <span><img src="../../assets/frontend/images/wa-caret.png">　造型师根据对用户形象设计，提出日常穿着及衣服购买的建议</span>
+            </p>
+        </div>
+    <div class="foot">
+        <ul class="f-menu clearfix">
+            <li>
+                <a href="首页.html">
+                    <div class="bt"></div>
+                            <span>
+                                <i class="fa fa-home"></i>
+                            </span><br/>
+                    <span>首页</span>
+                    <div class="br"></div>
+                </a>
+            </li>
+            <li class="active">
+                <a href="品牌服务.html">
+                    <div class="bt"></div>
+                                <span>
+                                    <i class="fa fa-bars"></i>
+                                </span><br/>
+                    <span>品牌服务</span>
+                    <div class="br"></div>
+                </a>
+            </li>
+            <li>
+                <a href="我的社区.html">
+                    <div class="bt"></div>
+                                <span>
+                                    <i class="fa fa-th-large"></i>
+                                </span><br/>
+                    <span>我的社区</span>
+                    <div class="br"></div>
+                </a>
+            </li>
+            <li>
+                <a href="个人中心.html">
+                    <div class="bt"></div>
+                                <span>
+                                    <i class="fa fa-user"></i>
+                                </span><br/>
+                    <span>个人中心</span>
+                </a>
+            </li>
+        </ul>
+    </div>
+</div>
+</div>
+</body>
+<script src="../../assets/global/plugins/jquery/jquery-1.11.3.min.js"></script>
+<script src="../../assets/mobile/js/global.js"></script>
+<script src="../../assets/global/plugins/jquery-spinner/js/jquery.spinner.js"></script>
+<script src="../../assets/global/plugins/My97DatePicker/WdatePicker.js"></script>
+<script type="text/javascript">
+    $('.spinnerExample').spinner({});
+</script>
+</html>
