@@ -45,7 +45,7 @@ a:hover{text-decoration: none;}
 
 .head-input{width: 100%;padding: 8px 0;position: relative;background: #fcc35b;}
 .head-input .fa{font-size: 20px;color: #333;position: absolute;left: 6%;top: 15px;}
-.head-input .search-input{width: 70%;height: 35px;background: #fff9ef;margin: 0 0 0 4%;padding-left: 8%;font-family: "微软雅黑";font-size: 16px;float: left;}
+.head-input .search-input{width: 70%;height: 35px;background: #fff9ef;margin: 0 0 0 4%;padding-left: 8%;font-family: "微软雅黑";font-size: 14px;float: left;}
 .head-input .btn-search{height: 35px;width: 20%;background: #fc883d;color: #fff;font-family: "微软雅黑";float: left;position: relative;left: 5px;}
 .wrapper .swiper-container{margin: 0;margin-top: -2px;}
 .swiper-pagination-bullet-active{background: #ff580b;}
@@ -424,7 +424,7 @@ text-align: center;line-height: 30px;background: #f9a003;}
 .form-group .select-address{border: 1px solid #dbdbdb;width: 32.1%;padding-left: 1%;font-size: 14px;height: 30px;color: #666;}
 .form-group .textarea{border: 1px solid #dbdbdb;width: 100%;}
 .form-group .input{border: 1px solid #dbdbdb;width: 100%;height: 30px;line-height: 30px;padding-left: 2%;}
-.form-group .input.bg{border: none;background: #fab432;color: #fff;font-size: 16px;height: 40px;line-height: 40px;}
+.form-group .input.bg{border: none;background: #fab432;color: #fff;font-size: 16px;height: 50px;line-height: 50px;}
 .form-group .input.w60{width: 68%;}
 .form-group .labelW40{width: 30%;display: inline-block;color: #666;}
 .form-group.mb0{margin-bottom: 0;}
@@ -545,7 +545,7 @@ body{    line-height: 1.6;}
 .form-group.w100{width: 100%;}
 .form-group.w100 .forgetPassword{position: relative;left: 15px;color: #fff;}
 .form-group.w100 .checkboxs.pl15{color: #fff;position: relative;left: 15px;}
-.form-group.w100 .checkboxs input{position: relative;top: 2px;}
+.form-group.w100 .checkboxs input{;}
 .form-group .code{background: #4489dc;color: #fff;font-size: 12px;}
 .form-group .code:hover{opacity: 0.9;filter:alpha(opacity=90);}
 .btn-register{background: #fab432;color: #fff;}
@@ -589,7 +589,7 @@ body{    line-height: 1.6;}
     .service-head .title{font-size: 16px;}
     .service-head img{top: -7px;}
     .searvice-infor .title{font-size: 16px;}
-    .searvice-infor p>span{font-size: 1px;}
+    .searvice-infor p>span{font-size: 12px;}
     .service-menu li .title{font-size: 14px;}
     .person-infor p{font-size: 14px;line-height: 20px;}
     .order-menu li .title{font-size: 16px;}
