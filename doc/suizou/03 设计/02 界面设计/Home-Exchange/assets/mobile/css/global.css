@@ -180,6 +180,8 @@ a:hover{text-decoration: none;}
 .order-menu li .clean{width: 50%;}
 .order-menu li .title{font-size: 20px;color: #ad9072;}
 .order-menu li .title.color5{color: #53ba93;}
+.order-menu li .title.color2{color: #fbb432;}
+.order-menu li .title.color2{color: #d6c1a9;}
 .order-menu li .btn-comment{padding: 5px 0;border-radius: 4px;background: #fbb432;color: #fff;position: absolute;bottom: 8%;right: 2%;display: inline-block;width: 60px;text-align: center;}
 .order-menu li .btn-comment.bg-ccc{background: #b2b1b0;font-size: 12px;}
 .order-menu li .btn-comment.left{left: 52%;}
@@ -246,6 +248,7 @@ a:hover{text-decoration: none;}
 .reserve>.title.bgfff{background: #fff;color: #821d2f;font-size: 16px;}
 .reserve>.title.color{color: #61bd8a;}
 .reserve>.title.color2{color: #fca613;}
+.reserve>.title.color3{color: #d6c1a9;}
 .reserve>.title.bg{background: #28b1de;}
 .reserve>.title.bg1{background: #821d2f;}
 .reserve>.title.bg2{background: #d6c1a8;}
