@@ -17,9 +17,9 @@
             }
             if(sd){
                 cm.css({height:windoeHeight-footHeight-sd+"px"});
-                if(cm.outerHeight(true)<362){
-                    cm.css({height:windoeHeight-footHeight+"px"});
-                }
+//                if(cm.outerHeight(true)<362){
+//                    cm.css({height:windoeHeight-footHeight+"px"});
+//                }
             }
         }else{
             $("html").css({"overflow-y":"auto"});

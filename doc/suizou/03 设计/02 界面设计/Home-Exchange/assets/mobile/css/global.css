@@ -399,7 +399,7 @@ text-align: center;line-height: 30px;background: #f9a003;}
 
 .address-group{padding: 2% 3.2%;background: #fff;margin: 10px 0;position: relative;font-size: 14px;color: #666;}
 .address-group .phone{position: absolute;right: 6%;top: 15px;}
-.address-group .fa{position: absolute;right: 2%;top: 30%;font-size: 30px;color: #666;}
+.address-group .fa{position: absolute;right: 4%;top: 36%;font-size: 30px;color: #666;}
 .address-group .people{position: absolute;top: 13px;}
 .address-group .address{;position:relative;bottom: 0;width: 88%;display: inline-block;left: 9%;padding: 0;}
 .address-group .default{color: #ff0404;font-size: 14px;position: absolute;top: 55%;left: 3.5%;}
@@ -439,13 +439,11 @@ text-align: center;line-height: 30px;background: #f9a003;}
 .infor-list li span{display: inline-block;width: 100%;}
 .infor-list li .btn-modiflyAddress{position: absolute;right: 4%;bottom: 4%;padding: 5px 10px;background: #fba85c;color: #fff;border-radius: 4px;font-size: 12px;}
 .booking-form .form-group.mb0{margin-bottom: 0;}
-
 .order-list{width: 100%;}
 .order-list li{width: 100%;padding: 2%;display: table;}
-
-.order-list li .div-img{width: 30%;}
+.order-list li .div-img{}
 .order-list li .order-img{width: 100%;}
-.order-list li .orderList-infor{font-size: 14px;color: #666;width: 68%;}
+.order-list li .orderList-infor{font-size: 14px;color: #666;width: 68%;padding-left: 2%;}
 .order-list li .orderList-infor p{line-height: 18px;}
 .order-list li a,.order-list li .orderList-infor{display: table-cell;vertical-align: middle;}
 
@@ -612,8 +610,8 @@ body{    line-height: 1.6;}
 
 @media screen and (max-width: 375px) {
     .person-infor{margin-top: 4%;}
-    .address-group .address{width: 87%;left: 12%;}
-    .address-group .people{position: absolute;top: 13px;left: 15%;}
+    .address-group .address{width: 87%;left: 2%;}
+    .address-group .people{position: absolute;top: 13px;left: 5%;}
     .form-group .code{text-indent: -3px;}
     .service-head .title.fs12{font-size: 12px;}
 }
