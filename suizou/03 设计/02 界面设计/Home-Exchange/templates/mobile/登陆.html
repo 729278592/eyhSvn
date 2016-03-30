@@ -20,9 +20,9 @@
         <div class="form-group clearfix">
             <div class="col-sm-12 col-xs-12 col-md-12">
                 <div class="input-group">
-                                <span class="input-group-addon">
-                                    <i class="fa fa-phone"></i>
-                                </span>
+                    <span class="input-group-addon">
+                        <i class="fa fa-phone"></i>
+                    </span>
                     <input type="text" class="form-control" placeholder="请输入您的昵称">
                 </div>
             </div>
@@ -30,22 +30,14 @@
         <div class="form-group clearfix">
             <div class="col-sm-12 col-xs-12 col-md-12">
                 <div class="input-group">
-                                <span class="input-group-addon">
-                                    <i class="fa fa-lock"></i>
-                                </span>
+                    <span class="input-group-addon">
+                        <i class="fa fa-lock"></i>
+                    </span>
                     <input type="password" class="form-control" placeholder="请输密码">
                 </div>
             </div>
         </div>
 
-        <div class="form-group w100 clearfix">
-            <div class="col-sm-6 col-xs-6 col-md-6">
-                <input type="text" class="form-control" placeholder="请输入验证码">
-            </div>
-            <div class="col-sm-6 col-xs-6 col-md-6">
-                <input type="button" id="getting" class="code form-control" value="获取验证码">
-            </div>
-        </div>
 
         <div class="form-group w100 clearfix">
             <div class="col-sm-12 col-xs-12 col-md-12">
@@ -117,14 +109,14 @@
 <script src="../../assets/mobile/js/global.js"></script>
 <script>
     $(function(){
-//            function heightAuto(){
-//                var d = $(".login-form");
-//                d.each(function(){
-//                    var ht = -$(this).get(0).offsetHeight/2+"px";
-//                    $(this).get(0).style.marginTop = ht;
-//                });
-//            }
-//            heightAuto();
+            function heightAuto(){
+                var d = $(".login-form");
+                d.each(function(){
+                    var ht = -$(this).get(0).offsetHeight/2+"px";
+                    $(this).get(0).style.marginTop = ht;
+                });
+            }
+            heightAuto();
 
 
         $('#getting').click(function(){
