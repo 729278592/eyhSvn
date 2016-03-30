@@ -538,7 +538,7 @@ body{    line-height: 1.6;}
 
 
 /*registr*/
-.login-form{width: 100%;background: rgba(2,2,3,0.5);padding: 20px 0 0 0;position: relative;z-index: 10;margin-top: 15%;}
+.login-form{width: 100%;background: rgba(2,2,3,0.5);padding: 20px 0 0 0;position: absolute;z-index: 10;top: 43.5%;overflow-y:auto;max-height: 400px;}
 .form-group.w100{width: 100%;}
 .form-group.w100 .forgetPassword{position: relative;left: 15px;color: #fff;}
 .form-group.w100 .checkboxs.pl15{color: #fff;position: relative;left: 15px;}
@@ -546,7 +546,7 @@ body{    line-height: 1.6;}
 .form-group .code{background: #4489dc;color: #fff;font-size: 12px;}
 .form-group .code:hover{opacity: 0.9;filter:alpha(opacity=90);}
 .btn-register{background: #fab432;color: #fff;}
-.content.bg{background: #fff;position: relative;}
+.content.bg{background: #fff;position: fixed;top: 0;right: 0;left: 0;bottom: 0;}
 
 .logBodyBg{width: 100%;height: 100%;position: fixed;z-index: 1;left: 0;top: 0;overflow: hidden;}
 .logBodyBg img{width: 100%;height: 100%;}
