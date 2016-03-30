@@ -540,6 +540,7 @@ body{    line-height: 1.6;}
 /*registr*/
 .login-form{width: 100%;background: rgba(2,2,3,0.5);padding: 20px 0 0 0;position: relative;z-index: 10;margin-top: 15%;}
 .form-group.w100{width: 100%;}
+.form-group.w100 .forgetPassword{position: relative;left: 15px;color: #fff;}
 .form-group.w100 .checkboxs.pl15{color: #fff;position: relative;left: 15px;}
 .form-group.w100 .checkboxs input{position: relative;top: 2px;}
 .form-group .code{background: #4489dc;color: #fff;font-size: 12px;}
@@ -551,8 +552,8 @@ body{    line-height: 1.6;}
 .logBodyBg img{width: 100%;height: 100%;}
 
 
-
-
+.btn-sure{background: #fab432;color: #fff;}
+.btn-retureLogin{background: #dbdbdb;color: #333;}
 
 
 
