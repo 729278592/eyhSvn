@@ -538,7 +538,7 @@ body{    line-height: 1.6;}
 
 
 /*registr*/
-.login-form{width: 100%;background: rgba(2,2,3,0.5);padding: 20px 0 0 0;position: absolute;z-index: 10;margin-top: 15%;}
+.login-form{width: 100%;background: rgba(2,2,3,0.5);padding: 20px 0 0 0;position: relative;z-index: 10;margin-top: 15%;}
 .form-group.w100{width: 100%;}
 .form-group.w100 .checkboxs input{position: relative;top: 2px;}
 .form-group .code{background: #4489dc;color: #fff;font-size: 12px;}
