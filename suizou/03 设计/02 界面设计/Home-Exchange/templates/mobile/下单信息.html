@@ -18,17 +18,18 @@
                     <div class="form-group w100">
                         <div class="service-head bg-fff mt15">
                             <span class="dot"></span>
-                            <span class="title">地址列表</span>
+                            <span class="title">收货信息</span>
                         </div>
                         <div class="h10"></div>
                     </div>
+
                     <div class="form-group mb0 w100">
-                        <div class="btn-addAddress">
+                        <div class="btn-addAddress hide">
                             <a href="地址列表.html">
                                 +添加地址
                             </a>
                         </div>
-                        <ul class="infor-list hide">
+                        <ul class="infor-list ">
                             <li>
                                 <span class="time">时间 : 2015-11-1</span><br/>
                                 <span class="address-infor">地址 : 重庆市渝中区袁家岗长江二路</span><br/>
@@ -37,8 +38,45 @@
                                 <a href="#" class="btn-modiflyAddress">修改地址</a>
                             </li>
                         </ul>
+                        <div class="h10"></div>
                     </div>
-                    <div class="form-group w100">
+                    <div class="form-group">
+                        <p class="title">请选择服务时间</p>
+                        <span class="span-wdate">
+                            <input class="Wdate" placeholder="2015-5-5" type="text" id="d15" onFocus="WdatePicker({minDate:'%y-%M-{%d}',isShowClear:false,readOnly:true})"/>
+                            <img class="Wdate-img" onclick="WdatePicker({minDate:'%y-%M-{%d}',el:'d15'})" src="../../assets/global/plugins/My97DatePicker/skin/datePicker.gif" width="16" height="22">
+                        </span>
+                        <select name="" class="select-time select-time1">
+                            <option value="8:00">8:00</option>
+                            <option value="9:00">9:00</option>
+                            <option value="10:00">10:00</option>
+                            <option value="11:00">11:00</option>
+                            <option value="12:00">12:00</option>
+                            <option value="13:00">13:00</option>
+                            <option value="14:00">14:00</option>
+                            <option value="15:00">15:00</option>
+                            <option value="16:00">16:00</option>
+                            <option value="17:00">17:00</option>
+                            <option value="18:00">18:00</option>
+                        </select>
+                        到
+                        <select name="" class="select-time select-time2">
+                            <option value="9:00">9:00</option>
+                            <option value="10:00">10:00</option>
+                            <option value="11:00">11:00</option>
+                            <option value="12:00">12:00</option>
+                            <option value="13:00">13:00</option>
+                            <option value="14:00">14:00</option>
+                            <option value="15:00">15:00</option>
+                            <option value="16:00">16:00</option>
+                            <option value="17:00">17:00</option>
+                            <option value="18:00">18:00</option>
+                        </select>
+                    </div>
+
+                <div class="form-group w100">
+                    <div class="h10"></div>
+
                     <div class="service-head bg-fff mt15">
                         <span class="dot"></span>
                         <span class="title">订单信息</span>
