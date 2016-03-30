@@ -169,6 +169,7 @@ a:hover{text-decoration: none;}
 .order-menu li .num2{color: #333;}
 .order-menu{width: 100%;}
 .order-menu.pd0 li{padding: 0;}
+.order-menu.pd0 li.mt0{margin-top: 0;}
 .order-menu.pd0 li a{display: block;width: 100%;}
 .order-menu.bg-fff li,.order-menu.fff{background: #fff;}
 .order-menu.mb10 li{background: #fff;}
@@ -226,6 +227,7 @@ a:hover{text-decoration: none;}
 .area-menu li>p {text-align: center;border-top: 1px solid #fab432;color: #fab432;font-size: 14px;padding: 6px 2px;margin: 0 auto;position: relative;top: 2px;display: inline-block;}
 .title-infor{color: #666;font-size: 14px;padding: 2% 0;}
 .pd2{padding: 2%;color: #666;}
+.pd2.pdt0{padding: 0 2%;}
 .small-infor{color: #63bf9d;}
 .p-list{line-height: 22px;color: #666;}
 
