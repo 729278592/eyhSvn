@@ -1041,6 +1041,7 @@ label.error {color: #EA5200;margin-bottom: 0;}
 .keep-mask-bg,.keep-mask{position: absolute;width: 120px;height: 100px;padding: 15px;top: 0;left: 0;}
 .keep-mask-bg{background: #83bfa8;opacity: 0.5;filter:alpha(opacity=50);}
 .keep-mask{color: #fff;line-height: 24px;font-size: 14px;}
+
 .reserve{width: 330px;}
 .reserve>.title{width: 310px;background: #fca511;color: #fff;height: 45px;line-height: 45px;padding: 0 10px;font-size: 14px;}
 .reserve>.title.bg{background: #28b1de;}
