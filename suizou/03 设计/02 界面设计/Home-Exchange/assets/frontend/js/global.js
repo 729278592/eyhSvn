@@ -1,5 +1,25 @@
 /*头部滑动*/
 (function($) {
+
+    /*提示使用ie7以上浏览器*/
+    var DEFAULT_VERSION = "7.0";
+    var ua = navigator.userAgent.toLowerCase();
+    var isIE = ua.indexOf("msie")>-1;
+    var safariVersion;
+    if(isIE){
+        safariVersion =  ua.match(/msie ([\d.]+)/)[1];
+        if(safariVersion <= DEFAULT_VERSION ){
+            //ie7浏览器
+            window.location.href = "../../templates/frontend/upgrade-browser.html";
+        }else{
+            //IE8+浏览器以上
+        }
+    }else{
+        //不是ie浏览器
+    }
+
+
+
     /*全屏图片居中*/
     var si = $(".auto-img");
     si.each(function(i){
