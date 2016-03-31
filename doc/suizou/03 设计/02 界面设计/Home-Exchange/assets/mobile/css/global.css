@@ -75,7 +75,6 @@ a:hover{text-decoration: none;}
 .search-chioce1 li{width: 32%;}
 .search-chioce1 li .item .num{left: 0;}
 
-
 .service-head{padding: 5px 15px;background: #ececec;height: 45px;}
 .service-head.bg-fff{background: #fff;margin-top: 1.5%;line-height: 35px;}
 .service-head.bg-fff.mt0{margin-top: 0;}
@@ -548,7 +547,8 @@ body{    line-height: 1.6;}
 .form-group.w100 .checkboxs input{;}
 .form-group .code{background: #4489dc;color: #fff;font-size: 12px;}
 .form-group .code:hover{opacity: 0.9;filter:alpha(opacity=90);}
-.btn-register{background: #fab432;color: #fff;}
+.form-group.w100 .form-control.btn-register{background: #fab433;color:#fff;}
+
 .content.bg{background: #fff;position: fixed;top: 0;right: 0;left: 0;bottom: 0;}
 
 .logBodyBg{width: 100%;height: 100%;position: fixed;z-index: 1;left: 0;top: 0;overflow: hidden;}
