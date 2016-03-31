@@ -5,37 +5,89 @@
     /*服务快速下单让时间控制*/
     var scl  =  $(".sever-content>li");
     var omla = $(".order-meun li");
-    var date = new Date();
     var day,week,str,str1;
-    omla.each(function(i){
-        str ='<tr>';
-        for(var a=1; a<8; a++){
-            var pluDay = date.getDay();
-            week = "周" + "日一二三四五六日一二三四五六".charAt((pluDay+a));
-            day = (date.getMonth()+1)+"."+(date.getDate()) ;
-            str += '<th>'+
-                       '<span class="large-week">'+week+'</span><br/>'+
-                       '<span>'+day+'</span>'+
-                   '</th>';
+    function initTime(){
+        var date = new Date();
+        var this_day = date.getDay(); //今天是这周的第几天
+        var step_s = -this_day+1; //上周日距离今天的天数（负数表示）
+        if (this_day == 0) {
+            step_s = -7; // 如果今天是周日
         }
+
+        var step_tu = 2 - this_day;
+        var step_we = 3 - this_day;
+        var step_th = 4 - this_day;
+        var step_fr = 5 - this_day;
+        var step_sa = 6 - this_day;
+        var step_m  = 7 - this_day; // 周日距离今天的天数（负数表示）
+
+        var thisTime = date.getTime();
+        var monday = new Date(thisTime + step_s * 24 * 3600* 1000);
+        var tuesday = new Date(thisTime + step_tu * 24 * 3600* 1000);
+        var wednesday = new Date(thisTime + step_we * 24 * 3600* 1000);
+        var thursday = new Date(thisTime + step_th * 24 * 3600* 1000);
+        var friday = new Date(thisTime + step_fr * 24 * 3600* 1000);
+        var saturday = new Date(thisTime + step_sa * 24 * 3600* 1000);
+        var sunday = new Date(thisTime +  step_m * 24 * 3600* 1000);//默认统计一周的时间
+
+        var starttime = transferDate(monday); //本周一的日期 （起始日期）
+        var tuesdaytime = transferDate(tuesday);
+        var wednesdaytime = transferDate(wednesday);
+        var thursdaytime = transferDate(thursday);
+        var fridaytime = transferDate(friday);
+        var saturdaytime = transferDate(saturday);
+        var endtime = transferDate(sunday);  //本周日的日期 （结束日期）
+        var arr = [starttime,tuesdaytime,wednesdaytime,thursdaytime,fridaytime,saturdaytime,endtime];
+
+            /*时间具体化显示在页面中*/
+        str ='<tr>';
+            for(var a=0; a<7; a++){
+                var pluDay = date.getDay();
+                week = "周" + "日一二三四五六日一二三四五六".charAt((pluDay+a));
+                day = (date.getMonth()+1)+"."+(date.getDate()+a) ;
+        str += '<th>'+
+                   '<span class="large-week">'+week+'</span><br/>'+
+                   '<span>'+arr[a]+'</span>'+
+               '</th>';
+            }
         str += '</tr>';
         str1 = '<tr>';
-        for(var b=1; b<8; b++){
-            day =date.getFullYear() +"-"+ (date.getMonth()+1)+"-"+(date.getDate()+b) ;
-            str1 +='<td>'+
-                        '<label>'+
-                            '<input type="radio" value='+day+' name="radio"/>'+
-                        '</label>'+
-                    '</td>';
-        }
+            for(var b=0; b<7; b++){
+        str1 += '<td>'+
+                    '<label>'+
+                        '<input type="radio" value='+arr[b]+' name="radio"/>'+
+                    '</label>'+
+                '</td>';
+            }
         str1 += '</tr>';
+    }
 
-        scl.eq(0).find(".de-table").html(str+str1);
-        $(this).on("click",function(){
-            scl.eq(i).addClass("active");
-            scl.eq(i).siblings("li").removeClass("active");
-            scl.eq(i).find(".de-table").html(str+str1);
-        })
+    /*时间格式化*/
+    function transferDate(date) {
+        var yearTemp = date.getFullYear();
+        var monthTemp = date.getMonth()+1;
+        var dayTemp = date.getDate();
+        if(parseInt(monthTemp) < 10) {
+            monthTemp = "0" + monthTemp;
+        }
+
+        if(parseInt(dayTemp) < 10) {
+            dayTemp = "0" + dayTemp;
+        }
+        return yearTemp + "-" + monthTemp+ "-" + dayTemp;
+    }
+    initTime();
+
+
+    /*服务切换*/
+    omla.each(function(i){
+            scl.eq(0).find(".de-table").html(str+str1);
+            $(this).on("click",function(){
+                scl.eq(i).addClass("active");
+                scl.eq(i).siblings("li").removeClass("active");
+                scl.eq(i).find(".de-table").html(str+str1);
+            })
+
     });
 
 
