@@ -290,7 +290,7 @@ b {line-height: 30px;font-weight: 700;}
 .nav-div{width: 255px;text-align: center;border-bottom: none;}
 .nav-p{width: 100%;height: 60px;line-height: 60px;border-bottom: 1px solid #dbdbdb;color:#333;}
 .nav-div .nav-p .fa{font-size: 30px;position: relative;top: 5px;left: -40px;color: #333;color: #333\0;}
-.nav-p span{}
+.nav-p span{position: relative;left: -20px;}
 .nav-p:hover{background: #fbb432;color: #fff;}
 .nav-p:hover .fa{color: #fff;}
 .nav-div.last{border-bottom: none;}
