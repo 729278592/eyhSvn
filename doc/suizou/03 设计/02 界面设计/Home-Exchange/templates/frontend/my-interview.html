@@ -156,7 +156,10 @@
                         <tr>
                             <td>中级</td>
                             <td>2015-4-4</td>
-                            <td>2015-4-4:12:00</td>
+                            <td>
+                                2015-4-4:12:00
+                                <a href="javascript:;" class="btn-interviewSuccess">面试通过</a>
+                            </td>
                         </tr>
                     </table>
                 </div>
@@ -240,26 +243,54 @@
         <span>版权所有：重庆至尚科技发展有限公司 CopyRight@2014-2019 备案号：渝ICP备15005428号-</span>　
     </div>
 </div>
+    <div class="mask-bg hide"></div>
+    <div class="mask hide">
+        <div class="payment-money">
+            <!--<i class="fa fa-remove"></i>-->
+            <p>
+                白富美、高富帅些您老已面试成功,请去支付定金;
+            </p>
+            <button class="btn-sure">确定</button>
+        </div>
+    </div>
 </div>
-</body>
-<script type="text/javascript" src="../../assets/global/plugins/jquery/jquery-1.11.3.min.js"></script>
-<script src="../../assets/global/plugins/move/js/move.js"></script>
-<script src="../../assets/frontend/js/global.js"></script>
-<script src="../../assets/frontend/js/personCenter.js"></script>
-<script src="../../assets/frontend/js/footHandle.js"></script>
-<script src="../../assets/global/plugins/My97DatePicker/WdatePicker.js"></script>
-<script>
-    $(".btn-sure").on("click",function(){
-        alert("提交成功");
-    });
-    $(".btn-person").each(function(i){
-        $(this).on("click",function(){
-            $(this).addClass("active");
-            $(this).siblings(".btn-person").removeClass("active");
-            $(".infor-table").eq(i).addClass("active");
-            $(".infor-table").eq(i).siblings(".infor-table").removeClass("active");
-        })
-    })
+    <script type="text/javascript" src="../../assets/global/plugins/jquery/jquery-1.11.3.min.js"></script>
+    <script src="../../assets/global/plugins/move/js/move.js"></script>
+    <script src="../../assets/frontend/js/global.js"></script>
+    <script src="../../assets/frontend/js/personCenter.js"></script>
+    <script src="../../assets/frontend/js/footHandle.js"></script>
+    <script src="../../assets/global/plugins/My97DatePicker/WdatePicker.js"></script>
+    <script>
 
-</script>
+        $(".btn-person").each(function(i){
+            $(this).on("click",function(){
+                $(this).addClass("active");
+                $(this).siblings(".btn-person").removeClass("active");
+                $(".infor-table").eq(i).addClass("active");
+                $(".infor-table").eq(i).siblings(".infor-table").removeClass("active");
+            })
+        })
+
+
+
+
+        ;
+        /*面试弹窗*/
+        $(".payment-money").delegate(".fa-remove","click",function(){
+            $(".mask-bg,.mask,.payment-money").addClass("hide");
+        });
+        $(".btn-interviewSuccess").on("click",function(e){
+            e.preventDefault();
+            $(".mask-bg,.mask,.payment-money").removeClass("hide");
+
+            var ht = -$(".payment-money").get(0).offsetHeight/2+"px";
+            $(".payment-money").get(0).style.marginTop = ht;
+        });
+
+        $(".btn-sure").on("click",function(){
+            $(".mask-bg,.mask,.payment-money").addClass("hide");
+        });
+
+    </script>
+</body>
 </html>
