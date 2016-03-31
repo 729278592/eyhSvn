@@ -9,17 +9,17 @@
     function initTime(){
         var date = new Date();
         var this_day = date.getDay(); //今天是这周的第几天
-        var step_s = -this_day+1; //上周日距离今天的天数（负数表示）
+        var step_s = -this_day+4; //上周日距离今天的天数（负数表示）
         if (this_day == 0) {
             step_s = -7; // 如果今天是周日
         }
 
-        var step_tu = 2 - this_day;
-        var step_we = 3 - this_day;
-        var step_th = 4 - this_day;
-        var step_fr = 5 - this_day;
-        var step_sa = 6 - this_day;
-        var step_m  = 7 - this_day; // 周日距离今天的天数（负数表示）
+        var step_tu = 5 - this_day;
+        var step_we = 6 - this_day;
+        var step_th = 7 - this_day;
+        var step_fr = 8 - this_day;
+        var step_sa = 9 - this_day;
+        var step_m  = 10 - this_day; // 周日距离今天的天数（负数表示）
 
         var thisTime = date.getTime();
         var monday = new Date(thisTime + step_s * 24 * 3600* 1000);
