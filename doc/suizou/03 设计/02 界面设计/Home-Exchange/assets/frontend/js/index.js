@@ -12,7 +12,7 @@
         for(var a=1; a<8; a++){
             var pluDay = date.getDay();
             week = "周" + "日一二三四五六日一二三四五六".charAt((pluDay+a));
-            day = (date.getMonth()+1)+"."+(date.getDate()+a) ;
+            day = (date.getMonth()+1)+"."+(date.getDate()) ;
             str += '<th>'+
                        '<span class="large-week">'+week+'</span><br/>'+
                        '<span>'+day+'</span>'+
