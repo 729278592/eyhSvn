@@ -1033,7 +1033,7 @@ label.error {color: #EA5200;margin-bottom: 0;}
 .keep-commont{position: relative;width: 660px;height: 290px;}
 .keep-commont>.title{width: 650px;height: 40px;padding-left: 10px;line-height: 40px;color: #fff;background: #52ba92;}
 .ls{margin-top: 20px;}
-.area-infor>.stype-title{font-size: 16px;color: #fb6555;margin-top: 15px;margin-bottom: 5px;}
+.area-infor>.stype-title{font-size: 16px;color: #444;margin-top: 15px;margin-bottom: 5px;}
 .p-list{line-height: 22px;}
 .p-list>span{width: 50%;font-size: 14px;color: #666;display: inline-block;float: left;}
 .p-list>span span{display: inline-block;width: 270px;}
@@ -1908,7 +1908,7 @@ tr th,tr td{ text-align:center;font-size: 14px;border:1px solid #fbb432;color: #
 .area-menu li .man4{background: url(../images/ma-img4.png);background-size: 85px 85px;}
 .area-menu li .man5{background: url(../images/ma-img5.png);background-size: 85px 85px;}
 .man-infor{width: 620px;margin: 10px 0 10px 5px;}
-.man-infor li{width: 111px;float: left;margin-right: 13px;font-size: 12px;color: #666;text-align: center;}
+.man-infor li{width: 142px;float: left;margin-right: 13px;font-size: 12px;color: #666;text-align: center;}
 
 
 
