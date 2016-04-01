@@ -54,9 +54,19 @@ a:hover{text-decoration: none;}
 .search-type li a{display: inline-block;width: 100%;}
 .search-type li a img{margin-bottom: 5px;width: 60%;}
 .search-type li a span{font-size: 16px;color: #333;}
-.active-new{padding-top: 1px;background-size: 100%;position: relative;height: 60px;}
-.active-new>img{width: 100%;height: 60px;}
-.active-new .active-p{width: 70%;position: absolute;left: 20%;top: 17%;}
+.active-new{padding-top: 1px;background-size: 100%;position: relative;height: 60px;display: table;}
+
+
+.active-new{background: url("../images/active-bg.png") ;width: 100%;height: 60px;background-size: 100% 60px;}
+.newsSlider{overflow-y: hidden;width: 70%;height: 44px;position: relative;left: 20%;top: 7px;}
+.news-list{position: absolute;top: 0;width: 100%;}
+.newsSlider li{height: 44px;}
+
+
+
+
+
+.active-new .active-p{width: 100%;}
 .active-new .active-p p{width: 100%;display: block;overflow: hidden;white-space: nowrap;text-overflow: ellipsis;}
 .active-new p .caret-dian{display: inline-block;width: 8px;height: 8px;background: #f32f20;border-radius: 66px;font-size: 16px;color: #666;}
 .recharge{margin:10px 0;}
