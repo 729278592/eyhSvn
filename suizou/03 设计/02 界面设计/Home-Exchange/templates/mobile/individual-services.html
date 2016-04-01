@@ -1,0 +1,137 @@
+<!DOCTYPE html>
+<html>
+<head lang="en">
+    <meta charset="UTF-8">
+    <title>开荒清洁</title>
+    <meta name="viewport" content="width=device-width; initial-scale=1.0; user-scalable=no;">
+    <link rel="stylesheet" href="../../assets/global/plugins/font/css/font-awesome.min.css"/>
+    <link rel="stylesheet" href="../../assets/global/plugins/bootstrap-3.3.5/css/bootstrap.min.css"/>
+    <link rel="stylesheet" href="../../assets/mobile/css/global.css"/>
+</head>
+<body>
+<div class="wrapper">
+    <div class="content bg-fff">
+        <img src="../../assets/mobile/images/hsList1.jpg" class="img-responsive"/>
+        <div class="reserve">
+            <p class="title bgfff color2">开荒清洁</p>
+            <p class="title">在线预订</p>
+            <div class="reserve-indormation">
+                <p class="title">请选择服务时间</p>
+                <div class="reserve-date clearfix">
+                    <div class="div-wdate left">
+                        <input name="serviceDate" class="Wdate inputDisable" type="text" value="2016-03-29" onFocus="WdatePicker({minDate:'%y-%M-{%d+1}'})"/>
+                        <i class="fa fa-calendar"></i>
+                    </div>
+                    <select name="serviceTime" id="serviceTime2" class="select-time right inputDisable">
+                        <option value="">时间</option>
+                        <option value="8:00">8:00</option>
+                        <option value="10:00">10:00</option>
+                        <option value="13:00">13:00</option>
+                        <option value="16:00">16:00</option>
+                    </select>
+                </div>
+
+                <p class="title pt0">请输入需要服务面积</p>
+                <div class="clearfix services-type">
+                    <input type="text" class="input-area"/>
+                    <span class="company">㎡</span>
+                </div>
+                <p class="title pt0">更多需求</p>
+                <textarea style="resize: none" name=""  cols="50" rows="3" class="textarea"   placeholder="您可以在这里备注需求"></textarea>
+                <p class="title total-title pt0">￥ : <span class="num total">0</span></p>
+                <p class="title pt0">
+                    <label>
+                        <input type="checkbox"/> 我已经阅读并同意
+                    </label>
+                    <a href="#">《家服汇用户使用协议》</a>
+                </p>
+                <div class="div-order">
+                    <a href="#" class="btn-order">下单</a>
+                    <!--<input type="submit" value="下单" class="btn-order"/>-->
+                </div>
+            </div>
+        </div>
+        <div class="h10 bgfff"></div>
+        <div class="service-head">
+            <span class="dot"></span>
+            <img src="../../assets/mobile/images/order.png" />
+            <span class="title">服务介绍</span>
+        </div>
+        <div class="pd2">
+            <p>① 防范于未然</p>
+            <p>大多是的真皮沙发在购买的时候都会送你一个保养蜡，如果不送的话，自己可以去买。沙发安装完成后，就要给真皮沙发打...</p>
+            <br/>
+            <p>② 常清洁</p>
+
+            <p>真皮沙发需要经常的清洁一下，推荐依然是用保养蜡，如果没这么多时间打蜡的话，可以考虑用软布擦拭一下</p>
+            <br/>
+            <p>③ 尽量少用水</p>
+
+            <p>真皮虽然防水，但是千万不要经常用水去清洁它，偶尔用水的话，也要尽快的擦干，否则的话会让真皮沙发慢慢的变硬</p>
+            <br/>
+            <p>④ 冰袋清洁</p>
+
+            <p>
+                <span>
+                    1、厨房（油烟机、燃气灶、橱柜、调味组、洗菜池、厨房整体台面、整体地面、垃圾桶）;
+                </span><br/>
+                <span>2、卫生间（洗漱台、淋浴房、马桶、地面、垃圾桶）;</span><br/>
+                <span>3、客厅（窗户、沙发、茶几、地面、垃圾桶、客厅家具、客厅家电）;</span><br/>
+                <span>4、卧室（窗户、床、梳妆台、衣柜、地面、卧室家电）;</span>
+            </p>
+        </div>
+
+    </div>
+    <div class="foot">
+        <ul class="f-menu clearfix">
+            <li>
+                <a href="index.html">
+                    <div class="bt"></div>
+                            <span>
+                                <i class="fa fa-home"></i>
+                            </span><br/>
+                    <span>首页</span>
+                    <div class="br"></div>
+                </a>
+            </li>
+            <li class="active">
+                <a href="brand-service.html">
+                    <div class="bt"></div>
+                                <span>
+                                    <i class="fa fa-bars"></i>
+                                </span><br/>
+                    <span>品牌服务</span>
+                    <div class="br"></div>
+                </a>
+            </li>
+            <li>
+                <a href="my-community.html">
+                    <div class="bt"></div>
+                                <span>
+                                    <i class="fa fa-th-large"></i>
+                                </span><br/>
+                    <span>我的社区</span>
+                    <div class="br"></div>
+                </a>
+            </li>
+            <li>
+                <a href="person-center.html">
+                    <div class="bt"></div>
+                                <span>
+                                    <i class="fa fa-user"></i>
+                                </span><br/>
+                    <span>个人中心</span>
+                </a>
+            </li>
+        </ul>
+    </div>
+</div>
+</body>
+<script src="../../assets/global/plugins/jquery/jquery-1.11.3.min.js"></script>
+<script src="../../assets/mobile/js/global.js"></script>
+<script src="../../assets/global/plugins/jquery-spinner/js/jquery.spinner.js"></script>
+<script src="../../assets/global/plugins/My97DatePicker/WdatePicker.js"></script>
+<script type="text/javascript">
+    $('.spinnerExample').spinner({});
+</script>
+</html>
