@@ -8,46 +8,15 @@
     var day,week,str,str1;
     function initTime(){
         var date = new Date();
-        var this_day = date.getDay(); //今天是这周的第几天;
-        var step = 0; //上周日距离今天的天数（负数表示）
-        if (this_day == 0) {
-            step = 0; // 如果今天是周日
-        }
-        else if (this_day == 1) {
-            step = 1; // 如果今天是周日
-        }
-        else if (this_day == 2) {
-            step = 2; // 如果今天是周日
-        }
-        else if (this_day == 3) {
-            step = 3; // 如果今天是周日
-        }
-        else if (this_day == 4) {
-            step = 4; // 如果今天是周日
-        }
-        else if (this_day == 5) {
-            step = 5; // 如果今天是周日
-        }
-        else if (this_day == 6) {
-            step = 6; // 如果今天是周日
-        }
-
-        var step_s  = step - this_day;
-        var step_tu = step + 1 - this_day;
-        var step_we = step + 2 - this_day;
-        var step_th = step + 3 - this_day;
-        var step_fr = step + 4 - this_day;
-        var step_sa = step + 5 - this_day;
-        var step_m  = step + 6 - this_day; // 周日距离今天的天数（负数表示）
 
         var thisTime = date.getTime();
-        var monday = new Date(thisTime + step_s * 24 * 3600* 1000);
-        var tuesday = new Date(thisTime + step_tu * 24 * 3600* 1000);
-        var wednesday = new Date(thisTime + step_we * 24 * 3600* 1000);
-        var thursday = new Date(thisTime + step_th * 24 * 3600* 1000);
-        var friday = new Date(thisTime + step_fr * 24 * 3600* 1000);
-        var saturday = new Date(thisTime + step_sa * 24 * 3600* 1000);
-        var sunday = new Date(thisTime + step_m * 24 * 3600* 1000);//默认统计一周的时间
+        var monday = new Date(thisTime);
+        var tuesday = new Date(thisTime   +     24 * 3600* 1000);
+        var wednesday = new Date(thisTime + 2 * 24 * 3600* 1000);
+        var thursday = new Date(thisTime  + 3 * 24 * 3600* 1000);
+        var friday = new Date(thisTime    + 4 * 24 * 3600* 1000);
+        var saturday = new Date(thisTime  + 5 * 24 * 3600* 1000);
+        var sunday = new Date(thisTime    + 6 * 24 * 3600* 1000);//默认统计一周的时间
 
         var starttime = transferDate(monday); //本周一的日期 （起始日期）
         var tuesdaytime = transferDate(tuesday);
