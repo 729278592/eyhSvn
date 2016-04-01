@@ -125,7 +125,7 @@ a:hover{text-decoration: none;}
 .train-menu li{width: 100%;border: 1px solid #dbdbdb;margin-bottom: 1.5%;}
 .train-menu li img{width: 40%;margin-right: 10px;}
 .train-menu li .train-infor{width: 55%;color: #666;font-size: 14px;}
-.train-menu li .train-infor .title{font-size: 16px;color: #333;margin-bottom: 4px;}
+.train-menu li .train-infor .title{font-size: 16px;color: #333;}
 .train-menu li .train-infor p .num{color: #ff580b;display: inline-block;overflow: hidden;white-space: nowrap;text-overflow: ellipsis;max-width: 42px;position: relative;top: 6px;}
 .train-menu li .train-infor .fa{}
 .train-menu li .train-infor .p-ti,.order-menu li .order-infor .p-ti{width: 100%;height: 44px;}
