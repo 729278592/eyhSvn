@@ -127,6 +127,16 @@ a:hover{text-decoration: none;}
 
 .train-menu{width: 94%;margin: 3% 3%;}
 .train-menu li{width: 100%;border: 1px solid #dbdbdb;margin-bottom: 1.5%;}
+
+.train-menu li .p-ti p{
+display: block;
+    display: -webkit-box;
+    width: 100%;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    -webkit-box-orient: vertical;
+    -webkit-line-clamp: 2;}
+
 .train-menu li img{width: 40%;margin-right: 10px;}
 .train-menu li .train-infor{width: 55%;color: #666;font-size: 14px;}
 .train-menu li .train-infor .title{font-size: 16px;color: #333;}
@@ -201,13 +211,14 @@ a:hover{text-decoration: none;}
 .order-menu li .btn-comment{padding: 5px 0;border-radius: 4px;background: #fbb432;color: #fff;position: absolute;bottom: 8%;right: 2%;display: inline-block;width: 60px;text-align: center;}
 .order-menu li .btn-comment.bg-ccc{background: #b2b1b0;font-size: 12px;}
 .order-menu li .btn-comment.left{left: 52%;}
-.order-menu li p{font-size: 14px;display: block;
+.order-menu li .p-ti p{display: block;
     display: -webkit-box;
     width: 46%;
     overflow: hidden;
     text-overflow: ellipsis;
     -webkit-box-orient: vertical;
-    -webkit-line-clamp: 2;
+    -webkit-line-clamp: 2;}
+.order-menu li p{font-size: 14px;
 
 }
 .order-menu li .order-infor{color: #666;}
