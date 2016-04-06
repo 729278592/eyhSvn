@@ -107,7 +107,12 @@ a:hover{text-decoration: none;}
 .service-more .seavice-infor{width: 45%;}
 .seavice-infor .title{font-size: 20px;color: #333;margin:10px 0 5% 0;}
 .seavice-infor .p-infor{width: 100%;height: 44px;}
-.seavice-infor .p-infor p{width: 95%;display: inline-block;line-height: 17px;}
+.seavice-infor .p-infor p{width: 95%;display: inline-block;line-height: 17px;
+    display: -webkit-box;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    -webkit-box-orient: vertical;
+    -webkit-line-clamp: 2;}
 .seavice-infor .p-infor .fa{width: 5%;text-align: right;display: inline-block;}
 .seavice-infor p{font-size: 14px;color: #666;}
 .seavice-infor .fa{font-size: 30px;}
@@ -196,7 +201,15 @@ a:hover{text-decoration: none;}
 .order-menu li .btn-comment{padding: 5px 0;border-radius: 4px;background: #fbb432;color: #fff;position: absolute;bottom: 8%;right: 2%;display: inline-block;width: 60px;text-align: center;}
 .order-menu li .btn-comment.bg-ccc{background: #b2b1b0;font-size: 12px;}
 .order-menu li .btn-comment.left{left: 52%;}
-.order-menu li p{font-size: 14px;display: block;}
+.order-menu li p{font-size: 14px;display: block;
+    display: -webkit-box;
+    width: 46%;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    -webkit-box-orient: vertical;
+    -webkit-line-clamp: 2;
+
+}
 .order-menu li .order-infor{color: #666;}
 .order-menu li .order-infor .money{color: #fbb435;position: relative;right: 2%;}
 .order-menu li .order-infor .pay-type{color: #fbb435;}
