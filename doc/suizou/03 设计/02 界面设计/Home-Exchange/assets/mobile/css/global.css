@@ -576,7 +576,7 @@ body{    line-height: 1.6;}
 .mc-content{padding: 3%;width: 94%;text-align: center;font-size: 14px;color: #fff;}
 .mc-head .title{font-size: 16px;margin-top: 0;color: #fff;}
 .mc-content p{font-size: 14px;color: #666;margin: 10px 0;}
-.maternity-div{padding: 15px 15px;background: #fff;color: #666;position: fixed;top: 50%;width: 100%;z-index: 100;}
+.maternity-div{padding: 15px 15px;background: #fff;color: #666;position: fixed;top: 50%;width: 100%;z-index: 100;max-width: 640px;}
 .maternity-div>.left{margin-right: 20px;}
 .maternity-div>.title{border: 1px solid #dbdbdb;font-size: 14px;padding: 5px 15px;text-align: center;margin: 15px 0 40px;width: 140px;}
 
