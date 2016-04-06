@@ -66,5 +66,31 @@
     };
     Method.init($(".search-terms,.service-type,.com_list,.hd-mask,.cont"));
 
+    /*多行打省略号*/
+    function ellipsisShow(){
+        var ds = $(".deatils-p");
+        ds.each(function(){
+            var divH = $(this).height();
+            var $p = $("p", $(this)).eq(0);
+            while ($p.outerHeight() > divH) {
+                $p.text($p.text().replace(/(\s)*([a-zA-Z0-9]+|\W)(\.\.\.)?$/, "..."));
+            }
+        });
+    }
+    ellipsisShow();
+
+    var sl = $(".sc-menu li");
+    var s = $(".sc-list");
+    sl.each(function(i){
+        $(this).on("click",function(){
+            $(this).addClass("active");
+            $(this).siblings(sl).removeClass("active");
+            s.eq(i).addClass("active");
+            s.eq(i).siblings(s).removeClass("active");
+            ellipsisShow();
+        })
+    });
+
+
 })(jQuery);
 
