@@ -54,7 +54,7 @@
                     <a href="#">《家服汇用户使用协议》</a>
                 </p>
                 <div class="div-order">
-                    <a href="#" class="btn-order">预约面试</a>
+                    <a href="#" class="btn-order btn-order1">预约面试</a>
                     <!--<input type="submit" value="下单" class="btn-order"/>-->
                 </div>
             </div>
@@ -326,7 +326,7 @@
         });
 
         /*好孕妈妈弹窗显示*/
-        $(".btn-order").on("click",function(e){
+        $(".btn-order1").on("click",function(e){
             e.preventDefault();
             $(".mask,.maternity-div").removeClass("hide");
             var ht = -$(".maternity-div").get(0).offsetHeight/2+"px";
