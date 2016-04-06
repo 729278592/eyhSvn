@@ -26,7 +26,6 @@ textarea,input,button,select{border: none;outline: none;}
 .content{width: 100%;padding-bottom: 72px;}
 .content.bg-ecec{background: #ececec;padding-top: 1px;}
 .foot{}
-.mask{position: fixed;left: 0;right: 0;top: 0;bottom: 0;background: rgba(0,0,0,.5)}
 a:hover{text-decoration: none;}
 
 
@@ -209,7 +208,7 @@ a:hover{text-decoration: none;}
 .clean-mask{position: absolute;padding: 5px;background: rgba(30, 188, 158, 0.60);color: #fff;font-size: 14px;z-index: 100;top: 10%;left: 2%;width: 26%;max-height: 120px;}
 
 .img-responsive{width: 100%;}
-.mask{position: fixed;top: 0;bottom: 0;left: 0;right: 0;background: rgba(0,0,0,.5);max-width: 640px;margin: 0 auto;}
+.mask{position: fixed;top: 0;bottom: 0;left: 0;right: 0;background: rgba(0,0,0,.5);max-width: 640px;margin: 0 auto;z-index: 1000;}
 
 
 
@@ -577,7 +576,7 @@ body{    line-height: 1.6;}
 .mc-content{padding: 3%;width: 94%;text-align: center;font-size: 14px;color: #fff;}
 .mc-head .title{font-size: 16px;margin-top: 0;color: #fff;}
 .mc-content p{font-size: 14px;color: #666;margin: 10px 0;}
-.maternity-div{padding: 15px 15px;background: #fff;color: #666;position: absolute;top: 50%;width: 100%;}
+.maternity-div{padding: 15px 15px;background: #fff;color: #666;position: fixed;top: 50%;width: 100%;z-index: 100;}
 .maternity-div>.left{margin-right: 20px;}
 .maternity-div>.title{border: 1px solid #dbdbdb;font-size: 14px;padding: 5px 15px;text-align: center;margin: 15px 0 40px;width: 140px;}
 
