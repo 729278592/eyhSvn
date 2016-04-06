@@ -462,24 +462,6 @@ text-align: center;line-height: 30px;background: #f9a003;}
 
 
 
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
 body{    line-height: 1.6;}
 .weui_cells_title + .weui_cells {
     margin-top: 0;
@@ -569,10 +551,50 @@ body{    line-height: 1.6;}
 
 .btn-sure{background: #fab432;color: #fff;}
 .btn-retureLogin{background: #dbdbdb;color: #333;}
+.btn-interview{padding: 6px 12px;background: #52ba93;color: #fff;font-size: 14px;margin-bottom: 10px;border-radius: 4px;}
+
+/*maternal-details*/
+.content>div.pa10{padding:0 10px;}
+.ma-div{width: 100%;display: table;}
+.ma-div>div.ma-infor,.ma-div>.ma-img{display: table-cell;vertical-align: middle;}
+.ma-div>.ma-img{width: 80%;}
+.ma-div>div.ma-infor{width: 60%;font-size: 14px;color: #333;}
+
+.ma-title{width: 100%;padding: 6px 0 6px 10px;font-size: 14px;background: #52ba93;color: #fff;}
+.ma6{margin: 10px 0;color: #666;}
 
 
 
 
+/*maternity-search*/
+.type-form{width: 100%;padding: 0 2%;font-size: 14px;color: #666;}
+.search-terms{width: 100%;}
+.search-terms li{width: 100%;display: table;padding: 2px 0;}
+.search-terms li>div{width: 100%;padding-top: 10px;}
+.search-terms li select{border: 1px solid #dbdbdb;width: 73%;padding: 5px 0 5px 5px;}
+
+.search-terms li .w10{display: inline-block;width: 23%;vertical-align: middle;}
+.search-terms li .w73{display: inline-block;width: 75%;vertical-align: middle;margin-left: 2%;}
+.search-terms li .rental_mode{padding: 5px 5px;background: #f3f3f3;color: #666;font-family: "微软雅黑";font-weight: 100;border-radius: 3px;margin-left: 5px;}
+.search-terms li .rental_mode.active{background: #fb8643;color: #fff;}
+.operation-btn{margin: 10px 0;}
+.btn-screen,.btn-clear{padding: 5px 12px;background: #fb8643;color: #fff;border-radius: 2px;}
+
+
+
+/*分页*/
+.paging{position: relative;left: 50%;margin-top: 20px;}
+.page-pre,.page-next{float: left;border-radius: 4px;background: #f2f2f2;color: #666;font-size: 16px;width: 40px;height: 30px;text-align: center;line-height: 30px;}
+.page-next{margin-left: 5px;}
+.page-menu{float: left;}
+.page-menu li{float: left;border-radius: 4px;background: #f2f2f2;margin-left: 5px;color: #999;width: 40px;height: 30px;text-align: center;line-height: 30px;font-size: 12px;}
+.page-menu li.active{background: #ff6702;color: #fff;}
+.page-pre:hover,.page-next:hover{cursor: pointer;}
+.page-next{margin-right: 4px;}
+.page-menu li:hover{cursor: pointer;}
+.page-num{border: 1px solid #ccc;text-align: center;width: 50px;height: 25px;line-height: 25px;color: #666;font-size: 12px;}
+.btn-jump{width: 50px;height: 30px;text-align: center;background: #ff6702;font-size: 12px;color: #fff;font-family: "微软雅黑";}
+.page-num:focus{color: #ff6702;}
 
 
 

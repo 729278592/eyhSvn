@@ -20,3 +20,4 @@ wardrobe-maintenance：衣柜维护；
 hourly-cleaning：钟点保洁；
 shoe-care：鞋柜护理；
 booking-information：预约信息；
+maternal-details:月嫂详情;

@@ -64,7 +64,7 @@
             })
         }
     };
-    Method.init($(".search-terms,.service-type,.com_list,.hd-mask"));
+    Method.init($(".search-terms,.service-type,.com_list,.hd-mask,.cont"));
 
     /*多行打省略号*/
     function ellipsisShow(){
