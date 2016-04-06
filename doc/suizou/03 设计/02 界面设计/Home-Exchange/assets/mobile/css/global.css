@@ -564,7 +564,7 @@ body{    line-height: 1.6;}
 
 .search-terms li .w10{display: inline-block;width: 23%;vertical-align: middle;}
 .search-terms li .w73{display: inline-block;width: 75%;vertical-align: middle;margin-left: 2%;}
-.search-terms li .rental_mode{padding: 5px 5px;background: #f3f3f3;color: #666;font-family: "微软雅黑";font-weight: 100;border-radius: 3px;margin-left: 5px;}
+.search-terms li .rental_mode{padding: 5px 5px;background: #f3f3f3;color: #666;font-family: "微软雅黑";font-weight: 100;border-radius: 3px;margin-left: 5px;font-size: 12px;}
 .search-terms li .rental_mode.active{background: #fb8643;color: #fff;}
 .operation-btn{margin: 10px 0;}
 .btn-screen,.btn-clear{padding: 5px 12px;background: #fb8643;color: #fff;border-radius: 2px;}
