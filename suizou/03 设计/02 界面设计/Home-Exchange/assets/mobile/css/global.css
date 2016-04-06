@@ -519,17 +519,6 @@ body{    line-height: 1.6;}
 
 
 
-/*register*/
-.head{height: 40px;line-height: 40px;text-align: center;background: #92adce;width: 100%;font-size: 14px;}
-.head-main{width: 94%;margin: 0 3%;color: #fff;}
-.mask-head{position: fixed;top: 0;left: 0;bottom: 0;right: 0;background: rgba(0,0,0,0.5);}
-.head-main .fa-bars{font-size: 14px;position: relative;top: 12px;}
-.head-main .title{}
-.menu-list{width: 80%;background: #258bcf;height: 100%;padding: 10% 5%;}
-.menu-list li{border-bottom: 1px solid #3c9edf;text-align: left;padding-left: 5%;}
-.menu-list li a{color: #fff;font-size: 14px;}
-.menu-list li a .fa{}
-.menu-list li a span{}
 
 
 
@@ -581,6 +570,18 @@ body{    line-height: 1.6;}
 .btn-screen,.btn-clear{padding: 5px 12px;background: #fb8643;color: #fff;border-radius: 2px;}
 
 
+/*maternity*/
+.mc-head{width: 100%;background: #52ba92;position: relative;height: 34px;line-height: 34px;border-radius: 4px 4px 0 0;text-align: center;}
+.mc-head .fa-remove{position: absolute;right: 10px;font-size: 14px;top: 10px;color: #fff;}
+.mc-head .fa-remove:hover{cursor: pointer;}
+.mc-content{padding: 3%;width: 94%;text-align: center;font-size: 14px;color: #fff;}
+.mc-head .title{font-size: 16px;margin-top: 0;color: #fff;}
+.mc-content p{font-size: 14px;color: #666;margin: 10px 0;}
+.maternity-div{padding: 15px 15px;background: #fff;color: #666;position: absolute;top: 50%;width: 100%;}
+.maternity-div>.left{margin-right: 20px;}
+.maternity-div>.title{border: 1px solid #dbdbdb;font-size: 14px;padding: 5px 15px;text-align: center;margin: 15px 0 40px;width: 140px;}
+
+.maternity-div .btn-order{width:150px;height:34px;line-height: 34px;background: #fbb432;color: #fff;border-radius: 4px;display: inline-block;text-align: center;}
 
 /*分页*/
 .paging{position: relative;left: 50%;margin-top: 20px;}
