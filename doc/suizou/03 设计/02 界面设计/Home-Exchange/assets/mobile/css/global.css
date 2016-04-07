@@ -442,7 +442,7 @@ p>label>input{position: relative;top: 2px;}
 .address-group .fa{position: absolute;right: 4%;top: 36%;font-size: 30px;color: #666;}
 .address-group .people{position: absolute;top: 13px;}
 .address-group .address{;position:relative;bottom: 0;width: 88%;display: inline-block;left: 9%;padding: 0;}
-.address-group>a>.address{left:0;}
+.address-group>a>.address{left:2%;}
 .address-group .default{color: #ff0404;font-size: 14px;position: absolute;top: 55%;left: 3.5%;}
 .add_address{position: fixed;left: 0;right: 0;bottom:0;background: #fc6b32;text-align: center;color: #fff;font-size: 18px;padding: 3% 0;display: inline-block;max-width: 640px;}
 .span-address{display: inline-block;width: 8%;height: 100%;}

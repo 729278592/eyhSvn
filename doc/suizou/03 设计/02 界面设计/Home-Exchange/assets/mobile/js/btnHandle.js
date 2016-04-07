@@ -8,6 +8,7 @@
     var bm = $(".btn-menu").outerHeight(true);
     var sd = $(".submit-div").outerHeight(true);
     var cm = $(".height-con");
+    var h362 = $(".h362");
     var contentHeight = cm.outerHeight(true);
     function heightAuto(){
         if((contentHeight+footHeight)<windoeHeight){
@@ -17,9 +18,9 @@
             }
             if(sd){
                 cm.css({height:windoeHeight-footHeight-sd+"px"});
-//                if(cm.outerHeight(true)<362){
-//                    cm.css({height:windoeHeight-footHeight+"px"});
-//                }
+                if(h362.outerHeight(true)<362){
+                    h362.css({height:windoeHeight-footHeight+"px"});
+                }
             }
         }else{
             $("html").css({"overflow-y":"auto"});
