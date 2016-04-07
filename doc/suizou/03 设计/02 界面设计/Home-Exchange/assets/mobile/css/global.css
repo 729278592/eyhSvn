@@ -280,6 +280,7 @@ a:hover{text-decoration: none;}
     width: 100%;
     padding: 6.5px 10px;
     color: #666;
+    border:none;
 }
 
 
@@ -408,7 +409,6 @@ p>label>input{position: relative;top: 2px;}
 .contact-type{padding: 20px 0;text-align: center;background: #fff;}
 .contact-type p{font-size: 18px;color: #666;}
 .contact-type p.phone-num{color: #f9a003;font-size: 20px;}
-
 
 /*change_address*/
 .add{display: inline-block;text-align: center;position: relative;margin-bottom: 10px;}
