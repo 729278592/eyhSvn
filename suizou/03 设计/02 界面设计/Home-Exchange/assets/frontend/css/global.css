@@ -1998,6 +1998,7 @@ nowrap;text-overflow: ellipsis;width: 100%;}.sc-list1{display: none;}
 .btn-sure.ml40{margin-left:80px;}
 .order-pay{width: 100%;background: #fff;padding-top: 1px;padding-bottom: 50px;}
 .order-infor{width: 933px;margin:15px auto 0;}
+.paySuccess{text-align: center;margin-top: 20px;color: #666;}
 .breadcrumbs-one.margin{margin-bottom: 10px;}
 .btn-Csure,.btn-cancle{display: inline-block;padding: 8px 25px;border-radius: 3px;background: #fca715;color: #fff;position: relative;top: 15px;}
 .btn-Csure{left: 40px;}
