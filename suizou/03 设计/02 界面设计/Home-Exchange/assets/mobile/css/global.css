@@ -225,8 +225,12 @@ display: block;
 .order-menu li .order-infor .money{color: #fbb435;position: relative;right: 2%;}
 .order-menu li .order-infor .pay-type{color: #fbb435;}
 .order-menu li .order-infor .distribution-type{color: #53ba93;}
+.order-menu li p a{margin-right:1%;}
 .order-menu li p .btn-ALLMoney{font-size:12px;display: inline-block;padding: 5px 10px;color: #fff;border-radius: 4px;background:#fbb435; }
 .order-menu li p.clearfix{margin: 5px 0;}
+.order-menu.pd2.bg-fff li p.clearfix{display:block;}
+
+
 
 .swiper-wrapper .swiper-slide{position: relative;}
 .clean-mask{position: absolute;padding: 5px;background: rgba(30, 188, 158, 0.60);color: #fff;font-size: 14px;z-index: 100;top: 10%;left: 2%;width: 26%;max-height: 120px;}
