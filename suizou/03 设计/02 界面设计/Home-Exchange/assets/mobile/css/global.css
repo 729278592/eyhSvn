@@ -364,7 +364,7 @@ p>label>input{position: relative;top: 2px;}
 .maternity-list{width: 100%;}
 .maternity-list li{width: 100%;background: #ececec;margin-bottom: 2%;display: table;}
 .maternity-list li .list-div,.maternity-list li .maternity-infor{display: table-cell;vertical-align: middle;}
-.maternity-list li .list-div{width: 30%;}
+.maternity-list li .list-div{width: 35%;}
 .maternity-list li .list-div img{width: 100%;}
 .maternity-list li .maternity-infor{padding-left: 5%;color: #666;}
 .title-action{height: 34px;line-height: 34px;font-size: 14px;color: #666;background: #f6fffa;width: 100%;padding: 0 3%;}
