@@ -438,7 +438,7 @@ p>label>input{position: relative;top: 2px;}
 
 
 .address-group{padding: 2% 3.2%;background: #fff;margin: 10px 0;position: relative;font-size: 14px;color: #666;}
-.address-group .phone{position: absolute;right: 6%;top: 15px;}
+.address-group .phone{position: absolute;left: 65%;top: 15px;}
 .address-group .fa{position: absolute;right: 4%;top: 36%;font-size: 30px;color: #666;}
 .address-group .people{position: absolute;top: 13px;}
 .address-group .address{;position:relative;bottom: 0;width: 88%;display: inline-block;left: 9%;padding: 0;}
