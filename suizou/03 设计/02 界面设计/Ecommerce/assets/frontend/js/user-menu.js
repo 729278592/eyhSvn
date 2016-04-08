@@ -3,9 +3,6 @@
  */
 $(function(){
 
-
-
-
     /*User personal information left navigation*/
     var yy = $(".personal-menu li a");
     yy.each(function(){
@@ -30,8 +27,5 @@ $(function(){
             }
         })
     });
-
-
-
 
 });

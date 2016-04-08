@@ -5,6 +5,14 @@
     <title>个人资料</title>
     <link rel="stylesheet" href="../../assets/global/plugins/font/css/font-awesome.min.css"/>
     <link rel="stylesheet" href="../../assets/frontend/css/global.css"/>
+    <style>
+        body{font-family: "微软雅黑";}
+        * {
+            -webkit-box-sizing: content-box;
+            -moz-box-sizing: content-box;
+            box-sizing: content-box;
+        }
+    </style>
 </head>
 <body>
     <div class="wapper">
@@ -27,7 +35,7 @@
                 </ul>
             </div>
         </div>
-        <div class="content mt15 clearfix">
+        <div class="content mt15">
             <div class="center">
                 <div class="clearfix" style="width: 100%;">
                     <ul class="personal-menu left">
@@ -101,99 +109,97 @@
                             <!--</div>-->
                         <!--</div>-->
                         <div class="infor">
-                            <div class="infor-title">
-                                <span class="span-infor block">基本资料</span>
-                            </div>
-                            <div class="infor-content clearfix">
-                                <p>
-                                    <span class="left">
-                                         <span class="type">联系电话:</span>
-                                         <span>13678478463</span>
-                                    </span>
-                                    <span class="gai right">修改</span>
-                                </p>
+                            <p class="btn-type">
+                                <button class="btn-person active">完善资料</button>
+                                <button class="btn-person">修改资料</button>
+                            </p>
 
-                                <p class="active">
-                                    <span class="left">
-                                         <span class="type">用户名:</span>
-                                         <span>张三</span>
-                                    </span>
-                                    <span class="gai right">修改</span>
-                                </p>
-                                <p>
-                                    <span class="left">
-                                         <span class="type">身份证:</span>
-                                         <span>5566887</span>
-                                    </span>
-                                    <span class="gai right">修改</span>
-                                </p>
-                                <p class="active">
-                                    <span class="left">
-                                         <span class="type">密码:</span>
-                                         <span>5566887</span>
-                                    </span>
-                                    <span class="gai right">修改</span>
-                                </p>
-                            </div>
-                            <div class="infor-title">
-                                <span class="span-infor block">个人资料</span>
-                            </div>
-                            <div class="infor-content clearfix">
-                                <img src="../../assets/frontend/images/uplode.png" alt="" class="left upload"/>
+                            <div class="active infor-table w100">
                                 <div class="left personal-infor">
-                                    <p>
-                                        <span class="type">姓名:</span>
-                                        <input type="text"/>
-                                    </p>
-                                    <p>
-                                        <span class="type">性别:</span>
-                                        <label><input type="radio" name="sex" checked/> 男</label>　
-                                        <label><input type="radio" name="sex"/> 女</label>
-                                    </p>
-                                    <p>
-                                        <span class="type">生日:</span>
-                                        <select name="">
-                                            <option value="2015">2015</option>
-                                            <option value="2015">2015</option>
-                                            <option value="2015">2015</option>
-                                        </select>年　
-                                        <select name="">
-                                            <option value="12">12</option>
-                                            <option value="11">11</option>
-                                            <option value="10">10</option>
-                                        </select>月　
-                                        <select name="">
-                                            <option value="5">5</option>
-                                            <option value="6">6</option>
-                                            <option value="7">7</option>
-                                        </select>日
-                                    </p>
-                                    <p>
-                                        <span class="type">身份:</span>
-                                        <label><input type="radio" name="type" checked/> 学生</label>　
-                                        <label> <input type="radio" name="type"/> 在职</label>　
-                                        <label><input type="radio" name="type"/> 自由职业</label>　
-                                        <label><input type="radio" name="type"/> 其他</label>
-                                    </p>
-                                    <p>
-                                        <span class="type">居住地:</span>
-                                        <select name="">
-                                            <option value="重庆市">重庆市</option>
-                                            <option value="重庆市">重庆市</option>
-                                            <option value="重庆市">重庆市</option>
-                                        </select>　　
-                                        <select name="">
-                                            <option value="巴南区">巴南区</option>
-                                            <option value="巴南区">巴南区</option>
-                                            <option value="巴南区">巴南区</option>
-                                        </select>　　
-                                        <select name="">
-                                            <option value="石杨路">石杨路</option>
-                                            <option value="石杨路">石杨路</option>
-                                            <option value="石杨路">石杨路</option>
-                                        </select>
-                                    </p>
-                                    <button class="btn-sure">保存</button>
+                                    <div class="div-groups">
+                                        <span class="span-group">当前头像</span>
+                                        <span class="span-tou">
+                                            <img src="../../assets/frontend/images/no-people.png" class="ziliao" alt="" id="tou">
+                                            <span class="title"></span>
+                                            <span class="ti-c">修改头像</span>
+                                        </span>
+                                    </div>
+                                    <form action="#" class="pi-form">
+                                        <p>
+                                            <span class="type">姓名 :</span>
+                                            <input type="text" class="text"placeholder="请输入姓名"/>
+                                        </p>
+                                        <p>
+                                            <span class="type">性别 :</span>
+                                            <label>
+                                                <input type="radio" name="sex" checked/>男
+                                            </label>
+                                            <label>
+                                                <input type="radio" name="sex"/>女
+                                            </label>
+                                        </p>
+                                        <p>
+                                            <span class="type">生日 :</span>
+                                            <input id="d4311" class="Wdate text inputDisable removePlaceholder" type="text" placeholder="2015-4-4" onFocus="WdatePicker()" readonly/>
+                                        </p>
+                                        <p>
+                                            <span class="type">身份:</span>
+                                            <label>
+                                                <input type="radio" name="type" checked/>学生
+                                            </label>
+                                            <label>
+                                                <input type="radio" name="type"/>在职
+                                            </label>
+                                            <label>
+                                                <input type="radio" name="type"/>自由职业
+                                            </label>
+                                            <label>
+                                                <input type="radio" name="type"/>其他
+                                            </label>
+                                        </p>
+                                        <p>
+                                            <span class="type">居住地:</span>
+                                            <select name="">
+                                                <option value="四川省">四川省</option>
+                                                <option value="广东省">广东省</option>
+                                                <option value="福建省">福建省</option>
+                                            </select> 省　
+                                            <select name="">
+                                                <option value="广安市">广安市</option>
+                                                <option value="佛山市">佛山市</option>
+                                                <option value="安徽市">安徽市</option>
+                                            </select> 市　
+                                            <select name="">
+                                                <option value="武胜县">武胜县</option>
+                                                <option value="邻水县">邻水县</option>
+                                                <option value="管啊县">管啊县</option>
+                                            </select> 县
+                                        </p>
+                                        <input type="submit" class="btn-sure" value="保存"/>
+                                    </form>
+                                </div>
+                            </div>
+                            <div class="infor-table auto">
+                                <div class="personal-infor mt0">
+                                    <form action="#">
+                                        <p>
+                                            <span class="type">用户名:</span>
+                                            <input type="text" class="text" placeholder="请输入用户名"/>
+                                        </p>
+                                        <p>
+                                            <span class="type">现在密码:</span>
+                                            <input type="text" class="text" placeholder="请输入现在密码"/>
+                                        </p>
+                                        <p>
+                                            <span class="type">新密码:</span>
+                                            <input type="text" class="text" placeholder="请输入新密码"/>
+                                        </p>
+                                        <p>
+                                            <span class="type">确认密码:</span>
+                                            <input type="text" class="text" placeholder="请输入密码"/>
+                                        </p>
+                                        <input type="submit" class="btn-sure" value="保存"/>
+                                    </form>
                                 </div>
                             </div>
                         </div>
@@ -218,5 +224,18 @@
     <script src="../../assets/global/plugins/move/js/move.js"></script>
     <script src="../../assets/frontend/js/global.js"></script>
     <script src="../../assets/frontend/js/user-menu.js"></script>
+    <script src="../../assets/global/plugins/My97DatePicker/WdatePicker.js"></script>
+    <script>
+        $(function(){
+            $(".btn-person").each(function(i){
+                $(this).on("click",function(){
+                    $(this).addClass("active");
+                    $(this).siblings(".btn-person").removeClass("active");
+                    $(".infor-table").eq(i).addClass("active");
+                    $(".infor-table").eq(i).siblings(".infor-table").removeClass("active");
+                })
+            })
+        })
+    </script>
 </body>
 </html>
