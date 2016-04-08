@@ -19,6 +19,8 @@ function heightAuto(){
     });
 }
 heightAuto();
+
+/*场景蒙版的显示*/
 var mbm = $(".mask,.mask-bg");
 var tul = $(".td-ul li.item");
 var by = $(".btn-yue");
@@ -27,6 +29,7 @@ tul.each(function(i){
     var that = $(this);
     that.find(by).on("click",function(){
         $(this).closest(".content-wisdom.bgfff").addClass("active").addClass("bg");
+        $(this).closest(".type-debugging").siblings(".type-debugging").find(".content-wisdom.bgfff").removeClass("active").removeClass("bg");
         mbm.removeClass("hide");
         d.eq(i).removeClass("hide");
         heightAuto();
@@ -91,12 +94,13 @@ dg.each(function(){
 
 /*取消设置场景条件*/
 var bc = $(".btn-cancle");
-bc.on("click",function(){
-    mbm.addClass("hide");
-    $(this).closest(".dailog").addClass("hide");
-    $(".content-wisdom.bgfff.bg").removeClass("active");
+bc.each(function(i){
+    $(this).on("click",function(){
+        mbm.addClass("hide");
+        $(this).closest(".dailog").addClass("hide");
+        $(".content-wisdom.bgfff.bg").removeClass("active");
+    });
 });
-
 
 /*确定设置场景条件*/
 var bcq = $(".btn-compelet");
