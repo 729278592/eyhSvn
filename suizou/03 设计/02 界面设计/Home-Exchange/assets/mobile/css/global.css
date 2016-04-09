@@ -182,9 +182,10 @@ a:hover{text-decoration: none;}
 .user-comment{width: 100%;padding: 0 2%;}
 .user-comment .title{font-size: 16px;color: #333;padding: 10px 0;}
 .comment-div{width: 100%;padding: 2% 5%;font-size: 14px;color: #666;background: #fff;border: 1px solid #efefef;}
+.comment-div .good{width: 6%;}
 .comment-div span.num{color: #ff0404;}
 .comment-div .fa-hand-o-up{font-size: 30px;color: #fab433;}
-.comment-div .fa-angle-right{font-size: 24px;color: #666;position: relative;top: 3px;}
+.comment-div .fa-angle-right{font-size: 24px;color: #666;position: relative;top: -2px;}
 
 
 
@@ -370,7 +371,7 @@ p>label>input{position: relative;top: 2px;}
 .services-type .input-area{float: left;height: 44px;line-height: 44px;padding-left: 10px;width: 75%;border: 1px solid #dbdbdb;}
 
 .div-wdate{width: 70%;height: 40px;background: #fff;position: relative;}
-.div-wdate .Wdate{border: 1px solid #efefef;background: transparent;width: 100%;height: 36px;line-height: 36px;position: relative;z-index: 5;padding-left: 10px;}
+.div-wdate .Wdate{border: 1px solid #efefef;background: transparent;width: 100%;height: 40px;line-height: 40px;position: relative;z-index: 5;padding-left: 10px;}
 .div-wdate.w100{width: 310px;}
 .div-wdate .Wdate.text{width: 300px;}
 .div-wdate .fa{position: absolute;right: 10px;top: 10px;color: #52ba92;}
