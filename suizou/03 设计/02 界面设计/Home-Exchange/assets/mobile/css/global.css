@@ -90,7 +90,7 @@ a:hover{text-decoration: none;}
 .service-head.mt15{margin-top: 1.5%;}
 .service-head img{position: relative;top: -8px;width: 5%;}
 .service-head .dot{display: inline-block;width: 2px;height: 30px;background: #fca511;position: relative;top: 4px;}
-.service-head .title{font-size: 20px;position: relative;top: -4px;color: #666;}
+.service-head .title{font-size: 16px;position: relative;top: -4px;color: #666;}
 .service-head a{color: #666;position: relative;top: 9px;}
 .service-head a.top0{top: 0;display: inline-block;width: 100%;height: 100%;}
 .service-head.bg-fff.btn-returnLogin{text-align: center;padding: 0;}
@@ -317,6 +317,9 @@ a:hover{text-decoration: none;}
 .area-menu li>p {text-align: center;border-top: 1px solid #fab432;color: #fab432;font-size: 14px;padding: 6px 2px;margin: 0 auto;position: relative;top: 2px;display: inline-block;}
 .title-infor{color: #666;font-size: 14px;padding: 2% 0;}
 .pd2{padding: 2%;color: #666;width: 96%;margin: 0 2%;background: #fff;border: 1px solid #dbdbdb;border-radius: 8px;}
+.list-service{width: 100%;}
+.list-service>li{border-bottom: 1px solid #dbdbdb;}
+.list-service>li.bb0{border-bottom: none;}
 .service-head>.title{line-height: 45px;}
 .pd2.pdt0{padding: 0 2%;}
 .small-infor{color: #63bf9d;}
@@ -639,7 +642,7 @@ body{    line-height: 1.6;}
 .ma6{margin: 10px 0;color: #666;}
 
 .head-title .service-head{background: #fff;line-height: 40px;}
-.head-title .service-head .fa-angle-right{position: relative;top: 8px;font-size: 18px;}
+.head-title .service-head .fa-angle-right,.head-title .service-head .fa-angle-down{position: relative;top: 8px;font-size: 18px;}
 
 /*maternity-search*/
 .type-form{width: 100%;padding: 0 2%;font-size: 14px;color: #666;}
@@ -722,7 +725,7 @@ body{    line-height: 1.6;}
     .clean-list li{font-size: 14px;}
     .clean-mask{font-size: 12px;}
     .order-step li span{font-size: 12px;}
-    .content{padding-bottom: 110px;}
+    .content{padding-bottom: 125px;}
     .news-menu li p,.service-head .title{font-size: 14px;}
     .service-head .title{top: -6px;}
     .add-span{top: 30%;}
