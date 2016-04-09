@@ -85,6 +85,7 @@ a:hover{text-decoration: none;}
 .search-chioce1 li .item .num{left: 0;}
 
 .service-head{padding: 5px 15px;background: #ececec;height: 45px;}
+.service-head>.title{color: #333;}
 .service-head.bg-fff{background: #fff;margin-top: 1.5%;line-height: 35px;}
 .service-head.bg-fff.mt0{margin-top: 0;}
 .service-head.mt15{margin-top: 1.5%;}
@@ -342,7 +343,7 @@ a:hover{text-decoration: none;}
 
 
 .reserve{width: 100%;padding: 0 2%;}
-.reserve>.title{width: 100%;color: #333;height: 45px;line-height: 45px;padding: 0 5%;font-size: 16px;}
+.reserve>.title{width: 100%;color: #333;height: 45px;line-height: 45px;font-size: 16px;}
 .reserve>.title.bgfff{background: #fff;color: #821d2f;font-size: 16px;}
 .reserve>.title.color{color: #61bd8a;}
 .reserve>.title.color2{color: #fca613;}
