@@ -10,11 +10,57 @@
 </head>
 <body>
     <div class="wrapper">
-        <div class="content bg-fff">
+        <div class="head">
+        <span class="left">
+            <i class="fa fa-angle-left"></i>
+        </span>
+            衣柜整理
+        </div>
+        <div class="content bg-ecec">
             <img src="../../assets/mobile/images/ward1.jpg" class="img-responsive"/>
+            <div class="service-infor">
+                <p class="large-title">衣橱专业整理设计</p>
+
+                <p class="small-title">艺厨设计/陈列搭配</p>
+
+                <p class="money">￥ : 600元/米</p>
+            </div>
+            <ul class="service-menu clearfix">
+                <li>
+                    <img src="../../assets/mobile/images/service1.png" class="service-img"/><br/>
+                    <span class="title">及时响应</span>
+                    <img src="../../assets/mobile/images/brone.png" class="brone"/><br/>
+                </li>
+                <li>
+                    <img src="../../assets/mobile/images/service2.png" class="service-img"/><br/>
+                    <span class="title">品质保证</span>
+                    <img src="../../assets/mobile/images/brone.png" class="brone"/><br/>
+                </li>
+                <li>
+                    <img src="../../assets/mobile/images/service3.png" class="service-img"/><br/>
+                    <span class="title">安全保证</span>
+                    <img src="../../assets/mobile/images/brone.png" class="brone"/><br/>
+                </li>
+                <li>
+                    <img src="../../assets/mobile/images/service4.png" class="service-img"/><br/>
+                    <span class="title">实名认证</span>
+                    <img src="../../assets/mobile/images/brone.png" class="brone"/><br/>
+                </li>
+                <li class="br0">
+                    <img src="../../assets/mobile/images/service5.png" class="service-img"/><br/>
+                    <span class="title">补实保证</span>
+                </li>
+            </ul>
+            <div class="user-comment">
+                <p class="title">用户评价</p>
+                <div class="comment-div">
+                    <i class="fa fa-hand-o-up"></i>
+                    已经有 <span class="num">2222</span>人评价此服务
+                    <i class="right fa fa-angle-right"></i>
+                </div>
+            </div>
             <div class="reserve">
-                <p class="title color3 bgfff">衣柜整理</p>
-                <p class="title bg2">在线预订</p>
+                <p class="title">在线预订</p>
                 <div class="reserve-indormation">
                     <p class="title">请选择服务时间</p>
                     <div class="reserve-date clearfix">
@@ -55,14 +101,17 @@
                     </div>
                 </div>
             </div>
-            <div class="h10 bgfff"></div>
             <div class="service-head">
-                <span class="dot"></span>
-                <img src="../../assets/mobile/images/order.png" />
                 <span class="title">服务介绍</span>
             </div>
             <div class="pd2">
-                <ul class="area-menu bg2 clearfix">
+                <div class="head-title">
+                    <div class="service-head">
+                        <span class="title">服务介绍</span>
+                        <i class="fa fa-angle-right right"></i>
+                    </div>
+                </div>
+                <ul class="area-menu bg2 hide clearfix">
                     <li>
                         <div class="area-num">
                             <img src="../../assets/mobile/images/wa-img1.png" class="img-responsive"/>
@@ -138,46 +187,42 @@
         </div>
         <div class="foot">
             <ul class="f-menu clearfix">
-                <li>
+                <li class="active">
                     <a href="index.html">
-                        <div class="bt"></div>
-                            <span>
-                                <i class="fa fa-home"></i>
-                            </span><br/>
+                        <span>
+                            <i class="fa fa-home"></i>
+                        </span>
                         <span>首页</span>
                         <div class="br"></div>
                     </a>
                 </li>
-                <li class="active">
-                    <a href="brand-service.html">
-                        <div class="bt"></div>
-                                <span>
-                                    <i class="fa fa-bars"></i>
-                                </span><br/>
-                        <span>品牌服务</span>
-                        <div class="br"></div>
-                    </a>
-                </li>
                 <li>
-                    <a href="my-community.html">
-                        <div class="bt"></div>
-                                <span>
-                                    <i class="fa fa-th-large"></i>
-                                </span><br/>
-                        <span>我的社区</span>
+                    <a href="brand-service.html">
+                        <span>
+                            <i class="fa fa-star-o"></i>
+                        </span>
+                        <span>星级服务</span>
                         <div class="br"></div>
                     </a>
                 </li>
                 <li>
                     <a href="person-center.html">
-                        <div class="bt"></div>
-                                <span>
-                                    <i class="fa fa-user"></i>
-                                </span><br/>
+                        <span>
+                            <i class="fa fa-user"></i>
+                        </span>
                         <span>个人中心</span>
                     </a>
                 </li>
             </ul>
+            <div class="copyright">
+                <div class="copyright-head">
+                    <img src="../../assets/mobile/images/index-logo.png" alt="" class="index-logo"/>
+                    家服汇
+                </div>
+                <p>
+                    重庆至尚科技发展有限公司 CopyRight@2014-2019 备案号：渝ICP备15005428号-1
+                </p>
+            </div>
         </div>
     </div>
 </body>
@@ -187,5 +232,19 @@
 <script src="../../assets/global/plugins/My97DatePicker/WdatePicker.js"></script>
 <script type="text/javascript">
     $('.spinnerExample').spinner({});
+
+
+    $(function(){
+        $(".head-title").on("click",function(){
+           if($(this).next().is(".hide")){
+               $(this).next().removeClass("hide");
+               $(this).find(".fa-angle-right").removeClass("fa-angle-right").addClass("fa-angle-down");
+           }else{
+               $(this).next().addClass("hide");
+               $(this).find(".fa-angle-down").removeClass("fa-angle-down").addClass("fa-angle-right");
+           }
+
+        });
+    })
 </script>
 </html>
