@@ -700,6 +700,7 @@ body{    line-height: 1.6;}
 .page-num{border: 1px solid #ccc;text-align: center;width: 50px;height: 25px;line-height: 25px;color: #666;font-size: 12px;}
 .btn-jump{width: 50px;height: 30px;text-align: center;background: #ff6702;font-size: 12px;color: #fff;font-family: "微软雅黑";}
 .page-num:focus{color: #ff6702;}
+.list-service .head-title .service-head>.title{font-size: 14px;}
 
 
 
