@@ -12,7 +12,7 @@ function load(){
         }
     });
 
-
+    $()
 }
 
 $(function(){
