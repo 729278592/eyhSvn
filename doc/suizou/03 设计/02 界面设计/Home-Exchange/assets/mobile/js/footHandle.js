@@ -24,7 +24,6 @@
                     cm.css({height:windoeHeight-footHeight - head-sd+"px"});
                 }
             }
-
             else{
                 cm.css({"height":"auto"});
             }
@@ -38,45 +37,19 @@
             }
             else{
                 content.css({"height":"auto"});
+
                 if($(".list-service.height").height()>410){
-                    cm.css({"height":"auto"});
+                    content.css({"height":"auto"});
                 }
                 else if($(".list-service.height").height()<270){
                     content.css({height:windoeHeight-footHeight-head+"px"});
+                    if(content.height()<410){
+                        content.css({"height":"auto"});
+                    }
                 }
             }
         }
-//        if((heightCon+footHeight+head)<windoeHeight){
-//            if(bm){
-//                alert(3)
-//                cm.css({height:windoeHeight-footHeight-bm+"px"});
-//            }
-//            if(sd){
-//                alert(2)
-//                cm.css({height:windoeHeight-footHeight-sd-head+"px"});
-//                if(h362.outerHeight(true)<362){
-//                    h362.css({height:windoeHeight-footHeight+"px"});
-//                }
-//            }
-//            if(heightauto){
-//                alert(heightCon)
-//                content.css({height:windoeHeight-footHeight-head+"px"});
-//            }
-//        }
-//        else{
-//            $("html").css({"overflow-y":"auto"});
-//            cm.css({"height":"auto"});
-//            content.css({"height":"auto"});
-//        }
     }
-//    if(cm){
-//        $(function(){
-//            heightAuto();
-//            $(window).on("resize",function(){
-//                heightAuto();
-//            });
-//        })
-//    }
 
 $(function(){
     heightAuto();
