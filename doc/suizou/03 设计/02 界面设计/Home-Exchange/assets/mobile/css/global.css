@@ -348,7 +348,7 @@ a:hover{text-decoration: none;}
 
 
 .reserve{width: 100%;padding: 0 2%;}
-.reserve>.title{width: 100%;color: #333;height: 45px;line-height: 45px;font-size: 16px;}
+.reserve>.title{width: 100%;color: #666;height: 45px;line-height: 45px;font-size: 14px;}
 .reserve>.title.bgfff{background: #fff;color: #821d2f;font-size: 16px;}
 .reserve>.title.color{color: #61bd8a;}
 .reserve>.title.color2{color: #fca613;}
