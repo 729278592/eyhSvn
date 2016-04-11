@@ -23,14 +23,14 @@ a,button,input,img,table,ul,li,tr,td,div{-webkit-tap-highlight-color:rgba(0,0,0,
 textarea,input,button,select{border: none;outline: none;}
 .hidden{visibility: hidden;}
 .wrapper{width: 100%;background: #fff;max-width: 640px;margin: 0 auto;position: relative;}
-.content{width: 100%;padding-bottom: 90px;}
+.content{width: 100%;}
 .content.bg-ecec{background: #ececec;padding-top: 1px;}
 a:hover{text-decoration: none;}
 
 
 
 /*index*/
-.foot{width: 100%;background: #028dd7;position: fixed;bottom: 0;left: 0;z-index: 50;}
+.foot{width: 100%;background: #028dd7;}
 .foot .f-menu{width: 80%;margin: 0 10%;height: 40px;}
 .foot .f-menu li{width: 33.3%;float: left;background: #028dd7;height: 40px;}
 .foot .f-menu li.active a{color: #aaa;}
@@ -739,7 +739,6 @@ body{    line-height: 1.6;}
     .clean-list li{font-size: 14px;}
     .clean-mask{font-size: 12px;}
     .order-step li span{font-size: 12px;}
-    .content{padding-bottom: 125px;}
     .news-menu li p,.service-head .title{font-size: 14px;}
     .service-head .title{top: -6px;}
     .service-head.lh0 .title{float: left;}
