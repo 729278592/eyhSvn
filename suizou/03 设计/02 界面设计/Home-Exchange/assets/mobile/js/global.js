@@ -12,7 +12,9 @@ function load(){
         }
     });
 
-    $("")
+    $(".head .left").on("click",function(){
+        window.history.go(-1)
+    });
 }
 
 $(function(){
