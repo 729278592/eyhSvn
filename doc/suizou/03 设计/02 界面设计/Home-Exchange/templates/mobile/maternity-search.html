@@ -9,334 +9,336 @@
     <link rel="stylesheet" href="../../assets/mobile/css/global.css"/>
 </head>
 <body>
-<div class="wrapper">
-    <div class="content bg-fff">
-        <form action="#" class="type-form">
-            <ul class="search-terms">
-                <li class="clearfix">
-                    <div class="left">
-                        <div class="w10">
-                            <span class="title">服务区域</span>
-                        </div>
-                        <select name="_seq_serviceRegion">
-                            <option value="" >不限</option>
-                            <option value="ddkq" >大渡口区</option>
-                            <option value="naq" >南岸区</option>
-                            <option value="yzq" >渝中区</option>
-                            <option value="ybj" >渝北区</option>
-                            <option value="jbq" >江北区</option>
-                            <option value="jlpq" >九龙坡区</option>
-                            <option value="spbq" >沙坪坝区</option>
-                        </select>
-
-                    </div>
-                    <div class="right">
-                        <div class="w10">
-                            <span style="width: 40px;display: inline-block;">籍贯</span>
-                        </div>
-                        <select name="_seq_birthplace">
-                            <option value="">不限</option>
-                            <option value="河北省">河北省</option>
-                            <option value="吉林省">吉林省</option>
-                            <option value="山西省">山西省</option>
-                            <option value="辽宁省">辽宁省</option>
-                            <option value="黑龙江省">黑龙江省</option>
-                            <option value="江苏省">江苏省</option>
-                            <option value="浙江省">浙江省</option>
-                            <option value="安徽省">安徽省</option>
-                            <option value="福建省">福建省</option>
-                            <option value="江西省">江西省</option>
-                            <option value="山东省">山东省</option>
-                            <option value="河南省">河南省</option>
-                            <option value="湖北省">湖北省</option>
-                            <option value="湖南省">湖南省</option>
-                            <option value="广东省">广东省</option>
-                            <option value="海南省">海南省</option>
-                            <option value="四川省">四川省</option>
-                            <option value="贵州省">贵州省</option>
-                            <option value="云南省">云南省</option>
-                            <option value="陕西省">陕西省</option>
-                            <option value="甘肃省">甘肃省</option>
-                            <option value="台湾省">台湾省</option>
-                            <option value="青海省">青海省</option>
-                            <option value="北京">北京</option>
-                            <option value="天津">天津</option>
-                            <option value="上海">上海</option>
-                            <option value="重庆">重庆</option>
-                            <option value="新疆维吾尔族自治区">新疆维吾尔族自治区</option>
-                            <option value="广西壮族自治区">广西壮族自治区</option>
-                            <option value="内蒙古自治区">内蒙古自治区</option>
-                            <option value="宁夏回族自治区">宁夏回族自治区</option>
-                            <option value="西藏自治区">西藏自治区</option>
-                        </select>
-                    </div>
-                </li>
-                <!--<li>-->
-                <!--<i class="fa fa-money"></i>-->
-                <!--<span class="title">价格</span>-->
-                <!--<div class="slider-money">-->
-                <!--<div id="slider-range" class="bg-blue">-->
-                <!--</div>-->
-                <!--<div>-->
-                <!--Value: <span id="slider-range-amount"></span>-->
-                <!--</div>-->
-                <!--</div>-->
-                <!--</li>-->
-                <input type="hidden" name="_nge_price" id="minPrice" value="1">
-                <input type="hidden" name="_nle_price" id="maxPrice" value="2000">
-
-
-                <li>
-                    <div class="w10">
-                        <span class="title">服务级别</span>
-                    </div>
-
-                    <div class="w73">
-                        <label class="rental_mode  active no-action">
-                            <input type="radio" name="_seq_level" class="" value="" checked/>
-                            不限
-                        </label>
-                        <label class="rental_mode ">
-                            <input type="radio" name="_seq_level" class="" value="1"/>
-                            低级
-                        </label>
-                        <label class="rental_mode ">
-                            <input type="radio" name="_seq_level" class="" value="2"/>
-                            中级
-                        </label>
-                        <label class="rental_mode ">
-                            <input type="radio" name="_seq_level" class="" value="3"/>
-                            高级
-                        </label>
-                    </div>
-
-                </li>
-
-
-                <li>
-                    <div class="w10">
-                        <span class="title">性别</span>
-                    </div>
-
-                    <div class="w73">
-                        <label class="rental_mode active no-action">
-                            <input type="radio" name="sexs" class="" checked/>
-                            不限
-                        </label>
-                        <label class="rental_mode ">
-                            <input type="radio" name="sexs" class=""/>
-                            男
-                        </label>
-                        <label class="rental_mode ">
-                            <input type="radio" name="sexs" class=""/>
-                            女
-                        </label>
-                    </div>
-                </li>
-                <li>
-                    <div class="w10">
-                        <span class="title">从业年限</span>
-                    </div>
-
-                    <div class="w73">
-                        <label class="rental_mode  active no-action">
-                            <input type="radio" name="year" class="" checked/>
-                            不限
-                        </label>
-                        <label class="rental_mode ">
-                            <input type="radio" name="year" class=""/>
-                            1-3年
-                        </label>
-                        <label class="rental_mode ">
-                            <input type="radio" name="year" class=""/>
-                            4-6年
-                        </label>
-                        <label class="rental_mode ">
-                            <input type="radio" name="year" class=""/>
-                            7年以上
-                        </label>
-                    </div>
-                </li>
-                <li>
-                    <div class="w10">
-                        <span class="title">专业证书</span>
-                    </div>
-
-                    <div class="w73">
-                        
-                        <label class="rental_mode ">
-                            <input type="checkbox" name="type" class=""/>
-                            高级月嫂证
-                        </label>
-                        <label class="rental_mode ">
-                            <input type="checkbox" name="type" class=""/>
-                            营养师证
-                        </label>
-                        <label class="rental_mode ">
-                            <input type="checkbox" name="type" class=""/>
-                            母婴服务二级证
-                        </label>
-                    </div>
-                </li>
-            </ul>
-            <center class="operation-btn">
-                <input type="submit" value="筛选" class="btn-screen"/>
-                <input type="reset"  value="清空" class="btn-clear"/>
-            </center>
-        </form>
-        <ul class="maternity-list">
-            <li>
-                <a href="maternal-details.html" class="list-div">
-                    <img src="../../assets/mobile/images/m-img1.jpg" alt=""/>
-                </a>
-                <div class="maternity-infor">
-                    <p>
-                        <i class="fa fa-check-circle-o"></i>
-                        <span>从业年限 : <span class="num">1</span>年工作经历</span>
-                    </p>
-                    <p>
-                        <i class="fa fa-money"></i>
-                        <span>参考薪酬 : ￥<span class="num">3000</span>元/月</span>
-                    </p>
-                    <p>
-                        <i class="fa fa-home"></i>
-                        <span>33岁|重庆|高中/中专/技校</span>
-                    </p>
-                </div>
-            </li>
-            <li>
-                <a href="maternal-details.html" class="list-div">
-                    <img src="../../assets/mobile/images/m-img1.jpg" alt=""/>
-                </a>
-                <div class="maternity-infor">
-                    <p>
-                        <i class="fa fa-check-circle-o"></i>
-                        <span>从业年限 : <span class="num">1</span>年工作经历</span>
-                    </p>
-                    <p>
-                        <i class="fa fa-money"></i>
-                        <span>参考薪酬 : ￥<span class="num">3000</span>元/月</span>
-                    </p>
-                    <p>
-                        <i class="fa fa-home"></i>
-                        <span>33岁|重庆|高中/中专/技校</span>
-                    </p>
-                </div>
-            </li>
-            <li>
-                <a href="maternal-details.html" class="list-div">
-                    <img src="../../assets/mobile/images/m-img1.jpg" alt=""/>
-                </a>
-                <div class="maternity-infor">
-                    <p>
-                        <i class="fa fa-check-circle-o"></i>
-                        <span>从业年限 : <span class="num">1</span>年工作经历</span>
-                    </p>
-                    <p>
-                        <i class="fa fa-money"></i>
-                        <span>参考薪酬 : ￥<span class="num">3000</span>元/月</span>
-                    </p>
-                    <p>
-                        <i class="fa fa-home"></i>
-                        <span>33岁|重庆|高中/中专/技校</span>
-                    </p>
-                </div>
-            </li>
-            <li>
-                <a href="maternal-details.html" class="list-div">
-                    <img src="../../assets/mobile/images/m-img1.jpg" alt=""/>
-                </a>
-                <div class="maternity-infor">
-                    <p>
-                        <i class="fa fa-check-circle-o"></i>
-                        <span>从业年限 : <span class="num">1</span>年工作经历</span>
-                    </p>
-                    <p>
-                        <i class="fa fa-money"></i>
-                        <span>参考薪酬 : ￥<span class="num">3000</span>元/月</span>
-                    </p>
-                    <p>
-                        <i class="fa fa-home"></i>
-                        <span>33岁|重庆|高中/中专/技校</span>
-                    </p>
-                </div>
-            </li>
-            <li>
-                <a href="maternal-details.html" class="list-div">
-                    <img src="../../assets/mobile/images/m-img1.jpg" alt=""/>
-                </a>
-                <div class="maternity-infor">
-                    <p>
-                        <i class="fa fa-check-circle-o"></i>
-                        <span>从业年限 : <span class="num">1</span>年工作经历</span>
-                    </p>
-                    <p>
-                        <i class="fa fa-money"></i>
-                        <span>参考薪酬 : ￥<span class="num">3000</span>元/月</span>
-                    </p>
-                    <p>
-                        <i class="fa fa-home"></i>
-                        <span>33岁|重庆|高中/中专/技校</span>
-                    </p>
-                </div>
-            </li>
-        </ul>
-        <div class="paging clearfix">
-            <ul class="page-menu clearfix">
-                <p class="page-pre" data-pagenum="1"><i class="fa fa-angle-left"></i></p>
-                <li class="active">1</li>
-                <p class="page-next" data-pagenum="2"><i class="fa fa-angle-right"></i></p>
-
-            </ul>
-            <input type="text" class="page-num" id="pageNumTarget">
-            <button type="button" class="btn-jump" id="targetButton">跳转</button>
-            <input type="hidden" value="15" id="totalPages">
+    <div class="wrapper">
+        <div class="head">
+            <span class="left">
+                <i class="fa fa-angle-left"></i>
+            </span>
+            月嫂搜索
         </div>
-    </div>
-    <div class="foot">
-        <ul class="f-menu clearfix">
-            <li>
-                <a href="index.html">
-                    <div class="bt"></div>
+        <div class="content bg-fff">
+            <form action="#" class="type-form">
+                <ul class="search-terms">
+                    <li class="clearfix">
+                        <div class="left">
+                            <div class="w10">
+                                <span class="title">服务区域</span>
+                            </div>
+                            <select name="_seq_serviceRegion">
+                                <option value="" >不限</option>
+                                <option value="ddkq" >大渡口区</option>
+                                <option value="naq" >南岸区</option>
+                                <option value="yzq" >渝中区</option>
+                                <option value="ybj" >渝北区</option>
+                                <option value="jbq" >江北区</option>
+                                <option value="jlpq" >九龙坡区</option>
+                                <option value="spbq" >沙坪坝区</option>
+                            </select>
+
+                        </div>
+                        <div class="right">
+                            <div class="w10">
+                                <span style="width: 40px;display: inline-block;">籍贯</span>
+                            </div>
+                            <select name="_seq_birthplace">
+                                <option value="">不限</option>
+                                <option value="河北省">河北省</option>
+                                <option value="吉林省">吉林省</option>
+                                <option value="山西省">山西省</option>
+                                <option value="辽宁省">辽宁省</option>
+                                <option value="黑龙江省">黑龙江省</option>
+                                <option value="江苏省">江苏省</option>
+                                <option value="浙江省">浙江省</option>
+                                <option value="安徽省">安徽省</option>
+                                <option value="福建省">福建省</option>
+                                <option value="江西省">江西省</option>
+                                <option value="山东省">山东省</option>
+                                <option value="河南省">河南省</option>
+                                <option value="湖北省">湖北省</option>
+                                <option value="湖南省">湖南省</option>
+                                <option value="广东省">广东省</option>
+                                <option value="海南省">海南省</option>
+                                <option value="四川省">四川省</option>
+                                <option value="贵州省">贵州省</option>
+                                <option value="云南省">云南省</option>
+                                <option value="陕西省">陕西省</option>
+                                <option value="甘肃省">甘肃省</option>
+                                <option value="台湾省">台湾省</option>
+                                <option value="青海省">青海省</option>
+                                <option value="北京">北京</option>
+                                <option value="天津">天津</option>
+                                <option value="上海">上海</option>
+                                <option value="重庆">重庆</option>
+                                <option value="新疆维吾尔族自治区">新疆维吾尔族自治区</option>
+                                <option value="广西壮族自治区">广西壮族自治区</option>
+                                <option value="内蒙古自治区">内蒙古自治区</option>
+                                <option value="宁夏回族自治区">宁夏回族自治区</option>
+                                <option value="西藏自治区">西藏自治区</option>
+                            </select>
+                        </div>
+                    </li>
+                    <!--<li>-->
+                    <!--<i class="fa fa-money"></i>-->
+                    <!--<span class="title">价格</span>-->
+                    <!--<div class="slider-money">-->
+                    <!--<div id="slider-range" class="bg-blue">-->
+                    <!--</div>-->
+                    <!--<div>-->
+                    <!--Value: <span id="slider-range-amount"></span>-->
+                    <!--</div>-->
+                    <!--</div>-->
+                    <!--</li>-->
+                    <input type="hidden" name="_nge_price" id="minPrice" value="1">
+                    <input type="hidden" name="_nle_price" id="maxPrice" value="2000">
+
+
+                    <li>
+                        <div class="w10">
+                            <span class="title">服务级别</span>
+                        </div>
+
+                        <div class="w73">
+                            <label class="rental_mode  active no-action">
+                                <input type="radio" name="_seq_level" class="" value="" checked/>
+                                不限
+                            </label>
+                            <label class="rental_mode ">
+                                <input type="radio" name="_seq_level" class="" value="1"/>
+                                低级
+                            </label>
+                            <label class="rental_mode ">
+                                <input type="radio" name="_seq_level" class="" value="2"/>
+                                中级
+                            </label>
+                            <label class="rental_mode ">
+                                <input type="radio" name="_seq_level" class="" value="3"/>
+                                高级
+                            </label>
+                        </div>
+
+                    </li>
+
+
+                    <li>
+                        <div class="w10">
+                            <span class="title">性别</span>
+                        </div>
+
+                        <div class="w73">
+                            <label class="rental_mode active no-action">
+                                <input type="radio" name="sexs" class="" checked/>
+                                不限
+                            </label>
+                            <label class="rental_mode ">
+                                <input type="radio" name="sexs" class=""/>
+                                男
+                            </label>
+                            <label class="rental_mode ">
+                                <input type="radio" name="sexs" class=""/>
+                                女
+                            </label>
+                        </div>
+                    </li>
+                    <li>
+                        <div class="w10">
+                            <span class="title">从业年限</span>
+                        </div>
+
+                        <div class="w73">
+                            <label class="rental_mode  active no-action">
+                                <input type="radio" name="year" class="" checked/>
+                                不限
+                            </label>
+                            <label class="rental_mode ">
+                                <input type="radio" name="year" class=""/>
+                                1-3年
+                            </label>
+                            <label class="rental_mode ">
+                                <input type="radio" name="year" class=""/>
+                                4-6年
+                            </label>
+                            <label class="rental_mode ">
+                                <input type="radio" name="year" class=""/>
+                                7年以上
+                            </label>
+                        </div>
+                    </li>
+                    <li>
+                        <div class="w10">
+                            <span class="title">专业证书</span>
+                        </div>
+
+                        <div class="w73">
+
+                            <label class="rental_mode ">
+                                <input type="checkbox" name="type" class=""/>
+                                高级月嫂证
+                            </label>
+                            <label class="rental_mode ">
+                                <input type="checkbox" name="type" class=""/>
+                                营养师证
+                            </label>
+                            <label class="rental_mode ">
+                                <input type="checkbox" name="type" class=""/>
+                                母婴服务二级证
+                            </label>
+                        </div>
+                    </li>
+                </ul>
+                <center class="operation-btn">
+                    <input type="submit" value="筛选" class="btn-screen"/>
+                    <input type="reset"  value="清空" class="btn-clear"/>
+                </center>
+            </form>
+            <ul class="maternity-list">
+                <li>
+                    <a href="maternal-details.html" class="list-div">
+                        <img src="../../assets/mobile/images/m-img1.jpg" alt=""/>
+                    </a>
+                    <div class="maternity-infor">
+                        <p>
+                            <i class="fa fa-check-circle-o"></i>
+                            <span>从业年限 : <span class="num">1</span>年工作经历</span>
+                        </p>
+                        <p>
+                            <i class="fa fa-money"></i>
+                            <span>参考薪酬 : ￥<span class="num">3000</span>元/月</span>
+                        </p>
+                        <p>
+                            <i class="fa fa-home"></i>
+                            <span>33岁|重庆|高中/中专/技校</span>
+                        </p>
+                    </div>
+                </li>
+                <li>
+                    <a href="maternal-details.html" class="list-div">
+                        <img src="../../assets/mobile/images/m-img1.jpg" alt=""/>
+                    </a>
+                    <div class="maternity-infor">
+                        <p>
+                            <i class="fa fa-check-circle-o"></i>
+                            <span>从业年限 : <span class="num">1</span>年工作经历</span>
+                        </p>
+                        <p>
+                            <i class="fa fa-money"></i>
+                            <span>参考薪酬 : ￥<span class="num">3000</span>元/月</span>
+                        </p>
+                        <p>
+                            <i class="fa fa-home"></i>
+                            <span>33岁|重庆|高中/中专/技校</span>
+                        </p>
+                    </div>
+                </li>
+                <li>
+                    <a href="maternal-details.html" class="list-div">
+                        <img src="../../assets/mobile/images/m-img1.jpg" alt=""/>
+                    </a>
+                    <div class="maternity-infor">
+                        <p>
+                            <i class="fa fa-check-circle-o"></i>
+                            <span>从业年限 : <span class="num">1</span>年工作经历</span>
+                        </p>
+                        <p>
+                            <i class="fa fa-money"></i>
+                            <span>参考薪酬 : ￥<span class="num">3000</span>元/月</span>
+                        </p>
+                        <p>
+                            <i class="fa fa-home"></i>
+                            <span>33岁|重庆|高中/中专/技校</span>
+                        </p>
+                    </div>
+                </li>
+                <li>
+                    <a href="maternal-details.html" class="list-div">
+                        <img src="../../assets/mobile/images/m-img1.jpg" alt=""/>
+                    </a>
+                    <div class="maternity-infor">
+                        <p>
+                            <i class="fa fa-check-circle-o"></i>
+                            <span>从业年限 : <span class="num">1</span>年工作经历</span>
+                        </p>
+                        <p>
+                            <i class="fa fa-money"></i>
+                            <span>参考薪酬 : ￥<span class="num">3000</span>元/月</span>
+                        </p>
+                        <p>
+                            <i class="fa fa-home"></i>
+                            <span>33岁|重庆|高中/中专/技校</span>
+                        </p>
+                    </div>
+                </li>
+                <li>
+                    <a href="maternal-details.html" class="list-div">
+                        <img src="../../assets/mobile/images/m-img1.jpg" alt=""/>
+                    </a>
+                    <div class="maternity-infor">
+                        <p>
+                            <i class="fa fa-check-circle-o"></i>
+                            <span>从业年限 : <span class="num">1</span>年工作经历</span>
+                        </p>
+                        <p>
+                            <i class="fa fa-money"></i>
+                            <span>参考薪酬 : ￥<span class="num">3000</span>元/月</span>
+                        </p>
+                        <p>
+                            <i class="fa fa-home"></i>
+                            <span>33岁|重庆|高中/中专/技校</span>
+                        </p>
+                    </div>
+                </li>
+            </ul>
+            <div class="paging clearfix">
+                <ul class="page-menu clearfix">
+                    <p class="page-pre" data-pagenum="1"><i class="fa fa-angle-left"></i></p>
+                    <li class="active">1</li>
+                    <p class="page-next" data-pagenum="2"><i class="fa fa-angle-right"></i></p>
+
+                </ul>
+                <input type="text" class="page-num" id="pageNumTarget">
+                <button type="button" class="btn-jump" id="targetButton">跳转</button>
+                <input type="hidden" value="15" id="totalPages">
+            </div>
+        </div>
+        <div class="foot">
+            <ul class="f-menu clearfix">
+                <li>
+                    <a href="index.html">
                             <span>
                                 <i class="fa fa-home"></i>
-                            </span><br/>
-                    <span>首页</span>
-                    <div class="br"></div>
-                </a>
-            </li>
-            <li class="active">
-                <a href="brand-service.html">
-                    <div class="bt"></div>
-                                <span>
-                                    <i class="fa fa-bars"></i>
-                                </span><br/>
-                    <span>品牌服务</span>
-                    <div class="br"></div>
-                </a>
-            </li>
-            <li>
-                <a href="my-community.html">
-                    <div class="bt"></div>
-                                <span>
-                                    <i class="fa fa-th-large"></i>
-                                </span><br/>
-                    <span>我的社区</span>
-                    <div class="br"></div>
-                </a>
-            </li>
-            <li>
-                <a href="person-center.html">
-                    <div class="bt"></div>
-                                <span>
-                                    <i class="fa fa-user"></i>
-                                </span><br/>
-                    <span>个人中心</span>
-                </a>
-            </li>
-        </ul>
+                            </span>
+                        <span>首页</span>
+                        <div class="br"></div>
+                    </a>
+                </li>
+                <li>
+                    <a href="brand-service.html">
+                            <span>
+                                <i class="fa fa-star-o"></i>
+                            </span>
+                        <span>星级服务</span>
+                        <div class="br"></div>
+                    </a>
+                </li>
+                <li>
+                    <a href="person-center.html">
+                            <span>
+                                <i class="fa fa-user"></i>
+                            </span>
+                        <span>个人中心</span>
+                    </a>
+                </li>
+            </ul>
+            <div class="copyright">
+                <div class="copyright-head">
+                    <img src="../../assets/mobile/images/index-logo.png" alt="" class="index-logo"/>
+                    家服汇
+                </div>
+                <p>
+                    重庆至尚科技发展有限公司 CopyRight@2014-2019 备案号：渝ICP备15005428号-1
+                </p>
+            </div>
+        </div>
     </div>
-</div>
 </body>
 <script src="../../assets/global/plugins/jquery/jquery-1.11.3.min.js"></script>
 <script src="../../assets/mobile/js/global.js"></script>
