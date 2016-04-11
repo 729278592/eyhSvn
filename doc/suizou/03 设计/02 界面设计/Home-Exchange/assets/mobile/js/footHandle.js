@@ -37,11 +37,10 @@
             }
             else{
                 content.css({"height":"auto"});
-
                 if($(".list-service.height").height()>410){
                     content.css({"height":"auto"});
                 }
-                else if($(".list-service.height").height()<270){
+                else if($(".list-service.height").height()<286){
                     content.css({height:windoeHeight-footHeight-head+"px"});
                     if(content.height()<410){
                         content.css({"height":"auto"});
