@@ -8,6 +8,7 @@
     var bm = $(".btn-menu").outerHeight(true);
     var sd = $(".submit-div").outerHeight(true);
     var cm = $(".height-con");
+    var head = $(".head").outerHeight(true);
     var h362 = $(".h362");
     var contentHeight = cm.outerHeight(true);
     function heightAuto(){
@@ -17,7 +18,7 @@
                 cm.css({height:windoeHeight-footHeight-bm+"px"});
             }
             if(sd){
-                cm.css({height:windoeHeight-footHeight-sd+"px"});
+                cm.css({height:windoeHeight-footHeight-sd-head+"px"});
                 if(h362.outerHeight(true)<362){
                     h362.css({height:windoeHeight-footHeight+"px"});
                 }
