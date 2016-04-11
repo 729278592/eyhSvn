@@ -243,8 +243,10 @@ a:hover{text-decoration: none;}
 
 /**/
 .order-menu li{display: table;}
+.order-menu.pd0 li.bb0{border-bottom: none;}
 .order-menu li .table-cell{display: table-cell;padding: 3%;vertical-align: middle;
     background: #fff;border-bottom: 1px solid #dbdbdb;font-size: 14px;color: #666;border-right: none;border-left: none;}
+.order-menu li .table-cell:last-child{text-align: center;width: 30%;}
 .order-menu li .table-cell .money{color: #ff3b30;}
 .order-menu li .table-cell .p-second{display: -webkit-box;
     overflow: hidden;
@@ -264,7 +266,7 @@ a:hover{text-decoration: none;}
 
 
 .fl-type{width: 100%;}
-.fl-type .btn-type{width: 47%;height: 36px;line-height: 36px;background: #fff;color: #666;font-family: "微软雅黑";}
+.fl-type .btn-type{width: 47%;height: 36px;line-height: 36px;background: #fff;color: #666;font-family: "微软雅黑";background: #efefef;}
 .fl-type .btn-type.active{background: #28b1de;color: #fff;}
 .fl-type .btn-type.mb10{margin-bottom: 10px;}
 .fl-type.bg5 .btn-type.active{background: #68b586;}
@@ -320,7 +322,10 @@ a:hover{text-decoration: none;}
 .title-infor{color: #666;font-size: 14px;padding: 2% 0;}
 .pd2{padding: 2%;color: #666;width: 96%;margin: 0 2%;background: #fff;border: 1px solid #dbdbdb;border-radius: 8px;}
 .list-service{width: 100%;}
+.list-service .head-title {border-bottom: 1px solid #efefef;}
+.list-service .head-title.bb0{border-bottom: 0;}
 .list-service>li{border-bottom: 1px solid #dbdbdb;}
+.list-service.bb0>li{border-bottom: none;}
 .list-service>li.bb0{border-bottom: none;}
 .service-head>.title{line-height: 45px;}
 .pd2.pdt0{padding: 0 2%;}
@@ -338,7 +343,7 @@ a:hover{text-decoration: none;}
     width: 100%;
     padding: 6.5px 10px;
     color: #666;
-    border:none;
+    border: 1px solid #efefef;
 }
 
 
@@ -721,7 +726,7 @@ body{    line-height: 1.6;}
     .service-head img{top: -7px;}
     .searvice-infor .title{font-size: 16px;}
     .searvice-infor p>span{font-size: 12px;}
-    .service-menu li .title{font-size: 14px;}
+    .service-menu li .title{font-size: 12px;}
     .person-infor p{font-size: 14px;line-height: 20px;}
     .order-menu li .title{font-size: 16px;}
     .clean-list li{font-size: 14px;}
