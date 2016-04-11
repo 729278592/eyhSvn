@@ -161,7 +161,7 @@ a:hover{text-decoration: none;}
 .service-menu li.br0{border-right: 0;}
 .service-menu li .title{display: inline-block;width: 100%;}
 .service-menu li .service-img{width: 50%;}
-.service-menu li .brone{position: absolute;right: 0;width: 1px;top: 8%;bottom: 10px;height: 70px;}
+.service-menu li .brone{position: absolute;right: 0;width: 1px;top: 0;bottom: 0;}
 .train-img{margin: 1.5% 0;}
 
 .searvice-menu{width: 100%;}
