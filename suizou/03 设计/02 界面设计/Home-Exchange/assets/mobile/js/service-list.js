@@ -19,7 +19,6 @@ $(function(){
             $(this).closest("li").siblings("li").find(".head-title").next().addClass("hide");
             $(this).closest("li").siblings("li").find(".fa-angle-down").removeClass("fa-angle-down").addClass("fa-angle-right");
             $(this).css({"borderBottom":"1px solid #efefef"});
-
             iSfunction()
         }else{
             $(this).next().addClass("hide");
