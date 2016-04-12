@@ -324,12 +324,14 @@ a:hover{text-decoration: none;}
 .area-menu.bg1 li>p {color: #8b3357;border-top-color: #8b3357;}
 .area-menu li>p {text-align: center;border-top: 1px solid #fab432;color: #fab432;font-size: 14px;padding: 6px 2px;margin: 0 auto;position: relative;top: 2px;display: inline-block;}
 .title-infor{color: #666;font-size: 14px;padding: 2% 0;}
-.pd2{padding: 2%;color: #666;width: 96%;margin: 0 2%;background: #fff;border: 1px solid #dbdbdb;border-radius: 8px;}
+.pd2{color: #666;width: 96%;margin: 0 2%;background: #fff;border: 1px solid #dbdbdb;border-radius: 8px;}
 .list-service{width: 100%;}
 .list-service .head-title.bb1 {border-bottom: 1px solid #efefef;}
 .head-title.lh0 .service-head{line-height: 0;}
 .list-service .head-title.bb0{border-bottom: 0;}
-.list-service>li{border-bottom: 1px solid #dbdbdb;}
+.list-service>li{border-bottom: 1px solid #dbdbdb;padding: 0 2%;}
+.pd2 .list-service>li{padding: 0;}
+ul .list-service .head-title .service-head{padding: 0;}
 .list-service.bb0>li{border-bottom: none;}
 .list-service>li.bb0{border-bottom: none;}
 .service-head>.title{line-height: 45px;}
