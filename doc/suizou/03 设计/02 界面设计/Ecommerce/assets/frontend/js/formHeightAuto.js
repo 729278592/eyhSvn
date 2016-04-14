@@ -4,7 +4,7 @@
 
 /*表单垂直居中*/
 function heightAuto(){
-    var d = $(".logBg, .logWrap");
+    var d = $(".logBg, .logWrap,.reWrap");
     d.each(function(){
         var ht = -$(this).get(0).offsetHeight/2+"px";
         $(this).get(0).style.marginTop = ht;
