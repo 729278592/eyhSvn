@@ -886,7 +886,9 @@ label.error {color: #EA5200;margin-bottom: 0;}
 .tiaoz .dao{color: #fd9f4d;}
 
 /*footer*/
+body.lineHeight{line-height: 1;}
 .footer{width: 100%;background: #322614;padding: 10px 0 20px;}
+.footer.fixed{position: fixed;bottom: 0;z-index: 1000;}
 .foot-menu{font-size: 14px;width: 604px;margin: 0 auto;height: 39px;}
 .foot-menu li{width: 120px;text-align: center;padding: 10px 0;float: left;}
 .foot-menu li a{width: 100%;border-right: 1px solid #efefef;color: #efefef;display: inline-block;}
