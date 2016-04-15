@@ -254,7 +254,7 @@ a:hover{text-decoration: none;}
 /**/
 .order-menu li{display: table;}
 .order-menu.pd0 li.bb0{border-bottom: none;}
-.order-menu li .table-cell{display: table-cell;padding: 4%;vertical-align: middle;
+.order-menu li .table-cell{display: table-cell;padding: 4.5%;vertical-align: middle;
     background: #fff;border-bottom: 1px solid #dbdbdb;font-size: 14px;color: #666;border-right: none;border-left: none;}
 
 .order-menu li .table-cell:last-child{text-align: center;width: 30%;}
@@ -843,6 +843,7 @@ body{    line-height: 1.6;}
     .address-group .address{margin: 8px 0;}
     .seavice-infor .title{font-size: 16px;}
     .order-menu li .table-cell .btn-rightOrder{font-size: 12px;}
+
 }
 
 
@@ -851,6 +852,7 @@ body{    line-height: 1.6;}
     .service-list li span{font-size: 12px;}
     .service-list li span.title{font-size: 14px;}
     .order-menu li .table-cell:first-child{background-size: 70%;}
+        .order-menu li .table-cell.pd15{padding-top:0%;}
 }
 
 @media screen and (max-width: 375px) {
