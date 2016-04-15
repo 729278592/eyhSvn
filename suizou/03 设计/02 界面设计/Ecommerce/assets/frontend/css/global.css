@@ -823,6 +823,11 @@ body.f9f{min-width:1170px; background: #f9f5f6;}
 .form p label{color: #666;}
 .form .input-group{width: 100%;position: relative;}
 .form .input-group input{height: 40px;line-height: 40px;}
+.form .input-group input[type="radio"] {
+    height: auto;
+    line-height: 0;
+}
+.form .input-group span.type{font-size: 14px;}
 .form .input-group.mb15{margin-bottom: 15px;}
 .Wdate.form-control{border: 1px solid #ccc;}
 .form .input-group.mb15 .select {
