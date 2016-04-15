@@ -411,7 +411,7 @@ label.error{color: #fb6454;}
 
 
 
-#tishi{width: 400px;height: 300px;position: fixed;top: -610px;background: #fafafa;z-index: 10000;left: 50%;margin-left: -200px;border: 5px solid #989898;}
+#tishi{width: 400px;height: 270px;position: fixed;top: -610px;background: #fafafa;z-index: 10000;left: 50%;margin-left: -200px;border: 5px solid #989898;}
 
 .ts_head{width: 100%;height: 40px;background: #f2f2f2;line-height: 40px;font-size: 16px;text-indent: 10px;}
 .ts_body{width: 100%;text-align: center;margin-top: 10px;font-size: 18px;}
@@ -453,7 +453,7 @@ label.error{color: #fb6454;}
 .click{background: #fd9f4d;color: #fff;border: none;border-bottom: 1px solid #fd9f4d;}
 .form{width: 460px;margin: 10px 17px;font-size: 14px;}
 .form span{color:#585656; }
-.form1{width: 450px;height: 250px;margin: -40px auto}
+.form1{width: 450px;height: 200px;margin: -40px auto}
 .form2{height: 250px;}
 
 .form2 span{font-size: 20px;color: #908e8e;width: 500px;}
