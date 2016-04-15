@@ -5,7 +5,6 @@
     <title>个人财符申请</title>
     <link rel="stylesheet" href="../../assets/global/plugins/bootstrap-3.3.5/css/bootstrap.min.css"/>
     <link rel="stylesheet" href="../../assets/global/plugins/font/css/font-awesome.min.css"/>
-    <link rel="stylesheet" href="../../assets/global/plugins/metic/css/plugins.css"/>
     <link rel="stylesheet" href="../../assets/frontend/css/global.css"/>
 </head>
 <body>
@@ -19,7 +18,14 @@
                 <li><a href="zhihui.html">智慧场景</a></li>
                 <li><a href="product_center.html">产品中心</a></li>
                 <li><a href="http://www.sskill.com/bbs">论坛</a></li>
-                <li><a href="login.html">注册/登陆</a></li>
+                <li>
+                    <span>
+                        <span><a href="person-register.html">注册</a>/<a href="person-login.html">登陆</a></span>
+                        <span class="hide">
+                            <a href="person-center.html">某某</a>
+                        </span>
+                    </span>
+                </li>
                 <li>
                     <a href="#" class="shoppingCart">
                         <i class="fa fa-shopping-cart"></i>
@@ -32,7 +38,7 @@
     <div class="logBodyBg">
         <img src="../../assets/frontend/images/shen-bg.jpg">
     </div>
-    <div class="logWrap">
+    <div class="logWrap application-bg">
         <ul class="register-ul clearfix">
             <li class="active first"><a href="person-wealthApplication.html">个人财符申请</a></li>
             <li class="mr0 last"><a href="company-wealthApplication.html">企业财符申请</a></li>
@@ -43,7 +49,7 @@
                     <span class="input-group-addon">
                         <i class="fa fa-user"></i>
                     </span>
-                    <input type="password" class="form-control" placeholder="请输入您的昵称" id="mobile" name="">
+                    <input type="text" class="form-control" placeholder="请输入您的姓名" id="name" name="name">
                 </div>
                 <div class="input-group mb15">
                     <span class="input-group-addon">
@@ -55,29 +61,46 @@
                     <span class="input-group-addon">
                         <i class="fa fa-bars"></i>
                     </span>
-                    <input type="email" class="form-control" placeholder="请再次输入您的邮箱" name="email">
+                    <input type="email" class="form-control" placeholder="请再次输入您的邮箱" id="email" name="email">
                 </div>
                 <div class="input-group mb15">
-                    <input type="email" class="form-control" placeholder="所属行业" name="email">
+                     <span class="input-group-addon">
+                        <i class="fa fa-bank"></i>
+                    </span>
+                    <input type="text" class="form-control" placeholder="所属行业" id="industry" name="industry">
                 </div>
                 <div class="input-group mb15">
                     <span class="input-group-addon">
                         <i class="fa fa-birthday-cake"></i>
                     </span>
-                    <input type="email" class="form-control" placeholder="请选择您的生日" name="email">
+                    <input id="d4311" name="d4311" class="Wdate form-control" readonly type="text" placeholder="请选择您的生日" onFocus="WdatePicker({minDate:'%y-%M-{%d}'})"/>
                 </div>
                 <div class="input-group mb15">
                     <span class="input-group-addon">
                         <i class="fa fa-map-signs"></i>
                     </span>
-                    <input type="email" class="form-control" placeholder="请选择您的" name="email">
+                    <select name="" class="select">
+                        <option value="请选择">请选择</option>
+                        <option value="重庆">重庆</option>
+                        <option value="重庆">重庆</option>
+                        <option value="重庆">重庆</option>
+                    </select>
+                    <select name="" class="select">
+                        <option value="请选择">请选择</option>
+                        <option value="渝中">渝中</option>
+                        <option value="渝中">渝中</option>
+                        <option value="渝中">渝中</option>
+                    </select>
+                    <select name="" class="mr0 select">
+                        <option value="请选择">请选择</option>
+                        <option value="袁家岗">袁家岗</option>
+                        <option value="袁家岗">袁家岗</option>
+                        <option value="袁家岗">袁家岗</option>
+                    </select>
                 </div>
                 <div class="form-group">
                     <!--<a href="person-center.html" class="form-control btn-click">立即登录</a>-->
-                    <input type="submit" class="form-control btn-click" value="立即注册">
-                </div>
-                <div class="form-group h54">
-                    <a href="login.html" class="right">已有账号? 立刻登陆</a>
+                    <input type="submit" class="form-control btn-click" value="立即申请">
                 </div>
             </form>
         </div>
@@ -93,5 +116,6 @@
 <script src="../../assets/frontend/js/formHeightAuto.js"></script>
 <script src="../../assets/frontend/js/coundTime.js"></script>
 <script src="../../assets/frontend/js/formValidate.js"></script>
+<script src="../../assets/global/plugins/My97DatePicker/WdatePicker.js"></script>
 </body>
 </html>

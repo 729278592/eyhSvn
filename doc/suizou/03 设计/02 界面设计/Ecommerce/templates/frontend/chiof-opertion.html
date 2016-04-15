@@ -5,18 +5,8 @@
     <title>财符登录操作</title>
     <link rel="stylesheet" href="../../assets/global/plugins/font/css/font-awesome.min.css"/>
     <link rel="stylesheet" href="../../assets/frontend/css/global.css"/>
-    <style>
-        body{min-width:1170px; background: #f9f5f6;}
-        .video-js{margin: 150px auto;}
-        .cj_ul1>li{padding: 0;background: transparent;}
-        .form1{width: 100%;margin-top:20px;}
-        .inpu3{left: 0;}
-        .inpu1{width:260px;margin-bottom: 0;}
-        .form1 a:hover{color: #f5796a;text-decoration: underline;}
-        .position{position: absolute;z-index: 10000;}
-    </style>
 </head>
-<body>
+<body class="f9f">
     <div class="wapper">
         <div class="header">
             <div class="head-main">
@@ -27,7 +17,14 @@
                     <li><a href="zhihui.html">智慧场景</a></li>
                     <li><a href="product_center.html">产品中心</a></li>
                     <li><a href="http://www.sskill.com/bbs">论坛</a></li>
-                    <li class="regs"><a href="#">注册/登陆</a></li>
+                    <li>
+                        <span>
+                            <span><a href="person-register.html">注册</a>/<a href="person-login.html">登陆</a></span>
+                            <span class="hide">
+                                <a href="person-center.html">某某</a>
+                            </span>
+                        </span>
+                    </li>
                     <li>
                         <a href="#" class="shoppingCart">
                             <i class="fa fa-shopping-cart"></i>
@@ -295,15 +292,6 @@
     <script src="../../assets/global/plugins/move/js/move.js"></script>
     <script src="../../assets/frontend/js/global.js"></script>
     <script src="../../assets/frontend/js/chio-opreation.js"></script>
-    <script src="../../assets/frontend/js/modal.js"></script>
-    <script>
-        $(function(){
-            var btn_save = $(".purchase_immediately,.regs");
-            btn_save.on("click",function(){
-                $("#container").dialog({title:'账户登录'});
-            })
-        })
-    </script>
     <script>
         var rul = $(".we-menu li");
         var rl = $(".type-div");

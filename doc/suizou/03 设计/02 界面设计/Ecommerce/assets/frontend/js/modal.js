@@ -20,13 +20,14 @@
 		var opts = $.extend({}, defaults, opts);
 		var content  = '<div id="'+opts.id+'"><div class="ts_head"><span>'+opts.title+'</span><span class="block close">×</span></div>'+
 				       '<div class="ts_body">' +
-                            '<form action="" class="form1">'+
+                            '<span class="error" id="error">手机号或密码错误!</span>'+
+                            '<form action="" class="form1" onsubmit="return false">'+
                                 '<span class="login_name">登录名:</span><br>'+
-                                '<label for=""> <input type="text" name="" class="inpu inpu3"placeholder="邮箱/手机号码 :"/></label><br/>'+
-                                '<span class="login_password">登录密码:</span><a  href="../frontend/confirm_account_number.html" class="forget_password">忘记密码?</a><br>'+
-                                '<label for=""> <input type="text" name="" class="inpu inpu3" placeholder="密码 :"/></label><br/>'+
+                                '<label for=""> <input type="text" name="" class="inpu"placeholder="邮箱/手机号码 :"/></label><br/>'+
+                                '<span class="login_password">登录密码:</span><a  href="confirm-admin.html" class="forget_password">忘记密码?</a><br>'+
+                                '<label for=""> <input type="text" name="" class="inpu" placeholder="密码 :"/></label><br/>'+
                                 '<label for=""> <input type="submit" value="立即登录" class="block inpu inpu1"/></label><br/>'+
-                                '<a href="../frontend/registered.html" class="free_register">免费注册</a>'+
+                                '<a href="person-register.html" class="free_register">免费注册</a>'+
                             '</form>'+
                        '</div>'+
                        '<div class="ts_foot">'+

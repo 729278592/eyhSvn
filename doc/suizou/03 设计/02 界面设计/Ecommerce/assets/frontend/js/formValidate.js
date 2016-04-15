@@ -25,6 +25,10 @@ $(function(){
                 required:true,
                 phone:true
             },
+            email:{
+                required:true,
+                email:true
+            },
             password:{
                 required:true,
                 maxlength:16,
@@ -45,6 +49,15 @@ $(function(){
             },
             inviteCode:{
                 minlength:4
+            },
+            name:{
+                required:true
+            },
+            industry:{
+                required:true
+            },
+            d4311:{
+                required:true
             }
         },
 
@@ -78,6 +91,18 @@ $(function(){
             mobile:{
                 required:"请输入手机号码",
                 phone:"请输入正确手机号码"
+            },
+            email:{
+                required:"请输入邮箱",
+                email:"邮箱格式不对"
+            }, name:{
+                required:"请输入您的姓名"
+            },
+            industry:{
+                required:"请选择您所属行业"
+            },
+            d4311:{
+                required:"请选择您的生日"
             }
         },
 
