@@ -257,8 +257,6 @@ a:hover{text-decoration: none;}
 .order-menu li .table-cell{display: table-cell;padding: 3%;vertical-align: middle;
     background: #fff;border-bottom: 1px solid #dbdbdb;font-size: 14px;color: #666;border-right: none;border-left: none;}
 
-.order-menu li .table-cell .bg-ff44{padding: 35% 0;background: #fab433;color: #fff;font-size: 14px;border-radius: 100%;}
-.order-menu li .table-cell.pd30 .bg-ff44{padding: 29% 0 15%;}
 .order-menu li .table-cell:last-child{text-align: center;width: 30%;}
 .order-menu li .table-cell .money{color: #ff3b30;}
 .order-menu li .table-cell .p-second{display: -webkit-box;
@@ -267,7 +265,8 @@ a:hover{text-decoration: none;}
     -webkit-box-orient: vertical;
     -webkit-line-clamp: 2;}
 .order-menu li .table-cell .btn-rightOrder{color: #666;padding: 5px 6px;border: 1px solid #efefef;border-radius: 2px;}
-.order-menu li .table-cell:first-child{text-align: center;}
+.order-menu li .table-cell:first-child{text-align: center;width: 30%;background: url("../images/service-bg.png") no-repeat;background-size: 80%;background-position: 50% 50%;color: #fff;
+}
 .order-menu li .table-cell.caret-ddd img{color: #fff;width:80%;}
 .order-menu li .table-cell.second{width: 40%;}
 .swiper-wrapper .swiper-slide{position: relative;}
@@ -843,6 +842,7 @@ body{    line-height: 1.6;}
     .address-group .address{margin: 8px 0;}
     .seavice-infor .title{font-size: 16px;}
     .order-menu li .table-cell .btn-rightOrder{font-size: 12px;}
+    /*.order-menu li .table-cell.pd30 .bg-ff44{padding: 38% 0;}*/
 }
 
 
