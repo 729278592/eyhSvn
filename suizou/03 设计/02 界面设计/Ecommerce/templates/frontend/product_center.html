@@ -4,19 +4,22 @@
     <meta charset="UTF-8">
     <title>产品中心</title>
     <link rel="stylesheet" href="../../assets/global/plugins/font/css/font-awesome.min.css"/>
-    <link rel="stylesheet" href="../../assets/frontend/css/Crweb.css"/>
     <link rel="stylesheet" href="../../assets/frontend/css/global.css"/>
     <style>
-        body{min-width:1170px; background: #f9f5f6;}
-        .cj_ul1>li{padding: 0;background: transparent;}
-        .form1{width: 100%;margin-top:20px;}
-        .inpu3{left: 0;}
-        .inpu1{width:260px;margin-bottom: 0;}
+        .content{background: #f9f5f6;margin: -5px 0 0 0;}
+        .form1{width: 100%;margin-top:0;}
+        .inpu1{width:260px;margin-bottom: 0;font-size: 14px;}
         .form1 a:hover{color: #f5796a;text-decoration: underline;}
         .position{position: absolute;z-index: 10000;}
+         span.error {
+            color: #a94442;
+            display: inline-block;
+             text-align: left;
+             font-size: 14px;
+        }
     </style>
 </head>
-<body>
+<body class="f9f">
     <div class="wapper">
         <div class="header">
             <div class="head-main">
@@ -27,7 +30,14 @@
                     <li><a href="zhihui.html">智慧场景</a></li>
                     <li class="active"><a href="product_center.html">产品中心</a></li>
                     <li><a href="http://www.sskill.com/bbs">论坛</a></li>
-                    <li class="regs"><a href="#">注册/登陆</a></li>
+                    <li>
+                        <span>
+                            <span><a href="person-register.html">注册</a>/<a href="person-login.html">登陆</a></span>
+                            <span class="hide">
+                                <a href="person-center.html">某某</a>
+                            </span>
+                        </span>
+                    </li>
                     <li>
                         <a href="#" class="shoppingCart">
                             <i class="fa fa-shopping-cart"></i>
