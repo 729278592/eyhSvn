@@ -29,7 +29,9 @@
             }
         }
         if(heightauto){
+        	
             if((heightauto+footHeight+head)<windoeHeight){
+            	
                 content.css({height:windoeHeight-footHeight-head+"px"});
                 if($(".list-service.height").height()<80){
                     content.css({height:windoeHeight-footHeight-head+"px"});
@@ -39,12 +41,18 @@
                 content.css({"height":"auto"});
                 if($(".list-service.height").height()>410){
                     content.css({"height":"auto"});
+                    alert(heightauto)
                 }
                 else if($(".list-service.height").height()<286){
-                    content.css({height:windoeHeight-footHeight-head+"px"});
-                    if(content.height()<410){
+                	if($(".list-service.height").get(0)){
+                		content.css({height:windoeHeight-footHeight-head+"px"});
+                	}
+                	else  if(content.height()<410){
                         content.css({"height":"auto"});
                     }
+                	else{
+                		content.css({"height":"auto"});
+                	}
                 }
             }
         }
