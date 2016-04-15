@@ -214,7 +214,7 @@ a:hover{text-decoration: none;}
 .order-menu li .num1{color: #53ba93;}
 .order-menu li .num2{color: #333;}
 .order-menu{width: 100%;}
-.order-menu.pd0 li{padding: 0;}
+.order-menu.pd0 li{padding: 0;min-height: 85px;}
 .order-menu.pd0 li.mt0{margin-top: 0;}
 .order-menu.pd0 li a{display: block;width: 100%;}
 .order-menu.bg-fff li,.order-menu.fff{background: #fff;}
@@ -842,7 +842,6 @@ body{    line-height: 1.6;}
     .address-group .address{margin: 8px 0;}
     .seavice-infor .title{font-size: 16px;}
     .order-menu li .table-cell .btn-rightOrder{font-size: 12px;}
-    /*.order-menu li .table-cell.pd30 .bg-ff44{padding: 38% 0;}*/
 }
 
 
