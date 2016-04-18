@@ -24,6 +24,7 @@ textarea,input,button,select{border: none;outline: none;}
 .hidden{visibility: hidden;}
 .wrapper{width: 100%;background: #fff;max-width: 640px;margin: 0 auto;position: relative;}
 .content{width: 100%;padding-bottom: 10px;}
+.content.pb0{padding-bottom: 0}
 .content.bg-ecec{background: #ececec;padding-top: 1px;}
 a:hover{text-decoration: none;}
 
