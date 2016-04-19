@@ -54,6 +54,7 @@ a:link{text-decoration: none;}
 .head-main .menu li:hover span.infor a{color: #fff;}
 #hover-active{background: #fbb432;position: absolute;top: 0;height: 60px;width: 120px;z-index: 10;}
 .slider{position: relative;}
+.slider .title-proty{position: absolute;bottom: 110px;right: 30px;font-size: 24px;color: #111;}
 .auto-img{position: relative;}
 .ch-mask{position: absolute;bottom: 0;left: 0;right: 0;background: #000;opacity: 0.4;filter:alpha(opacity=40);height: 90px;}
 .ch-mask-main{width: 860px;position: absolute;bottom: 10px;left: 50%;margin-left: -430px;z-index: 2;}
