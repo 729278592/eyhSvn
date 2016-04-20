@@ -6,7 +6,7 @@
 function heightAuto(){
     var d = $(".logBg, .logWrap,.reWrap");
     d.each(function(){
-        var ht = -$(this).get(0).offsetHeight/2-11+"px";
+        var ht = -$(this).height()/2+"px";
         $(this).get(0).style.marginTop = ht;
     });
 }

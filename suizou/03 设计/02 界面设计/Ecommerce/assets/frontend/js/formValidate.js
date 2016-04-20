@@ -117,8 +117,8 @@ $(function(){
                 error.insertAfter(element.parent(".input-group"));
                 heightAuto();
             } else {
-                heightAuto();
                 error.insertAfter(element); // for other inputs, just perform default behavior
+                heightAuto();
             }
         },
 
