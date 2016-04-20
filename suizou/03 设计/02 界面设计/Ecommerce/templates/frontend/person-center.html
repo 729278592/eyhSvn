@@ -5,14 +5,6 @@
     <title>个人资料</title>
     <link rel="stylesheet" href="../../assets/global/plugins/font/css/font-awesome.min.css"/>
     <link rel="stylesheet" href="../../assets/frontend/css/global.css"/>
-    <style>
-        body{font-family: "微软雅黑";}
-        * {
-            -webkit-box-sizing: content-box;
-            -moz-box-sizing: content-box;
-            box-sizing: content-box;
-        }
-    </style>
 </head>
 <body>
     <div class="wapper">
@@ -49,33 +41,50 @@
                         <li class="first">
                             <img src="../../assets/frontend/images/ul_head.png" alt=""style="float: left;"/>
                             <div class="li_top">
-                                <span style="color: #fff;font-size: 20px;">全部功能</span>
+                                <span>全部功能</span>
                             </div>
-                            <div class="li_bottom">财符中心</div>
+                            <div class="li_bottom">订单管理</div>
                         </li>
                         <li>
                             <div class="li_top">
-                             <span class="block">
-                                 <img src="../../assets/frontend/images/active_img.png" alt="" class="active_img hide"/>
-                                 <a href="#">财符余额</a>
-                             </span>
-                             <span class="block">
-                                 <img src="../../assets/frontend/images/active_img.png" alt="" class="active_img hide"/>
-                                 <a href="#">财符排行榜</a>
-                             </span>
+                                 <span class="block">
+                                     <img src="../../assets/frontend/images/active_img.png" alt="" class="active_img hide"/>
+                                     <a href="#">我的订单</a>
+                                 </span>
                             </div>
                             <div class="li_bottom active">个人中心</div>
                         </li>
+                        <li>
+                            <div class="li_top">
+                                <span class="block">
+                                     <img src="../../assets/frontend/images/active_img.png" alt="" class="active_img hide"/>
+                                     <a href="#">我的玩伴</a>
+                                 </span>
+                                 <span class="block active">
+                                     <img src="../../assets/frontend/images/active_img.png" alt="" class="active_img"/>
+                                     <a href="#">个人资料</a>
+                                 </span>
+                                 <span class="block">
+                                     <img src="../../assets/frontend/images/active_img.png" alt="" class="active_img hide"/>
+                                     <a href="#">收货地址</a>
+                                 </span>
+                                 <span class="block">
+                                     <img src="../../assets/frontend/images/active_img.png" alt="" class="active_img hide"/>
+                                     <a href="#">修改密码</a>
+                                 </span>
+                            </div>
+                            <div class="li_bottom">财符中心</div>
+                        </li>
                         <li class="last">
                             <div class="li_top">
-                            <span class="block">
-                                 <img src="../../assets/frontend/images/active_img.png" alt="" class="active_img hide"/>
-                                 <a href="#">我的个人中心</a>
-                             </span>
-                             <span class="block active">
-                                 <img src="../../assets/frontend/images/active_img.png" alt="" class="active_img"/>
-                                 <a href="#" class="active">个人资料</a>
-                             </span>
+                                <span class="block">
+                                     <img src="../../assets/frontend/images/active_img.png" alt="" class="active_img hide"/>
+                                     <a href="#">我的收益</a>
+                                 </span>
+                                 <span class="block">
+                                     <img src="../../assets/frontend/images/active_img.png" alt="" class="active_img hide"/>
+                                     <a href="#">财符排行榜</a>
+                                 </span>
                             </div>
                         </li>
                     </ul>
@@ -86,12 +95,12 @@
                                 <div class="information_specific block">
                                     <p class="name"><span>陈小洁中午好~</span></p>
                                     <p class="nember_level"><span>普通会员</span></p>
-                                    <p class="account_situation">
-                                        <span>账户安全 : </span>
-                                        <span class="progress_bar block"></span>
-                                        <!--<span>提升</span> <span class="block check check1"><i class="fa fa-check"></i></span>-->
-                                        <!--<a href="#">绑定手机</a> | <span class="block check check2"><i class="fa fa-minus"></i></span> <a href="#">绑定邮箱</a>-->
-                                    </p>
+                                    <!--<p class="account_situation">-->
+                                        <!--<span>账户安全 : </span>-->
+                                        <!--<span class="progress_bar block"></span>-->
+                                        <!--&lt;!&ndash;<span>提升</span> <span class="block check check1"><i class="fa fa-check"></i></span>&ndash;&gt;-->
+                                        <!--&lt;!&ndash;<a href="#">绑定手机</a> | <span class="block check check2"><i class="fa fa-minus"></i></span> <a href="#">绑定邮箱</a>&ndash;&gt;-->
+                                    <!--</p>-->
                                 </div>
                             </div>
                         </div>
@@ -115,13 +124,12 @@
                                 <!--</div>-->
                             <!--</div>-->
                         <!--</div>-->
-                        <div class="infor">
-                            <p class="btn-type">
-                                <button class="btn-person active">完善资料</button>
-                                <button class="btn-person">修改资料</button>
-                            </p>
+                        <div class="infor padlr10">
+                            <div class="order-title">
+                                <p>我的信息</p>
+                            </div>
 
-                            <div class="active infor-table w100">
+                            <div class="shopping padlr10 pt0 bb0 infor-table w100 clearfix mb0">
                                 <div class="left personal-infor">
                                     <div class="div-groups">
                                         <span class="span-group">当前头像</span>
@@ -186,29 +194,6 @@
                                     </form>
                                 </div>
                             </div>
-                            <div class="infor-table auto">
-                                <div class="personal-infor mt0">
-                                    <form action="#">
-                                        <p>
-                                            <span class="type">用户名:</span>
-                                            <input type="text" class="text" placeholder="请输入用户名"/>
-                                        </p>
-                                        <p>
-                                            <span class="type">现在密码:</span>
-                                            <input type="text" class="text" placeholder="请输入现在密码"/>
-                                        </p>
-                                        <p>
-                                            <span class="type">新密码:</span>
-                                            <input type="text" class="text" placeholder="请输入新密码"/>
-                                        </p>
-                                        <p>
-                                            <span class="type">确认密码:</span>
-                                            <input type="text" class="text" placeholder="请输入密码"/>
-                                        </p>
-                                        <input type="submit" class="btn-sure" value="保存"/>
-                                    </form>
-                                </div>
-                            </div>
                         </div>
                     </div>
                 </div>
@@ -228,8 +213,8 @@
         </div>
     </div>
     <script type="text/javascript" src="../../assets/global/plugins/jquery/jquery-1.11.3.min.js"></script>
-    <script src="../../assets/global/plugins/move/js/move.js"></script>
     <script src="../../assets/frontend/js/global.js"></script>
+    <script src="../../assets/frontend/js/footHandle.js"></script>
     <script src="../../assets/frontend/js/user-menu.js"></script>
     <script src="../../assets/global/plugins/My97DatePicker/WdatePicker.js"></script>
     <script>
