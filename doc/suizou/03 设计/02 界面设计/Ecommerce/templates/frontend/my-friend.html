@@ -52,12 +52,12 @@
                                      <a href="#">我的订单</a>
                                  </span>
                         </div>
-                        <div class="li_bottom ">个人中心</div>
+                        <div class="li_bottom active">个人中心</div>
                     </li>
                     <li>
                         <div class="li_top">
-                                <span class="block">
-                                     <img src="../../assets/frontend/images/active_img.png" alt="" class="active_img hide"/>
+                                <span class="block active">
+                                     <img src="../../assets/frontend/images/active_img.png" alt="" class="active_img"/>
                                      <a href="#">我的玩伴</a>
                                  </span>
                                  <span class="block">
@@ -73,12 +73,12 @@
                                      <a href="#">修改密码</a>
                                  </span>
                         </div>
-                        <div class="li_bottom active">财符中心</div>
+                        <div class="li_bottom">财符中心</div>
                     </li>
                     <li class="last">
                         <div class="li_top">
-                                <span class="block active">
-                                     <img src="../../assets/frontend/images/active_img.png" alt="" class="active_img"/>
+                                <span class="block">
+                                     <img src="../../assets/frontend/images/active_img.png" alt="" class="active_img hide"/>
                                      <a href="#">我的收益</a>
                                  </span>
                                  <span class="block">
@@ -109,6 +109,9 @@
                                     <th>玩版编码</th>
                                     <th>对应区域</th>
                                     <th>操作</th>
+                                </tr>
+                                <tr class="hide add-friend">
+                                    <td colspan="4">暂无玩伴,请添加</td>
                                 </tr>
                                 <tr>
                                     <td>玩伴名称</td>
@@ -200,6 +203,15 @@
 <script src="../../assets/global/plugins/My97DatePicker/WdatePicker.js"></script>
 <script>
     $(function(){
+
+        /*有无玩伴处理*/
+        function friendHandle(){
+            if(!$(".btn-remove").closest("tr").get(0)){
+                $(".add-friend").removeClass("hide");
+            }
+        }
+        friendHandle();
+
         /*分页居中*/
         var ml = $(".paging").width()/2;
         $(".paging").get(0).style.marginLeft = -ml+"px";
@@ -208,7 +220,7 @@
         function heightAuto(){
             var d = $(".friends-infor");
             d.each(function(){
-                var ht = -$(this).get(0).offsetHeight/2+"px";
+                var ht = -$(this).height()/2+"px";
                 $(this).get(0).style.marginTop = ht;
             });
         }
@@ -216,6 +228,12 @@
         /*新增玩伴*/
         $(".shopping_content").delegate(".btn-edit","click",function(){
             $(".mask,.mask-bg").removeClass("hide");
+            $(".friends-infor").addClass("shake");
+            $($(".friends-infor")).on('webkitAnimationEnd', function (){
+                $(this).removeClass('shake');
+            }).on('animationend', function (){
+                $(this).removeClass('shake');
+            });
             $(".opreation-type").text($(this).text());
             $(".btn-saveAddress").addClass("btn-plusAddrss");
             heightAuto();
@@ -249,6 +267,7 @@
                     $(this).val("");
                     $(this).attr({placeholder:$(this).attr("placeholder")});
                 });
+                alert("保存成功");
             }
         });
 
@@ -261,10 +280,10 @@
 
         /*删除玩伴*/
         $(".shopping").delegate(".btn-remove","click",function(){
-            if(confirm("确定要删除玩伴吗？"))
-            {
+            if(confirm("确定要删除玩伴吗？")){
                 $(".mask,.mask-bg").addClass("hide");
                 $(this).closest("tr").remove();
+                friendHandle()
             }
         });
     })

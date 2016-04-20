@@ -7,7 +7,7 @@
     <link rel="stylesheet" href="../../assets/global/plugins/font/css/font-awesome.min.css"/>
     <link rel="stylesheet" href="../../assets/frontend/css/global.css"/>
     <style>
-        .form .input-group div.col-sm-2,.form .input-group div.col-sm-10{padding: 0;}
+         div.col-sm-2, div.col-sm-10,div.col-sm-7,div.col-sm-3{padding: 0;}
         .form .input-group label{position: relative;top: 10px;}
         .form .input-group input{line-height: 20px;height: auto;}
     </style>
@@ -90,29 +90,19 @@
                             <input type="text" class="form-control" placeholder="组织机构代码" id="code" name="code">
                         </div>
                     </div>
-                    <div class="input-group mb15">
+                    <div class="input-group mb15" style="width:100%;">
                         <div class="col-sm-2 col-md-2 col-xs-2">
-                            <span>*</span> 地区
+                            <span>*</span> 营业执照
                         </div>
-                        <div class="col-sm-10 col-md-10 col-xs-10">
-                            <select name="" class="select">
-                                <option value="请选择">请选择</option>
-                                <option value="重庆">重庆</option>
-                                <option value="重庆">重庆</option>
-                                <option value="重庆">重庆</option>
-                            </select>
-                            <select name="" class="select">
-                                <option value="请选择">请选择</option>
-                                <option value="渝中">渝中</option>
-                                <option value="渝中">渝中</option>
-                                <option value="渝中">渝中</option>
-                            </select>
-                            <select name="" class="mr0 select">
-                                <option value="请选择">请选择</option>
-                                <option value="袁家岗">袁家岗</option>
-                                <option value="袁家岗">袁家岗</option>
-                                <option value="袁家岗">袁家岗</option>
-                            </select>
+                        <div class="col-sm-7 col-xs-7 col-lg-7">
+                            <input type="text" readonly id="mobile" class="form-control" placeholder="营业执照">
+                        </div>
+                        <div class="col-sm-3 col-xs-3 col-lg-3 right">
+                            <span class="getcode upload fileinput-button">
+                                <span>上传</span>
+                                <input type="file" name="files[]" multiple="">
+                            </span>
+
                         </div>
                     </div>
                     <div class="form-group">
