@@ -58,6 +58,9 @@ $(function(){
             },
             d4311:{
                 required:true
+            },
+            code:{
+                required:true
             }
         },
 
@@ -103,14 +106,17 @@ $(function(){
             },
             d4311:{
                 required:"请选择您的生日"
+            },
+            code:{
+                required:"请输入您的组织机构代码"
             }
         },
 
         errorPlacement: function (error, element) { // render error placement for each input type
             if (element.parent(".input-group").size() > 0) {
                 error.insertAfter(element.parent(".input-group"));
-                heightAuto();
             } else {
+                heightAuto();
                 error.insertAfter(element); // for other inputs, just perform default behavior
             }
         },
