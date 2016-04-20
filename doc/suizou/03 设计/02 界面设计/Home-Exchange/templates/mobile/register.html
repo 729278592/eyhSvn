@@ -86,45 +86,6 @@
                 </div>
             </form>
         </div>
-        <div class="foot fixed">
-            <ul class="f-menu clearfix">
-                <li>
-                    <a href="index.html">
-                                    <span>
-                                        <i class="fa fa-home"></i>
-                                    </span>
-                        <span>首页</span>
-                        <div class="br"></div>
-                    </a>
-                </li>
-                <li>
-                    <a href="brand-service.html">
-                                    <span>
-                                        <i class="fa fa-star-o"></i>
-                                    </span>
-                        <span>星级服务</span>
-                        <div class="br"></div>
-                    </a>
-                </li>
-                <li>
-                    <a href="person-center.html">
-                                    <span>
-                                        <i class="fa fa-user"></i>
-                                    </span>
-                        <span>个人中心</span>
-                    </a>
-                </li>
-            </ul>
-            <div class="copyright">
-                <div class="copyright-head">
-                    <img src="../../assets/mobile/images/index-logo.png" alt="" class="index-logo"/>
-                    家服汇
-                </div>
-                <p>
-                    重庆至尚科技发展有限公司 CopyRight@2014-2019 备案号：渝ICP备15005428号-1
-                </p>
-            </div>
-        </div>
     </div>
 </body>
 <script src="../../assets/global/plugins/jquery/jquery-1.11.3.min.js"></script>
@@ -133,13 +94,13 @@
 <script src="../../assets/global/plugins/jquery-validate/messages_zh.js"></script>
 <script>
     $(function(){
-                    function heightAuto(){
-                var d = $(".login-form");
-                d.each(function(){
-                    var ht = -$(this).get(0).offsetHeight/2+"px";
-                    $(this).get(0).style.marginTop = ht;
-                });
-            }
+        function heightAuto(){
+            var d = $(".login-form");
+            d.each(function(){
+                var ht = -($(this).outerHeight(true)-$(".head").outerHeight(true))/2+"px";
+                $(this).get(0).style.marginTop = ht;
+            });
+        }
             heightAuto();
         $('#getting').click(function(){
             var btn = $(this);
