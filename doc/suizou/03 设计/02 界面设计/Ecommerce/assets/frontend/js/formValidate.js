@@ -50,7 +50,7 @@ $(function(){
             inviteCode:{
                 minlength:4
             },
-            name:{
+            username:{
                 required:true
             },
             industry:{
@@ -60,6 +60,18 @@ $(function(){
                 required:true
             },
             code:{
+                required:true
+            },
+            number:{
+                required:true
+            },
+            businessLicense:{
+                required:true
+            },
+            ID:{
+                required:true
+            },
+            companyName:{
                 required:true
             }
         },
@@ -98,7 +110,8 @@ $(function(){
             email:{
                 required:"请输入邮箱",
                 email:"邮箱格式不对"
-            }, name:{
+            },
+            username:{
                 required:"请输入您的姓名"
             },
             industry:{
@@ -109,6 +122,18 @@ $(function(){
             },
             code:{
                 required:"请输入您的组织机构代码"
+            },
+            number:{
+                required:"请输入您的身份证号码"
+            },
+            businessLicense:{
+                required:"请上传您的营业执照图片"
+            },
+            ID:{
+                required:"请上传您的省份证图片"
+            },
+            companyName:{
+                required:"请输入企业名称"
             }
         },
 
@@ -118,6 +143,7 @@ $(function(){
                 heightAuto();
             } else {
                 error.insertAfter(element); // for other inputs, just perform default behavior
+                $(".wrapper.minHeight").addClass("minHeight950");
                 heightAuto();
             }
         },

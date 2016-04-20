@@ -7,13 +7,15 @@
     <link rel="stylesheet" href="../../assets/global/plugins/font/css/font-awesome.min.css"/>
     <link rel="stylesheet" href="../../assets/frontend/css/global.css"/>
     <style>
-        .form .input-group div.col-sm-2,.form .input-group div.col-sm-10{padding: 0;}
+        div.col-sm-2, div.col-sm-10,div.col-sm-7,div.col-sm-3{padding: 0;}
         .form .input-group label{position: relative;top: 10px;}
         .form .input-group input{line-height: 20px;height: auto;}
+        .wrapper.minHeight750{min-height: 840px;}
+        .wrapper.minHeight950{min-height: 1000px;}
     </style>
 </head>
 <body class="lineHeight">
-    <div class="wrapper minHeight750">
+    <div class="wrapper minHeight750 minHeight">
         <div class="header fixed">
             <div class="head-main">
                 <img src="../../assets/frontend/images/logo.png" alt="logo" class="left logo"/>
@@ -55,7 +57,7 @@
                             <span>*</span> 姓名
                         </div>
                         <div class="col-sm-10 col-md-10 col-xs-10">
-                            <input type="text" class="form-control" placeholder="请输入您的姓名" id="name" name="name">
+                            <input type="text" class="form-control" placeholder="请输入您的姓名" name="username">
                         </div>
                     </div>
                     <div class="input-group mb15">
@@ -63,7 +65,7 @@
                             <span>*</span> 手机号
                         </div>
                         <div class="col-sm-10 col-md-10 col-xs-10">
-                            <input type="text" class="form-control" placeholder="请输入号码" id="password" name="mobile">
+                            <input type="text" class="form-control" placeholder="请输入号码" name="mobile">
                         </div>
                     </div>
                     <div class="input-group mb15">
@@ -71,7 +73,7 @@
                             <span>*</span> 邮箱
                         </div>
                         <div class="col-sm-10 col-md-10 col-xs-10">
-                            <input type="email" class="form-control" placeholder="请再次输入您的邮箱" id="email" name="email">
+                            <input type="email" class="form-control" placeholder="请再次输入您的邮箱" name="email">
                         </div>
                     </div>
                     <div class="input-group mb15">
@@ -79,7 +81,7 @@
                             <span>*</span> 所属行业
                         </div>
                         <div class="col-sm-10 col-md-10 col-xs-10">
-                            <input type="text" class="form-control" placeholder="所属行业" id="industry" name="industry">
+                            <input type="text" class="form-control" placeholder="所属行业"  name="industry">
                         </div>
                     </div>
                     <div class="input-group mb15">
@@ -103,7 +105,7 @@
                             <span>*</span> 生日
                         </div>
                         <div class="col-sm-10 col-md-10 col-xs-10">
-                            <input id="d4311" name="d4311" class="Wdate form-control" readonly type="text" placeholder="请选择您的生日" onFocus="WdatePicker({minDate:'%y-%M-{%d}'})"/>
+                            <input id="d4311" name="d4311" class="Wdate form-control noplaceholder" readonly type="text" placeholder="请选择您的生日" onFocus="WdatePicker({})"/>
                         </div>
                     </div>
                     <div class="input-group mb15">
@@ -129,6 +131,30 @@
                                 <option value="袁家岗">袁家岗</option>
                                 <option value="袁家岗">袁家岗</option>
                             </select>
+                        </div>
+                    </div>
+                    <div class="input-group mb15">
+                        <div class="col-sm-2 col-md-2 col-xs-2">
+                            <span>*</span> 证件号码
+                        </div>
+                        <div class="col-sm-10 col-md-10 col-xs-10">
+                            <input type="text" class="form-control" placeholder="身份证证件号码" name="number">
+                        </div>
+                    </div>
+                    <div class="input-group mb15">
+                        <div class="col-sm-2 col-md-2 col-xs-2">
+                            <span>*</span> 扫描件
+                        </div>
+                        <div class="col-sm-7 col-xs-7 col-lg-7">
+                            <input type="text" readonly  class="form-control" name="ID" placeholder="身份证扫描件">
+                            <span class="help-block">图片支持jpg、png、gif格式</span>
+                        </div>
+                        <div class="col-sm-3 col-xs-3 col-lg-3 right">
+                            <span class="getcode upload fileinput-button">
+                                <span>上传</span>
+                                <input type="file" name="files[]" multiple="">
+                            </span>
+
                         </div>
                     </div>
                     <div class="form-group">
