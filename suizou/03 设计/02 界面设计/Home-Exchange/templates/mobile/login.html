@@ -8,8 +8,8 @@
     <link rel="stylesheet" href="../../assets/global/plugins/bootstrap-3.3.5/css/bootstrap.min.css"/>
     <link rel="stylesheet" href="../../assets/mobile/css/global.css"/>
 </head>
-<body>
-    <div class="wrapper">
+<body class="height100">
+    <div class="wrapper height100">
         <div class="head fixed">
             <span class="left">
                 <i class="fa fa-angle-left"></i>
@@ -17,7 +17,7 @@
             登陆
         </div>
         <div class="content bg">
-            <div class="logBodyBg"><img src="../../assets/mobile/images/d_mobilebg.jpg"></div>
+            <!--<div class="logBodyBg"><img src="../../assets/mobile/images/d_mobilebg.jpg"></div>-->
             <form action="#" class="login-form">
                 <div class="form-group clearfix">
                     <div class="col-sm-12 col-xs-12 col-md-12">
@@ -51,7 +51,7 @@
                 <div class="form-group w100 clearfix">
                     <!--<label class="checkboxs pl15"><input type="checkbox"/>下次自动登录</label>-->
                     <a href="forget-password.html" class="forgetPassword">忘记密码</a>
-                    <a href="register.html" class="right" style="color: #fff;position: relative;right: 5%;">无账号? 立刻注册</a>
+                    <a href="register.html" class="right" style="color: #666;position: relative;right: 5%;">无账号? 立刻注册</a>
                 </div>
             </form>
         </div>
@@ -61,14 +61,14 @@
 <script src="../../assets/mobile/js/global.js"></script>
 <script>
     $(function(){
-            function heightAuto(){
-                var d = $(".login-form");
-                d.each(function(){
-                    var ht = -($(this).height())/2+"px";
-                    $(this).get(0).style.marginTop = ht;
-                });
-            }
-            heightAuto();
+//        function heightAuto(){
+//            var d = $(".login-form");
+//            d.each(function(){
+//                var ht = -($(this).outerHeight(true)-$(".head").outerHeight(true))/2+"px";
+//                $(this).get(0).style.marginTop = ht;
+//            });
+//        }
+//            heightAuto();
 
 
         $('#getting').click(function(){
