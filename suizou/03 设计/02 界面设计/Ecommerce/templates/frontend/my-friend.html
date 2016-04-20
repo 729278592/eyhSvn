@@ -169,7 +169,7 @@
     <div class="mask hide">
         <div class="friends-infor">
             <div class="friends-head">
-                <span class="opreation-type">添加玩伴</span>
+                <span class="opreation-type">编辑玩伴信息</span>
                 <i class="fa fa-remove"></i>
             </div>
             <div class="friends-content">
@@ -225,7 +225,7 @@
             });
         }
 
-        /*新增玩伴*/
+        /*编辑玩伴*/
         $(".shopping_content").delegate(".btn-edit","click",function(){
             $(".mask,.mask-bg").removeClass("hide");
             $(".friends-infor").addClass("shake");
@@ -234,23 +234,20 @@
             }).on('animationend', function (){
                 $(this).removeClass('shake');
             });
-            $(".opreation-type").text($(this).text());
-            $(".btn-saveAddress").addClass("btn-plusAddrss");
+            $(this).addClass("btn-plusAddrss");
             heightAuto();
         });
         $(".mask,.mask-bg").delegate(".btn-saveFriend","click",function(){
             var friendName = $(this).closest(".friends-content").find(".friendName").val();
             var friendCode = $(this).closest(".friends-content").find(".friendCode").val();
             var friendArea = $(this).closest(".friends-content").find(".friendArea").val();
-            var str = '<tr>'+
-                          '<td>'+friendName+'</td>'+
-                          '<td>'+friendCode+'</td>'+
-                          '<td>'+friendArea+'</td>'+
-                          '<td>'+
-                              '<button type="button" class="btn-edit">编辑</button> | '+
-                              '<button type="button" class="btn-remove">删除</button>'+
-                          '</td>'+
-                      '</tr>';
+            var str = '<td>'+friendName+'</td>'+
+                      '<td>'+friendCode+'</td>'+
+                      '<td>'+friendArea+'</td>'+
+                      '<td>'+
+                          '<button type="button" class="btn-edit">编辑</button> | '+
+                          '<button type="button" class="btn-remove">删除</button>'+
+                      '</td>';
             if(!friendName){
                alert("玩伴姓名不能为空")
             }
@@ -260,21 +257,20 @@
            else if(!friendArea){
                 alert("玩伴区域不能为空")
             }else{
-                $(".shopping_content").append(str);
-                $(this).closest(".mask").addClass("hide");
-                $(this).closest(".mask").prev(".mask-bg").addClass("hide");
+                $(".btn-plusAddrss").closest("tr").html(str);
+                $(".mask,.mask-bg").addClass("hide");
                 $(".friends-infor").find("input").each(function(){
                     $(this).val("");
                     $(this).attr({placeholder:$(this).attr("placeholder")});
                 });
-                alert("保存成功");
+                $(".btn-edit").removeClass("btn-plusAddrss");
+                alert("编辑成功");
             }
         });
 
-        /*取消新增玩伴*/
+        /*取消编辑玩伴*/
         $(".mask,.mask-bg").delegate(".fa-remove","click",function(){
-            $(this).closest(".mask").addClass("hide");
-            $(this).closest(".mask").prev(".mask-bg").addClass("hide");
+            $(".mask,.mask-bg").addClass("hide");
         });
 
 
@@ -283,6 +279,7 @@
             if(confirm("确定要删除玩伴吗？")){
                 $(".mask,.mask-bg").addClass("hide");
                 $(this).closest("tr").remove();
+                $(".btn-edit").removeClass("btn-plusAddrss");
                 friendHandle()
             }
         });

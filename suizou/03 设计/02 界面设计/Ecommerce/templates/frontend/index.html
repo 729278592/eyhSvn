@@ -9,6 +9,7 @@
 </head>
 <body class="f9f">
     <div class="wrapper">
+        <div class="header-bg"></div>
         <div class="header fixed-bg">
             <div class="head-main">
                 <img src="../../assets/frontend/images/logo.png" alt="logo" class="left logo"/>
@@ -248,10 +249,10 @@
             var w = $(".header");
             $(window).scroll(function () {
                 if ($(this).scrollTop() > 0) {
-                    w.css({"background":"rgba(0,0,0,.6)"});
+                    $(".header-bg").addClass("back");
                 }
                 else {
-                    w.css({"background":"rgba(0,0,0,0)"})
+                    $(".header-bg").removeClass("back");
                 }
             });
             /*两行文字大省略号*/

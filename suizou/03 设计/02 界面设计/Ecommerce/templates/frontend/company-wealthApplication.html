@@ -10,6 +10,7 @@
          div.col-sm-2, div.col-sm-10,div.col-sm-7,div.col-sm-3{padding: 0;}
         .form .input-group label{position: relative;top: 10px;}
         .form .input-group input{line-height: 20px;height: auto;}
+         .wrapper.minHeight750{min-height: 810px;}
     </style>
 </head>
 <body class="lineHeight">
@@ -55,7 +56,7 @@
                             <span>*</span> 企业名称
                         </div>
                         <div class="col-sm-10 col-md-10 col-xs-10">
-                            <input type="text" class="form-control" placeholder="请输入您的姓名" id="name" name="name">
+                            <input type="text" class="form-control" placeholder="请输入企业名称" id="companyName" name="companyName">
                         </div>
                     </div>
                     <div class="input-group mb15">
@@ -90,19 +91,19 @@
                             <input type="text" class="form-control" placeholder="组织机构代码" id="code" name="code">
                         </div>
                     </div>
-                    <div class="input-group mb15" style="width:100%;">
+                    <div class="input-group mb15">
                         <div class="col-sm-2 col-md-2 col-xs-2">
                             <span>*</span> 营业执照
                         </div>
                         <div class="col-sm-7 col-xs-7 col-lg-7">
-                            <input type="text" readonly id="mobile" class="form-control" placeholder="营业执照">
+                            <input type="text" readonly class="form-control" placeholder="营业执照" name="businessLicense" id="businessLicense">
+                            <span class="help-block">图片支持jpg、png、gif格式</span>
                         </div>
                         <div class="col-sm-3 col-xs-3 col-lg-3 right">
                             <span class="getcode upload fileinput-button">
                                 <span>上传</span>
                                 <input type="file" name="files[]" multiple="">
                             </span>
-
                         </div>
                     </div>
                     <div class="form-group">
