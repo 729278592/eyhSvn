@@ -704,7 +704,7 @@ label.error{color: #fb6454;}
 .address_content_content img{vertical-align: top;margin-top: 5px;}
 .change_password_content .lh,.address_content_content .lh{line-height: 35px;}
 .move_left{display: inline-block;width: 75px;}
-.w_in{height: 25px;line-height: 25px;padding-left: 10px;width: 180px;}
+.w_in{height: 25px;line-height: 25px;padding-left: 10px;width: 180px;border: 1px solid #dbdbdb;}
 .w_in1{width: 360px;position: relative;left: 20px;}
 .w_inc{padding-left: 10px;width: 193px;height: 25px;line-height: 25px;}
 .textarea{position: relative;top: 30px;padding-left: 10px; outline: none;width:575px;height:77px;overflow: hidden;line-height: 30px;}
