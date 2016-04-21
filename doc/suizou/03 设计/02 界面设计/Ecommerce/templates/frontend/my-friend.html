@@ -18,12 +18,12 @@
                 <li><a href="product_center.html">产品中心</a></li>
                 <li><a href="http://www.sskill.com/bbs">论坛</a></li>
                 <li>
-                            <span>
-                                <span><a href="person-register.html">注册</a>/<a href="person-login.html">登陆</a></span>
-                                <span class="hide">
-                                    <a href="person-center.html">某某</a>
-                                </span>
-                            </span>
+                    <span>
+                        <span><a href="person-register.html">注册</a>/<a href="person-login.html">登陆</a></span>
+                        <span class="hide">
+                            <a href="person-center.html">某某</a>
+                        </span>
+                    </span>
                 </li>
                 <li>
                     <a href="#" class="shoppingCart">
@@ -47,10 +47,10 @@
                     </li>
                     <li>
                         <div class="li_top">
-                                 <span class="block ">
-                                     <img src="../../assets/frontend/images/active_img.png" alt="" class="active_img hide"/>
-                                     <a href="#">我的订单</a>
-                                 </span>
+                             <span class="block ">
+                                 <img src="../../assets/frontend/images/active_img.png" alt="" class="active_img hide"/>
+                                 <a href="my-order.html">我的订单</a>
+                             </span>
                         </div>
                         <div class="li_bottom active">个人中心</div>
                     </li>
@@ -58,19 +58,19 @@
                         <div class="li_top">
                                 <span class="block active">
                                      <img src="../../assets/frontend/images/active_img.png" alt="" class="active_img"/>
-                                     <a href="#">我的玩伴</a>
+                                     <a href="my-friend.html">我的玩伴</a>
                                  </span>
                                  <span class="block">
                                      <img src="../../assets/frontend/images/active_img.png" alt="" class="active_img hide"/>
-                                     <a href="#">个人资料</a>
+                                     <a href="person-center.html">个人资料</a>
                                  </span>
                                  <span class="block">
                                      <img src="../../assets/frontend/images/active_img.png" alt="" class="active_img hide"/>
-                                     <a href="#">收货地址</a>
+                                     <a href="getgoods-address.html">收货地址</a>
                                  </span>
                                  <span class="block">
                                      <img src="../../assets/frontend/images/active_img.png" alt="" class="active_img hide"/>
-                                     <a href="#">修改密码</a>
+                                     <a href="modifly-password.html">修改密码</a>
                                  </span>
                         </div>
                         <div class="li_bottom">财符中心</div>
@@ -79,11 +79,11 @@
                         <div class="li_top">
                                 <span class="block">
                                      <img src="../../assets/frontend/images/active_img.png" alt="" class="active_img hide"/>
-                                     <a href="#">我的收益</a>
+                                     <a href="my-profit.html">我的收益</a>
                                  </span>
                                  <span class="block">
                                      <img src="../../assets/frontend/images/active_img.png" alt="" class="active_img hide"/>
-                                     <a href="#">财符排行榜</a>
+                                     <a href="wealth-rank.html">财符排行榜</a>
                                  </span>
                         </div>
                     </li>
@@ -212,9 +212,12 @@
         }
         friendHandle();
 
-        /*分页居中*/
-        var ml = $(".paging").width()/2;
-        $(".paging").get(0).style.marginLeft = -ml+"px";
+        /*分页水平居中*/
+        function pageAuto(_this){
+            var ml = _this.outerWidth()/2;
+            _this.get(0).style.marginLeft = -ml+"px";
+        }
+        pageAuto($(".paging"));
 
         /*元素未知高度垂直居中*/
         function heightAuto(){

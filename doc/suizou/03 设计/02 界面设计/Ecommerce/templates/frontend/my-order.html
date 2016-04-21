@@ -194,9 +194,12 @@
     <script src="../../assets/global/plugins/My97DatePicker/WdatePicker.js"></script>
     <script>
         $(function(){
-            /*分页居中*/
-            var ml = $(".paging").width()/2;
-            $(".paging").get(0).style.marginLeft = -ml+"px";
+            /*分页水平居中*/
+            function pageAuto(_this){
+                var ml = _this.outerWidth()/2;
+                _this.get(0).style.marginLeft = -ml+"px";
+            }
+            pageAuto($(".paging"));
         })
     </script>
 </body>
