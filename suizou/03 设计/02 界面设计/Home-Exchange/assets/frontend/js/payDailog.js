@@ -10,7 +10,7 @@ $(function(){
                   '</div>'+
                   '<div class="mc-content ps-content">'+
                       '<p>'+
-                      '确认支付 <span class="service-name">'+options.dataPayStyle+'</span> '+options.dataServiceName+' <span class="money">'+options.dataLittleMoney+'</span> 元?'+
+                          '确认支付 <span class="service-name">'+options.dataServiceName+'</span> '+options.dataPayStyle+' <span class="money">'+options.dataLittleMoney+'</span> 元?'+
                       '</p>'+
                       '<p>'+
                           '<label><input type="checkbox"/> 使用电子钱包</label> : <span class="money">'+options.dataAllMoney+'</span>'+                        '</p>'+

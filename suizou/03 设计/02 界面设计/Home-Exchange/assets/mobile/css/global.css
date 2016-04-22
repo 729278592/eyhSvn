@@ -282,7 +282,18 @@ a:hover{text-decoration: none;}
 .clean-mask{position: absolute;padding: 5px;background: rgba(30, 188, 158, 0.60);color: #fff;font-size: 14px;z-index: 100;top: 10%;left: 2%;width: 26%;max-height: 120px;}
 
 .img-responsive{width: 100%;}
-.mask{position: fixed;top: 0;bottom: 0;left: 0;right: 0;background: rgba(0,0,0,.5);max-width: 640px;margin: 0 auto;z-index: 1000;}
+.mask,.payStyle-bg,.payStyle{position: fixed;top: 0;bottom: 0;left: 0;right: 0;background: rgba(0,0,0,.5);max-width: 640px;margin: 0 auto;z-index: 1000;}
+
+
+.payStyle-content{width: 94%;position: absolute;left: 50%;margin-left: -47%;background: #fff;top: 50%;border-radius: 4px 4px 0 0;}
+.mc-head{width: 100%;background: #52ba92;position: relative;height: 34px;line-height: 34px;border-radius: 4px 4px 0 0;text-align: center;}
+.mc-head .fa-remove{position: absolute;right: 10px;color: #666;font-size: 14px;top: 10px;}
+.mc-head .fa-remove:hover{cursor: pointer;}
+.mc-content{padding: 3%;width: 94%;text-align: center;font-size: 14px;color: #fff;}
+.mc-head .title{font-size: 16px;margin-top: 0;color: #fff;}
+.mc-content p{font-size: 14px;color: #666;margin: 10px 0;}
+.ps-content p .service-name,.ps-content p .money{color: #fab433;}
+
 
 .mask-content {
     width: 100%;
