@@ -14,7 +14,6 @@ function heightAuto(){
         if(cm.is(".mt15")){
             cm.css({height:windoeHeight-headHeight-footHeight-20});
         }
-
     }else{
         cm.css({height:"auto"});
     }
