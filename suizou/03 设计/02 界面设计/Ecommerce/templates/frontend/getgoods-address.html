@@ -98,7 +98,7 @@
                                 </div>
                             </div>
                         </div>
-                        <div class="infor">
+                        <div class="infor" id="addressOperation">
                             <div class="order-title">
                                 <p>收货地址</p>
                             </div>
@@ -106,57 +106,57 @@
                                 <div class="address_content">
                                     <div class="address_content_content">
                                         <form action="#">
-                                                <span class="lh"><span><span class="move_left"><span class="required">*</span>所在地区:</span></span>
-                                                    <select name="" class="w_inc">
-                                                        <option value="四川省">四川省</option>
-                                                        <option value="四川省">四川省</option>
-                                                        <option value="广东省">广东省</option>
-                                                    </select>
-                                                    <select name="" class="w_inc">
-                                                        <option value="广安市">广安市</option>
-                                                        <option value=""></option>
-                                                        <option value=""></option>
-                                                    </select>
-                                                    <select name="" class="w_inc">
-                                                        <option value="武胜县">武胜县</option>
-                                                        <option value=""></option>
-                                                        <option value=""></option>
-                                                    </select>
-                                                </span><br/>
-                                                <span class="lh" style="position: relative;top: -25px;"><span><span class="move_left"><span class="required">*</span>详细地址:</span></span>
-                                                     <textarea name="" cols="30" rows="10" style="resize: none" class="textarea" placeholder="请填写您所在的详细地址"></textarea>
-                                                </span><br/>
-                                                <span class="lh"><label><span class="move_left"><span class="required">*</span>邮政编码: </span></label>
-                                                    <input type="text" class="w_in" placeholder="请填写邮政编码"/>
-                                                </span><br/>
-                                                <span class="lh"><label><span class="move_left"><span class="required">*</span>收货人姓名: </span></label>
-                                                    <input type="text" class="w_in" placeholder="请填写收货人姓名"/>
-                                                </span><br/>
-                                                <span class="lh"><span><span class="move_left"><span class="required">*</span>手机号码:</span></span>
-                                                    <select name="" class="w_inc">
-                                                        <option value=""></option>
-                                                        <option value=""></option>
-                                                        <option value=""></option>
-                                                    </select>
-                                                    <input type="text" class="w_in w_in1" placeholder="请填写您的手机号码"/>
-                                                </span><br/>
-                                                <span class="lh"><span><span class="move_left">座机号码:</span></span>
-                                                    <select name="" class="w_inc">
-                                                        <option value=""></option>
-                                                        <option value=""></option>
-                                                        <option value=""></option>
-                                                    </select>
-                                                    <span style="position: relative;left: 20px;"><input type="text" class="w_in w_in2"/> - <input type="text" class="w_in w_in2"/> - <input type="text" class="w_in w_in2"/></span>
-                                                </span><br/>
-                                                <span class="lh"><span><span class="move_left"></span></span>
-                                                    <label>
-                                                        <input type="checkbox"/>设置为默认收货地址
-                                                    </label>
-                                                </span><br/>
-                                                <span class="lh"><span><span class="move_left"></span></span>
-                                                    <input type="submit" value="保存" class="btn_save"/>
-                                                    <input type="reset" value="取消" class="btn_cancel"/>
-                                                </span>
+                                            <span class="lh"><span><span class="move_left"><span class="required">*</span>所在地区:</span></span>
+                                                <select name="" class="w_inc select-s">
+                                                    <option value="四川省">四川省</option>
+                                                    <option value="四川省">四川省</option>
+                                                    <option value="广东省">广东省</option>
+                                                </select>
+                                                <select name="" class="w_inc select-q">
+                                                    <option value="广安市">广安市</option>
+                                                    <option value=""></option>
+                                                    <option value=""></option>
+                                                </select>
+                                                <select name="" class="w_inc select-x">
+                                                    <option value="武胜县">武胜县</option>
+                                                    <option value=""></option>
+                                                    <option value=""></option>
+                                                </select>
+                                            </span><br/>
+                                            <span class="lh" style="position: relative;top: -25px;"><span><span class="move_left"><span class="required">*</span>详细地址:</span></span>
+                                                 <textarea name="" cols="30" rows="10" style="resize: none" class="textarea" placeholder="请填写您所在的详细地址"></textarea>
+                                            </span><br/>
+                                            <span class="lh"><label><span class="move_left"><span class="required">*</span>邮政编码: </span></label>
+                                                <input type="text" class="w_in numberText" placeholder="请填写邮政编码"/>
+                                            </span><br/>
+                                            <span class="lh"><label><span class="move_left"><span class="required">*</span>收货人姓名: </span></label>
+                                                <input type="text" class="w_in nameText" placeholder="请填写收货人姓名"/>
+                                            </span><br/>
+                                            <span class="lh"><span><span class="move_left"><span class="required">*</span>手机号码:</span></span>
+                                                <select name="" class="w_inc">
+                                                    <option value=""></option>
+                                                    <option value=""></option>
+                                                    <option value=""></option>
+                                                </select>
+                                                <input type="text" class="w_in w_in1 phoneText" placeholder="请填写您的手机号码"/>
+                                            </span><br/>
+                                            <span class="lh"><span><span class="move_left">座机号码:</span></span>
+                                                <select name="" class="w_inc">
+                                                    <option value=""></option>
+                                                    <option value=""></option>
+                                                    <option value=""></option>
+                                                </select>
+                                                <span style="position: relative;left: 20px;"><input type="text" class="w_in w_in2"/> - <input type="text" class="w_in w_in2"/> - <input type="text" class="w_in w_in2"/></span>
+                                            </span><br/>
+                                            <span class="lh"><span><span class="move_left"></span></span>
+                                                <label>
+                                                    <input type="checkbox"/>设置为默认收货地址
+                                                </label>
+                                            </span><br/>
+                                            <span class="lh"><span><span class="move_left"></span></span>
+                                                <input type="submit" value="保存" class="btn_save" id="btn_save"/>
+                                                <input type="reset" value="取消" class="btn_cancel"/>
+                                            </span>
                                         </form>
                                     </div>
                                 </div>
@@ -164,22 +164,22 @@
                                     <div class="address_footer_head">
                                         已保存2条地址,还可以保存18条地址
                                     </div>
-                                    <ul class="address_footer_ul">
+                                    <ul class="address_footer_ul clearfix">
                                         <li>
-                                            <p class="address_footer_ul_head">陈小洁</p>
-                                            <p>15083377745</p>
-                                            <p>重庆巴南区</p>
-                                            <p>重庆市巴南大道38栋9-5(000000)</p>
+                                            <p class="address_footer_ul_head">收货人 : 陈小洁</p>
+                                            <p>手机号 : 15083377745</p>
+                                            <p>邮编 : 654225</p>
+                                            <p>详细地址 : 重庆市巴南大道38栋9-5(000000)</p>
                                             <p>
                                                 <button class="btn-modifly">编辑</button>
                                                 <button class="btn-remove">删除</button>
                                             </p>
                                         </li>
                                         <li>
-                                            <p class="address_footer_ul_head">陈小洁</p>
-                                            <p>15083377745</p>
-                                            <p>重庆巴南区</p>
-                                            <p>重庆市巴南大道38栋9-5(000000)</p>
+                                            <p class="address_footer_ul_head">收货人 : 陈小洁</p>
+                                            <p>手机号 : 15083377745</p>
+                                            <p>邮编 : 654225</p>
+                                            <p>详细地址 : 重庆市巴南大道38栋9-5(000000)</p>
                                             <p>
                                                 <button class="btn-modifly">编辑</button>
                                                 <button class="btn-remove">删除</button>
@@ -222,20 +222,21 @@
         <div class="mask-bg hide"></div>
         <div class="mask hide">
             <div class="address_content mask-address">
+                <i class="fa fa-remove" id="btn-remove"></i>
                 <div class="address_content_content">
                     <form action="#">
                         <span class="lh"><span><span class="move_left"><span class="required">*</span>所在地区:</span></span>
-                            <select name="" class="w_inc">
+                            <select name="" class="w_inc select-s">
                                 <option value="四川省">四川省</option>
                                 <option value="四川省">四川省</option>
                                 <option value="广东省">广东省</option>
                             </select>
-                            <select name="" class="w_inc">
+                            <select name="" class="w_inc select-q">
                                 <option value="广安市">广安市</option>
                                 <option value=""></option>
                                 <option value=""></option>
                             </select>
-                            <select name="" class="w_inc">
+                            <select name="" class="w_inc select-x">
                                 <option value="武胜县">武胜县</option>
                                 <option value=""></option>
                                 <option value=""></option>
@@ -245,18 +246,18 @@
                              <textarea name="" cols="30" rows="10" style="resize: none" class="textarea" placeholder="请填写您所在的详细地址"></textarea>
                         </span><br/>
                         <span class="lh"><label><span class="move_left"><span class="required">*</span>邮政编码: </span></label>
-                            <input type="text" class="w_in" placeholder="请填写邮政编码"/>
+                            <input type="text" class="w_in numberText" placeholder="请填写邮政编码"/>
                         </span><br/>
                         <span class="lh"><label><span class="move_left"><span class="required">*</span>收货人姓名: </span></label>
-                            <input type="text" class="w_in" placeholder="请填写收货人姓名"/>
+                            <input type="text" class="w_in nameText" placeholder="请填写收货人姓名"/>
                         </span><br/>
                         <span class="lh"><span><span class="move_left"><span class="required">*</span>手机号码:</span></span>
-                            <select name="" class="w_inc">
+                            <select name="" class="w_inc ">
                                 <option value=""></option>
                                 <option value=""></option>
                                 <option value=""></option>
                             </select>
-                            <input type="text" class="w_in w_in1" placeholder="请填写您的手机号码"/>
+                            <input type="text" class="w_in w_in1 phoneText" placeholder="请填写您的手机号码"/>
                         </span><br/>
                         <span class="lh"><span><span class="move_left">座机号码:</span></span>
                             <select name="" class="w_inc">
@@ -285,54 +286,11 @@
     <script src="../../assets/frontend/js/footHandle.js"></script>
     <script src="../../assets/frontend/js/user-menu.js"></script>
     <script src="../../assets/global/plugins/My97DatePicker/WdatePicker.js"></script>
+    <script src="../../assets/frontend/js/addressListOperation.js"></script>
     <script>
         $(function(){
-
-            /*分页水平居中*/
-            function pageAuto(_this){
-                var ml = _this.outerWidth()/2;
-                _this.get(0).style.marginLeft = -ml+"px";
-            }
-            pageAuto($(".paging"));
-
-            /*对象垂直水平居中*/
-            function objauto(_this){
-                var ml = _this.outerWidth()/2;
-                _this.get(0).style.marginLeft = -ml+"px";
-                var ml = _this.outerHeight()/2;
-                _this.get(0).style.marginTop = -ml+"px";
-            }
-
-            /*偶数项地址列表去掉右外边距*/
-            function addressList(){
-                $(".address_footer_ul li:odd").addClass("mr0");
-                $(".address_footer_ul li:even").removeClass("mr0");
-            }
-            addressList();
-
-
-            /*编辑地址列表*/
-            function modiflyAddressList(){
-                $(".mask-bg,.mask").removeClass("hide");
-                objauto($(".mask-address"));
-                $(".mask-address").addClass("shake");
-                $($(".mask-address")).on('webkitAnimationEnd', function (){
-                    $(this).removeClass('shake');
-                }).on('animationend', function (){
-                    $(this).removeClass('shake');
-                });
-            }
-            $(".address_footer_ul").delegate(".btn-modifly","click",modiflyAddressList);
-
-            /*删除地址列表*/
-            function removeAddressList(){
-                if(confirm("您确定要删除地址?")){
-                    $(this).closest("li").remove();
-                    addressList();
-                }
-            }
-            $(".address_footer_ul").delegate(".btn-remove","click",removeAddressList);
-        })
+           $("#addressOperation").addressListOperation({});
+        });
     </script>
 </body>
 </html>

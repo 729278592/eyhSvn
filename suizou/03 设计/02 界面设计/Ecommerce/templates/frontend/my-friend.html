@@ -260,6 +260,7 @@
            else if(!friendArea){
                 alert("玩伴区域不能为空")
             }else{
+                alert("编辑成功");
                 $(".btn-plusAddrss").closest("tr").html(str);
                 $(".mask,.mask-bg").addClass("hide");
                 $(".friends-infor").find("input").each(function(){
@@ -267,7 +268,7 @@
                     $(this).attr({placeholder:$(this).attr("placeholder")});
                 });
                 $(".btn-edit").removeClass("btn-plusAddrss");
-                alert("编辑成功");
+
             }
         });
 
