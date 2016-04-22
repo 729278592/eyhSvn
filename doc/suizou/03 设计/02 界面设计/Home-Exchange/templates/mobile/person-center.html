@@ -59,7 +59,10 @@
                             <p class="title">订单编号：241515321351</p>
                             <p>家居基础保洁 <span class="right money">80.00</span></p>
                             <p>支付状态 : <span class="pay-type">已支付</span></p>
-                            <p>订单状态 : <span class="distribution-type">已分配</span></p>
+                            <p>订单状态 :
+                                <a href="javascript:;" class="btn-payMoney btn-pay" dataPayStyle="订金" dataServiceName="初级月嫂" dataLittleMoney="0.01" dataAllMoney="￥500"><span class="distribution-type">付款</span></a>
+
+                                </p>
                             <a href="#" class="btn-comment bg-ccc">评论</a>
                         </div>
                     </li>
@@ -177,8 +180,52 @@
                 </p>
             </div>
         </div>
+        <div class="payStyle hide">
+            <div class="payStyle-content">
+
+            </div>
+        </div>
     </div>
 </body>
     <script src="../../assets/global/plugins/jquery/jquery-1.11.3.min.js"></script>
     <script src="../../assets/mobile/js/global.js"></script>
+    <script src="../../assets/mobile/js/payDailog.js"></script>
+<script>
+    $(function(){
+        /*面试弹窗*/
+        function heightAuto(){
+            var ht = -$(".payStyle-content,.payment-money").get(0).offsetHeight/2+"px";
+            $(".payStyle-content,.payment-money").get(0).style.marginTop = ht;
+        }
+
+        $(".payment-money").delegate(".fa-remove","click",function(){
+            $(".mask-bg,.mask,.payment-money").addClass("hide");
+        });
+        $(".btn-interviewSuccess").on("click",function(e){
+            e.preventDefault();
+            $(".mask-bg,.mask,.payment-money").removeClass("hide");
+            heightAuto()
+        });
+
+        $(".btn-sure").on("click",function(){
+            $(".mask-bg,.mask,.payment-money").addClass("hide");
+        });
+
+
+        /*支付弹窗*/
+        $(".order-menu").delegate(".btn-payMoney,.btn-payAllMoney","click",function(e){
+            $(".payStyle-bg,.payStyle").removeClass("hide");
+            e.preventDefault();
+            $(this).payStyle({
+                dataPayStyle:$(this).attr("dataPayStyle"),
+                dataServiceName:$(this).attr("dataServiceName"),
+                dataLittleMoney:$(this).attr("dataLittleMoney"),
+                dataAllMoney:$(this).attr("dataAllMoney")
+            });
+        });
+        $(".payStyle-content").delegate(".fa-remove","click",function(){
+            $(".payStyle-bg,.payStyle").addClass("hide");
+        });
+    })
+</script>
 </html>
