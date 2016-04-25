@@ -217,6 +217,7 @@ a:hover{text-decoration: none;}
 .person-infor p .btn-infor{display: inline-block;padding: 3px 10px;background: #54ba94;color: #fff;font-size: 14px;border-radius: 2px;position: relative;left: 5%;}
 .money-infor{width: 100%;background: #fff;padding: 4% 10% 2%;}
 .money-infor li{width: 33%;border-right: 1px solid #dbdbdb;font-size: 16px;color: #333;text-align: center;float: left;}
+.money-infor li a{display: inline-block;width: 100%;height: 100%;}
 .money-infor li.br0{border-right: 0;}
 .money-infor li span{}
 .money-infor li .num,.order-menu li .num{color: #fcac25;}
@@ -826,6 +827,8 @@ body{    line-height: 1.6;}
 .post-recharge p{margin-bottom: 15px;}
 .post-recharge p .select-recharge{width: 150px;padding: 5px 0 5px 10px;border: 1px solid #dbdbdb;}
 .post-recharge p .btn-recharge{padding: 5px 30px;background: #fab433;border-radius: 4px;color: #fff;}
+
+
 /*paySuccess*/
 .paySuccess{text-align: center;position:relative;top:100px;color: #666;}
 .paySuccess a{color: #fca715;}
