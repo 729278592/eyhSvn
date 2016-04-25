@@ -423,8 +423,10 @@ div.infor-table.w100 .personal-infor p .text {
 .shopping_content tr td .btn-remove{color: #fff;background:#fe695b; }
 /*关于我们*/
 .we-menu{width: 200px;}
-.we-menu li{width: 100%;height: 60px;text-align: center;line-height: 60px;color: #666;background: #eaeaea;font-size: 16px;margin-bottom: 5px;}
+.we-menu li{width: 100%;height: 60px;text-align: center;line-height: 60px;background: #eaeaea;font-size: 16px;margin-bottom: 5px;}
+.we-menu li a{display: inline-block;width: 100%;height: 100%;color: #666;}
 .we-menu li.active{background: #faa454;color: #fff;}
+.we-menu li.active a{color: #fff;}
 .company{border: 1px solid #dbdbdb;padding: 20px;width: 980px;background: #fff;}
 .company-img{width: 100%;}
 .company p{margin: 10px 0;font-size: 14px;color: #666;line-height: 23px;text-indent: 28px;}
