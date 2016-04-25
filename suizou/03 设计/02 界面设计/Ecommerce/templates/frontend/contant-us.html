@@ -85,14 +85,12 @@
     <script>
         var rul = $(".we-menu li");
         var rl = $(".type-div");
-        rul.each(function(i){
+        rul.each(function(){
             $(this).on("click",function(){
                 $(this).addClass("active");
                 $(this).siblings().removeClass("active");
             })
         });
-
-
     </script>
 </body>
 </html>
