@@ -821,6 +821,11 @@ body{    line-height: 1.6;}
 
 
 
+/*recharge*/
+.post-recharge{text-align: center;font-size: 14px;color: #666;position: relative;top: 20%;}
+.post-recharge p{margin-bottom: 15px;}
+.post-recharge p .select-recharge{width: 150px;padding: 5px 0 5px 10px;border: 1px solid #dbdbdb;}
+.post-recharge p .btn-recharge{padding: 5px 30px;background: #fab433;border-radius: 4px;color: #fff;}
 /*paySuccess*/
 .paySuccess{text-align: center;position:relative;top:100px;color: #666;}
 .paySuccess a{color: #fca715;}
