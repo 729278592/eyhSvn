@@ -1,4 +1,4 @@
-/*头部滑动*/
+/*placeholder的兼容*/
 
 if(navigator.appName == "Microsoft Internet Explorer") {
     if (navigator.appVersion.match(/8./i) == '8.') {

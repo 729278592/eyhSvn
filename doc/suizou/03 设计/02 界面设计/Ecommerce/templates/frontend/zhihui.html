@@ -2000,29 +2000,29 @@
     <script src="../../assets/frontend/js/global.js"></script>
     <script src="../../assets/frontend/js/wisdom.js"></script>
     <script src="../../assets/frontend/js/input-type.js"></script>
-<script>
-    jQuery(document).ready(function() {
-        ComponentsjQueryUISliders.init();
-        $('.demo').each( function() {
-            var that = $(this);
-            $(this).minicolors({
-                control: $(this).attr('data-control') || 'hue',
-                defaultValue: $(this).attr('data-defaultValue') || '',
-                inline: $(this).attr('data-inline') === 'true',
-                letterCase: $(this).attr('data-letterCase') || 'lowercase',
-                opacity: $(this).attr('data-opacity'),
-                position: $(this).attr('data-position') || 'bottom left',
-                change: function(hex, opacity) {
-                    if( !hex ) return;
-                    if( opacity ) hex += ', ' + opacity;
-                    try {
-                        that.closest(".color-pickup").siblings(".div-slider").find(".ui-widget-header").css({background:hex})
-                    } catch(e) {}
-                },
-                theme: 'bootstrap'
+    <script>
+        jQuery(document).ready(function() {
+            ComponentsjQueryUISliders.init();
+            $('.demo').each( function() {
+                var that = $(this);
+                $(this).minicolors({
+                    control: $(this).attr('data-control') || 'hue',
+                    defaultValue: $(this).attr('data-defaultValue') || '',
+                    inline: $(this).attr('data-inline') === 'true',
+                    letterCase: $(this).attr('data-letterCase') || 'lowercase',
+                    opacity: $(this).attr('data-opacity'),
+                    position: $(this).attr('data-position') || 'bottom left',
+                    change: function(hex, opacity) {
+                        if( !hex ) return;
+                        if( opacity ) hex += ', ' + opacity;
+                        try {
+                            that.closest(".color-pickup").siblings(".div-slider").find(".ui-widget-header").css({background:hex})
+                        } catch(e) {}
+                    },
+                    theme: 'bootstrap'
+                });
             });
         });
-    });
-</script>
+    </script>
 </body>
 </html>
