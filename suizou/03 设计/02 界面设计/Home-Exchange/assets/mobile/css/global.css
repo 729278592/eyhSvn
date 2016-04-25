@@ -731,7 +731,7 @@ body{    line-height: 1.6;}
 .record-table tr th,.record-table tr td{ text-align:center;font-size: 14px;border:1px solid #dbdbdb;color: #999;height: 2.6em;}
 .money-div{width: 90%;margin: 10px auto;font-size: 14px;color: #666;}
 .money-div .select-money{border: 1px solid #dbdbdb;padding-left: 10px;height: 30px;line-height: 30px;}
-
+.record-table tr td a{color:#53ba93;}
 
 
 
