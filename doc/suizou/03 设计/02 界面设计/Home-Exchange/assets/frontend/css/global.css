@@ -1988,10 +1988,11 @@ nowrap;text-overflow: ellipsis;width: 100%;}.sc-list1{display: none;}
 .personal-info .pi-form{width: 100%;}
 .personal-infor .address-form{margin-bottom: 40px;}
 .personal-infor.mt0{margin-top: 0;}
-.personal-infor p{margin: 15px 0;font-size: 14px;color: #666;}
+.personal-infor p{margin: 10px 0;font-size: 14px;color: #666;}
 .personal-infor p.top0 .type{vertical-align: top;}
 .personal-infor p span.required{color: #f04102;}
 .personal-infor p .type{display: inline-block;width: 75px;}
+.personal-infor span.proty{font-size: 14px;color: #fab433;}
 .personal-infor p .span-block{display: inline-block;}
 .personal-infor p .span-block select{display: inline-block;margin-bottom: 10px;width: 95px;padding: 5px 0 5px 10px;height: auto;}
 .personal-infor p .typeTextarea{vertical-align: top;}
