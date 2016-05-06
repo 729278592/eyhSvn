@@ -975,6 +975,7 @@ body.f9f{min-width:1170px; background: #f9f5f6;}
 .application-bg .register-ul li.last,.application-bg .register-ul li.last a{border-radius: 0 8px 0 0;}
 .register-ul li.w100{width: 100%;text-align: center;border-right: none;}
 .register-ul li a:hover{text-decoration: none;}
+.register-ul li.w100 a:hover{cursor: default;}
 .register-ul li a{display: inline-block;width: 100%;height: 100%;border-bottom: none;}
 .register-ul li.active a{color: #fff;background: #fcb755;}
 .register-ul li.mr0{border-right: 0;}
