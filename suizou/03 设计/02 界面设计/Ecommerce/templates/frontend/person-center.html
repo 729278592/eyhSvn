@@ -221,17 +221,5 @@
     <script src="../../assets/frontend/js/footHandle.js"></script>
     <script src="../../assets/frontend/js/user-menu.js"></script>
     <script src="../../assets/global/plugins/My97DatePicker/WdatePicker.js"></script>
-    <script>
-        $(function(){
-            $(".btn-person").each(function(i){
-                $(this).on("click",function(){
-                    $(this).addClass("active");
-                    $(this).siblings(".btn-person").removeClass("active");
-                    $(".infor-table").eq(i).addClass("active");
-                    $(".infor-table").eq(i).siblings(".infor-table").removeClass("active");
-                })
-            })
-        })
-    </script>
 </body>
 </html>
