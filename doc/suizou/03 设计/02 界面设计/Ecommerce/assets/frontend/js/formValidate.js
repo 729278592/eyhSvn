@@ -76,6 +76,9 @@ $(function(){
             },
             InvitationCode:{
                 required:true
+            },
+            imgMiss:{
+                required:true
             }
         },
 
@@ -140,6 +143,9 @@ $(function(){
             },
             InvitationCode:{
                 required:"请输入邀请码"
+            },
+            imgMiss:{
+                required:"请输上传图片"
             }
         },
 
