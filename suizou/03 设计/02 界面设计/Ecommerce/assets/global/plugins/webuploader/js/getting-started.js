@@ -135,7 +135,8 @@ jQuery(function() {
             $img = $li.find('img');
 
         $list.append( $li );
-
+        $(".wrapper").addClass("minHeight950");
+        heightAuto();
         // 创建缩略图
         uploader.makeThumb( file, function( error, src ) {
             if ( error ) {
