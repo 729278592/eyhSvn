@@ -152,12 +152,11 @@ $(function(){
         errorPlacement: function (error, element) { // render error placement for each input type
             if (element.parent(".input-group").size() > 0) {
                 error.insertAfter(element.parent(".input-group"));
-                heightAuto();
             } else {
                 error.insertAfter(element); // for other inputs, just perform default behavior
                 $(".wrapper.minHeight").addClass("minHeight950");
-                heightAuto();
             }
+            heightAuto();
         },
 
         highlight: function (element) { // hightlight error inputs
