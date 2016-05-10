@@ -73,6 +73,9 @@ $(function(){
             },
             companyName:{
                 required:true
+            },
+            InvitationCode:{
+                required:true
             }
         },
 
@@ -134,6 +137,9 @@ $(function(){
             },
             companyName:{
                 required:"请输入企业名称"
+            },
+            InvitationCode:{
+                required:"请输入邀请码"
             }
         },
 
