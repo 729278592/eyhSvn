@@ -145,7 +145,7 @@ $(function(){
                 required:"请输入邀请码"
             },
             imgMiss:{
-                required:"请输上传图片"
+                required:"请上传图片"
             }
         },
 
