@@ -13,9 +13,15 @@ $.fn.addressListOperation = function(opts){
             arr.maskBg = $(".mask-bg");
             arr.maskMaskBg  = $(".mask,.mask-bg");
             arr.addressFooterUl = $(".address_footer_ul");
+            arr.btn = $(".btn-address");
             arr.addressContent = $(".address_content");
             arr.maskAddress = $(".mask-address");
             arr.SaveModifliyAddress = "saveModifliyAddress";
+            arr.modifly = "modifly";
+            arr.addAddress = "addAddress";
+            arr.addressList = $(".address-list");
+            arr.btnModifly = arr.addressList.find(".btn-modifly");
+            arr.btnModiflys = "btnModiflys";
             method.pageAuto(_this,arr);
             method.addressList(_this,arr);
             method.modiflyAddressList(_this,arr);
@@ -24,12 +30,35 @@ $.fn.addressListOperation = function(opts){
             method.cancelSaveAddressList(_this,arr);
             method.saveModiflyAddressList(_this,arr);
             method.saveAddressList(_this,arr);
+            method.addAddressList(_this,arr);
+            method.btnModiflyList(_this,arr);
+            method.addressListClick(_this,arr);
         },
         pageAuto:function(_this,arr){/*分页水平居中*/
             arr.page = _this.find(".paging");
             arr.pageWidth = arr.page.outerWidth();
             arr.pagemarginLeft = -arr.pageWidth/2+"px";
             arr.page.css({marginLeft:arr.pagemarginLeft});
+        },
+        addressListClick:function(_this,arr){
+            arr.addressList.delegate("li","click",function(){
+               $(this).addClass("active");
+                $(this).siblings("li").removeClass("active");
+            })
+        },
+        btnModiflyList:function(_this,arr){
+            arr.addressList.delegate(".btn-modifly","click",function(){
+                arr.maskMaskBg .removeClass("hide");
+                method.objAuto(_this,arr);
+                arr.maskAddress.addClass("shake");
+                $(arr.maskAddress).on('webkitAnimationEnd', function (){
+                    $(this).removeClass('shake');
+                }).on('animationend', function (){
+                    $(this).removeClass('shake');
+                });
+                $(this).addClass("btn-modiflys");
+                arr.mask.find(".btn_save").addClass(arr.btnModiflys);
+            });
         },
         objAuto:function(_this,arr){/*对象垂直水平居中*/
             arr.addressWidth = arr.maskAddress.outerWidth(true);
@@ -46,6 +75,20 @@ $.fn.addressListOperation = function(opts){
             arr.Lieven = _this.find(".address_footer_ul li:even");
             arr.Liodd.addClass("mr0");
             arr.Lieven .removeClass("mr0");
+        },
+        addAddressList:function(_this,arr){/*新增地址列表*/
+            arr.btn.on("click",function(){
+                arr.maskMaskBg .removeClass("hide");
+                method.objAuto(_this,arr);
+                arr.maskAddress.addClass("shake");
+                $(arr.maskAddress).on('webkitAnimationEnd', function (){
+                    $(this).removeClass('shake');
+                }).on('animationend', function (){
+                    $(this).removeClass('shake');
+                });
+                $(this).addClass("btn-modiflys");
+                arr.mask.find(".btn_save").addClass(arr.addAddress);
+            });
         },
         modiflyAddressList:function(_this,arr){/*编辑地址列表*/
             arr.addressFooterUl.delegate(".btn-modifly","click",function(){
@@ -85,7 +128,7 @@ $.fn.addressListOperation = function(opts){
             });
         },
         saveModiflyAddressList:function(_this,arr){ /*保存修改的地址*/
-            arr.mask.delegate(".saveModifliyAddress","click",function(){
+            arr.mask.delegate(".saveModifliyAddress,.addAddress,.btnModiflys","click",function(){
                 arr.nameText = arr.addressContent.find(".nameText").val();
                 arr.phoneText = arr.addressContent.find(".phoneText").val();
                 arr.numberText = arr.addressContent.find(".numberText").val();
@@ -93,18 +136,48 @@ $.fn.addressListOperation = function(opts){
                 arr.selects = arr.addressContent.find(".select-s option:selected").val();
                 arr.selectq = arr.addressContent.find(".select-q option:selected").val();
                 arr.selectx = arr.addressContent.find(".select-x option:selected").val();
-                arr.str = '<p class="address_footer_ul_head">收货人 : '+arr.nameText+'</p>'+
-                           '<p>手机号 : '+arr.phoneText+'</p>'+
-                           '<p>邮编 : '+arr.numberText+'</p>'+
-                           '<p>详细地址 : '+arr.selects+arr.selectq+arr.selectx+arr.textareas+'</p>'+
-                           '<p>'+
-                               '<button class="btn-modifly">编辑</button>'+
-                               ' <button class="btn-remove">删除</button>'+
-                           '</p>';
-                arr.addressFooterUl.find(".btn-modiflys").closest("li").html(arr.str);
+
+                if(arr.addressFooterUl.get(0)){
+                    arr.str = '<p class="address_footer_ul_head">收货人 : '+arr.nameText+'</p>'+
+                        '<p>手机号 : '+arr.phoneText+'</p>'+
+                        '<p>邮编 : '+arr.numberText+'</p>'+
+                        '<p>详细地址 : '+arr.selects+arr.selectq+arr.selectx+arr.textareas+'</p>'+
+                        '<p>'+
+                        '<button class="btn-modifly">编辑</button>'+
+                        ' <button class="btn-remove">删除</button>'+
+                        '</p>';
+                    arr.addressFooterUl.find(".btn-modiflys").closest("li").html(arr.str);
+                    arr.mask.find(".btn_save").removeClass(arr.SaveModifliyAddress);
+                }
+                else if( arr.mask.find(".addAddress").get(0)){
+                    var str1 =
+                        '<li>' +
+                            '<label>' +
+                                '<input type="radio" name="address"/>'+
+                                '<span>'+arr.selects+arr.selectq+arr.selectx+arr.textareas+'</span>'+
+                                '<span>'+arr.phoneText+'</span>'+
+                                '<button class="btn-modifly right">修改</button>'+
+                            '</label>'+
+                        '</li>';
+                    arr.addressList.append(str1);
+                    arr.mask.find(".btn_save").removeClass(arr.addAddress);
+                }
+                else if(arr.addressList.find(".btn-modiflys").get(0)){
+                    var str2 =
+
+                        '<label>' +
+                        '<input type="radio" name="address"/>'+
+                        '<span>'+arr.selects+arr.selectq+arr.selectx+arr.textareas+'</span>'+
+                        '<span>'+arr.phoneText+'</span>'+
+                        '<button class="btn-modifly right">修改</button>'+
+                        '</label>'
+
+                    arr.addressList.find(".btn-modiflys").closest("li").html(str2);
+                    arr.mask.find(".btn_save").removeClass(arr.btnModiflys);
+                    arr.addressList.find(".btn-modifly").removeClass("btn-modiflys")
+                }
                 arr.maskMaskBg .addClass("hide");
                 method.defaultAuto(_this,arr);
-                arr.addressFooterUl.find(".btn-modiflys");
             });
         },
         saveAddressList:function(_this,arr){/*保存增加的地址*/
