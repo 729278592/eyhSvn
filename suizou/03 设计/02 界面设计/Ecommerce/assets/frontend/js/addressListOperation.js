@@ -47,7 +47,8 @@ $.fn.addressListOperation = function(opts){
             })
         },
         btnModiflyList:function(_this,arr){
-            arr.addressList.delegate(".btn-modifly","click",function(){
+            arr.addressList.delegate(".btn-modifly","click",function(e){
+                e.stopPropagation()
                 arr.maskMaskBg .removeClass("hide");
                 method.objAuto(_this,arr);
                 arr.maskAddress.addClass("shake");
