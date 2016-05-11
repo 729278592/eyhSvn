@@ -137,48 +137,58 @@ $.fn.addressListOperation = function(opts){
                 arr.selects = arr.addressContent.find(".select-s option:selected").val();
                 arr.selectq = arr.addressContent.find(".select-q option:selected").val();
                 arr.selectx = arr.addressContent.find(".select-x option:selected").val();
-
-                if(arr.addressFooterUl.get(0)){
-                    arr.str = '<p class="address_footer_ul_head">收货人 : '+arr.nameText+'</p>'+
-                        '<p>手机号 : '+arr.phoneText+'</p>'+
-                        '<p>邮编 : '+arr.numberText+'</p>'+
-                        '<p>详细地址 : '+arr.selects+arr.selectq+arr.selectx+arr.textareas+'</p>'+
-                        '<p>'+
-                        '<button class="btn-modifly">编辑</button>'+
-                        ' <button class="btn-remove">删除</button>'+
-                        '</p>';
-                    arr.addressFooterUl.find(".btn-modiflys").closest("li").html(arr.str);
-                    arr.mask.find(".btn_save").removeClass(arr.SaveModifliyAddress);
+                if(arr.nameText==" "){
+                    alert("请输入姓名")
+                }else if(arr.phoneText==""){
+                    alert("请输入电话号码")
+                }else if(arr.numberText==""){
+                    alert("请输入邮政编码")
+                }else if(arr.textareas==""){
+                    alert("请输入详细地址")
                 }
-                else if( arr.mask.find(".addAddress").get(0)){
-                    var str1 =
-                        '<li>' +
+                else{
+                    if(arr.addressFooterUl.get(0)){
+                        arr.str = '<p class="address_footer_ul_head">收货人 : '+arr.nameText+'</p>'+
+                            '<p>手机号 : '+arr.phoneText+'</p>'+
+                            '<p>邮编 : '+arr.numberText+'</p>'+
+                            '<p>详细地址 : '+arr.selects+arr.selectq+arr.selectx+arr.textareas+'</p>'+
+                            '<p>'+
+                            '<button class="btn-modifly">编辑</button>'+
+                            ' <button class="btn-remove">删除</button>'+
+                            '</p>';
+                        arr.addressFooterUl.find(".btn-modiflys").closest("li").html(arr.str);
+                        arr.mask.find(".btn_save").removeClass(arr.SaveModifliyAddress);
+                    }
+                    else if( arr.mask.find(".addAddress").get(0)){
+                        var str1 =
+                            '<li>' +
                             '<label>' +
-                                '<input type="radio" name="address"/>'+
-                                '<span>'+arr.selects+arr.selectq+arr.selectx+arr.textareas+'</span>'+
-                                '<span>'+arr.phoneText+'</span>'+
-                                '<button class="btn-modifly right">修改</button>'+
+                            '<input type="radio" name="address"/>'+
+                            '<span>'+arr.selects+arr.selectq+arr.selectx+arr.textareas+'</span>'+
+                            '<span>'+arr.phoneText+'</span>'+
+                            '<button class="btn-modifly right">修改</button>'+
                             '</label>'+
-                        '</li>';
-                    arr.addressList.append(str1);
-                    arr.mask.find(".btn_save").removeClass(arr.addAddress);
-                }
-                else if(arr.addressList.find(".btn-modiflys").get(0)){
-                    var str2 =
+                            '</li>';
+                        arr.addressList.append(str1);
+                        arr.mask.find(".btn_save").removeClass(arr.addAddress);
+                    }
+                    else if(arr.addressList.find(".btn-modiflys").get(0)){
+                        var str2 =
 
-                        '<label>' +
-                        '<input type="radio" name="address"/>'+
-                        '<span>'+arr.selects+arr.selectq+arr.selectx+arr.textareas+'</span>'+
-                        '<span>'+arr.phoneText+'</span>'+
-                        '<button class="btn-modifly right">修改</button>'+
-                        '</label>'
+                            '<label>' +
+                            '<input type="radio" name="address"/>'+
+                            '<span>'+arr.selects+arr.selectq+arr.selectx+arr.textareas+'</span>'+
+                            '<span>'+arr.phoneText+'</span>'+
+                            '<button class="btn-modifly right">修改</button>'+
+                            '</label>';
 
-                    arr.addressList.find(".btn-modiflys").closest("li").html(str2);
-                    arr.mask.find(".btn_save").removeClass(arr.btnModiflys);
-                    arr.addressList.find(".btn-modifly").removeClass("btn-modiflys")
+                        arr.addressList.find(".btn-modiflys").closest("li").html(str2);
+                        arr.mask.find(".btn_save").removeClass(arr.btnModiflys);
+                        arr.addressList.find(".btn-modifly").removeClass("btn-modiflys")
+                    }
+                    arr.maskMaskBg .addClass("hide");
+                    method.defaultAuto(_this,arr);
                 }
-                arr.maskMaskBg .addClass("hide");
-                method.defaultAuto(_this,arr);
             });
         },
         saveAddressList:function(_this,arr){/*保存增加的地址*/
@@ -190,20 +200,29 @@ $.fn.addressListOperation = function(opts){
                 arr.selects = $(this).closest(arr.addressContent).find(".select-s option:selected").val();
                 arr.selectq = $(this).closest(arr.addressContent).find(".select-q option:selected").val();
                 arr.selectx = $(this).closest(arr.addressContent).find(".select-x option:selected").val();
-                arr.str = '<p class="address_footer_ul_head">收货人 : '+arr.nameText+'</p>'+
-                            '<p>手机号 : '+arr.phoneText+'</p>'+
-                            '<p>邮编 : '+arr.numberText+'</p>'+
-                            '<p>详细地址 : '+arr.selects+arr.selectq+arr.selectx+arr.textareas+'</p>'+
-                            '<p>'+
-                            '<button class="btn-modifly">编辑</button>'+
-                            ' <button class="btn-remove">删除</button>'+
-                    '</p>';
-                arr.html = '<li>' +
-                               arr.str+
-                           '</li>';
-                arr.addressFooterUl.append(arr.html);
-                method.addressList(_this,arr);
-
+                if(arr.nameText==" "){
+                    alert("请输入姓名")
+                }else if(arr.phoneText==""){
+                    alert("请输入电话号码")
+                }else if(arr.numberText==""){
+                    alert("请输入邮政编码")
+                }else if(arr.textareas==""){
+                    alert("请输入详细地址")
+                }else{
+                    arr.str = '<p class="address_footer_ul_head">收货人 : '+arr.nameText+'</p>'+
+                        '<p>手机号 : '+arr.phoneText+'</p>'+
+                        '<p>邮编 : '+arr.numberText+'</p>'+
+                        '<p>详细地址 : '+arr.selects+arr.selectq+arr.selectx+arr.textareas+'</p>'+
+                        '<p>'+
+                        '<button class="btn-modifly">编辑</button>'+
+                        ' <button class="btn-remove">删除</button>'+
+                        '</p>';
+                    arr.html = '<li>' +
+                        arr.str+
+                        '</li>';
+                    arr.addressFooterUl.append(arr.html);
+                    method.addressList(_this,arr);
+                }
             })
         }
     };
