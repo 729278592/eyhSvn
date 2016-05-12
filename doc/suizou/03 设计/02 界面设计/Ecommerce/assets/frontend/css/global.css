@@ -782,7 +782,9 @@ label.error{color: #fb6454;}
 .wrcc_f .active1{background: #f9b67a;color: #fff; border: none;height:27px;width: 40px;line-height: 27px;text-align: center;}
 .wrcc_f .active1:hover{background: #f1a67a;}
 
-
+.paySuccess{text-align: center;margin-top: 20px;color: #666;}
+.paySuccess a{color: #fca715;}
+.paySuccess a:hover{text-decoration: underline;}
 
 .btn-address{padding: 5px 10px;background: #f9b67a;color: #fff;border-radius: 4px;margin-top: 10px;}
 .address-list{width: 100%;}
