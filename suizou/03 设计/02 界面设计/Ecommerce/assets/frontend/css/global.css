@@ -416,9 +416,9 @@ div.infor-table.w100 .personal-infor p .text {
 .shopping_content.b1 tr td,.shopping_content.b1 tr th{border: 1px solid #dbdbdb;}
 .shopping_content.b1.bg-none tr th{border: none;background: transparent;}
 .shopping_content.b1.bg-none tr td{border: none;border-top: 1px solid #dbdbdb;}
-.wealth-infor{width: 40%;display: table;}
-.wealth-infor>img,.wealth-infor>.wealth-details{display: table-cell;vertical-align: middle;}
-.wealth-infor>img{width: 121px;height: 121px;}
+.wealth-infor{width: 100%;display: table;}
+.wealth-infor>img,.wealth-infor>.wealth-details{display: table-cell;vertical-align: middle;position:relative;left:-5%;}
+.wealth-infor>img{width: 121px;height: 121px;position:relative;left:0%;}
 .wealth-details p{font-size: 14px;color: #333;line-height: 24px;}
 .table-title{font-size: 14px;color: #333;margin-bottom: 5px;}
 .shopping_content tr td .btn-edit,.shopping_content tr td .btn-remove{font-size: 14px;padding: 3px 10px;border-radius: 4px;}
