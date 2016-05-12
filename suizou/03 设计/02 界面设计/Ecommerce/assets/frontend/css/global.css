@@ -797,6 +797,7 @@ label.error{color: #fb6454;}
 .order-infor{padding: 15px 20px;border: 1px solid #fd635e;float: right;position: relative;top: 20px;}
 .order-infor p{color: #333;}
 .btn-pay{background: #fd635e;color: #fff;border-radius: 4px;padding: 6px 15px;float: right;}
+.bgfbb.mb0.btn-pay{padding: 5px 21px;background: #ff6702;}
 /*分页*/
 .paging{position: absolute;left: 50%;margin-top: 20px;bottom: 15px;}
 .page-pre,.page-next{float: left;border-radius: 4px;background: #f2f2f2;color: #666;font-size: 16px;width: 40px;height: 30px;text-align: center;line-height: 30px;}
