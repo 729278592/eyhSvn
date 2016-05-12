@@ -289,7 +289,7 @@ button.btn-search{width: 50px;height: 30px;line-height: 30px;border-radius: 0 4p
 .comment .comment-content{width: 100%;padding: 20px 20px 5px 20px;}
 .comment-content textarea{width: 410px;display: inline-block;border: 1px solid #dbdbdb;padding-left: 5px;color: #666;margin-bottom: 5px;}
 .comment-content .btn-CommentSubmit{padding: 5px 20px;background: #fba85c;color: #fff;}
-.shopping_content button.bgfbb{background: #fba85c;font-size: 12px;color: #fff;border-radius: 4px;width: 70px;height: 30px;line-height: 30px;text-align: center;margin-bottom: 5px;}
+.shopping_content button.bgfbb{background: #fba85c;font-size: 12px;color: #fff;border-radius: 4px;width: 70px;height: 30px;text-align: center;margin-bottom: 5px;}
 .shopping_content button.bgfbb.mb0{margin-bottom: 0;}
 .shopping_content img{vertical-align: middle;}
 
