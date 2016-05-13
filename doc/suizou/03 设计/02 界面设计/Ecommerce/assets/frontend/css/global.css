@@ -890,8 +890,7 @@ tr th,tr td{ text-align:center;font-size: 14px;border:1px solid #cccccc;color: #
 .details{left: 400px;top: 50px;}
 .details li{font-size: 16px;}
 .details .last span{display: inline-block;width: 15px;height: 15px;border-radius: 15px;}
-.details_div{width:550px;margin-top: 30px;display: inline-block;border-right: 1px solid #bfbfbf;margin-bottom: 20px;font-size: 16px;}
-.details_div:last-child{margin-left: 50px;border-right: none;}
+.details_div{width:100%;margin-top: 30px;display: inline-block;margin-bottom: 20px;font-size: 16px;}
 .support_format{margin: 30px 37px;font-size: 16px;}
 .support_format li{display: inline-block;width: 100px;height: 100px;border-radius: 50px;border: 1px solid #fa983f;margin-right: 67px;line-height: 100px;text-align: center;color:#fa983f;}
 .support_format .last{margin-right: 0;}
