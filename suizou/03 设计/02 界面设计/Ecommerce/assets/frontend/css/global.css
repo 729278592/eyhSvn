@@ -771,6 +771,7 @@ label.error{color: #fb6454;}
 .wealth-list li{width: 100%;display: table;padding: 10px 0;}
 .wealth-list li>span{display: table-cell;vertical-align: middle;text-align: center;width: 25%;color: #666;}
 .wealth-list li.first span{color: #fe685b;}
+.wealth-list li span>img{border-radius: 100px;width: 55px;height: 55px;}
 .wealth-list li.second span{color: #fab433;}
 .wealth-list li.three span{color: #64bf9e;}
 .wrcc_f{margin-bottom: 5px;margin-left: 680px;}
