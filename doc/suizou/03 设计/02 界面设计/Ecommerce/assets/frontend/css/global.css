@@ -137,7 +137,7 @@ a:link{text-decoration: none;}
 .td-ul li .type{width: 60px;padding: 0 10px;background: #e0dcdc;color: #666;height: 100%;}
 .td-ul li .type .fa{position: relative;left: 10px;top:-20px;}
 .td-ul li .type .block{width: 20px;height: 60px;position: relative;top: 12px;left: 15px;}
-.td-ul li .td-div{width: 1120px;height: 100%;background: #fafafa;}
+.td-ul li .td-div{width: 1120px;height: 100%;background: #efefef;}
 .td-ul li a{display: inline-block;color: #666;}
 .type-debugging{width: 275px;text-align: center;float: left;position: relative;height: 100%;}
 .type-debugging .content-wisdom{color: #666;margin: 35px auto;}
@@ -333,7 +333,7 @@ div.infor-table.w100 .personal-infor p .text {
 .cen_content{width: 960px;display: inline-block;position: relative;border:1px solid #dbdbdb;background: #fff;}
 .cen_content_head{width: 100%;height: 165px;background: #fee9e7;overflow: hidden;border: 1px solid #dbdbdb;border-bottom: none;}
 .cen_content_head .information{width: 765px;height: 80px;background: #fffaf9;margin: 32px 55px 32px 100px;padding: 10px 0;}
-.information_people{position: relative;top:-25px;left: -30px;width: 130px;}
+.information_people{position: relative;top:-25px;left: -30px;width: 130px;border-radius: 100%;height: 130px;}
 .information_specific p{line-height: 36px;}
 .information_specific .name{font-size: 18px;color: #f47868;}
 .nember_level{font-size: 14px;color: #020202;}
@@ -1107,7 +1107,7 @@ label.error {color: #EA5200;margin-bottom: 0;}
 .tiaoz .dao{color: #fd9f4d;}
 
 /*footer*/
-body.lineHeight{line-height: 1;}
+body{line-height: 1;}
 .footer{width: 100%;background: #322614;padding: 10px 0 20px;}
 .foot-menu{font-size: 14px;width: 604px;margin: 0 auto;height: 39px;}
 .foot-menu li{width: 120px;text-align: center;padding: 10px 0;float: left;}
