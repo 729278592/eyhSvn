@@ -1,0 +1,136 @@
+<!DOCTYPE html>
+<html>
+<head lang="en">
+    <meta charset="UTF-8">
+    <title>随走</title>
+    <meta name="viewport" content="width=device-width; initial-scale=1.0; user-scalable=no;">
+    <link rel="stylesheet" href="../../assets/global/plugins/font/css/font-awesome.min.css"/>
+    <link rel="stylesheet" href="../../assets/mobile/css/weui.css"/>
+    <link rel="stylesheet" href="../../assets/mobile/css/example.css"/>
+    <link rel="stylesheet" href="../../assets/mobile/css/global.css"/>
+</head>
+<body>
+    <div class="container js_container" id="container">
+        <div class="page">
+            <div class="head">
+                <i class="fa fa-angle-left"></i>
+                新建简历标签
+            </div>
+            <div class="bd">
+                <img src="../../assets/mobile/images/infor-bg.png" alt="" class="infotBg"/>
+                <div class="personIforImg">
+                    <div class="personIforImgDiv">
+                        <img src="../../assets/mobile/images/personPortrait.png" alt=""/>
+                    </div>
+                    <p class="name">张珊</p>
+                    <p class="phone">13478478463</p>
+                    <button type="button" class="btnInfor">基本信息</button>
+                </div>
+                <form action="#" id="form" onsubmit="return false">
+                    <div class="button-label">
+                        <p class="moreTag"><span class="required">*</span>最多只能添加5个标签</p>
+                        <a href="#" class="keyword-dashed-button">
+                            <span class="add-span">+</span>
+                            添加
+                        </a>
+                        <div class="keyword-div hide">
+                            <input type="text" class="keyword-input" placeholder="请输入标签名"/>
+                            <i class="fa fa-check-circle"></i>
+                            <i class="weui_icon_clear"></i>
+                        </div>
+                    </div>
+                    <div class="weui_btn_area">
+                        <input type="submit" class="weui_btn weui_btn_primary" id="saveBtn" value="完成">
+                    </div>
+                </form>
+            </div>
+
+        </div>
+    </div>
+    <script src="../../assets/global/plugins/jquery/jquery-1.11.3.min.js"></script>
+    <script src="../../assets/mobile/js/errMsg.js"></script>
+    <script src="../../assets/mobile/js/ConfirmDialog.js"></script>
+    <script>
+        $(function(){
+            function keywordButtonHide(){
+                if($(".keyword-button").get(0)){
+                    if(($(".keyword-button").size())>4){
+                        $(".keyword-dashed-button").addClass("hide");
+                        $(".keyword-div").addClass("hide");
+                    }
+                    else{
+                        $(".keyword-div").addClass("hide");
+                        $(".keyword-dashed-button").removeClass("hide");
+                    }
+                }
+                else{
+                    $(".keyword-div").addClass("hide");
+                    $(".keyword-dashed-button").removeClass("hide");
+                }
+            }
+            $(".keyword-dashed-button").on("touchend",function(){
+                $(this).addClass("hide");
+                $(".keyword-div").removeClass("hide");
+            });
+
+
+            $(".keyword-div .fa-check-circle").on("touchend",function(){
+                var values = $(this).closest(".keyword-div").find(".keyword-input").val();
+                var value = $.trim(values);
+                var arr = [];
+                arr.push(value);
+                if(value==''){
+                    showMsg('标签名不能为空');
+                }
+                else{
+                    var str = '<a href="#" class="keyword-button">'+
+                                  '<span class="keyword-button-content">'+value+'</span>'+
+                                  '<i class="weui_icon_clear" onclick="removeButton(this)" dataTitle="标题" dataContent="内容"></i>'+
+                              '</a>';
+                    if($(".keyword-button").get(0)){
+                        if($.inArray($(".keyword-button").find(".keyword-button-content").text(), arr) < 0){
+                            $(".keyword-dashed-button").before(str);
+                            $(this).closest(".keyword-div").find(".keyword-input").val("");
+                            keywordButtonHide()
+                        }
+                        else{
+                            showMsg('标签名已经存在');
+                        }
+                    }
+                    else{
+                        $(".keyword-dashed-button").before(str).removeClass("hide");
+                        $(this).closest(".keyword-div").addClass("hide");
+                        $(this).closest(".keyword-div").find(".keyword-input").val("");
+                        return false;
+                    }
+                }
+            });
+            $(".keyword-div .weui_icon_clear").on("touchend",function(){
+                $(".keyword-dashed-button").removeClass("hide");
+                $(this).closest(".keyword-div").addClass("hide");
+            });
+
+            $(".btnSure").on("touchend",function(){
+                $(".removeObj").closest(".keyword-button").remove();
+                $(".removeObj").removeClass("removeObj");
+                keywordButtonHide();
+                $('#dialog1').hide();
+            });
+            $(".btnCancle").on("touchend",function(){
+                $('#dialog1').hide();
+                $(".removeObj").removeClass("removeObj");
+            })
+        });
+        function removeButton(obj){
+            var objTitle   = $(obj).attr("dataTitle");
+            var objContent = $(obj).attr("dataContent");
+            var Confirm = {
+                title:objTitle,
+                content:objContent
+            };
+            showConfirmDialog(Confirm);
+            $(obj).closest(".keyword-button").addClass("removeObj");
+        }
+    </script>
+</body>
+</html>

@@ -1,0 +1,89 @@
+<!DOCTYPE html>
+<html>
+<head lang="en">
+    <meta charset="UTF-8">
+    <title>随走</title>
+    <meta name="viewport" content="width=device-width; initial-scale=1.0; user-scalable=no;">
+    <link rel="stylesheet" href="../../assets/global/plugins/font/css/font-awesome.min.css"/>
+    <link rel="stylesheet" href="../../assets/mobile/css/weui.css"/>
+    <link rel="stylesheet" href="../../assets/mobile/css/example.css"/>
+    <link rel="stylesheet" href="../../assets/mobile/css/global.css"/>
+</head>
+<body>
+    <div class="container js_container">
+        <div class="page">
+            <div class="head">
+                <i class="fa fa-angle-left"></i>
+                简历操作
+            </div>
+            <div class="bd">
+                <div class="largeTitle">
+                    填写随走标签简历，让您的竞争力一目了然！
+                </div>
+                <div class="weui_cells mt0 weui_cells_access">
+                    <a class="weui_cell c666" href="javascript:;">
+                        <div class="weui_cell_bd weui_cell_primary">
+                            <p>填写标签简历</p>
+                        </div>
+                        <div class="weui_cell_ft"></div>
+                    </a>
+                </div>
+                <div class="smallTtle pb0 bb1">
+                    选择已有简历
+                </div>
+                <div class="resumeCenter spacing fff">
+                    <div class="progress active">
+                        <p class="resumeTitle">简历1</p>
+                        <div class="weui_progress">
+                            <div class="weui_progress_bar">
+                                <div class="weui_progress_inner_bar js_progress" style="width: 10%;"></div>
+                            </div>
+                            <span class="complete">完成10%</span>
+                            <!--<a href="javascript:;" class="weui_progress_opr">-->
+                                <!--<img src="../../assets/mobile/images/modiflyIcon.png" alt="" class="modiflyIcon"/>-->
+                            <!--</a>-->
+                        </div>
+                        <span class="time">更新于2016-03-05 9:00</span>
+                    </div>
+                    <div class="progress">
+                        <p class="resumeTitle">简历2</p>
+                        <div class="weui_progress">
+                            <div class="weui_progress_bar">
+                                <div class="weui_progress_inner_bar js_progress" style="width: 50%;"></div>
+                            </div>
+                            <span class="complete">完成50%</span>
+                            <!--<a href="javascript:;" class="weui_progress_opr">-->
+                                <!--<img src="../../assets/mobile/images/modiflyIcon.png" alt="" class="modiflyIcon"/>-->
+                            <!--</a>-->
+                        </div>
+                        <span class="time">更新于2016-04-05 9:00</span>
+                    </div>
+                    <div class="progress">
+                        <p class="resumeTitle">简历3</p>
+                        <div class="weui_progress">
+                            <div class="weui_progress_bar">
+                                <div class="weui_progress_inner_bar js_progress" style="width: 80%;"></div>
+                            </div>
+                            <span class="complete">完成80%</span>
+                            <!--<a href="javascript:;" class="weui_progress_opr">-->
+                                <!--<img src="../../assets/mobile/images/modiflyIcon.png" alt="" class="modiflyIcon"/>-->
+                            <!--</a>-->
+                        </div>
+                        <span class="time">更新于2016-05-05 9:00</span>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <script src="../../assets/global/plugins/jquery/jquery-1.11.3.min.js"></script>
+    <script src="../../assets/mobile/js/global.js"></script>
+    <script>
+        $(function(){
+            $(".resumeCenter .progress").on("touchend",function(){
+                $(this).addClass("active");
+                $(this).siblings(".progress").removeClass("active");
+            })
+        })
+    </script>
+</body>
+</html>
