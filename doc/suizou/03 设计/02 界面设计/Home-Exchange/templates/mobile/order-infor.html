@@ -123,21 +123,33 @@
                             <div class="weui_cells weui_cells_checkbox">
                                 <label class="weui_cell weui_check_label" for="s11">
                                     <div class="weui_cell_hd">
-                                        <input type="checkbox" class="weui_check" name="checkbox1" id="s11" checked="checked">
+                                        <input type="radio" class="weui_check" name="checkbox1" id="s11" checked="checked">
                                         <i class="weui_icon_checked"></i>
                                     </div>
-                                    <div class="weui_cell_bd weui_cell_primary">
-                                        <p>使用点券 <span class="right num">xxx优惠券(显示优惠券信息)</span></p>
-                                    </div>
+                                    <!--<div class="weui_cell_bd weui_cell_primary">-->
+                                        <!--<p>使用点券 <span class="right num">xxx优惠券(显示优惠券信息)</span></p>-->
+                                    <!--</div>-->
+                                    <span class="type">　优惠券 : </span>
+                                    <select name="" class="select-group active">
+                                        <option value="请选择">请选择</option>
+                                        <option value="保洁优惠券">保洁优惠券</option>
+                                        <option value="春节慢100减10">春节慢100减10</option>
+                                    </select>
                                 </label>
                                 <label class="weui_cell weui_check_label" for="s12">
                                     <div class="weui_cell_hd">
-                                        <input type="checkbox" name="checkbox1" class="weui_check" id="s12">
+                                        <input type="radio" name="checkbox1" class="weui_check" id="s12">
                                         <i class="weui_icon_checked"></i>
                                     </div>
-                                    <div class="weui_cell_bd weui_cell_primary">
-                                        <p>使用电子钱包 <span class="right num">余额90.00</span></p>
-                                    </div>
+                                    <span class="type">电子钱包 : </span>
+                                    <select name="" class="select-group" disabled="disabled">
+                                        <option value="请选择">请选择</option>
+                                        <option value="电子钱包">电子钱包</option>
+                                        <option value="电子钱包">电子钱包</option>
+                                    </select>
+                                    <!--<div class="weui_cell_bd weui_cell_primary">-->
+                                        <!--<p>使用电子钱包 <span class="right num">余额90.00</span></p>-->
+                                    <!--</div>-->
                                 </label>
                             </div>
 
@@ -207,6 +219,18 @@
                 str1 += '<option value="">'+ ++num1 +':00</option>';
             }
             $(this).closest(".form-group").find(".select-time2").html(str1);
+        });
+
+
+
+        $(".weui_check_label").on("touchend",function(){
+                $(this).find(".select-group").removeAttr("disabled");
+                $(this).find(".select-group").addClass("active");
+                $(this).siblings(".weui_check_label").find(".select-group").attr({disabled:"disabled"});
+                $(this).siblings(".weui_check_label").find(".select-group").removeClass("active");
+        });
+        $(".select-group").on("touchend",function(e){
+            e.stopPropagation();
         })
     });
 </script>
