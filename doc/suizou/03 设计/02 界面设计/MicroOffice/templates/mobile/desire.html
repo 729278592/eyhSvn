@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html>
+<head lang="en">
+    <meta charset="UTF-8">
+    <title>随走</title>
+    <meta name="viewport" content="width=device-width; initial-scale=1.0; user-scalable=no;">
+    <link rel="stylesheet" href="../../assets/global/plugins/font/css/font-awesome.min.css"/>
+    <link rel="stylesheet" href="../../assets/mobile/css/weui.css"/>
+    <link rel="stylesheet" href="../../assets/mobile/css/example.css"/>
+    <link rel="stylesheet" href="../../assets/mobile/css/global.css"/>
+</head>
+<body>
+    <div class="container js_container">
+        <div class="page">
+            <div class="head">
+                <i class="fa fa-angle-left"></i>
+                感兴趣
+            </div>
+
+            <div class="bd">
+                <p class="title">
+                    <span class="proty">注</span> : 请留下您的联系方式,以方便HR联系您!
+                </p>
+                <form action="#" id="form" onsubmit="return false">
+                    <div class="weui_cells weui_cells_form">
+                        <div class="weui_cell">
+                            <div class="weui_cell_hd">
+                                <label class="weui_label"><img src="../../assets/mobile/images/userIcon.png" alt=""/>姓名</label>
+                            </div>
+                            <div class="weui_cell_bd weui_cell_primary">
+                                <input class="weui_input" type="text" placeholder="陈小洁" name="name"/>
+                            </div>
+                        </div>
+                        <div class="weui_cell">
+                            <div class="weui_cell_hd"><label class="weui_label"><img src="../../assets/mobile/images/phoneIcon.png" alt=""/>手机</label></div>
+                            <div class="weui_cell_bd weui_cell_primary">
+                                <input class="weui_input" type="text" placeholder="1508667774" name="mobile" id="mobile"/>
+                            </div>
+                        </div>
+                        <!--<div class="weui_cell">-->
+                            <!--<div class="weui_cell_hd"><label class="weui_label"><img src="../../assets/mobile/images/eamilIcon.png" alt=""/>邮箱</label></div>-->
+                            <!--<div class="weui_cell_bd weui_cell_primary">-->
+                                <!--<input class="weui_input" type="text" placeholder="729278592@qq.com" name="email"/>-->
+                            <!--</div>-->
+                        <!--</div>-->
+                    </div>
+                    <div class="weui_btn_area">
+                        <input type="submit" class="weui_btn weui_btn_primary" id="saveBtn" value="确定">
+                    </div>
+                </form>
+            </div>
+        </div>
+    </div>
+    <script src="../../assets/global/plugins/jquery/jquery-1.11.3.min.js"></script>
+    <script src="../../assets/mobile/js/global.js"></script>
+    <script src="../../assets/mobile/js/errMsg.js"></script>
+    <script>
+        $("#saveBtn").click(function(){
+            var reg = /^0?(13[0-9]|15[012356789]|18[0236789]|14[57])[0-9]{8}$/;
+            if($("#mobile").val() == '') {
+                showMsg('手机号码不能为空');
+                return false;
+            }
+            else if($("#mobile").get(0)&&!reg.test($("#mobile").val())){
+                showMsg('手机号码格式不正确');
+            }
+            return true;
+        })
+    </script>
+</body>
+</html>

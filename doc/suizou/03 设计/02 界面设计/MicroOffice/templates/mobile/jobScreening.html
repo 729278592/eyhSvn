@@ -1,0 +1,193 @@
+<!DOCTYPE html>
+<html>
+<head lang="en">
+    <meta charset="UTF-8">
+    <title>随走</title>
+    <meta name="viewport" content="width=device-width; initial-scale=1.0; user-scalable=no;">
+    <link rel="stylesheet" href="../../assets/global/plugins/font/css/font-awesome.min.css"/>
+    <link rel="stylesheet" href="../../assets/mobile/css/weui.css"/>
+    <link rel="stylesheet" href="../../assets/mobile/css/example.css"/>
+    <link rel="stylesheet" href="../../assets/mobile/css/global.css"/>
+</head>
+<body>
+    <div class="container js_container hiddenx" id="container">
+        <div class="page">
+            <div class="head">
+                <i class="fa fa-angle-left"></i>
+                职位筛选
+            </div>
+            <div class="bd">
+                <!--<a href="javascript:;" class="weui_btn weui_btn_primary">点击展现searchBar</a>-->
+                <div class="weui_search_bar" id="search_bar">
+                    <form class="weui_search_outer">
+                        <div class="weui_search_inner">
+                            <i class="weui_icon_search"></i>
+                            <input type="search" class="weui_search_input" id="search_input" placeholder="请输入关键词" required="">
+                            <a href="javascript:" class="weui_icon_clear" id="search_clear"></a>
+                        </div>
+                        <label for="search_input" class="weui_search_text" id="search_text">
+                            <i class="weui_icon_search"></i>
+                            <span>搜索</span>
+                        </label>
+                    </form>
+                    <a href="javascript:" class="weui_search_cancel" id="search_cancel">取消</a>
+                </div>
+                <div class="weui_cells weui_cells_access search_show" id="search_show" style="display: none;">
+                    <div class="weui_cell">
+                        <div class="weui_cell_bd weui_cell_primary">
+                            <p>实时搜索文本</p>
+                        </div>
+                    </div>
+                    <!--<div class="weui_cell">-->
+                        <!--<div class="weui_cell_bd weui_cell_primary">-->
+                            <!--<p>实时搜索文本</p>-->
+                        <!--</div>-->
+                    <!--</div>-->
+                    <!--<div class="weui_cell">-->
+                        <!--<div class="weui_cell_bd weui_cell_primary">-->
+                            <!--<p>实时搜索文本</p>-->
+                        <!--</div>-->
+                    <!--</div>-->
+                    <!--<div class="weui_cell">-->
+                        <!--<div class="weui_cell_bd weui_cell_primary">-->
+                            <!--<p>实时搜索文本</p>-->
+                        <!--</div>-->
+                    <!--</div>-->
+                </div>
+                <div class="scteeningCondition">
+                    <form action="#">
+                        <div class="scteeningConditionHead">筛选</div>
+                        <div class="weui_cell weui_cell_select">
+                            <div class="weui_cell_hd"><label class="weui_label">城市</label></div>
+                            <!--<img src="../../assets/mobile/images/jobState.png" alt=""/>-->
+                            <div class="weui_cell_bd weui_cell_primary">
+                                <select class="weui_select" name="select1">
+                                    <option selected="" value="不限">不限</option>
+                                    <option value="四川">四川</option>
+                                    <option value="四川">四川</option>
+                                    <option value="四川">四川</option>
+                                    <option value="四川">四川</option>
+                                    <option value="四川">四川</option>
+                                    <option value="四川">四川</option>
+                                    <option value="四川">四川</option>
+                                    <option value="四川">四川</option>
+                                    <option value="四川">四川</option>
+                                    <option value="四川">四川</option>
+                                    <option value="四川">四川</option>
+                                    <option value="四川">四川</option>
+                                    <option value="四川">四川</option>
+                                    <option value="四川">四川</option>
+                                    <option value="四川">四川</option>
+                                    <option value="四川">四川</option>
+                                    <option value="四川">四川</option>
+                                    <option value="四川">四川</option>
+                                    <option value="四川">四川</option>
+                                    <option value="四川">四川</option>
+                                    <option value="四川">四川</option>
+                                    <option value="四川">四川</option>
+                                    <option value="四川">四川</option>
+                                    <option value="四川">四川</option>
+                                    <option value="四川">四川</option>
+                                    <option value="四川">四川</option>
+                                    <option value="四川">四川</option>
+                                    <option value="四川">四川</option>
+                                    <option value="四川">四川</option>
+                                    <option value="四川">四川</option>
+                                </select>
+                            </div>
+                        </div>
+                        <div class="weui_cell weui_cell_select">
+                            <div class="weui_cell_hd"><label class="weui_label">地区</label></div>
+                            <!--<img src="../../assets/mobile/images/jobState.png" alt=""/>-->
+                            <div class="weui_cell_bd weui_cell_primary">
+                                <select class="weui_select" name="select1">
+                                    <option selected="" value="渝中">渝中</option>
+                                    <option value="南岸">南岸</option>
+                                    <option value="渝北">渝北</option>
+                                </select>
+                            </div>
+                        </div>
+                        <div class="weui_cell weui_cell_select">
+                            <div class="weui_cell_hd"><label class="weui_label">部门</label></div>
+                            <!--<img src="../../assets/mobile/images/jobState.png" alt=""/>-->
+                            <div class="weui_cell_bd weui_cell_primary">
+                                <select class="weui_select" name="select1">
+                                    <option selected="" value="技术">技术</option>
+                                    <option value="产品">产品</option>
+                                    <option value="销售">销售</option>
+                                </select>
+                            </div>
+                        </div>
+                        <div class="weui_cell weui_cell_select">
+                            <div class="weui_cell_hd"><label class="weui_label">职能</label></div>
+                            <!--<img src="../../assets/mobile/images/jobState.png" alt=""/>-->
+                            <div class="weui_cell_bd weui_cell_primary">
+                                <select class="weui_select" name="select1">
+                                    <option selected="" value="web前端">web前端</option>
+                                    <option value="java后台">java后台</option>
+                                    <option value="运营">运营</option>
+                                </select>
+                            </div>
+                        </div>
+                        <div class="weui_cell weui_cell_select">
+                            <div class="weui_cell_hd"><label class="weui_label">薪资</label></div>
+                            <!--<img src="../../assets/mobile/images/jobState.png" alt=""/>-->
+                            <div class="weui_cell_bd weui_cell_primary">
+                                <select class="weui_select" name="select1">
+                                    <option selected="" value="1000-2000">1000-2000</option>
+                                    <option value="2000-3000">2000-3000</option>
+                                    <option value="3000-4000">3000-4000</option>
+                                    <option value="2000-3000">2000-3000</option>
+                                    <option value="3000-4000">3000-4000</option>
+                                    <option value="2000-3000">2000-3000</option>
+                                    <option value="3000-4000">3000-4000</option>
+                                </select>
+                            </div>
+                        </div>
+                    </form>
+                </div>
+                <div class="weui_btn_area">
+                    <input type="submit" class="weui_btn weui_btn_primary" id="saveBtn" value="搜索">
+                </div>
+            </div>
+        </div>
+    </div>
+    <script src="../../assets/global/plugins/jquery/jquery-1.11.3.min.js"></script>
+    <script src="../../assets/mobile/js/global.js"></script>
+    <script>
+        $(function(){
+            /*搜索条*/
+            $('#container').on('focus', '#search_input', function () {
+                var $weuiSearchBar = $('#search_bar');
+                $weuiSearchBar.addClass('weui_search_focusing');
+            }).on('blur', '#search_input', function () {
+                var $weuiSearchBar = $('#search_bar');
+                $weuiSearchBar.removeClass('weui_search_focusing');
+                if ($(this).val()) {
+                    $('#search_text').hide();
+                } else {
+                    $('#search_text').show();
+                }
+            })
+//          .on('input', '#search_input', function () {
+//                var $searchShow = $("#search_show");
+//                if ($(this).val()) {
+//                    $searchShow.show();
+//                } else {
+//                    $searchShow.hide();
+//                }
+//            })
+            .on('touchend', '#search_cancel', function () {
+                $("#search_show").hide();
+                $('#search_input').val('');
+            })
+              .on('touchend', '#search_clear', function () {
+                $("#search_show").hide();
+                $('#search_input').val('');
+            });
+        });
+
+
+    </script>
+</body>
+</html>
