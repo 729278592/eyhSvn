@@ -703,6 +703,7 @@ body{    line-height: 1.6;}
     padding-right: 0.35em;
     display: inline-block;
 }
+.weui_cells_checkbox .weui_cell_bd{display: inline-block;width: 60%;}
 .weui_cell_primary {
     width: 2000px;
     white-space: normal;
@@ -723,7 +724,7 @@ body{    line-height: 1.6;}
 .sale-infor span{display: inline-block;width: 48%;text-align: center;font-size: 14px;color: #666;padding: 5px 0;}
 .select-group{display: inline-block;border: 1px solid #efefef;background: #ccc;min-width: 55%;}
 .select-group.active{background: #fff;}
-.weui_check_label .type{display: inline-block;width: 70px;}
+.weui_check_label .type{display: inline-block;width: 80px;}
 
 
 /*recharge-record*/
