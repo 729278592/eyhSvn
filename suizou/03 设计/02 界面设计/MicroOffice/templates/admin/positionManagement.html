@@ -1,0 +1,565 @@
+<!DOCTYPE html>
+<html>
+<head lang="en">
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1"/>
+    <link rel="stylesheet" href="../../assets/admin/css/app.css"/>
+    <link rel="stylesheet" href="../../assets/admin/css/appCommon.css"/>
+    <link rel="stylesheet" href="../../assets/admin/css/global.css"/>
+    <link rel="stylesheet" href="../../assets/global/plugins/font/css/font-awesome.min.css"/>
+    <title>职位管理</title>
+</head>
+<body>
+    <div id="admin-wrapper">
+        <div class="nav">
+            <div class="main-nav">
+                <div class="logo-wrapper">
+                    <div class="logo logo-left">
+                        <img src="../../assets/admin/images/logo.png" alt="" class="logoIcon"/>
+                    </div>
+                </div>
+                <ul class="main-nav-list">
+                    <li>
+                        <a href="index.html" class="clearfix" title="首页">
+                            <div class="main-nav-icon">
+                                <i class="fa fa-home"></i>
+                            </div>
+                        </a>
+                    </li>
+                    <li>
+                        <a href="application.html" class="clearfix" title="登陆">
+                            <div class="main-nav-icon">
+                                <i class="fa fa-book"></i>
+                            </div>
+                        </a>
+                    </li>
+                    <li class="active">
+                        <a href="#" class="clearfix">
+                            <div class="main-nav-icon">
+                                <i class="fa fa-home"></i>
+                            </div>
+                        </a>
+                    </li>
+                    <li>
+                        <a href="#" class="clearfix">
+                            <div class="main-nav-icon">
+                                <i class="fa fa-home"></i>
+                            </div>
+                        </a>
+                    </li>
+                    <li>
+                        <a href="#" class="clearfix">
+                            <div class="main-nav-icon">
+                                <i class="fa fa-home"></i>
+                            </div>
+                        </a>
+                    </li>
+                    <li>
+                        <a href="#" class="clearfix">
+                            <div class="main-nav-icon">
+                                <i class="fa fa-home"></i>
+                            </div>
+                        </a>
+                    </li>
+                    <li>
+                        <a href="#" class="clearfix">
+                            <div class="main-nav-icon">
+                                <i class="fa fa-home"></i>
+                            </div>
+                        </a>
+                    </li>
+                    <li class="last">
+                        <a href="#" class="clearfix">
+                            <div class="main-nav-icon">
+                                <i class="fa fa-gear"></i>
+                            </div>
+                        </a>
+                    </li>
+                </ul>
+            </div>
+            <div class="main-nav-w158">
+                <ul class="main-nav-list">
+                    <li>
+                        <a href="index.html" class="clearfix">
+                            <div class="main-nav-item">
+                                <span class="main-nav-item-name">首页</span>
+                            </div>
+                        </a>
+                    </li>
+                    <li>
+                        <a href="application.html" class="clearfix">
+                            <div class="main-nav-item">
+                                <span class="main-nav-item-name">职位管理</span>
+                            </div>
+                        </a>
+                    </li>
+                    <li class="active">
+                        <a href="#" class="clearfix">
+                            <div class="main-nav-item">
+                                <span class="main-nav-item-name">招聘管理</span>
+                            </div>
+                        </a>
+                    </li>
+                    <li>
+                        <a href="#" class="clearfix">
+                            <div class="main-nav-item">
+                                <span class="main-nav-item-name">潜在候选人</span>
+                            </div>
+                        </a>
+                    </li>
+                    <li>
+                        <a href="#" class="clearfix">
+                            <div class="main-nav-item">
+                                <span class="main-nav-item-name">微信招聘</span>
+                            </div>
+                        </a>
+                    </li>
+                    <li>
+                        <a href="#" class="clearfix">
+                            <div class="main-nav-item">
+                                <span class="main-nav-item-name">内推管理</span>
+                            </div>
+                        </a>
+                    </li>
+                    <li>
+                        <a href="#" class="clearfix">
+                            <div class="main-nav-item">
+                                <span class="main-nav-item-name">数据分析</span>
+                            </div>
+                        </a>
+                    </li>
+                    <li class="last">
+                        <a href="#" class="clearfix">
+                            <div class="main-nav-item">
+                                <span class="main-nav-item-name">账号设置</span>
+                            </div>
+                        </a>
+                    </li>
+                </ul>
+            </div>
+        </div>
+        <div id="admin-content-wrapper">
+            <div class="content-header">
+                <span class="content-title">职位管理</span>
+                <div class="company-name right">
+                    <a href="#">
+                        <img src="../../assets/admin/images/companyLogo.jpg" alt=""/>
+                    </a>
+                    易优弧
+                </div>
+            </div>
+            <div class="content-wrapper">
+                <div class="content content--side-main">
+                    <div class="application content-side">
+                        <div class="card">
+                            <div class="card-item card-title">
+                                筛选候选人
+                            </div>
+                            <div class="search card-item">
+                                <div class="search-box-wrapper">
+                                    <input type="text" class="search-box" name="application-search-keywords" />
+                                    <i class="fa fa-search"></i>
+                                </div>
+                            </div>
+                            <div class="card-item g-form-radio-group">
+                                <p class="card-sub-title">按状态</p>
+                                <div class="position-radio" >
+                                    <input type="radio" id="pos-stat-"   value="" class="" name="357" checked>
+                                    <label for="pos-stat-" class="">全部</label>
+                                </div>
+                                <div class="position-radio">
+                                    <input type="radio" id="pos-stat-0"  value="0"  name="357">
+                                    <label for="pos-stat-0" >待评审</label>
+                                </div>
+                                <div class="position-radio " >
+                                    <input type="radio" id="pos-stat-1"  value="1"  name="357">
+                                    <label for="pos-stat-2" class="">待面试</label>
+                                </div>
+                                <div class="position-radio " >
+                                    <input type="radio" id="pos-stat-2"  value="2"  name="357">
+                                    <label for="pos-stat-2" class="">待入职</label>
+                                </div>
+                                <div class="position-radio " >
+                                    <input type="radio" id="pos-stat-3"  value="3"  name="357">
+                                    <label for="pos-stat-2" class="">不合适</label>
+                                </div>
+                            </div>
+                            <div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="application content-main">
+                        <!-- 数据总览 -->
+                        <div class="card data-box">
+                            <div class="card-item card-title">
+                                数据总览
+                                <a ui-sref="admin.analysis.application" class="card-title-action"href="#">
+                                    查看详情
+                                </a>
+                            </div>
+                            <div class="card-item data-box-content">
+                                <div class="data-item">
+                                    <p class="data-item-title">收到简历数</p>
+                                    <span class="data-item-count">
+                                        2
+                                    </span>
+                                    <span class="data-item-delta">
+                                        <span>
+                                            <span class="hide">
+                                                <i class="iconfont">
+                                                    
+                                                </i>
+                                            </span>
+                                            <span class="hide">
+                                                <i class="iconfont">
+                                                    
+                                                </i>
+                                            </span>
+                                        </span>
+                                        <span class="data-item-percent"></span>
+                                    </span>
+                                </div>
+                                <div class="data-item">
+                                    <p class="data-item-title">
+                                        职位浏览量
+                                    </p>
+                                    <span class="data-item-count">
+                                        42
+                                    </span>
+                                    <span class="data-item-delta">
+                                        <span>
+                                            <span class="hide">
+                                                <i class="iconfont">
+                                                    
+                                                </i>
+                                            </span>
+                                            <span class="hide">
+                                                <i class="iconfont">
+                                                    
+                                                </i>
+                                            </span>
+                                        </span>
+                                        <span class="data-item-percent ">
+                                        </span>
+                                    </span>
+                                </div>
+                                <div class="data-item">
+                                    <p class="data-item-title">
+                                        在招职位数
+                                    </p>
+                                    <span class="data-item-count">
+                                        1
+                                    </span>
+                                    <span class="data-item-delta">
+                                        <span>
+                                            <span class="hide">
+                                                <i class="iconfont">
+                                                    
+                                                </i>
+                                            </span>
+                                            <span class="hide">
+                                                <i class="iconfont">
+                                                    
+                                                </i>
+                                            </span>
+                                        </span>
+                                        <span class="data-item-percent ng-binding">
+                                        </span>
+                                    </span>
+                                </div>
+                                <div class="data-box-collapse-handle">
+                                    <i class="fa fa-caret-up"></i>
+                                    收起
+                                </div>
+                            </div>
+                        </div>
+                        <!-- 简历列表 -->
+                        <div class="card common-list">
+                            <div class="card-item card-title">
+                                <span class="common-list-title">
+                                    收到的简历 -
+                                    <select class="select" name="position">
+                                        <option value="">
+                                            所有职位
+                                        </option>
+                                    </select>
+                                    <i class="fa fa-angle-down"></i>
+                                </span>
+                                <a ng-click="batch.toggle = !batch.toggle;" class="card-title-action">
+                                    批量处理
+                                    <i class="fa fa-angle-down"></i>
+                                </a>
+                            </div>
+                            <!-- 批量处理框 -->
+                            <div>
+                                <div class="batch card-item card-title">
+                                    <div class="squaredCheckBox">
+                                        <input type="checkbox" id="application-batch-selection">
+                                        <label for="application-batch-selection" class="selection">
+                                            全选/取消
+                                        </label>
+                                    </div>
+                                    <!-- <span class="selection">全选/取消</span> -->
+                                    <div class="batch-action draw-ban">
+                                        <i class="fa fa-home batch-action-iconsize"></i>
+                                        <a class="draw">
+                                            不合适
+                                        </a>
+                                    </div>
+                                    <div class="batch-action download">
+                                        <i class="fa fa-home batch-action-iconsize"></i>
+                                        <a class="draw">
+                                            导出excel
+                                        </a>
+                                    </div>
+                                    <div class="batch-action download">
+                                        <i class="fa fa-home batch-action-iconsize"></i>
+                                        <a class="draw">
+                                            下载简历
+                                        </a>
+                                    </div>
+                                    <div class="batch-action interview hide">
+                                        <i class="fa fa-home batch-action-iconsize"></i>
+                                        <a class="draw">
+                                            面试通过
+                                        </a>
+                                    </div>
+                                    <div class="batch-action interview-ban">
+                                        <i class="fa fa-home batch-action-iconsize"></i>
+                                        <a class="draw">
+                                            面试通过
+                                        </a>
+                                    </div>
+                                    <div class="batch-action review hide">
+                                        <i class="fa fa-home batch-action-iconsize"></i>
+                                        <a class="draw">
+                                            评审通过
+                                        </a>
+                                    </div>
+                                    <div class="batch-action review-ban">
+                                        <i class="fa fa-home batch-action-iconsize"></i>
+                                        <a class="draw">
+                                            评审通过
+                                        </a>
+                                    </div>
+                                </div>
+                            </div>
+                            <!-- 简历列表 -->
+                            <div class="card-item application-card common-list-item position">
+                            <div class="squaredCheckBox">
+                                <input type="checkbox" id="app-checkbox-99085" name="check">
+                                <label for="app-checkbox-99085">
+                                </label>
+                            </div>
+                            <div>
+                                <div class="application-card-content ">
+                                    <div class="item-title">
+                                        <span class="icon-wrap">
+                                        </span>
+                                        陈小洁
+                                        <ul class="item-info">
+                                            <li class="item-info-li ">
+                                            </li>
+                                            <li class="item-info-li">
+                                                25岁
+                                            </li>
+                                            <li class="item-info-li">
+                                                1年工作经验
+                                            </li>
+                                        </ul>
+                                    </div>
+                                    <ul class="item-content">
+                                        <li class="item-content-li application-card-ul-width">
+                                            <span class="item-info-li application-item-info-li-date ">
+                                                2015-04-01 — 2016-04-01
+                                            </span>
+                                            <span class="item-info-li application-item-info-li-sum ">
+                                                不想猜 - 你猜你猜你猜
+                                            </span>
+                                        </li>
+                                        <li class="item-content-li application-card-ul-width">
+                                            <span class="item-info-li application-item-info-li-date ">
+                                                2016-04-01 — 2016-04-01
+                                            </span>
+                                            <span class="item-info-li application-item-info-li-sum ">
+                                                本科 - 设计
+                                            </span>
+                                        </li>
+                                    </ul>
+                                    <ul class="item-info application-card-content-lefttag">
+                                        <li class="item-info-li application-item-info-li">
+                                            仟寻简历
+                                        </li>
+                                        <li class="item-info-li application-item-info-li">
+                                            2016-04-27
+                                        </li>
+                                    </ul>
+                                    <ul class="item-actions application-item-actions-pos">
+                                        <li class="item-action">
+                                            <a href="#" class="item-action-link">
+                                                <i class="fa fa-eye"></i>
+                                                查看
+                                            </a>
+                                        </li>
+                                        <li class="item-action">
+                                            <i class="fa fa-download"></i>
+                                            评审通过
+                                        </li>
+                                        <li class="action-ban hide">
+                                            <i class="fa fa-download"></i>
+                                            评审通过
+                                        </li>
+                                        <li
+                                            class="item-action">
+                                            <i class="fa fa-download"></i>
+                                            面试通过
+                                        </li>
+                                        <li class="action-ban hide">
+                                            <i class="fa fa-download"></i>
+                                            面试通过
+                                        </li>
+                                        <li class="item-action">
+                                            <i class="fa fa-download"></i>
+                                            下载
+                                        </li>
+                                        <li class="item-action">
+                                            <i class="fa fa-download"></i>
+                                            不合适
+                                        </li>
+
+                                    </ul>
+                                    <p class="application-job-apply">
+                                        职位申请
+                                    </p>
+                                    <a href="" class="truncate-application active application-time">
+                                        高级商务
+                                    </a>
+                                    <!-- inactive -->
+                                    <div class="application-progress-bar dq-application-status">
+                                        <ul class="dq-application-status-bar">
+                                            <li class="dq-application-status-bar-item">
+                                                <span class="dq-application-icon-status dq-application-icon-status-suc">
+                                                    <i class="dq-application-icon-status-mark dq-application-icon-status-circle-wh">
+                                                        <i class="fa fa-check"></i>
+                                                    </i>
+                                                    <span class="dq-application-status-text dq-application-icon-status-suc-text">
+                                                        浏览简历
+                                                    </span>
+                                                </span>
+                                            </li>
+                                            <li class="dq-application-status-bar-item">
+                                                <span class="dq-application-icon-status dq-application-icon-status-suc">
+                                                    <i class="dq-application-icon-status-mark dq-application-icon-status-circle-wh">
+                                                        <i class="fa fa-check"></i>
+                                                    </i>
+
+                                                    <span class="dq-application-status-text dq-application-icon-status-suc-text">
+                                                        简历评审
+                                                    </span>
+                                                </span>
+                                                <span class="dq-application-delimiter suc">
+                                                </span>
+                                            </li>
+                                            <li class="dq-application-status-bar-item dq-application-th-item">
+                                                <span class="dq-application-icon-status dq-application-icon-status-suc">
+                                                    <i class="dq-application-icon-status-mark dq-application-icon-status-circle-wh">
+                                                        <i class="fa fa-check"></i>
+                                                    </i>
+                                                    <span class="dq-application-status-text dq-application-icon-status-suc-text">
+                                                        面试
+                                                    </span>
+                                                </span>
+                                                <span class="dq-application-delimiter suc">
+                                                </span>
+                                            </li>
+                                            <li class="dq-application-status-bar-item dq-application-last-item">
+                                                <span class="dq-application-icon-status dq-application-icon-status-wait">
+                                                    <span class="dq-application-icon-status-mark dq-application-icon-status-circle-wh">
+                                                        4
+                                                    </span>
+                                                    <span class="dq-application-status-text dq-application-icon-status-wait-text">
+                                                        入职
+                                                    </span>
+                                                </span>
+                                                <span class="dq-application-delimiter default" >
+                                                </span>
+                                            </li>
+                                        </ul>
+                                    </div>
+                                </div>
+                                <!-- end ngSwitchWhen: -->
+                            </div>
+                            </div>
+                            <!-- 空简历提示 -->
+                            <div class="g-list-empty-wrapper hide">
+                                <div class="g-list-empty-square application-">
+                                    <p class="info-text">
+                                        该职位下没有任何相关简历
+                                        <br />
+                                        <span>
+                                            还有
+                                            <i class="no-style">
+                                            </i>
+                                            位潜在候选人可以去看看
+                                        </span>
+                                    </p>
+                                    <div class="btn-group">
+                                        <a class="btn btn-square">
+                                            查看潜在候选人
+                                        </a>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="application-new-one__title hide">
+                                <p class="application-new-one__title">
+                                    该职位下没有任何相关简历
+                                </p>
+                            </div>
+                            <!-- 分页控件 -->
+                            <div>
+                            </div>
+                        </div>
+                        <!-- 查看潜在候选人提示, 最后一页显示 -->
+                        <div class="card ns-candidate-more">
+                            <div class="card-item">
+                                <a href="#">
+                                    <img style="margin: 0 auto 15px auto; height: 30px; width: auto; display: block;" src="//static.moseeker.com/hr/common/images/candidate-avatar-sample.jpg">
+                                    没有合适的? 还有
+                                    <span class="count-label">
+                                        10
+                                    </span>
+                                    位潜在候选人, 这就去看看
+                                </a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        <!--<div class="newbieguide-overlay" ng-if="isNewbie" ng-click="turnoffNewbieGuide()"></div>-->
+        </div>
+        <div class="slide-bar">
+            <div class="slider-bar-l">
+                <i class="fa fa-weixin"></i>
+
+                <p>聊天</p>
+            </div>
+            <div class="slider-bar-w">
+                <i class="fa">?</i>
+
+                <p>反馈</p>
+            </div>
+        </div>
+    </div>
+    <script src="../../assets/global/plugins/jquery/jquery-1.11.3.min.js"></script>
+    <script src="../../assets/admin/js/globals.js"></script>
+    <script src="../../assets/global/plugins/ajaxify/jquery.history.js"></script>
+    <script src="../../assets/global/plugins/ajaxify/jquery-scrollto.js"></script>
+    <script src="../../assets/global/plugins/ajaxify/jquery.ajaxify.js"></script>
+    <script>
+        $(".nav a").ajaxify({
+            event: "click",
+            target: '#admin-content-wrapper'
+        });
+    </script>
+</body>
+</html>

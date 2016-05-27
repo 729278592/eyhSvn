@@ -1,0 +1,844 @@
+<!DOCTYPE html>
+<html>
+<head lang="en">
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1"/>
+    <link rel="stylesheet" href="../../assets/admin/css/app.css"/>
+    <link rel="stylesheet" href="../../assets/admin/css/appCommon.css"/>
+    <link rel="stylesheet" href="../../assets/admin/css/global.css"/>
+    <link rel="stylesheet" href="../../assets/global/plugins/font/css/font-awesome.min.css"/>
+    <title>潜在候选人</title>
+</head>
+<body>
+    <div id="admin-wrapper">
+        <div class="nav">
+            <div class="main-nav">
+                <div class="logo-wrapper">
+                    <div class="logo logo-left">
+                        <img src="../../assets/admin/images/logo.png" alt="" class="logoIcon"/>
+                    </div>
+                </div>
+                <ul class="main-nav-list">
+                    <li>
+                        <a href="index.html" class="clearfix" title="首页">
+                            <div class="main-nav-icon">
+                                <i class="fa fa-home"></i>
+                            </div>
+                        </a>
+                    </li>
+                    <li>
+                        <a href="application.html" class="clearfix" title="登陆">
+                            <div class="main-nav-icon">
+                                <i class="fa fa-book"></i>
+                            </div>
+                        </a>
+                    </li>
+                    <li>
+                        <a href="#" class="clearfix">
+                            <div class="main-nav-icon">
+                                <i class="fa fa-home"></i>
+                            </div>
+                        </a>
+                    </li>
+                    <li class="active">
+                        <a href="#" class="clearfix">
+                            <div class="main-nav-icon">
+                                <i class="fa fa-home"></i>
+                            </div>
+                        </a>
+                    </li>
+                    <li>
+                        <a href="#" class="clearfix">
+                            <div class="main-nav-icon">
+                                <i class="fa fa-home"></i>
+                            </div>
+                        </a>
+                    </li>
+                    <li>
+                        <a href="#" class="clearfix">
+                            <div class="main-nav-icon">
+                                <i class="fa fa-home"></i>
+                            </div>
+                        </a>
+                    </li>
+                    <li>
+                        <a href="#" class="clearfix">
+                            <div class="main-nav-icon">
+                                <i class="fa fa-home"></i>
+                            </div>
+                        </a>
+                    </li>
+                    <li class="last">
+                        <a href="#" class="clearfix">
+                            <div class="main-nav-icon">
+                                <i class="fa fa-gear"></i>
+                            </div>
+                        </a>
+                    </li>
+                </ul>
+            </div>
+            <div class="main-nav-w158">
+                <ul class="main-nav-list">
+                    <li>
+                        <a href="index.html" class="clearfix">
+                            <div class="main-nav-item">
+                                <span class="main-nav-item-name">首页</span>
+                            </div>
+                        </a>
+                    </li>
+                    <li>
+                        <a href="application.html" class="clearfix">
+                            <div class="main-nav-item">
+                                <span class="main-nav-item-name">职位管理</span>
+                            </div>
+                        </a>
+                    </li>
+                    <li>
+                        <a href="#" class="clearfix">
+                            <div class="main-nav-item">
+                                <span class="main-nav-item-name">招聘管理</span>
+                            </div>
+                        </a>
+                    </li>
+                    <li class="active">
+                        <a href="#" class="clearfix">
+                            <div class="main-nav-item">
+                                <span class="main-nav-item-name">潜在候选人</span>
+                            </div>
+                        </a>
+                    </li>
+                    <!--<li>-->
+                        <!--<a href="#" class="clearfix">-->
+                            <!--<div class="main-nav-item">-->
+                                <!--<span class="main-nav-item-name">微信招聘</span>-->
+                            <!--</div>-->
+                        <!--</a>-->
+                    <!--</li>-->
+                    <!--<li>-->
+                        <!--<a href="#" class="clearfix">-->
+                            <!--<div class="main-nav-item">-->
+                                <!--<span class="main-nav-item-name">内推管理</span>-->
+                            <!--</div>-->
+                        <!--</a>-->
+                    <!--</li>-->
+                    <li>
+                        <a href="#" class="clearfix">
+                            <div class="main-nav-item">
+                                <span class="main-nav-item-name">数据分析</span>
+                            </div>
+                        </a>
+                    </li>
+                    <li class="last">
+                        <a href="#" class="clearfix">
+                            <div class="main-nav-item">
+                                <span class="main-nav-item-name">账号设置</span>
+                            </div>
+                        </a>
+                    </li>
+                </ul>
+            </div>
+        </div>
+        <div id="admin-content-wrapper">
+            <div class="content-header">
+                <span class="content-title">职位管理</span>
+                <div class="company-name right">
+                    <a href="#">
+                        <img src="../../assets/admin/images/companyLogo.jpg" alt=""/>
+                    </a>
+                    易优弧
+                </div>
+            </div>
+            <div class="content-wrapper">
+                <div class="content content--side-main">
+                    <div class="content-side content-side">
+                        <!-- ngIf: childAccounts.length -->
+                        <div class="card card-rec-star hide">
+                            <div class="card-item">
+                                <a href="#">
+                                <span class="fl">
+                                    被推荐人数
+                                    <span class="is-recommend label">
+                                        推荐
+                                    </span>
+                                </span>
+                                <span class="fr count">
+                                    0人
+                                </span>
+                                </a>
+                            </div>
+                            <div class="card-item">
+                                <a href="#">
+                                    <span class="fl">
+                                        需后续跟进
+                                        <i class="fa fa-star"></i>
+                                    </span>
+                                    <span class="fr count">
+                                        0人
+                                    </span>
+                                </a>
+                            </div>
+                        </div>
+                        <div class="card candidate-position">
+                            <div class="card-item card-item-title">
+                                <span>
+                                    <em class="decorator">
+                                        感兴趣人数
+                                    </em>
+                                    /浏览人数
+                                </span>
+                            </div>
+
+                            <div class="" style="position: relative;">
+                                <div>
+                                    <div class="card-item selected">
+                                        <a href="#" class="block-anchor clearfix">
+                                            <span class="fl">
+                                                全部职位
+                                            </span>
+                                            <span class="count">
+                                                <em class="decorator">
+                                                    0
+                                                </em>
+                                                /5
+                                            </span>
+                                        </a>
+                                    </div>
+                                    <div class="card-item">
+                                        <a title="高级商务" class="block-anchor clearfix" href="#">
+                                            <span class="fl">
+                                                高级商务
+                                            </span>
+                                            <span class="count" title="0/5">
+                                                <em class="decorator">
+                                                    0
+                                                </em>
+                                                /5
+                                            </span>
+                                        </a>
+                                    </div>
+
+                                </div>
+                            </div>
+
+                        </div>
+                    </div>
+                    <div class="content-main">
+                        <div class="card candidate-list-topbar">
+                            <div class="card-item">
+                                <div class="candidate-action_batch clearfix s-line">
+                                    <label class="s-label g-fl">
+                                        筛选查找
+                                    </label>
+                                    <ul class="g-unstyled-list g-flat-list g-fl s-list">
+                                        <li class="s-item squaredCheckBox">
+                                            <input type="checkbox" id="fe">
+                                            <label for="fe">
+                                                员工的转发
+                                            </label>
+                                        </li>
+                                        <li class="s-item squaredCheckBox">
+                                            <input type="checkbox" id="ii">
+                                            <label for="ii">
+                                                对职位感兴趣
+                                            </label>
+                                        </li>
+                                        <li class="s-item squaredCheckBox">
+                                            <input type="checkbox" id="hc">
+                                            <label for="hc">
+                                                有联系方式
+                                            </label>
+                                        </li>
+                                        <li class="s-item squaredCheckBox">
+                                            <input type="checkbox" id="ad" >
+                                            <label for="ad">
+                                                投递了简历
+                                            </label>
+                                        </li>
+                                        <li class="s-item squaredCheckBox">
+                                            <input type="checkbox" id="rc">
+                                            <label for="rc">
+                                                有员工评价信息
+                                            </label>
+                                                    <span class="is-recommend label">
+                                                        推荐
+                                                    </span>
+                                        </li>
+                                        <li class="s-item squaredCheckBox">
+                                            <input type="checkbox" id="st">
+                                            <label for="st">
+                                                需后续跟进
+                                            </label>
+                                            <i class="fa fa-star"></i>
+                                        </li>
+                                    </ul>
+                                </div>
+                                <div class="s-line">
+                                    该筛选条件下, 潜在候选人共
+                                    <span class="s-span">
+                                        5
+                                    </span>
+                                    人
+                                </div>
+                            </div>
+                        </div>
+                        <div class="card common-list candidate-list-wrapper ns-positions-loaded ns-sharechain-loaded">
+                        <div class="card-item">
+                            <div class="list-title">
+                                <div class="title-item card-item-column column-weixin">
+                                    <span>
+                                        微信昵称
+                                    </span>
+                                </div>
+                                <div class="title-item card-item-column column-info">
+                                    <span>
+                                        基本信息
+                                    </span>
+                                </div>
+                                <div class="title-item card-item-column column-position" style="position: relative;">
+                                    <span>
+                                        相关职位
+                                    </span>
+                                    <i class="fa fa-question-circle"></i>
+                                </div>
+                                <div class="title-item card-item-column column-find">
+                                    <span>
+                                        如何找到他
+                                    </span>
+                                    <i class="fa fa-question-circle"></i>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="card-item common-list-item no-animate clearfix">
+                            <div class="candidate-item unread">
+                                <div class="card-item-column column-weixin">
+                                    <div class="column-wrap">
+                                        <div class="item-row">
+                                            <span title="鄭小毛毛毛" class="candidate-item_candidate-name">
+                                                💋鄭小毛毛毛
+                                            </span>
+                                            <div class="unread-dot">
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="card-item-column column-info">
+                                    <div class="column-wrap">
+                                        <div class="item-row">
+                                            <span class="">
+                                                💋鄭小毛毛毛
+                                            </span>
+                                        </div>
+                                        <div class="item-row extra-info">
+                                            <div>
+                                                13119555100
+                                            </div>
+                                            <span class="">
+                                                abeeycheng@163.co
+                                            </span>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="card-item-column column-position">
+                                    <div class="column-wrap">
+                                        <div class="item-row candidate_bordered-box ns-browsered-box">
+                                            <div class="candidate_bordered-box_border">
+                                            </div>
+                                            <div class="item-box bordered-box">
+                                                <span title="高级商务" class="">
+                                                    高级商务
+                                                </span>
+                                                <div class="item-meta">
+                                                    <span class="view-count">
+                                                        <i class="fa fa-eye"></i>
+                                                        1
+                                                    </span>
+                                                    <span class="last-view">
+                                                        <i class="fa fa-clock-o"></i>
+                                                        05-23 12:03
+                                                    </span>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="card-item-column column-find">
+                                    <div class="column-wrap">
+                                        <ul class="candidate_tree">
+                                            <li class="candidate_tree-node candidate-2327092">
+                                                <a href="#">
+                                                    <img class="candidate_user-avatar" src="http://wx.qlogo.cn/mmopen/RwpYsGTg59LdJURQHf2xFOCibYOTfLzWkXbuSaibBwZgQXpnleQrPdVpI50NnY6dENMIIZCZnzle4oqEbia0NgVTVvjIBMseKFa/0">
+                                                </a>
+                                                <span title="💋鄭小毛毛毛" class="candidate_user-name">
+                                                    💋鄭小毛毛毛
+                                                </span>
+                                                <span class="candidate_user-type">
+                                                    候选人
+                                                </span>
+                                            </li>
+                                        </ul>
+                                    </div>
+                                </div>
+                                <div class="card-item-column column-action">
+                                    <div class="column-wrap">
+                                        <a>
+                                            <i class="fa fa-star"></i>
+                                        </a>
+                                        <a href="#">
+                                            <i class="fa fa-weixin"></i>
+                                        </a>
+                                        <a href="#">
+                                            <i class="fa fa-trash-o"></i>
+                                        </a>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <!-- end ngRepeat: candidate in candidates -->
+                        <div class="card-item common-list-item no-animate clearfix">
+                            <div class="candidate-item unread">
+                                <div class="card-item-column column-weixin">
+                                    <div class="column-wrap">
+                                        <div class="item-row">
+                                            <span title="Su" class="candidate-item_candidate-name">
+                                                Su
+                                            </span>
+                                            <div class="unread-dot">
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="card-item-column column-info">
+                                    <div class="column-wrap">
+                                        <div class="item-row">
+                                            <span class="">
+                                                Su
+                                            </span>
+                                        </div>
+                                        <div class="item-row extra-info">
+                                            <div>
+                                                销售
+                                            </div>
+                                            <span title="城市: 周先生皮包公司">
+                                                周先生皮包公司
+                                            </span>
+                                        </div>
+                                        <div class="item-row extra-info">
+                                            <div>
+                                                15683078668
+                                            </div>
+                                            <span class="">
+                                                shusk@163.com
+                                            </span>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="card-item-column column-position">
+                                    <div class="column-wrap">
+                                        <div class="item-row candidate_bordered-box ns-browsered-box">
+                                            <div class="candidate_bordered-box_border">
+                                            </div>
+                                            <div class="item-box bordered-box">
+                                                <span title="高级商务" class="">
+                                                    高级商务
+                                                </span>
+                                                <div class="item-meta">
+                                                    <span class="view-count">
+                                                        <i class="fa fa-eye"></i>
+                                                        1
+                                                    </span>
+                                                    <span class="last-view">
+                                                        <i class="fa fa-clock-o"></i>
+                                                        05-23 12:03
+                                                    </span>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="card-item-column column-find">
+                                    <div class="column-wrap">
+                                        <ul class="candidate_tree">
+                                            <li class="candidate_tree-node candidate-1825569">
+                                                <a target="_blank" href="#">
+                                                    <img class="candidate_user-avatar" src="http://wx.qlogo.cn/mmopen/1CHHx9Yq4nFkXGyc4UfFAQpKb2LfRHM6k9gfyuBsDGwXBnCtg5ZwRFkzicwwZQX3lDZKiaVGWxZnStic7hWum8WE2qjnkTxh5LF/0">
+                                                </a>
+                                                <span title="Su" class="candidate_user-name">
+                                                    Su
+                                                </span>
+                                                <span class="candidate_user-type">
+                                                    候选人
+                                                </span>
+                                            </li>
+                                        </ul>
+                                    </div>
+                                </div>
+                                <div class="card-item-column column-action">
+                                    <div class="column-wrap">
+                                        <a>
+                                            <i class="fa fa-star"></i>
+                                        </a>
+                                        <a href="#">
+                                            <i class="fa fa-weixin"></i>
+                                        </a>
+                                        <a href="#">
+                                            <i class="fa fa-trash-o"></i>
+                                        </a>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <!-- end ngRepeat: candidate in candidates -->
+                        <div class="card-item common-list-item no-animate clearfix">
+                            <div class="candidate-item unread">
+                                <div class="card-item-column column-weixin">
+                                    <div class="column-wrap">
+                                        <div class="item-row">
+                                            <span title="Dream" class="candidate-item_candidate-name">
+                                                Dream
+                                            </span>
+                                            <div class="unread-dot">
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="card-item-column column-info">
+                                    <div class="column-wrap">
+                                        <div class="item-row">
+                                            <span class="">
+                                                Dream
+                                            </span>
+                                        </div>
+                                        <div class="item-row extra-info">
+                                            <div class=" ">
+                                                产品客服
+                                            </div>
+                                            <span title="城市: 仟寻" class="">
+                                                仟寻
+                                            </span>
+                                        </div>
+                                        <div class="item-row extra-info">
+                                            <div>
+                                                15902112184
+                                            </div>
+                                            <span class="">
+                                                xuyingying@moseeker.com
+                                            </span>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="card-item-column column-position">
+                                    <div class="column-wrap">
+                                        <!-- ngRepeat: rp in candidate.positions -->
+                                        <!-- ngIf: $index < 2 -->
+                                        <div class="item-row candidate_bordered-box ns-browsered-box">
+                                            <div class="candidate_bordered-box_border">
+                                            </div>
+                                            <div class="item-box bordered-box">
+                                                <span title="高级商务" class="">
+                                                    高级商务
+                                                </span>
+                                                <div class="item-meta">
+                                                    <span class="view-count">
+                                                        <i class="fa fa-eye"></i>
+                                                        1
+                                                    </span>
+                                                    <span class="last-view">
+                                                        <i class="fa fa-clock-o"></i>
+                                                        05-23 12:03
+                                                    </span>
+                                                </div>
+                                            </div>
+                                        </div>
+
+                                    </div>
+                                </div>
+                                <div class="card-item-column column-find">
+                                    <div class="column-wrap">
+                                        <ul class="candidate_tree">
+                                            <li class="candidate_tree-node candidate-1613833">
+                                                <a href="#" target="_blank">
+                                                    <img class="candidate_user-avatar" src="http://wx.qlogo.cn/mmopen/rLa1e8ffggS7iczAhNDFGld2MvjVHzxWrwibaWmiakBIL5CMy8UMIV6mleZic8ujKP90Ek6ard83E1d6MqUuCFAjDgiakknblv8j8/0">
+                                                </a>
+                                                <span title="Dream" class="candidate_user-name">
+                                                    Dream
+                                                </span>
+                                                <span class="candidate_user-type">
+                                                    候选人
+                                                </span>
+                                            </li>
+
+                                        </ul>
+                                    </div>
+                                </div>
+                                <div class="card-item-column column-action">
+                                    <div class="column-wrap">
+                                        <a>
+                                            <i class="fa fa-star"></i>
+                                        </a>
+                                        <a href="#">
+                                            <i class="fa fa-weixin"></i>
+                                        </a>
+
+                                        <a href="#">
+                                            <i class="fa fa-trash-o"></i>
+                                        </a>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <!-- end ngRepeat: candidate in candidates -->
+                        <div class="card-item common-list-item no-animate clearfix">
+                            <div class="candidate-item">
+                                <div  class="card-item-column column-weixin">
+                                    <div class="column-wrap">
+                                        <div class="item-row">
+                                            <span title="宇宙松散媛球酱" class="candidate-item_candidate-name">
+                                                宇宙松散媛球酱
+                                            </span>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="card-item-column column-info">
+                                    <div class="column-wrap">
+                                        <div class="item-row">
+                                            <span class="">
+                                                宇宙松散媛球酱
+                                            </span>
+                                        </div>
+                                        x
+                                        <div class="item-row extra-info">
+                                            <div>
+                                            </div>
+                                            <span class="">
+                                            </span>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="card-item-column column-position">
+                                    <div class="column-wrap">
+                                        <!-- ngRepeat: rp in candidate.positions -->
+                                        <!-- ngIf: $index < 2 -->
+                                        <div class="item-row candidate_bordered-box ns-browsered-box" >
+                                            <div class="candidate_bordered-box_border">
+                                            </div>
+                                            <div class="item-box bordered-box">
+                                                <span title="高级商务" class="">
+                                                    高级商务
+                                                </span>
+                                                <div class="item-meta">
+                                                    <span class="view-count">
+                                                        <i class="fa fa-eye"></i>
+                                                        1
+                                                    </span>
+                                                    <span class="last-view">
+                                                        <i class="fa fa-clock-o"></i>
+                                                        05-23 12:03
+                                                    </span>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="card-item-column column-find">
+                                    <div class="column-wrap">
+                                        <ul class="candidate_tree">
+
+                                            <li class="candidate_tree-node candidate-1825569">
+                                                <a target="_blank" href="#">
+                                                    <img class="candidate_user-avatar" src="http://wx.qlogo.cn/mmopen/1CHHx9Yq4nFkXGyc4UfFAQpKb2LfRHM6k9gfyuBsDGwXBnCtg5ZwRFkzicwwZQX3lDZKiaVGWxZnStic7hWum8WE2qjnkTxh5LF/0">
+                                                </a>
+                                                <span title="Su" class="candidate_user-name">
+                                                    Su
+                                                </span>
+
+                                                <span class="candidate_user-type">
+                                                    候选人
+                                                </span>
+
+                                                <div class="chain-arrow">
+                                                    <img src="//static.moseeker.com/hr//common/images/chain-arrow.png">
+                                                </div>
+                                            </li>
+                                            <li class="candidate_tree-node candidate-1825569">
+                                                <a target="_blank" href="#">
+                                                    <img class="candidate_user-avatar" src="http://wx.qlogo.cn/mmopen/1CHHx9Yq4nFkXGyc4UfFAQpKb2LfRHM6k9gfyuBsDGwXBnCtg5ZwRFkzicwwZQX3lDZKiaVGWxZnStic7hWum8WE2qjnkTxh5LF/0">
+                                                </a>
+                                                <span title="Su" class="candidate_user-name">
+                                                    Su
+                                                </span>
+
+                                                <span class="candidate_user-type">
+                                                    候选人
+                                                </span>
+
+                                                <div class="chain-arrow">
+                                                    <img src="//static.moseeker.com/hr//common/images/chain-arrow.png">
+                                                </div>
+                                            </li>
+                                        </ul>
+                                    </div>
+                                </div>
+                                <div class="card-item-column column-action">
+                                    <div class="column-wrap">
+                                        <a>
+                                            <i class="fa fa-star"></i>
+                                        </a>
+                                        <a href="#">
+                                            <i class="fa fa-weixin"></i>
+                                        </a>
+                                        <a href="#">
+                                            <i class="fa fa-trash-o"></i>
+                                        </a>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="card-item common-list-item no-animate clearfix" >
+                            <div class="candidate-item">
+                                <div class="card-item-column column-weixin">
+                                    <div class="column-wrap">
+                                        <div class="item-row">
+                                            <span title="陈小洁" class="candidate-item_candidate-name">
+                                                陈小洁
+                                            </span>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="card-item-column column-info">
+                                    <div class="column-wrap">
+                                        <div class="item-row">
+                                            <span class="">
+                                                陈小洁
+                                            </span>
+                                        </div>
+                                        <div class="item-row extra-info">
+                                            <div title="职位: 摸的">
+                                                摸的
+                                            </div>
+                                            <span title="城市: 一切众生" class="">
+                                                一切众生
+                                            </span>
+                                        </div>
+                                        <div class="item-row extra-info">
+                                            <div>
+                                            </div>
+                                            <span class="">
+                                                weirdocreep@163.com
+                                            </span>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="card-item-column column-position">
+                                    <div class="column-wrap">
+                                        <div class="item-row candidate_bordered-box ns-browsered-box">
+                                            <div class="candidate_bordered-box_border">
+                                            </div>
+                                            <div class="item-box bordered-box">
+                                                <span title="高级商务" class="">
+                                                    高级商务
+                                                </span>
+                                                <div class="item-meta">
+                                                    <span class="view-count">
+                                                        <i class="fa fa-eye"></i>
+                                                        1
+                                                    </span>
+                                                    <span class="last-view">
+                                                        <i class="fa fa-clock-o"></i>
+                                                        05-23 12:03
+                                                    </span>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="card-item-column  column-find">
+                                    <div class="column-wrap">
+                                        <ul class="candidate_tree">
+
+                                            <li class="candidate_tree-node candidate-1825569">
+                                                <a target="_blank" href="#">
+                                                    <img class="candidate_user-avatar" src="http://wx.qlogo.cn/mmopen/1CHHx9Yq4nFkXGyc4UfFAQpKb2LfRHM6k9gfyuBsDGwXBnCtg5ZwRFkzicwwZQX3lDZKiaVGWxZnStic7hWum8WE2qjnkTxh5LF/0">
+                                                </a>
+                                                <span title="Su" class="candidate_user-name">
+                                                    Su
+                                                </span>
+
+                                                <span class="candidate_user-type">
+                                                    候选人
+                                                </span>
+
+                                                <div class="chain-arrow">
+                                                    <img src="//static.moseeker.com/hr//common/images/chain-arrow.png">
+                                                </div>
+                                            </li>
+                                            <li class="candidate_tree-node candidate-1825569">
+                                                <a target="_blank" href="#">
+                                                    <img class="candidate_user-avatar" src="http://wx.qlogo.cn/mmopen/1CHHx9Yq4nFkXGyc4UfFAQpKb2LfRHM6k9gfyuBsDGwXBnCtg5ZwRFkzicwwZQX3lDZKiaVGWxZnStic7hWum8WE2qjnkTxh5LF/0">
+                                                </a>
+                                                <span title="Su" class="candidate_user-name">
+                                                    Su
+                                                </span>
+
+                                                <span class="candidate_user-type">
+                                                    候选人
+                                                </span>
+
+                                                <div class="chain-arrow">
+                                                    <img src="//static.moseeker.com/hr//common/images/chain-arrow.png">
+                                                </div>
+                                            </li>
+                                        </ul>
+                                    </div>
+                                </div>
+                                <div class="card-item-column column-action">
+                                    <div class="column-wrap">
+                                        <a>
+                                            <i class="fa fa-star"></i>
+                                        </a>
+                                        <a href="#">
+                                            <i class="fa fa-weixin"></i>
+                                        </a>
+                                        <a href="#">
+                                            <i class="fa fa-trash-o"></i>
+                                        </a>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="">
+                            <div class="dq-pagination">
+                            </div>
+                        </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        <!--<div class="newbieguide-overlay" ng-if="isNewbie" ng-click="turnoffNewbieGuide()"></div>-->
+        </div>
+        <div class="slide-bar">
+            <div class="slider-bar-l">
+                <i class="fa fa-weixin"></i>
+
+                <p>聊天</p>
+            </div>
+            <div class="slider-bar-w">
+                <i class="fa">?</i>
+
+                <p>反馈</p>
+            </div>
+        </div>
+    </div>
+    <script src="../../assets/global/plugins/jquery/jquery-1.11.3.min.js"></script>
+    <script src="../../assets/admin/js/globals.js"></script>
+    <script src="../../assets/admin/js/loading.js"></script>
+    <script src="../../assets/global/plugins/ajaxify/jquery.history.js"></script>
+    <script src="../../assets/global/plugins/ajaxify/jquery-scrollto.js"></script>
+    <script src="../../assets/global/plugins/ajaxify/jquery.ajaxify.js"></script>
+    <script>
+        $(".nav a").ajaxify({
+            event: "click",
+            target: '#admin-content-wrapper'
+        });
+    </script>
+</body>
+</html>
