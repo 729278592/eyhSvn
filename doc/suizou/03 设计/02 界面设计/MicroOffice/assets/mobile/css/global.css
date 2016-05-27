@@ -29,7 +29,7 @@ textarea,input,button,select{border: none;outline: none;}
 .content.bg-ecec{background: #ececec;padding-top: 1px;}
 a:hover{text-decoration: none;}
 img.w100{width: 100%;}
-.mask{position: absolute;top: 0;bottom: 0;right: 0;left: 0;background: rgba(0,0,0,0.6)}
+.mask,.maskHide{position: absolute;top: 0;bottom: 0;right: 0;left: 0;background: rgba(0,0,0,0.6);z-index: 10;}
 .reward{background: #fff;position: relative;width: 96%;margin: 60% auto;font-size: 14px;text-align: center;padding: 10% 0;}
 .reward img{position: absolute;width: 20%;left: 0;top: -40%;}
 .reward p{color: #333;}
@@ -124,6 +124,7 @@ img.resume{width: 100%;}
 .companyMenu li .companyInfor span img{width: 15%;}
 .companyMenu.b0{padding: 0;}
 .companyMenu.b0 li{border: none;}
+.companyMenu.bb1 li{border-bottom: 1px solid #dbdbdb;border-radius: 0;}
 .tdInfor{width: 100%;}
 .comInfor>.comInforCon>.tdInfor>p{font-size: 14px;color: #999;width: 100%;}
 .comInfor>.comInforCon>.tdInfor>p>span{width: 50%;display: inline-block;padding-left: 0;}
@@ -213,13 +214,17 @@ a.weui_cell.c666{color: #999;}
 a.weui_btn.weui_btn_primary{font-size: 16px;}
 
 .weui_cells_checkbox.mt0{margin-top: 0;}
-.weui_cells_checkbox.mt0 .weui_check_label{padding: 0;}
 .weui_cells.bt0:before{border-top: none;}
 .weui_cells.bt0:after{border-bottom: none;}
 .weui_cell.bt0:before{border-top: none;}
 
 .weui_cells_checkbox{}
-.weui_check_label{width: 30%;float: left;}
+.weui_cells_checkbox.h153{min-height: 240px;}
+.weui_check_label.w30{width: 30%;float: left;}
+.weui_check_label.w50{width: 40.5%;float: left;position: relative;min-height: 240px;}
+.weui_check_label.w50 .sexImg{width: 50%;position: absolute;left: 50%;margin-left: -25%;}
+.weui_check_label.w50 .weui_cell_hd{position: absolute;bottom: 5%;left: 50%;margin-left: -12px;}
+.weui_check_label.w30.p0{padding: 0;}
 .weui_cells_checkbox .weui_cell.bt0:active{background: transparent;}
 .weui_cell.weui_cell_select{padding: 0 15px;}
 .weui_select{font-family: "微软雅黑";padding: 0;color: #999;}
@@ -241,11 +246,11 @@ a.weui_btn.weui_btn_primary{font-size: 16px;}
 .comInfor .comInforCon p img,.comInfor .comInforCon p span{display: table-cell;vertical-align: middle;}
 .comInfor .comInforCon p img{width: 22px;}
 .comInfor .comInforCon p span{width: 100%;padding-left: 3%;}
-.companyBriefIntroduction{background: #fff;width: 94%;padding:3%;position: relative;margin-top: 10px;border-top: 1px solid #dbdbdb;}
+.companyBriefIntroduction{background: #fff;width: 94%;padding:3%;position: relative;margin-top: 10px;border-top: 1px solid #dbdbdb;border-bottom: 1px solid #dbdbdb;}
 .companyBriefIntroduction .comBItitle,.prosuct .prosuctTitle,.companyImgList .companyImgListTitle{text-align: center;font-size: 16px;color: #67a5f9;}
 .companyBriefIntroduction .comBIContent{font-size: 14px;color: #999;}
 .companyBriefIntroduction .weui_btn{position: absolute;right: 3%;bottom: 3%;}
-.prosuct,.companyImgList{background: #fff;margin-top: 10px;border-top: 1px solid #dbdbdb;width: 100%;padding: 2% 0;}
+.prosuct,.companyImgList{background: #fff;margin-top: 10px;border-top: 1px solid #dbdbdb;width: 100%;padding: 2% 0;border-bottom: 1px solid #dbdbdb;}
 .prosuct .prosuctContent{width: 94%;padding: 2% 3%;font-size: 14px;color: #999;}
 .companyImgList{text-align: center;color: #999;}
 .companyImgList .codeIcon{width: 40%;margin: 5% 0;}
@@ -309,3 +314,87 @@ a.weui_btn.weui_btn_primary{font-size: 16px;}
 
 .weui_tab.fixed{position: fixed;bottom: 0;width: 100%;height: 48px;}
 
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+/*滑动侧边导航*/
+.bars{position: fixed;left: 10%;bottom: 15%;width: 36px;height: 36px;padding: 4px;border-radius: 36px;background: rgba(255,0,80,0.5);}
+.bars .fa{display: inline-block;width: 100%;height: 100%;background: rgba(0,0,0,0.5);color: #fff;border-radius: 100%;text-align: center;line-height: 32px;}
+
+
+
+.leftNav{width: 80%;background: #258bcf;height: 100%;}
+.menu-list{width: 100%;}
+.menu-list li{border-bottom: 1px solid #3c9edf;text-align: left;padding: 10px 0 10px 5%;}
+.menu-list li a{color: #fff;font-size: 14px;display:inline-block;width: 100%;height: 100%;position: relative;}
+.menu-list li a .fa-angle-right{position: absolute;right: 5%;top: 3px;}
+.menu-list li a span{}
+
+
+
+
+
+@-webkit-keyframes slideIn {
+    from {
+        -webkit-transform: translate3d(-100%, 0, 0);
+        transform: translate3d(-100%, 0, 0)
+    }
+    to {
+        -webkit-transform: translate3d(0, 0, 0);
+        transform: translate3d(0, 0, 0)
+    }
+}
+
+@keyframes slideIn {
+    from {
+        -webkit-transform: translate3d(-100%, 0, 0);
+        transform: translate3d(-100%, 0, 0)
+    }
+    to {
+        -webkit-transform: translate3d(0, 0, 0);
+        transform: translate3d(0, 0, 0)
+    }
+}
+
+@-webkit-keyframes slideOut {
+    from {
+        -webkit-transform: translate3d(0, 0, 0);
+        transform: translate3d(0, 0, 0)
+    }
+    to {
+        -webkit-transform: translate3d(-100%, 0, 0);
+        transform: translate3d(-100%, 0, 0)
+    }
+}
+
+@keyframes slideOut {
+    from {
+        -webkit-transform: translate3d(0, 0, 0);
+        transform: translate3d(0, 0, 0)
+    }
+    to {
+        -webkit-transform: translate3d(-100%, 0, 0);
+        transform: translate3d(-100%, 0, 0)
+    }
+}
+.mask.slideIn {
+    -webkit-animation: slideIn .2s forwards;
+    animation: slideIn .2s forwards
+}
+
+.mask.slideOut {
+    -webkit-animation: slideOut .2s forwards;
+    animation: slideOut .2s forwards
+}

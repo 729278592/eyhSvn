@@ -27,7 +27,7 @@
                             <span>重庆易优弧有限公司</span>
                         </div>
                         <div class="comInforCon">
-                            <ul class="positionMenu companyMenu b0">
+                            <ul class="positionMenu companyMenu b0 bb1">
                                 <li>
                                     <a href="javascript:;">
                                         <span class="clearfix positionDiv">
@@ -155,8 +155,9 @@
                     </div>
                 </div>
             </div>
-            <div class="mask hide">
-                <div class="reward">
+
+            <div class="maskHide hide">
+                <div class="reward hide">
                     <img src="../../assets/mobile/images/shareIcon.png" alt=""/>
                     <p>转发给朋友或分享朋友圈，领取积分奖励！</p>
                 </div>
@@ -165,10 +166,17 @@
     </div>
     <script src="../../assets/global/plugins/jquery/jquery-1.11.3.min.js"></script>
     <script src="../../assets/mobile/js/global.js"></script>
+    <script src="../../assets/mobile/js/mobileLeft.js"></script>
     <script>
         $(function(){
-            $("#share").on("click",function(){
-                $(".mask").removeClass("hide");
+            /*左边滑动导航*/
+            mobileLeft.init($(".page"))
+        })
+    </script>
+    <script>
+        $(function(){
+            $("#share").on("touchend",function(){
+                $(".maskHide,.reward").removeClass("hide");
                 $(".reward").addClass("shake");
                 $($(".reward")).on('webkitAnimationEnd', function (){
                     $(this).removeClass('shake');
@@ -176,10 +184,11 @@
                     $(this).removeClass('shake');
                 });
             });
-            $(".mask").on("click",function(){
+            $(".page").delegate(".maskHide","touchend",function(){
                 $(this).addClass("hide");
+                $(".reward").addClass("hide");
             });
-            $(".reward").on("click",function(e){
+            $(".reward").on("touchend",function(e){
                 e.stopPropagation();
             })
         })

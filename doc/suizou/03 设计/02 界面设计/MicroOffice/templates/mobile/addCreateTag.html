@@ -73,31 +73,31 @@
                 $(".keyword-div").removeClass("hide");
             });
 
-
+            var arr = [];
             $(".keyword-div .fa-check-circle").on("touchend",function(){
                 var values = $(this).closest(".keyword-div").find(".keyword-input").val();
                 var value = $.trim(values);
-                var arr = [];
-                arr.push(value);
                 if(value==''){
                     showMsg('标签名不能为空');
                 }
                 else{
                     var str = '<a href="#" class="keyword-button">'+
                                   '<span class="keyword-button-content">'+value+'</span>'+
-                                  '<i class="weui_icon_clear" onclick="removeButton(this)" dataTitle="标题" dataContent="内容"></i>'+
+                                  '<i class="weui_icon_clear" dataTitle="标题" dataContent="内容"></i>'+
                               '</a>';
                     if($(".keyword-button").get(0)){
-                        if($.inArray($(".keyword-button").find(".keyword-button-content").text(), arr) < 0){
+                        if($.inArray(value, arr) < 0){
                             $(".keyword-dashed-button").before(str);
                             $(this).closest(".keyword-div").find(".keyword-input").val("");
-                            keywordButtonHide()
+                            arr.push(value);
+                            keywordButtonHide();
                         }
                         else{
                             showMsg('标签名已经存在');
                         }
                     }
                     else{
+                        arr.push(value);
                         $(".keyword-dashed-button").before(str).removeClass("hide");
                         $(this).closest(".keyword-div").addClass("hide");
                         $(this).closest(".keyword-div").find(".keyword-input").val("");
@@ -108,6 +108,7 @@
             $(".keyword-div .weui_icon_clear").on("touchend",function(){
                 $(".keyword-dashed-button").removeClass("hide");
                 $(this).closest(".keyword-div").addClass("hide");
+                $(this).closest(".keyword-div").find(".keyword-input").val("");
             });
 
             $(".btnSure").on("touchend",function(){
@@ -119,18 +120,25 @@
             $(".btnCancle").on("touchend",function(){
                 $('#dialog1').hide();
                 $(".removeObj").removeClass("removeObj");
+            });
+
+
+            $(".button-label").delegate(".keyword-button .weui_icon_clear",'click',function(){
+                var objTitle   = $(this).attr("dataTitle");
+                var objContent = $(this).attr("dataContent");
+                var Confirm = {
+                    title:objTitle,
+                    content:objContent
+                };
+                arr.splice($(this).parent(".keyword-button").index(),1);
+                console.log(arr);
+                $(this).closest(".keyword-button").remove();
+                keywordButtonHide();
+                showConfirmDialog(Confirm);
+                $(this).closest(".keyword-button").addClass("removeObj");
+
             })
         });
-        function removeButton(obj){
-            var objTitle   = $(obj).attr("dataTitle");
-            var objContent = $(obj).attr("dataContent");
-            var Confirm = {
-                title:objTitle,
-                content:objContent
-            };
-            showConfirmDialog(Confirm);
-            $(obj).closest(".keyword-button").addClass("removeObj");
-        }
     </script>
 </body>
 </html>
