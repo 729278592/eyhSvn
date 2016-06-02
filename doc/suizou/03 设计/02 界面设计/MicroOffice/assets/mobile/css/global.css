@@ -2,7 +2,7 @@
 
 
 /*common style*/
-body,html{margin:0;padding:0;font-family: "微软雅黑";}
+body,html{margin:0;padding:0;    font-family: "Helvetica Neue",Helvetica,"PingFang SC","Hiragino Sans GB","Microsoft Yahei","WenQuanYi Micro Hei",sans-serif, sans-serif}
 p{margin: 0;padding: 0;}
 ul,li,img{margin:0;padding:0;list-style:none;border:none; vertical-align:middle;}
 a{color:#000;text-decoration:none;}
@@ -330,8 +330,8 @@ a.weui_btn.weui_btn_primary{font-size: 16px;}
 
 
 /*滑动侧边导航*/
-.bars{position: fixed;left: 10%;bottom: 15%;width: 36px;height: 36px;padding: 4px;border-radius: 36px;background: rgba(255,0,80,0.5);}
-.bars .fa{display: inline-block;width: 100%;height: 100%;background: rgba(0,0,0,0.5);color: #fff;border-radius: 100%;text-align: center;line-height: 32px;}
+.bars{position: fixed;left: 10%;bottom: 15%;width: 36px;height: 36px;padding: 3px;border-radius: 36px;background: rgba(0,0,0,0.3);}
+.bars .fa{display: inline-block;width: 100%;height: 100%;background: rgba(0,0,0,0.6);color: #fff;border-radius: 100%;text-align: center;line-height: 36px;}
 
 
 

@@ -44,6 +44,8 @@ $(function(){
                 '</div>';
     $(".page").append(html1);
 });
+
+
     var mobileLeft = function(){
         var fabarsClck = function(_this){
             _this.find(".bars").on("touchend",function(){
@@ -60,7 +62,7 @@ $(function(){
         };
 
         var maskHeadClick = function(_this){
-            _this.delegate(".leftMask","touchend",function(){
+            _this.delegate(".leftMask","click",function(){
                 $(this).addClass('slideOut');
                 $($(".leftMask")).on('webkitAnimationEnd', function (){
                     $(".leftMask").removeClass("slideOut");
@@ -74,7 +76,7 @@ $(function(){
         };
 
         var menuListClick = function(_this){
-            _this.find(".leftNav").on("touchend",function(e){
+            _this.find(".leftNav").on("click",function(e){
                 e.stopPropagation();
             });
         };

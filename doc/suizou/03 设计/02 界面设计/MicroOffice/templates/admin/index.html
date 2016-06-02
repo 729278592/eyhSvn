@@ -3,10 +3,11 @@
 <head lang="en">
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1"/>
-    <link rel="stylesheet" href="../../assets/admin/css/app.css"/>
-    <link rel="stylesheet" href="../../assets/admin/css/appCommon.css"/>
+    <link rel="stylesheet" href="../../assets/admin/css/asgo.css"/>
+    <link rel="stylesheet" href="../../assets/admin/css/asgocommon.css"/>
     <link rel="stylesheet" href="../../assets/admin/css/global.css"/>
     <link rel="stylesheet" href="../../assets/global/plugins/font/css/font-awesome.min.css"/>
+    <script src="../../assets/global/plugins/jquery/jquery-1.11.3.min.js"></script>
     <title>首页</title>
 </head>
 <body>
@@ -15,7 +16,7 @@
             <div class="main-nav">
                 <div class="logo-wrapper">
                     <div class="logo logo-left">
-                        <img src="../../assets/admin/images/logo.png" alt="" class="logoIcon"/>
+                        随走
                     </div>
                 </div>
                 <ul class="main-nav-list">
@@ -27,49 +28,42 @@
                         </a>
                     </li>
                     <li>
-                        <a href="application.html" class="clearfix" title="登陆">
+                        <a href="mobileExhibition.html" class="clearfix" title="雇主品牌">
                             <div class="main-nav-icon">
-                                <i class="fa fa-book"></i>
+                                <img src="../../assets/admin/images/index.png" alt=""/>
                             </div>
                         </a>
                     </li>
                     <li>
-                        <a href="#" class="clearfix">
+                        <a href="application.html" class="clearfix">
                             <div class="main-nav-icon">
-                                <i class="fa fa-home"></i>
+                                <img src="../../assets/admin/images/users.png" alt=""/>
                             </div>
                         </a>
                     </li>
                     <li>
-                        <a href="#" class="clearfix">
+                        <a href="positionManagement.html" class="clearfix">
                             <div class="main-nav-icon">
-                                <i class="fa fa-home"></i>
+                                <img src="../../assets/admin/images/positionM.png" alt=""/>
                             </div>
                         </a>
                     </li>
                     <li>
-                        <a href="#" class="clearfix">
+                        <a href="specialList.html" class="clearfix">
                             <div class="main-nav-icon">
-                                <i class="fa fa-home"></i>
+                                <img src="../../assets/admin/images/specilIcon.png" alt=""/>
                             </div>
                         </a>
                     </li>
                     <li>
-                        <a href="#" class="clearfix">
+                        <a href="jobDataStatistics.html" class="clearfix">
                             <div class="main-nav-icon">
-                                <i class="fa fa-home"></i>
-                            </div>
-                        </a>
-                    </li>
-                    <li>
-                        <a href="#" class="clearfix">
-                            <div class="main-nav-icon">
-                                <i class="fa fa-home"></i>
+                                <img src="../../assets/admin/images/staticIcon.png" alt=""/>
                             </div>
                         </a>
                     </li>
                     <li class="last">
-                        <a href="#" class="clearfix">
+                        <a href="companyInfor.html" class="clearfix">
                             <div class="main-nav-icon">
                                 <i class="fa fa-gear"></i>
                             </div>
@@ -79,6 +73,9 @@
             </div>
             <div class="main-nav-w158">
                 <ul class="main-nav-list">
+                    <div class="logoDiv">
+                        <img src="../../assets/admin/images/logo.png" alt="" class="logoIcon"/>
+                    </div>
                     <li class="active">
                         <a href="index.html" class="clearfix list">
                             <div class="main-nav-item">
@@ -87,7 +84,7 @@
                         </a>
                     </li>
                     <li>
-                        <a href="application.html" class="clearfix">
+                        <a href="mobileExhibition.html" class="clearfix">
                             <div class="main-nav-item">
                                 <span class="main-nav-item-name">雇主品牌</span>
                             </div>
@@ -101,42 +98,28 @@
                         </a>
                     </li>
                     <li>
-                        <a href="#" class="clearfix">
+                        <a href="positionManagement.html" class="clearfix">
                             <div class="main-nav-item">
                                 <span class="main-nav-item-name">招聘管理</span>
                             </div>
                         </a>
                     </li>
                     <li>
-                        <a href="#" class="clearfix">
+                        <a href="specialList.html" class="clearfix">
                             <div class="main-nav-item">
-                                <span class="main-nav-item-name">潜在候选人</span>
+                                <span class="main-nav-item-name">专题管理</span>
                             </div>
                         </a>
                     </li>
                     <li>
-                        <a href="#" class="clearfix">
+                        <a href="jobDataStatistics.html" class="clearfix">
                             <div class="main-nav-item">
-                                <span class="main-nav-item-name">微信招聘</span>
-                            </div>
-                        </a>
-                    </li>
-                    <li>
-                        <a href="#" class="clearfix">
-                            <div class="main-nav-item">
-                                <span class="main-nav-item-name">内推管理</span>
-                            </div>
-                        </a>
-                    </li>
-                    <li>
-                        <a href="#" class="clearfix">
-                            <div class="main-nav-item">
-                                <span class="main-nav-item-name">数据分析</span>
+                                <span class="main-nav-item-name">数据统计</span>
                             </div>
                         </a>
                     </li>
                     <li class="last">
-                        <a href="#" class="clearfix">
+                        <a href="companyInfor.html" class="clearfix">
                             <div class="main-nav-item">
                                 <span class="main-nav-item-name">账号设置</span>
                             </div>
@@ -149,10 +132,26 @@
             <div class="content-header">
                 <span class="content-title">雇主首页</span>
                 <div class="company-name right">
-                    <a href="#">
-                        <img src="../../assets/admin/images/companyLogo.jpg" alt=""/>
-                    </a>
-                    易优弧
+                    <span class="accountSettings">
+                        <a href="#">
+                            <img src="../../assets/admin/images/companyLogo.jpg" alt=""/>
+                        </a>
+                        易优弧
+                    </span>
+                    <ul class="account-selection hide">
+                        <li>
+                            <a href="companyInfor.html" class="companyInfor">
+                                <i class="fa fa-gear"></i>
+                                账号设置
+                            </a>
+                        </li>
+                        <li class="signOut">
+                            <a href="#">
+                                <i class="fa fa-power-off"></i>
+                                退出登录
+                            </a>
+                        </li>
+                    </ul>
                 </div>
             </div>
             <div class="content-wrapper">
@@ -171,7 +170,7 @@
                         <div class="card qr-code">
                             <div class="qx-qrcode">
                                 <img src="../../assets/admin/images/code.jpg" alt=""/>
-                                <p class="qx-qrcode-text">关注仟寻招聘助手</p>
+                                <p class="qx-qrcode-text">关注易优弧招聘助手</p>
                             </div>
                         </div>
                     </div>
@@ -182,21 +181,32 @@
                                 <div class="card-item data-box-content">
                                     <div class="data-item">
                                         <p class="data-item-title">在招职位数</p>
-                                        <span class="data-item-count">5</span>
+                                        <a class="data-item-count application" href="application.html">5</a>
                                     </div>
                                     <div class="data-item high-light">
-                                        <a class="high-light-dashed" href="">
+                                        <a class="high-light-dashed" href="postOffice.html">
 
                                         </a>
                                     </div>
                                 </div>
                                     <!--<img  alt="发布第一个职位吧" width="355" height="199" class="newbieguide-arrow"></div>-->
-                                <div class="card-item card-title">在招职位
-                                    <a ui-sref="admin.position.list" class="card-title-action">更多</a>
+                                <div class="card-item card-title bg">在招职位
+                                    <a href="postOffice.html" class="card-title-action postOffice">更多</a>
                                 </div>
                                 <div class="card-item card-content" id="home-pos-list">
                                     <div class="position-list">
-                                        <a ui-sref="admin.position.edit({id: position.id})">
+                                        <a href="postOffice.html" class="postOffice">
+                                            <i class="dot green"></i>
+                                            <p class="nala_db">
+                                                <span>ss</span>
+                                                <span>dd</span>
+                                                <span>dd</span>
+                                                <span>dd</span>发布
+                                            </p>
+                                        </a>
+                                    </div>
+                                    <div class="position-list">
+                                        <a href="postOffice.html" class="postOffice">
                                             <i class="dot green"></i>
                                             <p class="nala_db">
                                                 <span>ss</span>
@@ -216,21 +226,21 @@
                             <div class="card">
                                 <div class="card-item card-title">招聘管理</div>
                                 <div class="card-item data-box-content">
-                                    <div class="data-item">
+                                    <div class="data-item br1">
                                         <p class="data-item-title">新增投递量</p>
-                                        <span class="data-item-count">6</span>
+                                        <a class="data-item-count positionManagement" href="positionManagement.html">6</a>
                                     </div>
                                     <div class="data-item">
                                         <p class="data-item-title">未查阅投递量</p>
-                                        <span class="data-item-count">6</span>
+                                        <a class="data-item-count positionManagement" href="positionManagement.html">6</a>
                                     </div>
                                 </div>
-                                <div class="card-item card-title">新增简历
-                                    <a ui-sref="admin.application.list" class="card-title-action">更多</a>
+                                <div class="card-item card-title bg">新增简历
+                                    <a href="interviewerInformation.html" class="card-title-action interviewerInformation">更多</a>
                                 </div>
                                 <div class="card-item card-content" id="home-app-list">
                                     <div class="position-list" >
-                                        <a ui-sref="admin.application.detail({id: application.id})">
+                                        <a href="interviewerInformation.html" class="interviewerInformation">
                                             <i class="dot green"></i>
                                             <p class="nala_db">
                                                 <span>Java开发</span>
@@ -246,6 +256,29 @@
                     </div>
                 </div>
             </div>
+            <script>
+                $(function(){
+                    $(window).on("click",function(){
+                        $(".account-selection").addClass("hide");
+
+                    });
+                    $(".accountSettings").on("click",function(e){
+                        e.stopPropagation();
+                        if($(".account-selection").is(".hide")){
+                            $(".account-selection").removeClass("hide");
+                        }else{
+                            $(".account-selection").addClass("hide");
+                        }
+                    });
+
+
+
+                    $(".high-light-dashed,.postOffice,.positionManagement,.application,.interviewerInformation,.companyInfor").ajaxify({
+                        event: "click",
+                        target:'#admin-content-wrapper'
+                    });
+                })
+            </script>
             <!--<div class="newbieguide-overlay" ng-if="isNewbie" ng-click="turnoffNewbieGuide()"></div>-->
         </div>
         <div class="slide-bar">
@@ -259,7 +292,6 @@
             </div>
         </div>
     </div>
-    <script src="../../assets/global/plugins/jquery/jquery-1.11.3.min.js"></script>
     <script src="../../assets/admin/js/globals.js"></script>
     <script src="../../assets/global/plugins/ajaxify/jquery.history.js"></script>
     <script src="../../assets/global/plugins/ajaxify/jquery-scrollto.js"></script>

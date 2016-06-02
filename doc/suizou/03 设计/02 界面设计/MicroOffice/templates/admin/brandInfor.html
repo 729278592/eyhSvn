@@ -8,7 +8,7 @@
     <link rel="stylesheet" href="../../assets/admin/css/global.css"/>
     <link rel="stylesheet" href="../../assets/global/plugins/font/css/font-awesome.min.css"/>
     <script src="../../assets/global/plugins/jquery/jquery-1.11.3.min.js"></script>
-    <title>公司</title>
+    <title>雇主品牌</title>
 </head>
 <body>
     <div id="admin-wrapper">
@@ -27,7 +27,7 @@
                             </div>
                         </a>
                     </li>
-                    <li>
+                    <li class="active">
                         <a href="mobileExhibition.html" class="clearfix" title="雇主品牌">
                             <div class="main-nav-icon">
                                 <i class="fa fa-bars"></i>
@@ -62,7 +62,7 @@
                             </div>
                         </a>
                     </li>
-                    <li class="last active">
+                    <li class="last">
                         <a href="companyInfor.html" class="clearfix">
                             <div class="main-nav-icon">
                                 <i class="fa fa-gear"></i>
@@ -83,7 +83,7 @@
                             </div>
                         </a>
                     </li>
-                    <li>
+                    <li class="active">
                         <a href="mobileExhibition.html" class="clearfix">
                             <div class="main-nav-item">
                                 <span class="main-nav-item-name">雇主品牌</span>
@@ -118,7 +118,7 @@
                             </div>
                         </a>
                     </li>
-                    <li class="last active">
+                    <li class="last">
                         <a href="companyInfor.html" class="clearfix">
                             <div class="main-nav-item">
                                 <span class="main-nav-item-name">账号设置</span>
@@ -135,7 +135,7 @@
                 a:hover{text-decoration: none;}
             </style>
             <div class="content-header">
-                <span class="content-title">账号资料</span>
+                <span class="content-title">雇主品牌</span>
                 <div class="company-name right">
                     <a href="#">
                         <img src="../../assets/admin/images/companyLogo.jpg" alt=""/>
@@ -145,50 +145,110 @@
             </div>
             <div class="content-wrapper">
                 <div class="content content--side-main content--no-inner-nav-bar home">
-                    <img src="../../assets/admin/images/companyGet.jpg" alt="" class="w100"/>
-                    <div class="content-position mt40">
-                        <ul class="companyTitle clearfix">
-                            <li class="hover">
-                                <a href="companyInfor.html" class="companyInfor">公司信息</a>
-                            </li>
-                            <li class="hover">
-                                <a href="userManagementList.html" class="userManagementList">用户管理(仅管理员权限)</a>
-                            </li>
-                            <li class="active">
-                                <a href="accountManagement.html" class="accountManagement">账号资料</a>
-                            </li>
-                            <li class="hover">
-                                <a href="modifyPassword.html" class="modifyPassword">修改密码</a>
-                            </li>
-                        </ul>
+                    <div class="content-position">
+                        <img src="../../assets/admin/images/brand.jpg" alt="" class="w100"/>
                         <div class="divForm">
                             <p class="title">
-                                <span>账号资料</span>
+                                <span>雇主品牌</span>
                             </p>
                         </div>
-                        <form action="#" id="form_sample_1" class="form-horizontal">
+                        <div class="companyInfors">
+                            <div class="companyInfoTitles">
+                                <a>
+                                    公司信息
+                                </a>
+                            </div>
+                            <div class="companyInfoContents">
+                                <p>
+                                    <span class="type">
+                                        <span class="required">*</span> 公司名称
+                                    </span>
+                                    <span>易优弧科技有限公司</span>
+                                </p>
+
+                                <p>
+                                    <span class="type">
+                                        <span class="required">*</span> 公司ID
+                                    </span>
+                                    <span>eyohu</span>
+                                </p>
+
+                                <p>
+                                    <span class="type">
+                                        <span class="required">*</span> 公司简称
+                                    </span>
+                                    <span>易优弧</span>
+                                </p>
+
+                                <p>
+                                    <span class="type">
+                                        <span class="required">*</span> 所属行业
+                                    </span>
+                                    <span>互联网</span>
+                                </p>
+
+                                <p>
+                                    <span class="type">
+                                        <span class="required">*</span> 公司规模
+                                    </span>
+                                    <span>10~50人</span>
+                                </p>
+                                <p>
+                                    <span class="type">
+                                        <span class="required">*</span> 公司地址
+                                    </span>
+                                    <span>重庆市九龙坡区袁家岗</span>
+                                </p>
+                                <p>
+                                    <span class="type">
+                                        <span class="required">*</span> 公司官网
+                                    </span>
+                                    <span>www.eyohu.com</span>
+                                </p>
+                                <p>
+                                    <span class="type">
+                                        <span class="required">*</span> 公司logo
+                                    </span>
+                                    <span></span>
+                                </p>
+                                <p>
+                                    <span class="type">
+                                        <span class="required">*</span> 公司二维码
+                                    </span>
+                                    <span></span>
+                                </p>
+                                <p class="pModify">
+                                    <a href="companyInfor.html" class="btnModify companyInfor">修改</a><br/>
+                                </p>
+
+                            </div>
+                            <p class="upFllow">
+                                <a>
+                                    <i class="fa fa-angle-double-up tops"></i><br/>
+                                    <span>收起</span>
+                                </a>
+                            </p>
+                        </div>
+                        <form action="#" id="form_sample_1" class="form-horizontal" >
+                            <div class="companyInfoTitles" style="margin-bottom: 50px;">
+                                <a>
+                                    品牌优势
+                                </a>
+                            </div>
                             <div class="form-group">
-                                <label class="control-label col-md-3 col-xs-3 col-sm-3">
-                                    <span class="required"> * </span>　用户名
+                                <label class="control-label col-md-3 col-xs-3 col-sm-3 pt0">
+                                    <span class="required"> * </span>　公司简介
                                 </label>
                                 <div class="col-md-6 col-xs-6 col-sm-6">
-                                    <input name="email" type="text" class="form-control" placeholder="请输入用户名"/>
+                                    <textarea style="resize: none" name="" rows="6" class="form-control" placeholder=""></textarea>
                                 </div>
                             </div>
                             <div class="form-group">
-                                <label class="control-label col-md-3 col-xs-3 col-sm-3">
-                                    <span class="required"> * </span>　公司名称
+                                <label class="control-label col-md-3 col-xs-3 col-sm-3 pt0">
+                                    <span class="required"> * </span>　福利待遇
                                 </label>
                                 <div class="col-md-6 col-xs-6 col-sm-6">
-                                    <input name="email" type="text" class="form-control" placeholder="请输入公司名称"/>
-                                </div>
-                            </div>
-                            <div class="form-group">
-                                <label class="control-label col-md-3 col-xs-3 col-sm-3">
-                                    <span class="required"> * </span>　手机号
-                                </label>
-                                <div class="col-md-6 col-xs-6 col-sm-6">
-                                    <input name="email" type="text" class="form-control" placeholder="请输入手机号"/>
+                                    <textarea style="resize: none" name="" rows="6" class="form-control" placeholder=""></textarea>
                                 </div>
                             </div>
                             <div class="form-group">
@@ -203,18 +263,19 @@
             </div>
             <script>
                 $(function(){
-                    $(".companyTitle li.hover a").hover(function(){
-                        $(this).animate({
-                            padding:"10px",
-                            marginTop:"-10px"
-                        },200)
-                    },function(){
-                        $(this).animate({
-                            padding:"5px 10px",
-                            marginTop:"0"
-                        },200)
+                    $(".upFllow a").on("click",function(){
+                        if($(this).find("i").is(".fa-angle-double-up")){
+                            $(this).closest(".companyInfors").find(".companyInfoContents").slideUp();
+                            $(this).find("i").removeClass("fa-angle-double-up").addClass("fa-angle-double-down");
+                            $(this).find("span").text("打开");
+                        }else if($(this).find("i").is(".fa-angle-double-down")){
+                            $(this).closest(".companyInfors").find(".companyInfoContents").slideDown();
+                            $(this).find("i").removeClass("fa-angle-double-down").addClass("fa-angle-double-up");
+                            $(this).find("span").text("收起");
+                        }
+
                     });
-                    $(".companyTitle li a").ajaxify({
+                    $(".companyInfor").ajaxify({
                         event: "click",
                         target:'#admin-content-wrapper'
                     });
