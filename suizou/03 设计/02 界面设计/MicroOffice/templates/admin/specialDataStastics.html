@@ -8,7 +8,7 @@
     <link rel="stylesheet" href="../../assets/admin/css/global.css"/>
     <link rel="stylesheet" href="../../assets/global/plugins/font/css/font-awesome.min.css"/>
     <script src="../../assets/global/plugins/jquery/jquery-1.11.3.min.js"></script>
-    <title>公司</title>
+    <title>专题数据统计</title>
 </head>
 <body>
     <div id="admin-wrapper">
@@ -55,14 +55,14 @@
                             </div>
                         </a>
                     </li>
-                    <li>
+                    <li class="active">
                         <a href="jobDataStatistics.html" class="clearfix">
                             <div class="main-nav-icon">
                                 <i class="fa fa-arrows"></i>
                             </div>
                         </a>
                     </li>
-                    <li class="last active">
+                    <li class="last">
                         <a href="companyInfor.html" class="clearfix">
                             <div class="main-nav-icon">
                                 <i class="fa fa-gear"></i>
@@ -111,14 +111,14 @@
                             </div>
                         </a>
                     </li>
-                    <li>
+                    <li class="active">
                         <a href="jobDataStatistics.html" class="clearfix">
                             <div class="main-nav-item">
                                 <span class="main-nav-item-name">数据统计</span>
                             </div>
                         </a>
                     </li>
-                    <li class="last active">
+                    <li class="last">
                         <a href="companyInfor.html" class="clearfix">
                             <div class="main-nav-item">
                                 <span class="main-nav-item-name">账号设置</span>
@@ -129,13 +129,8 @@
             </div>
         </div>
         <div id="admin-content-wrapper">
-            <link rel="stylesheet" href="../../assets/global/plugins/bootstrap-3.3.5/css/bootstrap.min.css"/>
-            <style>
-                body{font-family: "微软雅黑",Arial, Helvetica, sans-serif;overflow-x: hidden;-webkit-font-smoothing: antialiased;-moz-font-smoothing: antialiased;;}
-                a:hover{text-decoration: none;}
-            </style>
             <div class="content-header">
-                <span class="content-title">账号资料</span>
+                <span class="content-title">专题统计</span>
                 <div class="company-name right">
                     <a href="#">
                         <img src="../../assets/admin/images/companyLogo.jpg" alt=""/>
@@ -144,63 +139,117 @@
                 </div>
             </div>
             <div class="content-wrapper">
-                <div class="content content--side-main content--no-inner-nav-bar home">
-                    <img src="../../assets/admin/images/companyGet.jpg" alt="" class="w100"/>
-                    <div class="content-position mt40">
-                        <ul class="companyTitle clearfix">
+                <div class="content content--side-main content--no-inner-nav-bar home pt120">
+                    <div class="content-position pd0">
+                        <ul class="companyTitle clearfix top30">
                             <li class="hover">
-                                <a href="companyInfor.html" class="companyInfor">公司信息</a>
-                            </li>
-                            <li class="hover">
-                                <a href="userManagementList.html" class="userManagementList">用户管理(仅管理员权限)</a>
+                                <a href="jobDataStatistics.html" class="dataHtml">职位统计</a>
                             </li>
                             <li class="active">
-                                <a href="accountManagement.html" class="accountManagement">账号资料</a>
-                            </li>
-                            <li class="hover">
-                                <a href="modifyPassword.html" class="modifyPassword">修改密码</a>
+                                <a href="specialDataStastics.html" class="dataHtml">专题统计</a>
                             </li>
                         </ul>
-                        <div class="divForm">
-                            <p class="title">
-                                <span>账号资料</span>
-                            </p>
+                        <div class="dataStatisticsHead">
+                            <form action="#">
+                                <span class="title">筛选职位</span>
+                                <span class="dataOperation">
+                                    <input type="text" class="dataIput" placeholder="请输入您要搜索的职位"/>
+                                    <button class="btnSubmit" type="submit">
+                                        <i class="fa fa-search"></i>
+                                    </button>
+                                </span>
+                                <span class="timeSerch right">
+                                    <span class="spanInput">
+                                        <input id="start" class="Wdate" type="text" placeholder="2015-02-05" onfocus="WdatePicker({minDate:'%y-%M-{%d}',maxDate:'#F{$dp.$D(\'end\')}',readOnly:true})" readonly="">
+                                        <i class="fa fa-calendar"></i>
+                                    </span>
+                                    <span class="spanInput">
+                                        <input id="end" class="Wdate" type="text" placeholder="2015-02-06" onfocus="WdatePicker({minDate:'#F{$dp.$D(\'start\')||\'%y-%M-{%d+1}\'}',readOnly:true})" readonly="">　
+                                        <i class="fa fa-calendar"></i>
+                                    </span>
+                                </span>
+                            </form>
                         </div>
-                        <form action="#" id="form_sample_1" class="form-horizontal">
-                            <div class="form-group">
-                                <label class="control-label col-md-3 col-xs-3 col-sm-3">
-                                    <span class="required"> * </span>　用户名
-                                </label>
-                                <div class="col-md-6 col-xs-6 col-sm-6">
-                                    <input name="email" type="text" class="form-control" placeholder="请输入用户名"/>
-                                </div>
-                            </div>
-                            <div class="form-group">
-                                <label class="control-label col-md-3 col-xs-3 col-sm-3">
-                                    <span class="required"> * </span>　公司名称
-                                </label>
-                                <div class="col-md-6 col-xs-6 col-sm-6">
-                                    <input name="email" type="text" class="form-control" placeholder="请输入公司名称"/>
-                                </div>
-                            </div>
-                            <div class="form-group">
-                                <label class="control-label col-md-3 col-xs-3 col-sm-3">
-                                    <span class="required"> * </span>　手机号
-                                </label>
-                                <div class="col-md-6 col-xs-6 col-sm-6">
-                                    <input name="email" type="text" class="form-control" placeholder="请输入手机号"/>
-                                </div>
-                            </div>
-                            <div class="form-group">
-                                <div class="col-sm-6 col-xs-6 col-md-6 col-sm-offset-3 col-xs-offset-3 col-md-offset-3">
-                                    <button class="btn btnSure">保存</button>
-                                    <a href="#" class="btn btnReturn">取消</a>
-                                </div>
-                            </div>
-                        </form>
+                        <div class="dataContent">
+                            <div id="container" style="min-width: 310px; height: 400px; margin: 0 auto"></div>
+                        </div>
                     </div>
                 </div>
             </div>
+            <script src="../../assets/global/plugins/My97DatePicker/WdatePicker.js"></script>
+            <script src="../../assets/global/plugins/highCharts/js/highcharts.js"></script>
+            <script src="../../assets/global/plugins/highCharts/js/exporting.js"></script>
+            <script type="text/javascript">
+                $(function(){
+                    $('#container').highcharts({
+                        chart: {
+                            type: 'area'
+                        },
+                        title: {
+                            text: 'US and USSR nuclear stockpiles'
+                        },
+                        subtitle: {
+                            text: 'Source: <a href="http://thebulletin.metapress.com/content/c4120650912x74k7/fulltext.pdf">' +
+                                    'thebulletin.metapress.com</a>'
+                        },
+                        xAxis: {
+                            allowDecimals: false,
+                            labels: {
+                                formatter: function () {
+                                    return this.value; // clean, unformatted number for year
+                                }
+                            }
+                        },
+                        yAxis: {
+                            title: {
+                                text: 'Nuclear weapon states'
+                            },
+                            labels: {
+                                formatter: function () {
+                                    return this.value / 1000 + 'k';
+                                }
+                            }
+                        },
+                        tooltip: {
+                            pointFormat: '{series.name} produced <b>{point.y:,.0f}</b><br/>warheads in {point.x}'
+                        },
+                        plotOptions: {
+                            area: {
+                                pointStart: 2016,
+                                marker: {
+                                    enabled: false,
+                                    symbol: 'circle',
+                                    radius: 2,
+                                    states: {
+                                        hover: {
+                                            enabled: true
+                                        }
+                                    }
+                                }
+                            }
+                        },
+                        series: [{
+                            name: 'USA',
+                            data: [null, null, null, null, null, 6, 11, 32, 110, 235, 369, 640,
+                                1005, 1436, 2063, 3057, 4618, 6444, 9822, 15468, 20434, 24126,
+                                27387, 29459, 31056, 31982, 32040, 31233, 29224, 27342, 26662,
+                                26956, 27912, 28999, 28965, 27826, 25579, 25722, 24826, 24605,
+                                24304, 23464, 23708, 24099, 24357, 24237, 24401, 24344, 23586,
+                                22380, 21004, 17287, 14747, 13076, 12555, 12144, 11009, 10950,
+                                10871, 10824, 10577, 10527, 10475, 10421, 10358, 10295, 10104]
+                        }, {
+                            name: 'USSR/Russia',
+                            data: [100, null, null, null, null, null, null, null, null, null,
+                                1000, 25, 50, 120, 150, 200, 426, 660, 869, 1060, 1605, 2471, 3322,
+                                4238, 5221, 6129, 7089, 8339, 9399, 10538, 11643, 13092, 14478,
+                                15915, 17385, 19055, 21205, 23044, 25393, 27935, 30062, 32049,
+                                33952, 35804, 37431, 39197, 45000, 43000, 41000, 39000, 37000,
+                                35000, 33000, 31000, 29000, 27000, 25000, 24000, 23000, 22000,
+                                21000, 20000, 19000, 18000, 18000, 17000, 16000]
+                        }]
+                    });
+                })
+            </script>
             <script>
                 $(function(){
                     $(".companyTitle li.hover a").hover(function(){
@@ -213,10 +262,6 @@
                             padding:"5px 10px",
                             marginTop:"0"
                         },200)
-                    });
-                    $(".companyTitle li a").ajaxify({
-                        event: "click",
-                        target:'#admin-content-wrapper'
                     });
                 })
             </script>
@@ -237,7 +282,7 @@
     <script src="../../assets/global/plugins/ajaxify/jquery-scrollto.js"></script>
     <script src="../../assets/global/plugins/ajaxify/jquery.ajaxify.js"></script>
     <script>
-        $(".nav a").ajaxify({
+        $(".nav a,.high-light-dashed,.dataHtml").ajaxify({
             event: "click",
             target:'#admin-content-wrapper'
         });

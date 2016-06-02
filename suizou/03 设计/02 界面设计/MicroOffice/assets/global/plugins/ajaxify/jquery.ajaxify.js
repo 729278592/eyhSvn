@@ -248,7 +248,6 @@
                     $content.html(contentHtml).css('opacity',100).show(); /* you could fade in here if you'd like */
                 }
 
-
                 // Update the title
                 document.title = $data.find('.document-title:first').text();
                 try {
@@ -266,7 +265,9 @@
                     }
 
                     try {
+
                         scriptNode.appendChild(document.createTextNode(scriptText));
+
                     } catch ( Exception ) {
                         //IE8�Լ����£�����ʹ��text����
                         scriptNode.text = scriptText;

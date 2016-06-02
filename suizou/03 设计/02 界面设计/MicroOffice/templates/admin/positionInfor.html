@@ -3,10 +3,12 @@
 <head lang="en">
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1"/>
-    <link rel="stylesheet" href="../../assets/admin/css/app.css"/>
-    <link rel="stylesheet" href="../../assets/admin/css/appCommon.css"/>
+    <link rel="stylesheet" href="../../assets/global/plugins/bootstrap-3.3.5/css/bootstrap.min.css"/>
+    <link rel="stylesheet" href="../../assets/admin/css/asgo.css"/>
+    <link rel="stylesheet" href="../../assets/admin/css/asgocommon.css"/>
     <link rel="stylesheet" href="../../assets/admin/css/global.css"/>
     <link rel="stylesheet" href="../../assets/global/plugins/font/css/font-awesome.min.css"/>
+    <script src="../../assets/global/plugins/jquery/jquery-1.11.3.min.js"></script>
     <title>职位管理</title>
 </head>
 <body>
@@ -15,7 +17,7 @@
             <div class="main-nav">
                 <div class="logo-wrapper">
                     <div class="logo logo-left">
-                        <img src="../../assets/admin/images/logo.png" alt="" class="logoIcon"/>
+                        随走
                     </div>
                 </div>
                 <ul class="main-nav-list">
@@ -79,6 +81,9 @@
             </div>
             <div class="main-nav-w158">
                 <ul class="main-nav-list">
+                    <div class="logoDiv">
+                        <img src="../../assets/admin/images/logo.png" alt="" class="logoIcon"/>
+                    </div>
                     <li class="active">
                         <a href="index.html" class="clearfix list">
                             <div class="main-nav-item">
@@ -169,11 +174,11 @@
                             <p>霞妹妹 发布时间2016-04-05 9 : 0　<span style="color: #08be06;">招聘中!</span></p>
                         </div>
                         <div class="right">
-                            <a href="#">
+                            <a href="postOffice.html" class="modifyPosition">
                                 <i class="fa fa-pencil"></i><br/>
                                 编辑
                             </a>
-                            <a href="#">
+                            <a href="#" class="returnPrev">
                                 <i class="fa fa-mail-reply"></i><br/>
                                 返回
                             </a>
@@ -227,13 +232,12 @@
             </div>
         </div>
     </div>
-    <script src="../../assets/global/plugins/jquery/jquery-1.11.3.min.js"></script>
     <script src="../../assets/admin/js/globals.js"></script>
     <script src="../../assets/global/plugins/ajaxify/jquery.history.js"></script>
     <script src="../../assets/global/plugins/ajaxify/jquery-scrollto.js"></script>
     <script src="../../assets/global/plugins/ajaxify/jquery.ajaxify.js"></script>
     <script>
-        $(".nav a").ajaxify({
+        $(".nav a,.modifyPosition").ajaxify({
             event: "click",
             target:'#admin-content-wrapper'
         });
