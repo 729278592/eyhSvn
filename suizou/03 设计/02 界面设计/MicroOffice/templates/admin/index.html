@@ -260,18 +260,7 @@
                 $(function(){
                     $(window).on("click",function(){
                         $(".account-selection").addClass("hide");
-
                     });
-                    $(".accountSettings").on("click",function(e){
-                        e.stopPropagation();
-                        if($(".account-selection").is(".hide")){
-                            $(".account-selection").removeClass("hide");
-                        }else{
-                            $(".account-selection").addClass("hide");
-                        }
-                    });
-
-
 
                     $(".high-light-dashed,.postOffice,.positionManagement,.application,.interviewerInformation,.companyInfor").ajaxify({
                         event: "click",
