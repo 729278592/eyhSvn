@@ -10,7 +10,7 @@
     <link rel="stylesheet" href="../../assets/mobile/css/global.css"/>
 </head>
 <body>
-    <div class="container js_container">
+    <div class="container js_container absolute" id="errDailog">
         <div class="page">
             <div class="head">
                 <i class="fa fa-angle-left"></i>
@@ -27,7 +27,7 @@
                                 <label class="weui_label"><img src="../../assets/mobile/images/userIcon.png" alt=""/>姓名</label>
                             </div>
                             <div class="weui_cell_bd weui_cell_primary">
-                                <input class="weui_input" type="text" placeholder="陈小洁" name="name"/>
+                                <input class="weui_input" type="text" placeholder="陈小洁" name="name" id="personName"/>
                             </div>
                         </div>
                         <div class="weui_cell">
@@ -44,7 +44,7 @@
                         <!--</div>-->
                     </div>
                     <div class="weui_btn_area">
-                        <input type="submit" class="weui_btn weui_btn_primary" id="saveBtn" value="确定">
+                        <input type="submit" class="weui_btn weui_btn_primary" id="saveBtn" value="完成">
                     </div>
                 </form>
             </div>
@@ -56,12 +56,20 @@
     <script>
         $("#saveBtn").click(function(){
             var reg = /^0?(13[0-9]|15[012356789]|18[0236789]|14[57])[0-9]{8}$/;
-            if($("#mobile").val() == '') {
+            if($("#personName").val() == '') {
+                showMsg('姓名不能为空');
+                return false;
+            }
+            else if($("#mobile").val() == '') {
                 showMsg('手机号码不能为空');
                 return false;
             }
             else if($("#mobile").get(0)&&!reg.test($("#mobile").val())){
                 showMsg('手机号码格式不正确');
+                return false;
+            }
+            else{
+                window.location.href = "desireCompelet.html";
             }
             return true;
         })
