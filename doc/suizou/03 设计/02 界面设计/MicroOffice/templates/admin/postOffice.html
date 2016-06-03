@@ -30,35 +30,35 @@
                     <li>
                         <a href="mobileExhibition.html" class="clearfix" title="雇主品牌">
                             <div class="main-nav-icon">
-                                <i class="fa fa-bars"></i>
+                                <img src="../../assets/admin/images/index.png" alt=""/>
                             </div>
                         </a>
                     </li>
-                    <li  class="active">
+                    <li class="active">
                         <a href="application.html" class="clearfix">
                             <div class="main-nav-icon">
-                                <i class="fa fa-th"></i>
+                                <img src="../../assets/admin/images/users.png" alt=""/>
                             </div>
                         </a>
                     </li>
                     <li>
                         <a href="positionManagement.html" class="clearfix">
                             <div class="main-nav-icon">
-                                <i class="fa fa-hand-paper-o"></i>
+                                <img src="../../assets/admin/images/positionM.png" alt=""/>
                             </div>
                         </a>
                     </li>
                     <li>
                         <a href="specialList.html" class="clearfix">
                             <div class="main-nav-icon">
-                                <i class="fa fa-file"></i>
+                                <img src="../../assets/admin/images/specilIcon.png" alt=""/>
                             </div>
                         </a>
                     </li>
                     <li>
                         <a href="jobDataStatistics.html" class="clearfix">
                             <div class="main-nav-icon">
-                                <i class="fa fa-arrows"></i>
+                                <img src="../../assets/admin/images/staticIcon.png" alt=""/>
                             </div>
                         </a>
                     </li>
@@ -137,10 +137,26 @@
             <div class="content-header">
                 <span class="content-title">发布职位</span>
                 <div class="company-name right">
-                    <a href="#">
-                        <img src="../../assets/admin/images/companyLogo.jpg" alt=""/>
-                    </a>
-                    易优弧
+                    <span class="accountSettings">
+                        <a href="#">
+                            <img src="../../assets/admin/images/companyLogo.jpg" alt=""/>
+                        </a>
+                        易优弧
+                    </span>
+                    <ul class="account-selection hide">
+                        <li>
+                            <a href="companyInfor.html" class="companyInfor">
+                                <i class="fa fa-gear"></i>
+                                账号设置
+                            </a>
+                        </li>
+                        <li class="signOut">
+                            <a href="#">
+                                <i class="fa fa-power-off"></i>
+                                退出登录
+                            </a>
+                        </li>
+                    </ul>
                 </div>
             </div>
             <div class="content-wrapper">
@@ -178,7 +194,7 @@
                                     <span class="required">  </span>　
                                 </label>
                                 <div class="col-md-6 col-xs-6 col-sm-6">
-                                    <div class="squaredCheckBox top" style="width: 100%;">
+                                    <div class="squaredCheckBox top rewardMoney" style="width: 100%;">
                                         <input type="checkbox" id="position-batch-selection" name="check">
                                         <label for="position-batch-selection" class="selection">设置悬赏金额
                                             <a href="#">
@@ -191,9 +207,18 @@
                                     </div>
                                 </div>
                             </div>
-
-
-
+                            <div class="form-group hide">
+                                <label class="control-label col-md-3 col-xs-3 col-sm-3">
+                                    <span class="required"> * </span>　悬赏金额
+                                </label>
+                                <div class="col-md-6 col-xs-6 col-sm-6">
+                                    <select class="form-control" name="">
+                                        <option value="500">500</option>
+                                        <option value="500">500</option>
+                                    </select>
+                                    <i class="fa fa-caret-down"></i>
+                                </div>
+                            </div>
                             <!--<div class="form-group">-->
                                 <!--<label class="control-label col-md-3 col-xs-3 col-sm-3">-->
                                     <!--<span class="required"> * </span>　选择行业-->
@@ -426,16 +451,16 @@
                                 </div>
                             </div>
                             <div class="form-group g-form-radio-group">
-                                <label class="control-label col-md-3 col-xs-3 col-sm-3">
+                                <label class="control-label col-md-3 col-xs-3 col-sm-3 noBeflre">
                                     <span class="required"> * </span>　工作性质
                                 </label>
                                 <div class="col-md-6 col-xs-6 col-sm-6" style="position: relative;top: 8px;">
                                     <div class="position-radio style">
-                                        <input type="radio" id="job" value="" class="" name="357" checked="">
+                                        <input type="radio" id="job" value="" class="" name="357" checked="checked">
                                         <label for="job" class="">全职</label>
                                     </div>　
                                     <div class="position-radio style">
-                                        <input type="radio" id="job1" value="" class="" name="357" checked="">
+                                        <input type="radio" id="job1" value="" class="" name="357">
                                         <label for="job1" class="">兼职</label>
                                     </div>
                                 </div>
@@ -610,6 +635,7 @@
                                                     <span  class="panel-location ">长春</span></span><span class="panel-location-wrapper "  >
                                                     <span  class="panel-location ">常德</span></span><span class="panel-location-wrapper "  >
                                                     <span  class="panel-location ">昌都</span></span><span class="panel-location-wrapper "  >
+                                                    <span  class="panel-location ">重庆</span></span><span class="panel-location-wrapper "  >
                                                     <span  class="panel-location ">长葛</span></span><span class="panel-location-wrapper "  >
                                                     <span  class="panel-location ">昌吉</span></span><span class="panel-location-wrapper "  >
                                                     <span  class="panel-location ">昌江</span></span><span class="panel-location-wrapper "  >
@@ -693,6 +719,7 @@
                                                     <span class="panel-location ">海口</span></span><span class="panel-location-wrapper ">
                                                     <span class="panel-location ">海南洲</span></span><span class="panel-location-wrapper ">
                                                     <span class="panel-location ">海宁</span></span><span class="panel-location-wrapper ">
+                                                    <span class="panel-location ">海外</span></span><span class="panel-location-wrapper ">
                                                     <span class="panel-location ">海西</span></span><span class="panel-location-wrapper ">
                                                     <span class="panel-location ">海阳</span></span><span class="panel-location-wrapper ">
                                                     <span class="panel-location ">哈密</span></span><span class="panel-location-wrapper ">
@@ -1121,7 +1148,7 @@
                                     <span class="required"> * </span>　职位描述
                                 </label>
                                 <div class="col-md-6 col-xs-6 col-sm-6">
-                                    <textarea style="resize: none" name="" rows="6" class="form-control" placeholder="说说你所掌握的技能"></textarea>
+                                    <textarea style="resize: none" name="" rows="6" class="form-control" placeholder="说说职位需求"></textarea>
                                 </div>
                             </div>
                             <div class="form-group">
@@ -1193,7 +1220,10 @@
                                 $(this).addClass("panel-location--selected");
                                 $(this).siblings(".panel-location-wrapper").removeClass("panel-location--selected");
                                 otherText.removeClass("panel-location--selected");
-                                acity.empty().append('<span class="location-selected all">全国</span>');
+                                var allCity = document.createElement("span");
+                                allCity.className = "location-selected all";
+                                allCity.appendChild(document.createTextNode("全国"));
+                                acity.empty().append(allCity);
                             }else{
                                 if(acity.find(".location-selected").size()>4){
                                     alert("最多选5个城市");
@@ -1221,6 +1251,19 @@
                                     }
                                 }
                             }
+                        }
+                    });
+
+                    /*悬赏金额*/
+                    $(".rewardMoney").on("click",function(){
+                        if($(this).find("input").prop("checked")){
+                            $(this).find("input").removeAttr("checked");
+                            $(this).closest(".form-group").next(".form-group").addClass("hide");
+                            return false;
+                        }else if(!($(this).find("input").prop("checked"))){
+                            $(this).find("input").prop({checked:"checked"});
+                            $(this).closest(".form-group").next(".form-group").removeClass("hide");
+                            return false;
                         }
                     });
                 })

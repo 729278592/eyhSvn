@@ -170,10 +170,11 @@ a:link{text-decoration: none;}
 .quickInfor li .fa{color: #4c8bda;}
 .quickInfor li .return{display: inline-block;padding: 2px 15px;background: #578adc;border-radius: 15px;color: #fff;font-size: 14px;}
 .quickInfor li .return .fa{color: #fff;}
-
+.dq-application-resume-preview_title{font-size: 16px;}
 
 
 /*自写样式*/
+.g-form-radio-group label.noBeflre:before{border: none;background: transparent;}
 .qx-qrcode img{width: 165px;height: 165px}
 #admin-wrapper,html,body{height: 100%;}
 #admin-wrapper{position: relative;overflow-x: auto;min-width: 1100px;}
@@ -253,12 +254,14 @@ a:link{text-decoration: none;}
 .slider-bar-l:hover p,.slider-bar-w:hover p{display: inline-block;cursor: pointer;}
 
 
+.location-selected:not(:last-of-type):after{content: " ";}
+
 
 /*head*/
 .head{background: #2c2c2c;position: fixed;z-index: 10;left: 0;right: 0;}
 /*.head-main,.content-main,.foot-main{width: 1024px;margin: 0 auto;position: relative;}*/
 .head-main{height: 60px;line-height: 60px;}
-.head-main .logo{width: 135px;height: 60px;background: url(../images/loginLogo.png) no-repeat 0 13px;z-index: 10;}
+.head-main .logo{width: 135px;height: 60px;background: url(../images/loginLogo.png) no-repeat 0 13px;z-index: 10;margin-left: 40px;}
 .head-main .menu{position: relative;}
 .head-main .menu li{width: 160px;height: 60px;float: left;line-height: 60px;text-align: center;}
 .head-main .menu li>a,.head-main .menu li span.infor{display: inline-block;width: 120px;height: 60px;line-height: 60px;text-align: center;z-index: 100001;font-size: 14px;}
@@ -292,7 +295,7 @@ body,html{height: 100%;}
 .wrapper{width: 100%;height: 100%;min-height: 800px;}
 .logBodyBg{width: 100%;height: 100%;position: fixed;z-index: 1;left: 0;top: 0;overflow: hidden;min-width: 1024px;}
 .logBodyBg img{width: 100%; height: 100%;}
-.logWrap,.regWrap{background-color: #fff;width: 442px;position: absolute;z-index: 2;left: 50%;top: 57%;margin: 0 0 0 -221px;border-radius: 8px;}
+.logWrap,.regWrap{background-color: #fff;width: 442px;position: absolute;z-index: 2;left: 50%;top: 50%;margin: 0 0 0 -221px;border-radius: 8px;}
 .reWrap{margin-top: -180px;height: 460px;}
 .loginPeople{position: absolute;top: -130px;left: 150px;}
 .logBox,.regBox{padding-top:1px;margin: 20px 40px;}
@@ -349,7 +352,7 @@ img.w100{width: 100%;}
 .form-group .fa-caret-down{position: absolute;right: 25px;top: 10px;display: none\0;}
 .upLoad,.btnOpen,.btnRecharge{font-size: 12px;border-radius: 8px;background: #69a7f9;color: #fff;width: 70px;height: 30px;text-align: center;display: inline-block;line-height: 30px;}
 .btnOpen{background: #d5f7ef;color: #4fc283;border: 1px solid #08be06;}
-.btnRecharge{background: #fbe2da;color: #ec724b;border: 1px solid #eb6e45;}
+.btnRecharge{background: #fbe2da;color: #ec724b;border: 1px solid #eb6e45;margin-left: 10px;}
 .btnOpen:hover,.btnOpen:focus{color: #4fc283;}
 .btnRecharge:hover,.btnRecharge:focus{color: #ec724b;}
 .content-position.pd15{padding: 15px;}
@@ -529,7 +532,7 @@ a.keyword-button:hover,.keyword-button:active,.keyword-button:focus{color: #fff;
 .entryStep li .step{color: #666;width: 62px;height: 68px;background: url("../images/state1.png") no-repeat;position: relative;top: -30px;font-size: 14px;line-height: 68px;text-align: center;display: inline-block;}
 .entryStep li.pass .step{}
 .entryStep li.notPass .step{}
-.entryStep li .operation{position: absolute;left: 100px;top: 50px;display: inline-block;}
+.entryStep li .operation{position: absolute;left: 50%;top: 50px;display: inline-block;margin-left: -87px;}
 .entryStep li .operation.l147{left: 147px;}
 .entryStep li .operation a{display: inline-block;background: red;color: #fff;border-radius: 10px;font-size: 12px;width: 80px;height: 30px;line-height: 30px;}
 .entryStep li .operation a.btnPass{background: #ed6d45;}
@@ -559,25 +562,29 @@ a.keyword-button:hover,.keyword-button:active,.keyword-button:focus{color: #fff;
 .dailogContent .opreateBtn button{width: 80px;height: 30px;line-height: 30px;color: #fff;border-radius: 8px;font-size: 14px;}
 .dailogContent .opreateBtn .btnSure{background: #ed6d45;margin-right: 10px;}
 .dailogContent .opreateBtn .btnCancel{background: #c9c9c9;}
-.dailogContent p{width: 100%;margin-bottom: 10px;text-align: left;color: #333;}
+.dailogContent p{width: 100%;margin-bottom: 10px;text-align: left;position: relative;content: #666;}
 .entryStep li .dailogContent p .type{display: inline-block;width: 80px;color: #999;}
 .dailogContent p textarea{vertical-align: top;border: 1px solid #efefef;}
-
+.rechargeMoney{text-align: center;}
+.dailogContent p select{width: 130px;border: 1px solid #dbdbdb;padding: 5px 0 5px 10px;}
+.dailogContent p .fa-caret-down{position: absolute;right: 20px;top: 9px;}
+.rechargeMoney .dailogContent p .type{color: #999;}
+.dq-application-resume-preview .dq-application-resume-preview_info_title{font-size: 16px;}
 
 /*dataStatistics*/
 .dataStatisticsHead{padding: 10px;border-bottom: 1px solid #dbdbdb;color: #666;font-size: 14px;}
 .dataStatisticsHead .title{}
 .dataStatisticsHead .dataOperation{position: relative;left: 15px;}
 .dataStatisticsHead .dataOperation .dataIput{border: 1px solid #dbdbdb;width: 350px;border-radius: 20px;height: 30px;line-height: 30px;padding-left: 10px;}
-.dataStatisticsHead .dataOperation .btnSubmit{position: absolute;right: 15px;top: 0;background: transparent;}
-.dataStatisticsHead .dataOperation .btnSubmit .fa{font-size: 16px;color: #333;color: #41b3f3;}
+.dataStatisticsHead .dataOperation .btnSubmit{position: absolute;right: 5px;top: 0;background: transparent;}
+.dataStatisticsHead .dataOperation .btnSubmit .fa{font-size: 16px;color: #41b3f3;}
 .dataStatisticsHead .timeSerch{}
 .dataStatisticsHead .timeSerch .spanInput{position: relative;display: inline-block;margin-left: 15px;}
 .dataStatisticsHead .timeSerch .Wdate{border: 1px solid #dbdbdb;position: relative;z-index: 10;background: transparent;padding-left: 10px;}
 .dataStatisticsHead .timeSerch .spanInput .fa{position: absolute;left: 145px;top: 8px;color: #69a7f9;}
 .card-item.card-title.bg{background: #2ed6b1;color: #fff;}
 .card-item.card-title.bg a{color: #fff;}
-
+.data-item{padding-left: 7%;}
 
 /*brandInfor*/
 .companyInfors{width: 80%;margin: 50px auto;}
@@ -621,4 +628,6 @@ a.keyword-button:hover,.keyword-button:active,.keyword-button:focus{color: #fff;
     .form-group .btnReturn{left: -160px;}
     .btn.btnSure{left: 160px;}
 }
-
+@media screen and (max-height: 750px) {
+    .regWrap{top:61%;}
+}

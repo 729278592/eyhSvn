@@ -12,7 +12,7 @@ $(function(){
                        '</p>'+
                    '</div>'+
                '</div>';
-    $(".container").append(html);
+    $("#errDailog").append(html);
 });
 
 function showMsg(message) {

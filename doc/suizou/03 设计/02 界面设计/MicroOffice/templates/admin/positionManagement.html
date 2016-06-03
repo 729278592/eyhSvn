@@ -20,7 +20,6 @@
                     </div>
                 </div>
                 <ul class="main-nav-list">
-
                     <li>
                         <a href="index.html" class="clearfix" title="首页">
                             <div class="main-nav-icon">
@@ -31,35 +30,35 @@
                     <li>
                         <a href="mobileExhibition.html" class="clearfix" title="雇主品牌">
                             <div class="main-nav-icon">
-                                <i class="fa fa-bars"></i>
+                                <img src="../../assets/admin/images/index.png" alt=""/>
                             </div>
                         </a>
                     </li>
                     <li>
                         <a href="application.html" class="clearfix">
                             <div class="main-nav-icon">
-                                <i class="fa fa-th"></i>
+                                <img src="../../assets/admin/images/users.png" alt=""/>
                             </div>
                         </a>
                     </li>
                     <li class="active">
                         <a href="positionManagement.html" class="clearfix">
                             <div class="main-nav-icon">
-                                <i class="fa fa-hand-paper-o"></i>
+                                <img src="../../assets/admin/images/positionM.png" alt=""/>
                             </div>
                         </a>
                     </li>
                     <li>
                         <a href="specialList.html" class="clearfix">
                             <div class="main-nav-icon">
-                                <i class="fa fa-file"></i>
+                                <img src="../../assets/admin/images/specilIcon.png" alt=""/>
                             </div>
                         </a>
                     </li>
                     <li>
                         <a href="jobDataStatistics.html" class="clearfix">
                             <div class="main-nav-icon">
-                                <i class="fa fa-arrows"></i>
+                                <img src="../../assets/admin/images/staticIcon.png" alt=""/>
                             </div>
                         </a>
                     </li>
@@ -91,14 +90,14 @@
                             </div>
                         </a>
                     </li>
-                    <li>
+                    <li class="active">
                         <a href="application.html" class="clearfix">
                             <div class="main-nav-item">
                                 <span class="main-nav-item-name">职位管理</span>
                             </div>
                         </a>
                     </li>
-                    <li class="active">
+                    <li>
                         <a href="positionManagement.html" class="clearfix">
                             <div class="main-nav-item">
                                 <span class="main-nav-item-name">招聘管理</span>
@@ -133,23 +132,38 @@
             <div class="content-header">
                 <span class="content-title">招聘管理</span>
                 <div class="company-name right">
-                    <a href="#">
-                        <img src="../../assets/admin/images/companyLogo.jpg" alt=""/>
-                    </a>
-                    易优弧
+                    <span class="accountSettings">
+                        <a href="#">
+                            <img src="../../assets/admin/images/companyLogo.jpg" alt=""/>
+                        </a>
+                        易优弧
+                    </span>
+                    <ul class="account-selection hide">
+                        <li>
+                            <a href="companyInfor.html" class="companyInfor">
+                                <i class="fa fa-gear"></i>
+                                账号设置
+                            </a>
+                        </li>
+                        <li class="signOut">
+                            <a href="#">
+                                <i class="fa fa-power-off"></i>
+                                退出登录
+                            </a>
+                        </li>
+                    </ul>
                 </div>
             </div>
             <div class="content-wrapper">
                 <div class="content content--side-main">
-
                     <div class="application content-side">
                         <div class="card">
                             <div class="card-item card-title">
-                                筛选候选人
+                                筛选
                             </div>
                             <div class="search card-item">
                                 <div class="search-box-wrapper">
-                                    <input type="text" class="search-box" name="application-search-keywords"/>
+                                    <input type="text" class="search-box" name="application-search-keywords" placeholder="请输入职位名称"/>
                                     <i class="fa fa-search"></i>
                                 </div>
                             </div>
@@ -163,32 +177,31 @@
                                     <input type="radio" id="pos-stat-0"  value="0"  name="357">
                                     <label for="pos-stat-0" >未查阅</label>
                                 </div>
-                                <div class="position-radio " >
-                                    <input type="radio" id="pos-stat-2"  value="2"  name="357">
-                                    <label for="pos-stat-2" class="">已查阅</label>
-                                </div>
-                            </div>
-                            <div class="card-item g-form-radio-group">
-                                <p class="card-sub-title">简历标记</p>
                                 <div class="position-radio">
-                                    <input type="radio" id="pos-recruit-type-" value="" name="363" checked>
-                                    <label for="pos-recruit-type-" class="">全部</label>
-                                </div>
-                                <div class="position-radio">
-                                    <input type="radio" id="pos-recruit-type-0" value="0" name="363">
+                                    <input type="radio" id="pos-recruit-type-0" value="0" name="357">
                                     <label for="pos-recruit-type-0" class="">重点关注</label>
                                 </div>
-                                <div class="position-radio">
-                                    <input type="radio" id="pos-recruit-type-1" value="1" name="363">
-                                    <label for="pos-recruit-type-1" class="">通过</label>
+                                <div class="position-radio " >
+                                    <input type="radio" id="pos-stat-2"  value="2"  name="357">
+                                    <label for="pos-stat-2" class="">评审通过</label>
                                 </div>
                                 <div class="position-radio">
-                                    <input type="radio" id="pos-recruit-type-2" value="1" name="363">
-                                    <label for="pos-recruit-type-2" class="">未通过</label>
+                                    <input type="radio" id="pos-recruit-type-3" value="0" name="357">
+                                    <label for="pos-recruit-type-3" class="">面试通过</label>
+                                </div>
+
+                                <div class="position-radio">
+                                    <input type="radio" id="pos-recruit-type-1" value="1" name="357">
+                                    <label for="pos-recruit-type-1" class="">已入职</label>
+                                </div>
+                                <div class="position-radio">
+                                    <input type="radio" id="pos-recruit-type-2" value="1" name="357">
+                                    <label for="pos-recruit-type-2" class="">不合格</label>
                                 </div>
                             </div>
+
                             <div class="card-item g-form-radio-group">
-                                <p class="card-sub-title">只为所属部门</p>
+                                <p class="card-sub-title">所属部门</p>
                                 <div class="position-radio">
                                     <input type="radio" id="pos-work-type-" value=""  name="369" checked>
                                     <label for="pos-work-type-" class="">研发部</label>
@@ -404,22 +417,12 @@
                                         <p class="application-job-apply">
                                             职位申请
                                         </p>
-                                        <a href="" class="truncate-application active application-time">
+                                        <a href="positionInfor.html" class="positionInfor truncate-application active application-time">
                                             高级商务
                                         </a>
                                         <!-- inactive -->
                                         <div class="application-progress-bar dq-application-status">
                                             <ul class="dq-application-status-bar">
-                                                <li class="dq-application-status-bar-item">
-                                                    <span class="dq-application-icon-status dq-application-icon-status-suc">
-                                                        <i class="dq-application-icon-status-mark dq-application-icon-status-circle-wh">
-                                                            <i class="fa fa-check"></i>
-                                                        </i>
-                                                        <span class="dq-application-status-text dq-application-icon-status-suc-text">
-                                                            浏览简历
-                                                        </span>
-                                                    </span>
-                                                </li>
                                                 <li class="dq-application-status-bar-item">
                                                     <span class="dq-application-icon-status dq-application-icon-status-suc">
                                                         <i class="dq-application-icon-status-mark dq-application-icon-status-circle-wh">
@@ -560,16 +563,6 @@
                                                         <i class="dq-application-icon-status-mark dq-application-icon-status-circle-wh">
                                                             <i class="fa fa-check"></i>
                                                         </i>
-                                                        <span class="dq-application-status-text dq-application-icon-status-suc-text">
-                                                            浏览简历
-                                                        </span>
-                                                    </span>
-                                                </li>
-                                                <li class="dq-application-status-bar-item">
-                                                    <span class="dq-application-icon-status dq-application-icon-status-suc">
-                                                        <i class="dq-application-icon-status-mark dq-application-icon-status-circle-wh">
-                                                            <i class="fa fa-check"></i>
-                                                        </i>
 
                                                         <span class="dq-application-status-text dq-application-icon-status-suc-text">
                                                             简历评审
@@ -666,7 +659,10 @@
                             $(this).addClass("show");
                         }
                     });
-
+                    $(".lookResume,.dataStatistics,.positionInfor").ajaxify({
+                        event: "click",
+                        target: '#admin-content-wrapper'
+                    });
                     /*全选*/
                     $(".squaredCheckBox").on("click",function(){
                         if($(this).find("input").prop("checked")){
@@ -698,7 +694,7 @@
     <script src="../../assets/global/plugins/ajaxify/jquery-scrollto.js"></script>
     <script src="../../assets/global/plugins/ajaxify/jquery.ajaxify.js"></script>
     <script>
-        $(".nav a,.lookResume,.dataStatistics").ajaxify({
+        $(".nav a").ajaxify({
             event: "click",
             target: '#admin-content-wrapper'
         });
