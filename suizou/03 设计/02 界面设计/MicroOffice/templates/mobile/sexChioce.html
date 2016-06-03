@@ -49,15 +49,7 @@
     <script src="../../assets/global/plugins/My97DatePicker/WdatePicker.js"></script>
     <script>
         $("#saveBtn").click(function(){
-            var reg = /^0?(13[0-9]|15[012356789]|18[0236789]|14[57])[0-9]{8}$/;
-            if($("#mobile").val() == '') {
-                showMsg('手机号码不能为空');
-                return false;
-            }
-            else if($("#mobile").get(0)&&!reg.test($("#mobile").val())){
-                showMsg('手机号码格式不正确');
-                console.log($("#mobile").html())
-            }
+            window.location.href = "fillEducationList.html";
             return true;
         })
     </script>

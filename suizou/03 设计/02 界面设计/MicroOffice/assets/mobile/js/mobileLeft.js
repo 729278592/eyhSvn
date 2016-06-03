@@ -6,45 +6,47 @@
 $(function(){
     var html =  '<div class="mask hide leftMask">'+
                     '<div class="leftNav hide">'+
+                        '<div class="person-head center clearfix">'+
+                            '<img src="../../assets/mobile/images/portrait.png" alt="" class="portrait">'+
+                        '</div>'+
                         '<ul class="menu-list">'+
                             '<li>'+
-                                '<a href="">'+
-                                    '<i class="fa fa-home"></i>'+
-                                    '<span>首页</span>'+
+                                '<a href="resumeCenter.html">'+
+//                                    '<i class="fa fa-home"></i>'+
+                                    '<span>简历中心</span>'+
                                     '<i class="fa fa-angle-right"></i>'+
                                 '</a>'+
                             '</li>'+
                             '<li>'+
-                                '<a href="">'+
-                                    '<i class="fa fa-bars"></i>'+
-                                    '<span>品牌服务</span>'+
+                                '<a href="jobRecord.html">'+
+//                                    '<i class="fa fa-bars"></i>'+
+                                    '<span>求职记录</span>'+
                                     '<i class="fa fa-angle-right"></i>'+
                                 '</a>'+
                             '</li>'+
                             '<li>'+
-                                '<a href="">'+
-                                    '<i class="fa fa-th-large"></i>'+
-                                    '<span>我的社区</span>'+
+                                '<a href="desirePosition.html">'+
+//                                    '<i class="fa fa-th-large"></i>'+
+                                    '<span>感兴趣职位</span>'+
                                     '<i class="fa fa-angle-right"></i>'+
                                 '</a>'+
                             '</li>'+
                             '<li>'+
-                                '<a href="">'+
-                                    '<i class="fa fa-user"></i>'+
-                                    '<span>个人中心</span>'+
+                                '<a href="forwardingRecord.html">'+
+//                                    '<i class="fa fa-user"></i>'+
+                                    '<span>转发记录</span>'+
                                     '<i class="fa fa-angle-right"></i>'+
                                 '</a>'+
                             '</li>'+
                         '</ul>'+
                     '</div>'+
                 '</div>';
-    $(".page").append(html);
+    $(".container").append(html);
     var html1 = '<div class="bars">'+
                     '<i class="fa fa-bars"></i>'+
                 '</div>';
-    $(".page").append(html1);
+    $(".container").append(html1);
 });
-
 
     var mobileLeft = function(){
         var fabarsClck = function(_this){
@@ -70,7 +72,6 @@ $(function(){
                 }).on('animationend', function (){
                     $(".leftMask").removeClass("slideOut");
                     _this.find(".leftMask,.leftNav").addClass("hide");
-
                 });
             })
         };
@@ -103,6 +104,7 @@ $(function(){
                         $(".leftMask").removeClass("slideOut");
                         _this.find(".leftMask,.leftNav").addClass("hide");
                     });
+//                    $(".bd").css({"overflow-y":"auto",height:"auto","paddingBottom":"50px"});
                 }
             });
         };

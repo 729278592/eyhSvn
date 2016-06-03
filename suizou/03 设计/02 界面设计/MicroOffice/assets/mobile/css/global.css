@@ -134,16 +134,23 @@ img.resume{width: 100%;}
 .weui_cell .weui_label img{width: 25%;margin-right: 8%;}
 .weui_cell .weui_label,.weui_cells .weui_cell{font-size: 14px;}
 .desire-head{background: #fff;text-align: center;padding: 10% 0;box-shadow: 0 1px 1px rgba(0,0,0,0.1);}
+.desire-head.w90{width: 90%;padding:  5%;}
 .desire-head>img{width: 25%;}
-.desire-title{font-size: 20px;color: #e84b2f;}
+.desire-head p .fillResume,.desire-head p .goOnLook{display: inline-block;padding: 5px 15px;border-radius: 10px;font-size: 14px;color: #fff;margin: 10px 0 0 0;}
+.desire-head p .fillResume{background: #e84b2f;}
+.desire-head p .goOnLook{background: #aeacad;}
+.desire-title{font-size: 16px;color: #e84b2f;}
+.desire-title.fs16{font-size: 16px;}
 .desire-con{font-size: 16px;color: #67a5f9;}
+.desire-con.fs14{font-size: 14px;}
 .desire-content{text-align: center;}
-.desire-Ctitle{padding: 5px 20px;border-radius: 20px;font-size: 18px;color: #fff;background: #2e7fd4;display: inline-block;margin-top: 5%;}
+.desire-Ctitle{padding: 5px 20px;border-radius: 20px;font-size: 16px;color: #fff;background: #2e7fd4;display: inline-block;margin-top: 5%;}
 .divP{width: 94%;margin: 5% auto 10%;text-align: left;}
-.divP p{font-size: 16px;color: #999;margin-bottom: 3px;}
+.divP p{font-size: 14px;color: #999;margin-bottom: 3px;}
 .divP p span{display: inline-block;text-align: left;width: 90%;margin-left: 2%;}
+.divP.img23 p>img{vertical-align: top;width: 23px;}
 .divP p>img{vertical-align: top;}
-.code{}
+.code.mb15{margin-bottom: 15px;}
 .code{}
 .code>img{width: 30%;}
 .code p{font-size: 16px;color: #999;margin-top: 2%;}
@@ -158,6 +165,7 @@ img.resume{width: 100%;}
 .personIfor .phone{margin-bottom: 0;}
 .person-head .modiflyIcon{width:5%;float: right;position: absolute;bottom: 15%;right: 5%;}
 .weui_cells.mt0{margin-top: 0;}
+.leftNav .person-head.center{margin-top: 20px;}
 .person-head.center{text-align: center;}
 .person-head.center .portrait{float: none;}
 .positionInfor p{font-size: 14px;margin-bottom: 2%;color: #666;}
@@ -210,7 +218,7 @@ a.weui_cell.c666{color: #999;}
 .personIforP.auto{text-align: center;}
 .personIforP .btnAddwe{font-size: 16px;padding: 3px 5%;border: 1px dotted #67a5f9;background: transparent;color:#67a5f9;display: inline-block;}
 
-.personIforP .btn-modify{padding: 5px 20px;border-radius: 4px;background: #06be04;color: #fff;font-family: "微软雅黑";position: absolute;top: 15px;right: 10px;}
+.personIforP .btn-modify{padding: 5px 20px;border-radius: 4px;background: #06be04;color: #fff;font-family: "微软雅黑";position: absolute;top: 5px;right: 10px;display: inline-block;font-size: 14px;}
 
 a.weui_btn.weui_btn_primary{font-size: 16px;}
 
@@ -294,6 +302,7 @@ a.weui_btn.weui_btn_primary{font-size: 16px;}
 .keyword-div .weui_icon_clear{position: relative;display: inline-block;width: 14px;height: 14px;border-radius: 14px;top: -2px;}
 .keyword-div.have .fa-check-circle{position: absolute;right: 30px;top: 9px;display: inline-block;font-size: 16px;}
 #errDailog{position: relative;}
+#errDailog.absolute{position: absolute;}
 .container>#errMsg{background: transparent;}
 #errDailog .weui_mask_transparent,#errDailog .weui_mask{position: absolute;left: 0;right: 0;top: 0;bottom: 0;background: transparent;}
 #errMsg{position: absolute;top: 0;left: 0;right: 0;bottom: 0;}
@@ -309,6 +318,7 @@ a.weui_btn.weui_btn_primary{font-size: 16px;}
 .weui_progress_inner_bar{border-radius: 10px;background: #4c8bda;}
 .weui_progress_opr{text-align: right;}
 .progress{padding-bottom: 10px;border-bottom: 1px solid #dbdbdb;padding-top: 10px;}
+.progress>a{display: inline-block;width: 100%;height: 100%;}
 .progress .resumeTitle{font-size: 14px;color:#4c8bda;}
 .progress .time{font-size: 14px;color: #ababab;}
 .resumeCenter.fff{background: #fff;}
@@ -379,10 +389,10 @@ a.weui_btn.weui_btn_primary{font-size: 16px;}
 
 
 
-.leftNav{width: 80%;background: #258bcf;height: 100%;}
+.leftNav{width: 80%;background: #fff;height: 100%;}
 .menu-list{width: 100%;}
-.menu-list li{border-bottom: 1px solid #3c9edf;text-align: left;padding: 10px 0 10px 5%;}
-.menu-list li a{color: #fff;font-size: 14px;display:inline-block;width: 100%;height: 100%;position: relative;}
+.menu-list li{border-bottom: 1px solid #dbdbdb;text-align: left;padding: 10px 0 10px 5%;}
+.menu-list li a{color: #666;font-size: 14px;display:inline-block;width: 100%;height: 100%;position: relative;}
 .menu-list li a .fa-angle-right{position: absolute;right: 5%;top: 3px;}
 .menu-list li a span{}
 

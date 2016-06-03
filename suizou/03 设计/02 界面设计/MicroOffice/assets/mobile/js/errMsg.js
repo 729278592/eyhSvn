@@ -23,5 +23,5 @@ function showMsg(message) {
         $(".weui_toast").removeClass("weui_toastshow");
         $('#errMsg').hide();
         $(".errSpan").empty();
-    }, 5000);
+    }, 1000);
 }
