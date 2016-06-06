@@ -434,7 +434,7 @@ div.infor-table.w100 .personal-infor p .text {
 .company-img{width: 100%;}
 .company p{margin: 10px 0;font-size: 14px;color: #666;line-height: 23px;text-indent: 28px;}
 .wealth{width: 100%;height: 215px;background: url("../images/wealth.jpg") no-repeat;background-size: 100% 100%;overflow: hidden;text-align: center;}
-.w-details{width: 84%;margin: 60px auto 20px;font-size: 14px;color: #fff;}
+.w-details{width: 84%;margin: 40px auto 20px;font-size: 14px;color: #fff;line-height: 20px;}
 .btn-step{width: 180px;height: 40px;line-height: 40px;background: #fb7f53;color: #fff;display: inline-block;border-radius: 2px;}
 .btn-step.hide{display: none;}
 
