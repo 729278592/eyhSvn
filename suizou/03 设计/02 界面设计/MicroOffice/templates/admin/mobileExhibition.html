@@ -271,6 +271,16 @@
                         event: "click",
                         target:'#admin-content-wrapper'
                     });
+
+                    /*账号操作*/
+                    $(".accountSettings").on("click",function(e){
+                        e.stopPropagation();
+                        if($(".account-selection").is(".hide")){
+                            $(".account-selection").removeClass("hide");
+                        }else{
+                            $(".account-selection").addClass("hide");
+                        }
+                    });
                 })
             </script>
         </div>

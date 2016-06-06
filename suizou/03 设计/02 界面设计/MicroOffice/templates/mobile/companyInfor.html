@@ -7,6 +7,7 @@
     <link rel="stylesheet" href="../../assets/global/plugins/font/css/font-awesome.min.css"/>
     <link rel="stylesheet" href="../../assets/mobile/css/weui.css"/>
     <link rel="stylesheet" href="../../assets/mobile/css/example.css"/>
+    <link rel="stylesheet" href="../../assets/global/plugins/swiper/dist/css/swiper.min.css"/>
     <link rel="stylesheet" href="../../assets/mobile/css/global.css"/>
 </head>
 <body>
@@ -49,11 +50,27 @@
                         全球领先的综合通信解决方案提供商。公司通过为全球160多个国家和地区的电信运营商和企业网客户提供创新技术与产品
                         解决方案，让全世用户共享语音、数据多媒体、无线宽带等全方位沟通。公司成立于1986年时中国最大的通信设备上市公司。
                     </p>
-                    <a href="javascript:;" class="weui_btn weui_btn_mini weui_btn_default">更多+</a>
+                    <!--<a href="javascript:;" class="weui_btn weui_btn_mini weui_btn_default">更多+</a>-->
                 </div>
                 <div class="prosuct">
                     <div class="prosuctTitle">产品展示</div>
-                    <img src="../../assets/mobile/images/production.png" alt="" class="w100"/>
+                    <div class="swiper-container swiper-container-horizontal" id="swiper-container1">
+                        <div class="swiper-wrapper" style="transition-duration: 0ms; ">
+                            <div class="swiper-slide">
+                                <img src="../../assets/mobile/images/production0.png" alt="" class="w100"/>
+                            </div>
+                            <div class="swiper-slide">
+                                <img src="../../assets/mobile/images/production1.png" alt="" class="w100"/>
+                            </div>
+                            <div class="swiper-slide">
+                                <img src="../../assets/mobile/images/production2.png" alt="" class="w100"/>
+                            </div>
+                        </div>
+                        <div class="swiper-pagination"></div>
+                        <!--<div class="swiper-button-next"></div>-->
+                        <!--<div class="swiper-button-prev"></div>-->
+                    </div>
+
                     <p class="prosuctContent">
                         全球领先的综合通信解决方案提供商。公司通过为全球160多个国家和地区的电信运营商和企业网客户提供创新技术与产品
                         解决方案，让全世用户共享语音、数据多媒体、无线宽带等全方位沟通。公司成立于1986年时中国最大的通信设备上市公司。
@@ -61,17 +78,58 @@
                 </div>
                 <div class="companyImgList">
                     <div class="companyImgListTitle">公司图片</div>
-                    <img src="../../assets/mobile/images/companyInforImg2.png" alt="" class="w100"/>
+                    <div class="swiper-container swiper-container-horizontal" id="swiper-container2">
+                        <div class="swiper-wrapper" style="transition-duration: 0ms; ">
+                            <div class="swiper-slide">
+                                <img src="../../assets/mobile/images/companyInforImg2-0.png" alt="" class="w100"/>
+                            </div>
+                            <div class="swiper-slide">
+                                <img src="../../assets/mobile/images/companyInforImg2-1.png" alt="" class="w100"/>
+                            </div>
+                            <div class="swiper-slide">
+                                <img src="../../assets/mobile/images/companyInforImg2-2.png" alt="" class="w100"/>
+                            </div>
+                        </div>
+                        <div class="swiper-pagination"></div>
+                        <!--<div class="swiper-button-next"></div>-->
+                        <!--<div class="swiper-button-prev"></div>-->
+                    </div>
                     <img src="../../assets/mobile/images/codeIcon.jpg" alt="" class="codeIcon"/>
                     <p>关注企业公众号，获取更多企业咨询</p>
                 </div>
                 <div class="weui_btn_area">
-                    <a href="#" class="weui_btn weui_btn_primary">职位列表</a>
+                    <a href="positionList.html" class="weui_btn weui_btn_primary">职位列表</a>
                 </div>
             </div>
         </div>
     </div>
     <script src="../../assets/global/plugins/jquery/jquery-1.11.3.min.js"></script>
     <script src="../../assets/mobile/js/global.js"></script>
+    <script src="../../assets/global/plugins/swiper/dist/js/swiper.min.js"></script>
+    <script>
+        swiper = new Swiper('#swiper-container1', {
+//        prevButton:'.swiper-button-prev',
+//        nextButton:'.swiper-button-next',
+            slidesPerView: 1,
+            pagination:'.swiper-pagination',
+            paginationClickable: true,
+            spaceBetween: 0,
+            loop:true,
+            autoplay: 5000,
+            autoplayDisableOnInteraction: false
+        });
+
+        swiper = new Swiper('#swiper-container2', {
+//        prevButton:'.swiper-button-prev',
+//        nextButton:'.swiper-button-next',
+            slidesPerView: 1,
+            pagination:'.swiper-pagination',
+            paginationClickable: true,
+            spaceBetween: 0,
+            loop:true,
+            autoplay: 5000,
+            autoplayDisableOnInteraction: false
+        });
+    </script>
 </body>
 </html>

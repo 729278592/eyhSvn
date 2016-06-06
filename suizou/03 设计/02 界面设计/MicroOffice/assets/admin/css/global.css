@@ -252,16 +252,18 @@ a:link{text-decoration: none;}
 .slider-bar-l .fa,.slider-bar-w .fa{font-size: 20px;}
 .slider-bar-l p,.slider-bar-w p{display: none;font-size: 14px;}
 .slider-bar-l:hover p,.slider-bar-w:hover p{display: inline-block;cursor: pointer;}
-
-
+.hoveran{color: #82c0f5;}
+.annotation{color: #82c0f5;display: none;border: 1px solid #dbdbdb;padding: 10px;}
+.hoveran:hover .annotation{display: inline-block;}
+.annotation span{font-size: 14px;color: #666;font-weight: 100;}
 .location-selected:not(:last-of-type):after{content: " ";}
 
 
 /*head*/
-.head{background: #2c2c2c;position: fixed;z-index: 10;left: 0;right: 0;}
+.head{width: 100%;position: relative;z-index: 100;}
 /*.head-main,.content-main,.foot-main{width: 1024px;margin: 0 auto;position: relative;}*/
 .head-main{height: 60px;line-height: 60px;}
-.head-main .logo{width: 135px;height: 60px;background: url(../images/loginLogo.png) no-repeat 0 13px;z-index: 10;margin-left: 40px;}
+.head-main .logo a{display:inline-block;width: 135px;height: 60px;background: url(../images/loginLogo.png) no-repeat 0 13px;z-index: 10;margin-left: 40px;}
 .head-main .menu{position: relative;}
 .head-main .menu li{width: 160px;height: 60px;float: left;line-height: 60px;text-align: center;}
 .head-main .menu li>a,.head-main .menu li span.infor{display: inline-block;width: 120px;height: 60px;line-height: 60px;text-align: center;z-index: 100001;font-size: 14px;}
@@ -295,7 +297,7 @@ body,html{height: 100%;}
 .wrapper{width: 100%;height: 100%;min-height: 800px;}
 .logBodyBg{width: 100%;height: 100%;position: fixed;z-index: 1;left: 0;top: 0;overflow: hidden;min-width: 1024px;}
 .logBodyBg img{width: 100%; height: 100%;}
-.logWrap,.regWrap{background-color: #fff;width: 442px;position: absolute;z-index: 2;left: 50%;top: 50%;margin: 0 0 0 -221px;border-radius: 8px;}
+.logWrap,.regWrap{background-color: #fff;width: 442px;position: absolute;z-index: 2;left: 50%;top: 55%;margin: 0 0 0 -221px;border-radius: 8px;}
 .reWrap{margin-top: -180px;height: 460px;}
 .loginPeople{position: absolute;top: -130px;left: 150px;}
 .logBox,.regBox{padding-top:1px;margin: 20px 40px;}
@@ -451,7 +453,8 @@ img.w100{width: 100%;}
 .button-label .keyword-dashed-button,.button-label .keyword-div,.button-label .keyword-button{float: left;}
 .button-label .moreTag{text-align: center;font-size: 14px;color: #666;padding:0 0 10px 0;}
 .button-label .moreTag .required{color: #fda341;position: relative;top: 3px;left: -5px;}
-a.keyword-button{padding: 0;color: #fff;border-radius: 4px;background: #8DBBFB;height: 34px;line-height: 34px;text-align: center;display: inline-block;width: 80px; position: relative;margin-bottom: 10px;}
+
+a.keyword-button{padding: 0;color: #fff;border-radius: 4px;background: #8DBBFB;height: 34px;line-height: 34px;text-align: center;display: inline-block;width: 90px; position: relative;margin-bottom: 10px;}
 a.keyword-button .keyword-button-content{font-size: 14px;display: inline-block;width: 75%;text-overflow:ellipsis; overflow:hidden; white-space:nowrap;position: relative;left: -8px;}
 a.keyword-button .fa-times-circle-o{font-size: 18px;cursor: pointer;position: absolute;top: 8px;right: 5px;}
 a.keyword-button .fa-times-circle-o:before{color: #4b8ada;!important;}
@@ -463,7 +466,8 @@ a.keyword-button:hover,.keyword-button:active,.keyword-button:focus{color: #fff;
 .keyword-div{padding-right: 5px;border: 1px dashed #DBDCDE;cursor: pointer;border-radius: 4px;height: 34px;color: #ABB4C3;display: inline-block;background: #fff;}
 .keyword-div.hide,.keyword-dashed-button.hide{display: none;}
 .keyword-div .keyword-input{outline: 0;border: 0;padding-left: 5px;height: 100%;box-sizing: border-box;font-family: "微软雅黑";color: #666;}
-.keyword-div .fa-check-circle{color: #4c8bda;}
+.keyword-div .fa-check-circle{color: #4c8bda;font-size: 20px;}
+.keyword-div .fa-times-circle-o,.keyword-div .fa-check-circle{font-size: 20px;position: relative;top: 2px;}
 .squaredCheckBox.top label:before{top: 11px;}
 .squaredCheckBox.top input[type=checkbox]:checked + label:after{top: 5px;}
 .squaredCheckBox.top a{color: #4c8bda;position: relative;}
@@ -546,10 +550,31 @@ a.keyword-button:hover,.keyword-button:active,.keyword-button:focus{color: #fff;
 .entryStep li.notPass .type{color: #f61464;}
 .entryStep li.pass .type{color: #ed6d45;}
 .Wdate{border: 1px solid #efefef;}
-.resumeTitle{position: absolute;top: -40px;height: 40px;line-height: 40px;padding: 0 15px;border-radius: 10px 10px 0 0;background: #4879c7;color: #fff;font-size: 18px;}
+.peopleName{position: absolute;top: -40px;}
+.resumeTitle{height: 40px;line-height: 40px;padding: 0 15px;border-radius: 10px 10px 0 0;background: #4879c7;color: #fff;font-size: 18px;display: inline-block;}
+.tlInfor{display: inline-block;margin-left: 10px;position: relative;top: 5px;}
+.tlInfor span{color: #4879c7;}
 .resumeTitle .time{font-size: 12px;}
 .inforAddress{border: 1px solid #efefef;padding: 5px 0 5px 10px;}
 .staticImg {width: 100px;}
+.dq-application-resume-preview_title{font-weight: bold;}
+.dq-application-resume-preview .dq-application-resume-preview_basic_field{font-size: 14px;}
+.resumeBq{}
+.resumeBq li{float: left;margin: 10px 10px 0 0;padding: 5px 30px;background: #9f9f9f;color: #fff;border-radius: 20px;text-align: center;font-size: 14px;}
+.notSpecial{font-size: 20px;color: #999;text-align: center;padding: 50px 0;}
+.basic-info .basic-img{float: left;padding: 50px 0 0 38px;text-align: center;}
+.basic-info .basic-img img{float: none;margin: 0;}
+.card.company-logo .company-info{width: 180px;}
+.moneyzp{width: 94%;margin: 0 3%;}
+.moneyzp span{color: #f61464;}
+.moneyzp span.color1{color: #06be04;}
+.moneyzp a{color: #4879c7;}
+.inpotLook{font-size: 14px;color: #666;}
+.inpotLook .fa-star{color: #ed6d45;}
+.inpotLook .fa-star-o{color: #666;}
+.dq-application-icon-status .fa-remove{color: #fff;font-size: 12px;display: inline-block;width: 100%;height: 100%;text-align: center;position: relative;top: -2px;}
+.common-list-item .item-actions .item-action.hide{display: none;}'
+
 
 
 
@@ -585,6 +610,11 @@ a.keyword-button:hover,.keyword-button:active,.keyword-button:focus{color: #fff;
 .card-item.card-title.bg{background: #2ed6b1;color: #fff;}
 .card-item.card-title.bg a{color: #fff;}
 .data-item{padding-left: 7%;}
+.numList{padding: 10px 42px;}
+.numList li{float: left;margin-right: 50px;}
+
+
+
 
 /*brandInfor*/
 .companyInfors{width: 80%;margin: 50px auto;}

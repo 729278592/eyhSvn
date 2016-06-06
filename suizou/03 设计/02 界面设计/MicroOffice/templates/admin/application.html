@@ -224,7 +224,7 @@
                             </div>
                             <div class="card-item data-box-content">
                                 <div class="data-item clearfix">
-                                    <img src="../../assets/admin/images/staticImg1.png" alt="" class="staticImg left"/>
+                                    <img src="../../assets/admin/images/positionImg4.png" alt="" class="staticImg left"/>
                                     <div class="infor left">
                                         <span class="data-item-count data-item-count1">
                                             2
@@ -233,7 +233,7 @@
                                     </div>
                                 </div>
                                 <div class="data-item">
-                                    <img src="../../assets/admin/images/staticImg2.png" alt="" class="staticImg left"/>
+                                    <img src="../../assets/admin/images/positionImg5.png" alt="" class="staticImg left"/>
                                     <div class="infor left">
                                         <span class="data-item-count data-item-count2">
                                             42
@@ -244,7 +244,7 @@
                                     </div>
                                 </div>
                                 <div class="data-item">
-                                    <img src="../../assets/admin/images/staticImg3.png" alt="" class="staticImg left"/>
+                                    <img src="../../assets/admin/images/positionImg6.png" alt="" class="staticImg left"/>
 
                                     <div class="infor left">
                                         <span class="data-item-count data-item-count3">
@@ -318,9 +318,9 @@
                                         </li>
                                     </ul>
                                     <ul class="item-info ns-position_item-info">
-                                        <li class="item-info-li ">
-                                            社招
-                                        </li>
+                                        <!--<li class="item-info-li ">-->
+                                            <!--社招-->
+                                        <!--</li>-->
                                         <li class="item-info-li">
                                             <span class="">
                                                 全职
@@ -331,12 +331,12 @@
                                         </li>
                                     </ul>
                                     <ul class="item-actions">
-                                        <li class="item-action">
-                                            <a class="item-action-link">
-                                                <i class="fa fa-home"></i>
-                                                置顶
-                                            </a>
-                                        </li>
+                                        <!--<li class="item-action">-->
+                                            <!--<a class="item-action-link">-->
+                                                <!--<i class="fa fa-home"></i>-->
+                                                <!--置顶-->
+                                            <!--</a>-->
+                                        <!--</li>-->
                                         <li class="item-action">
                                             <a class="item-action-link postOffice" href="postOffice.html">
                                                 <i class="fa fa-pencil"></i>
@@ -349,16 +349,20 @@
                                                 预览
                                             </a>
                                         </li>
-                                        <li class="item-action hide">
-                                            <i class="fa fa-share"></i>
-                                            分享
-                                            <div class="newbie-pulse scale">
-                                            </div>
-                                        </li>
-                                        <li class="item-action">
-                                            <a class="">
+                                        <!--<li class="item-action hide">-->
+                                            <!--<i class="fa fa-share"></i>-->
+                                            <!--分享-->
+                                            <!--<div class="newbie-pulse scale">-->
+                                            <!--</div>-->
+                                        <!--</li>-->
+                                        <li class="item-action status">
+                                            <a class="hf">
                                                 <i class="fa fa-bars"></i>
                                                 恢复
+                                            </a>
+                                            <a class="cx hide">
+                                                <i class="fa fa-bars"></i>
+                                                撤下
                                             </a>
                                         </li>
                                         <li class="item-action">
@@ -397,7 +401,7 @@
                             <!-- 职位列表 -->
                             <div>
                             </div>
-                            <div class="positoin-new-one hide">
+                            <div class="positoin-new-one">
                                 <p class="position-new-one__title">
                                     你还没发布任何职位!
                                 </p>
@@ -462,7 +466,24 @@
 
                     setTimeout(function(){
                         $(".loadingAnimate").addClass("hide")
-                    },1000)
+                    },1000);
+
+                    /*撤下和恢复状态切换*/
+                    $(".status a").on("click",function(){
+                        $(this).addClass("hide");
+                        $(this).siblings("a").removeClass("hide");
+                    })
+
+
+                    /*账号操作*/
+                    $(".accountSettings").on("click",function(e){
+                        e.stopPropagation();
+                        if($(".account-selection").is(".hide")){
+                            $(".account-selection").removeClass("hide");
+                        }else{
+                            $(".account-selection").addClass("hide");
+                        }
+                    });
                 })
             </script>
         </div>

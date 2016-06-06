@@ -33,17 +33,17 @@
                                         <span class="clearfix positionDiv">
                                             <span class="left">
                                                 <span class="conpanyName">JAVA开发</span><br/>
-                                                <span class="industry">3~5年/本科</span>
+                                                <!--<span class="industry">3~5年/本科</span>-->
                                             </span>
                                             <span class="right">
                                                 <span class="lookNum">10000元/月</span><br/>
-                                                <span class="peopleNum">10人</span>
+                                                <!--<span class="peopleNum">10人</span>-->
                                             </span>
                                         </span>
                                     </a>
                                     <div class="companyInfor">
                                         <span><img src="../../assets/mobile/images/cnforIcon1.jpg" alt=""/> 重庆</span>
-                                        <span><img src="../../assets/mobile/images/cnforIcon3.jpg" alt=""/> 今日跟新</span>
+                                        <span><img src="../../assets/mobile/images/cnforIcon3.jpg" alt=""/> 今日更新</span>
                                     </div>
                                 </li>
                             </ul>
@@ -54,10 +54,13 @@
                                 </p>
 
                                 <p>
-                                    <span>招聘类型 : 社招</span>
+                                    <span>工作经验 : 不限</span>
                                     <span>工作性质 : 全职</span>
                                 </p>
-
+                                <p>
+                                    <span>学历要求 : 本科</span>
+                                    <span></span>
+                                </p>
                                 <p>
                                     <span class="w100">工作地点 : 重庆市九龙坡袁家岗11-10</span>
                                 </p>
@@ -75,7 +78,7 @@
                         <span><span>3.</span><span>创新技术与产品解决方案,让全世界用户享有语音数</span></span><br/>
                         <span><span>4.</span><span>据多媒体、无线宽带等全方位沟通。</span></span>
                     </p>
-                    <a href="javascript:;" class="weui_btn weui_btn_mini weui_btn_default">更多+</a>
+                    <!--<a href="javascript:;" class="weui_btn weui_btn_mini weui_btn_default">更多+</a>-->
                 </div>
                 <div class="companyBriefIntroduction">
                     <p class="comBItitle">
@@ -87,7 +90,7 @@
                         <span><span>3.</span><span>创新技术与产品解决方案,让全世界用户享有语音数</span></span><br/>
                         <span><span>4.</span><span>据多媒体、无线宽带等全方位沟通。</span></span>
                     </p>
-                    <a href="javascript:;" class="weui_btn weui_btn_mini weui_btn_default">更多+</a>
+                    <!--<a href="javascript:;" class="weui_btn weui_btn_mini weui_btn_default">更多+</a>-->
                 </div>
                 <div class="prosuct">
                     <div class="prosuctTitle">福利待遇</div>
@@ -120,13 +123,13 @@
                     <div class="weui_cells mt0 weui_cells_access">
                         <a class="weui_cell" href="javascript:;">
                             <div class="weui_cell_bd weui_cell_primary">
-                                <p>10000元/月</p>
+                                <p>java开发</p>
                             </div>
                             <div class="weui_cell_ft">10000元/月</div>
                         </a>
                         <a class="weui_cell" href="javascript:;">
                             <div class="weui_cell_bd weui_cell_primary">
-                                <p>10000元/月</p>
+                                <p>java开发</p>
                             </div>
                             <div class="weui_cell_ft">10000元/月</div>
                         </a>
@@ -155,13 +158,14 @@
                     </div>
                 </div>
             </div>
-            <div class="maskHide hide">
-                <div class="reward hide">
-                    <img src="../../assets/mobile/images/shareIcon.png" alt=""/>
-                    <p>转发给朋友或分享朋友圈，领取积分奖励！</p>
-                </div>
+        </div>
+        <div class="maskHide hide">
+            <div class="reward hide">
+                <img src="../../assets/mobile/images/shareIcon.png" alt=""/>
+                <p>转发给朋友或分享朋友圈，领取积分奖励！</p>
             </div>
         </div>
+
     </div>
     <script src="../../assets/global/plugins/jquery/jquery-1.11.3.min.js"></script>
     <script src="../../assets/mobile/js/global.js"></script>
@@ -183,7 +187,7 @@
                     $(this).removeClass('shake');
                 });
             });
-            $(".page").delegate(".maskHide","touchend",function(){
+            $(".container").delegate(".maskHide","touchend",function(){
                 $(this).addClass("hide");
                 $(".reward").addClass("hide");
             });

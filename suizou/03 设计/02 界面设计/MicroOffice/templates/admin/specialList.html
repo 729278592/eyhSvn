@@ -283,10 +283,27 @@
                                     </div>
                                 </li>
                             </ul>
+                            <!--空专题提示-->
+                            <div class="notSpecial hide">
+                                您尚未创建专题
+                            </div>
                         </div>
                     </div>
                 </div>
             </div>
+            <script>
+                $(function(){
+                    /*账号操作*/
+                    $(".accountSettings").on("click",function(e){
+                        e.stopPropagation();
+                        if($(".account-selection").is(".hide")){
+                            $(".account-selection").removeClass("hide");
+                        }else{
+                            $(".account-selection").addClass("hide");
+                        }
+                    });
+                })
+            </script>
         </div>
         <div class="slide-bar">
             <div class="slider-bar-l">

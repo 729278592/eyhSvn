@@ -159,13 +159,22 @@
                     <div class="content-side">
                         <div class="card company-logo">
                             <div class="basic-info">
-                                <img alt="" src="../../assets/admin/images/companyIcon.jpg"/>
+                                <div class="basic-img">
+                                    <img alt="" src="../../assets/admin/images/companyIcon.jpg"/><br/>
+                                    <span>公司logo</span>
+                                </div>
                                 <div class="company-info">
-                                    <p class="ft14" >重庆</p>
-                                    <p class="ft14" ></p>
+                                    <p class="ft14" >重庆易优弧科技有限公司</p>
+                                    <p class="ft14" >互联网行业/500+人</p>
+                                    <p class="ft14" >www.eyohu.com</p>
                                 </div>
                             </div>
-                            <div class="account-type">账户类型: 体验版</div>
+                            <div class="clearfix moneyzp">
+                                <span class="left hide">未开通悬赏招聘</span>
+                                <span class="left color1 ">已开通悬赏招聘 <span>余额 : 800.00元</span></span>
+                                <a href="#" class="right hide">什么是悬赏招聘?</a>
+                                <a href="#" class="right lookDetaile">查看详情</a>
+                            </div>
                         </div>
                         <div class="card qr-code">
                             <div class="qx-qrcode">
@@ -231,7 +240,7 @@
                                         <a class="data-item-count positionManagement" href="positionManagement.html">6</a>
                                     </div>
                                     <div class="data-item">
-                                        <p class="data-item-title">未查阅投递量</p>
+                                        <p class="data-item-title">简历总量</p>
                                         <a class="data-item-count positionManagement" href="positionManagement.html">6</a>
                                     </div>
                                 </div>
@@ -265,6 +274,16 @@
                     $(".high-light-dashed,.postOffice,.positionManagement,.application,.interviewerInformation,.companyInfor").ajaxify({
                         event: "click",
                         target:'#admin-content-wrapper'
+                    });
+
+                    /*账号操作*/
+                    $(".accountSettings").on("click",function(e){
+                        e.stopPropagation();
+                        if($(".account-selection").is(".hide")){
+                            $(".account-selection").removeClass("hide");
+                        }else{
+                            $(".account-selection").addClass("hide");
+                        }
                     });
                 })
             </script>
