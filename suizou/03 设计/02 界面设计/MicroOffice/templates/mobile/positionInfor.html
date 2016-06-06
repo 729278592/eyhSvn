@@ -111,7 +111,22 @@
                 </div>
                 <div class="companyImgList">
                     <div class="companyImgListTitle">公司图片</div>
-                    <img src="../../assets/mobile/images/companyInforImg2.png" alt="" class="w100"/>
+                    <div class="swiper-container swiper-container-horizontal" id="swiper-container2">
+                        <div class="swiper-wrapper" style="transition-duration: 0ms; ">
+                            <div class="swiper-slide">
+                                <img src="../../assets/mobile/images/companyInforImg2-0.png" alt="" class="w100"/>
+                            </div>
+                            <div class="swiper-slide">
+                                <img src="../../assets/mobile/images/companyInforImg2-1.png" alt="" class="w100"/>
+                            </div>
+                            <div class="swiper-slide">
+                                <img src="../../assets/mobile/images/companyInforImg2-2.png" alt="" class="w100"/>
+                            </div>
+                        </div>
+                        <div class="swiper-pagination"></div>
+                        <!--<div class="swiper-button-next"></div>-->
+                        <!--<div class="swiper-button-prev"></div>-->
+                    </div>
                     <img src="../../assets/mobile/images/codeIcon.jpg" alt="" class="codeIcon"/>
                     <p>关注企业公众号，获取更多企业咨询</p>
                 </div>
@@ -170,6 +185,9 @@
     <script src="../../assets/global/plugins/jquery/jquery-1.11.3.min.js"></script>
     <script src="../../assets/mobile/js/global.js"></script>
     <script src="../../assets/mobile/js/mobileLeft.js"></script>
+    <script src="../../assets/global/plugins/swiper/dist/js/swiper.min.js"></script>
+
+
     <script>
         $(function(){
             /*左边滑动导航*/
@@ -193,7 +211,20 @@
             });
             $(".reward").on("touchend",function(e){
                 e.stopPropagation();
-            })
+            })；
+
+            swiper = new Swiper('#swiper-container1', {
+//        prevButton:'.swiper-button-prev',
+//        nextButton:'.swiper-button-next',
+                slidesPerView: 1,
+                pagination:'.swiper-pagination',
+                paginationClickable: true,
+                spaceBetween: 0,
+                loop:true,
+                autoplay: 5000,
+                autoplayDisableOnInteraction: false
+            });
+
         })
     </script>
 </body>
