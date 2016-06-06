@@ -268,6 +268,19 @@
                     </div>
                 </div>
             </div>
+            <script>
+                $(function(){
+                    /*账号操作*/
+                    $(".accountSettings").on("click",function(e){
+                        e.stopPropagation();
+                        if($(".account-selection").is(".hide")){
+                            $(".account-selection").removeClass("hide");
+                        }else{
+                            $(".account-selection").addClass("hide");
+                        }
+                    });
+                })
+            </script>
             <!--<div class="newbieguide-overlay" ng-if="isNewbie" ng-click="turnoffNewbieGuide()"></div>-->
         </div>
         <div class="slide-bar">

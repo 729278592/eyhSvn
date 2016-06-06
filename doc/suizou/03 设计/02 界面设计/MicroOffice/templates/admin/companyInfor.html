@@ -184,6 +184,8 @@
                             </p>
                         </div>
                         <form action="#" id="form_sample_1" class="form-horizontal">
+
+
                             <div class="form-group">
                                 <label class="control-label col-md-3 col-xs-3 col-sm-3">
                                     <span class="required"> * </span>　公司名称
@@ -192,14 +194,14 @@
                                     <input name="email" type="text" class="form-control" placeholder="重庆易优弧有限公司"/>
                                 </div>
                             </div>
-                            <div class="form-group">
-                                <label class="control-label col-md-3 col-xs-3 col-sm-3">
-                                    <span class="required"> * </span>　公 司 ID
-                                </label>
-                                <div class="col-md-6 col-xs-6 col-sm-6">
-                                    <input name="email" type="text" class="form-control" placeholder="eyohu"/>
-                                </div>
-                            </div>
+                            <!--<div class="form-group">-->
+                                <!--<label class="control-label col-md-3 col-xs-3 col-sm-3">-->
+                                    <!--<span class="required"> * </span>　公 司 ID-->
+                                <!--</label>-->
+                                <!--<div class="col-md-6 col-xs-6 col-sm-6">-->
+                                    <!--<input name="email" type="text" class="form-control" placeholder="eyohu"/>-->
+                                <!--</div>-->
+                            <!--</div>-->
                             <div class="form-group">
                                 <label class="control-label col-md-3 col-xs-3 col-sm-3">
                                     <span class="required"> * </span>　公司简称
@@ -228,14 +230,18 @@
                             </div>
                             <div class="form-group">
                                 <label class="control-label col-md-3 col-xs-3 col-sm-3">
-                                    <span class="required"> * </span>　招聘人数
+                                    <span class="required"> * </span>　公司规模
                                 </label>
                                 <div class="col-md-6 col-xs-6 col-sm-6">
                                     <select class="form-control" name="">
-                                        <option value="50+人">50+人</option>
-                                        <option value="50+人">50+人</option>
-                                        <option value="50+人">50+人</option>
-                                        <option value="50+人">50+人</option>
+                                        <option value="请选择">请选择</option>
+                                        <option value="少于50人">少于50人</option>
+                                        <option value="50-150人">50-150人</option>
+                                        <option value="150-500人">150-500人</option>
+                                        <option value="500-1000人">500-1000人</option>
+                                        <option value="1000-5000人">1000-5000人</option>
+                                        <option value="5000-10000人">5000-10000人</option>
+                                        <option value="10000以人">10000以人</option>
                                     </select>
                                     <i class="fa fa-caret-down"></i>
                                 </div>
@@ -298,7 +304,7 @@
                                     <span class="required">  </span>　公司logo
                                 </label>
                                 <div class="col-md-6 col-xs-6 col-sm-6">
-                                    <input type="text" class="upLoad" value="上传图片"/>
+                                    <input type="text" class="upLoad" value="上传图片" readonly/>
                                     <span class="help-block">图片支持jpg、png、gif格式</span>
                                 </div>
                             </div>
@@ -307,47 +313,12 @@
                                     <span class="required">  </span>　公司二维码
                                 </label>
                                 <div class="col-md-6 col-xs-6 col-sm-6">
-                                    <input type="text" class="upLoad" value="上传图片"/>
+                                    <input type="text" class="upLoad" value="上传图片" readonly/>
                                     <span class="help-block">图片支持jpg、png、gif格式</span>
                                 </div>
                             </div>
                             <hr/>
-                            <div class="form-group">
-                                <label class="control-label col-md-3 col-xs-3 col-sm-3">
-                                    <span class="required">  </span>　开启职位悬赏功能 ?
-                                </label>
-                                <div class="col-md-6 col-xs-6 col-sm-6">
-                                    <a href="#" class="btnOpen"><i class="fa fa-lock"></i> 已开通</a>
-                                    <a href="javascript:;" class="btnRecharge"><i class="fa fa-money"></i> 充值</a>
-                                </div>
-                            </div>
-                            <div class="dailog rechargeMoney hide">
-                                <div class="dailogHead">悬赏充值</div>
-                                <div class="dailogContent">
-                                    <p>
-                                        <span class="type">你已开通悬赏功能,请选择充值金额 </span>
-                                        <select name="">
-                                            <option value="200">200</option>
-                                            <option value="200">200</option>
-                                            <option value="200">200</option>
-                                        </select>
-                                        <i class="fa fa-caret-down"></i>
-                                    </p>
-                                    <div class="opreateBtn">
-                                        <button class="btnSure">充值</button>
-                                        <button class="btnCancel">取消</button>
-                                    </div>
-                                </div>
-                            </div>
-                            <div class="form-group">
-                                <label class="control-label col-md-3 col-xs-3 col-sm-3">
-                                    <span class="required">  </span>　
-                                    <span style="color: #fe6a5d;"><i class="fa fa-money"></i> 悬赏钱包 : 899.00</span>
-                                </label>
-                                <div class="col-md-6 col-xs-6 col-sm-6">
-                                    <a href="#" style="color: #578adc;position: relative;top: 5px;text-decoration: underline;">查看悬赏历史</a>
-                                </div>
-                            </div>
+
                             <div class="form-group">
                                 <div class="col-sm-6 col-xs-6 col-md-6 col-sm-offset-3 col-xs-offset-3 col-md-offset-3">
                                     <button class="btn btnSure">保存</button>
@@ -360,6 +331,16 @@
             </div>
             <script>
                 $(function(){
+                    /*账号操作*/
+                    $(".accountSettings").on("click",function(e){
+                        e.stopPropagation();
+                        if($(".account-selection").is(".hide")){
+                            $(".account-selection").removeClass("hide");
+                        }else{
+                            $(".account-selection").addClass("hide");
+                        }
+                    });
+
                     $(".companyTitle li.hover a").hover(function(){
                         $(this).animate({
                             padding:"10px",
@@ -458,25 +439,7 @@
                         target:'#admin-content-wrapper'
                     });
 
-                    /*btnRecharge*/
-                    $(".btnRecharge").on("click",function(){
-                        $(".dailog.rechargeMoney").removeClass("hide");
-                        heightAuto();
 
-                    });
-
-                    $(".dailog .opreateBtn .btnCancel").on("click",function(){
-                        $(this).closest(".dailog.rechargeMoney").addClass("hide");
-                    });
-
-                    /*单窗居中*/
-                    function heightAuto(){
-                        var d = $(".dailog");
-                        d.each(function(){
-                            var ht = -$(this).height()/2+"px";
-                            $(this).get(0).style.marginTop = ht;
-                        });
-                    }
                 });
 
             </script>

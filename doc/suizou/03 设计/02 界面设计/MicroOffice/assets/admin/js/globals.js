@@ -43,12 +43,5 @@ $(function(){
 
 
 
-    $(".accountSettings").on("click",function(e){
-        e.stopPropagation();
-        if($(".account-selection").is(".hide")){
-            $(".account-selection").removeClass("hide");
-        }else{
-            $(".account-selection").addClass("hide");
-        }
-    });
+
 });

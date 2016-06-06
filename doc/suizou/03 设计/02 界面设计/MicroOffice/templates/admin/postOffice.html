@@ -183,8 +183,8 @@
                                 </label>
                                 <div class="col-md-6 col-xs-6 col-sm-6">
                                     <select class="form-control" name="">
-                                        <option value="关闭">关闭</option>
                                         <option value="招聘中">招聘中</option>
+                                        <option value="已撤下">已撤下</option>
                                     </select>
                                     <i class="fa fa-caret-down"></i>
                                 </div>
@@ -194,16 +194,21 @@
                                     <span class="required">  </span>　
                                 </label>
                                 <div class="col-md-6 col-xs-6 col-sm-6">
-                                    <div class="squaredCheckBox top rewardMoney" style="width: 100%;">
+                                    <div class="squaredCheckBox top rewardMoney" style="">
                                         <input type="checkbox" id="position-batch-selection" name="check">
                                         <label for="position-batch-selection" class="selection">设置悬赏金额
-                                            <a href="#">
+
+                                        </label>
+                                        <span class="hoveran">
                                                 什么是悬赏功能?
                                                 <div class="annotation">
-                                                    悬赏功能是....
+                                                    <span>
+                                                        悬赏招聘模式,将传统意义的企业内荐和猎头结合起来并将两种方式最大化,通过悬赏金调动有资源的所有,将人际资源有效地转化为商业价值和社会价值,通过资源为企业推荐合适的岗位候选人,让招聘变得更简单
+                                                        <br/>
+                                                        <a href="#" style="color: #4879c7;">开通悬赏招聘</a>
+                                                    </span>
                                                 </div>
-                                            </a>
-                                        </label>
+                                            </span>
                                     </div>
                                 </div>
                             </div>
@@ -1114,8 +1119,11 @@
                                 </label>
                                 <div class="col-md-6 col-xs-6 col-sm-6">
                                     <select class="form-control" name="">
-                                        <option value="1000">1000</option>
-                                        <option value="1000~2000">1000~2000</option>
+                                        <option value="面谈">面谈</option>
+                                        <option value="3000~5000">3000~5000</option>
+                                        <option value="5000~8000">5000~8000</option>
+                                        <option value="8000~10000">8000~10000</option>
+                                        <option value="10000以上">10000以上</option>
                                     </select>
                                     <i class="fa fa-caret-down"></i>
                                 </div>
@@ -1126,13 +1134,41 @@
                                 </label>
                                 <div class="col-md-6 col-xs-6 col-sm-6">
                                     <select class="form-control">
+                                        <option value="不限">不限</option>
                                         <option value="1年及以下">1年及以下</option>
-                                        <option value="1年及以下">1-2年</option>
-                                        <option value="2-3年">2-3年</option>
-                                        <option value="4-5年">4-5年</option>
-                                        <option value="5年及以上">5年及以上</option>
+                                        <option value="1-3年">1-3年</option>
+                                        <option value="3-5年">3-5年</option>
+                                        <option value="5-8年">5-8年</option>
+                                        <option value="8年以上">8年以上</option>
                                     </select>
                                     <i class="fa fa-caret-down"></i>
+                                </div>
+                            </div>
+                            <div class="form-group">
+                                <label class="control-label col-md-3 col-xs-3 col-sm-3">
+                                    <span class="required"> * </span>　福利待遇
+                                </label>
+                                <div class="col-md-6 col-xs-6 col-sm-6">
+                                    <div class="button-label bt0 clearfix">
+                                        <!--<p class="moreTag"><span class="required">*</span>最多只能添加5个标签</p>-->
+                                        <a href="#" class="keyword-dashed-button">
+                                            <span class="add-span">+</span>
+                                            添加
+                                        </a>
+                                        <div class="keyword-div hide">
+                                            <input type="text" class="keyword-input" placeholder="请输入标签名"/>
+                                            <i class="fa fa-check-circle"></i>
+                                            <i class="fa fa-times-circle-o"></i>
+                                        </div>
+                                    </div>
+                                    <div class="department hide">
+                                        <p class="departmentTitle">默认福利</p>
+                                        <ul class="clearfix departmentList">
+                                            <li><a href="#">五险一金</a></li>
+                                            <li><a href="#">带薪年假</a></li>
+                                            <li><a href="#">公费旅游</a></li>
+                                        </ul>
+                                    </div>
                                 </div>
                             </div>
                             <div class="form-group">
@@ -1163,6 +1199,17 @@
             </div>
             <script>
                 $(function(){
+
+                    /*账号操作*/
+                    $(".accountSettings").on("click",function(e){
+                        e.stopPropagation();
+                        if($(".account-selection").is(".hide")){
+                            $(".account-selection").removeClass("hide");
+                        }else{
+                            $(".account-selection").addClass("hide");
+                        }
+                    });
+
                     var selectCity  = $(".acity").closest(".selectCity").find(".location-tabs-wrapper");
                     $(".acity").on("click",function(){
 
@@ -1265,6 +1312,89 @@
                             $(this).closest(".form-group").next(".form-group").removeClass("hide");
                             return false;
                         }
+                    });
+                })
+            </script>
+            <script>
+                $(function(){
+                    function keywordButtonHide(){
+                        if($(".keyword-button").get(0)){
+                            if(($(".keyword-button").size())>4){
+                                $(".keyword-dashed-button").addClass("hide");
+                                $(".keyword-div").addClass("hide");
+                            }
+                            else{
+                                $(".keyword-div").addClass("hide");
+                                $(".keyword-dashed-button").removeClass("hide");
+                            }
+                        }
+                        else{
+                            $(".keyword-div").addClass("hide");
+                            $(".keyword-dashed-button").removeClass("hide");
+                        }
+                    }
+
+                    $(".keyword-dashed-button").on("click",function(){
+                        $(this).addClass("hide");
+                        $(".keyword-div").removeClass("hide");
+                        $(".department").removeClass("hide");
+                    });
+                    var arr = [];
+                    $(".keyword-div .fa-check-circle").on("click",function(){
+                        var values = $(this).closest(".keyword-div").find(".keyword-input").val();
+                        var value = $.trim(values);
+                        var str = document.createElement("a");
+                        str.className = "keyword-button";
+                        var aSpan = document.createElement("span");
+                        aSpan.className = "keyword-button-content";
+                        var aI = document.createElement("i");
+                        aI.className = "fa fa-times-circle-o";
+                        aSpan.appendChild(document.createTextNode(value));
+                        str.appendChild(aSpan);
+                        str.appendChild(aI);
+                        if(value==''){
+                            alert('标签名不能为空');
+                        }
+                        else{
+                            if($(".keyword-button").get(0)){
+                                if($.inArray(value, arr) < 0){
+                                    $(".keyword-dashed-button").before(str);
+                                    $(this).closest(".keyword-div").find(".keyword-input").val("");
+                                    $(".department").addClass("hide");
+                                    arr.push(value);
+                                    keywordButtonHide();
+                                }
+                                else{
+                                    alert('标签名已经存在');
+                                }
+                            }
+                            else{
+                                arr.push(value);
+                                $(".keyword-dashed-button").before(str).removeClass("hide");
+                                $(this).closest(".keyword-div").addClass("hide");
+                                $(this).closest(".keyword-div").find(".keyword-input").val("");
+                                $(".department").addClass("hide");
+                                return false;
+                            }
+                        }
+                    });
+
+                    $(".keyword-div .fa-times-circle-o").on("click",function(){
+                        $(".keyword-dashed-button").removeClass("hide");
+                        $(this).closest(".keyword-div").addClass("hide");
+                        $(".department").addClass("hide");
+                        $(this).closest(".keyword-div").find(".keyword-input").val("");
+                    });
+
+                    $(".departmentList li a").on("click",function(){
+                        $(".keyword-input").val($(this).text());
+                    });
+
+                    $(".button-label").delegate(".keyword-button .fa-times-circle-o",'click',function(){
+                        arr.splice($(this).parent(".keyword-button").index(),1);
+                        $(this).closest(".keyword-button").remove();
+                        $(".department").addClass("hide");
+                        keywordButtonHide();
                     });
                 })
             </script>

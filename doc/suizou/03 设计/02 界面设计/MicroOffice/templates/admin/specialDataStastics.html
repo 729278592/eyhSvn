@@ -164,6 +164,9 @@
                             <li class="active">
                                 <a href="specialDataStastics.html" class="dataHtml">专题统计</a>
                             </li>
+                            <li class="hover">
+                                <a href="resumeDataStatistics.html" class="dataHtml">简历统计</a>
+                            </li>
                         </ul>
                         <div class="dataStatisticsHead">
                             <form action="#">
@@ -197,6 +200,16 @@
             <script src="../../assets/global/plugins/highCharts/js/exporting.js"></script>
             <script type="text/javascript">
                 $(function(){
+                    /*账号操作*/
+                    $(".accountSettings").on("click",function(e){
+                        e.stopPropagation();
+                        if($(".account-selection").is(".hide")){
+                            $(".account-selection").removeClass("hide");
+                        }else{
+                            $(".account-selection").addClass("hide");
+                        }
+                    });
+
                     $('#container').highcharts({
                         chart: {
                             type: 'area'
@@ -297,10 +310,10 @@
             </div>
         </div>
     </div>
-    <script src="../../assets/admin/js/globals.js"></script>
     <script src="../../assets/global/plugins/ajaxify/jquery.history.js"></script>
     <script src="../../assets/global/plugins/ajaxify/jquery-scrollto.js"></script>
     <script src="../../assets/global/plugins/ajaxify/jquery.ajaxify.js"></script>
+    <script src="../../assets/admin/js/globals.js"></script>
     <script>
         $(".nav a").ajaxify({
             event: "click",
