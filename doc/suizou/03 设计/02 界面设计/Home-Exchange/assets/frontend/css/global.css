@@ -2102,6 +2102,29 @@ nowrap;text-overflow: ellipsis;width: 100%;}.sc-list1{display: none;}
 .comment-content .btn-CommentSubmit{padding: 5px 20px;background: #fba85c;color: #fff;}
 .shopping_content button.bgfbb{background: #fba85c;font-size: 12px;color: #fff;border-radius: 4px;width: 65px;height: 30px;line-height: 30px;text-align: center;}
 
+
+
+/*dailog*/
+.mask,.mask-bg{position: fixed;left: 0;right: 0;bottom: 0;top: 0;z-index: 100;}
+.dailog{position: fixed;top: 50%;left: 50%;min-width: 400px;margin-left: -200px;border-radius: 8px 8px 0 0;z-index: 99999999;}
+.dailogHead{width: 100%;padding: 10px 5%;background: #fdb755;text-align: center;color: #fff;border-radius: 8px 8px 0 0;font-size: 14px;}
+.dailogContent{border: 1px solid #dbdbdb;padding: 5%;width: 100%;background: #fff;border-top: none;font-size: 14px;}
+.dailogContent .opreateBtn{margin: 15px 0 0 5px;}
+.dailogContent .opreateBtn button{width: 80px;height: 30px;line-height: 30px;color: #fff;border-radius: 8px;font-size: 14px;}
+.dailogContent .opreateBtn .btnSure{background: #ff8202;margin-right: 10px;}
+.dailogContent .opreateBtn .btnCancel{background: #c9c9c9;}
+.dailogContent p{width: 100%;margin-bottom: 10px;text-align: left;position: relative;color: #666;}
+.entryStep li .dailogContent p .type{display: inline-block;width: 80px;color: #999;}
+.dailogContent p textarea{vertical-align: top;border: 1px solid #efefef;}
+.rechargeMoney{text-align: center;}
+.dailogContent p{display: inline-block;}
+.dailogContent p select{width: 130px;border: 1px solid #dbdbdb;padding: 5px 0 5px 10px;}
+.dailogContent p .fa-caret-down{position: absolute;right: 20px;top: 9px;}
+.rechargeMoney .dailogContent p .type{color: #999;}
+button, select {
+    text-transform: none;
+}
+
 .div-input #form1>div input.input-time{width:120px;}
 .shopping_content img{vertical-align: middle;}
 .order-title{width: 705px;height: 30px;line-height: 30px;padding: 0 5px;border-bottom: 1px solid #dbdbdb;margin-bottom: 10px;}

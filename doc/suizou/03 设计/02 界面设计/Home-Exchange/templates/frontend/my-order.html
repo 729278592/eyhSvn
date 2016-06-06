@@ -185,7 +185,23 @@
                                     <td>499</td>
                                     <td class="last">
                                         <button type="button" class="bgfbb hide btn-confirm">确认完成</button>
-                                        <button type="button" class="bgfbb btn-pay">付款</button>
+                                        <button type="button" class="bgfbb btn-pay hide">付款</button>
+                                        <button type="button" class="bgfbb btn-tk">申请退款</button>
+
+                                        <div class="dailog rechargeMoney hide">
+                                            <div class="dailogHead">申请退款</div>
+                                            <div class="dailogContent">
+                                                <p>
+                                                    <span class="type">
+                                                        请先于客户人员沟通联系,确定退货/退款事宜。
+                                                    </span>
+                                                </p>
+                                                <div class="opreateBtn">
+                                                    <button class="btnSure">确定</button>
+                                                    <button class="btnCancel">取消</button>
+                                                </div>
+                                            </div>
+                                        </div>
                                     </td>
                                 </tr>
                             </table>
@@ -306,6 +322,27 @@
             $(this).closest(".mask").addClass("hide");
             $(this).closest(".mask").prev(".mask-bg").addClass("hide");
         });
+
+
+        /*btnRecharge*/
+        $(".btn-tk").on("click",function(){
+            $(this).closest("td").find(".dailog.rechargeMoney").removeClass("hide");
+            heightAuto();
+
+        });
+
+        $(".dailog .opreateBtn .btnCancel").on("click",function(){
+            $(this).closest(".dailog.rechargeMoney").addClass("hide");
+        });
+
+        /*单窗居中*/
+        function heightAuto(){
+            var d = $(".dailog");
+            d.each(function(){
+                var ht = -$(this).height()/2+"px";
+                $(this).get(0).style.marginTop = ht;
+            });
+        }
     })
 </script>
 </body>
