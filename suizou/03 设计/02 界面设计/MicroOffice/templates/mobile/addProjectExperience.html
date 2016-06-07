@@ -8,9 +8,11 @@
     <link rel="stylesheet" href="../../assets/mobile/css/weui.css"/>
     <link rel="stylesheet" href="../../assets/mobile/css/example.css"/>
     <link rel="stylesheet" href="../../assets/mobile/css/global.css"/>
+    <script src="../../assets/global/plugins/jquery/jquery-1.11.3.min.js"></script>
+
 </head>
 <body>
-    <div class="container js_container">
+    <div class="container js_container absolute errDailog">
         <div class="page">
             <div class="head">
                 <i class="fa fa-angle-left"></i>
@@ -22,7 +24,7 @@
                         <div class="weui_cell">
                             <div class="weui_cell_hd"><label class="weui_label"><img src="../../assets/mobile/images/caseIcon.png" alt=""/>项目名称</label></div>
                             <div class="weui_cell_bd weui_cell_primary">
-                                <input class="weui_input" type="text" placeholder="百度网盘"/>
+                                <input class="weui_input" id="caseName" type="text" placeholder="百度网盘"/>
                             </div>
                         </div>
                         <div class="weui_cell">
@@ -42,31 +44,39 @@
                         <div class="weui_cell">
                             <div class="weui_cell_hd"><label class="weui_label"><img src="../../assets/mobile/images/caseDetailsIcon.png" alt=""/>项目描述</label></div>
                             <div class="weui_cell_bd weui_cell_primary">
-                                <textarea name="" class="weui_textarea" placeholder="项目描述"  id="" cols="30" rows="5"></textarea>
+                                <textarea name="" id="caseDetails" class="weui_textarea" placeholder="项目描述" cols="30" rows="5"></textarea>
                             </div>
                         </div>
                     </div>
                     <div class="weui_btn_area">
-                        <input type="submit" class="weui_btn weui_btn_primary" id="saveBtn" value="保存">
+                        <input type="submit"  class="weui_btn weui_btn_primary saveProjectExperience" id="saveBtn" value="保存">
                     </div>
                 </form>
+                <script src="../../assets/global/plugins/My97DatePicker/WdatePicker.js"></script>
             </div>
         </div>
     </div>
-    <script src="../../assets/global/plugins/jquery/jquery-1.11.3.min.js"></script>
     <script src="../../assets/mobile/js/global.js"></script>
     <script src="../../assets/mobile/js/errMsg.js"></script>
-    <script src="../../assets/global/plugins/My97DatePicker/WdatePicker.js"></script>
     <script>
         $("#saveBtn").click(function(){
-            var reg = /^0?(13[0-9]|15[012356789]|18[0236789]|14[57])[0-9]{8}$/;
-            if($("#mobile").val() == '') {
-                showMsg('手机号码不能为空');
+            if($("#caseName").val() == '') {
+                showMsg('项目名不能为空');
                 return false;
             }
-            else if($("#mobile").get(0)&&!reg.test($("#mobile").val())){
-                showMsg('手机号码格式不正确');
-                console.log($("#mobile").html())
+            else if($("#start").val() == '') {
+                showMsg('开始时间不能为空');
+                return false;
+            }
+            else if($("#end").val() == '') {
+                showMsg('结束时间不能为空');
+                return false;
+            }
+            else if($("#caseDetails").val() == '') {
+                showMsg('项目描述不能为空');
+                return false;
+            }else{
+                window.location.href = "addTag.html";
             }
             return true;
         })

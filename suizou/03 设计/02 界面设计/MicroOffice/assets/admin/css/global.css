@@ -113,7 +113,8 @@ a:link{text-decoration: none;}
 #admin-content-wrapper{position:absolute;margin-left:50px;left:0;right:0;z-index:1}
 .btn,.card,.sub-nav,.sub-title,header{background-color:#fff}
 
-
+.common-list-item .item-actions.application-item-actions-pos{left: 64%;}
+.fbxzw{font-size: 14px;color: #6cb7ee;margin-right: 20px;}
 
 
 
@@ -163,7 +164,6 @@ a:link{text-decoration: none;}
 .loadingInfor{position: absolute;left: 50%;z-index: 10;margin-left: -70px;top: 50%;margin-top: -60px;}
 .loadingInfor img{width: 140px;}
 .search-box{line-height: 35px;}
-.content--main-side .content-main{margin-right: 0;}
 .quickInfor{padding: 15px 0;border: 1px solid #dbdbdb;width: 100%;}
 .quickInfor li{float: left;width: 24.5%;border-right: 1px solid #4c8bda;color: #666;text-align: center;padding: 5px 0;}
 .quickInfor li.br0{border-right: 0;}
@@ -252,12 +252,11 @@ a:link{text-decoration: none;}
 .slider-bar-l .fa,.slider-bar-w .fa{font-size: 20px;}
 .slider-bar-l p,.slider-bar-w p{display: none;font-size: 14px;}
 .slider-bar-l:hover p,.slider-bar-w:hover p{display: inline-block;cursor: pointer;}
-.hoveran{color: #82c0f5;}
-.annotation{color: #82c0f5;display: none;border: 1px solid #dbdbdb;padding: 10px;}
+.hoveran{color: #82c0f5;position: relative;width: 480px;display: inline-block;}
+.annotation{color: #82c0f5;display: none;border: 1px solid #dbdbdb;padding: 10px;position: absolute;left: -108px;top: 20px;width: 600px;z-index: 1000;background: #fff;}
 .hoveran:hover .annotation{display: inline-block;}
 .annotation span{font-size: 14px;color: #666;font-weight: 100;}
 .location-selected:not(:last-of-type):after{content: " ";}
-
 
 /*head*/
 .head{width: 100%;position: relative;z-index: 100;}
@@ -424,7 +423,7 @@ img.w100{width: 100%;}
 .linkGroup{margin: 50px 0;}
 .linkGroup>div{margin-bottom: 30px;}
 .linkGroup>div .titleName{font-size: 16px;color: #666;}
-.linkGroup>div>div{margin-right: 30px;margin-top: 20px;}
+.linkGroup>div>div{margin-right: 30px;margin-top: 20px;margin-bottom: 10px;}
 .linkGroup>div .interA{}
 .linkGroup>div .interA a{text-decoration: underline;color: #fda341;font-size: 16px;}
 .linkGroup>div img{width: 100px;}
@@ -565,19 +564,25 @@ a.keyword-button:hover,.keyword-button:active,.keyword-button:focus{color: #fff;
 .basic-info .basic-img{float: left;padding: 50px 0 0 38px;text-align: center;}
 .basic-info .basic-img img{float: none;margin: 0;}
 .card.company-logo .company-info{width: 180px;}
+.company-info .ft14{font-weight: bold;}
 .moneyzp{width: 94%;margin: 0 3%;}
 .moneyzp span{color: #f61464;}
 .moneyzp span.color1{color: #06be04;}
 .moneyzp a{color: #4879c7;}
+.moneyzp a:hover{text-decoration: underline;}
 .inpotLook{font-size: 14px;color: #666;}
 .inpotLook .fa-star{color: #ed6d45;}
 .inpotLook .fa-star-o{color: #666;}
 .dq-application-icon-status .fa-remove{color: #fff;font-size: 12px;display: inline-block;width: 100%;height: 100%;text-align: center;position: relative;top: -2px;}
-.common-list-item .item-actions .item-action.hide{display: none;}'
+.common-list-item .item-actions .item-action.hide{display: none;}
 
-
-
-
+.dinLink{width: 94%;margin: 0 3%;overflow: hidden;border-top: 1px solid #efefef;}
+.dinLink p{width: 100%;font-size: 14px;color: #999;}
+.dinLink p a{color: #666;}
+.dinLink p a:hover{text-decoration: underline;}
+.dinLink p.title{font-weight: bold;color: #333;margin-top: 10px;}
+.dinLink p.smsgzpp{margin: 10px 0;text-align: right;}
+.dinLink p.smsgzpp a{color: #3080d4;}
 /*dailog*/
 .mask,.mask-bg{position: fixed;left: 0;right: 0;bottom: 0;top: 0;z-index: 100;}
 .dailog{position: fixed;top: 50%;left: 50%;min-width: 400px;margin-left: -200px;border-radius: 8px 8px 0 0;z-index: 99999999;}

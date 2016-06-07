@@ -272,6 +272,13 @@
                                     <i class="fa fa-angle-down">
                                     </i>
                                 </a>
+                                <a class="right postOffice fbxzw" href="postOffice.html">
+                                    <i class="fa fa-plus"></i>
+                                    <span>
+                                        发布新职位
+                                    </span>
+                                </a>
+
                             </div>
                             <div class="batch card-item card-title hide">
                                 <div class="squaredCheckBox">
@@ -283,15 +290,16 @@
                                     <i class="fa fa-send"></i>
                                     <a class="republish">重新发布选中职位</a>
                                 </div>
-                                <div class="batch-action up">
-                                    <i class="fa fa-arrow-up"></i>
-                                    <a class="up">置顶选中职位</a>
-                                </div>
+                                <!--<div class="batch-action up">-->
+                                    <!--<i class="fa fa-arrow-up"></i>-->
+                                    <!--<a class="up">置顶选中职位</a>-->
+                                <!--</div>-->
                                 <div class="batch-action draw">
                                     <i class="fa fa-trash-o"></i>
                                     <a class="draw">撤下选中职位</a>
                                 </div>
                             </div>
+                            <!-- 职位列表 -->
                             <div class="positionList">
                                 <div class="card-item common-list-item ns-position-item position">
                                     <div class="squaredCheckBox hide">
@@ -398,18 +406,15 @@
                                     </div>
                                 </div>
                             </div>
-                            <!-- 职位列表 -->
-                            <div>
-                            </div>
+
+                            <!-- 无职位去发布新职位 -->
                             <div class="positoin-new-one">
                                 <p class="position-new-one__title">
                                     你还没发布任何职位!
                                 </p>
-                                <a class="publish-new btn" ui-sref="admin.position.edit">
-                                    <div class="wrapper">
-                                        <i class="iconfont">
-                                            &#xe61f
-                                        </i>
+                                <a class="publish-new btn postOffice" style="border-left: none;text-align: center;" href="postOffice.html">
+                                    <div class="wrappers">
+                                        <i class="fa fa-plus"></i>
                                         <span>
                                             发布新职位
                                         </span>
@@ -472,8 +477,12 @@
                     $(".status a").on("click",function(){
                         $(this).addClass("hide");
                         $(this).siblings("a").removeClass("hide");
-                    })
+                    });
 
+                    $(".nav a,postOffice").ajaxify({
+                        event: "click",
+                        target: '#admin-content-wrapper'
+                    });
 
                     /*账号操作*/
                     $(".accountSettings").on("click",function(e){

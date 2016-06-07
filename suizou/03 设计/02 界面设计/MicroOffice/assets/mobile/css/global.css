@@ -30,8 +30,12 @@ textarea,input,button,select{border: none;outline: none;}
 a:hover{text-decoration: none;}
 img.w100{width: 100%;}
 .mask,.maskHide{position: absolute;top: 0;bottom: 0;right: 0;left: 0;background: rgba(0,0,0,0.6);z-index: 10;}
-.reward{background: #fff;position: relative;width: 96%;margin: 60% auto;font-size: 14px;text-align: center;padding: 10% 0;}
-.reward img{position: absolute;width: 20%;left: 0;top: -40%;}
+.reward{background: #fff;position: relative;width: 96%;margin: 50% auto;font-size: 14px;text-align: center;padding: 10% 0;}
+.reward .shareImg{position: absolute;width: 20%;left: 0;top: -40%;z-index: 2;}
+ .shareImg1{position: absolute;
+    left: 2%;
+    top: 2%;
+    width: 95%}
 .reward p{color: #333;}
 .reward.shake{
     -webkit-animation: showSweetAlert 0.2s;
@@ -113,6 +117,8 @@ img.resume{width: 100%;}
 .positionMenu li>a .lookNum{color: #fbb755;font-size: 14px;}
 .positionMenu li .companyInfor{width: 96%;padding: 2%;}
 .positionMenu li .companyInfor span{display: inline-block;vertical-align: middle;text-align: center;color: #666;overflow: hidden;white-space: nowrap;text-overflow: ellipsis;width: 32%;line-height: 28px;font-size: 14px;}
+.positionMenu li .companyInfor.w30 span{width: 32%;}
+.positionMenu li .companyInfor.w30 .fa{font-size: 16px;color: #3080d4;}
 .positionMenu li .companyInfor span img{width: 20%;}
 .companyMenu{}
 .companyMenu li{}
@@ -172,8 +178,10 @@ img.resume{width: 100%;}
 .positionInfor p>img{width: 22px;}
 .positionInfor .positionName{padding: 1% 5%;background: #2e7fd4;color: #fff;font-size: 14px;display: inline-block;border-radius: 20px;}
 .positionInfor .companyName,.positionInfor .time,.positionInfor .jobRecord{display: table;}
+.positionInfor .jobRecord.w50,.positionInfor .time{float: left;width: 50%;}
+.positionInfor .jobRecord.w50 span{top: 0;}
 .positionInfor .time img,.positionInfor .companyName img,.positionInfor .companyName span,.positionInfor .time span,.positionInfor .jobRecord img,.positionInfor .jobRecord span{display: table-cell;vertical-align: middle;}
-.positionInfor .companyName span,.positionInfor .time span,.positionInfor .jobRecord span{padding-left: 2%;width: 100%;}
+.positionInfor .companyName span,.positionInfor .time span,.positionInfor .jobRecord span{padding-left: 8px;width: 100%;}
 .positionInfor .companyName span{font-size: 12px;}
 .positionInfor .time{color: #999;}
 .positionInfor .jobRecord span{position: relative;top: -2px;}
@@ -202,8 +210,6 @@ a.weui_cell.c666{color: #999;}
 
 
 .infotBg{position: absolute;top: 0;width: 100%;}
-
-
 .personIforImg{width: 92%;text-align: center;position: relative;z-index: 10;border-bottom: 1px dotted #67a5f9;margin: 0 auto;padding-bottom: 2%;}
 .personIforImgDiv{width: 20%;padding: 1.5%;border: 1px solid #fff;display: inline-block;border-radius: 100%;}
 .personIforImgDiv>img{width: 100%;}
@@ -222,21 +228,26 @@ a.weui_cell.c666{color: #999;}
 
 a.weui_btn.weui_btn_primary{font-size: 16px;}
 
+.swiper-container.ma0{margin: 0 auto;}
+.swiper-container.w100,.swiper-wrapper.w100,.swiper-wrapper.w100 .swiper-slide{height: 100%;}
+.swiper-container-horizontal>.swiper-pagination.padd{height: 8px;top: -7px;}
+
+
 .weui_cells_checkbox.mt0{margin-top: 0;}
 .weui_cells.bt0:before{border-top: none;}
 .weui_cells.bt0:after{border-bottom: none;}
 .weui_cell.bt0:before{border-top: none;}
 
 .weui_cells_checkbox{}
-.weui_cells_checkbox.h153{min-height: 240px;}
+.weui_cells_checkbox.h153{min-height: 160px;}
 .weui_check_label.w30{width: 30%;float: left;}
-.weui_check_label.w50{width: 40.5%;float: left;position: relative;min-height: 240px;}
-.weui_check_label.w50 .sexImg{width: 50%;position: absolute;left: 50%;margin-left: -25%;}
+.weui_check_label.w50{width: 40.5%;float: left;position: relative;min-height: 160px;}
+.weui_check_label.w50 .sexImg{width: 40%;position: absolute;left: 50%;margin-left: -20%;}
 .weui_check_label.w50 .weui_cell_hd{position: absolute;bottom: 5%;left: 50%;margin-left: -12px;}
 .weui_check_label.w30.p0{padding: 0;}
 .weui_cells_checkbox .weui_cell.bt0:active{background: transparent;}
 .weui_cell.weui_cell_select{padding: 0 15px;}
-.weui_select{font-family: "微软雅黑";padding: 0;color: #999;}
+.weui_select{font-family: "微软雅黑";padding: 0;color: #333;}
 .weui_cells.fbf{background: #fbf9fe;}
 
 .weui_cell .integral{font-size: 16px;color: #2e7fd4;}
@@ -244,12 +255,15 @@ a.weui_btn.weui_btn_primary{font-size: 16px;}
 
 .weui_cell_select .weui_select{font-size: 14px;}
 
+
+.ft{text-align: center;padding: 1px;position: fixed;bottom: 0;left: 0;right: 0;background: #fff;color: #999;font-size: 12px;z-index: 10000;}
+.ft span{font-weight: bold;font-style: italic;}
 .companyDetails{width: 100%;}
 .companyDetails .companyImg{width: 100%;position: relative;}
 .companyDetails .companyImg .company-icon{position: absolute;bottom: -25%;width: 20%;border-radius: 100%;left: 50%;margin-left: -10%;}
 .comInfor{background: #fff;width: 94%;padding: 10% 3% 5%;border-bottom: 1px solid #dbdbdb;}
 .comInfor .comInforTitle{text-align: center;}
-.comInfor .comInforTitle span{padding: 3px 10px;border-radius: 20px;border: 1px solid #fda341;display: inline-block;color:#fda341;}
+.comInfor .comInforTitle a{padding: 3px 10px;border-radius: 20px;border: 1px solid #fda341;display: inline-block;color:#fda341;}
 .comInfor .comInforCon{width: 100%;border-top: 1px solid #dbdbdb;margin-top: 3%;}
 .comInfor .comInforCon p{display: table;font-size: 14px;color: #999;margin-top: 1%;}
 .comInfor .comInforCon p img,.comInfor .comInforCon p span{display: table-cell;vertical-align: middle;}
@@ -301,14 +315,14 @@ a.weui_btn.weui_btn_primary{font-size: 16px;}
 .keyword-div.have .weui_icon_clear{color: #4c8bda;position: absolute;top: -25px;right: 10px;}
 .keyword-div .weui_icon_clear{position: relative;display: inline-block;width: 14px;height: 14px;border-radius: 14px;top: -2px;}
 .keyword-div.have .fa-check-circle{position: absolute;right: 30px;top: 9px;display: inline-block;font-size: 16px;}
-#errDailog{position: relative;}
-#errDailog.absolute{position: absolute;}
+.errDailog{position: relative;}
+.errDailog.absolute{position: absolute;}
 .container>#errMsg{background: transparent;}
-#errDailog .weui_mask_transparent,#errDailog .weui_mask{position: absolute;left: 0;right: 0;top: 0;bottom: 0;background: transparent;}
+.errDailog .weui_mask_transparent,.errDailog .weui_mask{position: absolute;left: 0;right: 0;top: 0;bottom: 0;background: transparent;}
 #errMsg{position: absolute;top: 0;left: 0;right: 0;bottom: 0;}
-#errDailog .weui_toast{position: absolute;}
-.section #errDailog .weui_toast{position: absolute;width: 121px;min-height: 121px;margin-left: -60px;}
-#errDailog .weui_dialog{position: absolute;}
+.errDailog .weui_toast{position: absolute;}
+.section .errDailog .weui_toast{position: absolute;width: 121px;min-height: 121px;margin-left: -60px;}
+.errDailog .weui_dialog{position: absolute;}
 
 
 .weui_progress_bar{height: 8px;border-radius: 10px;-webkit-box-flex: 1;-webkit-flex: 1;-ms-flex: 1;flex: 1;}
@@ -326,8 +340,9 @@ a.weui_btn.weui_btn_primary{font-size: 16px;}
 .resumeCenter.spacing .progress.active{background: #ffb232;}
 .progress.active .weui_progress .complete,.progress.active .time{color: #fff;}
 .bd.pb48{padding-bottom: 50px;}
+#fp-nav ul li a span{background: #8ebbfb;border:1px solid #8ebbfb;}
 
-
+#fp-nav ul li a.active span{background: #0000ff;}
 
 
 
