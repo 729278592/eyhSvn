@@ -8,9 +8,10 @@
     <link rel="stylesheet" href="../../assets/mobile/css/weui.css"/>
     <link rel="stylesheet" href="../../assets/mobile/css/example.css"/>
     <link rel="stylesheet" href="../../assets/mobile/css/global.css"/>
+    <script src="../../assets/global/plugins/jquery/jquery-1.11.3.min.js"></script>
 </head>
 <body>
-    <div class="container js_container">
+    <div class="container js_container absolute errDailog">
         <div class="page">
             <div class="head">
                 <i class="fa fa-angle-left"></i>
@@ -22,7 +23,7 @@
                         <div class="weui_cell">
                             <div class="weui_cell_hd"><label class="weui_label"><img src="../../assets/mobile/images/schoolIcon.png" alt=""/>学校</label></div>
                             <div class="weui_cell_bd weui_cell_primary">
-                                <input class="weui_input" type="text" placeholder="请填写学校名称"/>
+                                <input class="weui_input" type="text" id="schoolName" placeholder="请填写学校名称"/>
                             </div>
                         </div>
                         <div class="weui_cell">
@@ -43,40 +44,46 @@
                             <div class="weui_cell_hd"><label class="weui_label"><img src="../../assets/mobile/images/educationIcon.png" alt=""/>学历</label></div>
                             <div class="weui_cell_bd weui_cell_primary">
                                 <select class="weui_select" name="select1">
-                                    <option selected="" value="初中">初中</option>
-                                    <option value="高中">高中</option>
-                                    <option value="大学">大学</option>
+                                    <option selected="" value="高中">高中</option>
+                                    <option value="大专">大专</option>
+                                    <option value="本科">本科</option>
+                                    <option value="研究生">研究生</option>
                                 </select>
                             </div>
                         </div>
                         <div class="weui_cell">
                             <div class="weui_cell_hd"><label class="weui_label"><img src="../../assets/mobile/images/majorIcon.png" alt=""/>专业</label></div>
                             <div class="weui_cell_bd weui_cell_primary">
-                                <input class="weui_input" type="text" placeholder="请填写专业名称"/>
+                                <input class="weui_input" type="text" id="specialName" placeholder="请填写专业名称"/>
                             </div>
                         </div>
                     </div>
                     <div class="weui_btn_area">
-                        <input type="submit" class="weui_btn weui_btn_primary" id="saveBtn" value="保存">
+                        <input type="submit" class="weui_btn weui_btn_primary saveEducation" id="saveBtn" value="保存">
                     </div>
                 </form>
+                <script src="../../assets/global/plugins/My97DatePicker/WdatePicker.js"></script>
             </div>
         </div>
     </div>
-    <script src="../../assets/global/plugins/jquery/jquery-1.11.3.min.js"></script>
     <script src="../../assets/mobile/js/global.js"></script>
     <script src="../../assets/mobile/js/errMsg.js"></script>
-    <script src="../../assets/global/plugins/My97DatePicker/WdatePicker.js"></script>
     <script>
         $("#saveBtn").click(function(){
-            var reg = /^0?(13[0-9]|15[012356789]|18[0236789]|14[57])[0-9]{8}$/;
-            if($("#mobile").val() == '') {
-                showMsg('手机号码不能为空');
+            if($("#schoolName").val() == '') {
+                showMsg('学校名不能为空');
                 return false;
             }
-            else if($("#mobile").get(0)&&!reg.test($("#mobile").val())){
-                showMsg('手机号码格式不正确');
-                console.log($("#mobile").html())
+            else if($("#start").val() == '') {
+                showMsg('开始时间不正确');
+            }
+            else if($("#end").val() == '') {
+                showMsg('结束时间不正确');
+            }
+            else if($("#specialName").val() == '') {
+                showMsg('专业名不正确');
+            }else{
+                window.location.href = "addEducation.html"
             }
             return true;
         })

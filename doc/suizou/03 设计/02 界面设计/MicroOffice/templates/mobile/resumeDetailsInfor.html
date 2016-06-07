@@ -1,286 +1,476 @@
 <!DOCTYPE html>
 <html lang="zh-CN">
 <head>
-<meta charset="utf-8">
-<title></title>
+    <meta charset="utf-8">
+    <title></title>
     <meta name="viewport" content="width=device-width; initial-scale=1.0; user-scalable=no;">
-    <link rel="stylesheet" href="../../assets/global/plugins/fullSlider/css/jquery.fullPage.css">
+    <link rel="stylesheet" href="../../assets/global/plugins/swiper/dist/css/swiper.min.css"/>
     <link rel="stylesheet" href="../../assets/global/plugins/font/css/font-awesome.min.css"/>
     <link rel="stylesheet" href="../../assets/mobile/css/weui.css"/>
     <link rel="stylesheet" href="../../assets/mobile/css/example.css"/>
     <link rel="stylesheet" href="../../assets/mobile/css/global.css"/>
+    <script src="../../assets/global/plugins/jquery/jquery-1.11.3.min.js"></script>
+
 </head>
 <body>
-    <!--<ul id="menu">-->
-        <!--<li data-menuanchor="basicInformation" class="active">-->
-            <!--<a href="#basicInformation">基本信息</a>-->
-        <!--</li>-->
-        <!--<li data-menuanchor="educationList">-->
-            <!--<a href="#educationList">教育背景</a>-->
-        <!--</li>-->
-        <!--<li data-menuanchor="workExperienceList">-->
-            <!--<a href="#workExperienceList">工作经历</a>-->
-        <!--</li>-->
-        <!--<li data-menuanchor="projectExperienceList">-->
-            <!--<a href="#projectExperienceList">项目经历</a>-->
-        <!--</li>-->
-        <!--<li data-menuanchor="addCreateTag">-->
-            <!--<a href="#addCreateTag">简历标签</a>-->
-        <!--</li>-->
-    <!--</ul>-->
-    <div id="dowebok">
-        <div class="section">
-            <div class="container js_container">
-                <div class="page relative">
-                    <div class="bd">
-                        <div class="personIforImg">
-                            <button type="button" class="btnInfor">基本信息</button>
-                        </div>
-                        <div class="personIforP">
-                            <p>性别 : <span>男</span></p>
-                            <p>出生年月 : <span>1991-10-4</span></p>
-                            <p>身高(cm) : <span>170</span></p>
-                            <p>体重(kg) : <span>70</span></p>
-                            <p>户籍 : <span>重庆</span></p>
-                            <p>所在地 : <span>重庆</span></p>
-                            <p>工作经验 : <span>1-3年</span></p>
-                            <p>手机 : <span>15086677745</span></p>
-                            <p>邮箱 : <span>729278592@qq.com</span></p>
-                            <p>工作状态 : <span>在职</span></p>
-                            <a class="btn-modify" href="detailedBasicInfor.html">编辑</a>
-                        </div>
-                        <!--<div class="weui_btn_area">-->
-                            <!--<a href="#" class="weui_btn weui_btn_primary">新增</a>-->
-                        <!--</div>-->
-                    </div>
-                </div>
-            </div>
-        </div>
-        <div class="section">
-            <div class="container js_container">
-                <div class="page relative">
-                    <div class="bd">
-                        <div class="personIforImg">
-                            <button type="button" class="btnInfor">教育背景</button>
-                        </div>
-                        <div class="personIforP">
-                            <p>学校 : <span>北京大学</span></p>
-                            <p>在校时间 : <span>1991-10-4~至今</span></p>
-                            <p>学历 : <span>本科</span></p>
-                            <p>专业 : <span>计算机专业</span></p>
-                            <a class="btn-modify" href="addEducation.html">编辑</a>
-                        </div>
-                        <!--<div class="personIforP auto">-->
-                        <!--<a href="#" class="btnAddwe">+增加一条教育经历</a>-->
-                        <!--</div>-->
-                        <div class="weui_btn_area">
-                            <a href="addEducation.html" class="weui_btn weui_btn_primary">新增</a>
-                        </div>
-                    </div>
-                </div>
-            </div>
-        </div>
-        <div class="section">
-            <div class="container js_container">
-                <div class="page relative">
-                    <div class="bd">
-                        <div class="personIforImg">
-                            <button type="button" class="btnInfor">工作经历</button>
-                        </div>
-                        <div class="personIforP">
-                            <p>公司 : <span>百度科技</span></p>
-                            <p>在职时间 : <span>1991-10-4~至今</span></p>
-                            <p>所属行业 : <span>互联网</span></p>
-                            <p>职位 : <span>Java开发工程师</span></p>
-                            <a class="btn-modify" href="">编辑</a>
-                        </div>
-                        <div class="personIforP">
-                            <p>公司 : <span>百度科技</span></p>
-                            <p>在职时间 : <span>1991-10-4~至今</span></p>
-                            <p>所属行业 : <span>互联网</span></p>
-                            <p>职位 : <span>Java开发工程师</span></p>
-                            <a class="btn-modify" href="addJobExperience.html">编辑</a>
-                        </div>
-                        <div class="weui_btn_area">
-                            <a href="addJobExperience.html" class="weui_btn weui_btn_primary">新增</a>
-                        </div>
-                    </div>
-                </div>
-            </div>
-        </div>
-        <div class="section">
-            <div class="container js_container">
-                <div class="page relative">
-                    <div class="bd">
-                        <div class="personIforImg">
-                            <button type="button" class="btnInfor">项目经历</button>
-                        </div>
-                        <div class="personIforP">
-                            <p>项目名称 : <span>百度网盘</span></p>
-                            <p>项目周期 : <span>1991-10-4~至今</span></p>
-                            <p>项目描述 : <br/><span>百度网盘是百度推出的一项云存储服务，是百度云的其中一个服务，首次注册即有机会获得15GB的空间，目前有Web版、Windows</span></p>
-                            <a class="btn-modify" href="addProjectExperience.html">编辑</a>
-                        </div>
-                        <!--<div class="personIforP auto">-->
-                            <!--<a href="#" class="btnAddwe">+增加一条项目经历</a>-->
-                        <!--</div>-->
-                        <div class="weui_btn_area">
-                            <a href="addProjectExperience.html" class="weui_btn weui_btn_primary">新增</a>
-                        </div>
-                    </div>
-                </div>
-            </div>
-        </div>
-        <div class="section">
-            <div class="container js_container absolute" id="errDailog">
-                <div class="page">
-                    <div class="bd">
-                        <div class="personIforImg">
-                            <button type="button" class="btnInfor">简历标签</button>
-                        </div>
+    <div class="swiper-container ma0 w100 swiper-container-horizontal errDailog" id="swiper-container2">
+        <div class="swiper-wrapper w100"  style="transition-duration: 0ms; ">
+            <div class="swiper-slide">
+                <div class="container js_container" >
+                    <div class="page">
+                        <div class="bd ">
+                            <div class="personIforImg">
+                                <button type="button" class="btnInfor">基本信息</button>
+                            </div>
+                            <div class="personIforP">
+                                <p>性别 : <span>男</span></p>
+                                <p>出生年月 : <span>1991-10-4</span></p>
+                                <p>身高(cm) : <span>170</span></p>
+                                <p>体重(kg) : <span>70</span></p>
+                                <p>户籍 : <span>重庆</span></p>
+                                <p>所在地 : <span>重庆</span></p>
+                                <p>工作经验 : <span>1-3年</span></p>
+                                <p>手机 : <span>15086677745</span></p>
+                                <p>邮箱 : <span>729278592@qq.com</span></p>
+                                <p>工作状态 : <span>在职</span></p>
+                                <a class="btn-modify modifyBasicInfor">编辑</a>
+                            </div>
 
-                        <form action="#" id="form" onsubmit="return false">
-                            <div class="button-label">
-                                <p class="moreTag"><span class="required">*</span>最多只能添加5个标签</p>
-                                <!--<a href="#" class="keyword-dashed-button">-->
+                            <!--<div class="weui_btn_area">-->
+                            <!--<a href="#" class="weui_btn weui_btn_primary">新增</a>-->
+                            <!--</div>-->
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="swiper-slide">
+                <div class="container js_container">
+                    <div class="page">
+                        <div class="bd">
+                            <div class="personIforImg">
+                                <button type="button" class="btnInfor">教育背景</button>
+                            </div>
+                            <div class="personIforP">
+                                <p>学校 : <span>北京大学</span></p>
+                                <p>在校时间 : <span>1991-10-4~至今</span></p>
+                                <p>学历 : <span>本科</span></p>
+                                <p>专业 : <span>计算机专业</span></p>
+                                <a class="btn-modify modifyEducation">编辑</a>
+                            </div>
+                            <!--<div class="personIforP auto">-->
+                            <!--<a href="#" class="btnAddwe">+增加一条教育经历</a>-->
+                            <!--</div>-->
+                            <div class="weui_btn_area">
+                                <a class="weui_btn weui_btn_primary modifyEducation">新增</a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="swiper-slide">
+                <div class="container js_container">
+                    <div class="page">
+                        <div class="bd">
+                            <div class="personIforImg">
+                                <button type="button" class="btnInfor">工作经历</button>
+                            </div>
+                            <div class="personIforP">
+                                <p>公司 : <span>百度科技</span></p>
+                                <p>在职时间 : <span>1991-10-4~至今</span></p>
+                                <p>所属行业 : <span>互联网</span></p>
+                                <p>职位 : <span>Java开发工程师</span></p>
+                                <a class="btn-modify modifyJobExperience">编辑</a>
+                            </div>
+                            <div class="personIforP">
+                                <p>公司 : <span>百度科技</span></p>
+                                <p>在职时间 : <span>1991-10-4~至今</span></p>
+                                <p>所属行业 : <span>互联网</span></p>
+                                <p>职位 : <span>Java开发工程师</span></p>
+                                <a class="btn-modify modifyJobExperience">编辑</a>
+                            </div>
+                            <div class="weui_btn_area">
+                                <a class="weui_btn weui_btn_primary modifyJobExperience">新增</a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="swiper-slide">
+                <div class="container js_container">
+                    <div class="page">
+                        <div class="bd">
+                            <div class="personIforImg">
+                                <button type="button" class="btnInfor">项目经历</button>
+                            </div>
+                            <div class="personIforP">
+                                <p>项目名称 : <span>百度网盘</span></p>
+                                <p>项目周期 : <span>1991-10-4~至今</span></p>
+                                <p>项目描述 : <br/><span>百度网盘是百度推出的一项云存储服务，是百度云的其中一个服务，首次注册即有机会获得15GB的空间，目前有Web版、Windows</span></p>
+                                <a class="btn-modify modifyProjectExperience">编辑</a>
+                            </div>
+                            <!--<div class="personIforP auto">-->
+                            <!--<a href="#" class="btnAddwe">+增加一条项目经历</a>-->
+                            <!--</div>-->
+                            <div class="weui_btn_area">
+                                <a class="weui_btn weui_btn_primary modifyProjectExperience">新增</a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="swiper-slide">
+                <div class="container js_container">
+                    <div class="page">
+                        <div class="bd">
+                            <div class="personIforImg">
+                                <button type="button" class="btnInfor">简历标签</button>
+                            </div>
+
+                            <form action="#" id="form" onsubmit="return false">
+                                <div class="button-label">
+                                    <p class="moreTag"><span class="required">*</span>最多只能添加5个标签</p>
+                                    <!--<a href="#" class="keyword-dashed-button">-->
                                     <!--<span class="add-span">+</span>-->
                                     <!--添加-->
-                                <!--</a>-->
-                                <!--<div class="keyword-div have hide">-->
+                                    <!--</a>-->
+                                    <!--<div class="keyword-div have hide">-->
                                     <!--<input type="text" class="keyword-input" placeholder="请输入标签名"/>-->
                                     <!--<i class="fa fa-check-circle"></i>-->
                                     <!--<i class="weui_icon_clear"></i>-->
-                                <!--</div>-->
-                                <a href="#" class="keyword-button"><span class="keyword-button-content">s</span><i class="weui_icon_clear" datatitle="标题" datacontent="内容"></i></a>
+                                    <!--</div>-->
+                                    <a href="#" class="keyword-button"><span class="keyword-button-content">s</span></a>
+                                </div>
+                                <div class="weui_btn_area">
+                                    <a class="weui_btn weui_btn_primary addTag" id="saveBtn">新增</a>
+                                </div>
+                            </form>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="swiper-slide">
+                <div class="container js_container">
+                    <div class="page">
+                        <div class="bd">
+                            <div class="personIforImg">
+                                <button type="button" class="btnInfor">其他信息</button>
                             </div>
+                            <div class="personIforP">
+                                <p>介绍 : <br/><span>百度网盘是百度推出的一项云存储服务，是百度云的其中一个服务，首次注册即有机会获得15GB的空间，目前有Web版、Windows</span></p>
+                                <button class="btn-modify modifyOtherInfor">编辑</button>
+                            </div>
+                            <!--<div class="personIforP auto">-->
+                            <!--<a href="#" class="btnAddwe">+增加一条项目经历</a>-->
+                            <!--</div>-->
                             <div class="weui_btn_area">
-                                <input type="submit" class="weui_btn weui_btn_primary" id="saveBtn" value="完成">
+                                <a class="weui_btn weui_btn_primary" href="modifyResumeSuccess.html">完成</a>
                             </div>
-                        </form>
-                    </div>
-                </div>
-            </div>
-        </div>
-        <div class="section">
-            <div class="container js_container">
-                <div class="page relative">
-                    <div class="bd">
-                        <div class="personIforImg">
-                            <button type="button" class="btnInfor">其他信息</button>
-                        </div>
-                        <div class="personIforP">
-                            <p>介绍 : <br/><span>百度网盘是百度推出的一项云存储服务，是百度云的其中一个服务，首次注册即有机会获得15GB的空间，目前有Web版、Windows</span></p>
-                            <button class="btn-modify">编辑</button>
-                        </div>
-                        <!--<div class="personIforP auto">-->
-                        <!--<a href="#" class="btnAddwe">+增加一条项目经历</a>-->
-                        <!--</div>-->
-                        <div class="weui_btn_area">
-                            <a href="#" class="weui_btn weui_btn_primary">完成</a>
                         </div>
                     </div>
                 </div>
             </div>
         </div>
+        <div class="swiper-pagination padd"></div>
     </div>
-    <script src="../../assets/global/plugins/jquery/jquery-1.11.3.min.js"></script>
-    <!--<script src="../../assets/mobile/js/global.js"></script>-->
+    <script src="../../assets/global/plugins/swiper/dist/js/swiper.min.js"></script>
     <script src="../../assets/mobile/js/errMsg.js"></script>
-    <!--<script src="../../assets/mobile/js/ConfirmDialog.js"></script>-->
     <script>
         $(function(){
-            function keywordButtonHide(){
-                if($(".keyword-button").get(0)){
-                    if(($(".keyword-button").size())>4){
-                        $(".keyword-dashed-button").addClass("hide");
-                        $(".keyword-div").addClass("hide");
-                    }
-                    else{
-                        $(".keyword-div").addClass("hide");
-                        $(".keyword-dashed-button").removeClass("hide");
-                    }
-                }
-                else{
-                    $(".keyword-div").addClass("hide");
-                    $(".keyword-dashed-button").removeClass("hide");
-                }
-            }
-            $(".keyword-dashed-button").on("touchend",function(){
-                $(this).addClass("hide");
-                $(".keyword-div").removeClass("hide");
+            swiper = new Swiper('#swiper-container2', {
+                slidesPerView: 1,
+                pagination:'.swiper-pagination',
+                paginationClickable: true,
+                spaceBetween: 0,
+                loop:true,
+                autoplay: false,
+                autoplayDisableOnInteraction: false
             });
-
-            var arr = [];
-            $(".keyword-div .fa-check-circle").on("touchend",function(){
-                var values = $(this).closest(".keyword-div").find(".keyword-input").val();
-                var value = $.trim(values);
-                if(value==''){
-                    showMsg('标签名不能为空');
-                }
-                else{
-                    var str = '<a href="#" class="keyword-button">'+
-                            '<span class="keyword-button-content">'+value+'</span>'+
-                            '<i class="weui_icon_clear" dataTitle="标题" dataContent="内容"></i>'+
-                            '</a>';
-                    if($(".keyword-button").get(0)){
-                        if($.inArray(value, arr) < 0){
-                            $(".keyword-dashed-button").before(str);
-                            $(this).closest(".keyword-div").find(".keyword-input").val("");
-                            arr.push(value);
-                            keywordButtonHide();
-                        }
-                        else{
-                            showMsg('标签名已经存在');
-                        }
-                    }
-                    else{
-                        arr.push(value);
-                        $(".keyword-dashed-button").before(str).removeClass("hide");
-                        $(this).closest(".keyword-div").addClass("hide");
-                        $(this).closest(".keyword-div").find(".keyword-input").val("");
-                        return false;
-                    }
-                }
-            });
-            $(".keyword-div .weui_icon_clear").on("touchend",function(){
-                $(".keyword-dashed-button").removeClass("hide");
-                $(this).closest(".keyword-div").addClass("hide");
-                $(this).closest(".keyword-div").find(".keyword-input").val("");
-            });
-
-            $(".btnSure").on("touchend",function(){
-                $(".removeObj").closest(".keyword-button").remove();
-                $(".removeObj").removeClass("removeObj");
-                keywordButtonHide();
-                $('#dialog1').hide();
-            });
-            $(".btnCancle").on("touchend",function(){
-                $('#dialog1').hide();
-                $(".removeObj").removeClass("removeObj");
-            });
-
-
-            $(".button-label").delegate(".keyword-button .weui_icon_clear",'click',function(){
-                var objTitle   = $(this).attr("dataTitle");
-                var objContent = $(this).attr("dataContent");
-                var Confirm = {
-                    title:objTitle,
-                    content:objContent
-                };
-                arr.splice($(this).parent(".keyword-button").index(),1);
-                $(this).closest(".keyword-button").remove();
-                keywordButtonHide();
-                showConfirmDialog(Confirm);
-                $(this).closest(".keyword-button").addClass("removeObj");
-            })
         });
     </script>
-    <script src="../../assets/global/plugins/fullSlider/js/jquery.fullPage.min.js"></script>
     <script>
         $(function(){
-            $('#dowebok').fullpage({
-                sectionsColor: ['#fff', '#fff', '#fff', '#fff', '#fff'],
-                'navigation': true
+            var bd = $(".bd");
+
+            /*基本信息的操作*/
+            bd.delegate(".modifyBasicInfor","click",function(){
+                var that = $(this);
+                $.ajax({
+                    type : "POST",
+                    url : "addDetailedBasicInfor.html",
+                    dataType : "html",
+                    cache : false,
+                    success : function(data) {
+                        var $data = $(data);
+                        that.closest(".bd").html($data.find(".bd").html());
+                    }
+                });
+            });
+            bd.delegate(".saveBasic","click",function(){
+                var reg = /^0?(13[0-9]|15[012356789]|18[0236789]|14[57])[0-9]{8}$/;
+                if($("#start").val() == '') {
+                    showMsg('时间不能为空');
+                    return false;
+                }
+                else if($("#bodyHeight").val() == '') {
+                    showMsg('身高不能为空');
+                    return false;
+                }
+                else if($("#weight").val() == '') {
+                    showMsg('体重不能为空');
+                    return false;
+                }
+                else if($("#address").val() == '') {
+                    showMsg('出生地不能为空');
+                    return false;
+                }
+                else if($("#address").val() == '') {
+                    showMsg('现住地不能为空');
+                    return false;
+                }
+                else if($("#mobile").val() == '') {
+                    showMsg('手机号不能为空');
+                    return false;
+                }
+                else if($("#mobile").get(0)&&!reg.test($("#mobile").val())){
+                    showMsg('手机号格式不正确');
+                }
+                else if($("#email").val() == '') {
+                    showMsg('邮箱不能为空');
+                    return false;
+                }
+                else{
+                    var that = $(this);
+                    $.ajax({
+                        type : "POST",
+                        url : "basicInformation.html",
+                        dataType : "html",
+                        cache : false,
+                        success : function(data) {
+                            var $data = $(data);
+                            that.closest(".bd").html($data.find(".bd").html());
+                        }
+                    });
+                }
+                return true;
+            });
+
+            /*教育信息的操作*/
+            bd.delegate(".modifyEducation","click",function(){
+                var that = $(this);
+                $.ajax({
+                    type : "POST",
+                    url : "addEducation.html",
+                    dataType : "html",
+                    cache : false,
+                    success : function(data) {
+                        var $data = $(data);
+                        that.closest(".bd").html($data.find(".bd").html());
+                    }
+                });
+            });
+            bd.delegate(".saveEducation","click",function(){
+                if($("#schoolName").val() == '') {
+                    showMsg('学校名不能为空');
+                    return false;
+                }
+                else if($("#start").val() == '') {
+                    showMsg('开始时间不正确');
+                }
+                else if($("#end").val() == '') {
+                    showMsg('结束时间不正确');
+                }
+                else if($("#specialName").val() == '') {
+                    showMsg('专业名不正确');
+                }
+                else{
+                    var that = $(this);
+                    $.ajax({
+                        type : "POST",
+                        url : "educationList.html",
+                        dataType : "html",
+                        cache : false,
+                        success : function(data) {
+                            var $data = $(data);
+                            that.closest(".bd").html($data.find(".bd").html());
+                        }
+                    });
+                }
+                return true;
+            });
+
+            /*工作信息的操作*/
+            bd.delegate(".modifyJobExperience","click",function(){
+                var that = $(this);
+                $.ajax({
+                    type : "POST",
+                    url : "addJobExperience.html",
+                    dataType : "html",
+                    cache : false,
+                    success : function(data) {
+                        var $data = $(data);
+                        that.closest(".bd").html($data.find(".bd").html());
+                        
+                    }
+                });
+            });
+            bd.delegate(".saveJobExperience","click",function(){
+                if($("#start").val() == '') {
+                    showMsg('开始时间不能为空');
+                    return false;
+                }
+                else  if($("#end").val() == '') {
+                    showMsg('结束时间不能为空');
+                    return false;
+                }
+                else if($("#companyName").val() == '') {
+                    showMsg('公司名不能为空');
+                    return false;
+                }
+                else if($("#position").val() == '') {
+                    showMsg('行业不能为空');
+                    return false;
+                }
+                else  if($("#job").val() == '') {
+                    showMsg('职位不能为空');
+                    return false;
+                }
+                else{
+                    var that = $(this);
+                    $.ajax({
+                        type : "POST",
+                        url : "educationList.html",
+                        dataType : "html",
+                        cache : false,
+                        success : function(data) {
+                            var $data = $(data);
+                            that.closest(".bd").html($data.find(".bd").html());
+                            
+                        }
+                    });
+                }
+                return true;
+            });
+
+            /*项目信息的操作*/
+            bd.delegate(".modifyProjectExperience","click",function(){
+                var that = $(this);
+                $.ajax({
+                    type : "POST",
+                    url : "addProjectExperience.html",
+                    dataType : "html",
+                    cache : false,
+                    success : function(data) {
+                        var $data = $(data);
+                        that.closest(".bd").html($data.find(".bd").html());
+                        
+                    }
+                });
+            });
+            bd.delegate(".saveProjectExperience","click",function(){
+                if($("#start").val() == '') {
+                    showMsg('开始时间不能为空');
+                    return false;
+                }
+                else  if($("#end").val() == '') {
+                    showMsg('结束时间不能为空');
+                    return false;
+                }
+                else if($("#companyName").val() == '') {
+                    showMsg('公司名不能为空');
+                    return false;
+                }
+                else if($("#position").val() == '') {
+                    showMsg('行业不能为空');
+                    return false;
+                }
+                else  if($("#job").val() == '') {
+                    showMsg('职位不能为空');
+                    return false;
+                }
+                else{
+                    var that = $(this);
+                    $.ajax({
+                        type : "POST",
+                        url : "projectExperienceList.html",
+                        dataType : "html",
+                        cache : false,
+                        success : function(data) {
+                            var $data = $(data);
+                            that.closest(".bd").html($data.find(".bd").html());
+                            
+                        }
+                    });
+                }
+                return true;
+            });
+
+            /*标签的操作*/
+            bd.delegate(".addTag","click",function(){
+                var that = $(this);
+                $.ajax({
+                    type : "POST",
+                    url : "addTag.html",
+                    dataType : "html",
+                    cache : false,
+                    success : function(data) {
+                        var $data = $(data);
+                        that.closest(".bd").html($data.find(".bd").html());
+                        
+                    }
+                });
+            });
+            bd.delegate(".saveTag","click",function(e){
+                e.preventDefault();
+                var that = $(this);
+                $.ajax({
+                    type : "POST",
+                    url : "tagInfor.html",
+                    dataType : "html",
+                    cache : false,
+                    success : function(data) {
+                        var $data = $(data);
+                        that.closest(".bd").html($data.find(".bd").html());
+                        
+                    }
+                });
+                return true;
+            });
+
+            /*其他信息的操作*/
+            bd.delegate(".modifyOtherInfor","click",function(){
+                var that = $(this);
+                $.ajax({
+                    type : "POST",
+                    url : "addOtherInfor.html",
+                    dataType : "html",
+                    cache : false,
+                    success : function(data) {
+                        var $data = $(data);
+                        that.closest(".bd").html($data.find(".bd").html());
+                        
+                    }
+                });
+            });
+            bd.delegate(".saveOtherInfor","click",function(e){
+                var that = $(this);
+                if($("#caseDetails").val() == '') {
+                    showMsg('项目描述不能为空');
+                    return false;
+                }else{
+                    $.ajax({
+                        type : "POST",
+                        url : "otherInforList.html",
+                        dataType : "html",
+                        cache : false,
+                        success : function(data) {
+                            var $data = $(data);
+                            that.closest(".bd").html($data.find(".bd").html());
+                            
+                        }
+                    });
+
+                }
+                return true;
             });
         });
     </script>

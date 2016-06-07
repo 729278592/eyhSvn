@@ -10,7 +10,7 @@
     <link rel="stylesheet" href="../../assets/mobile/css/global.css"/>
 </head>
 <body>
-<div class="container js_container absolute" id="errDailog">
+<div class="container js_container absolute errDailog">
     <div class="page">
         <div class="head">
             <i class="fa fa-angle-left"></i>
@@ -46,12 +46,12 @@
                             <input class="weui_input" type="text" placeholder="重庆易优弧有限公司" id="compangName"/>
                         </div>
                     </div>
-                    <div class="weui_cell">
-                        <div class="weui_cell_hd"><label class="weui_label"><img src="../../assets/mobile/images/jobIcon.png" alt=""/>行业</label></div>
-                        <div class="weui_cell_bd weui_cell_primary">
-                            <input class="weui_input" type="text" placeholder="IT" id="position"/>
-                        </div>
-                    </div>
+                    <!--<div class="weui_cell">-->
+                        <!--<div class="weui_cell_hd"><label class="weui_label"><img src="../../assets/mobile/images/jobIcon.png" alt=""/>行业</label></div>-->
+                        <!--<div class="weui_cell_bd weui_cell_primary">-->
+                            <!--<input class="weui_input" type="text" placeholder="IT" id="position"/>-->
+                        <!--</div>-->
+                    <!--</div>-->
                     <div class="weui_cell">
                         <div class="weui_cell_hd"><label class="weui_label"><img src="../../assets/mobile/images/positionIcon.png" alt=""/>职位</label></div>
                         <div class="weui_cell_bd weui_cell_primary">
@@ -93,7 +93,7 @@
             return false;
         }
         else{
-            window.location.href = "fillTag.html";
+            window.location.href = "addTag.html";
         }
         return true;
     })

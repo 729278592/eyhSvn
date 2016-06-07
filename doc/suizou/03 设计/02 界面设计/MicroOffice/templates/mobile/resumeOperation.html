@@ -32,7 +32,7 @@
                     选择已有简历
                 </div>
                 <div class="resumeCenter spacing fff">
-                    <div class="progress active">
+                    <div class="progress">
                         <a href="resumeDetailsInfor.html">
                             <p class="resumeTitle">简历1</p>
                             <div class="weui_progress">
@@ -47,49 +47,11 @@
                             <span class="time">更新于2016-03-05 9:00</span>
                         </a>
                     </div>
-                    <div class="progress">
-                        <a href="resumeDetailsInfor.html">
-                            <p class="resumeTitle">简历2</p>
-                            <div class="weui_progress">
-                                <div class="weui_progress_bar">
-                                    <div class="weui_progress_inner_bar js_progress" style="width: 50%;"></div>
-                                </div>
-                                <span class="complete">完成50%</span>
-                                <!--<a href="javascript:;" class="weui_progress_opr">-->
-                                <!--<img src="../../assets/mobile/images/modiflyIcon.png" alt="" class="modiflyIcon"/>-->
-                                <!--</a>-->
-                            </div>
-                            <span class="time">更新于2016-04-05 9:00</span>
-                        </a>
-                    </div>
-                    <div class="progress">
-                        <a href="resumeDetailsInfor.html">
-                            <p class="resumeTitle">简历3</p>
-                            <div class="weui_progress">
-                                <div class="weui_progress_bar">
-                                    <div class="weui_progress_inner_bar js_progress" style="width: 80%;"></div>
-                                </div>
-                                <span class="complete">完成80%</span>
-                                <!--<a href="javascript:;" class="weui_progress_opr">-->
-                                <!--<img src="../../assets/mobile/images/modiflyIcon.png" alt="" class="modiflyIcon"/>-->
-                                <!--</a>-->
-                            </div>
-                            <span class="time">更新于2016-05-05 9:00</span>
-                        </a>
-                    </div>
                 </div>
             </div>
         </div>
     </div>
     <script src="../../assets/global/plugins/jquery/jquery-1.11.3.min.js"></script>
     <script src="../../assets/mobile/js/global.js"></script>
-    <script>
-        $(function(){
-            $(".resumeCenter .progress").on("touchend",function(){
-                $(this).addClass("active");
-                $(this).siblings(".progress").removeClass("active");
-            })
-        })
-    </script>
 </body>
 </html>

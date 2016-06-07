@@ -7,6 +7,7 @@
     <link rel="stylesheet" href="../../assets/global/plugins/font/css/font-awesome.min.css"/>
     <link rel="stylesheet" href="../../assets/mobile/css/weui.css"/>
     <link rel="stylesheet" href="../../assets/mobile/css/example.css"/>
+    <link rel="stylesheet" href="../../assets/global/plugins/swiper/dist/css/swiper.min.css"/>
     <link rel="stylesheet" href="../../assets/mobile/css/global.css"/>
 </head>
 <body>
@@ -20,11 +21,13 @@
                 <div class="companyDetails">
                     <div class="companyImg">
                         <img src="../../assets/mobile/images/companyInforImg1.jpg" class="w100" alt=""/>
-                        <img src="../../assets/mobile/images/company1.jpg" alt="" class="company-icon">
+                        <a href="companyInfor.html">
+                            <img src="../../assets/mobile/images/company1.jpg" alt="" class="company-icon">
+                        </a>
                     </div>
                     <div class="comInfor">
                         <div class="comInforTitle">
-                            <span>重庆易优弧有限公司</span>
+                            <a href="companyInfor.html">重庆易优弧有限公司</a>
                         </div>
                         <div class="comInforCon">
                             <ul class="positionMenu companyMenu b0 bb1">
@@ -41,8 +44,9 @@
                                             </span>
                                         </span>
                                     </a>
-                                    <div class="companyInfor">
+                                    <div class="companyInfor w30">
                                         <span><img src="../../assets/mobile/images/cnforIcon1.jpg" alt=""/> 重庆</span>
+                                        <span><i class="fa fa-eye"></i> 200次</span>
                                         <span><img src="../../assets/mobile/images/cnforIcon3.jpg" alt=""/> 今日更新</span>
                                     </div>
                                 </li>
@@ -150,6 +154,8 @@
                         </a>
                     </div>
                 </div>
+                <img src="../../assets/mobile/images/companyInforImg2-0.png" alt="" class="w100"/>
+
                 <div class="weui_tab fixed">
                     <div class="weui_tabbar">
                         <a href="javascript:;" class="weui_tabbar_item" id="share">
@@ -175,19 +181,17 @@
             </div>
         </div>
         <div class="maskHide hide">
+            <img src="../../assets/mobile/images/shareImg1.png" alt="" class="shareImg1"/>
             <div class="reward hide">
-                <img src="../../assets/mobile/images/shareIcon.png" alt=""/>
+                <img src="../../assets/mobile/images/shareImg.png" alt="" class="shareImg"/>
                 <p>转发给朋友或分享朋友圈，领取积分奖励！</p>
             </div>
         </div>
-
     </div>
     <script src="../../assets/global/plugins/jquery/jquery-1.11.3.min.js"></script>
     <script src="../../assets/mobile/js/global.js"></script>
     <script src="../../assets/mobile/js/mobileLeft.js"></script>
     <script src="../../assets/global/plugins/swiper/dist/js/swiper.min.js"></script>
-
-
     <script>
         $(function(){
             /*左边滑动导航*/
@@ -209,11 +213,12 @@
                 $(this).addClass("hide");
                 $(".reward").addClass("hide");
             });
+
             $(".reward").on("touchend",function(e){
                 e.stopPropagation();
-            })；
-
-            swiper = new Swiper('#swiper-container1', {
+            });
+          
+            swiper = new Swiper('#swiper-container2', {
 //        prevButton:'.swiper-button-prev',
 //        nextButton:'.swiper-button-next',
                 slidesPerView: 1,

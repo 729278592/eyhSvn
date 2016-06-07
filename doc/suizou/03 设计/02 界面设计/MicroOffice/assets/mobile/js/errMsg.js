@@ -12,7 +12,7 @@ $(function(){
                        '</p>'+
                    '</div>'+
                '</div>';
-    $("#errDailog").append(html);
+    $(".errDailog").append(html);
 });
 
 function showMsg(message) {
@@ -23,5 +23,5 @@ function showMsg(message) {
         $(".weui_toast").removeClass("weui_toastshow");
         $('#errMsg').hide();
         $(".errSpan").empty();
-    }, 1000);
+    }, 3000);
 }
