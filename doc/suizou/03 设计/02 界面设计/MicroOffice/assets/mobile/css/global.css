@@ -185,7 +185,7 @@ img.resume{width: 100%;}
 .positionInfor .companyName span{font-size: 12px;}
 .positionInfor .time{color: #999;}
 .positionInfor .jobRecord span{position: relative;top: -2px;}
-.positionInfor.pd15{padding: 10px 15px;border-bottom: 1px solid #dfdfdf;}
+.positionInfor.pd15{padding: 10px 15px 36px;border-bottom: 1px solid #dfdfdf;}
 .positionInfor.pd15 .dtepTitle{color: #333;font-size: 16px;}
 
 .stepDiv{width: 92%;padding: 0 4%;}
@@ -229,9 +229,9 @@ a.weui_cell.c666{color: #999;}
 a.weui_btn.weui_btn_primary{font-size: 16px;}
 
 .swiper-container.ma0{margin: 0 auto;}
-.swiper-container.w100,.swiper-wrapper.w100,.swiper-wrapper.w100 .swiper-slide{height: 100%;}
-.swiper-container-horizontal>.swiper-pagination.padd{height: 8px;top: -7px;}
-
+.swiper-container.w100,.swiper-wrapper.w100 .swiper-slide{height: 100%;}
+.swiper-container-horizontal>.swiper-pagination.padd{bottom: 0;}
+.swiper-wrapper.w100{height: 96%;padding-bottom: 4%;}
 
 .weui_cells_checkbox.mt0{margin-top: 0;}
 .weui_cells.bt0:before{border-top: none;}
@@ -276,6 +276,7 @@ a.weui_btn.weui_btn_primary{font-size: 16px;}
 .prosuct,.companyImgList{background: #fff;margin-top: 10px;border-top: 1px solid #dbdbdb;width: 100%;padding: 2% 0;border-bottom: 1px solid #dbdbdb;}
 .prosuct .prosuctContent{width: 94%;padding: 2% 3%;font-size: 14px;color: #999;}
 .companyImgList{text-align: center;color: #999;}
+.companyImgList p{font-size: 14px;}
 .companyImgList .codeIcon{width: 40%;margin: 5% 0;}
 .companyBriefIntroduction .comBIContent>span{display: inline-block;width: 100%;vertical-align: top;}
 .companyBriefIntroduction .comBIContent>span>span:last-child{display: inline-block;width: 94%;}
@@ -285,7 +286,8 @@ a.weui_btn.weui_btn_primary{font-size: 16px;}
 .prosuct .goodMenu li .fa{font-size: 16px;}
 .prosuct .goodMenu li .goodName{}
 
-
+.weui_search_inner .weui_search_input{font-size: 12px;font-family: "微软雅黑";}
+.weui_search_cancel{font-size: 14px;font-family: "微软雅黑";}
 .weui_tab .weui_tabbar{background: #e84b2f;position: relative;}
 .weui_tab .weui_tabbar a,.weui_tab .weui_tabbar a p{color: #fff;padding-top: 0;}
 .weui_tab .weui_tabbar a p{margin-top: 0;padding-bottom: 5px;}
@@ -293,8 +295,9 @@ a.weui_btn.weui_btn_primary{font-size: 16px;}
 .weui_tab .weui_tabbar a:last-child{border-right: none;}
 .positionList{width: 100%;}
 .positionList .positionListtitle{width: 100%;text-align: center;padding: 10px 0 ;color: #666;}
-
+.swiper-container.m0{margin: 0 auto;}
 .button-label{width: 94%;margin: 0 auto;text-align: center;border-top: 1px dotted #67a5f9;padding-top: 3%;}
+.button-label.bt0{border-top: 0;}
 .button-label .moreTag{text-align: center;font-size: 14px;color: #666;padding:0 0 10px 0;}
 .button-label .moreTag .required{color: #fda341;position: relative;top: 3px;left: -5px;}
 .keyword-button{color: #fff;border-radius: 4px;background: #8DBBFB;padding: 0 8% 0 4%;height: 36px;line-height: 36px;text-align: center;display: inline-block;width: 60%; position: relative;margin-bottom: 10px;}
@@ -347,7 +350,7 @@ a.weui_btn.weui_btn_primary{font-size: 16px;}
 
 
 
-.weui_tab.fixed{position: fixed;bottom: 0;width: 100%;height: 48px;}
+.weui_tab.fixed{position: fixed;bottom: 0;width: 100%;height: 48px;z-index: 10;}
 
 
 
