@@ -115,9 +115,9 @@ a:link{text-decoration: none;}
 
 .common-list-item .item-actions.application-item-actions-pos{left: 64%;}
 .fbxzw{font-size: 14px;color: #6cb7ee;margin-right: 20px;}
-
-
-
+.dq-application-detail-icon-status > i.ml0{margin-left: 0;margin-top: 4px;}
+.dq-application-detail-status-recommend > span.text{right: 33px;}
+.dq-application-detail-status-recommend.textAlign{display: inline-block;top: -33px;}
 
 .content-header{padding-left: 20px;background: #4879c7;border-bottom: 1px solid #f7f7f7;width: 98%;z-index: 20;height: 50px;line-height: 50px;position: fixed;display: block;}
 .content-header .content-title{color: #fff;font-size: 16px;}
@@ -171,6 +171,17 @@ a:link{text-decoration: none;}
 .quickInfor li .return{display: inline-block;padding: 2px 15px;background: #578adc;border-radius: 15px;color: #fff;font-size: 14px;}
 .quickInfor li .return .fa{color: #fff;}
 .dq-application-resume-preview_title{font-size: 16px;}
+.ns-admin.ns-setting.ns-accountinfo .form-control-input.default.hide{display: none;}
+.ns-admin.ns-setting.ns-accountinfo .form-control-input.default{background: #f7f7f7;}
+.content-wrapper{position: relative;}
+.ns-admin.ns-setting.ns-accountinfo .form-control-input{background: #fff;}
+.content-wrapper .modal-tip{position: fixed;left: 0;top: 0;right: 0;bottom: 0;}
+.content-wrapper .modal-tip.hide{display: none !important;}
+.position-phone-validate{position: absolute;top: 35%;}
+.form-line-group-input .form-control-input{width: 52%;margin-right: 0;}
+.disabled.form-control-submit{text-align: center;}
+.ns-admin.ns-setting.ns-accountinfo .error-message{background: transparent;}
+.error .error-message{padding-left: 0;margin-top: 5px;}
 
 
 /*自写样式*/
@@ -180,9 +191,10 @@ a:link{text-decoration: none;}
 #admin-wrapper{position: relative;overflow-x: auto;min-width: 1100px;}
 .right-con{overflow-y: auto;}
 .admin-wrapper{position: relative;}
-.main-nav,.nav{position:fixed;top:0;left:0;z-index:35;text-align:center;width:50px;bottom: 0;}
+.main-nav,.nav{position:fixed;top:0;left:0;z-index:1;text-align:center;width:50px;bottom: 0;}
 .main-nav{background-color: #1d2938;}
-.main-nav-w158{position:fixed;top:0;left:-158px;z-index:34;background-color: #4879c7;text-align:center;width:158px;}
+.highcharts-container{font-family: "微软雅黑";}
+.main-nav-w158{position:fixed;top:0;left:-158px;z-index:0;background-color: #4879c7;text-align:center;width:158px;}
 .main-nav .logo-wrapper,.main-nav-w158 .logo-wrapper{width:100%;background-color: #67a5f9;height:50px;display:block;color:#abb4c3;overflow:hidden}
 .main-nav .logo-wrapper{background: #1d2938;}
 .main-nav .logo-wrapper .logo,.main-nav-w158 .logo-wrapper .logo{height:100%;font-size:14px;position:relative}
@@ -349,6 +361,7 @@ img.w100{width: 100%;}
 .btn.btnSure,.brn.btnReturn{float: none;width: 80px;position: relative;}
 .btn.btnSure{left: 210px;}
 .form-horizontal .control-label {padding-top: 7px;margin-bottom: 0;text-align: right;}
+.form-horizontal .control-label.pad0{padding-left: 17px;padding-right: 0;text-align: left;}
 .form-group{position: relative;}
 .form-group .fa-caret-down{position: absolute;right: 25px;top: 10px;display: none\0;}
 .upLoad,.btnOpen,.btnRecharge{font-size: 12px;border-radius: 8px;background: #69a7f9;color: #fff;width: 70px;height: 30px;text-align: center;display: inline-block;line-height: 30px;}
@@ -536,7 +549,7 @@ a.keyword-button:hover,.keyword-button:active,.keyword-button:focus{color: #fff;
 .entryStep li.pass .step{}
 .entryStep li.notPass .step{}
 .entryStep li .operation{position: absolute;left: 50%;top: 50px;display: inline-block;margin-left: -87px;}
-.entryStep li .operation.l147{left: 147px;}
+.entryStep li .operation.l147{margin-left: -40px}
 .entryStep li .operation a{display: inline-block;background: red;color: #fff;border-radius: 10px;font-size: 12px;width: 80px;height: 30px;line-height: 30px;}
 .entryStep li .operation a.btnPass{background: #ed6d45;}
 .entryStep li .operation a.btnPass.bgccc{background: #ccc;margin-left: 50px;}
@@ -601,8 +614,40 @@ a.keyword-button:hover,.keyword-button:active,.keyword-button:focus{color: #fff;
 .rechargeMoney .dailogContent p .type{color: #999;}
 .dq-application-resume-preview .dq-application-resume-preview_info_title{font-size: 16px;}
 
+
+.amountTable{ border-collapse:collapse;width: 100%;margin: 20px auto;font-size: 14px;}
+.amountTable tr th{ text-align:center;color: #333;padding: 15px 0;background: #e2e2e2;font-family: "微软雅黑";}
+.amountTable tr td{border:1px solid #dbdbdb;text-align:center;padding: 10px 0;position: relative;}
+/*.amountTable tr td:after{content: " ";position: absolute;top: 0;right: 0;border-right: 1px solid #dbdbdb;width: 1px;height: 100%;}*/
+.amountTable tr td .type{display: inline-block;width: 70px;color: #666;}
+.amountTable tr td .num{font-size: 16px;color: #ec6a40;}
+.amountTable tr td .money{content: #ec6a40;font-size: 14px;}
+.amountTable tr td .time{color: #999;font-size: 14px;}
+.amountTable tr td .name{display: inline-block;width: 50px;color: #666;}
+.amountTable tr td .year{display: inline-block;width: 50px;color: #999;}
+.amountTable tr td .job{color: #666;}
+.amountTable tr td .jobName{display: inline-block;width: 60px;color: #666;}
+.amountTable tr td .deart{color: #999;}
+.amountTable tr td .styleH{display: inline-block;height: 1px;width: 15px;background: #999;position: relative;top: -5px;left: 10px;}
+
+
+/*分页*/
+.paging{position: relative;left: 50%;margin-top: 20px;}
+.page-pre,.page-next{float: left;border-radius: 4px;background: #f2f2f2;color: #666;font-size: 16px;width: 40px;height: 30px;text-align: center;line-height: 30px;}
+.page-next{margin-left: 5px;}
+.page-menu{float: left;}
+.page-menu li{float: left;border-radius: 4px;background: #f2f2f2;margin-left: 5px;color: #999;width: 40px;height: 30px;text-align: center;line-height: 30px;font-size: 12px;}
+.page-menu li.active{background: #ff6702;color: #fff;}
+.page-pre:hover,.page-next:hover{cursor: pointer;}
+.page-next{margin-right: 4px;}
+.page-menu li:hover{cursor: pointer;}
+.page-num{border: 1px solid #ccc;text-align: center;width: 50px;height: 25px;line-height: 25px;color: #666;font-size: 12px;}
+.btn-jump{width: 50px;height: 30px;text-align: center;background: #ff6702;font-size: 12px;color: #fff;font-family: "微软雅黑";}
+.page-num:focus{color: #ff6702;}
+
 /*dataStatistics*/
 .dataStatisticsHead{padding: 10px;border-bottom: 1px solid #dbdbdb;color: #666;font-size: 14px;}
+.dataStatisticsHead.bb0{border-bottom: 0;padding: 0;}
 .dataStatisticsHead .title{}
 .dataStatisticsHead .dataOperation{position: relative;left: 15px;}
 .dataStatisticsHead .dataOperation .dataIput{border: 1px solid #dbdbdb;width: 350px;border-radius: 20px;height: 30px;line-height: 30px;padding-left: 10px;}

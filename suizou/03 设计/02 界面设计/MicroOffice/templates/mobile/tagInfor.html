@@ -20,15 +20,24 @@
                 <div class="personIforImg">
                     <button type="button" class="btnInfor">简历标签</button>
                 </div>
-                <div class="personIforP">
-                    <p>公司 : <span>百度科技</span></p>
-                    <p>在职时间 : <span>1991-10-4~至今</span></p>
-                    <p>所属行业 : <span>互联网</span></p>
-                    <p>职位 : <span>Java开发工程师</span></p>
-                </div>
-                <div class="weui_btn_area">
-                    <a href="#" class="weui_btn weui_btn_primary addTag">保存</a>
-                </div>
+                <form action="#" id="form" onsubmit="return false">
+                    <div class="button-label bt0">
+                        <p class="moreTag"><span class="required">*</span>最多只能添加5个标签</p>
+                        <!--<a href="#" class="keyword-dashed-button">-->
+                        <!--<span class="add-span">+</span>-->
+                        <!--添加-->
+                        <!--</a>-->
+                        <!--<div class="keyword-div have hide">-->
+                        <!--<input type="text" class="keyword-input" placeholder="请输入标签名"/>-->
+                        <!--<i class="fa fa-check-circle"></i>-->
+                        <!--<i class="weui_icon_clear"></i>-->
+                        <!--</div>-->
+                        <a href="#" class="keyword-button"><span class="keyword-button-content">s</span></a>
+                    </div>
+                    <div class="weui_btn_area">
+                        <a class="weui_btn weui_btn_primary addTag" id="saveBtn">新增</a>
+                    </div>
+                </form>
             </div>
 
         </div>

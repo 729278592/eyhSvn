@@ -231,6 +231,10 @@
                             $(".account-selection").addClass("hide");
                         }
                     });
+
+                    $(".returnPrev").on("click",function(){
+                        window.history.go(-1);
+                    });
                 })
             </script>
         </div>

@@ -129,11 +129,6 @@
             </div>
         </div>
         <div id="admin-content-wrapper">
-            <link rel="stylesheet" href="../../assets/global/plugins/bootstrap-3.3.5/css/bootstrap.min.css"/>
-            <style>
-                body{font-family: "微软雅黑",Arial, Helvetica, sans-serif;overflow-x: hidden;-webkit-font-smoothing: antialiased;-moz-font-smoothing: antialiased;;}
-                a:hover{text-decoration: none;}
-            </style>
             <div class="content-header">
                 <span class="content-title">账号资料</span>
                 <div class="company-name right">
@@ -162,10 +157,13 @@
             <div class="content-wrapper">
                 <div class="content content--side-main content--no-inner-nav-bar home">
                     <img src="../../assets/admin/images/companyGet.jpg" alt="" class="w100"/>
-                    <div class="content-position mt40">
+                    <div class="content-position mt40 ns-admin ns-setting ns-accountinfo ng-scope">
                         <ul class="companyTitle clearfix">
                             <li class="hover">
                                 <a href="companyInfor.html" class="companyInfor">公司信息</a>
+                            </li>
+                            <li class="hover">
+                                <a href="amountReward.html" class="amountReward">悬赏招聘</a>
                             </li>
                             <!--<li class="hover">-->
                                 <!--<a href="userManagementList.html" class="userManagementList">用户管理(仅管理员权限)</a>-->
@@ -173,83 +171,144 @@
                             <li class="active">
                                 <a href="accountManagement.html" class="accountManagement">账号资料</a>
                             </li>
-                            <li class="hover">
-                                <a href="modifyPassword.html" class="modifyPassword">修改密码</a>
-                            </li>
+                            <!--<li class="hover">-->
+                                <!--<a href="modifyPassword.html" class="modifyPassword">修改密码</a>-->
+                            <!--</li>-->
                         </ul>
                         <div class="divForm">
                             <p class="title">
                                 <span>账号资料</span>
                             </p>
                         </div>
-                        <form action="#" id="form_sample_1" class="form-horizontal">
-                            <!--<div class="form-group">-->
-                                <!--<label class="control-label col-md-3 col-xs-3 col-sm-3">-->
-                                    <!--<span class="required"> * </span>　用户名-->
-                                <!--</label>-->
-                                <!--<div class="col-md-6 col-xs-6 col-sm-6">-->
-                                    <!--<input name="email" type="text" class="form-control" placeholder="请输入用户名"/>-->
-                                <!--</div>-->
-                            <!--</div>-->
-                            <div class="form-group">
-                                <label class="control-label col-md-3 col-xs-3 col-sm-3">
-                                    <span class="required">  </span>　开启职位悬赏功能 ?
-                                </label>
-                                <div class="col-md-6 col-xs-6 col-sm-6">
-                                    <a href="#" class="btnOpen"><i class="fa fa-lock"></i> 已开通</a>
-                                    <a href="javascript:;" class="btnRecharge"><i class="fa fa-money"></i> 充值</a>
-                                </div>
+                        <div class="content setting" style="padding: 0 0 5px;">
+                            <div class="card setting-company setting-narrow" style="background: #f7f7f7;">
+                                <form class="setting-info" name="settingInfoForm">
+                                    <section class="setting-other">
+                                        <!--<div class="form-line">-->
+                                            <!--<label class="form-line-label">联系人邮箱</label>-->
+                                            <!--<div class="form-line-input">-->
+                                                <!--<input class="form-control-input hide" type="email" name="email">-->
+                                                <!--<label class="form-control-input default hide"></label>-->
+                                                <!--<label class="form-control-input default null-info">未填写</label>-->
+                                            <!--</div>-->
+                                            <!--<span class="error-message">邮箱格式不正确</span>-->
+                                            <!--<label class="emailtip hide">验证邮件已发，请尽快登陆验证<br>24h内未验证将取消修改</label>-->
+
+                                            <!--<a class="modify change"  href="">修改</a>-->
+                                            <!--<a class="modify confirm hide" href="">确认</a>-->
+                                            <!--<a class="modify cancel hide" href="">取消</a>-->
+                                        <!--</div>-->
+                                        <div class="form-line personName">
+                                            <label class="form-line-label">联系人姓名</label>
+                                            <div class="form-line-input">
+                                                <input class="form-control-input hide inputName" type="text" name="name">
+                                                <label class="form-control-input default haveName ">周先生</label>
+                                                <label class="form-control-input default null-info hide">未填写</label>
+                                            </div>
+                                            <span class="error-message">联系人不能为空</span>
+                                            <a class="modify change">修改</a>
+                                            <a class="modify confirm hide">确认</a>
+                                            <a class="modify cancel hide">取消</a>
+                                        </div>
+
+                                        <div class="form-line mobile">
+                                            <label class="form-line-label">联系人手机</label>
+                                            <div class="form-line-input">
+                                                <input class="form-control-input hide" type="text" name="mobile" placeholder="请输入新的手机号">
+                                                <label class="form-control-input default">15683078668</label>
+                                                <label class="form-control-input default null-info hide">未填写</label>
+                                            </div>
+                                            <span class="error-message">请输入11位手机号</span>
+                                            <a class="modify change">修改</a>
+                                        </div>
+
+                                        <div class="form-line newMobile hide">
+                                            <label class="form-line-label"></label>
+                                            <div class="form-line-group-input pos">
+                                                <input class="form-control-input code" type="text" name="code">
+                                                <span>
+                                                    <button class="form-control-button disabled" type="button" style="padding: 0;">
+                                                        <span>
+                                                             发送验证码
+                                                         </span>
+                                                    </button>
+                                                </span>
+                                                <a class="modify confirm mobile-confirm hide">确认</a>
+                                                <a class="modify cancel mobile-cancel hide">取消</a>
+                                            </div>
+                                            <span class="error-message">请输入4位验证码</span>
+                                        </div>
+
+                                        <!--<div class="form-line weixin">-->
+                                            <!--<label class="form-line-label">绑定微信号</label>-->
+                                            <!--<div class="form-line-input">-->
+                                                <!--<label class="form-control-input default">Su</label>-->
+                                                <!--<label class="form-control-input default null-info hide">未绑定</label>-->
+                                            <!--</div>-->
+                                            <!--<span class="error-message">请输入11位手机号</span>-->
+                                            <!--<a class="modify change">修改</a>-->
+                                        <!--</div>-->
+                                        <div class="form-line password">
+                                            <label class="form-line-label">密码设置</label>
+                                            <div class="form-line-input">
+                                                <label class="form-control-input default">******</label>
+
+                                                <label class="form-control-input default null-info hide">未设置</label>
+                                            </div>
+                                            <span class="error-message">密码</span>
+                                            <a class="modify change">修改</a>
+                                        </div>
+
+                                        <div class="form-line passwd-md hide">
+                                            <label class="form-line-label"></label>
+                                            <div class="form-line-input">
+                                                <input class="form-control-input" type="password" name="password" placeholder="输入新密码" >
+                                            </div>
+                                            <span class="error-message">密码需为6位数字字母组成</span>
+                                        </div>
+
+                                        <div class="form-line passwd-md hide">
+                                            <label class="form-line-label"></label>
+                                            <div class="form-line-input pos">
+                                                <input class="form-control-input" type="password" name="confirm_password" placeholder="再次输入新密码" >
+                                                <a class="modify confirm mobile-confirm hide">确认</a>
+                                                <a class="modify cancel mobile-cancel hide">取消</a>
+                                            </div>
+                                            <span class="error-message">密码不一致</span>
+                                        </div>
+
+                                    </section>
+                                </form>
                             </div>
-                            <div class="dailog rechargeMoney hide">
-                                <div class="dailogHead">悬赏充值</div>
-                                <div class="dailogContent">
-                                    <p>
-                                        <span class="type">你已开通悬赏功能,请选择充值金额 </span>
-                                        <select name="">
-                                            <option value="200">200</option>
-                                            <option value="200">200</option>
-                                            <option value="200">200</option>
-                                        </select>
-                                        <i class="fa fa-caret-down"></i>
-                                    </p>
-                                    <div class="opreateBtn">
-                                        <button class="btnSure">充值</button>
-                                        <button class="btnCancel">取消</button>
+                        </div>
+                    </div>
+                </div>
+                <div class="modal-backdrop  hide" style="z-index: 1040;"></div>
+                <div class="modal  modal-tip hide">
+                    <div class="position-phone-validate">
+                        <div class="position-phone-validate-wrapper">
+                            <i class="fa fa-remove close"></i>
+                            <form name="phoneValidateForm" class="">
+                                <p class="position-phone-validate-wrapper-tip">请先验证手机号</p>
+                                <p class="position-phone-validate-wrapper-tip setting-phone">15683078668</p>
+                                <div class="form-line">
+                                    <div class="form-line-group-input ppv">
+                                        <input class="form-control-input code-input" type="text" name="code" placeholder="请输入验证码">
+                                        <span>
+                                            <button class="form-control-button code-btn" type="button">
+                                                <span class="">
+                                                    发送验证码
+                                                 </span>
+                                            </button>
+                                        </span>
                                     </div>
+                                    <span class="error-message ppv">请输入4位验证码</span>
                                 </div>
-                            </div>
-                            <div class="form-group">
-                                <label class="control-label col-md-3 col-xs-3 col-sm-3">
-                                    <span class="required">  </span>　
-                                    <span style="color: #fe6a5d;"><i class="fa fa-money"></i> 悬赏钱包 : 899.00</span>
-                                </label>
-                                <div class="col-md-6 col-xs-6 col-sm-6">
-                                    <a href="#" style="color: #578adc;position: relative;top: 5px;text-decoration: underline;">查看悬赏历史</a>
+                                <div class="ppv">
+                                    <input class="form-control-submit disabled" value="确认" disabled="disabled">
                                 </div>
-                            </div>
-                            <div class="form-group">
-                                <label class="control-label col-md-3 col-xs-3 col-sm-3">
-                                    <span class="required"> * </span>　联系人姓名
-                                </label>
-                                <div class="col-md-6 col-xs-6 col-sm-6">
-                                    <input name="email" type="text" class="form-control" placeholder="请输入公司名称"/>
-                                </div>
-                            </div>
-                            <div class="form-group">
-                                <label class="control-label col-md-3 col-xs-3 col-sm-3">
-                                    <span class="required"> * </span>　手机号
-                                </label>
-                                <div class="col-md-6 col-xs-6 col-sm-6">
-                                    <input name="email" type="text" class="form-control" placeholder="请输入手机号"/>
-                                </div>
-                            </div>
-                            <div class="form-group">
-                                <div class="col-sm-6 col-xs-6 col-md-6 col-sm-offset-3 col-xs-offset-3 col-md-offset-3">
-                                    <button class="btn btnSure">保存</button>
-                                    <a href="#" class="btn btnReturn">取消</a>
-                                </div>
-                            </div>
-                        </form>
+                            </form>
+                        </div>
                     </div>
                 </div>
             </div>
@@ -270,7 +329,6 @@
                         event: "click",
                         target:'#admin-content-wrapper'
                     });
-                    
 
                     /*账号操作*/
                     $(".accountSettings").on("click",function(e){
@@ -282,36 +340,112 @@
                         }
                     });
 
-                    /*btnRecharge*/
-                    $(".btnRecharge").on("click",function(){
-                        $(".dailog.rechargeMoney").removeClass("hide");
-                        heightAuto();
+                    $(".modify.change").on("click",function(){
+                        var formLine = $(this).closest(".form-line");
+                        var isPersonName = formLine.is(".personName");
+                        if(isPersonName){
+                            var personName = $(".personName");
+                            $(this).addClass("hide");
+                            personName.find(".inputName").removeClass("hide");
+                            personName.find(".confirm").removeClass("hide");
+                            personName.find(".cancel").removeClass("hide");
+                            personName.find(".modify").removeClass("hide");
+                            if(!(personName.find(".haveName").is(".hide"))){
+                                personName.find(".haveName").addClass("hide");
+                                personName.find(".null-info").addClass("nullInfo");
+                            }else if(!(personName.find(".null-info").is(".hide"))){
+                                personName.find(".null-info").addClass("hide");
+                                personName.find(".haveName").addClass("have-name");
+                            }
+                        }else if(formLine.is(".mobile")){
+                            $(".modal-backdrop,.modal-tip").removeClass("hide");
+                        }else if(formLine.is(".newMobile")){
 
-                    });
+                        }else if(formLine.is(".password")){
+                            $(".modal-backdrop,.modal-tip").removeClass("hide");
+                        }else if(formLine.is(".weixin")){
 
-                    $(".dailog .opreateBtn .btnCancel").on("click",function(){
-                        $(this).closest(".dailog.rechargeMoney").addClass("hide");
-                    });
-
-                    /*单窗居中*/
-                    function heightAuto(){
-                        var d = $(".dailog");
-                        d.each(function(){
-                            var ht = -$(this).height()/2+"px";
-                            $(this).get(0).style.marginTop = ht;
-                        });
-                    }
-
-                    /*账号操作*/
-                    $(".accountSettings").on("click",function(e){
-                        e.stopPropagation();
-                        if($(".account-selection").is(".hide")){
-                            $(".account-selection").removeClass("hide");
-                        }else{
-                            $(".account-selection").addClass("hide");
                         }
                     });
-                })
+                    $(".confirm").on("click",function(){
+                        var formLine = $(this).closest(".form-line");
+                        if(formLine.is(".personName")){
+                            var personName = $(".personName");
+                            var inputNameValue = personName.find(".inputName").val();
+                            if($.trim(inputNameValue)==''){
+//                                personName.find(".error-message").css({"display":"inline-block"});
+//                                personName.find(".form-line-label").addClass("red");
+//                                personName.addClass("error");
+                                personName.find(".haveName").addClass("hide");
+                                personName.find(".null-info").removeClass("hide");
+                                personName.find(".inputName").addClass("hide");
+                                personName.find(".confirm").addClass("hide");
+                                personName.find(".cancel").addClass("hide");
+                            }
+                            else{
+                                if(personName.find(".null-info").is(".nullInfo")){
+                                    personName.find(".null-info").addClass("hide");
+                                    personName.find(".haveName").removeClass("hide");
+                                    personName.find(".null-info").removeClass("nullInfo");
+                                }else if(personName.find(".haveName").is(".have-name")){
+                                    personName.find(".haveName").addClass("hide");
+                                    personName.find(".null-info").removeClass("hide");
+                                    personName.find(".haveName").removeClass("have-name");
+                                }
+                                personName.find(".inputName").addClass("hide");
+                                personName.find(".confirm").addClass("hide");
+                                personName.find(".cancel").addClass("hide");
+                                personName.find(".haveName").text( personName.find(".inputName").val())
+                            }
+                        }else if(formLine.is(".mobile")){
+
+                        }else if(formLine.is(".newMobile")){
+
+                        }else if(formLine.is(".password")){
+
+                        }else if(formLine.is(".weixin")){
+
+                        }
+
+                    });
+
+
+                    $(".cancel").on("click",function(){
+                        var formLine = $(this).closest(".form-line");
+                        if(formLine.is(".personName")){
+                            var personName = $(".personName");
+                            var inputNameValue = personName.find(".inputName").val();
+                            personName.find(".inputName").addClass("hide");
+//                            personName.find(".inputName").val(" ");
+                            personName.find(".confirm").addClass("hide");
+                            personName.find(".cancel").addClass("hide");
+
+                            if(personName.find(".null-info").is(".nullInfo")){
+                                personName.find(".null-info").addClass("hide");
+                                personName.find(".haveName").removeClass("hide");
+                                personName.find(".null-info").removeClass("nullInfo");
+                            }else if(personName.find(".haveName").is(".have-name")){
+                                personName.find(".haveName").addClass("hide");
+                                personName.find(".null-info").removeClass("hide");
+                                personName.find(".haveName").removeClass("have-name");
+                            }
+                        }else if(formLine.is(".mobile")){
+
+                        }else if(formLine.is(".newMobile")){
+
+                        }else if(formLine.is(".password")){
+
+                        }else if(formLine.is(".weixin")){
+
+                        }
+
+                    });
+
+                    $(".close").on("click",function(){
+                        $(".modal-tip,.modal-backdrop").addClass("hide")
+                    })
+
+                });
             </script>
         </div>
         <div class="slide-bar">
