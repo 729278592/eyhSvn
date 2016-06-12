@@ -109,7 +109,7 @@ img.resume{width: 100%;}
 .positionMenu{padding: 3% 10px;}
 .positionMenu li{width: 100%;border: 1px solid #dbdbdb;border-radius: 10px;margin-bottom: 4%;background: #fff;}
 .positionMenu li>a{display:block;width: 96%;height: 96%;border-bottom: 1px solid #dbdbdb;padding: 2% 2% 0 2%;}
-.positionMenu li>a span{display: inline-block;}
+.positionMenu li>a span{display: inline-block;color: #666;font-size: 12px;}
 .positionMenu li>a .positionDiv{padding: 1%;width: 98%;}
 .positionMenu li>a .company-icon{width: 25%;border-radius: 100%;margin-right: 3%;}
 .positionMenu li>a .conpanyName{font-size: 16px;color: #fe685b;margin-top: 5%;}
@@ -239,9 +239,9 @@ a.weui_btn.weui_btn_primary{font-size: 16px;}
 .weui_cell.bt0:before{border-top: none;}
 
 .weui_cells_checkbox{}
-.weui_cells_checkbox.h153{min-height: 160px;}
+.weui_cells_checkbox.h153{min-height: 200px;}
 .weui_check_label.w30{width: 30%;float: left;}
-.weui_check_label.w50{width: 40.5%;float: left;position: relative;min-height: 160px;}
+.weui_check_label.w50{width: 40.5%;float: left;position: relative;min-height: 180px;}
 .weui_check_label.w50 .sexImg{width: 40%;position: absolute;left: 50%;margin-left: -20%;}
 .weui_check_label.w50 .weui_cell_hd{position: absolute;bottom: 5%;left: 50%;margin-left: -12px;}
 .weui_check_label.w30.p0{padding: 0;}
