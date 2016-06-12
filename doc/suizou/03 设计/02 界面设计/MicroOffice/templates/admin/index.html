@@ -172,20 +172,30 @@
                             <div class="clearfix moneyzp">
                                 <span class="left ">未开通悬赏招聘</span>
                                 <span class="left color1 hide">已开通悬赏招聘 <span>余额 : 800.00元</span></span>
-                                <a href="#" class="right ">什么是悬赏招聘?</a>
+                                <a href="amountReward.html" class="right amountReward">什么是悬赏招聘?</a>
                                 <a href="#" class="right hide lookDetaile">查看详情</a>
                             </div>
                             <div class="dinLink">
-                                <p class="title">品牌主页 : </p>
-                                <p>
-                                    <a href="">www.4399.com</a>
-                                </p>
+                                <!--<p class="title">品牌主页 : </p>-->
+                                <!--<p>-->
+                                    <!--<a href="">www.4399.com</a>-->
+                                <!--</p>-->
                                 <p class="title">职位列表 : </p>
                                 <p>
-                                    <a href="">www.4399.com</a>
+                                    <a href="#">
+                                        https://hr.moseeker.com/admin/setting/accountinfo</a>
                                 </p>
-                                <p class="smsgzpp">
-                                    <a href="mobileExhibition.html" class="mobileExhibition">什么是雇主品牌</a>
+                                <p class="smsgzpp clearfix">
+                                    <a href="javascript:;" class="howPosition">
+                                        如何绑定职位
+                                        <span class="detailsPosition">
+                                            <i class="fa fa-caret-up"></i>
+                                            <span>1 : 绑定职位需要注意.......</span><br/>
+                                            <span>1 : 绑定职位需要注意.......</span><br/>
+                                            <span>1 : 绑定职位需要注意.......</span><br/>
+                                        </span>
+                                    </a>
+
                                 </p>
                             </div>
                         </div>
@@ -284,7 +294,7 @@
                         $(".account-selection").addClass("hide");
                     });
 
-                    $(".high-light-dashed,.postOffice,.positionManagement,.application,.interviewerInformation,.companyInfor,.mobileExhibition").ajaxify({
+                    $(".high-light-dashed,.postOffice,.positionManagement,.application,.interviewerInformation,.companyInfor,.amountReward").ajaxify({
                         event: "click",
                         target:'#admin-content-wrapper'
                     });
@@ -298,6 +308,8 @@
                             $(".account-selection").addClass("hide");
                         }
                     });
+
+
                 })
             </script>
             <!--<div class="newbieguide-overlay" ng-if="isNewbie" ng-click="turnoffNewbieGuide()"></div>-->

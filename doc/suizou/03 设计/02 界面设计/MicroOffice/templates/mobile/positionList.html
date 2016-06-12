@@ -8,6 +8,10 @@
     <link rel="stylesheet" href="../../assets/mobile/css/weui.css"/>
     <link rel="stylesheet" href="../../assets/mobile/css/example.css"/>
     <link rel="stylesheet" href="../../assets/mobile/css/global.css"/>
+    <style>
+        .weui_search_cancel{display: inline-block;}
+        .weui_search_text{z-index: 0;}
+    </style>
 </head>
 <body>
     <div class="container js_container" id="container">
@@ -42,7 +46,9 @@
                             <span>搜索</span>
                         </label>
                     </form>
-                    <a href="javascript:" class="weui_search_cancel" id="search_cancel">取消</a>
+                    <a href="javascript:" class="weui_search_cancel" id="search_cancel">
+                        <i class="fa fa-bars"></i>
+                    </a>
                 </div>
                 <div class="weui_cells weui_cells_access search_show" id="search_show" style="display: none;">
                     <div class="weui_cell">

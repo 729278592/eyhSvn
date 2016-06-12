@@ -18,6 +18,7 @@ a:link{text-decoration: none;}
 
 
 /*修改样式*/
+.mask.maskRchrege{position: fixed;top: 0;left: 0;right: 0;bottom: 0;z-index: 1000;}
 #site-footer ._n,.account-nav .account-selection li a,.actions-link,.card-title-action,.common-list-item .btn-hollow,.common-list-item .btn_hollow,.common-list-item .item-actions .item-action-link,.common-list-item .job-apply,.data-item-delta .tips,
 .remember-password .forget,.sub-nav .btn-back,.sub-title .btn-back,.tab,.user-service-modal a{text-decoration:none}
 .agreement:after,.remember-password:after,.submit:after{clear:both}
@@ -110,7 +111,7 @@ a:link{text-decoration: none;}
 .common-list-item .item-actions,.common-list-item .item-content,.common-list-item .item-info,
 .position-actions,.position-actions .card,.resume-actions,.resume-actions .card{list-style:none;padding:0;margin:0}
 #admin-wrapper{width:100%;}
-#admin-content-wrapper{position:absolute;margin-left:50px;left:0;right:0;z-index:1}
+#admin-content-wrapper{position:absolute;margin-left:50px;left:0;right:0;z-index:0;}
 .btn,.card,.sub-nav,.sub-title,header{background-color:#fff}
 
 .common-list-item .item-actions.application-item-actions-pos{left: 64%;}
@@ -306,7 +307,7 @@ a:link{text-decoration: none;}
 /*login*/
 body,html{height: 100%;}
 .wrapper{width: 100%;height: 100%;min-height: 800px;}
-.logBodyBg{width: 100%;height: 100%;position: fixed;z-index: 1;left: 0;top: 0;overflow: hidden;min-width: 1024px;}
+.logBodyBg{width: 100%;height: 100%;position: absolute;z-index: 1;left: 0;top: 0;overflow: hidden;min-width: 1024px;}
 .logBodyBg img{width: 100%; height: 100%;}
 .logWrap,.regWrap{background-color: #fff;width: 442px;position: absolute;z-index: 2;left: 50%;top: 55%;margin: 0 0 0 -221px;border-radius: 8px;}
 .reWrap{margin-top: -180px;height: 460px;}
@@ -314,8 +315,8 @@ body,html{height: 100%;}
 .logBox,.regBox{padding-top:1px;margin: 20px 40px;}
 .logBox .title,.regBox .title{font-size: 18px;color: #f16a20;width: 100%;text-align: center;padding-bottom: 20px;}
 .form{width: 100%;height:100%;font-size: 12px;}
-
-
+.form.fs14{font-size: 14px;}
+body.overflow{overflow: hidden;}
 
 .question-infor{position: absolute;width: 200px;padding: 10px;background: #ff7f81;font-size: 14px;color: #fff;top: -8px;right: -204px;z-index: 10;display: none;font-family: "微软雅黑";}
 .question-infor .fa{position: absolute;left: -5px;top: 8px;color: #ff7f81;font-size: 16px;}
@@ -332,7 +333,7 @@ input.btn-click:hover{background: #e16a20}
 /*.col-sm-8,.col-sm-4{padding: 0;}*/
 label.error {color: #EA5200;margin-bottom: 0;}
 .form .mt{margin-top: 10px;}
-.form-group.h54{height: 20px;margin-bottom: 0;}
+.form-group.h54{height: 20px;margin-bottom: 0;font-size: 12px;}
 .form .form-group.bocea .w100{border-color: #ff7b22;}
 .input-group .form-control.w66{width: 65.6666%;padding-left: 1%;line-height: 30px;}
 .input-group span.c6{color: #666;font-size: 14px;}
@@ -360,6 +361,8 @@ img.w100{width: 100%;}
 .form-group span.required{color: #f16b22;position: relative;top: 2px;display: inline-block;width: 15px;}
 .btn.btnSure,.brn.btnReturn{float: none;width: 80px;position: relative;}
 .btn.btnSure{left: 210px;}
+.btn.btnSure.style{left: 0;}
+.form-group .btnReturn.style{margin-left: 5px;}
 .form-horizontal .control-label {padding-top: 7px;margin-bottom: 0;text-align: right;}
 .form-horizontal .control-label.pad0{padding-left: 17px;padding-right: 0;text-align: left;}
 .form-group{position: relative;}
@@ -589,13 +592,15 @@ a.keyword-button:hover,.keyword-button:active,.keyword-button:focus{color: #fff;
 .dq-application-icon-status .fa-remove{color: #fff;font-size: 12px;display: inline-block;width: 100%;height: 100%;text-align: center;position: relative;top: -2px;}
 .common-list-item .item-actions .item-action.hide{display: none;}
 
-.dinLink{width: 94%;margin: 0 3%;overflow: hidden;border-top: 1px solid #efefef;}
+.dinLink{width: 94%;margin: 0 3%;border-top: 1px solid #efefef;}
 .dinLink p{width: 100%;font-size: 14px;color: #999;}
 .dinLink p a{color: #666;}
-.dinLink p a:hover{text-decoration: underline;}
 .dinLink p.title{font-weight: bold;color: #333;margin-top: 10px;}
-.dinLink p.smsgzpp{margin: 10px 0;text-align: right;}
-.dinLink p.smsgzpp a{color: #3080d4;}
+.dinLink p.smsgzpp{margin: 10px 0;position: relative;}
+.dinLink p.smsgzpp a{color: #3080d4;float: right;position: relative;}
+.dinLink p.smsgzpp a:hover .detailsPosition{display: inline-block;}
+.detailsPosition{color: #666;background: #f1f1f1;padding: 10px 20px;position: absolute;min-width: 250px;left: 0;top: 28px;}
+.detailsPosition .fa-caret-up{position: absolute;top: -10px;left: 0;color: #f1f1f1;font-size: 16px;}
 /*dailog*/
 .mask,.mask-bg{position: fixed;left: 0;right: 0;bottom: 0;top: 0;z-index: 100;}
 .dailog{position: fixed;top: 50%;left: 50%;min-width: 400px;margin-left: -200px;border-radius: 8px 8px 0 0;z-index: 99999999;}
@@ -686,8 +691,13 @@ a.keyword-button:hover,.keyword-button:active,.keyword-button:focus{color: #fff;
     left: 50%;
     margin-left: -4px;
     -webkit-animation: top 1s;
+    -moz-animation: top 1s;
     animation: top 1s;
     animation-iteration-count:1000;
+    -webkit-animation: top 1s;
+    -webkit-animation-iteration-count:1000;
+    -moz-animation: top 1s;
+    -moz-animation-iteration-count:1000;
 }
 @-webkit-keyframes top {
     0% {
@@ -703,11 +713,25 @@ a.keyword-button:hover,.keyword-button:active,.keyword-button:focus{color: #fff;
         top: 0;
     }
 }
-
+@-moz-keyframes top {
+    0% {
+        top: -3px;
+    }
+    40% {
+        top: 0;
+    }
+    80% {
+        top: 3px;
+    }
+    100% {
+        top: 0;
+    }
+}
 @media screen and (max-width: 1400px) {
     .form-group .btnReturn{left: -160px;}
     .btn.btnSure{left: 160px;}
+    .common-list-item .item-actions.application-item-actions-pos{left: 58%;}
 }
 @media screen and (max-height: 750px) {
-    .regWrap{top:61%;}
+    .regWrap{top:58%;}
 }
