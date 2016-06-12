@@ -182,9 +182,9 @@
                                 <!--</p>-->
                                 <p class="title">职位列表 : </p>
                                 <p>
-                                    <button class="btnCopy right" id="txt">复制</button>
-                                    <a href="javascript:;" class="copyA">
-                                        https://hr.moseeker.com/admin/setting/accountinfo
+                                    <input type="button" class="btnCopy right"  value="复制" />
+                                    <a href="#" class="copyA">
+                                        <textarea readonly style="resize: none;" rows="" id="txt">https://hr.moseeker.com/admin/setting/accountinfo</textarea>
                                     </a>
                                 </p>
                                 <p class="smsgzpp clearfix">
@@ -313,8 +313,7 @@
 
 
 
-                    $(".copyA").on("click",function(){
-                        alert();
+                    $(".btnCopy").on("click",function(){
                         var t = document.getElementById("txt");
                         t.select();
                         document.execCommand("Copy"); // 执行浏览器复制命令
