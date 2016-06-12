@@ -716,6 +716,33 @@ a.keyword-button:hover,.keyword-button:active,.keyword-button:focus{color: #fff;
 .companyInfoContents .fa-angle-up{}
 .companyInfors p.upFllow{text-align: center;color: #41b3f3;position: relative;margin-top: 15px;}
 
+.workList{margin: 100px 90px;display: block;}
+.workList li{position: relative;float: left;width: 20%;border-bottom: 1px solid #dbdbdb;}
+.workList li p.workInfor{position: absolute;font-weight: 100;width: 200%;}
+
+.caseList{margin: 30px 70px;}
+.caseList li{margin: 0 auto 0 100px;position: relative;height: auto;}
+.caseList li .xt{position: absolute;top: 0;bottom: 0;width: 1px;background: #dbdbdb;left: -50px;}
+.caseList li .defaulIcon{width: 30px;position: absolute;left: -100px;top: 50px;}
+.caseList li .caretBorder{display: inline-block;width: 18px;height: 18px;background: #36af68;border-radius: 24px;position: absolute;left: -60px;top: 60px;}
+.caseList li .caretfff{display: inline-block;width: 14px;height: 14px;background: #fff;margin: 2px;border-radius: 20px; }
+.caseList li .caseInfor{}
+.caseList li .time{color: #36af68;display: inline-block;margin-top: 20px;}
+.caseList li .caseWz{background: #f3f3f3;padding: 6px 20px;position: relative;margin-top: 10px;}
+.caseList li .fa-caret-left{position: absolute;left: -10px;color:#eee;font-size: 30px;}
+.caseList li p{font-size: 12px;color: #999;line-height: 20px;}
+.caseList li p.title{font-weight: bold;font-size: 14px;}
+.dq-application-icon-status-suc{background: #5caec9;border: 1px solid #5caec9;}
+.dq-application-detail-delimiter.suc{background: #5caec9;}
+.dq-application-icon-status-suc-text{color: #5caec9;}
+
+.workList li.bottom p.workInfor{top: 15px;left: -10px;}
+.workList li.top p.workInfor{top: -60px;left: -140px;}
+.workList li .caretBg{position: absolute;width: 8px;height: 8px;border-radius: 8px;background: #35b3c8;left: 50%;top: 50%;margin-left: -4px;margin-top: -4px;display: inline-block;}
+.workList li .time{font-size: 12px;position: relative;top: -10px;}
+.workList li p .posirionInfor{border-radius: 4px;background: #4879c7;padding: 5px;font-size: 12px;font-weight: 100;display: inline-block;width: 94px;height: 42px;}
+.workList li p .companyName{font-weight: 100;color: #fff;}
+.workList li p .positionName{font-weight: 100;color: #5bd0c8;display: inline-block;width: 100%;text-align: center;}
 .tops{
     position: absolute;
     left: 50%;
@@ -763,6 +790,7 @@ a.keyword-button:hover,.keyword-button:active,.keyword-button:focus{color: #fff;
     .common-list-item .item-actions.application-item-actions-pos{left: 58%;}
     .hoveran{width: 465px;}
     .annotation{width: 575px;}
+    .resumeBq li{padding: 5px 20px;}
 }
 @media screen and (max-height: 750px) {
     .regWrap{top:58%;}
