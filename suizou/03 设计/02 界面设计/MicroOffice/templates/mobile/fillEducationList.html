@@ -24,14 +24,14 @@
                         <div class="weui_cell">
                             <div class="weui_cell_hd"><label for="" class="weui_label"><img src="../../assets/mobile/images/startTimeIcon.png" alt=""/>开始日期</label></div>
                             <div class="weui_cell_bd weui_cell_primary">
-                                <input id="start" class="Wdate" type="text" style="border: none;height: 18px;" placeholder="2015-02-05" onfocus="WdatePicker({minDate:'%y-%M-{%d}',maxDate:'#F{$dp.$D(\'end\')}',readOnly:true})" readonly="">
+                                <input id="start" class="Wdate" type="text" style="border: none;height: 18px;" placeholder="2015-02-05" onfocus="WdatePicker()" readonly="">
                                 <i class="fa fa-calendar"></i>
                             </div>
                         </div>
                         <div class="weui_cell">
                             <div class="weui_cell_hd"><label for="" class="weui_label"><img src="../../assets/mobile/images/endTimeIcon.png" alt=""/>结束日期</label></div>
                             <div class="weui_cell_bd weui_cell_primary">
-                                <input id="end" class="Wdate" type="text" style="border: none;height: 18px;"placeholder="2015-02-06" onfocus="WdatePicker({minDate:'#F{$dp.$D(\'start\')||\'%y-%M-{%d+1}\'}',readOnly:true})" readonly="">　
+                                <input id="end" class="Wdate" type="text" style="border: none;height: 18px;"placeholder="2015-02-06" onfocus="WdatePicker({minDate:'#F{$dp.$D(\'start\')}',readOnly:true})" readonly="">　
                                 <i class="fa fa-calendar"></i>
                             </div>
                         </div>
