@@ -626,8 +626,8 @@ a.keyword-button:hover,.keyword-button:active,.keyword-button:focus{color: #fff;
 .dinLink p.smsgzpp{margin: 10px 0;position: relative;}
 .dinLink p.smsgzpp a{color: #3080d4;float: right;position: relative;}
 .dinLink p.smsgzpp a:hover .detailsPosition{display: inline-block;}
-.detailsPosition{color: #666;background: #f7f7f7;padding: 10px 20px;position: absolute;min-width: 250px;left: 90px;top: -0px;z-index: 1000;display: none;}
-.detailsPosition .fa-caret-left{position: absolute;top: 0;left: -5px;color: #f7f7f7;font-size: 16px;}
+.detailsPosition{color: #fff;background: rgba(0,0,0,0.6);border-radius: 2px;padding: 10px 20px;position: absolute;min-width: 250px;left: 90px;top: -0px;z-index: 1000;display: none;}
+.detailsPosition .fa-caret-left{position: absolute;top: 3px;left: -5px;color: rgba(0,0,0,0.6);font-size: 16px;}
 .howPosition:hover .detailsPosition{display: inline-block;}
 .nala_db span{display: inline-block;margin-left: 10px;}
 
