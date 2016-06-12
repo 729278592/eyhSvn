@@ -182,20 +182,21 @@
                                 <!--</p>-->
                                 <p class="title">职位列表 : </p>
                                 <p>
-                                    <a href="#">
-                                        https://hr.moseeker.com/admin/setting/accountinfo</a>
+                                    <button class="btnCopy right" id="txt">复制</button>
+                                    <a href="javascript:;" class="copyA">
+                                        https://hr.moseeker.com/admin/setting/accountinfo
+                                    </a>
                                 </p>
                                 <p class="smsgzpp clearfix">
                                     <a href="javascript:;" class="howPosition">
                                         如何绑定职位
                                         <span class="detailsPosition">
-                                            <i class="fa fa-caret-up"></i>
-                                            <span>1 : 绑定职位需要注意.......</span><br/>
-                                            <span>1 : 绑定职位需要注意.......</span><br/>
-                                            <span>1 : 绑定职位需要注意.......</span><br/>
+                                            <i class="fa fa-caret-left"></i>
+                                            <span>1 : 绑定职位需要注意绑定职位需要注意绑定职位需要注意绑定职位需要注意</span><br/>
+                                            <span>2 : 绑定职位需要注意.......</span><br/>
+                                            <span>3 : 绑定职位需要注意.......</span><br/>
                                         </span>
                                     </a>
-
                                 </p>
                             </div>
                         </div>
@@ -310,6 +311,15 @@
                     });
 
 
+
+
+                    $(".copyA").on("click",function(){
+                        alert();
+                        var t = document.getElementById("txt");
+                        t.select();
+                        document.execCommand("Copy"); // 执行浏览器复制命令
+                        alert("已复制好，可贴粘。");
+                    })
                 })
             </script>
             <!--<div class="newbieguide-overlay" ng-if="isNewbie" ng-click="turnoffNewbieGuide()"></div>-->
