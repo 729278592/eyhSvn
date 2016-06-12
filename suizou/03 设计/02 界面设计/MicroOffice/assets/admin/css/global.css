@@ -617,15 +617,20 @@ a.keyword-button:hover,.keyword-button:active,.keyword-button:focus{color: #fff;
 .dinLink{width: 94%;margin: 0 3%;border-top: 1px solid #efefef;}
 .dinLink p{width: 100%;font-size: 14px;color: #999;}
 .dinLink p>a{color: #666;}
-.dinLink p>a.copyA{display: block;width:260px;text-overflow:ellipsis; overflow:hidden; white-space:nowrap;}
-.dinLink p .btnCopy{display: inline-block;padding: 3px 10px;background: #6cb7ee;color: #fff;border-radius: 4px;font-size: 14px;}
+.dinLink p>a.copyA{display: block;width:275px;}
+
+.dinLink p>a.copyA textarea{display: block;border: none;width: 100%;}
+.dinLink p>a.copyA textarea:hover{cursor: pointer;}
+.dinLink p .btnCopy{display: inline-block;padding: 3px 10px;background: #6cb7ee;font-size: 12px;color: #fff;border-radius: 4px;}
 .dinLink p.title{font-weight: bold;color: #333;margin-top: 10px;}
 .dinLink p.smsgzpp{margin: 10px 0;position: relative;}
 .dinLink p.smsgzpp a{color: #3080d4;float: right;position: relative;}
 .dinLink p.smsgzpp a:hover .detailsPosition{display: inline-block;}
-.detailsPosition{color: #666;background: #fafafa;padding: 10px 20px;position: absolute;min-width: 250px;left: 90px;top: -0px;z-index: 1000;display: none;}
-.detailsPosition .fa-caret-left{position: absolute;top: 0;left: -5px;color: #fafafa;font-size: 16px;}
+.detailsPosition{color: #666;background: #f7f7f7;padding: 10px 20px;position: absolute;min-width: 250px;left: 90px;top: -0px;z-index: 1000;display: none;}
+.detailsPosition .fa-caret-left{position: absolute;top: 0;left: -5px;color: #f7f7f7;font-size: 16px;}
 .howPosition:hover .detailsPosition{display: inline-block;}
+.nala_db span{display: inline-block;margin-left: 10px;}
+
 /*dailog*/
 .mask,.mask-bg{position: fixed;left: 0;right: 0;bottom: 0;top: 0;z-index: 100;}
 .dailog{position: fixed;top: 50%;left: 50%;min-width: 400px;margin-left: -200px;border-radius: 8px 8px 0 0;z-index: 99999999;}
@@ -706,7 +711,7 @@ a.keyword-button:hover,.keyword-button:active,.keyword-button:focus{color: #fff;
 .companyInfoContents p span{display: inline-block;}
 .companyInfoContents p .required{color: #ff3b30;width: 18px;}
 .companyInfoContents p .type{color: #666;padding: 0 10px;width: 140px;font-weight: 100;}
-.companyInfoContents .btnModify{padding: 6px 20px;color: #fff;background: #eb6e45;border-radius: 6px;display: inline-block;font-weight: 100;}
+.companyInfoContents .btnModify{padding: 6px 20px;width: 80px;height: 34px;color: #fff;background: #eb6e45;border-radius: 4px;display: inline-block;font-weight: 100;}
 .companyInfoContents p.pModify{text-align: center;}
 .companyInfoContents .fa-angle-up{}
 .companyInfors p.upFllow{text-align: center;color: #41b3f3;position: relative;margin-top: 15px;}
