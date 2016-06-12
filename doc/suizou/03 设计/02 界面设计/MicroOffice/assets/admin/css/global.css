@@ -351,7 +351,7 @@ label.error {color: #EA5200;margin-bottom: 0;}
 .form-group .btnReturn:hover{text-decoration: none;}
 .form-group.h34{height: 34px;}
 label{font-weight: 100;color: #4B525C;}
-
+.card.qr-code{height: 243px;}
 /*postOffice*/
 .content-position{background: #fff;padding: 20px 40px;width: 100%;position: relative;border: 1px solid #dbdbdb;}
 .content-position.mt40{margin-top: 60px;}
@@ -433,7 +433,7 @@ img.w100{width: 100%;}
 }
 
 /*mobileExhibition*/
-.maxw640{width: 395px;margin: 0 150px;position: relative;display: block;height: 813px;background-image: url("../images/device-sprite.png");background-size: 300%;background-repeat: no-repeat;background-position: 0 0;}
+.maxw640{width: 395px;margin: 0 120px;position: relative;display: block;height: 813px;background-image: url("../images/device-sprite.png");background-size: 300%;background-repeat: no-repeat;background-position: 0 0;}
 .maxw640 .container{position: absolute;top: 117px;left: 37px;width: 321px;height: 569px;overflow: hidden;font-size: 0.85rem;line-height: 1.05rem;background: #eeeeee;}
 .maxw640 .container{overflow-y: auto;}
 .linkGroup{margin: 50px 0;}
@@ -546,7 +546,7 @@ a.keyword-button:hover,.keyword-button:active,.keyword-button:focus{color: #fff;
 .headName{width: 100%;border-bottom: 1px solid #afafaf;}
 .headName p{padding: 3px 30px 3px 5px;background: #fff;display: inline-block;margin-bottom: 10px;color: #6cb7ee;}
 
-.basicDiv{margin-left: 40px;width: 580px;margin-top: 15px;}
+.basicDiv{margin-left: 40px;width: 550px;margin-top: 15px;}
 .contentCon{}
 .basicList{display: block;padding-top: 5px;}
 .basicList li{float: left;width: 50%;color: #dfdfdf;font-size: 12px;}
@@ -718,7 +718,7 @@ a.keyword-button:hover,.keyword-button:active,.keyword-button:focus{color: #fff;
 
 .workList{margin: 100px 90px;display: block;}
 .workList li{position: relative;float: left;width: 20%;border-bottom: 1px solid #dbdbdb;}
-.workList li p.workInfor{position: absolute;font-weight: 100;width: 200%;}
+.workList li p.workInfor{position: absolute;font-weight: 100;}
 
 .caseList{margin: 30px 70px;}
 .caseList li{margin: 0 auto 0 100px;position: relative;height: auto;}
@@ -735,11 +735,12 @@ a.keyword-button:hover,.keyword-button:active,.keyword-button:focus{color: #fff;
 .dq-application-icon-status-suc{background: #5caec9;border: 1px solid #5caec9;}
 .dq-application-detail-delimiter.suc{background: #5caec9;}
 .dq-application-icon-status-suc-text{color: #5caec9;}
-
-.workList li.bottom p.workInfor{top: 15px;left: -40px;}
-.workList li.top p.workInfor{top: -60px;left: -10px;}
+.iconfont, [class*=icon-], [class^=icon-]{font-size: 14px;}
+.workList li.bottom p.workInfor{top: 15px;left: 50%;margin-left: -47px;}
+.workList li.top p.workInfor{top: -60px;left: 50%;margin-left: -47px;}
 .workList li .caretBg{position: absolute;width: 8px;height: 8px;border-radius: 8px;background: #35b3c8;left: 50%;top: 50%;margin-left: -4px;margin-top: -4px;display: inline-block;}
-.workList li .time{font-size: 12px;position: relative;top: -10px;}
+.workList li.bottom .time{font-size: 12px;position: absolute;top: -40px;left: 13px;}
+.workList li.top .time{font-size: 12px;position: absolute;top: 20px;left: 13px;}
 .workList li p .posirionInfor{border-radius: 4px;background: #4879c7;padding: 5px;font-size: 12px;font-weight: 100;display: inline-block;width: 94px;height: 42px;}
 .workList li p .companyName{font-weight: 100;color: #fff;}
 .workList li p .positionName{font-weight: 100;color: #5bd0c8;display: inline-block;width: 100%;text-align: center;}
@@ -787,7 +788,7 @@ a.keyword-button:hover,.keyword-button:active,.keyword-button:focus{color: #fff;
 @media screen and (max-width: 1400px) {
     .form-group .btnReturn{left: -160px;}
     .btn.btnSure{left: 160px;}
-    .common-list-item .item-actions.application-item-actions-pos{left: 58%;}
+    .common-list-item .item-actions.application-item-actions-pos{left: 63%;}
     .hoveran{width: 465px;}
     .annotation{width: 575px;}
     .resumeBq li{padding: 5px 20px;}

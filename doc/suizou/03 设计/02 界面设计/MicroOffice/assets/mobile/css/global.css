@@ -154,7 +154,7 @@ img.resume{width: 100%;}
 .divP{width: 94%;margin: 5% auto 10%;text-align: left;}
 .divP p{font-size: 14px;color: #999;margin-bottom: 3px;}
 .divP p span{display: inline-block;text-align: left;width: 90%;margin-left: 2%;}
-.divP.img23 p>img{vertical-align: top;width: 23px;}
+.divP.img23 p>img{vertical-align: top;width: 18px;}
 .divP p>img{vertical-align: top;}
 .code.mb15{margin-bottom: 15px;}
 .code{}
@@ -216,6 +216,7 @@ a.weui_cell.c666{color: #999;}
 .personIforImg .name,.personIforImg .phone{font-size: 14px;color: #fff;}
 .personIforImg .btnInfor{padding: 5px 10%;border-radius: 20px;background: #e84b2f;color: #fff;font-size: 14px;margin-top: 15%;font-family: "微软雅黑";}
 .personIforP{position:relative;width: 92%;margin: 0 auto;padding: 4% 0;border-bottom: 1px dotted #67a5f9;}
+.personIforP span.type{display: inline-block;min-width: 60px;}
 .personIforP.b0{border: none;}
 .personIforP.mt15{margin-top: 30px;}
 .personIforP p{font-size: 14px;color: #666;text-align: left;}
@@ -241,7 +242,7 @@ a.weui_btn.weui_btn_primary{font-size: 16px;}
 .weui_cells_checkbox{}
 .weui_cells_checkbox.h153{min-height: 200px;}
 .weui_check_label.w30{width: 30%;float: left;}
-.weui_check_label.w50{width: 40.5%;float: left;position: relative;min-height: 180px;}
+.weui_check_label.w50{width: 40.5%;float: left;position: relative;min-height: 170px;}
 .weui_check_label.w50 .sexImg{width: 40%;position: absolute;left: 50%;margin-left: -20%;}
 .weui_check_label.w50 .weui_cell_hd{position: absolute;bottom: 5%;left: 50%;margin-left: -12px;}
 .weui_check_label.w30.p0{padding: 0;}
