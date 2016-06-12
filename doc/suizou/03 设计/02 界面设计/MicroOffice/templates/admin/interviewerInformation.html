@@ -129,11 +129,11 @@
             </div>
         </div>
         <div id="admin-content-wrapper">
-            <link rel="stylesheet" href="../../assets/global/plugins/bootstrap-3.3.5/css/bootstrap.min.css"/>
-            <style>
-                body{font-family: "微软雅黑",Arial, Helvetica, sans-serif;overflow-x: hidden;-webkit-font-smoothing: antialiased;-moz-font-smoothing: antialiased;;}
-                a:hover{text-decoration: none;}
-            </style>
+            <!--<link rel="stylesheet" href="../../assets/global/plugins/bootstrap-3.3.5/css/bootstrap.min.css"/>-->
+            <!--<style>-->
+                <!--body{font-family: "微软雅黑",Arial, Helvetica, sans-serif;overflow-x: hidden;-webkit-font-smoothing: antialiased;-moz-font-smoothing: antialiased;;}-->
+                <!--a:hover{text-decoration: none;}-->
+            <!--</style>-->
             <div class="content-header">
                 <span class="content-title">职位管理</span>
                 <div class="company-name right">
@@ -163,192 +163,72 @@
                 <div class="content content--main-side pt120">
                     <div class="pr">
                         <div class="content-main dq-application-resume-preview" style="position: relative;">
-                            <div class="peopleName">
-                                <div class="resumeTitle">
-                                    周先生
-                                    <span class="time">　发布时间 : 2016-04-05 9 : 00</span>
-                                </div>
-                                <p class="tlInfor"><span title="推荐人的微信ID">WHB</span> 推荐</p>
-                            </div>
 
-                            <ul class="quickInfor clearfix">
-                                <li><i class="fa fa-user"></i> java开发</li>
-                                <li><i class="fa fa-birthday-cake"></i> 30岁</li>
-                                <li><i class="fa fa-book"></i> 本科</li>
-                                <li class="br0">
-                                    <i class="fa fa-book"></i> 计算机专业
-                                    <a href="#" class="return right returnPrev">
-                                        <i class="fa fa-mail-reply"></i> 返回
-                                    </a>
-                                </li>
-                            </ul>
-                            <div class="dq-application-resume-preview_progress">
-                                <div class="dq-application-resume-preview_title">
-                                    招聘进度
-                                </div>
-                                <div class="dq-application-resume-preview_info" style="height: 150px;">
-                                    <ul class="entryStep clearfix">
-                                        <li class="first pass">
-                                            <div class="step">
-                                                <span class="">1评审</span>
-                                            </div>
-                                            <div class="operation">
-                                                <a href="#" class="btnNotPass">
-                                                    <i class="fa fa-times-circle-o"></i> 不合适
-                                                </a>
-                                                <a href="#" class="btnPass">
-                                                    <i class="fa fa-check-circle"></i> 合适
-                                                </a>
-                                            </div>
-                                            <div class="typeText hide">
-                                                <span class="type"></span><br/>
-                                                <a href="#" class="btnRefresh">
-                                                    <i class="fa fa-mail-reply"></i> 重新评审
-                                                </a>
-                                            </div>
-                                            <div class="reviewDailog dailog hide">
-                                                <div class="dailogHead">候选人评审通过</div>
-                                                <div class="dailogContent">
-                                                    <p>
-                                                        <span class="type">姓名 : </span>
-                                                        <span class="name">周先生</span>
-                                                    </p>
-                                                    <p>
-                                                        <span class="type">面试时间 : </span>
-                                                        <input id="start" class="Wdate" type="text" style="border: 1px solid #efefef;padding-left: 5px;" placeholder="2015-02-05" onfocus="WdatePicker({})" readonly="">
-                                                        9:00
-                                                    </p>
-                                                    <p>
-                                                        <span class="type">面试详细地址 : </span>
-                                                        <textarea name="" style="resize: none" id="" cols="30" rows="5" placeholder="请填写详细地址"></textarea>
-                                                    </p>
-                                                    <div class="opreateBtn">
-                                                        <button class="btnSure">确认</button>
-                                                        <button class="btnCancel">取消</button>
-                                                    </div>
-                                                </div>
-                                            </div>
+
+                            <div class="basicInfor clearfix">
+                                <div class="left">
+                                    <img src="../../assets/admin/images/interviewPerson.png" alt="" class="interviewPerson"/>
+                                    <ul class="ulInfor clearfix">
+                                        <li>
+                                            <i class="fa fa-home"></i>java 开发
                                         </li>
-                                        <li class="next">
-                                            <div class="step">
-                                                <span class="">2面试</span>
-                                            </div>
-                                            <div class="operation hide">
-                                                <a href="#" class="btnNotPass ">
-                                                    <i class="fa fa-times-circle-o"></i> 不通过
-                                                </a>
-                                                <a href="#" class="btnPass">
-                                                    <i class="fa fa-check-circle"></i> 通过
-                                                </a>
-                                            </div>
-                                            <div class="typeText hide">
-                                                <span class="type"></span><br/>
-                                                <a href="#" class="btnRefresh">
-                                                    <i class="fa fa-mail-reply"></i> 重新面试
-                                                </a>
-                                            </div>
-                                            <div class="interviewDailog dailog hide">
-                                                <div class="dailogHead">候选人面试通过</div>
-                                                <div class="dailogContent">
-                                                    记录候选人入职情况,可以获取全面的统计招聘信息
-                                                    <div class="opreateBtn">
-                                                        <button class="btnSure">现在入职</button>
-                                                        <button class="btnCancel">稍后入职</button>
-                                                    </div>
-                                                </div>
-                                            </div>
+                                        <li>
+                                            <i class="fa fa-home"></i> 本科
                                         </li>
-                                        <li class="last">
-                                            <div class="step">
-                                                <span class="">3入职</span>
-                                            </div>
-                                            <div class="operation hide l147">
-                                                <a href="#" class="btnPass">
-                                                    <i class="fa fa-check-circle"></i> 入职
-                                                </a>
-                                            </div>
-                                            <div class="typeText hide">
-                                                <span class="type"></span><br/>
-                                                <a href="#" class="btnRefresh">
-                                                    <i class="fa fa-mail-reply"></i> 取消入职
-                                                </a>
-                                            </div>
-                                            <div class="entryDailog dailog hide">
-                                                <div class="dailogDiv1 hide">
-                                                    <div class="dailogHead">候选人入职通过</div>
-                                                    <div class="dailogContent">
-                                                        记录候选人入职情况,可以获取全面的统计招聘信息
-                                                        <div class="opreateBtn">
-                                                            <button class="btnSure">取消入职</button>
-                                                            <button class="btnCancel">保持入职</button>
-                                                        </div>
-                                                    </div>
-                                                </div>
-                                                <div class="dailogDiv2 hide">
-                                                    <div class="dailogHead">候选人入职通过</div>
-                                                    <div class="dailogContent">
-                                                        记录候选人入职情况,可以获取全面的统计招聘信息
-                                                        <div class="opreateBtn">
-                                                            <button class="btnSure">现在入职</button>
-                                                            <button class="btnCancel">稍后入职</button>
-                                                        </div>
-                                                    </div>
-                                                </div>
-                                            </div>
+                                        <li class="br0">
+                                            <i class="fa fa-book"></i> 计算机专业
                                         </li>
                                     </ul>
                                 </div>
+                                <div class="left basicDiv">
+                                    <div class="headName">
+                                        <p>
+                                            周小姐
+                                        </p>
+                                    </div>
+                                    <div class="contentCon">
+                                        <ul class="basicList clearfix">
+                                            <li><span class="typeSpan">出生年月</span> : 1991-05-05(25岁)</li>
+                                            <li><span class="typeSpan">身高</span> : 165cm</li>
+                                            <li><span class="typeSpan">联系方式</span> : 136678478463</li>
+                                            <li><span class="typeSpan">婚姻状况</span> : 未婚</li>
+                                            <li><span class="typeSpan">性别</span> : 女</li>
+                                            <li><span class="typeSpan">户籍</span> : 重庆</li>
+                                            <li><span class="typeSpan">邮箱</span> : 729278592@qq.com</li>
+                                            <li><span class="typeSpan">所在地</span> : 重庆</li>
+                                            <li><span class="typeSpan">体重</span> : 45kg</li>
+                                            <li><span class="typeSpan">联系方式</span> : 在职</li>
+                                        </ul>
+                                    </div>
+                                </div>
                             </div>
-                            <div class="dq-application-resume-preview_basic">
+
+                            <div class="dq-application-resume-preview_intention">
                                 <div class="dq-application-resume-preview_title">
-                                    基本信息
+                                    简历标签
                                 </div>
                                 <div class="dq-application-resume-preview_info">
-                                    <div class="dq-application-resume-preview_basic_field">
-                                        出生年月: 2016-05-23(25岁)
-                                    </div>
-                                    <div class="dq-application-resume-preview_basic_field">
-                                        性别：女
-                                    </div>
-                                    <div class="dq-application-resume-preview_basic_field">
-                                        联系电话: 15055555555
-                                    </div>
-                                    <div class="dq-application-resume-preview_basic_field">
-                                        婚姻状况: 未婚
-                                    </div>
-                                    <div class="dq-application-resume-preview_basic_field">
-                                        身高: 165cm
-                                    </div>
-                                    <div class="dq-application-resume-preview_basic_field">
-                                        体重: 45kg
-                                    </div>
-                                    <div class="dq-application-resume-preview_basic_field">
-                                        邮箱：729278592@qq.com
-                                    </div>
-                                    <div class="dq-application-resume-preview_basic_field">
-                                        所在地: 重庆
-                                    </div>
-                                    <div class="dq-application-resume-preview_basic_field" >
-                                        工作经验: 2年
-                                    </div>
-                                    <div class="dq-application-resume-preview_basic_field">
-                                        在职状态: 在职
-                                    </div>
-
+                                    <ul class="resumeBq clearfix">
+                                        <li>5年java开发经验</li>
+                                        <li>5年java开发经验</li>
+                                        <li>5年java开发经验</li>
+                                        <li>5年java开发经验</li>
+                                    </ul>
                                 </div>
                             </div>
+
                             <div class="dq-application-resume-preview_edu-exp">
                                 <div class="dq-application-resume-preview_title">
                                     教育经历
                                 </div>
                                 <div class="dq-application-resume-preview_info">
                                     <div>
-                                    <div class="dq-application-resume-preview_line-field">
-                                    <span class="dq-application-resume-preview_edu-exp_subtitle ">计算机专业 | 大专</span>
-                                    重庆大学
-                                    <span class="dq-application-resume-preview_edu-exp_label ">2016-05 — 2016-05</span>
-                                </div>
-                                </div>
+                                        <div class="dq-application-resume-preview_line-field spanList">
+                                            <span class="dq-application-resume-preview_edu-exp_subtitle ">计算机专业 | 大专</span>
+                                            <span>重庆大学</span>
+                                            <span class="dq-application-resume-preview_edu-exp_label br0">2016-05 — 2016-05</span>
+                                        </div>
+                                    </div>
                                     <div class="dq-application-resume-preview_line-padding"></div>
                                 </div>
                             </div>
@@ -390,26 +270,13 @@
 
                                 </div>
                             </div>
-                            <div class="dq-application-resume-preview_intention">
-                                <div class="dq-application-resume-preview_title">
-                                    简历标签
-                                </div>
-                                <div class="dq-application-resume-preview_info">
-                                    <ul class="resumeBq clearfix">
-                                        <li>5年java开发经验</li>
-                                        <li>5年java开发经验</li>
-                                        <li>5年java开发经验</li>
-                                        <li>5年java开发经验</li>
-                                    </ul>
-                                </div>
-                            </div>
                             <div class="dq-application-resume-preview_other">
                                 <div class="dq-application-resume-preview_title">
                                     其他信息
                                 </div>
                                 <div class="dq-application-resume-preview_info">
                                 <div class="">
-                                    <p style="font-size: 14px;">个人主页: www.4399.com</p>
+                                    <p style="font-size: 14px;">个人主页: <span style="color: #6cb7ee;">www.4399.com</span></p>
 
                                 </div>
 
