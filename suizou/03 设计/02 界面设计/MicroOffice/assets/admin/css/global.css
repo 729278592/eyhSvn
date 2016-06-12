@@ -549,7 +549,7 @@ a.keyword-button:hover,.keyword-button:active,.keyword-button:focus{color: #fff;
 .basicDiv{margin-left: 40px;width: 580px;margin-top: 15px;}
 .contentCon{}
 .basicList{display: block;padding-top: 5px;}
-.basicList li{float: left;width: 50%;color: #dfdfdf;}
+.basicList li{float: left;width: 50%;color: #dfdfdf;font-size: 12px;}
 .basicList li .typeSpan{display: inline-block;width: 58px;font-size: 12px;}
 .spanList span{display: inline-block;width: 29%;border-right: 1px solid #dbdbdb;text-align: center;}
 .spanList span.br0{border-right: 0;}
@@ -736,8 +736,8 @@ a.keyword-button:hover,.keyword-button:active,.keyword-button:focus{color: #fff;
 .dq-application-detail-delimiter.suc{background: #5caec9;}
 .dq-application-icon-status-suc-text{color: #5caec9;}
 
-.workList li.bottom p.workInfor{top: 15px;left: -10px;}
-.workList li.top p.workInfor{top: -60px;left: -140px;}
+.workList li.bottom p.workInfor{top: 15px;left: -40px;}
+.workList li.top p.workInfor{top: -60px;left: -10px;}
 .workList li .caretBg{position: absolute;width: 8px;height: 8px;border-radius: 8px;background: #35b3c8;left: 50%;top: 50%;margin-left: -4px;margin-top: -4px;display: inline-block;}
 .workList li .time{font-size: 12px;position: relative;top: -10px;}
 .workList li p .posirionInfor{border-radius: 4px;background: #4879c7;padding: 5px;font-size: 12px;font-weight: 100;display: inline-block;width: 94px;height: 42px;}
@@ -791,6 +791,7 @@ a.keyword-button:hover,.keyword-button:active,.keyword-button:focus{color: #fff;
     .hoveran{width: 465px;}
     .annotation{width: 575px;}
     .resumeBq li{padding: 5px 20px;}
+    .basicDiv{width: 390px;}
 }
 @media screen and (max-height: 750px) {
     .regWrap{top:58%;}
