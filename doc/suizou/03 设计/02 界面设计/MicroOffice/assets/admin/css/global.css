@@ -12,7 +12,6 @@ input,button{outline: none;border: none;font-family: "微软雅黑";}
 .left{float: left;}
 a:link{text-decoration: none;}
 .center{width: 1240px;margin: 0 auto;}
-.copyright{font-size: 14px;color: #fff;z-index: 10;width: 100%;text-align: center;margin: 1px\0;}
 .copyright a{color: #fff;}
 .block{display: inline-block;}
 
@@ -111,7 +110,7 @@ a:link{text-decoration: none;}
 .common-list-item .item-actions,.common-list-item .item-content,.common-list-item .item-info,
 .position-actions,.position-actions .card,.resume-actions,.resume-actions .card{list-style:none;padding:0;margin:0}
 #admin-wrapper{width:100%;}
-#admin-content-wrapper{position:absolute;margin-left:50px;left:0;right:0;z-index:0;}
+#admin-content-wrapper{position:absolute;margin-left:50px;left:0;right:0;z-index:2;}
 .btn,.card,.sub-nav,.sub-title,header{background-color:#fff}
 
 .common-list-item .item-actions.application-item-actions-pos{left: 64%;}
@@ -153,7 +152,6 @@ a:link{text-decoration: none;}
     cursor: default;
     color: #ABB4C3;
 }
-.dq-application-status-text{font-size: 12px;}
 .application-job-apply{margin: 21px 0;right: 50px;}
 
 .card-item .fa-star{color: #fda341;}
@@ -192,10 +190,11 @@ a:link{text-decoration: none;}
 #admin-wrapper{position: relative;overflow-x: auto;min-width: 1100px;}
 .right-con{overflow-y: auto;}
 .admin-wrapper{position: relative;}
-.main-nav,.nav{position:fixed;top:0;left:0;z-index:1;text-align:center;width:50px;bottom: 0;}
+.main-nav,.nav{position:fixed;top:0;left:0;z-index:3;text-align:center;width:50px;bottom: 0;}
+.main-nav{z-index: 3000;}
 .main-nav{background-color: #1d2938;}
 .highcharts-container{font-family: "微软雅黑";}
-.main-nav-w158{position:fixed;top:0;left:-158px;z-index:0;background-color: #4879c7;text-align:center;width:158px;}
+.main-nav-w158{position:fixed;top:0;left:-158px;z-index:2999;background-color: #4879c7;text-align:center;width:158px;}
 .main-nav .logo-wrapper,.main-nav-w158 .logo-wrapper{width:100%;background-color: #67a5f9;height:50px;display:block;color:#abb4c3;overflow:hidden}
 .main-nav .logo-wrapper{background: #1d2938;}
 .main-nav .logo-wrapper .logo,.main-nav-w158 .logo-wrapper .logo{height:100%;font-size:14px;position:relative}
@@ -265,7 +264,7 @@ a:link{text-decoration: none;}
 .slider-bar-l .fa,.slider-bar-w .fa{font-size: 20px;}
 .slider-bar-l p,.slider-bar-w p{display: none;font-size: 14px;}
 .slider-bar-l:hover p,.slider-bar-w:hover p{display: inline-block;cursor: pointer;}
-.hoveran{color: #82c0f5;position: relative;width: 480px;display: inline-block;}
+.hoveran{color: #82c0f5;position: relative;width: 460px;display: inline-block;}
 .annotation{color: #82c0f5;display: none;border: 1px solid #dbdbdb;padding: 10px;position: absolute;left: -108px;top: 20px;width: 600px;z-index: 1000;background: #fff;}
 .hoveran:hover .annotation{display: inline-block;}
 .annotation span{font-size: 14px;color: #666;font-weight: 100;}
@@ -313,10 +312,10 @@ body,html{height: 100%;}
 .reWrap{margin-top: -180px;height: 460px;}
 .loginPeople{position: absolute;top: -130px;left: 150px;}
 .logBox,.regBox{padding-top:1px;margin: 20px 40px;}
-.logBox .title,.regBox .title{font-size: 18px;color: #f16a20;width: 100%;text-align: center;padding-bottom: 20px;}
-.form{width: 100%;height:100%;font-size: 12px;}
+.logBox .title,.regBox .title{font-size: 18px;color: #f16a20;width: 100%;text-align: center;padding-bottom: 20px;font-weight: bold;}
+.form{width: 100%;height:100%;font-size: 14px;}
 .form.fs14{font-size: 14px;}
-body.overflow{overflow: hidden;}
+body.overflow{overflow-y: hidden;overflow-x: auto;}
 
 .question-infor{position: absolute;width: 200px;padding: 10px;background: #ff7f81;font-size: 14px;color: #fff;top: -8px;right: -204px;z-index: 10;display: none;font-family: "微软雅黑";}
 .question-infor .fa{position: absolute;left: -5px;top: 8px;color: #ff7f81;font-size: 16px;}
@@ -330,6 +329,11 @@ input.btn-click:hover{background: #e16a20}
 .form .form-group .btn-click:hover{text-decoration: none;opacity: 0.8;filter:alpha(opacity=80);}
 .form  a:hover{text-decoration: underline;}
 .form  a{color: #f16a20;}
+.foot{position: absolute;bottom: 0;left: 0;right: 0;height: 40px;z-index: 100;line-height: 40px;color: #666;}
+.foot-main{width: 90%;margin: 0 auto;height: 100%;padding: 0 2%;}
+.copyright{font-size: 14px;color: #666;z-index: 10;text-align: center;margin: 1px\0;}
+
+
 /*.col-sm-8,.col-sm-4{padding: 0;}*/
 label.error {color: #EA5200;margin-bottom: 0;}
 .form .mt{margin-top: 10px;}
@@ -341,9 +345,9 @@ label.error {color: #EA5200;margin-bottom: 0;}
 .form-group.mb0{margin-bottom: 0;}
 .form-group .check{color: #666;}
 .form-group.bo .w100{border: none;color: #666;}
-.form-group .getcode{position: absolute;right: 0;top: 0;height: 31px;width: 120px;background: #f16a20;text-align: center;line-height: 31px;color: #fff;border-radius: 0 20px 20px 0;}
+.form-group .getcode{position: absolute;right: 0;top: 0;height: 34px;width: 120px;background: #f16a20;text-align: center;line-height: 34px;color: #fff;border-radius: 0 20px 20px 0;font-size: 12px;}
 .form-group .getcode:hover{opacity: 0.8;filter:alpha(opacity=80);}
-.form-group .w100 .type{display: inline-block;width: 60px;color: #666;}
+.form-group .w100 .type{display: inline-block;width: 64px;color: #666;}
 .form-group .help-block-error{position: relative;left: 12px;color: #fe695c;}
 .form-group .errMessge{color: #fe695c;}
 .form-group .btnSure{background: #f16b22;color: #fff;}
@@ -698,6 +702,17 @@ a.keyword-button:hover,.keyword-button:active,.keyword-button:focus{color: #fff;
 .numList{padding: 10px 42px;}
 .numList li{float: left;margin-right: 50px;}
 
+.askMaskBg{background: #000;opacity: 0.6;filter:alpha(opcity=60);}
+.askMaskBg,.askMask{position: fixed;top: 0;left: 0;right: 0;bottom: 0;z-index: 100000;}
+.askWrapper{border-radius:4px ;width: 440px;padding: 25px;background: #fff;position: absolute;left: 50%;top: 50%;margin-left: -245px;}
+.askWrapperHeader{display: table;}
+.askWrapperHeader .fa-remove{position: absolute;right: 5px;top: 5px;}
+.askWrapperHeader .prote{width: 60px;height: 60px;margin-right: 20px;}
+.askWrapperHeader .prote,.askWrapperHeader p{display: table-cell;vertical-align: middle;}
+.askWrapperHeader p{width: 300px;color: #666;}
+.btn.btnSure.left{left: 40px;}
+.askWrapperCon{margin-top: 15px;}
+.askWrapperCon .form-group {display: block;}
 
 
 
@@ -744,6 +759,8 @@ a.keyword-button:hover,.keyword-button:active,.keyword-button:focus{color: #fff;
 .workList li p .posirionInfor{border-radius: 4px;background: #4879c7;padding: 5px;font-size: 12px;font-weight: 100;display: inline-block;width: 94px;height: 42px;}
 .workList li p .companyName{font-weight: 100;color: #fff;}
 .workList li p .positionName{font-weight: 100;color: #5bd0c8;display: inline-block;width: 100%;text-align: center;}
+.dq-application-status-text{font-size: 12px;}
+
 .tops{
     position: absolute;
     left: 50%;
@@ -788,12 +805,17 @@ a.keyword-button:hover,.keyword-button:active,.keyword-button:focus{color: #fff;
 @media screen and (max-width: 1400px) {
     .form-group .btnReturn{left: -160px;}
     .btn.btnSure{left: 160px;}
-    .common-list-item .item-actions.application-item-actions-pos{left: 63%;}
-    .hoveran{width: 465px;}
-    .annotation{width: 575px;}
+    .common-list-item .item-actions.application-item-actions-pos{left: 57%;}
+    .hoveran{width: 390px;}
+    .annotation{width: 500px;}
     .resumeBq li{padding: 5px 20px;}
     .basicDiv{width: 390px;}
 }
 @media screen and (max-height: 750px) {
     .regWrap{top:58%;}
+}
+
+
+@media screen and (max-width: 1400px)and (min-width: 1251px) {
+    .common-list-item .item-actions.application-item-actions-pos{left: 60%;}
 }
