@@ -33,8 +33,16 @@
                         选择已有简历
                     </div>
                     <div class="resumeCenter spacing fff">
-                        <div class="progress">
-                            <a href="resumeDetailsInfor.html">
+                        <div class="progress relative">
+                            <div class="weui_cells weui_cells_checkbox mt0 bt0 style">
+                                <label class="weui_check_label bt0  p0" for="s11">
+                                    <div class="weui_cell_hd">
+                                        <input type="checkbox" class="weui_check" name="checkbox1" id="s11" checked="checked">
+                                        <i class="weui_icon_checked"></i>
+                                    </div>
+                                </label>
+                            </div>
+                            <div style="display: inline-block;width: 90%;">
                                 <p class="resumeTitle">简历1</p>
                                 <div class="weui_progress">
                                     <div class="weui_progress_bar">
@@ -45,12 +53,23 @@
                                     <!--<img src="../../assets/mobile/images/modiflyIcon.png" alt="" class="modiflyIcon"/>-->
                                     <!--</a>-->
                                 </div>
-                                <span class="time">更新于2016-03-05 9:00</span>
-                            </a>
+                                <span class="time">更新于2016-03-05 9:00
+                                     <a href="resumeDetailsInfor.html">
+                                         <img src="../../assets/mobile/images/modiflyIcon.png" alt="" class="modiflyIcon" style="width: 15px;position: absolute;right: 15px;bottom: 15px;"/>
+                                     </a>
+                                </span>
+                            </div>
+
+                        </div>
+                        <div class="weui_btn_area">
+                            <a class="weui_btn weui_btn_primary" href="javascript:" id="showTooltips">投递</a>
                         </div>
                     </div>
                     <div class="notResume">
-
+                        <div class="personIforP auto b0 mt15">
+                            <p style="text-align: center;font-size: 18px;color: #999;padding: 10px 0;">您尚未创建简历</p>
+                            <a href="addDetailedBasicInfor.html" class="btnAddwe">+创建一份简历</a>
+                        </div>
                     </div>
                 </div>
             </div>

@@ -362,10 +362,12 @@
                             }
                         }else if(formLine.is(".mobile")){
                             $(".modal-backdrop,.modal-tip").removeClass("hide");
+                            $("#admin-content-wrapper").css({"z-index":"13"});
                         }else if(formLine.is(".newMobile")){
 
                         }else if(formLine.is(".password")){
                             $(".modal-backdrop,.modal-tip").removeClass("hide");
+                            $("#admin-content-wrapper").css({"z-index":"13"});
                         }else if(formLine.is(".weixin")){
 
                         }
@@ -445,7 +447,8 @@
                     });
 
                     $(".close").on("click",function(){
-                        $(".modal-tip,.modal-backdrop").addClass("hide")
+                        $(".modal-tip,.modal-backdrop").addClass("hide");
+                        $("#admin-content-wrapper").css({"z-index":"2"})
                     })
 
                 });

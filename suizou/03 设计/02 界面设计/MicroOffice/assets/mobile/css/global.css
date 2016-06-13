@@ -347,7 +347,7 @@ a.weui_btn.weui_btn_primary{font-size: 16px;}
 #fp-nav ul li a span{background: #8ebbfb;border:1px solid #8ebbfb;}
 
 #fp-nav ul li a.active span{background: #0000ff;}
-
+.weui_cells.style{width: 8%;display: inline-block;position:relative;top: -18px;}
 
 
 
