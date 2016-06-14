@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html>
+<head lang="en">
+    <meta charset="UTF-8">
+    <title>就诊评分</title>
+    <meta name="viewport" content="width=device-width; initial-scale=1.0; user-scalable=no;">
+    <link rel="stylesheet" href="../../assets/global/plugins/font/css/font-awesome.min.css"/>
+    <link rel="stylesheet" href="../../assets/global/plugins/weUi/css/weui.css"/>
+    <link rel="stylesheet" href="../../assets/global/plugins/weUi/css/example.css"/>
+    <link rel="stylesheet" href="../../assets/mobile/css/global.css"/>
+</head>
+<body>
+    <div class="container js_container overflowX">
+        <div class="page">
+            <div class="bd">
+                <form action="#">
+                    <div class="score">
+                        <p class="title">
+                            评价张志平医生
+                        </p>
+                        <ul class="starList clearfix">
+                            <li>
+                                <i class="fa fa-star-o"></i>
+                            </li>
+                            <li>
+                                <i class="fa fa-star-o"></i>
+                            </li>
+                            <li>
+                                <i class="fa fa-star-o"></i>
+                            </li>
+                            <li>
+                                <i class="fa fa-star-o"></i>
+                            </li>
+                            <li>
+                                <i class="fa fa-star-o"></i>
+                            </li>
+                            <li>
+                                <i class="fa fa-star-o"></i>
+                            </li>
+                            <li>
+                                <i class="fa fa-star-o"></i>
+                            </li>
+                            <li>
+                                <i class="fa fa-star-o"></i>
+                            </li>
+                            <li>
+                                <i class="fa fa-star-o"></i>
+                            </li>
+                            <li>
+                                <i class="fa fa-star-o"></i>
+                            </li>
+                        </ul>
+                        <span class="fraction">
+                            <span class="numFraction">0</span> 分
+                        </span>
+                    </div>
+                    <div class="weui_cell pd0 bt0">
+                        <div class="weui_cell_bd weui_cell_primary">
+                            <textarea name="" id="caseDetails" class="weui_textarea pd10" placeholder="请输入评价内容" cols="30" rows="15"></textarea>
+                        </div>
+                    </div>
+                    <div class="weui_btn_area btnStyle w100 fixed">
+                        <a class="weui_btn weui_btn_primary" href="javascript:" id="showTooltips">提交</a>
+                    </div>
+                </form>
+            </div>
+        </div>
+    </div>
+    <script src="../../assets/global/plugins/jquery/jquery-1.11.3.min.js"></script>
+    <script src="../../assets/mobile/js/global.js"></script>
+    <script src="../../assets/mobile/js/stars.js"></script>
+    <script>
+        $(function(){
+            commentStars.init($(".starList li"))
+        })
+    </script>
+</body>
+</html>

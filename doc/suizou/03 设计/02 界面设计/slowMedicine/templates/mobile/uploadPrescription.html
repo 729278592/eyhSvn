@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html>
+<head lang="en">
+    <meta charset="UTF-8">
+    <title>上传处方</title>
+    <meta name="viewport" content="width=device-width; initial-scale=1.0; user-scalable=no;">
+    <link rel="stylesheet" href="../../assets/global/plugins/font/css/font-awesome.min.css"/>
+    <link rel="stylesheet" href="../../assets/global/plugins/weUi/css/weui.css"/>
+    <link rel="stylesheet" href="../../assets/global/plugins/weUi/css/example.css"/>
+    <link rel="stylesheet" href="../../assets/global/plugins/webuploader/css/webuploader.css"/>
+    <link rel="stylesheet" href="../../assets/global/plugins/bootstrap-3.3.5/css/bootstrap.min.css"/>
+    <link rel="stylesheet" href="../../assets/mobile/css/global.css"/>
+    <style>
+        .webuploader-pick{background: transparent;text-align: center;}
+    </style>
+</head>
+<body>
+    <div class="container js_container">
+        <div class="page bgfff">
+            <div class="bd">
+                <form action="#">
+                    <div class="weui_cells bb0 mt0 weui_cells_form">
+                        <div class="upload">
+                            <div class="uploader-demo">
+                                <!--用来存放item-->
+                                <div id="fileList" class="uploader-list "></div>
+                                <div id="filePicker">
+                                    <div class="uploadDiv">
+                                        <img src="../../assets/mobile/images/uploadImg.png" alt=""/>
+                                    </div>
+                                </div>
+                            </div>
+                            <span class="help-block">
+                                <span class="fs16">上传图片资料</span><br/>
+                                <span class="fs14">最多可上传5张图片</span>
+                            </span>
+                        </div>
+                        <div class="weui_cell pd0 bt0">
+                            <div class="weui_cell_bd weui_cell_primary">
+                                <p style="padding: 10px 15px 0;font-size: 16px;">处方详情 : </p>
+                                <textarea name="" id="caseDetails" class="weui_textarea pd10 pd15" placeholder="请输入处方详情..." cols="30" rows="6"></textarea>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="weui_btn_area btnStyle w100 fixed">
+                        <a class="weui_btn weui_btn_primary" href="javascript:" id="showTooltips">完成</a>
+                    </div>
+                </form>
+
+
+
+            </div>
+        </div>
+    </div>
+    <script src="../../assets/global/plugins/jquery/jquery-1.11.3.min.js"></script>
+    <script src="../../assets/global/plugins/webuploader/js/webuploader.js"></script>
+    <script src="../../assets/global/plugins/webuploader/js/upLoadfk.js"></script>
+    <script src="../../assets/mobile/js/global.js"></script>
+</body>
+</html>
