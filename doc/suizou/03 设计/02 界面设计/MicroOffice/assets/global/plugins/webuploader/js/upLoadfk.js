@@ -1,10 +1,8 @@
 /**
- * Created by WHB on 2016/6/12.
+ * Created by WHB on 2016/6/13.
  */
-// 图片上传demo
-jQuery(function() {
-    var $ = jQuery,
-        $list = $('#fileList,#fileList1'),
+$(function() {
+    var $list = $('#fileList'),
     // 优化retina, 在retina下这个值是2
         ratio = window.devicePixelRatio || 1,
     // 缩略图大小
@@ -29,7 +27,7 @@ jQuery(function() {
 
         // 选择文件的按钮。可选。
         // 内部根据当前运行是创建，可能是input元素，也可能是flash.
-        pick: '#filePicker,#filePicker1',
+        pick: '#filePicker',
 
         // 只允许选择文件，可选。
         accept: {
@@ -41,13 +39,16 @@ jQuery(function() {
 
     // 当有文件添加进来的时候
     uploader.on( 'fileQueued', function( file ) {
-        var $li = $('<div id="' + file.id + '" class="file-item thumbnail">' +
-                        '<img>' +
-                        '<div class="info">' + file.name + '</div>' +
-                    '</div>'),
+        var $li = $(
+                    '<div id="' + file.id + '" class="file-item thumbnail">' +
+                    '<img>' +
+                    '<div class="info">' + file.name + '</div>' +
+                    '</div>'
+            ),
             $img = $li.find('img');
 
         $list.append( $li );
+        $(".wrapper").addClass("minHeight950");
         // 创建缩略图
         uploader.makeThumb( file, function( error, src ) {
             if ( error ) {
