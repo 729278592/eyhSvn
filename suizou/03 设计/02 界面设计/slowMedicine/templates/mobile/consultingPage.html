@@ -7,12 +7,13 @@
     <link rel="stylesheet" href="../../assets/global/plugins/font/css/font-awesome.min.css"/>
     <link rel="stylesheet" href="../../assets/global/plugins/weUi/css/weui.css"/>
     <link rel="stylesheet" href="../../assets/global/plugins/weUi/css/example.css"/>
+    <link rel="stylesheet" href="../../assets/global/plugins/webuploader/css/webuploader.css"/>
     <link rel="stylesheet" href="../../assets/mobile/css/global.css"/>
 </head>
 <body>
     <div class="container js_container">
-        <div class="page">
-            <div class="bd">
+        <div class="page ">
+            <div class="bd pd40">
                 <form action="#">
                     <div class="weui_cells mt0 weui_cells_form">
                         <div class="perfectInformation">
@@ -39,12 +40,35 @@
                         <div class="weui_cell pd0 bt0">
                             <div class="weui_cell_bd weui_cell_primary">
                                 <p style="padding: 10px 15px 0">描述 : </p>
-                                <textarea name="" id="caseDetails" class="weui_textarea pd10 pd15" placeholder="请输入评价内容" cols="30" rows="5"></textarea>
+                                <textarea name="" id="caseDetails" class="weui_textarea pd10 pd15" placeholder="请输入描述内容" cols="30" rows="5"></textarea>
                             </div>
+                        </div>
+                        <div class="bg"></div>
+                        <div class="upload pd15">
+                            <p class="title">检查资料上传 : </p>
+                            <div class="uploader-demo">
+                                <div id="fileList" class="uploader-list "></div>
+                                <div id="filePicker">
+                                    <div class="uploadDiv">
+                                        <img src="../../assets/mobile/images/uploadImg.png" alt=""/>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="weui_cells weui_cells_checkbox mt0 bt0 bb0">
+                            <label class="weui_cell weui_check_label bt0 w30 p0" for="s11">
+                                <div class="weui_cell_hd">
+                                    <input type="checkbox" class="weui_check" name="checkbox1" id="s11" checked="checked">
+                                    <i class="weui_icon_checked"></i>
+                                </div>
+                                <div class="weui_cell_bd">
+                                    <p>匿名咨询</p>
+                                </div>
+                            </label>
                         </div>
                     </div>
                     <div class="weui_btn_area btnStyle w100 fixed">
-                        <a class="weui_btn weui_btn_primary" href="javascript:" id="showTooltips">确定</a>
+                        <a class="weui_btn weui_btn_primary" href="javascript:" id="showTooltips">提交</a>
                     </div>
                 </form>
             </div>
@@ -52,6 +76,8 @@
     </div>
     <script src="../../assets/global/plugins/jquery/jquery-1.11.3.min.js"></script>
     <script src="../../assets/mobile/js/global.js"></script>
+    <script src="../../assets/global/plugins/webuploader/js/webuploader.js"></script>
+    <script src="../../assets/global/plugins/webuploader/js/upLoadfk.js"></script>
     <script>
         $(function(){
             $(".btnPerfect").on("click",function(){

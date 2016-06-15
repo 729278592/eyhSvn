@@ -72,11 +72,30 @@ img.w100{width: 100%;}
     100% {
         transform: scale(1);
         -webkit-transform: scale(1); } }
-.weui_btn_area.fixed{position: fixed;bottom: 0;}
+.weui_btn_area.fixed{position: fixed;bottom: -5px;}
 .weui_btn_area.fixed img{width: 30px;position: relative;top: -2px;}
-.weui_btn_area.w100{width: 100%;left: 50%;margin-left: -50%;}
+.weui_btn_area.w100{width: 100%;left: 50%;margin-left: -50%;z-index: 100;}
 .weui_btn_area.absolute{position: relative;bottom: 0;}
+a.weui_media_box:active {
+    background-color: transparent;
+}
 
+
+
+.thumbnail {
+    display: block;
+    padding: 4px;
+    margin-bottom: 20px;
+    line-height: 1.42857143;
+    background-color: #fff;
+    border: 1px solid #ddd;
+    border-radius: 4px;
+    -webkit-transition: border .2s ease-in-out;
+    -o-transition: border .2s ease-in-out;
+    transition: border .2s ease-in-out;
+}
+
+.webuploader-pick{background: transparent;text-align: center;}
 
 
 
@@ -94,6 +113,7 @@ img.w100{width: 100%;}
 .person-head .personInfor .doctorName a{display:inline-block;padding:0 3px;color:#ffad12;border-radius:4px;border:2px solid #ffad12}
 .person-head .tableCell.btnDiv{vertical-align:bottom;text-align:right}
 .weui_cells.mt0{margin-top:0}
+.weui_cells.bb0:after{border-bottom:none;position: relative; }
 .person-head .btnDiv .btnModify{display:inline-block;padding:2px 6px;border:2px solid #67b9f1;color:#67b9f1;border-radius:14px}
 .weui_cells_access a.weui_cell{color:#333}
 .panel .bd{padding-bottom:0}
@@ -107,6 +127,18 @@ img.w100{width: 100%;}
 .weui_media_desc.hide{display: none;}
 .weui_media_desc span.color{color: #5abbf8;}
 
+
+.weui_cells_checkbox{}
+.weui_cells_checkbox.h153{min-height: 200px;}
+.weui_check_label.w30{width: 30%;float: right;margin: 10px 0;color: #666;}
+.weui_check_label.w50{width: 40.5%;float: left;position: relative;min-height: 170px;}
+.weui_check_label.w50 .sexImg{width: 40%;position: absolute;left: 50%;margin-left: -20%;}
+.weui_check_label.w50 .weui_cell_hd{position: absolute;bottom: 5%;left: 50%;margin-left: -12px;}
+.weui_check_label.w30.p0{padding: 0;}
+.weui_cells_checkbox .weui_cell.bt0:active{background: transparent;}
+.weui_cell.weui_cell_select{padding: 0 15px;}
+.weui_select{font-family: "微软雅黑";padding: 0;color: #333;}
+.weui_cells.fbf{background: #fbf9fe;}
 
 /*mydoctor*/
 .weui_media_box .weui_media_title{font-size:16px}
@@ -173,12 +205,12 @@ img.w100{width: 100%;}
 .weui_cells.bb0:after{border-bottom: none;}
 .webuploader-pick{padding: 5px 10px;}
 .file-item {float: left; position: relative;margin: 0 10px 10px 0;padding: 4px;}
-.uploader-list {width: 100%;overflow: hidden;}
+.uploader-list {width: 92%;overflow: hidden;margin: 0 4%;}
 .file-item .info {position: absolute;left: 4px;bottom: 4px;right: 4px;height: 20px;line-height: 20px;text-indent: 5px;background: rgba(0, 0, 0, 0.6);color: white;overflow: hidden;white-space: nowrap;text-overflow: ellipsis;font-size: 12px;z-index: 10;}
 .thumbnail a>img, .thumbnail>img{width: 100px;height: 100px;}
 
-
-
+.upload .title{font-size: 14px;text-align: left;padding: 0 15px 5px;}
+.upload.pd15{padding: 15px 0;}
 /*prescriptionRecord*/
 .bdHead{width: 100%;height: 45px;line-height: 45px;text-align: center;background: #fff;border-bottom: 1px solid #efefef;}
 .bdHead.bg1{background: transparent;border-bottom: none;}
