@@ -459,8 +459,8 @@
                             <a href="interviewerInformation.html" class="interviewerInformation">
                                 <div class="card-item application-card common-list-item position">
                                     <div class="squaredCheckBox hide">
-                                        <input type="checkbox" id="app-checkbox-99085" name="check">
-                                        <label for="app-checkbox-99085">
+                                        <input type="checkbox" id="app-checkbox-99086" name="check">
+                                        <label for="app-checkbox-99086">
                                         </label>
                                     </div>
                                     <div>
@@ -631,7 +631,7 @@
                         target: '#admin-content-wrapper'
                     });
                     /*全选*/
-                    $(".squaredCheckBox").on("click",function(){
+                    $(".batch.card-item.card-title").find(".squaredCheckBox").on("click",function(){
                         if($(this).find("input").prop("checked")){
                             $(this).find("input").removeAttr("checked");
                             $(".card-item.position .squaredCheckBox").find("input").removeAttr("checked");
