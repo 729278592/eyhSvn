@@ -10,9 +10,9 @@
     <link rel="stylesheet" href="../../assets/mobile/css/global.css"/>
 </head>
 <body>
-    <div class="container js_container">
+    <div class="container js_container errDailog absolute">
         <div class="page">
-            <div class="bd">
+            <div class="bd pd40">
                 <form action="#">
                     <div class="weui_cells mt0 weui_cells_form">
                         <!--<div class="weui_cell l0">-->
@@ -22,19 +22,19 @@
                             <!--</div>-->
                         <!--</div>-->
                         <div class="weui_cell l0 imgUpload">
-                            <div class="weui_cell_hd"><label class="weui_label">头像 :</label></div>
+                            <div class="weui_cell_hd"><label class="weui_label">头　　像 :</label></div>
                             <div class="weui_cell_bd weui_cell_primary">
-                                <img src="../../assets/mobile/images/personImg.png" alt="" class="right"/>
+                                <img src="../../assets/mobile/images/doctorImg.png" alt="" class="right"/>
                             </div>
                         </div>
                         <div class="weui_cell l0">
-                            <div class="weui_cell_hd"><label class="weui_label">姓名 :</label></div>
+                            <div class="weui_cell_hd"><label class="weui_label">姓　　名 :</label></div>
                             <div class="weui_cell_bd weui_cell_primary">
-                                <input class="weui_input" type="text" placeholder="张志平">
+                                <input class="weui_input" type="text" placeholder="张志平" id="personName">
                             </div>
                         </div>
                         <div class="weui_cell l0 weui_cell_select">
-                            <div class="weui_cell_hd"><label class="weui_label">职称 :</label></div>
+                            <div class="weui_cell_hd"><label class="weui_label">职　　称 :</label></div>
                             <div class="weui_cell_bd weui_cell_primary">
                                 <select class="weui_select" name="select1">
                                     <option selected="" value="副教授">副教授</option>
@@ -51,7 +51,7 @@
                         <div class="weui_cell l0">
                             <div class="weui_cell_hd"><label class="weui_label">手机号码 :</label></div>
                             <div class="weui_cell_bd weui_cell_primary">
-                                <input class="weui_input" type="number" pattern="[0-9]*" placeholder="1689898989">
+                                <input class="weui_input" type="number" pattern="[0-9]*" id="mobile" placeholder="1689898989">
                             </div>
                         </div>
                         <div class="weui_cell l0">
@@ -76,5 +76,25 @@
     </div>
     <script src="../../assets/global/plugins/jquery/jquery-1.11.3.min.js"></script>
     <script src="../../assets/mobile/js/global.js"></script>
+    <script src="../../assets/mobile/js/errMsg.js"></script>
+    <script>
+        $("#showTooltips").click(function(){
+            var reg = /^0?(13[0-9]|15[012356789]|18[0236789]|14[57])[0-9]{8}$/;
+            if($("#personName").val() == '') {
+                showMsg('姓名不能为空');
+                return false;
+            }
+            else if($("#mobile").val() == ''){
+                showMsg('手机号不能为空');
+            }
+            else if($("#mobile").get(0)&&!reg.test($("#mobile").val())){
+                showMsg('手机号格式不正确');
+            }
+            else{
+
+            }
+            return true;
+        });
+    </script>
 </body>
 </html>
