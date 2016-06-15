@@ -405,6 +405,111 @@
                                         </div>
                                     </div>
                                 </div>
+                                <div class="card-item common-list-item ns-position-item position">
+                                    <div class="squaredCheckBox hide">
+                                        <input type="checkbox" id="checkbox-57156" name="check">
+                                        <label for="checkbox-57156"></label>
+                                    </div>
+                                    <div class="priority-triangle hide"></div>
+                                    <div class="item-title">
+                                        <p class="item-title__title">
+                                            高级商务
+                                        </p>
+                                        <div class="item-title__withdraw hide">
+                                            <span class="deadline ">
+                                                14
+                                            </span>
+                                            天后将彻底消失
+                                        </div>
+                                    </div>
+                                    <ul class="item-content">
+                                        <li class="item-content-li">
+                                            <span class="item-info-li">
+                                                周先服饰 - 市场部
+                                            </span>
+                                        </li>
+                                    </ul>
+                                    <ul class="item-info ns-position_item-info">
+                                        <!--<li class="item-info-li ">-->
+                                        <!--社招-->
+                                        <!--</li>-->
+                                        <li class="item-info-li">
+                                            <span class="">
+                                                全职
+                                            </span>
+                                        </li>
+                                        <li class="item-info-li">
+                                            2016-04-26 发布
+                                        </li>
+                                    </ul>
+                                    <ul class="item-actions">
+                                        <!--<li class="item-action">-->
+                                        <!--<a class="item-action-link">-->
+                                        <!--<i class="fa fa-home"></i>-->
+                                        <!--置顶-->
+                                        <!--</a>-->
+                                        <!--</li>-->
+                                        <li class="item-action">
+                                            <a class="item-action-link postOffice" href="postOffice.html">
+                                                <i class="fa fa-pencil"></i>
+                                                编辑
+                                            </a>
+                                        </li>
+                                        <li class="item-action">
+                                            <a class="item-action-link">
+                                                <i class="fa fa-eye"></i>
+                                                预览
+                                            </a>
+                                        </li>
+                                        <!--<li class="item-action hide">-->
+                                        <!--<i class="fa fa-share"></i>-->
+                                        <!--分享-->
+                                        <!--<div class="newbie-pulse scale">-->
+                                        <!--</div>-->
+                                        <!--</li>-->
+                                        <li class="item-action status">
+                                            <a class="hf" style="color: #4b525c;">
+                                                <i class="fa fa-mail-reply"></i>
+                                                恢复
+                                            </a>
+                                            <a class="cx hide" style="color: #4b525c;">
+                                                <i class="fa fa-remove"></i>
+                                                撤下
+                                            </a>
+                                        </li>
+                                        <li class="item-action">
+                                            <a class="item-action-link">
+                                                <i class="fa fa-trash-o"></i>
+                                                删除
+                                            </a>
+                                        </li>
+                                    </ul>
+                                    <div class="item-count-info">
+                                        <div class="item-count-info_item">
+                                            <a class="position__resume position btn-hollow active" href="positionManagement.html">
+                                                <span class="">
+                                                    2 份简历
+                                                </span>
+                                                <span class="tips position-tips hide">
+                                                    0 new
+                                                    <img class="tip-tip" width="13" height="8" src="//static.moseeker.com/hr/common/images/tip_tip.png">
+                                                </span>
+                                            </a>
+                                        </div>
+                                        <div class="item-count-info_item scope-candidate">
+                                            <a class="position__candidate candidate__count-btn" href="#">
+                                                <span class="">
+                                                    4 位重点关注
+                                                </span>
+                                                <span class="tips candidate-tips hide">
+                                                    2 new
+                                                    <img class="tip-tip" width="13" height="8" src="//static.moseeker.com/hr/common/images/tip_tip.png">
+                                                </span>
+                                            </a>
+                                        </div>
+                                    </div>
+                                </div>
+
                             </div>
 
                             <!-- 无职位去发布新职位 -->
@@ -450,7 +555,7 @@
                     });
 
                     /*全选*/
-                    $(".squaredCheckBox").on("click",function(){
+                    $(".batch.card-item.card-title").find(".squaredCheckBox").on("click",function(){
                         if($(this).find("input").prop("checked")){
                             $(this).find("input").removeAttr("checked");
                             $(".card-item.position .squaredCheckBox").find("input").removeAttr("checked");
@@ -479,7 +584,7 @@
                         $(this).siblings("a").removeClass("hide");
                     });
 
-                    $(".nav a,postOffice").ajaxify({
+                    $(".nav a,.postOffice").ajaxify({
                         event: "click",
                         target: '#admin-content-wrapper'
                     });
