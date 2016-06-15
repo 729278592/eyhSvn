@@ -2,9 +2,93 @@
 <html>
 <head lang="en">
     <meta charset="UTF-8">
-    <title></title>
+    <title>处方记录</title>
+    <meta name="viewport" content="width=device-width; initial-scale=1.0; user-scalable=no;">
+    <link rel="stylesheet" href="../../assets/global/plugins/font/css/font-awesome.min.css"/>
+    <link rel="stylesheet" href="../../assets/global/plugins/weUi/css/weui.css"/>
+    <link rel="stylesheet" href="../../assets/global/plugins/weUi/css/example.css"/>
+    <link rel="stylesheet" href="../../assets/global/plugins/swiper/dist/css/swiper.min.css"/>
+    <link rel="stylesheet" href="../../assets/mobile/css/global.css"/>
 </head>
 <body>
+    <div class="container bgfff js_container">
+        <div class="page bgfff">
+            <div class="bd">
+                <div class="bdHead">
+                    共 <span></span> 张处方
+                </div>
+                <div class="swiper-container swiper-container-horizontal" id="swiper-container2">
+                    <div class="swiper-wrapper w70" style="transition-duration: 0ms; ">
+                        <div class="swiper-slide ">
+                            <img src="../../assets/mobile/images/prescription1.jpg" alt="" class="w100"/>
+                        </div>
+                        <div class="swiper-slide">
+                            <img src="../../assets/mobile/images/prescription2.jpg" alt="" class="w100"/>
+                        </div>
+                        <div class="swiper-slide">
+                            <img src="../../assets/mobile/images/prescription3.jpg" alt="" class="w100"/>
+                        </div>
+                        <div class="swiper-slide">
+                            <img src="../../assets/mobile/images/prescription4.jpg" alt="" class="w100"/>
+                        </div>
+                        <div class="swiper-slide">
+                            <img src="../../assets/mobile/images/prescription5.jpg" alt="" class="w100"/>
+                        </div>
+                    </div>
+                    <!--<div class="swiper-pagination"></div>-->
+                    <div class="swiper-button-next"></div>
+                    <div class="swiper-button-prev"></div>
+                </div>
+                <div class="bdFoot">
+                    <p>
+                        <span class="type">
+                            上传日期 :　
+                        </span>
+                        <span class="spanInfor">
+                            2016-05-05
+                        </span>
+                    </p>
 
+                    <p>
+                        <span class="type">
+                            病历描述 : 　
+                        </span>
+                       <span class="spanInfor">
+                            <span>0.9%氯化钠注射液　　250ml</span> <br/>
+                            <span>0.9%氯化钠注射液　　100ml</span> <br/>
+                            <span>5%葡萄糖注射液　　250ml</span> <br/>
+                            <span>5%葡萄糖注射液　　250ml</span>
+                       </span>
+                    </p>
+                    <a href="uploadPrescription.html" class="btnprescription">
+
+                    </a>
+                </div>
+            </div>
+        </div>
+    </div>
+    <script src="../../assets/global/plugins/jquery/jquery-1.11.3.min.js"></script>
+    <script src="../../assets/mobile/js/global.js"></script>
+    <script src="../../assets/global/plugins/swiper/dist/js/swiper.min.js"></script>
+    <script>
+        $(function(){
+            swiper = new Swiper('#swiper-container2', {
+                prevButton:'.swiper-button-prev',
+                nextButton:'.swiper-button-next',
+                slidesPerView: 1,
+//                pagination:'.swiper-pagination',
+                paginationClickable: true,
+                spaceBetween: 0,
+//                loop:true,
+                autoplay: 5000,
+                autoplayDisableOnInteraction: false
+            });
+
+            $(".bdHead span").text($(".swiper-slide").size())
+
+
+        })
+
+    </script>
 </body>
 </html>

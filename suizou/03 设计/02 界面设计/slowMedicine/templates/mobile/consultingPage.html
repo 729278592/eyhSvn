@@ -15,6 +15,16 @@
             <div class="bd">
                 <form action="#">
                     <div class="weui_cells mt0 weui_cells_form">
+                        <div class="perfectInformation">
+                            <img src="../../assets/mobile/images/mark.png" alt="" class="tipImg"/>
+                            <span class="title">完善个人资料让医生更全面的了解病情</span>
+                            <button class="btnPerfect" type="button">点击完善</button>
+                            <div class="inputInfor hide">
+                                <p><span class="type">您的姓名</span> : <input type="text"/></p>
+                                <p><span class="type">出生年月</span> : <input type="text"/></p>
+                                <p><span class="type">手机号码</span> : <input type="text"/></p>
+                            </div>
+                        </div>
                         <div class="weui_cell l0 weui_cell_select">
                             <div class="weui_cell_hd"><label class="weui_label">咨询类别 :</label></div>
                             <div class="weui_cell_bd weui_cell_primary relative bl1">
@@ -25,9 +35,7 @@
                                 </select>
                             </div>
                         </div>
-                        <div class="bg">
-
-                        </div>
+                        <div class="bg"></div>
                         <div class="weui_cell pd0 bt0">
                             <div class="weui_cell_bd weui_cell_primary">
                                 <p style="padding: 10px 15px 0">描述 : </p>
@@ -44,5 +52,22 @@
     </div>
     <script src="../../assets/global/plugins/jquery/jquery-1.11.3.min.js"></script>
     <script src="../../assets/mobile/js/global.js"></script>
+    <script>
+        $(function(){
+            $(".btnPerfect").on("click",function(){
+                var inputInfor = $(this).closest(".perfectInformation").find(".inputInfor");
+                if(inputInfor.is(".hide")){
+                    inputInfor.slideDown(100);
+                    $(this).text("点击关闭");
+                    inputInfor.removeClass("hide")
+                }
+                else if(inputInfor.not(".hide")){
+                    inputInfor.slideUp(100);
+                    $(this).text("点击完善");
+                    inputInfor.addClass("hide")
+                }
+            })
+        })
+    </script>
 </body>
 </html>
