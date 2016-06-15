@@ -63,7 +63,7 @@
                 </ul>
                 <div class="weui_panel weui_panel_access mt0">
                     <div class="weui_panel_bd">
-                        <a href="#" class="weui_media_box r15 weui_media_appmsg">
+                        <a href="doctorIndex.html" class="weui_media_box r15 weui_media_appmsg">
                             <div class="weui_media_hd">
                                 <img class="weui_media_appmsg_thumb portrait" src="../../assets/mobile/images/doctorImg.png">
                             </div>
@@ -76,7 +76,7 @@
                                 <button class="addFollow">+ 关注</button>
                             </div>
                         </a>
-                        <a href="#" class="weui_media_box r15 weui_media_appmsg">
+                        <a href="doctorIndex.html" class="weui_media_box r15 weui_media_appmsg">
                             <div class="weui_media_hd">
                                 <img class="weui_media_appmsg_thumb portrait" src="../../assets/mobile/images/doctorImg.png">
                             </div>
@@ -89,7 +89,7 @@
                                 <button class="addFollow">+ 关注</button>
                             </div>
                         </a>
-                        <a href="#" class="weui_media_box r15 weui_media_appmsg">
+                        <a href="doctorIndex.html" class="weui_media_box r15 weui_media_appmsg">
                             <div class="weui_media_hd">
                                 <img class="weui_media_appmsg_thumb portrait" src="../../assets/mobile/images/doctorImg.png">
                             </div>
@@ -109,5 +109,19 @@
     </div>
     <script src="../../assets/global/plugins/jquery/jquery-1.11.3.min.js"></script>
     <script src="../../assets/mobile/js/global.js"></script>
+    <script>
+        $(function(){
+            $(".addFollow").on("click",function(e){
+                e.preventDefault();
+                $(this).closest(".weui_media_bd").find(".cancelFollow").removeClass("hide");
+                $(this).addClass("hide");
+            });
+            $(".cancelFollow").on("click",function(e){
+                e.preventDefault();
+                $(this).closest(".weui_media_bd").find(".addFollow").removeClass("hide");
+                $(this).addClass("hide");
+            });
+        })
+    </script>
 </body>
 </html>
