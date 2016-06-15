@@ -23,7 +23,7 @@
                                 '</div>'+
                                 '<div class="form-group clearfix">'+
                                     '<div class="col-md-12 col-xs-12 col-sm-12">'+
-                                        '<textarea cols="10" rows="5" style="resize: none;" class="form-control bg" placeholder="用户定义的代码区域"></textarea>'+
+                                        '<textarea cols="10" rows="5" style="resize: none;" class="form-control bg" placeholder="请输入反馈内容"></textarea>'+
                                     '</div>'+
                                 '</div>'+
                                 '<div class="form-group">'+
