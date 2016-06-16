@@ -638,10 +638,15 @@ a.keyword-button:hover,.keyword-button:active,.keyword-button:focus{color: #fff;
 .nala_db span{display: inline-block;margin-left: 10px;}
 
 /*dailog*/
-.mask,.mask-bg{position: fixed;left: 0;right: 0;bottom: 0;top: 0;z-index: 100;}
+.mask,.mask-bg{position: fixed;left: 0;right: 0;bottom: 0;top: 0;z-index: 10000;}
+.mask-bg{background: #000;opacity: 0.5;filter:alpha(opacity=50);}
 .dailog{position: fixed;top: 50%;left: 50%;min-width: 400px;margin-left: -200px;border-radius: 8px 8px 0 0;z-index: 99999999;}
+.tips{padding: 6px 50px;border-radius: 30px;border: 1px solid #2ed6b1;position: fixed;background: #fff;z-index: 100;color: #2ed6b1;text-align: center;left: 50%;font-size: 16px;
+        opacity: 0;top: -5%;
+}
 .dailogHead{width: 100%;padding: 10px 0;background: #578adc;text-align: center;color: #fff;border-radius: 8px 8px 0 0;font-size: 14px;}
 .dailogContent{border: 1px solid #dbdbdb;padding: 5%;width: 100%;background: #fff;border-top: none;font-size: 14px;}
+.dailogContent.center,.dailogContent.center p{text-align: center;}
 .dailogContent .opreateBtn{margin: 15px 0 0 5px;}
 .dailogContent .opreateBtn button{width: 80px;height: 30px;line-height: 30px;color: #fff;border-radius: 8px;font-size: 14px;}
 .dailogContent .opreateBtn .btnSure{background: #ed6d45;margin-right: 10px;}

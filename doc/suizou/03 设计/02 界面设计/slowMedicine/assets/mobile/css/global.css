@@ -157,7 +157,7 @@ a.weui_media_box:active {
 .weui_media_box.r15:before{content:" ";position:absolute;top:0;height:1px;width:auto;border-top:1px solid #E5E5E5;color:#E5E5E5;-webkit-transform-origin:0 0;transform-origin:0 0;-webkit-transform:scaleY(.5);transform:scaleY(.5);left:15px;right:15px}
 .weui_panel_hd.l0:after{left:0}
 .weui_panel_hd{color:#333;font-weight:700;font-size:14px}
-.weui_panel_hd .sign{width:4px;background:#ffa902;position:absolute;left:0;top:1px;bottom:1px}
+.weui_panel_hd .sign{width:4px;background:#ffa902;position:absolute;left:0;top:1px;bottom:1px;height: 44px;}
 .weui_panel_hd .sign.bg1{background:#48afef}
 .weui_panel_hd.top1:before{content:" ";position:absolute;left:0;top:0;width:100%;height:1px;border-bottom:1px solid #E5E5E5;color:#E5E5E5;-webkit-transform-origin:0 100%;transform-origin:0 100%;-webkit-transform:scaleY(.5);transform:scaleY(.5)}
 .doctorListA{height:100%;position:absolute;right:15px;top:0;bottom:0;line-height:46px;display:inline-block;border-left:1px solid #E5E5E5;padding-left:15px;color:#59b9f5;font-weight:100}
