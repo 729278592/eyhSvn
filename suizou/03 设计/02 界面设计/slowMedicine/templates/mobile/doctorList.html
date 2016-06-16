@@ -131,25 +131,25 @@
             $(".addFollow").on("click",function(e){
                 e.preventDefault();
                 var that = $(this);
+                that.closest(".weui_media_bd").find(".cancelFollow").removeClass("hide");
+                that.addClass("hide");
                 $('#toast1').show();
                 $(".weui_toast").addClass("weui_toastshow");
                 setTimeout(function () {
                     $(".weui_toast").removeClass("weui_toastshow");
                     $('#toast1').hide();
-                    that.closest(".weui_media_bd").find(".cancelFollow").removeClass("hide");
-                    that.addClass("hide");
                 }, 3000);
             });
             $(".cancelFollow").on("click",function(e){
                 e.preventDefault();
                 var _this = $(this);
+                _this.closest(".weui_media_bd").find(".addFollow").removeClass("hide");
+                _this.addClass("hide");
                 $('#toast2').show();
                 $(".weui_toast").addClass("weui_toastshow");
                 setTimeout(function () {
                     $(".weui_toast").removeClass("weui_toastshow");
                     $('#toast2').hide();
-                    _this.closest(".weui_media_bd").find(".addFollow").removeClass("hide");
-                    _this.addClass("hide");
                 }, 3000);
             });
         })

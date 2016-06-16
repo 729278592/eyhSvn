@@ -324,7 +324,7 @@
 
                             <div class="form-group">
                                 <div class="col-sm-6 col-xs-6 col-md-6 col-sm-offset-3 col-xs-offset-3 col-md-offset-3">
-                                    <button class="btn btnSure">保存</button>
+                                    <button class="btn btnSure" id="btnTips">保存</button>
                                     <a href="#" class="btn btnReturn">取消</a>
                                 </div>
                             </div>
@@ -445,6 +445,14 @@
 
                 });
 
+            </script>
+            <script src="../../assets/admin/js/tips.js"></script>
+            <script>
+                $(function(){
+                    $("#btnTips").on("click",function(){
+                        tipsContent("公司信息修改成功",$(".tips"));
+                    });
+                })
             </script>
         </div>
         <div class="slide-bar">
