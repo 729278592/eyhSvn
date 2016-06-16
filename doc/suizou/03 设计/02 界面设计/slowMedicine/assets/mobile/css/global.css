@@ -252,7 +252,7 @@ a.weui_media_box:active {
 .sumbitInfor .input-group{font-size: 14px;color: #666;margin-bottom: 10px;}
 .sumbitInfor .type{}
 .sumbitInfor .personForm input{border: 1px solid #efefef;padding: 5px 40px 5px 10px;font-family: "微软雅黑";}
-.sumbitInfor .personForm .btnSumbit{padding: 10px 0;width: 221px;height: 30px;background: #f8c929;color: #fff;font-size: 16px;font-family: "微软雅黑";line-height: 10px;position: relative;left: 20px;}
+.sumbitInfor .personForm .btnSumbit{padding: 10px 0;width: 204px;height: 30px;background: #f8c929;color: #fff;font-size: 16px;font-family: "微软雅黑";line-height: 10px;position: relative;left: 19px;}
 .weui_toast,.weui_toast{z-index: 300;}
 
 
