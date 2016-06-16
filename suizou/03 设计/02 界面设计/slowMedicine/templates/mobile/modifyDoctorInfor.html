@@ -55,7 +55,7 @@
                             </div>
                         </div>
                         <div class="weui_cell l0">
-                            <div class="weui_cell_hd"><label class="weui_label">执业医生 :</label></div>
+                            <div class="weui_cell_hd"><label class="weui_label">执业医院 :</label></div>
                             <div class="weui_cell_bd weui_cell_primary">
                                 <input class="weui_input" type="text"  placeholder="重庆西南医院">
                             </div>
@@ -68,7 +68,7 @@
                         </div>
                     </div>
                     <div class="weui_btn_area btnStyle w100 fixed">
-                        <a class="weui_btn weui_btn_primary" href="javascript:" id="showTooltips">确定</a>
+                        <a class="weui_btn weui_btn_primary" href="javascript:" id="showTooltips">提交</a>
                     </div>
                 </form>
             </div>
@@ -76,22 +76,22 @@
     </div>
     <script src="../../assets/global/plugins/jquery/jquery-1.11.3.min.js"></script>
     <script src="../../assets/mobile/js/global.js"></script>
-    <script src="../../assets/mobile/js/errMsg.js"></script>
+    <script src="../../assets/mobile/js/messageTip.js"></script>
     <script>
         $("#showTooltips").click(function(){
             var reg = /^0?(13[0-9]|15[012356789]|18[0236789]|14[57])[0-9]{8}$/;
             if($("#personName").val() == '') {
-                showMsg('姓名不能为空');
+                showErrMsg('姓名不能为空');
                 return false;
             }
             else if($("#mobile").val() == ''){
-                showMsg('手机号不能为空');
+                showErrMsg('手机号不能为空');
             }
             else if($("#mobile").get(0)&&!reg.test($("#mobile").val())){
-                showMsg('手机号格式不正确');
+                showErrMsg('手机号格式不正确');
             }
             else{
-
+                showLoading("数据提交中","提交成功");
             }
             return true;
         });

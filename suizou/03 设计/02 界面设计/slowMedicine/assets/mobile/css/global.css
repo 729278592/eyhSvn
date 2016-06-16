@@ -97,8 +97,8 @@ a.weui_media_box:active {
 
 .webuploader-pick{background: transparent;text-align: center;}
 
-
-
+.btnOk{padding: 8px 15px;border-radius: 4px;background: #5abbf8;color: #fff;font-family: "微软雅黑";position: absolute;left: 50%;margin-left: -41px;top: 50%;margin-top: 100px;}
+.myDoctor{font-size: 14px;color: #5abbf8;}
 /*patientList*/
 .weui_cell .weui_label img{width:25%;margin-right:8%}
 .weui_cell .weui_label,.weui_cells .weui_cell{font-size:14px}
@@ -119,10 +119,11 @@ a.weui_media_box:active {
 .panel .bd{padding-bottom:0}
 .weui_cell.l0:before{left:0}
 .weui_media_box.weui_media_appmsg .weui_media_hd.mr0{margin-right:0;margin-left:.4em}
+.weui_media_box.weui_media_appmsg .weui_media_hd.lh0{line-height: 20px;}
 .weui_media_box .weui_media_title.auto{font-weight:400;width:auto;overflow:hidden;text-overflow:clip;white-space:pre-line;margin-bottom:10px}
 .weui_panel_bd:after{content:" ";position:absolute;bottom:0;height:1px;width:100%;border-bottom:1px solid #E5E5E5;color:#E5E5E5;-webkit-transform-origin:0 0;transform-origin:0 0;-webkit-transform:scaleY(.5);transform:scaleY(.5);left:0;right:0}
-
-
+.btnResolved,.btnResolvedDisabled{padding:1px 3px;background: #f8c92b;color: #fff;border-radius: 4px;font-family: "微软雅黑";font-size: 12px;}
+.btnResolvedDisabled{background: #dbdbdb;}
 /*patientInfor*/
 .weui_media_desc.hide{display: none;}
 .weui_media_desc span.color{color: #5abbf8;}
@@ -179,18 +180,18 @@ a.weui_media_box:active {
 .weui_textarea.pd10{padding: 2%;font-family: "微软雅黑";font-size: 14px;color: #333;width: 96%;}
 .weui_textarea.pd15{padding: 2% 15px;}
 .overflowX{overflow-x: hidden;}
-.mainDoctor{font-size: 12px;border-radius: 20px;display: inline-block;width: 110px;height: 29px;line-height: 25px;text-align: center;position: absolute;right: 0;top: 50%;margin-top: -30px;font-family: "微软雅黑";border: 2px solid #ffad12;color: #ffad12;background: transparent;}
+.mainDoctor{font-size: 12px;border-radius: 20px;display: inline-block;width: 110px;height: 29px;line-height: 25px;text-align: center;position: absolute;right: 0;top: 50%;margin-top: -40px;font-family: "微软雅黑";border: 2px solid #ffad12;color: #ffad12;background: transparent;}
 .mainDoctor.zIndex1999{z-index: 9999;}
 .mainDoctor.bgfff{background: #fff;}
 .mainDoctor img{width: 12px;}
 .foot{position: fixed;left: 0;right: 0;bottom: 0;height: 40px;text-align: center;line-height: 40px;}
 .foot.zIndex1999{z-index: 999;}
-.foot.h50{height: 50px;line-height: 45px;}
-.footBg{width: 100%;height: 100%;background: #fff;border-top: 1px solid #efefef;}
-.footBg input.inputBtn{font-family: "微软雅黑";width: 60%;border: 1px solid #efefef;border-radius: 20px;box-shadow: inset 1px 1px 1px rgba(0,0,0,.2),1px 1px 1px rgba(0,0,0,.2);padding: 8px 0 8px 5px;}
-.footBg .btnTj{height: 37px;line-height: 37px;width: 30%;background: #f8c929;border-radius: 10px;position: relative;top: 2px;}
-.foot button{display: inline-block;width: 100%;height: 100%;background: transparent;color: #fff;font-size: 16px;font-family: "微软雅黑";background: #50b1ed;}
-.foot button img{width: 30px;}
+.foot{}
+.footBg.h50{width: 100%;background: #fff;border-top: 1px solid #efefef;height: 40px;line-height: 35px;}
+.footBg input.inputBtn{font-family: "微软雅黑";width: 60%;border: 1px solid #efefef;border-radius: 20px;box-shadow: inset 1px 1px 1px rgba(0,0,0,.2),1px 1px 1px rgba(0,0,0,.2);padding: 5px 0 5px 5px;}
+.footBg .btnTj{height: 32px;line-height: 32px;width: 30%;background: #f8c929;border-radius: 10px;position: relative;top: 2px;}
+.foot a,.foot button{display: inline-block;width: 100%;height: 100%;color: #fff;font-size: 16px;font-family: "微软雅黑";background: #50b1ed;}
+.foot a img{width: 30px;}
 .bd.pd40{padding-bottom: 40px;}
 
 
@@ -250,9 +251,9 @@ a.weui_media_box:active {
 .sumbitInfor .personForm{position: absolute;top: 50%;z-index: 1000;width: 94%;margin: 0 3%;text-align: center;}
 .sumbitInfor .input-group{font-size: 14px;color: #666;margin-bottom: 10px;}
 .sumbitInfor .type{}
-.sumbitInfor .personForm input{border: 1px solid #efefef;padding: 5px 40px 5px 10px;}
+.sumbitInfor .personForm input{border: 1px solid #efefef;padding: 5px 40px 5px 10px;font-family: "微软雅黑";}
 .sumbitInfor .personForm .btnSumbit{padding: 10px 0;width: 221px;height: 30px;background: #f8c929;color: #fff;font-size: 16px;font-family: "微软雅黑";line-height: 10px;position: relative;left: 20px;}
-
+.weui_toast,.weui_toast{z-index: 300;}
 
 
 
@@ -289,10 +290,10 @@ a.weui_media_box:active {
 .screenDoctor li:after{position:absolute;content:"";width:1px;height:40px;border-right:1px solid #e5e5e5;top:0;right:0;-webkit-transform-origin:0 0;bottom:0;overflow:hidden}
 .screenDoctor li.title{width:10%;font-size:14px;color:#ffa902}
 .screenDoctor li.select{width:20%}
-.screenDoctor li.select select{width:100%;background:0 0;font-family:"微软雅黑";text-align:center;text-overflow:ellipsis;overflow:hidden;white-space:nowrap}
+.screenDoctor li.select select{-webkit-appearance: none;position: relative;border: none;width:80%;background:transparent;font-family:"微软雅黑";text-align:center;text-overflow:ellipsis;overflow:hidden;white-space:nowrap;padding-left: 1%;height: 40px;line-height: 40px;padding-right: 15%;}
 .screenDoctor li.last{width:10%}
 .screenDoctor li.last .fa-bars{font-size:14px;color:#5ab1e7}
-
+.screenDoctor li.select .caret {height: 0;width: 0;border-left: 4px solid transparent;border-right: 4px solid transparent;border-top: 4px solid #333;position: absolute;top: 50%;right: 5px;margin-top: -3px;}
 
 
 /*consultingInfor*/
@@ -305,7 +306,6 @@ a.weui_media_box:active {
 .describe .caretUpDiv{position:absolute;top:-21px;left:20px;background:#fff;display:inline-block}
 .describe .describeCon,.describe .describeTitle{display:table-cell}
 .describe .describeTitle{width:32%}
-.describe .describeTitle img{width:48%}
 .describe .describeTitle span.title{color:#5abbf8;font-size: 14px;}
 .describe .describeCon p{font-size:14px;color:#333}
 .data{padding:15px}

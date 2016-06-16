@@ -10,7 +10,7 @@
     <link rel="stylesheet" href="../../assets/mobile/css/global.css"/>
 </head>
 <body>
-    <div class="container js_container">
+    <div class="container errDailog absolute">
         <div class="page">
             <div class="bd pd40">
                 <div class="weui_panel weui_panel_access">
@@ -28,6 +28,7 @@
                                     <img src="../../assets/mobile/images/mainDoctorIcon.png" alt=""/>
                                     设为主治医生
                                 </button>
+                                <span class="myDoctor">我的主治医生</span>
                             </div>
                         </span>
                         <div class="score bt0 mb0">
@@ -67,7 +68,7 @@
                             <span class="fraction fs14">
                                 <span class="numFraction">0</span>分
                             </span>
-                            <a href="doctorList.html" class="commentNum zIndex1999">
+                            <a href="doctorEvaluationList.html" class="commentNum zIndex1999">
                                 <span class="left">
                                     1081
                                 </span>
@@ -108,7 +109,7 @@
                 <div class="weui_panel weui_panel_access">
                     <p class="caseTitle">案例咨询</p>
                     <div class="weui_panel_bd l15 r15 relative">
-                        <a href="#" class="weui_media_box l0 weui_media_appmsg">
+                        <a href="consultingInfor.html" class="weui_media_box l0 weui_media_appmsg">
                             <div class="weui_media_bd relative">
                                 <h4 class="weui_media_title auto">希望大夫帮我分析下，我是不是得了乙肝啊，谢谢您
                                 </h4>
@@ -122,7 +123,7 @@
                         </a>
                     </div>
                     <div class="weui_panel_bd l15 r15 relative">
-                        <a href="#" class="weui_media_box l0 weui_media_appmsg">
+                        <a href="consultingInfor.html" class="weui_media_box l0 weui_media_appmsg">
                             <div class="weui_media_bd relative">
                                 <h4 class="weui_media_title auto">希望大夫帮我分析下，我是不是得了乙肝啊，谢谢您
                                 </h4>
@@ -136,7 +137,7 @@
                         </a>
                     </div>
                     <div class="weui_panel_bd l15 r15 relative">
-                        <a href="#" class="weui_media_box l0 weui_media_appmsg">
+                        <a href="consultingInfor.html" class="weui_media_box l0 weui_media_appmsg">
                             <div class="weui_media_bd relative">
                                 <h4 class="weui_media_title auto">希望大夫帮我分析下，我是不是得了乙肝啊，谢谢您
                                 </h4>
@@ -151,31 +152,33 @@
                     </div>
                 </div>
                 <div class="foot zIndex1999">
-                    <button type="button">
+                    <a href="consultingPage.html">
                         <img src="../../assets/mobile/images/consultationIcon.png" alt=""/>
                         在线咨询
-                    </button>
+                    </a>
                 </div>
             </div>
         </div>
+        <!--第一次加载处理-->
         <div class="maskHide">
             <div class="tipImgs">
                 <img src="../../assets/mobile/images/mainDoctor.png" alt="" class="mainDoctorImg1"/>
                 <img src="../../assets/mobile/images/mainDoctor1.png" alt="" class="mainDoctorImg"/>
+                <button class="btnOk">我知道了</button>
             </div>
             <div class="sumbitInfor hide">
                 <img src="../../assets/mobile/images/personInforBg.png" alt="" class="personInforBg"/>
                 <i class="fa fa-remove"></i>
-                <form action="#" class="personForm">
+                <form action="#" class="personForm" onsubmit="return false;">
                     <div class="input-group">
                         <span class="type">姓名 : </span>
-                        <input type="text" id="personName"/>
+                        <input type="text" id="personName" placeholder="请输入姓名"/>
                     </div>
                     <div class="input-group">
                         <span class="type">手机 : </span>
-                        <input type="text" id="mobile"/>
+                        <input type="text" id="mobile" placeholder="请输入手机号"/>
                     </div>
-                    <button class="btnSumbit" type="submit">提交</button>
+                    <button class="btnSumbit" id="showTooltips" type="submit">提交</button>
                 </form>
             </div>
         </div>
@@ -184,6 +187,8 @@
     <script src="../../assets/mobile/js/global.js"></script>
     <script src="../../assets/mobile/js/stars.js"></script>
     <script src="../../assets/mobile/js/mobileLeft.js"></script>
+    <script src="../../assets/mobile/js/messageTip.js"></script>
+
     <script>
         $(function(){
             /*左边滑动导航*/
@@ -192,7 +197,9 @@
             /*评论星*/
             commentStars.init($(".starList li"));
 
-            $(".mainDoctor").on("click",function(){
+
+            /*第一次加载时的蒙版处理*/
+            $(".mainDoctor").on("touchend",function(){
                 $(".tipImgs").addClass("hide");
                 if($(".maskHide").is(".hide")){
                     $(".maskHide").removeClass("hide")
@@ -200,11 +207,36 @@
                 $(".sumbitInfor").removeClass("hide");
                 $(".foot,.mainDoctor,.commentNum").removeClass("zIndex1999");
             });
-
-            $(".sumbitInfor .fa-remove").on("click",function(){
+            $(".sumbitInfor .fa-remove").on("touchend",function(){
                 $(this).closest(".maskHide").addClass("hide");
                 $(this).closest(".sumbitInfor").addClass("hide");
-            })
+            });
+
+            /*去除样式*/
+            $(".btnOk").on("touchend",function(){
+                $(this).closest(".maskHide").addClass("hide");
+                $(".foot,.mainDoctor,.commentNum").removeClass("zIndex1999");
+            });
+
+
+            /*数据提交*/
+            $("#showTooltips").click(function(){
+                var reg = /^0?(13[0-9]|15[012356789]|18[0236789]|14[57])[0-9]{8}$/;
+                if($("#personName").val() == '') {
+                    showErrMsg('姓名不能为空');
+                    return false;
+                }
+                else if($("#mobile").val() == ''){
+                    showErrMsg('手机号不能为空');
+                }
+                else if($("#mobile").get(0)&&!reg.test($("#mobile").val())){
+                    showErrMsg('手机号格式不正确');
+                }
+                else{
+                    showLoading("数据提交中")
+                }
+                return true;
+            });
 
 
         })
