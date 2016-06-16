@@ -28,8 +28,11 @@
                                     </span>
                                 </p>
                             </div>
-                            <div class="weui_media_hd mr0">
-                                <img class="weui_media_appmsg_thumb portrait" src="../../assets/mobile/images/waitFor.png">
+                            <div class="weui_media_hd mr0 lh0">
+                                <img class="weui_media_appmsg_thumb portrait1" src="../../assets/mobile/images/waitFor.png">
+                                <img class="weui_media_appmsg_thumb portrait2 hide" src="../../assets/mobile/images/ok.png">
+                                <button class="btnResolved">已解决</button>
+                                <button class="btnResolvedDisabled hide">已解决</button>
                             </div>
                         </span>
                     </div>
@@ -108,18 +111,46 @@
                         </span>
                     </div>
                 </div>
+                <div id="toast" style="display: none;">
+                    <div class="weui_mask_transparent"></div>
+                    <div class="weui_toast">
+                        <i class="weui_icon_toast"></i>
+                        <p class="weui_toast_content">已解决</p>
+                    </div>
+                </div>
             </div>
-            <div class="foot h50">
-                <div class="footBg">
+            <div class="foot ">
+                <div class="footBg h50">
                     <form action="#">
                         <input type="text" class="inputBtn" placeholder="回复张医生"/>
                         <button type="submit" class="btnTj">提交</button>
                     </form>
                 </div>
+                <a href="consultingPage.html" class="hide">
+                    <img src="../../assets/mobile/images/consultationIcon.png" alt="">
+                    在线咨询
+                </a>
             </div>
         </div>
     </div>
     <script src="../../assets/global/plugins/jquery/jquery-1.11.3.min.js"></script>
     <script src="../../assets/mobile/js/global.js"></script>
+    <script>
+        $(function(){
+            $(".btnResolved").on("touchend",function(){
+                var that = $(this);
+                $('#toast').show();
+                $(".weui_toast").addClass("weui_toastshow");
+                setTimeout(function () {
+                    $(".weui_toast").removeClass("weui_toastshow");
+                    $('#toast').hide();
+                    that.closest(".weui_media_hd").find(".portrait1").addClass("hide");
+                    that.closest(".weui_media_hd").find(".portrait2").removeClass("hide");
+                    $(".btnResolved").addClass("hide");
+                    that.closest(".weui_media_hd").find(".btnResolvedDisabled").removeClass("hide");
+                }, 3000);
+            });
+        })
+    </script>
 </body>
 </html>

@@ -12,16 +12,16 @@ $(function(){
                         '</div>'+
                         '<ul class="menu-list">'+
                             '<li>'+
-                                '<a href="medicalRecord.html">'+
+                                '<a href="prescriptionRecord.html">'+
                                    '<img src="../../assets/mobile/images/personIcon1.png" class="personIcon" style="width:15px;margin-right:5px;">'+
-                                    '<span>病历档案</span>'+
+                                    '<span>处方记录</span>'+
                                     '<i class="fa fa-angle-right"></i>'+
                                 '</a>'+
                             '</li>'+
                             '<li>'+
-                                '<a href="prescriptionRecord.html">'+
+                                '<a href="medicalRecord.html">'+
                                     '<img src="../../assets/mobile/images/personIcon2.png" class="personIcon" style="width:15px;margin-right:5px;">'+
-                                    '<span>处方记录</span>'+
+                                    '<span>病历档案</span>'+
                                     '<i class="fa fa-angle-right"></i>'+
                                 '</a>'+
                             '</li>'+
@@ -33,7 +33,7 @@ $(function(){
                                 '</a>'+
                             '</li>'+
                             '<li>'+
-                                '<a href="forwardingRecord.html">'+
+                                '<a href="myConsultingList.html">'+
                                     '<img src="../../assets/mobile/images/personIcon4.png" class="personIcon" style="width:15px;margin-right:5px;">'+
                                     '<span>咨询记录</span>'+
                                     '<i class="fa fa-angle-right"></i>'+

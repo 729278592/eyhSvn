@@ -27,6 +27,7 @@
                             <option value=""></option>
                             <option value=""></option>
                         </select>
+                        <span class="caret"></span>
                     </li>
                     <li class="title">
                         医院
@@ -41,6 +42,7 @@
                             <option value="西南医院">西南医院</option>
                             <option value="西南医院">西南医院</option>
                         </select>
+                        <span class="caret"></span>
                     </li>
                     <li class="title">
                         科室
@@ -56,6 +58,7 @@
                             <option value="妇产科">妇产</option>
                             <option value="传染病科">传染病</option>
                         </select>
+                        <span class="caret"></span>
                     </li>
                     <li class="last">
                         <i class="fa fa-bars"></i>
@@ -104,6 +107,20 @@
                         </a>
                     </div>
                 </div>
+                <div id="toast1" style="display: none;">
+                    <div class="weui_mask_transparent"></div>
+                    <div class="weui_toast">
+                        <i class="weui_icon_toast"></i>
+                        <p class="weui_toast_content">已关注</p>
+                    </div>
+                </div>
+                <div id="toast2" style="display: none;">
+                    <div class="weui_mask_transparent"></div>
+                    <div class="weui_toast">
+                        <i class="weui_icon_toast"></i>
+                        <p class="weui_toast_content">已取消关注</p>
+                    </div>
+                </div>
             </div>
         </div>
     </div>
@@ -113,13 +130,27 @@
         $(function(){
             $(".addFollow").on("click",function(e){
                 e.preventDefault();
-                $(this).closest(".weui_media_bd").find(".cancelFollow").removeClass("hide");
-                $(this).addClass("hide");
+                var that = $(this);
+                $('#toast1').show();
+                $(".weui_toast").addClass("weui_toastshow");
+                setTimeout(function () {
+                    $(".weui_toast").removeClass("weui_toastshow");
+                    $('#toast1').hide();
+                    that.closest(".weui_media_bd").find(".cancelFollow").removeClass("hide");
+                    that.addClass("hide");
+                }, 3000);
             });
             $(".cancelFollow").on("click",function(e){
                 e.preventDefault();
-                $(this).closest(".weui_media_bd").find(".addFollow").removeClass("hide");
-                $(this).addClass("hide");
+                var _this = $(this);
+                $('#toast2').show();
+                $(".weui_toast").addClass("weui_toastshow");
+                setTimeout(function () {
+                    $(".weui_toast").removeClass("weui_toastshow");
+                    $('#toast2').hide();
+                    _this.closest(".weui_media_bd").find(".addFollow").removeClass("hide");
+                    _this.addClass("hide");
+                }, 3000);
             });
         })
     </script>
