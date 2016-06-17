@@ -15,12 +15,14 @@
         <div class="page bgfff">
             <div class="bd">
                 <div class="bdHead">
-                    共 <span></span> 张处方
+                    共 <span class="num"></span> 张处方
+                    <a href="uploadPrescription.html" class="addZl"></a>
                 </div>
                 <div class="swiper-container swiper-container-horizontal" id="swiper-container2">
                     <div class="swiper-wrapper w70" style="transition-duration: 0ms; ">
                         <div class="swiper-slide ">
                             <img src="../../assets/mobile/images/prescription1.jpg" alt="" class="w100"/>
+                            <button class="btnLarge"></button>
                             <div class="bdFoot">
                                 <p>
                                     <span class="type">
@@ -47,6 +49,7 @@
                         </div>
                         <div class="swiper-slide">
                             <img src="../../assets/mobile/images/prescription2.jpg" alt="" class="w100"/>
+                            <button class="btnLarge"></button>
                             <div class="bdFoot">
                                 <p>
                                     <span class="type">
@@ -73,6 +76,7 @@
                         </div>
                         <div class="swiper-slide">
                             <img src="../../assets/mobile/images/prescription3.jpg" alt="" class="w100"/>
+                            <button class="btnLarge"></button>
                             <div class="bdFoot">
                                 <p>
                                     <span class="type">
@@ -99,6 +103,7 @@
                         </div>
                         <div class="swiper-slide">
                             <img src="../../assets/mobile/images/prescription4.jpg" alt="" class="w100"/>
+                            <button class="btnLarge"></button>
                             <div class="bdFoot">
                                 <p>
                                     <span class="type">
@@ -125,6 +130,7 @@
                         </div>
                         <div class="swiper-slide">
                             <img src="../../assets/mobile/images/prescription5.jpg" alt="" class="w100"/>
+                            <button class="btnLarge"></button>
                             <div class="bdFoot">
                                 <p>
                                     <span class="type">
@@ -154,7 +160,12 @@
                     <div class="swiper-button-next"></div>
                     <div class="swiper-button-prev"></div>
                 </div>
-
+                <div class="largeCon hide">
+                    <i class="fa fa-remove"></i>
+                    <div class="largeConCon">
+                        <img src="" alt=""/>
+                    </div>
+                </div>
             </div>
         </div>
     </div>
@@ -175,8 +186,15 @@
                 autoplayDisableOnInteraction: false
             });
 
-            $(".bdHead span").text($(".swiper-slide").size())
-
+            $(".bdHead span.num").text($(".swiper-slide").size());
+            $(".btnLarge").on("click",function(){
+                $(".largeCon").removeClass("hide");
+                var src = $(this).prev("img").attr("src");
+                $(".largeCon").find("img").attr({src:src});
+            });
+            $(".largeCon .fa-remove").on("click",function(){
+                $(this).closest(".largeCon").addClass("hide");
+            })
 
         })
 

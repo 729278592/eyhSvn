@@ -4,7 +4,7 @@
 
 $(function(){
     var errMessage = '<div id="errMsg" style="display: none;">'+
-                     '<div class="weui_mask_transparent"></div>'+
+                     '<div class="weui_mask_transparent fixed"></div>'+
                      '<div class="weui_toast">'+
                          '<p class="weui_toast_content">' +
                               '<img src="../../assets/mobile/images/smile_icon.png" alt="" id="smile-icon"/><br/>'+
@@ -15,7 +15,7 @@ $(function(){
     $(".errDailog").append(errMessage);
 
   var loadingToast = '<div id="loadingToast" class="weui_loading_toast" style="display: none;">'+
-                     '<div class="weui_mask_transparent"></div>'+
+                     '<div class="weui_mask_transparent fixed"></div>'+
                          '<div class="weui_toast">'+
                              '<div class="weui_loading">'+
                                  '<div class="weui_loading_leaf weui_loading_leaf_0"></div>'+
@@ -39,7 +39,7 @@ $(function(){
     $(".errDailog").append(loadingToast);
 
   var toast = '<div id="toast" style="display: none;">'+
-              '<div class="weui_mask_transparent"></div>'+
+              '<div class="weui_mask_transparent fixed"></div>'+
                   '<div class="weui_toast">'+
                       '<i class="weui_icon_toast"></i>'+
                       '<p class="weui_toast_content">' +
@@ -71,6 +71,10 @@ function showToast(message1) {
         $("#toast .weui_toast").removeClass("weui_toastshow");
         $('#toast').hide();
         $("#toast .weui_toast_content .errSpan").empty();
+        if($(".mainDoctor").get(0)){
+            $(".mainDoctor").addClass("hide");
+            $("span.myDoctor").removeClass("hide")
+        }
     }, 3000);
 }
 

@@ -7,8 +7,10 @@ $(function(){
     var html =  '<div class="mask hide leftMask">'+
                     '<div class="leftNav hide">'+
                         '<div class="person-head personImg clearfix">'+
-                            '<img src="../../assets/mobile/images/personImg.png" alt="" class="portrait"><br/>'+
-                            '<span>李建国</span>'+
+                            '<a href="patientInfor.html">' +
+                                '<img src="../../assets/mobile/images/personImg.png" alt="" class="portrait"><br/>'+
+                                '<span>李建国</span>'+
+                            '</a>'+
                         '</div>'+
                         '<ul class="menu-list">'+
                             '<li>'+

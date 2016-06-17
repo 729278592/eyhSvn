@@ -217,8 +217,8 @@
                                         <div class="form-line mobile">
                                             <label class="form-line-label">联系人手机</label>
                                             <div class="form-line-input">
-                                                <input class="form-control-input hide" type="text" name="mobile" placeholder="请输入新的手机号">
-                                                <label class="form-control-input default">15683078668</label>
+                                                <input class="form-control-input hide inputPhone" type="text" name="mobile" placeholder="请输入新的手机号">
+                                                <label class="form-control-input default havePhone">15683078668</label>
                                                 <label class="form-control-input default null-info hide">未填写</label>
                                             </div>
                                             <span class="error-message">请输入11位手机号</span>
@@ -230,10 +230,8 @@
                                             <div class="form-line-group-input pos">
                                                 <input class="form-control-input code" type="text" name="code">
                                                 <span>
-                                                    <button class="form-control-button disabled" type="button" style="padding: 0;">
-                                                        <span>
-                                                             发送验证码
-                                                         </span>
+                                                    <button class="form-control-button disabled" id="newCode" type="button" disabled="disabled" style="padding: 0;">
+                                                        发送验证码
                                                     </button>
                                                 </span>
                                                 <a class="modify confirm mobile-confirm hide">确认</a>
@@ -279,7 +277,6 @@
                                             </div>
                                             <span class="error-message">密码不一致</span>
                                         </div>
-
                                     </section>
                                 </form>
                             </div>
@@ -298,23 +295,22 @@
                                     <div class="form-line-group-input ppv">
                                         <input class="form-control-input code-input" type="text" name="code" placeholder="请输入验证码">
                                         <span>
-                                            <button class="form-control-button code-btn" type="button">
-                                                <span class="">
-                                                    发送验证码
-                                                 </span>
+                                            <button class="form-control-button code-btn" type="button" id="btnTips">
+                                                发送验证码
                                             </button>
                                         </span>
                                     </div>
-                                    <span class="error-message ppv">请输入4位验证码</span>
+                                    <span class="error-message ppv w100">请输入4位验证码</span>
                                 </div>
                                 <div class="ppv">
-                                    <input class="form-control-submit disabled" value="确认" disabled="disabled">
+                                    <input class="form-control-submit disabled" readonly value="确认" disabled="disabled">
                                 </div>
                             </form>
                         </div>
                     </div>
                 </div>
             </div>
+            <script src="../../assets/admin/js/tips.js"></script>
 
             <script>
                 $(function(){
@@ -363,6 +359,7 @@
                             }
                         }else if(formLine.is(".mobile")){
                             $(".modal-backdrop,.modal-tip").removeClass("hide");
+                            $(".modal-tip").find(".position-phone-validate").addClass("mobileDailog");
                             $("#admin-content-wrapper").css({"z-index":"13"});
                         }else if(formLine.is(".newMobile")){
 
@@ -373,6 +370,111 @@
 
                         }
                     });
+
+
+                    /*去除按钮的禁止点击事件*/
+                    $(".modal-tip").delegate(".position-phone-validate.mobileDailog .code-input","keyup",function(){
+                        if(($.trim($(this).val())=="")||($(this).val().length!=4)){
+                            $(this).closest(".position-phone-validate.mobileDailog").find(".form-control-submit").addClass("disabled").attr({disabled:"disabled"})
+                            $(this).closest(".form-line").addClass("error");
+                        }else{
+                            $(this).closest(".position-phone-validate.mobileDailog").find(".form-control-submit.disabled").removeClass("disabled").removeAttr("disabled")
+                            $(this).closest(".form-line").removeClass("error");
+                        }
+                    });
+                    $("#btnTips").on("click",function(){
+                        tipsContent("验证码发送成功",$(".tips"),"success");
+                        var btn = $(this);
+                        var count = 60;
+                        var resend = setInterval(function(){
+                            count--;
+                            if (count > 0){
+                                btn.addClass("active");
+                                btn.text(count+"秒后可重新获取");
+                            }else {
+                                clearInterval(resend);
+                                btn.removeClass("active");
+                                btn.text("获取验证码").removeAttr('disabled style');
+                            }
+                        }, 1000);
+                        btn.attr('disabled',true).css('cursor','not-allowed');
+                    });
+
+                    /*确认验证信息发送成功后弹框处理*/
+                    $(".modal-tip").delegate(".position-phone-validate.mobileDailog .form-control-submit","click",function(){
+                        if($(".position-phone-validate.mobileDailog").find(".code-input").val()=="1234"){
+                            $(".modal-tip,.modal-backdrop").addClass("hide");
+                            $("#admin-content-wrapper").css({"z-index":"2"});
+                            $(".modal-tip").find(".position-phone-validate").removeClass("mobileDailog");
+                            $(".mobile").find(".inputPhone").removeClass("hide");
+                            $(".mobile").find(".havePhone").addClass("hide");
+                            $(".mobile").find(".modify.change").addClass("hide");
+                            $(".newMobile").removeClass("hide");
+                            $(".newMobile").find(".confirm").removeClass("hide");
+                            $(".newMobile").find(".cancel").removeClass("hide");
+                        }else{
+                            tipsContent("验证码不正确",$(".tips"),"fail");
+                        }
+                    });
+
+
+                    /*修改手机号码提示*/
+                    $(".mobile").find(".inputPhone").on("keyup",function(){
+                        var reg = /^0?(13[0-9]|15[012356789]|18[0236789]|14[57])[0-9]{8}$/;
+                        if(($.trim($(this).val())=="")||(!reg.test($(this).val()))){
+                            $(this).closest(".mobile").addClass("error");
+                            $(this).closest(".mobile").find(".form-line-label").addClass("red");
+                            $(this).closest(".mobile").find(".error-message").removeClass("red");
+
+                            if(!($(".newMobile").find(".form-control-button").is(".disabled"))){
+                                $(".newMobile").find(".form-control-button").addClass("disabled");
+                                $(".newMobile").find(".form-control-button").attr({disabled:"disabled"});
+                            }
+                        }
+                        else{
+                            $(this).closest(".mobile").removeClass("error");
+                            $(this).closest(".mobile").find(".form-line-label").removeClass("red");
+                            $(this).closest(".mobile").find(".error-message").addClass("red");
+                            $(".newMobile").find(".form-control-button").removeClass("disabled");
+                            $(".newMobile").find(".form-control-button").removeAttr("disabled");
+                        }
+                    });
+
+
+                    /*新手机验证提示*/
+                    $("#newCode").on("click",function(){
+//                        if($.trim($(".form-line.newMobile").find(".form-control-input.code").val())==""){
+//                            tipsContent("验证码不能为空",$(".tips"),"fail");
+//                        }
+//                        else if($(".form-line.newMobile").find(".form-control-input.code").val()!="1234"){
+//                            tipsContent("验证码不正确",$(".tips"),"fail");
+//                        }
+//                        else if($(".position-phone-validate.mobileDailog").find(".code-input").val().length!=6){
+//                            tipsContent("验证码长度为6位",$(".tips"),"fail");
+//                        }
+//                        else{
+//
+//                        }
+
+                        tipsContent("验证码发送成功",$(".tips"),"success");
+                        var btn = $(this);
+                        var count = 60;
+                        var resend = setInterval(function(){
+                            count--;
+                            if (count > 0){
+                                btn.addClass("active");
+                                btn.text(count+"秒后可重新获取");
+                            }else {
+                                clearInterval(resend);
+                                btn.removeClass("active");
+                                btn.text("获取验证码").removeAttr('disabled style');
+                            }
+                        }, 1000);
+                        btn.attr('disabled',true).css('cursor','not-allowed');
+                    });
+
+
+                    /*确认修改处理*/
                     $(".confirm").on("click",function(){
                         var formLine = $(this).closest(".form-line");
                         if(formLine.is(".personName")){
@@ -406,7 +508,25 @@
                         }else if(formLine.is(".mobile")){
 
                         }else if(formLine.is(".newMobile")){
+                            if($(".form-line.newMobile").find(".form-control-input.code").val()=="1234"){
+                                $(".mobile").find(".inputPhone").addClass("hide");
+                                $(".mobile").find(".havePhone").removeClass("hide");
+                                $(".mobile").find(".modify.change").removeClass("hide");
+                                $(".newMobile").addClass("hide");
+                                $(".newMobile").find(".confirm").addClass("hide");
+                                $(".newMobile").find(".cancel").addClass("hide");
+                                if(($(".mobile").find(".havePhone").text())==($(".mobile").find(".inputPhone").val())){
+                                    tipsContent("未修改信息",$(".tips"),"fail");
+                                }
+                                else{
+                                    tipsContent("手机号修改成功",$(".tips"),"success");
+                                }
+                                $(".mobile").find(".havePhone").text($(".mobile").find(".inputPhone").val());
 
+
+                            }else{
+                                tipsContent("验证码不正确",$(".tips"),"fail");
+                            }
                         }else if(formLine.is(".password")){
 
                         }else if(formLine.is(".weixin")){
@@ -415,7 +535,7 @@
 
                     });
 
-
+                    /*取消信息修改处理*/
                     $(".cancel").on("click",function(){
                         var formLine = $(this).closest(".form-line");
                         if(formLine.is(".personName")){
@@ -438,7 +558,22 @@
                         }else if(formLine.is(".mobile")){
 
                         }else if(formLine.is(".newMobile")){
+                            var newMobile = $(".newMobile");
+                            var inputPhoneValue = newMobile.find(".inputPhone").val();
+                            newMobile.find(".inputPhone").addClass("hide");
+//                            personName.find(".inputName").val(" ");
+                            newMobile.find(".confirm").addClass("hide");
+                            newMobile.find(".cancel").addClass("hide");
 
+                            if(newMobile.find(".null-info").is(".nullInfo")){
+                                newMobile.find(".null-info").addClass("hide");
+                                newMobile.find(".havePhone").removeClass("hide");
+                                newMobile.find(".null-info").removeClass("nullInfo");
+                            }else if(newMobile.find(".havePhone").is(".have-name")){
+                                newMobile.find(".havePhone").addClass("hide");
+                                newMobile.find(".null-info").removeClass("hide");
+                                newMobile.find(".havePhone").removeClass("have-name");
+                            }
                         }else if(formLine.is(".password")){
 
                         }else if(formLine.is(".weixin")){

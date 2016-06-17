@@ -11,8 +11,9 @@ if(!($("#admin-content-wrapper").find(".tips").get(0))){
                '</div>';
     $("#admin-content-wrapper").append(tips);
 }
-function tipsContent(message,obj){
+function tipsContent(message,obj,staute){
     obj.find(".type").text(message);
+    obj.addClass(staute);
     pageAuto(obj);
     obj.animate({
         top:"1%",
@@ -22,7 +23,9 @@ function tipsContent(message,obj){
             $(".tips").animate({
                 top:"-5%",
                 opacity:"0"
-            },500)
+            },500,function(){
+                obj.removeClass(staute);
+            });
         },3000)
     })
 }
