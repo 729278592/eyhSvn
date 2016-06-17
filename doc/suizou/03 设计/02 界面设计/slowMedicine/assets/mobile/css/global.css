@@ -220,7 +220,7 @@ a.weui_media_box:active {
 .swiper-wrapper.w70 .swiper-slide,.swiper-wrapper.w50 .swiper-slide{text-align: center;}
 .swiper-wrapper.w70 .swiper-slide img{width: 70%;}
 .swiper-wrapper.w50 .swiper-slide img{width: 60%;}
-.bdFoot{padding: 15px 2%;width: 96%;border-top: 1px solid #efefef;font-size: 14px;display: table;position: relative;z-index: 100;}
+.bdFoot{padding: 15px 2% 0;width: 96%;border-top: 1px solid #efefef;font-size: 14px;display: table;position: relative;z-index: 100;}
 .bdFoot p{margin-bottom: 10px;}
 .bdFoot.mb0 p{margin-bottom: 0;}
 .bdFoot span.type{color: #999;font-size: 14px;}
