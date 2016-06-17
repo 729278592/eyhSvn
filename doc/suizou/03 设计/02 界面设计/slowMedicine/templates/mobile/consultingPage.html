@@ -13,7 +13,7 @@
 <body>
     <div class="container">
         <div class="page ">
-            <div class="bd pd40">
+            <div class="bd absolute pd40">
                 <form action="#">
                     <div class="weui_cells mt0 weui_cells_form">
                         <div class="perfectInformation">
@@ -24,6 +24,9 @@
                                 <p><span class="type">您的姓名</span> : <input type="text"/></p>
                                 <!--<p><span class="type">出生年月</span> : <input type="text"/></p>-->
                                 <p><span class="type">手机号码</span> : <input type="text"/></p>
+                                <p>
+                                    <button class="btnSave">保存</button>
+                                </p>
                             </div>
                         </div>
                         <div class="weui_cell l0 weui_cell_select">
@@ -67,10 +70,13 @@
                             </label>
                         </div>
                     </div>
-                    <div class="weui_btn_area btnStyle w100 fixed">
-                        <a class="weui_btn weui_btn_primary" href="javascript:" id="showTooltips">提交</a>
-                    </div>
+
                 </form>
+            </div>
+            <div class="foot">
+                <a href="consultingPage.html" class="bg3">
+                    提交
+                </a>
             </div>
         </div>
     </div>
