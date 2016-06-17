@@ -1,0 +1,123 @@
+<!DOCTYPE html>
+<html>
+<head lang="en">
+    <meta charset="UTF-8">
+    <title>医生登陆</title>
+    <meta name="viewport" content="width=device-width; initial-scale=1.0; user-scalable=no;">
+    <link rel="stylesheet" href="../../assets/global/plugins/font/css/font-awesome.min.css"/>
+    <link rel="stylesheet" href="../../assets/global/plugins/weUi/css/weui.css"/>
+    <link rel="stylesheet" href="../../assets/global/plugins/weUi/css/example.css"/>
+    <link rel="stylesheet" href="../../assets/mobile/css/global.css"/>
+</head>
+<body>
+    <div class="container errDailog absolute">
+        <div class="page bgfff">
+            <div class="bd">
+                <div class="loginTips">
+                    <img src="../../assets/mobile/images/mark.png" alt="" class="tipImg"/>
+                    <span class="title">如果您已入驻名医馆,请输入您的手机号码,即可查看患者咨询</span>
+                </div>
+                <form action="#" class="doctorForm" onsubmit="return false;">
+                    <div class="input-group">
+                        <span class="type">手　机 : </span>
+                        <input type="text" class="inputText" id="mobile" placeholder="请输入手机号"/>
+                        <span class="errMessage hide"></span>
+                    </div>
+                    <div class="input-group">
+                        <span class="type">验证码 : </span>
+                        <input type="text" class="inputText inputCode" id="code" placeholder="请输入验证码"/><button class="getCode disabled" disabled="disabled" id="getCode">获取验证码</button>
+                        <span class="errMessage hide"></span>
+                    </div>
+                    <div class="input-group">
+                        <button class="btnSumbit disabled" id="showTooltips" disabled="disabled" type="submit">提交</button>
+                    </div>
+                </form>
+            </div>
+        </div>
+    </div>
+    <script src="../../assets/global/plugins/jquery/jquery-1.11.3.min.js"></script>
+    <script src="../../assets/mobile/js/global.js"></script>
+    <script src="../../assets/mobile/js/messageTip.js"></script>
+    <script>
+        $(".doctorForm .input-group input.inputText").on("keyup",function(){
+           if($(this).is("#mobile")){
+               var reg = /^0?(13[0-9]|15[012356789]|18[0236789]|14[57])[0-9]{8}$/;
+               if($.trim($(this).val()) == ''){
+                   $(this).closest(".input-group").addClass("err");
+                   $(this).closest(".input-group").find(".errMessage").removeClass("hide");
+                   $(this).closest(".input-group").find(".errMessage").text("手机号不能为空");
+                   $("#getCode").attr({disabled:"disabled"});
+                   $("#getCode").addClass("disabled");
+               }
+               else if(!(reg.test($(this).val()))){
+                   $(this).closest(".input-group").addClass("err");
+                   $(this).closest(".input-group").find(".errMessage").removeClass("hide");
+                   $(this).closest(".input-group").find(".errMessage").text("手机号格式不正确");
+                   $("#getCode").attr({disabled:"disabled"});
+                   $("#getCode").addClass("disabled");
+               }else{
+                   $(this).closest(".input-group").removeClass("err");
+                   $(this).closest(".input-group").find(".errMessage").addClass("hide");
+                   $(this).closest(".input-group").find(".errMessage").text(" ");
+                   $("#getCode").removeAttr("disabled");
+                   $("#getCode").removeClass("disabled");
+               }
+           }
+            else if($(this).is("#code")){
+               if(($.trim($(this).val()) != '')&&($(this).val().length == 4)){
+                   $(this).closest(".input-group").removeClass("err");
+                   $(this).closest(".input-group").find(".errMessage").addClass("hide");
+                   $(this).closest(".input-group").find(".errMessage").text(" ");
+                   $("#showTooltips").removeAttr("disabled");
+                   $("#showTooltips").removeClass("disabled");
+               }else{
+                   $(this).closest(".input-group").addClass("err");
+                   $(this).closest(".input-group").find(".errMessage").removeClass("hide");
+                   $(this).closest(".input-group").find(".errMessage").text("请输入4位验证码");
+                   $("#showTooltips").attr({disabled:"disabled"});
+                   $("#showTooltips").addClass("disabled");
+               }
+           }
+        });
+
+        $("#showTooltips").click(function(){
+            var reg = /^0?(13[0-9]|15[012356789]|18[0236789]|14[57])[0-9]{8}$/;
+
+             if($.trim($("#mobile").val()) == ''){
+                showErrMsg('手机号不能为空');
+            }
+            else if($("#mobile").get(0)&&!reg.test($("#mobile").val())){
+                showErrMsg('手机号格式不正确');
+            }
+            else if($.trim($("#code").val()) == '') {
+                showErrMsg('验证码不能为空');
+                return false;
+            }
+            else{
+                showLoading("数据提交中","提交成功");
+            }
+            return true;
+        });
+
+        $("#getCode").on("click",function(){
+
+            var btn = $(this);
+            var count = 60;
+            var resend = setInterval(function(){
+                count--;
+                if (count > 0){
+                    btn.addClass("disabled");
+                    btn.text(count+"秒后可重新获取");
+                }else {
+                    clearInterval(resend);
+                    btn.removeClass("disabled");
+                    btn.text("获取验证码").removeAttr('disabled style');
+                }
+            }, 1000);
+            showErrMsg('验证码发送成功');
+            btn.attr('disabled',true);
+        });
+
+    </script>
+</body>
+</html>

@@ -28,7 +28,7 @@
                                     <img src="../../assets/mobile/images/mainDoctorIcon.png" alt=""/>
                                     设为主治医生
                                 </button>
-                                <span class="myDoctor">我的主治医生</span>
+                                <span class="myDoctor hide">我的主治医生</span>
                             </div>
                         </span>
                         <div class="score bt0 mb0">
@@ -107,7 +107,10 @@
                     </div>
                 </div>
                 <div class="weui_panel weui_panel_access">
-                    <p class="caseTitle">案例咨询</p>
+                    <p class="caseTitle">
+                        案例咨询
+                        <a href="moreConsulting.html" class="moreConsulting">查看更多》</a>
+                    </p>
                     <div class="weui_panel_bd l15 r15 relative">
                         <a href="consultingInfor.html" class="weui_media_box l0 weui_media_appmsg">
                             <div class="weui_media_bd relative">
@@ -233,7 +236,7 @@
                     showErrMsg('手机号格式不正确');
                 }
                 else{
-                    showLoading("数据提交中")
+                    showLoading("数据提交中","提交成功")
                 }
                 return true;
             });

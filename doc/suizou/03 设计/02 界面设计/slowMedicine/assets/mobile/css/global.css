@@ -111,6 +111,7 @@ a.weui_media_box:active {
 .person-head .personInfor .name{font-size:16px}
 .person-head .personInfor .name a{display:inline-block;padding:0 3px;color:#ffad12;border-radius:4px;border:2px solid #ffad12;font-size:12px}
 .person-head .personInfor .doctorName a{display:inline-block;padding:0 3px;color:#ffad12;border-radius:4px;border:2px solid #ffad12}
+.person-head .personInfor .doctorName a.b0{border: none;}
 .person-head .tableCell.btnDiv{vertical-align:bottom;text-align:right}
 .weui_cells.mt0{margin-top:0}
 .weui_cells.bb0:after{border-bottom:none;position: relative; }
@@ -183,6 +184,7 @@ a.weui_media_box:active {
 .mainDoctor{font-size: 12px;border-radius: 20px;display: inline-block;width: 110px;height: 29px;line-height: 25px;text-align: center;position: absolute;right: 0;top: 50%;margin-top: -40px;font-family: "微软雅黑";border: 2px solid #ffad12;color: #ffad12;background: transparent;}
 .mainDoctor.zIndex1999{z-index: 9999;}
 .mainDoctor.bgfff{background: #fff;}
+.mainDoctor.hide{display: none;}
 .mainDoctor img{width: 12px;}
 .foot{position: fixed;left: 0;right: 0;bottom: 0;height: 40px;text-align: center;line-height: 40px;}
 .foot.zIndex1999{z-index: 999;}
@@ -209,12 +211,14 @@ a.weui_media_box:active {
 .uploader-list {width: 92%;overflow: hidden;margin: 0 4%;}
 .file-item .info {position: absolute;left: 4px;bottom: 4px;right: 4px;height: 20px;line-height: 20px;text-indent: 5px;background: rgba(0, 0, 0, 0.6);color: white;overflow: hidden;white-space: nowrap;text-overflow: ellipsis;font-size: 12px;z-index: 10;}
 .thumbnail a>img, .thumbnail>img{width: 100px;height: 100px;}
-
 .upload .title{font-size: 14px;text-align: left;padding: 0 15px 5px;}
 .upload.pd15{padding: 15px 0;}
+
+
+
 /*prescriptionRecord*/
 .bdHead{width: 100%;height: 45px;line-height: 45px;text-align: center;background: #fff;border-bottom: 1px solid #efefef;}
-.bdHead.bg1{background: transparent;border-bottom: none;}
+.bdHead.bg1{background: transparent;}
 .bdHead.bg1 p{background: #fff;display: inline-block;width: 100px;height: 30px;line-height: 30px;position: relative;z-index: 100;}
 .bdHead span{color: #48afef;}
 .swiper-wrapper.w70 .swiper-slide,.swiper-wrapper.w50 .swiper-slide{text-align: center;}
@@ -229,13 +233,12 @@ a.weui_media_box:active {
 .medicalBg{margin: 5% auto;width: 90%;position: relative;overflow: hidden;padding: 0 0 1% 0;}
 .medicalBg>img{width: 100%;position: absolute;height: 100%;}
 .medicalBgBgfff{margin: 14% auto 5%;width: 90%;background: #fff;position: relative;z-index: 100;border-radius: 10px;}
-.medicalBgBgfff:before{content: "";width: 100%;height: 1px;border-top: 1px solid #e5e5e5;top: 22px;left: 0;position: absolute;}
+/*.medicalBgBgfff:before{content: "";width: 100%;height: 1px;border-top: 1px solid #e5e5e5;top: 22px;left: 0;position: absolute;}*/
 .swiper-container.m0{margin: 0;}
 .bdFoot .btnModifyz{position: absolute;background: url("../images/modifyBtnIcon.png") no-repeat;background-size: 100%;width: 70px;height: 28px;top: 5px;right: 5px;}
 .bdFoot .btnprescription{position: absolute;background: url("../images/modifyprescription.png") no-repeat;background-size: 100%;width: 70px;height: 28px;top: 5px;right: 5px;}
 .weui_cell_ft span.not{color: #ff5d5d;}
-
-
+.addZl{background: url("../images/addZl.png") no-repeat;background-size: 100%;width: 70px;height: 28px;display: inline-block;position: absolute;right:10px;top: 10px;}
 
 
 /*doctorIndex*/
@@ -269,6 +272,7 @@ a.weui_media_box:active {
 .weui_cell.weui_cell_select{padding:0 15px}
 .caseTitle{padding:10px 15px;position:relative;font-size:16px;color:#45a7e4;font-weight:700}
 .caseTitle:after{content:"";position:absolute;height:1px;border-bottom:1px solid #E5E5E5;bottom:0;left:15px;right:15px;-webkit-transform-origin:0 0;transform-origin:0 0;-webkit-transform:scaleY(.5);transform:scaleY(.5)}
+.caseTitle .moreConsulting{float: right;font-size: 14px;font-weight: 100;color: #666;}
 .weui_panel_bd.l15:after{left:15px;width:auto}
 .weui_panel_bd.r15:after{right:15px;width:auto}
 .weui_panel_bd:last-child:after{border-bottom:none}
@@ -326,9 +330,35 @@ a.weui_media_box:active {
 .largeConCon{width:94%;margin:3% auto;background:#fff}
 .largeConCon img{width:100%}
 .btnLarge{position:absolute;display:inline-block;width:30px;height:28px;background:url(../images/btnLarge.png) no-repeat;background-size:100%;left:50%;top:50%;margin-left:-15px;margin-top:-15px;z-index:10}
+.btnLarge1{display:inline-block;width:30px;height:28px;background:url(../images/addZl.png) no-repeat;background-size:100%;}
 
 
-
+/*doctorLogin*/
+.loginTips{background: #fff8e7;padding: 10px 15px;color: #666;position: relative;display: table;}
+.loginTips .tipImg{width: 80%;margin-top: 10px;}
+.loginTips .title{font-size: 12px;}
+.loginTips .tipImg,.loginTips .title{display: table-cell;vertical-align: middle;}
+.doctorForm{width: 90%;margin: 5% auto;}
+.doctorForm .input-group{width: 100%;margin-bottom: 10px;}
+.doctorForm .input-group input.inputText{width: 69%;border: 1px solid #efefef;padding: 7px 10px;font-family: "微软雅黑";}
+.doctorForm .input-group input.inputCode{width: 29%;}
+.doctorForm .input-group .getCode{color: #fff;background: #06be04;width: 40%;height: 32px;font-family: "微软雅黑";font-size: 12px;}
+.doctorForm .input-group .getCode.disabled{background: #ccc;}
+.doctorForm .input-group.err .errMessage{position: relative;left: 65px;font-size: 12px;}
+.doctorForm .input-group.err .errMessage,.doctorForm .input-group.err .type{color: #ff0404;}
+.doctorForm .input-group.err .inputText{border: 1px solid #ff0404;}
+.doctorForm .type{display: inline-block;width: 60px;font-size: 14px;color: #333;}
+.doctorForm .btnSumbit{    padding: 10px 0;
+    width: 76%;
+    height: 30px;
+    background: #f8c929;
+    color: #fff;
+    font-size: 16px;
+    font-family: "微软雅黑";
+    line-height: 10px;
+    position: relative;
+    left: 65px;}
+.doctorForm .btnSumbit.disabled{background: #ccc;}
 /*滑动侧边导航*/
 .personImg{width:92%;padding:4%;text-align:center;font-size:18px}
 .personImg img{width:25%}
@@ -367,4 +397,4 @@ a.weui_media_box:active {
 #smile-icon{margin:20px 0 10px}
 
 
-
+.weui_mask_transparent.fixed{position: fixed;z-index: 10000;}

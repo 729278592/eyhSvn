@@ -18,7 +18,8 @@
                     <img src="../../assets/mobile/images/medicalBg.png" alt=""/>
                     <div class="medicalBgBgfff">
                         <div class="bdHead bg1">
-                            <p>共 <span></span> 份病历</p>
+                            <p>共 <span class="num"></span> 份病历</p>
+                            <a href="uploadPrescription.html" class="addZl"></a>
                         </div>
                         <div class="m0 swiper-container swiper-container-horizontal" id="swiper-container">
                             <div class="swiper-wrapper w50" style="transition-duration: 0ms; ">
@@ -142,7 +143,6 @@
                             <div class="swiper-button-next"></div>
                             <div class="swiper-button-prev"></div>
                         </div>
-
                     </div>
                 </div>
                 <div class="largeCon hide">
@@ -170,7 +170,7 @@
                 autoplay: 5000,
                 autoplayDisableOnInteraction: false
             });
-            $(".bdHead span").text($(".swiper-slide").size());
+            $(".bdHead .num").text($(".swiper-slide").size());
             $(".btnLarge").on("click",function(){
                 $(".largeCon").removeClass("hide");
                 var src = $(this).prev("img").attr("src");
