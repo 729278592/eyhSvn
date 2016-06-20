@@ -191,8 +191,8 @@ a.weui_media_box:active {
 .footBg.h50{width: 100%;background: #fff;border-top: 1px solid #efefef;height: 40px;line-height: 35px;}
 .footBg input.inputBtn{font-family: "微软雅黑";width: 60%;border: 1px solid #efefef;border-radius: 20px;box-shadow: inset 1px 1px 1px rgba(0,0,0,.2),1px 1px 1px rgba(0,0,0,.2);padding: 5px 0 5px 5px;font-size: 14px;}
 .footBg .btnTj{height: 32px;line-height: 32px;width: 30%;background: #f8c929;border-radius: 10px;position: relative;top: 2px;}
-.foot a,.foot button{display: inline-block;width: 100%;height: 100%;color: #fff;font-size: 16px;font-family: "微软雅黑";background: #50b1ed;}
-.foot a.bg3{background: #f8c929;}
+.foot a,.foot button,.foot input{display: inline-block;width: 100%;height: 100%;color: #fff;font-size: 16px;font-family: "微软雅黑";background: #50b1ed;}
+.foot a.bg3,.foot input.bg3{background: #f8c929;}
 .foot a img{width: 30px;}
 .bd.pd40{padding-bottom: 40px;}
 .bd.absolute{position: absolute;top: 0;bottom: 0;overflow-y: scroll;-webkit-overflow-scrolling: touch;width: 100%;}
@@ -321,7 +321,7 @@ a.weui_media_box:active {
 .perfectInformation .title{font-size:12px}
 .perfectInformation .tipImg{width:6%}
 .perfectInformation .btnPerfect{font-family:"微软雅黑";position:absolute;top:15px;right:10px;display:inline-block;padding:3px 5px;background:0 0;font-size:12px;color:#ffad12;border:1px solid #ffad12;border-radius:4px}
-.inputInfor{width:94%;margin:10px auto}
+.inputInfor{width:100%;margin:10px auto}
 .inputInfor p{width:100%;margin-bottom:10px}
 .inputInfor p .type{font-size:14px;display:inline-block;width:58px}
 .inputInfor p input{padding:5px 30px 5px 5px;border:1px solid #efefef}

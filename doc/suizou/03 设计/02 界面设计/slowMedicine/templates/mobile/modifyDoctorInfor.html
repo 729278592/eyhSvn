@@ -67,13 +67,12 @@
                             </div>
                         </div>
                     </div>
+                    <div class="foot">
+                        <input type="submit" class="bg3" value="提交" id="showTooltips"/>
+                    </div>
                 </form>
             </div>
-            <div class="foot">
-                <a href="consultingPage.html" class="bg3" id="showTooltips">
-                    提交
-                </a>
-            </div>
+
         </div>
     </div>
     <script src="../../assets/global/plugins/jquery/jquery-1.11.3.min.js"></script>
@@ -82,11 +81,11 @@
     <script>
         $("#showTooltips").click(function(){
             var reg = /^0?(13[0-9]|15[012356789]|18[0236789]|14[57])[0-9]{8}$/;
-            if($("#personName").val() == '') {
+            if($.trim($("#personName").val()) == '') {
                 showErrMsg('姓名不能为空');
                 return false;
             }
-            else if($("#mobile").val() == ''){
+            else if($.trim($("#mobile").val()) == ''){
                 showErrMsg('手机号不能为空');
             }
             else if($("#mobile").get(0)&&!reg.test($("#mobile").val())){
