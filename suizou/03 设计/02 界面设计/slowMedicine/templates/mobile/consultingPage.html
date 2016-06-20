@@ -11,24 +11,26 @@
     <link rel="stylesheet" href="../../assets/mobile/css/global.css"/>
 </head>
 <body>
-    <div class="container">
+    <div class="container errDailog absolute">
         <div class="page ">
             <div class="bd absolute pd40">
                 <form action="#">
-                    <div class="weui_cells mt0 weui_cells_form">
-                        <div class="perfectInformation">
-                            <img src="../../assets/mobile/images/mark.png" alt="" class="tipImg"/>
-                            <span class="title">完善个人资料让医生更全面的了解病情</span>
-                            <!--<button class="btnPerfect" type="button">点击完善</button>-->
-                            <div class="inputInfor">
-                                <p><span class="type">您的姓名</span> : <input type="text"/></p>
-                                <!--<p><span class="type">出生年月</span> : <input type="text"/></p>-->
-                                <p><span class="type">手机号码</span> : <input type="text"/></p>
-                                <p>
-                                    <button class="btnSave">保存</button>
-                                </p>
-                            </div>
+                    <div class="perfectInformation">
+                        <img src="../../assets/mobile/images/mark.png" alt="" class="tipImg"/>
+                        <span class="title">完善个人资料让医生更全面的了解病情</span>
+                        <!--<button class="btnPerfect" type="button">点击完善</button>-->
+                        <div class="inputInfor">
+                            <p><span class="type">您的姓名</span> : <input type="text" id="personName"/></p>
+                            <!--<p><span class="type">出生年月</span> : <input type="text"/></p>-->
+                            <p><span class="type">手机号码</span> : <input type="text" id="phone"/></p>
+                            <p>
+                                <button type="submit" class="btnSave">保存</button>
+                            </p>
                         </div>
+                    </div>
+                </form>
+                <form action="#">
+                    <div class="weui_cells mt0 weui_cells_form">
                         <div class="weui_cell l0 weui_cell_select">
                             <div class="weui_cell_hd"><label class="weui_label">咨询类别 :</label></div>
                             <div class="weui_cell_bd weui_cell_primary relative bl1">
@@ -70,36 +72,37 @@
                             </label>
                         </div>
                     </div>
-
+                    <div class="foot">
+                        <input type="submit" class="bg3" value="提交"/>
+                    </div>
                 </form>
             </div>
-            <div class="foot">
-                <a href="consultingPage.html" class="bg3">
-                    提交
-                </a>
-            </div>
+
         </div>
     </div>
     <script src="../../assets/global/plugins/jquery/jquery-1.11.3.min.js"></script>
     <script src="../../assets/mobile/js/global.js"></script>
     <script src="../../assets/global/plugins/webuploader/js/webuploader.js"></script>
     <script src="../../assets/global/plugins/webuploader/js/upLoadfk.js"></script>
+    <script src="../../assets/mobile/js/messageTip.js"></script>
     <script>
-        $(function(){
-//            $(".btnPerfect").on("click",function(){
-//                var inputInfor = $(this).closest(".perfectInformation").find(".inputInfor");
-//                if(inputInfor.is(".hide")){
-//                    inputInfor.slideDown(100);
-//                    $(this).text("点击关闭");
-//                    inputInfor.removeClass("hide")
-//                }
-//                else if(inputInfor.not(".hide")){
-//                    inputInfor.slideUp(100);
-//                    $(this).text("点击完善");
-//                    inputInfor.addClass("hide")
-//                }
-//            })
-        })
+        $("#btnSave").click(function(){
+            var reg = /^0?(13[0-9]|15[012356789]|18[0236789]|14[57])[0-9]{8}$/;
+            if($.trim($("#personName").val()) == '') {
+                showErrMsg('姓名不能为空');
+                return false;
+            }
+            else if($.trim($("#mobile").val()) == ''){
+                showErrMsg('手机号不能为空');
+            }
+            else if($("#mobile").get(0)&&!reg.test($("#mobile").val())){
+                showErrMsg('手机号格式不正确');
+            }
+            else{
+                showLoading("数据提交中","提交成功");
+            }
+            return true;
+        });
     </script>
 </body>
 </html>

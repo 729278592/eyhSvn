@@ -60,15 +60,11 @@
                                 <input class="weui_input" type="text" id="address"  placeholder="袁家岗中心城上城">
                             </div>
                         </div>
-
                     </div>
-
+                    <div class="foot">
+                        <input type="submit" class="bg3" value="提交" id="showTooltips"/>
+                    </div>
                 </form>
-            </div>
-            <div class="foot">
-                <a href="consultingPage.html" class="bg3" id="showTooltips">
-                    提交
-                </a>
             </div>
         </div>
     </div>
@@ -78,17 +74,17 @@
     <script>
         $("#showTooltips").click(function(){
             var reg = /^0?(13[0-9]|15[012356789]|18[0236789]|14[57])[0-9]{8}$/;
-            if($("#personName").val() == '') {
+            if($.trim($("#personName").val()) == '') {
                 showErrMsg('姓名不能为空');
                 return false;
             }
-            else if($("#mobile").val() == ''){
+            else if($.trim($("#mobile").val()) == ''){
                 showErrMsg('手机号不能为空');
             }
             else if($("#mobile").get(0)&&!reg.test($("#mobile").val())){
                 showErrMsg('手机号格式不正确');
             }
-            else if($("#address").val() == ''){
+            else if($.trim($("#address").val()) == ''){
                 showErrMsg('地址不能为空');
             }
             else{
