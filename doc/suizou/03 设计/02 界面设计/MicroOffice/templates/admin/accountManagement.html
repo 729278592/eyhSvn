@@ -358,9 +358,17 @@
                                 personName.find(".haveName").addClass("have-name");
                             }
                         }else if(formLine.is(".mobile")){
+                            var mobile = $(".mobile");
                             $(".modal-backdrop,.modal-tip").removeClass("hide");
                             $(".modal-tip").find(".position-phone-validate").addClass("mobileDailog");
                             $("#admin-content-wrapper").css({"z-index":"13"});
+                            if(!(mobile.find(".havePhone").is(".hide"))){
+                                mobile.find(".havePhone").addClass("hide");
+                                mobile.find(".null-info").addClass("nullInfo");
+                            }else if(!(mobile.find(".null-info").is(".hide"))){
+                                mobile.find(".null-info").addClass("hide");
+                                mobile.find(".havePhone").addClass("have-phone");
+                            }
                         }else if(formLine.is(".newMobile")){
 
                         }else if(formLine.is(".password")){
@@ -462,7 +470,7 @@
                         var resend = setInterval(function(){
                             count--;
                             if (count > 0){
-                                btn.addClass("active");
+                                btn.addClass("disabled");
                                 btn.text(count+"秒后可重新获取");
                             }else {
                                 clearInterval(resend);
@@ -484,6 +492,7 @@
 //                                personName.find(".error-message").css({"display":"inline-block"});
 //                                personName.find(".form-line-label").addClass("red");
 //                                personName.addClass("error");
+                                tipsContent("姓名未填写",$(".tips"),"fail");
                                 personName.find(".haveName").addClass("hide");
                                 personName.find(".null-info").removeClass("hide");
                                 personName.find(".inputName").addClass("hide");
@@ -491,6 +500,7 @@
                                 personName.find(".cancel").addClass("hide");
                             }
                             else{
+                                tipsContent("姓名修改成功",$(".tips"),"success");
                                 if(personName.find(".null-info").is(".nullInfo")){
                                     personName.find(".null-info").addClass("hide");
                                     personName.find(".haveName").removeClass("hide");
@@ -518,6 +528,7 @@
                                 if(($(".mobile").find(".havePhone").text())==($(".mobile").find(".inputPhone").val())){
                                     tipsContent("未修改信息",$(".tips"),"fail");
                                 }
+
                                 else{
                                     tipsContent("手机号修改成功",$(".tips"),"success");
                                 }
@@ -525,8 +536,24 @@
 
 
                             }else{
-                                tipsContent("验证码不正确",$(".tips"),"fail");
-                            }
+                                 if($.trim($(".mobile").find(".inputPhone").val())==""){
+                                        tipsContent("未修改信息",$(".tips"),"fail");
+                                        var newMobile = $(".newMobile");
+                                        newMobile.addClass("hide");
+                                        var mobile = $(".mobile");
+                                        mobile.find(".inputPhone").addClass("hide");
+                                        mobile.find(".modify").removeClass("hide");
+                                        if(mobile.find(".null-info").is(".nullInfo")){
+                                            mobile.find(".null-info").addClass("hide");
+                                            mobile.find(".havePhone").removeClass("hide");
+                                            mobile.find(".null-info").removeClass("nullInfo");
+                                        }else if(mobile.find(".havePhone").is(".have-phone")){
+                                            mobile.find(".havePhone").addClass("hide");
+                                            mobile.find(".null-info").removeClass("hide");
+                                            mobile.find(".havePhone").removeClass("have-phone");
+                                        }
+                                    }
+                                 }
                         }else if(formLine.is(".password")){
 
                         }else if(formLine.is(".weixin")){
@@ -559,34 +586,29 @@
 
                         }else if(formLine.is(".newMobile")){
                             var newMobile = $(".newMobile");
-                            var inputPhoneValue = newMobile.find(".inputPhone").val();
-                            newMobile.find(".inputPhone").addClass("hide");
-//                            personName.find(".inputName").val(" ");
-                            newMobile.find(".confirm").addClass("hide");
-                            newMobile.find(".cancel").addClass("hide");
-
-                            if(newMobile.find(".null-info").is(".nullInfo")){
-                                newMobile.find(".null-info").addClass("hide");
-                                newMobile.find(".havePhone").removeClass("hide");
-                                newMobile.find(".null-info").removeClass("nullInfo");
-                            }else if(newMobile.find(".havePhone").is(".have-name")){
-                                newMobile.find(".havePhone").addClass("hide");
-                                newMobile.find(".null-info").removeClass("hide");
-                                newMobile.find(".havePhone").removeClass("have-name");
+                            newMobile.addClass("hide");
+                            var mobile = $(".mobile");
+                            mobile.find(".inputPhone").addClass("hide");
+                            mobile.find(".modify").removeClass("hide");
+                            if(mobile.find(".null-info").is(".nullInfo")){
+                                mobile.find(".null-info").addClass("hide");
+                                mobile.find(".havePhone").removeClass("hide");
+                                mobile.find(".null-info").removeClass("nullInfo");
+                            }else if(mobile.find(".havePhone").is(".have-phone")){
+                                mobile.find(".havePhone").addClass("hide");
+                                mobile.find(".null-info").removeClass("hide");
+                                mobile.find(".havePhone").removeClass("have-phone");
                             }
                         }else if(formLine.is(".password")){
 
                         }else if(formLine.is(".weixin")){
 
                         }
-
                     });
-
                     $(".close").on("click",function(){
                         $(".modal-tip,.modal-backdrop").addClass("hide");
                         $("#admin-content-wrapper").css({"z-index":"2"})
                     })
-
                 });
             </script>
         </div>

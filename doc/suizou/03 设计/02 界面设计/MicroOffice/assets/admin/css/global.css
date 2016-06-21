@@ -113,7 +113,7 @@ a:link{text-decoration: none;}
 #admin-content-wrapper{position:absolute;margin-left:50px;left:0;right:0;z-index:2;}
 .btn,.card,.sub-nav,.sub-title,header{background-color:#fff}
 
-.common-list-item .item-actions.application-item-actions-pos{left: 64%;}
+.common-list-item .item-actions.application-item-actions-pos{left: 61%;}
 .fbxzw{font-size: 14px;color: #6cb7ee;margin-right: 20px;}
 .dq-application-detail-icon-status > i.ml0{margin-left: 0;margin-top: 4px;}
 .dq-application-detail-status-recommend > span.text{right: 33px;}
@@ -181,8 +181,11 @@ a:link{text-decoration: none;}
 .position-phone-validate-wrapper input.form-control-submit{text-align: center;}
 .ns-admin.ns-setting.ns-accountinfo .error-message{background: transparent;}
 .error .error-message{padding-left: 0;margin-top: 5px;}
-
-
+.resume-actions .fa {font-size: 16px;vertical-align: middle;margin-right: 36px;}
+.dq-application-detail-icon-status .fa{margin-right: 0;}
+.dq-application-detail-status-recommend.textAlign .fa{margin-right: 0;}
+.dq-application-detail-icon-status .fa-remove{position: relative;font-size: 16px;left: -3px;top: 1px;}
+.dq-application-detail-status-recommend{top: -32px;}
 /*自写样式*/
 .g-form-radio-group label.noBeflre:before{border: none;background: transparent;}
 .qx-qrcode img{width: 165px;height: 165px}
@@ -807,7 +810,7 @@ a.keyword-button:hover,.keyword-button:active,.keyword-button:focus{color: #fff;
 @media screen and (max-width: 1400px) {
     .form-group .btnReturn{left: -160px;}
     .btn.btnSure{left: 160px;}
-    .common-list-item .item-actions.application-item-actions-pos{left: 57%;}
+    .common-list-item .item-actions.application-item-actions-pos{left: 52%;}
     .hoveran{width: 390px;}
     .annotation{width: 500px;}
     .resumeBq li{padding: 5px 20px;}
@@ -819,5 +822,5 @@ a.keyword-button:hover,.keyword-button:active,.keyword-button:focus{color: #fff;
 
 
 @media screen and (max-width: 1400px)and (min-width: 1251px) {
-    .common-list-item .item-actions.application-item-actions-pos{left: 60%;}
+    .common-list-item .item-actions.application-item-actions-pos{left: 56%;}
 }

@@ -384,7 +384,7 @@
                                                 </li>
                                             </ul>
                                             <ul class="item-actions application-item-actions-pos">
-                                                <li class="item-action ">
+                                                <li class="item-action first">
                                                     <i class="fa fa-newspaper-o"></i>
                                                     评审通过
                                                 </li>
@@ -392,16 +392,23 @@
                                                     <i class="fa fa-newspaper-o"></i>
                                                     评审通过
                                                 </li>
-                                                <li class="item-action">
+                                                <li class="item-action hide second">
                                                     <i class="fa fa-group"></i>
                                                     面试通过
                                                 </li>
-                                                <li class="action-ban item-action hide">
+                                                <li class="action-ban item-action">
                                                     <i class="fa fa-group"></i>
                                                     面试通过
                                                 </li>
-
-                                                <li class="item-action">
+                                                <li class="item-action hide three">
+                                                    <i class="fa fa-compass"></i>
+                                                    成功入职
+                                                </li>
+                                                <li class="action-ban item-action">
+                                                    <i class="fa fa-compass"></i>
+                                                    成功入职
+                                                </li>
+                                                <li class="item-action four">
                                                     <i class="fa fa-remove"></i>
                                                     不合适
                                                 </li>
@@ -419,35 +426,87 @@
                                             <!-- inactive -->
                                             <div class="application-progress-bar dq-application-status">
                                                 <ul class="dq-application-status-bar">
-                                                    <li class="dq-application-status-bar-item">
-                                                        <span class="dq-application-icon-status dq-application-icon-status-wait" >
+                                                    <li class="dq-application-status-bar-item dq-application-fi-item">
+                                                        <span class="dq-application-icon-status dq-application-icon-status-wait">
                                                             <span class="dq-application-icon-status-mark ng-scope dq-application-icon-status-circle-wh">1</span>
                                                             <span class="dq-application-status-text dq-application-icon-status-wait-text" >简历评审</span>
                                                         </span>
+
+                                                        <span class="dq-application-icon-status dq-application-icon-status-suc hide">
+                                                           <i class="dq-application-icon-status-mark dq-application-icon-status-circle-wh ml0">
+                                                               <i class="fa fa-check"></i>
+                                                           </i>
+                                                            <span class="dq-application-status-text dq-application-icon-status-suc-text">简历评审</span>
+                                                        </span>
+
+                                                        <span class="dq-application-icon-status dq-application-icon-status-reject hide">
+                                                            <i class="dq-application-icon-status-mark dq-application-icon-status-circle-wh ml0">
+                                                                <i class="fa fa-remove"></i>
+                                                            </i>
+                                                            <span class="dq-application-status-text dq-application-icon-status-reject-text">简历评审</span>
+                                                        </span>
+
+                                                        <span class="dq-application-icon-status dq-application-icon-status-default hide">
+                                                            <span  class="dq-application-icon-status-mark ng-scope dq-application-icon-status-circle-gre">1</span>
+                                                            <span class="dq-application-status-text dq-application-icon-status-default-text">简历评审</span>
+                                                        </span>
                                                         <span class="dq-application-delimiter default"></span>
                                                     </li>
-
-
                                                     <li class="dq-application-status-bar-item dq-application-th-item ">
-                                                        <span class="dq-application-icon-status dq-application-icon-status-wait " >
+                                                        <span class="dq-application-icon-status dq-application-icon-status-wait hide">
                                                             <span class="dq-application-icon-status-mark ng-scope dq-application-icon-status-circle-wh">2</span>
-                                                            <span class="dq-application-status-text dq-application-icon-status-wait-text">面试</span>
+                                                            <span class="dq-application-status-text dq-application-icon-status-wait-text" >面试</span>
                                                         </span>
-                                                        <span class="dq-application-delimiter default" ></span>
+                                                        <span class="dq-application-icon-status dq-application-icon-status-suc hide">
+                                                            <i class="dq-application-icon-status-mark dq-application-icon-status-circle-wh">
+                                                                <i class="dq-application-icon-status-mark dq-application-icon-status-circle-wh ml0">
+                                                                    <i class="fa fa-check"></i>
+                                                                </i>
+                                                            </i>
+                                                            <span class="dq-application-status-text dq-application-icon-status-suc-text">面试</span>
+                                                        </span>
+
+                                                        <span class="dq-application-icon-status dq-application-icon-status-reject hide">
+                                                            <i class="dq-application-icon-status-mark dq-application-icon-status-circle-wh ml0">
+                                                                <i class="fa fa-remove"></i>
+                                                            </i>
+                                                            <span class="dq-application-status-text dq-application-icon-status-reject-text">面试</span>
+                                                        </span>
+
+                                                        <span class="dq-application-icon-status dq-application-icon-status-default">
+                                                            <span  class="dq-application-icon-status-mark ng-scope dq-application-icon-status-circle-gre">2</span>
+                                                            <span class="dq-application-status-text dq-application-icon-status-default-text">面试</span>
+                                                        </span>
+                                                        <span class="dq-application-delimiter default"></span>
                                                     </li>
-
-
-
                                                     <li class="dq-application-status-bar-item dq-application-last-item">
-                                                        <span class="dq-application-icon-status dq-application-icon-status-wait">
-                                                            <span class="dq-application-icon-status-mark dq-application-icon-status-circle-wh">
-                                                                3
-                                                            </span>
-                                                            <span class="dq-application-status-text dq-application-icon-status-wait-text">
-                                                                入职
-                                                            </span>
+                                                        <span class="dq-application-icon-status dq-application-icon-status-wait hide">
+                                                            <span class="dq-application-icon-status-mark ng-scope dq-application-icon-status-circle-wh">3</span>
+                                                            <span class="dq-application-status-text dq-application-icon-status-wait-text" >入职</span>
                                                         </span>
-                                                        <span class="dq-application-delimiter default" >
+                                                        <span class="dq-application-icon-status dq-application-icon-status-suc hide">
+                                                            <i class="dq-application-icon-status-mark dq-application-icon-status-circle-wh">
+                                                                <i class="dq-application-icon-status-mark dq-application-icon-status-circle-wh ml0">
+                                                                    <i class="fa fa-check"></i>
+                                                                </i>
+                                                            </i>
+                                                            <span class="dq-application-status-text dq-application-icon-status-suc-text">入职</span>
+                                                        </span>
+
+                                                        <span class="dq-application-icon-status dq-application-icon-status-reject hide">
+                                                            <i class="dq-application-icon-status-mark dq-application-icon-status-circle-wh">
+                                                                <i class="dq-application-icon-status-mark dq-application-icon-status-circle-wh ml0">
+                                                                    <i class="fa fa-remove"></i>
+                                                                </i>
+                                                            </i>
+                                                            <span class="dq-application-status-text dq-application-icon-status-reject-text">入职</span>
+                                                        </span>
+
+                                                        <span class="dq-application-icon-status dq-application-icon-status-default">
+                                                            <span  class="dq-application-icon-status-mark ng-scope dq-application-icon-status-circle-gre">3</span>
+                                                            <span class="dq-application-status-text dq-application-icon-status-default-text">入职</span>
+                                                        </span>
+                                                        <span class="dq-application-delimiter default">
                                                         </span>
                                                     </li>
                                                 </ul>
@@ -525,7 +584,14 @@
                                                     <i class="fa fa-group"></i>
                                                     面试通过
                                                 </li>
-
+                                                <li class="item-action">
+                                                    <i class="fa fa-compass"></i>
+                                                    成功入职
+                                                </li>
+                                                <li class="action-ban item-action hide">
+                                                    <i class="fa fa-compass"></i>
+                                                    成功入职
+                                                </li>
                                                 <li class="item-action">
                                                     <i class="fa fa-remove"></i>
                                                     不合适
@@ -552,17 +618,13 @@
                                                         <span class="dq-application-delimiter default"></span>
                                                     </li>
 
-
                                                     <li class="dq-application-status-bar-item dq-application-th-item ">
                                                         <span class="dq-application-icon-status dq-application-icon-status-wait " >
                                                             <span class="dq-application-icon-status-mark ng-scope dq-application-icon-status-circle-wh">2</span>
                                                             <span class="dq-application-status-text dq-application-icon-status-wait-text">面试</span>
                                                         </span>
-                                                        <span class="dq-application-delimiter default" ></span>
+                                                        <span class="dq-application-delimiter default"></span>
                                                     </li>
-
-
-
                                                     <li class="dq-application-status-bar-item dq-application-last-item">
                                                         <span class="dq-application-icon-status dq-application-icon-status-wait">
                                                             <span class="dq-application-icon-status-mark dq-application-icon-status-circle-wh">
@@ -596,24 +658,96 @@
                             <div>
                             </div>
                         </div>
-                        <!-- 查看潜在候选人提示, 最后一页显示 -->
-                        <!--<div class="card ns-candidate-more">-->
-                            <!--<div class="card-item">-->
-                                <!--<a href="#">-->
-                                    <!--<img style="margin: 0 auto 15px auto; height: 30px; width: auto; display: block;" src="//static.moseeker.com/hr/common/images/candidate-avatar-sample.jpg">-->
-                                    <!--没有合适的? 还有-->
-                                    <!--<span class="count-label">-->
-                                        <!--10-->
-                                    <!--</span>-->
-                                    <!--位潜在候选人, 这就去看看-->
-                                <!--</a>-->
-                            <!--</div>-->
-                        <!--</div>-->
                     </div>
                 </div>
             </div>
             <script>
                 $(function(){
+                    $(".item-action").on("click",function(){
+                       if($(this).is(".first")){
+                           $(this).addClass("hide");
+                           $(this).next(".item-action").removeClass("hide");
+                           $(this).closest(".application-card-content").find(".dq-application-fi-item").find(".dq-application-icon-status-wait").addClass("hide");
+                           $(this).closest(".application-card-content").find(".dq-application-fi-item").find(".dq-application-icon-status-suc").removeClass("hide");
+                           $(this).closest(".application-card-content").find(".dq-application-th-item").find(".dq-application-icon-status-default").addClass("hide");
+                           $(this).closest(".application-card-content").find(".dq-application-th-item").find(".dq-application-icon-status-wait").removeClass("hide");
+                           $(".item-action.second").removeClass("hide");
+                           $(".item-action.second").next(".item-action").addClass("hide");
+
+                       }else if($(this).is(".second")){
+                           $(this).addClass("hide");
+                           $(this).next(".item-action").removeClass("hide");
+                           $(this).closest(".application-card-content").find(".dq-application-th-item").find(".dq-application-icon-status-wait").addClass("hide");
+                           $(this).closest(".application-card-content").find(".dq-application-th-item").find(".dq-application-icon-status-suc").removeClass("hide");
+                           $(this).closest(".application-card-content").find(".dq-application-last-item").find(".dq-application-icon-status-default").addClass("hide");
+                           $(this).closest(".application-card-content").find(".dq-application-last-item").find(".dq-application-icon-status-wait").removeClass("hide");
+                           $(".item-action.three").removeClass("hide");
+                           $(".item-action.three").next(".item-action").addClass("hide");
+
+                       }else if($(this).is(".three")){
+                           $(this).addClass("hide");
+                           $(this).next(".item-action").removeClass("hide");
+                           $(".item-action.four").addClass("hide");
+                           $(this).closest(".application-card-content").find(".dq-application-last-item").find(".dq-application-icon-status-wait").addClass("hide");
+                           $(this).closest(".application-card-content").find(".dq-application-last-item").find(".dq-application-icon-status-suc").removeClass("hide");
+                       }
+                    });
+
+                    $(".item-action.red").on("click",function(){
+                        if($(this).closest(".application-card-content").find(".dq-application-fi-item").find(".dq-application-icon-status-reject").is(".active")){
+                            $(this).addClass("hide");
+                            $(this).prev(".item-action").removeClass("hide");
+                            $(this).siblings(".item-action.first").removeClass("hide");
+                            $(this).siblings(".item-action.first").next(".item-action").addClass("hide");
+                            $(this).closest(".application-card-content").find(".dq-application-fi-item").find(".dq-application-icon-status-wait").removeClass("hide");
+                            $(this).closest(".application-card-content").find(".dq-application-fi-item").find(".dq-application-icon-status-reject").addClass("hide").removeClass("active");
+
+                        }else if($(this).closest(".application-card-content").find(".dq-application-th-item").find(".dq-application-icon-status-reject").is(".active")){
+                            $(this).addClass("hide");
+                            $(this).prev(".item-action").removeClass("hide");
+                            $(this).siblings(".item-action.second").removeClass("hide");
+                            $(this).siblings(".item-action.second").next(".item-action").addClass("hide");
+                            $(this).closest(".application-card-content").find(".dq-application-th-item").find(".dq-application-icon-status-wait").removeClass("hide");
+                            $(this).closest(".application-card-content").find(".dq-application-th-item").find(".dq-application-icon-status-reject").addClass("hide").removeClass("active");
+                        }else if($(this).closest(".application-card-content").find(".dq-application-last-item").find(".dq-application-icon-status-reject").is(".active")){
+                            $(this).addClass("hide");
+                            $(this).prev(".item-action").removeClass("hide");
+                            $(this).siblings(".item-action.three").removeClass("hide");
+                            $(this).siblings(".item-action.three").next(".item-action").addClass("hide");
+                            $(this).closest(".application-card-content").find(".dq-application-last-item").find(".dq-application-icon-status-wait").removeClass("hide");
+                            $(this).closest(".application-card-content").find(".dq-application-last-item").find(".dq-application-icon-status-reject").addClass("hide").removeClass("active");
+                        }
+                    });
+
+
+                    $(".item-action.four").on("click",function(){
+                        if($(this).siblings(".item-action.first").next(".item-action").is(".hide")){
+                            $(this).addClass("hide");
+                            $(this).next(".item-action").removeClass("hide");
+                            $(this).siblings(".item-action.first").addClass("hide");
+                            $(this).siblings(".item-action.first").next(".item-action").removeClass("hide");
+                            $(this).closest(".application-card-content").find(".dq-application-fi-item").find(".dq-application-icon-status-wait").addClass("hide");
+                            $(this).closest(".application-card-content").find(".dq-application-fi-item").find(".dq-application-icon-status-reject").removeClass("hide").addClass("active");
+
+                        }else if($(this).siblings(".item-action.second").next(".item-action").is(".hide")){
+                            $(this).addClass("hide");
+                            $(this).next(".item-action").removeClass("hide");
+                            $(this).siblings(".item-action.second").addClass("hide");
+                            $(this).siblings(".item-action.second").next(".item-action").removeClass("hide");
+                            $(this).closest(".application-card-content").find(".dq-application-th-item").find(".dq-application-icon-status-wait").addClass("hide");
+                            $(this).closest(".application-card-content").find(".dq-application-th-item").find(".dq-application-icon-status-reject").removeClass("hide").addClass("active");
+                        }else if($(this).siblings(".item-action.three").next(".item-action").is(".hide")){
+                            $(this).addClass("hide");
+                            $(this).next(".item-action").removeClass("hide");
+                            $(this).siblings(".item-action.three").addClass("hide");
+                            $(this).siblings(".item-action.three").next(".item-action").removeClass("hide");
+                            $(this).closest(".application-card-content").find(".dq-application-last-item").find(".dq-application-icon-status-wait").addClass("hide");
+                            $(this).closest(".application-card-content").find(".dq-application-last-item").find(".dq-application-icon-status-reject").removeClass("hide").addClass("active");
+                        }
+                    });
+
+
+
                     $(".allHandle").on("click",function(){
                         if($(this).is(".show")){
                             $(".batch.card-item.card-title").removeClass("hide");
@@ -655,7 +789,7 @@
 
                     $(".common-list-item .item-actions").on("click",function(e){
                         e.preventDefault();
-                    })
+                    });
 
                     /*账号操作*/
                     $(".accountSettings").on("click",function(e){
