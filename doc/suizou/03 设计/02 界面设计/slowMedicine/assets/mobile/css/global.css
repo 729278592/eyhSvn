@@ -2,7 +2,8 @@
 
 
 /*common style*/
-body,html{margin:0;padding:0;    font-family: "微软雅黑";}
+body,html{margin:0;padding:0;font-family: "微软雅黑";}
+.Verdana{font-family: "Verdana";}
 p{margin: 0;padding: 0;}
 ul,li,img{margin:0;padding:0;list-style:none;border:none; vertical-align:middle;}
 a{color:#000;text-decoration:none;}
@@ -31,8 +32,8 @@ a:hover{text-decoration: none;}
 img.w100{width: 100%;}
 .container>.mask,.container>.maskHide{position: fixed;top: 0;bottom: 0;right: 0;left: 0;background: rgba(0,0,0,0.6);z-index: 10;}
 .container>.maskHide img{width: 100%;}
-.container>.maskHide .mainDoctorImg1{width: 94%;margin: 15% 3% 0;}
-.container>.maskHide .mainDoctorImg{width: 94%;margin: 11% 3% 0;}
+.container>.maskHide .mainDoctorImg1{width: 94%;margin: 12% 5% 0;}
+.container>.maskHide .mainDoctorImg{width: 94%;margin: 13% 3% 0;}
 .reward{background: #fff;position: relative;width: 96%;margin: 50% auto;font-size: 14px;text-align: center;padding: 10% 0;}
 .reward .shareImg{position: absolute;width: 20%;left: 0;top: -40%;z-index: 2;}
  .shareImg1{position: absolute;
@@ -94,11 +95,11 @@ a.weui_media_box:active {
     -o-transition: border .2s ease-in-out;
     transition: border .2s ease-in-out;
 }
-
 .webuploader-pick{background: transparent;text-align: center;}
-
-.btnOk{padding: 8px 15px;border-radius: 4px;background: #5abbf8;color: #fff;font-family: "微软雅黑";position: absolute;left: 50%;margin-left: -41px;top: 50%;margin-top: 100px;}
+.btnOk{padding: 10px 20px;border-radius: 4px;background: #5abbf8;color: #fff;font-family: "微软雅黑";position: absolute;left: 50%;margin-left: -46px;top: 50%;margin-top: 100px;}
 .myDoctor{font-size: 14px;color: #5abbf8;}
+
+
 /*patientList*/
 .weui_cell .weui_label img{width:25%;margin-right:8%}
 .weui_cell .weui_label,.weui_cells .weui_cell{font-size:14px}
@@ -125,11 +126,29 @@ a.weui_media_box:active {
 .weui_panel_bd:after{content:" ";position:absolute;bottom:0;height:1px;width:100%;border-bottom:1px solid #E5E5E5;color:#E5E5E5;-webkit-transform-origin:0 0;transform-origin:0 0;-webkit-transform:scaleY(.5);transform:scaleY(.5);left:0;right:0}
 .btnResolved,.btnResolvedDisabled{padding:1px 3px;background: #f8c92b;color: #fff;border-radius: 4px;font-family: "微软雅黑";font-size: 12px;}
 .btnResolvedDisabled{background: #dbdbdb;}
+
+
+.advancedSearch{position: fixed;z-index: 10;left: 0;top: 0;right: 0;bottom: 0;background: #fff;}
+.advancedSearchCon{}
+.goPrev {
+    width: 100%;
+    height: 40px;
+    background: #50b1ed;
+    line-height: 40px;
+    text-align: center;
+    color: #fff;
+}
+.goPrev .fa {
+    float: left;
+    position: relative;
+    top: 10px;
+    left: 3%;
+}
+
+
 /*patientInfor*/
 .weui_media_desc.hide{display: none;}
 .weui_media_desc span.color{color: #5abbf8;}
-
-
 .weui_cells_checkbox{}
 .weui_cells_checkbox.h153{min-height: 200px;}
 .weui_check_label.w30{width: 30%;float: right;margin: 10px 0;color: #666;}
@@ -189,10 +208,10 @@ a.weui_media_box:active {
 .foot{position: fixed;left: 0;right: 0;bottom: 0;height: 40px;text-align: center;line-height: 40px;}
 .foot.zIndex1999{z-index: 999;}
 .footBg.h50{width: 100%;background: #fff;border-top: 1px solid #efefef;height: 40px;line-height: 35px;}
-.footBg input.inputBtn{font-family: "微软雅黑";width: 60%;border: 1px solid #efefef;border-radius: 20px;box-shadow: inset 1px 1px 1px rgba(0,0,0,.2),1px 1px 1px rgba(0,0,0,.2);padding: 5px 0 5px 5px;font-size: 14px;}
+.footBg input.inputBtn{font-size: 12px;background: transparent;font-family: "微软雅黑";width: 60%;border: 1px solid #efefef;border-radius: 20px;box-shadow: inset 1px 1px 1px rgba(0,0,0,.2),1px 1px 1px rgba(0,0,0,.2);padding: 6px 0 6px 5px;}
 .footBg .btnTj{height: 32px;line-height: 32px;width: 30%;background: #f8c929;border-radius: 10px;position: relative;top: 2px;}
 .foot a,.foot button,.foot input{display: inline-block;width: 100%;height: 100%;color: #fff;font-size: 16px;font-family: "微软雅黑";background: #50b1ed;}
-.foot a.bg3,.foot input.bg3{background: #f8c929;}
+.foot a.bg3,.foot input.bg3,.foot button{background: #f8c929;}
 .foot a img{width: 30px;}
 .bd.pd40{padding-bottom: 40px;}
 .bd.absolute{position: absolute;top: 0;bottom: 0;overflow-y: scroll;-webkit-overflow-scrolling: touch;width: 100%;}
@@ -301,6 +320,7 @@ a.weui_media_box:active {
 
 
 /*consultingInfor*/
+
 .weui_media_desc.middle{display:table;position:relative;z-index:100}
 .weui_media_desc.middle .spanImg,.weui_media_desc.middle .spanInfor{display:table-cell;vertical-align:middle}
 .weui_media_desc.middle .spanImg{width:15%}
@@ -311,7 +331,7 @@ a.weui_media_box:active {
 .describe .describeCon,.describe .describeTitle{display:table-cell}
 .describe .describeTitle{width:32%}
 .describe .describeTitle span.title{color:#5abbf8;font-size: 14px;}
-.describe .describeCon p{font-size:14px;color:#333}
+.describe .describeCon p{font-size:14px;color:#333;}
 .data{padding:15px}
 .data .dataTitle{color:#5abbf8;font-size: 14px;}
 .data .dataCon img{width:90px;height:90px;margin:15px 1px}
@@ -323,8 +343,9 @@ a.weui_media_box:active {
 .perfectInformation .btnPerfect{font-family:"微软雅黑";position:absolute;top:15px;right:10px;display:inline-block;padding:3px 5px;background:0 0;font-size:12px;color:#ffad12;border:1px solid #ffad12;border-radius:4px}
 .inputInfor{width:100%;margin:10px auto}
 .inputInfor p{width:100%;margin-bottom:10px}
+.weui_media_box.weui_media_appmsg .weui_media_appmsg_thumb{border-radius: 100%;}
 .inputInfor p .type{font-size:14px;display:inline-block;width:58px}
-.inputInfor p input{padding:5px 30px 5px 5px;border:1px solid #efefef}
+.inputInfor p input{padding:8px 30px 8px 5px;border:1px solid #efefef;width: 60%;}
 .inputInfor .btnSave{font-size: 14px;width: 60px;height: 32px;background: #f8c92b;color: #fff;border-radius: 2px;text-align: center;line-height: 32px;font-family: "微软雅黑";margin: 0 auto;display: block;}
 .largeCon{width:94%;margin:0 auto;position:fixed;background:#52b8f9;padding:1px 0;border-radius:8px;top:10px;left:10px;z-index:100}
 .largeCon .fa-remove{display:inline-block;width:30px;height:30px;border-radius:30px;text-align:center;line-height:30px;color:#fff;background:#52b8f9;position:absolute;right:-8px;top:-8px}
@@ -332,6 +353,11 @@ a.weui_media_box:active {
 .largeConCon img{width:100%}
 .btnLarge{position:absolute;display:inline-block;width:30px;height:28px;background:url(../images/btnLarge.png) no-repeat;background-size:100%;left:50%;top:50%;margin-left:-15px;margin-top:-15px;z-index:10}
 .btnLarge1{display:inline-block;width:30px;height:28px;background:url(../images/addZl.png) no-repeat;background-size:100%;}
+.weui_cell.weui_cell_select{position: relative;}
+.weui_cell.weui_cell_select.bb1:after{position: absolute;width: 100%;height: 1px;border-bottom: 1px solid #efefef;left: 0;bottom: 0;content: "";}
+.weui_cell.l0.bb1,.upload.bt1{position: relative;}
+.weui_cell.l0.bb1:after{position: absolute;width: 100%;height: 1px;border-bottom: 1px solid #efefef;left: 0;bottom: 0;content: "";}
+.upload.bt1:after{position: absolute;width: 100%;height: 1px;border-bottom: 1px solid #efefef;left: 0;top: 0;content: "";}
 
 
 /*doctorLogin*/
@@ -363,8 +389,8 @@ a.weui_media_box:active {
 /*滑动侧边导航*/
 .personImg{width:92%;padding:4%;text-align:center;font-size:18px}
 .personImg img{width:25%}
-.container>.bars{position:fixed;left:10%;bottom:15%;width:36px;height:36px;padding:3px;border-radius:36px;background:rgba(125,125,125,.3)}
-.bars .fa{display:inline-block;width:100%;height:100%;background:rgba(80,177,237,.8);color:#fff;border-radius:100%;text-align:center;line-height:36px}
+.container>.bars{position:fixed;left:10%;bottom:15%;width:45px;height:45px;padding:3px;border-radius:45px;background:rgba(125,125,125,.3)}
+.bars .fa{display:inline-block;width:100%;height:100%;background:rgba(80,177,237,.8);color:#fff;border-radius:100%;text-align:center;line-height:45px}
 .leftNav{width:80%;background:#fff;height:100%}
 .menu-list{width:100%}
 .menu-list li{border-bottom:1px solid #efefef;text-align:left;padding:10px 0 10px 5%}
@@ -382,8 +408,24 @@ a.weui_media_box:active {
 @keyframes slideOut{from{-webkit-transform:translate3d(0,0,0);transform:translate3d(0,0,0)}
     to{-webkit-transform:translate3d(-100%,0,0);transform:translate3d(-100%,0,0)}
 }
-.mask.slideIn{-webkit-animation:slideIn .2s forwards;animation:slideIn .2s forwards}
-.mask.slideOut{-webkit-animation:slideOut .2s forwards;animation:slideOut .2s forwards}
+
+
+
+@-webkit-keyframes slideInRight{from{-webkit-transform:translate3d(100%,0,0);transform:translate3d(100%,0,0)}
+    to{-webkit-transform:translate3d(0,0,0);transform:translate3d(0,0,0)}
+}
+@keyframes slideInRight{from{-webkit-transform:translate3d(100%,0,0);transform:translate3d(100%,0,0)}
+    to{-webkit-transform:translate3d(0,0,0);transform:translate3d(0,0,0)}
+}
+@-webkit-keyframes slideOutRight{from{-webkit-transform:translate3d(0,0,0);transform:translate3d(0,0,0)}
+    to{-webkit-transform:translate3d(100%,0,0);transform:translate3d(100%,0,0)}
+}
+@keyframes slideOutRight{from{-webkit-transform:translate3d(0,0,0);transform:translate3d(0,0,0)}
+    to{-webkit-transform:translate3d(100%,0,0);transform:translate3d(100%,0,0)}
+}
+
+.mask.slideIn,.advancedSearch.slideInRight{-webkit-animation:slideInRight .2s forwards;animation:slideInRight .2s forwards}
+.mask.slideOut,.advancedSearch.slideOutRight{-webkit-animation:slideOutRight .2s forwards;animation:slideOutRight .2s forwards}
 .weui_cell_select .weui_cell_bd:after{content:" ";display:inline-block;-webkit-transform:rotate(0);transform:rotate(0);height:0;width:0;border-left:4px solid transparent;border-right:4px solid transparent;border-top:4px solid #333;position:absolute;top:50%;right:15px;margin-top:-3px}
 .errDailog{position:relative}
 .errDailog.absolute{position:absolute}
@@ -399,3 +441,10 @@ a.weui_media_box:active {
 
 
 .weui_mask_transparent.fixed{position: fixed;z-index: 10000;}
+
+
+
+/*media*/
+@media screen and (min-height: 660px) {
+    .container>.maskHide .mainDoctorImg{margin: 7% 3% 0;}
+}

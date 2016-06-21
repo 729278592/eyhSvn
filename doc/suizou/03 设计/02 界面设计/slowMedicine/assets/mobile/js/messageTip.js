@@ -49,6 +49,10 @@ $(function(){
               '</div>';
 
     $(".errDailog").append(toast);
+
+
+
+
 });
 
 function showErrMsg(message) {
