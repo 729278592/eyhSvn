@@ -212,7 +212,7 @@ a.weui_media_box:active {
 .foot{position: fixed;left: 0;right: 0;bottom: 0;height: 40px;text-align: center;line-height: 40px;}
 .foot.zIndex1999{z-index: 999;}
 .footBg.h50{width: 100%;background: #fff;border-top: 1px solid #efefef;height: 40px;line-height: 35px;}
-.footBg input.inputBtn{font-size: 12px;background: transparent;font-family: "微软雅黑";width: 60%;border: 1px solid #efefef;border-radius: 20px;box-shadow: inset 1px 1px 1px rgba(0,0,0,.2),1px 1px 1px rgba(0,0,0,.2);padding: 6px 0 6px 5px;}
+.footBg input.inputBtn{font-size: 12px;background: transparent;font-family: "微软雅黑";width: 60%;border: 1px solid #efefef;border-radius: 20px;box-shadow: inset 1px 1px 1px rgba(0,0,0,.2),1px 1px 1px rgba(0,0,0,.2);padding: 6px 0 6px 5px;color: #666;}
 .footBg .btnTj{height: 32px;line-height: 32px;width: 30%;background: #f8c929;border-radius: 10px;position: relative;top: 2px;}
 .foot a,.foot button,.foot input{display: inline-block;width: 100%;height: 100%;color: #fff;font-size: 16px;font-family: "微软雅黑";background: #50b1ed;}
 .foot a.bg3,.foot input.bg3,.foot button{background: #f8c929;}
