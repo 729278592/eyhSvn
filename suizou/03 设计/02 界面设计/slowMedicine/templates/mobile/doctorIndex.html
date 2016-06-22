@@ -192,7 +192,6 @@
     </div>
     <script src="../../assets/global/plugins/jquery/jquery-1.11.3.min.js"></script>
     <script src="../../assets/mobile/js/global.js"></script>
-    <script src="../../assets/mobile/js/stars.js"></script>
     <script src="../../assets/mobile/js/mobileLeft.js"></script>
     <script src="../../assets/mobile/js/messageTip.js"></script>
 
@@ -200,10 +199,6 @@
         $(function(){
             /*左边滑动导航*/
             mobileLeft.init($(".container"));
-
-            /*评论星*/
-            commentStars.init($(".starList li"));
-
 
             /*第一次加载时的蒙版处理*/
             $(".mainDoctor").on("touchend",function(){

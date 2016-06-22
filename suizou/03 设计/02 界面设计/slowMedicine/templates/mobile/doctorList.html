@@ -13,57 +13,18 @@
     <div class="container absolute errDailog">
         <div class="page">
             <div class="bd">
-                <ul class="screenDoctor clearfix">
-                    <li class="title">
-                        地区
-                    </li>
-                    <li class="select">
-                        <select name="">
-                            <option value="沙坪坝">沙坪坝</option>
-                            <option value="渝中">渝中</option>
-                            <option value="渝北">渝北</option>
-                            <option value="九龙坡">九龙坡</option>
-                            <option value="北碚">北碚</option>
-                            <option value=""></option>
-                            <option value=""></option>
-                        </select>
-                        <span class="caret"></span>
-                    </li>
-                    <li class="title">
-                        医院
-                    </li>
-                    <li class="select">
-                        <select name="">
-                            <option value="西南医院">西南医院</option>
-                            <option value="西南医院">西南医院</option>
-                            <option value="西重庆是的实打实医院">西重庆是的实打实医院</option>
-                            <option value="西南医院">西南医院</option>
-                            <option value="西南医院">西南医院</option>
-                            <option value="西南医院">西南医院</option>
-                            <option value="西南医院">西南医院</option>
-                        </select>
-                        <span class="caret"></span>
-                    </li>
-                    <li class="title">
-                        科室
-                    </li>
-                    <li class="select">
-                        <select name="">
-                            <option value="妇产科">妇产</option>
-                            <option value="传染病科">传染病</option>
-                            <option value="妇产科">妇产</option>
-                            <option value="传染病科">传染病</option>
-                            <option value="妇产科">妇产</option>
-                            <option value="传染病科">传染病</option>
-                            <option value="妇产科">妇产</option>
-                            <option value="传染病科">传染病</option>
-                        </select>
-                        <span class="caret"></span>
-                    </li>
-                    <li class="last">
+                <div class="weui_search_bar">
+                    <form class="weui_search_outer">
+                        <div class="weui_search_inner">
+                            <i class="weui_icon_search"></i>
+                            <input type="search" class="weui_search_input" placeholder="请输入关键词" required="">
+                            <a href="javascript:" class="weui_icon_clear"></a>
+                        </div>
+                    </form>
+                    <a href="javascript:" class="weui_search_cancel highSerch">
                         <i class="fa fa-bars"></i>
-                    </li>
-                </ul>
+                    </a>
+                </div>
                 <div class="weui_panel weui_panel_access mt0">
                     <div class="weui_panel_bd">
                         <a href="doctorIndex.html" class="weui_media_box r15 weui_media_appmsg">
@@ -104,6 +65,12 @@
                         </a>
                     </div>
                 </div>
+                <div class="notConTip hide">
+                    <img src="../../assets/mobile/images/notContent.png" alt=""/>
+                    <p class="notInfor">
+                        没搜索到医生
+                    </p>
+                </div>
             </div>
             <div class="advancedSearch hide">
                 <div class="goPrev">
@@ -111,24 +78,38 @@
                     高级筛选
                 </div>
                 <div class="advancedSearchCon ">
+                    <div class="weui_search_bar" id="search_bar">
+                        <form class="weui_search_outer">
+                            <div class="weui_search_inner">
+                                <i class="weui_icon_search"></i>
+                                <input type="search" class="weui_search_input" id="search_input" placeholder="请输入关键词" required="">
+                                <a href="javascript:" class="weui_icon_clear" id="search_clear"></a>
+                            </div>
+                            <label for="search_input" class="weui_search_text" id="search_text">
+                                <i class="weui_icon_search"></i>
+                                <span>搜索</span>
+                            </label>
+                        </form>
+                        <a href="javascript:" class="weui_search_cancel" id="search_cancel">取消</a>
+                    </div>
                     <form action="#">
                         <div class="weui_cells mt0 weui_cells_form">
                             <div class="weui_cell address l0">
-                                <div class="weui_cell_hd"><label class="weui_label">地　　区 :</label></div>
+                                <div class="weui_cell_hd"><label class="weui_label"><img src="../../assets/mobile/images/addressIcon.png" alt=""/>地区 :</label></div>
                                 <div class="weui_cell_bd weui_cell_primary">
-                                    <input class="weui_input" type="text" placeholder="张志平" id="personName">
+                                    <input class="weui_input" type="text" readonly placeholder="张志平" id="personName">
                                 </div>
                             </div>
                             <div class="weui_cell hospital l0">
-                                <div class="weui_cell_hd"><label class="weui_label">医　　院 :</label></div>
+                                <div class="weui_cell_hd"><label class="weui_label"><img src="../../assets/mobile/images/hospital.png" alt=""/>医院 :</label></div>
                                 <div class="weui_cell_bd weui_cell_primary">
-                                    <input class="weui_input" type="text"  placeholder="重庆西南医院">
+                                    <input class="weui_input" type="text" readonly placeholder="重庆西南医院">
                                 </div>
                             </div>
                             <div class="weui_cell department l0">
-                                <div class="weui_cell_hd"><label class="weui_label">所属科室 :</label></div>
+                                <div class="weui_cell_hd"><label class="weui_label"><img src="../../assets/mobile/images/departmentIcon.png" alt=""/>科室 :</label></div>
                                 <div class="weui_cell_bd weui_cell_primary">
-                                    <input class="weui_input" type="text"  placeholder="感染科">
+                                    <input class="weui_input" type="text" readonly placeholder="感染科">
                                 </div>
                             </div>
                         </div>
@@ -138,40 +119,120 @@
                     </form>
                 </div>
             </div>
-
-            <div class="addressChioce">
+            <div class="addressChioce hide">
+                <div class="goPrev">
+                    <i class="fa fa-angle-left"></i>
+                    高级筛选
+                </div>
                 <ul class="menu-list">
                     <li>
                         <a href="javascript:;">
-                            <span>处方记录</span>
-                            <i class="fa fa-angle-right"></i>
+                            <span>渝中区</span>
+                            <img src="../../assets/mobile/images/checked.png" alt="" class="checked"/>
                         </a>
                     </li>
                     <li>
                         <a href="javascript:;">
-                            <span>病历档案</span>
-                            <i class="fa fa-angle-right"></i>
+                            <span>九龙坡区</span>
+                            <img src="../../assets/mobile/images/checked.png" alt="" class="checked"/>
                         </a>
                     </li>
                     <li>
                         <a href="javascript:;">
-                            <span>我的名医</span>
-                            <i class="fa fa-angle-right"></i>
+                            <span>北碚区</span>
+                            <img src="../../assets/mobile/images/checked.png" alt="" class="checked"/>
                         </a>
                     </li>
                     <li>
                         <a href="javascript:;">
-                            <span>咨询记录</span>
-                            <i class="fa fa-angle-right"></i>
+                            <span>渝北区</span>
+                            <img src="../../assets/mobile/images/checked.png" alt="" class="checked"/>
+                        </a>
+                    </li>
+                    <li>
+                        <a href="javascript:;">
+                            <span>南岸区</span>
+                            <img src="../../assets/mobile/images/checked.png" alt="" class="checked"/>
                         </a>
                     </li>
                 </ul>
             </div>
-            <div class="hospitalChioce">
-
+            <div class="hospitalChioce hide">
+                <div class="goPrev">
+                    <i class="fa fa-angle-left"></i>
+                    高级筛选
+                </div>
+                <ul class="menu-list">
+                    <li>
+                        <a href="javascript:;">
+                            <span>重庆医学院</span>
+                            <img src="../../assets/mobile/images/checked.png" alt="" class="checked"/>
+                        </a>
+                    </li>
+                    <li>
+                        <a href="javascript:;">
+                            <span>重庆医学院</span>
+                            <img src="../../assets/mobile/images/checked.png" alt="" class="checked"/>
+                        </a>
+                    </li>
+                    <li>
+                        <a href="javascript:;">
+                            <span>重庆医学院</span>
+                            <img src="../../assets/mobile/images/checked.png" alt="" class="checked"/>
+                        </a>
+                    </li>
+                    <li>
+                        <a href="javascript:;">
+                            <span>重庆医学院</span>
+                            <img src="../../assets/mobile/images/checked.png" alt="" class="checked"/>
+                        </a>
+                    </li>
+                    <li>
+                        <a href="javascript:;">
+                            <span>重庆医学院</span>
+                            <img src="../../assets/mobile/images/checked.png" alt="" class="checked"/>
+                            <!--<i class="fa fa-angle-right"></i>-->
+                        </a>
+                    </li>
+                </ul>
             </div>
-            <div class="departmentChioce">
-
+            <div class="departmentChioce hide">
+                <div class="goPrev">
+                    <i class="fa fa-angle-left"></i>
+                    高级筛选
+                </div>
+                <ul class="menu-list">
+                    <li>
+                        <a href="javascript:;">
+                            <span>妇产科</span>
+                            <img src="../../assets/mobile/images/checked.png" alt="" class="checked"/>
+                        </a>
+                    </li>
+                    <li>
+                        <a href="javascript:;">
+                            <span>妇产科</span>
+                            <img src="../../assets/mobile/images/checked.png" alt="" class="checked"/>
+                        </a>
+                    </li>
+                    <li>
+                        <a href="javascript:;">
+                            <span>妇产科</span>
+                            <img src="../../assets/mobile/images/checked.png" alt="" class="checked"/>
+                        </a>
+                    </li>
+                    <li>
+                        <a href="javascript:;">
+                            <span>妇产科</span>
+                            <img src="../../assets/mobile/images/checked.png" alt="" class="checked"/>
+                        </a>
+                    </li>
+                    <li>
+                        <a href="javascript:;">
+                            <span>妇产科</span>
+                            <img src="../../assets/mobile/images/checked.png" alt="" class="checked"/>
+                        </a>
+                    </li>
+                </ul>
             </div>
         </div>
     </div>
@@ -181,7 +242,7 @@
     <script>
         $(function(){
             var weui_media_bdRelative =$(".weui_media_bd.relative");
-            weui_media_bdRelative.delegate("#star","click",function(e){
+            weui_media_bdRelative.delegate(".cancelFollow","click",function(e){
                 e.preventDefault();
                 $(this).removeClass("cancelFollow").addClass("addFollow");
                 $(this).html("+ 关注");
@@ -194,27 +255,189 @@
                 showToast("已取消关注");
             });
 
-            $(".screenDoctor li.last").on("touchend",function(){
+
+            /*高级筛选*/
+            $(".highSerch .fa").on("touchend",function(){
                 var advancedSearch = $(".advancedSearch");
                 advancedSearch.removeClass("hide");
                 advancedSearch.addClass('slideInRight');
                 $(advancedSearch).on('webkitAnimationEnd', function (){
                     advancedSearch.removeClass("slideInRight");
+                    advancedSearch.removeClass("hide");
                 }).on('animationend', function (){
                     advancedSearch.removeClass("slideInRight");
+                    advancedSearch.removeClass("hide");
                 });
             });
 
 
+            /*选择条件控制*/
+            $(".weui_cell").on("touchend",function(){
+                if($(this).is(".address")){
+                    var addressChioce = $(".addressChioce");
+                    addressChioce.removeClass("hide");
+                    addressChioce.addClass('slideInRight');
+                    $(addressChioce).on('webkitAnimationEnd', function (){
+                        addressChioce.removeClass("slideInRight");
+                        addressChioce.removeClass("hide");
+                    }).on('animationend', function (){
+                        addressChioce.removeClass("slideInRight");
+                        addressChioce.removeClass("hide");
+                    });
+                }else if($(this).is(".hospital")){
+                    var hospitalChioce = $(".hospitalChioce");
+                    hospitalChioce.removeClass("hide");
+                    hospitalChioce.addClass('slideInRight');
+                    $(hospitalChioce).on('webkitAnimationEnd', function (){
+                        hospitalChioce.removeClass("slideInRight");
+                        hospitalChioce.removeClass("hide");
+                    }).on('animationend', function (){
+                        hospitalChioce.removeClass("slideInRight");
+                        hospitalChioce.removeClass("hide");
+                    });
+
+                }else if($(this).is(".department")){
+                    var departmentChioce = $(".departmentChioce");
+                    departmentChioce.removeClass("hide");
+                    departmentChioce.addClass('slideInRight');
+                    $(departmentChioce).on('webkitAnimationEnd', function (){
+                        departmentChioce.removeClass("slideInRight");
+                        departmentChioce.removeClass("hide");
+                    }).on('animationend', function (){
+                        departmentChioce.removeClass("slideInRight");
+                        departmentChioce.removeClass("hide");
+                    });
+                }
+            });
+
+
+            /*条件选好后带数据返回上一级*/
             $(".menu-list li a").on("touchend",function(){
                 var text = $(this).find("span").text();
+                $(this).addClass("check");
+                $(this).parent("li").siblings("li").find("a").removeClass("check");
                 if($(this).closest(".addressChioce").get(0)){
+                    var addressChioce = $(this).closest(".addressChioce");
+                    addressChioce.removeClass("hide");
+                    addressChioce.addClass('slideOutRight');
+                    $(addressChioce).on('webkitAnimationEnd', function (){
+                        addressChioce.removeClass("slideOutRight");
+                        addressChioce.addClass("hide");
+                    }).on('animationend', function (){
+                        addressChioce.removeClass("slideOutRight");
+                        addressChioce.addClass("hide");
+                        $(".address").find("input").val(text);
+                    });
+                }else if($(this).closest(".hospitalChioce").get(0)){
+                    var hospitalChioce = $(this).closest(".hospitalChioce");
+                    hospitalChioce.removeClass("hide");
+                    hospitalChioce.addClass('slideOutRight');
+                    $(hospitalChioce).on('webkitAnimationEnd', function (){
+                        hospitalChioce.removeClass("slideOutRight");
+                        hospitalChioce.addClass("hide");
+                    }).on('animationend', function (){
+                        hospitalChioce.removeClass("slideOutRight");
+                        hospitalChioce.addClass("hide");
+                        $(".hospital").find("input").val(text);
+                    });
+                }else if($(this).closest(".departmentChioce").get(0)){
+                    var departmentChioce = $(this).closest(".departmentChioce");
+                    departmentChioce.removeClass("hide");
+                    departmentChioce.addClass('slideOutRight');
+                    $(departmentChioce).on('webkitAnimationEnd', function (){
+                        departmentChioce.removeClass("slideOutRight");
+                        departmentChioce.addClass("hide");
+                    }).on('animationend', function (){
+                        departmentChioce.removeClass("slideOutRight");
+                        departmentChioce.addClass("hide");
+                        $(".department").find("input").val(text);
+                    });
+                }
+            });
 
+
+            /*返回上一级*/
+            $(".goPrev").on("touchend",function(){
+                if($(this).closest(".advancedSearch").get(0)){
+                    var advancedSearch = $(".advancedSearch");
+                    advancedSearch.removeClass("hide");
+                    advancedSearch.addClass('slideOutRight');
+                    $(advancedSearch).on('webkitAnimationEnd', function (){
+                        advancedSearch.removeClass("slideOutRight");
+                        advancedSearch.addClass("hide");
+                    }).on('animationend', function (){
+                        advancedSearch.removeClass("slideOutRight");
+                        advancedSearch.addClass("hide");
+                    });
+                }else if($(this).closest(".addressChioce").get(0)){
+                    var addressChioce = $(".addressChioce");
+                    addressChioce.removeClass("hide");
+                    addressChioce.addClass('slideOutRight');
+                    $(addressChioce).on('webkitAnimationEnd', function (){
+                        addressChioce.removeClass("slideOutRight");
+                        addressChioce.addClass("hide");
+                    }).on('animationend', function (){
+                        addressChioce.removeClass("slideOutRight");
+                        addressChioce.addClass("hide");
+                    });
+                }else if($(this).closest(".hospitalChioce").get(0)){
+                    var hospitalChioce = $(".hospitalChioce");
+                    hospitalChioce.removeClass("hide");
+                    hospitalChioce.addClass('slideOutRight');
+                    $(hospitalChioce).on('webkitAnimationEnd', function (){
+                        hospitalChioce.removeClass("slideOutRight");
+                        hospitalChioce.addClass("hide");
+                    }).on('animationend', function (){
+                        hospitalChioce.removeClass("slideOutRight");
+                        hospitalChioce.addClass("hide");
+                    });
+
+                }else if($(this).closest(".departmentChioce").get(0)){
+                    var departmentChioce = $(".departmentChioce");
+                    departmentChioce.removeClass("hide");
+                    departmentChioce.addClass('slideOutRight');
+                    $(departmentChioce).on('webkitAnimationEnd', function (){
+                        departmentChioce.removeClass("slideOutRight");
+                        departmentChioce.addClass("hide");
+                    }).on('animationend', function (){
+                        departmentChioce.removeClass("slideOutRight");
+                        departmentChioce.addClass("hide");
+                    });
+                }
+            });
+
+
+
+            /*搜索条*/
+            $('.container').on('focus', '#search_input', function () {
+                var $weuiSearchBar = $('#search_bar');
+                $weuiSearchBar.addClass('weui_search_focusing');
+            }).on('blur', '#search_input', function () {
+                var $weuiSearchBar = $('#search_bar');
+                $weuiSearchBar.removeClass('weui_search_focusing');
+                if ($(this).val()) {
+                    $('#search_text').hide();
+                } else {
+                    $('#search_text').show();
                 }
             })
-
+//          .on('input', '#search_input', function () {
+//                var $searchShow = $("#search_show");
+//                if ($(this).val()) {
+//                    $searchShow.show();
+//                } else {
+//                    $searchShow.hide();
+//                }
+//            })
+                    .on('touchend', '#search_cancel', function () {
+                        $("#search_show").hide();
+                        $('#search_input').val('');
+                    })
+                    .on('touchend', '#search_clear', function () {
+                        $("#search_show").hide();
+                        $('#search_input').val('');
+                    });
         });
     </script>
-
 </body>
 </html>
