@@ -70,9 +70,23 @@
                             <span class="title">检查资料 : </span>
                         </div>
                         <div class="dataCon">
-                            <img src="../../assets/mobile/images/data1.jpg" alt=""/>
-                            <img src="../../assets/mobile/images/data2.jpg" alt=""/>
-                            <img src="../../assets/mobile/images/data3.jpg" alt=""/>
+                            <ul class="clearfix dataMenu">
+                                <li>
+                                    <img src="../../assets/mobile/images/medicalRecord1.jpg" alt=""/>
+                                    <button class="btnLarge"></button>
+                                </li>
+                                <li>
+                                    <img src="../../assets/mobile/images/medicalRecord2.jpg" alt=""/>
+                                    <button class="btnLarge"></button>
+                                </li>
+                                <li>
+                                    <img src="../../assets/mobile/images/medicalRecord3.jpg" alt=""/>
+                                    <button class="btnLarge"></button>
+                                </li>
+                            </ul>
+                            <div class="largeImg hide">
+                                <img src="" alt=""/>
+                            </div>
                         </div>
                     </div>
                     <div class="bg">
@@ -150,6 +164,18 @@
                     $('#toast').hide();
                 }, 3000);
             });
+
+            $(".dataMenu .btnLarge").on("touchend",function(){
+                var src = $(this).parent().find("img").attr("src");
+                $(".largeImg").removeClass("hide");
+                $(".largeImg").find("img").attr({src:src})
+            });
+            $(".largeImg").on("touchend",function(){
+                $(this).addClass("hide");
+            });
+            $(".largeImg img").on("touchend",function(e){
+                e.stopPropagation();
+            })
         })
     </script>
 </body>
