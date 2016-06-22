@@ -14,7 +14,7 @@
     <div class="container errDailog absolute">
         <div class="page ">
             <div class="bd absolute pd40">
-                <form action="#">
+                <form action="#" onsubmit="return false">
                     <div class="perfectInformation">
                         <img src="../../assets/mobile/images/mark.png" alt="" class="tipImg"/>
                         <span class="title">完善个人资料让医生更全面的了解病情</span>
@@ -73,7 +73,7 @@
                         </div>
                     </div>
                     <div class="foot">
-                        <button type="submit" class="bg3">提交</button>
+                        <button type="submit" disabled="disabled" class="bg3 disabled">提交</button>
                     </div>
                 </form>
             </div>
@@ -85,23 +85,25 @@
     <script src="../../assets/global/plugins/webuploader/js/upLoadfk.js"></script>
     <script src="../../assets/mobile/js/messageTip.js"></script>
     <script>
-        $("#btnSave").click(function(){
-            var reg = /^0?(13[0-9]|15[012356789]|18[0236789]|14[57])[0-9]{8}$/;
-            if($.trim($("#personName").val()) == '') {
-                showErrMsg('姓名不能为空');
-                return false;
-            }
-            else if($.trim($("#mobile").val()) == ''){
-                showErrMsg('手机号不能为空');
-            }
-            else if($("#mobile").get(0)&&!reg.test($("#mobile").val())){
-                showErrMsg('手机号格式不正确');
-            }
-            else{
-                showLoading("数据提交中","提交成功");
-            }
-            return true;
-        });
+        $(function(){
+            $("#btnSave").on("click",function(){
+                var reg = /^0?(13[0-9]|15[012356789]|18[0236789]|14[57])[0-9]{8}$/;
+                if($.trim($("#personName").val()) == '') {
+                    showErrMsg('姓名不能为空');
+                    return false;
+                }
+                else if($.trim($("#mobile").val()) == ''){
+                    showErrMsg('手机号不能为空');
+                }
+                else if($("#mobile").get(0)&&!reg.test($("#mobile").val())){
+                    showErrMsg('手机号格式不正确');
+                }
+                else{
+                    showLoading("数据提交中","提交成功");
+                }
+                return true;
+            });
+        })
     </script>
 </body>
 </html>

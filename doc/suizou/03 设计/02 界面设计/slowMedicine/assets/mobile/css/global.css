@@ -101,7 +101,7 @@ a.weui_media_box:active {
 
 
 /*patientList*/
-.weui_cell .weui_label img{width:25%;margin-right:8%}
+.weui_cell .weui_label img{width:22%;margin-right:8%}
 .weui_cell .weui_label,.weui_cells .weui_cell{font-size:14px}
 .person-head{padding:4% 15px;position:relative;display:table;font-size:14px;color:#333}
 .person-head .tableCell{display:table-cell;vertical-align:middle}
@@ -128,7 +128,7 @@ a.weui_media_box:active {
 .btnResolvedDisabled{background: #dbdbdb;}
 
 
-.advancedSearch,.addressChioce{position: fixed;z-index: 10;left: 0;top: 0;right: 0;bottom: 0;background: #fff;}
+.advancedSearch,.addressChioce,.hospitalChioce,.departmentChioce{position: fixed;z-index: 10;left: 0;top: 0;right: 0;bottom: 0;background: #fff;}
 .advancedSearchCon{}
 .goPrev {
     width: 100%;
@@ -160,6 +160,8 @@ a.weui_media_box:active {
 .weui_cell.weui_cell_select{padding: 0 15px;}
 .weui_select{font-family: "微软雅黑";padding: 0;color: #333;}
 .weui_cells.fbf{background: #fbf9fe;}
+
+
 
 /*mydoctor*/
 .weui_media_box .weui_media_title{font-size:16px}
@@ -212,6 +214,7 @@ a.weui_media_box:active {
 .footBg .btnTj{height: 32px;line-height: 32px;width: 30%;background: #f8c929;border-radius: 10px;position: relative;top: 2px;}
 .foot a,.foot button,.foot input{display: inline-block;width: 100%;height: 100%;color: #fff;font-size: 16px;font-family: "微软雅黑";background: #50b1ed;}
 .foot a.bg3,.foot input.bg3,.foot button{background: #f8c929;}
+.foot button.disabled{background: #aaa;}
 .foot a img{width: 30px;}
 .bd.pd40{padding-bottom: 40px;}
 .bd.absolute{position: absolute;top: 0;bottom: 0;overflow-y: scroll;-webkit-overflow-scrolling: touch;width: 100%;}
@@ -317,14 +320,21 @@ a.weui_media_box:active {
 .screenDoctor li.last{width:10%}
 .screenDoctor li.last .fa-bars{font-size:14px;color:#5ab1e7}
 .screenDoctor li.select .caret {height: 0;width: 0;border-left: 4px solid transparent;border-right: 4px solid transparent;border-top: 4px solid #333;position: absolute;top: 50%;right: 5px;margin-top: -3px;}
-
+.weui_search_inner .weui_search_input {
+    font-size: 12px;
+    font-family: "微软雅黑";
+}
+.weui_search_cancel {
+    font-size: 12px;
+    font-family: "微软雅黑";
+}
 
 /*consultingInfor*/
 
 .weui_media_desc.middle{display:table;position:relative;z-index:100}
 .weui_media_desc.middle .spanImg,.weui_media_desc.middle .spanInfor{display:table-cell;vertical-align:middle}
 .weui_media_desc.middle .spanImg{width:15%}
-.weui_media_desc.middle .spanImg img{width:80%}
+.weui_media_desc.middle .spanImg img{width:80%;border-radius: 100%;}
 .describe{display:table;padding:15px;position:relative}
 .describe:after{content:"";position:absolute;bottom:0;border-bottom:1px dashed #e5e5e5;height:1px;left:15px;right:15px}
 .describe .caretUpDiv{position:absolute;top:-21px;left:20px;background:#fff;display:inline-block}
@@ -343,7 +353,9 @@ a.weui_media_box:active {
 .perfectInformation .btnPerfect{font-family:"微软雅黑";position:absolute;top:15px;right:10px;display:inline-block;padding:3px 5px;background:0 0;font-size:12px;color:#ffad12;border:1px solid #ffad12;border-radius:4px}
 .inputInfor{width:100%;margin:10px auto}
 .inputInfor p{width:100%;margin-bottom:10px}
+.weui_media_box.weui_media_appmsg .weui_media_hd.mr0 .weui_media_appmsg_thumb{border-radius: 0%;}
 .weui_media_box.weui_media_appmsg .weui_media_appmsg_thumb{border-radius: 100%;}
+.weui_panel_bd.l15.r15.relative .weui_media_box.weui_media_appmsg .weui_media_appmsg_thumb.portrait{border-radius: 0;}
 .inputInfor p .type{font-size:14px;display:inline-block;width:58px}
 .inputInfor p input{padding:8px 30px 8px 5px;border:1px solid #efefef;width: 60%;}
 .inputInfor .btnSave{font-size: 14px;width: 60px;height: 32px;background: #f8c92b;color: #fff;border-radius: 2px;text-align: center;line-height: 32px;font-family: "微软雅黑";margin: 0 auto;display: block;}
@@ -358,6 +370,13 @@ a.weui_media_box:active {
 .weui_cell.l0.bb1,.upload.bt1{position: relative;}
 .weui_cell.l0.bb1:after{position: absolute;width: 100%;height: 1px;border-bottom: 1px solid #efefef;left: 0;bottom: 0;content: "";}
 .upload.bt1:after{position: absolute;width: 100%;height: 1px;border-bottom: 1px solid #efefef;left: 0;top: 0;content: "";}
+.addressChioce .menu-list li,.hospitalChioce .menu-list li,.departmentChioce .menu-list li{padding: 5px 0 5px 5%;}
+.notConTip{text-align: center;color: #999;margin-top: 150px;}
+.notConTip.mt15{margin: 15px 0;font-size: 12px;}
+.notConTip img{width: 20%;margin-bottom: 5px;}
+.notConTip img.w10{width: 10%;}
+.notConTip .notInfor a{color: #5abbf8;font-weight: bold;}
+.highSerch{display: inline-block;}
 
 
 /*doctorLogin*/
@@ -386,6 +405,9 @@ a.weui_media_box:active {
     position: relative;
     left: 65px;}
 .doctorForm .btnSumbit.disabled{background: #ccc;}
+
+
+
 /*滑动侧边导航*/
 .personImg{width:92%;padding:4%;text-align:center;font-size:18px}
 .personImg img{width:25%}
@@ -396,7 +418,10 @@ a.weui_media_box:active {
 .menu-list li{border-bottom:1px solid #efefef;text-align:left;padding:10px 0 10px 5%}
 .menu-list li a{color:#666;font-size:14px;display:inline-block;width:100%;height:100%;position:relative}
 .menu-list li a .fa-angle-right{position:absolute;right:5%;top:3px}
-@-webkit-keyframes slideIn{from{-webkit-transform:translate3d(-100%,0,0);transform:translate3d(-100%,0,0)}
+.menu-list li a img.checked{width: 20px;float: right;position: relative;right: 15px;display: none;}
+.menu-list li a.check img.checked{display: inline-block;}
+@-webkit-keyframes slideIn{from{
+    -webkit-transform:translate3d(-100%,0,0);transform:translate3d(-100%,0,0)}
     to{-webkit-transform:translate3d(0,0,0);transform:translate3d(0,0,0)}
 }
 @keyframes slideIn{from{-webkit-transform:translate3d(-100%,0,0);transform:translate3d(-100%,0,0)}

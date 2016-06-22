@@ -7,7 +7,6 @@
     <link rel="stylesheet" href="../../assets/global/plugins/font/css/font-awesome.min.css"/>
     <link rel="stylesheet" href="../../assets/global/plugins/weUi/css/weui.css"/>
     <link rel="stylesheet" href="../../assets/global/plugins/weUi/css/example.css"/>
-    <link rel="stylesheet" href="../../assets/global/plugins/webuploader/css/webuploader.css"/>
     <link rel="stylesheet" href="../../assets/mobile/css/global.css"/>
 </head>
 <body>
@@ -17,12 +16,31 @@
                 <form action="#">
                     <div class="weui_cells bb0 mt0 weui_cells_form">
                         <div class="upload">
-                            <div class="uploader-demo">
-                                <!--用来存放item-->
-                                <div id="fileList" class="uploader-list "></div>
-                                <div id="filePicker">
-                                    <div class="uploadDiv">
-                                        <img src="../../assets/mobile/images/uploadImg.png" alt=""/>
+                            <div class="weui_cells weui_cells_form">
+                                <div class="weui_cell">
+                                    <div class="weui_cell_bd weui_cell_primary">
+                                        <div class="weui_uploader">
+                                            <div class="weui_uploader_hd weui_cell">
+                                                <div class="weui_cell_bd weui_cell_primary">图片上传</div>
+                                                <div class="weui_cell_ft">0/2</div>
+                                            </div>
+                                            <div class="weui_uploader_bd">
+                                                <ul class="weui_uploader_files">
+                                                    <li class="weui_uploader_file" style="background-image:url(http://shp.qpic.cn/weixinsrc_pic/pScBR7sbqjOBJomcuvVJ6iacVrbMJaoJZkFUIq4nzQZUIqzTKziam7ibg/)"></li>
+                                                    <li class="weui_uploader_file weui_uploader_status" style="background-image:url(http://shp.qpic.cn/weixinsrc_pic/pScBR7sbqjOBJomcuvVJ6iacVrbMJaoJZkFUIq4nzQZUIqzTKziam7ibg/)">
+                                                        <div class="weui_uploader_status_content">
+                                                            <i class="weui_icon_warn"></i>
+                                                        </div>
+                                                    </li>
+                                                    <li class="weui_uploader_file weui_uploader_status" style="background-image:url(http://shp.qpic.cn/weixinsrc_pic/pScBR7sbqjOBJomcuvVJ6iacVrbMJaoJZkFUIq4nzQZUIqzTKziam7ibg/)">
+                                                        <div class="weui_uploader_status_content">50%</div>
+                                                    </li>
+                                                </ul>
+                                                <div class="weui_uploader_input_wrp">
+                                                    <input class="weui_uploader_input" type="file" accept="image/jpg,image/jpeg,image/png,image/gif" multiple="">
+                                                </div>
+                                            </div>
+                                        </div>
                                     </div>
                                 </div>
                             </div>
@@ -46,8 +64,6 @@
         </div>
     </div>
     <script src="../../assets/global/plugins/jquery/jquery-1.11.3.min.js"></script>
-    <script src="../../assets/global/plugins/webuploader/js/webuploader.js"></script>
-    <script src="../../assets/global/plugins/webuploader/js/upLoadfk.js"></script>
     <script src="../../assets/mobile/js/global.js"></script>
 </body>
 </html>
