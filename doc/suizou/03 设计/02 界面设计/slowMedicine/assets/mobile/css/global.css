@@ -350,8 +350,15 @@ a.weui_media_box:active {
 .describe .describeTitle span.title{color:#5abbf8;font-size: 14px;}
 .describe .describeCon p{font-size:14px;color:#333;}
 .data{padding:15px}
-.data .dataTitle{color:#5abbf8;font-size: 14px;}
-.data .dataCon img{width:90px;height:90px;margin:15px 1px}
+.data .dataCon img{}
+.dataMenu{width: 100%;}
+.dataMenu li{width:90px;height:90px;margin:10px 3px ;position: relative;float: left;}
+.dataMenu li img{width: 100%;height: 100%;}
+.dataMenu li .btnLarge{position: absolute;left: 50%;top: 50%;margin-left: -12px;margin-top: -11px;width: 24px;}
+.largeImg{position: fixed;top: 0;right: 0;bottom: 0;left: 0;background: rgba(0,0,0,0.5);z-index: 1000;}
+.largeImg .close{width:30px;height:30px;border-radius: 100%;font-size: 14px;color: #fff;background: red;
+    position: absolute;right: 10px;top: 10px;text-align: center;line-height: 30px;}
+.largeImg img{width: 80%;left: 50%;margin-left: -40%;position: absolute;top: 50%;margin-top: -60%;}
 .weui_media_bd .inforB{font-size:14px;margin:5px 0}
 .perfectInformation{background:#fff8e7;padding:10px 15px;color:#666;position:relative}
 .perfectInformation .title{font-size:12px}
