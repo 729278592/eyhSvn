@@ -4,158 +4,472 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width; initial-scale=1.0; user-scalable=no;">
     <link rel="stylesheet" href="../../assets/global/plugins/font/css/font-awesome.min.css"/>
-    <link rel="stylesheet" href="../../assets/mobile/css/global.css"/>
     <link rel="stylesheet" href="../../assets/mobile/css/weui.css"/>
     <link rel="stylesheet" href="../../assets/mobile/css/example.css"/>
+    <link rel="stylesheet" href="../../assets/mobile/css/global.css"/>
+
 </head>
 <body>
     <div class="container js_container absolute errDailog">
-        <div class="page">
+        <div class="page resumeBasic">
+            <div class="head">
+                <i class="fa fa-angle-left"></i>
+                基本信息
+            </div>
             <div class="bd">
-                <img src="../../assets/mobile/images/resume2.jpg" alt="" class="resume"/>
-                <form action="#" id="form" onsubmit="return false">
+                <img src="../../assets/mobile/images/resume7.jpg" alt="" class="resume"/>
+                <form action="#" onsubmit="return false">
                     <div class="weui_cells weui_cells_form mt0">
                         <div class="weui_cell">
                             <div class="weui_cell_hd"><label class="weui_label">姓名</label></div>
                             <div class="weui_cell_bd weui_cell_primary">
-                                <input class="weui_input" type="text" placeholder="张三" id="personName"/>
+                                <input class="weui_input personName" type="text" placeholder="张三"/>
                             </div>
                         </div>
                         <div class="weui_cell">
-                            <div class="weui_cell_hd"><label for="" class="weui_label">生日</label></div>
+                            <div class="weui_cell_hd"><label class="weui_label">生日</label></div>
                             <div class="weui_cell_bd weui_cell_primary">
-                                <input id="start" class="Wdate" type="text" style="border: none;height: 18px;" placeholder="2015-02-05" onfocus="WdatePicker({})" readonly="">
-                                <i class="fa fa-calendar"></i>
+                                <input type="date" class="date weui_input">
+
                             </div>
                         </div>
                     </div>
                     <div class="weui_btn_area">
-                        <input type="submit" class="weui_btn weui_btn_primary js_cell" data-id="fillResumeWorkExperience" id="saveBtn" value="下一步">
+                        <input type="submit" class="weui_btn weui_btn_primary js_cell nextBtn" data-id="fillResumeWorkExperience" value="下一步">
                     </div>
                 </form>
             </div>
         </div>
-    </div>
-    <script type="text/html" id="tpl_fillResumeWorkExperience">
-        <div class="page">
+        <div class="page hide resumeSex">
             <div class="head">
                 <i class="fa fa-angle-left"></i>
-                新建简历
+                性别选择
             </div>
             <div class="bd">
-                <img src="../../assets/mobile/images/resume3.jpg" alt="" class="resume"/>
+                <img src="../../assets/mobile/images/resume8.jpg" alt="" class="resume"/>
+                <form action="#" onsubmit="return false">
+                    <div class="weui_cells weui_cells_checkbox mt0 bt0 h153">
+                        <label class="weui_cell weui_check_label w50" for="s11">
+                            <img src="../../assets/mobile/images/woman.png" alt="" class="sexImg"/>
+                            <div class="weui_cell_hd">
+                                <input type="radio" class="weui_check" name="sex" id="s11" checked="checked">
+                                <i class="weui_icon_checked"></i>
+                            </div>
+                        </label>
+                        <label class="weui_cell weui_check_label bt0 w50" for="s12">
+                            <img src="../../assets/mobile/images/man.png" alt="" class="sexImg"/>
+                            <div class="weui_cell_hd">
+                                <input type="radio" name="sex" class="weui_check" id="s12">
+                                <i class="weui_icon_checked"></i>
+                            </div>
+
+                        </label>
+                    </div>
+                    <div class="weui_btn_area w100 clearfix">
+                        <button type="button" class="weui_btn weui_btn_mini weui_btn_default prevBtn">上一步</button>
+                        <input type="submit" class="weui_btn weui_btn_mini weui_btn_primary nextBtn" value="下一步">
+                    </div>
+                </form>
+            </div>
+        </div>
+        <div class="page hide resumeEducation">
+            <div class="head">
+                <i class="fa fa-angle-left"></i>
+                教育经历
+            </div>
+            <div class="bd">
+                <img src="../../assets/mobile/images/resume9.jpg" alt="" class="resume"/>
+                <form action="#" onsubmit="return false">
+                    <div class="weui_cells weui_cells_form mt0">
+                        <div class="weui_cell">
+                            <div class="weui_cell_hd"><label class="weui_label"><img src="../../assets/mobile/images/startTimeIcon.png" alt=""/>开始日期</label></div>
+                            <div class="weui_cell_bd weui_cell_primary">
+                                <input class="stareDate" type="date weui_input">　
+                                
+                            </div>
+                        </div>
+                        <div class="weui_cell">
+                            <div class="weui_cell_hd"><label class="weui_label"><img src="../../assets/mobile/images/endTimeIcon.png" alt=""/>结束日期</label></div>
+                            <div class="weui_cell_bd weui_cell_primary">
+                                <input class="endDate" type="date weui_input">　
+                                <!---->
+                            </div>
+                        </div>
+                        <div class="weui_cell">
+                            <div class="weui_cell_hd"><label class="weui_label"><img src="../../assets/mobile/images/schoolIcon.png" alt=""/>学校名称</label></div>
+                            <div class="weui_cell_bd weui_cell_primary">
+                                <input class="weui_input schoolName" type="text" placeholder="成都理工大学"/>
+                            </div>
+                        </div>
+                        <div class="weui_cell weui_cell_select">
+                            <div class="weui_cell_hd"><label class="weui_label"><img src="../../assets/mobile/images/xlIcon.jpg" alt=""/>学历</label></div>
+                            <div class="weui_cell_bd weui_cell_primary">
+                                <select class="weui_select" name="select1">
+                                    <option selected="" value="高中">高中</option>
+                                    <option value="大专">大专</option>
+                                    <option value="本科">本科</option>
+                                    <option value="研究生">研究生</option>
+                                </select>
+                            </div>
+                        </div>
+                        <div class="weui_cell">
+                            <div class="weui_cell_hd"><label class="weui_label"><img src="../../assets/mobile/images/zyIcon.jpg" alt=""/>专业</label></div>
+                            <div class="weui_cell_bd weui_cell_primary">
+                                <input class="weui_input zy" type="text" placeholder="专业"/>
+                            </div>
+                        </div>
+
+                    </div>
+                    <div class="weui_btn_area w100 clearfix">
+                        <button type="button" class="weui_btn weui_btn_mini weui_btn_default prevBtn">上一步</button>
+                        <input type="submit" class="weui_btn weui_btn_mini weui_btn_primary nextBtn" value="下一步">
+                    </div>
+                </form>
+            </div>
+        </div>
+        <div class="page hide resumeJob">
+            <div class="head">
+                <i class="fa fa-angle-left"></i>
+                工作经历
+            </div>
+            <div class="bd">
+                <img src="../../assets/mobile/images/resume10.jpg" alt="" class="resume"/>
                 <form action="#" id="form" onsubmit="return false">
                     <div class="weui_cells weui_cells_form mt0">
                         <div class="weui_cell">
-                            <div class="weui_cell_hd"><label for="" class="weui_label"><img src="../../assets/mobile/images/startTimeIcon.png" alt=""/>开始日期</label></div>
+                            <div class="weui_cell_hd"><label class="weui_label"><img src="../../assets/mobile/images/startTimeIcon.png" alt=""/>开始日期</label></div>
                             <div class="weui_cell_bd weui_cell_primary">
-                                <input id="start" class="Wdate" type="text" style="border: none;height: 18px;" placeholder="2015-02-05" onfocus="WdatePicker({minDate:'%y-%M-{%d}',maxDate:'#F{$dp.$D(\'end\')}',readOnly:true})" readonly="">
-                                <i class="fa fa-calendar"></i>
+                                <input class="stareDate" type="date weui_input">　
+                                
                             </div>
                         </div>
                         <div class="weui_cell">
-                            <div class="weui_cell_hd"><label for="" class="weui_label"><img src="../../assets/mobile/images/endTimeIcon.png" alt=""/>结束日期</label></div>
+                            <div class="weui_cell_hd"><label class="weui_label"><img src="../../assets/mobile/images/endTimeIcon.png" alt=""/>结束日期</label></div>
                             <div class="weui_cell_bd weui_cell_primary">
-                                <input id="end" class="Wdate" type="text" style="border: none;height: 18px;"placeholder="2015-02-06" onfocus="WdatePicker({minDate:'#F{$dp.$D(\'start\')||\'%y-%M-{%d+1}\'}',readOnly:true})" readonly="">　
-                                <i class="fa fa-calendar"></i>
+                                <input class="endDate" type="date weui_input">　
+                                
                             </div>
                         </div>
-                        <!--<div class="weui_cell">-->
-                        <!--<div class="weui_cell_hd"><label for="" class="weui_label">时间</label></div>-->
-                        <!--<div class="weui_cell_bd weui_cell_primary">-->
-                        <!--<input class="weui_input" type="datetime-local" value="" placeholder=""/>-->
-                        <!--</div>-->
-                        <!--</div>-->
                         <div class="weui_cell">
                             <div class="weui_cell_hd"><label class="weui_label"><img src="../../assets/mobile/images/companyIcon.png" alt=""/>公司</label></div>
                             <div class="weui_cell_bd weui_cell_primary">
-                                <input class="weui_input" type="text" placeholder="重庆易优弧有限公司"/>
+                                <input class="weui_input companyName" type="text" placeholder="重庆易优弧有限公司"/>
                             </div>
                         </div>
                         <div class="weui_cell">
                             <div class="weui_cell_hd"><label class="weui_label"><img src="../../assets/mobile/images/jobIcon.png" alt=""/>行业</label></div>
                             <div class="weui_cell_bd weui_cell_primary">
-                                <input class="weui_input" type="text" placeholder="科技公司"/>
+                                <input class="weui_input hy" type="text" placeholder="科技公司"/>
                             </div>
                         </div>
                         <div class="weui_cell">
                             <div class="weui_cell_hd"><label class="weui_label"><img src="../../assets/mobile/images/positionIcon.png" alt=""/>职位</label></div>
                             <div class="weui_cell_bd weui_cell_primary">
-                                <input class="weui_input" type="text" placeholder="设计"/>
+                                <input class="weui_input sj" type="text" placeholder="设计"/>
                             </div>
                         </div>
                     </div>
-                    <div class="weui_btn_area">
-                        <input type="submit" class="weui_btn weui_btn_primary" id="saveBtn" data-id="" value="下一步">
+                    <div class="weui_btn_area w100 clearfix">
+                        <button type="button" class="weui_btn weui_btn_mini weui_btn_default prevBtn">上一步</button>
+                        <input type="submit" class="weui_btn weui_btn_mini weui_btn_primary nextBtn" value="下一步">
                     </div>
                 </form>
             </div>
         </div>
-    </script>
-    <script></script>
-    <script></script>
-    <script></script>
-    <script></script>
+        <div class="page hide resumeTag">
+            <div class="head">
+                <i class="fa fa-angle-left"></i>
+                简历标签
+            </div>
+            <div class="bd">
+                <img src="../../assets/mobile/images/resume11.jpg" alt="" class="resume"/>
+                <form action="#" onsubmit="return false">
+                    <div class="button-label">
+                        <p class="moreTag"><span class="required">*</span>最多只能添加5个标签</p>
+                        <a href="#" class="keyword-dashed-button">
+                            <span class="add-span">+</span>
+                            添加
+                        </a>
+                        <div class="keyword-div hide">
+                            <input type="text" class="keyword-input" placeholder="请输入标签名"/>
+                            <i class="fa fa-check-circle"></i>
+                            <i class="weui_icon_clear"></i>
+                        </div>
+                    </div>
+                    <div class="weui_btn_area w100 clearfix">
+                        <button type="button" class="weui_btn weui_btn_mini weui_btn_default prevBtn">上一步</button>
+                        <a href="fiilResumeSuccess.html" class="weui_btn weui_btn_mini weui_btn_primary nextBtn">完成</a>
+                    </div>
+                </form>
+            </div>
+        </div>
+    </div>
     <script src="../../assets/global/plugins/jquery/jquery-1.11.3.min.js"></script>
     <!--<script src="../../assets/mobile/js/example.js"></script>-->
-    <script src="../../assets/mobile/js/global.js"></script>
+    <!--<script src="../../assets/mobile/js/global.js"></script>-->
     <script src="../../assets/mobile/js/errMsg.js"></script>
     <script src="../../assets/global/plugins/My97DatePicker/WdatePicker.js"></script>
     <script>
-        var stack = [];
-        var $container = $('.js_container');
-        function getData(obj){
-            var id = obj.data('id');
-            go(id);
-        }
+        $(function(){
+            /*下一步*/
+            $(".nextBtn").click(function(){
+                var resumeBasic = $(".page.resumeBasic");
+                var resumeSex = $(".page.resumeSex");
+                var resumeEducation = $(".page.resumeEducation");
+                var resumeJob = $(".page.resumeJob");
+                var resumeTag = $(".page.resumeTag");
 
-        // location.hash = '#hash1' 和点击后退都会触发`hashchange`，这个demo页面只关心后退
-        $(window).on('hashchange', function (e) {
-            if (/#.+/gi.test(e.newURL)) {
-                return;
-            }
-            var $top = stack.pop();
-            if (!$top) {
-                return;
-            }
-            $top.addClass('slideOut').on('animationend', function () {
-                $top.remove();
-            }).on('webkitAnimationEnd', function () {
-                $top.remove();
+                if($(this).closest(".page").is(".resumeBasic")){
+                    if($(this).closest(".page").find(".personName").val() == '') {
+                        showMsg('姓名不能为空');
+                        return false;
+                    }
+                    else if($(this).closest(".page").find(".date").val() == '') {
+                        showMsg('时间不能为空');
+                        return false;
+                    }else{
+                        resumeSex.removeClass("hide").addClass("slideInRight");
+                        $(resumeSex).on('webkitAnimationEnd', function (){
+                            resumeSex.removeClass('slideInRight');
+                            resumeBasic.addClass("hide");
+                            resumeSex.removeClass("hide")
+                        }).on('animationend', function (){
+                            resumeSex.removeClass('slideInRight');
+                            resumeBasic.addClass("hide");
+                            resumeSex.removeClass("hide")
+                        });
+                    }
+                    return true;
+                }
+                else if($(this).closest(".page").is(".resumeSex")) {
+                    resumeEducation.removeClass("hide").addClass("slideInRight");
+                    $(resumeEducation).on('webkitAnimationEnd', function (){
+                        resumeEducation.removeClass('slideInRight');
+                        resumeSex.addClass("hide");
+                        resumeEducation.removeClass("hide")
+                    }).on('animationend', function (){
+                        resumeEducation.removeClass('slideInRight');
+                        resumeSex.addClass("hide");
+                        resumeEducation.removeClass("hide")
+                    });
+                }
+                else if($(this).closest(".page").is(".resumeEducation")){
+                    if($(this).closest(".page").find(".startDate").val() == '') {
+                        showMsg('开始时间不能为空');
+                        return false;
+                    }
+                    else if($(this).closest(".page").find(".endDate").val() == '') {
+                        showMsg('结束时间不能为空');
+                        return false;
+                    }
+                    else if($(this).closest(".page").find(".schoolName").val() == '') {
+                        showMsg('学校名称不能为空');
+                        return false;
+                    }
+                    else if($(this).closest(".page").find(".zy").val() == '') {
+                        showMsg('专业不能为空');
+                        return false;
+                    }
+                    else{
+                        resumeJob.removeClass("hide").addClass("slideInRight");
+                        $(resumeJob).on('webkitAnimationEnd', function (){
+                            resumeJob.removeClass('slideInRight');
+                            resumeEducation.addClass("hide");
+                            resumeJob.removeClass("hide")
+                        }).on('animationend', function (){
+                            resumeJob.removeClass('slideInRight');
+                            resumeEducation.addClass("hide");
+                            resumeJob.removeClass("hide")
+                        });
+                    }
+                    return true;
+                }
+                else if($(this).closest(".page").is(".resumeJob")){
+                    if($(this).closest(".page").find(".startDate").val() == '') {
+                        showMsg('开始时间不能为空');
+                        return false;
+                    }
+                    else if($(this).closest(".page").find(".endDate").val() == '') {
+                        showMsg('结束时间不能为空');
+                        return false;
+                    }
+                    else if($(this).closest(".page").find(".companyName").val() == '') {
+                        showMsg('公司名称不能为空');
+                        return false;
+                    }
+                    else if($(this).closest(".page").find(".hy").val() == '') {
+                        showMsg('所属行业不能为空');
+                        return false;
+                    }
+                    else if($(this).closest(".page").find(".sj").val() == '') {
+                        showMsg('职业不能为空');
+                        return false;
+                    }else{
+                        resumeTag.removeClass("hide").addClass("slideInRight");
+                        $(resumeTag).on('webkitAnimationEnd', function (){
+                            resumeTag.removeClass('slideInRight');
+                            resumeJob.addClass("hide");
+                            resumeTag.removeClass("hide")
+                        }).on('animationend', function (){
+                            resumeTag.removeClass('slideInRight');
+                            resumeJob.addClass("hide");
+                            resumeTag.removeClass("hide")
+                        });
+                    }
+                    return true;
+                }
             });
-        });
-        function go(id){
-            var $tpl = $($('#tpl_' + id).html()).addClass('slideIn').addClass(id);
-            $container.append($tpl);
-            stack.push($tpl);
-            // why not use `history.pushState`, https://github.com/weui/weui/issues/26
-            //history.pushState({id: id}, '', '#' + id);
-            location.hash = '#' + id;
-            $($tpl).on('webkitAnimationEnd', function (){
-                $(this).removeClass('slideIn');
-            }).on('animationend', function (){
-                $(this).removeClass('slideIn');
-            });
-        }
-
-//        if (/#.*/gi.test(location.href)) {
-//            go(location.hash.slice(1));
-//        }
 
 
-        $("#saveBtn").click(function(){
-            if($(this).closest(".js_container").find("#personName").val() == '') {
-                showMsg('姓名不能为空');
-                return false;
-            }
-            else  if($(this).closest(".js_container").find("#start").val() == '') {
-                showMsg('时间不能为空');
-                return false;
-            }else{
-                getData($(this))
-            }
-            return true;
+            /*上一步*/
+            $(".prevBtn").click(function(){
+                var resumeBasic = $(".page.resumeBasic");
+                var resumeSex = $(".page.resumeSex");
+                var resumeEducation = $(".page.resumeEducation");
+                var resumeJob = $(".page.resumeJob");
+                var resumeTag = $(".page.resumeTag");
+                if($(this).closest(".page").is(".resumeSex")) {
+                    resumeSex.addClass("slideOutLeft");
+                    resumeBasic.removeClass("hide");
+                    $(resumeSex).on('webkitAnimationEnd', function (){
+                        resumeSex.removeClass('slideOutLeft');
+                        resumeSex.addClass("hide");
+                        resumeBasic.removeClass("hide");
+                    }).on('animationend', function (){
+                        resumeSex.removeClass('slideOutLeft');
+                        resumeSex.addClass("hide");
+                        resumeBasic.removeClass("hide");
+                    });
+                }
+                else if($(this).closest(".page").is(".resumeEducation")){
+                    resumeEducation.addClass("slideOutLeft");
+                    resumeSex.removeClass("hide");
+                    $(resumeEducation).on('webkitAnimationEnd', function (){
+                        resumeEducation.removeClass('slideOutLeft');
+                        resumeEducation.addClass("hide");
+                        resumeSex.removeClass("hide");
+                    }).on('animationend', function (){
+                        resumeEducation.removeClass('slideOutLeft');
+                        resumeEducation.addClass("hide");
+                        resumeSex.removeClass("hide");
+                    });
+                }
+                else if($(this).closest(".page").is(".resumeJob")){
+                    resumeJob.addClass("slideOutLeft");
+                    resumeEducation.removeClass("hide");
+                    $(resumeJob).on('webkitAnimationEnd', function (){
+                        resumeJob.removeClass('slideOutLeft');
+                        resumeJob.addClass("hide");
+                        resumeEducation.removeClass("hide");
+                    }).on('animationend', function (){
+                        resumeJob.removeClass('slideOutLeft');
+                        resumeJob.addClass("hide");
+                        resumeEducation.removeClass("hide");
+                    });
+                }
+                else if($(this).closest(".page").is(".resumeTag")){
+                    resumeTag.addClass("slideOutLeft");
+                    resumeJob.removeClass("hide");
+                    $(resumeTag).on('webkitAnimationEnd', function (){
+                        resumeTag.removeClass('slideOutLeft');
+                        resumeTag.addClass("hide");
+                        resumeJob.removeClass("hide");
+                    }).on('animationend', function (){
+                        resumeTag.removeClass('slideOutLeft');
+                        resumeTag.addClass("hide");
+                        resumeJob.removeClass("hide");
+                    });
+                }
+            })
         })
+    </script>
+    <script>
+        $(function(){
+            function keywordButtonHide(){
+                if($(".keyword-button").get(0)){
+                    if(($(".keyword-button").size())>4){
+                        $(".keyword-dashed-button").addClass("hide");
+                        $(".keyword-div").addClass("hide");
+                    }
+                    else{
+                        $(".keyword-div").addClass("hide");
+                        $(".keyword-dashed-button").removeClass("hide");
+                    }
+                }
+                else{
+                    $(".keyword-div").addClass("hide");
+                    $(".keyword-dashed-button").removeClass("hide");
+                }
+            }
+            $(".keyword-dashed-button").on("touchend",function(){
+                $(this).addClass("hide");
+                $(".keyword-div").removeClass("hide");
+            });
+
+            var arr = [];
+            $(".keyword-div .fa-check-circle").on("touchend",function(){
+                var values = $(this).closest(".keyword-div").find(".keyword-input").val();
+                var value = $.trim(values);
+                if(value==''){
+                    showMsg('标签名不能为空');
+                }
+                else{
+                    var str = '<a href="#" class="keyword-button">'+
+                            '<span class="keyword-button-content">'+value+'</span>'+
+                            '<i class="weui_icon_clear" dataTitle="标题" dataContent="内容"></i>'+
+                            '</a>';
+                    if($(".keyword-button").get(0)){
+                        if($.inArray(value, arr) < 0){
+                            $(".keyword-dashed-button").before(str);
+                            $(this).closest(".keyword-div").find(".keyword-input").val("");
+                            arr.push(value);
+                            keywordButtonHide();
+                        }
+                        else{
+                            showMsg('标签名已经存在');
+                        }
+                    }
+                    else{
+                        arr.push(value);
+                        $(".keyword-dashed-button").before(str).removeClass("hide");
+                        $(this).closest(".keyword-div").addClass("hide");
+                        $(this).closest(".keyword-div").find(".keyword-input").val("");
+                        return false;
+                    }
+                }
+            });
+            $(".keyword-div .weui_icon_clear").on("touchend",function(){
+                $(".keyword-dashed-button").removeClass("hide");
+                $(this).closest(".keyword-div").addClass("hide");
+                $(this).closest(".keyword-div").find(".keyword-input").val("");
+            });
+
+            $(".btnSure").on("touchend",function(){
+                $(".removeObj").closest(".keyword-button").remove();
+                $(".removeObj").removeClass("removeObj");
+                keywordButtonHide();
+                $('#dialog1').hide();
+            });
+            $(".btnCancle").on("touchend",function(){
+                $('#dialog1').hide();
+                $(".removeObj").removeClass("removeObj");
+            });
+
+
+            $(".button-label").delegate(".keyword-button .weui_icon_clear",'click',function(){
+                var objTitle   = $(this).attr("dataTitle");
+                var objContent = $(this).attr("dataContent");
+                var Confirm = {
+                    title:objTitle,
+                    content:objContent
+                };
+                arr.splice($(this).parent(".keyword-button").index(),1);
+                $(this).closest(".keyword-button").remove();
+                keywordButtonHide();
+//                showConfirmDialog(Confirm);
+                $(this).closest(".keyword-button").addClass("removeObj");
+            })
+        });
     </script>
 </body>
 </html>
