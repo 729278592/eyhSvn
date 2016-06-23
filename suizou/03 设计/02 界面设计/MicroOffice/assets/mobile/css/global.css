@@ -500,3 +500,5 @@ a.weui_btn.weui_btn_primary{font-size: 16px;}
 
 .resumeBasic .weui_cell_primary,.resumeSex .weui_cell_primary,.resumeEducation .weui_cell_primary,
 .resumeJob .weui_cell_primary,.resumeTag .weui_cell_primary{height: 25px;line-height: 25px;}
+.resumeBasic .weui_cell_primary.h44,.resumeSex .weui_cell_primary.h44,.resumeEducation .weui_cell_primary.h44,
+.resumeJob .weui_cell_primary.h44,.resumeTag .weui_cell_primary.h44{height: 44px;line-height: 44px;}
