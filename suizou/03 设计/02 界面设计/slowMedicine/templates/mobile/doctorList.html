@@ -429,14 +429,11 @@
 //                    $searchShow.hide();
 //                }
 //            })
-                    .on('touchend', '#search_cancel', function () {
+                    .on('touchend', '#search_cancel,#search_clear', function () {
                         $("#search_show").hide();
                         $('#search_input').val('');
                     })
-                    .on('touchend', '#search_clear', function () {
-                        $("#search_show").hide();
-                        $('#search_input').val('');
-                    });
+
         });
     </script>
 </body>
