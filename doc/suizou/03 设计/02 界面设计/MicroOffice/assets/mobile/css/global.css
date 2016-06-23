@@ -468,3 +468,32 @@ a.weui_btn.weui_btn_primary{font-size: 16px;}
     -webkit-animation: slideOut .2s forwards;
     animation: slideOut .2s forwards
 }
+
+.page.slideInRight {
+    -webkit-animation: slideInRight .2s forwards;
+    animation: slideInRight .2s forwards
+}
+
+.page.slideOutLeft {
+    -webkit-animation: slideOutLeft .2s forwards;
+    animation: slideOutLeft .2s forwards
+}
+
+@-webkit-keyframes slideInRight{from{-webkit-transform:translate3d(100%,0,0);transform:translate3d(100%,0,0)}
+    to{-webkit-transform:translate3d(0,0,0);transform:translate3d(0,0,0)}
+}
+@keyframes slideInRight{from{-webkit-transform:translate3d(100%,0,0);transform:translate3d(100%,0,0)}
+    to{-webkit-transform:translate3d(0,0,0);transform:translate3d(0,0,0)}
+}
+@-webkit-keyframes slideOutLeft{from{-webkit-transform:translate3d(0,0,0);transform:translate3d(0,0,0)}
+    to{-webkit-transform:translate3d(100%,0,0);transform:translate3d(100%,0,0)}
+}
+@keyframes slideOutLeft{from{-webkit-transform:translate3d(0,0,0);transform:translate3d(0,0,0)}
+    to{-webkit-transform:translate3d(100%,0,0);transform:translate3d(100%,0,0)}
+}
+
+.weui_btn_mini.nextBtn,.weui_btn_mini.prevBtn{padding:6px 20px;font-family: "微软雅黑";}
+.weui_btn_mini.nextBtn{float: right;margin-top: 0;}
+.weui_btn_mini.prevBtn{float: left;background: #f7f7f7;color: #333;}
+.weui_btn_area.w100{margin: 1.17647059em 3% 0.3em;width: 94%;}
+
