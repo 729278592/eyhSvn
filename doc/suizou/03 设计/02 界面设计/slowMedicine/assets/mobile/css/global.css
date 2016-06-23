@@ -270,7 +270,7 @@ a.weui_media_box:active {
 .weui_uploader_bd{text-align: center;}
 .weui_uploader_input_wrp{display: inline-block;float: none;}
 .weui_uploader_input_wrp.block{display: block;float: none;margin: 0 auto;}
-.weui_uploader_file img{width: 100%;}
+.weui_uploader_file img{width: 100%;height: 100%;}
 
 /*doctorIndex*/
 .weui_article{border-top: 1px solid #E5E5E5;margin-top: 6px;background: #fff;}
