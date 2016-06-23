@@ -162,9 +162,11 @@ a.weui_media_box:active {
 .weui_cells.fbf{background: #fbf9fe;}
 .weui_uploader_input_wrp{border:3px solid #5bbbf8;border-radius: 100%;}
 .weui_uploader_input_wrp:before, .weui_uploader_input_wrp:after{background: #5bbbf8;}
+.weui_uploader_input_wrp.style{border: 1px solid #efefef;border-radius: 0;float: left;}
 .weui_media_box.pd20{padding: 15px 15px 25px 15px;}
-
-
+.weui_uploader_file.relative{position: relative;}
+.weui_uploader_file{margin-bottom: 30px;}
+.weui_uploader_file .btnRemove{position: absolute;bottom: -25px;left: 30px;}
 /*mydoctor*/
 .weui_media_box .weui_media_title{font-size:16px}
 .weui_media_box .weui_media_title.color{color:#5abbf8;font-weight:700}
