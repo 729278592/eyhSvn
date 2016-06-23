@@ -248,7 +248,7 @@ a.weui_media_box:active {
 .bdHead.bg1 p{background: #fff;display: inline-block;width: 100px;height: 30px;line-height: 30px;position: relative;z-index: 100;}
 .bdHead span{color: #48afef;}
 .swiper-wrapper.w70 .swiper-slide,.swiper-wrapper.w50 .swiper-slide{text-align: center;}
-.swiper-wrapper.w70 .swiper-slide img{width: 70%;}
+.swiper-wrapper.w70 .swiper-slide img{width: 70%;min-height: 340px;}
 .swiper-wrapper.w50 .swiper-slide img{width: 60%;}
 .bdFoot{padding: 15px 2% 0;width: 96%;border-top: 1px solid #efefef;font-size: 14px;display: table;position: relative;z-index: 100;}
 .bdFoot p{margin-bottom: 10px;}
@@ -376,9 +376,9 @@ a.weui_media_box:active {
 .inputInfor p .type{font-size:14px;display:inline-block;width:58px}
 .inputInfor p input{padding:8px 30px 8px 5px;border:1px solid #efefef;width: 60%;}
 .inputInfor .btnSave{font-size: 14px;width: 60px;height: 32px;background: #f8c92b;color: #fff;border-radius: 2px;text-align: center;line-height: 32px;font-family: "微软雅黑";margin: 0 auto;display: block;}
-.largeCon{width:94%;margin:0 auto;position:fixed;background:#52b8f9;padding:1px 0;border-radius:8px;top:10px;left:10px;z-index:100}
+.largeCon{position:fixed;background:#52b8f9;padding:1px 0;border-radius:8px;z-index:100;left: 3%;right: 3%;bottom: 3%;top: 3%;}
 .largeCon .fa-remove{display:inline-block;width:30px;height:30px;border-radius:30px;text-align:center;line-height:30px;color:#fff;background:#52b8f9;position:absolute;right:-8px;top:-8px}
-.largeConCon{width:94%;margin:3% auto;background:#fff}
+.largeConCon{width:94%;margin:3% auto;background:#fff;height: 97%;}
 .largeConCon img{width:100%}
 .btnLarge{position:absolute;display:inline-block;width:30px;height:28px;background:url(../images/btnLarge.png) no-repeat;background-size:100%;left:50%;top:50%;margin-left:-15px;margin-top:-15px;z-index:10}
 .btnLarge1{display:inline-block;width:30px;height:28px;background:url(../images/addZl.png) no-repeat;background-size:100%;}
@@ -493,3 +493,23 @@ a.weui_media_box:active {
 @media screen and (min-height: 660px) {
     .container>.maskHide .mainDoctorImg{margin: 7% 3% 0;}
 }
+
+@media screen and (min-width: 370px) {
+    .swiper-wrapper.w70 .swiper-slide img{min-height: 398px;}
+}
+
+
+
+@media screen and (min-width: 414px) {
+    .swiper-wrapper.w70 .swiper-slide img{min-height: 440px;}
+}
+
+
+@media screen and (min-height: 560px) {
+    .swiper-wrapper.w50 .swiper-slide img{width: 90%;}
+}
+
+@media screen and (min-height: 667px) {
+    .swiper-wrapper.w50 .swiper-slide img{width: 100%;}
+}
+

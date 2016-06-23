@@ -15,6 +15,7 @@
         <div class="page absolute bgfff">
             <div class="bd">
                 <form action="#">
+                    <input type="hidden" id="uploadfile" name="images" value="">
                     <div class="weui_cells bb0 mt0 weui_cells_form">
                         <div class="upload">
                             <div class="weui_cell">
@@ -38,8 +39,7 @@
                                                     <div class="weui_uploader_status_content">50%</div>
                                                 </li>
                                             </ul>
-                                            <div class="weui_uploader_input_wrp block">
-                                                <input class="weui_uploader_input" type="file" accept="image/jpg,image/jpeg,image/png,image/gif" multiple="">
+                                            <div class="weui_uploader_input_wrp block" id="chooseImage">
                                             </div>
                                         </div>
                                     </div>
@@ -65,6 +65,65 @@
         </div>
     </div>
     <script src="../../assets/global/plugins/jquery/jquery-1.11.3.min.js"></script>
+    <script type="text/javascript" src="http://res.wx.qq.com/open/js/jweixin-1.0.0.js"></script>
     <script src="../../assets/mobile/js/global.js"></script>
+    <script type="text/javascript">
+
+        $(function(){
+            $.getJSON("/weixin/helper/jssdk/sign.do",{wechatId:"gh_fb964f127af7", url:location.href.split("#")[0]},function(data){
+                wx.config({
+                    debug: false,
+                    appId: "wx9f05f2bbcfd90ddc",
+                    timestamp: "1466672466",
+                    nonceStr: "02e5ced1-e6ef-4dd9-b735-503178af1a63",
+                    signature: "4a5df1cd820380ee9266818a5e97d5f6a25276a7",
+                    jsApiList: [
+                        'chooseImage',
+                        'uploadImage'
+                    ]
+                });
+            })
+        });
+
+        var serverId;
+        var localIds;
+
+        var images = {
+            localId: [],
+            serverId: []
+        };
+
+        wx.ready(function () {
+            document.querySelector('#chooseImage').onclick = function () {
+                wx.chooseImage({
+                    count: 1, // 默认9
+                    sizeType: ['original', 'compressed'], // 可以指定是原图还是压缩图，默认二者都有
+                    sourceType: ['album', 'camera'], // 可以指定来源是相册还是相机，默认二者都有
+                    success: function (res) {
+                        images.localId = res.localIds; // 返回选定照片的本地ID列表，localId可以作为img标签的src属性显示图片
+                        //alert("已选择" + res.localIds.length + "张图片");
+                        try{
+                            wx.uploadImage({
+                                localId: images.localId[0], // 需要上传的图片的本地ID，由chooseImage接口获得
+                                isShowProgressTips: 1, // 默认为1，显示进度提示
+                                success: function (res) {
+                                    serverId = res.serverId; // 返回图片的服务器端ID
+                                    $("#uploadfile").val(serverId);
+                                    $(".weui_uploader_files").html('<li class="weui_uploader_file"><img src="'+images.localId[0]+'"/></li>');
+
+                                },
+                                fail: function (res) {
+                                    alert(JSON.stringify(res));
+                                }
+                            });
+                        }catch(e){
+                            alert(e);
+                        }
+                    }
+                });
+            }
+        });
+
+    </script>
 </body>
 </html>
