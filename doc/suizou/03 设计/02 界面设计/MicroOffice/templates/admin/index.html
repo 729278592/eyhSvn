@@ -308,7 +308,6 @@
                     </div>
                 </div>
             </div>
-
             <script src="../../assets/global/plugins/webuploader/js/upLoadfk.js"></script>
             <script>
                 $(function(){
@@ -331,11 +330,13 @@
                         }
                     });
 
+
+
                     $(".btnCopy").on("click",function(){
                         var t = document.getElementById("txt");
                         t.select();
                         document.execCommand("Copy"); // 执行浏览器复制命令
-                        var that = $(this)
+                        var that = $(this);
                         that.attr({disabled:"disabled"});
                         $(".copyTip").animate({
                             opacity:1,
@@ -370,7 +371,6 @@
     <script src="../../assets/global/plugins/ajaxify/jquery.history.js"></script>
     <script src="../../assets/global/plugins/ajaxify/jquery-scrollto.js"></script>
     <script src="../../assets/global/plugins/ajaxify/jquery.ajaxify.js"></script>
-
     <script>
         $(".nav a").ajaxify({
             event: "click",
