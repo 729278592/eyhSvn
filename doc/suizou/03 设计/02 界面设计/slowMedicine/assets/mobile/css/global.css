@@ -269,8 +269,8 @@ a.weui_media_box:active {
 .uploadmedical{background: url("../images/uploadmedical.png") no-repeat;background-size: 100%;width: 70px;height: 28px;display: inline-block;position: absolute;right:10px;top: 10px;}
 .weui_uploader_bd{text-align: center;}
 .weui_uploader_input_wrp{display: inline-block;float: none;}
-
-
+.weui_uploader_input_wrp.block{display: block;float: none;margin: 0 auto;}
+.weui_uploader_file img{width: 100%;}
 
 /*doctorIndex*/
 .weui_article{border-top: 1px solid #E5E5E5;margin-top: 6px;background: #fff;}
