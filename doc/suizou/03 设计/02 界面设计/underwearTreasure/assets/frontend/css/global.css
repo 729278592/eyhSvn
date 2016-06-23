@@ -94,8 +94,8 @@ a:link{text-decoration: none;}
 .bb-custom-wrapper > nav a{background: rgba(111,151,20,1);color: #fff;opacity: 1;}
 .bb-nav-prev{left: -60px;}
 .bb-nav-next{right: -60px;}
-
-
+.bb-custom-wrapper > nav a::before, .bb-custom-wrapper > nav a::after{background: #fff;}
+.page-layout-3:last-child{background: transparent;}
 /*contentUs-content*/
 .contantUs{position: relative;left: 50%;margin: 15px 0 50px -512px;width: 1024px;}
 .menu {float: left;background: #fff;}
