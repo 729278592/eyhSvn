@@ -497,3 +497,6 @@ a.weui_btn.weui_btn_primary{font-size: 16px;}
 .weui_btn_mini.prevBtn{float: left;background: #f7f7f7;color: #333;}
 .weui_btn_area.w100{margin: 1.17647059em 3% 0.3em;width: 94%;}
 
+
+.resumeBasic .weui_cell_primary,.resumeSex .weui_cell_primary,.resumeEducation .weui_cell_primary,
+.resumeJob .weui_cell_primary,.resumeTag .weui_cell_primary{height: 25px;line-height: 25px;}
