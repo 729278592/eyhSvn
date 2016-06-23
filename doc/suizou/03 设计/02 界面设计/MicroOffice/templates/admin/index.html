@@ -335,7 +335,8 @@
                         var t = document.getElementById("txt");
                         t.select();
                         document.execCommand("Copy"); // 执行浏览器复制命令
-
+                        var that = $(this)
+                        that.attr({disabled:"disabled"});
                         $(".copyTip").animate({
                             opacity:1,
                             top:"-40px",
@@ -346,7 +347,8 @@
                                     opacity:0,
                                     top:"20px",
                                     zIndex:"0"
-                                },500)
+                                },500);
+                                that.removeAttr("disabled");
                             },2000)
                         })
                     })
