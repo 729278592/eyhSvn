@@ -22,9 +22,9 @@
                         <div class="inputInfor">
                             <p><span class="type">您的姓名</span> : <input type="text" id="personName"/></p>
                             <!--<p><span class="type">出生年月</span> : <input type="text"/></p>-->
-                            <p><span class="type">手机号码</span> : <input type="text" id="phone"/></p>
+                            <p><span class="type">手机号码</span> : <input type="text" id="mobile"/></p>
                             <p>
-                                <button type="submit" class="btnSave">保存</button>
+                                <button type="button" class="btnSave" id="btnSave">保存</button>
                             </p>
                         </div>
                     </div>
@@ -93,7 +93,7 @@
                         </div>
                     </div>
                     <div class="foot">
-                        <button type="submit" disabled="disabled" class="bg3 disabled">提交</button>
+                        <button type="submit" disabled="disabled" id="showTooltips" class="bg3 disabled">提交</button>
                     </div>
                 </form>
             </div>
@@ -106,7 +106,7 @@
     <script src="../../assets/mobile/js/messageTip.js"></script>
     <script>
         $(function(){
-            $("#btnSave").on("click",function(){
+            $("#btnSave").on("touchend",function(){
                 var reg = /^0?(13[0-9]|15[012356789]|18[0236789]|14[57])[0-9]{8}$/;
                 if($.trim($("#personName").val()) == '') {
                     showErrMsg('姓名不能为空');
@@ -120,6 +120,8 @@
                 }
                 else{
                     showLoading("数据提交中","提交成功");
+                    $("#showTooltips").removeAttr("disabled");
+                    $("#showTooltips").removeClass("disabled");
                 }
                 return true;
             });
