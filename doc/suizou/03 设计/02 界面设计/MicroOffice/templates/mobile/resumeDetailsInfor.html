@@ -60,7 +60,7 @@
                             <!--<a href="#" class="btnAddwe">+增加一条教育经历</a>-->
                             <!--</div>-->
                             <div class="weui_btn_area">
-                                <a class="weui_btn weui_btn_primary modifyEducation">新增</a>
+                                <a class="weui_btn weui_btn_primary modifyEducation addEducation">新增</a>
                             </div>
                         </div>
                     </div>
@@ -263,6 +263,9 @@
                     cache : false,
                     success : function(data) {
                         var $data = $(data);
+                        if(that.is(".addEducation")){
+                            $data.find(".saveEducation").addClass("addData");
+                        }
                         that.closest(".bd").html($data.find(".bd").html());
                     }
                 });
@@ -290,7 +293,21 @@
                         cache : false,
                         success : function(data) {
                             var $data = $(data);
-                            that.closest(".bd").html($data.find(".bd").html());
+                            if(that.is(".addData")){
+                                var str =  '<div class="personIforP">'+
+                                                '<p><span class="type">学校</span> : <span>ss</span></p>'+
+                                                '<p><span class="type">在校时间</span> : <span>1991-10-4~至今</span></p>'+
+                                                '<p><span class="type">学历</span> : <span>本科</span></p>'+
+                                                '<p><span class="type">专业</span> : <span>计算机专业</span></p>'+
+                                                '<a class="btn-modify modifyEducation">编辑</a>'+
+                                            '</div>';
+                                that.removeClass("addData");
+                                $data.find(".weui_btn_area").before(str);
+                                $data.find(".weui_btn_area .modifyEducation").addClass("addEducation");
+                                that.closest(".bd").html($data.find(".bd").html());
+                            }else {
+                                that.closest(".bd").html($data.find(".bd").html());
+                            }
                         }
                     });
                 }
