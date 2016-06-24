@@ -219,7 +219,7 @@ a.weui_cell.c666{color: #999;}
 .personIforP span.type{display: inline-block;min-width: 60px;}
 .personIforP.b0{border: none;}
 .personIforP.mt15{margin-top: 30px;}
-.personIforP p{font-size: 14px;color: #666;text-align: left;}
+.personIforP p{font-size: 14px;color: #666;text-align: left;margin: 3px 0;}
 .personIforP p span{color: #333;}
 .container>.page.relative{position: relative;}
 .personIforP.auto{text-align: center;}
