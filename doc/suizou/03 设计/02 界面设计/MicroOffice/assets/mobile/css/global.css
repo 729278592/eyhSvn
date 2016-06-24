@@ -475,8 +475,8 @@ a.weui_btn.weui_btn_primary{font-size: 16px;}
 }
 
 .page.slideOutLeft {
-    -webkit-animation: slideOutLeft .2s forwards;
-    animation: slideOutLeft .2s forwards
+    -webkit-animation: slideOutLeft .4s forwards;
+    animation: slideOutLeft .4s forwards
 }
 
 @-webkit-keyframes slideInRight{from{-webkit-transform:translate3d(100%,0,0);transform:translate3d(100%,0,0)}
