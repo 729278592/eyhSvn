@@ -9,7 +9,7 @@
         };
         var opts = $.extend({}, defaults, options);
         var Methods = {
-            init:function(_this){
+            init: function(_this){
                 var arr = {};
                 arr.navSlider = _this.find(".slider");
                 arr.navSliderLi = arr.navSlider.find("li");
