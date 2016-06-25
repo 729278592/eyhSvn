@@ -1,8 +1,6 @@
 /**
  * Created by eyohu023 on 2016/1/20.
  */
-
-
     function heightAuto(){
         var windoeHeight = $(window).outerHeight(true);
         var headHeight = $(".head").outerHeight(true);
