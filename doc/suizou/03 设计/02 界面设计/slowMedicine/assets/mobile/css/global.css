@@ -361,7 +361,7 @@ a.weui_media_box:active {
 .largeImg{position: fixed;top: 0;right: 0;bottom: 0;left: 0;background: rgba(0,0,0,0.5);z-index: 1000;}
 .largeImg .close{width:30px;height:30px;border-radius: 100%;font-size: 14px;color: #fff;background: red;
     position: absolute;right: 10px;top: 10px;text-align: center;line-height: 30px;}
-.largeImg img{width: 80%;left: 50%;margin-left: -40%;position: absolute;top: 50%;margin-top: -60%;}
+.largeImg img{width: 80%;left: 50%;margin-left: -40%;position: absolute;top: 50%;margin-top: -67%;height: 90%;}
 .weui_media_bd .inforB{font-size:14px;margin:5px 0}
 .perfectInformation{background:#fff8e7;padding:10px 15px;color:#666;position:relative}
 .perfectInformation .title{font-size:12px}
