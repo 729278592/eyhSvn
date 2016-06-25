@@ -11,125 +11,124 @@
     <script src="../../assets/global/plugins/jquery/jquery-1.11.3.min.js"></script>
 </head>
 <body>
-    <div class="container js_container absolute errDailog">
-        <div class="page">
-            <div class="head">
-                <i class="fa fa-angle-left"></i>
-                新建简历标签
-            </div>
-            <div class="bd">
-                <img src="../../assets/mobile/images/resume11.jpg" alt="" class="resume"/>
-                <form action="#" id="form" onsubmit="return false">
-                    <div class="button-label">
-                        <p class="moreTag"><span class="required">*</span>最多只能添加5个标签</p>
-                        <a href="#" class="keyword-dashed-button">
-                            <span class="add-span">+</span>
-                            添加
-                        </a>
-                        <div class="keyword-div hide">
-                            <input type="text" class="keyword-input" placeholder="请输入标签名"/>
-                            <i class="fa fa-check-circle"></i>
-                            <i class="weui_icon_clear"></i>
-                        </div>
+<div class="container js_container absolute errDailog">
+    <div class="page">
+        <div class="head">
+            <i class="fa fa-angle-left"></i>
+            新建简历标签
+        </div>
+        <div class="bd">
+            <form action="#" id="form" onsubmit="return false">
+                <div class="button-label bt0">
+                    <p class="moreTag"><span class="required">*</span>最多只能添加5个标签</p>
+                    <a href="#" class="keyword-dashed-button">
+                        <span class="add-span">+</span>
+                        添加
+                    </a>
+                    <div class="keyword-div hide">
+                        <input type="text" class="keyword-input" placeholder="请输入标签名"/>
+                        <i class="fa fa-check-circle"></i>
+                        <i class="weui_icon_clear"></i>
                     </div>
-                    <div class="weui_btn_area">
-                        <a type="submit" class="weui_btn weui_btn_primary saveTag" href="fiilResumeSuccess.html"  id="saveBtn">完成</a>
-                    </div>
-                </form>
-                <script src="../../assets/mobile/js/errMsg.js"></script>
-                <!--<script src="../../assets/mobile/js/ConfirmDialog.js"></script>-->
-                <script>
-                    $(function(){
-                        function keywordButtonHide(){
-                            if($(".keyword-button").get(0)){
-                                if(($(".keyword-button").size())>4){
-                                    $(".keyword-dashed-button").addClass("hide");
-                                    $(".keyword-div").addClass("hide");
-                                }
-                                else{
-                                    $(".keyword-div").addClass("hide");
-                                    $(".keyword-dashed-button").removeClass("hide");
-                                }
+                </div>
+                <div class="weui_btn_area">
+                    <a type="submit" class="weui_btn weui_btn_primary saveTag" href="fiilResumeSuccess.html"  id="saveBtn">保存</a>
+                </div>
+            </form>
+            <script src="../../assets/mobile/js/errMsg.js"></script>
+            <!--<script src="../../assets/mobile/js/ConfirmDialog.js"></script>-->
+            <script>
+                $(function(){
+                    function keywordButtonHide(){
+                        if($(".keyword-button").get(0)){
+                            if(($(".keyword-button").size())>4){
+                                $(".keyword-dashed-button").addClass("hide");
+                                $(".keyword-div").addClass("hide");
                             }
                             else{
                                 $(".keyword-div").addClass("hide");
                                 $(".keyword-dashed-button").removeClass("hide");
                             }
                         }
-                        $(".keyword-dashed-button").on("touchend",function(){
-                            $(this).addClass("hide");
-                            $(".keyword-div").removeClass("hide");
-                        });
+                        else{
+                            $(".keyword-div").addClass("hide");
+                            $(".keyword-dashed-button").removeClass("hide");
+                        }
+                    }
+                    $(".keyword-dashed-button").on("touchend",function(){
+                        $(this).addClass("hide");
+                        $(".keyword-div").removeClass("hide");
+                    });
 
-                        var arr = [];
-                        $(".keyword-div .fa-check-circle").on("touchend",function(){
-                            var values = $(this).closest(".keyword-div").find(".keyword-input").val();
-                            var value = $.trim(values);
-                            if(value==''){
-                                showMsg('标签名不能为空');
-                            }
-                            else{
-                                var str = '<a href="#" class="keyword-button">'+
-                                        '<span class="keyword-button-content">'+value+'</span>'+
-                                        '<i class="weui_icon_clear" dataTitle="标题" dataContent="内容"></i>'+
-                                        '</a>';
-                                if($(".keyword-button").get(0)){
-                                    if($.inArray(value, arr) < 0){
-                                        $(".keyword-dashed-button").before(str);
-                                        $(this).closest(".keyword-div").find(".keyword-input").val("");
-                                        arr.push(value);
-                                        keywordButtonHide();
-                                    }
-                                    else{
-                                        showMsg('标签名已经存在');
-                                    }
+                    var arr = [];
+                    $(".keyword-div .fa-check-circle").on("touchend",function(){
+                        var values = $(this).closest(".keyword-div").find(".keyword-input").val();
+                        var value = $.trim(values);
+                        if(value==''){
+                            showMsg('标签名不能为空');
+                        }
+                        else{
+                            var str = '<a href="#" class="keyword-button">'+
+                                    '<span class="keyword-button-content">'+value+'</span>'+
+                                    '<i class="weui_icon_clear" dataTitle="标题" dataContent="内容"></i>'+
+                                    '</a>';
+                            if($(".keyword-button").get(0)){
+                                if($.inArray(value, arr) < 0){
+                                    $(".keyword-dashed-button").before(str);
+                                    $(this).closest(".keyword-div").find(".keyword-input").val("");
+                                    arr.push(value);
+                                    keywordButtonHide();
                                 }
                                 else{
-                                    arr.push(value);
-                                    $(".keyword-dashed-button").before(str).removeClass("hide");
-                                    $(this).closest(".keyword-div").addClass("hide");
-                                    $(this).closest(".keyword-div").find(".keyword-input").val("");
-                                    return false;
+                                    showMsg('标签名已经存在');
                                 }
                             }
-                        });
-                        $(".keyword-div .weui_icon_clear").on("touchend",function(){
-                            $(".keyword-dashed-button").removeClass("hide");
-                            $(this).closest(".keyword-div").addClass("hide");
-                            $(this).closest(".keyword-div").find(".keyword-input").val("");
-                        });
-
-                        $(".btnSure").on("touchend",function(){
-                            $(".removeObj").closest(".keyword-button").remove();
-                            $(".removeObj").removeClass("removeObj");
-                            keywordButtonHide();
-                            $('#dialog1').hide();
-                        });
-                        $(".btnCancle").on("touchend",function(){
-                            $('#dialog1').hide();
-                            $(".removeObj").removeClass("removeObj");
-                        });
-
-
-                        $(".button-label").delegate(".keyword-button .weui_icon_clear",'click',function(){
-                            var objTitle   = $(this).attr("dataTitle");
-                            var objContent = $(this).attr("dataContent");
-                            var Confirm = {
-                                title:objTitle,
-                                content:objContent
-                            };
-                            arr.splice($(this).parent(".keyword-button").index(),1);
-                            $(this).closest(".keyword-button").remove();
-                            keywordButtonHide();
-//                showConfirmDialog(Confirm);
-                            $(this).closest(".keyword-button").addClass("removeObj");
-                        })
+                            else{
+                                arr.push(value);
+                                $(".keyword-dashed-button").before(str).removeClass("hide");
+                                $(this).closest(".keyword-div").addClass("hide");
+                                $(this).closest(".keyword-div").find(".keyword-input").val("");
+                                return false;
+                            }
+                        }
                     });
-                </script>
-            </div>
+                    $(".keyword-div .weui_icon_clear").on("touchend",function(){
+                        $(".keyword-dashed-button").removeClass("hide");
+                        $(this).closest(".keyword-div").addClass("hide");
+                        $(this).closest(".keyword-div").find(".keyword-input").val("");
+                    });
+
+                    $(".btnSure").on("touchend",function(){
+                        $(".removeObj").closest(".keyword-button").remove();
+                        $(".removeObj").removeClass("removeObj");
+                        keywordButtonHide();
+                        $('#dialog1').hide();
+                    });
+                    $(".btnCancle").on("touchend",function(){
+                        $('#dialog1').hide();
+                        $(".removeObj").removeClass("removeObj");
+                    });
+
+
+                    $(".button-label").delegate(".keyword-button .weui_icon_clear",'click',function(){
+                        var objTitle   = $(this).attr("dataTitle");
+                        var objContent = $(this).attr("dataContent");
+                        var Confirm = {
+                            title:objTitle,
+                            content:objContent
+                        };
+                        arr.splice($(this).parent(".keyword-button").index(),1);
+                        $(this).closest(".keyword-button").remove();
+                        keywordButtonHide();
+//                showConfirmDialog(Confirm);
+                        $(this).closest(".keyword-button").addClass("removeObj");
+                    })
+                });
+            </script>
         </div>
     </div>
-    <script src="../../assets/mobile/js/global.js"></script>
+</div>
+<script src="../../assets/mobile/js/global.js"></script>
 
 </body>
 </html>

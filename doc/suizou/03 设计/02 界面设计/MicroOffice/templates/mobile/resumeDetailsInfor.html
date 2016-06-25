@@ -137,7 +137,10 @@
                                     <!--<i class="fa fa-check-circle"></i>-->
                                     <!--<i class="weui_icon_clear"></i>-->
                                     <!--</div>-->
-                                    <a href="#" class="keyword-button"><span class="keyword-button-content">s</span></a>
+                                    <a href="#" class="keyword-button">
+                                        <span class="keyword-button-content">s</span>
+                                        <i class="weui_icon_clear"></i>
+                                    </a>
                                 </div>
                                 <div class="weui_btn_area">
                                     <a class="weui_btn weui_btn_primary addTag" id="saveBtn">新增</a>
@@ -413,7 +416,6 @@
                         success : function(data) {
                             var $data = $(data);
                             that.closest(".bd").html($data.find(".bd").html());
-                            
                         }
                     });
                 }
@@ -431,7 +433,6 @@
                     success : function(data) {
                         var $data = $(data);
                         that.closest(".bd").html($data.find(".bd").html());
-                        
                     }
                 });
             });
@@ -446,7 +447,6 @@
                     success : function(data) {
                         var $data = $(data);
                         that.closest(".bd").html($data.find(".bd").html());
-                        
                     }
                 });
                 return true;
