@@ -39,6 +39,12 @@
             <!--<script src="../../assets/mobile/js/ConfirmDialog.js"></script>-->
             <script>
                 $(function(){
+
+                    //取消字符串中出现的所有逗号
+                    function clear(str) {
+                        str = str.replace(/，|,/g, "");
+                        return str;
+                    }
                     function keywordButtonHide(){
                         if($(".keyword-button").get(0)){
                             if(($(".keyword-button").size())>4){
@@ -63,34 +69,45 @@
                     var arr = [];
                     $(".keyword-div .fa-check-circle").on("touchend",function(){
                         var values = $(this).closest(".keyword-div").find(".keyword-input").val();
-                        var value = $.trim(values);
-                        if(value==''){
-                            showMsg('标签名不能为空');
-                        }
-                        else{
-                            var str = '<a href="#" class="keyword-button">'+
-                                    '<span class="keyword-button-content">'+value+'</span>'+
-                                    '<i class="weui_icon_clear" dataTitle="标题" dataContent="内容"></i>'+
-                                    '</a>';
-                            if($(".keyword-button").get(0)){
-                                if($.inArray(value, arr) < 0){
-                                    $(".keyword-dashed-button").before(str);
-                                    $(this).closest(".keyword-div").find(".keyword-input").val("");
-                                    arr.push(value);
-                                    keywordButtonHide();
-                                }
-                                else{
-                                    showMsg('标签名已经存在');
-                                }
+
+                        var a=values,b;
+                        b=a.replace(/，|,/g,"");
+                        if(a.length!=b.length){
+                            showMsg('标签名不能含逗号');
+                        }else{
+                            var value = $.trim(values);
+                            if(value==''){
+                                showMsg('标签名不能为空');
                             }
                             else{
-                                arr.push(value);
-                                $(".keyword-dashed-button").before(str).removeClass("hide");
-                                $(this).closest(".keyword-div").addClass("hide");
-                                $(this).closest(".keyword-div").find(".keyword-input").val("");
-                                return false;
+                                var str = '<a href="#" class="keyword-button">'+
+                                        '<span class="keyword-button-content">'+value+'</span>'+
+                                        '<i class="weui_icon_clear"></i>'+
+                                        '</a>';
+                                if($(".keyword-button").get(0)){
+                                    if($.inArray(value, arr) < 0){
+                                        $(".keyword-dashed-button").before(str);
+                                        $(this).closest(".keyword-div").find(".keyword-input").val("");
+                                        arr.push(value);
+                                        keywordButtonHide();
+                                    }
+                                    else{
+                                        showMsg('标签名已经存在');
+                                    }
+                                }
+                                else{
+                                    arr.push(value);
+                                    $(".keyword-dashed-button").before(str).removeClass("hide");
+                                    $(this).closest(".keyword-div").addClass("hide");
+                                    $(this).closest(".keyword-div").find(".keyword-input").val("");
+                                    return false;
+                                }
                             }
                         }
+
+
+
+
                     });
                     $(".keyword-div .weui_icon_clear").on("touchend",function(){
                         $(".keyword-dashed-button").removeClass("hide");
