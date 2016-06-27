@@ -470,7 +470,7 @@ a.weui_media_box:active {
 
 
 .advancedSearch.slideInRight,.addressChioce.slideInRight,.hospitalChioce.slideInRight,.departmentChioce.slideInRight{-webkit-animation:slideInRight .2s forwards;animation:slideInRight .2s forwards}
-.advancedSearch.slideOutRight,.addressChioce.slideOutRight,.hospitalChioce.slideOutRight,.departmentChioce.slideOutRight{-webkit-animation:slideOutRight .2s forwards;animation:slideOutRight .2s forwards}
+.advancedSearch.slideOutRight,.addressChioce.slideOutRight,.hospitalChioce.slideOutRight,.departmentChioce.slideOutRight{-webkit-animation:slideOutRight .6s forwards;animation:slideOutRight .6s forwards}
 .weui_cell_select .weui_cell_bd:after{content:" ";display:inline-block;-webkit-transform:rotate(0);transform:rotate(0);height:0;width:0;border-left:4px solid transparent;border-right:4px solid transparent;border-top:4px solid #333;position:absolute;top:50%;right:15px;margin-top:-3px}
 .errDailog{position:relative}
 .errDailog.absolute{position:absolute}
@@ -484,7 +484,7 @@ a.weui_media_box:active {
 .weui_toast_content{text-align:center;font-size:14px}
 #smile-icon{margin:20px 0 10px}
 
-
+.weui_search_bar .fa{font-size: 20px;position: relative;top: 2px;}
 .weui_mask_transparent.fixed{position: fixed;z-index: 10000;}
 
 

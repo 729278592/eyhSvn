@@ -323,6 +323,7 @@
                     $(addressChioce).on('webkitAnimationEnd', function (){
                         addressChioce.removeClass("slideOutRight");
                         addressChioce.addClass("hide");
+                        $(".address").find("input").val(text);
                     }).on('animationend', function (){
                         addressChioce.removeClass("slideOutRight");
                         addressChioce.addClass("hide");
@@ -335,6 +336,7 @@
                     $(hospitalChioce).on('webkitAnimationEnd', function (){
                         hospitalChioce.removeClass("slideOutRight");
                         hospitalChioce.addClass("hide");
+                        $(".hospital").find("input").val(text);
                     }).on('animationend', function (){
                         hospitalChioce.removeClass("slideOutRight");
                         hospitalChioce.addClass("hide");
@@ -347,6 +349,7 @@
                     $(departmentChioce).on('webkitAnimationEnd', function (){
                         departmentChioce.removeClass("slideOutRight");
                         departmentChioce.addClass("hide");
+                        $(".department").find("input").val(text);
                     }).on('animationend', function (){
                         departmentChioce.removeClass("slideOutRight");
                         departmentChioce.addClass("hide");
