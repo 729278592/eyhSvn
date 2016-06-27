@@ -190,15 +190,17 @@ img.resume{width: 100%;}
 
 .stepDiv{width: 92%;padding: 0 4%;}
 .stepDiv .dtepTitle{color: #333;font-size: 16px;margin: 10px 0;}
-.jobStep{width: 100%;}
-.jobStep li{width: 100%;}
-.jobStep li img{float: left;}
-.jobStep li div{position: relative;top: -5px;left: 10px;}
+.jobStep{width: 100%;margin-bottom: 50px;}
+.jobStep li{width: 100%;position: relative;height: 60px;}
+.jobStep li img,.jobStep li div{}
+.jobStep li img{position: absolute;top: 0;}
+.jobStep li div{position: absolute;left: 30px;bottom: -25px;}
+.jobStep li.first div{top: -5px;}
+.jobStep li.first{height: 4px;}
 .jobStep li div p{font-size: 14px;}
 .jobStep li div p.status{color: #666;}
 .jobStep li div p.time{color: #999;}
-.jobStep li img.star{position: relative;left: -5px;padding-bottom: 20px;}
-.jobStep li:last-child div{position: relative;left: -1px;}
+.jobStep li img.star{position: relative;left: -2px;padding-bottom: 20px;}
 
 
 .largeTitle{font-size: 16px;color: #71c9a7;padding: 10px 0 10px 15px;}
