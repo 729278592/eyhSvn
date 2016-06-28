@@ -195,7 +195,7 @@
                             <p class="title pt0">我的预产期</p>
                             <div class="reserve-date clearfix">
                                 <div class="div-wdate left">
-                                    <input id="d4311" class="Wdate" type="text" placeholder="2015-10-10" onfocus="  WdatePicker({ dateFmt: 'yyyy-MM', isShowToday: false, isShowClear: false })">
+                                    <input id="d4311" class="Wdate" type="text" placeholder="2016-10-10" readonly="flase" onfocus="WdatePicker({ dateFmt: 'yyyy-MM', isShowToday: false, isShowClear: false,onpicking :function(dq){alert(dq.cal.getScaleFactor)}})" value="2015-5-5">
                                     <i class="fa fa-calendar"></i>
                                 </div>
                                 <!--<select name="" class="select-time right inputDisable">-->
@@ -1227,6 +1227,8 @@
             $(this).closest(".ma-dailog").addClass("hide");
             console.log( $(this).closest(".ma-dailog"))
         });
+
+
     </script>
 
 </html>

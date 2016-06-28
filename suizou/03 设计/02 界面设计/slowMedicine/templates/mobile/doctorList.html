@@ -346,15 +346,11 @@
                     var departmentChioce = $(this).closest(".departmentChioce");
                     departmentChioce.removeClass("hide");
                     departmentChioce.addClass('slideOutRight');
-                    $(departmentChioce).on('webkitAnimationEnd', function (){
+                    setTimeout(function(){
                         departmentChioce.removeClass("slideOutRight");
                         departmentChioce.addClass("hide");
                         $(".department").find("input").val(text);
-                    }).on('animationend', function (){
-                        departmentChioce.removeClass("slideOutRight");
-                        departmentChioce.addClass("hide");
-                        $(".department").find("input").val(text);
-                    });
+                    },200);
                 }
             });
 
