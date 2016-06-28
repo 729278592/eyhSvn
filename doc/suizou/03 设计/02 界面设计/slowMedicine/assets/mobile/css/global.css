@@ -507,10 +507,10 @@ a.weui_media_box:active {
 
 
 @media screen and (min-height: 560px) {
-    .swiper-wrapper.w50 .swiper-slide img{width: 90%;}
+    .swiper-wrapper.w50 .swiper-slide img{width: 85%;}
 }
 
 @media screen and (min-height: 667px) {
-    .swiper-wrapper.w50 .swiper-slide img{width: 100%;}
+    .swiper-wrapper.w50 .swiper-slide img{width: 90%;}
 }
 
