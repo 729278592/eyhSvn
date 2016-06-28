@@ -152,7 +152,7 @@ a:link{text-decoration: none;}
     cursor: default;
     color: #ABB4C3;
 }
-.application-job-apply{margin: 21px 0;right: 50px;}
+.application-job-apply{margin: 12px 0;right: 50px;}
 
 .card-item .fa-star{color: #fda341;}
 .card-item-column.column-action a .fa{font-size: 18px;}
@@ -634,6 +634,7 @@ a.keyword-button:hover,.keyword-button:active,.keyword-button:focus{color: #fff;
 .copyTip{opacity: 0;filter:alpha(opacity=50);position: absolute;top: 20px;background: #fff;border: 1px solid #dbdbdb;padding: 5px;border-radius: 5px;
     right: -20px;font-size: 12px;color: #578adc;z-index: 0;}
 .copyTip .fa{font-size: 20px;position: absolute;bottom: -14px;left: 40px;color: #efefef;}
+
 /*dailog*/
 .error .error-message.w100{width: 100%;}
 .mask,.mask-bg{position: fixed;left: 0;right: 0;bottom: 0;top: 0;z-index: 10000;}
@@ -717,7 +718,7 @@ a.keyword-button:hover,.keyword-button:active,.keyword-button:focus{color: #fff;
 .btn.btnSure.left{left: 40px;}
 .askWrapperCon{margin-top: 15px;}
 .askWrapperCon .form-group {display: block;}
-
+.askWrapperCon .errDiv{font-size: 14px;padding: 5px 15px;color:#ff4400;}
 
 
 /*brandInfor*/
