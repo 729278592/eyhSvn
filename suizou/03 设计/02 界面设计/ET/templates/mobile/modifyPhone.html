@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html>
+<head lang="en">
+    <meta charset="UTF-8">
+    <title>修改手机</title>
+    <meta name="viewport" content="width=device-width; initial-scale=1.0; user-scalable=no;">
+    <link rel="stylesheet" href="../../assets/global/plugins/font/css/font-awesome.min.css"/>
+    <link rel="stylesheet" href="../../assets/global/plugins/weUi/css/weui.css"/>
+    <link rel="stylesheet" href="../../assets/global/plugins/weUi/css/example.css"/>
+    <link rel="stylesheet" href="../../assets/mobile/css/global.css"/>
+</head>
+<body>
+    <div class="container absolute errDailog">
+        <div class="page">
+            <div class="bd">
+                <form action="#" id="form" onsubmit="return false">
+                    <div class="weui_cells weui_cells_form mt0">
+                        <div class="weui_cell">
+                            <div class="weui_cell_hd">
+                                <label class="weui_label">
+                                    <span class="spanImgBg spanPhone"></span>
+                                    <span class="spanText">手　机</span>
+                                </label>
+                            </div>
+                            <div class="weui_cell_bd weui_cell_primary">
+                                <input class="weui_input" type="text" placeholder="13678478463" id="newMobile"/>
+                            </div>
+                        </div>
+                        <div class="weui_cell weui_vcode">
+                            <div class="weui_cell_hd">
+                                <label class="weui_label">
+                                    <span class="spanImgBg spanPhoneYz"></span>
+                                    <span class="spanText">验证码</span>
+                                </label>
+                            </div>
+                            <div class="weui_cell_bd weui_cell_primary">
+                                <input class="weui_input" type="text" placeholder="4位有效数字" maxlength="4" id="verificationCode">
+                            </div>
+                            <div class="weui_cell_ft minw105">
+                                <!--<img src="../../assets/mobile/images/vcode.jpg">-->
+                                <button type="button" disabled="disabled" class="btnVerification disabled">发送验证码</button>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="weui_btn_area">
+                        <input type="submit" class="weui_btn weui_btn_primary" id="saveBtn" value="保存">
+                    </div>
+                </form>
+            </div>
+        </div>
+    </div>
+    <script src="../../assets/global/plugins/jquery/jquery-1.11.3.min.js"></script>
+    <script src="../../assets/mobile/js/global.js"></script>
+    <script src="../../assets/mobile/js/messageTip.js"></script>
+    <script>
+        $("#saveBtn").click(function(){
+            var reg = /^(1[38][0-9]|14[57]|15[012356789]|17[0678])[0-9]{8}$/;
+            if($.trim($("#newMobile").val())== '') {
+                showErrMsg('手机号不能为空');
+                return false;
+            }
+            else if($("#newMobile").get(0)&&!reg.test($("#newMobile").val())){
+                showErrMsg('手机号格式不正确');
+                return false;
+            }
+            else if($.trim($("#verificationCode").val()) == ''){
+                showErrMsg('验证码不能为空');
+                return false;
+            }
+
+            else{
+            }
+            return true;
+        });
+    </script>
+</body>
+</html>
