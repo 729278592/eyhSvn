@@ -442,7 +442,7 @@ img.w100{width: 100%;}
 }
 
 /*mobileExhibition*/
-.maxw640{width: 395px;margin: 0 120px;position: relative;display: block;height: 813px;background-image: url("../images/device-sprite.png");background-size: 300%;background-repeat: no-repeat;background-position: 0 0;}
+.maxw640{width: 395px;margin: 0 99px;position: relative;display: block;height: 813px;background-image: url("../images/device-sprite.png");background-size: 300%;background-repeat: no-repeat;background-position: 0 0;}
 .maxw640 .container{position: absolute;top: 117px;width: 321px;height: 569px;overflow: hidden;font-size: 0.85rem;line-height: 1.05rem;background: #eeeeee;}
 .maxw640 .container{overflow-y: auto;}
 .linkGroup{margin: 50px 0;}
