@@ -403,9 +403,9 @@ a.weui_media_box:active {
 .loginTips .tipImg,.loginTips .title{display: table-cell;vertical-align: middle;}
 .doctorForm{width: 90%;margin: 5% auto;}
 .doctorForm .input-group{width: 100%;margin-bottom: 10px;}
-.doctorForm .input-group input.inputText{width: 69%;border: 1px solid #efefef;padding: 7px 10px;font-family: "微软雅黑";}
+.doctorForm .input-group input.inputText{width: 69%;border: 1px solid #efefef;padding: 10px 10px;font-family: "微软雅黑";}
 .doctorForm .input-group input.inputCode{width: 29%;}
-.doctorForm .input-group .getCode{color: #fff;background: #06be04;width: 40%;height: 32px;font-family: "微软雅黑";font-size: 12px;}
+.doctorForm .input-group .getCode{color: #fff;background: #06be04;width: 40%;height: 38px;font-family: "微软雅黑";font-size: 12px;}
 .doctorForm .input-group .getCode.disabled{background: #ccc;}
 .doctorForm .input-group.err .errMessage{position: relative;left: 65px;font-size: 12px;}
 .doctorForm .input-group.err .errMessage,.doctorForm .input-group.err .type{color: #ff0404;}
@@ -413,7 +413,7 @@ a.weui_media_box:active {
 .doctorForm .type{display: inline-block;width: 60px;font-size: 14px;color: #333;}
 .doctorForm .btnSumbit{    padding: 10px 0;
     width: 76%;
-    height: 30px;
+    height: 38px;
     background: #f8c929;
     color: #fff;
     font-size: 16px;
