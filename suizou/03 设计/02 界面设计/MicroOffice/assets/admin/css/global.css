@@ -180,12 +180,15 @@ a:link{text-decoration: none;}
 .form-line-group-input .form-control-input{width: 52%;margin-right: 0;}
 .position-phone-validate-wrapper input.form-control-submit{text-align: center;}
 .ns-admin.ns-setting.ns-accountinfo .error-message{background: transparent;}
-.error .error-message{padding-left: 0;margin-top: 5px;}
+.error .error-message{padding-left: 0;margin-top: 5px;text-indent: 0;}
+.passwd-md.error .error-message{text-indent: 12px;}
 .resume-actions .fa {font-size: 16px;vertical-align: middle;margin-right: 36px;}
 .dq-application-detail-icon-status .fa{margin-right: 0;}
 .dq-application-detail-status-recommend.textAlign .fa{margin-right: 0;}
 .dq-application-detail-icon-status .fa-remove{position: relative;font-size: 16px;left: -3px;top: 1px;}
 .dq-application-detail-status-recommend{top: -32px;}
+.ns-admin.ns-setting.ns-accountinfo .modify.confirm.disabled{background: #ccc}
+.ns-admin.ns-setting.ns-accountinfo .modify.confirm.disabled:hover{cursor: not-allowed;}
 /*自写样式*/
 .g-form-radio-group label.noBeflre:before{border: none;background: transparent;}
 .qx-qrcode img{width: 165px;height: 165px}

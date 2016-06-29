@@ -205,7 +205,7 @@
                                             <label class="form-line-label">联系人姓名</label>
                                             <div class="form-line-input">
                                                 <input class="form-control-input hide inputName" type="text" name="name">
-                                                <label class="form-control-input default haveName ">周先生</label>
+                                                <label class="form-control-input default haveName">周先生</label>
                                                 <label class="form-control-input default null-info hide">未填写</label>
                                             </div>
                                             <span class="error-message">联系人不能为空</span>
@@ -252,15 +252,20 @@
                                         <div class="form-line password">
                                             <label class="form-line-label">密码设置</label>
                                             <div class="form-line-input">
-                                                <label class="form-control-input default">******</label>
-
+                                                <label class="form-control-input default hide">******</label>
                                                 <label class="form-control-input default null-info hide">未设置</label>
                                             </div>
                                             <span class="error-message">密码</span>
-                                            <a class="modify change">修改</a>
+                                            <a class="modify change hide">修改</a>
                                         </div>
-
-                                        <div class="form-line passwd-md hide">
+                                        <div class="form-line passwd-md nowPassword">
+                                            <label class="form-line-label"></label>
+                                            <div class="form-line-input">
+                                                <input class="form-control-input" type="password" name="password" placeholder="输入当前密码" >
+                                            </div>
+                                            <span class="error-message">密码需为6位数字字母组成</span>
+                                        </div>
+                                        <div class="form-line passwd-md newPassword">
                                             <label class="form-line-label"></label>
                                             <div class="form-line-input">
                                                 <input class="form-control-input" type="password" name="password" placeholder="输入新密码" >
@@ -268,12 +273,12 @@
                                             <span class="error-message">密码需为6位数字字母组成</span>
                                         </div>
 
-                                        <div class="form-line passwd-md hide">
+                                        <div class="form-line passwd-md confirmNewPassword">
                                             <label class="form-line-label"></label>
                                             <div class="form-line-input pos">
                                                 <input class="form-control-input" type="password" name="confirm_password" placeholder="再次输入新密码" >
-                                                <a class="modify confirm mobile-confirm hide">确认</a>
-                                                <a class="modify cancel mobile-cancel hide">取消</a>
+                                                <a class="modify confirm mobile-confirm disabled" disabled="disabled">确认</a>
+                                                <a class="modify cancel mobile-cancel">取消</a>
                                             </div>
                                             <span class="error-message">密码不一致</span>
                                         </div>
@@ -314,6 +319,37 @@
 
             <script>
                 $(function(){
+                    /*密码验证错误提示*/
+                    $(".form-line.passwd-md .form-control-input").on("keyup",function(){
+                        var regPassword = /^(?=.*\d)(?=.*[a-zA-Z]).{6,}$/;
+                        var passWord = $(this).closest(".passwd-md");
+                        if(passWord.is(".nowPassword")){
+                            if(regPassword.test($(this).val())){
+                                passWord.removeClass("error");
+                            }else{
+                                passWord.addClass("error");
+                            }
+                        }
+                        else if(passWord.is(".newPassword")){
+                            if(regPassword.test($(this).val())){
+                                passWord.removeClass("error");
+                            }else{
+                                passWord.addClass("error");
+                            }
+
+                        }
+                        else if(passWord.is(".confirmNewPassword")){
+                            if($(this).val() != $(".newPassword").find(".form-control-input").val()){
+                                passWord.addClass("error");
+                                $(".modify.confirm").addClass("disabled").addClass("disabled");
+                            }else{
+                                passWord.removeClass("error");
+                                $(".modify.confirm").removeClass("disabled").removeAttr("disabled");
+                            }
+                        }
+                    });
+
+
                     $(".companyTitle li.hover a").hover(function(){
                         $(this).animate({
                             padding:"10px",
@@ -372,8 +408,17 @@
                         }else if(formLine.is(".newMobile")){
 
                         }else if(formLine.is(".password")){
+                            var password = $(".password");
                             $(".modal-backdrop,.modal-tip").removeClass("hide");
+                            $(".modal-tip").find(".position-phone-validate").addClass("passwordDailog");
                             $("#admin-content-wrapper").css({"z-index":"13"});
+                            if(!(password.find(".havePhone").is(".hide"))){
+                                password.find(".havePhone").addClass("hide");
+                                password.find(".null-info").addClass("nullInfo");
+                            }else if(!(password.find(".null-info").is(".hide"))){
+                                password.find(".null-info").addClass("hide");
+                                password.find(".havePhone").addClass("have-phone");
+                            }
                         }else if(formLine.is(".weixin")){
 
                         }
@@ -383,11 +428,11 @@
                     /*去除按钮的禁止点击事件*/
                     $(".modal-tip").delegate(".position-phone-validate.mobileDailog .code-input","keyup",function(){
                         if(($.trim($(this).val())=="")||($(this).val().length!=4)){
-                            $(this).closest(".position-phone-validate.mobileDailog").find(".form-control-submit").addClass("disabled").attr({disabled:"disabled"})
-                            $(this).closest(".form-line").addClass("error");
+                            $(this).closest(".position-phone-validate.mobileDailog").find(".form-control-submit").addClass("disabled").attr({disabled:"disabled"});
+                            $(this).closest(".position-phone-validate.mobileDailog").find(".form-line").addClass("error");
                         }else{
-                            $(this).closest(".position-phone-validate.mobileDailog").find(".form-control-submit.disabled").removeClass("disabled").removeAttr("disabled")
-                            $(this).closest(".form-line").removeClass("error");
+                            $(this).closest(".position-phone-validate.mobileDailog").find(".form-control-submit.disabled").removeClass("disabled").removeAttr("disabled");
+                            $(this).closest(".position-phone-validate.mobileDailog").find(".form-line").removeClass("error");
                         }
                     });
                     $("#btnTips").on("click",function(){
@@ -426,14 +471,26 @@
                     });
 
 
+                    /*修改密码验证*/
+                    $(".modal-tip").delegate(".position-phone-validate.passwordDailog .form-control-submit","click",function(){
+                        if($(".position-phone-validate.passwordDailog").find(".code-input").val()=="1234"){
+                            $(".modal-tip,.modal-backdrop").addClass("hide");
+                            $("#admin-content-wrapper").css({"z-index":"2"});
+                            $(".modal-tip").find(".position-phone-validate").removeClass("passwordDailog");
+
+                        }else{
+                            tipsContent("验证码不正确",$(".tips"),"fail");
+                        }
+                    });
+
+
                     /*修改手机号码提示*/
                     $(".mobile").find(".inputPhone").on("keyup",function(){
-                        var reg = /^0?(13[0-9]|15[012356789]|18[0236789]|14[57])[0-9]{8}$/;
+                        var reg = /^(1[38][0-9]|14[57]|15[012356789]|17[0678])[0-9]{8}$/;
                         if(($.trim($(this).val())=="")||(!reg.test($(this).val()))){
                             $(this).closest(".mobile").addClass("error");
                             $(this).closest(".mobile").find(".form-line-label").addClass("red");
                             $(this).closest(".mobile").find(".error-message").removeClass("red");
-
                             if(!($(".newMobile").find(".form-control-button").is(".disabled"))){
                                 $(".newMobile").find(".form-control-button").addClass("disabled");
                                 $(".newMobile").find(".form-control-button").attr({disabled:"disabled"});
@@ -559,7 +616,6 @@
                         }else if(formLine.is(".weixin")){
 
                         }
-
                     });
 
                     /*取消信息修改处理*/
@@ -606,8 +662,17 @@
                         }
                     });
                     $(".close").on("click",function(){
-                        $(".modal-tip,.modal-backdrop").addClass("hide");
-                        $("#admin-content-wrapper").css({"z-index":"2"})
+                        if($(this).closest(".position-phone-validate").is(".mobileDailog")){
+                            $(".modal-tip,.modal-backdrop").addClass("hide");
+                            $("#admin-content-wrapper").css({"z-index":"2"});
+                            $(this).closest(".position-phone-validate").removeClass("mobileDailog");
+                        }
+                        else if($(this).closest(".position-phone-validate").is(".passwordDailog")){
+                            $(".modal-tip,.modal-backdrop").addClass("hide");
+                            $("#admin-content-wrapper").css({"z-index":"2"});
+                            $(this).closest(".position-phone-validate").removeClass("passwordDailog");
+                        }
+
                     })
                 });
             </script>
