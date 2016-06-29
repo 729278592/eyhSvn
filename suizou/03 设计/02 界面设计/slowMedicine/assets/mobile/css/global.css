@@ -398,7 +398,7 @@ a.weui_media_box:active {
 
 /*doctorLogin*/
 .loginTips{background: #fff8e7;padding: 10px 15px;color: #666;position: relative;display: table;}
-.loginTips .tipImg{width: 80%;margin-top: 10px;}
+.loginTips .tipImg{width: 80%;margin-top: 1px;}
 .loginTips .title{font-size: 12px;}
 .loginTips .tipImg,.loginTips .title{display: table-cell;vertical-align: middle;}
 .doctorForm{width: 90%;margin: 5% auto;}
