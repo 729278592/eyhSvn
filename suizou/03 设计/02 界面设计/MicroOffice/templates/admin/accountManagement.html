@@ -262,6 +262,7 @@
                                             <label class="form-line-label"></label>
                                             <div class="form-line-input">
                                                 <input class="form-control-input" type="password" name="password" placeholder="输入当前密码" >
+                                                <!--<a href="#" class="forgetPassword">忘记密码</a>-->
                                             </div>
                                             <span class="error-message">密码需为6位数字字母组成</span>
                                         </div>
@@ -336,6 +337,17 @@
                             }else{
                                 passWord.addClass("error");
                             }
+//
+//                            if($(".modify.confirm").is("disabled")){
+//                                if(($(this).val() == $(".newPassword").find(".form-control-input").val())&&(regPassword.test($(this).val()))){
+//                                    passWord.removeClass("error");
+//                                    $(".modify.confirm").removeClass("disabled").removeAttr("disabled");
+//
+//                                }else{
+//                                    passWord.addClass("error");
+//                                    $(".modify.confirm").addClass("disabled").addClass("disabled");
+//                                }
+//                            }
 
                         }
                         else if(passWord.is(".confirmNewPassword")){

@@ -189,6 +189,9 @@ a:link{text-decoration: none;}
 .dq-application-detail-status-recommend{top: -32px;}
 .ns-admin.ns-setting.ns-accountinfo .modify.confirm.disabled{background: #ccc}
 .ns-admin.ns-setting.ns-accountinfo .modify.confirm.disabled:hover{cursor: not-allowed;}
+.form-line{position: relative;}
+.forgetPassword{position: absolute;top: 10px;right: -84px;}
+.ns-admin.ns-setting.ns-accountinfo .form-line.passwd-md{top: -50px;}
 /*自写样式*/
 .g-form-radio-group label.noBeflre:before{border: none;background: transparent;}
 .qx-qrcode img{width: 165px;height: 165px}
