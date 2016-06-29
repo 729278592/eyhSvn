@@ -268,7 +268,7 @@
                                         <div class="form-line passwd-md newPassword">
                                             <label class="form-line-label"></label>
                                             <div class="form-line-input">
-                                                <input class="form-control-input" type="password" name="password" placeholder="输入新密码" >
+                                                <input class="form-control-input" type="password" name="password"  placeholder="输入新密码" >
                                             </div>
                                             <span class="error-message">密码需为6位数字字母组成</span>
                                         </div>
@@ -339,12 +339,13 @@
 
                         }
                         else if(passWord.is(".confirmNewPassword")){
-                            if($(this).val() != $(".newPassword").find(".form-control-input").val()){
-                                passWord.addClass("error");
-                                $(".modify.confirm").addClass("disabled").addClass("disabled");
-                            }else{
+                            if(($(this).val() == $(".newPassword").find(".form-control-input").val())&&(regPassword.test($(this).val()))){
                                 passWord.removeClass("error");
                                 $(".modify.confirm").removeClass("disabled").removeAttr("disabled");
+
+                            }else{
+                                passWord.addClass("error");
+                                $(".modify.confirm").addClass("disabled").addClass("disabled");
                             }
                         }
                     });
