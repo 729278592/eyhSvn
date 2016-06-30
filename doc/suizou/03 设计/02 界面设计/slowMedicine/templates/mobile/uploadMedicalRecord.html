@@ -2,16 +2,15 @@
 <html>
 <head lang="en">
     <meta charset="UTF-8">
-    <title>上传处方</title>
+    <title>上传病历</title>
     <meta name="viewport" content="width=device-width; initial-scale=1.0; user-scalable=no;">
     <link rel="stylesheet" href="../../assets/global/plugins/font/css/font-awesome.min.css"/>
     <link rel="stylesheet" href="../../assets/global/plugins/weUi/css/weui.css"/>
     <link rel="stylesheet" href="../../assets/global/plugins/weUi/css/example.css"/>
     <link rel="stylesheet" href="../../assets/mobile/css/global.css"/>
-
 </head>
 <body>
-    <div class="container">
+    <div class="container absolute errDailog">
         <div class="page absolute bgfff">
             <div class="bd">
                 <form action="#">
@@ -53,77 +52,30 @@
                         <div class="weui_cell pd0 bt0">
                             <div class="weui_cell_bd weui_cell_primary">
                                 <p style="padding: 10px 15px 0;font-size: 16px;">病历描述 : </p>
-                                <textarea name="" id="caseDetails" class="weui_textarea pd10 pd15" placeholder="请输入病历描述..." cols="30" rows="6"></textarea>
+                                <textarea name="" id="caseDetails" class="weui_textarea pd10 pd15" placeholder="慢医小助手将为您补充病历描述的专业信息，您可以选择填写" cols="30" rows="6"></textarea>
                             </div>
                         </div>
                     </div>
-                    <div class="foot">
-                        <input type="submit" class="bg3" value="提交"/>
+                    <!--<div class="foot">-->
+                        <!--<input type="submit" class="bg3" value="提交"/>-->
+                    <!--</div>-->
+                    <div class="weui_btn_area btnStyle w100 fixed">
+                        <button  type="submit" class="weui_btn weui_btn_primary bg3" id="showTooltips">
+                            提交
+                        </button>
                     </div>
                 </form>
             </div>
         </div>
     </div>
     <script src="../../assets/global/plugins/jquery/jquery-1.11.3.min.js"></script>
-    <script type="text/javascript" src="http://res.wx.qq.com/open/js/jweixin-1.0.0.js"></script>
     <script src="../../assets/mobile/js/global.js"></script>
-    <script type="text/javascript">
-
-        $(function(){
-            $.getJSON("/weixin/helper/jssdk/sign.do",{wechatId:"gh_fb964f127af7", url:location.href.split("#")[0]},function(data){
-                wx.config({
-                    debug: false,
-                    appId: "wx9f05f2bbcfd90ddc",
-                    timestamp: "1466672466",
-                    nonceStr: "02e5ced1-e6ef-4dd9-b735-503178af1a63",
-                    signature: "4a5df1cd820380ee9266818a5e97d5f6a25276a7",
-                    jsApiList: [
-                        'chooseImage',
-                        'uploadImage'
-                    ]
-                });
-            })
+    <script src="../../assets/mobile/js/messageTip.js"></script>
+    <script>
+        $("#showTooltips").click(function(){
+            showLoading("数据提交中","提交成功");
+            return true;
         });
-
-        var serverId;
-        var localIds;
-
-        var images = {
-            localId: [],
-            serverId: []
-        };
-
-        wx.ready(function () {
-            document.querySelector('#chooseImage').onclick = function () {
-                wx.chooseImage({
-                    count: 1, // 默认9
-                    sizeType: ['original', 'compressed'], // 可以指定是原图还是压缩图，默认二者都有
-                    sourceType: ['album', 'camera'], // 可以指定来源是相册还是相机，默认二者都有
-                    success: function (res) {
-                        images.localId = res.localIds; // 返回选定照片的本地ID列表，localId可以作为img标签的src属性显示图片
-                        //alert("已选择" + res.localIds.length + "张图片");
-                        try{
-                            wx.uploadImage({
-                                localId: images.localId[0], // 需要上传的图片的本地ID，由chooseImage接口获得
-                                isShowProgressTips: 1, // 默认为1，显示进度提示
-                                success: function (res) {
-                                    serverId = res.serverId; // 返回图片的服务器端ID
-                                    $("#uploadfile").val(serverId);
-                                    $(".weui_uploader_files").html('<li class="weui_uploader_file"><img src="'+images.localId[0]+'"/></li>');
-
-                                },
-                                fail: function (res) {
-                                    alert(JSON.stringify(res));
-                                }
-                            });
-                        }catch(e){
-                            alert(e);
-                        }
-                    }
-                });
-            }
-        });
-
     </script>
 </body>
 </html>
