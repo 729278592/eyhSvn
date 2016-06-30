@@ -168,28 +168,38 @@
                                 <a href="resumeDataStatistics.html" class="dataHtml">简历统计</a>
                             </li>
                         </ul>
-                        <div class="dataStatisticsHead">
-                            <form action="#">
-                                <span class="title">筛选职位</span>
-                                <span class="dataOperation">
-                                    <input type="text" class="dataIput" placeholder="请输入您要搜索的职位"/>
-                                    <button class="btnSubmit" type="submit">
-                                        <i class="fa fa-search"></i>
-                                    </button>
-                                </span>
-                                <span class="timeSerch right">
-                                    <span class="spanInput">
-                                        <input id="start" class="Wdate" type="text" placeholder="2015-02-05" onfocus="WdatePicker({minDate:'%y-%M-{%d}',maxDate:'#F{$dp.$D(\'end\')}',readOnly:true})" readonly="">
-                                        <i class="fa fa-calendar"></i>
-                                    </span>
-                                    <span class="spanInput">
-                                        <input id="end" class="Wdate" type="text" placeholder="2015-02-06" onfocus="WdatePicker({minDate:'#F{$dp.$D(\'start\')||\'%y-%M-{%d+1}\'}',readOnly:true})" readonly="">　
-                                        <i class="fa fa-calendar"></i>
-                                    </span>
-                                </span>
-                            </form>
-                        </div>
+                        <!--<div class="dataStatisticsHead">-->
+                            <!--<form action="#">-->
+                                <!--<span class="title">筛选职位</span>-->
+                                <!--<span class="dataOperation">-->
+                                    <!--<input type="text" class="dataIput" placeholder="请输入您要搜索的职位"/>-->
+                                    <!--<button class="btnSubmit" type="submit">-->
+                                        <!--<i class="fa fa-search"></i>-->
+                                    <!--</button>-->
+                                <!--</span>-->
+                                <!--<span class="timeSerch right">-->
+                                    <!--<span class="spanInput">-->
+                                        <!--<input id="start" class="Wdate" type="text" placeholder="2015-02-05" onfocus="WdatePicker({minDate:'%y-%M-{%d}',maxDate:'#F{$dp.$D(\'end\')}',readOnly:true})" readonly="">-->
+                                        <!--<i class="fa fa-calendar"></i>-->
+                                    <!--</span>-->
+                                    <!--<span class="spanInput">-->
+                                        <!--<input id="end" class="Wdate" type="text" placeholder="2015-02-06" onfocus="WdatePicker({minDate:'#F{$dp.$D(\'start\')||\'%y-%M-{%d+1}\'}',readOnly:true})" readonly="">　-->
+                                        <!--<i class="fa fa-calendar"></i>-->
+                                    <!--</span>-->
+                                <!--</span>-->
+                            <!--</form>-->
+                        <!--</div>-->
                         <div class="dataContent">
+                            <div class="dataStatisticsHead">
+                                <form action="#">
+                                    <span class="timeSerch right">
+                                        <span class="spanInput">
+                                            <input id="start" class="Wdate" type="text" placeholder="2015-02-05" onfocus="WdatePicker({minDate:'%y-%M-{%d}',maxDate:'#F{$dp.$D(\'end\')}',readOnly:true})" readonly="">
+                                            <i class="fa fa-calendar"></i>
+                                        </span>
+                                    </span>
+                                </form>
+                            </div>
                             <div id="container" style="min-width: 310px; height: 400px; margin: 0 auto"></div>
                         </div>
                     </div>
@@ -244,6 +254,5 @@
     <script src="../../assets/global/plugins/ajaxify/jquery-scrollto.js"></script>
     <script src="../../assets/global/plugins/ajaxify/jquery.ajaxify.js"></script>
     <script src="../../assets/admin/js/globals.js"></script>
-
 </body>
 </html>
