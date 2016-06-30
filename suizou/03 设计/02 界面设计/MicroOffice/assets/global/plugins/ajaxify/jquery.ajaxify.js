@@ -143,10 +143,8 @@
                 $dataBody = $data.find('.document-body:first'),
                     $dataContent = $dataBody.find(settings.target).filter(':first');
 
-
                 // Fetch the scripts
                 var $scripts = $dataContent.find('.document-script');
-                console.log($scripts)
                 if ( $scripts.length ) {
                     $scripts.detach();
                 }
@@ -173,11 +171,9 @@
                     var $script = "";
 
                     if ( $(this).attr("src") ) {
-
-                        $script = '<script type="text\/javascript" src="*" ><\/script>'.replace('*', $(this).attr("src"));
-
+                        $script = '<script type="text/javascript" src="*" ></script>'.replace('*', $(this).attr("src"));
                     } else {
-                        $script = '<script type="text/javascript">'+$(this).text()+'<\/script>'
+                        $script = '<script type="text/javascript">' + $(this).html().replace('&lt;','<').replace('&gt;','>').replace('&amp;','&') + '</script>';
                     }
 
                     $content.append($script);
