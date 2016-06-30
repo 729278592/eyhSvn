@@ -13,8 +13,9 @@
     <div class="container">
         <div class="page">
             <div class="bd absolute pd40">
-                <div class="weui_panel weui_panel_access">
-                    <div class="weui_panel_bd l15 r15 relative">
+                <div class="overflowy">
+                    <div class="weui_panel weui_panel_access">
+                        <div class="weui_panel_bd l15 r15 relative">
                         <span class="weui_media_box l0 weui_media_appmsg pd20">
                             <div class="weui_media_bd relative">
                                 <h4 class="weui_media_title auto">希望大夫帮我分析下，我是不是得了乙肝啊，谢谢您
@@ -35,64 +36,60 @@
                                 <button class="btnResolvedDisabled hide">已解决</button>
                             </div>
                         </span>
-                    </div>
-                    <div class="describe">
-                        <div class="caretUpDiv">
-                            <img src="../../assets/mobile/images/caretUp.png" alt="" class="caretUp"/>
                         </div>
-                        <div class="describeTitle">
-                            <img src="../../assets/mobile/images/describeImg.png" alt=""/> 
-                            <span class="title">描述 : </span>
-                        </div>
-                        <div class="describeCon">
-                            <p>
-                                乙肝表面抗原 + 15.657
-                            </p>
+                        <div class="describe">
+                            <div class="caretUpDiv">
+                                <img src="../../assets/mobile/images/caretUp.png" alt="" class="caretUp"/>
+                            </div>
+                            <div class="describeTitle">
+                                <img src="../../assets/mobile/images/describeImg.png" alt=""/>
+                                <span class="title">描述 : </span>
+                            </div>
+                            <div class="describeCon">
+                                <p>
+                                    乙肝表面抗原 + 15.657
+                                </p>
 
-                            <p>乙肝表面抗体 — 0.171</p>
+                                <p>乙肝表面抗体 — 0.171</p>
 
-                            <p>乙肝E抗原 — 0.504</p>
+                                <p>乙肝E抗原 — 0.504</p>
 
-                            <p>乙肝E抗体 + 0.301</p>
+                                <p>乙肝E抗体 + 0.301</p>
 
-                            <p>乙肝核心抗体 + 0.630</p>
+                                <p>乙肝核心抗体 + 0.630</p>
 
-                            <p>我去查了肝功的,肝功是正常的,但不知道乙肝检查的情况怎么样</p>
+                                <p>我去查了肝功的,肝功是正常的,但不知道乙肝检查的情况怎么样</p>
 
-                            <p>想得到怎样的帮助 : </p>
+                                <p>想得到怎样的帮助 : </p>
 
-                            <p>请问我有没有得乙肝,严不严重,会不会传染,需不需要吃药？谢谢!</p>
-                        </div>
-                    </div>
-                    <div class="data">
-                        <div class="dataTitle">
-                            <img src="../../assets/mobile/images/dataImg.png" alt=""/>
-                            <span class="title">检查资料 : </span>
-                        </div>
-                        <div class="dataCon">
-                            <ul class="clearfix dataMenu">
-                                <li>
-                                    <img src="../../assets/mobile/images/medicalRecord1.jpg" alt=""/>
-                                    <button class="btnLarge"></button>
-                                </li>
-                                <li>
-                                    <img src="../../assets/mobile/images/medicalRecord2.jpg" alt=""/>
-                                    <button class="btnLarge"></button>
-                                </li>
-                                <li>
-                                    <img src="../../assets/mobile/images/medicalRecord3.jpg" alt=""/>
-                                    <button class="btnLarge"></button>
-                                </li>
-                            </ul>
-                            <div class="largeImg">
-                                <img src="../../assets/mobile/images/medicalRecord3.jpg" alt=""/>
+                                <p>请问我有没有得乙肝,严不严重,会不会传染,需不需要吃药？谢谢!</p>
                             </div>
                         </div>
-                    </div>
-                    <div class="bg">
+                        <div class="data">
+                            <div class="dataTitle">
+                                <img src="../../assets/mobile/images/dataImg.png" alt=""/>
+                                <span class="title">检查资料 : </span>
+                            </div>
+                            <div class="dataCon">
+                                <ul class="clearfix dataMenu">
+                                    <li>
+                                        <img src="../../assets/mobile/images/medicalRecord1.jpg" alt=""/>
+                                        <button class="btnLarge"></button>
+                                    </li>
+                                    <li>
+                                        <img src="../../assets/mobile/images/medicalRecord2.jpg" alt=""/>
+                                        <button class="btnLarge"></button>
+                                    </li>
+                                    <li>
+                                        <img src="../../assets/mobile/images/medicalRecord3.jpg" alt=""/>
+                                        <button class="btnLarge"></button>
+                                    </li>
+                                </ul>
 
-                    </div>
-                    <div class="weui_panel_bd">
+                            </div>
+                        </div>
+                        <div class="bg"></div>
+                        <div class="weui_panel_bd">
                         <span class="weui_media_box l0 weui_media_appmsg top">
                             <div class="weui_media_hd">
                                 <img class="weui_media_appmsg_thumb portrait" src="../../assets/mobile/images/doctorImg.png">
@@ -123,15 +120,19 @@
                                 </p>
                             </div>
                         </span>
+                        </div>
+                    </div>
+                    <div id="toast" style="display: none;">
+                        <div class="weui_mask_transparent"></div>
+                        <div class="weui_toast">
+                            <i class="weui_icon_toast"></i>
+                            <p class="weui_toast_content">已解决</p>
+                        </div>
                     </div>
                 </div>
-                <div id="toast" style="display: none;">
-                    <div class="weui_mask_transparent"></div>
-                    <div class="weui_toast">
-                        <i class="weui_icon_toast"></i>
-                        <p class="weui_toast_content">已解决</p>
-                    </div>
-                </div>
+            </div>
+            <div class="largeImg hide">
+                <img src="../../assets/mobile/images/medicalRecord3.jpg" alt=""/>
             </div>
             <div class="foot ">
                 <div class="footBg h50">
@@ -172,6 +173,7 @@
             });
             $(".largeImg").on("touchend",function(){
                 $(this).addClass("hide");
+                $(".bd.absolute>div").removeClass("overflowy");
             });
             $(".largeImg img").on("touchend",function(e){
                 e.stopPropagation();

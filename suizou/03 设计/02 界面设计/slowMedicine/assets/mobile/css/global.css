@@ -31,6 +31,7 @@ textarea,input,button,select{border: none;outline: none;}
 a:hover{text-decoration: none;}
 img.w100{width: 100%;}
 .container>.mask,.container>.maskHide{position: fixed;top: 0;bottom: 0;right: 0;left: 0;background: rgba(0,0,0,0.6);z-index: 10;}
+.container>.leftMask{z-index: 1000;}
 .container>.maskHide img{width: 100%;}
 .container>.maskHide .mainDoctorImg1{width: 94%;margin: 12% 5% 0;}
 .container>.maskHide .mainDoctorImg{width: 94%;margin: 13% 3% 0;}
@@ -300,8 +301,8 @@ a.weui_media_box:active {
 .swiper-wrapper.w50 .swiper-slide img{width: 70%;min-height: 280px;}
 .bdFoot{padding: 15px 2% 0;width: 96%;border-top: 1px solid #efefef;font-size: 14px;display: table;position: relative;z-index: 100;margin-top: 10px;}
 .bdFoot p{margin-bottom: 10px;}
-.bdFoot.mb0 p{margin-bottom: 0;}
-.bdFoot span.type{color: #999;font-size: 14px;}
+.bdFoot.mb0 p{margin-bottom: 0;text-align: left;}
+.bdFoot span.type{color: #999;font-size: 14px;width: 78px;}
 .bdFoot span.spanInfor{font-size: 14px;color: #333;}
 .bdFoot span.type,.bdFoot span.spanInfor{display: table-cell;}
 .medicalBg{margin: 5% auto;width: 90%;position: relative;overflow: hidden;padding: 0 0 1% 0;}
@@ -334,11 +335,11 @@ a.weui_media_box:active {
 .sumbitInfor{width: 90%;position: absolute;left: 50%;margin-left: -45%;max-height: 570px;min-height: 350px;top: 50%;margin-top: -200px;}
 .sumbitInfor .personInforBg{width: 100%;position: absolute;}
 .sumbitInfor .fa-remove{position: absolute;background: #fff;color: #25a7e4;border-radius: 50px;right: -10px;top: 20px;width: 30px;height: 30px;text-align: center;line-height: 30px;border:3px solid #25a7e4;}
-.sumbitInfor .personForm{position: absolute;top: 50%;z-index: 1000;width: 94%;margin: 0 3%;text-align: center;}
+.sumbitInfor .personForm{position: absolute;top: 45%;z-index: 1000;width: 94%;margin: 0 3%;text-align: center;}
 .sumbitInfor .input-group{font-size: 14px;color: #666;margin-bottom: 10px;}
 .sumbitInfor .type{}
-.sumbitInfor .personForm input{border: 1px solid #efefef;padding: 5px 40px 5px 10px;font-family: "微软雅黑";}
-.sumbitInfor .personForm .btnSumbit{padding: 10px 0;width: 204px;height: 30px;background: #f8c929;color: #fff;font-size: 16px;font-family: "微软雅黑";line-height: 10px;position: relative;left: 19px;}
+.sumbitInfor .personForm input{border: 1px solid #efefef;padding: 8px 40px 8px 10px;font-family: "微软雅黑";}
+.sumbitInfor .personForm .btnSumbit{padding: 10px 0;width: 204px;height: 34px;background: #f8c929;color: #fff;font-size: 16px;font-family: "微软雅黑";line-height: 10px;position: relative;left: 19px;}
 .weui_toast,.weui_toast{z-index: 300;}
 
 
@@ -409,7 +410,7 @@ a.weui_media_box:active {
 .dataMenu li{width:90px;height:90px;margin:10px 3px ;position: relative;float: left;}
 .dataMenu li img{width: 100%;height: 100%;}
 .dataMenu li .btnLarge{position: absolute;left: 50%;top: 50%;margin-left: -12px;margin-top: -11px;width: 24px;}
-.largeImg{position: fixed;top: 0;right: 0;bottom: 0;left: 0;background: rgba(0,0,0,0.5);z-index: 1000;}
+.largeImg{position: fixed;top: 0;right: 0;bottom: 0;left: 0;background: rgba(0,0,0,0.5);z-index: 30000;}
 .largeImg .close{width:30px;height:30px;border-radius: 100%;font-size: 14px;color: #fff;background: red;
     position: absolute;right: 10px;top: 10px;text-align: center;line-height: 30px;}
 .largeImg img{width: 80%;left: 50%;margin-left: -40%;position: absolute;top: 50%;margin-top: -67%;height: 90%;}
@@ -539,15 +540,15 @@ a.weui_media_box:active {
 .weui_mask_transparent.fixed{position: fixed;z-index: 10000;}
 
 
-
+.swiper-button-next, .swiper-button-prev{top: 40%;}
 /*media*/
 @media screen and (min-height: 660px) {
     .container>.maskHide .mainDoctorImg{margin: 7% 3% 0;}
 }
 
+
 @media screen and (min-width: 370px) {
-    .swiper-wrapper.w70 .swiper-slide img{height: 398px;}
-    .swiper-wrapper.w50 .swiper-slide img{min-height: 398px;}
+
     .weui_search_bar.style .weui_search_cancel{width: 7%;}
     .weui_search_bar.style .weui_search_inner .weui_icon_search{width: 14%;}
     .commentNum{background-size: 70% 90%;right: -24px;}
@@ -555,23 +556,55 @@ a.weui_media_box:active {
         width: 70%;
         height: 90%;
     }
+
 }
 
 
 @media screen and (min-width: 414px) {
-    .swiper-wrapper.w70 .swiper-slide img{height: 440px;}
-    .swiper-wrapper.w50 .swiper-slide img{min-height: 398px;}
+
 }
 
+@media screen and (min-height: 480px) {
+    .swiper-wrapper.w50 .swiper-slide{height: 350px;overflow-y: auto;}
+    .medicalBgBgfff{height: 410px;}
+    .swiper-wrapper.w70 .swiper-slide{height: 430px;overflow-y: auto;}
+    .swiper-wrapper.w70 {height: 430px;}
+    .swiper-wrapper.w70 .swiper-slide img{height: 340px;}
+    .swiper-wrapper.w50 .swiper-slide img{min-height: 320px;}
+    .largeImg img{margin-top: -70%;height: 80%}
+}
 
 @media screen and (min-height: 560px) {
     .swiper-wrapper.w50 .swiper-slide img{width: 85%;}
     .largeImg img{margin-top: -80%;}
-
+    .swiper-wrapper.w50 .swiper-slide{height: 430px;overflow-y: auto;}
+    .medicalBgBgfff{height: 490px;}
+    .swiper-wrapper.w70 .swiper-slide{height: 510px;overflow-y: auto;}
+    .swiper-wrapper.w70 {height: 510px;}
+    .swiper-wrapper.w70 .swiper-slide img{height: 398px;}
+    .swiper-wrapper.w50 .swiper-slide img{min-height: 378px;}
+    .largeImg img{margin-top: -67%;height: 80%}
+    .sumbitInfor{top: 55%;}
+    .sumbitInfor .personForm{top: 50%;}
 }
 
 
-@media screen and (min-height: 667px) {
+@media screen and (min-height: 660px) {
     .swiper-wrapper.w50 .swiper-slide img {width: 90%;}
+    .swiper-wrapper.w50 .swiper-slide{height: 590px;overflow-y: auto;}
+    .medicalBgBgfff{height: 650px;}
+    .swiper-wrapper.w70 .swiper-slide{height: 620px;overflow-y: auto;}
+    .swiper-wrapper.w70 {height: 620px;}
+    .swiper-wrapper.w70 .swiper-slide img{height: 440px;}
+    .swiper-wrapper.w50 .swiper-slide img{min-height: 420px;}
+    .largeImg img{margin-top: -60%;height: 80%}
+}
 
+
+@media screen and (min-height: 730px) {
+    .swiper-wrapper.w70 .swiper-slide{height: 620px;overflow-y: auto;}
+    .swiper-wrapper.w70 {height: 620px;}
+    .swiper-wrapper.w70 .swiper-slide img{height: 500px;}
+    .swiper-wrapper.w50 .swiper-slide img{min-height: 480px;}
+    .sumbitInfor .personForm{top: 55%;}
 }
