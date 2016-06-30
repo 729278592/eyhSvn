@@ -280,6 +280,7 @@
                                 <div class="col-md-6 col-xs-6 col-sm-6">
                                     <div class="button-label bt0 clearfix">
                                         <!--<p class="moreTag"><span class="required">*</span>最多只能添加5个标签</p>-->
+                                        <a class="keyword-button"><span class="keyword-button-content">技术部</span><i class="fa fa-times-circle-o"></i></a>
                                         <a href="#" class="keyword-dashed-button">
                                             <span class="add-span">+</span>
                                             添加
@@ -401,6 +402,7 @@
                         }
                         else{
                             if($(".keyword-button").get(0)){
+                                arr.push($(".keyword-button .keyword-button-content").text());
                                 if($.inArray(value, arr) < 0){
                                     $(".keyword-dashed-button").before(str);
                                     $(this).closest(".keyword-div").find(".keyword-input").val("");
