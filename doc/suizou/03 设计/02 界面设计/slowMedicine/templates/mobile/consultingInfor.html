@@ -13,7 +13,7 @@
     <div class="container">
         <div class="page">
             <div class="bd absolute pd40">
-                <div class="overflowy">
+                <div class="">
                     <div class="weui_panel weui_panel_access">
                         <div class="weui_panel_bd l15 r15 relative">
                         <span class="weui_media_box l0 weui_media_appmsg pd20">
@@ -169,7 +169,8 @@
             $(".dataMenu .btnLarge").on("touchend",function(){
                 var src = $(this).parent().find("img").attr("src");
                 $(".largeImg").removeClass("hide");
-                $(".largeImg").find("img").attr({src:src})
+                $(".largeImg").find("img").attr({src:src});
+                $(".bd.absolute>div").addClass("overflowy");
             });
             $(".largeImg").on("touchend",function(){
                 $(this).addClass("hide");
