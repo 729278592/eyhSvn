@@ -13,11 +13,11 @@
     <div class="container absolute errDailog">
         <div class="page">
             <div class="bd">
-                <div class="weui_search_bar">
+                <div class="weui_search_bar style">
                     <form class="weui_search_outer">
                         <div class="weui_search_inner">
                             <i class="weui_icon_search"></i>
-                            <input type="search" class="weui_search_input" placeholder="请输入关键词" required="">
+                            <input type="search" class="weui_search_input" placeholder="请输入医院名称或医生名称" required="">
                             <a href="javascript:" class="weui_icon_clear"></a>
                         </div>
                     </form>
@@ -78,38 +78,50 @@
                     高级筛选
                 </div>
                 <div class="advancedSearchCon ">
-                    <div class="weui_search_bar" id="search_bar">
+                    <!--<div class="weui_search_bar" id="search_bar">-->
+                        <!--<form class="weui_search_outer">-->
+                            <!--<div class="weui_search_inner">-->
+                                <!--<i class="weui_icon_search"></i>-->
+                                <!--<input type="search" class="weui_search_input" id="search_input" placeholder="请输入关键词" required="">-->
+                                <!--<a href="javascript:" class="weui_icon_clear" id="search_clear"></a>-->
+                            <!--</div>-->
+                            <!--<label for="search_input" class="weui_search_text" id="search_text">-->
+                                <!--<i class="weui_icon_search"></i>-->
+                                <!--<span>搜索</span>-->
+                            <!--</label>-->
+                        <!--</form>-->
+                        <!--<a href="javascript:" class="weui_search_cancel" id="search_cancel">取消</a>-->
+                    <!--</div>-->
+                    <div class="weui_search_bar style">
+                        <span class="titleTexts">
+                            关键字 :
+                        </span>
                         <form class="weui_search_outer">
                             <div class="weui_search_inner">
-                                <i class="weui_icon_search"></i>
-                                <input type="search" class="weui_search_input" id="search_input" placeholder="请输入关键词" required="">
-                                <a href="javascript:" class="weui_icon_clear" id="search_clear"></a>
+                                <!--<i class="weui_icon_search"></i>-->
+                                <input type="search" class="weui_search_input" placeholder="请输入医院名称或医生名称" required="">
+                                <a href="javascript:" class="weui_icon_clear"></a>
                             </div>
-                            <label for="search_input" class="weui_search_text" id="search_text">
-                                <i class="weui_icon_search"></i>
-                                <span>搜索</span>
-                            </label>
                         </form>
-                        <a href="javascript:" class="weui_search_cancel" id="search_cancel">取消</a>
                     </div>
                     <form action="#">
                         <div class="weui_cells mt0 weui_cells_form">
                             <div class="weui_cell address l0">
                                 <div class="weui_cell_hd"><label class="weui_label"><img src="../../assets/mobile/images/addressIcon.png" alt=""/>地区 :</label></div>
                                 <div class="weui_cell_bd weui_cell_primary">
-                                    <input class="weui_input" type="text" readonly placeholder="张志平" id="personName">
+                                    <input class="weui_input" type="text" readonly value="所有地区" id="personName">
                                 </div>
                             </div>
                             <div class="weui_cell hospital l0">
                                 <div class="weui_cell_hd"><label class="weui_label"><img src="../../assets/mobile/images/hospital.png" alt=""/>医院 :</label></div>
                                 <div class="weui_cell_bd weui_cell_primary">
-                                    <input class="weui_input" type="text" readonly placeholder="重庆西南医院">
+                                    <input class="weui_input" type="text" readonly value="所有医院">
                                 </div>
                             </div>
                             <div class="weui_cell department l0">
                                 <div class="weui_cell_hd"><label class="weui_label"><img src="../../assets/mobile/images/departmentIcon.png" alt=""/>科室 :</label></div>
                                 <div class="weui_cell_bd weui_cell_primary">
-                                    <input class="weui_input" type="text" readonly placeholder="感染科">
+                                    <input class="weui_input" type="text" readonly value="所有科室">
                                 </div>
                             </div>
                         </div>

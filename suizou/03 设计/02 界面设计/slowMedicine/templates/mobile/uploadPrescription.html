@@ -7,11 +7,10 @@
     <link rel="stylesheet" href="../../assets/global/plugins/font/css/font-awesome.min.css"/>
     <link rel="stylesheet" href="../../assets/global/plugins/weUi/css/weui.css"/>
     <link rel="stylesheet" href="../../assets/global/plugins/weUi/css/example.css"/>
-    <link rel="stylesheet" href="../../assets/global/plugins/webuploader/css/webuploader.css"/>
     <link rel="stylesheet" href="../../assets/mobile/css/global.css"/>
 </head>
 <body>
-    <div class="container">
+    <div class="container absolute errDailog">
         <div class="page absolute bgfff">
             <div class="bd">
                 <form action="#">
@@ -52,20 +51,30 @@
                         <div class="weui_cell pd0 bt0">
                             <div class="weui_cell_bd weui_cell_primary">
                                 <p style="padding: 10px 15px 0;font-size: 16px;">处方详情 : </p>
-                                <textarea name="" id="caseDetails" class="weui_textarea pd10 pd15" placeholder="请输入处方详情..." cols="30" rows="6"></textarea>
+                                <textarea name="" id="caseDetails" class="weui_textarea pd10 pd15" placeholder="慢医小助手将为您补充处方描述的专业信息，您可以选择填写" cols="30" rows="6"></textarea>
                             </div>
                         </div>
                     </div>
-                    <div class="foot">
-                        <input type="submit" class="bg3" value="提交"/>
+                    <!--<div class="foot">-->
+                        <!--<input type="submit" class="bg3" value="提交"/>-->
+                    <!--</div>-->
+                    <div class="weui_btn_area btnStyle w100 fixed">
+                        <button  type="submit" class="weui_btn weui_btn_primary bg3" id="showTooltips">
+                            提交
+                        </button>
                     </div>
                 </form>
             </div>
         </div>
     </div>
     <script src="../../assets/global/plugins/jquery/jquery-1.11.3.min.js"></script>
-    <script src="../../assets/global/plugins/webuploader/js/webuploader.js"></script>
-    <script src="../../assets/global/plugins/webuploader/js/upLoadfk.js"></script>
     <script src="../../assets/mobile/js/global.js"></script>
+    <script src="../../assets/mobile/js/messageTip.js"></script>
+    <script>
+        $("#showTooltips").click(function(){
+            showLoading("数据提交中","提交成功");
+            return true;
+        });
+    </script>
 </body>
 </html>
