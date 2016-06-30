@@ -402,7 +402,10 @@
                         }
                         else{
                             if($(".keyword-button").get(0)){
-                                arr.push($(".keyword-button .keyword-button-content").text());
+                                $(".keyword-button").each(function(){
+                                    arr.push($(this).find(".keyword-button-content").text());
+                                });
+
                                 if($.inArray(value, arr) < 0){
                                     $(".keyword-dashed-button").before(str);
                                     $(this).closest(".keyword-div").find(".keyword-input").val("");
