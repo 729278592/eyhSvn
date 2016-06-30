@@ -699,7 +699,7 @@ a.keyword-button:hover,.keyword-button:active,.keyword-button:focus{color: #fff;
 
 
 /*dataStatistics*/
-.dataStatisticsHead{padding: 10px;border-bottom: 1px solid #dbdbdb;color: #666;font-size: 14px;}
+.dataStatisticsHead{padding: 10px;color: #666;font-size: 14px;}
 .dataStatisticsHead.bb0{border-bottom: 0;padding: 0;}
 .dataStatisticsHead .title{}
 .dataStatisticsHead .dataOperation{position: relative;left: 15px;}
