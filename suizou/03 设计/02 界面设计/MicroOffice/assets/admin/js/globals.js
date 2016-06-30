@@ -3,6 +3,11 @@
  */
 /*左边二级导航*/
 $(function(){
+
+    $(".nav a").ajaxify({
+        target:'#admin-content-wrapper'
+    });
+
     $(".nav").hover(
         function(){
             $(this).animate({width:"158px"},200);

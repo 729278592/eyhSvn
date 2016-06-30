@@ -193,7 +193,8 @@ a:link{text-decoration: none;}
 .forgetPassword{position: absolute;top: 10px;right: -84px;}
 .ns-admin.ns-setting.ns-accountinfo .form-line.passwd-md{top: -50px;}
 .position-phone-validate-wrapper{position: relative;}
-.position-phone-validate-wrapper .close{position: absolute;top: 10px;left: 400px;}
+.position-phone-validate-wrapper .close{position: absolute;top: 10px;left: 400px;color: #999;
+    opacity: 0.5;}
 /*自写样式*/
 .g-form-radio-group label.noBeflre:before{border: none;background: transparent;}
 .qx-qrcode img{width: 165px;height: 165px}

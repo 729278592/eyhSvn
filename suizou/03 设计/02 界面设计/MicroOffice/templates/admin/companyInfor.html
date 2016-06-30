@@ -382,15 +382,20 @@
                     $(".keyword-div .fa-check-circle").on("click",function(){
                         var values = $(this).closest(".keyword-div").find(".keyword-input").val();
                         var value = $.trim(values);
-                        var str = document.createElement("a");
-                        str.className = "keyword-button";
-                        var aSpan = document.createElement("span");
-                        aSpan.className = "keyword-button-content";
-                        var aI = document.createElement("i");
-                        aI.className = "fa fa-times-circle-o";
-                        aSpan.appendChild(document.createTextNode(value));
-                        str.appendChild(aSpan);
-                        str.appendChild(aI);
+//                        var str = document.createElement("a");
+//                        str.className = "keyword-button";
+//                        var aSpan = document.createElement("span");
+//                        aSpan.className = "keyword-button-content";
+//                        var aI = document.createElement("i");
+//                        aI.className = "fa fa-times-circle-o";
+//                        aSpan.appendChild(document.createTextNode(value));
+//                        str.appendChild(aSpan);
+//                        str.appendChild(aI);
+                        var str = '<a class="keyword-button">' +
+                                      '<span class="keyword-button-content">'+value+'</span>' +
+                                      '<i class="fa fa-times-circle-o"></i>' +
+                                  '</a>';
+
                         if(value==''){
                             alert('标签名不能为空');
                         }
@@ -464,16 +469,10 @@
             </div>
         </div>
     </div>
-    <script src="../../assets/admin/js/globals.js"></script>
+
     <script src="../../assets/global/plugins/ajaxify/jquery.history.js"></script>
     <script src="../../assets/global/plugins/ajaxify/jquery-scrollto.js"></script>
     <script src="../../assets/global/plugins/ajaxify/jquery.ajaxify.js"></script>
-    <script>
-        $(".nav a").ajaxify({
-            event: "click",
-            target:'#admin-content-wrapper'
-        });
-
-    </script>
+    <script src="../../assets/admin/js/globals.js"></script>
 </body>
 </html>
