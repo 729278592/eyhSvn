@@ -67,7 +67,7 @@ function showErrMsg(message) {
 }
 
 
-function showToast(message1) {
+function showToast(message1,str) {
     $("#toast .weui_toast_content .errSpan").append(message1);
     $("#toast .weui_toast").addClass("weui_toastshow");
     $('#toast').show();
@@ -79,11 +79,14 @@ function showToast(message1) {
             $(".mainDoctor").addClass("hide");
             $("span.myDoctor").removeClass("hide")
         }
+        callback(str)
     }, 3000);
 }
 
-
-function showLoading(message,message1) {
+function callback(str){
+    window.location.href = str + '.html';
+}
+function showLoading(message,message1,str) {
     $("#loadingToast .weui_toast_content .errSpan").append(message);
     $('#loadingToast').show();
     $("#loadingToast .weui_toast").addClass("weui_toastshow");
@@ -91,6 +94,6 @@ function showLoading(message,message1) {
         $("#loadingToast .weui_toast").removeClass("weui_toastshow");
         $('#loadingToast').hide();
         $("#loadingToast .weui_toast_content .errSpan").empty();
-        showToast(message1)
+        showToast(message1,str)
     }, 3000);
 }
