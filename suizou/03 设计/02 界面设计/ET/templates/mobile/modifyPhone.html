@@ -12,25 +12,27 @@
 <body>
     <div class="container absolute errDailog">
         <div class="page">
-            <div class="bd">
+            <div class="bd absolute pd40">
                 <form action="#" id="form" onsubmit="return false">
                     <div class="weui_cells weui_cells_form mt0">
                         <div class="weui_cell">
                             <div class="weui_cell_hd">
                                 <label class="weui_label">
-                                    <span class="spanImgBg spanPhone"></span>
-                                    <span class="spanText">手　机</span>
+                                    <!--<span class="spanImgBg spanPhone"></span>-->
+                                    <!--<span class="spanText">手机号</span>-->
+                                    <span class="color">手机号</span>
                                 </label>
                             </div>
                             <div class="weui_cell_bd weui_cell_primary">
-                                <input class="weui_input" type="text" placeholder="13678478463" id="newMobile"/>
+                                <input class="weui_input" type="text" placeholder="13678478463" id="oldMobile"/>
                             </div>
                         </div>
                         <div class="weui_cell weui_vcode">
                             <div class="weui_cell_hd">
                                 <label class="weui_label">
-                                    <span class="spanImgBg spanPhoneYz"></span>
-                                    <span class="spanText">验证码</span>
+                                    <!--<span class="spanImgBg spanPhoneYz"></span>-->
+                                    <!--<span class="spanText">验证码</span>-->
+                                    <span class="color">验证码</span>
                                 </label>
                             </div>
                             <div class="weui_cell_bd weui_cell_primary">
@@ -43,7 +45,7 @@
                         </div>
                     </div>
                     <div class="weui_btn_area">
-                        <input type="submit" class="weui_btn weui_btn_primary" id="saveBtn" value="保存">
+                        <input type="submit" class="weui_btn weui_btn_primary" id="saveBtn" value="下一步">
                     </div>
                 </form>
             </div>
@@ -52,26 +54,36 @@
     <script src="../../assets/global/plugins/jquery/jquery-1.11.3.min.js"></script>
     <script src="../../assets/mobile/js/global.js"></script>
     <script src="../../assets/mobile/js/messageTip.js"></script>
+    <script src="../../assets/mobile/js/common-validate.js"></script>
     <script>
-        $("#saveBtn").click(function(){
-            var reg = /^(1[38][0-9]|14[57]|15[012356789]|17[0678])[0-9]{8}$/;
-            if($.trim($("#newMobile").val())== '') {
-                showErrMsg('手机号不能为空');
-                return false;
-            }
-            else if($("#newMobile").get(0)&&!reg.test($("#newMobile").val())){
-                showErrMsg('手机号格式不正确');
-                return false;
-            }
-            else if($.trim($("#verificationCode").val()) == ''){
-                showErrMsg('验证码不能为空');
-                return false;
-            }
+        $(function(){
+            $("#saveBtn").click(function(){
+                if($.trim($("#oldMobile").val())== '') {
+                    showErrMsg('手机号不能为空');
+                    return false;
+                }
+                else if($("#newMobile").get(0)&&!isPhone($("#newMobile").val())){
+                    showErrMsg('手机号格式不正确');
+                    return false;
+                }
+                else if($.trim($("#verificationCode").val()) == ''){
+                    showErrMsg('验证码不能为空');
+                    return false;
+                }
+                else{
+                    showLoading('提交数据中','提交完成','fillNewPhone');
+                }
+                return true;
+            });
 
-            else{
-            }
-            return true;
-        });
+            $("#oldMobile").on("keyup",function(){
+                if(isPhone($(this).val())){
+                    $(".btnVerification").removeClass("disabled").removeAttr("disabled");
+                }else{
+                    $(".btnVerification").addClass("disabled").attr("disabled");
+                }
+            })
+        })
     </script>
 </body>
 </html>

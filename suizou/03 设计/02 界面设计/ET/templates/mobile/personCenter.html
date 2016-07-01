@@ -22,7 +22,7 @@
             <div class="bd">
                 <form action="#" id="form" onsubmit="return false">
                     <div class="weui_cells weui_cells_form mt0">
-                        <div class="weui_cell">
+                        <a class="weui_cell" href="modifyName.html">
                             <div class="weui_cell_hd">
                                 <label class="weui_label">
                                     <span class="spanImgBg spanName"></span>
@@ -30,15 +30,15 @@
                                 </label>
                             </div>
                             <div class="weui_cell_bd weui_cell_primary">
-                                <input class="weui_input" id="address" type="text" placeholder="重庆" name=""/>
+                                <div class="weui_cell_ft taLeft">张三</div>
                             </div>
-                        </div>
+                        </a>
                         <div class="weui_cell">
                             <label class="weui_label">
                                 <span class="spanImgBg spanBirthday"></span>
                                 <span class="spanText">生日</span>
                             </label>
-                            <div class="weui_cell_bd weui_cell_primary">
+                            <div class="weui_cell_bd weui_cell_primary date">
                                 <!--<input type="text" class="weui_input" id='datetime-picker'/>-->
                                 <input type="date" class="weui_input" placeholder="2015-4-4"/>
                             </div>
@@ -58,14 +58,14 @@
                                 <span class="spanImgBg spanAddress"></span>
                                 <span class="spanText">地址</span>
                             </label>
-                            <div class="weui_cell_bd weui_cell_primary">
+                            <div class="weui_cell_bd weui_cell_primary date">
                                 <input type="text" id='city-picker' class="weui_input" value="浙江 杭州 拱墅区" />
                             </div>
                         </div>
                     </div>
-                    <div class="weui_btn_area">
-                        <input type="submit" class="weui_btn weui_btn_primary saveBasic" id="saveBtn" value="保存">
-                    </div>
+                    <!--<div class="weui_btn_area">-->
+                        <!--<input type="submit" class="weui_btn weui_btn_primary" id="showTooltips" value="保存">-->
+                    <!--</div>-->
                 </form>
             </div>
         </div>
@@ -76,7 +76,6 @@
     <script type='text/javascript' src='../../assets/global/plugins/mobile-plugins/js/sm.js' charset='utf-8'></script>
     <script type='text/javascript' src='../../assets/global/plugins/mobile-plugins/js/sm-extend.js' charset='utf-8'></script>
     <script type='text/javascript' src='../../assets/global/plugins/mobile-plugins/js/sm-city-picker.js' charset='utf-8'></script>
-
     <script>
         /*生日*/
 //        $("#datetime-picker").datetimePicker({
