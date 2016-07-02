@@ -109,9 +109,9 @@ a.weui_media_box:active {
 .person-head .personImg{width:20%}
 .person-head .personImg.pd0{padding:0}
 .person-head .personImg img{border-radius: 100%;width: 74px;height: 74px;}
-.person-head .personInfor{width:33%;padding-left:4%}
+.person-head .personInfor{width:33%;position: relative;left: 8%;}
 .person-head .personInfor .name{font-size:16px}
-.person-head .personInfor .name a{display:inline-block;padding:0 3px;color:#ffad12;border-radius:4px;border:2px solid #ffad12;font-size:12px}
+.person-head .personInfor .name>a{display:block;padding:0 3px;color:#ffad12;border-radius:4px;border:2px solid #ffad12;font-size:12px;width: 38px;}
 .person-head .personInfor .doctorName a{display:inline-block;padding:0 3px;color:#ffad12;border-radius:4px;border:2px solid #ffad12}
 .person-head .personInfor .doctorName a.b0{border: none;}
 .person-head .tableCell.btnDiv{vertical-align:bottom;text-align:right}
