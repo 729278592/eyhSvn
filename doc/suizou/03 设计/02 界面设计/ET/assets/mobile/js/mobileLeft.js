@@ -7,7 +7,7 @@ $(function(){
     var html =  '<div class="mask hide leftMask">'+
                     '<div class="leftNav hide">'+
                         '<div class="person-head personImg clearfix">'+
-                            '<a href="patientInfor.html">' +
+                            '<a href="personCenter.html">' +
                                 '<img src="../../assets/mobile/images/personImg.png" alt="" class="portrait"><br/>'+
                                 '<span>李建国</span>　<img src="../../assets/mobile/images/modifyIcon.png" alt="" class="modifyIcon">'+
                             '</a>'+
@@ -18,28 +18,28 @@ $(function(){
                         '</div>'+
                         '<ul class="menu-list">'+
                             '<li>'+
-                                '<a href="prescriptionRecord.html">'+
+                                '<a href="membershipPrivileges.html">'+
                                    '<img src="../../assets/mobile/images/vipIcon.png" class="icons">'+
                                     '<span>会员特权(VI会员)</span>'+
                                     '<i class="fa fa-angle-right"></i>'+
                                 '</a>'+
                             '</li>'+
                             '<li>'+
-                                '<a href="medicalRecord.html">'+
+                                '<a href="forwardRecordActive.html">'+
                                     '<img src="../../assets/mobile/images/forwardIcon.png" class="icons">'+
                                     '<span>转发记录</span>'+
                                     '<i class="fa fa-angle-right"></i>'+
                                 '</a>'+
                             '</li>'+
                             '<li>'+
-                                '<a href="myDoctor.html">'+
+                                '<a href="activeRecordGo.html">'+
                                     '<img src="../../assets/mobile/images/activeRecordIcon.png" class="icons">'+
                                     '<span>活动记录</span>'+
                                     '<i class="fa fa-angle-right"></i>'+
                                 '</a>'+
                             '</li>'+
                             '<li>'+
-                                '<a href="myConsultingList.html">'+
+                                '<a href="notRecordsConsumptioned.html">'+
                                     '<img src="../../assets/mobile/images/shareRecordIcon.png" class="icons">'+
                                     '<span>消费记录</span>'+
                                     '<i class="fa fa-angle-right"></i>'+
