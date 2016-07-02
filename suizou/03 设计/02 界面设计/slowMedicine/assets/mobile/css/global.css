@@ -108,8 +108,8 @@ a.weui_media_box:active {
 .person-head .tableCell{display:table-cell;vertical-align:middle}
 .person-head .personImg{width:20%}
 .person-head .personImg.pd0{padding:0}
-.person-head .personImg img{width:100%;border-radius: 100%;}
-.person-head .personInfor{width:46%;padding-left:4%}
+.person-head .personImg img{border-radius: 100%;width: 74px;height: 74px;}
+.person-head .personInfor{width:33%;padding-left:4%}
 .person-head .personInfor .name{font-size:16px}
 .person-head .personInfor .name a{display:inline-block;padding:0 3px;color:#ffad12;border-radius:4px;border:2px solid #ffad12;font-size:12px}
 .person-head .personInfor .doctorName a{display:inline-block;padding:0 3px;color:#ffad12;border-radius:4px;border:2px solid #ffad12}
@@ -364,7 +364,7 @@ a.weui_media_box:active {
 .weui_panel{margin-top:6px}
 .weui_select{font-family:"微软雅黑";padding:0;color:#333;font-size:14px}
 .weui_cells_form input,.weui_cells_form label[for],.weui_cells_form textarea{font-family:"微软雅黑"}
-.imgUpload img{width:40%;position:relative;right:15px;border-radius: 100%;}
+.imgUpload img{position:relative;right:15px;border-radius: 100%;width: 74px;height: 74px;}
 .imgUpload .weui_cell_bd:after{content:" ";display:inline-block;-webkit-transform:rotate(45deg);transform:rotate(45deg);height:6px;width:6px;border-width:2px 2px 0 0;border-color:#C8C8CD;border-style:solid;position:relative;top:-2px;position:absolute;top:50%;right:15px;margin-top:-3px}
 .weui_btn_primary{background-color:#f8c929;border-radius:0}
 .weui_btn:after{border-radius:0;border:none}

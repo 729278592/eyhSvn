@@ -91,6 +91,6 @@ function showLoading(message,message1) {
         $("#loadingToast .weui_toast").removeClass("weui_toastshow");
         $('#loadingToast').hide();
         $("#loadingToast .weui_toast_content .errSpan").empty();
-        showToast(message1)
+        showToast(message1);
     }, 3000);
 }
