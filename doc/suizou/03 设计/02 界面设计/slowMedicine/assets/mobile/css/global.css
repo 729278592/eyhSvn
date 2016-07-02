@@ -238,7 +238,8 @@ a.weui_media_box:active {
     margin-left: .3em;}
 .weui_search_bar .titleTexts{font-size: 14px;display: inline-block;padding-right: 5px;position: relative;top: 2px;}
 .imgUpload .weui_cell_bd.weui_cell_primary:after{display: none;}
-
+.foot a.weui_btn_primary.bg4:active{background: #51b1ed;}
+.weui_search_inner .weui_icon_clear{right: 17%;padding: 0 5px;}
 /*medicalScore*/
 .score{padding: 15px;background: #fff;margin-bottom: 10px;}
 .score.pd0{padding: 0;}
