@@ -330,7 +330,7 @@ body,html{height: 100%;}
 .form{width: 100%;height:100%;font-size: 14px;}
 .form.fs14{font-size: 14px;}
 body.overflow{overflow-y: hidden;overflow-x: auto;}
-
+.form-group .getcode.active{background: #ccc;}
 .question-infor{position: absolute;width: 200px;padding: 10px;background: #ff7f81;font-size: 14px;color: #fff;top: -8px;right: -204px;z-index: 10;display: none;font-family: "微软雅黑";}
 .question-infor .fa{position: absolute;left: -5px;top: 8px;color: #ff7f81;font-size: 16px;}
 .question-infor p{line-height: 16px;top: 0;}
@@ -343,9 +343,7 @@ input.btn-click:hover{background: #e16a20}
 .form .form-group .btn-click:hover{text-decoration: none;opacity: 0.8;filter:alpha(opacity=80);}
 .form  a:hover{text-decoration: underline;}
 .form  a{color: #f16a20;}
-.foot{position: absolute;bottom: 0;left: 0;right: 0;height: 40px;z-index: 100;line-height: 40px;color: #666;}
-.foot-main{width: 90%;margin: 0 auto;height: 100%;padding: 0 2%;}
-.copyright{font-size: 14px;color: #666;z-index: 10;text-align: center;margin: 1px\0;}
+
 
 
 /*.col-sm-8,.col-sm-4{padding: 0;}*/
@@ -371,6 +369,9 @@ label.error {color: #EA5200;margin-bottom: 0;}
 label{font-weight: 100;color: #4B525C;}
 .card.qr-code{height: 238px;}
 .qx-qrcode{padding: 14px 0 25px;}
+.foot{position: absolute;bottom: 0;left: 0;right: 0;height: 40px;z-index: 100;line-height: 40px;color: #666;}
+.foot-main{width: 90%;margin: 0 auto;height: 100%;padding: 0 2%;}
+.copyright{font-size: 14px;color: #666;z-index: 10;text-align: center;margin: 1px\0;}
 /*postOffice*/
 .content-position{background: #fff;padding: 20px 40px;width: 100%;position: relative;border: 1px solid #dbdbdb;}
 .content-position.mt40{margin-top: 60px;}
@@ -386,10 +387,12 @@ img.w100{width: 100%;}
 .form-horizontal .control-label.pad0{padding-left: 17px;padding-right: 0;text-align: left;}
 .form-group{position: relative;}
 .form-group .fa-caret-down{position: absolute;right: 25px;top: 10px;display: none\0;}
-.upLoad,.btnOpen,.btnRecharge{font-size: 12px;border-radius: 8px;background: #69a7f9;color: #fff;width: 70px;height: 30px;text-align: center;display: inline-block;line-height: 30px;}
+.upLoad,.btnOpen,.btnRecharge,.btnNotOpen{font-size: 12px;border-radius: 8px;background: #69a7f9;color: #fff;width: 70px;height: 30px;text-align: center;display: inline-block;line-height: 30px;}
 .btnOpen{background: #d5f7ef;color: #4fc283;border: 1px solid #08be06;}
 .btnRecharge{background: #fbe2da;color: #ec724b;border: 1px solid #eb6e45;margin-left: 10px;}
 .btnOpen:hover,.btnOpen:focus{color: #4fc283;}
+.btnNotOpen:hover,.btnNotOpen:focus{color: #ec724b;}
+.btnNotOpen{background: #fbe2da;color: #ec724b;border: 1px solid #eb6e45;}
 .btnRecharge:hover,.btnRecharge:focus{color: #ec724b;}
 .content-position.pd15{padding: 15px;}
 .positionHead{background: #fff;padding: 15px;width: 100%;border: 1px solid #578ada;border-top-width:4px;margin-bottom: 10px;}
