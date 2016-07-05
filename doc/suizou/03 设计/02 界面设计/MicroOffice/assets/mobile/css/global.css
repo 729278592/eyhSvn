@@ -504,3 +504,20 @@ a.weui_btn.weui_btn_primary{font-size: 16px;}
 .resumeJob .weui_cell_primary,.resumeTag .weui_cell_primary{height: 25px;line-height: 25px;}
 .resumeBasic .weui_cell_primary.h44,.resumeSex .weui_cell_primary.h44,.resumeEducation .weui_cell_primary.h44,
 .resumeJob .weui_cell_primary.h44,.resumeTag .weui_cell_primary.h44{height: 44px;line-height: 44px;}
+
+
+.weui_search_bar.style{background: #fff;}
+.weui_search_inner{padding-left: 10px;}
+.weui_search_bar.style .weui_search_inner .weui_icon_search{right: 0;display: inline-block;width: 16%;left: auto;text-align: center;}
+.weui_search_bar.style .weui_search_inner .weui_icon_search:after{content: "";position: absolute;left: 0;top: 2px;bottom: 0px;width: 1px;border-left: 1px solid #efefef;}
+.weui_search_bar.style .weui_search_inner .weui_icon_search:before{color:#48a8e4;font-weight: bold; }
+.weui_search_bar.style .weui_search_cancel{width: 6%;text-align: center;color: #48a8e4;}
+.weui_search_bar.style .weui_search_cancel:after{content: "";position: absolute;right: 10%;
+    top: 0;bottom: 0;width: 1px;border-left: 1px solid #efefef;}
+.weui_btn{font-family: "微软雅黑";}
+.weui_search_bar.style .weui_search_inner .weui_icon_clear {
+    position: absolute;
+    top: -2px;
+    right: 15%;
+    padding: 0 10px;
+    line-height: 28px;}

@@ -2,7 +2,7 @@
 <html>
 <head lang="en">
     <meta charset="UTF-8">
-    <title>粉丝数据-粉丝记录</title>
+    <title>活动管理-编辑活动</title>
     <link rel="stylesheet" href="../../assets/admin/css/global.css"/>
     <link rel="stylesheet" href="../../assets/global/plugins/font/css/font-awesome.css"/>
 </head>
@@ -18,7 +18,7 @@
                         </a>
                         <div class="colorBlock"></div>
                     </li>
-                    <li>
+                    <li class="active">
                         <a href="productDisplay.html">
                             内容管理
                         </a>
@@ -36,7 +36,7 @@
                         </a>
                         <div class="colorBlock"></div>
                     </li>
-                    <li class="active">
+                    <li>
                         <a href="#">
                             财务管理
                         </a>
@@ -56,123 +56,86 @@
             <div class="center">
                 <div class="contentMain clearfix">
                     <div class="left navMenu">
-                        <div class="title">粉丝记录</div>
+                        <div class="title">活动管理</div>
                         <ul class="navList">
-                            <li class="active">
-                                <a href="fanRecord.html">
+                            <li>
+                                <a href="activityManagement.html">
                                     <i class="fa fa-home"></i>
-                                    粉丝记录
+                                    活动管理
                                 </a>
                             </li>
                             <li>
-                                <a href="fanAnalysis.html">
+                                <a href="activityParticipation.html">
                                     <i class="fa fa-home"></i>
-                                    粉丝分析
+                                    活动参与
+                                </a>
+                            </li>
+                            <li class="active">
+                                <a href="activityFlow.html">
+                                    <i class="fa fa-home"></i>
+                                    活动流量
                                 </a>
                             </li>
                         </ul>
                     </div>
                     <div class="right contentMaincon">
-                        <div class="title">粉丝记录</div>
                         <form action="###">
-                            <div class="divTable clearfix">
-                                <div class="inputDiv clearfix">
-                                    <input id="start"  class="Wdate" type="text" placeholder="开始日期" onFocus="WdatePicker({maxDate:'#F{$dp.$D(\'end\')}',readOnly:true})"/>
-                                    <span class="spanColor">至</span>
-                                    <input id="end"  class="Wdate" type="text" placeholder="结束日期" onFocus="WdatePicker({minDate:'#F{$dp.$D(\'start\')||\'%y-%M-{%d+1}\'}',readOnly:true})"/>　
+                            <div class="title">活动管理</div>
+                            <div class="divForm">
+                                <div class="divInput">
+                                    <span class="type">活动名称 : </span>
+                                    <input type="text" placeholder="试吃活动"/>
                                 </div>
-                                <div class="inputDiv mr0">
-                                    <button type="submit" class="query">
-                                        <i class="fa fa-search"></i>
-                                        查询
-                                    </button>
+                                <div class="divInput">
+                                    <span class="type">活动类型 : </span>
+                                    <select>
+                                        <option value="美食">美食</option>
+                                        <option value="爬山">爬山</option>
+                                        <option value="骑车">骑车</option>
+                                        <option value="旅游">旅游</option>
+                                    </select>
+                                </div>
+                                <div class="divInput">
+                                    <span class="type">时间 : </span>
+                                    <input type="text"/>
+                                    <select>
+                                        <option value="9 : 00">9 : 00</option>
+                                        <option value="9 : 00">9 : 00</option>
+                                        <option value="9 : 00">9 : 00</option>
+                                        <option value="9 : 00">9 : 00</option>
+                                    </select>
+                                </div>
+                                <div class="divInput">
+                                    <span class="type">活动类型 : </span>
+                                    <select>
+                                        <option value="请选择">请选择</option>
+                                        <option value="四川">四川</option>
+                                        <option value="四川">四川</option>
+                                        <option value="四川">四川</option>
+                                    </select>
+                                    <select>
+                                        <option value="广安">广安</option>
+                                        <option value="广安">广安</option>
+                                        <option value="广安">广安</option>
+                                        <option value="广安">广安</option>
+                                    </select>
+                                    <select>
+                                        <option value="武胜">武胜</option>
+                                        <option value="武胜">武胜</option>
+                                        <option value="武胜">武胜</option>
+                                        <option value="武胜">武胜</option>
+                                    </select>
+                                </div>
+                                <div class="divInput">
+                                    <span class="type">费用 : </span>
+                                    <input type="text" placeholder="50元/人"/>
                                 </div>
                             </div>
+                            <div class="title">活动介绍</div>
+                            <div class="divForm">
+
+                            </div>
                         </form>
-
-                        <!--流量管理数据-->
-                        <table class="dataTable">
-                            <tr>
-                                <th>时间</th>
-                                <th>渠道</th>
-                                <th>粉丝ID</th>
-                                <th>手机</th>
-                                <th>行为</th>
-                            </tr>
-                            <tr>
-                                <td>2016.06.06</td>
-                                <td>微信</td>
-                                <td class="money">张ID</td>
-                                <td>1598876548</td>
-                                <td>转发《户外设备30强》</td>
-                            </tr>
-                            <tr>
-                                <td>2016.06.06</td>
-                                <td>微信</td>
-                                <td class="money">张ID</td>
-                                <td>1598876548</td>
-                                <td>转发《户外设备30强》</td>
-                            </tr>
-                            <tr>
-                                <td>2016.06.06</td>
-                                <td>微信</td>
-                                <td class="money">张ID</td>
-                                <td>1598876548</td>
-                                <td>转发《户外设备30强》</td>
-                            </tr>
-                            <tr>
-                                <td>2016.06.06</td>
-                                <td>微信</td>
-                                <td class="money">张ID</td>
-                                <td>1598876548</td>
-                                <td>转发《户外设备30强》</td>
-                            </tr>
-                            <tr>
-                                <td>2016.06.06</td>
-                                <td>微信</td>
-                                <td class="money">张ID</td>
-                                <td>1598876548</td>
-                                <td>转发《户外设备30强》</td>
-                            </tr>
-                        </table>
-
-                        <!--无数据提示-->
-                        <div class="notDataTips hide">
-                            <img src="../../assets/admin/images/notDataTips.png" alt=""/><br/>
-                            暂无数据
-                        </div>
-
-                        <!--正在加载图片-->
-                        <div class="loadingTip hide">
-                            <img src="../../assets/admin/images/loading.jpg" alt=""/><br/>
-                            正在加载,请稍后...
-                        </div>
-
-                        <!--分页-->
-                        <div class="paging clearfix">
-                            <ul class="page-menu clearfix">
-                                <p class="page-pre" data-pagenum="1"><i class="fa fa-angle-left"></i></p>
-
-                                <li class="active">1</li>
-
-                                <li class="liPage">2</li>
-
-                                <li class="liPage">3</li>
-
-                                <li class="liPage">4</li>
-
-                                <li class="liPage">5</li>
-
-                                <li class="liPage">6</li>
-
-                                <li class="liPage">7</li>
-
-                            </ul>
-                            <input type="text" class="page-num" id="pageNumTarget">
-                            <button type="button" class="btn-jump" id="targetButton">跳转</button>
-                            <p class="page-next" data-pagenum="2"><i class="fa fa-angle-right"></i></p>
-                            <input type="hidden" value="447" id="totalPages">
-                        </div>
                     </div>
                 </div>
             </div>
@@ -221,9 +184,9 @@
                             <p class="title">关注我们:</p>
                             <ul class="iconMenu clearfix">
                                 <li>
-                                                                <span>
-                                                                    贴
-                                                                </span>
+                                                        <span>
+                                                            贴
+                                                        </span>
                                 </li>
                                 <li>
                                     <i class="fa fa-weixin"></i>
@@ -243,14 +206,6 @@
     </div>
     <script src="../../assets/global/plugins/jquery/jquery-1.11.3.min.js"></script>
     <script src="../../assets/admin/js/global.js"></script>
-    <script src="../../assets/global/plugins/My97DatePicker/WdatePicker.js"></script>
     <script src="../../assets/admin/js/footHandle.js"></script>
-    <script>
-        jQuery(document).ready(function() {
-            var ml = $(".paging").width()/2;
-            $(".paging").get(0).style.marginLeft = -ml+"px";
-
-        });
-    </script>
 </body>
 </html>
