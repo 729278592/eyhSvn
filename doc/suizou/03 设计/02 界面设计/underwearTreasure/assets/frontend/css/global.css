@@ -171,7 +171,7 @@ img.textInfor{margin: 10px 0 0;}
 .iconMenu li span{font-weight: bold;}
 .iconMenu li .fa{font-size: 22px;}
 .iconMenu li:hover{color: #efefef;background: rgba(255,255,255,0.5);}
-.ourImg .codeJpg{margin-left: 20px;}
+.ourImg .codeJpg{margin-left: 20px;width: 111px;height: 111px;}
 
 
 
