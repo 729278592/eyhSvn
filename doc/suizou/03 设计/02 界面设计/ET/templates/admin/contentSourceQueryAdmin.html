@@ -74,6 +74,8 @@
                     </div>
                     <div class="right contentMaincon">
                         <div class="title">素材管理</div>
+
+                        <!--数据搜索-->
                         <form action="###">
                             <div class="divTable clearfix">
                                 <div class="inputDiv">
@@ -92,6 +94,7 @@
                                 </div>
                             </div>
                         </form>
+
                         <!--流量管理数据-->
                         <table class="dataTable">
                             <tr>
@@ -150,31 +153,20 @@
                                     </a>
                                 </td>
                             </tr>
-                            <tr>
-                                <td>素材1</td>
-                                <td>2016.06.06</td>
-                                <td>4578</td>
-                                <td>410</td>
-                                <td>50</td>
-                                <td>
-                                    <a class="color1">
-                                        <i class="fa fa-home"></i> 详情
-                                    </a>
-                                </td>
-                            </tr>
-                            <tr>
-                                <td>素材1</td>
-                                <td>2016.06.06</td>
-                                <td>4578</td>
-                                <td>410</td>
-                                <td>50</td>
-                                <td>
-                                    <a class="color1">
-                                        <i class="fa fa-home"></i> 详情
-                                    </a>
-                                </td>
-                            </tr>
                         </table>
+
+                        <!--无数据提示-->
+                        <div class="notDataTips hide">
+                            <img src="../../assets/admin/images/notDataTips.png" alt=""/><br/>
+                            暂无数据
+                        </div>
+
+                        <!--正在加载图片-->
+                        <div class="loadingTip hide">
+                            <img src="../../assets/admin/images/loading.jpg" alt=""/><br/>
+                            正在加载,请稍后...
+                        </div>
+
                         <!--分页-->
                         <div class="paging clearfix">
                             <ul class="page-menu clearfix">
@@ -248,9 +240,9 @@
                             <p class="title">关注我们:</p>
                             <ul class="iconMenu clearfix">
                                 <li>
-                                        <span>
-                                            贴
-                                        </span>
+                                                <span>
+                                                    贴
+                                                </span>
                                 </li>
                                 <li>
                                     <i class="fa fa-weixin"></i>
