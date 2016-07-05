@@ -390,9 +390,8 @@ img.w100{width: 100%;}
 .upLoad,.btnOpen,.btnRecharge,.btnNotOpen{font-size: 12px;border-radius: 8px;background: #69a7f9;color: #fff;width: 70px;height: 30px;text-align: center;display: inline-block;line-height: 30px;}
 .btnOpen{background: #d5f7ef;color: #4fc283;border: 1px solid #08be06;}
 .btnRecharge{background: #fbe2da;color: #ec724b;border: 1px solid #eb6e45;margin-left: 10px;}
-.btnOpen:hover,.btnOpen:focus{color: #4fc283;
-    text-decoration: none;}
-.btnNotOpen:hover,.btnNotOpen:focus{color: #ec724b;text-decoration: none;}
+.btnOpen:hover,.btnOpen:focus{color: #4fc283;}
+.btnNotOpen:hover,.btnNotOpen:focus{color: #ec724b;}
 .btnNotOpen{background: #fbe2da;color: #ec724b;border: 1px solid #eb6e45;}
 .btnRecharge:hover,.btnRecharge:focus{color: #ec724b;}
 .content-position.pd15{padding: 15px;}
@@ -667,9 +666,11 @@ a.keyword-button:hover,.keyword-button:active,.keyword-button:focus{color: #fff;
 .entryStep li .dailogContent p .type{display: inline-block;width: 80px;color: #999;}
 .dailogContent p textarea{vertical-align: top;border: 1px solid #efefef;}
 .rechargeMoney{text-align: center;}
+.auditRecharge{text-align: center;}
 .dailogContent p select{width: 130px;border: 1px solid #dbdbdb;padding: 5px 0 5px 10px;}
 .dailogContent p .fa-caret-down{position: absolute;right: 20px;top: 9px;}
 .rechargeMoney .dailogContent p .type{color: #999;}
+.auditRecharge .dailogContent p .type{color: #999;}
 .dq-application-resume-preview .dq-application-resume-preview_info_title{font-size: 16px;}
 .amountTable{ border-collapse:collapse;width: 100%;margin: 20px auto;font-size: 14px;}
 .amountTable tr th{ text-align:center;color: #333;padding: 15px 0;background: #e2e2e2;font-family: "微软雅黑";}
