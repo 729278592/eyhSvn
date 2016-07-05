@@ -390,8 +390,9 @@ img.w100{width: 100%;}
 .upLoad,.btnOpen,.btnRecharge,.btnNotOpen{font-size: 12px;border-radius: 8px;background: #69a7f9;color: #fff;width: 70px;height: 30px;text-align: center;display: inline-block;line-height: 30px;}
 .btnOpen{background: #d5f7ef;color: #4fc283;border: 1px solid #08be06;}
 .btnRecharge{background: #fbe2da;color: #ec724b;border: 1px solid #eb6e45;margin-left: 10px;}
-.btnOpen:hover,.btnOpen:focus{color: #4fc283;}
-.btnNotOpen:hover,.btnNotOpen:focus{color: #ec724b;}
+.btnOpen:hover,.btnOpen:focus{color: #4fc283;
+    text-decoration: none;}
+.btnNotOpen:hover,.btnNotOpen:focus{color: #ec724b;text-decoration: none;}
 .btnNotOpen{background: #fbe2da;color: #ec724b;border: 1px solid #eb6e45;}
 .btnRecharge:hover,.btnRecharge:focus{color: #ec724b;}
 .content-position.pd15{padding: 15px;}
