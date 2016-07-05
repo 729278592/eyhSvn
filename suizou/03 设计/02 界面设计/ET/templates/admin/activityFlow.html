@@ -2,7 +2,7 @@
 <html>
 <head lang="en">
     <meta charset="UTF-8">
-    <title>素材管理-查询</title>
+    <title>活动管理-活动流量</title>
     <link rel="stylesheet" href="../../assets/admin/css/global.css"/>
     <link rel="stylesheet" href="../../assets/global/plugins/font/css/font-awesome.css"/>
 </head>
@@ -56,100 +56,148 @@
             <div class="center">
                 <div class="contentMain clearfix">
                     <div class="left navMenu">
-                        <div class="title">内容管理</div>
+                        <div class="title">活动管理</div>
                         <ul class="navList">
-                            <li class="active">
-                                <a href="contentSourceQueryAdmin.html">
+                            <li>
+                                <a href="activityManagement.html">
                                     <i class="fa fa-home"></i>
-                                    素材管理
+                                    活动管理
                                 </a>
                             </li>
                             <li>
-                                <a href="contentFlowAdmin.html">
+                                <a href="activityParticipation.html">
                                     <i class="fa fa-home"></i>
-                                    流量管理
+                                    活动参与
+                                </a>
+                            </li>
+                            <li class="active">
+                                <a href="activityFlow.html">
+                                    <i class="fa fa-home"></i>
+                                    活动流量
                                 </a>
                             </li>
                         </ul>
                     </div>
                     <div class="right contentMaincon">
-                        <div class="title">素材管理</div>
-
-                        <!--数据搜索-->
-                        <form action="###">
-                            <div class="divTable clearfix">
-                                <div class="inputDiv">
-                                    <input type="text" placeholder="输入文章标题" class="inputTitle placeholder"/>
-                                </div>
-                                <div class="inputDiv clearfix">
-                                    <input id="start"  class="Wdate" type="text" placeholder="开始日期" onFocus="WdatePicker({maxDate:'#F{$dp.$D(\'end\')}',readOnly:true})"/>
-                                    <span class="spanColor">至</span>
-                                    <input id="end"  class="Wdate" type="text" placeholder="结束日期" onFocus="WdatePicker({minDate:'#F{$dp.$D(\'start\')||\'%y-%M-{%d+1}\'}',readOnly:true})"/>　
-                                </div>
-                                <div class="inputDiv mr0">
-                                    <button type="submit" class="query">
-                                        <i class="fa fa-search"></i>
-                                        查询
-                                    </button>
-                                </div>
+                        <div class="title">活动管理</div>
+                        <div class="dataContent style clearfix">
+                            <div class="left userIconImg">
+                                <img src="../../assets/admin/images/homeIcon.png" alt=""/>
                             </div>
-                        </form>
+                            <div class="left fanAnalysisInfor">
+                                <p class="name">天天美食免费领取</p>
 
+                                <p>
+                                    时间 : <span class="color">2016.5.5 18:00</span>
+                                </p>
+                            </div>
+                        </div>
                         <!--流量管理数据-->
                         <table class="dataTable">
                             <tr>
-                                <th>文章标题</th>
-                                <th>时间</th>
-                                <th>阅读次数</th>
-                                <th>阅读人数</th>
-                                <th>互赞次数</th>
-                                <th>操作</th>
+                                <th>活动名称</th>
+                                <th>活动类型</th>
+                                <th>开始时间</th>
+                                <th>地址</th>
+                                <th style="width:35%">操作</th>
                             </tr>
                             <tr>
-                                <td>素材1</td>
-                                <td>2016.06.06</td>
-                                <td>4578</td>
-                                <td>410</td>
-                                <td>50</td>
+                                <td>活动1</td>
+                                <td>美食</td>
+                                <td>2016.5.5</td>
+                                <td>重庆，解放碑</td>
                                 <td>
-                                    <a class="color1">
-                                        <i class="fa fa-home"></i> 详情
+                                    <a class="color1 aClick modifyData">
+                                        <i class="fa fa-pencil"></i> 编辑
+                                    </a>
+                                    <a class="color2 aClick typeData">
+                                        <i class="fa fa-remove"></i> 关闭
+                                    </a>
+                                    <a class="color2 aClick reply hide">
+                                        <i class="fa fa-reply"></i> 再次发布
+                                    </a>
+                                    <a class="color4 aClick removeData">
+                                        <i class="fa fa-trash"></i> 删除
                                     </a>
                                 </td>
                             </tr>
                             <tr>
-                                <td>素材1</td>
-                                <td>2016.06.06</td>
-                                <td>4578</td>
-                                <td>410</td>
-                                <td>50</td>
+                                <td>活动1</td>
+                                <td>美食</td>
+                                <td>2016.5.5</td>
+                                <td>重庆，解放碑</td>
                                 <td>
-                                    <a class="color1">
-                                        <i class="fa fa-home"></i> 详情
+                                    <a class="color1 aClick modifyData">
+                                        <i class="fa fa-pencil"></i> 编辑
+                                    </a>
+                                    <a class="color2 aClick typeData">
+                                        <i class="fa fa-remove"></i> 关闭
+                                    </a>
+                                    <a class="color2 aClick reply hide">
+                                        <i class="fa fa-reply"></i> 再次发布
+                                    </a>
+                                    <a class="color4 aClick removeData">
+                                        <i class="fa fa-trash"></i> 删除
                                     </a>
                                 </td>
                             </tr>
                             <tr>
-                                <td>素材1</td>
-                                <td>2016.06.06</td>
-                                <td>4578</td>
-                                <td>410</td>
-                                <td>50</td>
+                                <td>活动1</td>
+                                <td>美食</td>
+                                <td>2016.5.5</td>
+                                <td>重庆，解放碑</td>
                                 <td>
-                                    <a class="color1">
-                                        <i class="fa fa-home"></i> 详情
+                                    <a class="color1 aClick modifyData">
+                                        <i class="fa fa-pencil"></i> 编辑
+                                    </a>
+                                    <a class="color2 aClick typeData">
+                                        <i class="fa fa-remove"></i> 关闭
+                                    </a>
+                                    <a class="color2 aClick reply hide">
+                                        <i class="fa fa-reply"></i> 再次发布
+                                    </a>
+                                    <a class="color4 aClick removeData">
+                                        <i class="fa fa-trash"></i> 删除
                                     </a>
                                 </td>
                             </tr>
                             <tr>
-                                <td>素材1</td>
-                                <td>2016.06.06</td>
-                                <td>4578</td>
-                                <td>410</td>
-                                <td>50</td>
+                                <td>活动1</td>
+                                <td>美食</td>
+                                <td>2016.5.5</td>
+                                <td>重庆，解放碑</td>
                                 <td>
-                                    <a class="color1">
-                                        <i class="fa fa-home"></i> 详情
+                                    <a class="color1 aClick modifyData">
+                                        <i class="fa fa-pencil"></i> 编辑
+                                    </a>
+                                    <a class="color2 aClick typeData">
+                                        <i class="fa fa-remove"></i> 关闭
+                                    </a>
+                                    <a class="color2 aClick reply hide">
+                                        <i class="fa fa-reply"></i> 再次发布
+                                    </a>
+                                    <a class="color4 aClick removeData">
+                                        <i class="fa fa-trash"></i> 删除
+                                    </a>
+                                </td>
+                            </tr>
+                            <tr>
+                                <td>活动1</td>
+                                <td>美食</td>
+                                <td>2016.5.5</td>
+                                <td>重庆，解放碑</td>
+                                <td>
+                                    <a class="color1 aClick modifyData">
+                                        <i class="fa fa-pencil"></i> 编辑
+                                    </a>
+                                    <a class="color2 aClick typeData">
+                                        <i class="fa fa-remove"></i> 关闭
+                                    </a>
+                                    <a class="color2 aClick reply hide">
+                                        <i class="fa fa-reply"></i> 再次发布
+                                    </a>
+                                    <a class="color4 aClick removeData">
+                                        <i class="fa fa-trash"></i> 删除
                                     </a>
                                 </td>
                             </tr>
@@ -165,32 +213,6 @@
                         <div class="loadingTip hide">
                             <img src="../../assets/admin/images/loading.jpg" alt=""/><br/>
                             正在加载,请稍后...
-                        </div>
-
-                        <!--分页-->
-                        <div class="paging clearfix">
-                            <ul class="page-menu clearfix">
-                                <p class="page-pre" data-pagenum="1"><i class="fa fa-angle-left"></i></p>
-
-                                <li class="active">1</li>
-
-                                <li class="liPage">2</li>
-
-                                <li class="liPage">3</li>
-
-                                <li class="liPage">4</li>
-
-                                <li class="liPage">5</li>
-
-                                <li class="liPage">6</li>
-
-                                <li class="liPage">7</li>
-
-                            </ul>
-                            <input type="text" class="page-num" id="pageNumTarget">
-                            <button type="button" class="btn-jump" id="targetButton">跳转</button>
-                            <p class="page-next" data-pagenum="2"><i class="fa fa-angle-right"></i></p>
-                            <input type="hidden" value="447" id="totalPages">
                         </div>
                     </div>
                 </div>
@@ -240,9 +262,9 @@
                             <p class="title">关注我们:</p>
                             <ul class="iconMenu clearfix">
                                 <li>
-                                                <span>
-                                                    贴
-                                                </span>
+                                                    <span>
+                                                        贴
+                                                    </span>
                                 </li>
                                 <li>
                                     <i class="fa fa-weixin"></i>
@@ -262,13 +284,6 @@
     </div>
     <script src="../../assets/global/plugins/jquery/jquery-1.11.3.min.js"></script>
     <script src="../../assets/admin/js/global.js"></script>
-    <script src="../../assets/global/plugins/My97DatePicker/WdatePicker.js"></script>
     <script src="../../assets/admin/js/footHandle.js"></script>
-    <script>
-        jQuery(document).ready(function() {
-            var ml = $(".paging").width()/2;
-            $(".paging").get(0).style.marginLeft = -ml+"px";
-        });
-    </script>
 </body>
 </html>
