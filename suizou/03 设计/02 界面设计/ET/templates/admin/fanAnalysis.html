@@ -2,7 +2,7 @@
 <html>
 <head lang="en">
     <meta charset="UTF-8">
-    <title>流量管理</title>
+    <title>粉丝数据-粉丝分析</title>
     <link rel="stylesheet" href="../../assets/admin/css/global.css"/>
     <link rel="stylesheet" href="../../assets/global/plugins/font/css/font-awesome.css"/>
 </head>
@@ -56,40 +56,55 @@
             <div class="center">
                 <div class="contentMain clearfix">
                     <div class="left navMenu">
-                        <div class="title">内容管理</div>
+                        <div class="title">粉丝分析</div>
                         <ul class="navList">
                             <li>
-                                <a href="contentSourceQueryAdmin.html">
+                                <a href="fanRecord.html">
                                     <i class="fa fa-home"></i>
-                                    素材管理
+                                    粉丝记录
                                 </a>
                             </li>
                             <li class="active">
-                                <a href="contentFlowAdmin.html">
+                                <a href="fanAnalysis.html">
                                     <i class="fa fa-home"></i>
-                                    流量管理
+                                    粉丝分析
                                 </a>
                             </li>
                         </ul>
                     </div>
-                    <div class="right contentMaincon">
-                        <div class="title">素材管理</div>
-                        <div class="divTable bb1 clearfix">
-                            <div class="inputDiv w15">
-                                <span class="articleName">文章1</span>
+                    <div class="right contentMaincon mb0">
+                        <div class="title">粉丝分析</div>
+                        <div class="dataContent style clearfix">
+                            <div class="left userIconImg">
+                                <img src="../../assets/admin/images/userIcon.png" alt=""/>
                             </div>
-                            <div class="inputDiv">
-                                    <span class="time">
-                                        2016-08-06至2016-09-21
-                                    </span>
-                            </div>
-                            <div class="inputDiv mr0 taRight">
-                                <button type="button" class="return">
-                                    <i class="fa fa-reply"></i>
-                                    返回
-                                </button>
+                            <div class="left fanAnalysisInfor">
+                                <p class="name">张晓丽</p>
+
+                                <p>
+                                    来　　自 : <span class="color">微信</span>
+                                </p>
+
+                                <p>
+                                    手机号码 : <span class="color">15086565654</span>
+                                </p>
+                                <p>标　　签 : </p>
+                                <ul class="fanAnalysisList clearfix">
+                                    <li>
+                                        <a href="###">70后</a>
+                                    </li>
+                                    <li>
+                                        <a href="###">绝世奶爸</a>
+                                    </li>
+                                    <li>
+                                        <a href="###">吃货</a>
+                                    </li>
+                                </ul>
                             </div>
                         </div>
+                    </div>
+                    <div class="right contentMaincon">
+                        <div class="title">行为数据</div>
                         <div class="dataContent">
                             <div id="container" style="min-width: 310px; height: 400px; margin: 0 auto"></div>
                         </div>
@@ -141,9 +156,9 @@
                             <p class="title">关注我们:</p>
                             <ul class="iconMenu clearfix">
                                 <li>
-                                    <span>
-                                        贴
-                                    </span>
+                                            <span>
+                                                贴
+                                            </span>
                                 </li>
                                 <li>
                                     <i class="fa fa-weixin"></i>
@@ -164,6 +179,7 @@
     <script src="../../assets/global/plugins/jquery/jquery-1.11.3.min.js"></script>
     <script src="../../assets/admin/js/global.js"></script>
     <script src="../../assets/admin/js/footHandle.js"></script>
+    <script src="../../assets/global/plugins/My97DatePicker/WdatePicker.js"></script>
     <script src="../../assets/global/plugins/highCharts/js/highcharts.js"></script>
     <script src="../../assets/global/plugins/highCharts/js/exporting.js"></script>
     <script>

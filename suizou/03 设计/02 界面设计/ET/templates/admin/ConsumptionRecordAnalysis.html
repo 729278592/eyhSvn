@@ -2,7 +2,7 @@
 <html>
 <head lang="en">
     <meta charset="UTF-8">
-    <title>财务管理-消费记录</title>
+    <title>财务管理-消费记录分析</title>
     <link rel="stylesheet" href="../../assets/admin/css/global.css"/>
     <link rel="stylesheet" href="../../assets/global/plugins/font/css/font-awesome.css"/>
 </head>
@@ -18,7 +18,7 @@
                         </a>
                         <div class="colorBlock"></div>
                     </li>
-                    <li>
+                    <li class="active">
                         <a href="productDisplay.html">
                             内容管理
                         </a>
@@ -36,7 +36,7 @@
                         </a>
                         <div class="colorBlock"></div>
                     </li>
-                    <li class="active">
+                    <li>
                         <a href="#">
                             财务管理
                         </a>
@@ -64,7 +64,7 @@
                                     充值管理
                                 </a>
                             </li>
-                            <li class="active">
+                            <li>
                                 <a href="RecordsConsumption.html">
                                     <i class="fa fa-home"></i>
                                     消费记录
@@ -76,7 +76,7 @@
                                     流量总报
                                 </a>
                             </li>
-                            <li>
+                            <li class="active">
                                 <a href="ConsumptionRecordAnalysis.html">
                                     <i class="fa fa-home"></i>
                                     消费/流量分析
@@ -85,7 +85,7 @@
                         </ul>
                     </div>
                     <div class="right contentMaincon">
-                        <div class="title">消费记录</div>
+                        <div class="title">消费记录分析</div>
                         <form action="###">
                             <div class="divTable clearfix">
                                 <div class="inputDiv clearfix">
@@ -101,84 +101,8 @@
                                 </div>
                             </div>
                         </form>
-
-                        <!--流量管理数据-->
-                        <table class="dataTable">
-                            <tr>
-                                <th>时间</th>
-                                <th>消费项目</th>
-                                <th>消费E豆(元)</th>
-                                <th>账户余额</th>
-                            </tr>
-                            <tr>
-                                <td>2016.06.06</td>
-                                <td>发布《文章 : 网络营销》</td>
-                                <td>-98E豆</td>
-                                <td>1000E豆</td>
-                            </tr>
-                            <tr>
-                                <td>2016.06.06</td>
-                                <td>发布《文章 : 网络营销》</td>
-                                <td>-98E豆</td>
-                                <td>1000E豆</td>
-                            </tr>
-                            <tr>
-                                <td>2016.06.06</td>
-                                <td>发布《文章 : 网络营销》</td>
-                                <td>-98E豆</td>
-                                <td>1000E豆</td>
-                            </tr>
-                            <tr>
-                                <td>2016.06.06</td>
-                                <td>发布《文章 : 网络营销》</td>
-                                <td>-98E豆</td>
-                                <td>1000E豆</td>
-                            </tr>
-
-                            <tr>
-                                <td>2016.06.06</td>
-                                <td>发布《文章 : 网络营销》</td>
-                                <td>-98E豆</td>
-                                <td>1000E豆</td>
-                            </tr>
-                        </table>
-
-                        <!--无数据提示-->
-                        <div class="notDataTips hide">
-                            <img src="../../assets/admin/images/notDataTips.png" alt=""/><br/>
-                            暂无数据
-                        </div>
-
-                        <!--正在加载图片-->
-                        <div class="loadingTip hide">
-                            <img src="../../assets/admin/images/loading.jpg" alt=""/><br/>
-                            正在加载,请稍后...
-                        </div>
-
-                        <!--分页-->
-                        <div class="paging clearfix">
-                            <ul class="page-menu clearfix">
-                                <p class="page-pre" data-pagenum="1"><i class="fa fa-angle-left"></i></p>
-
-                                <li class="active">1</li>
-
-                                <li class="liPage">2</li>
-
-                                <li class="liPage">3</li>
-
-                                <li class="liPage">4</li>
-
-                                <li class="liPage">5</li>
-
-                                <li class="liPage">6</li>
-
-                                <li class="liPage">7</li>
-
-                            </ul>
-                            <input type="text" class="page-num" id="pageNumTarget">
-                            <button type="button" class="btn-jump" id="targetButton">跳转</button>
-                            <p class="page-next" data-pagenum="2"><i class="fa fa-angle-right"></i></p>
-                            <input type="hidden" value="447" id="totalPages">
+                        <div class="dataContent">
+                            <div id="container" style="min-width: 310px; height: 400px; margin: 0 auto"></div>
                         </div>
                     </div>
                 </div>
@@ -228,9 +152,9 @@
                             <p class="title">关注我们:</p>
                             <ul class="iconMenu clearfix">
                                 <li>
-                                                        <span>
-                                                            贴
-                                                        </span>
+                                        <span>
+                                            贴
+                                        </span>
                                 </li>
                                 <li>
                                     <i class="fa fa-weixin"></i>
@@ -250,13 +174,85 @@
     </div>
     <script src="../../assets/global/plugins/jquery/jquery-1.11.3.min.js"></script>
     <script src="../../assets/admin/js/global.js"></script>
-    <script src="../../assets/global/plugins/My97DatePicker/WdatePicker.js"></script>
     <script src="../../assets/admin/js/footHandle.js"></script>
+    <script src="../../assets/global/plugins/My97DatePicker/WdatePicker.js"></script>
+    <script src="../../assets/global/plugins/highCharts/js/highcharts.js"></script>
+    <script src="../../assets/global/plugins/highCharts/js/exporting.js"></script>
     <script>
-        jQuery(document).ready(function() {
-            var ml = $(".paging").width()/2;
-            $(".paging").get(0).style.marginLeft = -ml+"px";
-
+        $('#container').highcharts({
+            chart: {
+                type: 'area'
+            },
+            title: {
+                text: '职位统计'
+            },
+            subtitle: {
+                text: '职位统计'
+            },
+            xAxis: {
+                allowDecimals: false,
+                labels: {
+                    formatter: function () {
+                        return this.value; // clean, unformatted number for year
+                    }
+                }
+            },
+            yAxis: {
+                title: {
+                    text: '浏览量'
+                },
+                labels: {
+                    formatter: function () {
+                        return this.value / 1000 + 'k';
+                    }
+                }
+            },
+            tooltip: {
+                pointFormat: '{series.name} produced <b>{point.y:,.0f}</b><br/>warheads in {point.x}'
+            },
+            plotOptions: {
+                area: {
+                    pointStart: 2010,
+                    marker: {
+                        enabled: false,
+                        symbol: 'circle',
+                        radius: 2,
+                        states: {
+                            hover: {
+                                enabled: true
+                            }
+                        }
+                    }
+                }
+            },
+            series: [{
+                name: '图文页阅读次数',
+                data: [null, null, null, null, null, 6, 11, 32, 110, 235, 369, 640,
+                    1005, 1436, 2063, 3057, 4618, 6444, 9822, 15468, 20434, 24126,
+                    27387, 29459, 31056, 31982, 32040, 31233, 29224, 27342, 26662,
+                    26956, 27912, 28999, 28965, 27826, 25579, 25722, 24826, 24605,
+                    24304, 23464, 23708, 24099, 24357, 24237, 24401, 24344, 23586,
+                    22380, 21004, 17287, 14747, 13076, 12555, 12144, 11009, 10950,
+                    10871, 10824, 10577, 10527, 10475, 10421, 10358, 10295, 10104]
+            }, {
+                name: '图文页阅读人数',
+                data: [100, null, null, null, null, null, null, null, null, null,
+                    1000, 25, 50, 120, 150, 200, 426, 660, 869, 1060, 1605, 2471, 3322,
+                    4238, 5221, 6129, 7089, 8339, 9399, 10538, 11643, 13092, 14478,
+                    15915, 17385, 19055, 21205, 23044, 25393, 27935, 30062, 32049,
+                    33952, 35804, 37431, 39197, 45000, 43000, 41000, 39000, 37000,
+                    35000, 33000, 31000, 29000, 27000, 25000, 24000, 23000, 22000,
+                    21000, 20000, 19000, 18000, 18000, 17000, 16000]
+            }, {
+                name: '转发人数',
+                data: [100, null, null, null, null, null, null, null, null, null,
+                    1000, 25, 50, 120, 150, 200, 426, 660, 869, 1060, 1605, 2471, 3322,
+                    4238, 5221, 6129, 7089, 8339, 9399, 10538, 11643, 13092, 14478,
+                    15915, 17385, 19055, 21205, 23044, 25393, 27935, 30062, 32049,
+                    33952, 35804, 37431, 39197, 45000, 43000, 41000, 39000, 37000,
+                    35000, 33000, 31000, 29000, 27000, 25000, 24000, 23000, 22000,
+                    21000, 20000, 19000, 18000, 18000, 17000, 16000]
+            }]
         });
     </script>
 </body>

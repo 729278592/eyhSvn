@@ -2,7 +2,7 @@
 <html>
 <head lang="en">
     <meta charset="UTF-8">
-    <title>财务管理-消费记录</title>
+    <title>活动管理-活动参与-感兴趣</title>
     <link rel="stylesheet" href="../../assets/admin/css/global.css"/>
     <link rel="stylesheet" href="../../assets/global/plugins/font/css/font-awesome.css"/>
 </head>
@@ -18,7 +18,7 @@
                         </a>
                         <div class="colorBlock"></div>
                     </li>
-                    <li>
+                    <li class="active">
                         <a href="productDisplay.html">
                             内容管理
                         </a>
@@ -36,7 +36,7 @@
                         </a>
                         <div class="colorBlock"></div>
                     </li>
-                    <li class="active">
+                    <li>
                         <a href="#">
                             财务管理
                         </a>
@@ -56,90 +56,89 @@
             <div class="center">
                 <div class="contentMain clearfix">
                     <div class="left navMenu">
-                        <div class="title">内容管理</div>
+                        <div class="title">活动管理</div>
                         <ul class="navList">
                             <li>
-                                <a href="RechargeRecord.html">
+                                <a href="contentSourceQueryAdmin.html">
                                     <i class="fa fa-home"></i>
-                                    充值管理
+                                    活动管理
                                 </a>
                             </li>
                             <li class="active">
-                                <a href="RecordsConsumption.html">
+                                <a href="contentFlowAdmin.html">
                                     <i class="fa fa-home"></i>
-                                    消费记录
+                                    活动参与
                                 </a>
                             </li>
                             <li>
-                                <a href="flowInfor.html">
+                                <a href="contentFlowAdmin.html">
                                     <i class="fa fa-home"></i>
-                                    流量总报
-                                </a>
-                            </li>
-                            <li>
-                                <a href="ConsumptionRecordAnalysis.html">
-                                    <i class="fa fa-home"></i>
-                                    消费/流量分析
+                                    活动流量
                                 </a>
                             </li>
                         </ul>
                     </div>
                     <div class="right contentMaincon">
-                        <div class="title">消费记录</div>
-                        <form action="###">
-                            <div class="divTable clearfix">
-                                <div class="inputDiv clearfix">
-                                    <input id="start"  class="Wdate" type="text" placeholder="开始日期" onFocus="WdatePicker({maxDate:'#F{$dp.$D(\'end\')}',readOnly:true})"/>
-                                    <span class="spanColor">至</span>
-                                    <input id="end"  class="Wdate" type="text" placeholder="结束日期" onFocus="WdatePicker({minDate:'#F{$dp.$D(\'start\')||\'%y-%M-{%d+1}\'}',readOnly:true})"/>　
-                                </div>
-                                <div class="inputDiv mr0">
-                                    <button type="submit" class="query">
-                                        <i class="fa fa-search"></i>
-                                        查询
-                                    </button>
-                                </div>
+                        <div class="title">活动参与</div>
+                        <div class="dataContent style clearfix">
+                            <div class="left userIconImg">
+                                <img src="../../assets/admin/images/userIcon.png" alt=""/>
                             </div>
-                        </form>
+                            <div class="left fanAnalysisInfor">
+                                <p class="name">天天没事免费领取</p>
+
+                                <p>
+                                    时　　间 : <span class="color">2016-05-05 18:00</span>
+                                </p>
+                                <p>
+                                    地　　址 : <span class="color">重庆,解放碑</span>
+                                </p>
+                            </div>
+                        </div>
+                        <ul class="typeList">
+                            <li>
+                                <a href="activityParticipationSignUp.html">
+                                    已报名(66)
+                                </a>
+                            </li>
+                            <li class="active">
+                                <a href="activityParticipationInterested.html">
+                                    感兴趣(46)
+                                </a>
+                            </li>
+                        </ul>
 
                         <!--流量管理数据-->
                         <table class="dataTable">
                             <tr>
-                                <th>时间</th>
-                                <th>消费项目</th>
-                                <th>消费E豆(元)</th>
-                                <th>账户余额</th>
+                                <th>姓名</th>
+                                <th>微信ID</th>
+                                <th>联系方式</th>
                             </tr>
                             <tr>
-                                <td>2016.06.06</td>
-                                <td>发布《文章 : 网络营销》</td>
-                                <td>-98E豆</td>
-                                <td>1000E豆</td>
+                                <td>炸鸡</td>
+                                <td>炸鸡店</td>
+                                <td>15056675478</td>
                             </tr>
                             <tr>
-                                <td>2016.06.06</td>
-                                <td>发布《文章 : 网络营销》</td>
-                                <td>-98E豆</td>
-                                <td>1000E豆</td>
+                                <td>炸鸡</td>
+                                <td>炸鸡店</td>
+                                <td>15056675478</td>
                             </tr>
                             <tr>
-                                <td>2016.06.06</td>
-                                <td>发布《文章 : 网络营销》</td>
-                                <td>-98E豆</td>
-                                <td>1000E豆</td>
+                                <td>炸鸡</td>
+                                <td>炸鸡店</td>
+                                <td>15056675478</td>
                             </tr>
                             <tr>
-                                <td>2016.06.06</td>
-                                <td>发布《文章 : 网络营销》</td>
-                                <td>-98E豆</td>
-                                <td>1000E豆</td>
+                                <td>炸鸡</td>
+                                <td>炸鸡店</td>
+                                <td>15056675478</td>
                             </tr>
-
                             <tr>
-                                <td>2016.06.06</td>
-                                <td>发布《文章 : 网络营销》</td>
-                                <td>-98E豆</td>
-                                <td>1000E豆</td>
+                                <td>炸鸡</td>
+                                <td>炸鸡店</td>
+                                <td>15056675478</td>
                             </tr>
                         </table>
 
@@ -228,9 +227,9 @@
                             <p class="title">关注我们:</p>
                             <ul class="iconMenu clearfix">
                                 <li>
-                                                        <span>
-                                                            贴
-                                                        </span>
+                                                            <span>
+                                                                贴
+                                                            </span>
                                 </li>
                                 <li>
                                     <i class="fa fa-weixin"></i>
@@ -250,13 +249,12 @@
     </div>
     <script src="../../assets/global/plugins/jquery/jquery-1.11.3.min.js"></script>
     <script src="../../assets/admin/js/global.js"></script>
-    <script src="../../assets/global/plugins/My97DatePicker/WdatePicker.js"></script>
     <script src="../../assets/admin/js/footHandle.js"></script>
     <script>
         jQuery(document).ready(function() {
+            /*分页居中*/
             var ml = $(".paging").width()/2;
             $(".paging").get(0).style.marginLeft = -ml+"px";
-
         });
     </script>
 </body>

@@ -45,6 +45,7 @@ a:link{text-decoration: none;}
 .navList li.active{border: 1px solid #fb8d55;}
 .navList li.active a{color: #fb8d55;}
 .contentMaincon{width: 780px;border:1px solid #dbdbdb;background: #fff;margin-bottom: 10px;}
+.contentMaincon.mb0{margin-bottom: 0;}
 .contentMaincon>.title{width: 750px;height: 34px;background: #e0e3f2;padding: 0 15px;font-size: 16px;color: #333;line-height: 34px;}
 .divTable{padding: 10px 15px;width: 750px;}
 .divTable.bb1{border-bottom: 1px solid #dbdbdb;}
@@ -88,7 +89,7 @@ a:link{text-decoration: none;}
 .typeList{margin: 10px 0 0 30px;}
 .typeList li{float: left;margin-right: 10px;}
 .typeList li.active{}
-.typeList li a{display: inline-block;padding: 7px 6px 3px 6px;font-size: 14px;border: 1px solid transparent;color: #666;border-bottom: none;border-radius: 6px 6px 0 0;}
+.typeList li a{display: inline-block;padding: 7px 6px 3px 6px;font-size: 14px;border: 1px solid transparent;color: #333;border-bottom: none;border-radius: 6px 6px 0 0;}
 .typeList li.active a{border: 1px solid #fa8c55;color: #fa8c55;border-bottom: none;background: #f2f2f2;}
 
 
@@ -184,6 +185,22 @@ a:link{text-decoration: none;}
 .tips.success{border: 1px solid #2ed6b1;color: #2ed6b1;}
 .tips.fail{border: 1px solid #ff0404;color: #ff0404;}
 
+
+/*fanAnalysis*/
+.dataContent.style{padding: 15px 25px;}
+.userIconImg{margin-right: 15px;}
+.fanAnalysisInfor{}
+.fanAnalysisInfor p{font-size: 14px;color: #666;margin-bottom: 5px;}
+.fanAnalysisInfor p.name{font-size: 16px;color: #7084cc;}
+.fanAnalysisInfor p span.color{color: #333;}
+.fanAnalysisInfor .fanAnalysisList{}
+.fanAnalysisInfor .fanAnalysisList li{width: 170px;height: 30px;text-align: center;line-height: 30px;margin-right: 25px;float: left;}
+.fanAnalysisInfor .fanAnalysisList li a{display: inline-block;width: 100%;height: 100%;background: #7084cc;color: #fff;font-size: 14px;}
+
+
+/*无数据提示*/
+.notDataTips,.loadingTip{width: 100%;margin: 60px 0;text-align: center;font-size: 14px;color: #666;}
+.notDataTips img,.loadingTip img{margin-bottom: 10px;}
 
 /*login*/
 body,html{height: 100%;}
