@@ -300,12 +300,24 @@ a.weui_media_box:active {
 .swiper-wrapper.w70 .swiper-slide,.swiper-wrapper.w50 .swiper-slide{text-align: center;}
 .swiper-wrapper.w70 .swiper-slide img{width: 70%;height: 340px;}
 .swiper-wrapper.w50 .swiper-slide img{width: 70%;min-height: 280px;}
-.bdFoot{padding: 15px 2% 0;width: 96%;border-top: 1px solid #efefef;font-size: 14px;display: table;position: relative;z-index: 100;margin-top: 10px;}
-.bdFoot p{margin-bottom: 10px;}
-.bdFoot.mb0 p{margin-bottom: 0;text-align: left;}
-.bdFoot span.type{color: #999;font-size: 14px;width: 78px;}
-.bdFoot span.spanInfor{font-size: 14px;color: #333;}
-.bdFoot span.type,.bdFoot span.spanInfor{display: table-cell;}
+.bdFoot{padding: 15px 5px 0;border-top: 1px solid #efefef;font-size: 14px;display: table;position: relative;z-index: 100;margin-top: 10px;}
+.bdFoot p{margin-bottom: 10px;display: -webkit-box;
+    display: -webkit-flex;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-align: center;
+    -webkit-align-items: center;
+    -ms-flex-align: center;
+    align-items: center;}
+.bdFoot.mb0 p{margin-bottom: 0;text-align: left;position: relative;}
+.bdFoot span.type{color: #999;font-size: 14px;width: 78px;height: 24px;vertical-align: top;}
+.bdFoot span.spanInfor{font-size: 14px;color: #333;-webkit-box-flex: 1;
+    -webkit-flex: 1;
+    -ms-flex: 1;
+    flex: 1;
+    min-width: 0;
+}
+.bdFoot span.type,.bdFoot span.spanInfor{}
 .medicalBg{margin: 5% auto;width: 90%;position: relative;overflow: hidden;padding: 0 0 1% 0;}
 .medicalBg>img{width: 100%;position: absolute;height: 100%;}
 .medicalBgBgfff{margin: 14% auto 5%;width: 90%;background: #fff;position: relative;z-index: 100;border-radius: 10px;}
