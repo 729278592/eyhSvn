@@ -300,7 +300,7 @@ a.weui_media_box:active {
 .swiper-wrapper.w70 .swiper-slide,.swiper-wrapper.w50 .swiper-slide{text-align: center;}
 .swiper-wrapper.w70 .swiper-slide img{width: 70%;height: 340px;}
 .swiper-wrapper.w50 .swiper-slide img{width: 70%;min-height: 280px;}
-.bdFoot{padding: 15px 5px 0;border-top: 1px solid #efefef;font-size: 14px;display: table;position: relative;z-index: 100;margin-top: 10px;}
+.bdFoot{padding: 15px 2% 0;width:96%;border-top: 1px solid #efefef;font-size: 14px;display: table;position: relative;z-index: 100;margin-top: 10px;}
 .bdFoot p{margin-bottom: 10px;display: -webkit-box;
     display: -webkit-flex;
     display: -ms-flexbox;
