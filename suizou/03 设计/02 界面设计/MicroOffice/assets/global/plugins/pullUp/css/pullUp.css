@@ -1,0 +1,151 @@
+
+#content.refer {
+    top: 0
+}
+
+#content {
+    position: absolute;
+    top: 2.5rem;
+    left: 0;
+    right: 0;
+    bottom: 1.83333rem;
+    width: 100%;
+    overflow: hidden
+}
+
+#content > .cover {
+    position: absolute;
+    width: 100%;
+    top: 0;
+    left: 0;
+    z-index: 15;
+    display: none;
+    background-color: #000;
+    opacity: 0.6
+}
+
+#content.favorite-positions {
+    top: 0
+}
+
+#scroller {
+    position: absolute;
+    z-index: 1;
+    width: 100%;
+    min-height: 101%
+}
+.position-list {
+    list-style: none;
+    padding: 0;
+    margin: 0
+}
+#pullUp {
+    height: 40px;
+    line-height: 40px;
+    padding: 5px 10px;
+    font-weight: bold;
+    font-size: 1rem;
+    color: #abb4c3;
+    margin: 10px 0 20px;
+    text-align: center
+}
+
+#pullUp .pullUpIcon {
+    display: inline-block;
+    vertical-align: middle;
+    width: 2.5rem;
+    height: 2.5rem;
+    background-image: url('../images/pull-icon.png');
+    background-position: 0 0;
+    background-repeat: no-repeat;
+    background-size: 2.5rem;
+    -webkit-transition-property: -webkit-transform;
+    -webkit-transition-duration: 250ms;
+    transition-property: -webkit-transform;
+    transition-duration: 250ms
+}
+
+#pullUp .pullUpIcon {
+    -webkit-transform: rotate(-180deg) translateZ(0);
+    transform: rotate(-180deg) translateZ(0)
+}
+
+#pullUp .pullUpLabel {
+    display: inline-block;
+    vertical-align: middle
+}
+
+#pullUp.flip .pullUpIcon {
+    -webkit-transform: rotate(0deg) translateZ(0)
+}
+
+#pullUp.loading .pullUpIcon {
+    height: 10px;
+    width: 10px;
+    margin-right: 10px
+}
+
+#pullUp.loading .pullUpIcon:before, #pullUp.loading .pullUpIcon:after {
+    position: absolute;
+    display: block;
+    content: '.';
+    color: transparent;
+    width: 10px;
+    height: 10px;
+    background: #333;
+    -webkit-border-radius: 50%;
+    border-radius: 50%;
+    -webkit-animation: loading 1s infinite linear;
+    margin-left: -7.5px;
+    margin-top: -7.5px;
+    -webkit-transition: all .2s;
+    transition: all .2s
+}
+
+#pullUp.loading .pullUpIcon:before {
+    background: #2cd6b1;
+    bottom: auto;
+    top: 0;
+    right: 0;
+    left: 0
+}
+
+#pullUp.loading .pullUpIcon:after {
+    background: #66a4f9;
+    bottom: 0;
+    top: auto;
+    left: 0;
+    right: 0;
+    -webkit-animation-delay: -.5s
+}
+
+@-webkit-keyframes loading {
+    0% {
+        top: 0%;
+        left: 50%;
+        right: auto;
+        bottom: auto
+    }
+    25% {
+        top: 50%;
+        left: 0%
+    }
+    50% {
+        bottom: auto;
+        top: 100%;
+        right: auto;
+        left: 50%
+    }
+    75% {
+        top: 50%;
+        bottom: auto;
+        left: 100%;
+        right: auto
+    }
+    100% {
+        top: 0%;
+        bottom: auto;
+        left: 50%;
+        right: auto
+    }
+}

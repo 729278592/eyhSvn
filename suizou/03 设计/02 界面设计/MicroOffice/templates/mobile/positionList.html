@@ -7,48 +7,21 @@
     <link rel="stylesheet" href="../../assets/global/plugins/font/css/font-awesome.min.css"/>
     <link rel="stylesheet" href="../../assets/mobile/css/weui.css"/>
     <link rel="stylesheet" href="../../assets/mobile/css/example.css"/>
+    <link rel="stylesheet" href="../../assets/global/plugins/pullUp/css/pullUp.css"/>
     <link rel="stylesheet" href="../../assets/mobile/css/global.css"/>
-    <style>
-        .weui_search_cancel{display: inline-block;}
-        .weui_search_text{z-index: 0;}
-    </style>
 </head>
 <body>
     <div class="container js_container" id="container">
         <div class="page">
-            <div class="head">
-                <i class="fa fa-angle-left"></i>
-                职位列表
-            </div>
             <div class="bd">
-                <div class="companyDetails">
-                    <div class="companyImg">
-                        <img src="../../assets/mobile/images/companyInforImg1.jpg" class="w100" alt=""/>
-                        <a href="companyInfor.html">
-                            <img src="../../assets/mobile/images/company1.jpg" alt="" class="company-icon">
-                        </a>
-                    </div>
-                    <div class="comInfor">
-                        <div class="comInforTitle">
-                            <a href="companyInfor.html">重庆易优弧有限公司</a>
-                        </div>
-                    </div>
-                </div>
-                <div class="weui_search_bar" id="search_bar">
+                <div class="weui_search_bar style">
                     <form class="weui_search_outer">
                         <div class="weui_search_inner">
                             <i class="weui_icon_search"></i>
-                            <input type="search" class="weui_search_input" id="search_input" placeholder="请输入关键词" required="">
-                            <a href="javascript:" class="weui_icon_clear" id="search_clear"></a>
+                            <input type="search" class="weui_search_input" placeholder="请输入医院名称或医生名称" required="">
+                            <a href="javascript:" class="weui_icon_clear"></a>
                         </div>
-                        <label for="search_input" class="weui_search_text" id="search_text">
-                            <i class="weui_icon_search"></i>
-                            <span>搜索</span>
-                        </label>
                     </form>
-                    <a href="javascript:" class="weui_search_cancel" id="search_cancel">
-                        <i class="fa fa-bars"></i>
-                    </a>
                 </div>
                 <div class="weui_cells weui_cells_access search_show" id="search_show" style="display: none;">
                     <div class="weui_cell">
@@ -57,9 +30,11 @@
                         </div>
                     </div>
                 </div>
-                <ul class="positionMenu companyMenu">
-                    <li>
-                        <a href="positionInfor.html">
+                <section id=content>
+                    <div id=scroller>
+                        <ul class="positionMenu companyMenu position-list">
+                            <li>
+                                <a href="positionInfor.html">
                             <span class="clearfix positionDiv">
                                 <span class="left">
                                     <span class="conpanyName">JAVA开发</span><br/>
@@ -70,15 +45,15 @@
                                     人数 : <span class="peopleNum">10人</span>
                                 </span>
                             </span>
-                        </a>
-                        <div class="companyInfor w30">
-                            <span><img src="../../assets/mobile/images/cnforIcon1.jpg" alt=""/> 重庆</span>
-                            <span><i class="fa fa-eye"></i> 200次</span>
-                            <span><img src="../../assets/mobile/images/cnforIcon3.jpg" alt=""/> 今日更新</span>
-                        </div>
-                    </li>
-                    <li>
-                        <a href="positionInfor.html">
+                                </a>
+                                <div class="companyInfor w30">
+                                    <span><img src="../../assets/mobile/images/cnforIcon1.jpg" alt=""/> 重庆</span>
+                                    <span><i class="fa fa-eye"></i> 200次</span>
+                                    <span><img src="../../assets/mobile/images/cnforIcon3.jpg" alt=""/> 今日更新</span>
+                                </div>
+                            </li>
+                            <li>
+                                <a href="positionInfor.html">
                             <span class="clearfix positionDiv">
                                 <span class="left">
                                     <span class="conpanyName">JAVA开发</span><br/>
@@ -89,15 +64,15 @@
                                     人数 : <span class="peopleNum">10人</span>
                                 </span>
                             </span>
-                        </a>
-                        <div class="companyInfor w30">
-                            <span><img src="../../assets/mobile/images/cnforIcon1.jpg" alt=""/> 重庆</span>
-                            <span><i class="fa fa-eye"></i> 200次</span>
-                            <span><img src="../../assets/mobile/images/cnforIcon3.jpg" alt=""/> 今日更新</span>
-                        </div>
-                    </li>
-                    <li>
-                        <a href="positionInfor.html">
+                                </a>
+                                <div class="companyInfor w30">
+                                    <span><img src="../../assets/mobile/images/cnforIcon1.jpg" alt=""/> 重庆</span>
+                                    <span><i class="fa fa-eye"></i> 200次</span>
+                                    <span><img src="../../assets/mobile/images/cnforIcon3.jpg" alt=""/> 今日更新</span>
+                                </div>
+                            </li>
+                            <li>
+                                <a href="positionInfor.html">
                             <span class="clearfix positionDiv">
                                 <span class="left">
                                     <span class="conpanyName">JAVA开发</span><br/>
@@ -108,51 +83,30 @@
                                     人数 : <span class="peopleNum">10人</span>
                                 </span>
                             </span>
-                        </a>
-                        <div class="companyInfor w30">
-                            <span><img src="../../assets/mobile/images/cnforIcon1.jpg" alt=""/> 重庆</span>
-                            <span><i class="fa fa-eye"></i> 200次</span>
-                            <span><img src="../../assets/mobile/images/cnforIcon3.jpg" alt=""/> 今日更新</span>
+                                </a>
+                                <div class="companyInfor w30">
+                                    <span><img src="../../assets/mobile/images/cnforIcon1.jpg" alt=""/> 重庆</span>
+                                    <span><i class="fa fa-eye"></i> 200次</span>
+                                    <span><img src="../../assets/mobile/images/cnforIcon3.jpg" alt=""/> 今日更新</span>
+                                </div>
+                            </li>
+                        </ul>
+                        <div id=pullUp class="ub ub-pc c-gra">
+                            <div class=pullUpIcon></div>
+                            <div class=pullUpLabel>加载更多职位</div>
                         </div>
-                    </li>
-                </ul>
+                    </div>
+                    <div id=footer style="display: none">
+                        <a id=next-page href=/moile/positon?tjtoken=20160705172856&amp;m=list&amp;employment_type=全部&amp;candidate_source=全部>更多职位</a>
+                    </div>
+                </section>
             </div>
         </div>
     </div>
     <script src="../../assets/global/plugins/jquery/jquery-1.11.3.min.js"></script>
     <script src="../../assets/mobile/js/global.js"></script>
-    <script>
-        //$(function(){
-            /*搜索条*/
-//            $('#container').on('focus', '#search_input', function () {
-//                var $weuiSearchBar = $('#search_bar');
-//                $weuiSearchBar.addClass('weui_search_focusing');
-//            }).on('blur', '#search_input', function () {
-//                var $weuiSearchBar = $('#search_bar');
-//                $weuiSearchBar.removeClass('weui_search_focusing');
-//                if ($(this).val()) {
-//                    $('#search_text').hide();
-//                } else {
-//                    $('#search_text').show();
-//                }
-//            })
-//          .on('input', '#search_input', function () {
-//                var $searchShow = $("#search_show");
-//                if ($(this).val()) {
-//                    $searchShow.show();
-//                } else {
-//                    $searchShow.hide();
-//                }
-//            })
-//                    .on('touchend', '#search_cancel', function () {
-//                        $("#search_show").hide();
-//                        $('#search_input').val('');
-//                    })
-//                    .on('touchend', '#search_clear', function () {
-//                        $("#search_show").hide();
-//                        $('#search_input').val('');
-//                    });
-//        })
-    </script>
+    <script src="../../assets/global/plugins/pullUp/js/runner-msk07720d667.js"></script>
+    <script src="../../assets/global/plugins/pullUp/js/global.bundle-msk49e83f440.js"></script>
+    <script src="../../assets/global/plugins/pullUp/js/main-msk6b35c6e83.js"></script>
 </body>
 </html>
