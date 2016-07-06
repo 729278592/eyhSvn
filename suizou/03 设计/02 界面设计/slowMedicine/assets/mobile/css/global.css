@@ -317,7 +317,7 @@ a.weui_media_box:active {
     flex: 1;
     min-width: 0;
 }
-.bdFoot span.type,.bdFoot span.spanInfor{}
+.bdFoot span.type,.bdFoot span.spanInfor{display: block;}
 .medicalBg{margin: 5% auto;width: 90%;position: relative;overflow: hidden;padding: 0 0 1% 0;}
 .medicalBg>img{width: 100%;position: absolute;height: 100%;}
 .medicalBgBgfff{margin: 14% auto 5%;width: 90%;background: #fff;position: relative;z-index: 100;border-radius: 10px;}
