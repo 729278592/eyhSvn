@@ -28,7 +28,7 @@ function tipsContent(message,obj,staute){
                 opacity:"0"
             },500,function(){
                 obj.removeClass(staute);
-                obj.closest(".maskTip").addClass("hide");
+                obj.closest(".maskTip").remove();
             });
         },3000)
     })

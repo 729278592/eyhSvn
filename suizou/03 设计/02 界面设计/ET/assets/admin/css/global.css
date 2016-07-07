@@ -1,4 +1,5 @@
 @charset "utf-8";
+
 body,html{font-family: Microsoft YaHei,Arial, Helvetica, sans-serif;-webkit-font-smoothing: antialiased;}
 html{overflow-y:auto;overflow-x:hidden;min-width:100%;}
 body,p,html{margin: 0;padding: 0;}
@@ -17,6 +18,8 @@ a:link{text-decoration: none;}
 .content{width: 100%;margin-top: 15px;}
 .center{width: 1024px;margin: 0 auto;}
 .contentMain{width: 100%;}
+
+
 /*head*/
 .head{width: 100%;background: #586aa8;}
 .headMain{width: 1024px;height: 60px;margin: 0 auto;line-height: 60px;}
@@ -59,7 +62,8 @@ a:link{text-decoration: none;}
 .titleNav{width: 100%;border-bottom: 1px solid #dbdbdb;}
 .titleNav li{float: left;padding: 5px 10px;border-bottom: 2px solid transparent;color: #666;position: relative;top: 1px;}
 .titleNav li.active{border-bottom: 2px solid #fb8348;color: #fb8348;;}
-.contentList{padding: 5px;}
+.contentList{padding: 5px;display: none;}
+.contentList.active{display: inline-block;}
 .contentList li{border-bottom: 1px solid #dbdbdb;width: 100%;padding: 3px 0;}
 .contentList li.bb0{border-bottom: 0;}
 .contentList li .number{display: inline-block;float: left;font-size: 14px;color: #666;margin-right: 5px;}
@@ -102,17 +106,26 @@ a:link{text-decoration: none;}
 .personInfor>div p.name{font-size: 16px;color: #fff;margin-top: 5px;}
 .personInfor>div.activeName{font-size: 16px;line-height: 61px;text-align: center;width: 600px;}
 .personInfor>div.time{font-size: 16px;color: #dbdbdb;line-height: 61px;}
-
-
-
 .ETdata{width: 777px;background: #fff;border: 1px solid #dbdbdb;margin-top: 5px;}
 .ETtitle{width: 757px;padding: 0 10px;height: 40px;line-height: 40px;font-size: 16px;color: #666;background: #e0e4f3;}
-.typeList.style{border-bottom: 1px solid #fa8c55;width: 747px;margin: 10px 15px 0 15px;}
+.typeList.style{border-bottom: 1px solid #fa8c55;width: 747px;margin: 10px 15px 10px 15px;}
 .typeList.style li{background: transparent;position: relative;top: 1px;}
 .typeList.style li.active{background: transparent;}
 .typeList.style li.active a{background: #fff;}
 .typeList.style li a{padding: 7px 10px 3px 10px;color: #666;}
 
+
+/*accountSetting*/
+.accountInfor{width: 750px;padding: 15px;}
+.accountInfor>div{}
+.accountInforImg{}
+.accountInforImg p{color: #666;font-size: 14px;margin-bottom: 10px;}
+.accountInforImg>div{font-size: 14px;color: #f78f5d;}
+.accountInforImg>div img{}
+.accountInforImg>div span{}
+.accountInforImg>div .btnRecord{font-size: 14px;color: #f78f5d;text-decoration: underline;}
+.accountInforA a{font-size: 14px;color: #8ebbfb;}
+.accountInforA a:hover{text-decoration: underline;}
 /*contentSourceQueryAdmin-content*/
 .navMenu{width: 230px;background: #fff;}
 .navMenu .title{width: 210px;height: 40px;padding: 0 10px;line-height: 40px;color: #efefef;background: #8d94ae;}
@@ -200,14 +213,11 @@ a:link{text-decoration: none;}
 .dailogContent .pCenter p span.colors{font-size: 18px;color: #ff3b30;}
 .dailogContent .pCenter p span.num{font-size: 18px;color: red;}
 .dailogContent .pCenter p.tips2{font-size: 14px;color: #999;}
-
-
 .shake {
     -webkit-animation: showSweetAlert 0.2s;
     -moz-animation: showSweetAlert 0.2s;
     animation: showSweetAlert 0.2s;
 }
-
 @-webkit-keyframes showSweetAlert {
     0% {
         transform: scale(0.7);
@@ -236,6 +246,8 @@ a:link{text-decoration: none;}
         transform: scale(1);
         -webkit-transform: scale(1); } }
 
+
+
 /*enterpriseSetting*/
 .inforList{padding: 0 10px;font-size: 14px;color: #666;}
 .inforList li{width: 100%;padding: 10px 0 0;border-bottom: 1px solid #dfdfdf;}
@@ -248,21 +260,45 @@ a:link{text-decoration: none;}
 .inforList li.on .modifyInfor{display: block;}
 .inforList li.bb0{border-bottom: none;}
 .modifyInfor div.name{display: inline-block;width: 70px;color: #666;line-height: 25px;}
-.modifyInfor .modifyInforCon{width: 690px;margin: 0;padding: 0;}
+.modifyInfor .modifyInforCon{width: 760px;margin: 0;padding: 0;}
 .modifyInfor .modifyInforCon .modifyInput{position: relative;}
 .modifyInfor .modifyInforCon .modifyInput,.modifyInfor .modifyInforCon form{width: 100%;}
 .modifyInfor .modifyInforCon form{margin: 0;padding: 0;}
-.modifyInput>div.left{width: 300px;}
+.modifyInput>div.left{width: 335px;}
 .modifyInput>div.right{position: absolute;bottom: 0;right: 0;}
 .modifyInput .divInput{width: 100%;margin-bottom: 8px;}
 .modifyInput .divInput.mb0{margin-bottom: 0;}
-.modifyInput .divInput input{border: 1px solid #dbdbdb;padding: 5px 10px;color: #333;}
+.modifyInput .divInput input{border: 1px solid #dbdbdb;padding: 7px 10px;color: #333;width: 241px;}
+.modifyInput .divInput input.style{width: 150px;}
+.modifyInput .divInput input.getcode{width: 90px;}
 .modifyInput>div.right .btnSure,.modifyInput>div.right .btnCancel{display: inline-block;padding: 5px 10px;border-radius: 4px;color: #fff;}
 .modifyInput>div.right .btnSure{background: #f78f5d;}
 .modifyInput>div.right .btnCancel{background: #ccc;}
 .tips{padding: 6px 50px;border-radius: 30px;position: fixed;background: #fff;z-index: 99999999;text-align: center;left: 50%;font-size: 16px;opacity: 0;top: -5%;font-size: 14px;}
 .tips.success{border: 1px solid #2ed6b1;color: #2ed6b1;}
 .tips.fail{border: 1px solid #ff0404;color: #ff0404;}
+
+
+
+/*chargeRecord*/
+.recordInfor{padding: 20px 50px;background: #fff;margin-bottom: 15px;box-shadow: 0 0 1px rgba(0,0,0,0.2);}
+.recordHead{width: 100%;}
+.recordHeadBread{border-bottom: 1px solid #dbdbdb;width: 100%;padding: 5px 0;}
+.recordHeadBread li{float: left;font-size: 16px;}
+.recordHeadBread li a{color: #386fbe;}
+.recordContent{width: 100%;margin-top: 15px;}
+.recordTable{width: 100%;border-collapse:collapse;border: 1px solid #dbdbdb;}
+.recordTable tr:hover{background: #e7f3ff;}
+.recordTable tr th{background: #386fbe;}
+.recordTable tr th span{display: inline-block;width: 100%;color: #fff;font-weight: 100;border-right: 1px solid #fff;}
+.recordTable tr td{text-align: center;color: #666;}
+.recordTable tr td,.recordTable tr th{padding: 10px 0;font-size: 14px;}
+.recordTable tr.even{background: #fafafa;}
+
+
+
+
+
 
 
 /*fanAnalysis*/
@@ -280,10 +316,29 @@ a:link{text-decoration: none;}
 /*无数据提示*/
 .notDataTips,.loadingTip{width: 100%;margin: 60px 0;text-align: center;font-size: 14px;color: #666;}
 .notDataTips img,.loadingTip img{margin-bottom: 10px;}
+.highcharts-button{display: none;}
+
+
+/*addActive*/
+.activeForm{padding: 10px;}
+.formDiv{margin-bottom: 10px;}
+.formDiv .activeInput{padding: 8px 10px;border: 1px solid #dbdbdb;color: #333;width: 154px;margin-right: 10px;}
+.formDiv .activeSelect{padding: 8px 10px;border: 1px solid #dbdbdb;color: #333;width: 175px;margin-right: 10px;}
+.formDiv .activeInput.Wdate{height: auto;line-height: 20px;}
+.formDiv .activeTextarea{padding: 8px 10px;border: 1px solid #dbdbdb;width: 740px;margin-top: 10px;}
+.formDiv .type{display: inline-block;width: 80px;font-size: 14px;color: #666;}
+.help-block.help-block-error{font-size: 14px;color: #ff0404;position: relative;left: 84px;top: -5px;}
+.footFormDiv{border-top: 1px solid #dbdbdb;}
+.footFormDiv .btnInput{display: inline-block;width: 60px;height: 34px;line-height: 34px;text-align: center;border-radius: 4px;border: 1px solid #dbdbdb;color: #666;background: #fff;margin-right: 10px;}
+.footFormDiv .btnInput.bg1{background: #fc9c3d;color: #fff;border: none;}
+.footFormDiv{background: #fff;text-align: center;padding: 30px 0;position: fixed;bottom: 0;left: 0;right: 0;}
+
+
+
 
 /*login*/
 body,html{height: 100%;}
-.wrapper{width: 100%;height: 100%;min-height: 650px;}
+.wrapper.h100{width: 100%;height: 100%;min-height: 650px;}
 .logBodyBg{width: 100%;height: 100%;position: absolute;z-index: 1;left: 0;top: 0;overflow: hidden;min-width: 1024px;}
 .logBodyBg img{width: 100%; height: 100%;}
 .logWrap,.regWrap{background-color: #fff;width: 442px;position: absolute;z-index: 2;left: 50%;top: 50%;margin: 0 0 0 -221px;border-radius: 8px;}
@@ -294,7 +349,6 @@ body,html{height: 100%;}
 .form{width: 100%;height:100%;font-size: 14px;}
 .form.fs14{font-size: 14px;}
 body.overflow{overflow-y: hidden;overflow-x: auto;}
-
 .question-infor{position: absolute;width: 200px;padding: 10px;background: #ff7f81;font-size: 14px;color: #fff;top: -8px;right: -204px;z-index: 10;display: none;font-family: "微软雅黑";}
 .question-infor .fa{position: absolute;left: -5px;top: 8px;color: #ff7f81;font-size: 16px;}
 .question-infor p{line-height: 16px;top: 0;}
@@ -342,10 +396,7 @@ label{font-weight: 100;color: #4B525C;}
 .ourMenuDiv{width: 100%;border-bottom: 1px solid #444;text-align: center;height: 51px;}
 .ourMenu{width: 80%;margin: 0 auto;height: 20px;overflow: hidden;padding: 25px 0;}
 .ourMenu li{float: left;text-align: center;width: 25%;height: 20px;overflow: hidden;position: relative;top: -10px;}
-
-.ourMenu li a{display: inline-block;height: 40px;line-height: 20px;transition:.5s all ease;
-    -webkit-transition:.5s all ease;-moz-transition:.5s all ease;position: relative;top: 0;width: 99%;border-right: 1px solid #555;color:#aaa;font-size: 14px;}
-
+.ourMenu li a{display: inline-block;height: 40px;line-height: 20px;transition:.5s all ease;-webkit-transition:.5s all ease;-moz-transition:.5s all ease;position: relative;top: 0;width: 99%;border-right: 1px solid #555;color:#aaa;font-size: 14px;}
 .ourMenu li a p.first{color: #aaa;}
 .ourMenu li a p.last{color: #fff;}
 .ourMenu li a:hover{top: -20px;}

@@ -84,27 +84,11 @@
                                     </a>
                                 </div>
                                 <div class="modifyInfor clearfix">
-                                    <form action="###">
-                                        <div class="modifyInforCon">
-                                            <div class="modifyInput clearfix">
-                                                <div class="left">
-                                                    <div class="left name">旧手机号 : </div>
-                                                    <div class="divInput mb0">
-                                                        <input type="text" placeholder="请输入旧手机号"/>
-                                                    </div>
-                                                </div>
-                                            </div>
-                                            <div class="modifyInput clearfix">
-                                                <div class="left">
-                                                    <div class="left name">　验证码 : </div>
-                                                    <div class="divInput mb0">
-                                                        <input type="text" class="style" placeholder="4位有效数字"/><input class="getcode" type="button" id="getting" value="立即获取">
-                                                    </div>
-                                                </div>
-                                            </div>
+                                    <div class="left name">手机号码 : </div>
+                                    <div class="left modifyInforCon">
+                                        <form action="###">
                                             <div class="clearfix modifyInput">
                                                 <div class="left">
-                                                    <div class="left name">新手机号 : </div>
                                                     <div class="divInput mb0">
                                                         <input type="text" placeholder="请输入新手机号"/>
                                                     </div>
@@ -114,16 +98,16 @@
                                                     <button type="reset" class="btnCancel">取消</button>
                                                 </div>
                                             </div>
-                                        </div>
-                                    </form>
+                                        </form>
+                                    </div>
                                 </div>
                             </li>
                             <li>
                                 <div class="defaultInfor">
                                     <span class="name">密　　码 : </span>
-                                    <span>
-                                        <input type="password" value="3356564"/>
-                                    </span>
+                                            <span>
+                                                <input type="password" value="3356564"/>
+                                            </span>
                                     <a class="modify right">
                                         修改 <i class="fa fa-angle-double-down "></i>
                                     </a>
@@ -245,9 +229,9 @@
                             <p class="title">关注我们:</p>
                             <ul class="iconMenu clearfix">
                                 <li>
-                                    <span>
-                                        贴
-                                    </span>
+                                            <span>
+                                                贴
+                                            </span>
                                 </li>
                                 <li>
                                     <i class="fa fa-weixin"></i>
@@ -268,20 +252,5 @@
     <script src="../../assets/global/plugins/jquery/jquery-1.11.3.min.js"></script>
     <script src="../../assets/admin/js/global.js"></script>
     <script src="../../assets/admin/js/footHandle.js"></script>
-    <script src="../../assets/admin/js/sliderUpDown.js"></script>
-    <!--<script src="../../assets/admin/js/tips.js"></script>-->
-    <script>
-        $(function(){
-            /*提示错误*/
-
-//            tipsContent("验证码不正确",$(".tips"),"fail");
-
-            $(".inforList li").sliderUpDown();
-            /*信息修改确定*/
-            $(".modifyInput").delegate("div.right .btnSure","click",function(){
-                $(this).closest(".modifyInput").find("")
-            })
-        });
-    </script>
 </body>
 </html>

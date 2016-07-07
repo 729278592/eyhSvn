@@ -95,6 +95,62 @@
                                 <li class="active">内容</li>
                                 <li>活动</li>
                             </ul>
+                            <ul class="contentList active">
+                                <li class="clearfix">
+                                    <span class="number first">①</span>
+                                    <div class="contentListInfor">
+                                        <p class="name first">夏日炎炎,分享好的防护霜</p>
+
+                                        <p class="companyName">雅漾防晒系列</p>
+
+                                        <p class="taRight">
+                                            <i class="fa fa-home"></i> 51714
+                                        </p>
+                                    </div>
+                                </li>
+                                <li class="clearfix">
+                                    <span class="number">②</span>
+                                    <div class="contentListInfor">
+                                        <p class="name">夏日炎炎,分享好的防护霜</p>
+
+                                        <p class="companyName">雅漾防晒系列</p>
+
+                                        <p class="taRight">
+                                            <i class="fa fa-home"></i> 51714
+                                        </p>
+                                    </div>
+                                </li>
+                                <li class="clearfix">
+                                    <span class="number">③</span>
+                                    <div class="contentListInfor">
+                                        <p class="name">夏日炎炎,分享好的防护霜</p>
+
+                                        <p class="companyName">雅漾防晒系列</p>
+
+                                        <p class="taRight">
+                                            <i class="fa fa-home"></i> 51714
+                                        </p>
+                                    </div>
+                                </li>
+                                <li class="clearfix">
+                                    <span class="number">④</span>
+                                    <div class="contentListInfor">
+                                        <p class="name">夏日炎炎,分享好的防护霜</p>
+
+                                        <p class="companyName">雅漾防晒系列</p>
+
+                                        <p class="taRight">
+                                            <i class="fa fa-home"></i> 51714
+                                        </p>
+                                    </div>
+                                </li>
+                                <li class="clearfix bb0">
+                                    <div class="textCenter">
+                                        <img src="../../assets/admin/images/erCode.jpg" alt=""/> <br/>
+                                        关注E推数据公众号
+                                    </div>
+                                </li>
+                            </ul>
                             <ul class="contentList">
                                 <li class="clearfix">
                                     <span class="number first">①</span>
@@ -207,7 +263,7 @@
                                         <li>
                                             <p>发布新活动</p>
                                             <div class="contentNumDiv bg6">
-                                                <a href="###">
+                                                <a href="addActive.html">
                                                     <i class="fa fa-plus"></i>
                                                 </a>
                                             </div>
@@ -235,12 +291,12 @@
                             <div class="ETtitle">T推数据快报</div>
                             <ul class="typeList clearfix style">
                                 <li class="active">
-                                    <a href="activityParticipationSignUp.html">
+                                    <a>
                                         内容
                                     </a>
                                 </li>
                                 <li>
-                                    <a href="activityParticipationInterested.html">
+                                    <a>
                                         活动
                                     </a>
                                 </li>
@@ -322,81 +378,84 @@
     <script src="../../assets/global/plugins/highCharts/js/highcharts.js"></script>
     <script src="../../assets/global/plugins/highCharts/js/exporting.js"></script>
     <script>
-        $('#container').highcharts({
-            chart: {
-                type: 'area'
-            },
-            title: {
-                text: '职位统计'
-            },
-            subtitle: {
-                text: '职位统计'
-            },
-            xAxis: {
-                allowDecimals: false,
-                labels: {
-                    formatter: function () {
-                        return this.value; // clean, unformatted number for year
-                    }
-                }
-            },
-            yAxis: {
-                title: {
-                    text: '浏览量'
+
+
+        $(function(){
+            /*线形图*/
+            $('#container').highcharts({
+                chart: {
+                    type: 'spline'
                 },
-                labels: {
-                    formatter: function () {
-                        return this.value / 1000 + 'k';
-                    }
-                }
-            },
-            tooltip: {
-                pointFormat: '{series.name} produced <b>{point.y:,.0f}</b><br/>warheads in {point.x}'
-            },
-            plotOptions: {
-                area: {
-                    pointStart: 2010,
-                    marker: {
-                        enabled: false,
-                        symbol: 'circle',
-                        radius: 2,
-                        states: {
-                            hover: {
-                                enabled: true
-                            }
+                title: {
+                    text: ' '
+                },
+                subtitle: {
+                    text: ' '
+                },
+                xAxis: {
+                    categories: ['Jan', 'Feb', 'Mar', 'Apr', 'May', 'Jun',
+                        'Jul', 'Aug', 'Sep', 'Oct', 'Nov', 'Dec']
+                },
+                yAxis: {
+                    title: {
+                        text: 'Temperature'
+                    },
+                    labels: {
+                        formatter: function () {
+                            return this.value + '°';
                         }
                     }
-                }
-            },
-            series: [{
-                name: '图文页阅读次数',
-                data: [null, null, null, null, null, 6, 11, 32, 110, 235, 369, 640,
-                    1005, 1436, 2063, 3057, 4618, 6444, 9822, 15468, 20434, 24126,
-                    27387, 29459, 31056, 31982, 32040, 31233, 29224, 27342, 26662,
-                    26956, 27912, 28999, 28965, 27826, 25579, 25722, 24826, 24605,
-                    24304, 23464, 23708, 24099, 24357, 24237, 24401, 24344, 23586,
-                    22380, 21004, 17287, 14747, 13076, 12555, 12144, 11009, 10950,
-                    10871, 10824, 10577, 10527, 10475, 10421, 10358, 10295, 10104]
-            }, {
-                name: '图文页阅读人数',
-                data: [100, null, null, null, null, null, null, null, null, null,
-                    1000, 25, 50, 120, 150, 200, 426, 660, 869, 1060, 1605, 2471, 3322,
-                    4238, 5221, 6129, 7089, 8339, 9399, 10538, 11643, 13092, 14478,
-                    15915, 17385, 19055, 21205, 23044, 25393, 27935, 30062, 32049,
-                    33952, 35804, 37431, 39197, 45000, 43000, 41000, 39000, 37000,
-                    35000, 33000, 31000, 29000, 27000, 25000, 24000, 23000, 22000,
-                    21000, 20000, 19000, 18000, 18000, 17000, 16000]
-            }, {
-                name: '转发人数',
-                data: [100, null, null, null, null, null, null, null, null, null,
-                    1000, 25, 50, 120, 150, 200, 426, 660, 869, 1060, 1605, 2471, 3322,
-                    4238, 5221, 6129, 7089, 8339, 9399, 10538, 11643, 13092, 14478,
-                    15915, 17385, 19055, 21205, 23044, 25393, 27935, 30062, 32049,
-                    33952, 35804, 37431, 39197, 45000, 43000, 41000, 39000, 37000,
-                    35000, 33000, 31000, 29000, 27000, 25000, 24000, 23000, 22000,
-                    21000, 20000, 19000, 18000, 18000, 17000, 16000]
-            }]
-        });
+                },
+                tooltip: {
+                    crosshairs: true,
+                    shared: true
+                },
+                plotOptions: {
+                    spline: {
+                        marker: {
+                            radius: 4,
+                            lineColor: '#666',
+                            lineWidth: 1
+                        }
+                    }
+                },
+                series: [{
+                    name: '保留时间',
+                    marker: {
+                        symbol: 'square'
+                    },
+                    data: [7.0, 6.9, 9.5, 14.5, 18.2, 21.5, 25.2, {
+                        y: 26.5,
+                        marker: {
+                            symbol: 'url(https://www.highcharts.com/samples/graphics/sun.png)'
+                        }
+                    }, 23.3, 18.3, 13.9, 9.6]
+
+                }, {
+                    name: '转发次数',
+                    marker: {
+                        symbol: 'diamond'
+                    },
+                    data: [{
+                        y: 3.9,
+                        marker: {
+                            symbol: 'url(https://www.highcharts.com/samples/graphics/snow.png)'
+                        }
+                    }, 4.2, 5.7, 8.5, 11.9, 15.2, 17.0, 16.6, 14.2, 10.3, 6.6, 4.8]
+                }]
+            });
+
+            /*E推热榜切换*/
+            var contentList = $(".contentList");
+            $(".titleNav li").each(function(i){
+                $(this).click(function(){
+                    $(this).addClass("active");
+                    $(this).siblings("li").removeClass("active");
+                    contentList.eq(i).addClass("active");
+                    contentList.eq(i).siblings(".contentList").removeClass("active");
+                });
+            })
+        })
     </script>
 </body>
 </html>

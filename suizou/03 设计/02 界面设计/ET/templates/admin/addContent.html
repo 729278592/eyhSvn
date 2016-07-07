@@ -1,0 +1,159 @@
+<!DOCTYPE html>
+<html>
+<head lang="en">
+    <meta charset="UTF-8">
+    <title>活动管理-活动管理</title>
+    <link rel="stylesheet" href="../../assets/admin/css/global.css"/>
+    <link rel="stylesheet" href="../../assets/global/plugins/font/css/font-awesome.css"/>
+</head>
+<body>
+    <div class="wrapper">
+        <div class="head">
+            <div class="headMain">
+                <img src="../../assets/admin/images/logo.png" alt="" class="logo"/>
+                <ul class="clearfix navMeun right">
+                    <li>
+                        <a href="index.html">
+                            首页
+                        </a>
+                        <div class="colorBlock"></div>
+                    </li>
+                    <li class="active">
+                        <a href="productDisplay.html">
+                            内容管理
+                        </a>
+                        <div class="colorBlock"></div>
+                    </li>
+                    <li>
+                        <a href="afterSaleService.html">
+                            活动管理
+                        </a>
+                        <div class="colorBlock"></div>
+                    </li>
+                    <li>
+                        <a href="aboutUs.html">
+                            粉丝数据
+                        </a>
+                        <div class="colorBlock"></div>
+                    </li>
+                    <li>
+                        <a href="#">
+                            财务管理
+                        </a>
+                        <div class="colorBlock"></div>
+                    </li>
+                    <li class="last">
+                        <a href="#">
+                            <img src="../../assets/admin/images/companyLogo.jpg" alt=""/>
+                            有限公搜
+                        </a>
+                        <div class="colorBlock"></div>
+                    </li>
+                </ul>
+            </div>
+        </div>
+        <div class="content">
+            <div class="center">
+                <div class="contentMain clearfix">
+                    <div class="left navMenu">
+                        <div class="title">内容管理</div>
+                        <ul class="navList">
+                            <li class="active">
+                                <a href="contentSourceQueryAdmin.html">
+                                    <i class="fa fa-home"></i>
+                                    素材管理
+                                </a>
+                            </li>
+                            <li>
+                                <a href="contentFlowAdmin.html">
+                                    <i class="fa fa-home"></i>
+                                    流量管理
+                                </a>
+                            </li>
+                        </ul>
+                    </div>
+                    <div class="right contentMaincon">
+                        <div class="title">素材管理</div>
+                        <form action="###" class="activeForm" id="activeForm">
+                            <div class="formDiv">
+                                <span class="type">素材名称 : </span>
+                                <input type="text" placeholder="素材1" value="" class="activeInput" name="activeName"/><br/>
+                            </div>
+                            <div class="formDiv">
+                                <span class="type">创建时间 : </span> <span style="font-size: 14px;color: #333;">2016-9-7</span>
+                            </div>
+
+                            <div class="formDiv hide">
+                                <span class="type">活动介绍 : </span> <br/>
+                                <textarea name="activeInfor" class="activeTextarea" style="resize: none;" id="" cols="30" rows="10"></textarea>
+                            </div>
+                            <div class="formDiv">
+                                <span class="type">素材介绍 : </span> <br/>
+                                <img src="contentInfor.png" alt="" style="width: 100%;"/>
+                            </div>
+
+                            <div class="footFormDiv">
+                                <input type="submit" value="发布" class="btnInput bg1"/>
+                                <button type="button" class="btnInput">预览</button>
+                                <button  type="button" class="btnInput">取消</button>
+                            </div>
+                        </form>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <script src="../../assets/global/plugins/jquery/jquery-1.11.3.min.js"></script>
+    <script src="../../assets/admin/js/global.js"></script>
+    <script src="../../assets/admin/js/footHandle.js"></script>
+    <script src="../../assets/global/plugins/My97DatePicker/WdatePicker.js"></script>
+    <script src="../../assets/global/plugins/jquery-validate/jquery.validate.min.js"></script>
+    <script src="../../assets/global/plugins/jquery-validate/messages_zh.js"></script>
+    <script>
+        $(function(){
+            /*验证表单*/
+            $("#activeForm").validate({
+                errorElement: 'span', //default input error message container
+                errorClass: 'help-block help-block-error', // default input error message class
+                rules: {
+                    activeName:{
+                        required:true
+                    }
+                },
+
+                messages: {
+                    activeName:{
+                        required:"请输入素材名称"
+                    }
+                },
+
+                errorPlacement: function (error, element) { // render error placement for each input type
+                    if (element.parent(".formDiv").size() > 0) {
+                        error.insertAfter(element.parent(".formDiv"));
+                    } else {
+                        error.insertAfter(element); // for other inputs, just perform default behavior
+                        error.insertAfter(element.parent());
+                    }
+                    heightAuto()
+                },
+
+                highlight: function (element) { // hightlight error inputs
+                    $(element).closest('.formDiv').removeClass("has-success").addClass('has-error'); // set error class to the control group
+                },
+
+                unhighlight: function (element) { // revert the change done by hightlight
+                    $(element).closest('.formDiv').removeClass('has-error'); // set error class to the control group
+                },
+
+                success: function (label, element) {
+                    label.closest('.formDiv').removeClass('has-error'); // set success class to the control group
+                },
+
+                submitHandler: function(form) {
+                    //                    register();
+                }
+            });
+        });
+    </script>
+</body>
+</html>
