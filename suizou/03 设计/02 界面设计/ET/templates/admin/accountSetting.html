@@ -8,50 +8,64 @@
 </head>
 <body>
     <div class="wrapper">
-        <div class="head">
-            <div class="headMain">
-                <img src="../../assets/admin/images/logo.png" alt="" class="logo"/>
-                <ul class="clearfix navMeun right">
-                    <li>
-                        <a href="index.html">
-                            首页
-                        </a>
-                        <div class="colorBlock"></div>
-                    </li>
-                    <li class="active">
-                        <a href="productDisplay.html">
-                            内容管理
-                        </a>
-                        <div class="colorBlock"></div>
-                    </li>
-                    <li>
-                        <a href="afterSaleService.html">
-                            活动管理
-                        </a>
-                        <div class="colorBlock"></div>
-                    </li>
-                    <li>
-                        <a href="aboutUs.html">
-                            粉丝数据
-                        </a>
-                        <div class="colorBlock"></div>
-                    </li>
-                    <li>
-                        <a href="#">
-                            财务管理
-                        </a>
-                        <div class="colorBlock"></div>
-                    </li>
-                    <li class="last">
-                        <a href="#">
-                            <img src="../../assets/admin/images/companyLogo.jpg" alt=""/>
-                            有限公搜
-                        </a>
-                        <div class="colorBlock"></div>
-                    </li>
-                </ul>
-            </div>
+    <div class="head">
+        <div class="headMain">
+            <img src="../../assets/admin/images/logo.png" alt="" class="logo"/>
+            <ul class="clearfix navMeun right">
+                <li>
+                    <a href="index.html">
+                        首页
+                    </a>
+                    <div class="colorBlock"></div>
+                </li>
+                <li>
+                    <a href="contentSourceReleaseAdmin.html">
+                        内容管理
+                    </a>
+                    <div class="colorBlock"></div>
+                </li>
+                <li>
+                    <a href="activityManagement.html">
+                        活动管理
+                    </a>
+                    <div class="colorBlock"></div>
+                </li>
+                <li>
+                    <a href="FanRecord.html">
+                        粉丝数据
+                    </a>
+                    <div class="colorBlock"></div>
+                </li>
+                <li>
+                    <a href="RechargeRecord.html">
+                        财务管理
+                    </a>
+                    <div class="colorBlock"></div>
+                </li>
+                <li class="last active">
+                    <a href="#">
+                        <img src="../../assets/admin/images/companyLogo.jpg" alt=""/>
+                        有限公司
+                    </a>
+                    <div class="colorBlock"></div>
+                    <ul class="account-selection hide">
+                        <li>
+                            <a href="accountSetting.html" class="companyInfors">
+                                <i class="fa fa-gear"></i>
+                                账号设置
+                            </a>
+                        </li>
+                        <li class="signOut">
+                            <a href="login.html">
+                                <i class="fa fa-power-off"></i>
+                                退出登录
+                            </a>
+                        </li>
+                    </ul>
+                </li>
+            </ul>
         </div>
+    </div>
         <div class="content">
             <div class="center">
                 <div class="contentMain clearfix">
@@ -79,7 +93,7 @@
                                 <div class="defaultInfor">
                                     <span class="name">登录手机 : </span>
                                     <span>15086677745</span>
-                                    <a class="modify right">
+                                    <a class="modify right hide">
                                         修改 <i class="fa fa-angle-double-down"></i>
                                     </a>
                                 </div>
@@ -87,26 +101,26 @@
                                     <form action="###">
                                         <div class="modifyInforCon">
                                             <div class="modifyInput clearfix">
-                                                <div class="left">
+                                                <div class="inputGroup">
                                                     <div class="left name">旧手机号 : </div>
                                                     <div class="divInput mb0">
-                                                        <input type="text" placeholder="请输入旧手机号"/>
+                                                        <input type="text" name="oldPhone" class="input" placeholder="请输入旧手机号"/>
                                                     </div>
                                                 </div>
                                             </div>
                                             <div class="modifyInput clearfix">
-                                                <div class="left">
+                                                <div class="inputGroup">
                                                     <div class="left name">　验证码 : </div>
                                                     <div class="divInput mb0">
-                                                        <input type="text" class="style" placeholder="4位有效数字"/><input class="getcode" type="button" id="getting" value="立即获取">
+                                                        <input type="text" name="authCode" class="input style" placeholder="6位有效数字"/><input class="getcode" type="button" id="getting" value="立即获取">
                                                     </div>
                                                 </div>
                                             </div>
                                             <div class="clearfix modifyInput">
-                                                <div class="left">
+                                                <div class="inputGroup">
                                                     <div class="left name">新手机号 : </div>
                                                     <div class="divInput mb0">
-                                                        <input type="text" placeholder="请输入新手机号"/>
+                                                        <input type="text" name="newPhone" class="input" placeholder="请输入新手机号"/>
                                                     </div>
                                                 </div>
                                                 <div class="right">
@@ -129,13 +143,21 @@
                                     </a>
                                 </div>
                                 <div class="modifyInfor clearfix">
-                                    <div class="left name">密　　码 : </div>
-                                    <div class="left modifyInforCon">
-                                        <form action="###">
+                                    <form action="###">
+                                        <div class="modifyInforCon">
                                             <div class="clearfix modifyInput">
-                                                <div class="left">
+                                                <div class="inputGroup">
+                                                    <div class="left name">　新密码 : </div>
                                                     <div class="divInput mb0">
-                                                        <input type="text" placeholder="请输入新密码"/>
+                                                        <input type="text" name="password" placeholder="请输入新密码" class="input"/>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                            <div class="clearfix modifyInput">
+                                                <div class="inputGroup">
+                                                    <div class="left name">　旧密码 : </div>
+                                                    <div class="divInput mb0">
+                                                        <input type="text" name="confirmPwd" placeholder="请输入新密码" class="input"/>
                                                     </div>
                                                 </div>
                                                 <div class="right">
@@ -143,8 +165,8 @@
                                                     <button type="reset" class="btnCancel">取消</button>
                                                 </div>
                                             </div>
-                                        </form>
-                                    </div>
+                                        </div>
+                                    </form>
                                 </div>
                             </li>
                             <li class="bb0">
@@ -156,13 +178,13 @@
                                     </a>
                                 </div>
                                 <div class="modifyInfor clearfix">
-                                    <div class="left name">姓　　名 : </div>
-                                    <div class="left modifyInforCon">
-                                        <form action="###">
+                                    <form action="###">
+                                        <div class="modifyInforCon">
                                             <div class="clearfix modifyInput">
-                                                <div class="left">
+                                                <div class="inputGroup">
+                                                    <div class="left name">姓　　名 : </div>
                                                     <div class="divInput mb0">
-                                                        <input type="text" placeholder="请输入姓名"/>
+                                                        <input type="text" name="personName" placeholder="请输入姓名" class="input"/>
                                                     </div>
                                                 </div>
                                                 <div class="right">
@@ -170,8 +192,8 @@
                                                     <button type="reset" class="btnCancel">取消</button>
                                                 </div>
                                             </div>
-                                        </form>
-                                    </div>
+                                        </div>
+                                    </form>
                                 </div>
                             </li>
                         </ul>
@@ -270,17 +292,130 @@
     <script src="../../assets/admin/js/footHandle.js"></script>
     <script src="../../assets/admin/js/sliderUpDown.js"></script>
     <!--<script src="../../assets/admin/js/tips.js"></script>-->
+    <script src="../../assets/global/plugins/jquery-validate/jquery.validate.min.js"></script>
+    <script src="../../assets/global/plugins/jquery-validate/messages_zh.js"></script>
+    <script>
+        $(function(){
+            /*验证表单*/
+            $("form").each(function(){
+                $(this).validate({
+                    errorElement: 'span', //default input error message container
+                    errorClass: 'help-block help-block-error', // default input error message class
+                    rules: {
+                        oldPhone:{
+                            required:true,
+                            phone:true
+                        },
+                        authCode:{
+                            required:true,
+                            maxlength:6,
+                            minlength:6
+                        },
+                        newPhone:{
+                            required:true,
+                            phone:true
+                        },
+                        password:{
+                            required:true,
+                            maxlength:16,
+                            minlength:6
+                        },
+                        confirmPwd: {
+                            required: true,
+                            equalTo: "#password"
+                        },
+                        personName:{
+                            required: true
+                        }
+
+                    },
+
+                    messages: {
+                        oldPhone:{
+                            required:"请输入手机号码",
+                            phone:"请输入正确手机号码"
+                        },
+                        authCode:{
+                            required:"请输入验证码",
+                            maxlength:"验证码为6位",
+                            minlength:"验证码为6位"
+                        },
+                        newPhone:{
+                            required:"请输入手机号码",
+                            phone:"请输入正确手机号码"
+                        },
+
+                        password:{
+                            required:"请输入密码",
+                            minlength: jQuery.validator.format("密码不能少于 {0} 个字符"),
+                            maxlength: jQuery.validator.format("密码不能多于 {0} 个字符")
+                        },
+                        confirmPwd: {
+                            required: "请再次输入密码",
+                            equalTo: "两次输入密码不相同"
+                        },
+                        personName:{
+                            required: "姓名不能为空"
+                        }
+                    },
+
+                    errorPlacement: function (error, element) { // render error placement for each input type
+                        if (element.parent(".formDiv").size() > 0) {
+                            error.insertAfter(element.parent(".formDiv"));
+                        } else {
+                            error.insertAfter(element); // for other inputs, just perform default behavior
+                            error.insertAfter(element.parent());
+                        }
+                        heightAuto()
+                    },
+
+                    highlight: function (element) { // hightlight error inputs
+                        $(element).closest('.formDiv').removeClass("has-success").addClass('has-error'); // set error class to the control group
+                    },
+
+                    unhighlight: function (element) { // revert the change done by hightlight
+                        $(element).closest('.formDiv').removeClass('has-error'); // set error class to the control group
+                    },
+
+                    success: function (label, element) {
+                        label.closest('.formDiv').removeClass('has-error'); // set success class to the control group
+                    },
+
+                    submitHandler: function(form) {
+                        //                    register();
+                    }
+                });
+            });
+
+        });
+    </script>
     <script>
         $(function(){
             /*提示错误*/
-
 //            tipsContent("验证码不正确",$(".tips"),"fail");
 
+            /*修改信息*/
             $(".inforList li").sliderUpDown();
-            /*信息修改确定*/
-            $(".modifyInput").delegate("div.right .btnSure","click",function(){
-                $(this).closest(".modifyInput").find("")
-            })
+
+
+            /*验证码操作*/
+            $('#getting').click(function(){
+                var btn = $(this);
+                var count = 60;
+                var resend = setInterval(function(){
+                    count--;
+                    if (count > 0){
+                        btn.val(count+"秒后可重新获取");
+                        btn.addClass("disabled");
+                        //                        $.cookie("captcha", count, {path: '/', expires: (1/86400)*count});
+                    }else {
+                        clearInterval(resend);
+                        btn.removeClass("disabled");
+                        btn.val("获取验证码").removeAttr('disabled style');
+                    }
+                }, 1000);
+                btn.attr('disabled',true).css('cursor','not-allowed');
+            });
         });
     </script>
 </body>

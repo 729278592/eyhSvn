@@ -10,16 +10,29 @@
         var sliderUpDownMethods = {
             init:function(_this){
                 navDiv = _this.find(".modify");
-                sliderUpDownMethods.onClick();
+                btnCancel = _this.find(".btnCancel");
+                sliderUpDownMethods.navDivOnClick();
+                sliderUpDownMethods.btnCancelOnclick();
             },
-            onClick:function(){
+            navDivOnClick:function(){
                 navDiv.on("click",function(){
                     if($(this).closest("li").find(".modifyInfor").css("display") == "none"){
                         $(this).closest("li").find(".modifyInfor").slideDown().end().closest("li").addClass("on");
                         $(this).closest("li").siblings("li").find(".modifyInfor").slideUp().end().closest("li").siblings("li").removeClass("on");
+                        $(this).addClass("hide");
+                        $(this).closest("li").siblings("li").find(".modify").removeClass("hide");
                     }
-                    else{
+                    //else{
+//                        $(this).closest("li").find(".modifyInfor").slideUp().end().closest(".li").removeClass("on");
+                    //}
+                })
+            },
+            btnCancelOnclick:function(){
+                btnCancel.on("click",function(){
+
+                    if($(this).closest("li").find(".modifyInfor").css("display") == "block"){
                         $(this).closest("li").find(".modifyInfor").slideUp().end().closest(".li").removeClass("on");
+                        $(this).closest("li").find(".modify").removeClass("hide");
                     }
                 })
             }

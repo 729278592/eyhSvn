@@ -1,0 +1,461 @@
+<!DOCTYPE html>
+<html>
+<head lang="en">
+    <meta charset="UTF-8">
+    <title>企业设置</title>
+    <link rel="stylesheet" href="../../assets/admin/css/global.css"/>
+    <link rel="stylesheet" href="../../assets/global/plugins/font/css/font-awesome.css"/>
+
+</head>
+<body>
+    <div class="wrapper">
+        <div class="head">
+            <div class="headMain">
+                <img src="../../assets/admin/images/logo.png" alt="" class="logo"/>
+                <ul class="clearfix navMeun right">
+                    <li>
+                        <a href="index.html">
+                            首页
+                        </a>
+                        <div class="colorBlock"></div>
+                    </li>
+                    <li>
+                        <a href="contentSourceReleaseAdmin.html">
+                            内容管理
+                        </a>
+                        <div class="colorBlock"></div>
+                    </li>
+                    <li>
+                        <a href="activityManagement.html">
+                            活动管理
+                        </a>
+                        <div class="colorBlock"></div>
+                    </li>
+                    <li>
+                        <a href="FanRecord.html">
+                            粉丝数据
+                        </a>
+                        <div class="colorBlock"></div>
+                    </li>
+                    <li>
+                        <a href="RechargeRecord.html">
+                            财务管理
+                        </a>
+                        <div class="colorBlock"></div>
+                    </li>
+                    <li class="last active">
+                        <a href="#">
+                            <img src="../../assets/admin/images/companyLogo.jpg" alt=""/>
+                            有限公司
+                        </a>
+                        <div class="colorBlock"></div>
+                        <ul class="account-selection hide">
+                            <li>
+                                <a href="accountSetting.html" class="companyInfors">
+                                    <i class="fa fa-gear"></i>
+                                    账号设置
+                                </a>
+                            </li>
+                            <li class="signOut">
+                                <a href="login.html">
+                                    <i class="fa fa-power-off"></i>
+                                    退出登录
+                                </a>
+                            </li>
+                        </ul>
+                    </li>
+                </ul>
+            </div>
+        </div>
+        <div class="content">
+            <div class="center">
+                <div class="contentMain">
+                    <div class="main-center">
+                        <dl>
+                            <dt>
+                                <span>充值金额</span></dt>
+                                <dd class="pay">
+                                    <ul class="clearfix">
+                                        <!-- ngRepeat: m in money -->
+                                        <li>
+                                            <label>
+                                                <span class="radiobox icon-radio-uncheck">
+                                                    <input type="radio" name="selectMoney" value="500" class=" " checked="checked">
+                                                </span>
+                                                <span>
+                                                    <em class="">500</em>元
+                                                </span>
+                                            </label>
+                                        </li>
+
+                                        <li>
+                                            <label>
+                                            <span class="radiobox icon-radio-checked">
+                                              <input type="radio" name="selectMoney" value="1000" required="" class="" checked="checked"></span>
+                                            <span>
+                                            <em>1000</em>元</span></label>
+                                        </li>
+                                        <li class="">
+                                            <label>
+                                            <span class="radiobox icon-radio-uncheck">
+                                              <input type="radio" name="selectMoney" value="2000" class="" checked="checked"></span>
+                                            <span>
+                                            <em class="">2000</em>元</span></label>
+                                        </li>
+                                        <li class="">
+                                            <label>
+                                            <span class="radiobox icon-radio-uncheck">
+                                              <input type="radio" name="selectMoney" value="5000" class="" checked="checked"></span>
+                                            <span>
+                                              <em>5000</em>元</span></label>
+                                        </li>
+                                        <li class="">
+                                            <label>
+                                            <span class="radiobox icon-radio-uncheck">
+                                              <input type="radio" name="selectMoney" value="10000" class="" checked="checked"></span>
+                                            <span>
+                                              <em>10000</em>元</span></label>
+                                        </li>
+                                        <li >
+                                            <label>
+                                            <span class="radiobox icon-radio-uncheck">
+                                              <input type="radio" name="selectMoney" value="50000" class="" checked="checked"></span>
+                                            <span>
+                                              <em>50000</em>元</span></label>
+                                        </li>
+                                        <li class="clear payother">
+                                            <label>
+                                            <span class="radiobox icon-radio-uncheck">
+                                              <input type="radio" value="other" name="selectMoney">
+                                            </span>
+                                            <span>其他金额</span></label>
+                                          <span class="recharge-input hide">:
+                                            <input class="other" type="text">
+                                            <span>元</span></span>
+                                        </li>
+                                    </ul>
+                                </dd>
+                            <dt>
+                                <span>支付方式</span></dt>
+                            <dd class="bank tab">
+                                <div class="tab-content">
+                                    <ul class="tab-content-item clearfix">
+                                        <li title="支付宝">
+                                            <label>
+                                                  <span class="radiobox icon-radio-uncheck">
+                                                    <input type="radio" name="recharge[pay_bank]" value="-1"></span>
+                                                <span class="bankpic zhifubao_1"></span>
+                                            </label>
+                                        </li>
+                                        <!-- end ngRepeat: bank in personalInternetBanking -->
+                                        <li title="支付宝">
+                                            <label>
+                                                  <span class="radiobox icon-radio-uncheck">
+                                                    <input type="radio" name="recharge[pay_bank]" value="-2">
+                                                  </span>
+                                                <span class="bankpic zhifubao_2"></span>
+                                            </label>
+                                        </li>
+                                        <!-- end ngRepeat: bank in personalInternetBanking -->
+                                        <li  title="中国工商银行" class="clear">
+                                            <label for="bank-ICBCB2C">
+                                                  <span class="radiobox icon-radio-uncheck">
+                                                    <input type="radio" name="recharge[pay_bank]" value="ICBCB2C" id="bank-ICBCB2C" ></span>
+                                                <span class="bankpic zzggyh" ng-class="bank.class"></span>
+                                            </label>
+                                        </li>
+                                        <!-- end ngRepeat: bank in personalInternetBanking -->
+                                        <li title="中国建设银行">
+                                            <label>
+                                                  <span class="radiobox icon-radio-uncheck">
+                                                    <input type="radio" name="recharge[pay_bank]" value="CCB"></span>
+                                                <span class="bankpic zzjsyh"></span>
+                                            </label>
+                                        </li>
+                                        <li title="招商银行">
+                                            <label>
+                                                  <span class="radiobox icon-radio-uncheck">
+                                                    <input type="radio" name="recharge[pay_bank]" value="CMB"></span>
+                                                <span class="bankpic zsyh"></span>
+                                            </label>
+                                        </li>
+                                        <li title="中国农业银行">
+                                            <label>
+                                                  <span class="radiobox icon-radio-uncheck">
+                                                    <input type="radio" name="recharge[pay_bank]" value="ABC"></span>
+                                                <span class="bankpic zznyyh"></span>
+                                            </label>
+                                        </li>
+                                        <li title="中国银行">
+                                            <label>
+                                                  <span class="radiobox icon-radio-uncheck">
+                                                    <input type="radio" name="recharge[pay_bank]" value="BOCB2C"></span>
+                                                <span class="bankpic zzyh"></span>
+                                            </label>
+                                        </li>
+                                        <li title="中信银行">
+                                            <label>
+                                                  <span class="radiobox icon-radio-uncheck">
+                                                    <input type="radio" name="recharge[pay_bank]" value="CITIC"></span>
+                                                <span class="bankpic zxyh"></span>
+                                            </label>
+                                        </li>
+                                        <li title="中国光大银行">
+                                            <label>
+                                                  <span class="radiobox icon-radio-uncheck">
+                                                    <input type="radio" name="recharge[pay_bank]" value="CEB-DEBIT"></span>
+                                                <span class="bankpic zzgdyh"></span>
+                                            </label>
+                                        </li>
+                                        <li title="中国民生银行">
+                                            <label>
+                                                  <span class="radiobox icon-radio-uncheck">
+                                                    <input type="radio" name="recharge[pay_bank]" value="CMBC"></span>
+                                                <span class="bankpic zzmsyh"></span>
+                                            </label>
+                                        </li>
+                                        <li title="浦发银行">
+                                            <label>
+                                                  <span class="radiobox icon-radio-uncheck">
+                                                    <input type="radio" name="recharge[pay_bank]" value="SPDB"></span>
+                                                <span class="bankpic ppyh"></span>
+                                            </label>
+                                        </li>
+                                        <li title="中国邮政储蓄银行">
+                                            <label>
+                                                  <span class="radiobox icon-radio-uncheck">
+                                                    <input type="radio" name="recharge[pay_bank]" value="POSTGC"></span>
+                                                <span class="bankpic zzyzcxyh"></span>
+                                            </label>
+                                        </li>
+                                        <!-- end ngRepeat: bank in personalInternetBanking -->
+                                        <li title="兴业银行">
+                                            <label>
+                                                  <span class="radiobox icon-radio-uncheck">
+                                                    <input type="radio" name="recharge[pay_bank]" value="CIB"></span>
+                                                <span class="bankpic xyyh"></span>
+                                            </label>
+                                        </li>
+                                        <li title="广发银行">
+                                            <label>
+                                                  <span class="radiobox icon-radio-uncheck">
+                                                    <input type="radio" name="recharge[pay_bank]" value="GDB"></span>
+                                                <span class="bankpic gfyh"></span>
+                                            </label>
+                                        </li>
+                                        <li title="杭州银行">
+                                            <label>
+                                                  <span class="radiobox icon-radio-uncheck">
+                                                    <input type="radio" name="recharge[pay_bank]" value="HZCBB2C"></span>
+                                                <span class="bankpic hzyh"></span>
+                                            </label>
+                                        </li>
+                                        <li title="上海银行">
+                                            <label>
+                                                  <span class="radiobox icon-radio-uncheck">
+                                                    <input type="radio" name="recharge[pay_bank]" value="SHBANK"></span>
+                                                <span class="bankpic shyh"></span>
+                                            </label>
+                                        </li>
+                                        <li title="宁波银行">
+                                            <label>
+                                                  <span class="radiobox icon-radio-uncheck">
+                                                    <input type="radio" name="recharge[pay_bank]" value="NBBANK"></span>
+                                                <span class="bankpic nbyh" ></span>
+                                            </label>
+                                        </li>
+                                        <!-- end ngRepeat: bank in personalInternetBanking -->
+                                        <li ng-repeat="bank in personalInternetBanking" ng-class="{'clear': $index === 2}" title="平安银行"
+                                            ng-click="selectBank(bank.id)" class="ng-scope">
+                                            <label for="bank-SPABANK">
+                                                  <span class="radiobox icon-radio-uncheck"
+                                                        ng-class="{'icon-radio-checked': payBank === bank.id, 'icon-radio-uncheck': payBank !== bank.id}">
+                                                    <input type="radio" name="recharge[pay_bank]" value="SPABANK" ng-model="$parent.payBank"
+                                                           id="bank-SPABANK" ng-change="selectBank(bank.id)" class="ng-pristine ng-valid"></span>
+                                                <span class="bankpic payh" ng-class="bank.class"></span>
+                                            </label>
+                                        </li>
+                                        <!-- end ngRepeat: bank in personalInternetBanking -->
+                                        <li ng-repeat="bank in personalInternetBanking" ng-class="{'clear': $index === 2}" title="北京农商银行"
+                                            ng-click="selectBank(bank.id)" class="ng-scope">
+                                            <label for="bank-BJRCB">
+                                                  <span class="radiobox icon-radio-uncheck"
+                                                        ng-class="{'icon-radio-checked': payBank === bank.id, 'icon-radio-uncheck': payBank !== bank.id}">
+                                                    <input type="radio" name="recharge[pay_bank]" value="BJRCB" ng-model="$parent.payBank" id="bank-BJRCB"
+                                                           ng-change="selectBank(bank.id)" class="ng-pristine ng-valid"></span>
+                                                <span class="bankpic bjnsyh" ng-class="bank.class"></span>
+                                            </label>
+                                        </li>
+                                        <!-- end ngRepeat: bank in personalInternetBanking -->
+                                        <li ng-repeat="bank in personalInternetBanking" ng-class="{'clear': $index === 2}" title="富滇银行"
+                                            ng-click="selectBank(bank.id)" class="ng-scope">
+                                            <label for="bank-FDB">
+                                                  <span class="radiobox icon-radio-uncheck"
+                                                        ng-class="{'icon-radio-checked': payBank === bank.id, 'icon-radio-uncheck': payBank !== bank.id}">
+                                                    <input type="radio" name="recharge[pay_bank]" value="FDB" ng-model="$parent.payBank" id="bank-FDB"
+                                                           ng-change="selectBank(bank.id)" class="ng-pristine ng-valid"></span>
+                                                <span class="bankpic fcyh" ng-class="bank.class"></span>
+                                            </label>
+                                        </li>
+                                        <!-- end ngRepeat: bank in personalInternetBanking -->
+                                        <li ng-repeat="bank in personalInternetBanking" ng-class="{'clear': $index === 2}" title="交通银行"
+                                            ng-click="selectBank(bank.id)" class="ng-scope">
+                                            <label for="bank-COMM">
+                                                  <span class="radiobox icon-radio-uncheck"
+                                                        ng-class="{'icon-radio-checked': payBank === bank.id, 'icon-radio-uncheck': payBank !== bank.id}">
+                                                    <input type="radio" name="recharge[pay_bank]" value="COMM" ng-model="$parent.payBank" id="bank-COMM"
+                                                           ng-change="selectBank(bank.id)" class="ng-pristine ng-valid"></span>
+                                                <span class="bankpic jtyh" ng-class="bank.class"></span>
+                                            </label>
+                                        </li>
+                                        <!-- end ngRepeat: bank in personalInternetBanking -->
+                                        <li ng-repeat="bank in personalInternetBanking" ng-class="{'clear': $index === 2}" title="北京银行"
+                                            ng-click="selectBank(bank.id)" class="ng-scope">
+                                            <label for="bank-BJBANK">
+                                                  <span class="radiobox icon-radio-uncheck"
+                                                        ng-class="{'icon-radio-checked': payBank === bank.id, 'icon-radio-uncheck': payBank !== bank.id}">
+                                                    <input type="radio" name="recharge[pay_bank]" value="BJBANK" ng-model="$parent.payBank" id="bank-BJBANK"
+                                                           ng-change="selectBank(bank.id)" class="ng-pristine ng-valid"></span>
+                                                <span class="bankpic bjyh" ng-class="bank.class"></span>
+                                            </label>
+                                        </li>
+                                        <!-- end ngRepeat: bank in personalInternetBanking -->
+                                        <li ng-repeat="bank in personalInternetBanking" ng-class="{'clear': $index === 2}" title="上海农商银行"
+                                            ng-click="selectBank(bank.id)" class="ng-scope">
+                                            <label for="bank-SHRCB">
+                                                  <span class="radiobox icon-radio-uncheck"
+                                                        ng-class="{'icon-radio-checked': payBank === bank.id, 'icon-radio-uncheck': payBank !== bank.id}">
+                                                    <input type="radio" name="recharge[pay_bank]" value="SHRCB" ng-model="$parent.payBank" id="bank-SHRCB"
+                                                           ng-change="selectBank(bank.id)" class="ng-pristine ng-valid"></span>
+                                                <span class="bankpic shnsyh" ng-class="bank.class"></span>
+                                            </label>
+                                        </li>
+                                        <!-- end ngRepeat: bank in personalInternetBanking -->
+                                        <li ng-repeat="bank in personalInternetBanking" ng-class="{'clear': $index === 2}" title="温州银行"
+                                            ng-click="selectBank(bank.id)" class="ng-scope">
+                                            <label for="bank-WZCBB2C-DEBIT">
+                                                  <span class="radiobox icon-radio-uncheck"
+                                                        ng-class="{'icon-radio-checked': payBank === bank.id, 'icon-radio-uncheck': payBank !== bank.id}">
+                                                    <input type="radio" name="recharge[pay_bank]" value="WZCBB2C-DEBIT" ng-model="$parent.payBank"
+                                                           id="bank-WZCBB2C-DEBIT" ng-change="selectBank(bank.id)" class="ng-pristine ng-valid"></span>
+                                                <span class="bankpic wzyh" ng-class="bank.class"></span>
+                                            </label>
+                                        </li>
+                                        <!-- end ngRepeat: bank in personalInternetBanking --></ul>
+                                </div>
+                            </dd>
+                        </dl>
+                        <div class="sign" ng-hide="activeTab ===  2">
+                            <input name="recharge[pay_type]" type="hidden" ng-value="payType">
+                            <input type="hidden" id="J-bind-value" name="recharge[bind_money]" ng-value="bind">
+                            <button type="submit">立即支付</button>
+
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="foot">
+            <div class="footMain">
+                <div class="ourMenuDiv">
+                    <ul class="clearfix ourMenu">
+                        <li>
+                            <a href="companyInfor.html">
+                                <p class="first">公司简介</p>
+
+                                <p class="last">公司简介</p>
+                            </a>
+                        </li>
+                        <li>
+                            <a href="talentRecruitment.html">
+                                <p class="first">人才招聘</p>
+
+                                <p class="last">人才招聘</p>
+                            </a>
+                        </li>
+                        <li>
+                            <a href="brandCooperation.html">
+                                <p class="first">品牌合作</p>
+
+                                <p class="last">品牌合作</p>
+                            </a>
+                        </li>
+                        <li class="last">
+                            <a href="aboutUs.html">
+                                <p class="first">关于我们</p>
+
+                                <p class="last">关于我们</p>
+                            </a>
+                        </li>
+                    </ul>
+                </div>
+                <div class="ourInfor clearfix">
+                    <div class="copyright left">
+                        <p class="large">
+                            售后客服电话 : 023-58001118 <span>(周一至周五9:00-18:00)</span>
+                        </p>
+
+                        <p class="small">
+                            渝ICP备15002338号-1 Copyright © 2014~2015 重庆都漫科技有限公司 版权所有
+                        </p>
+                    </div>
+                    <div class="left clearfix ourImg">
+                        <div class="left">
+                            <p class="title">关注我们:</p>
+                            <ul class="iconMenu clearfix">
+                                <li>
+                                    <span>
+                                        贴
+                                    </span>
+                                </li>
+                                <li>
+                                    <i class="fa fa-weixin"></i>
+                                </li>
+                                <li>
+                                    <i class="fa fa-weibo"></i>
+                                </li>
+                            </ul>
+                        </div>
+                        <div class="left">
+                            <img src="../../assets/admin/images/erCode.jpg" alt="" class="codeJpg"/>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <script src="../../assets/global/plugins/jquery/jquery-1.11.3.min.js"></script>
+    <script src="../../assets/admin/js/global.js"></script>
+    <script src="../../assets/admin/js/footHandle.js"></script>
+    <script>
+        $(function(){
+
+            function checked(obj){
+                obj.find(".radiobox").removeClass("icon-radio-uncheck").addClass("icon-radio-checked");
+                obj.closest("li").siblings("li").find(".radiobox").removeClass("icon-radio-checked").addClass("icon-radio-uncheck");
+            }
+            /*充值金额*/
+            $(".main-center .pay li label").on("click",function(){
+                checked($(this));
+                var recharge = $(this).closest("li").siblings("li").find(".recharge-input");
+                if(recharge.get(0)){
+                    recharge.removeClass("hide")
+                }
+                if(recharge.get(0)){
+                    recharge.addClass("hide")
+                }
+            });
+
+            /*支付方式*/
+            $(".tab-content-item li").on("click",function(){
+                checked($(this))
+            });
+        })
+    </script>
+</body>
+</html>
+
+
+
+
+
