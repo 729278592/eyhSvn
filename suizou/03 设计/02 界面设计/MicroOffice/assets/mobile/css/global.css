@@ -194,8 +194,9 @@ img.resume{width: 100%;}
 .jobStep li{width: 100%;position: relative;height: 60px;}
 .jobStep li img,.jobStep li div{}
 .jobStep li img{position: absolute;top: 0;}
-.jobStep li div{position: absolute;left: 30px;bottom: -25px;}
+.jobStep li div{position: absolute;left: 30px;bottom: -5px;}
 .jobStep li.first div{top: -5px;}
+.jobStep li.last div{bottom: -2px;}
 .jobStep li.first{height: 4px;}
 .jobStep li div p{font-size: 14px;}
 .jobStep li div p.status{color: #666;}
