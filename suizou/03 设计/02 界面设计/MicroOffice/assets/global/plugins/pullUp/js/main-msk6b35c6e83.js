@@ -3171,6 +3171,7 @@
                             var e = t[0].trim();
                             e.length > 0 ? (
                                 $(e).hide().appendTo(u).fadeIn(),
+
                                 c.html("上拉载入更多职位..."),
                                 h.removeClass("loading"),
                                 h.attr("class", "").hide(),
@@ -3240,7 +3241,11 @@
                                 }),
                                 a.on("scrollEnd",
                                     function() {
-                                        1 == l && h.attr("class").match("flip|loading") && (h.removeClass("flip").addClass("loading"), c.html("正在载入..."), l = 2, s())
+                                        1 == l && h.attr("class").match("flip|loading") && (h.removeClass("flip").addClass("loading"),
+                                            c.html("正在载入..."),
+                                            l = 2,
+                                            s())
+
                                     })
                         }
                         var a, h, c, l = 0,
@@ -3276,7 +3281,8 @@
                                                     data: {
                                                         restype: "json"
                                                     },
-                                                    type: "GET"
+                                                    type: "GET",
+
                                                 }
                                             }).init()
                                         },
