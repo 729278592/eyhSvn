@@ -286,7 +286,7 @@ a.weui_btn.weui_btn_primary{font-size: 16px;}
 .companyBriefIntroduction .comBIContent>span>span:last-child{display: inline-block;width: 94%;}
 .companyBriefIntroduction .comBIContent>span>span:first-child{vertical-align: top;}
 .prosuct .goodMenu{width: 100%;margin-top: 3%;}
-.prosuct .goodMenu li{width: 26%;margin-left: 2.5%;float: left;padding: 5px 2%;border-radius: 20px;color: #fff;font-size: 14px;background: #ffb232;}
+.prosuct .goodMenu li{width: 26%;margin-left: 2.5%;float: left;padding: 5px 0.1% 5px 3.9%;;border-radius: 20px;color: #fff;font-size: 14px;background: #ffb232;}
 .prosuct .goodMenu li .fa{font-size: 16px;}
 .prosuct .goodMenu li .goodName{}
 
