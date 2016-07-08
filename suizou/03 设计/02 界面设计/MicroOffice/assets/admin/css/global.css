@@ -226,7 +226,7 @@ body{background-color: #f7f7f7;!important;}
 .main-nav .main-nav-icon img{width: 20px;}
 .main-nav .main-nav-icon .fa{font-size:20px;color: #fff;}
 .accountSettings:hover{cursor: pointer;}
-.company-name{height: 100%;line-height: 50px;text-align: center;color: #fff;margin-right: 75px;position: relative;display: inline-block;}
+.company-name{height: 100%;line-height: 50px;text-align: center;color: #fff;margin-right: 100px;position: relative;display: inline-block;}
 .logoDiv{width: 100%;height: 50px;line-height: 50px;}
 .logoDiv img{position: relative;left: 25px;width: 60px;}
 
@@ -458,7 +458,7 @@ img.w100{width: 100%;}
 .maxw640{width: 395px;margin: 0 99px;position: relative;display: block;height: 813px;background-image: url("../images/device-sprite.png");background-size: 300%;background-repeat: no-repeat;background-position: 0 0;}
 .maxw640 .container{position: absolute;top: 117px;width: 321px;height: 569px;overflow: hidden;font-size: 0.85rem;line-height: 1.05rem;background: #eeeeee;}
 .maxw640 .container{overflow-y: auto;}
-.linkGroup{margin: 50px 0;}
+.linkGroup{margin: 50px 0;width: 600px;}
 .linkGroup>div{margin-bottom: 30px;}
 .linkGroup>div .titleName{font-size: 16px;color: #666;}
 .linkGroup>div>div{margin-right: 30px;margin-top: 20px;margin-bottom: 10px;}
@@ -473,7 +473,7 @@ img.w100{width: 100%;}
 
 /*companyInfor*/
 #btnTips.active{background: #abb4c3;border: none;}
-.companyTitle{position: absolute;top: -31px;left: 15px;}
+.companyTitle{position: absolute;top: -30px;left: 15px;}
 .companyTitle.top30{top: -30px;}
 .companyTitle li{float: left;margin-left: 15px;}
 .companyTitle li.active{}
