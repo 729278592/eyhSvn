@@ -264,15 +264,15 @@ a.weui_btn.weui_btn_primary{font-size: 16px;}
 .ft span{font-weight: bold;font-style: italic;}
 .companyDetails{width: 100%;}
 .companyDetails .companyImg{width: 100%;position: relative;}
-.companyDetails .companyImg .company-icon{position: absolute;bottom: -25%;width: 20%;border-radius: 100%;left: 50%;margin-left: -10%;}
+.companyDetails .companyImg .company-icon{position: absolute;bottom: -25%;border-radius: 100%;left: 50%;margin-left: -33px;width: 66px;height: 66px;}
 .comInfor{background: #fff;width: 94%;padding: 10% 3% 5%;border-bottom: 1px solid #dbdbdb;}
-.comInfor .comInforTitle{text-align: center;}
+.comInfor .comInforTitle{text-align: center;font-size: 16px;}
 .comInfor .comInforTitle a{padding: 3px 10px;border-radius: 20px;border: 1px solid #fda341;display: inline-block;color:#fda341;}
 .comInfor .comInforCon{width: 100%;border-top: 1px solid #dbdbdb;margin-top: 3%;}
 .comInfor .comInforCon p{display: table;font-size: 14px;color: #999;margin-top: 1%;}
 .comInfor .comInforCon p img,.comInfor .comInforCon p span{display: table-cell;vertical-align: middle;}
 .comInfor .comInforCon p img{width: 22px;}
-.comInfor .comInforCon p span{width: 100%;padding-left: 3%;}
+.comInfor .comInforCon p span{width: 100%;padding-left: 3%;color: #666;}
 .companyBriefIntroduction{background: #fff;width: 94%;padding:3%;position: relative;margin-top: 10px;border-top: 1px solid #dbdbdb;border-bottom: 1px solid #dbdbdb;}
 .companyBriefIntroduction .comBItitle,.prosuct .prosuctTitle,.companyImgList .companyImgListTitle{text-align: center;font-size: 16px;color: #67a5f9;}
 .companyBriefIntroduction .comBIContent{font-size: 14px;color: #999;}
@@ -281,7 +281,7 @@ a.weui_btn.weui_btn_primary{font-size: 16px;}
 .prosuct .prosuctContent{width: 94%;padding: 2% 3%;font-size: 14px;color: #999;}
 .companyImgList{text-align: center;color: #999;}
 .companyImgList p{font-size: 14px;}
-.companyImgList .codeIcon{width: 40%;margin: 5% 0;}
+.companyImgList .codeIcon{width: 128px;height:128px;margin: 5% 0;}
 .companyBriefIntroduction .comBIContent>span{display: inline-block;width: 100%;vertical-align: top;}
 .companyBriefIntroduction .comBIContent>span>span:last-child{display: inline-block;width: 94%;}
 .companyBriefIntroduction .comBIContent>span>span:first-child{vertical-align: top;}
