@@ -132,7 +132,7 @@
             <link rel="stylesheet" href="../../assets/global/plugins/bootstrap-3.3.5/css/bootstrap.min.css"/>
             <link rel="stylesheet" href="../../assets/mobile/css/global.css"/>
             <style>
-                body{font-family: "微软雅黑",Arial, Helvetica, sans-serif;overflow-x: hidden;-webkit-font-smoothing: antialiased;-moz-font-smoothing: antialiased;;}
+                body{font-family: "微软雅黑",Arial, Helvetica, sans-serif;overflow-x: hidden;-webkit-font-smoothing: antialiased;-moz-font-smoothing: antialiased;background: #f7f7f7;}
                 a:hover{text-decoration: none;}
             </style>
             <div class="content-header">
@@ -398,7 +398,7 @@
                                   '</a>';
 
                         if(value==''){
-                            alert('标签名不能为空');
+                            tipsContent("标签名不能为空",$(".tips"),"fail");
                         }
                         else{
                             if($(".keyword-button").get(0)){
@@ -414,7 +414,7 @@
                                     keywordButtonHide();
                                 }
                                 else{
-                                    alert('标签名已经存在');
+                                    tipsContent("标签名已经存在",$(".tips"),"fail");
                                 }
                             }
                             else{

@@ -131,7 +131,7 @@
         <div id="admin-content-wrapper">
             <link rel="stylesheet" href="../../assets/global/plugins/bootstrap-3.3.5/css/bootstrap.min.css"/>
             <style>
-                body{font-family: "微软雅黑",Arial, Helvetica, sans-serif;overflow-x: hidden;-webkit-font-smoothing: antialiased;-moz-font-smoothing: antialiased;;}
+                body{font-family: "微软雅黑",Arial, Helvetica, sans-serif;overflow-x: hidden;-webkit-font-smoothing: antialiased;-moz-font-smoothing: antialiased;background: #f7f7f7;}
                  a:hover{text-decoration: none;}
             </style>
             <div class="content-header">
@@ -1357,20 +1357,29 @@
                     $(".keyword-div .fa-check-circle").on("click",function(){
                         var values = $(this).closest(".keyword-div").find(".keyword-input").val();
                         var value = $.trim(values);
-                        var str = document.createElement("a");
-                        str.className = "keyword-button";
-                        var aSpan = document.createElement("span");
-                        aSpan.className = "keyword-button-content";
-                        var aI = document.createElement("i");
-                        aI.className = "fa fa-times-circle-o";
-                        aSpan.appendChild(document.createTextNode(value));
-                        str.appendChild(aSpan);
-                        str.appendChild(aI);
+//                        var str = document.createElement("a");
+//                        str.className = "keyword-button";
+//                        var aSpan = document.createElement("span");
+//                        aSpan.className = "keyword-button-content";
+//                        var aI = document.createElement("i");
+//                        aI.className = "fa fa-times-circle-o";
+//                        aSpan.appendChild(document.createTextNode(value));
+//                        str.appendChild(aSpan);
+//                        str.appendChild(aI);
+                        var str = '<a class="keyword-button">' +
+                                '<span class="keyword-button-content">'+value+'</span>' +
+                                '<i class="fa fa-times-circle-o"></i>' +
+                                '</a>';
+
                         if(value==''){
                             alert('标签名不能为空');
                         }
                         else{
                             if($(".keyword-button").get(0)){
+                                $(".keyword-button").each(function(){
+                                    arr.push($(this).find(".keyword-button-content").text());
+                                });
+
                                 if($.inArray(value, arr) < 0){
                                     $(".keyword-dashed-button").before(str);
                                     $(this).closest(".keyword-div").find(".keyword-input").val("");
