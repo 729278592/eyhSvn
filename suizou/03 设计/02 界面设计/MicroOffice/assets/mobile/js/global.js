@@ -11,7 +11,7 @@ function heightAuto(){
     var area = $(".weui_btn_area");
     var bd = $(".bd");
     var bdHeight = bd.outerHeight(true);
-    if((bdHeight+headHeight)<windoeHeight){
+    if((bdHeight)<windoeHeight){
         bd.get(0).style.height = windoeHeight-headHeight + "px";
 //            $("html").css({"overflow-y":"hidden"});
         if(area.is(".relative")){
