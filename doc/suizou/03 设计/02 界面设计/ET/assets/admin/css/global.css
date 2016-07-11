@@ -1,7 +1,7 @@
 @charset "utf-8";
 
-body,html{font-family: Microsoft YaHei,Arial, Helvetica, sans-serif;-webkit-font-smoothing: antialiased;}
-html{overflow-y:auto;overflow-x:hidden;min-width:100%;}
+body,html{-webkit-font-smoothing: antialiased;}
+html{overflow-y:auto;overflow-x:hidden;min-width:100%;font-family: "Helvetica Neue",Helvetica,"PingFang SC","Hiragino Sans GB","Microsoft Yahei","WenQuanYi Micro Hei",sans-serif;}
 body,p,html{margin: 0;padding: 0;}
 ul,li,img{margin:0;padding:0;list-style:none;border:none; vertical-align:middle;}
 a{color:#000;text-decoration:none;}
@@ -526,7 +526,7 @@ a:link{text-decoration: none;}
 .navList li.active a{color: #fb8d55;background: #faeee8;}
 .contentMaincon{width: 780px;border:1px solid #dbdbdb;background: #fff;margin-bottom: 10px;}
 .contentMaincon.mb0{margin-bottom: 0;}
-.contentMaincon>.title{width: 750px;height: 34px;background: #e0e3f2;padding: 0 15px;font-size: 16px;color: #333;line-height: 34px;}
+.contentMaincon>.title{width: 750px;height: 40px;background: #e0e3f2;padding: 0 15px;font-size: 16px;color: #333;line-height: 40px;}
 .divTable{padding: 10px 15px;width: 750px;}
 .divTable.bb1{border-bottom: 1px solid #dbdbdb;}
 .divTable .inputDiv{display: inline-block;float: left;margin-right: 15px;}
