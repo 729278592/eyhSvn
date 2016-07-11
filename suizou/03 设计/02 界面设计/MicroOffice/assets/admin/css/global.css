@@ -655,7 +655,7 @@ a.keyword-button:hover,.keyword-button:active,.keyword-button:focus{color: #fff;
 .error .error-message.w100{width: 100%;}
 .mask,.mask-bg{position: fixed;left: 0;right: 0;bottom: 0;top: 0;z-index: 10000;}
 .dailog{position: fixed;top: 50%;left: 50%;min-width: 400px;margin-left: -200px;border-radius: 8px 8px 0 0;z-index: 99999999;}
-.tips{padding: 6px 50px;border-radius: 30px;position: fixed;background: #fff;z-index: 99999999;text-align: center;left: 50%;font-size: 16px;opacity: 0;top: -5%;font-size: 14px;}
+.tips{padding: 6px 50px;border-radius: 30px;position: fixed;background: #fff;z-index: 99999999;text-align: center;left: 50%;font-size: 16px;opacity: 0;top: -5%;font-size: 14px;margin-left: -50px;}
 .tips.success{border: 1px solid #2ed6b1;color: #2ed6b1;}
 .tips.fail{border: 1px solid #ff0404;color: #ff0404;}
 .dailogHead{width: 100%;padding: 10px 0;background: #578adc;text-align: center;color: #fff;border-radius: 8px 8px 0 0;font-size: 14px;}
