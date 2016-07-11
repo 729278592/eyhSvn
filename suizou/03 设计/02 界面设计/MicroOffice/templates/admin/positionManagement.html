@@ -643,6 +643,7 @@
                                     </div>
                                 </div>
                             </a>
+
                             <!-- 空简历提示 -->
                             <div class="notSpecial">
                                 目前尚无简历投递
@@ -654,10 +655,25 @@
                                     该职位下没有任何相关简历
                                 </p>
                             </div>
-                            <!-- 分页控件 -->
-                            <div>
+                            <!--分页-->
+                            <div class="paging clearfix">
+                                <ul class="page-menu clearfix">
+                                    <p class="page-pre" data-pagenum="1"><i class="fa fa-angle-left"></i></p>
+                                    <li class="active">1</li>
+                                    <li class="liPage">2</li>
+                                    <li class="liPage">3</li>
+                                    <li class="liPage">4</li>
+                                    <li class="liPage">5</li>
+                                    <li class="liPage">6</li>
+                                    <li class="liPage">7</li>
+                                </ul>
+                                <input type="text" class="page-num" id="pageNumTarget">
+                                <button type="button" class="btn-jump" id="targetButton">跳转</button>
+                                <p class="page-next" data-pagenum="2"><i class="fa fa-angle-right"></i></p>
+                                <input type="hidden" value="447" id="totalPages">
                             </div>
                         </div>
+
                     </div>
                 </div>
             </div>
@@ -800,6 +816,10 @@
                             $(".account-selection").addClass("hide");
                         }
                     });
+
+                    /*分页居中*/
+                    var ml = $(".paging").width()/2;
+                    $(".paging").get(0).style.marginLeft = -ml+"px";
                 });
             </script>
         </div>
