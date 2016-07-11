@@ -20,7 +20,7 @@ function tipsContent(message,obj,staute){
     obj.addClass(staute);
     pageAuto(obj);
     obj.animate({
-        top:"7%",
+        top:"8px",
         opacity:"1"
     },500,function(){
         setTimeout(function(){
