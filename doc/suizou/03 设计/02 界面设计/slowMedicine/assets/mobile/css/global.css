@@ -123,7 +123,7 @@ a.weui_media_box:active {
 .weui_cell.l0:before{left:0}
 .weui_media_box.weui_media_appmsg .weui_media_hd.mr0{margin-right:0;margin-left:.4em}
 .weui_media_box.weui_media_appmsg .weui_media_hd.lh0{line-height: 20px;}
-.weui_media_box .weui_media_title.auto{font-weight:400;width:95%;overflow:hidden;text-overflow:clip;white-space:pre-line;margin-bottom:10px}
+.weui_media_box .weui_media_title.auto{font-weight:400;width:auto;overflow:hidden;text-overflow:clip;white-space:pre-line;margin-bottom:10px}
 .weui_media_box .weui_media_title.auto.caretP{position: relative;}
 .weui_media_box .weui_media_title.auto.caretP:after{position: absolute;content: "";right: 0px;width: 6px;;height: 6px;border-radius: 6px;background: red;top: 0;}
 .weui_panel_bd:after{content:" ";position:absolute;bottom:0;height:1px;width:100%;border-bottom:1px solid #E5E5E5;color:#E5E5E5;-webkit-transform-origin:0 0;transform-origin:0 0;-webkit-transform:scaleY(.5);transform:scaleY(.5);left:0;right:0}
