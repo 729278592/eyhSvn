@@ -176,12 +176,16 @@ a.weui_media_box:active {
 .weui_media_hd.relative{position:relative}
 .addFollow,.cancelFollow{border-radius:20px;display:inline-block;width:85px;height:29px;line-height:25px;text-align:center;position:absolute;right:0;top:50%;margin-top:-12px;font-family:"微软雅黑";z-index:10}
 .cancelFollow{background:#f6f6f6;color:#999;border:1px solid #E5E5E5}
+.myDoctor{;position:absolute;right:0;top:50%;margin-top:-22px;font-family:"微软雅黑";z-index:10;color:#5bbbf8;}
+
+
 .addFollow.hide,.cancelFollow.hide{display:none}
 .addFollow{color:#5bbbf8;border:1px solid #5bbbf8;background:0 0;font-weight:700}
 .weui_media_title span.rank{padding:2px 5px;color:#ffad12;border-radius:4px;border:1px solid #ffad12;font-size:12px}
 .weui_media_box.l0:before{left:0}
 .weui_cell.pd0{padding:0}
 .weui_media_box.r15:before{content:" ";position:absolute;top:0;height:1px;width:auto;border-top:1px solid #E5E5E5;color:#E5E5E5;-webkit-transform-origin:0 0;transform-origin:0 0;-webkit-transform:scaleY(.5);transform:scaleY(.5);left:15px;right:15px}
+.weui_panel_bd.style{position: relative;background: #efefef;}
 .weui_panel_hd.l0:after{left:0}
 .weui_panel_hd{color:#333;font-weight:700;font-size:14px}
 .weui_panel_hd .sign{width:4px;background:#ffa902;position:absolute;left:0;top:1px;bottom:1px;height: 44px;}

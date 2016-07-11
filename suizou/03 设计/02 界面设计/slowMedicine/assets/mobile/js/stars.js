@@ -30,7 +30,7 @@ var commentStars = function(){
                 $(this).nextAll("li").find(".fa-star").removeClass("fa-star").addClass("fa-star-o");
 
                 if($(this).closest(".score").find(".numFraction").get(0)){
-                    $(this).closest(".score").find(".numFraction").text($(this).closest(".score").find(".starList li.active").size());
+                    $(this).closest(".score").find(".numFraction").text($(this).closest(".score").find(".starList li.active").size()*2);
                     $("#inputStar").val($(this).closest(".score").find(".numFraction").text())
                 }
 //                _this.unbind("mouseout");
