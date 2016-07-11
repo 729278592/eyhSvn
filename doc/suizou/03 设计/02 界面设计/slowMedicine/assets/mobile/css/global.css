@@ -361,10 +361,10 @@ a.weui_media_box:active {
 .sumbitInfor .fa-remove{position: absolute;background: #fff;color: #25a7e4;border-radius: 50px;right: -10px;top: 20px;width: 30px;height: 30px;text-align: center;line-height: 30px;border:3px solid #25a7e4;}
 .sumbitInfor .personForm{position: absolute;top: 36%;z-index: 1000;width: 94%;margin: 0 3%;text-align: center;}
 .sumbitInfor .input-group{font-size: 14px;color: #666;margin-bottom: 10px;}
-.sumbitInfor .input-group .getCode{color: #fff;background: #45a7e5;width: 108px;height: 34px;font-family: "微软雅黑";font-size: 12px;}
+.sumbitInfor .input-group .getCode{color: #fff;background: #45a7e5;width: 90px;height: 34px;font-family: "微软雅黑";font-size: 12px;}
 .sumbitInfor .input-group .getCode.disabled{background: #ccc;}
 .sumbitInfor .input-group input.inputText{width: 69%;border: 1px solid #efefef;padding: 8px 10px;font-family: "微软雅黑";}
-.sumbitInfor .input-group input.inputCode{width: 86px;padding-right: 0;}
+.sumbitInfor .input-group input.inputCode{width: 72px;padding-right: 0;}
 .sumbitInfor .type{}
 .sumbitInfor .personForm input{-webkit-appearance:none;border: 1px solid #efefef;padding: 8px 40px 8px 10px;font-family: "微软雅黑";}
 .sumbitInfor .personForm .btnSumbit{padding: 10px 0;width: 206px;height: 34px;background: #45a7e5;color: #fff;font-size: 16px;font-family: "微软雅黑";line-height: 10px;position: relative;left: 26px;}
