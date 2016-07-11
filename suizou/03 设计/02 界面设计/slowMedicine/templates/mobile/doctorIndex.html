@@ -34,30 +34,32 @@
                         </span>
                             <div class="score bt0 mb0">
                                 <span style="color: #6cb7ee;font-size: 14px;">就诊评价 : </span>
-                                <ul class="starList clearfix fs14 mr2">
-                                    <li>
-                                        <i class="fa fa-star"></i>
-                                    </li>
-                                    <li>
-                                        <i class="fa fa-star"></i>
-                                    </li>
-                                    <li>
-                                        <i class="fa fa-star"></i>
-                                    </li>
-                                    <li>
-                                        <i class="fa fa-star"></i>
-                                    </li>
-                                    <li>
-                                        <i class="fa fa-star"></i>
-                                    </li>
-                                </ul>
-                            <span class="fraction fs14">
-                                <span class="numFraction">0</span>分
-                            </span>
-                                <a href="doctorEvaluationList.html" class="commentNum zIndex1999">
-                                <span class="left">
-                                    1081
-                                </span>
+                                <a href="doctorEvaluationList.html" class="commentA">
+                                    <ul class="starList clearfix fs14 mr2">
+                                        <li>
+                                            <i class="fa fa-star-o"></i>
+                                        </li>
+                                        <li>
+                                            <i class="fa fa-star-o"></i>
+                                        </li>
+                                        <li>
+                                            <i class="fa fa-star-o"></i>
+                                        </li>
+                                        <li>
+                                            <i class="fa fa-star-o"></i>
+                                        </li>
+                                        <li>
+                                            <i class="fa fa-star-o"></i>
+                                        </li>
+                                    </ul>
+                                    <span class="fraction fs14">
+                                        <span class="numFraction">0</span>分
+                                    </span>
+                                    <span class="commentNum zIndex1999">
+                                        <span class="left">
+                                            共10001条
+                                        </span>
+                                    </span>
                                 </a>
                             </div>
                         </div>
@@ -94,7 +96,7 @@
                     </div>
                     <div class="weui_panel weui_panel_access">
                         <p class="caseTitle">
-                            案例咨询
+                            咨询案例
                             <a href="moreConsulting.html" class="moreConsulting">查看更多》</a>
                         </p>
                         <div class="weui_panel_bd l15 r15 relative">
@@ -139,9 +141,36 @@
                                 </div>
                             </a>
                         </div>
+                        <div class="weui_panel_bd l15 r15 relative">
+                            <a href="consultingInfor.html" class="weui_media_box l0 weui_media_appmsg">
+                                <div class="weui_media_bd relative">
+                                    <h4 class="weui_media_title auto">希望大夫帮我分析下，我是不是得了乙肝啊，谢谢您
+                                    </h4>
+                                    <p class="weui_media_desc">
+                                        <span class="Verdana">更新时间：2016-05-10  9:08</span>
+                                    </p>
+                                </div>
+                                <div class="weui_media_hd mr0">
+                                    <img class="weui_media_appmsg_thumb portrait" src="../../assets/mobile/images/waitFor.png">
+                                </div>
+                            </a>
+                        </div>
+                        <div class="weui_panel_bd l15 r15 relative">
+                            <a href="consultingInfor.html" class="weui_media_box l0 weui_media_appmsg">
+                                <div class="weui_media_bd relative">
+                                    <h4 class="weui_media_title auto">希望大夫帮我分析下，我是不是得了乙肝啊，谢谢您
+                                    </h4>
+                                    <p class="weui_media_desc">
+                                        <span class="Verdana">更新时间：2016-05-10  9:08</span>
+                                    </p>
+                                </div>
+                                <div class="weui_media_hd mr0">
+                                    <img class="weui_media_appmsg_thumb portrait" src="../../assets/mobile/images/waitFor.png">
+                                </div>
+                            </a>
+                        </div>
                     </div>
                 </div>
-
             </div>
             <!--<div class="foot zIndex1999">-->
                 <!--<a href="consultingPage.html">-->
@@ -149,14 +178,12 @@
                     <!--在线咨询-->
                 <!--</a>-->
             <!--</div>-->
-
             <div class="weui_btn_area btnStyle w100 fixed foot zIndex1999">
                 <a href="consultingPage.html"  class="weui_btn weui_btn_primary bg4">
                     <img src="../../assets/mobile/images/consultationIcon.png" alt=""/>
                     在线咨询
                 </a>
             </div>
-
         </div>
         <!--第一次加载处理-->
         <div class="maskHide">
@@ -170,12 +197,16 @@
                 <i class="fa fa-remove"></i>
                 <form action="#" class="personForm" onsubmit="return false;">
                     <div class="input-group">
-                        <span class="type">姓名 : </span>
+                        <span class="type">姓　名 : </span>
                         <input type="text" id="personName" placeholder="请输入姓名"/>
                     </div>
                     <div class="input-group">
-                        <span class="type">手机 : </span>
-                        <input type="text" id="mobile" placeholder="请输入手机号"/>
+                        <span class="type">手　机 : </span>
+                        <input type="tel" id="mobile" placeholder="请输入手机号"/>
+                    </div>
+                    <div class="input-group">
+                        <span class="type">验证码 : </span>
+                        <input type="number" class="inputText inputCode" id="code" placeholder="请输入验证码"/><button class="getCode" id="getCode">获取验证码</button>
                     </div>
                     <button class="btnSumbit" id="showTooltips" type="submit">提交</button>
                 </form>
@@ -233,6 +264,26 @@
                     showLoading("数据提交中","提交成功")
                 }
                 return true;
+            });
+
+
+            $("#getCode").on("click",function(){
+
+                var btn = $(this);
+                var count = 60;
+                var resend = setInterval(function(){
+                    count--;
+                    if (count > 0){
+                        btn.addClass("disabled");
+                        btn.text(count+"秒后可重新获取");
+                    }else {
+                        clearInterval(resend);
+                        btn.removeClass("disabled");
+                        btn.text("获取验证码").removeAttr('disabled style');
+                    }
+                }, 1000);
+                showErrMsg('验证码发送成功');
+                btn.attr('disabled',true);
             });
         })
     </script>

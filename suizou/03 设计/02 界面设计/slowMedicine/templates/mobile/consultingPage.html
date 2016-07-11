@@ -22,7 +22,8 @@
                         <div class="inputInfor">
                             <p><span class="type">您的姓名</span> : <input type="text" id="personName"/></p>
                             <!--<p><span class="type">出生年月</span> : <input type="text"/></p>-->
-                            <p><span class="type">手机号码</span> : <input type="text" id="mobile"/></p>
+                            <p><span class="type">手机号码</span> : <input type="tel" maxlength="10" id="mobile"/></p>
+                            <p><span class="type">验证码</span> : <input type="number" class="codeVal"/><button class="getCode"  id="getCode">获取验证码</button>
                             <p>
                                 <button type="button" class="btnSave" id="btnSave">保存</button>
                             </p>
@@ -91,19 +92,27 @@
                         <div class="weui_cells weui_cells_checkbox mt0 bt0 bb0">
                             <label class="weui_cell weui_check_label bt0 w30 p0" for="s11">
                                 <div class="weui_cell_hd">
-                                    <input type="checkbox" class="weui_check" name="checkbox1" id="s11" checked="checked">
+                                    <input type="checkbox" class="weui_check" name="checkbox1" id="s11">
                                     <i class="weui_icon_checked"></i>
                                 </div>
                                 <div class="weui_cell_bd">
-                                    <p>匿名咨询</p>
+                                    <p>仅医生可见</p>
                                 </div>
                             </label>
                         </div>
                     </div>
-                    <div class="weui_btn_area btnStyle w100 fixed">
-                        <button  type="submit" disabled="disabled" class="weui_btn weui_btn_primary bg3 disabled" id="showTooltips">
-                            提交
-                        </button>
+                    <!--<div class="weui_btn_area btnStyle w100 fixed">-->
+                        <!--<button  type="submit" disabled="disabled" class="weui_btn weui_btn_primary bg3 disabled" id="showTooltips">-->
+                            <!--提交-->
+                        <!--</button>-->
+                    <!--</div>-->
+
+                    <div class="weui_btn_area btnStyle w100 fixed foot">
+                        <a class="weui_btn weui_btn_primary bg3 disabled" disabled="disabled" id="showTooltips">
+                            <button  type="submit">
+                                提交
+                            </button>
+                        </a>
                     </div>
                 </form>
             </div>
@@ -133,6 +142,26 @@
                     $("#showTooltips").removeAttr("disabled").removeClass("disabled");
                 }
                 return true;
+            });
+
+
+            $("#getCode").on("click",function(){
+
+                var btn = $(this);
+                var count = 60;
+                var resend = setInterval(function(){
+                    count--;
+                    if (count > 0){
+                        btn.addClass("disabled");
+                        btn.text(count+"秒后可重新获取");
+                    }else {
+                        clearInterval(resend);
+                        btn.removeClass("disabled");
+                        btn.text("获取验证码").removeAttr('disabled style');
+                    }
+                }, 1000);
+                showErrMsg('验证码发送成功');
+                btn.attr('disabled',true);
             });
         })
     </script>

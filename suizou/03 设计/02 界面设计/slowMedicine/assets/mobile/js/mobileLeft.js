@@ -14,6 +14,31 @@ $(function(){
                         '</div>'+
                         '<ul class="menu-list">'+
                             '<li>'+
+                                '<a href="modifyDoctorInfor.html">'+
+                                    '<img src="../../assets/mobile/images/modifyInforIcon.jpg" class="personIcon" style="width:16px;margin-right:5px;">'+
+                                    '<span>修改信息</span>'+
+                                    '<i class="fa fa-angle-right"></i>'+
+                                '</a>'+
+                            '</li>'+
+                            '<li>'+
+                                '<a href="uploadPrescription.html">'+
+                                    '<img src="../../assets/mobile/images/upLoadIcon.jpg" class="personIcon" style="width:16px;margin-right:5px;">'+
+                                    '<span class="right style color1">(尚未上传)</span>'+
+                                    '<span class="right style color2 hide">共3份处方单</span>'+
+                                    '<span>新增处方</span>'+
+                                    '<i class="fa fa-angle-right"></i>'+
+                                '</a>'+
+                            '</li>'+
+                            '<li>'+
+                                '<a href="uploadMedicalRecord.html">'+
+                                    '<img src="../../assets/mobile/images/upLoadIcon.jpg" class="personIcon" style="width:16px;margin-right:5px;">'+
+                                    '<span class="right style color1 hide">(尚未上传)</span>'+
+                                    '<span class="right style color2 ">共3份病历单</span>'+
+                                    '<span>新增病历</span>'+
+                                    '<i class="fa fa-angle-right"></i>'+
+                                '</a>'+
+                            '</li>'+
+                            '<li>'+
                                 '<a href="prescriptionRecord.html">'+
                                    '<img src="../../assets/mobile/images/personIcon1.png" class="personIcon" style="width:15px;margin-right:5px;">'+
                                     '<span>处方记录</span>'+
