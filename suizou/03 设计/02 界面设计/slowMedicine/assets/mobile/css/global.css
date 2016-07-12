@@ -106,6 +106,7 @@ a.weui_media_box:active {
 .weui_cell .weui_label,.weui_cells .weui_cell{font-size:14px}
 .person-head{padding:4% 15px;position:relative;display:table;font-size:14px;color:#333}
 .person-head.style{height: 90px;}
+.person-head.style .personImg{width: 110px;height: 90px;}
 .person-head .tableCell{display:table-cell;vertical-align:middle}
 .person-head .tableCell.style{width: 60%;}
 .person-head .personImg{width:20%}
