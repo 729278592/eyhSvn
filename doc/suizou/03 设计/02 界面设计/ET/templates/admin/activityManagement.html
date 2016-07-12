@@ -31,7 +31,7 @@
                     <div class="colorBlock"></div>
                 </li>
                 <li>
-                    <a href="FanRecord.html">
+                    <a href="fanRecord.html">
                         粉丝数据
                     </a>
                     <div class="colorBlock"></div>
@@ -117,7 +117,7 @@
                                         <i class="fa fa-remove"></i> 关闭
                                     </a>
                                     <a class="color2 aClick reply hide">
-                                        <i class="fa fa-reply"></i> 再次发布
+                                        <i class="fa fa-arrow-up"></i> 再次发布
                                     </a>
                                     <a class="color4 aClick removeData">
                                         <i class="fa fa-trash"></i> 删除
@@ -137,7 +137,7 @@
                                         <i class="fa fa-remove"></i> 关闭
                                     </a>
                                     <a class="color2 aClick reply hide">
-                                        <i class="fa fa-reply"></i> 再次发布
+                                        <i class="fa fa-arrow-up"></i> 再次发布
                                     </a>
                                     <a class="color4 aClick removeData">
                                         <i class="fa fa-trash"></i> 删除
@@ -157,7 +157,7 @@
                                         <i class="fa fa-remove"></i> 关闭
                                     </a>
                                     <a class="color2 aClick reply hide">
-                                        <i class="fa fa-reply"></i> 再次发布
+                                        <i class="fa fa-arrow-up"></i> 再次发布
                                     </a>
                                     <a class="color4 aClick removeData">
                                         <i class="fa fa-trash"></i> 删除
@@ -177,7 +177,7 @@
                                         <i class="fa fa-remove"></i> 关闭
                                     </a>
                                     <a class="color2 aClick reply hide">
-                                        <i class="fa fa-reply"></i> 再次发布
+                                        <i class="fa fa-arrow-up"></i> 再次发布
                                     </a>
                                     <a class="color4 aClick removeData">
                                         <i class="fa fa-trash"></i> 删除
@@ -197,7 +197,7 @@
                                         <i class="fa fa-remove"></i> 关闭
                                     </a>
                                     <a class="color2 aClick reply hide">
-                                        <i class="fa fa-reply"></i> 再次发布
+                                        <i class="fa fa-arrow-up"></i> 再次发布
                                     </a>
                                     <a class="color4 aClick removeData">
                                         <i class="fa fa-trash"></i> 删除
@@ -406,7 +406,7 @@
     <script>
         jQuery(document).ready(function() {
             /*分页居中*/
-            var ml = $(".paging").width()/2;
+            var ml = ($(".paging").outerWidth()+$(".page-num").outerWidth()+$(".btn-jump").outerWidth())/2;
             $(".paging").get(0).style.marginLeft = -ml+"px";
 
             /*弹窗居中*/

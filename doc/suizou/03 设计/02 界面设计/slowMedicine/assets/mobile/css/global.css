@@ -106,7 +106,7 @@ a.weui_media_box:active {
 .weui_cell .weui_label,.weui_cells .weui_cell{font-size:14px}
 .person-head{padding:4% 15px;position:relative;display:table;font-size:14px;color:#333}
 .person-head.style{height: 90px;}
-.person-head.style .personImg{width: 40%;}
+.person-head.style .personImg{width: 36%;}
 .person-head .tableCell{display:table-cell;vertical-align:middle}
 .person-head .tableCell.style{width: 60%;}
 .person-head .personImg{width:20%}
@@ -114,7 +114,8 @@ a.weui_media_box:active {
 .person-head .personImg img{border-radius: 100%;width: 74px;height: 74px;}
 .person-head .personInfor{width:33%;position: relative;left: 8%;}
 .person-head .personInfor .name{font-size:16px}
-.person-head .personInfor .name>a{display:block;padding:0 3px;color:#ffad12;border-radius:4px;border:2px solid #ffad12;font-size:12px;width: 38px;}
+.slider{margin: 0;padding:0 10px;}
+.person-head .personInfor .name>a{text-align: center;display:block;padding:0 3px;color:#ffad12;border-radius:4px;border:2px solid #ffad12;font-size:12px;width: 38px;}
 .person-head .personInfor .doctorName a{display:inline-block;padding:0 3px;color:#ffad12;border-radius:4px;border:2px solid #ffad12}
 .person-head .personInfor .doctorName a.b0{border: none;}
 .person-head .tableCell.btnDiv{vertical-align:bottom;text-align:right}
@@ -364,12 +365,12 @@ a.weui_media_box:active {
 .sumbitInfor .fa-remove{position: absolute;background: #fff;color: #25a7e4;border-radius: 50px;right: -10px;top: 20px;width: 30px;height: 30px;text-align: center;line-height: 30px;border:3px solid #25a7e4;}
 .sumbitInfor .personForm{position: absolute;top: 36%;z-index: 1000;width: 94%;margin: 0 3%;text-align: center;}
 .sumbitInfor .input-group{font-size: 14px;color: #666;margin-bottom: 10px;}
-.sumbitInfor .input-group .getCode{color: #fff;background: #45a7e5;width: 90px;height: 34px;font-family: "微软雅黑";font-size: 12px;}
+.sumbitInfor .input-group .getCode{color: #fff;background: #45a7e5;width: 110px;height: 34px;font-family: "微软雅黑";font-size: 12px;}
 .sumbitInfor .input-group .getCode.disabled{background: #ccc;}
-.sumbitInfor .input-group input.inputText{width: 69%;border: 1px solid #efefef;padding: 8px 10px;font-family: "微软雅黑";}
-.sumbitInfor .input-group input.inputCode{width: 72px;padding-right: 0;}
+.sumbitInfor .input-group input.inputText{text-indent: 5px;width: 69%;border: 1px solid #efefef;padding: 8px 0;font-family: "微软雅黑";}
+.sumbitInfor .input-group input.inputCode{width: 82px;padding-right: 0;}
 .sumbitInfor .type{}
-.sumbitInfor .personForm input{-webkit-appearance:none;border: 1px solid #efefef;padding: 8px 40px 8px 10px;font-family: "微软雅黑";}
+.sumbitInfor .personForm input{-webkit-appearance:none;border: 1px solid #efefef;padding: 8px 0 8px 0;text-indent: 5px;width: 194px;font-family: "微软雅黑";}
 .sumbitInfor .personForm .btnSumbit{padding: 10px 0;width: 206px;height: 34px;background: #45a7e5;color: #fff;font-size: 16px;font-family: "微软雅黑";line-height: 10px;position: relative;left: 26px;}
 .weui_toast,.weui_toast{z-index: 300;}
 

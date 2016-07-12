@@ -76,7 +76,6 @@
         if($.metadata){ // 是否引入metadata支持
             settings = jQuery.extend(settings,$(this).metadata());
         }
-
         $(this).each(function(index) {
 
             $(this).on('click', function(e) { //not a real click, or target = "_blank"
