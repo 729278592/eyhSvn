@@ -7,6 +7,7 @@
     <link rel="stylesheet" href="../../assets/global/plugins/font/css/font-awesome.min.css"/>
     <link rel="stylesheet" href="../../assets/global/plugins/weUi/css/weui.css"/>
     <link rel="stylesheet" href="../../assets/global/plugins/weUi/css/example.css"/>
+    <link rel="stylesheet" href="../../assets/global/plugins/swiper/dist/css/swiper.min.css"/>
     <link rel="stylesheet" href="../../assets/mobile/css/global.css"/>
 </head>
 <body>
@@ -78,22 +79,24 @@
                             </p>
                         </section>
                     </article>
-                    <div class="weui_panel weui_panel_access" style="margin:6px 2% 0;width: 96%;">
-                        <div class="weui_panel_bd relative">
-                            <a href="#" class="weui_media_box l0 weui_media_appmsg">
-                                <div class="weui_media_bd relative">
-                                    <h4 class="weui_media_title auto">恩替卡位分散片 <span style="color: #6cb7ee;">100元3盒</span>
-                                    </h4>
-                                    <p class="weui_media_desc">
-                                        <span>全网最大优惠,仅售3天</span>
-                                    </p>
+                    <div class="slider">
+                        <div class="swiper-container swiper-container-horizontal" id="swiper-container">
+                            <div class="swiper-wrapper" style="transition-duration: 0ms; ">
+                                <div class="swiper-slide">
+                                    <a href="http://weidian.com/?userid=965143415&code=021UEi3B1yshi00BZBZA13Md3B1UEi3d&state=H5WXshare&from=groupmessage&isappinstalled=0">
+                                        <img src="../../assets/mobile/images/sliderDoctor1.jpg" alt="" class="w100"/>
+                                    </a>
                                 </div>
-                                <div class="weui_media_hd mr0" style="width: 30%;">
-                                    <img class="weui_media_appmsg_thumb portrait" src="../../assets/mobile/images/drugImg.png" >
+                                <div class="swiper-slide">
+                                    <img src="../../assets/mobile/images/sliderDoctor2.jpg" alt="" class="w100"/>
                                 </div>
-                            </a>
+                            </div>
+                            <!--<div class="swiper-pagination"></div>-->
+                            <!--<div class="swiper-button-next"></div>-->
+                            <!--<div class="swiper-button-prev"></div>-->
                         </div>
                     </div>
+
                     <div class="weui_panel weui_panel_access">
                         <p class="caseTitle">
                             咨询案例
@@ -217,7 +220,22 @@
     <script src="../../assets/mobile/js/global.js"></script>
     <script src="../../assets/mobile/js/mobileLeft.js"></script>
     <script src="../../assets/mobile/js/messageTip.js"></script>
-
+    <script src="../../assets/global/plugins/swiper/dist/js/swiper.min.js"></script>
+    <script>
+        $(function(){
+            swiper = new Swiper('#swiper-container', {
+                //                prevButton:'.swiper-button-prev',
+                //                nextButton:'.swiper-button-next',
+                slidesPerView: 1,
+//                pagination:'.swiper-pagination',
+//                paginationClickable: true,
+                spaceBetween: 0,
+                loop:true,
+                autoplay: 5000,
+                autoplayDisableOnInteraction: false
+            });
+        })
+    </script>
     <script>
         $(function(){
             /*左边滑动导航*/
