@@ -80,7 +80,8 @@ $(function(){
 
     var mobileLeft = function(){
         var fabarsClck = function(_this){
-            _this.find(".bars").on("touchend",function(){
+            _this.find(".bars").on("touchend",function(e){
+                e.preventDefault();
                 _this.find(".leftMask,.leftNav").removeClass("hide");
                 _this.find(".leftMask").addClass('slideIn');
                 $($(".leftMask")).on('webkitAnimationEnd', function (){
@@ -94,7 +95,8 @@ $(function(){
         };
 
         var maskHeadClick = function(_this){
-            _this.delegate(".leftMask","click",function(){
+            _this.delegate(".leftMask","click",function(e){
+                e.preventDefault();
                 $(this).addClass('slideOut');
                 $($(".leftMask")).on('webkitAnimationEnd', function (){
                     $(".leftMask").removeClass("slideOut");
@@ -150,8 +152,6 @@ $(function(){
     }();
 
 
-/*左边滑动导航*/
-mobileLeft.init($(".container"));
 
 
 

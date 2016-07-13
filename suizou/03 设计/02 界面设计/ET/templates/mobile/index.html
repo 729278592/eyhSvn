@@ -14,69 +14,12 @@
     <div class="container ">
         <div class="page">
             <div class="bd absolute pd40">
-            <div class="swiper-container" id="swiper-container1">
-                <div class="swiper-wrapper">
-                    <div class="swiper-slide">
-                        <a href="###">
-                            活动精选
-                        </a>
-                    </div>
-                    <div class="swiper-slide">
-                        <a href="###">
-                            活动分类1
-                        </a>
-                    </div>
-                    <div class="swiper-slide">
-                        <a href="###">
-                            活动分类2
-                        </a>
-                    </div>
-                    <div class="swiper-slide">
-                        <a href="###">
-                            活动分类3
-                        </a>
-                    </div>
-                    <div class="swiper-slide">
-                        <a href="###">
-                            活动分类4
-                        </a>
-                    </div>
-                    <div class="swiper-slide">
-                        <a href="###">
-                            活动分类5
-                        </a>
-                    </div>
-                </div>
-                <!-- Add Pagination -->
-                <!--<div class="swiper-pagination"></div>-->
-                <div class="swiper-button-next">
-                    <i class="fa fa-angle-right"></i>
-                </div>
-                <div class="swiper-button-prev">
-                    <i class="fa fa-angle-left"></i>
-                </div>
-            </div>
-                <div class="swiper-container m0 swiper-container-horizontal" id="swiper-container">
-                    <div class="swiper-wrapper" style="transition-duration: 0ms; ">
-                        <div class="swiper-slide">
-                            <img src="../../assets/mobile/images/indexSlider1.jpg" alt="" class="w100"/>
-                        </div>
-                        <div class="swiper-slide">
-                            <img src="../../assets/mobile/images/indexSlider2.jpg" alt="" class="w100"/>
-                        </div>
-                        <div class="swiper-slide">
-                            <img src="../../assets/mobile/images/indexSlider3.jpg" alt="" class="w100"/>
-                        </div>
-                    </div>
-                    <div class="swiper-pagination"></div>
-                    <!--<div class="swiper-button-next"></div>-->
-                    <!--<div class="swiper-button-prev"></div>-->
-                </div>
+
                 <div class="activeCon">
                     <div class="weui_panel_hd l0">
                         <span class="colorBlock"></span>
                         <span class="title">内容推荐</span>
-                        <a class="right">
+                        <a class="right" href="softWen.html">
                             更多 <i class="fa fa-angle-double-right"></i>
                         </a>
                     </div>
@@ -199,7 +142,7 @@
                     <div class="weui_panel_hd l0">
                         <span class="colorBlock"></span>
                         <span class="title">活动精选</span>
-                        <a class="right">
+                        <a class="right" href="activeList.html">
                             更多 <i class="fa fa-angle-double-right"></i>
                         </a>
                     </div>
@@ -286,7 +229,7 @@
                     <div class="weui_panel_hd l0">
                         <span class="colorBlock"></span>
                         <span class="title">商盟动态</span>
-                        <a class="right">
+                        <a class="right" href="shangMeng.html">
                             更多 <i class="fa fa-angle-double-right"></i>
                         </a>
                     </div>
@@ -404,20 +347,8 @@
     <script src="../../assets/global/plugins/swiper/dist/js/swiper.min.js"></script>
     <script src="../../assets/mobile/js/global.js"></script>
     <script src="../../assets/mobile/js/mobileLeft.js"></script>
-
     <script>
         $(function(){
-             new Swiper('#swiper-container1', {
-                pagination: '.swiper-pagination',
-                slidesPerView: 4,
-                 prevButton:'.swiper-button-prev',
-                 nextButton:'.swiper-button-next',
-//                paginationClickable: true,
-                spaceBetween: 2,
-                freeMode: true
-            });
-
-
             swiper = new Swiper('#swiper-container', {
                 //                prevButton:'.swiper-button-prev',
                 //                nextButton:'.swiper-button-next',
