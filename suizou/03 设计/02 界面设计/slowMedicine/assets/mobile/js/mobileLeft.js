@@ -74,6 +74,8 @@ $(function(){
                     '<i class="fa fa-bars"></i>'+
                 '</div>';
     $(".container").append(html1);
+    /*左边滑动导航*/
+    mobileLeft.init($(".container"));
 });
 
     var mobileLeft = function(){
@@ -147,6 +149,9 @@ $(function(){
         }
     }();
 
+
+/*左边滑动导航*/
+mobileLeft.init($(".container"));
 
 
 

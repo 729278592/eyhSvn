@@ -238,8 +238,7 @@
     </script>
     <script>
         $(function(){
-            /*左边滑动导航*/
-            mobileLeft.init($(".container"));
+
 
             /*第一次加载时的蒙版处理*/
             $(".mainDoctor").on("touchend",function(){
@@ -251,14 +250,16 @@
                 $(".foot,.mainDoctor,.commentNum").removeClass("zIndex1999");
                 $(".bd.absolute>div").addClass("overflowy");
             });
-            $(".sumbitInfor .fa-remove").on("touchend",function(){
+            $(".sumbitInfor .fa-remove").on("touchend",function(e){
                 $(this).closest(".maskHide").addClass("hide");
                 $(this).closest(".sumbitInfor").addClass("hide");
                 $(".bd.absolute>div").removeClass("overflowy");
+                e.preventDefault();
             });
 
             /*去除样式*/
-            $(".btnOk").on("touchend",function(){
+            $(".btnOk").on("touchstart",function(e){
+                e.preventDefault();
                 $(this).closest(".maskHide").addClass("hide");
                 $(".foot,.mainDoctor,.commentNum").removeClass("zIndex1999");
                 $(".bd.absolute>div").removeClass("overflowy");
