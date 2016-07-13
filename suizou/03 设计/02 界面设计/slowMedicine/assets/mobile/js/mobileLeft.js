@@ -71,7 +71,7 @@ $(function(){
                 '</div>';
     $(".container").append(html);
     var html1 = '<div class="bars">'+
-                    '<i class="fa fa-bars"></i>'+
+                    '<i class="fa fa-user"></i>'+
                 '</div>';
     $(".container").append(html1);
     /*左边滑动导航*/
