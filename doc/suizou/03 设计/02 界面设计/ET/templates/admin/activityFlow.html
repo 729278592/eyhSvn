@@ -183,76 +183,103 @@
                             <img src="../../assets/admin/images/loading.jpg" alt=""/><br/>
                             正在加载,请稍后...
                         </div>
+
+                        <!--分页-->
+                        <div class="paging clearfix">
+                            <ul class="page-menu clearfix">
+                                <p class="page-pre" data-pagenum="1"><i class="fa fa-angle-left"></i></p>
+                                <li class="active">1</li>
+                                <li class="liPage">2</li>
+                                <li class="liPage">3</li>
+                                <li class="liPage">4</li>
+                                <li class="liPage">5</li>
+                                <li class="liPage">6</li>
+                                <li class="liPage">7</li>
+                            </ul>
+                            <input type="text" class="page-num" id="pageNumTarget">
+                            <button type="button" class="btn-jump" id="targetButton">跳转</button>
+                            <p class="page-next" data-pagenum="2"><i class="fa fa-angle-right"></i></p>
+                            <input type="hidden" value="447" id="totalPages">
+                        </div>
                     </div>
                 </div>
             </div>
         </div>
-        <div class="foot">
-            <div class="footMain">
-                <div class="ourMenuDiv">
-                    <ul class="clearfix ourMenu">
-                        <li>
-                            <a href="companyInfor.html">
-                                <p class="first">公司简介</p>
-                                <p class="last">公司简介</p>
-                            </a>
-                        </li>
-                        <li>
-                            <a href="talentRecruitment.html">
-                                <p class="first">人才招聘</p>
-                                <p class="last">人才招聘</p>
-                            </a>
-                        </li>
-                        <li>
-                            <a href="brandCooperation.html">
-                                <p class="first">品牌合作</p>
-                                <p class="last">品牌合作</p>
-                            </a>
-                        </li>
-                        <li class="last">
-                            <a href="aboutUs.html">
-                                <p class="first">关于我们</p>
-                                <p class="last">关于我们</p>
-                            </a>
-                        </li>
-                    </ul>
+    <div class="foot">
+        <div class="footMain">
+            <div class="ourMenuDiv">
+                <ul class="clearfix ourMenu">
+                    <li>
+                        <a href="###">
+                            <p class="first">公司简介</p>
+                            <p class="last">公司简介</p>
+                        </a>
+                    </li>
+                    <li>
+                        <a href="###">
+                            <p class="first">人才招聘</p>
+                            <p class="last">人才招聘</p>
+                        </a>
+                    </li>
+                    <li>
+                        <a href="###">
+                            <p class="first">品牌合作</p>
+                            <p class="last">品牌合作</p>
+                        </a>
+                    </li>
+                    <li class="last">
+                        <a href="###">
+                            <p class="first">关于我们</p>
+                            <p class="last">关于我们</p>
+                        </a>
+                    </li>
+                </ul>
+            </div>
+            <div class="ourInfor clearfix">
+                <div class="copyright left">
+                    <p>
+                        E维科技有限公司Copyright© 2012-2016
+                    </p>
+
+                    <p>
+                        渝ICP备12043691号-1渝公网安备 31010102002040号
+                    </p>
+                    <p class="large">
+                        售后客服电话 : 023-58001118 <span>(周一至周五9:00-18:00)</span>
+                    </p>
+
                 </div>
-                <div class="ourInfor clearfix">
-                    <div class="copyright left">
-                        <p class="large">
-                            售后客服电话 : 023-58001118 <span>(周一至周五9:00-18:00)</span>
-                        </p>
-                        <p class="small">
-                            渝ICP备15002338号-1 Copyright © 2014~2015 重庆都漫科技有限公司 版权所有
-                        </p>
-                    </div>
-                    <div class="left clearfix ourImg">
-                        <div class="left">
-                            <p class="title">关注我们:</p>
-                            <ul class="iconMenu clearfix">
-                                <li>
+                <div class="left clearfix ourImg">
+                    <div class="left">
+                        <ul class="iconMenu clearfix">
+                            <li>
                                     <span>
                                         贴
                                     </span>
-                                </li>
-                                <li>
-                                    <i class="fa fa-weixin"></i>
-                                </li>
-                                <li>
-                                    <i class="fa fa-weibo"></i>
-                                </li>
-                            </ul>
-                        </div>
-                        <div class="left">
-                            <img src="../../assets/admin/images/erCode.jpg" alt="" class="codeJpg"/>
-                        </div>
+                            </li>
+                            <li>
+                                <i class="fa fa-weixin"></i>
+                            </li>
+                            <li>
+                                <i class="fa fa-weibo"></i>
+                            </li>
+                        </ul>
+                    </div>
+                    <div class="left">
+                        <img src="../../assets/admin/images/erCode.jpg" alt="" class="codeJpg"/>
                     </div>
                 </div>
             </div>
         </div>
     </div>
+    </div>
     <script src="../../assets/global/plugins/jquery/jquery-1.11.3.min.js"></script>
     <script src="../../assets/admin/js/global.js"></script>
     <script src="../../assets/admin/js/footHandle.js"></script>
+    <script>
+        /*分页居中*/
+        var ml = ($(".paging").outerWidth()+$(".page-num").outerWidth()+$(".btn-jump").outerWidth())/2;
+        $(".paging").get(0).style.marginLeft = -ml+"px";
+    </script>
 </body>
 </html>

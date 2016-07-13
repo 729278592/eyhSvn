@@ -87,7 +87,7 @@
                         </ul>
                     </div>
                     <div class="right contentMaincon">
-                        <div class="title">素材管理</div>
+                        <div class="title">素材管理<a href="###" class="addActive right">+发布新内容</a></div>
                         <ul class="typeList">
                             <li class="active">
                                 <a href="contentSourceReleaseAdmin.html">
@@ -236,31 +236,30 @@
                 </div>
             </div>
         </div>
-
         <div class="foot">
             <div class="footMain">
                 <div class="ourMenuDiv">
                     <ul class="clearfix ourMenu">
                         <li>
-                            <a href="companyInfor.html">
+                            <a href="###">
                                 <p class="first">公司简介</p>
                                 <p class="last">公司简介</p>
                             </a>
                         </li>
                         <li>
-                            <a href="talentRecruitment.html">
+                            <a href="###">
                                 <p class="first">人才招聘</p>
                                 <p class="last">人才招聘</p>
                             </a>
                         </li>
                         <li>
-                            <a href="brandCooperation.html">
+                            <a href="###">
                                 <p class="first">品牌合作</p>
                                 <p class="last">品牌合作</p>
                             </a>
                         </li>
                         <li class="last">
-                            <a href="aboutUs.html">
+                            <a href="###">
                                 <p class="first">关于我们</p>
                                 <p class="last">关于我们</p>
                             </a>
@@ -269,16 +268,20 @@
                 </div>
                 <div class="ourInfor clearfix">
                     <div class="copyright left">
+                        <p>
+                            E维科技有限公司Copyright© 2012-2016
+                        </p>
+
+                        <p>
+                            渝ICP备12043691号-1渝公网安备 31010102002040号
+                        </p>
                         <p class="large">
                             售后客服电话 : 023-58001118 <span>(周一至周五9:00-18:00)</span>
                         </p>
-                        <p class="small">
-                            渝ICP备15002338号-1 Copyright © 2014~2015 重庆都漫科技有限公司 版权所有
-                        </p>
+
                     </div>
                     <div class="left clearfix ourImg">
                         <div class="left">
-                            <p class="title">关注我们:</p>
                             <ul class="iconMenu clearfix">
                                 <li>
                                     <span>
@@ -300,8 +303,8 @@
                 </div>
             </div>
         </div>
-        <div class="maskBg hide"></div>
-        <div class="mask hide">
+        <div class="maskBg "></div>
+        <div class="mask ">
             <form action="###">
                 <div class="dailog modiflyDailog hide">
                     <div class="dailogHead">
@@ -350,15 +353,23 @@
                     <button class="btnCancel">取消</button>
                 </div>
             </div>
-            <div class="dailog lookDailog hide">
+            <div class="dailog lookDailog ">
                 <div class="dailogHead">
                     提示
                     <i class="fa fa-remove right"></i>
                 </div>
                 <div class="dailogContent">
-                    <div class="pCenter">
-                        <img src="../../assets/admin/images/erCode.jpg" alt=""/>
-                        <p>请扫描二维码,在手机上浏览文章</p>
+                    <div class="look clearfix">
+                        <div class="lookImg">
+                            <img src="../../assets/admin/images/erCode.jpg" alt=""/>
+                        </div>
+                        <div class="lookTable">
+                            <p>请扫描二维码,在手机上浏览文章</p>
+                            <div class="looDiv">
+                                <button class="btnSure">撤下</button>
+                                <button class="btnCancel">取消</button>
+                            </div>
+                        </div>
                     </div>
                 </div>
 
@@ -405,7 +416,7 @@
     <script>
         jQuery(document).ready(function() {
             /*分页居中*/
-            var ml = $(".paging").width()/2;
+            var ml = ($(".paging").outerWidth()+$(".page-num").outerWidth()+$(".btn-jump").outerWidth())/2;
             $(".paging").get(0).style.marginLeft = -ml+"px";
 
             /*单窗居中*/
