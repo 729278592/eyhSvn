@@ -182,31 +182,21 @@
             });
 
 
-
-
-
-
             $(".dataMenu .btnLarge").on("touchend",function(e){
                 e.preventDefault();
-                var html = '<div class="close">'+
-                               '<i class="fa fa-remove"></i>'+
-                           '</div>';
                 var src = $(this).parent().find("img").attr("src");
-
                 $(".pinch-zoom-container").css({display:"inline-block",height:"100%"});
-                $(".pinch-zoom-container").append(html);
                 $(".pinch-zoom-container").find("img").attr({src:src});
                 $(".pinch-zoom").css({transform:"scale(1, 1)"});
-                $(".bd.absolute>div").addClass("overflowy");
-            });
-            $(".pinch-zoom-container").delegate(".close","touchend",function(e){
-                e.preventDefault();
-                $(".pinch-zoom").css({transform:"scale(1, 1)"});
-                $(".pinch-zoom-container").css({display:"none"});
-                $(".bd.absolute>div").removeClass("overflowy");
-                $(this).remove();
             });
 
+            $("div.pinch-zoom").click(function(){
+                $(".pinch-zoom-container").css({display:"none"});
+            });
+            $("div.pinch-zoom img").click(function(e){
+                e.preventDefault();
+                e.stopPropagation();
+            })
         })
     </script>
 </body>
