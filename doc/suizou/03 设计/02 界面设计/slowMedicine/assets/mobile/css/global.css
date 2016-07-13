@@ -115,7 +115,7 @@ a.weui_media_box:active {
 .person-head .personInfor{width:33%;position: relative;left: 8%;}
 .person-head .personInfor .name{font-size:16px}
 .slider{margin: 0;padding:0 10px;}
-.person-head .personInfor .name>a{text-align: center;display:block;padding:0 3px;color:#ffad12;border-radius:4px;border:2px solid #ffad12;font-size:12px;width: 38px;}
+.person-head .personInfor .name>a.job{text-align: center;display:inline-block;padding:0 3px;color:#ffad12;border-radius:4px;border:2px solid #ffad12;font-size:12px;}
 .person-head .personInfor .doctorName a{display:inline-block;padding:0 3px;color:#ffad12;border-radius:4px;border:2px solid #ffad12}
 .person-head .personInfor .doctorName a.b0{border: none;}
 .person-head .tableCell.btnDiv{vertical-align:bottom;text-align:right}
@@ -321,14 +321,14 @@ a.weui_media_box:active {
     -ms-flex-align: center;
     align-items: center;}
 .bdFoot.mb0 p{margin-bottom: 0;text-align: left;position: relative;}
-.bdFoot span.type{color: #999;font-size: 14px;width: 78px;height: 24px;vertical-align: top;}
+.bdFoot span.type{color: #999;font-size: 14px;width: 78px;height: 24px;vertical-align: top;text-align: left;}
 .bdFoot span.spanInfor{font-size: 14px;color: #333;-webkit-box-flex: 1;
     -webkit-flex: 1;
     -ms-flex: 1;
     flex: 1;
     min-width: 0;
 }
-.bdFoot span.type,.bdFoot span.spanInfor{display: block;}
+.bdFoot span.type,.bdFoot span.spanInfor{display: block;text-align: left;}
 .medicalBg{margin: 5% auto;width: 90%;position: relative;overflow: hidden;padding: 0 0 1% 0;}
 .medicalBg>img{width: 100%;position: absolute;height: 100%;}
 .medicalBgBgfff{margin: 14% auto 5%;width: 90%;background: #fff;position: relative;z-index: 100;border-radius: 10px;}
@@ -360,7 +360,7 @@ a.weui_media_box:active {
     white-space: nowrap;
     }
 
-.sumbitInfor{width: 90%;position: absolute;left: 50%;margin-left: -45%;max-height: 570px;min-height: 350px;top: 50%;margin-top: -200px;}
+.sumbitInfor{width: 90%;position: absolute;left: 50%;margin-left: -45%;max-height: 570px;min-height: 350px;top: 50%;margin-top: -156px;}
 .sumbitInfor .personInforBg{width: 100%;position: absolute;}
 .sumbitInfor .fa-remove{position: absolute;background: #fff;color: #25a7e4;border-radius: 50px;right: -10px;top: 20px;width: 30px;height: 30px;text-align: center;line-height: 30px;border:3px solid #25a7e4;}
 .sumbitInfor .personForm{position: absolute;top: 36%;z-index: 1000;width: 94%;margin: 0 3%;text-align: center;}
@@ -371,7 +371,7 @@ a.weui_media_box:active {
 .sumbitInfor .input-group input.inputCode{width: 82px;padding-right: 0;}
 .sumbitInfor .type{}
 .sumbitInfor .personForm input{-webkit-appearance:none;border: 1px solid #efefef;padding: 8px 0 8px 0;text-indent: 5px;width: 194px;font-family: "微软雅黑";}
-.sumbitInfor .personForm .btnSumbit{padding: 10px 0;width: 206px;height: 34px;background: #45a7e5;color: #fff;font-size: 16px;font-family: "微软雅黑";line-height: 10px;position: relative;left: 26px;}
+.sumbitInfor .personForm .btnSumbit{padding: 10px 0;width: 196px;height: 34px;background: #45a7e5;color: #fff;font-size: 16px;font-family: "微软雅黑";line-height: 10px;position: relative;left: 26px;}
 .weui_toast,.weui_toast{z-index: 300;}
 
 
@@ -458,9 +458,9 @@ a.weui_media_box:active {
 .weui_media_box.weui_media_appmsg .weui_media_hd.mr0 .weui_media_appmsg_thumb{border-radius: 0%;}
 .weui_media_box.weui_media_appmsg .weui_media_appmsg_thumb{border-radius: 100%;width: 100%;height: 100%;}
 .weui_panel_bd.l15.r15.relative .weui_media_box.weui_media_appmsg .weui_media_appmsg_thumb.portrait{border-radius: 0;}
-.inputInfor p .type{font-size:14px;display:inline-block;width:58px}
-.inputInfor p input{padding:8px 30px 8px 5px;border:1px solid #efefef;width: 60%;border-radius: 0;}
-.inputInfor p input.codeVal{padding:8px 30px 8px 5px;width: 22%;}
+.inputInfor p .type{font-size:14px;display:inline-block;width:70px}
+.inputInfor p input{padding:8px 30px 8px 5px;border:1px solid #efefef;width: 55%;border-radius: 0;}
+.inputInfor p input.codeVal{padding:8px 30px 8px 5px;width: 17%;}
 .inputInfor p button.getCode{width: 38%;height: 32px;font-family: "微软雅黑";font-size: 12px;background: #52b1ed;color: #fff;}
 .inputInfor .btnSave{font-size: 14px;width: 60px;height: 32px;background: #51b1ed;color: #fff;border-radius: 2px;text-align: center;line-height: 32px;font-family: "微软雅黑";margin: 0 auto;display: block;}
 .largeCon{position:fixed;background:#52b8f9;padding:1px 0;border-radius:8px;z-index:100;left: 3%;right: 3%;bottom: 3%;top: 3%;}
