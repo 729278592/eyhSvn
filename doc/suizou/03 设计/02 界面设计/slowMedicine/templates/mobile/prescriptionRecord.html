@@ -159,11 +159,14 @@
                     <div class="swiper-button-next"></div>
                     <div class="swiper-button-prev"></div>
                 </div>
-                <div class="largeCon hide">
-                    <i class="fa fa-remove"></i>
-                    <div class="largeConCon">
-                        <img src="" alt=""/>
-                    </div>
+                <!--<div class="largeCon hide">-->
+                    <!--<i class="fa fa-remove"></i>-->
+                    <!--<div class="largeConCon">-->
+                        <!--<img src="" alt=""/>-->
+                    <!--</div>-->
+                <!--</div>-->
+                <div class="pinch-zoom">
+                    <img src="" alt=""/>
                 </div>
             </div>
         </div>
@@ -171,6 +174,13 @@
     <script src="../../assets/global/plugins/jquery/jquery-1.11.3.min.js"></script>
     <script src="../../assets/mobile/js/global.js"></script>
     <script src="../../assets/global/plugins/swiper/dist/js/swiper.min.js"></script>
+    <script src="../../assets/global/plugins/enlarge/js/underscore.js"></script>
+    <script src="../../assets/global/plugins/enlarge/js/pinchzoom.js"></script>
+    <script>
+        $('div.pinch-zoom').each(function () {
+            new RTP.PinchZoom($(this), {});
+        });
+    </script>
     <script>
         $(function(){
             swiper = new Swiper('#swiper-container2', {
@@ -186,13 +196,31 @@
             });
 
             $(".bdHead span.num").text($(".swiper-slide").size());
-            $(".btnLarge").on("click",function(){
-                $(".largeCon").removeClass("hide");
-                var src = $(this).prev("img").attr("src");
-                $(".largeCon").find("img").attr({src:src});
+//            $(".btnLarge").on("click",function(){
+//                $(".largeCon").removeClass("hide");
+//                var src = $(this).prev("img").attr("src");
+//                $(".largeCon").find("img").attr({src:src});
+//            });
+//            $(".largeCon .fa-remove").on("click",function(){
+//                $(this).closest(".largeCon").addClass("hide");
+//            })
+
+
+
+            $(".btnLarge").on("touchend",function(e){
+                e.preventDefault();
+                var src = $(this).closest(".swiper-slide").find("img").attr("src");
+                $(".pinch-zoom-container").css({display:"inline-block",height:"100%"});
+                $(".pinch-zoom-container").find("img").attr({src:src});
+                $(".pinch-zoom").css({transform:"scale(1, 1)"});
             });
-            $(".largeCon .fa-remove").on("click",function(){
-                $(this).closest(".largeCon").addClass("hide");
+
+            $("div.pinch-zoom").click(function(){
+                $(".pinch-zoom-container").css({display:"none"});
+            });
+            $("div.pinch-zoom img").click(function(e){
+                e.preventDefault();
+                e.stopPropagation();
             })
         })
     </script>
