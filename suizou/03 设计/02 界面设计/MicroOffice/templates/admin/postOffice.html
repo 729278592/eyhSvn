@@ -476,7 +476,9 @@
                                 </label>
                                 <div class="col-md-6 col-xs-6 col-sm-6 selectCity">
                                     <div class="form-control acity">
-                                        <span class="location-selector-placeholder">选择工作地点，至多选5个</span>
+                                        <span class="location-selector-placeholder hide">选择工作地点，至多选5个</span>
+                                        <span class="location-selected">全国</span>
+                                      
                                     </div>
                                     <div class="location-tabs-wrapper">
                                         <div class="location-tabs">
@@ -1251,6 +1253,29 @@
                         })
                     });
 
+
+                    var selected = $(".form-control.acity").find(".location-selected");
+
+
+                    if(selected.get(0)){
+                        if(selected.text()=="全国"){
+                            selected.addClass("all");
+                        }
+
+                        var otherText = $(".location-pane").find(".panel-location-wrapper").find(".panel-location");
+//
+
+                        selected.each(function(i){
+                            otherText.each(function(j){
+                                if( selected.eq(i).text()==otherText.eq(j).text()){
+                                    otherText.eq(j).closest(".panel-location-wrapper").addClass("panel-location--selected");
+                                }
+                            })
+                        })
+
+
+                    }
+
                     var acity = $(".acity");
                     $(".location").delegate(".panel-location-wrapper","click",function(){
                         var text = $(this).find(".panel-location").text();
@@ -1314,6 +1339,8 @@
                             }
                         }
                     });
+
+
 
                     /*悬赏金额*/
                     $(".rewardMoney").on("click",function(){
