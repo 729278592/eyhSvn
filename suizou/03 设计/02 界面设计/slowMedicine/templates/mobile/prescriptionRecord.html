@@ -196,21 +196,12 @@
             });
 
             $(".bdHead span.num").text($(".swiper-slide").size());
-//            $(".btnLarge").on("click",function(){
-//                $(".largeCon").removeClass("hide");
-//                var src = $(this).prev("img").attr("src");
-//                $(".largeCon").find("img").attr({src:src});
-//            });
-//            $(".largeCon .fa-remove").on("click",function(){
-//                $(this).closest(".largeCon").addClass("hide");
-//            })
-
 
 
             $(".btnLarge").on("touchend",function(e){
                 e.preventDefault();
                 var src = $(this).closest(".swiper-slide").find("img").attr("src");
-                $(".pinch-zoom-container").css({display:"inline-block",height:"100%"});
+                $(".pinch-zoom-container").css({display:"inline-block",height:"100%",position:"absolute"});
                 $(".pinch-zoom-container").find("img").attr({src:src});
                 $(".pinch-zoom").css({transform:"scale(1, 1)"});
             });
