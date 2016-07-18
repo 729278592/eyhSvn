@@ -353,7 +353,7 @@ label.error {color: #EA5200;margin-bottom: 0;}
 .form .form-group.bocea .w100{border-color: #ff7b22;}
 .input-group .form-control.w66{width: 65.6666%;padding-left: 1%;line-height: 30px;}
 .input-group span.c6{color: #666;font-size: 14px;}
-.form-group .checkboxs{position: relative;top: 2px;}
+.form-group .checkboxs{vertical-align: text-top;}
 .form-group.mb0{margin-bottom: 0;}
 .form-group .check{color: #666;}
 .form-group.bo .w100{border: none;color: #666;padding: 0;margin: 10px 0;}
