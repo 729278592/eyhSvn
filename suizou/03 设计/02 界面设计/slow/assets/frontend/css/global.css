@@ -39,7 +39,7 @@ html.overflow{overflow-y:hidden;}
 
 
 /*index-content*/
-.dm-video{width: 1200px;margin: 40px auto;}
+.dm-video{width: 1024px;margin: 40px auto;}
 .dm-list{width: 100%;}
 .dm-list li{float: left;width: 50%;}
 .dm-list li a{display: inline-block;width: 100%;position: relative;}
@@ -66,7 +66,7 @@ html.overflow{overflow-y:hidden;}
 .bb-nav-prev{left: -60px;}
 .bb-nav-next{right: -60px;}
 .bb-custom-wrapper > nav a::before, .bb-custom-wrapper > nav a::after{background: #fff;}
-.page-layout-3:last-child{background: transparent;}
+.bb-custom-side.page-layout-1,.bb-custom-side.page-layout-2,.bb-custom-side.page-layout-3 {background: url('../images/shubg.png') 100%;}
 .bb-custom-side .title{font-size: 20px;color: #7abc2b;text-align: center;padding: 5% 10%;}
 .bb-custom-side .page-content{padding: 0 10%;}
 .bb-custom-side .page-content p{font-size: 14px;text-indent: 28px;color: #333;line-height: 20px;margin: 5px 0;font-family: "微软雅黑";font-style: normal;}
