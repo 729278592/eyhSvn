@@ -260,21 +260,40 @@
                         $('.section4').find('.bg4').delay(50).animate({
                             opacity: '1'
                         },400,function(){
-                            $('.section4').find('.product-img4').animate({
-                                opacity:1,
-                                width:"1050px",
-                                height:"850px",
-                                marginLeft:"-525px",
-                                top:"0%"
-                            },800,function(){
-                                $('.section4').find('.productionBg2').animate({
+                            if($(window).width()>1200){
+                                $('.section4').find('.product-img4').animate({
                                     opacity:1,
-                                    width:"391px",
-                                    height:"285px",
-                                    left:"15%",
-                                    top:"15%"
-                                },200)
-                            });
+                                    width:"1150px",
+                                    height:"890px",
+                                    marginLeft:"-575px",
+                                    top:"0%"
+                                },800,function(){
+                                    $('.section4').find('.productionBg2').animate({
+                                        opacity:1,
+                                        width:"350px",
+                                        height:"265px",
+                                        left:"15%",
+                                        top:"15%"
+                                    },200)
+                                });
+                            }
+                            else if($(window).width()<1400){
+                                $('.section4').find('.product-img4').animate({
+                                    opacity:1,
+                                    width:"900px",
+                                    height:"700px",
+                                    marginLeft:"-525px",
+                                    top:"0%"
+                                },800,function(){
+                                    $('.section4').find('.productionBg2').animate({
+                                        opacity:1,
+                                        width:"340px",
+                                        height:"245px",
+                                        left:"5%",
+                                        top:"15%"
+                                    },200)
+                                });
+                            }
                         });
                     }
                     if(index == 5){
