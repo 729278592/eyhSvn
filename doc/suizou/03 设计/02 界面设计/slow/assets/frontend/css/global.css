@@ -76,13 +76,13 @@ html.overflow{overflow-y:hidden;}
 
 /*health-content*/
 .health{width: 964px;padding:25px 30px;background: #fff;margin: 0 auto;}
-.health-head{width: 100%;padding-bottom: 10px;border-bottom: 1px solid #81ae39;margin-bottom: 10px;}
+.health-head{width: 100%;padding-bottom: 10px;border-bottom: 1px solid #83dbfd;margin-bottom: 10px;}
 .health-head img{margin-right: 20px;}
-.health-head span{display: inline-block;height: 44px;line-height: 44px;color: #81ae39;}
+.health-head span{display: inline-block;height: 44px;line-height: 44px;color: #83dbfd;}
 .healthIcon{}
 .health-content{}
 .health-content .w100{width: 100%;}
-.health-content .health-content-head{position: relative;width: 98%;padding: 5px 1%;background: #80cb92;color: #fff;font-size: 14px;}
+.health-content .health-content-head{position: relative;width: 98%;padding: 5px 1%;background: #83dbfd;color: #fff;font-size: 14px;}
 .color-block{position: absolute;top: 5px;bottom: 5px;width: 3px;background: #ff8105;}
 .health-content .health-content-head span{position: relative;left: 15px;}
 .health-content .health-content-content{margin: 5px 0 20px 0;}
