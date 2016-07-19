@@ -76,16 +76,14 @@
                     <li>
                         <a>
                             <img src="../../assets/frontend/images/banner1.jpg" alt=""/>
-                            <div class="play-mask-bg">
-                                <div class="play-on">
-                                    <span class="play"></span>
-                                </div>
+                            <div class="play-on">
+                                <span class="play"></span>
                             </div>
                         </a>
                     </li>
                     <li>
                         <a href="###">
-                            <img src="../../assets/frontend/images/banner1.jpg" alt=""/>
+                            <img src="../../assets/frontend/images/banner2.jpg" alt=""/>
                         </a>
                     </li>
                 </ul>
@@ -99,12 +97,6 @@
                             <a href="companyInfor.html">
                                 <p class="first">公司简介</p>
                                 <p class="last">公司简介</p>
-                            </a>
-                        </li>
-                        <li>
-                            <a href="talentRecruitment.html">
-                                <p class="first">人才招聘</p>
-                                <p class="last">人才招聘</p>
                             </a>
                         </li>
                         <li>
@@ -190,7 +182,7 @@
             });
 
             /*video*/
-            $(".play").on("click",function(){
+            $(".play-on").on("click",function(){
                 $("html").addClass("overflow");
                 $(".video-mask,.video-mask-bg").removeClass("hide");
                 $("#example_video_1").css({width:"960px",height:"600px"});
