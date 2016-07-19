@@ -21,6 +21,8 @@ html.overflow{overflow-y:hidden;}
     -webkit-transition: background-color .5s ease-in-out;
     -o-transition: background-color .5s ease-in-out;
     transition: background-color .5s ease-in-out;}
+.head.style{background: #83dbfd;}
+.head.style:hover{background: #83dbfd;}
 .head.hover {
     background-color: #fff;
     -webkit-transition: background-color .5s ease-in-out;
@@ -29,14 +31,12 @@ html.overflow{overflow-y:hidden;}
 .head-main{width: 90%;margin: 0 5%;}
 .logoDiv{padding: 0 0;}
 .logoDiv img{position: relative;top: 5px;}
-.dm-menu{padding-left: 50px;padding-top: 23px;}
+.dm-menu{padding-left: 0px;padding-top: 23px;}
 .dm-menu li{float: left;margin-left: 150px;}
 .dm-menu li a{color: #4f4949;}
 .dm-menu li.active a{color: #f16f05;}
 .dm-shopping{padding-top: 25px;width: 95px;height: 20px;}
 .dm-shopping a{color: #4f4949;}
-
-
 
 /*index-content*/
 .dm-video{width: 1024px;margin: 40px auto;}
@@ -50,27 +50,27 @@ html.overflow{overflow-y:hidden;}
 .video-div{width: 960px;height: 600px;position: absolute;left: 50%;top: 50%;margin-left: -480px;margin-top: -300px;}
 .video-div .close{opacity: .6;filter:alpha(opacity=60);position: absolute;right: -15px;top: -15px;width: 30px;height: 30px;line-height: 30px;text-align: center;font-size: 16px;color: #ededed;border-radius: 100%;border: 1px solid #ededed;z-index: 10;}
 .video-div .close:hover{opacity: 1;filter:alpha(opacity=100);}
-.play-mask-bg{position: absolute;left: 0;right: 0;top: 0;bottom: 0;background: #000;opacity: 0.7;filter:alpha(opacity=70);}
-.play-on {position: absolute;width: 56px;height: 56px;left: 50%;top: 50%;margin-top: -28px;margin-left: -28px;}
-.play-on .play {background-image: url(../images/paly.png);background-repeat: no-repeat;width: 54px;height: 54px;border-radius: 50%;border: 1px solid white;display: inline-block;background-position: center;background-size: 15px;float: left;cursor: pointer;opacity: .6;filter:alpha(opacity=60);}
-.play-on .play:hover{opacity: 1;filter:alpha(opacity=100);}
+.play-on {position: absolute;width: 80px;height: 80px;left: 50%;top: 50%;margin-top: -40px;margin-left: -40px;background: url(../images/play.png);background-size: 80px 80px;}
+
 
 
 /*brand-content*/
 .content.pt69{padding-top: 69px;}
-.brandStory{position: relative;min-height: 630px;width: 1000px;margin: 0 auto;top: 20px;}
-#book-1{border-color: #6f9714;border-radius: 4px;}
+.brandStory{position: relative;min-height: 601px;width: 914px;margin: 0 auto 50px;top: 20px;}
+#book-1{border-color: #87CEFA;border-radius: 4px;}
 .bb-custom-wrapper{position: absolute;width: 914px;height: 601px;background-size: 100%;}
 .page-layout-2:first-child,.page-layout-2{background: transparent;}
-.bb-custom-wrapper > nav a{background: rgba(111,151,20,1);color: #fff;opacity: 1;}
+.bb-custom-wrapper > nav a{background: #87CEFA;color: #fff;opacity: 1;}
 .bb-nav-prev{left: -60px;}
 .bb-nav-next{right: -60px;}
+.bb-item{background: url('../images/shubg.jpg') 100%;background-color: transparent;}
 .bb-custom-wrapper > nav a::before, .bb-custom-wrapper > nav a::after{background: #fff;}
-.bb-custom-side.page-layout-1,.bb-custom-side.page-layout-2,.bb-custom-side.page-layout-3 {background: url('../images/shubg.png') 100%;}
+.bb-page,.bb-custom-wrapper {background: url('../images/shubg.jpg') 100%;background-color: transparent;}
 .bb-custom-side .title{font-size: 20px;color: #7abc2b;text-align: center;padding: 5% 10%;}
-.bb-custom-side .page-content{padding: 0 10%;}
+.bb-custom-side .page-content{padding: 30% 2%;}
 .bb-custom-side .page-content p{font-size: 14px;text-indent: 28px;color: #333;line-height: 20px;margin: 5px 0;font-family: "微软雅黑";font-style: normal;}
 .page-layout-1 p,.page-layout-2 p{text-align: left;position: static;width: auto;max-width: 100%;left: 0;top: 0; -webkit-transform: translateY(0%) translateX(0%); }
+.page-layout-1 p .largeTitle{font-size: 20px;}
 .page-layout-2 div{position: static;padding: 0;width: auto;}
 .page-layout-2:first-child div:last-child, .page-layout-2:last-child div:first-child{color: #7abc2b;}
 
@@ -97,17 +97,17 @@ p.proty,p.phone{color: #ff8105;font-size: 14px;margin: 5px 0;}
 .contantUs{position: relative;left: 50%;margin: 15px 0 50px -512px;width: 1024px;}
 .menu {float: left;background: #fff;}
 .menu li{border: 1px solid #e7e7e7;border-bottom: none;width: 200px;height: 60px;line-height: 60px;text-align: center;}
-.menu .active a{color: #fff;background: #91a8d1;}
-.menu li .fa{position: relative;left: 103px;top: -60px;font-size: 20px;color:#91a8d1 }
+.menu .active a{color: #fff;background: #84dbfd;}
+.menu li .fa{position: relative;left: 103px;top: -60px;font-size: 20px;color:#84dbfd }
 .menu li a{display: inline-block;width: 100%;height: 100%;color: #444;}
 .menu .last{border-bottom:  1px solid #e7e7e7;}
 .contantUsCon{float: right;width: 728px;padding: 26px 36px;background: #fff;}
 .content.bg{background: #f4f4f4;}
-.contantUsConHead{display: table;padding-bottom: 10px;border-bottom: 1px solid #81ae39;width: 100%;}
+.contantUsConHead{display: table;padding-bottom: 10px;border-bottom: 1px solid #85dbfd;width: 100%;}
 .contantUsConHead .title,.contantUsConHead img{display: table-cell;vertical-align: middle;font-size: 14px;color: #666;margin-right: 10px;}
-.contantUsConHead .title .companyName{font-size: 16px;color: #81ae39;}
+.contantUsConHead .title .companyName{font-size: 16px;color: #85dbfd;}
 .contantUsConCon{padding-top: 10px;}
-.contantUsConCon p{font-size: 14px;color: #999;margin: 20px 0;}
+.contantUsConCon p{font-size: 14px;color: #999;margin: 20px 0;text-indent: 28px;}
 .contantUsConCon .DM{float: right;}
 .contantUsConCon .contantImg{width: 100%;}
 .contantUsConCon.lh{line-height: 22px;color: #999;font-size: 14px;}
@@ -122,7 +122,7 @@ p.proty,p.phone{color: #ff8105;font-size: 14px;margin: 5px 0;}
 .footMain{width: 1024px;margin: 0 auto;}
 .ourMenuDiv{width: 100%;border-bottom: 1px solid #444;text-align: center;height: 51px;}
 .ourMenu{width: 80%;margin: 0 auto;height: 20px;overflow: hidden;padding: 25px 0;}
-.ourMenu li{float: left;text-align: center;width: 25%;height: 20px;overflow: hidden;position: relative;top: -10px;}
+.ourMenu li{float: left;text-align: center;width: 33%;height: 20px;overflow: hidden;position: relative;top: -10px;}
 
 .ourMenu li a{display: inline-block;height: 40px;line-height: 20px;transition:.5s all ease;
     -webkit-transition:.5s all ease;-moz-transition:.5s all ease;position: relative;top: 0;width: 99%;border-right: 1px solid #555;color:#aaa;font-size: 14px;}
