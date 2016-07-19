@@ -84,10 +84,10 @@ html.overflow{overflow-y:hidden;}
 .health-content .w100{width: 100%;}
 .health-content .health-content-head{position: relative;width: 98%;padding: 5px 1%;background: #83dbfd;color: #fff;font-size: 14px;}
 .color-block{position: absolute;top: 5px;bottom: 5px;width: 3px;background: #ff8105;}
-.health-content .health-content-head span{position: relative;left: 15px;}
+.health-content .health-content-head span{position: relative;left: 15px;font-size: 16px;}
 .health-content .health-content-content{margin: 5px 0 20px 0;}
 .health-content .health-content-content p{font-size: 14px;color: #666;line-height: 20px;text-indent: 28px;}
-.health-content .health-content-content .title{font-size: 14px;color: #333;text-indent: 0;margin-top: 10px;}
+.health-content .health-content-content .title{font-size: 16px;color: #333;text-indent: 0;margin-top: 10px;}
 .health-content .w100{}
 .health-content .w100{}
 p.proty,p.phone{color: #ff8105;font-size: 14px;margin: 5px 0;}
@@ -97,8 +97,8 @@ p.proty,p.phone{color: #ff8105;font-size: 14px;margin: 5px 0;}
 .contantUs{position: relative;left: 50%;margin: 15px 0 50px -512px;width: 1024px;}
 .menu {float: left;background: #fff;}
 .menu li{border: 1px solid #e7e7e7;border-bottom: none;width: 200px;height: 60px;line-height: 60px;text-align: center;}
-.menu .active a{color: #fff;background: #84dbfd;}
-.menu li .fa{position: relative;left: 103px;top: -60px;font-size: 20px;color:#84dbfd }
+.menu .active a{color: #fff;background: #ff869b;}
+.menu li .fa{position: relative;left: 103px;top: -60px;font-size: 20px;color:#ff869b }
 .menu li a{display: inline-block;width: 100%;height: 100%;color: #444;}
 .menu .last{border-bottom:  1px solid #e7e7e7;}
 .contantUsCon{float: right;width: 728px;padding: 26px 36px;background: #fff;}
@@ -113,8 +113,9 @@ p.proty,p.phone{color: #ff8105;font-size: 14px;margin: 5px 0;}
 .contantUsConCon.lh{line-height: 22px;color: #999;font-size: 14px;}
 .contantUsConCon.lh .fs16{font-size: 16px;color: #81ae38;display: inline-block;margin-bottom: 5px;position: relative;left: -9px;}
 .contantUsConCon.lh .bgColor{display: inline-block;width: 3px;height: 20px;background: #81ae38;position: relative;top: 5px;}
-
-
+.produtionInfor{padding:0 10px;border: 1px solid #efefef;position: relative;top: 6px;}
+.caretUpDiv{width: 25px;height: 13px;position: absolute;top: -13px;left: 174px;background: #fff;}
+.produtionInfor .caretUp{position: relative;top: -5px;}
 
 /*foot*/
 .foot{width: 100%;background: #242424;}
