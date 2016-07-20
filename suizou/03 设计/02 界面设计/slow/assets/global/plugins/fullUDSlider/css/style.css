@@ -24,7 +24,7 @@
 .section1 .text p{font-size: 12px;color: #646464;}
 .section2 .bg2{background:url(../../../../frontend/images/page2_bg.jpg) no-repeat;background-size:100% 100%;width:100%;height:100%;background-position:0 0}
 .section2 .bg2,.section2 .product-img2{position:absolute;z-index:30;opacity:0;filter:Alpha(opacity=0);-webkit-transform-origin:center;transform-origin:center}
-.section2 .product-img2{background:url(../../../../frontend/images/page2_product1.png) no-repeat;background-size:100% 100%;width:562px;height:530px;left:50%;top:50%;background-position:0 0;margin-top:-150px;margin-left:-200px}
+.section2 .product-img2{background:url(../../../../frontend/images/page2_product1.png) no-repeat;background-size:100% 100%;width:866px;height:640px;left:40%;top:50%;background-position:0 0;margin-top:-150px;margin-left:-200px}
 .section2 .text .productionBg2{background:url(../../../../frontend/images/productBg2.png);width: 121px;height: 95px;display: inline-block;}
 
 .section2 .text{opacity:0;position:absolute;z-index:30;width:300px;height:75pt;left:60%;top:50%;margin-left:-150px;margin-top:-70px}
@@ -52,9 +52,9 @@
 
 .section4 .bg4{background:#fff;background-size:100% 100%;width:100%;height:100%;background-position:0 0;opacity:0;filter:Alpha(opacity=0)}
 .section4 .bg4,.section4 .product-img4{position:absolute;z-index:30;-webkit-transform-origin:center;transform-origin:center}
-.section4 .product-img4{position: absolute;background:url(../../../../frontend/images/page4_product.png) no-repeat;background-size:100% 100%;width:650px;height:500px;left:50%;top:30%;margin-left:-325px;background-position:0 0;}
+.section4 .product-img4{position: absolute;background:url(../../../../frontend/images/page4_product.png) no-repeat;background-size:100% 100%;width:742px;height:525px;left:50%;top:30%;margin-left:-372px;background-position:0 0;}
 .section4 .text{}
-.section4 .text .productionBg2{background:url(../../../../frontend/images/productBg4.png) no-repeat;width: 200px;height: 140px;position: absolute;background-size: 100% 100%;opacity: 0;filter:alpha(opacity=0);z-index: 500;}
+.section4 .text .productionBg2{background:url(../../../../frontend/images/productBg4.png) no-repeat;width: 236px;height: 143px;position: absolute;background-size: 100% 100%;opacity: 0;filter:alpha(opacity=0);z-index: 500;}
 .section4 .text .title{color:#7abc2b;font-size:24px}
 
 

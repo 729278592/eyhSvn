@@ -79,12 +79,15 @@ html.overflow{overflow-y:hidden;}
     height: 100%;
     background-size: cover;
 }
-.page-layout-2:first-child,.page-layout-2:last-child,.page-layout-1:first-child,.page-layout-1:last-child {
-    background: url(../images/aboutUsImg.png) no-repeat top left;
+.page-layout-2:first-child,.page-layout-1:first-child{
+    background: url(../images/shuBg1.jpg) no-repeat top left;
     background-size: cover;
 }
 
-
+.page-layout-2:last-child,.page-layout-1:last-child {
+    background: url(../images/shuBg2.jpg) no-repeat top left;
+    background-size: cover;
+}
 
 /*health-content*/
 .health{width: 964px;padding:25px 30px;background: #fff;margin: 0 auto;}
@@ -119,6 +122,7 @@ p.proty,p.phone{color: #ff8105;font-size: 14px;margin: 5px 0;}
 .contantUsConHead .title,.contantUsConHead img{display: table-cell;vertical-align: middle;font-size: 14px;color: #666;margin-right: 10px;}
 .contantUsConHead .title .companyName{font-size: 16px;color: #85dbfd;}
 .contantUsConCon{padding-top: 10px;}
+.contantUsConCon.style p{margin: 5px 0;font-size: 16px;color: #333;}
 .contantUsConCon p{font-size: 14px;color: #999;margin: 20px 0;text-indent: 28px;}
 .contantUsConCon .DM{float: right;}
 .contantUsConCon .contantImg{width: 100%;}
