@@ -1,0 +1,275 @@
+<!DOCTYPE html>
+<html>
+<head lang="en">
+    <meta charset="UTF-8">
+    <title>粉丝数据-粉丝记录</title>
+    <link rel="stylesheet" href="../../assets/admin/css/global.css"/>
+    <link rel="stylesheet" href="../../assets/global/plugins/font/css/font-awesome.css"/>
+</head>
+<body>
+    <div class="wrapper">
+        <div class="head">
+            <div class="headMain">
+                <img src="../../assets/admin/images/logo.png" alt="" class="logo"/>
+                <ul class="clearfix navMeun right">
+                    <li>
+                        <a href="index.html">
+                            首页
+                        </a>
+                        <div class="colorBlock"></div>
+                    </li>
+                    <li>
+                        <a href="contentSourceReleaseAdmin.html">
+                            内容管理
+                        </a>
+                        <div class="colorBlock"></div>
+                    </li>
+                    <li>
+                        <a href="activityManagement.html">
+                            活动管理
+                        </a>
+                        <div class="colorBlock"></div>
+                    </li>
+                    <li class="active">
+                        <a href="fanRecord.html">
+                            粉丝数据
+                        </a>
+                        <div class="colorBlock"></div>
+                    </li>
+                    <li>
+                        <a href="RechargeRecord.html">
+                            财务管理
+                        </a>
+                        <div class="colorBlock"></div>
+                    </li>
+                    <li class="last">
+                        <a href="#">
+                            <img src="../../assets/admin/images/companyLogo.jpg" alt=""/>
+                            有限公司
+                        </a>
+                        <div class="colorBlock"></div>
+                        <ul class="account-selection hide">
+                            <li>
+                                <a href="accountSetting.html" class="companyInfors">
+                                    <i class="fa fa-gear"></i>
+                                    账号设置
+                                </a>
+                            </li>
+                            <li class="signOut">
+                                <a href="login.html">
+                                    <i class="fa fa-power-off"></i>
+                                    退出登录
+                                </a>
+                            </li>
+                        </ul>
+                    </li>
+                </ul>
+            </div>
+        </div>
+        <div class="content">
+            <div class="center">
+                <div class="contentMain clearfix">
+                    <div class="left navMenu">
+                        <div class="title">粉丝记录</div>
+                        <ul class="navList">
+                            <li class="active">
+                                <a href="fanRecord.html">
+                                    <i class="fa fa-home"></i>
+                                    粉丝记录
+                                </a>
+                            </li>
+                            <li>
+                                <a href="fanAnalysis1.html">
+                                    <i class="fa fa-home"></i>
+                                    粉丝分析
+                                </a>
+                            </li>
+                        </ul>
+                    </div>
+                    <div class="right contentMaincon">
+                        <div class="title">粉丝记录</div>
+                        <form action="###">
+                            <div class="divTable clearfix">
+                                <div class="inputDiv clearfix">
+                                    <input id="start"  class="Wdate" type="text" placeholder="开始日期" onFocus="WdatePicker({maxDate:'#F{$dp.$D(\'end\')}',readOnly:true})"/>
+                                    <span class="spanColor">至</span>
+                                    <input id="end"  class="Wdate" type="text" placeholder="结束日期" onFocus="WdatePicker({minDate:'#F{$dp.$D(\'start\')||\'%y-%M-{%d+1}\'}',readOnly:true})"/>　
+                                </div>
+                                <div class="inputDiv mr0">
+                                    <button type="submit" class="query">
+                                        <i class="fa fa-search"></i>
+                                        查询
+                                    </button>
+                                </div>
+                            </div>
+                        </form>
+
+                        <!--流量管理数据-->
+                        <table class="dataTable">
+                            <tr>
+                                <th>时间</th>
+                                <th>渠道</th>
+                                <th>粉丝ID</th>
+                                <th>手机</th>
+                                <th>行为</th>
+                            </tr>
+                            <tr>
+                                <td>2016.06.06</td>
+                                <td>微信</td>
+                                <td class="money"><a href="fanAnalysis.html">张ID</a></td>
+                                <td>1598876548</td>
+                                <td>转发《户外设备30强》</td>
+                            </tr>
+                            <tr>
+                                <td>2016.06.06</td>
+                                <td>微信</td>
+                                <td class="money"><a href="fanAnalysis.html">张ID</a></td>
+                                <td>1598876548</td>
+                                <td>转发《户外设备30强》</td>
+                            </tr>
+                            <tr>
+                                <td>2016.06.06</td>
+                                <td>微信</td>
+                                <td class="money"><a href="fanAnalysis.html">张ID</a></td>
+                                <td>1598876548</td>
+                                <td>转发《户外设备30强》</td>
+                            </tr>
+                            <tr>
+                                <td>2016.06.06</td>
+                                <td>微信</td>
+                                <td class="money"><a href="fanAnalysis.html">张ID</a></td>
+                                <td>1598876548</td>
+                                <td>转发《户外设备30强》</td>
+                            </tr>
+                            <tr>
+                                <td>2016.06.06</td>
+                                <td>微信</td>
+                                <td class="money"><a href="fanAnalysis.html">张ID</a></td>
+                                <td>1598876548</td>
+                                <td>转发《户外设备30强》</td>
+                            </tr>
+                        </table>
+
+                        <!--无数据提示-->
+                        <div class="notDataTips hide">
+                            <img src="../../assets/admin/images/notDataTips.png" alt=""/><br/>
+                            暂无数据
+                        </div>
+
+                        <!--正在加载图片-->
+                        <div class="loadingTip hide">
+                            <img src="../../assets/admin/images/loading.jpg" alt=""/><br/>
+                            正在加载,请稍后...
+                        </div>
+
+                        <!--分页-->
+                        <div class="paging clearfix">
+                            <ul class="page-menu clearfix">
+                                <p class="page-pre" data-pagenum="1"><i class="fa fa-angle-left"></i></p>
+
+                                <li class="active">1</li>
+
+                                <li class="liPage">2</li>
+
+                                <li class="liPage">3</li>
+
+                                <li class="liPage">4</li>
+
+                                <li class="liPage">5</li>
+
+                                <li class="liPage">6</li>
+
+                                <li class="liPage">7</li>
+
+                            </ul>
+                            <input type="text" class="page-num" id="pageNumTarget">
+                            <button type="button" class="btn-jump" id="targetButton">跳转</button>
+                            <p class="page-next" data-pagenum="2"><i class="fa fa-angle-right"></i></p>
+                            <input type="hidden" value="447" id="totalPages">
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="foot">
+            <div class="footMain">
+                <div class="ourMenuDiv">
+                    <ul class="clearfix ourMenu">
+                        <li>
+                            <a href="###">
+                                <p class="first">公司简介</p>
+                                <p class="last">公司简介</p>
+                            </a>
+                        </li>
+                        <li>
+                            <a href="###">
+                                <p class="first">人才招聘</p>
+                                <p class="last">人才招聘</p>
+                            </a>
+                        </li>
+                        <li>
+                            <a href="###">
+                                <p class="first">品牌合作</p>
+                                <p class="last">品牌合作</p>
+                            </a>
+                        </li>
+                        <li class="last">
+                            <a href="###">
+                                <p class="first">关于我们</p>
+                                <p class="last">关于我们</p>
+                            </a>
+                        </li>
+                    </ul>
+                </div>
+                <div class="ourInfor clearfix">
+                    <div class="copyright left">
+                        <p>
+                            E维科技有限公司Copyright© 2012-2016
+                        </p>
+
+                        <p>
+                            渝ICP备12043691号-1渝公网安备 31010102002040号
+                        </p>
+                        <p class="large">
+                            售后客服电话 : 023-58001118 <span>(周一至周五9:00-18:00)</span>
+                        </p>
+
+                    </div>
+                    <div class="left clearfix ourImg">
+                        <div class="left">
+                            <ul class="iconMenu clearfix">
+                                <li>
+                                    <span>
+                                        贴
+                                    </span>
+                                </li>
+                                <li>
+                                    <i class="fa fa-weixin"></i>
+                                </li>
+                                <li>
+                                    <i class="fa fa-weibo"></i>
+                                </li>
+                            </ul>
+                        </div>
+                        <div class="left">
+                            <img src="../../assets/admin/images/erCode.jpg" alt="" class="codeJpg"/>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <script src="../../assets/global/plugins/jquery/jquery-1.11.3.min.js"></script>
+    <script src="../../assets/admin/js/global.js"></script>
+    <script src="../../assets/global/plugins/My97DatePicker/WdatePicker.js"></script>
+    <script src="../../assets/admin/js/footHandle.js"></script>
+    <script>
+        jQuery(document).ready(function() {
+            /*分页居中*/
+            var ml = ($(".paging").outerWidth()+$(".page-num").outerWidth()+$(".btn-jump").outerWidth())/2;
+            $(".paging").get(0).style.marginLeft = -ml+"px";
+
+        });
+    </script>
+</body>
+</html>
