@@ -136,7 +136,7 @@
                                         售后客服电话 : 4000023080 <span>(周一至周五9:00-18:00)</span>
                                     </p>
                                     <p class="small">
-                                        渝ICP备15002338号-1 Copyright © 2014~2015 重庆都漫科技有限公司 版权所有
+                                        渝ICP备16006294号-2 Copyright © 2014~2015 重庆都漫科技有限公司 版权所有
                                     </p>
                                 </div>
                                 <div class="left clearfix ourImg">
@@ -207,11 +207,11 @@
                         }, 400, function(){
                             $('.section2').find('.product-img2').animate({
                                 opacity: '1',
-                                width:"400px",
-                                height:"400px"
+                                width:"690px",
+                                height:"480px"
                             },800,function(){
                                 $('.section2').find('.product-img2').animate({
-                                    left:"30%"
+                                    left:"25%"
                                 },800,function(){
                                     $('.section2').find('.text').animate({
                                         opacity: '1',
@@ -258,40 +258,44 @@
                     if(index == 4){
                         $('.section4').find('.bg4').delay(50).animate({
                             opacity: '1'
-                        },400,function(){
-                            if($(window).width()>1200){
-                                $('.section4').find('.product-img4').animate({
-                                    opacity:1,
-                                    width:"1150px",
-                                    height:"890px",
-                                    marginLeft:"-575px",
-                                    top:"0%"
-                                },800,function(){
-                                    $('.section4').find('.productionBg2').animate({
+                        },200,function(){
+                            if($(window).width()>1400){
+                                $('.section4').find('.bg4').delay(50).animate({
+                                    opacity: '1'
+                                },400,function(){
+                                    $('.section4').find('.product-img4').animate({
                                         opacity:1,
-                                        width:"350px",
-                                        height:"265px",
-                                        left:"15%",
-                                        top:"15%"
-                                    },200)
+                                        width:"1254px",
+                                        height:"860px",
+                                        marginLeft:"-625px",
+                                        top:"0%"
+                                    },800,function(){
+                                        $('.section4').find('.productionBg2').animate({
+                                            opacity:1,
+                                            width:"473px",
+                                            height:"287px",
+                                            left:"15%",
+                                            top:"15%"
+                                        },200)
+                                    });
                                 });
                             }
                             else if($(window).width()<1400){
                                 $('.section4').find('.product-img4').animate({
                                     opacity:1,
-                                    width:"900px",
-                                    height:"700px",
-                                    marginLeft:"-525px",
-                                    top:"0%"
+                                    width:"970px",
+                                    height:"690px",
+                                    marginLeft:"-485px",
+                                    top:"10%"
                                 },800,function(){
                                     $('.section4').find('.productionBg2').animate({
                                         opacity:1,
-                                        width:"340px",
-                                        height:"245px",
-                                        left:"5%",
+                                        width:"473px",
+                                        height:"287px",
+                                        left:"15%",
                                         top:"15%"
                                     },200)
-                                });
+                                })
                             }
                         });
                     }
@@ -334,20 +338,20 @@
                         }, 400, function(){
                             $('.section2').find('.product-img2').animate({
                                 opacity: '0',
-                                width:"500px",
-                                height:"500px"
-                            },800,function(){
+                                width:"866px",
+                                height:"640px"
+                            },200,function(){
                                 $('.section2').find('.product-img2').animate({
-                                    left:"50%"
-                                },800,function(){
+                                    left:"40%"
+                                },200,function(){
                                     $('.section2').find('.text').animate({
                                         opacity: '0',
                                         width:"300px",
                                         height:"100px"
-                                    },800,function(){
+                                    },200,function(){
                                         $('.section2').find('.text').animate({
                                             left:"60%"
-                                        },800)
+                                        },200)
                                     })
                                 })
                             });
@@ -389,15 +393,15 @@
                         },400,function(){
                             $('.section4').find('.product-img4').animate({
                                 opacity:0,
-                                width:"650px",
-                                height:"500px",
+                                width:"742px",
+                                height:"525px",
                                 marginLeft:"-325px",
                                 top:"30%"
                             },800,function(){
                                 $('.section4').find('.productionBg2').animate({
                                     opacity:0,
-                                    width:"200px",
-                                    height:"140px",
+                                    width:"236px",
+                                    height:"143px",
                                     left:"0%",
                                     top:"0%"
                                 },200)
