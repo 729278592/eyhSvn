@@ -706,7 +706,6 @@
                            $(this).closest(".application-card-content").find(".dq-application-th-item").find(".dq-application-icon-status-wait").removeClass("hide");
                            $(".item-action.second").removeClass("hide");
                            $(".item-action.second").next(".item-action").addClass("hide");
-
                        }else if($(this).is(".second")){
                            $(this).addClass("hide");
                            $(this).next(".item-action").removeClass("hide");
@@ -718,12 +717,6 @@
                            $(".item-action.three").next(".item-action").addClass("hide");
 
                        }else if($(this).is(".three")){
-                           $(this).addClass("hide");
-                           $(this).next(".item-action").removeClass("hide");
-                           $(".item-action.four").addClass("hide");
-                           $(this).closest(".application-card-content").find(".dq-application-last-item").find(".dq-application-icon-status-wait").addClass("hide");
-                           $(this).closest(".application-card-content").find(".dq-application-last-item").find(".dq-application-icon-status-suc").removeClass("hide");
-
 
 
                            if( $(this).closest(".common-list").next(".mask").get(0)){
@@ -734,10 +727,20 @@
                            }
                            $(".dailog.rechargeMoney").removeClass("hide");
                            heightAuto();
-
-
                        }
                     });
+
+                    $(".dailog .opreateBtn .btnSure").on("click",function(){
+                        $(this).closest(".dailog.rechargeMoney").addClass("hide");
+                        $(this).closest(".mask").addClass("hide");
+
+                        $(".item-action.three").addClass("hide");
+                        $(".item-action.three").next(".item-action").removeClass("hide");
+                        $(".item-action.four").addClass("hide");
+                        $(".item-action.three").closest(".application-card-content").find(".dq-application-last-item").find(".dq-application-icon-status-wait").addClass("hide");
+                        $(".item-action.three").closest(".application-card-content").find(".dq-application-last-item").find(".dq-application-icon-status-suc").removeClass("hide");
+                    });
+
                     $(".dailog .opreateBtn .btnCancel").on("click",function(){
                         $(this).closest(".dailog.rechargeMoney").addClass("hide");
                         $(this).closest(".mask").addClass("hide");
