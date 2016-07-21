@@ -30,7 +30,7 @@ html.overflow{overflow-y:hidden;}
     transition: background-color .5s ease-in-out;}
 .head-main{width: 90%;margin: 0 5%;}
 .logoDiv{padding: 0 0;}
-.logoDiv img{position: relative;top: 5px;}
+.logoDiv img{position: relative;top: 2px;}
 .dm-menu{padding-left: 0px;padding-top: 23px;}
 .dm-menu li{float: left;margin-left: 150px;}
 .dm-menu li a{color: #4f4949;}
