@@ -677,7 +677,7 @@
                             <div class="dailogHead">悬赏充值</div>
                             <div class="dailogContent">
                                 <p>
-                                    <span class="type">你已开通悬赏功能,请选择充值金额 </span>
+                                    <span class="type">你已开通悬赏功能,请选择充值金额 你已开通悬赏功能,请选择充值金额 你已开通悬赏功能,请选择充值金额 你已开通悬赏功能,请选择充值金额 </span>
                                     <select name="">
                                         <option value="200">200</option>
                                         <option value="200">200</option>
@@ -751,7 +751,9 @@
                         var d = $(".dailog");
                         d.each(function(){
                             var ht = -$(this).height()/2+"px";
+                            var wt = -$(this).outerWidth()/2+"px";
                             $(this).get(0).style.marginTop = ht;
+                            $(this).get(0).style.marginLeft = wt;
                         });
                     }
                     $(".item-action.red").on("click",function(){
