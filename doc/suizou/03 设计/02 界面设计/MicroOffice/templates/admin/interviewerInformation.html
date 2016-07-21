@@ -552,12 +552,16 @@
             <script>
                 $(function(){
                     /*通过*/
+                    function pass(obj){
+                        obj.closest("li").find(".dq-application-icon-status-wait").addClass("hide");
+                        obj.closest("li").removeClass("current").addClass("recommend");
+                        obj.closest("li").find(".dq-application-icon-status-suc").removeClass("hide");
+                        obj.closest("li").find(".dq-application-detail-status-btns").addClass("dq-application-btns-hide");
+                    }
                     $(".dq-application-detail-status-btns-suc").on("click",function(){
-                        $(this).closest("li").find(".dq-application-icon-status-wait").addClass("hide");
-                        $(this).closest("li").removeClass("current").addClass("recommend");
-                        $(this).closest("li").find(".dq-application-icon-status-suc").removeClass("hide");
-                        $(this).closest("li").find(".dq-application-detail-status-btns").addClass("dq-application-btns-hide");
+
                         if($(this).closest("li").is(".first")){
+                            pass($(this));
                             $(this).closest("li").siblings("li.second").find(".dq-application-icon-status-wait").removeClass("hide");
                             $(this).closest("li").siblings("li.second").find(".dq-application-icon-status-default").addClass("hide");
                             $(this).closest("li").siblings("li.second").find(".dq-application-detail-status-btns").removeClass("dq-application-btns-hide");
@@ -569,16 +573,15 @@
                             $(this).closest("li").siblings("li.three").find(".dq-application-detail-status-btns").removeClass("dq-application-btns-hide");
                             $(this).closest("li").siblings("li.three").addClass("current");
                             $(".dq-application-detail-psr:last").find(".dq-application-detail-delimiter").removeClass("default").addClass("suc")
-
+                            pass($(this));
 
                         }
                         if($(this).closest("li").is(".second")){
 //                            $(this).closest("li").prev("li").find(".dq-application-detail-status-btns").removeClass("dq-application-btns-hide");
                             $(this).closest("li").siblings("li.first").removeClass("recommend")
+                            pass($(this));
                         }else if($(this).closest("li").is(".three")){
 //                            $(this).closest("li").prev("li").find(".dq-application-detail-status-btns").removeClass("dq-application-btns-hide");
-                            $(this).closest("li").siblings("li.second").removeClass("recommend");
-
 
                             if( $(this).closest(".cards.content-side").next(".mask").get(0)){
                                 $(this).closest(".cards.content-side").next(".mask").removeClass("hide");
@@ -595,7 +598,16 @@
                         $(this).closest(".dailog.rechargeMoney").addClass("hide");
                         $(this).closest(".mask").addClass("hide");
                     });
+                    $(".dailog .opreateBtn .btnSure").on("click",function(){
+                        $(this).closest(".dailog.rechargeMoney").addClass("hide");
+                        $(this).closest(".mask").addClass("hide");
+                        $(".dq-application-status-card-item").find("li.second").removeClass("recommend");
 
+                        $(".dq-application-detail-status-btns-suc").closest("li.three").find(".dq-application-icon-status-wait").addClass("hide");
+                        $(".dq-application-detail-status-btns-suc").closest("li.three").removeClass("current").addClass("recommend");
+                        $(".dq-application-detail-status-btns-suc").closest("li.three").find(".dq-application-icon-status-suc").removeClass("hide");
+                        $(".dq-application-detail-status-btns-suc").closest("li.three").find(".dq-application-detail-status-btns").addClass("dq-application-btns-hide");
+                    });
                     /*单窗居中*/
                     function heightAuto(){
                         var d = $(".dailog");
