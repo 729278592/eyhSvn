@@ -675,7 +675,7 @@ a.keyword-button:hover,.keyword-button:active,.keyword-button:focus{color: #fff;
 .dailogContent p{width: 100%;margin-bottom: 10px;text-align: left;position: relative;color: #666;}
 .entryStep li .dailogContent p .type{display: inline-block;width: 80px;color: #999;}
 .dailogContent p textarea{vertical-align: top;border: 1px solid #efefef;}
-.rechargeMoney{text-align: center;}
+.rechargeMoney{text-align: center;width: 400px;}
 .auditRecharge{text-align: center;}
 .dailogContent p select{width: 130px;border: 1px solid #dbdbdb;padding: 5px 0 5px 10px;}
 .dailogContent p .fa-caret-down{position: absolute;right: 20px;top: 9px;}
