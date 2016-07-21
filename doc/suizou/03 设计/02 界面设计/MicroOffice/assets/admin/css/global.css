@@ -160,8 +160,8 @@ body{background-color: #f7f7f7;!important;}
 
 .loadingAnimate{position: absolute;left: 0;right: 0;top: 0;bottom: 0;z-index: 10;background: transparent;text-align: center;}
 .batch-action{height: 45px;line-height: 45px;}
-.loadingInfor{position: absolute;left: 50%;z-index: 10;margin-left: -70px;top: 50%;margin-top: -60px;}
-.loadingInfor img{width: 140px;}
+.loadingInfor{position: absolute;left: 50%;z-index: 10;margin-left: -70px;top: 50%;margin-top: -16px;}
+.loadingInfor img{width: 32px;}
 .search-box{line-height: 35px;}
 .quickInfor{padding: 15px 0;border: 1px solid #dbdbdb;width: 100%;}
 .quickInfor li{float: left;width: 24.5%;border-right: 1px solid #4c8bda;color: #666;text-align: center;padding: 5px 0;}
