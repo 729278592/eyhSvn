@@ -167,9 +167,7 @@
                                                 </div>
 
                                             </li>
-                                            <li>
-                                                <i class="fa fa-weibo"></i>
-                                            </li>
+
                                         </ul>
                                     </div>
                                 </div>
@@ -295,6 +293,7 @@
                         });
                     }
                     if(index == 5){
+                        $(".head").addClass("hover");
                         $('.section5').find('.bg3').delay(50).animate({
                             opacity: '1'
                         }, 100,function(){
@@ -408,6 +407,7 @@
 
                     }
                     if(index == 5){
+                        $(".head").removeClass("hover");
                         $('.section5').find('.bg3').delay(50).animate({
                             opacity: '0'
                         }, 400,function(){
