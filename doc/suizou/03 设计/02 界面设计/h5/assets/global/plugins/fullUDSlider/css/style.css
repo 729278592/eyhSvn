@@ -236,6 +236,8 @@ section{position: relative;}
 .el_bg8_box .btnInfor{display: inline-block;padding: 7px 15px;background: #c7c7c7;color: #efefef;float: right;font-size: 14px;}
 
 
+.nowPage{position: absolute;right: 5px;bottom: 5px;font-size: 14px;color: #333;font-weight: bold;}
+
 
 @media screen and (min-height: 560px) {
     .bg2 .el_bg2_infor{height: 320px;}
