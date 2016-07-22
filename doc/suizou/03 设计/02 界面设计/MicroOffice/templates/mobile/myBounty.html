@@ -76,16 +76,38 @@
                 <script src="../../assets/global/plugins/My97DatePicker/WdatePicker.js"></script>
             </div>
         </div>
+        <div class="weui_dialog_confirm hide" id="dialog1">
+        <div class="weui_mask bg"></div>
+        <div class="weui_dialog">
+            <div class="weui_dialog_hd"><strong class="weui_dialog_title">确认提现?</strong></div>
+            <div class="weui_dialog_bd">
+                <div>持卡人： <span class="type">张三</span></div>
+                <div>银行卡： <span class="type">交通银行</span></div>
+                <div>金　额： <span class="type">￥500</span></div>
+                <div>卡　号： <span class="type">555555555555555555566</span></div>
+                </div>
+            <div class="weui_dialog_ft">
+                <a href="javascript:;" class="weui_btn_dialog default btnCancle">取消</a>
+                <a href="javascript:;" class="weui_btn_dialog primary btnSure">确定</a>
+                </div>
+            </div>
+        </div>
     </div>
     <script src="../../assets/mobile/js/global.js"></script>
     <script src="../../assets/mobile/js/errMsg.js"></script>
     <script>
         $(function(){
+            $(".btnCancle").on("touchend",function(){
+                $(this).closest(".weui_dialog_confirm").addClass("hide")
+            });
+
             $(".btnMoney").on("touchend",function(){
                 if($(".weui_cell_bd.weui_cell_primary>p>.red").is(".hide")){
                     showMsg('提现成功');
                 }else{
-                    showMsg('请绑定银行卡')
+//                    showMsg('请绑定银行卡');
+                    $('#dialog1').removeClass("hide")
+                    $(".weui_toast").addClass("weui_toastshow");
                 }
             });
         })

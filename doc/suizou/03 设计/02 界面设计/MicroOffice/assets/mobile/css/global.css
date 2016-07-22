@@ -419,6 +419,7 @@ a.weui_btn.weui_btn_primary{font-size: 16px;}
 .weui_cells_form .weui_cell_ft.style span.ok{color: #999;}
 .weui_cell_bd.weui_cell_primary>p>.name{position: relative;left: 20%;color: #367c8a;}
 .weui_cell_bd.weui_cell_primary>p>.red{color: #ff0404;position: relative;left: 20%;}
+ .errDailog .weui_mask.bg{background: rgba(0, 0, 0, 0.6);}
 .weui_cell_bd.weui_cell_primary>p>.name.weui_cell_bd.weui_cell_primary.style p{color: #4a4a4a;}
 .moneyInfor{padding: 10px 15px;margin-top: 10px;background: #fff;border-top: 1px solid #efefef;border-bottom: 1px solid #efefef;}
 .moneyInfor p{width: 100%;font-size: 16px;color: #367c8a;}
@@ -451,7 +452,7 @@ a.weui_btn.weui_btn_primary{font-size: 16px;}
 .presentTable tr td{text-align: center;color: #666;padding: 8px 0;font-size: 14px;}
 .presentTable tr th,.presentTable tr td{border-top: 1px solid #dbdbdb;}
 
-
+.weui_dialog_confirm .weui_dialog .weui_dialog_hd,.weui_dialog_confirm .weui_dialog_ft a{font-size: 14px;}
 
 @-webkit-keyframes slideIn {
     from {
