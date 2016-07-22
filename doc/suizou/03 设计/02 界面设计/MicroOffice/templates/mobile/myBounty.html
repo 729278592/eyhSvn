@@ -1,0 +1,94 @@
+<!DOCTYPE html>
+<html>
+<head lang="en">
+    <meta charset="UTF-8">
+    <title>随走</title>
+    <meta name="viewport" content="width=device-width; initial-scale=1.0; user-scalable=no;">
+    <link rel="stylesheet" href="../../assets/global/plugins/font/css/font-awesome.min.css"/>
+    <link rel="stylesheet" href="../../assets/mobile/css/weui.css"/>
+    <link rel="stylesheet" href="../../assets/mobile/css/example.css"/>
+    <link rel="stylesheet" href="../../assets/mobile/css/global.css"/>
+    <script src="../../assets/global/plugins/jquery/jquery-1.11.3.min.js"></script>
+</head>
+<body>
+    <div class="container js_container absolute errDailog">
+        <div class="page">
+            <div class="bd">
+                <form action="#" id="form" onsubmit="return false">
+                    <div class="weui_cells_form mt0">
+                        <div class="weui_cells mt0 weui_cells_access">
+                            <a class="weui_cell" href="presentChioce.html">
+                                <div class="weui_cell_bd weui_cell_primary style">
+                                    <p>
+                                        银行卡
+                                        <span class="name hide">交通银行</span>
+                                        <span class="red ">请绑定银行卡</span>
+                                    </p>
+                                </div>
+                                <div class="weui_cell_ft style">
+                                    <span class="red">未绑定</span>
+                                    <span class="ok hide">已绑定</span>
+                                </div>
+                            </a>
+                        </div>
+                        <div class="moneyInfor">
+                            <p>
+                                可提现金额 : <span class="money">￥500.00</span>
+                            </p>
+                            <button type="submit" class="btnMoney">提现</button>
+                        </div>
+                    </div>
+                </form>
+                <div class="presentRecord">
+                    <p class="presenTitle">提现记录</p>
+                    <table class="presentTable">
+                        <!--<tr>-->
+                            <!--<th>金额</th>-->
+                            <!--<th>状态</th>-->
+                            <!--<th>时间</th>-->
+                        <!--</tr>-->
+                        <tr>
+                            <td>￥500</td>
+                            <td>失败</td>
+                            <td>2016-05-05</td>
+                        </tr>
+                        <tr>
+                            <td>￥500</td>
+                            <td>处理中</td>
+                            <td>2016-05-05</td>
+                        </tr>
+                        <tr>
+                            <td>￥500</td>
+                            <td>成功</td>
+                            <td>2016-05-05</td>
+                        </tr>
+                    </table>
+                    <div class="notConTip hide">
+                        <img src="../../assets/mobile/images/notContent.png" alt=""/>
+                        <p class="notInfor">
+                            暂无数据
+                        </p>
+                    </div>
+                </div>
+                <div class="weui_btn_area">
+                    <input type="text" readonly class="weui_btn weui_btn_primary saveBasic" id="saveBtn" value="返回个人中心">
+                </div>
+                <script src="../../assets/global/plugins/My97DatePicker/WdatePicker.js"></script>
+            </div>
+        </div>
+    </div>
+    <script src="../../assets/mobile/js/global.js"></script>
+    <script src="../../assets/mobile/js/errMsg.js"></script>
+    <script>
+        $(function(){
+            $(".btnMoney").on("touchend",function(){
+                if($(".weui_cell_bd.weui_cell_primary>p>.red").is(".hide")){
+                    showMsg('提现成功');
+                }else{
+                    showMsg('请绑定银行卡')
+                }
+            });
+        })
+    </script>
+</body>
+</html>

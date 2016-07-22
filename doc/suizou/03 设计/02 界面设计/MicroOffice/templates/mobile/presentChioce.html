@@ -1,0 +1,83 @@
+<!DOCTYPE html>
+<html>
+<head lang="en">
+    <meta charset="UTF-8">
+    <title>随走</title>
+    <meta name="viewport" content="width=device-width; initial-scale=1.0; user-scalable=no;">
+    <link rel="stylesheet" href="../../assets/global/plugins/font/css/font-awesome.min.css"/>
+    <link rel="stylesheet" href="../../assets/mobile/css/weui.css"/>
+    <link rel="stylesheet" href="../../assets/mobile/css/example.css"/>
+    <link rel="stylesheet" href="../../assets/mobile/css/global.css"/>
+    <script src="../../assets/global/plugins/jquery/jquery-1.11.3.min.js"></script>
+</head>
+<body>
+    <div class="container js_container absolute errDailog">
+        <div class="page">
+            <div class="bd">
+                <form action="#" id="form" onsubmit="return false">
+                    <div class="weui_cells weui_cells_form mt0">
+                        <div class="weui_cell">
+                            <div class="weui_cell_hd">
+                                <label class="weui_label">
+                                    持卡人
+                                </label>
+                            </div>
+                            <div class="weui_cell_bd weui_cell_primary">
+                                <input class="weui_input" type="text" id="personName" placeholder="请输入持卡人姓名" name=""/>
+                            </div>
+                        </div>
+                        <div class="weui_cell weui_cell_select">
+                            <div class="weui_cell_hd">
+                                <label class="weui_label">
+                                    银行
+                                </label>
+                            </div>
+                            <div class="weui_cell_bd weui_cell_primary">
+                                <select class="weui_select" name="select1">
+                                    <option selected="" value="交通银行">交通银行</option>
+                                    <option value="工商银行">工商银行</option>
+                                    <option value="中国银行">中国银行</option>
+                                    <option value="广发银行">广发银行</option>
+                                    <option value="中信银行">中信银行</option>
+                                </select>
+                            </div>
+                        </div>
+                        <div class="weui_cell">
+                            <div class="weui_cell_hd">
+                                <label class="weui_label">
+                                    卡号
+                                </label>
+                            </div>
+                            <div class="weui_cell_bd weui_cell_primary">
+                                <input class="weui_input" type="number" id="number" placeholder="请输入卡号" name=""/>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="weui_btn_area">
+                        <input type="submit" class="weui_btn weui_btn_primary saveBasic" id="saveBtn" value="保存">
+                    </div>
+                </form>
+                <script src="../../assets/global/plugins/My97DatePicker/WdatePicker.js"></script>
+            </div>
+        </div>
+    </div>
+    <script src="../../assets/mobile/js/global.js"></script>
+    <script src="../../assets/mobile/js/errMsg.js"></script>
+    <script>
+        $("#saveBtn").click(function(){
+           if($("#personName").val() == '') {
+                showMsg('姓名不能为空');
+                return false;
+            }
+            else if($("#number").val() == '') {
+                showMsg('卡号不能为空');
+                return false;
+            }else{
+               window.location.href = "myBounty.html";
+           }
+
+            return true;
+        });
+    </script>
+</body>
+</html>
