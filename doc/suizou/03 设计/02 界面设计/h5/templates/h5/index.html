@@ -1,0 +1,705 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+    <meta charset="utf-8">
+    <title></title>
+    <meta name="viewport" content="width=device-width; initial-scale=1.0; user-scalable=no;">
+    <link rel="stylesheet" href="../../assets/global/plugins/fullUDSlider/css/jquery.fullPage.css">
+    <link rel="stylesheet" href="../../assets/global/plugins/fullUDSlider/css/style.css">
+    <style type="text/css">
+        .btn_music{display:inline-block;width:35px;height:35px;background:url('../../assets/global/plugins/fullUDSlider/images/play.png') no-repeat center center;background-size:100% auto;position:absolute;z-index:100;right:15px;top:20px;}
+        .btn_music.on{background-image: url("../../assets/global/plugins/fullUDSlider/images/stop.png");}
+        .btn_music.transform{
+            -webkit-animation:rotating 2s linear infinite;
+            -moz-animation:rotating 2s linear infinite;
+            -o-animation:rotating 2s linear infinite;
+            animation:rotating 2s linear infinite}
+        @-webkit-keyframes rotating{from{-webkit-transform:rotate(0)}to{-webkit-transform:rotate(360deg)}}
+        @keyframes rotating{from{transform:rotate(0)}to{transform:rotate(360deg)}}
+        @-moz-keyframes rotating{from{-moz-transform:rotate(0)}to{-moz-transform:rotate(360deg)}}
+    </style>
+</head>
+<body>
+    <span id="playbox" class="btn_music on transform" onclick="playbox.init(this).play();">
+        <audio id="audio" loop src="../../assets/global/plugins/fullUDSlider/images/4.mp3"></audio>
+    </span>
+    <div id="dowebok">
+        <div class="section section1">
+            <div class="bg1">
+                <div class="el_box">
+                    <div class="el_box_bg"></div>
+                    <div class="el_box_text">
+                        <div class="el_box_logo"></div>
+                        <p class="website">www.suizou.com</p>
+                    </div>
+                </div>
+                <div class="el_text">
+                    <p class="largeTitle">重庆易优弧科技有限公司</p>
+
+                    <p class="smallTitle">九龙坡区袁家岗中新城上城6栋</p>
+
+                    <p>023-68610177</p>
+                </div>
+                <div class="jionUs">
+                    Join us
+                </div>
+            </div>
+        </div>
+        <div class="section section2">
+            <div class="bg2">
+                <div class="el_bg2_box">
+                    <div class="el_box_bg"></div>
+                    <div class="el_about_text">
+                        <p class="a_title">
+                            <span>关于我们</span>
+                            <span class="little">About us</span>
+                        </p>
+
+                        <p class="a_website">
+                            www.eyohu.com
+                        </p>
+                    </div>
+                </div>
+                <div class="el_bg2_infor">
+                    <div class="a_infor">
+                        重庆易优弧科技有限公司是移动互联网领域的创新企业，致力于为各类企业客户提供移动互联网以及大数据分析的完整解决方案，提供传统行业
+                        互联网——以及重庆易优弧科技有限公司是移动互联网领域创新企业，致力于为各类企业客户提供移动互联网以及大数据分析的完整解决方案，提供
+                        传统行业互联网——以及020的企业咨询，业务方向包括商业模式转型、主价值链重构、互联网思维变革、信息系统升级。
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="section section3">
+            <div class="bg2 bg3">
+                <div class="el_bg2_box">
+                    <div class="el_box_bg"></div>
+                    <div class="el_about_text">
+                        <p class="a_title">
+                            <span>业务介绍</span>
+                            <span class="little">About us</span>
+                        </p>
+
+                        <p class="a_website">
+                            www.eyohu.com
+                        </p>
+                    </div>
+                </div>
+                <div class="el_bg2_infor">
+                    <div class="a_infor">
+                        公司业务中国医药包括基于移动互联网的方案策划、营销推广、产品开发，并针对传统行业提供互联网+解决方案以及020电商解决方案。
+                        公司产品包括企业移动办公、客户联系管理、020电商平台、信息管理系统，并为客户提供微信服务好、企业号、Html5网站、后台管理系统、APP等的定制开发和运营推广。
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="section section4">
+            <div class="bg4">
+                <div class="el_b4_box">
+                    <div class="el_b4_text">
+                        <p class="largeText">产品介绍</p>
+                        <p>Product　introduction</p>
+                    </div>
+                    <div class="el_b4_bg"></div>
+                </div>
+                <div class="el_bg2_infor">
+                    <div class="a_infor">
+                        公司在汽车、房地产、服务业、农业等领域有多年经验，先后服务过多家企业，包括拓新地产、旺德地产、运通汽车集团、商社集团、东风风神
+                        、环宇二手车等，在信息化建设、020平台上有着丰富经验。 <br/>
+                        公司秉承"专业、敬业、创新、共赢"的企业理念，不断完善我们的产品、服务，为客户创新企业运作模式、有力的保障了企业业绩增长。我们愿以真诚和辛勤让移动互联网技术、运营
+                        和现代企业管理相融合，解决客户的难点、痛点，与客户携手共进。
+
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="section section5">
+            <div class="bg5">
+                <div class="el_bg5_bg"></div>
+                <div class="el_bg5_text"></div>
+                <div class="el_bg5_text1"></div>
+            </div>
+        </div>
+        <div class="section section6">
+            <div class="bg6">
+                <ul class="jobList">
+                    <li><span>程序员/3名</span></li>
+                    <li><span>薪资 : 5000-10000</span></li>
+                </ul>
+                <div class="jobInfor">
+                    <div class="jobBg"></div>
+                    <div class="jobLogo"></div>
+                    <div class="jobInforP">
+                        <p class="title">职位要求 :</p>
+
+                        <p>
+                            1、项目需求沟通，能很好的理解并形成需求规格文档
+                        </p>
+
+                        <p>
+                            2、根据需求规格较好的完成功能设计并形成设计文档
+                        </p>
+
+                        <p>
+                            3、根据设计文档有
+                        </p>
+
+                        <p>
+                            <a href="###" class="btnInfor">
+                                查看职位详情
+                            </a>
+                        </p>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="section section7">
+            <div class="bg6">
+                <ul class="jobList">
+                    <li><span>UI设计/3名</span></li>
+                    <li><span>薪资 : 3500-7800</span></li>
+                </ul>
+                <div class="jobInfor">
+                    <div class="jobBg"></div>
+                    <div class="jobLogo"></div>
+                    <div class="jobInforP">
+                        <p class="title">职位要求 :</p>
+
+                        <p>
+                            1、项目需求沟通，能很好的理解并形成需求规格文档
+                        </p>
+
+                        <p>
+                            2、根据需求规格较好的完成功能设计并形成设计文档
+                        </p>
+
+                        <p>
+                            3、根据设计文档有有计划高质量的完成功能开发并交付
+                        </p>
+
+                        <p>
+                            <a href="###" class="btnInfor">
+                                查看职位详情
+                            </a>
+                        </p>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="section section8">
+            <div class="bg8">
+                <div class="el_bg8_box">
+                    <div class="codeDiv">
+                        <div class="codeImg"></div>
+                        <p>长按二维码 <br/> 关注官微</p>
+                    </div>
+                    <div class="btnInforDiv">
+                        <a href="###" class="btnInfor">
+                            查看职位详情
+                        </a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="caretUp"></div>
+    <script src="../../assets/global/plugins/fullUDSlider/js/jquery-1.8.3.min.js"></script>
+    <script src="../../assets/global/plugins/fullUDSlider/js/jquery.fullPage.min.js"></script>
+    <script src="../../assets/global/plugins/fullUDSlider/js/jquery.easing.min.js"></script>
+    <script>
+        $(function(){
+            function section(){
+                $('.section1').find('.bg1').delay(50).animate({
+                    opacity:"1"
+                }, 1,function() {
+                    $('.section1').find('.el_box').animate({
+                        top: "10%",
+                        opacity: "1"
+                    }, 400,function(){
+                        $('.section1').find('.el_box_bg').addClass("transform");
+                        $('.section1').find('.el_box_logo').animate({
+                            width: "90px",
+                            height: "90px",
+                            left:"100%",
+                            top: "351%",
+                            opacity: "1"
+                        });
+                        $('.section1').find('.el_text').animate({
+                            bottom:"60px",
+                            opacity: "1"
+                        },1000);
+                        $('.section1').find('.jionUs').animate({
+                            bottom:"15px",
+                            opacity: "1"
+                        },1000);
+                    });
+                });
+            }
+            section();
+
+            $('#dowebok').fullpage({
+//                sectionsColor: ['#1bbc9b', '#4BBFC3', '#7BAABE', '#f90',"#f9c"],
+                afterLoad: function(anchorLink, index){
+                    if(index == 1){
+                        section()
+                    }
+                    if(index == 2){
+                        $('.section2').find('.bg2').delay(50).animate({
+                            opacity: '1'
+                        }, 400,function(){
+                            $('.section2').find('.el_box_bg').animate({
+                                opacity: '1',
+                                left:"10%"
+                            },1000);
+                            $('.section2').find('.el_box_bg').addClass("transform");
+
+                            $('.section2').find('.el_about_text').animate({
+                                opacity: '1',
+                                left:"25%"
+                            },1000,function(){
+                                $('.section2').find('.a_website').addClass("transform");
+                                $('.section2').find('.a_website').animate({
+                                    opacity: '1'
+                                },400,function(){
+                                    $('.section2').find('.el_bg2_infor').animate({
+                                        opacity:"1",
+                                        bottom:"5%"
+                                    },600,function(){
+                                        $('.section2').find('.a_infor').animate({
+                                            opacity:"1"
+                                        },600)
+                                    })
+
+                                });
+                            })
+
+                        });
+                    }
+                    if(index == 3){
+                        $('.section3').find('.bg2').delay(50).animate({
+                            opacity: '1'
+                        }, 400,function(){
+                            $('.section3').find('.el_box_bg').animate({
+                                opacity: '1',
+                                left:"15%"
+                            },1000);
+                            $('.section3').find('.el_box_bg').addClass("transform");
+
+                            $('.section3').find('.el_about_text').animate({
+                                opacity: '1',
+                                left:"25%"
+                            },1000,function(){
+                                $('.section3').find('.a_website').addClass("transform");
+                                $('.section3').find('.a_website').animate({
+                                    opacity: '1'
+                                },400,function(){
+                                    $('.section3').find('.el_bg2_infor').animate({
+                                        opacity:"1",
+                                        bottom:"5%"
+                                    },600,function(){
+                                        $('.section3').find('.a_infor').animate({
+                                            opacity:"1"
+                                        },600)
+                                    })
+                                });
+                            })
+                        });
+                    }
+                    if(index == 4){
+                        $('.section4').find('.bg4').delay(50).animate({
+                            opacity:"1"
+                        },500,function(){
+                            $('.section4').find('.el_b4_text').animate({
+                                opacity:"1",
+                                left:"10%"
+                            },500);
+                            $('.section4').find('.el_b4_bg').animate({
+                                opacity:"1",
+                                left:"10%"
+                            },500,function(){
+                                $('.section4').find('.el_bg2_infor').animate({
+                                    opacity:"1",
+                                    bottom:"5%"
+                                },600,function(){
+                                    $('.section4').find('.a_infor').animate({
+                                        opacity:"1"
+                                    },600)
+                                })
+                            });
+                        });
+                    }
+                    if(index == 5){
+                        $('.section5').find('.bg5').delay(50).animate({
+                            opacity:"1"
+                        },500,function(){
+                            $('.section5').find('.el_bg5_bg').animate({
+                                opacity:"1"
+                            },100,function(){
+                                $('.section5').find('.el_bg5_bg').addClass("shake");
+                                $('.section5').find('.el_bg5_text,.el_bg5_text1').animate({
+                                    opacity:"1"
+                                },500,function(){
+                                    $('.section5').find('.el_bg5_text').addClass("rotateX");
+                                    $('.section5').find('.el_bg5_text1').addClass("rotateX");
+                                });
+                            });
+                        });
+                    }
+                    if(index == 6){
+                        $('.section6').find('.bg6').delay(50).animate({
+                            opacity:"1"
+                        },500,function(){
+                            $('.section6').find('.bg6 .jobList li').eq(0).addClass("rotateX");
+                            $('.section6').find('.bg6 .jobList li').eq(0).animate({
+                                opacity:"1"
+                            },500,function(){
+                                $('.section6').find('.bg6 .jobList li').eq(1).addClass("rotateX");
+                                $('.section6').find('.bg6 .jobList li').eq(1).animate({
+                                    opacity:"1"
+                                },1000,function(){
+                                    $('.section6').find('.jobBg').addClass("transform");
+                                    $('.section6').find('.jobBg').animate({
+                                        opacity:"1"
+                                    },500,function(){
+                                        $('.section6').find('.jobInforP').animate({
+                                            opacity:"1"
+                                        },1000);
+                                        $('.section6').find('.jobLogo').addClass("rotateX");
+                                        $('.section6').find('.jobLogo').animate({
+                                            opacity:"1"
+                                        },1000)
+                                    })
+                                })
+                            })
+                        });
+                    }
+                    if(index == 7){
+                        $('.section7').find('.bg6').delay(50).animate({
+                            opacity:"1"
+                        },500,function(){
+                            $('.section7').find('.bg6 .jobList li').eq(0).addClass("rotateX");
+                            $('.section7').find('.bg6 .jobList li').eq(0).animate({
+                                opacity:"1"
+                            },500,function(){
+                                $('.section7').find('.bg6 .jobList li').eq(1).addClass("rotateX");
+                                $('.section7').find('.bg6 .jobList li').eq(1).animate({
+                                    opacity:"1"
+                                },1000,function(){
+                                    $('.section7').find('.jobBg').addClass("transform");
+                                    $('.section7').find('.jobBg').animate({
+                                        opacity:"1"
+                                    },500,function(){
+                                        $('.section7').find('.jobInforP').animate({
+                                            opacity:"1"
+                                        },1000);
+                                        $('.section7').find('.jobLogo').addClass("rotateX");
+                                        $('.section7').find('.jobLogo').animate({
+                                            opacity:"1"
+                                        },1000)
+                                    })
+                                })
+                            })
+                        });
+                    }
+                    if(index == 8){
+                        $('.section8').find('.bg8').delay(50).animate({
+                            opacity:"1"
+                        },500,function(){
+                            $('.section8').find('.el_bg8_box').animate({
+                                opacity:"1",
+                                bottom:"0"
+                            },500,function(){
+                                $('.section8').find('.codeDiv').animate({
+                                    opacity:"1",
+                                    bottom:"20%"
+                                },500);
+                                $('.section8').find('.btnInforDiv').animate({
+                                    opacity:"1",
+                                    bottom:"10%"
+                                },500);
+                            })
+                        });
+                    }
+                },
+                onLeave: function(index, direction){
+                    if(index == 1){
+                        $('.section1').find('.bg1').delay(500).animate({
+                            opacity:"1"
+                        }, 40,function() {
+                            $('.section1').find('.el_box').animate({
+                                top: "35%",
+                                opacity: "0"
+                            }, 40,function(){
+                                $('.section1').find('.el_box_bg').removeClass("transform");
+                                $('.section1').find('.el_box_logo').animate({
+                                    width: "45px",
+                                    height: "45px",
+                                    left:"120%",
+                                    top: "420%",
+                                    opacity: "0"
+                                });
+                                $('.section1').find('.el_text').animate({
+                                    bottom:"30px",
+                                    opacity: "0"
+                                },100);
+                                $('.section1').find('.jionUs').animate({
+                                    bottom:"0",
+                                    opacity: "0"
+                                },100);
+                            });
+                        });
+                    }
+                    if(index == 2){
+                        $('.section2').find('.bg2').delay(50).animate({
+                            opacity: '1'
+                        }, 40,function(){
+                            $('.section2').find('.el_box_bg').animate({
+                                opacity: '0',
+                                left:"-10%"
+                            },100);
+                            $('.section2').find('.el_box_bg').removeClass("transform");
+
+                            $('.section2').find('.el_about_text').animate({
+                                opacity: '0',
+                                left:"60%"
+                            },100,function(){
+                                $('.section2').find('.a_website').removeClass("transform");
+                                $('.section2').find('.a_website').animate({
+                                    opacity: '0'
+                                },4,function(){
+                                    $('.section2').find('.el_bg2_infor').animate({
+                                        opacity:"0",
+                                        bottom:"-5%"
+                                    },6,function(){
+                                        $('.section2').find('.a_infor').animate({
+                                            opacity:"0"
+                                        },6)
+                                    })
+
+                                });
+                            })
+
+                        });
+                    }
+                    if(index == 3){
+                        $('.section3').find('.bg2').delay(50).animate({
+                            opacity: '1'
+                        }, 40,function(){
+                            $('.section3').find('.el_box_bg').animate({
+                                opacity: '0',
+                                left:"-10%"
+                            },100);
+                            $('.section3').find('.el_box_bg').removeClass("transform");
+
+                            $('.section3').find('.el_about_text').animate({
+                                opacity: '0',
+                                left:"60%"
+                            },100,function(){
+                                $('.section3').find('.a_website').removeClass("transform");
+                                $('.section3').find('.a_website').animate({
+                                    opacity: '0'
+                                },4,function(){
+                                    $('.section3').find('.el_bg2_infor').animate({
+                                        opacity:"0",
+                                        bottom:"-5%"
+                                    },6,function(){
+                                        $('.section3').find('.a_infor').animate({
+                                            opacity:"0"
+                                        },6)
+                                    })
+                                });
+                            })
+
+                        });
+                    }
+                    if(index == 4){
+                        $('.section4').find('.bg4').delay(50).animate({
+                            opacity:"1"
+                        },50,function(){
+                            $('.section4').find('.el_b4_text').animate({
+                                opacity:"0",
+                                left:"70%"
+                            },50);
+                            $('.section4').find('.el_b4_bg').animate({
+                                opacity:"0",
+                                left:"-10%"
+                            },50,function(){
+                                $('.section4').find('.el_bg2_infor').animate({
+                                    opacity:"0",
+                                    bottom:"-5%"
+                                },60,function(){
+                                    $('.section4').find('.a_infor').animate({
+                                        opacity:"0"
+                                    },60)
+                                })
+                            });
+                        });
+                    }
+                    if(index == 5){
+                        $('.section5').find('.bg5').delay(50).animate({
+                            opacity:"1"
+                        },50,function(){
+                            $('.section5').find('.el_bg5_bg').animate({
+                                opacity:"0"
+                            },50,function(){
+                                $('.section5').find('.el_bg5_bg').removeClass("shake");
+                                $('.section5').find('.el_bg5_text,.el_bg5_text1').animate({
+                                    opacity:"0"
+                                },50,function(){
+                                    $('.section5').find('.el_bg5_text').removeClass("rotateX");
+                                    $('.section5').find('.el_bg5_text1').removeClass("rotateX");
+                                });
+                            });
+                        });
+                    }
+                    if(index == 6){
+                        $('.section6').find('.bg6').delay(50).animate({
+                            opacity:"1"
+                        },50,function(){
+                            $('.section6').find('.bg6 .jobList li').eq(0).removeClass("rotateX");
+                            $('.section6').find('.bg6 .jobList li').eq(0).animate({
+                                opacity:"0"
+                            },50,function(){
+                                $('.section6').find('.bg6 .jobList li').eq(1).removeClass("rotateX");
+                                $('.section6').find('.bg6 .jobList li').eq(1).animate({
+                                    opacity:"0"
+                                },10,function(){
+                                    $('.section6').find('.jobBg').removeClass("transform");
+                                    $('.section6').find('.jobBg').animate({
+                                        opacity:"0"
+                                    },50,function(){
+                                        $('.section6').find('.jobInforP').animate({
+                                            opacity:"0"
+                                        },10);
+                                        $('.section6').find('.jobLogo').removeClass("rotateX");
+                                        $('.section6').find('.jobLogo').animate({
+                                            opacity:"0"
+                                        },10)
+                                    })
+                                })
+                            })
+                        });
+                    }
+                    if(index == 7){
+                        $('.section7').find('.bg6').delay(50).animate({
+                            opacity:"1"
+                        },50,function(){
+                            $('.section7').find('.bg6 .jobList li').eq(0).removeClass("rotateX");
+                            $('.section7').find('.bg6 .jobList li').eq(0).animate({
+                                opacity:"0"
+                            },50,function(){
+                                $('.section7').find('.bg6 .jobList li').eq(1).removeClass("rotateX");
+                                $('.section7').find('.bg6 .jobList li').eq(1).animate({
+                                    opacity:"0"
+                                },10,function(){
+                                    $('.section7').find('.jobBg').removeClass("transform");
+                                    $('.section7').find('.jobBg').animate({
+                                        opacity:"0"
+                                    },50,function(){
+                                        $('.section7').find('.jobInforP').animate({
+                                            opacity:"0"
+                                        },10);
+                                        $('.section7').find('.jobLogo').removeClass("rotateX");
+                                        $('.section7').find('.jobLogo').animate({
+                                            opacity:"0"
+                                        },10)
+                                    })
+                                })
+                            })
+                        });
+                    }
+                    if(index == 8){
+                        $('.section8').find('.bg8').delay(50).animate({
+                            opacity:"1"
+                        },50,function(){
+                            $('.section8').find('.el_bg8_box').animate({
+                                opacity:"0",
+                                bottom:"-30%"
+                            },50,function(){
+                                $('.section8').find('.codeDiv').animate({
+                                    opacity:"0",
+                                    bottom:"0"
+                                },50);
+                                $('.section8').find('.btnInforDiv').animate({
+                                    opacity:"0",
+                                    bottom:"0"
+                                },50);
+                            })
+                        });
+                    }
+                },
+//                navigation: true,
+                continuousVertical: true
+            });
+        });
+    </script>
+    <script type="text/javascript">
+        var playbox = (function(){
+            //author:eric_wu
+            var _playbox = function(){
+                var that = this;
+                that.box = null;
+                that.player = null;
+                that.src = null;
+                that.on = false;
+                //
+                that.autoPlayFix = {
+                    on: true,
+                    //evtName: ("ontouchstart" in window)?"touchend":"click"
+                    evtName: ("ontouchstart" in window)?"touchstart":"mouseover"
+
+                }
+
+            };
+            _playbox.prototype = {
+                init: function(box_ele){
+                    this.box = "string" === typeof(box_ele)?document.getElementById(box_ele):box_ele;
+                    this.player = this.box.querySelectorAll("audio")[0];
+                    this.src = this.player.src;
+                    this.init = function(){return this;};
+                    this.autoPlayEvt(true);
+                    return this;
+                },
+                play: function(){
+                    if(this.autoPlayFix.on){
+                        this.autoPlayFix.on = false;
+                        this.autoPlayEvt(false);
+                    }
+                    this.on = !this.on;
+                    if(true == this.on){
+                        this.player.src = this.src;
+                        this.player.play();
+                    }else{
+                        this.player.pause();
+                        this.player.src = null;
+                    }
+                    if("function" == typeof(this.play_fn)){
+                        this.play_fn.call(this);
+                    }
+                },
+                handleEvent: function(evt){
+                    this.play();
+                },
+                autoPlayEvt: function(important){
+                    if(important || this.autoPlayFix.on){
+                        document.body.addEventListener(this.autoPlayFix.evtName, this, false);
+                    }else{
+                        document.body.removeEventListener(this.autoPlayFix.evtName, this, false);
+                    }
+                }
+            };
+            return new _playbox();
+        })();
+
+        playbox.play_fn = function(){
+            this.box.className = this.on?"btn_music on transform":"btn_music";
+        }
+    </script>
+
+    <script type="text/javascript">
+        $(document).ready(function(){
+            playbox.init("playbox");
+        });
+
+    </script>
+</body>
+</html>
