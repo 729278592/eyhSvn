@@ -37,7 +37,7 @@ html.overflow{overflow-y:hidden;}
 .dm-menu li.active a{color: #f16f05;}
 .dm-shopping{padding-top: 25px;width: 95px;height: 20px;}
 .dm-shopping a{color: #4f4949;}
-
+.btndownLoad{display: block;width: 100px;height: 30px;margin: 40px auto;text-align: center;color: #666;font-size: 14px;}
 /*index-content*/
 .dm-video{width: 1024px;margin: 40px auto;}
 .dm-list{width: 100%;}
@@ -123,6 +123,7 @@ p.proty,p.phone{color: #ff8105;font-size: 14px;margin: 5px 0;}
 .contantUsConHead .title{position: relative;left: -100px;}
 .contantUsConHead .title .companyName{font-size: 16px;color: #85dbfd;}
 .contantUsConCon{padding-top: 10px;}
+.contantUsConCon p.serviceTitle{font-size:20px;color: #333;text-align: center; }
 .contantUsConCon.style p{margin: 5px 0;font-size: 16px;color: #333;}
 .contantUsConCon p{font-size: 14px;color: #999;margin: 20px 0;text-indent: 28px;}
 .contantUsConCon p.style{font-size: 16px;color: #333;}
