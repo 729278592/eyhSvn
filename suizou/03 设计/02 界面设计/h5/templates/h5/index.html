@@ -6,6 +6,7 @@
     <meta name="viewport" content="width=device-width; initial-scale=1.0; user-scalable=no;">
     <link rel="stylesheet" href="../../assets/global/plugins/fullUDSlider/css/jquery.fullPage.css">
     <link rel="stylesheet" href="../../assets/global/plugins/fullUDSlider/css/style.css">
+    <link rel="stylesheet" href="../../assets/global/plugins/swiper/dist/css/swiper.min.css"/>
     <style type="text/css">
         .btn_music{display:inline-block;width:35px;height:35px;background:url('../../assets/global/plugins/fullUDSlider/images/play.png') no-repeat center center;background-size:100% auto;position:absolute;z-index:100;right:15px;top:20px;}
         .btn_music.on{background-image: url("../../assets/global/plugins/fullUDSlider/images/stop.png");}
@@ -99,7 +100,24 @@
                         <p class="largeText">产品介绍</p>
                         <p>Product　introduction</p>
                     </div>
-                    <div class="el_b4_bg"></div>
+                    <div class="el_b4_bg">
+                        <div class="swiper-container m0 swiper-container-horizontal" id="swiper-container">
+                            <div class="swiper-wrapper" style="transition-duration: 0ms; ">
+                                <div class="swiper-slide">
+                                    <img src="../../assets/h5/images/product1.jpg" alt="" class="w100"/>
+                                </div>
+                                <div class="swiper-slide">
+                                    <img src="../../assets/h5/images/product2.jpg" alt="" class="w100"/>
+                                </div>
+                                <div class="swiper-slide">
+                                    <img src="../../assets/h5/images/product3.jpg" alt="" class="w100"/>
+                                </div>
+                            </div>
+                            <div class="swiper-pagination"></div>
+                            <!--<div class="swiper-button-next"></div>-->
+                            <!--<div class="swiper-button-prev"></div>-->
+                        </div>
+                    </div>
                 </div>
                 <div class="el_bg2_infor">
                     <div class="a_infor">
@@ -705,6 +723,22 @@
             playbox.init("playbox");
         });
 
+    </script>
+    <script src="../../assets/global/plugins/swiper/dist/js/swiper.min.js"></script>
+    <script>
+        $(function(){
+            swiper = new Swiper('#swiper-container', {
+                //          prevButton:'.swiper-button-prev',
+                //          nextButton:'.swiper-button-next',
+                slidesPerView: 1,
+                pagination:'.swiper-pagination',
+                paginationClickable: true,
+                spaceBetween: 0,
+                loop:true,
+                autoplay: 5000,
+                autoplayDisableOnInteraction: false
+            });
+        })
     </script>
 </body>
 </html>
