@@ -71,24 +71,38 @@
             </div>
         </div>
         <div class="section section3">
-            <div class="bg2 bg3">
-                <div class="el_bg2_box">
-                    <div class="el_box_bg"></div>
-                    <div class="el_about_text">
-                        <p class="a_title">
-                            <span>业务介绍</span>
-                            <span class="little">About us</span>
-                        </p>
-
-                        <p class="a_website">
-                            www.eyohu.com
-                        </p>
+            <div class="bg4">
+                <div class="el_b4_box">
+                    <div class="el_b4_text">
+                        <p class="largeText">产品介绍</p>
+                        <p>Product　introduction</p>
+                    </div>
+                    <div class="el_b4_bg">
+                        <div class="swiper-container m0 swiper-container-horizontal" id="swiper-container">
+                            <div class="swiper-wrapper" style="transition-duration: 0ms; ">
+                                <div class="swiper-slide">
+                                    <img src="../../assets/h5/images/product1.jpg" alt="" class="w100"/>
+                                </div>
+                                <div class="swiper-slide">
+                                    <img src="../../assets/h5/images/product2.jpg" alt="" class="w100"/>
+                                </div>
+                                <div class="swiper-slide">
+                                    <img src="../../assets/h5/images/product3.jpg" alt="" class="w100"/>
+                                </div>
+                            </div>
+                            <div class="swiper-pagination"></div>
+                            <!--<div class="swiper-button-next"></div>-->
+                            <!--<div class="swiper-button-prev"></div>-->
+                        </div>
                     </div>
                 </div>
                 <div class="el_bg2_infor">
                     <div class="a_infor">
-                        公司业务中国医药包括基于移动互联网的方案策划、营销推广、产品开发，并针对传统行业提供互联网+解决方案以及020电商解决方案。
-                        公司产品包括企业移动办公、客户联系管理、020电商平台、信息管理系统，并为客户提供微信服务好、企业号、Html5网站、后台管理系统、APP等的定制开发和运营推广。
+                        公司在汽车、房地产、服务业、农业等领域有多年经验，先后服务过多家企业，包括拓新地产、旺德地产、运通汽车集团、商社集团、东风风神
+                        、环宇二手车等，在信息化建设、020平台上有着丰富经验。 <br/>
+                        公司秉承"专业、敬业、创新、共赢"的企业理念，不断完善我们的产品、服务，为客户创新企业运作模式、有力的保障了企业业绩增长。我们愿以真诚和辛勤让移动互联网技术、运营
+                        和现代企业管理相融合，解决客户的难点、痛点，与客户携手共进。
+
                     </div>
                 </div>
             </div>
@@ -131,13 +145,6 @@
             </div>
         </div>
         <div class="section section5">
-            <div class="bg5">
-                <div class="el_bg5_bg"></div>
-                <div class="el_bg5_text"></div>
-                <div class="el_bg5_text1"></div>
-            </div>
-        </div>
-        <div class="section section6">
             <div class="bg6">
                 <ul class="jobList">
                     <li><span>程序员/3名</span></li>
@@ -170,7 +177,7 @@
                 </div>
             </div>
         </div>
-        <div class="section section7">
+        <div class="section section6">
             <div class="bg6">
                 <ul class="jobList">
                     <li><span>UI设计/3名</span></li>
@@ -203,7 +210,7 @@
                 </div>
             </div>
         </div>
-        <div class="section section8">
+        <div class="section section7">
             <div class="bg8">
                 <div class="el_bg8_box">
                     <div class="codeDiv">
@@ -298,33 +305,26 @@
                         });
                     }
                     if(index == 3){
-                        $('.section3').find('.bg2').delay(50).animate({
-                            opacity: '1'
-                        }, 400,function(){
-                            $('.section3').find('.el_box_bg').animate({
-                                opacity: '1',
-                                left:"15%"
-                            },1000);
-                            $('.section3').find('.el_box_bg').addClass("transform");
-
-                            $('.section3').find('.el_about_text').animate({
-                                opacity: '1',
-                                left:"25%"
-                            },1000,function(){
-                                $('.section3').find('.a_website').addClass("transform");
-                                $('.section3').find('.a_website').animate({
-                                    opacity: '1'
-                                },400,function(){
-                                    $('.section3').find('.el_bg2_infor').animate({
-                                        opacity:"1",
-                                        bottom:"5%"
-                                    },600,function(){
-                                        $('.section3').find('.a_infor').animate({
-                                            opacity:"1"
-                                        },600)
-                                    })
-                                });
-                            })
+                        $('.section3').find('.bg4').delay(50).animate({
+                            opacity:"1"
+                        },500,function(){
+                            $('.section3').find('.el_b4_text').animate({
+                                opacity:"1",
+                                left:"10%"
+                            },500);
+                            $('.section3').find('.el_b4_bg').animate({
+                                opacity:"1",
+                                left:"10%"
+                            },500,function(){
+                                $('.section3').find('.el_bg2_infor').animate({
+                                    opacity:"1",
+                                    bottom:"5%"
+                                },600,function(){
+                                    $('.section3').find('.a_infor').animate({
+                                        opacity:"1"
+                                    },600)
+                                })
+                            });
                         });
                     }
                     if(index == 4){
@@ -350,21 +350,33 @@
                             });
                         });
                     }
+
                     if(index == 5){
-                        $('.section5').find('.bg5').delay(50).animate({
+                        $('.section5').find('.bg6').delay(50).animate({
                             opacity:"1"
                         },500,function(){
-                            $('.section5').find('.el_bg5_bg').animate({
+                            $('.section5').find('.bg6 .jobList li').eq(0).addClass("rotateX");
+                            $('.section5').find('.bg6 .jobList li').eq(0).animate({
                                 opacity:"1"
-                            },100,function(){
-                                $('.section5').find('.el_bg5_bg').addClass("shake");
-                                $('.section5').find('.el_bg5_text,.el_bg5_text1').animate({
+                            },500,function(){
+                                $('.section5').find('.bg6 .jobList li').eq(1).addClass("rotateX");
+                                $('.section5').find('.bg6 .jobList li').eq(1).animate({
                                     opacity:"1"
-                                },500,function(){
-                                    $('.section5').find('.el_bg5_text').addClass("rotateX");
-                                    $('.section5').find('.el_bg5_text1').addClass("rotateX");
-                                });
-                            });
+                                },1000,function(){
+                                    $('.section5').find('.jobBg').addClass("transform");
+                                    $('.section5').find('.jobBg').animate({
+                                        opacity:"1"
+                                    },500,function(){
+                                        $('.section5').find('.jobInforP').animate({
+                                            opacity:"1"
+                                        },1000);
+                                        $('.section5').find('.jobLogo').addClass("rotateX");
+                                        $('.section5').find('.jobLogo').animate({
+                                            opacity:"1"
+                                        },1000)
+                                    })
+                                })
+                            })
                         });
                     }
                     if(index == 6){
@@ -396,46 +408,18 @@
                         });
                     }
                     if(index == 7){
-                        $('.section7').find('.bg6').delay(50).animate({
+                        $('.section7').find('.bg8').delay(50).animate({
                             opacity:"1"
                         },500,function(){
-                            $('.section7').find('.bg6 .jobList li').eq(0).addClass("rotateX");
-                            $('.section7').find('.bg6 .jobList li').eq(0).animate({
-                                opacity:"1"
-                            },500,function(){
-                                $('.section7').find('.bg6 .jobList li').eq(1).addClass("rotateX");
-                                $('.section7').find('.bg6 .jobList li').eq(1).animate({
-                                    opacity:"1"
-                                },1000,function(){
-                                    $('.section7').find('.jobBg').addClass("transform");
-                                    $('.section7').find('.jobBg').animate({
-                                        opacity:"1"
-                                    },500,function(){
-                                        $('.section7').find('.jobInforP').animate({
-                                            opacity:"1"
-                                        },1000);
-                                        $('.section7').find('.jobLogo').addClass("rotateX");
-                                        $('.section7').find('.jobLogo').animate({
-                                            opacity:"1"
-                                        },1000)
-                                    })
-                                })
-                            })
-                        });
-                    }
-                    if(index == 8){
-                        $('.section8').find('.bg8').delay(50).animate({
-                            opacity:"1"
-                        },500,function(){
-                            $('.section8').find('.el_bg8_box').animate({
+                            $('.section7').find('.el_bg8_box').animate({
                                 opacity:"1",
                                 bottom:"0"
                             },500,function(){
-                                $('.section8').find('.codeDiv').animate({
+                                $('.section7').find('.codeDiv').animate({
                                     opacity:"1",
                                     bottom:"20%"
                                 },500);
-                                $('.section8').find('.btnInforDiv').animate({
+                                $('.section7').find('.btnInforDiv').animate({
                                     opacity:"1",
                                     bottom:"10%"
                                 },500);
@@ -504,7 +488,7 @@
                         });
                     }
                     if(index == 3){
-                        $('.section3').find('.bg2').delay(50).animate({
+                        $('.section3').find('.bg4').delay(50).animate({
                             opacity: '1'
                         }, 40,function(){
                             $('.section3').find('.el_box_bg').animate({
@@ -558,20 +542,31 @@
                         });
                     }
                     if(index == 5){
-                        $('.section5').find('.bg5').delay(50).animate({
+                        $('.section5').find('.bg6').delay(50).animate({
                             opacity:"1"
                         },50,function(){
-                            $('.section5').find('.el_bg5_bg').animate({
+                            $('.section5').find('.bg6 .jobList li').eq(0).removeClass("rotateX");
+                            $('.section5').find('.bg6 .jobList li').eq(0).animate({
                                 opacity:"0"
                             },50,function(){
-                                $('.section5').find('.el_bg5_bg').removeClass("shake");
-                                $('.section5').find('.el_bg5_text,.el_bg5_text1').animate({
+                                $('.section5').find('.bg6 .jobList li').eq(1).removeClass("rotateX");
+                                $('.section5').find('.bg6 .jobList li').eq(1).animate({
                                     opacity:"0"
-                                },50,function(){
-                                    $('.section5').find('.el_bg5_text').removeClass("rotateX");
-                                    $('.section5').find('.el_bg5_text1').removeClass("rotateX");
-                                });
-                            });
+                                },10,function(){
+                                    $('.section5').find('.jobBg').removeClass("transform");
+                                    $('.section5').find('.jobBg').animate({
+                                        opacity:"0"
+                                    },50,function(){
+                                        $('.section5').find('.jobInforP').animate({
+                                            opacity:"0"
+                                        },10);
+                                        $('.section5').find('.jobLogo').removeClass("rotateX");
+                                        $('.section5').find('.jobLogo').animate({
+                                            opacity:"0"
+                                        },10)
+                                    })
+                                })
+                            })
                         });
                     }
                     if(index == 6){
@@ -603,46 +598,18 @@
                         });
                     }
                     if(index == 7){
-                        $('.section7').find('.bg6').delay(50).animate({
+                        $('.section7').find('.bg8').delay(50).animate({
                             opacity:"1"
                         },50,function(){
-                            $('.section7').find('.bg6 .jobList li').eq(0).removeClass("rotateX");
-                            $('.section7').find('.bg6 .jobList li').eq(0).animate({
-                                opacity:"0"
-                            },50,function(){
-                                $('.section7').find('.bg6 .jobList li').eq(1).removeClass("rotateX");
-                                $('.section7').find('.bg6 .jobList li').eq(1).animate({
-                                    opacity:"0"
-                                },10,function(){
-                                    $('.section7').find('.jobBg').removeClass("transform");
-                                    $('.section7').find('.jobBg').animate({
-                                        opacity:"0"
-                                    },50,function(){
-                                        $('.section7').find('.jobInforP').animate({
-                                            opacity:"0"
-                                        },10);
-                                        $('.section7').find('.jobLogo').removeClass("rotateX");
-                                        $('.section7').find('.jobLogo').animate({
-                                            opacity:"0"
-                                        },10)
-                                    })
-                                })
-                            })
-                        });
-                    }
-                    if(index == 8){
-                        $('.section8').find('.bg8').delay(50).animate({
-                            opacity:"1"
-                        },50,function(){
-                            $('.section8').find('.el_bg8_box').animate({
+                            $('.section7').find('.el_bg8_box').animate({
                                 opacity:"0",
                                 bottom:"-30%"
                             },50,function(){
-                                $('.section8').find('.codeDiv').animate({
+                                $('.section7').find('.codeDiv').animate({
                                     opacity:"0",
                                     bottom:"0"
                                 },50);
-                                $('.section8').find('.btnInforDiv').animate({
+                                $('.section7').find('.btnInforDiv').animate({
                                     opacity:"0",
                                     bottom:"0"
                                 },50);
