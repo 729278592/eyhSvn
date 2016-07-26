@@ -6,6 +6,7 @@
     <link rel="stylesheet" href="../../assets/global/plugins/bootstrap-3.3.5/css/bootstrap.min.css"/>
     <link rel="stylesheet" href="../../assets/admin/css/asgo.css"/>
     <link rel="stylesheet" href="../../assets/admin/css/asgocommon.css"/>
+    <link rel="stylesheet" href="../../assets/global/plugins/slider/css/slider.css"/>
     <link rel="stylesheet" href="../../assets/admin/css/global.css"/>
     <link rel="stylesheet" href="../../assets/global/plugins/font/css/font-awesome.min.css"/>
     <script src="../../assets/global/plugins/jquery/jquery-1.11.3.min.js"></script>
@@ -160,24 +161,24 @@
 
                 </div>
             </div>
-            <script>
-                $(function(){
-                    $(".high-light-dashed").ajaxify({
-                        event: "click",
-                        target:'#admin-content-wrapper'
-                    });
+        <script>
+            $(function(){
+                $(".high-light-dashed").ajaxify({
+                    event: "click",
+                    target:'#admin-content-wrapper'
+                });
 
-                    /*账号操作*/
-                    $(".accountSettings").on("click",function(e){
-                        e.stopPropagation();
-                        if($(".account-selection").is(".hide")){
-                            $(".account-selection").removeClass("hide");
-                        }else{
-                            $(".account-selection").addClass("hide");
-                        }
-                    });
-                })
-            </script>
+                /*账号操作*/
+                $(".accountSettings").on("click",function(e){
+                    e.stopPropagation();
+                    if($(".account-selection").is(".hide")){
+                        $(".account-selection").removeClass("hide");
+                    }else{
+                        $(".account-selection").addClass("hide");
+                    }
+                });
+            })
+        </script>
         </div>
         <div class="slide-bar">
             <div class="slider-bar-l">
@@ -194,6 +195,13 @@
     <script src="../../assets/global/plugins/ajaxify/jquery-scrollto.js"></script>
     <script src="../../assets/global/plugins/ajaxify/jquery.ajaxify.js"></script>
     <script src="../../assets/admin/js/globals.js"></script>
-
+    <script src="../../assets/global/plugins/slider/js/slider.js"></script>
+    <script>
+        /*slider*/
+        $(".navSlider").slider({
+            defauTime:5000,
+            moveTime:600
+        });
+    </script>
 </body>
 </html>

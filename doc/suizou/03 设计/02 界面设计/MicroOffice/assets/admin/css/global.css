@@ -703,13 +703,15 @@ a.keyword-button:hover,.keyword-button:active,.keyword-button:focus{color: #fff;
 .amountTable tr td .deart{color: #999;}
 .amountTable tr td .styleH{display: inline-block;height: 1px;width: 15px;background: #999;position: relative;top: -5px;left: 10px;}
 
-
-
+.positions-table td, .positions-table th{text-align: center;}
+.positions-table .squaredCheckBox label{position: relative;top: -6px;}
+.positions-selected-position-delete{font-size: 14px;text-align: center;line-height: 18px;color: #fff;}
 .registerAggtrrment-infor{    width: 1024px;
     margin: 0 auto;
     position: relative;}
 .registerAggtrrment-infor h2{margin-bottom: 20px;}
 .registerAggtrrment-infor p{text-indent: 28px;}
+.h5-edit-area-label{padding-top: 0;}
 /*分页*/
 .paging{position: relative;left: 50%;margin: 20px 0;}
 .page-pre,.page-next{float: left;border-radius: 4px;background: #f2f2f2;color: #666;font-size: 16px;width: 40px;height: 30px;text-align: center;line-height: 30px;}

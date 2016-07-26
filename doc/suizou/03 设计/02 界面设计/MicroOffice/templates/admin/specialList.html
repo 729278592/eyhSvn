@@ -251,7 +251,7 @@
                                             <i class="fa fa-eye"></i><br/>
                                             预览
                                         </a>
-                                        <a href="#">
+                                        <a href="#" class="removeSpecil">
                                             <i class="fa fa-trash-o"></i><br/>
                                             删除
                                         </a>
@@ -276,7 +276,7 @@
                                             <i class="fa fa-eye"></i><br/>
                                             预览
                                         </a>
-                                        <a href="#">
+                                        <a href="#" class="removeSpecil">
                                             <i class="fa fa-trash-o"></i><br/>
                                             删除
                                         </a>
@@ -291,7 +291,29 @@
                     </div>
                 </div>
             </div>
+            <div class="mask-bg hide"></div>
+            <div class="mask hide">
+                <div class="dailog">
+                    <div class="dailogHead">操作</div>
+                    <div class="dailogContent style">
+                        <p>
+                            <span class="type">是否删除?</span>
+                        </p>
+                        <div class="opreateBtn">
+                            <button class="btnSure">确定</button>
+                            <button class="btnCancel">取消</button>
+                        </div>
+                    </div>
+                </div>
+            </div>
             <script>
+                /*居中*/
+                function pageAuto(_this){
+                    var ml = _this.outerWidth()/2;
+                    var mt = _this.outerHeight()/2;
+                    _this.get(0).style.marginLeft = -ml+"px";
+                    _this.get(0).style.marginTop = -mt+"px";
+                }
                 $(function(){
                     /*账号操作*/
                     $(".accountSettings").on("click",function(e){
@@ -302,7 +324,25 @@
                             $(".account-selection").addClass("hide");
                         }
                     });
-                })
+
+
+                    $(".pa15").delegate(".removeSpecil","click",function(){
+                        $(".mask,.mask-bg,.dailog").removeClass("hide");
+                        pageAuto($(".dailog"));
+                        $(this).closest("li").addClass("remove");
+                    });
+
+
+                    $(".btnSure").on('click',function(){
+                        $(".mask,.mask-bg,.dailog").addClass("hide");
+                        $(".remove").addClass("hide");
+                    });
+                    $(".btnCancel").on('click',function(){
+                        $(".mask,.mask-bg,.dailog").addClass("hide");
+                    })
+                });
+
+
             </script>
         </div>
         <div class="slide-bar">
@@ -317,13 +357,7 @@
         </div>
         <script>
             $(function(){
-                /*用户数据的删除*/
-                $(".removeSpecil").on("click",function(){
-                    var remove = confirm("确定删除?");
-                    if(remove==true){
-                        $(this).closest("li").remove();
-                    }
-                })
+
                 $(".addSpecial,.modifySpecil,.dataStatistics").ajaxify({
                     event: "click",
                     target:'#admin-content-wrapper'
