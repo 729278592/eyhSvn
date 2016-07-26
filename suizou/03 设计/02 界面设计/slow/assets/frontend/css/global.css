@@ -142,7 +142,7 @@ p.proty,p.phone{color: #ff8105;font-size: 14px;margin: 5px 0;}
 .produtionInfor .caretUp{position: relative;top: -5px;}
 
 .goList{width: 100%;margin-top: 20px;}
-.goList li{float: left;width: 25%;text-align: center;}
+.goList li{float: left;width: 33.3%;text-align: center;}
 .goList li div{display: inline-block;}
 .goList li .faDiv{width: 50px;height: 50px;line-height: 50px;font-size: 18px;border-radius: 100%;position: relative;top: -12px;}
 .goList li .faDiv img{width: 100%;height: 100%;}
