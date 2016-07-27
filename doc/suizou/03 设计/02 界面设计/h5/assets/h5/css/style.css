@@ -176,7 +176,7 @@ section{position: relative;}
 
 
 
-.section5 .bg6{opacity: 0;background:url(../images/bg2.jpg) no-repeat;background-size:100% 100%;width:100%;height:100%;background-position:0 0;position: absolute;}
+.section .bg6{opacity: 0;background:url(../images/bg2.jpg) no-repeat;background-size:100% 100%;width:100%;height:100%;background-position:0 0;position: absolute;}
 .bg6 .jobList{}
 .bg6 .jobList li{opacity: 0;font-size: 16px;color: #fff;background:url(../images/job1.png) no-repeat;background-size:100% 100%;width:185px;height:52px;background-position:0 0;position: absolute;left: 10%;}
 .bg6 .jobList li:first-child{top: 5%;}
@@ -227,15 +227,15 @@ section{position: relative;}
         transform: perspective(400px) rotateX(0);
     }
 }
-.section6 .bg6{opacity: 0;background:url(../images/bg2.jpg) no-repeat;background-size:100% 100%;width:100%;height:100%;background-position:0 0;position: absolute;}
+.section .bg6{opacity: 0;background:url(../images/bg2.jpg) no-repeat;background-size:100% 100%;width:100%;height:100%;background-position:0 0;position: absolute;}
 
-.section7 .bg8{opacity: 0;background:url(../images/bg2.jpg) no-repeat;background-size:100% 100%;width:100%;height:100%;background-position:0 0;position: absolute;}
+.sectionLast .bg8{opacity: 0;background:url(../images/bg2.jpg) no-repeat;background-size:100% 100%;width:100%;height:100%;background-position:0 0;position: absolute;}
 
-.section7 .el_bg8_box{position: absolute;bottom: -30%;left: 10%;width: 80%;height: 400px;background:url(../images/codeBg.png)no-repeat;background-size:100% 100%;}
+.sectionLast .el_bg8_box{position: absolute;bottom: -30%;left: 10%;width: 80%;height: 400px;background:url(../images/codeBg.png)no-repeat;background-size:100% 100%;}
 .el_bg8_box .codeDiv{text-align: center;opacity: 0;width: 120px;position: absolute;left: 56%;margin-left: -60px;bottom: 0;}
 .el_bg8_box .codeImg{width: 120px;height: 120px;background:url(../images/ercode.jpg)no-repeat;background-size:100% 100%;}
 .el_bg8_box .codeDiv p{font-size: 16px;color: #fff;}
-.el_bg8_box .btnInforDiv{position: absolute;bottom: 0;opacity: 0;left: 34%;width: 114px;height: 33px;}
+.el_bg8_box .btnInforDiv{position: absolute;bottom: 0;opacity: 0;left: 33%;width: 114px;height: 33px;}
 .el_bg8_box .btnInfor{display: inline-block;padding: 7px 15px;background: #c7c7c7;color: #efefef;float: right;font-size: 14px;}
 
 
