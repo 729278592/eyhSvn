@@ -74,8 +74,8 @@
             <div class="bg4">
                 <div class="el_b4_box">
                     <div class="el_b4_text">
-                        <p class="largeText">产品介绍</p>
-                        <p>Product　introduction</p>
+                        <p class="largeText">办公环境</p>
+                        <p>office</p>
                     </div>
                     <div class="el_b4_bg">
                         <div class="swiper-container m0 swiper-container-horizontal" id="swiper-container">
@@ -98,11 +98,8 @@
                 </div>
                 <div class="el_bg2_infor">
                     <div class="a_infor">
-                        公司在汽车、房地产、服务业、农业等领域有多年经验，先后服务过多家企业，包括拓新地产、旺德地产、运通汽车集团、商社集团、东风风神
-                        、环宇二手车等，在信息化建设、020平台上有着丰富经验。 <br/>
-                        公司秉承"专业、敬业、创新、共赢"的企业理念，不断完善我们的产品、服务，为客户创新企业运作模式、有力的保障了企业业绩增长。我们愿以真诚和辛勤让移动互联网技术、运营
-                        和现代企业管理相融合，解决客户的难点、痛点，与客户携手共进。
-
+                        公司业务中国医药包括基于移动互联网的方案策划、营销推广、产品开发，并针对传统行业提供互联网+解决方案以及020电商解决方案。
+                        公司产品包括企业移动办公、客户联系管理、020电商平台、信息管理系统，并为客户提供微信服务好、企业号、Html5网站、后台管理系统、APP等的定制开发和运营推广。
                     </div>
                 </div>
             </div>
@@ -115,7 +112,7 @@
                         <p>Product　introduction</p>
                     </div>
                     <div class="el_b4_bg">
-                        <div class="swiper-container m0 swiper-container-horizontal" id="swiper-container">
+                        <div class="swiper-container m0 swiper-container-horizontal" id="swiper-container1">
                             <div class="swiper-wrapper" style="transition-duration: 0ms; ">
                                 <div class="swiper-slide">
                                     <img src="../../assets/h5/images/product1.jpg" alt="" class="w100"/>
@@ -127,9 +124,9 @@
                                     <img src="../../assets/h5/images/product3.jpg" alt="" class="w100"/>
                                 </div>
                             </div>
-                            <div class="swiper-pagination"></div>
-                            <!--<div class="swiper-button-next"></div>-->
-                            <!--<div class="swiper-button-prev"></div>-->
+                            <!--<div class="swiper-pagination"></div>-->
+                            <div class="swiper-button-next"></div>
+                            <div class="swiper-button-prev"></div>
                         </div>
                     </div>
                 </div>
@@ -489,33 +486,25 @@
                     }
                     if(index == 3){
                         $('.section3').find('.bg4').delay(50).animate({
-                            opacity: '1'
-                        }, 40,function(){
-                            $('.section3').find('.el_box_bg').animate({
-                                opacity: '0',
+                            opacity:"1"
+                        },50,function(){
+                            $('.section3').find('.el_b4_text').animate({
+                                opacity:"0",
+                                left:"70%"
+                            },50);
+                            $('.section3').find('.el_b4_bg').animate({
+                                opacity:"0",
                                 left:"-10%"
-                            },100);
-                            $('.section3').find('.el_box_bg').removeClass("transform");
-
-                            $('.section3').find('.el_about_text').animate({
-                                opacity: '0',
-                                left:"60%"
-                            },100,function(){
-                                $('.section3').find('.a_website').removeClass("transform");
-                                $('.section3').find('.a_website').animate({
-                                    opacity: '0'
-                                },4,function(){
-                                    $('.section3').find('.el_bg2_infor').animate({
-                                        opacity:"0",
-                                        bottom:"-5%"
-                                    },6,function(){
-                                        $('.section3').find('.a_infor').animate({
-                                            opacity:"0"
-                                        },6)
-                                    })
-                                });
-                            })
-
+                            },50,function(){
+                                $('.section3').find('.el_bg2_infor').animate({
+                                    opacity:"0",
+                                    bottom:"-5%"
+                                },60,function(){
+                                    $('.section3').find('.a_infor').animate({
+                                        opacity:"0"
+                                    },60)
+                                })
+                            });
                         });
                     }
                     if(index == 4){
@@ -689,12 +678,26 @@
         $(document).ready(function(){
             playbox.init("playbox");
         });
-
     </script>
     <script src="../../assets/global/plugins/swiper/dist/js/swiper.min.js"></script>
     <script>
         $(function(){
-            swiper = new Swiper('#swiper-container', {
+            new Swiper('#swiper-container1', {
+                prevButton:'.swiper-button-prev',
+                nextButton:'.swiper-button-next',
+                slidesPerView: 1,
+//                pagination:'.swiper-pagination',
+//                paginationClickable: true,
+                spaceBetween: 0,
+                loop:true,
+                autoplay: 5000,
+                autoplayDisableOnInteraction: false
+            });
+
+
+        });
+        $(function(){
+            new Swiper('#swiper-container', {
                 //          prevButton:'.swiper-button-prev',
                 //          nextButton:'.swiper-button-next',
                 slidesPerView: 1,
