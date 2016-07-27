@@ -286,24 +286,24 @@
 
     /*第四屏离开动画*/
     function sectionOut4(){
-        $('.section4').find('.bg4').delay(50).animate({
+        $('.section4').find('.bg4').delay(5).animate({
             opacity:"1"
-        },50,function(){
+        },5,function(){
             $('.section4').find('.el_b4_text').animate({
                 opacity:"0",
                 left:"70%"
-            },50);
+            },5);
             $('.section4').find('.el_b4_bg').animate({
                 opacity:"0",
                 left:"-10%"
-            },50,function(){
+            },5,function(){
                 $('.section4').find('.el_bg2_infor').animate({
                     opacity:"0",
                     bottom:"-5%"
-                },60,function(){
+                },6,function(){
                     $('.section4').find('.a_infor').animate({
                         opacity:"0"
-                    },60)
+                    },6)
                 })
             });
         });
@@ -345,26 +345,26 @@
         var aninmateOut = $(".section").eq(num);
         aninmateOut.find('.bg6').animate({
             opacity:"1"
-        },0,function(){
+        },5,function(){
             aninmateOut.find('.bg6 .jobList li').eq(0).removeClass("rotateX");
             aninmateOut.find('.bg6 .jobList li').eq(0).animate({
                 opacity:"0"
-            },0,function(){
+            },5,function(){
                 aninmateOut.find('.bg6 .jobList li').eq(1).removeClass("rotateX");
                 aninmateOut.find('.bg6 .jobList li').eq(1).animate({
                     opacity:"0"
-                },0,function(){
+                },5,function(){
                     aninmateOut.find('.bg6 .jobBg').removeClass("transform");
                     aninmateOut.find('.bg6 .jobBg').animate({
                         opacity:"0"
-                    },0,function(){
+                    },5,function(){
                         aninmateOut.find('.bg6 .jobInforP').animate({
                             opacity:"0"
-                        },0);
+                        },5);
                         aninmateOut.find('.bg6 .jobLogo').removeClass("rotateX");
                         aninmateOut.find('.bg6 .jobLogo').animate({
                             opacity:"0"
-                        },0)
+                        },5)
                     })
                 })
             })
@@ -373,21 +373,21 @@
 
     /*最后一屏离开动画*/
     function sectionOutLast(){
-        $('.sectionLast').find('.bg8').delay(50).animate({
+        $('.sectionLast').find('.bg8').delay(5).animate({
             opacity:"1"
-        },50,function(){
+        },5,function(){
             $('.sectionLast').find('.el_bg8_box').animate({
                 opacity:"0",
                 bottom:"-30%"
-            },50,function(){
+            },5,function(){
                 $('.sectionLast').find('.codeDiv').animate({
                     opacity:"0",
                     bottom:"0"
-                },50);
+                },5);
                 $('.sectionLast').find('.btnInforDiv').animate({
                     opacity:"0",
                     bottom:"0"
-                },50);
+                },5);
             })
         });
 
@@ -458,13 +458,13 @@
                 });
             }
             if(swiper.activeIndex==1){
-                $('.section1').find('.bg1').delay(500).animate({
+                $('.section1').find('.bg1').delay(5).animate({
                     opacity:"1"
-                }, 40,function() {
+                }, 4,function() {
                     $('.section1').find('.el_box').animate({
                         top: "35%",
                         opacity: "0"
-                    }, 40,function(){
+                    }, 4,function(){
                         $('.section1').find('.el_box_bg').removeClass("transform");
                         $('.section1').find('.el_box_logo').animate({
                             width: "45px",
@@ -476,11 +476,11 @@
                         $('.section1').find('.el_text').animate({
                             bottom:"30px",
                             opacity: "0"
-                        },100);
+                        },10);
                         $('.section1').find('.jionUs').animate({
                             bottom:"0",
                             opacity: "0"
-                        },100);
+                        },10);
                     });
                 });
 
@@ -516,43 +516,43 @@
 
                 });
 
-                $('.section3').find('.bg4').delay(50).animate({
+                $('.section3').find('.bg4').delay(5).animate({
                     opacity:"1"
-                },50,function(){
+                },5,function(){
                     $('.section3').find('.el_b4_text').animate({
                         opacity:"0",
                         left:"70%"
-                    },50);
+                    },5);
                     $('.section3').find('.el_b4_bg').animate({
                         opacity:"0",
                         left:"-10%"
-                    },50,function(){
+                    },5,function(){
                         $('.section3').find('.el_bg2_infor').animate({
                             opacity:"0",
                             bottom:"-5%"
-                        },60,function(){
+                        },6,function(){
                             $('.section3').find('.a_infor').animate({
                                 opacity:"0"
-                            },60)
+                            },6)
                         })
                     });
                 });
 
             }
             if(swiper.activeIndex==2){
-                $('.section2').find('.bg2').delay(50).animate({
+                $('.section2').find('.bg2').delay(5).animate({
                     opacity: '1'
-                }, 40,function(){
+                }, 4,function(){
                     $('.section2').find('.el_box_bg').animate({
                         opacity: '0',
                         left:"-10%"
-                    },100);
+                    },10);
                     $('.section2').find('.el_box_bg').removeClass("transform");
 
                     $('.section2').find('.el_about_text').animate({
                         opacity: '0',
                         left:"60%"
-                    },100,function(){
+                    },10,function(){
                         $('.section2').find('.a_website').removeClass("transform");
                         $('.section2').find('.a_website').animate({
                             opacity: '0'
@@ -593,47 +593,47 @@
                     });
                 });
 
-                $('.section4').find('.bg4').delay(50).animate({
+                $('.section4').find('.bg4').delay(5).animate({
                     opacity:"1"
-                },50,function(){
+                },5,function(){
                     $('.section4').find('.el_b4_text').animate({
                         opacity:"0",
                         left:"70%"
-                    },50);
+                    },5);
                     $('.section4').find('.el_b4_bg').animate({
                         opacity:"0",
                         left:"-10%"
-                    },50,function(){
+                    },5,function(){
                         $('.section4').find('.el_bg2_infor').animate({
                             opacity:"0",
                             bottom:"-5%"
-                        },60,function(){
+                        },6,function(){
                             $('.section4').find('.a_infor').animate({
                                 opacity:"0"
-                            },60)
+                            },6)
                         })
                     });
                 });
             }
             if(swiper.activeIndex==3){
-                $('.section3').find('.bg4').delay(50).animate({
+                $('.section3').find('.bg4').delay(5).animate({
                     opacity:"1"
-                },50,function(){
+                },5,function(){
                     $('.section3').find('.el_b4_text').animate({
                         opacity:"0",
                         left:"70%"
-                    },50);
+                    },5);
                     $('.section3').find('.el_b4_bg').animate({
                         opacity:"0",
                         left:"-10%"
-                    },50,function(){
+                    },5,function(){
                         $('.section3').find('.el_bg2_infor').animate({
                             opacity:"0",
                             bottom:"-5%"
-                        },60,function(){
+                        },6,function(){
                             $('.section3').find('.a_infor').animate({
                                 opacity:"0"
-                            },60)
+                            },6)
                         })
                     });
                 });
@@ -660,28 +660,28 @@
                     });
                 });
 
-                $('.section5').find('.bg6').delay(50).animate({
+                $('.section5').find('.bg6').delay(5).animate({
                     opacity:"1"
-                },50,function(){
+                },5,function(){
                     $('.section5').find('.bg6 .jobList li').eq(0).removeClass("rotateX");
                     $('.section5').find('.bg6 .jobList li').eq(0).animate({
                         opacity:"0"
-                    },50,function(){
+                    },5,function(){
                         $('.section5').find('.bg6 .jobList li').eq(1).removeClass("rotateX");
                         $('.section5').find('.bg6 .jobList li').eq(1).animate({
                             opacity:"0"
-                        },10,function(){
+                        },1,function(){
                             $('.section5').find('.jobBg').removeClass("transform");
                             $('.section5').find('.jobBg').animate({
                                 opacity:"0"
-                            },50,function(){
+                            },5,function(){
                                 $('.section5').find('.jobInforP').animate({
                                     opacity:"0"
-                                },10);
+                                },1);
                                 $('.section5').find('.jobLogo').removeClass("rotateX");
                                 $('.section5').find('.jobLogo').animate({
                                     opacity:"0"
-                                },10)
+                                },1)
                             })
                         })
                     })
@@ -691,7 +691,8 @@
 				if(swiper.activeIndex==4){					
 					sectionInLast();
 				}
-			}else if(positionNum==1){
+			}
+            else if(positionNum==1){
 				if(swiper.activeIndex==4){
 					sectionOut4();
 					sectionJobIn(swiper.activeIndex);
@@ -701,7 +702,8 @@
 					sectionJobOut(swiper.activeIndex-1);
 					sectionInLast();
 				}
-			}else if(positionNum==2){
+			}
+            else if(positionNum==2){
 				if(swiper.activeIndex==4){
 					sectionOut4();
 					sectionJobIn(swiper.activeIndex);
@@ -710,13 +712,14 @@
 				if(swiper.activeIndex==5){
 					sectionJobOut(swiper.activeIndex-1);
 					sectionJobIn(swiper.activeIndex);
-					sectionInLast();
+					sectionOutLast();
 				}
 				if(swiper.activeIndex==6){
 					sectionJobOut(swiper.activeIndex-1);
 					sectionInLast();
 				}
-			}else if(positionNum==3){
+			}
+            else if(positionNum==3){
 				if(swiper.activeIndex==4){
 					sectionOut4();
 					sectionJobIn(swiper.activeIndex);
@@ -762,7 +765,8 @@
 					sectionJobOut(swiper.activeIndex-1);
 					sectionInLast();
 				}
-			}else if(positionNum==5){
+			}
+            else if(positionNum==5){
 				if(swiper.activeIndex==4){
 					sectionOut4();
 					sectionJobIn(swiper.activeIndex);
@@ -793,7 +797,7 @@
 					sectionInLast();
 				}
 			}
-                                    
+
         }
     });
 

@@ -719,6 +719,16 @@ a.keyword-button:hover,.keyword-button:active,.keyword-button:focus{color: #fff;
 .h5-edit-area-label{padding-top: 0;}
 .content--main-side .content-side {right: -50px;width: 320px;}
 .actions-btns.card{width: 300px;}
+.styles-item.mr0{margin-right: 0;}
+.styles-item-img{width: 189.7px;height: 189px;}
+.styles-item{text-align: left;}
+.styles-item p{width: 189px;font-size: 14px;display: block;padding: 5px 0;height: 30px;}
+.styles-item p .free{color: #00d449;}
+.styles-item p .style{border-radius: 2px;display: inline-block;padding: 2px 15px;background: #f1c411;color: #fff;}
+.styles-item p .money{font-size: 18px;color: #f1c411;}
+
+
+
 
 .phone{width: 306px;height: 625px;background: url(../images/iphone-bg.png) no-repeat;background-size: 100% 100%;overflow: hidden;}
 .el_phone{width: 270px;height: 500px;margin: 65px auto;position: relative;overflow-y: hidden;}
