@@ -1,14 +1,14 @@
 <html class="overflow" lang="en">
 <head>
     <meta charset="utf-8">
-    <title>Swiper demo</title>
+    <title>随走</title>
     <meta name="viewport" content="width=device-width, initial-scale=1, minimum-scale=1, maximum-scale=1">
     <!-- Link Swiper's CSS -->
     <link rel="stylesheet" href="../../assets/global/plugins/swiper/dist/css/swiper.min.css">
     <link rel="stylesheet" href="../../assets/h5/css/style.css"/>
     <style type="text/css">
-        .btn_music{display:inline-block;width:35px;height:35px;background:url('../../assets/h5/images/play.png') no-repeat center center;background-size:100% auto;position:absolute;z-index:100;right:15px;top:20px;}
-        .btn_music.on{background-image: url("../../assets/h5/images/stop.png");}
+        .btn_music{display:inline-block;width:35px;height:35px;background:url('../../assets/admin/images/h5images/play.png') no-repeat center center;background-size:100% auto;position:absolute;z-index:100;right:15px;top:20px;}
+        .btn_music.on{background-image: url("../../assets/admin/images/h5images/stop.png");}
         .btn_music.transform{
             -webkit-animation:rotating 2s linear infinite;
             -moz-animation:rotating 2s linear infinite;
@@ -22,7 +22,7 @@
 <body class="overflow">
 <!-- Swiper -->
     <span id="playbox" class="btn_music on transform" onclick="playbox.init(this).play();">
-        <audio id="audio" loop src="../../assets/h5/images/4.mp3"></audio>
+        <audio id="audio" loop src="../../assets/admin/images/h5images/4.mp3"></audio>
     </span>
     <div id="dowebok">
     </div>
@@ -90,13 +90,13 @@
                         <div class="swiper-container m0 swiper-container-horizontal" id="swiper-container2">
                             <div class="swiper-wrapper" style="transition-duration: 0ms; ">
                                 <div class="swiper-slide">
-                                    <img src="../../assets/h5/images/product1.jpg" alt="" class="w100"/>
+                                    <img src="../../assets/admin/images/h5images/product1.jpg" alt="" class="w100"/>
                                 </div>
                                 <div class="swiper-slide">
-                                    <img src="../../assets/h5/images/product2.jpg" alt="" class="w100"/>
+                                    <img src="../../assets/admin/images/h5images/product2.jpg" alt="" class="w100"/>
                                 </div>
                                 <div class="swiper-slide">
-                                    <img src="../../assets/h5/images/product3.jpg" alt="" class="w100"/>
+                                    <img src="../../assets/admin/images/h5images/product3.jpg" alt="" class="w100"/>
                                 </div>
                             </div>
                             <!--<div class="swiper-pagination"></div>-->
@@ -126,13 +126,13 @@
                         <div class="swiper-container m0 swiper-container-horizontal" id="swiper-container3">
                             <div class="swiper-wrapper" style="transition-duration: 0ms; ">
                                 <div class="swiper-slide">
-                                    <img src="../../assets/h5/images/product1.jpg" alt="" class="w100"/>
+                                    <img src="../../assets/admin/images/h5images/product1.jpg" alt="" class="w100"/>
                                 </div>
                                 <div class="swiper-slide">
-                                    <img src="../../assets/h5/images/product2.jpg" alt="" class="w100"/>
+                                    <img src="../../assets/admin/images/h5images/product2.jpg" alt="" class="w100"/>
                                 </div>
                                 <div class="swiper-slide">
-                                    <img src="../../assets/h5/images/product3.jpg" alt="" class="w100"/>
+                                    <img src="../../assets/admin/images/h5images/product3.jpg" alt="" class="w100"/>
                                 </div>
                             </div>
                             <!--<div class="swiper-pagination"></div>-->
@@ -241,13 +241,13 @@
         </div>
     </div>
     </div>
-<!-- Add Pagination -->
-<!--<div class="swiper-pagination"></div>-->
-</div>
-<div class="nowPage">
-    <span class="nowPageSpan">1</span>/<span class="allPageSpan"></span>
-</div>
-<div class="caretUp"></div>
+    <!-- Add Pagination -->
+    <!--<div class="swiper-pagination"></div>-->
+    </div>
+    <div class="nowPage">
+        <span class="nowPageSpan">1</span>/<span class="allPageSpan"></span>
+    </div>
+    <div class="caretUp"></div>
     <!-- Swiper JS -->
     <script src="../../assets/global/plugins/swiper/dist/js/swiper.min.js"></script>
     <script src="../../assets/global/plugins/jquery/jquery-1.11.3.min.js"></script>
@@ -752,7 +752,6 @@
         }
     });
 
-
     $(function(){
         new Swiper('#swiper-container2', {
             prevButton:'.swiper-button-prev',
@@ -780,9 +779,6 @@
         });
     });
     </script>
-
-
-
     <script type="text/javascript">
         var playbox = (function(){
             //author:eric_wu

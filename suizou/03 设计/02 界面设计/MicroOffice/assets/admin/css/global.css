@@ -718,6 +718,7 @@ a.keyword-button:hover,.keyword-button:active,.keyword-button:focus{color: #fff;
 .registerAggtrrment-infor p{text-indent: 28px;}
 .h5-edit-area-label{padding-top: 0;}
 .content--main-side .content-side {right: -50px;width: 320px;}
+.actions-btns.card{width: 300px;}
 
 .phone{width: 306px;height: 625px;background: url(../images/iphone-bg.png) no-repeat;background-size: 100% 100%;overflow: hidden;}
 .el_phone{width: 270px;height: 500px;margin: 65px auto;position: relative;overflow-y: hidden;}
