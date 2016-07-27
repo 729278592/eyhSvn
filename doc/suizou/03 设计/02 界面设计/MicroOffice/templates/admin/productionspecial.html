@@ -303,23 +303,23 @@
                             <div class="h5-edit-area styles">
                                 <div class="h5-edit-area-label">专题风格</div>
                                 <ul class="h5-edit-area-editing">
-                                    <li class="styles-item">
-                                        <img src="" width="82" height="82" class="styles-item-img">
+                                    <li class="styles-item selected">
+                                        <img src="../../assets/admin/images/template0_logo.jpg" width="82" height="82" class="styles-item-img">
                                         <br>
                                         <span class="styles-item-label">搞怪蓝人</span>
                                     </li>
                                     <li class="styles-item">
-                                        <img src="" width="82" height="82" class="styles-item-img">
+                                        <img src="../../assets/admin/images/template1_logo.jpg" width="82" height="82" class="styles-item-img">
                                         <br>
                                         <span class="styles-item-label">童趣天空</span>
                                     </li>
                                     <li class="styles-item">
-                                        <img src="" width="82" height="82" class="styles-item-img">
+                                        <img src="../../assets/admin/images/template2_logo.jpg" width="82" height="82" class="styles-item-img">
                                         <br>
                                         <span class="styles-item-label">变换几何</span>
                                     </li>
-                                    <li class="styles-item selected">
-                                        <img src="" width="82" height="82" class="styles-item-img">
+                                    <li class="styles-item">
+                                        <img src="../../assets/admin/images/template3_logo.png" width="82" height="82" class="styles-item-img">
                                         <br>
                                         <span class="styles-item-label">办公桌面</span>
                                     </li>
@@ -441,6 +441,12 @@
 //                    $(".positions-table td.time").each(function(i){
 //                        arr.push($.trim($(this).text()).replace(/-/g,''));
 //                    });
+
+
+                    $(".h5-edit-area-editing li").on("click",function(){
+                        $(this).addClass("selected");
+                        $(this).siblings("li").removeClass("selected");
+                    })
 
                 })
             </script>
