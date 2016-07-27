@@ -397,6 +397,7 @@
                                     if(that.attr("data")==$(this).attr("dataNum")){
                                         $(this).remove();
                                         jobNum($(".positions-table-wrapper tbody tr.selected").size());
+                                        that.removeAttr("data");
                                     }
                                 })
 
@@ -417,6 +418,9 @@
                         })
                     });
 
+                    $(".positions-table .squaredCheckBox").on("click",function(e){
+                        e.preventDefault();
+                    })
 
                     /*删除职位*/
                     $(".positions-selected").delegate(".positions-selected-position-delete","click",function(){
