@@ -200,9 +200,8 @@
                                                     发布时间
                                                     <!--<i class="fa fa-caret-up"></i>-->
                                                 </th>
-                                                <th>职位名称</th>
-                                                <th>发布人</th>
-                                                <th>
+                                                <th width="25%;">职位名称</th>
+                                                <th width="30%">
                                                     地区
                                                 </th>
                                                 <th>
@@ -220,7 +219,6 @@
                                                 </td>
                                                 <td class="time">2016-07-25</td>
                                                 <td dq-title="yy1" length="12" class="">yy1</td>
-                                                <td class="">是</td>
                                                 <td class="">长沙，常州</td>
                                                 <td class="">全职</td>
                                                 <td class="">社招</td>
@@ -232,7 +230,6 @@
                                                 </td>
                                                 <td class="time">2016-07-20</td>
                                                 <td dq-title="sf" length="12" class="">sf</td>
-                                                <td class="">是</td>
                                                 <td class="">上海</td>
                                                 <td class="">全职</td>
                                                 <td class="">社招</td>
@@ -244,7 +241,6 @@
                                                 </td>
                                                 <td class="time">2016-05-15</td>
                                                 <td dq-title="sf3" length="12" class="">sf3</td>
-                                                <td class="">是</td>
                                                 <td class="">上海</td>
                                                 <td class="">全职</td>
                                                 <td class="">社招</td>
@@ -256,7 +252,6 @@
                                                 </td>
                                                 <td class="time">2016-05-12</td>
                                                 <td dq-title="yy" length="12" class="">yy</td>
-                                                <td class="">是</td>
                                                 <td class="">长沙，常州</td>
                                                 <td class="">全职</td>
                                                 <td class="">社招</td>
@@ -268,7 +263,6 @@
                                                 </td>
                                                 <td class="time">2016-05-10</td>
                                                 <td dq-title="sf2" length="12" class="">sf2</td>
-                                                <td class="">是</td>
                                                 <td class="">上海</td>
                                                 <td class="">全职</td>
                                                 <td class="">社招</td>
@@ -280,7 +274,6 @@
                                                 </td>
                                                 <td class="time">2016-05-9</td>
                                                 <td dq-title="sf1" length="12" class="">sf1</td>
-                                                <td class="">是</td>
                                                 <td class="">上海</td>
                                                 <td class="">全职</td>
                                                 <td class="">社招</td>
@@ -313,7 +306,7 @@
                                     <li class="styles-item">
                                         <img src="../../assets/admin/images/template1_logo.jpg" class="styles-item-img">
                                         <p class="clearfix">
-                                            <button type="button" class="style left">购买</button>
+                                            <a class="style left">购买</a>
                                             <span class="money right">￥500.00</span>
                                         </p>
                                         <span class="styles-item-label">童趣天空</span>
@@ -321,7 +314,7 @@
                                     <li class="styles-item">
                                         <img src="../../assets/admin/images/template2_logo.jpg" class="styles-item-img">
                                         <p class="clearfix">
-                                            <button type="button" class="style left">购买</button>
+                                            <a class="style left">购买</a>
                                             <span class="money right">￥500.00</span>
                                         </p>
                                         <span class="styles-item-label">变换几何</span>
@@ -329,11 +322,12 @@
                                     <li class="styles-item mr0">
                                         <img src="../../assets/admin/images/template3_logo.png" class="styles-item-img">
                                         <p class="clearfix">
-                                            <button type="button" class="style left">购买</button>
+                                            <a class="style left">购买</a>
                                             <span class="money right">￥500.00</span>
                                         </p>
                                         <span class="styles-item-label">办公桌面</span>
                                     </li>
+
                                 </ul>
                             </div>
                             <!-- 风格 END -->
@@ -460,7 +454,7 @@
 
                     $(".h5-edit-area-editing li img").on("click",function(){
                         $(this).closest("li").addClass("selected");
-                        $(this).siblings("li").removeClass("selected");
+                        $(this).closest("li").siblings("li").removeClass("selected");
                     })
 
                 })
