@@ -308,28 +308,29 @@
         });
     }
 
-    /*第一个职位进入动画*/
-    function sectionIn5(){
-        $('.section5').find('.bg6').delay(50).animate({
+    /*职位进入动画*/
+    function sectionJobIn(num){
+        var animateIn = $(".section").eq(num);
+        animateIn.find('.bg6').delay(50).animate({
             opacity:"1"
         },500,function(){
-            $('.section5').find('.bg6 .jobList li').eq(0).addClass("rotateX");
-            $('.section5').find('.bg6 .jobList li').eq(0).animate({
+            animateIn.find('.bg6 .jobList li').eq(0).addClass("rotateX");
+            animateIn.find('.bg6 .jobList li').eq(0).animate({
                 opacity:"1"
             },500,function(){
-                $('.section5').find('.bg6 .jobList li').eq(1).addClass("rotateX");
-                $('.section5').find('.bg6 .jobList li').eq(1).animate({
+                animateIn.find('.bg6 .jobList li').eq(1).addClass("rotateX");
+                animateIn.find('.bg6 .jobList li').eq(1).animate({
                     opacity:"1"
                 },1000,function(){
-                    $('.section5').find('.jobBg').addClass("transform");
-                    $('.section5').find('.jobBg').animate({
+                    animateIn.find('.bg6 .jobBg').addClass("transform");
+                    animateIn.find('.bg6 .jobBg').animate({
                         opacity:"1"
                     },500,function(){
-                        $('.section5').find('.jobInforP').animate({
+                        animateIn.find('.bg6 .jobInforP').animate({
                             opacity:"1"
                         },1000);
-                        $('.section5').find('.jobLogo').addClass("rotateX");
-                        $('.section5').find('.jobLogo').animate({
+                        animateIn.find('.bg6 .jobLogo').addClass("rotateX");
+                        animateIn.find('.bg6 .jobLogo').animate({
                             opacity:"1"
                         },1000)
                     })
@@ -338,90 +339,31 @@
         });
     }
 
-    /*第一个职位离开动画*/
-    function sectionOut5(){
-        $('.section5').find('.bg6').delay(50).animate({
+    /*职位离开动画*/
+    function sectionJobOut(num){
+        var aninmateOut = $(".section").eq(num);
+        aninmateOut.find('.bg6').animate({
             opacity:"1"
-        },50,function(){
-            $('.section5').find('.bg6 .jobList li').eq(0).removeClass("rotateX");
-            $('.section5').find('.bg6 .jobList li').eq(0).animate({
+        },0,function(){
+            aninmateOut.find('.bg6 .jobList li').eq(0).removeClass("rotateX");
+            aninmateOut.find('.bg6 .jobList li').eq(0).animate({
                 opacity:"0"
-            },50,function(){
-                $('.section5').find('.bg6 .jobList li').eq(1).removeClass("rotateX");
-                $('.section5').find('.bg6 .jobList li').eq(1).animate({
+            },0,function(){
+                aninmateOut.find('.bg6 .jobList li').eq(1).removeClass("rotateX");
+                aninmateOut.find('.bg6 .jobList li').eq(1).animate({
                     opacity:"0"
-                },10,function(){
-                    $('.section5').find('.jobBg').removeClass("transform");
-                    $('.section5').find('.jobBg').animate({
+                },0,function(){
+                    aninmateOut.find('.bg6 .jobBg').removeClass("transform");
+                    aninmateOut.find('.bg6 .jobBg').animate({
                         opacity:"0"
-                    },50,function(){
-                        $('.section5').find('.jobInforP').animate({
+                    },0,function(){
+                        aninmateOut.find('.bg6 .jobInforP').animate({
                             opacity:"0"
-                        },10);
-                        $('.section5').find('.jobLogo').removeClass("rotateX");
-                        $('.section5').find('.jobLogo').animate({
+                        },0);
+                        aninmateOut.find('.bg6 .jobLogo').removeClass("rotateX");
+                        aninmateOut.find('.bg6 .jobLogo').animate({
                             opacity:"0"
-                        },10)
-                    })
-                })
-            })
-        });
-    }
-
-    /*第二个职位进入动画*/
-    function sectionIn6(){
-        $('.section6').find('.bg6').delay(50).animate({
-            opacity:"1"
-        },500,function(){
-            $('.section6').find('.bg6 .jobList li').eq(0).addClass("rotateX");
-            $('.section6').find('.bg6 .jobList li').eq(0).animate({
-                opacity:"1"
-            },500,function(){
-                $('.section6').find('.bg6 .jobList li').eq(1).addClass("rotateX");
-                $('.section6').find('.bg6 .jobList li').eq(1).animate({
-                    opacity:"1"
-                },1000,function(){
-                    $('.section6').find('.jobBg').addClass("transform");
-                    $('.section6').find('.jobBg').animate({
-                        opacity:"1"
-                    },500,function(){
-                        $('.section6').find('.jobInforP').animate({
-                            opacity:"1"
-                        },1000);
-                        $('.section6').find('.jobLogo').addClass("rotateX");
-                        $('.section6').find('.jobLogo').animate({
-                            opacity:"1"
-                        },1000)
-                    })
-                })
-            })
-        });
-    }
-
-    /*第二个职位离开动画*/
-    function sectionOut6(){
-        $('.section6').find('.bg6').delay(50).animate({
-            opacity:"1"
-        },50,function(){
-            $('.section6').find('.bg6 .jobList li').eq(0).removeClass("rotateX");
-            $('.section6').find('.bg6 .jobList li').eq(0).animate({
-                opacity:"0"
-            },50,function(){
-                $('.section6').find('.bg6 .jobList li').eq(1).removeClass("rotateX");
-                $('.section6').find('.bg6 .jobList li').eq(1).animate({
-                    opacity:"0"
-                },10,function(){
-                    $('.section6').find('.jobBg').removeClass("transform");
-                    $('.section6').find('.jobBg').animate({
-                        opacity:"0"
-                    },50,function(){
-                        $('.section6').find('.jobInforP').animate({
-                            opacity:"0"
-                        },10);
-                        $('.section6').find('.jobLogo').removeClass("rotateX");
-                        $('.section6').find('.jobLogo').animate({
-                            opacity:"0"
-                        },10)
+                        },0)
                     })
                 })
             })
@@ -746,16 +688,16 @@
             }
             if(swiper.activeIndex==4){
                 sectionOut4();
-                sectionIn5();
-                sectionOut6();
+                sectionJobIn(swiper.activeIndex);
+                sectionJobOut(swiper.activeIndex+1);
             }
             if(swiper.activeIndex==5){
-                sectionOut5();
-                sectionIn6();
+                sectionJobOut(swiper.activeIndex-1);
+                sectionJobIn(swiper.activeIndex);
                 sectionOutLast();
             }
             if(swiper.activeIndex==6){
-                sectionOut6();
+                sectionJobOut(swiper.activeIndex-1);
                 sectionInLast();
             }
         }
