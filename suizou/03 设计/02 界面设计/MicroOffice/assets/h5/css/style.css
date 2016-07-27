@@ -212,7 +212,7 @@ section{position: relative;}
 
 
 
-.section5 .bg6{opacity: 0;background:url(../../admin/images/h5images/bg2.jpg) no-repeat;background-size:100% 100%;width:100%;height:100%;background-position:0 0;position: absolute;}
+.section .bg6{opacity: 0;background:url(../../admin/images/h5images/bg2.jpg) no-repeat;background-size:100% 100%;width:100%;height:100%;background-position:0 0;position: absolute;}
 .bg6 .jobList{}
 .bg6 .jobList li{opacity: 0;font-size: 16px;color: #fff;background:url(../../admin/images/h5images/job1.png) no-repeat;background-size:100% 100%;width:185px;height:52px;background-position:0 0;position: absolute;left: 10%;}
 .bg6 .jobList li:first-child{top: 5%;}
@@ -263,7 +263,7 @@ section{position: relative;}
         transform: perspective(400px) rotateX(0);
     }
 }
-.section6 .bg6{opacity: 0;background:url(../../admin/images/h5images/bg2.jpg) no-repeat;background-size:100% 100%;width:100%;height:100%;background-position:0 0;position: absolute;}
+.section .bg6{opacity: 0;background:url(../../admin/images/h5images/bg2.jpg) no-repeat;background-size:100% 100%;width:100%;height:100%;background-position:0 0;position: absolute;}
 
 .sectionLast .bg8{opacity: 0;background:url(../../admin/images/h5images/bg2.jpg) no-repeat;background-size:100% 100%;width:100%;height:100%;background-position:0 0;position: absolute;}
 

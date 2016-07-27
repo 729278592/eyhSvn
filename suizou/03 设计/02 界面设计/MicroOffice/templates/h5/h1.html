@@ -153,8 +153,9 @@
                     </div>
                 </div>
             </div>
+
             <div class="swiper-slide">
-                <div class="section section5">
+                <div class="section section5 job">
                     <div class="bg6">
                         <ul class="jobList">
                             <li><span>程序员/3名</span></li>
@@ -189,7 +190,7 @@
                 </div>
             </div>
             <div class="swiper-slide">
-                <div class="section section6">
+                <div class="section section6 job">
                     <div class="bg6">
                         <ul class="jobList">
                             <li><span>UI设计/3名</span></li>
@@ -223,6 +224,7 @@
                     </div>
                 </div>
             </div>
+
             <div class="swiper-slide">
                 <div class="section sectionLast">
                     <div class="bg8">
@@ -253,580 +255,579 @@
     <script src="../../assets/global/plugins/jquery/jquery-1.11.3.min.js"></script>
     <!-- Initialize Swiper -->
     <script>
-	var positionNum = 2;
-    $(".allPageSpan").text($(".section").size());
-    function sectionIn1(){
-        $('.section1').find('.bg1').delay(50).animate({
-            opacity:"1"
-        }, 1,function() {
-            $('.section1').find('.el_box').animate({
-                top: "10%",
-                opacity: "1"
-            }, 400,function(){
-                $('.section1').find('.el_box_bg').addClass("transform");
-                $('.section1').find('.el_box_logo').animate({
-                    width: "90px",
-                    height: "90px",
-                    left:"100%",
-                    top: "351%",
+        var positionNum = $(".section.job").size();
+        $(".allPageSpan").text($(".section").size());
+        function sectionIn1(){
+            $('.section1').find('.bg1').delay(50).animate({
+                opacity:"1"
+            }, 1,function() {
+                $('.section1').find('.el_box').animate({
+                    top: "10%",
                     opacity: "1"
+                }, 400,function(){
+                    $('.section1').find('.el_box_bg').addClass("transform");
+                    $('.section1').find('.el_box_logo').animate({
+                        width: "90px",
+                        height: "90px",
+                        left:"100%",
+                        top: "351%",
+                        opacity: "1"
+                    });
+                    $('.section1').find('.el_text').animate({
+                        bottom:"60px",
+                        opacity: "1"
+                    },1000);
+                    $('.section1').find('.jionUs').animate({
+                        bottom:"15px",
+                        opacity: "1"
+                    },1000);
                 });
-                $('.section1').find('.el_text').animate({
-                    bottom:"60px",
-                    opacity: "1"
-                },1000);
-                $('.section1').find('.jionUs').animate({
-                    bottom:"15px",
-                    opacity: "1"
-                },1000);
             });
-        });
-    }
-    sectionIn1();
+        }
+        sectionIn1();
 
-    /*第四屏离开动画*/
-    function sectionOut4(){
-        $('.section4').find('.bg4').delay(5).animate({
-            opacity:"1"
-        },5,function(){
-            $('.section4').find('.el_b4_text').animate({
-                opacity:"0",
-                left:"70%"
-            },5);
-            $('.section4').find('.el_b4_bg').animate({
-                opacity:"0",
-                left:"-10%"
+        /*第四屏离开动画*/
+        function sectionOut4(){
+            $('.section4').find('.bg4').delay(5).animate({
+                opacity:"1"
             },5,function(){
-                $('.section4').find('.el_bg2_infor').animate({
+                $('.section4').find('.el_b4_text').animate({
                     opacity:"0",
-                    bottom:"-5%"
-                },6,function(){
-                    $('.section4').find('.a_infor').animate({
-                        opacity:"0"
-                    },6)
-                })
+                    left:"70%"
+                },5);
+                $('.section4').find('.el_b4_bg').animate({
+                    opacity:"0",
+                    left:"-10%"
+                },5,function(){
+                    $('.section4').find('.el_bg2_infor').animate({
+                        opacity:"0",
+                        bottom:"-5%"
+                    },6,function(){
+                        $('.section4').find('.a_infor').animate({
+                            opacity:"0"
+                        },6)
+                    })
+                });
             });
-        });
-    }
+        }
 
-    /*职位进入动画*/
-    function sectionJobIn(num){
-        var animateIn = $(".section").eq(num);
-        animateIn.find('.bg6').delay(50).animate({
-            opacity:"1"
-        },500,function(){
-            animateIn.find('.bg6 .jobList li').eq(0).addClass("rotateX");
-            animateIn.find('.bg6 .jobList li').eq(0).animate({
+        /*职位进入动画*/
+        function sectionJobIn(num){
+            var animateIn = $(".section").eq(num);
+            animateIn.find('.bg6').delay(50).animate({
                 opacity:"1"
             },500,function(){
-                animateIn.find('.bg6 .jobList li').eq(1).addClass("rotateX");
-                animateIn.find('.bg6 .jobList li').eq(1).animate({
+                animateIn.find('.bg6 .jobList li').eq(0).addClass("rotateX");
+                animateIn.find('.bg6 .jobList li').eq(0).animate({
                     opacity:"1"
-                },1000,function(){
-                    animateIn.find('.bg6 .jobBg').addClass("transform");
-                    animateIn.find('.bg6 .jobBg').animate({
+                },500,function(){
+                    animateIn.find('.bg6 .jobList li').eq(1).addClass("rotateX");
+                    animateIn.find('.bg6 .jobList li').eq(1).animate({
                         opacity:"1"
-                    },500,function(){
-                        animateIn.find('.bg6 .jobInforP').animate({
+                    },1000,function(){
+                        animateIn.find('.bg6 .jobBg').addClass("transform");
+                        animateIn.find('.bg6 .jobBg').animate({
                             opacity:"1"
-                        },1000);
-                        animateIn.find('.bg6 .jobLogo').addClass("rotateX");
-                        animateIn.find('.bg6 .jobLogo').animate({
-                            opacity:"1"
-                        },1000)
+                        },500,function(){
+                            animateIn.find('.bg6 .jobInforP').animate({
+                                opacity:"1"
+                            },1000);
+                            animateIn.find('.bg6 .jobLogo').addClass("rotateX");
+                            animateIn.find('.bg6 .jobLogo').animate({
+                                opacity:"1"
+                            },1000)
+                        })
                     })
                 })
-            })
-        });
-    }
+            });
+        }
 
-    /*职位离开动画*/
-    function sectionJobOut(num){
-        var aninmateOut = $(".section").eq(num);
-        aninmateOut.find('.bg6').animate({
-            opacity:"1"
-        },5,function(){
-            aninmateOut.find('.bg6 .jobList li').eq(0).removeClass("rotateX");
-            aninmateOut.find('.bg6 .jobList li').eq(0).animate({
-                opacity:"0"
+        /*职位离开动画*/
+        function sectionJobOut(num){
+            var aninmateOut = $(".section").eq(num);
+            aninmateOut.find('.bg6').animate({
+                opacity:"1"
             },5,function(){
-                aninmateOut.find('.bg6 .jobList li').eq(1).removeClass("rotateX");
-                aninmateOut.find('.bg6 .jobList li').eq(1).animate({
+                aninmateOut.find('.bg6 .jobList li').eq(0).removeClass("rotateX");
+                aninmateOut.find('.bg6 .jobList li').eq(0).animate({
                     opacity:"0"
                 },5,function(){
-                    aninmateOut.find('.bg6 .jobBg').removeClass("transform");
-                    aninmateOut.find('.bg6 .jobBg').animate({
+                    aninmateOut.find('.bg6 .jobList li').eq(1).removeClass("rotateX");
+                    aninmateOut.find('.bg6 .jobList li').eq(1).animate({
                         opacity:"0"
                     },5,function(){
-                        aninmateOut.find('.bg6 .jobInforP').animate({
+                        aninmateOut.find('.bg6 .jobBg').removeClass("transform");
+                        aninmateOut.find('.bg6 .jobBg').animate({
                             opacity:"0"
-                        },5);
-                        aninmateOut.find('.bg6 .jobLogo').removeClass("rotateX");
-                        aninmateOut.find('.bg6 .jobLogo').animate({
-                            opacity:"0"
-                        },5)
+                        },5,function(){
+                            aninmateOut.find('.bg6 .jobInforP').animate({
+                                opacity:"0"
+                            },5);
+                            aninmateOut.find('.bg6 .jobLogo').removeClass("rotateX");
+                            aninmateOut.find('.bg6 .jobLogo').animate({
+                                opacity:"0"
+                            },5)
+                        })
                     })
                 })
-            })
-        });
-    }
+            });
+        }
 
-    /*最后一屏离开动画*/
-    function sectionOutLast(){
-        $('.sectionLast').find('.bg8').delay(5).animate({
-            opacity:"1"
-        },5,function(){
-            $('.sectionLast').find('.el_bg8_box').animate({
-                opacity:"0",
-                bottom:"-30%"
+        /*最后一屏离开动画*/
+        function sectionOutLast(){
+            $('.sectionLast').find('.bg8').delay(5).animate({
+                opacity:"1"
             },5,function(){
-                $('.sectionLast').find('.codeDiv').animate({
+                $('.sectionLast').find('.el_bg8_box').animate({
                     opacity:"0",
-                    bottom:"0"
-                },5);
-                $('.sectionLast').find('.btnInforDiv').animate({
-                    opacity:"0",
-                    bottom:"0"
-                },5);
-            })
-        });
+                    bottom:"-30%"
+                },5,function(){
+                    $('.sectionLast').find('.codeDiv').animate({
+                        opacity:"0",
+                        bottom:"0"
+                    },5);
+                    $('.sectionLast').find('.btnInforDiv').animate({
+                        opacity:"0",
+                        bottom:"0"
+                    },5);
+                })
+            });
 
-    }
+        }
 
-    /*最后一屏进入动画*/
-    function sectionInLast(){
-        $('.sectionLast').find('.bg8').delay(50).animate({
-            opacity:"1"
-        },500,function(){
-            $('.sectionLast').find('.el_bg8_box').animate({
-                opacity:"1",
-                bottom:"0"
+        /*最后一屏进入动画*/
+        function sectionInLast(){
+            $('.sectionLast').find('.bg8').delay(50).animate({
+                opacity:"1"
             },500,function(){
-                $('.sectionLast').find('.codeDiv').animate({
+                $('.sectionLast').find('.el_bg8_box').animate({
                     opacity:"1",
-                    bottom:"20%"
-                },500);
-                $('.sectionLast').find('.btnInforDiv').animate({
-                    opacity:"1",
-                    bottom:"10%"
-                },500);
-            })
-        });
-    }
-	
+                    bottom:"0"
+                },500,function(){
+                    $('.sectionLast').find('.codeDiv').animate({
+                        opacity:"1",
+                        bottom:"20%"
+                    },500);
+                    $('.sectionLast').find('.btnInforDiv').animate({
+                        opacity:"1",
+                        bottom:"10%"
+                    },500);
+                })
+            });
+        }
 
-    new Swiper('#swiper-container1', {
-        pagination: '.swiper-pagination',
-        direction: 'vertical',
-        slidesPerView: 1,
-        paginationClickable: true,
-        spaceBetween: 0,
-        mousewheelControl: true,
-        onSlideChangeEnd: function(swiper){
-            $(".nowPageSpan").text(swiper.activeIndex + 1);
-            if(swiper.activeIndex==0){
-                sectionIn1();
-                $('.section2').find('.bg2').delay(50).animate({
-                    opacity: '1'
-                }, 40,function(){
-                    $('.section2').find('.el_box_bg').animate({
-                        opacity: '0',
-                        left:"-10%"
-                    },100);
-                    $('.section2').find('.el_box_bg').removeClass("transform");
 
-                    $('.section2').find('.el_about_text').animate({
-                        opacity: '0',
-                        left:"60%"
-                    },100,function(){
-                        $('.section2').find('.a_website').removeClass("transform");
-                        $('.section2').find('.a_website').animate({
-                            opacity: '0'
-                        },4,function(){
-                            $('.section2').find('.el_bg2_infor').animate({
+        new Swiper('#swiper-container1', {
+            pagination: '.swiper-pagination',
+            direction: 'vertical',
+            slidesPerView: 1,
+            paginationClickable: true,
+            spaceBetween: 0,
+            mousewheelControl: true,
+            onSlideChangeEnd: function(swiper){
+                $(".nowPageSpan").text(swiper.activeIndex + 1);
+                if(swiper.activeIndex==0){
+                    sectionIn1();
+                    $('.section2').find('.bg2').delay(50).animate({
+                        opacity: '1'
+                    }, 40,function(){
+                        $('.section2').find('.el_box_bg').animate({
+                            opacity: '0',
+                            left:"-10%"
+                        },100);
+                        $('.section2').find('.el_box_bg').removeClass("transform");
+
+                        $('.section2').find('.el_about_text').animate({
+                            opacity: '0',
+                            left:"60%"
+                        },100,function(){
+                            $('.section2').find('.a_website').removeClass("transform");
+                            $('.section2').find('.a_website').animate({
+                                opacity: '0'
+                            },4,function(){
+                                $('.section2').find('.el_bg2_infor').animate({
+                                    opacity:"0",
+                                    bottom:"-5%"
+                                },6,function(){
+                                    $('.section2').find('.a_infor').animate({
+                                        opacity:"0"
+                                    },6)
+                                })
+                            });
+                        })
+
+                    });
+                }
+                if(swiper.activeIndex==1){
+                    $('.section1').find('.bg1').delay(5).animate({
+                        opacity:"1"
+                    }, 4,function() {
+                        $('.section1').find('.el_box').animate({
+                            top: "35%",
+                            opacity: "0"
+                        }, 4,function(){
+                            $('.section1').find('.el_box_bg').removeClass("transform");
+                            $('.section1').find('.el_box_logo').animate({
+                                width: "45px",
+                                height: "45px",
+                                left:"120%",
+                                top: "420%",
+                                opacity: "0"
+                            });
+                            $('.section1').find('.el_text').animate({
+                                bottom:"30px",
+                                opacity: "0"
+                            },10);
+                            $('.section1').find('.jionUs').animate({
+                                bottom:"0",
+                                opacity: "0"
+                            },10);
+                        });
+                    });
+
+
+                    $('.section2').find('.bg2').delay(50).animate({
+                        opacity: '1'
+                    }, 400,function(){
+                        $('.section2').find('.el_box_bg').animate({
+                            opacity: '1',
+                            left:"10%"
+                        },1000);
+                        $('.section2').find('.el_box_bg').addClass("transform");
+
+                        $('.section2').find('.el_about_text').animate({
+                            opacity: '1',
+                            left:"25%"
+                        },1000,function(){
+                            $('.section2').find('.a_website').addClass("transform");
+                            $('.section2').find('.a_website').animate({
+                                opacity: '1'
+                            },400,function(){
+                                $('.section2').find('.el_bg2_infor').animate({
+                                    opacity:"1",
+                                    bottom:"5%"
+                                },600,function(){
+                                    $('.section2').find('.a_infor').animate({
+                                        opacity:"1"
+                                    },600)
+                                })
+
+                            });
+                        })
+
+                    });
+
+                    $('.section3').find('.bg4').delay(5).animate({
+                        opacity:"1"
+                    },5,function(){
+                        $('.section3').find('.el_b4_text').animate({
+                            opacity:"0",
+                            left:"70%"
+                        },5);
+                        $('.section3').find('.el_b4_bg').animate({
+                            opacity:"0",
+                            left:"-10%"
+                        },5,function(){
+                            $('.section3').find('.el_bg2_infor').animate({
                                 opacity:"0",
                                 bottom:"-5%"
                             },6,function(){
-                                $('.section2').find('.a_infor').animate({
+                                $('.section3').find('.a_infor').animate({
                                     opacity:"0"
                                 },6)
                             })
-
                         });
-                    })
-
-                });
-            }
-            if(swiper.activeIndex==1){
-                $('.section1').find('.bg1').delay(5).animate({
-                    opacity:"1"
-                }, 4,function() {
-                    $('.section1').find('.el_box').animate({
-                        top: "35%",
-                        opacity: "0"
-                    }, 4,function(){
-                        $('.section1').find('.el_box_bg').removeClass("transform");
-                        $('.section1').find('.el_box_logo').animate({
-                            width: "45px",
-                            height: "45px",
-                            left:"120%",
-                            top: "420%",
-                            opacity: "0"
-                        });
-                        $('.section1').find('.el_text').animate({
-                            bottom:"30px",
-                            opacity: "0"
-                        },10);
-                        $('.section1').find('.jionUs').animate({
-                            bottom:"0",
-                            opacity: "0"
-                        },10);
                     });
-                });
 
+                }
+                if(swiper.activeIndex==2){
+                    $('.section2').find('.bg2').delay(5).animate({
+                        opacity: '1'
+                    }, 4,function(){
+                        $('.section2').find('.el_box_bg').animate({
+                            opacity: '0',
+                            left:"-10%"
+                        },10);
+                        $('.section2').find('.el_box_bg').removeClass("transform");
 
-                $('.section2').find('.bg2').delay(50).animate({
-                    opacity: '1'
-                }, 400,function(){
-                    $('.section2').find('.el_box_bg').animate({
-                        opacity: '1',
-                        left:"10%"
-                    },1000);
-                    $('.section2').find('.el_box_bg').addClass("transform");
+                        $('.section2').find('.el_about_text').animate({
+                            opacity: '0',
+                            left:"60%"
+                        },10,function(){
+                            $('.section2').find('.a_website').removeClass("transform");
+                            $('.section2').find('.a_website').animate({
+                                opacity: '0'
+                            },4,function(){
+                                $('.section2').find('.el_bg2_infor').animate({
+                                    opacity:"0",
+                                    bottom:"-5%"
+                                },6,function(){
+                                    $('.section2').find('.a_infor').animate({
+                                        opacity:"0"
+                                    },6)
+                                })
 
-                    $('.section2').find('.el_about_text').animate({
-                        opacity: '1',
-                        left:"25%"
-                    },1000,function(){
-                        $('.section2').find('.a_website').addClass("transform");
-                        $('.section2').find('.a_website').animate({
-                            opacity: '1'
-                        },400,function(){
-                            $('.section2').find('.el_bg2_infor').animate({
+                            });
+                        })
+
+                    });
+
+                    $('.section3').find('.bg4').delay(50).animate({
+                        opacity:"1"
+                    },500,function(){
+                        $('.section3').find('.el_b4_text').animate({
+                            opacity:"1",
+                            left:"10%"
+                        },500);
+                        $('.section3').find('.el_b4_bg').animate({
+                            opacity:"1",
+                            left:"10%"
+                        },500,function(){
+                            $('.section3').find('.el_bg2_infor').animate({
                                 opacity:"1",
                                 bottom:"5%"
                             },600,function(){
-                                $('.section2').find('.a_infor').animate({
+                                $('.section3').find('.a_infor').animate({
                                     opacity:"1"
                                 },600)
                             })
-
                         });
-                    })
-
-                });
-
-                $('.section3').find('.bg4').delay(5).animate({
-                    opacity:"1"
-                },5,function(){
-                    $('.section3').find('.el_b4_text').animate({
-                        opacity:"0",
-                        left:"70%"
-                    },5);
-                    $('.section3').find('.el_b4_bg').animate({
-                        opacity:"0",
-                        left:"-10%"
-                    },5,function(){
-                        $('.section3').find('.el_bg2_infor').animate({
-                            opacity:"0",
-                            bottom:"-5%"
-                        },6,function(){
-                            $('.section3').find('.a_infor').animate({
-                                opacity:"0"
-                            },6)
-                        })
                     });
-                });
 
-            }
-            if(swiper.activeIndex==2){
-                $('.section2').find('.bg2').delay(5).animate({
-                    opacity: '1'
-                }, 4,function(){
-                    $('.section2').find('.el_box_bg').animate({
-                        opacity: '0',
-                        left:"-10%"
-                    },10);
-                    $('.section2').find('.el_box_bg').removeClass("transform");
-
-                    $('.section2').find('.el_about_text').animate({
-                        opacity: '0',
-                        left:"60%"
-                    },10,function(){
-                        $('.section2').find('.a_website').removeClass("transform");
-                        $('.section2').find('.a_website').animate({
-                            opacity: '0'
-                        },4,function(){
-                            $('.section2').find('.el_bg2_infor').animate({
+                    $('.section4').find('.bg4').delay(5).animate({
+                        opacity:"1"
+                    },5,function(){
+                        $('.section4').find('.el_b4_text').animate({
+                            opacity:"0",
+                            left:"70%"
+                        },5);
+                        $('.section4').find('.el_b4_bg').animate({
+                            opacity:"0",
+                            left:"-10%"
+                        },5,function(){
+                            $('.section4').find('.el_bg2_infor').animate({
                                 opacity:"0",
                                 bottom:"-5%"
                             },6,function(){
-                                $('.section2').find('.a_infor').animate({
+                                $('.section4').find('.a_infor').animate({
                                     opacity:"0"
                                 },6)
                             })
-
                         });
-                    })
-
-                });
-
-                $('.section3').find('.bg4').delay(50).animate({
-                    opacity:"1"
-                },500,function(){
-                    $('.section3').find('.el_b4_text').animate({
-                        opacity:"1",
-                        left:"10%"
-                    },500);
-                    $('.section3').find('.el_b4_bg').animate({
-                        opacity:"1",
-                        left:"10%"
-                    },500,function(){
-                        $('.section3').find('.el_bg2_infor').animate({
-                            opacity:"1",
-                            bottom:"5%"
-                        },600,function(){
-                            $('.section3').find('.a_infor').animate({
-                                opacity:"1"
-                            },600)
-                        })
                     });
-                });
-
-                $('.section4').find('.bg4').delay(5).animate({
-                    opacity:"1"
-                },5,function(){
-                    $('.section4').find('.el_b4_text').animate({
-                        opacity:"0",
-                        left:"70%"
-                    },5);
-                    $('.section4').find('.el_b4_bg').animate({
-                        opacity:"0",
-                        left:"-10%"
+                }
+                if(swiper.activeIndex==3){
+                    $('.section3').find('.bg4').delay(5).animate({
+                        opacity:"1"
                     },5,function(){
-                        $('.section4').find('.el_bg2_infor').animate({
+                        $('.section3').find('.el_b4_text').animate({
                             opacity:"0",
-                            bottom:"-5%"
-                        },6,function(){
-                            $('.section4').find('.a_infor').animate({
-                                opacity:"0"
-                            },6)
-                        })
-                    });
-                });
-            }
-            if(swiper.activeIndex==3){
-                $('.section3').find('.bg4').delay(5).animate({
-                    opacity:"1"
-                },5,function(){
-                    $('.section3').find('.el_b4_text').animate({
-                        opacity:"0",
-                        left:"70%"
-                    },5);
-                    $('.section3').find('.el_b4_bg').animate({
-                        opacity:"0",
-                        left:"-10%"
-                    },5,function(){
-                        $('.section3').find('.el_bg2_infor').animate({
+                            left:"70%"
+                        },5);
+                        $('.section3').find('.el_b4_bg').animate({
                             opacity:"0",
-                            bottom:"-5%"
-                        },6,function(){
-                            $('.section3').find('.a_infor').animate({
-                                opacity:"0"
-                            },6)
-                        })
+                            left:"-10%"
+                        },5,function(){
+                            $('.section3').find('.el_bg2_infor').animate({
+                                opacity:"0",
+                                bottom:"-5%"
+                            },6,function(){
+                                $('.section3').find('.a_infor').animate({
+                                    opacity:"0"
+                                },6)
+                            })
+                        });
                     });
-                });
 
-                $('.section4').find('.bg4').delay(50).animate({
-                    opacity:"1"
-                },500,function(){
-                    $('.section4').find('.el_b4_text').animate({
-                        opacity:"1",
-                        left:"10%"
-                    },500);
-                    $('.section4').find('.el_b4_bg').animate({
-                        opacity:"1",
-                        left:"10%"
+                    $('.section4').find('.bg4').delay(50).animate({
+                        opacity:"1"
                     },500,function(){
-                        $('.section4').find('.el_bg2_infor').animate({
+                        $('.section4').find('.el_b4_text').animate({
                             opacity:"1",
-                            bottom:"5%"
-                        },600,function(){
-                            $('.section4').find('.a_infor').animate({
-                                opacity:"1"
-                            },600)
-                        })
+                            left:"10%"
+                        },500);
+                        $('.section4').find('.el_b4_bg').animate({
+                            opacity:"1",
+                            left:"10%"
+                        },500,function(){
+                            $('.section4').find('.el_bg2_infor').animate({
+                                opacity:"1",
+                                bottom:"5%"
+                            },600,function(){
+                                $('.section4').find('.a_infor').animate({
+                                    opacity:"1"
+                                },600)
+                            })
+                        });
                     });
-                });
 
-                $('.section5').find('.bg6').delay(5).animate({
-                    opacity:"1"
-                },5,function(){
-                    $('.section5').find('.bg6 .jobList li').eq(0).removeClass("rotateX");
-                    $('.section5').find('.bg6 .jobList li').eq(0).animate({
-                        opacity:"0"
+                    $('.section5').find('.bg6').delay(5).animate({
+                        opacity:"1"
                     },5,function(){
-                        $('.section5').find('.bg6 .jobList li').eq(1).removeClass("rotateX");
-                        $('.section5').find('.bg6 .jobList li').eq(1).animate({
+                        $('.section5').find('.bg6 .jobList li').eq(0).removeClass("rotateX");
+                        $('.section5').find('.bg6 .jobList li').eq(0).animate({
                             opacity:"0"
-                        },1,function(){
-                            $('.section5').find('.jobBg').removeClass("transform");
-                            $('.section5').find('.jobBg').animate({
+                        },5,function(){
+                            $('.section5').find('.bg6 .jobList li').eq(1).removeClass("rotateX");
+                            $('.section5').find('.bg6 .jobList li').eq(1).animate({
                                 opacity:"0"
-                            },5,function(){
-                                $('.section5').find('.jobInforP').animate({
+                            },1,function(){
+                                $('.section5').find('.jobBg').removeClass("transform");
+                                $('.section5').find('.jobBg').animate({
                                     opacity:"0"
-                                },1);
-                                $('.section5').find('.jobLogo').removeClass("rotateX");
-                                $('.section5').find('.jobLogo').animate({
-                                    opacity:"0"
-                                },1)
+                                },5,function(){
+                                    $('.section5').find('.jobInforP').animate({
+                                        opacity:"0"
+                                    },1);
+                                    $('.section5').find('.jobLogo').removeClass("rotateX");
+                                    $('.section5').find('.jobLogo').animate({
+                                        opacity:"0"
+                                    },1)
+                                })
                             })
                         })
-                    })
-                });
+                    });
+                }
+                if(positionNum==0){
+                    if(swiper.activeIndex==4){
+                        sectionInLast();
+                    }
+                }
+                else if(positionNum==1){
+                    if(swiper.activeIndex==4){
+                        sectionOut4();
+                        sectionJobIn(swiper.activeIndex);
+                        sectionInLast();
+                    }
+                    if(swiper.activeIndex==5){
+                        sectionJobOut(swiper.activeIndex-1);
+                        sectionInLast();
+                    }
+                }
+                else if(positionNum==2){
+                    if(swiper.activeIndex==4){
+                        sectionOut4();
+                        sectionJobIn(swiper.activeIndex);
+                        sectionJobOut(swiper.activeIndex+1);
+                    }
+                    if(swiper.activeIndex==5){
+                        sectionJobOut(swiper.activeIndex-1);
+                        sectionJobIn(swiper.activeIndex);
+                        sectionOutLast();
+                    }
+                    if(swiper.activeIndex==6){
+                        sectionJobOut(swiper.activeIndex-1);
+                        sectionInLast();
+                    }
+                }
+                else if(positionNum==3){
+                    if(swiper.activeIndex==4){
+                        sectionOut4();
+                        sectionJobIn(swiper.activeIndex);
+                        sectionJobOut(swiper.activeIndex+1);
+                    }
+                    if(swiper.activeIndex==5){
+                        sectionJobOut(swiper.activeIndex-1);
+                        sectionJobIn(swiper.activeIndex);
+                        sectionJobOut(swiper.activeIndex+1);
+                    }
+                    if(swiper.activeIndex==6){
+                        sectionJobOut(swiper.activeIndex-1);
+                        sectionJobIn(swiper.activeIndex);
+                        sectionInLast();
+                    }
+                    if(swiper.activeIndex==7){
+                        sectionJobOut(swiper.activeIndex-1);
+                        sectionInLast();
+                    }
+                }
+                else if(positionNum==4){
+                    if(swiper.activeIndex==4){
+                        sectionOut4();
+                        sectionJobIn(swiper.activeIndex);
+                        sectionJobOut(swiper.activeIndex+1);
+                    }
+                    if(swiper.activeIndex==5){
+                        sectionJobOut(swiper.activeIndex-1);
+                        sectionJobIn(swiper.activeIndex);
+                        sectionJobOut(swiper.activeIndex+1);
+                    }
+                    if(swiper.activeIndex==6){
+                        sectionJobOut(swiper.activeIndex-1);
+                        sectionJobIn(swiper.activeIndex);
+                        sectionJobOut(swiper.activeIndex+1);
+                    }
+                    if(swiper.activeIndex==7){
+                        sectionJobOut(swiper.activeIndex-1);
+                        sectionJobIn(swiper.activeIndex);
+                        sectionInLast();
+                    }
+                    if(swiper.activeIndex==8){
+                        sectionJobOut(swiper.activeIndex-1);
+                        sectionInLast();
+                    }
+                }
+                else if(positionNum==5){
+                    if(swiper.activeIndex==4){
+                        sectionOut4();
+                        sectionJobIn(swiper.activeIndex);
+                        sectionJobOut(swiper.activeIndex+1);
+                    }
+                    if(swiper.activeIndex==5){
+                        sectionJobOut(swiper.activeIndex-1);
+                        sectionJobIn(swiper.activeIndex);
+                        sectionJobOut(swiper.activeIndex+1);
+                    }
+                    if(swiper.activeIndex==6){
+                        sectionJobOut(swiper.activeIndex-1);
+                        sectionJobIn(swiper.activeIndex);
+                        sectionJobOut(swiper.activeIndex+1);
+                    }
+                    if(swiper.activeIndex==7){
+                        sectionJobOut(swiper.activeIndex-1);
+                        sectionJobIn(swiper.activeIndex);
+                        sectionJobOut(swiper.activeIndex+1);
+                    }
+                    if(swiper.activeIndex==8){
+                        sectionJobOut(swiper.activeIndex-1);
+                        sectionJobIn(swiper.activeIndex);
+                        sectionInLast();
+                    }
+                    if(swiper.activeIndex==9){
+                        sectionJobOut(swiper.activeIndex-1);
+                        sectionInLast();
+                    }
+                }
+
             }
-			if(positionNum==0){
-				if(swiper.activeIndex==4){					
-					sectionInLast();
-				}
-			}
-            else if(positionNum==1){
-				if(swiper.activeIndex==4){
-					sectionOut4();
-					sectionJobIn(swiper.activeIndex);
-					sectionInLast();
-				}
-				if(swiper.activeIndex==5){
-					sectionJobOut(swiper.activeIndex-1);
-					sectionInLast();
-				}
-			}
-            else if(positionNum==2){
-				if(swiper.activeIndex==4){
-					sectionOut4();
-					sectionJobIn(swiper.activeIndex);
-					sectionJobOut(swiper.activeIndex+1);
-				}
-				if(swiper.activeIndex==5){
-					sectionJobOut(swiper.activeIndex-1);
-					sectionJobIn(swiper.activeIndex);
-					sectionOutLast();
-				}
-				if(swiper.activeIndex==6){
-					sectionJobOut(swiper.activeIndex-1);
-					sectionInLast();
-				}
-			}
-            else if(positionNum==3){
-				if(swiper.activeIndex==4){
-					sectionOut4();
-					sectionJobIn(swiper.activeIndex);
-					sectionJobOut(swiper.activeIndex+1);
-				}
-				if(swiper.activeIndex==5){
-					sectionJobOut(swiper.activeIndex-1);
-					sectionJobIn(swiper.activeIndex);
-					sectionJobOut(swiper.activeIndex+1);
-				}
-				if(swiper.activeIndex==6){
-					sectionJobOut(swiper.activeIndex-1);
-					sectionJobIn(swiper.activeIndex);
-					sectionInLast();
-				}
-				if(swiper.activeIndex==7){
-					sectionJobOut(swiper.activeIndex-1);
-					sectionInLast();
-				}
-			}
-			else if(positionNum==4){
-				if(swiper.activeIndex==4){
-					sectionOut4();
-					sectionJobIn(swiper.activeIndex);
-					sectionJobOut(swiper.activeIndex+1);
-				}
-				if(swiper.activeIndex==5){
-					sectionJobOut(swiper.activeIndex-1);
-					sectionJobIn(swiper.activeIndex);
-					sectionJobOut(swiper.activeIndex+1);
-				}
-				if(swiper.activeIndex==6){
-					sectionJobOut(swiper.activeIndex-1);
-					sectionJobIn(swiper.activeIndex);
-					sectionJobOut(swiper.activeIndex+1);
-				}
-				if(swiper.activeIndex==7){
-					sectionJobOut(swiper.activeIndex-1);
-					sectionJobIn(swiper.activeIndex);
-					sectionInLast();
-				}
-				if(swiper.activeIndex==8){
-					sectionJobOut(swiper.activeIndex-1);
-					sectionInLast();
-				}
-			}
-            else if(positionNum==5){
-				if(swiper.activeIndex==4){
-					sectionOut4();
-					sectionJobIn(swiper.activeIndex);
-					sectionJobOut(swiper.activeIndex+1);
-				}
-				if(swiper.activeIndex==5){
-					sectionJobOut(swiper.activeIndex-1);
-					sectionJobIn(swiper.activeIndex);
-					sectionJobOut(swiper.activeIndex+1);
-				}
-				if(swiper.activeIndex==6){
-					sectionJobOut(swiper.activeIndex-1);
-					sectionJobIn(swiper.activeIndex);
-					sectionJobOut(swiper.activeIndex+1);
-				}
-				if(swiper.activeIndex==7){
-					sectionJobOut(swiper.activeIndex-1);
-					sectionJobIn(swiper.activeIndex);
-					sectionJobOut(swiper.activeIndex+1);
-				}
-				if(swiper.activeIndex==8){
-					sectionJobOut(swiper.activeIndex-1);
-					sectionJobIn(swiper.activeIndex);
-					sectionInLast();
-				}
-				if(swiper.activeIndex==9){
-					sectionJobOut(swiper.activeIndex-1);
-					sectionInLast();
-				}
-			}
-
-        }
-    });
-
-    $(function(){
-        new Swiper('#swiper-container2', {
-            prevButton:'.swiper-button-prev',
-            nextButton:'.swiper-button-next',
-            slidesPerView: 1,
-            paginationClickable: true,
-            spaceBetween: 0,
-            mousewheelControl: true,
-            loop:true,
-            autoplay: 5000,
-            autoplayDisableOnInteraction: false
         });
 
-        new Swiper('#swiper-container3', {
-            prevButton:'.swiper-button-prev',
-            nextButton:'.swiper-button-next',
-    //                pagination: '.swiper-pagination',
-            slidesPerView: 1,
-            paginationClickable: true,
-            spaceBetween: 0,
-            mousewheelControl: true,
-            loop:true,
-            autoplay: 5000,
-            autoplayDisableOnInteraction: false
+        $(function(){
+            new Swiper('#swiper-container2', {
+                prevButton:'.swiper-button-prev',
+                nextButton:'.swiper-button-next',
+                slidesPerView: 1,
+                paginationClickable: true,
+                spaceBetween: 0,
+                mousewheelControl: true,
+                loop:true,
+                autoplay: 5000,
+                autoplayDisableOnInteraction: false
+            });
+
+            new Swiper('#swiper-container3', {
+                prevButton:'.swiper-button-prev',
+                nextButton:'.swiper-button-next',
+        //                pagination: '.swiper-pagination',
+                slidesPerView: 1,
+                paginationClickable: true,
+                spaceBetween: 0,
+                mousewheelControl: true,
+                loop:true,
+                autoplay: 5000,
+                autoplayDisableOnInteraction: false
+            });
         });
-    });
     </script>
     <script type="text/javascript">
         var playbox = (function(){
