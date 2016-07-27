@@ -131,6 +131,7 @@
             </div>
         </div>
         <div id="admin-content-wrapper">
+
             <div class="content-header">
                 <span class="content-title">制作专题</span>
                 <div class="company-name right">
@@ -157,28 +158,293 @@
                 </div>
             </div>
             <div class="content-wrapper">
-                <div class="content content--side-main content--no-inner-nav-bar home">
+                <div class="content content--main-side h5-edit-wrapper">
+                    <div class="pr">
+                        <!-- 左侧编辑 START -->
+                        <div class="content-main card h5-edit">
+                            <!-- 封面 START -->
+                            <div class="h5-edit-area cover">
+                                <div class="h5-edit-area-label">封面信息</div>
+                                <div class="h5-edit-area-editing">
+                                    <div class="cover-img">
+                                        <div class="cover-img-upload">
+                                            <img  class="cover-img-upload-pic" alt="封面图片" src="../../assets/admin/images/companyIcon.jpg"><!-- end ngSwitchWhen: -->
+                                        </div>
+                                    </div>
+                                    <div class="cover-text">
+                                        <input type="text" placeholder="请输入专题标题(64字)" class="cover-text-title" maxlength="64">
+                                        <textarea placeholder="请输入专题描述(120字)" class="cover-text-description" maxlength="120"></textarea>
+                                    </div>
+                                </div>
+                                <div style="display: block; position: absolute; overflow: hidden; margin: 0px; padding: 0px; opacity: 0; direction: ltr; z-index: 2147483583; visibility: hidden;"><input type="file" name="uploadImage" style="position: absolute; right: 0px; margin: 0px; padding: 0px; font-size: 480px; font-family: sans-serif; cursor: pointer;"></div>
+                            </div>
+                            <!-- 封面 END -->
 
+                            <!-- 职位 STRAT -->
+                            <div class="h5-edit-area positions">
+                                <div class="h5-edit-area-label">选择职位</div>
+                                <div class="h5-edit-area-editing">
+                                    <div class="search card-item">
+                                        <div class="search-box-wrapper">
+                                            <input type="text" id="position-list-search" class="search-box" placeholder="请输入关键字">
+                                            <i class="fa fa-search"></i>
+                                        </div>
+                                    </div>
+
+                                    <!-- 职位列表 START -->
+                                    <div class="positions-table-wrapper">
+                                        <table class="positions-table">
+                                            <thead>
+                                            <tr>
+                                                <th></th>
+                                                <th class="pointer">
+                                                    发布时间 <i class="fa fa-caret-up"></i>
+                                                </th>
+                                                <th>职位名称</th>
+                                                <th>发布人</th>
+                                                <th>
+                                                    地区
+                                                </th>
+                                                <th>
+                                                    类型
+                                                <th>
+                                                    性质
+                                                </th>
+                                            </tr>
+                                            </thead>
+                                            <tbody>
+                                            <tr>
+                                                <td class="squaredCheckBox">
+                                                    <input type="checkbox" id="app-checkbox-11521" name="check">
+                                                    <label for="app-checkbox-111521"></label>
+                                                </td>
+                                                <td class="time">2016-07-25</td>
+                                                <td dq-title="yy1" length="12" class="">yy1</td>
+                                                <td class="">是</td>
+                                                <td class="">长沙，常州</td>
+                                                <td class="">全职</td>
+                                                <td class="">社招</td>
+                                            </tr>
+                                            <tr>
+                                                <td class="squaredCheckBox">
+                                                    <input type="checkbox" id="app-checkbox-5267" name="check">
+                                                    <label for="app-checkbox-59267"></label>
+                                                </td>
+                                                <td class="time">2016-07-20</td>
+                                                <td dq-title="sf" length="12" class="">sf</td>
+                                                <td class="">是</td>
+                                                <td class="">上海</td>
+                                                <td class="">全职</td>
+                                                <td class="">社招</td>
+                                            </tr>
+                                            <tr>
+                                                <td class="squaredCheckBox">
+                                                    <input type="checkbox" id="app-checkbox-5962" name="check">
+                                                    <label for="app-checkbox-59267"></label>
+                                                </td>
+                                                <td class="time">2016-05-15</td>
+                                                <td dq-title="sf3" length="12" class="">sf3</td>
+                                                <td class="">是</td>
+                                                <td class="">上海</td>
+                                                <td class="">全职</td>
+                                                <td class="">社招</td>
+                                            </tr>
+                                            <tr>
+                                                <td class="squaredCheckBox">
+                                                    <input type="checkbox" id="app-checkbox-111521" name="check">
+                                                    <label for="app-checkbox-111521"></label>
+                                                </td>
+                                                <td class="time">2016-05-12</td>
+                                                <td dq-title="yy" length="12" class="">yy</td>
+                                                <td class="">是</td>
+                                                <td class="">长沙，常州</td>
+                                                <td class="">全职</td>
+                                                <td class="">社招</td>
+                                            </tr>
+                                            <tr>
+                                                <td class="squaredCheckBox">
+                                                    <input type="checkbox" id="app-checkbox-59267" name="check">
+                                                    <label for="app-checkbox-59267"></label>
+                                                </td>
+                                                <td class="time">2016-05-10</td>
+                                                <td dq-title="sf2" length="12" class="">sf2</td>
+                                                <td class="">是</td>
+                                                <td class="">上海</td>
+                                                <td class="">全职</td>
+                                                <td class="">社招</td>
+                                            </tr>
+                                            <tr>
+                                                <td class="squaredCheckBox">
+                                                    <input type="checkbox" id="app-checkbox-59262" name="check">
+                                                    <label for="app-checkbox-59267"></label>
+                                                </td>
+                                                <td class="time">2016-05-9</td>
+                                                <td dq-title="sf1" length="12" class="">sf1</td>
+                                                <td class="">是</td>
+                                                <td class="">上海</td>
+                                                <td class="">全职</td>
+                                                <td class="">社招</td>
+                                            </tr>
+                                            </tbody>
+                                        </table>
+                                    </div>
+                                    <!-- 职位列表 END -->
+
+                                    <!-- 被选择的职位 START -->
+                                    <dl class="positions-selected">
+                                        <dt class="positions-selected-title">已选职位 (<span class="num">0</span>/5)</dt>
+                                    </dl>
+                                    <!-- 被选择的职位 END -->
+                                </div>
+                            </div>
+                            <!-- 职位 END -->
+
+                            <!-- 风格 START -->
+                            <div class="h5-edit-area styles">
+                                <div class="h5-edit-area-label">专题风格</div>
+                                <ul class="h5-edit-area-editing">
+                                    <li class="styles-item">
+                                        <img src="" width="82" height="82" class="styles-item-img">
+                                        <br>
+                                        <span class="styles-item-label">搞怪蓝人</span>
+                                    </li>
+                                    <li class="styles-item">
+                                        <img src="" width="82" height="82" class="styles-item-img">
+                                        <br>
+                                        <span class="styles-item-label">童趣天空</span>
+                                    </li>
+                                    <li class="styles-item">
+                                        <img src="" width="82" height="82" class="styles-item-img">
+                                        <br>
+                                        <span class="styles-item-label">变换几何</span>
+                                    </li>
+                                    <li class="styles-item selected">
+                                        <img src="" width="82" height="82" class="styles-item-img">
+                                        <br>
+                                        <span class="styles-item-label">办公桌面</span>
+                                    </li>
+                                </ul>
+                            </div>
+                            <!-- 风格 END -->
+
+                        </div>
+                        <!-- 左侧编辑 END -->
+
+                        <!-- 右侧预览和保存区域 START -->
+                        <div class="content-side actions">
+
+                            <!-- 手机预览 START -->
+                            <div class="phone">
+                                <div class="el_phone">
+                                    <iframe src="../h5/h1.html" frameborder="0"></iframe>
+                                </div>
+                            </div>
+                            <!-- 手机预览 END -->
+
+                            <!-- 保存/取消操作 START -->
+                            <div class="actions-btns card" h5-details="h5Details">
+                                <div class="card-item actions-btns-publish">
+                                    <i class="fa fa-save"></i>
+                                    保存专题
+                                </div>
+                                <div class="card-item actions-btns-back">
+                                    <i class="fa fa-arrow-left"></i>
+                                    返回列表
+                                </div>
+                            </div>
+                            <!-- 保存/取消操作 END -->
+
+                        </div>
+                        <!-- 右侧预览和保存区域 END -->
+                    </div>
                 </div>
             </div>
-        <script>
-            $(function(){
-                $(".high-light-dashed").ajaxify({
-                    event: "click",
-                    target:'#admin-content-wrapper'
-                });
+            <script src="../../assets/admin/js/tips.js"></script>
+            <script>
+                $(function(){
+                    $(".high-light-dashed").ajaxify({
+                        event: "click",
+                        target:'#admin-content-wrapper'
+                    });
 
-                /*账号操作*/
-                $(".accountSettings").on("click",function(e){
-                    e.stopPropagation();
-                    if($(".account-selection").is(".hide")){
-                        $(".account-selection").removeClass("hide");
-                    }else{
-                        $(".account-selection").addClass("hide");
+                    /*账号操作*/
+                    $(".accountSettings").on("click",function(e){
+                        e.stopPropagation();
+                        if($(".account-selection").is(".hide")){
+                            $(".account-selection").removeClass("hide");
+                        }else{
+                            $(".account-selection").addClass("hide");
+                        }
+                    });
+
+                    /*选择职位*/
+                    $(".positions-table-wrapper tbody tr").each(function(i){
+                        $(this).on("click",function(){
+                            var dqTitle = $(this).find("td").eq(2).attr("dq-title");
+                            function dd(title,i){
+                                var html = '<dd dataNum = "'+i+'" class="positions-selected-position" ng-repeat="position in selectedPositions">'+
+                                        '<span class="vm">'+title+'</span>'+
+                                        '<span class="positions-selected-position-delete" >×'+
+                                        '</span>'+
+                                        '</dd>';
+                                return html;
+                            }
+                            if($(this).find("input").prop("checked")){
+                                $(this).removeClass("selected");
+                                $(this).find("input").prop({"checked":false});
+                                var that = $(this);
+                                $(".positions-selected dd").each(function(){
+                                    if(that.attr("data")==$(this).attr("dataNum")){
+                                        $(this).remove();
+                                        jobNum($(".positions-table-wrapper tbody tr.selected").size());
+                                    }
+                                })
+
+                            }else{
+                                var selected = $(".positions-table-wrapper tbody tr.selected");
+                                if((selected.size()<5)||(!(selected.get(0)))){
+                                    $(this).addClass("selected");
+                                    $(this).find("input").prop({"checked":"checked"});
+                                    $(".positions-selected").append(dd(dqTitle,i));
+                                    $(this).attr({"data":i});
+                                    jobNum($(".positions-table-wrapper tbody tr.selected").size());
+                                }
+                                else{
+                                    tipsContent("最多5个",$(".tips"),"fail");
+                                    $(this).find("input").prop({"checked":false});
+                                }
+                            }
+                        })
+                    });
+
+
+                    /*删除职位*/
+                    $(".positions-selected").delegate(".positions-selected-position-delete","click",function(){
+                        var that = $(this);
+                        $(".positions-table-wrapper tr.selected").each(function(){
+                            if(that.closest("dd").attr("dataNum")==$(this).attr("data")){
+                                $(this).removeClass("selected");
+                                $(this).find("input").prop({"checked":false});
+                                that.closest("dd").remove();
+                                jobNum($(".positions-table-wrapper tr.selected").size());
+                            }
+                        })
+                    });
+
+                    /*职位数量*/
+                    function jobNum(num){
+                        $(".positions-selected-title .num").text(num);
                     }
-                });
-            })
-        </script>
+
+                    /*表格时间排序*/
+//                    var arr = [];
+//                    $(".positions-table td.time").each(function(i){
+//                        arr.push($.trim($(this).text()).replace(/-/g,''));
+//                    });
+
+                })
+            </script>
+
         </div>
         <div class="slide-bar">
             <div class="slider-bar-l">
@@ -205,3 +471,4 @@
     </script>
 </body>
 </html>
+
