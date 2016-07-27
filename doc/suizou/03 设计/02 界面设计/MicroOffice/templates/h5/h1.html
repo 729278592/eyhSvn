@@ -253,6 +253,7 @@
     <script src="../../assets/global/plugins/jquery/jquery-1.11.3.min.js"></script>
     <!-- Initialize Swiper -->
     <script>
+	var positionNum = 2;
     $(".allPageSpan").text($(".section").size());
     function sectionIn1(){
         $('.section1').find('.bg1').delay(50).animate({
@@ -412,7 +413,7 @@
             })
         });
     }
-
+	
 
     new Swiper('#swiper-container1', {
         pagination: '.swiper-pagination',
@@ -686,20 +687,113 @@
                     })
                 });
             }
-            if(swiper.activeIndex==4){
-                sectionOut4();
-                sectionJobIn(swiper.activeIndex);
-                sectionJobOut(swiper.activeIndex+1);
-            }
-            if(swiper.activeIndex==5){
-                sectionJobOut(swiper.activeIndex-1);
-                sectionJobIn(swiper.activeIndex);
-                sectionOutLast();
-            }
-            if(swiper.activeIndex==6){
-                sectionJobOut(swiper.activeIndex-1);
-                sectionInLast();
-            }
+			if(positionNum==0){
+				if(swiper.activeIndex==4){					
+					sectionInLast();
+				}
+			}else if(positionNum==1){
+				if(swiper.activeIndex==4){
+					sectionOut4();
+					sectionJobIn(swiper.activeIndex);
+					sectionInLast();
+				}
+				if(swiper.activeIndex==5){
+					sectionJobOut(swiper.activeIndex-1);
+					sectionInLast();
+				}
+			}else if(positionNum==2){
+				if(swiper.activeIndex==4){
+					sectionOut4();
+					sectionJobIn(swiper.activeIndex);
+					sectionJobOut(swiper.activeIndex+1);
+				}
+				if(swiper.activeIndex==5){
+					sectionJobOut(swiper.activeIndex-1);
+					sectionJobIn(swiper.activeIndex);
+					sectionInLast();
+				}
+				if(swiper.activeIndex==6){
+					sectionJobOut(swiper.activeIndex-1);
+					sectionInLast();
+				}
+			}else if(positionNum==3){
+				if(swiper.activeIndex==4){
+					sectionOut4();
+					sectionJobIn(swiper.activeIndex);
+					sectionJobOut(swiper.activeIndex+1);
+				}
+				if(swiper.activeIndex==5){
+					sectionJobOut(swiper.activeIndex-1);
+					sectionJobIn(swiper.activeIndex);
+					sectionJobOut(swiper.activeIndex+1);
+				}
+				if(swiper.activeIndex==6){
+					sectionJobOut(swiper.activeIndex-1);
+					sectionJobIn(swiper.activeIndex);
+					sectionInLast();
+				}
+				if(swiper.activeIndex==7){
+					sectionJobOut(swiper.activeIndex-1);
+					sectionInLast();
+				}
+			}
+			else if(positionNum==4){
+				if(swiper.activeIndex==4){
+					sectionOut4();
+					sectionJobIn(swiper.activeIndex);
+					sectionJobOut(swiper.activeIndex+1);
+				}
+				if(swiper.activeIndex==5){
+					sectionJobOut(swiper.activeIndex-1);
+					sectionJobIn(swiper.activeIndex);
+					sectionJobOut(swiper.activeIndex+1);
+				}
+				if(swiper.activeIndex==6){
+					sectionJobOut(swiper.activeIndex-1);
+					sectionJobIn(swiper.activeIndex);
+					sectionJobOut(swiper.activeIndex+1);
+				}
+				if(swiper.activeIndex==7){
+					sectionJobOut(swiper.activeIndex-1);
+					sectionJobIn(swiper.activeIndex);
+					sectionInLast();
+				}
+				if(swiper.activeIndex==8){
+					sectionJobOut(swiper.activeIndex-1);
+					sectionInLast();
+				}
+			}else if(positionNum==5){
+				if(swiper.activeIndex==4){
+					sectionOut4();
+					sectionJobIn(swiper.activeIndex);
+					sectionJobOut(swiper.activeIndex+1);
+				}
+				if(swiper.activeIndex==5){
+					sectionJobOut(swiper.activeIndex-1);
+					sectionJobIn(swiper.activeIndex);
+					sectionJobOut(swiper.activeIndex+1);
+				}
+				if(swiper.activeIndex==6){
+					sectionJobOut(swiper.activeIndex-1);
+					sectionJobIn(swiper.activeIndex);
+					sectionJobOut(swiper.activeIndex+1);
+				}
+				if(swiper.activeIndex==7){
+					sectionJobOut(swiper.activeIndex-1);
+					sectionJobIn(swiper.activeIndex);
+					sectionJobOut(swiper.activeIndex+1);
+				}
+				if(swiper.activeIndex==8){
+					sectionJobOut(swiper.activeIndex-1);
+					sectionJobIn(swiper.activeIndex);
+					sectionInLast();
+				}
+				if(swiper.activeIndex==9){
+					sectionJobOut(swiper.activeIndex-1);
+					sectionInLast();
+				}
+			}
+                                    
         }
     });
 
