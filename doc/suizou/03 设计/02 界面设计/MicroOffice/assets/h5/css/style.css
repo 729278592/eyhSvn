@@ -265,13 +265,13 @@ section{position: relative;}
 }
 .section6 .bg6{opacity: 0;background:url(../../admin/images/h5images/bg2.jpg) no-repeat;background-size:100% 100%;width:100%;height:100%;background-position:0 0;position: absolute;}
 
-.section7 .bg8{opacity: 0;background:url(../../admin/images/h5images/bg2.jpg) no-repeat;background-size:100% 100%;width:100%;height:100%;background-position:0 0;position: absolute;}
+.sectionLast .bg8{opacity: 0;background:url(../../admin/images/h5images/bg2.jpg) no-repeat;background-size:100% 100%;width:100%;height:100%;background-position:0 0;position: absolute;}
 
-.section7 .el_bg8_box{position: absolute;bottom: -30%;left: 10%;width: 80%;height: 400px;background:url(../../admin/images/h5images/codeBg.png)no-repeat;background-size:100% 100%;}
+.sectionLast .el_bg8_box{position: absolute;bottom: -30%;left: 10%;width: 80%;height: 400px;background:url(../../admin/images/h5images/codeBg.png)no-repeat;background-size:100% 100%;}
 .el_bg8_box .codeDiv{text-align: center;opacity: 0;width: 120px;position: absolute;left: 56%;margin-left: -60px;bottom: 0;}
 .el_bg8_box .codeImg{width: 120px;height: 120px;background:url(../../admin/images/h5images/ercode.jpg)no-repeat;background-size:100% 100%;}
 .el_bg8_box .codeDiv p{font-size: 16px;color: #fff;}
-.el_bg8_box .btnInforDiv{position: absolute;bottom: 0;opacity: 0;left: 34%;width: 114px;height: 33px;}
+.el_bg8_box .btnInforDiv{position: absolute;bottom: 0;opacity: 0;left: 30%;width: 114px;height: 33px;}
 .el_bg8_box .btnInfor{display: inline-block;padding: 7px 15px;background: #c7c7c7;color: #efefef;float: right;font-size: 14px;}
 
 
