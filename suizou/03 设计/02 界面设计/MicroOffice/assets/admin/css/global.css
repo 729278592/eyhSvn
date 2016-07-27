@@ -721,7 +721,9 @@ a.keyword-button:hover,.keyword-button:active,.keyword-button:focus{color: #fff;
 .actions-btns.card{width: 300px;}
 .styles-item.mr0{margin-right: 0;}
 .styles-item-img{width: 193.7px;height: 189px;}
+.styles-item-img:hover{cursor: pointer;}
 .styles-item{text-align: left;margin-bottom: 15px;}
+.styles-item:hover{cursor: default;}
 .styles-item p{width: 189px;font-size: 14px;display: block;padding: 5px 0;height: 30px;}
 .styles-item p .free{color: #00d449;}
 .styles-item p .style{border-radius: 2px;display: inline-block;padding: 2px 15px;background: #f1c411;color: #fff;}
