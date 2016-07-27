@@ -37,7 +37,7 @@ html.overflow{overflow-y:hidden;}
 .dm-menu li.active a{color: #f16f05;}
 .dm-shopping{padding-top: 25px;width: 95px;height: 20px;}
 .dm-shopping a{color: #4f4949;}
-.btndownLoad{display: block;width: 100px;height: 30px;margin: 40px auto;text-align: center;color: #666;font-size: 14px;}
+.btndownLoad{display: block;height: 30px;margin: 40px auto;text-align: center;color: #666;font-size: 14px;}
 /*index-content*/
 .dm-video{width: 1024px;margin: 40px auto;}
 .dm-list{width: 100%;}
