@@ -304,23 +304,34 @@
                                 <div class="h5-edit-area-label">专题风格</div>
                                 <ul class="h5-edit-area-editing">
                                     <li class="styles-item selected">
-                                        <img src="../../assets/admin/images/template0_logo.jpg" width="82" height="82" class="styles-item-img">
-                                        <br>
+                                        <img src="../../assets/admin/images/template0_logo.jpg" class="styles-item-img">
+                                        <p class="clearfix">
+                                            <span class="free left">免费</span>
+                                        </p>
                                         <span class="styles-item-label">搞怪蓝人</span>
                                     </li>
                                     <li class="styles-item">
-                                        <img src="../../assets/admin/images/template1_logo.jpg" width="82" height="82" class="styles-item-img">
-                                        <br>
+                                        <img src="../../assets/admin/images/template1_logo.jpg" class="styles-item-img">
+                                        <p class="clearfix">
+                                            <button type="button" class="style left">购买</button>
+                                            <span class="money right">￥500.00</span>
+                                        </p>
                                         <span class="styles-item-label">童趣天空</span>
                                     </li>
                                     <li class="styles-item">
-                                        <img src="../../assets/admin/images/template2_logo.jpg" width="82" height="82" class="styles-item-img">
-                                        <br>
+                                        <img src="../../assets/admin/images/template2_logo.jpg" class="styles-item-img">
+                                        <p class="clearfix">
+                                            <button type="button" class="style left">购买</button>
+                                            <span class="money right">￥500.00</span>
+                                        </p>
                                         <span class="styles-item-label">变换几何</span>
                                     </li>
-                                    <li class="styles-item">
-                                        <img src="../../assets/admin/images/template3_logo.png" width="82" height="82" class="styles-item-img">
-                                        <br>
+                                    <li class="styles-item mr0">
+                                        <img src="../../assets/admin/images/template3_logo.png" class="styles-item-img">
+                                        <p class="clearfix">
+                                            <button type="button" class="style left">购买</button>
+                                            <span class="money right">￥500.00</span>
+                                        </p>
                                         <span class="styles-item-label">办公桌面</span>
                                     </li>
                                 </ul>
@@ -420,7 +431,7 @@
 
                     $(".positions-table .squaredCheckBox").on("click",function(e){
                         e.preventDefault();
-                    })
+                    });
 
                     /*删除职位*/
                     $(".positions-selected").delegate(".positions-selected-position-delete","click",function(){
@@ -447,8 +458,8 @@
 //                    });
 
 
-                    $(".h5-edit-area-editing li").on("click",function(){
-                        $(this).addClass("selected");
+                    $(".h5-edit-area-editing li img").on("click",function(){
+                        $(this).closest("li").addClass("selected");
                         $(this).siblings("li").removeClass("selected");
                     })
 
