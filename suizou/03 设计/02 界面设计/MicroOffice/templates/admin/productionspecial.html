@@ -130,7 +130,6 @@
             </div>
         </div>
         <div id="admin-content-wrapper">
-
             <div class="content-header">
                 <span class="content-title">制作专题</span>
                 <div class="company-name right">
@@ -365,6 +364,31 @@
                     </div>
                 </div>
             </div>
+            <div class="mask-bg hide"></div>
+            <div class="mask hide">
+                <div class="h5-preview-share">
+                    <!-- 二维码 START-->
+                    <div class="card h5-preview-share-card">
+                        <qrcode class="h5-preview-share-card-qrcode">
+                            <img src="../../assets/admin/images/code1.jpg" class="qrcode" height="162" width="162" alt=""/>
+                        </qrcode>
+                        <div class="h5-preview-share-card-url">
+                            <p class="h5-preview-share-card-url-tip">
+                                扫描二维码手机预览<br>或者复制以下链接通过微信发送给您的朋友
+                            </p>
+                            <p class="h5-preview-share-card-url-link">http://qx.moseeker.com/h5/3890</p>
+                        </div>
+                    </div>
+                    <!-- 二维码 END -->
+
+                    <!-- 操作 START-->
+                    <div class="h5-preview-share-actions">
+                        <!-- ngIf: !accountCheck.isSubAccount(h5) || (!accountCheck.isSuperAccount(AdminUserInfo)) -->
+                        <a class="h5-preview-share-actions-btn" href="specialList.html">返回列表</a>
+                    </div>
+                    <!-- 操作 END -->
+                </div>
+            </div>
             <script src="../../assets/admin/js/tips.js"></script>
             <script>
                 $(function(){
@@ -456,11 +480,23 @@
                     $(".h5-edit-area-editing li img").on("click",function(){
                         $(this).closest("li").addClass("selected");
                         $(this).closest("li").siblings("li").removeClass("selected");
-                    })
+                    });
 
+
+                    $(".card-item.actions-btns-publish").on("click",function(){
+                        $("#admin-content-wrapper").css({zIndex:"15"});
+                        $(".mask-bg,.mask").removeClass("hide");
+                    });
+                    $(".mask").on("click",function(){
+                        $(".mask-bg,.mask").addClass("hide");
+                        $("#admin-content-wrapper").css({zIndex:"12"});
+                    });
+
+                    $(".card.h5-preview-share-card,.h5-preview-share-actions-btn").on("click",function(e){
+                        e.stopPropagation();
+                    })
                 })
             </script>
-
         </div>
         <div class="slide-bar">
             <div class="slider-bar-l">
