@@ -110,7 +110,7 @@ body{background-color: #f7f7f7;!important;}
 .common-list-item .item-actions,.common-list-item .item-content,.common-list-item .item-info,
 .position-actions,.position-actions .card,.resume-actions,.resume-actions .card{list-style:none;padding:0;margin:0}
 #admin-wrapper{width:100%;}
-#admin-content-wrapper{position:absolute;margin-left:50px;left:0;right:0;z-index:2;}
+#admin-content-wrapper{position:absolute;margin-left:50px;left:0;right:0;z-index:12;}
 .btn,.card,.sub-nav,.sub-title,header{background-color:#fff}
 
 .common-list-item .item-actions.application-item-actions-pos{left: 61%;}
@@ -729,7 +729,7 @@ a.keyword-button:hover,.keyword-button:active,.keyword-button:focus{color: #fff;
 .styles-item p .style{border-radius: 2px;display: inline-block;padding: 2px 15px;background: #f1c411;color: #fff;}
 .styles-item p .style:hover{text-decoration: none;}
 .styles-item p .money{font-size: 18px;color: #f1c411;}
-
+.h5-preview-share{position: absolute;left: 50%;margin-left: -283px;top: 40%;margin-top: -140px;}
 
 
 

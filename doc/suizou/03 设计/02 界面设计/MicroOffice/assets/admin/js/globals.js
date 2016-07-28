@@ -10,12 +10,16 @@ $(function(){
 
     $(".nav").hover(
         function(){
+            $(this).css({zIndex:"20"});
             $(this).animate({width:"158px"},200);
             $(".main-nav-w158").animate({left:"0"},200);
         },
         function(){
+            var that = $(this);
             $(this).animate({width:"50px"},200);
-            $(".main-nav-w158").animate({left:"-158px"},200);
+            $(".main-nav-w158").animate({left:"-158px"},200,function(){
+                that.css({zIndex:"20"});
+            });
         });
     var mw158 = $(".main-nav-w158 .main-nav-list li");
     var m     = $(".main-nav .main-nav-list li");
