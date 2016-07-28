@@ -1,0 +1,169 @@
+@charset "utf-8";
+/*common style*/
+.verdana{font-family: "Verdana";}
+body,html{margin:0;padding:0;font-size:30px;color:#000;font-family:"Microsoft YaHei","微软雅黑";line-heihgt:20px;}
+ul,li,img{margin:0;padding:0;list-style:none;border:none; vertical-align:middle;}
+a{color:#000;text-decoration:none;}
+.clearfix:after {content: ".";display: block;clear: both;visibility: hidden;line-height: 0;height: 0;}
+.clearfix{display: inline-block;}
+.relative{position:relative;}
+.absolute{position: absolute;}
+.fix     {position: fixed;}
+.left{float: left;}
+.right{float: right;}
+html[xmlns] .clearfix {display: block;}
+a,button,input,img,table,ul,li,tr,td,div{-webkit-tap-highlight-color:rgba(0,0,0,0);}
+
+.content {width: 100%;position: relative;max-width: 640px;margin: 0 auto;}
+.content.overflow{overflow-x: hidden;}
+.content.bg{background: #f3f3f3;}
+
+
+/*考勤列表*/
+.attendance,.attendance_img{width: 100%;}
+.attendance ul{position: relative;}
+.attendance ul li{float: left;position: relative;width: 16%;height: 3.5em;top: -7em;margin-left: 7%;}
+.cu_s{color: #080202;display: inline-block;position: absolute;width: 96%;height: 96%;border-radius: 112px;background: transparent;text-align: center;line-height: 104px;font-size: 1.6em;}
+.cu_s1{position: absolute;bottom: -1.5em;left: 0.8em;}
+.cu_s2{border: 3px solid #e12a29;color:#e12a29 }
+.cu_s3{border: 3px solid #3da0ea;color:#3da0ea }
+.cu_s4{border: 3px solid #48a9ae;color:#48a9ae }
+.cu_s5{border: 3px solid #f38d6f;color:#f38d6f }
+.cc_heade{position: relative;top: -3.8em;}
+.cc_h{width: 100%;height: 1em;text-align: center;line-height: 1em;border-bottom: 1px solid #b9b9b9;color: #080202;padding-bottom: 10px;}
+input{outline: none;}
+.cb_div{width: 65%;margin: 1em auto;height: 35px;}
+.cb_spna{position: relative;}
+.cb_in{font-size: 21px;width: 4.1em;position: relative;top: -0.55em;height: 1.3em;padding-left: 0.5em;display: inline-block;margin: 0 0.1em;}
+.cb_in1{position: absolute;right: 0.1em;}
+.cbs_ul{width: 69%;position: absolute;top: 1.04em;left: 0.1em;display: none;height: 3.82em;overflow-y: scroll}
+.cbs_ul li{width:95%;height: 1.72em; border: 1px solid #bababa;border-bottom: 0;background: #fff;font-size: 16px;line-height: 1.72em;}
+.cbs_ul li:last-child{border-bottom:1px solid #bababa; }
+.c_ta{width: 100%;margin-top: 1em;}
+table{ border-collapse:collapse;width: 90%;margin: 0 auto;}
+tr th{font-size: 29px;font-weight: 100;}
+tr td{ text-align:center;font-size: 15px;border:1px solid #ccc;color: #080202;}
+tr th,tr td{height: 2.6em;}
+.late{background: #bce0f4;color: #22b9eb;}
+.l_la{font-size: 16px;}
+.tui{background: #b1dfe1;color: #339ba1;}
+.gong{background: #f8c0a7;color: #fa7011;}
+.show{display: block;}
+.hide{display: none;}
+.attendance-records{width: 100%;font-size: 15px;margin: 0 auto;margin-bottom: 20px;border-top: 1px solid #ddd;}
+.attendance-records li{width: 96%;padding:0 2%;height: 40px;border-bottom: 1px solid #ddd;line-height: 40px;background: #fff;}
+.attendance-records li:first-child{margin: 10px 0;border-top: 1px solid #ddd;}
+.attendance-records li>span:first-child{display: inline-block;width: 130px;}
+.attendance-records li ul li{float: left;width: 50%;height: 40px;}
+.attendance-records li:last-child{border-bottom: none;}
+.ccc{background: #ccc;}
+#sandbox-container{width: 100%;background: #fff;}
+#sandbox-container .table-condensed{margin-left: 5%;}
+.datepicker{width: 100%;}
+.sign_in{position: relative;left: 20px;}
+.the_mood,.the_about,.sign_back,.the_length{position: relative;left: 5px;}
+
+.attendance-records li span{color: #666;}
+.attendance-records li span.color{color: #f00;}
+.datepicker.datepicker-inline td{padding:5px 5px;}
+.datepicker table tr td.active.active{background: #47aaea;}
+.datepicker table tr td.today{position: relative;background: #edf6fd;border: 1px solid #60b4ed;}
+.datepicker table tr td, .datepicker table tr th{border-radius: 0;}
+.datepicker table tr td.today .todayImg{position: absolute;top: 4px;right: 2px;line-height: 40px;width: 20px;}
+.datepicker table tr td.red{position: relative;}
+.datepicker table tr td.red .notAttence{position: absolute;top: 0;right: 0;width: 10px;}
+.notes{font-size: 14px;color: #666;width: 96%;padding: 0 2%;}
+.notes p{width: 100%;display: block;}
+.notes p span{width: 41%;margin: 0;text-align: center;}
+.notes p span.style{display: inline-block;width: 20px;float: left;}
+.notes p span.last{width: 59%;}
+.notes p img{width: 18px;}
+/*签到失败*/
+.sign{width: 100%;}
+.signInFail{width: 80%;margin: 10%;}
+.sign .time{font-size: 36px;color: #46aaea;border: 1px solid #46aaea;width: 80%;margin: 0 auto;text-align: center;padding: 5px 0;}
+.attendanceFailInfor{font-size: 14px;color: #666;width: 80%;margin: 0 auto;}
+.attendanceFailInfor p.title{font-size: 16px;color: #000;text-align: center;}
+.datepicker{padding: 0;}
+
+
+@media screen and (max-width: 768px) {
+    /*考勤*/
+    .s_last{width: 55%;}
+    /*考勤*/
+}
+@media screen and (min-width: 640px) {
+    /*考勤*/
+    .ban,.head,.content,.share_btn,.common_head img{width: 21.3em;}
+    .s_last{width: 348px;}
+    .c_cccu li{font-size: 0.9em;}
+    .cc_h{margin-top: 0.5em;}
+    .c_wu{top: 3em;width: 100%;}
+    /*考勤*/
+}
+@media screen and (max-width: 640px) {
+
+
+}
+@media screen and (max-width: 568px) {
+    /*考勤*/
+    .attendance ul li{top: -6em;height: 3em;width: 3em;margin-left: 7%;}
+    .cu_s{line-height: 3.5em;font-size: 25px;}
+    .cbs_ul{margin-left: -0.05em;}
+    .cu_s1{font-size: 25px;}
+    /*考勤*/
+}
+@media screen and (max-width: 480px) {
+    /*考勤*/
+    .cc_h {margin-top: 2em;font-size: 25px;}
+    .attendance ul li{top: -5em;height: 2.5em;width: 2.5em;margin-left: 7%;}
+    .cu_s{line-height: 3.5em;font-size: 25px;}
+    .cu_s1{font-size: 20px;}
+    .cb_div{width: 75%;}
+    tr th.datepicker-switch{font-size: 20px;}
+    tr th.dow{font-size: 20px;}
+    /*考勤*/
+}
+@media screen and (max-width: 414px) {
+    /*考勤*/
+    .attendance ul li{top: -4.5em;height: 2.5em;width: 2.5em;margin-left: 5.4%;}
+    .cu_s{line-height: 3em;font-size: 25px;}
+    .cu_s1{font-size: 22px;}
+    .cb_div{width: 78%;}
+    tr th.datepicker-switch{font-size: 18px;}
+    tr th.dow{font-size: 18px;}
+    /*考勤*/
+}
+@media screen and (max-width: 384px) {
+    /*考勤*/
+    .attendance ul li{margin-left: 3.6%;}
+    /*考勤*/
+}
+@media screen and (max-width: 375px) {
+    /*考勤*/
+    .attendance ul li{top: -4.5em;height: 2.5em;width: 2.5em;margin-left: 3.7%;}
+    .cu_s{line-height: 3em;font-size: 25px;}
+    .cu_s1{font-size: 22px;}
+    .cb_div{width: 78%;margin-top: 0.5em;}
+    .cbs_ul{height: 3em;}
+    /*考勤*/
+}
+@media screen and (max-width: 360px) {
+    /*考勤*/
+    .attendance ul li{margin-left: 3.4%;}
+    /*考勤*/
+}
+@media screen and (max-width: 320px) {
+    /*考勤*/
+    .attendance ul li {top: -3.8em;height: 2.16em;width: 2.16em;}
+    .c_cccu li{font-size: 0.6em;}
+    .c_cc{height: 4.6em;padding: 0.5% 1.1% 1.1% 0.5%;}
+    .c_c{height: 3.5em;}
+    .cb_div{width: 78%;}
+    .cu_s{line-height: 2.5em;font-size: 25px;}
+    .cu_s1{font-size: 18px;}
+    tr th{font-size: 20px;}
+    tr th.datepicker-switch{font-size: 16px;}
+    tr th.dow{font-size: 16px;}
+    /*考勤*/
+}
