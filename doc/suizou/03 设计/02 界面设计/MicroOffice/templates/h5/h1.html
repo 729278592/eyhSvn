@@ -19,14 +19,10 @@
         @-moz-keyframes rotating{from{-moz-transform:rotate(0)}to{-moz-transform:rotate(360deg)}}
     </style>
 </head>
-<body class="overflow">
 <!-- Swiper -->
     <span id="playbox" class="btn_music on transform" onclick="playbox.init(this).play();">
         <audio id="audio" loop src="../../assets/h5/images/4.mp3"></audio>
     </span>
-    <div id="dowebok">
-    </div>
-
     <div class="swiper-container" id="swiper-container1">
         <div class="swiper-wrapper">
             <div class="swiper-slide">
@@ -255,10 +251,7 @@
     <script src="../../assets/global/plugins/jquery/jquery-1.11.3.min.js"></script>
     <!-- Initialize Swiper -->
     <script>
-    $(".caretUp").on("click",function(){
-        $.fn.fullpage.moveSectionDown();
 
-    })
         var positionNum = $(".section.job").size();
         $(".allPageSpan").text($(".section").size());
         function sectionIn1(){

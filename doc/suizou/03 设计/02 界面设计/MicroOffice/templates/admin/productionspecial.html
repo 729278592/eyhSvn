@@ -363,7 +363,7 @@
                             <!-- 手机预览 START -->
                             <div class="phone">
                                 <div class="el_phone">
-                                    <iframe src="../h5/h1.html" frameborder="0"></iframe>
+                                    <iframe src="../h5/h1.html" id="iframe"></iframe>
                                 </div>
                             </div>
                             <!-- 手机预览 END -->
@@ -625,7 +625,17 @@
 
                     $(".card.h5-preview-share-card,.h5-preview-share-actions-btn").on("click",function(e){
                         e.stopPropagation();
-                    })
+                    });
+
+                    $.ajax({
+                        type : "POST",
+                        url : "../h5/h1.html",
+                        dataType : "html",
+                        cache : false,
+                        success : function(data) {
+                            $("#iframe").attr({src:url})
+                        }
+                    });
                 })
             </script>
         </div>
