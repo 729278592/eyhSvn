@@ -255,6 +255,10 @@
     <script src="../../assets/global/plugins/jquery/jquery-1.11.3.min.js"></script>
     <!-- Initialize Swiper -->
     <script>
+    $(".caretUp").on("click",function(){
+        $.fn.fullpage.moveSectionDown();
+
+    })
         var positionNum = $(".section.job").size();
         $(".allPageSpan").text($(".section").size());
         function sectionIn1(){

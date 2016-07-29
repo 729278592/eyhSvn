@@ -278,8 +278,7 @@ section{position: relative;}
 .nowPage{z-index: 1000;position: absolute;right: 5px;bottom: 5px;font-size: 14px;color: #333;font-weight: bold;}
 
 
-.section{position: absolute;left: 0;top: 0;width:270px;
-    height: 480px;}
+.section{position: absolute;left: 0;top: 0;right: 0;bottom: 0;}
 
 @media screen and (min-height: 560px) {
     .bg2 .el_bg2_infor{height: 320px;}
