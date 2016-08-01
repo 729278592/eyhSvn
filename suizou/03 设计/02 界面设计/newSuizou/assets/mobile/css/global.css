@@ -4,6 +4,7 @@
 body,html{margin:0;padding:0;font-size:30px;color:#000;font-family:"Microsoft YaHei","微软雅黑";line-heihgt:20px;}
 ul,li,img{margin:0;padding:0;list-style:none;border:none; vertical-align:middle;}
 a{color:#000;text-decoration:none;}
+body{background: #f7f7f7;}
 .clearfix:after {content: ".";display: block;clear: both;visibility: hidden;line-height: 0;height: 0;}
 .clearfix{display: inline-block;}
 .relative{position:relative;}
@@ -69,16 +70,17 @@ tr th,tr td{height: 2.6em;}
 .datepicker table tr td.active.active{background: #47aaea;}
 .datepicker table tr td.today{position: relative;background: #edf6fd;border: 1px solid #60b4ed;}
 .datepicker table tr td, .datepicker table tr th{border-radius: 0;}
-.datepicker table tr td.today .todayImg{position: absolute;top: 4px;right: 2px;line-height: 40px;width: 20px;}
-.datepicker table tr td.red{position: relative;}
-.datepicker table tr td.red .notAttence{position: absolute;top: 0;right: 0;width: 10px;}
+
+.datepicker table tr td.red{position: relative;background: url(../images/notAttence.png) no-repeat;background-position: 23px 2px;background-size: 10px 10px;}
 .notes{font-size: 14px;color: #666;width: 96%;padding: 0 2%;}
 .notes p{width: 100%;display: block;}
 .notes p span{width: 41%;margin: 0;text-align: center;}
 .notes p span.style{display: inline-block;width: 20px;float: left;}
 .notes p span.last{width: 59%;}
 .notes p img{width: 18px;}
-/*签到失败*/
+.datepicker table tr td.today{background: url(../images/todayImg.png) no-repeat;background-position: 23px 2px;background-size: 22px;}
+
+/*attendanceFail*/
 .sign{width: 100%;}
 .signInFail{width: 80%;margin: 10%;}
 .sign .time{font-size: 36px;color: #46aaea;border: 1px solid #46aaea;width: 80%;margin: 0 auto;text-align: center;padding: 5px 0;}
@@ -86,6 +88,189 @@ tr th,tr td{height: 2.6em;}
 .attendanceFailInfor p.title{font-size: 16px;color: #000;text-align: center;}
 .datepicker{padding: 0;}
 
+
+
+/*applyLeave*/
+.weui_cells.weui_cells_form.mt0{margin-top: 0;}
+.weui_cell .weui_label, .weui_cells .weui_cell{font-size: 14px;}
+.weui_cells_form input {font-family: "微软雅黑";font-size: 14px;}
+.weui_cell.weui_cell_select {padding: 0 15px;}
+.weui_select {font-family: "微软雅黑";padding: 0;color: #333;}
+
+textarea{font-family: "微软雅黑";}
+
+.weui_cell .weui_label{display: table;}
+.weui_cell .weui_label .spanImgBg,.weui_cell .weui_label .spanText{display: table-cell;vertical-align: middle;}
+.weui_cell .weui_label .color{color: #4b53c8;}
+
+
+.picker-modal .bar .title,.bar .button.pull-right{font-size: 14px;}
+.picker-item,.picker-items-col.picker-items-col-divider{font-size: 16px;}
+.weui_cells_form .weui_cell_ft.taLeft{font-size: 14px;text-align: left;position: relative;color: #3d4145;}
+.weui_cell .weui_cell_ft.taLeft:after {
+    content: " ";
+    display: inline-block;
+    -webkit-transform: rotate(45deg);
+    transform: rotate(45deg);
+    height: 6px;
+    width: 6px;
+    border-width: 2px 2px 0 0;
+    border-color: #C8C8CD;
+    border-style: solid;
+    position: absolute;
+    top: 5px;
+    right: 0;
+    margin-left: .3em;
+}
+
+.weui_cell_bd.date{position: relative;}
+.weui_cell_bd.date:after{
+    position: absolute;
+    content: "";
+    width: 0;
+    height: 0;
+    border: 4px solid #333;
+    border-top-color: #333;
+    border-left-color: transparent;
+    border-bottom-color: transparent;
+    border-right-color: transparent;
+    right: 0;
+    top: 10px;
+}
+.weui_cell:before{left: 0;}
+.weui_cell.mb15{margin-bottom: 10px;border-bottom: 1px solid #efefef;}
+.weui_cell_select .weui_cell_bd.date:after{
+    position: absolute;
+    content: "";
+    width: 0;
+    height: 0;
+    border: 4px solid #333;
+    border-top-color: #333;
+    border-left-color: transparent;
+    border-bottom-color: transparent;
+    border-right-color: transparent;
+    right: 0;
+    top: 22px;webkit-transform: rotate(0deg);
+    transform: rotate(0deg)}
+
+.weui_cells a.weui_cell:active {background-color: #ECECEC;}
+.weui_btn.b0:after,.weui_btn.b0{border: 0;border-radius: 0;}
+.weui_btn_area .weui_btn_primary{background: #47aaea;}
+.weui_btn_area.fixed {margin: 0;width: 100%;z-index: 1;position: fixed;left: 0;right: 0;height: 50px;text-align: center;line-height: 50px;bottom: -8px;}
+.weui_cells.bg{background: #f7f7f7;}
+.weui_cells.bg .weui_cell{background: #fff;}
+
+.content, .page {
+    position: absolute;
+    top: 0;
+    right: 0;
+    bottom: 0;
+    left: 0;
+}
+.bd.pd50{padding-bottom: 50px;}
+.bd.absolute{position: absolute;top: 0;bottom: 0;overflow-y: scroll;-webkit-overflow-scrolling: touch;width: 100%;}
+
+.weui_btn_primary:not(.weui_btn_disabled):active {
+    color: rgba(255, 255, 255, 0.4);
+    background-color: #47aaea;
+}
+
+#errMsg {
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;    z-index: 10000;
+}
+
+.weui_mask_transparent.fixed {
+    position: fixed;
+    z-index: 10000;
+}
+.errDailog .weui_mask, .errDailog .weui_mask_transparent {
+    position: absolute;
+    left: 0;
+    right: 0;
+    top: 0;
+    bottom: 0;
+    background: 0 0;
+}
+.errDailog .weui_toast {
+    position: absolute;
+    width: 4.4em;
+    min-height: 4em;
+    margin-left: -2.2em;
+    margin-top: -2em;
+}
+.weui_toast, .weui_toast {
+    z-index: 300;
+}
+.weui_toast_content {
+    text-align: center;
+    font-size: 14px;
+}
+#smile-icon {
+    margin: 20px 0 10px;
+}
+
+
+
+.advancedSearch,.addressChioce{position: fixed;z-index: 10;left: 0;top: 0;right: 0;bottom: 0;background: #f7f7f7;}
+.advancedSearchCon{}
+.weui_cells.style .weui_cell:after {
+    content: " ";
+    display: inline-block;
+    -webkit-transform: rotate(45deg);
+    transform: rotate(45deg);
+    height: 6px;
+    width: 6px;
+    border-width: 2px 2px 0 0;
+    border-color: #C8C8CD;
+    border-style: solid;
+    position: relative;
+    top: -2px;
+    top: -1px;
+    margin-left: .3em;
+}
+.weui_cells.style1{margin-top: 10px;}
+.departmentTitle{font-size: 16px;padding: 10px 15px;color: #48a8e4;}
+.weui_search_bar{background: #fff;height: 43px;display: block;width: 100%;}
+.weui_search_bar span.left{display: inline-block;width: 10%;height:30px;font-size: 24px; text-align: center;line-height: 30px;color: #333;}
+.weui_search_bar .weui_search_outer{width: 75%;}
+.weui_search_bar .weui_search_inner{padding-left: 10px;height: 30px;line-height: 30px;}
+.weui_search_bar .weui_search_inner .weui_icon_search{right: 0;display: inline-block;width: 16%;left: auto;text-align: center;}
+.weui_search_bar .weui_search_inner .weui_icon_search:after{content: "";position: absolute;left: 0;top: 2px;bottom: -2px;width: 1px;border-left: 1px solid #efefef;}
+.weui_search_bar .weui_search_inner .weui_icon_search:before{color:#48a8e4;font-weight: bold; }
+.weui_search_bar .weui_search_cancel{width: 6%;text-align: center;color: #48a8e4;}
+
+.weui_search_inner .weui_search_input,.weui_search_cancel {
+    font-size: 12px;
+    font-family: "微软雅黑";
+    position: absolute;top: 0;width: 80%;padding: 6px;
+}
+.highSerch {
+    display: inline-block;
+    width: 15%;
+    height: 30px;line-height: 30px;text-align: center;
+    color: #48a8e4;
+    font-size: 12px;
+    position: relative;
+}
+
+.weui_search_inner .weui_icon_clear {
+    right: 17%;
+    padding: 0 5px;
+    top: -4px;
+}
+.weui_cells.mt0{margin-top: 0;}
+@-webkit-keyframes slideInRight{from{-webkit-transform:translate3d(100%,0,0);transform:translate3d(100%,0,0)}
+    to{-webkit-transform:translate3d(0,0,0);transform:translate3d(0,0,0)}
+}
+@-webkit-keyframes slideOutRight{from{-webkit-transform:translate3d(0,0,0);transform:translate3d(0,0,0)}
+    to{-webkit-transform:translate3d(100%,0,0);transform:translate3d(100%,0,0)}
+}
+.advancedSearch.slideInRight,.addressChioce.slideInRight{-webkit-animation:slideInRight .2s forwards;animation:slideInRight .2s forwards}
+.advancedSearch.slideOutRight,.addressChioce.slideOutRight{-webkit-animation:slideOutRight .6s forwards;animation:slideOutRight .6s forwards}
 
 @media screen and (max-width: 768px) {
     /*考勤*/

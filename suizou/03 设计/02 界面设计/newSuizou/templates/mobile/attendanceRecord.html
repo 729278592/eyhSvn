@@ -100,19 +100,11 @@
         });
 
         $(function(){
-//            $(".day").each(function(){
-//                $(this).on("click",function(e){
-//                    e.stopPropagation();
-//                })
-//            });
-
-            /*今天*/
-            var today = "<img src='../../assets/mobile/images/todayImg.png' class='todayImg'/>";
-            $(".datepicker table tr td.today").append(today);
-
-            /*未正常签到*/
-            var noAttendance = "<img src='../../assets/mobile/images/notAttence.png' class='notAttence'/>";
-            $(".datepicker table tr td.red").append(noAttendance);
+            $(".day").each(function(e){
+                $(this).on("click",function(e){
+                    e.stopPropagation();
+                })
+            });
         })
     </script>
 </body>
