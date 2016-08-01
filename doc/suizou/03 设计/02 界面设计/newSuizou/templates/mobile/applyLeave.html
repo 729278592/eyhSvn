@@ -1,0 +1,363 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8"/>
+    <title>考勤记录</title>
+    <meta name="viewport" content="width=device-width; initial-scale=1.0; user-scalable=no;">
+    <link rel="stylesheet" href="../../assets/global/plugins/weUi/css/example.css"/>
+    <link rel="stylesheet" href="../../assets/global/plugins/weUi/css/weui.css"/>
+    <link rel="stylesheet" href="../../assets/global/plugins/font/css/font-awesome.min.css"/>
+    <link rel="stylesheet" href="../../assets/mobile/css/global.css"/>
+</head>
+<body>
+    <div class="content errDailog">
+        <div class="page">
+            <div class="bd pd50 absolute">
+                <form action="#" id="form" onsubmit="return false">
+                    <div class="weui_cells weui_cells_form mt0 bg">
+                        <div class="weui_cell weui_cell_select mb15">
+                            <div class="weui_cell_hd">
+                                <label class="weui_label">
+                                    <span class="spanText">类型</span>
+                                </label>
+                            </div>
+                            <div class="weui_cell_bd weui_cell_primary date">
+                                <select class="weui_select" name="select1">
+                                    <option selected="" value="病假">病假</option>
+                                    <option value="事假">事假</option>
+                                    <option value="婚假">婚假</option>
+                                </select>
+                            </div>
+                        </div>
+
+                        <a class="weui_cell mb15" href="###">
+                            <div class="weui_cell_hd">
+                                <label class="weui_label">
+                                    <span class="spanText">提交对象</span>
+                                </label>
+                            </div>
+                            <div class="weui_cell_bd weui_cell_primary">
+                                <!--<input type="text" class="weui_input" id='datetime-picker'/>-->
+                                <div class="weui_cell_ft taLeft">
+                                    张三
+                                </div>
+                            </div>
+                        </a>
+                        <a class="weui_cell mb15" href="###">
+                            <div class="weui_cell_hd">
+                                <label class="weui_label">
+                                    <span class="spanText">抄送对象</span>
+                                </label>
+                            </div>
+                            <div class="weui_cell_bd weui_cell_primary">
+                                <!--<input type="text" class="weui_input" id='datetime-picker'/>-->
+                                <div class="weui_cell_ft taLeft">
+                                    李四
+                                </div>
+                            </div>
+                        </a>
+                        <div class="weui_cell">
+                            <label class="weui_label">
+                                <span class="spanText">开始日期</span>
+                            </label>
+                            <div class="weui_cell_bd weui_cell_primary date">
+                                <input type="date" id="start" class="weui_input" placeholder="2015-4-4" max="2016-8-4"/>
+                            </div>
+                        </div>
+                        <div class="weui_cell mb15">
+                            <label class="weui_label">
+                                <span class="spanText">结束日期</span>
+                            </label>
+                            <div class="weui_cell_bd weui_cell_primary date">
+                                <input type="date" id="end" class="weui_input" placeholder="2015-4-4"/>
+                            </div>
+                        </div>
+                        <div class="weui_cell">
+                            <div class="weui_cell_hd">
+                                <label class="weui_label">
+                                    <span class="spanText">原因</span>
+                                </label>
+                            </div>
+                            <div class="weui_cell_bd weui_cell_primary">
+                                <textarea name="" id="caseDetails" class="weui_textarea" placeholder="请假理由" cols="30" rows="5"></textarea>
+                            </div>
+                        </div>
+                        <div class="weui_btn_area fixed">
+                            <a class="weui_btn weui_btn_primary b0" id="showTooltips">
+                                提交
+                            </a>
+                        </div>
+                    </div>
+                </form>
+            </div>
+            <div class="advancedSearch hide">
+                <div class="weui_search_bar clearfix">
+                    <span class="left">
+                        <i class="fa fa-angle-left"></i>
+                    </span>
+                    <form class="weui_search_outer left">
+                        <div class="weui_search_inner">
+                            <i class="weui_icon_search"></i>
+                            <input type="search" class="weui_search_input" placeholder="请输入关键词" required="">
+                            <a href="javascript:" class="weui_icon_clear"></a>
+                        </div>
+                    </form>
+                </div>
+                <div class="department">
+                    <p class="departmentTitle">销售部</p>
+                    <div class="weui_cells style mt0">
+                        <div class="weui_cell l0">
+                            <div class="weui_cell_hd">
+                                <label class="weui_label">
+                                    总　　监
+                                </label>
+                            </div>
+                            <div class="weui_cell_bd weui_cell_primary">
+                            </div>
+                        </div>
+                        <div class="weui_cell l0">
+                            <div class="weui_cell_hd">
+                                <label class="weui_label">
+                                    经　　理
+                                </label>
+                            </div>
+                            <div class="weui_cell_bd weui_cell_primary">
+                            </div>
+                        </div>
+                        <div class="weui_cell l0">
+                            <div class="weui_cell_hd">
+                                <label class="weui_label">
+                                    　副经理
+                                </label>
+                            </div>
+                            <div class="weui_cell_bd weui_cell_primary">
+                            </div>
+                        </div>
+                        <div class="weui_cell l0">
+                            <div class="weui_cell_hd">
+                                <label class="weui_label">
+                                    营销顾问
+                                </label>
+                            </div>
+                            <div class="weui_cell_bd weui_cell_primary">
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="addressChioce hide">
+                <div class="weui_search_bar clearfix">
+                    <span class="left">
+                        <i class="fa fa-angle-left"></i>
+                    </span>
+                    <form class="weui_search_outer left">
+                        <div class="weui_search_inner">
+                            <i class="weui_icon_search"></i>
+                            <input type="search" class="weui_search_input" placeholder="请输入关键词" required="">
+                            <a href="javascript:" class="weui_icon_clear"></a>
+                        </div>
+                    </form>
+                    <a href="javascript:" class="highSerch left">
+                        完成
+                    </a>
+                </div>
+                <div class="department">
+                    <div class="weui_cells weui_cells_checkbox">
+                        <label class="weui_cell weui_check_label l0"  for="s11">
+                            <div class="weui_cell_hd">
+                                <label class="weui_label">
+                                    张丽丽
+                                </label>
+                            </div>
+                            <div class="weui_cell_bd weui_cell_primary">
+                                <input type="checkbox" class="weui_check" name="checkbox1" id="s11">
+                                <i class="weui_icon_checked right"></i>
+                            </div>
+                        </label>
+                        <label class="weui_cell weui_check_label l0"  for="s12">
+                            <div class="weui_cell_hd">
+                                <label class="weui_label">
+                                    张丽丽
+                                </label>
+                            </div>
+                            <div class="weui_cell_bd weui_cell_primary">
+                                <input type="checkbox" class="weui_check" name="checkbox1" id="s12">
+                                <i class="weui_icon_checked right"></i>
+                            </div>
+                        </label>
+                        <label class="weui_cell weui_check_label l0"  for="s13">
+                            <div class="weui_cell_hd">
+                                <label class="weui_label">
+                                    张丽丽
+                                </label>
+                            </div>
+                            <div class="weui_cell_bd weui_cell_primary">
+                                <input type="checkbox" class="weui_check" name="checkbox1" id="s13">
+                                <i class="weui_icon_checked right"></i>
+                            </div>
+                        </label>
+                        <label class="weui_cell weui_check_label l0"  for="s14">
+                            <div class="weui_cell_hd">
+                                <label class="weui_label">
+                                    张丽丽
+                                </label>
+                            </div>
+                            <div class="weui_cell_bd weui_cell_primary">
+                                <input type="checkbox" class="weui_check" name="checkbox1" id="s14">
+                                <i class="weui_icon_checked right"></i>
+                            </div>
+                        </label>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <script src="../../assets/global/plugins/jquery/jquery-1.11.3.min.js"></script>
+    <script src="../../assets/mobile/js/messageTip.js"></script>
+    <script src="../../assets/mobile/js/global.js"></script>
+    <script>
+        $(function(){
+
+            /*高级筛选*/
+            $(".bd a.weui_cell").on("touchend",function(){
+                var advancedSearch = $(".advancedSearch");
+                advancedSearch.removeClass("hide");
+                advancedSearch.addClass('slideInRight');
+                $(advancedSearch).on('webkitAnimationEnd', function (){
+                    advancedSearch.removeClass("slideInRight");
+                    advancedSearch.removeClass("hide");
+                }).on('animationend', function (){
+                    advancedSearch.removeClass("slideInRight");
+                    advancedSearch.removeClass("hide");
+                });
+            });
+
+
+            /*选择条件控制*/
+            $(".advancedSearch .weui_cell").on("touchend",function(){
+                var addressChioce = $(".addressChioce");
+                var advancedSearch = $(".advancedSearch");
+                advancedSearch.addClass("hide");
+                addressChioce.removeClass("hide");
+                addressChioce.addClass('slideInRight');
+                $(addressChioce).on('webkitAnimationEnd', function (){
+                    addressChioce.removeClass("slideInRight");
+                    advancedSearch.addClass("hide");
+                    addressChioce.removeClass("hide");
+                }).on('animationend', function (){
+                    addressChioce.removeClass("slideInRight");
+                    addressChioce.removeClass("hide");
+                    advancedSearch.addClass("hide");
+                });
+            });
+
+
+            /*完成选择条件*/
+            $(".highSerch").on("touchend",function(){
+                var addressChioce = $(this).closest(".addressChioce");
+                addressChioce.removeClass("hide");
+                addressChioce.addClass('slideOutRight');
+                $(addressChioce).on('webkitAnimationEnd', function (){
+                    addressChioce.removeClass("slideOutRight");
+                    addressChioce.addClass("hide");
+                }).on('animationend', function (){
+                    addressChioce.removeClass("slideOutRight");
+                    addressChioce.addClass("hide");
+                });
+            });
+
+
+
+
+            /*返回上一级*/
+            $(".weui_search_bar span.left").on("touchend",function(){
+                if($(this).closest(".advancedSearch").get(0)){
+                    var advancedSearch = $(".advancedSearch");
+                    advancedSearch.removeClass("hide");
+                    advancedSearch.addClass('slideOutRight');
+                    $(advancedSearch).on('webkitAnimationEnd', function (){
+                        advancedSearch.removeClass("slideOutRight");
+                        advancedSearch.addClass("hide");
+                    }).on('animationend', function (){
+                        advancedSearch.removeClass("slideOutRight");
+                        advancedSearch.addClass("hide");
+                    });
+                }else if($(this).closest(".addressChioce").get(0)){
+                    var addressChioce = $(".addressChioce");
+                    var advancedSearch = $(".advancedSearch");
+                    addressChioce.removeClass("hide");
+                    advancedSearch.removeClass("hide");
+                    addressChioce.addClass('slideOutRight');
+                    $(addressChioce).on('webkitAnimationEnd', function (){
+                        addressChioce.removeClass("slideOutRight");
+                        addressChioce.addClass("hide");
+                        advancedSearch.removeClass("hide");
+                    }).on('animationend', function (){
+                        addressChioce.removeClass("slideOutRight");
+                        addressChioce.addClass("hide");
+                        advancedSearch.removeClass("hide");
+                    });
+                }
+            });
+
+
+
+            /*搜索条*/
+            $('.container').on('focus', '#search_input', function () {
+                var $weuiSearchBar = $('#search_bar');
+                $weuiSearchBar.addClass('weui_search_focusing');
+            }).on('blur', '#search_input', function () {
+                var $weuiSearchBar = $('#search_bar');
+                $weuiSearchBar.removeClass('weui_search_focusing');
+                if ($(this).val()) {
+                    $('#search_text').hide();
+                } else {
+                    $('#search_text').show();
+                }
+            })
+//          .on('input', '#search_input', function () {
+//                var $searchShow = $("#search_show");
+//                if ($(this).val()) {
+//                    $searchShow.show();
+//                } else {
+//                    $searchShow.hide();
+//                }
+//            })
+                    .on('touchend', '#search_cancel,#search_clear', function () {
+                        $("#search_show").hide();
+                        $('#search_input').val('');
+                    })
+
+        });
+    </script>
+    <script>
+
+        /*获取h5时间值*/
+        $('input').on('input propertychange',function(){
+            console.log($(this).val());
+        });
+
+        $("#showTooltips").click(function(){
+            if($.trim($("#submitPerson").val()) == '') {
+                showErrMsg('提交对象不能为空');
+                return false;
+            }
+            else if($.trim($("#copePerson").val()) == ''){
+                showErrMsg('抄送对象不能为空');
+            }
+            else if($.trim($("#start").val()) == ''){
+                showErrMsg('开始时间不能为空');
+            }
+            else if($.trim($("#end").val()) == ''){
+                showErrMsg('结束时间不能为空');
+            }else if($.trim($("#caseDetails").val()) == ''){
+                showErrMsg('请假理由不能为空');
+            }
+            else{
+                showLoading("数据提交中","提交成功");
+            }
+            return true;
+        });
+    </script>
+</body>
+</html>
