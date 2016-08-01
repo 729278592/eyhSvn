@@ -735,6 +735,11 @@ a.keyword-button:hover,.keyword-button:active,.keyword-button:focus{color: #fff;
 .phone{width: 306px;height: 625px;background: url(../images/iphone-bg.png) no-repeat;background-size: 100% 100%;overflow: hidden;}
 .el_phone{width: 270px;height: 500px;margin: 65px auto;position: relative;overflow-y: hidden;}
 .el_phone iframe{width: 100%;height: 480px;border: 0;}
+.section{position: absolute;left: 0;top: 0;width:270px;height: 480px;}
+.lookPrev .phone{position: absolute;left: 50%;margin-left: -423px;top: 50%;margin-top: -300px;}
+.lookPrev .h5-preview-share{margin-left: -110px;margin-top: -200px;}
+
+
 /*分页*/
 .paging{position: relative;left: 50%;margin: 20px 0;}
 .page-pre,.page-next{float: left;border-radius: 4px;background: #f2f2f2;color: #666;font-size: 16px;width: 40px;height: 30px;text-align: center;line-height: 30px;}

@@ -222,7 +222,7 @@
                                             <i class="fa fa-pencil"></i><br/>
                                             编辑
                                         </a>
-                                        <a href="#">
+                                        <a class="lookSpecial">
                                             <i class="fa fa-eye"></i><br/>
                                             预览
                                         </a>
@@ -247,7 +247,7 @@
                                             <i class="fa fa-pencil"></i><br/>
                                             编辑
                                         </a>
-                                        <a href="#">
+                                        <a class="lookSpecial">
                                             <i class="fa fa-eye"></i><br/>
                                             预览
                                         </a>
@@ -272,7 +272,7 @@
                                             <i class="fa fa-pencil"></i><br/>
                                             编辑
                                         </a>
-                                        <a href="#">
+                                        <a class="lookSpecial">
                                             <i class="fa fa-eye"></i><br/>
                                             预览
                                         </a>
@@ -293,7 +293,7 @@
             </div>
             <div class="mask-bg hide"></div>
             <div class="mask hide">
-                <div class="dailog">
+                <div class="dailog hide">
                     <div class="dailogHead">操作</div>
                     <div class="dailogContent style">
                         <p>
@@ -303,6 +303,38 @@
                             <button class="btnSure">确定</button>
                             <button class="btnCancel">取消</button>
                         </div>
+                    </div>
+                </div>
+
+                <div class="lookPrev hide">
+                    <!-- 手机预览 START -->
+                    <div class="phone">
+                        <div class="el_phone">
+                            <iframe src="../h5/h1.html" id="iframe"></iframe>
+                        </div>
+                    </div>
+                    <!-- 手机预览 END -->
+                    <div class="h5-preview-share">
+                        <!-- 二维码 START-->
+                        <div class="card h5-preview-share-card">
+                            <qrcode class="h5-preview-share-card-qrcode">
+                                <img src="../../assets/admin/images/code1.jpg" class="qrcode" height="162" width="162" alt=""/>
+                            </qrcode>
+                            <div class="h5-preview-share-card-url">
+                                <p class="h5-preview-share-card-url-tip">
+                                    扫描二维码手机预览<br>或者复制以下链接通过微信发送给您的朋友
+                                </p>
+                                <p class="h5-preview-share-card-url-link">http://qx.moseeker.com/h5/3890</p>
+                            </div>
+                        </div>
+                        <!-- 二维码 END -->
+
+                        <!-- 操作 START-->
+                        <div class="h5-preview-share-actions">
+                            <!-- ngIf: !accountCheck.isSubAccount(h5) || (!accountCheck.isSuperAccount(AdminUserInfo)) -->
+                            <a class="h5-preview-share-actions-btn" href="specialList.html">返回列表</a>
+                        </div>
+                        <!-- 操作 END -->
                     </div>
                 </div>
             </div>
@@ -325,23 +357,29 @@
                         }
                     });
 
-
+                    /*删除专题*/
                     $(".pa15").delegate(".removeSpecil","click",function(){
                         $(".mask,.mask-bg,.dailog").removeClass("hide");
                         pageAuto($(".dailog"));
                         $(this).closest("li").addClass("remove");
                     });
 
-
+                    /*确认删除专题*/
                     $(".btnSure").on('click',function(){
                         $(".mask,.mask-bg,.dailog").addClass("hide");
                         $(".remove").addClass("hide");
                     });
+
+                    /*取消删除专题*/
                     $(".btnCancel").on('click',function(){
                         $(".mask,.mask-bg,.dailog").addClass("hide");
-                    })
-                });
+                    });
 
+                    /*预览专题*/
+                    $(".specialList").delegate(".lookSpecial","click",function(){
+                        $(".mask,.mask-bg,.lookPrev").removeClass("hide");
+                    });
+                });
 
             </script>
         </div>
