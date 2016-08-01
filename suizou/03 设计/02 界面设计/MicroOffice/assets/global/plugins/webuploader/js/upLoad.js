@@ -42,6 +42,7 @@ jQuery(function() {
     // 当有文件添加进来的时候
     uploader.on( 'fileQueued', function( file ) {
         var $li = $('<div id="' + file.id + '" class="file-item thumbnail">' +
+                        '<span class="closes"></span>'+
                         '<img>' +
                         '<div class="info">' + file.name + '</div>' +
                     '</div>'),
@@ -96,6 +97,10 @@ jQuery(function() {
     uploader.on( 'uploadComplete', function( file ) {
         $( '#'+file.id ).find('.progress').remove();
     });
+
+    $("#fileList1").delegate(".closes","click",function(){
+        $(this).closest(".file-item").remove();
+    })
 });
 
 
@@ -139,6 +144,7 @@ jQuery(function() {
     // 当有文件添加进来的时候
     uploader.on( 'fileQueued', function( file ) {
         var $li = $('<div id="' + file.id + '" class="file-item thumbnail">' +
+                '<span class="closes"></span>'+
                 '<img>' +
                 '<div class="info">' + file.name + '</div>' +
                 '</div>'),
@@ -193,4 +199,7 @@ jQuery(function() {
     uploader.on( 'uploadComplete', function( file ) {
         $( '#'+file.id ).find('.progress').remove();
     });
+    $("#fileList").delegate(".closes","click",function(){
+        $(this).closest(".file-item").remove();
+    })
 });

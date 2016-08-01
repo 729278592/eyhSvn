@@ -83,27 +83,28 @@
             todayHighlight: true,
             daysOfWeekDisabled: "0,6",
             beforeShowDay: function (date){
-                if (date.getMonth() == (new Date()).getMonth())
-                switch (date.getDate()){
-                    case 4:
-                        return {
-                            tooltip: 'Example tooltip',
-                            classes: 'active'
-                        };
-                    case 12:
-                        return "red";
-                    case 13:
-                        return "red";
+                if (date.getMonth() == (new Date()).getMonth()){
+                    switch (date.getDate()){
+                        case 4:
+                            return {
+                                tooltip: 'Example tooltip',
+                                classes: 'active'
+                            };
+                        case 12:
+                            return "red";
+                        case 13:
+                            return "red";
+                    }
                 }
             }
         });
 
         $(function(){
-            $(".day").each(function(){
-                $(this).on("click",function(e){
-                    e.stopPropagation();
-                })
-            });
+//            $(".day").each(function(){
+//                $(this).on("click",function(e){
+//                    e.stopPropagation();
+//                })
+//            });
 
             /*今天*/
             var today = "<img src='../../assets/mobile/images/todayImg.png' class='todayImg'/>";
