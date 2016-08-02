@@ -122,8 +122,8 @@ textarea{font-family: "微软雅黑";}
     right: 0;
     margin-left: .3em;
 }
-
 .weui_cell_bd.date{position: relative;}
+.weui_cell_bd.style{position: relative;}
 .weui_cell_bd.date:after{
     position: absolute;
     content: "";
@@ -137,6 +137,8 @@ textarea{font-family: "微软雅黑";}
     right: 0;
     top: 10px;
 }
+.weui_cell_bd.style input{background: transparent;position: relative;z-index: 10;}
+.weui_cell_bd.style .fa{position: absolute;top: 4px;right: 0;color: #00d449;z-index: 0;}
 .weui_cell:before{left: 0;}
 .weui_cell.mb15{margin-bottom: 10px;border-bottom: 1px solid #efefef;}
 .weui_cell_select .weui_cell_bd.date:after{

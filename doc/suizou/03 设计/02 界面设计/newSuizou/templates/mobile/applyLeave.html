@@ -60,16 +60,18 @@
                             <label class="weui_label">
                                 <span class="spanText">开始日期</span>
                             </label>
-                            <div class="weui_cell_bd weui_cell_primary date">
-                                <input type="date" id="start" class="weui_input" placeholder="2015-4-4" max="2016-8-4"/>
+                            <div class="weui_cell_bd weui_cell_primary style">
+                                <input type="date" id="start" class="weui_input" placeholder="2015/04/04" min="2016/08/04"/>
+                                <i class="fa fa-calendar"></i>
                             </div>
                         </div>
                         <div class="weui_cell mb15">
                             <label class="weui_label">
                                 <span class="spanText">结束日期</span>
                             </label>
-                            <div class="weui_cell_bd weui_cell_primary date">
-                                <input type="date" id="end" class="weui_input" placeholder="2015-4-4"/>
+                            <div class="weui_cell_bd weui_cell_primary style">
+                                <input type="date" id="end" class="weui_input" placeholder="2015/04/04" max="2016/08/24"/>
+                                <i class="fa fa-calendar"></i>
                             </div>
                         </div>
                         <div class="weui_cell">
@@ -237,7 +239,6 @@
             $(".advancedSearch .weui_cell").on("touchend",function(){
                 var addressChioce = $(".addressChioce");
                 var advancedSearch = $(".advancedSearch");
-                advancedSearch.addClass("hide");
                 addressChioce.removeClass("hide");
                 addressChioce.addClass('slideInRight');
                 $(addressChioce).on('webkitAnimationEnd', function (){
