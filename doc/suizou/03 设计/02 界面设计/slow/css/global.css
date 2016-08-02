@@ -23,7 +23,7 @@ html.overflow{overflow-y:hidden;}
     transition: background-color .5s ease-in-out;}
 .head.style{background: #83dbfd;}
 .head.style:hover{background: #83dbfd;}
-.head.hover {
+.head {
     background-color: #fff;
     -webkit-transition: background-color .5s ease-in-out;
     -o-transition: background-color .5s ease-in-out;
@@ -90,7 +90,7 @@ html.overflow{overflow-y:hidden;}
 }
 
 /*health-content*/
-.health{width: 964px;padding:25px 30px;background: #fff;margin: 0 auto;}
+.health{width: 964px;padding:25px 30px;background: #fff;margin: 15px auto;}
 .health-head{width: 100%;padding-bottom: 10px;border-bottom: 1px solid #83dbfd;margin-bottom: 10px;}
 .health-head img{margin-right: 20px;}
 .health-head span{display: inline-block;height: 44px;line-height: 44px;color: #83dbfd;}

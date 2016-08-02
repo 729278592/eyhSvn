@@ -19,7 +19,7 @@ ul li,ul{margin:0;padding:0;list-style:none;}
 .nav .btn,.nav .btnBg{
     width: 40px;height: 60px;position: absolute;
     top: 50%;margin-top: -30px;cursor: pointer;text-align: center;line-height: 55px;
-    color: white;display: none;
+    color: white;
 }
 .nav .btnBg{background: #000;opacity: 0.5;filter:alpha(opacity=50);}
 .nav .btnBg.hover{opacity: 0.8;filter:alpha(opacity=80);}
