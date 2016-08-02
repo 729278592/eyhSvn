@@ -274,7 +274,7 @@ a.weui_btn.weui_btn_primary{font-size: 16px;}
 .comInfor .comInforCon p img{width: 22px;}
 .comInfor .comInforCon p span{width: 100%;padding-left: 3%;color: #666;}
 .companyBriefIntroduction{background: #fff;width: 94%;padding:3%;position: relative;margin-top: 10px;border-top: 1px solid #dbdbdb;border-bottom: 1px solid #dbdbdb;}
-.companyBriefIntroduction .comBItitle,.prosuct .prosuctTitle,.companyImgList .companyImgListTitle{text-align: center;font-size: 16px;color: #67a5f9;}
+.companyBriefIntroduction .comBItitle,.prosuct .prosuctTitle,.companyImgList .companyImgListTitle{text-align: center;font-size: 16px;color: #67a5f9;height: 25px;line-height: 25px;}
 .companyBriefIntroduction .comBIContent{font-size: 14px;color: #999;}
 .companyBriefIntroduction .weui_btn{position: absolute;right: 3%;bottom: 3%;}
 .prosuct,.companyImgList{background: #fff;margin-top: 10px;border-top: 1px solid #dbdbdb;width: 100%;padding: 2% 0;border-bottom: 1px solid #dbdbdb;}
