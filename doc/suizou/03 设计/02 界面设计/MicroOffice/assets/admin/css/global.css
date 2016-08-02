@@ -636,7 +636,7 @@ a.keyword-button:hover,.keyword-button:active,.keyword-button:focus{color: #fff;
 .basic-info .basic-img{float: left;padding: 50px 0 0 38px;text-align: center;}
 .basic-info .basic-img img{float: none;margin: 0;}
 .card.company-logo .company-info{width: 180px;}
-.company-info .ft14{font-weight: bold;}
+.company-info .ft14{font-weight: bold;width: 180px;text-overflow:ellipsis; overflow:hidden; white-space:nowrap; }
 .moneyzp{width: 94%;margin: 0 3%;}
 .moneyzp span{color: #f61464;}
 .moneyzp span.color1{color: #06be04;}
