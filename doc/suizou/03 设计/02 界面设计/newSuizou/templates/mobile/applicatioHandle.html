@@ -1,0 +1,119 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8"/>
+    <title>已处理申请</title>
+    <meta name="viewport" content="width=device-width; initial-scale=1.0; user-scalable=no;">
+    <link rel="stylesheet" href="../../assets/global/plugins/weUi/css/example.css"/>
+    <link rel="stylesheet" href="../../assets/global/plugins/weUi/css/weui.css"/>
+    <link rel="stylesheet" href="../../assets/global/plugins/font/css/font-awesome.min.css"/>
+    <link rel="stylesheet" href="../../assets/mobile/css/global.css"/>
+</head>
+<body>
+    <div class="content">
+        <div class="page">
+            <div class="bd">
+                <div class="applicatioOpetion">
+                    <ul class="applicatioNav clearfix">
+                        <li>
+                            <a href="applicatioApproval.html">待审批</a>
+                        </li>
+                        <li>
+                            <a href="applicatioHandle.html" class="active">已处理</a>
+                        </li>
+                    </ul>
+                </div>
+                <div class="applicatioList">
+                    <div class="weui_search_bar style clearfix">
+                        <form class="weui_search_outer left" style="width: 100%;">
+                            <div class="weui_search_inner">
+                                <i class="weui_icon_search"></i>
+                                <input type="search" class="weui_search_input" id="search_input" placeholder="请输入关键词" required="">
+                                <a href="javascript:" class="weui_icon_clear" id="search_cancel"></a>
+                            </div>
+                        </form>
+                    </div>
+                    <ul class="entryList">
+                        <li>
+                            <a href="javascript:;">
+                                <div class="couponImg">
+                                    <img src="../../assets/mobile/images/default.png" class="couponImg1" alt=""/>
+                                </div>
+                                <span class="inforList">
+                                    <span class="title">请假申请</span>
+                                    <span>营销部门-南安市场-周圈圈</span>
+                                    <span>2016-08-05 15:23</span>
+                                </span>
+                                <span class="passIcon">
+                                    <span class="pass">
+
+                                    </span>
+                                </span>
+                            </a>
+                        </li>
+                        <li>
+                            <a href="javascript:;">
+                                <div class="couponImg">
+                                    <img src="../../assets/mobile/images/default.png" class="couponImg1" alt=""/>
+                                </div>
+                                <span class="inforList">
+                                    <span class="title">请假申请</span>
+                                    <span>营销部门-南安市场-周圈圈</span>
+                                    <span>2016-08-05 15:23</span>
+                                </span>
+                                 <span class="passIcon">
+                                    <span class="notPass">
+
+                                    </span>
+                                </span>
+                            </a>
+                        </li>
+                        <li>
+                            <a href="javascript:;">
+                                <div class="couponImg">
+                                    <img src="../../assets/mobile/images/default.png" class="couponImg1" alt=""/>
+                                </div>
+                                 <span class="inforList">
+                                    <span class="title">请假申请</span>
+                                    <span>营销部门-南安市场-周圈圈</span>
+                                    <span>2016-08-05 15:23</span>
+                                </span>
+                                 <span class="passIcon">
+                                    <span class="pass">
+
+                                    </span>
+                                </span>
+                            </a>
+                        </li>
+                        <li>
+                            <a href="javascript:;">
+                                <div class="couponImg">
+                                    <img src="../../assets/mobile/images/default.png" class="couponImg1" alt=""/>
+                                </div>
+                                <span class="inforList">
+                                    <span class="title">请假申请</span>
+                                    <span>营销部门-南安市场-周圈圈</span>
+                                    <span>2016-08-05 15:23</span>
+                                </span>
+                                 <span class="passIcon">
+                                    <span class="pass">
+
+                                    </span>
+                                </span>
+                            </a>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+    </div>
+    <script src="../../assets/global/plugins/jquery/jquery-1.11.3.min.js"></script>
+    <script src="../../assets/mobile/js/global.js"></script>
+    <script>
+        /*搜索条*/
+        $('.content').on('touchend', '#search_cancel', function () {
+            $('#search_input').val('');
+        })
+    </script>
+</body>
+</html>
