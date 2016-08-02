@@ -131,6 +131,7 @@
             </div>
         </div>
         <div id="admin-content-wrapper">
+            <script src="../../assets/admin/js/jquery.zclip.min.js"></script>
             <link rel="stylesheet" href="../../assets/global/plugins/webuploader/css/webuploader.css"/>
             <link rel="stylesheet" href="../../assets/global/plugins/bootstrap-3.3.5/css/bootstrap.min.css"/>
             <style>
@@ -331,13 +332,9 @@
                     });
 
 
+                    function coPy(obj){
 
-                    $(".btnCopy").on("click",function(){
-                        var t = document.getElementById("txt");
-                        t.select();
-                        document.execCommand("Copy"); // 执行浏览器复制命令
-                        var that = $(this);
-                        that.attr({disabled:"disabled"});
+                        obj.attr({disabled:"disabled"});
                         $(".copyTip").animate({
                             opacity:1,
                             top:"-40px",
@@ -352,7 +349,27 @@
                                 that.removeAttr("disabled");
                             },2000)
                         })
-                    })
+                    }
+
+
+                    $(document).ready(function(){
+                        if ( window.clipboardData ) {
+                            $('.btnCopy').click(function() {
+                                window.clipboardData.setData("Text", $(this).closest(".copy").find("textarea").val());
+                                coPy($(this))
+                            });
+                        } else {
+                            $(".btnCopy").zclip({
+                                path:'http://img3.job1001.com/js/ZeroClipboard/ZeroClipboard.swf',
+                                copy:function(){return $(this).closest(".copy").find("textarea").val();},
+                                afterCopy:function(){
+                                    var that = $(this);
+                                    coPy(that)
+                                }
+                            });
+                        }
+                    });
+
                 })
             </script>
         </div>
