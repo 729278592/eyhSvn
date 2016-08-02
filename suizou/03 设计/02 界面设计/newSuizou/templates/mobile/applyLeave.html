@@ -2,7 +2,7 @@
 <html>
 <head>
     <meta charset="utf-8"/>
-    <title>考勤记录</title>
+    <title>请假申请</title>
     <meta name="viewport" content="width=device-width; initial-scale=1.0; user-scalable=no;">
     <link rel="stylesheet" href="../../assets/global/plugins/weUi/css/example.css"/>
     <link rel="stylesheet" href="../../assets/global/plugins/weUi/css/weui.css"/>
@@ -61,7 +61,7 @@
                                 <span class="spanText">开始日期</span>
                             </label>
                             <div class="weui_cell_bd weui_cell_primary style">
-                                <input type="date" id="start" class="weui_input" placeholder="开始日期" min="2016/08/04"/>
+                                <input type="date" id="start" class="weui_input" placeholder="2015/04/04"/>
                                 <i class="fa fa-calendar"></i>
                             </div>
                         </div>
@@ -70,7 +70,7 @@
                                 <span class="spanText">结束日期</span>
                             </label>
                             <div class="weui_cell_bd weui_cell_primary style">
-                                <input type="date" id="end" class="weui_input" placeholder="结束日期" max="2016/08/24"/>
+                                <input type="date" id="end" class="weui_input" placeholder="2015/04/04"/>
                                 <i class="fa fa-calendar"></i>
                             </div>
                         </div>
@@ -93,15 +93,15 @@
                 </form>
             </div>
             <div class="advancedSearch hide">
-                <div class="weui_search_bar clearfix">
+                <div class="weui_search_bar style clearfix">
                     <span class="left">
                         <i class="fa fa-angle-left"></i>
                     </span>
                     <form class="weui_search_outer left">
                         <div class="weui_search_inner">
                             <i class="weui_icon_search"></i>
-                            <input type="search" class="weui_search_input" placeholder="请输入关键词" required="">
-                            <a href="javascript:" class="weui_icon_clear"></a>
+                            <input type="search" class="weui_search_input" id="search_input" placeholder="请输入关键词" required="">
+                            <a href="javascript:" class="weui_icon_clear" id="search_cancel"></a>
                         </div>
                     </form>
                 </div>
@@ -148,7 +148,7 @@
                 </div>
             </div>
             <div class="addressChioce hide">
-                <div class="weui_search_bar clearfix">
+                <div class="weui_search_bar style clearfix">
                     <span class="left">
                         <i class="fa fa-angle-left"></i>
                     </span>
@@ -304,32 +304,10 @@
 
 
             /*搜索条*/
-            $('.container').on('focus', '#search_input', function () {
-                var $weuiSearchBar = $('#search_bar');
-                $weuiSearchBar.addClass('weui_search_focusing');
-            }).on('blur', '#search_input', function () {
-                var $weuiSearchBar = $('#search_bar');
-                $weuiSearchBar.removeClass('weui_search_focusing');
-                if ($(this).val()) {
-                    $('#search_text').hide();
-                } else {
-                    $('#search_text').show();
-                }
-            })
-//          .on('input', '#search_input', function () {
-//                var $searchShow = $("#search_show");
-//                if ($(this).val()) {
-//                    $searchShow.show();
-//                } else {
-//                    $searchShow.hide();
-//                }
-//            })
-                    .on('touchend', '#search_cancel,#search_clear', function () {
-                        $("#search_show").hide();
-                        $('#search_input').val('');
-                    })
-
-        });
+            $('.content').on('touchend', '#search_cancel', function () {
+                    $('#search_input').val('');
+                })
+            });
     </script>
     <script>
 

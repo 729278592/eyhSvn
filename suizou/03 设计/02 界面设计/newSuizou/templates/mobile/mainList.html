@@ -1,0 +1,165 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8"/>
+    <title>通讯录列表</title>
+    <meta name="viewport" content="width=device-width; initial-scale=1.0; user-scalable=no;">
+    <link rel="stylesheet" href="../../assets/global/plugins/weUi/css/example.css"/>
+    <link rel="stylesheet" href="../../assets/global/plugins/weUi/css/weui.css"/>
+    <link rel="stylesheet" href="../../assets/global/plugins/font/css/font-awesome.min.css"/>
+    <link rel="stylesheet" href="../../assets/mobile/css/global.css"/>
+</head>
+<body>
+    <div class="content">
+        <div class="page">
+            <div class="bd">
+                <div class="applicatioList">
+                    <div class="weui_search_bar style clearfix">
+                        <form class="weui_search_outer left" style="width: 100%;">
+                            <div class="weui_search_inner">
+                                <i class="weui_icon_search"></i>
+                                <input type="search" class="weui_search_input" id="search_input" placeholder="请输入关键词" required="">
+                                <a href="javascript:" class="weui_icon_clear" id="search_cancel"></a>
+                            </div>
+                        </form>
+                    </div>
+                    <div class="mainTitle styleRight">
+                        公司人员
+                    </div>
+                    <ul class="entryList hide mainstyle">
+                        <li>
+                            <div href="javascript:;">
+                                <div class="couponImg">
+                                    <img src="../../assets/mobile/images/default.png" class="couponImg1" alt=""/>
+                                </div>
+                                <span class="inforList">
+                                    请假申请
+                                </span>
+                                <span class="passIcon">
+                                    <!--13578467496-->
+                                </span>
+                            </div>
+                        </li>
+                        <li>
+                            <div href="javascript:;">
+                                <div class="couponImg">
+                                    <img src="../../assets/mobile/images/default.png" class="couponImg1" alt=""/>
+                                </div>
+                                <span class="inforList">
+                                    请假申请
+                                </span>
+                                <span class="passIcon">
+                                    <!--13578467496-->
+                                </span>
+                            </div>
+                        </li>
+                        <li>
+                            <div href="javascript:;">
+                                <div class="couponImg">
+                                    <img src="../../assets/mobile/images/default.png" class="couponImg1" alt=""/>
+                                </div>
+                                <span class="inforList">
+                                    请假申请
+                                </span>
+                                <span class="passIcon">
+                                    <!--13578467496-->
+                                </span>
+                            </div>
+                        </li>
+                        <li>
+                            <div href="javascript:;">
+                                <div class="couponImg">
+                                    <img src="../../assets/mobile/images/default.png" class="couponImg1" alt=""/>
+                                </div>
+                                <span class="inforList">
+                                    请假申请
+                                </span>
+                                <span class="passIcon">
+                                    <!--13578467496-->
+                                </span>
+                            </div>
+                        </li>
+                    </ul>
+                    <div class="mainTitle">
+                        朋友
+                    </div>
+                    <ul class="entryList mainstyle">
+                        <li>
+                            <div href="javascript:;">
+                                <div class="couponImg">
+                                    <img src="../../assets/mobile/images/default.png" class="couponImg1" alt=""/>
+                                </div>
+                                <span class="inforList">
+                                    请假申请
+                                </span>
+                                <span class="passIcon">
+                                    <!--13578467496-->
+                                </span>
+                            </div>
+                        </li>
+                        <li>
+                            <div href="javascript:;">
+                                <div class="couponImg">
+                                    <img src="../../assets/mobile/images/default.png" class="couponImg1" alt=""/>
+                                </div>
+                                <span class="inforList">
+                                    请假申请
+                                </span>
+                                <span class="passIcon">
+                                    <!--13578467496-->
+                                </span>
+                            </div>
+                        </li>
+                        <li>
+                            <div href="javascript:;">
+                                <div class="couponImg">
+                                    <img src="../../assets/mobile/images/default.png" class="couponImg1" alt=""/>
+                                </div>
+                                <span class="inforList">
+                                    请假申请
+                                </span>
+                                <span class="passIcon">
+                                    <!--13578467496-->
+                                </span>
+                            </div>
+                        </li>
+                        <li>
+                            <div href="javascript:;">
+                                <div class="couponImg">
+                                    <img src="../../assets/mobile/images/default.png" class="couponImg1" alt=""/>
+                                </div>
+                                <span class="inforList">
+                                    请假申请
+                                </span>
+                                <span class="passIcon">
+                                    <!--13578467496-->
+                                </span>
+                            </div>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+    </div>
+    <script src="../../assets/global/plugins/jquery/jquery-1.11.3.min.js"></script>
+    <script src="../../assets/mobile/js/global.js"></script>
+    <script>
+        /*搜索条*/
+        $('.content').on('touchend', '#search_cancel', function () {
+            $('#search_input').val('');
+        });
+
+        $(function(){
+            $(".mainTitle").on("touchend",function(){
+                if($(this).is(".styleRight")){
+                    $(this).removeClass("styleRight");
+                    $(this).next(".entryList").removeClass("hide");
+                }else{
+                    $(this).addClass("styleRight");
+                    $(this).next(".entryList").addClass("hide");
+                }
+            })
+        })
+    </script>
+</body>
+</html>
