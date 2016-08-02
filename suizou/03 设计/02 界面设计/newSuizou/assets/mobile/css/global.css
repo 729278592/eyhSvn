@@ -238,7 +238,11 @@ textarea{font-family: "微软雅黑";}
 .weui_btn_area.style button.active{background: #47aaea;}
 
 
-
+/*not_registered*/
+.content.bg{background: #dbdbdb;}
+.loading{position: absolute;top: 50%;left: 50%;margin-left: -15px;margin-top: -15px;}
+.description{position: relative;top: 200px;width: 94%;padding: 0 3%;}
+.c_wu{position: absolute;top: 3em;;}
 /*mainList*/
 .mainTitle{padding: 10px;font-size: 14px;color: #333;position: relative;margin-top: 10px;background: #fff;border-top: 1px solid #efefef;}
 .mainTitle:after{position:absolute;content:"";width:0;height:0;border:6px solid #3fa8ec;border-top-color:#3fa8ec;border-left-color:transparent;border-bottom-color:transparent;border-right-color:transparent;right:15px;top:18px}
