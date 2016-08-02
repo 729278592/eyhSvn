@@ -111,14 +111,16 @@ body{background-color: #f7f7f7;!important;}
 .position-actions,.position-actions .card,.resume-actions,.resume-actions .card{list-style:none;padding:0;margin:0}
 #admin-wrapper{width:100%;}
 #admin-content-wrapper{position:absolute;margin-left:50px;left:0;right:0;z-index:12;}
-.btn,.card,.sub-nav,.sub-title,header{background-color:#fff}
-
+.btn,.sub-nav,.sub-title,header,.company-logo,.qr-code{background-color:#fff}
+.card-item.card-title.bg{position: relative;top: 27px;margin-top: -8px;}
 .common-list-item .item-actions.application-item-actions-pos{left: 61%;}
 .fbxzw{font-size: 14px;color: #6cb7ee;margin-right: 20px;}
 .dq-application-detail-icon-status > i.ml0{margin-left: 0;margin-top: 4px;}
 .dq-application-detail-status-recommend > span.text{right: 33px;}
 .dq-application-detail-status-recommend.textAlign{display: inline-block;top: -33px;}
-
+.actions-btns-publish,.actions-btns-back{width: 100%;}
+.card{background: #fff;}
+.inner-content >.card{background: transparent;}
 .content-header{padding-left: 20px;background: #4879c7;border-bottom: 1px solid #f7f7f7;width: 98%;z-index: 20;height: 50px;line-height: 50px;position: fixed;display: block;}
 .content-header .content-title{color: #fff;font-size: 16px;}
 .logo-left .logoIcon{width: 85%;margin: 18px auto;display: block;}
@@ -532,6 +534,13 @@ a.keyword-button:hover,.keyword-button:active,.keyword-button:focus{color: #fff;
 .data-item .infor .data-item-count2.color7{color: #6cb7ee;}
 .data-item .infor .data-item-count3.color8{color: #24b4ab;}
 .content-position.pd0{padding: 0;}
+.data-box-content {
+    padding: 80px 0;
+}
+.inner-content .data-box-content {
+
+    padding-bottom: 80px;
+}
 .content-position .specialName{padding: 10px 25px;color: #666;}
 .content-position .addSpecial,.content-position .addHr{display: inline-block;width: 100%;border: 1px dotted #ff3b30;text-align: center;padding: 25px;color: #ff3b30;}
 .pa15{padding: 0 25px;}

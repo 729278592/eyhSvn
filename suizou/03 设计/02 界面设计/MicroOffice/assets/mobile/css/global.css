@@ -318,9 +318,11 @@ a.weui_btn.weui_btn_primary{font-size: 16px;}
 .keyword-div .keyword-input{outline: 0;border: 0;padding-left: 5px;height: 100%;box-sizing: border-box;font-family: "微软雅黑";}
 .keyword-div.have .keyword-input{position: absolute;top:0;outline: 0;border: 0;padding-left: 5px;height: 100%;box-sizing: border-box;font-family: "微软雅黑";}
 
-.keyword-div .fa-check-circle{color: #4c8bda;}
+.keyword-div .fa-check-circle{color: #4c8bda;font-size: 22px;position: relative;top: 2px;}
+.keyword-button .weui_icon_clear:before{font-size: 18px;}
 .keyword-div.have .weui_icon_clear{color: #4c8bda;position: absolute;top: -25px;right: 10px;}
 .keyword-div .weui_icon_clear{position: relative;display: inline-block;width: 14px;height: 14px;border-radius: 14px;top: -2px;}
+.keyword-div .weui_icon_clear:before{font-size: 18px;}
 .keyword-div.have .fa-check-circle{position: absolute;right: 30px;top: 9px;display: inline-block;font-size: 16px;}
 .errDailog{position: relative;}
 .errDailog.absolute{position: absolute;}
