@@ -372,7 +372,7 @@ label.error {color: #EA5200;margin-bottom: 0;}
 .form-group .btnReturn:hover{text-decoration: none;}
 .form-group.h34{height: 34px;}
 label{font-weight: 100;color: #4B525C;}
-.card.qr-code{height: 238px;}
+.card.qr-code{height: 273px;}
 .qx-qrcode{padding: 14px 0 25px;}
 .foot{position: absolute;bottom: 0;left: 0;right: 0;height: 40px;z-index: 100;line-height: 40px;color: #666;}
 .foot-main{width: 90%;margin: 0 auto;height: 100%;padding: 0 2%;}
@@ -731,8 +731,10 @@ a.keyword-button:hover,.keyword-button:active,.keyword-button:focus{color: #fff;
 .styles-item.mr0{margin-right: 0;}
 .styles-item-img{width: 193.7px;height: 189px;}
 .styles-item-img:hover{cursor: pointer;}
-.styles-item{text-align: left;margin-bottom: 15px;}
+.styles-item{text-align: left;margin-bottom: 15px;position: relative;}
 .styles-item:hover{cursor: default;}
+.styles-item .selectImgs{display: none;position: absolute;z-index: 10;width: 16px;top: 0;right: 0;}
+.styles-item.selected .selectImgs{display: inline-block;}
 .styles-item p{width: 189px;font-size: 14px;display: block;padding: 5px 0;height: 30px;}
 .styles-item p .free{color: #00d449;}
 .styles-item p .style{border-radius: 2px;display: inline-block;padding: 2px 15px;background: #f1c411;color: #fff;}
