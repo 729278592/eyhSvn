@@ -221,11 +221,11 @@ section{position: relative;}
 .bg6 .jobInfor{position: absolute;left: 10%;bottom: 5%;width: 100%}
 
 .bg6 .jobInfor .jobBg{transform:rotateY(-90deg);width: 80%;height: 280px;background:url(../images/jobText.png) no-repeat;background-size:100% 100%;opacity: 0;bottom: 5%;left: -10%;}
-.bg6 .jobInfor .jobInforP{opacity: 0;position: absolute;bottom: 5%;width: 73%;padding: 20px 10px;}
+.bg6 .jobInfor .jobInforP{top: 0;opacity: 0;position: absolute;bottom: 0;width: 73%;padding: 0 10px;}
 .bg6 .jobInfor .jobLogo{width: 100px;height: 90px;background:url(../images/jobLogo.jpg) no-repeat;background-size:100% 100%;position: absolute;left: 55%;z-index: 300;bottom: 83%;opacity: 0;}
-.bg6 .jobInfor p{margin:10px 0;font-size: 14px;color: #666;text-align: left;}
+.bg6 .jobInfor p{margin:10px 0;font-size: 14px;color: #666;text-align: left;;display: -webkit-box;-webkit-box-orient: vertical;-webkit-line-clamp: 3;overflow: hidden;text-overflow: ellipsis;}
 .bg6 .jobInfor .title{font-size: 24px;color: #3c3c3c;}
-.bg6 .jobInfor p .btnInfor{display: inline-block;padding: 7px 15px;background: #c7c7c7;color: #efefef;float: right;font-size: 14px;}
+.bg6 .jobInfor .btnInfor{display: inline-block;padding: 7px 15px;background: #c7c7c7;color: #efefef;font-size: 14px;position: absolute;bottom: 5px;right: 5px;}
 
 .bg6 .jobInfor .jobBg.transform {
     -webkit-transform: rotate(0deg);
