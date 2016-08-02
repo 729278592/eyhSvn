@@ -301,7 +301,7 @@ section{position: relative;}
     .bg5 .el_bg5_text{top: 31%;}
     .bg5 .el_bg5_text1{top: 62%;left: 27%;}
     .el_bg8_box .btnInforDiv{left: 37%;}
-    .bg4 .el_b4_bg img{width: 299px;height: 290px;}
+    .bg4 .el_b4_bg img{width: 299px;height: 180px;}
 }
 
 @media screen and (min-height: 730px) {
