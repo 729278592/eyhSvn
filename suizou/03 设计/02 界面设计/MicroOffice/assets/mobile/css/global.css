@@ -109,6 +109,7 @@ img.resume{width: 100%;}
 .positionMenu{padding: 3% 10px;}
 .positionMenu li{width: 100%;border: 1px solid #dbdbdb;border-radius: 10px;margin-bottom: 4%;background: #fff;}
 .positionMenu li>a{display:block;width: 96%;height: 96%;border-bottom: 1px solid #dbdbdb;padding: 2% 2% 0 2%;}
+.positionMenu li>a.bb0{border-bottom: none;}
 .positionMenu li>a span{display: inline-block;color: #666;font-size: 12px;}
 .positionMenu li>a .positionDiv{padding: 1%;width: 98%;}
 .positionMenu li>a .company-icon{width: 25%;border-radius: 100%;margin-right: 3%;}
