@@ -210,12 +210,14 @@ textarea{font-family: "微软雅黑";}
     overflow: hidden;
     text-overflow: ellipsis;font-size: 14px;color: #999;}
 .entryList li .inforList span.title{font-size: 16px;color: #333;border: none;}
-.entryList li .inforList span.title .inforTitle{display: inline-block;text-overflow:ellipsis; overflow:hidden; white-space:nowrap; width: 120px;color: #333;}
+.entryList li .inforList span.title .inforTitle{font-size: 16px;display: inline-block;text-overflow:ellipsis; overflow:hidden; white-space:nowrap; width: 120px;color: #333;}
 .entryList li .inforList span.inforListInfor{display: -webkit-box;
     -webkit-box-orient: vertical;
     -webkit-line-clamp: 3;
     overflow: hidden;
     text-overflow: ellipsis;}
+.entryList li .inforList span.color{text-align: right;color: #ff3b30;}
+.entryList li .inforList span.inforListInfor.style{-webkit-line-clamp: 2;}
 .entryList li .tipLeft,.entryList li .passIcon{font-size: 14px;width: 10%;position: relative;text-align: center;}
 .entryList li .passIcon .pass{background: url(../images/pass.png) no-repeat;width: 20px;height: 20px;background-size: 20px 20px;display: inline-block;}
 .entryList li .passIcon .notPass{background: url(../images/notPass.png) no-repeat;width: 20px;height: 20px;background-size: 20px 20px;display: inline-block;}
