@@ -27,54 +27,68 @@
         <div id="sandbox-container">
             <div></div>
         </div>
-        <ul class="attendance-records">
-            <!--<li>-->
+        <div class="attendance-month ">
+            <ul class="attendance-records">
+                <!--<li>-->
                 <!--<ul>-->
-                    <!--<li><span>签到 :</span><span class="sign_in"></span></li>-->
-                    <!--<li><span>签退 :</span><span class="sign_back"></span></li>-->
+                <!--<li><span>签到 :</span><span class="sign_in"></span></li>-->
+                <!--<li><span>签退 :</span><span class="sign_back"></span></li>-->
                 <!--</ul>-->
-            <!--</li>-->
-            <li>
-                <span>本月已过工作天数 :</span>
+                <!--</li>-->
+                <li>
+                    <span>本月已过工作天数 :</span>
                 <span class="the_length">
                     <span class="color">18</span>天
                 </span>
-            </li>
-            <li>
-                <span>本月已经考勤次数 :</span>
+                </li>
+                <li>
+                    <span>本月已经考勤次数 :</span>
                 <span class="the_about">
                     签到<span class="color">1</span>次　　
                     签退<span class="color">1</span>次
                 </span>
-            </li>
-            <li>
-                <span></span>
+                </li>
+                <li>
+                    <span></span>
                 <span class="the_mood">
                     迟到<span class="color">1</span>次　　
                     早退<span class="color">1</span>次
                 </span>
-            </li>
-        </ul>
-
-        <div class="notes">
-            <p class="clearfix">
+                </li>
+            </ul>
+            <div class="notes">
+                <p class="clearfix">
                 <span class="left">
                     注: <img src="../../assets/mobile/images/icon1.jpg" alt=""/> 表示 : "选中"
                 </span>
                 <span class="left last">
                     <img src="../../assets/mobile/images/notAttence.png" alt=""/> 表示 : 当天"未正常签到"
                 </span>
-            </p>
+                </p>
 
-            <p class="clearfix">
+                <p class="clearfix">
                 <span class="left" style="position: relative;left: 4px;">
                     　<img src="../../assets/mobile/images/icon2.png" alt=""/> 表示 : "今天"
                 </span>
-            </p>
+                </p>
+            </div>
+        </div>
+        <div class="attendance-day hide">
+            <ul class="attendance-records-day">
+                <li>
+                    <ul>
+                        <li><span>签到:</span><span class="sign_in"></span></li>
+                        <li><span>签退:</span><span class="sign_back"></span></li>
+                    </ul>
+                </li>
+                <li><span>工作时长:</span><span class="the_length"><span class="hours">0</span>小时<span class="minutes">0</span>分钟</span></li>
+                <li><span>签到说说:</span><span class="the_about">又是充实的一天</span></li>
+                <li><span>签退心情:</span><span class="the_mood">好</span></li>
+            </ul>
         </div>
     </div>
     <script src="../../assets/global/plugins/jquery.min.js"></script>
-    <script src="../../assets/global/plugins/phone-date-time/js/bootstrap-datepicker.js"></script>
+    <script src="../../assets/global/plugins/phone-date-time/js/bootstrap-datepickered.js"></script>
     <script src="../../assets/mobile/js/global.js"></script>
     <script>
         $('#sandbox-container div').datepicker({
@@ -85,11 +99,11 @@
             beforeShowDay: function (date){
                 if (date.getMonth() == (new Date()).getMonth()){
                     switch (date.getDate()){
-                        case 4:
-                            return {
-                                tooltip: 'Example tooltip',
-                                classes: 'active'
-                            };
+//                        case 4:
+//                            return {
+//                                tooltip: 'Example tooltip',
+//                                classes: 'active'
+//                            };
                         case 12:
                             return "red";
                         case 13:
@@ -102,9 +116,16 @@
         $(function(){
             $(".day").each(function(e){
                 $(this).on("click",function(e){
-                    e.stopPropagation();
+                    $(".attendance-day").removeClass("hide");
+                    $(".attendance-month").addClass("hide");
                 })
             });
+            $(".next,.prev,span.month").each(function(e){
+                $(this).on("click",function(e){
+                    $(".attendance-day").addClass("hide");
+                    $(".attendance-month").removeClass("hide");
+                })
+            })
         })
     </script>
 </body>
