@@ -63,7 +63,7 @@ html.overflow{overflow-y:hidden;}
 .bb-custom-wrapper > nav a{background: #87CEFA;color: #fff;opacity: 1;}
 .bb-nav-prev{left: -60px;}
 .bb-nav-next{right: -60px;}
-.bb-item{background-color: transparent;}
+.bb-item{background-color: transparent;position: relative;}
 .bb-custom-wrapper > nav a::before, .bb-custom-wrapper > nav a::after{background: #fff;}
 .bb-page,.bb-custom-wrapper {background-color: transparent;}
 .bb-custom-side .title{font-size: 20px;color: #7abc2b;text-align: center;padding: 5% 10%;}
@@ -82,11 +82,16 @@ html.overflow{overflow-y:hidden;}
 .page-layout-2:first-child,.page-layout-1:first-child{
     background: url(../images/shuBg1.jpg) no-repeat top left;
     background-size: cover;
+    position: absolute;
+    z-index: 100;left: 0;
 }
 
 .page-layout-2:last-child,.page-layout-1:last-child {
     background: url(../images/shuBg2.jpg) no-repeat top left;
     background-size: cover;
+    position: absolute;
+    z-index: 100;right: 0;
+
 }
 
 /*health-content*/
