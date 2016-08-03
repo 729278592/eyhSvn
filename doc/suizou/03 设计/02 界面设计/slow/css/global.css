@@ -12,7 +12,7 @@ textarea,select,input,button{outline: none;border: none;font-family: "微软雅�
 .right{float: right;}
 .left{float: left;}
 a:link{text-decoration: none;}
-.wrapper{width: 100%;position: relative;min-width: 1024px;}
+.wrapper{width: 100%;position: relative;min-width: 1124px;}
 html.overflow{overflow-y:hidden;}
 .wrapper.style{position: absolute;top: 0;left: 0;background: #f7f7f7;}
 
