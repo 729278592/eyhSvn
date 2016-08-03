@@ -21,6 +21,7 @@ html.overflow{overflow-y:hidden;}
     -webkit-transition: background-color .5s ease-in-out;
     -o-transition: background-color .5s ease-in-out;
     transition: background-color .5s ease-in-out;}
+.head.relative{position: relative;}
 .head.style{background: #83dbfd;}
 .head.style:hover{background: #83dbfd;}
 .head {
