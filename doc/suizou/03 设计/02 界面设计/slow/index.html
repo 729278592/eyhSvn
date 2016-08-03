@@ -7,7 +7,6 @@
     <meta content="都漫，智能设计 一键启动 都市生活，当然快人一步" name="Description" />
     <meta content="都漫，智能设计 一键启动 都市生活，当然快人一步" name="Keywords" />
     <link rel="stylesheet" href="plugins/slider/css/slider.css"/>
-    <link href="plugins/video/video-js.css" rel="stylesheet" type="text/css">
     <link rel="stylesheet" href="plugins/font/css/font-awesome.min.css"/>
     <link rel="stylesheet" href="css/global.css"/>
 </head>
@@ -165,22 +164,16 @@
                 <div class="close">
                     <i class="fa fa-remove"></i>
                 </div>
-                <video id="example_video_1" class="video-js vjs-default-skin" controls preload="none" width="640" height="400"
-                       poster=""
-                       data-setup="{}">
-                    <source src="http://mvvideo2.meitudata.com/5667c7b8efde88012.mp4" type='video/mp4' />
-                    <source src="http://video-js.zencoder.com/oceans-clip.webm" type='video/webm' />
-                    <source src="http://video-js.zencoder.com/oceans-clip.ogv" type='video/ogg' />
-                    <track kind="captions" src="plugins/video/demo.captions.vtt" srclang="en" label="English"><!-- Tracks need an ending tag thanks to IE9 -->
-                    <track kind="subtitles" src="plugins/video/demo.captions.vtt" srclang="en" label="English"><!-- Tracks need an ending tag thanks to IE9 -->
-                </video>
+                <div class="video">
+                    <iframe width="960px" height="600px" src="http://yuntv.letv.com/bcloud.html?uu=6mgaqg1zfo&vu=8e7c52117c&pu=b778877a45&auto_play=1&gpcflag=1&width=100%&height=600&max-width=900" frameborder=0 allowfullscreen autoplay="false"></iframe>
+                </div>
+                <div class="noe-video hide">亲,还没上传视屏哦!</div>
             </div>
         </div>
     </div>
     <script src="plugins/jquery/jquery-1.11.3.min.js"></script>
     <script src="plugins/slider/js/slider.js"></script>
     <script src="js/gloabl.js"></script>
-    <script src="plugins/video/video.js"></script>
     <script>
         $(function(){
             /*slider*/
@@ -193,26 +186,13 @@
             $(".play-on").on("click",function(){
                 $("html").addClass("overflow");
                 $(".video-mask,.video-mask-bg").removeClass("hide");
-                $("#example_video_1").css({width:"960px",height:"600px"});
 
-                /*自动播放*/
-                myPlayer = videojs('example_video_1');
-                videojs("example_video_1").ready(function(){
-                    var myPlayer = this;
-                    myPlayer.play();
-                });
             });
 
 
             $(".video-div").delegate(".close","click",function(){
                 $(".video-mask,.video-mask-bg").addClass("hide");
                 $("html").removeClass("overflow");
-                /*停止播放*/
-                myPlayer = videojs('example_video_1');
-                videojs("example_video_1").ready(function(){
-                    var myPlayer = this;
-                    myPlayer.pause();
-                });
             })
         });
 

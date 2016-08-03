@@ -17,6 +17,7 @@ html.overflow{overflow-y:hidden;}
 .wrapper.style{position: absolute;top: 0;left: 0;background: #f7f7f7;}
 
 /*head*/
+embed{height: 600px;}
 .head{width: 100%;position: absolute;top: 0;z-index: 100;
     -webkit-transition: background-color .5s ease-in-out;
     -o-transition: background-color .5s ease-in-out;

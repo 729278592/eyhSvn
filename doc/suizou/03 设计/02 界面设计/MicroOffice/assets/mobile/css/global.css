@@ -24,6 +24,7 @@ textarea,input,button,select{border: none;outline: none;}
 .hidden{visibility: hidden;}
 .wrapper{width: 100%;background: #fff;max-width: 640px;margin: 0 auto;position: relative;}
 .content{width: 100%;}
+.content.bg2{background: #f1f5f8;position: absolute;top: 0;left: 0;right: 0;bottom: 0;}
 .content.pad10{padding: 0 10px;}
 .content.pb0{padding-bottom: 0}
 .content.bg-ecec{background: #ececec;padding-top: 1px;}
@@ -84,8 +85,12 @@ img.w100{width: 100%;}
 .weui_toast_content{text-align: center;font-size: 14px;}
 #smile-icon{margin: 20px 0 10px;}
 .weui_cells{font-size: 16px;}
-
-
+.description {position: relative;top: 50px;width: 94%;padding: 0 3%;}
+.description p.title{}
+.description p{color: #666;text-align: center;font-size: 16px;margin-bottom: 5px;}
+.description p span.color{font-size: 20px;color: #6ba1dd;}
+.c_wu {margin-left: 10%;width: 80%;}
+.c_iim{position: absolute;left: 0%;width: 100%;bottom: 16px;}
 img.resume{width: 100%;}
 
 

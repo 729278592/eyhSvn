@@ -202,6 +202,7 @@ textarea{font-family: "微软雅黑";}
 .entryList li .couponImg{width: 20%;position: relative;text-align: center;}
 .entryList li .couponImg img.couponTip{position: absolute;width: 30%;right: -10%;top: -10%;}
 .entryList li .couponImg img.couponImg1{width: 60px;height: 60px;border-radius: 100%;}
+.entryList li .couponImg.style img.couponImg1{width: 80px;height: 80px;border-radius: 2px;}
 .entryList li .inforList{width: 65%;}
 .entryList li .inforList span{display: -webkit-box;
     -webkit-box-orient: vertical;
@@ -209,6 +210,12 @@ textarea{font-family: "微软雅黑";}
     overflow: hidden;
     text-overflow: ellipsis;font-size: 14px;color: #999;}
 .entryList li .inforList span.title{font-size: 16px;color: #333;border: none;}
+.entryList li .inforList span.title .inforTitle{display: inline-block;text-overflow:ellipsis; overflow:hidden; white-space:nowrap; width: 120px;color: #333;}
+.entryList li .inforList span.inforListInfor{display: -webkit-box;
+    -webkit-box-orient: vertical;
+    -webkit-line-clamp: 3;
+    overflow: hidden;
+    text-overflow: ellipsis;}
 .entryList li .tipLeft,.entryList li .passIcon{font-size: 14px;width: 10%;position: relative;text-align: center;}
 .entryList li .passIcon .pass{background: url(../images/pass.png) no-repeat;width: 20px;height: 20px;background-size: 20px 20px;display: inline-block;}
 .entryList li .passIcon .notPass{background: url(../images/notPass.png) no-repeat;width: 20px;height: 20px;background-size: 20px 20px;display: inline-block;}
