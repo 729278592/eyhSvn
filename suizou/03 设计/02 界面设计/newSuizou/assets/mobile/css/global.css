@@ -58,7 +58,7 @@ tr th,tr td{height: 2.6em;}
 .attendance-records li ul li{float: left;width: 50%;height: 40px;}
 .attendance-records li:last-child{border-bottom: none;}
 .ccc{background: #ccc;}
-#sandbox-container{width: 100%;background: #fff;}
+#sandbox-container{width: 100%;background: #fff;border-bottom: 1px solid #dbdbdb;}
 #sandbox-container .table-condensed{margin-left: 5%;}
 .datepicker{width: 100%;}
 .sign_in{position: relative;left: 20px;}
@@ -78,7 +78,25 @@ tr th,tr td{height: 2.6em;}
 .notes p span.style{display: inline-block;width: 20px;float: left;}
 .notes p span.last{width: 59%;}
 .notes p img{width: 18px;}
-.datepicker table tr td.today{background: url(../images/todayImg.png) no-repeat;background-position: 23px 2px;background-size: 22px;}
+.datepicker table tr td.today{background: url(../images/todayImg.png) no-repeat;background-position: 18px 2px;background-size: 22px;}
+
+.datepicker table tr td span.active.active{background: #48abea;}
+
+
+.attendance-day{margin-top: 10px;}
+.attendance-records-day{width: 96%;padding:0 2%;font-size: 15px;margin: 0 auto;background: #fff;border-top: 1px solid #dbdbdb;}
+.attendance-records-day li{width: 100%;height: 40px;border-bottom: 1px solid #ddd;line-height: 40px;}
+.attendance-records-day li ul li{float: left;width: 50%;height: 40px;}
+.attendance-records-day li:last-child{border-bottom: none;}
+.sign_in{position: relative;left: 35px;}
+.the_mood,.the_about,.sign_back,.the_length{position: relative;left: 5px;}
+.hours,.minutes{color: #ff0000;}
+
+
+
+
+
+
 
 /*attendanceFail*/
 .sign{width: 100%;}
@@ -239,7 +257,8 @@ textarea{font-family: "微软雅黑";}
 
 
 /*not_registered*/
-.content.bg{background: #dbdbdb;}
+.content.bg1{background: #dbdbdb;}
+
 .loading{position: absolute;top: 50%;left: 50%;margin-left: -15px;margin-top: -15px;}
 .description{position: relative;top: 200px;width: 94%;padding: 0 3%;}
 .c_wu{position: absolute;top: 3em;;}
