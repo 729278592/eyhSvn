@@ -57,32 +57,43 @@
                     <div class="bg2">
                         <div class="product-img2"></div>
                         <div class="text">
-                            <div class="productionBg2"></div>
-                            <p class="title">只需爱，零残留</p>
-                            <p>洗涤全过程只需水，无任何化学物质，真正做到零残留。</p>
+                            <p class="title">随手洗</p>
+                            <p>即换即洗，一键清洗消毒</p>
+                            <p>贴身衣物随心洗，做都市精致女人</p>
                         </div>
                     </div>
                 </div>
-
                 <div class="section section3">
                     <div class="bg4">
                         <div class="text">
-                            <div class="productionBg2"></div>
+                            <p class="title">母婴洗</p>
+                            <p style="color: #fff;">衣物分开洗，防止交叉感染，给宝贝第二层肌肤更天然的保护</p>
                         </div>
                         <div class="product-img4"></div>
                     </div>
                 </div>
+
                 <div class="section section4">
+                    <div class="bg4">
+                        <div class="product-img4"></div>
+                        <div class="text">
+                            <p class="title">健康洗</p>
+                            <p>只需清水,拒绝一切残留，高效去污，更健康的洗护</p>
+                        </div>
+                    </div>
+                </div>
+                <div class="section section5">
                     <div class="bg5">
                         <div class="text">
-                            <p class="title">声波洗净，轻柔呵护</p>
-                            <p>超声波全方位洗涤 低频低转甩干 无需翻滚搅拌　　远离磨损 变形 缠绕;我要美胸，拒绝变形 </p>
+                            <p class="title">声波洗净</p>
+                            <p style="font-size: 18px;color: #fff;">轻柔呵护</p>
+                            <p style="color: #666;font-size: 14px;">超声波全方位洗涤 低频低转甩干 无需翻滚搅拌</p>
                         </div>
                         <div class="product-img5"></div>
                     </div>
 
                 </div>
-                <div class="section section5">
+                <div class="section section6">
                     <div class="bg3">
                         <div class="text">
                             <p class="title">双重杀菌，健康无忧 </p>
@@ -193,7 +204,7 @@
                 }, 400, function(){
                     $('.section1').find('.text').animate({
                         opacity: '1',
-                        top:"80px"
+                        top:"140px"
 
                     },800,function(){
                         $('.section1').find('.product-img1').animate({
@@ -213,110 +224,93 @@
                     if(index == 2){
                         $('.section2').find('.bg2').delay(50).animate({
                             opacity: '1'
-                        }, 400, function(){
-                            $('.section2').find('.product-img2').animate({
+                        },400,function(){
+                            $('.section2').find('.text').animate({
                                 opacity: '1',
-                                width:"550px",
-                                height:"380px"
-                            },800,function(){
+                                top:"20%"
+                            },800, function(){
                                 $('.section2').find('.product-img2').animate({
-                                    left:"20%"
-                                },800,function(){
-                                    $('.section2').find('.text').animate({
-                                        opacity: '1',
-                                        width:"430px"
-                                    },800,function(){
-                                        $('.section2').find('.text').animate({
-                                            left:"70%"
-                                        },800)
-                                    })
-                                })
-                            });
+                                    opacity: '1'
+
+                                },800);
+                            })
                         });
                     }
                     if(index == 3){
                         $('.section3').find('.bg4').delay(50).animate({
                             opacity: '1'
                         },200,function(){
-                            if($(window).width()>1400){
-                                $('.section3').find('.bg4').delay(50).animate({
-                                    opacity: '1'
-                                },400,function(){
-                                    $('.section3').find('.product-img4').animate({
-                                        opacity:1,
-                                        width:"1254px",
-                                        height:"860px",
-                                        marginLeft:"-625px",
-                                        top:"0%"
-                                    },800,function(){
-                                        $('.section3').find('.productionBg2').animate({
-                                            opacity:1,
-                                            width:"500px",
-                                            height:"310px",
-                                            left:"15%",
-                                            top:"15%"
-                                        },200)
-                                    });
-                                });
-                            }
-                            else if($(window).width()<1400){
-                                $('.section3').find('.product-img4').animate({
-                                    opacity:1,
-                                    width:"970px",
-                                    height:"690px",
-                                    marginLeft:"-485px",
-                                    top:"10%"
+                            $('.section3').find('.bg4').delay(50).animate({
+                                opacity: '1'
+                            },400,function(){
+                                $('.section3').find('.text').animate({
+                                    opacity: '1',
+                                    left:"21%"
                                 },800,function(){
-                                    $('.section3').find('.productionBg2').animate({
-                                        opacity:1,
-                                        width:"590px",
-                                        height:"400px",
-                                        left:"15%",
-                                        top:"15%"
+                                    $('.section3').find('.product-img4').animate({
+                                        opacity: '1',
+                                        left:"20%"
                                     },200)
-                                })
-                            }
+                                });
+                            });
                         });
                     }
                     if(index == 4){
-
-
-                        $('.section4').find('.bg5').delay(50).animate({
+                        $('.section4').find('.bg4').delay(50).animate({
+                            opacity: '1'
+                        },200,function(){
+                            $('.section4').find('.bg4').delay(50).animate({
+                                opacity: '1'
+                            },400,function(){
+                                $('.section4').find('.product-img4').animate({
+                                    opacity: '1',
+                                    left:"20%"
+                                },500,function(){
+                                    $('.section4').find('.text').animate({
+                                        opacity: '1',
+                                        left:"50%"
+                                    },800)
+                                });
+                            });
+                        });
+                    }
+                    if(index == 5){
+                        $('.section5').find('.bg5').delay(50).animate({
                             opacity: '1'
                         }, 400, function(){
-                            $('.section4').find('.text').animate({
+                            $('.section5').find('.text').animate({
                                 opacity: '1',
-                                left:"50%"
+                                left:"40%"
                             },800,function(){
-                                $('.section4').find('.product-img5').animate({
+                                $('.section5').find('.product-img5').animate({
                                     opacity: '1',
                                     left:"50%"
                                 },800)
                             })
                         });
                     }
-                    if(index == 5){
+                    if(index == 6){
                         $(".head").addClass("hover");
-                        $('.section5').find('.bg3').delay(50).animate({
+                        $('.section6').find('.bg3').delay(50).animate({
                             opacity: '1'
                         }, 100,function(){
-                            $('.section5').find('.text').animate({
+                            $('.section6').find('.text').animate({
                                 opacity: '1',
                                 top:"20%"
                             },800,function(){
-                                $('.section5').find('.productMenu li').eq(0).animate({
+                                $('.section6').find('.productMenu li').eq(0).animate({
                                     opacity: '1'
                                 },200,function(){
-                                    $('.section5').find('.productMenu li').eq(1).animate({
+                                    $('.section6').find('.productMenu li').eq(1).animate({
                                         opacity: '1'
                                     },200,function(){
-                                        $('.section5').find('.productMenu li').eq(2).animate({
+                                        $('.section6').find('.productMenu li').eq(2).animate({
                                             opacity: '1'
                                         },200,function(){
-                                            $('.section5').find('.productMenu li').eq(3).animate({
+                                            $('.section6').find('.productMenu li').eq(3).animate({
                                                 opacity: '1'
                                             },200,function(){
-                                                $('.section5').find('.productMenu li').eq(4).animate({
+                                                $('.section6').find('.productMenu li').eq(4).animate({
                                                     opacity: '1'
                                                 },200)
                                             })
@@ -334,103 +328,110 @@
                     if(index == 1){
                         $('.section1').find('.bg1').delay(50).animate({
                             opacity: '0'
-                        }, 400, function(){
+                        }, 4, function(){
                             $('.section1').find('.text').animate({
                                 opacity: '0',
                                 top:"-10%"
 
-                            },800,function(){
+                            },8,function(){
                                 $('.section1').find('.product-img1').animate({
                                     opacity: '0',
                                     bottom:"-10%"
-                                },800)
+                                },8)
                             });
                         });
                     }
                     if(index == 2){
                         $('.section2').find('.bg2').delay(50).animate({
-                            opacity: '0'
-                        }, 400, function(){
-                            $('.section2').find('.product-img2').animate({
+                            opacity: '1'
+                        },4,function(){
+                            $('.section2').find('.text').animate({
                                 opacity: '0',
-                                width:"866px",
-                                height:"640px"
-                            },200,function(){
+                                top:"-10%"
+                            },8, function(){
                                 $('.section2').find('.product-img2').animate({
-                                    left:"40%"
-                                },200,function(){
-                                    $('.section2').find('.text').animate({
-                                        opacity: '0',
-                                        width:"300px",
-                                        height:"100px"
-                                    },200,function(){
-                                        $('.section2').find('.text').animate({
-                                            left:"60%"
-                                        },200)
-                                    })
-                                })
-                            });
+                                    opacity: '0'
+
+                                },8);
+                            })
                         });
                     }
                     if(index == 3){
                         $('.section3').find('.bg4').delay(50).animate({
-                            opacity: '0'
-                        },400,function(){
-                            $('.section3').find('.product-img4').animate({
-                                opacity:0,
-                                width:"742px",
-                                height:"525px",
-                                marginLeft:"-325px",
-                                top:"30%"
-                            },800,function(){
-                                $('.section3').find('.productionBg2').animate({
-                                    opacity:0,
-                                    width:"236px",
-                                    height:"143px",
-                                    left:"0%",
-                                    top:"0%"
-                                },200)
+                            opacity: '1'
+                        },2,function(){
+                            $('.section3').find('.bg4').delay(50).animate({
+                                opacity: '0'
+                            },4,function(){
+                                $('.section3').find('.text').animate({
+                                    opacity: '0',
+                                    left:"-10%"
+                                },8,function(){
+                                    $('.section3').find('.product-img4').animate({
+                                        opacity: '0',
+                                        left:"70%"
+                                    },2)
+                                });
                             });
                         });
                     }
                     if(index == 4){
-                        $('.section4').find('.bg5').delay(50).animate({
+                        $('.section4').find('.bg4').delay(50).animate({
+                            opacity: '1'
+                        },2,function(){
+                            $('.section4').find('.bg4').delay(50).animate({
+                                opacity: '0'
+                            },4,function(){
+                                $('.section4').find('.product-img4').animate({
+                                    opacity: '0',
+                                    left:"1%"
+                                },2,function(){
+                                    $('.section4').find('.text').animate({
+                                        opacity: '0',
+                                        left:"20%"
+                                    },8)
+                                });
+                            });
+                        });
+                    }
+                    if(index == 4){
+                        $('.section5').find('.bg5').delay(50).animate({
                             opacity: '0'
-                        }, 400, function(){
-                            $('.section4').find('.text').animate({
+                        }, 4, function(){
+                            $('.section5').find('.text').animate({
                                 opacity: '0',
                                 left:"20%"
-                            },800,function(){
-                                $('.section4').find('.product-img5').animate({
+                            },8,function(){
+                                $('.section5').find('.product-img5').animate({
                                     opacity: '0',
                                     left:"70%"
-                                },800)
+                                },8)
                             })
                         });
 
                     }
                     if(index == 5){
                         $(".head").removeClass("hover");
-                        $('.section5').find('.bg3').delay(50).animate({
+                        $('.section6').find('.bg3').delay(50).animate({
                             opacity: '0'
                         }, 400,function(){
-                            $('.section5').find('.text').animate({
+                            $('.section6').find('.text').animate({
                                 opacity: '0',
                                 top:"5%"
                             },800,function(){
-                                $('.section5').find('.productMenu li').eq(0).animate({
+                                $('.section6').find('.productMenu li').eq(0).animate({
                                     opacity: '0'
                                 },20,function(){
-                                    $('.section5').find('.productMenu li').eq(1).animate({
+                                    $('.section6').find('.productMenu li').eq(1).animate({
                                         opacity: '0'
                                     },20,function(){
-                                        $('.section5').find('.productMenu li').eq(2).animate({
+                                        $('.section6').find('.productMenu li').eq(2).animate({
                                             opacity: '0'
                                         },20,function(){
-                                            $('.section5').find('.productMenu li').eq(3).animate({
+                                            $('.section6').find('.productMenu li').eq(3).animate({
                                                 opacity: '0'
                                             },20,function(){
-                                                $('.section5').find('.productMenu li').eq(4).animate({
+                                                $('.section6').find('.productMenu li').eq(4).animate({
                                                     opacity: '0'
                                                 },20)
                                             })
