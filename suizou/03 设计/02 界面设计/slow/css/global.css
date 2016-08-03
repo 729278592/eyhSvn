@@ -82,14 +82,14 @@ html.overflow{overflow-y:hidden;}
 .page-layout-2:first-child,.page-layout-1:first-child{
     background: url(../images/shuBg1.jpg) no-repeat top left;
     background-size: cover;
-    position: absolute;
+    position: relative;
     z-index: 100;left: 0;
 }
 
 .page-layout-2:last-child,.page-layout-1:last-child {
     background: url(../images/shuBg2.jpg) no-repeat top left;
     background-size: cover;
-    position: absolute;
+    position: relative;
     z-index: 100;right: 0;
 
 }
