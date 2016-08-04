@@ -41,6 +41,7 @@
                                 <div class="weui_cell_ft taLeft">
                                     张三
                                 </div>
+                                <input type="hidden"/>
                             </div>
                         </a>
                         <a class="weui_cell mb15" href="###">
@@ -54,6 +55,7 @@
                                 <div class="weui_cell_ft taLeft">
                                     李四
                                 </div>
+                                <input type="hidden" />
                             </div>
                         </a>
                         <div class="weui_cell">
@@ -106,8 +108,53 @@
                     </form>
                 </div>
                 <div class="department">
-                    <p class="departmentTitle">销售部</p>
-                    <div class="weui_cells style mt0">
+                    <p class="departmentTitle ">
+                        销售部
+                        <span class="caretDown"></span>
+                    </p>
+                    <div class="weui_cells style mt0 ">
+                        <div class="weui_cell l0">
+                            <div class="weui_cell_hd">
+                                <label class="weui_label">
+                                    总　　监
+                                </label>
+                            </div>
+                            <div class="weui_cell_bd weui_cell_primary">
+                            </div>
+                        </div>
+                        <div class="weui_cell l0">
+                            <div class="weui_cell_hd">
+                                <label class="weui_label">
+                                    经　　理
+                                </label>
+                            </div>
+                            <div class="weui_cell_bd weui_cell_primary">
+                            </div>
+                        </div>
+                        <div class="weui_cell l0">
+                            <div class="weui_cell_hd">
+                                <label class="weui_label">
+                                    　副经理
+                                </label>
+                            </div>
+                            <div class="weui_cell_bd weui_cell_primary">
+                            </div>
+                        </div>
+                        <div class="weui_cell l0">
+                            <div class="weui_cell_hd">
+                                <label class="weui_label">
+                                    营销顾问
+                                </label>
+                            </div>
+                            <div class="weui_cell_bd weui_cell_primary">
+                            </div>
+                        </div>
+                    </div>
+                    <p class="departmentTitle rotate">
+                        市场部
+                        <span class="caretDown"></span>
+                    </p>
+                    <div class="weui_cells style mt0 hide">
                         <div class="weui_cell l0">
                             <div class="weui_cell_hd">
                                 <label class="weui_label">
@@ -159,13 +206,13 @@
                             <a href="javascript:" class="weui_icon_clear"></a>
                         </div>
                     </form>
-                    <a href="javascript:" class="highSerch left">
-                        完成
-                    </a>
+                    <!--<a href="javascript:" class="highSerch left">-->
+                        <!--完成-->
+                    <!--</a>-->
                 </div>
                 <div class="department">
                     <div class="weui_cells weui_cells_checkbox">
-                        <label class="weui_cell weui_check_label l0"  for="s11">
+                        <label class="weui_cell weui_check_label l0"  for="s11" data="name">
                             <div class="weui_cell_hd">
                                 <label class="weui_label">
                                     张丽丽
@@ -176,7 +223,7 @@
                                 <i class="weui_icon_checked right"></i>
                             </div>
                         </label>
-                        <label class="weui_cell weui_check_label l0"  for="s12">
+                        <label class="weui_cell weui_check_label l0"  for="s12" data="name">
                             <div class="weui_cell_hd">
                                 <label class="weui_label">
                                     张丽丽
@@ -187,7 +234,7 @@
                                 <i class="weui_icon_checked right"></i>
                             </div>
                         </label>
-                        <label class="weui_cell weui_check_label l0"  for="s13">
+                        <label class="weui_cell weui_check_label l0"  for="s13" data="name">
                             <div class="weui_cell_hd">
                                 <label class="weui_label">
                                     张丽丽
@@ -198,7 +245,7 @@
                                 <i class="weui_icon_checked right"></i>
                             </div>
                         </label>
-                        <label class="weui_cell weui_check_label l0"  for="s14">
+                        <label class="weui_cell weui_check_label l0"  for="s14" data="name">
                             <div class="weui_cell_hd">
                                 <label class="weui_label">
                                     张丽丽
@@ -210,6 +257,11 @@
                             </div>
                         </label>
                     </div>
+                </div>
+                <div class="weui_btn_area fixed">
+                    <a class="weui_btn weui_btn_primary b0" id="btnSure">
+                        完成
+                    </a>
                 </div>
             </div>
         </div>
@@ -316,6 +368,23 @@
             console.log($(this).val());
         });
 
+        /*选择部门*/
+        $(".departmentTitle").on("touchend",function(){
+            if($(this).is(".rotate")){
+                $(this).removeClass("rotate");
+                $(this).next(".weui_cells.style").removeClass("hide");
+            }else{
+                $(this).addClass("rotate");
+                $(this).next(".weui_cells.style").addClass("hide");
+            }
+        });
+
+        $("#btnSure").on("click",function(){
+
+        });
+
+
+
         $("#showTooltips").click(function(){
             if($.trim($("#submitPerson").val()) == '') {
                 showErrMsg('提交对象不能为空');
@@ -338,5 +407,6 @@
             return true;
         });
     </script>
+
 </body>
 </html>

@@ -144,7 +144,7 @@ textarea{font-family: "微软雅黑";}
 .bd.pd50{padding-bottom:50px}
 .bd.absolute{position:absolute;top:0;bottom:0;overflow-y:scroll;-webkit-overflow-scrolling:touch;width:100%}
 .weui_btn_primary:not(.weui_btn_disabled):active{color:rgba(255,255,255,.4);background-color:#47aaea}
-#errMsg{position:absolute;top:0;left:0;right:0;bottom:0;z-index:10000}
+#errMsg,#application{position:absolute;top:0;left:0;right:0;bottom:0;z-index:10000}
 .weui_mask_transparent.fixed{position:fixed;z-index:10000}
 .errDailog .weui_mask,.errDailog .weui_mask_transparent{position:absolute;left:0;right:0;top:0;bottom:0;background:0 0}
 .errDailog .weui_toast{position:absolute;width:4.4em;min-height:4em;margin-left:-2.2em;margin-top:-2em}
@@ -154,10 +154,25 @@ textarea{font-family: "微软雅黑";}
 .addressChioce,.advancedSearch{position:fixed;z-index:10;left:0;top:0;right:0;bottom:0;background:#f7f7f7}
 .weui_cells.style .weui_cell:after{content:" ";display:inline-block;-webkit-transform:rotate(45deg);transform:rotate(45deg);height:6px;width:6px;border-width:2px 2px 0 0;border-color:#C8C8CD;border-style:solid;position:relative;top:-2px;top:-1px;margin-left:.3em}
 .weui_cells.style1{margin-top:10px}
-.departmentTitle{font-size:16px;padding:10px 15px;color:#48a8e4}
+.departmentTitle{font-size:16px;padding:10px 15px;color:#48a8e4;position: relative;background: #fff;border: 1px solid #dbdbdb;margin-top: 5px;}
+.departmentTitle .caretDown{    position: absolute;
+    content: "";
+    width: 0;
+    height: 0;
+    border: 4px solid #333;
+    border-top-color: #333;
+    border-left-color: transparent;
+    border-bottom-color: transparent;
+    border-right-color: transparent;
+    right: 15px;
+    top: 22px;
+    webkit-transform: rotate(0);
+    transform: rotate(0);}
+.departmentTitle.rotate .caretDown{webkit-transform: rotate(-90deg);
+    transform: rotate(-90deg);}
 .weui_search_bar.style{background:#fff;height:54px;display:block;width:100%}
 .weui_search_bar.style span.left{display:inline-block;width:10%;height:30px;font-size:24px;text-align:center;line-height:30px;color:#333}
-.weui_search_bar.style .weui_search_outer{width:75%}
+.weui_search_bar.style .weui_search_outer{width:90%}
 .weui_search_bar.style .weui_search_inner{padding-left:10px;height:36px;line-height:36px}
 .weui_search_bar.style .weui_search_inner .weui_icon_search{right:0;display:inline-block;width:16%;left:auto;text-align:center;height: 36px;line-height: 32px;}
 .weui_search_bar.style .weui_search_inner .weui_icon_search:after{content:"";position:absolute;left:0;top:2px;bottom:-2px;width:1px;border-left:1px solid #efefef}
@@ -196,9 +211,14 @@ textarea{font-family: "微软雅黑";}
 
 
 
-
+.entryList li .passIcon.notPassed.hide{display: none;}
+.entryList li .passIcon.passed.hide{display: none;}
 .entryList{background: #fff;}
+.entryList.imgStyle{padding-bottom: 10px;}
+.entryList.imgStyle span{display: inline-block;width: 25%;text-align: center;margin-top: 10px;}
+.entryList.imgStyle span img{width: 60px;height: 60px;}
 .entryList li .couponImg,.entryList li .inforList,.entryList li .tipLeft,.entryList li .passIcon{display: table-cell;vertical-align: middle;}
+.entryList li .inforList.style{padding: 0;}
 .entryList li .couponImg{width: 20%;position: relative;text-align: center;}
 .entryList li .couponImg img.couponTip{position: absolute;width: 30%;right: -10%;top: -10%;}
 .entryList li .couponImg img.couponImg1{width: 60px;height: 60px;border-radius: 100%;}
@@ -210,12 +230,16 @@ textarea{font-family: "微软雅黑";}
     overflow: hidden;
     text-overflow: ellipsis;font-size: 14px;color: #999;}
 .entryList li .inforList span.title{font-size: 16px;color: #333;border: none;}
+.entryList li .inforList span.title.styles{font-size: 18px;}
+.entryList li .inforList.top{vertical-align: top;}
+.entryList li .inforList span.color1{color:#ff0404; font-size: 18px;}
 .entryList li .inforList span.title .inforTitle{font-size: 16px;display: inline-block;text-overflow:ellipsis; overflow:hidden; white-space:nowrap; width: 120px;color: #333;}
 .entryList li .inforList span.inforListInfor{display: -webkit-box;
     -webkit-box-orient: vertical;
     -webkit-line-clamp: 3;
     overflow: hidden;
     text-overflow: ellipsis;}
+.weui_textarea{border: 1px solid #efefef;padding: 5px;}
 .entryList li .inforList span.color{text-align: right;color: #ff3b30;}
 .entryList li .inforList span.inforListInfor.style{-webkit-line-clamp: 2;}
 .entryList li .tipLeft,.entryList li .passIcon{font-size: 14px;width: 10%;position: relative;text-align: center;}
@@ -263,7 +287,7 @@ textarea{font-family: "微软雅黑";}
 .entryList.style li .inforList span.title{color: #47aaea;}
 .weui_btn_area.style button {font-family: "微软雅黑";width: 50%;float: left;height: 42px;text-align: center;border: none;outline: none;background: #9a9a9a;color: #efefef;}
 .weui_btn_area.style button.active{background: #47aaea;}
-
+#applicationInfor{width: 40px;height: 40px;margin:20px 0 10px}
 
 /*not_registered*/
 .content.bg1{background: #dbdbdb;}
@@ -271,11 +295,25 @@ textarea{font-family: "微软雅黑";}
 .loading{position: absolute;top: 50%;left: 50%;margin-left: -15px;margin-top: -15px;}
 .description{position: relative;top: 200px;width: 94%;padding: 0 3%;}
 .c_wu{position: absolute;top: 3em;;}
+
+
 /*mainList*/
 .mainTitle{padding: 10px;font-size: 14px;color: #333;position: relative;margin-top: 10px;background: #fff;border-top: 1px solid #efefef;}
 .mainTitle:after{position:absolute;content:"";width:0;height:0;border:6px solid #3fa8ec;border-top-color:#3fa8ec;border-left-color:transparent;border-bottom-color:transparent;border-right-color:transparent;right:15px;top:18px}
 .mainTitle.styleRight:after{transform:rotate(-90deg);top: 15px;}
 
+
+/**/
+.mainTitle.style{border-bottom: 1px dashed #efefef;font-size: 16px;}
+.mainTitle.style:after{border: none;}
+.entryList li .inforList.color2{color: #47aaea;}
+.entryList li .inforList.color2 .fa{font-size: 24px;position: relative;top: 4px;}
+.weui_cells.bg .weui_cell.weui_check_label.style2{width: 50%;float: left;padding: 0;}
+.weui_cells.bg .weui_cell.weui_check_label.style2:before{border-top: 0;}
+.weui_cells_checkbox.style2:before,.weui_cells_checkbox.style2:after{border-top: 0;border-bottom: 0;}
+.weui_cells.bg .weui_cell.weui_check_label.style2 .weui_label{width: auto;}
+.relesaTitle{padding: 10px 15px;font-size: 16px;color: #333;}
+.zhuyi{background: #fff;font-size: 14px;color: #ff3b30;text-align: center;padding-bottom: 10px;}
 
 
 @media screen and (max-width: 768px) {
