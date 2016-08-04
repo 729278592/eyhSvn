@@ -4,8 +4,8 @@
     <meta charset="utf-8"/>
     <meta name="viewport" content="width=device-width; initial-scale=1.0; user-scalable=no;">
     <title>考勤记录</title>
-    <link rel="stylesheet" href="../../assets/global/plugins/phone-date-time/css/bootstrap-datepicker3.css"/>
-    <link rel="stylesheet" href="../../assets/global/plugins/phone-date-time/css/bootstrap-datepicker3.standalone.css"/>
+    <link rel="stylesheet" href="../../assets/global/plugins/bootstrap-datepicker/css/bootstrap-datepicker.css"/>
+    <link rel="stylesheet" href="../../assets/global/plugins/bootstrap-datepicker/css/bootstrap-datepicker.standalone.css"/>
     <link rel="stylesheet" href="../../assets/mobile/css/global.css"/>
 </head>
 <body>
@@ -88,13 +88,15 @@
         </div>
     </div>
     <script src="../../assets/global/plugins/jquery.min.js"></script>
-    <script src="../../assets/global/plugins/phone-date-time/js/bootstrap-datepickered.js"></script>
+    <script src="../../assets/global/plugins/bootstrap-datepicker/js/bootstrap-datepicker.js"></script>
+    <script src="../../assets/global/plugins/bootstrap-datepicker/js/locales/bootstrap-datepicker.zh-CN.min.js"></script>
     <script src="../../assets/mobile/js/global.js"></script>
     <script>
         $('#sandbox-container div').datepicker({
             keyboardNavigation: false,
             forceParse: false,
             todayHighlight: true,
+            language:"zh-CN",
             daysOfWeekDisabled: "0,6",
             beforeShowDay: function (date){
                 if (date.getMonth() == (new Date()).getMonth()){

@@ -4,15 +4,17 @@
 
 $(function(){
     var errMessage = '<div id="errMsg" style="display: none;">'+
-                     '<div class="weui_mask_transparent fixed"></div>'+
-                     '<div class="weui_toast">'+
-                         '<p class="weui_toast_content">' +
-                              '<img src="../../assets/mobile/images/smile_icon.png" alt="" id="smile-icon"/><br/>'+
-                              '<span class="errSpan"></span>'+
-                         '</p>'+
-                     '</div>'+
-                 '</div>';
+                         '<div class="weui_mask_transparent fixed"></div>'+
+                         '<div class="weui_toast">'+
+                             '<p class="weui_toast_content">' +
+                                  '<img src="../../assets/mobile/images/smile_icon.png" alt="" id="smile-icon"/><br/>'+
+                                  '<span class="errSpan"></span>'+
+                             '</p>'+
+                         '</div>'+
+                     '</div>';
     $(".errDailog").append(errMessage);
+
+
 
   var loadingToast = '<div id="loadingToast" class="weui_loading_toast" style="display: none;">'+
                      '<div class="weui_mask_transparent fixed"></div>'+
@@ -49,10 +51,6 @@ $(function(){
               '</div>';
 
     $(".errDailog").append(toast);
-
-
-
-
 });
 
 function showErrMsg(message) {
@@ -92,5 +90,31 @@ function showLoading(message,message1) {
         $('#loadingToast').hide();
         $("#loadingToast .weui_toast_content .errSpan").empty();
         showToast(message1);
+    }, 3000);
+}
+
+
+
+var application = '<div id="application" style="display: none;">'+
+                      '<div class="weui_mask_transparent fixed"></div>'+
+                         '<div class="weui_toast">'+
+                             '<p class="weui_toast_content">' +
+                                 '<img src="" alt="" id="applicationInfor"/><br/>'+
+                                 '<span class="errSpan"></span>'+
+                             '</p>'+
+                         '</div>'+
+                     '</div>';
+$(".errDailog").append(application);
+function showApplication(img,message){
+    $("#application .weui_toast_content .errSpan").append(message);
+    $('#application').show();
+    $("#application .weui_toast").addClass("weui_toastshow");
+    var src = "../../assets/mobile/images/";
+    var type = ".png";
+    $("#applicationInfor").attr({src:src+img+type});
+    setTimeout(function () {
+        $("#application .weui_toast").removeClass("weui_toastshow");
+        $('#application').hide();
+        $("#application .weui_toast_content .errSpan").empty();
     }, 3000);
 }

@@ -1,0 +1,160 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8"/>
+    <title>发布需求</title>
+    <meta name="viewport" content="width=device-width; initial-scale=1.0; user-scalable=no;">
+    <link rel="stylesheet" href="../../assets/mobile/plugins/weUi/css/example.css"/>
+    <link rel="stylesheet" href="../../assets/mobile/plugins/weUi/css/weui.css"/>
+    <link rel="stylesheet" href="../../assets/global/plugins/font-awesome/css/font-awesome.min.css"/>
+    <link rel="stylesheet" href="../../assets/mobile/css/global.css"/>
+</head>
+<body>
+    <div class="content errDailog">
+        <div class="page">
+            <div class="bd pd50 absolute">
+                <form action="#" id="form" onsubmit="return false">
+                    <div class="weui_cells weui_cells_form mt0 bg">
+                        <div class="relesaTitle">我要发布</div>
+                        <div class="weui_cell ">
+                            <div class="weui_cell_hd">
+                                <label class="weui_label">
+                                    <span class="spanText">名称</span>
+                                </label>
+                            </div>
+                            <div class="weui_cell_bd weui_cell_primary">
+                                <input class="weui_input" type="text" placeholder="请输入资源名称" name=""/>
+                            </div>
+                        </div>
+                        <div class="weui_cell mb15">
+                            <div class="weui_cell_hd">
+                                <label class="weui_label">
+                                    <span class="spanText"></span>
+                                </label>
+                            </div>
+                            <div class="weui_cell_bd weui_cell_primary">
+                                <div class="weui_cells weui_cells_checkbox mt0 style2">
+                                    <label class="weui_cell weui_check_label l0 style2" id="checke1" for="s11">
+                                        <input type="radio" class="weui_check" checked name="checkbox1" id="s11">
+                                        <i class="weui_icon_checked"></i> 资源
+                                    </label>
+                                    <label class="weui_cell weui_check_label l0 style2" id="checke2" for="s111">
+                                        <input type="radio" class="weui_check" name="checkbox1" id="s111">
+                                        <i class="weui_icon_checked"></i> 需求
+                                    </label>
+                                </div>
+                            </div>
+                        </div>
+
+                        <div class="checked">
+                            <div class="weui_cell ">
+                                <div class="weui_cell_hd">
+                                    <label class="weui_label">
+                                        <span class="spanText">价格</span>
+                                    </label>
+                                </div>
+                                <div class="weui_cell_bd weui_cell_primary">
+                                    <input class="weui_input" type="text" placeholder="请输入价格" name=""/>
+                                </div>
+                            </div>
+                            <div class="weui_cell">
+                                <div class="weui_cell_hd">
+                                    <label class="weui_label">
+                                        <span class="spanText"></span>
+                                    </label>
+                                </div>
+                                <div class="weui_cell_bd weui_cell_primary">
+                                    <div class="weui_cells weui_cells_checkbox mt0 style2">
+                                        <label class="weui_cell weui_check_label l0 style2"  for="s121">
+                                            <input type="checkbox" class="weui_check" name="checkbox1" id="s121">
+                                            <i class="weui_icon_checked "></i> 社群优惠
+                                        </label>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="zhuyi">
+                                <span>*只有社群成员才一定优惠,更有助于资源的推广</span>
+                            </div>
+
+                            <div class="relesaTitle">用途</div>
+                            <div>
+                                <textarea name="" style="padding: 5px 15px;font-size: 14px;" class="weui_textarea" placeholder="教育" cols="30" rows="5"></textarea>
+                            </div>
+                        </div>
+                        <div class="relesaTitle">详情描述</div>
+                        <div style="margin-bottom: 15px;">
+                            <textarea name="" style="padding: 5px 15px;font-size: 14px;" class="weui_textarea" placeholder="实惠经济" cols="30" rows="5"></textarea>
+                        </div>
+                        <div class="weui_cell ">
+                            <div class="weui_cell_hd">
+                                <label class="weui_label">
+                                    <span class="spanText">姓名</span>
+                                </label>
+                            </div>
+                            <div class="weui_cell_bd weui_cell_primary">
+                                <input class="weui_input" type="text" placeholder="请输入姓名" name=""/>
+                            </div>
+                        </div>
+                        <div class="weui_cell ">
+                            <div class="weui_cell_hd">
+                                <label class="weui_label">
+                                    <span class="spanText">手机</span>
+                                </label>
+                            </div>
+                            <div class="weui_cell_bd weui_cell_primary">
+                                <input class="weui_input" type="text" placeholder="请输入手机号" name=""/>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="weui_btn_area fixed">
+                        <a class="weui_btn weui_btn_primary b0" id="showTooltips">
+                            发布
+                        </a>
+                    </div>
+                </form>
+            </div>
+
+        </div>
+    </div>
+    <script src="../../assets/global/plugins/jquery.min.js"></script>
+    <script src="../../assets/mobile/js/messageTip.js"></script>
+    <script src="../../assets/mobile/js/global.js"></script>
+    <script>
+        $("#showTooltips").click(function(){
+            if($.trim($("#submitPerson").val()) == '') {
+                showErrMsg('提交对象不能为空');
+                return false;
+            }
+            else if($.trim($("#copePerson").val()) == ''){
+                showErrMsg('抄送对象不能为空');
+            }
+            else if($.trim($("#start").val()) == ''){
+                showErrMsg('开始时间不能为空');
+            }
+            else if($.trim($("#end").val()) == ''){
+                showErrMsg('结束时间不能为空');
+            }else if($.trim($("#caseDetails").val()) == ''){
+                showErrMsg('请假理由不能为空');
+            }
+            else{
+                showLoading("数据提交中","提交成功");
+            }
+            return true;
+        });
+
+        $("#checke1").on("click",function(){
+           if($(this).find("input")[0].checked==true){
+
+               $(".checked").removeClass("hide");
+           }
+        });
+
+        $("#checke2").on("click",function(){
+            if($(this).find("input")[0].checked==true){
+                $(".checked").addClass("hide");
+            }
+
+        });
+    </script>
+</body>
+</html>
