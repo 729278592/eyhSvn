@@ -2,7 +2,7 @@
 <html>
 <head>
     <meta charset="utf-8"/>
-    <title>请假申请</title>
+    <title>填写报告</title>
     <meta name="viewport" content="width=device-width; initial-scale=1.0; user-scalable=no;">
     <link rel="stylesheet" href="../../assets/mobile/plugins/weUi/css/example.css"/>
     <link rel="stylesheet" href="../../assets/mobile/plugins/weUi/css/weui.css"/>
@@ -15,6 +15,16 @@
             <div class="bd pd50 absolute">
                 <form action="#" id="form" onsubmit="return false">
                     <div class="weui_cells weui_cells_form mt0 bg">
+                        <div class="weui_cell mb15">
+                            <div class="weui_cell_hd">
+                                <label class="weui_label">
+                                    <span class="spanText">标题</span>
+                                </label>
+                            </div>
+                            <div class="weui_cell_bd weui_cell_primary">
+                                <input class="weui_input" type="text" placeholder="请输入价格" name=""/>
+                            </div>
+                        </div>
                         <div class="weui_cell weui_cell_select mb15">
                             <div class="weui_cell_hd">
                                 <label class="weui_label">
@@ -23,9 +33,12 @@
                             </div>
                             <div class="weui_cell_bd weui_cell_primary date">
                                 <select class="weui_select" name="select1">
-                                    <option selected="" value="病假">病假</option>
-                                    <option value="事假">事假</option>
-                                    <option value="婚假">婚假</option>
+                                    <option selected="" value="填写报告类型">填写报告类型</option>
+                                    <option value="日报">日报</option>
+                                    <option value="周报">周报</option>
+                                    <option value="月报">月报</option>
+                                    <option value="半年报">半年报</option>
+                                    <option value="年报">年报</option>
                                 </select>
                             </div>
                         </div>
@@ -44,7 +57,7 @@
                                 <input type="hidden"/>
                             </div>
                         </a>
-                        <a class="weui_cell mb15" href="###">
+                        <a class="weui_cell" href="###">
                             <div class="weui_cell_hd">
                                 <label class="weui_label">
                                     <span class="spanText">抄送对象</span>
@@ -58,38 +71,18 @@
                                 <input type="hidden" />
                             </div>
                         </a>
-                        <div class="weui_cell">
-                            <label class="weui_label">
-                                <span class="spanText">开始日期</span>
-                            </label>
-                            <div class="weui_cell_bd weui_cell_primary style">
-                                <input type="date" id="start" class="weui_input" placeholder="2015/04/04"/>
-                                <i class="fa fa-calendar"></i>
-                            </div>
+
+                        <div class="relesaTitle">工作总结</div>
+                        <div>
+                            <textarea name="" style="padding: 5px 15px;font-size: 14px;" class="weui_textarea" placeholder="1.设计完成 2.程序完成" cols="30" rows="5"></textarea>
                         </div>
-                        <div class="weui_cell mb15">
-                            <label class="weui_label">
-                                <span class="spanText">结束日期</span>
-                            </label>
-                            <div class="weui_cell_bd weui_cell_primary style">
-                                <input type="date" id="end" class="weui_input" placeholder="2015/04/04"/>
-                                <i class="fa fa-calendar"></i>
-                            </div>
+                        <div class="relesaTitle">工作计划</div>
+                        <div style="margin-bottom: 15px;">
+                            <textarea name="" style="padding: 5px 15px;font-size: 14px;" class="weui_textarea" placeholder="1.设计完成 2.程序完成" cols="30" rows="5"></textarea>
                         </div>
-                        <div class="weui_cell">
-                            <div class="weui_cell_hd">
-                                <label class="weui_label">
-                                    <span class="spanText">原因</span>
-                                </label>
-                            </div>
-                            <div class="weui_cell_bd weui_cell_primary">
-                                <textarea name="" id="caseDetails" class="weui_textarea" placeholder="请假理由" cols="30" rows="5"></textarea>
-                            </div>
-                        </div>
-                        <div class="weui_btn_area fixed">
-                            <a class="weui_btn weui_btn_primary b0" id="showTooltips">
-                                提交
-                            </a>
+                        <div class="weui_btn_area fixed style">
+                            <button type="button" class="btnAgree">保存</button>
+                            <button type="button" class="btnNotAgree active">提交</button>
                         </div>
                     </div>
                 </form>
@@ -196,9 +189,9 @@
             </div>
             <div class="addressChioce hide">
                 <div class="weui_search_bar style clearfix">
-                    <span class="left">
-                        <i class="fa fa-angle-left"></i>
-                    </span>
+                                <span class="left">
+                                    <i class="fa fa-angle-left"></i>
+                                </span>
                     <form class="weui_search_outer left">
                         <div class="weui_search_inner">
                             <i class="weui_icon_search"></i>
@@ -207,7 +200,7 @@
                         </div>
                     </form>
                     <!--<a href="javascript:" class="highSerch left">-->
-                        <!--完成-->
+                    <!--完成-->
                     <!--</a>-->
                 </div>
                 <div class="department">
@@ -357,9 +350,9 @@
 
             /*搜索条*/
             $('.content').on('touchend', '#search_cancel', function () {
-                    $('#search_input').val('');
-                })
-            });
+                $('#search_input').val('');
+            })
+        });
     </script>
     <script>
 
@@ -407,6 +400,5 @@
             return true;
         });
     </script>
-
 </body>
 </html>
