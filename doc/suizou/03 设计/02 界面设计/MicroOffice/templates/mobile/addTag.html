@@ -28,7 +28,7 @@
                     <div class="keyword-div hide">
                         <input type="text" class="keyword-input" placeholder="请输入标签名"/>
                         <i class="fa fa-check-circle"></i>
-                        <i class="weui_icon_clear"></i>
+                        <i class="fa fa-times-circle"></i>
                     </div>
                 </div>
                 <div class="weui_btn_area">
@@ -109,7 +109,7 @@
 
 
                     });
-                    $(".keyword-div .weui_icon_clear").on("touchend",function(){
+                    $(".keyword-div .fa-times-circle").on("touchend",function(){
                         $(".keyword-dashed-button").removeClass("hide");
                         $(this).closest(".keyword-div").addClass("hide");
                         $(this).closest(".keyword-div").find(".keyword-input").val("");
