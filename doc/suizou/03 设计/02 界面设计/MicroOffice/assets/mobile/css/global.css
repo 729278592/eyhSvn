@@ -234,7 +234,7 @@ a.weui_cell.c666{color: #999;}
 .container>.page.relative{position: relative;}
 .personIforP.auto{text-align: center;}
 .personIforP .btnAddwe{font-size: 16px;padding: 3px 5%;border: 1px dotted #67a5f9;background: transparent;color:#67a5f9;display: inline-block;}
-.weui_textarea{font-family: "微软雅黑";}
+.weui_textarea{font-family: "微软雅黑";border: 1px solid #efefef;padding: 5px;}
 .personIforP .btn-modify{padding: 5px 20px;border-radius: 4px;background: #06be04;color: #fff;font-family: "微软雅黑";position: absolute;top: 5px;right: 10px;display: inline-block;font-size: 14px;}
 
 a.weui_btn.weui_btn_primary{font-size: 16px;}
