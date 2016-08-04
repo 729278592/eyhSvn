@@ -79,6 +79,7 @@ img.w100{width: 100%;}
 .page .title{padding: 10px 0 0;text-align: center;color: #02b7ee;font-size: 14px;}
 .page .title .proty{width:25px;height:25px;display:inline-block;line-height:25px;border-radius: 100%;border: 1px solid #02b7ee;}
 .weui_btn_area.absolute{position: absolute;bottom: 10px;width: 90%;left: 50%;margin-left: -45%;}
+.weui_btn_area.absolute.style{z-index: 100;bottom: 20px;}
 .weui_btn_area.relative{position: relative;bottom: 0;}
 .container.hiddenx{overflow-x: hidden;}
 
@@ -328,8 +329,13 @@ a.weui_btn.weui_btn_primary{font-size: 16px;}
 .keyword-button .weui_icon_clear:before{font-size: 18px;}
 .keyword-div.have .weui_icon_clear{color: #4c8bda;position: absolute;top: -25px;right: 10px;}
 .keyword-div .weui_icon_clear{position: relative;display: inline-block;width: 14px;height: 14px;border-radius: 14px;top: -2px;}
+.keyword-div .fa-times-circle{    color: #888;
+    font-size: 22px;
+    position: relative;
+    top: 2px;}
 .keyword-div .weui_icon_clear:before{font-size: 18px;}
 .keyword-div.have .fa-check-circle{position: absolute;right: 30px;top: 9px;display: inline-block;font-size: 16px;}
+
 .errDailog{position: relative;}
 .errDailog.absolute{position: absolute;}
 .container>#errMsg{background: transparent;}
