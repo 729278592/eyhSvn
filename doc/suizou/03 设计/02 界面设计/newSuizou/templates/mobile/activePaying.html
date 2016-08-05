@@ -1,0 +1,190 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8"/>
+    <title>活动-待支付</title>
+    <meta name="viewport" content="width=device-width; initial-scale=1.0; user-scalable=no;">
+    <link rel="stylesheet" href="../../assets/mobile/plugins/weUi/css/example.css"/>
+    <link rel="stylesheet" href="../../assets/mobile/plugins/weUi/css/weui.css"/>
+    <link rel="stylesheet" href="../../assets/global/plugins/font-awesome/css/font-awesome.min.css"/>
+    <link rel="stylesheet" href="../../assets/mobile/css/global.css"/>
+</head>
+<body>
+    <div class="content errDailog">
+        <div class="page">
+            <div class="bd">
+                <div class="applicatioOpetion">
+                    <ul class="applicatioNav  clearfix">
+                        <li>
+                            <a href="activePaying.html" class="active">待支付( 6 )</a>
+                        </li>
+                        <li>
+                            <a href="activePayed.html">已支付( 5 )</a>
+                        </li>
+                    </ul>
+                </div>
+                <ul class="entryList mb10">
+                    <li>
+                        <p class="pInfor clearfix">
+                            <span>报名时间 : 2016.03.21</span>
+                            <span class="right">报名订单 : 5012504505560</span>
+                        </p>
+                        <div>
+                            <div class="couponImg style">
+                                <img src="../../assets/mobile/images/shop1.jpg" class="couponImg1" alt=""/>
+                            </div>
+                            <span class="inforList">
+                                <span class="title">
+                                    求购二手钢琴
+                                </span>
+                                <span>
+                                    <i class="spanIcon addressIcon"></i>
+                                    重庆市，渝中区，中新城上城6栋1110
+                                </span>
+                                <span>
+                                    <i class="spanIcon timeIcon"></i>
+                                    2016.06.12 ~2016.09.23
+                                </span>
+                            </span>
+                        </div>
+                        <p class="clearfix bt1">
+                            <span class="oneMoney left">￥100x2</span>
+                            <span class="right allMoney">￥200</span>
+                        </p>
+
+                        <p class="clearfix bt1">
+                            <i class="fa fa-trash-o left"></i>
+                            <a href="###" class="btnPay btnPayMask right">支付</a>
+                        </p>
+                    </li>
+                    <li>
+                        <p class="pInfor clearfix">
+                            <span>报名时间 : 2016.03.21</span>
+                            <span class="right">报名订单 : 5012504505560</span>
+                        </p>
+                        <div>
+                            <div class="couponImg style">
+                                <img src="../../assets/mobile/images/shop1.jpg" class="couponImg1" alt=""/>
+                            </div>
+                            <span class="inforList">
+                                <span class="title">
+                                    求购二手钢琴
+                                </span>
+                                <span>
+                                    <i class="spanIcon addressIcon"></i>
+                                    重庆市，渝中区，中新城上城6栋1110
+                                </span>
+                                <span>
+                                    <i class="spanIcon timeIcon"></i>
+                                    2016.06.12 ~2016.09.23
+                                </span>
+                            </span>
+                        </div>
+                        <p class="clearfix bt1">
+                            <span class="oneMoney left">￥100x2</span>
+                            <span class="right allMoney">￥200</span>
+                        </p>
+
+                        <p class="clearfix bt1">
+                            <i class="fa fa-trash-o left"></i>
+                            <a href="###" class="btnPay btnPayMask right">支付</a>
+                        </p>
+                    </li>
+                    <li class="mb0">
+                        <p class="pInfor clearfix">
+                            <span>报名时间 : 2016.03.21</span>
+                            <span class="right">报名订单 : 5012504505560</span>
+                        </p>
+                        <div>
+                            <div class="couponImg style">
+                                <img src="../../assets/mobile/images/shop1.jpg" class="couponImg1" alt=""/>
+                            </div>
+                            <span class="inforList">
+                                <span class="title">
+                                    求购二手钢琴
+                                </span>
+                                <span>
+                                    <i class="spanIcon addressIcon"></i>
+                                    重庆市，渝中区，中新城上城6栋1110
+                                </span>
+                                <span>
+                                    <i class="spanIcon timeIcon"></i>
+                                    2016.06.12 ~2016.09.23
+                                </span>
+                            </span>
+                        </div>
+                        <p class="clearfix bt1">
+                            <span class="oneMoney left">￥100x2</span>
+                            <span class="right allMoney">￥200</span>
+                        </p>
+
+                        <p class="clearfix bt1">
+                            <i class="fa fa-trash-o left"></i>
+                            <a href="###" class="btnPay btnPayMask right">支付</a>
+                        </p>
+                    </li>
+                </ul>
+            </div>
+        </div>
+    </div>
+    <script src="../../assets/global/plugins/jquery.min.js"></script>
+    <script src="../../assets/mobile/js/global.js"></script>
+    <script src="../../assets/mobile/js/confirm.js"></script>
+    <script src="../../assets/mobile/js/removeTip.js"></script>
+    <script>
+        $(function(){
+            $(".entryList").delegate(".fa-trash-o","touchend",function(){
+                $("body").addClass("overflowy");
+                confirmTip("是否删除?");
+                $(this).closest("li").addClass("removeActive");
+            });
+
+
+            /*取消删除活动*/
+            $(".content").delegate("#signCancel","touchend",function(){
+                $(".weui_dialog_confirm").addClass("hide");
+                $("body").removeClass("overflowy");
+            });
+
+            /*取消删除活动*/
+            $(".content").delegate("#signSure","touchend",function(){
+                $(".weui_dialog_confirm").addClass("hide");
+                setTimeout(function(){
+                    $(".entryList li.removeActive").remove();
+                    $("body").removeClass("overflowy");
+                    showErrMsg("删除成功");
+                },10)
+            });
+
+
+            /*支付弹窗提示*/
+            $(".entryList").delegate(".btnPayMask","touchend",function(){
+                $.ajax({
+                    type : "get",
+                    url : "payTip.html",
+                    dataType : "html",
+                    cache : false,
+                    success : function(data) {
+                        $(".content").append($(data));
+                        setTimeout(function(){
+                            $("#mask").addClass("weui_fade_toggle");
+                            $(".weui_actionsheet ").addClass("weui_actionsheet_toggle");
+                            $("body").addClass("overflowy");
+                        },10)
+                    }
+                });
+            });
+
+            /*关闭支付弹窗*/
+            $(".content").delegate(".closeImg,#mask","touchend",function(){
+                $("#mask").removeClass("weui_fade_toggle");
+                $(".weui_actionsheet ").removeClass("weui_actionsheet_toggle");
+                $("body").removeClass("overflowy");
+                setTimeout(function(){
+                    $("#mask,#weui_actionsheet").remove();
+                },100)
+            })
+        })
+    </script>
+</body>
+</html>
