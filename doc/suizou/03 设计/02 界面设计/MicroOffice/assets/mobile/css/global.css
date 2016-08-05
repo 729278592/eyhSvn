@@ -441,7 +441,7 @@ a.weui_btn.weui_btn_primary{font-size: 16px;}
 .moneyInfor .btnMoney:active {
     color: rgba(255, 255, 255, 0.4);    background-color: #039702;
 }
-.notConTip{text-align: center;color: #999;padding: 20px 0;background: #fff;}
+.notConTip{text-align: center;color: #999;padding: 20px 0;position: relative;top: 30%;}
 .notConTip.mt15{margin: 15px 0;font-size: 12px;}
 .notConTip img{width: 20%;margin-bottom: 5px;}
 .notConTip img.w10{width: 10%;}
