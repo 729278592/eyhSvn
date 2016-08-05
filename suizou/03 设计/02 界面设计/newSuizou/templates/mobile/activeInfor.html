@@ -1,0 +1,146 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8"/>
+    <title>活动详情</title>
+    <meta name="viewport" content="width=device-width; initial-scale=1.0; user-scalable=no;">
+    <link rel="stylesheet" href="../../assets/mobile/plugins/weUi/css/example.css"/>
+    <link rel="stylesheet" href="../../assets/mobile/plugins/weUi/css/weui.css"/>
+    <link rel="stylesheet" href="../../assets/mobile/plugins/swiper/dist/css/swiper.min.css"/>
+    <link rel="stylesheet" href="../../assets/global/plugins/font-awesome/css/font-awesome.min.css"/>
+    <link rel="stylesheet" href="../../assets/mobile/css/global.css"/>
+</head>
+<body>
+    <div class="content">
+        <div class="page">
+            <div class="bd absolute pd50">
+                <div class="swiper-container mt0 swiper-container-horizontal" id="swiper-container">
+                    <div class="swiper-wrapper" style="transition-duration: 0ms; ">
+                        <div class="swiper-slide">
+                            <img src="../../assets/mobile/images/active1.jpg" alt="" class="w100"/>
+                        </div>
+                        <div class="swiper-slide">
+                            <img src="../../assets/mobile/images/active2.jpg" alt="" class="w100"/>
+                        </div>
+                    </div>
+                    <div class="swiper-pagination"></div>
+                    <!--<div class="swiper-button-next"></div>-->
+                    <!--<div class="swiper-button-prev"></div>-->
+                </div>
+
+                <div class="activeCon mb15">
+                    <p class="title">指尖的钢琴-成人零基础[免费]学钢琴</p>
+                    <p>在盲目的生活中，我们也许会被现实吞噬，也有可能还继续追逐梦想，这里是你我的起点，让我们放飞梦想一起来加入指尖钢琴社吧</p>
+                </div>
+                <div class="activeIn mb15">
+                    <p>
+                        <span class="spanIcon timeIcon"></span>
+                        <span class="text">
+                            2016.06.12 ~2016.09.23
+                        </span>
+                    </p>
+                    <p>
+                        <span class="spanIcon addressIcon"></span>
+                        <span class="text">
+                            重庆市，渝中区，中新城上城6栋1110
+                        </span>
+
+                    </p>
+                    <p>
+                        <span class="spanIcon moneyIcon "></span>
+                        <span class="text">
+                            免费
+                        </span>
+
+                    </p>
+                </div>
+                <div class="activeCon mb15" style="border-top: 1px solid #dbdbdb;">
+                    <p class="title">活动介绍</p>
+                    <p>
+                        在全新的智能视听课堂上，跟着钢琴上的88个灯立刻开始弹奏，弹错会智能纠错、标红等待，灭掉屏幕上掉落 的小花更能一步步熟悉键位、
+                    </p>
+                    <p>
+                        在全新的智能视听课堂上，跟着钢琴上的88个灯立刻开始弹奏，弹错会智能纠错、标红等待，灭掉屏幕上掉落 的小花更能一步步熟悉键位、 副本
+                    </p>
+                    <div class="swiper-container mt0 swiper-container-horizontal" id="swiper-container1">
+                        <div class="swiper-wrapper" style="transition-duration: 0ms; ">
+                            <div class="swiper-slide">
+                                <img src="../../assets/mobile/images/active1.jpg" alt="" class="w100"/>
+                            </div>
+                        </div>
+                        <!--<div class="swiper-pagination"></div>-->
+                        <!--<div class="swiper-button-next"></div>-->
+                        <!--<div class="swiper-button-prev"></div>-->
+                    </div>
+                    <p style="padding-top: 10px;">
+                        在全新的智能视听课堂上，跟着钢琴上的88个灯立刻开始弹奏，弹错会智能纠错、标红等待，灭掉屏幕上掉落 的小花更能
+                    </p>
+                </div>
+                <div>
+                    <img src="../../assets/mobile/images/activeMoney.jpg" alt="" class="w100"/>
+                </div>
+            </div>
+            <div class="weui_btn_area fixed">
+                <button class="weui_btn weui_btn_primary b0 hide" >
+                    申请加入
+                </button>
+                <button class="weui_btn weui_btn_primary b0 " id="signUp">
+                    报名
+                </button>
+                <button class="weui_btn weui_btn_primary b0 hide actived">
+                    报名即将开始
+                </button>
+                <button class="weui_btn weui_btn_primary b0 hide actived" >
+                    报名即已结束
+                </button>
+            </div>
+        </div>
+    </div>
+    <script src="../../assets/global/plugins/jquery.min.js"></script>
+    <script src="../../assets/mobile/plugins/swiper/dist/js/swiper.min.js"></script>
+    <script src="../../assets/mobile/js/global.js"></script>
+    <script src="../../assets/mobile/js/confirm.js"></script>
+    <script>
+        $(function(){
+            new Swiper('#swiper-container', {
+                slidesPerView: 1,
+                pagination:'.swiper-pagination',
+                paginationClickable: true,
+                spaceBetween: 0,
+                loop:true,
+                autoplay: 5000,
+                autoplayDisableOnInteraction: false
+            });
+            new Swiper('#swiper-container1', {
+                slidesPerView: 1,
+//                pagination:'.swiper-pagination',
+//                prevButton:'.swiper-button-prev',
+//                nextButton:'.swiper-button-next',
+                paginationClickable: true,
+                spaceBetween: 0,
+//                loop:true,
+//                autoplay: 5000,
+                autoplayDisableOnInteraction: false
+            });
+
+            /*再次报名*/
+            $(".weui_btn_area").delegate("#signUp","click",function(){
+                confirmTip("您已经报名该活动,是否再报名?");
+                $("body").addClass("overflowy");
+            });
+
+            /*确定再次报名*/
+            $(".content").delegate("#signCancel","click",function(){
+                $(".weui_dialog_confirm").addClass("hide");
+                $("body").removeClass("overflowy");
+            });
+
+            /*取消再次报名*/
+            $(".content").delegate("#signSure","click",function(){
+                $(".weui_dialog_confirm").addClass("hide");
+                $("body").removeClass("overflowy");
+            });
+        })
+    </script>
+</body>
+</html>

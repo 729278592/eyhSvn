@@ -1,0 +1,96 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8"/>
+    <title>活动-申请加入</title>
+    <meta name="viewport" content="width=device-width; initial-scale=1.0; user-scalable=no;">
+    <link rel="stylesheet" href="../../assets/mobile/plugins/weUi/css/example.css"/>
+    <link rel="stylesheet" href="../../assets/mobile/plugins/weUi/css/weui.css"/>
+    <link rel="stylesheet" href="../../assets/mobile/plugins/swiper/dist/css/swiper.min.css"/>
+    <link rel="stylesheet" href="../../assets/global/plugins/font-awesome/css/font-awesome.min.css"/>
+    <link rel="stylesheet" href="../../assets/mobile/css/global.css"/>
+</head>
+<body>
+    <div class="content">
+        <div class="page">
+            <div class="bd absolute pd50">
+                <div class="swiper-container mt0 swiper-container-horizontal" id="swiper-container">
+                    <div class="swiper-wrapper" style="transition-duration: 0ms; ">
+                        <div class="swiper-slide">
+                            <img src="../../assets/mobile/images/active1.jpg" alt="" class="w100"/>
+                        </div>
+                        <div class="swiper-slide">
+                            <img src="../../assets/mobile/images/active2.jpg" alt="" class="w100"/>
+                        </div>
+                    </div>
+                    <div class="swiper-pagination"></div>
+                    <!--<div class="swiper-button-next"></div>-->
+                    <!--<div class="swiper-button-prev"></div>-->
+                </div>
+
+                <div class="activeCon">
+                    <p class="title">指尖的钢琴-成人零基础[免费]学钢琴</p>
+                    <p>在盲目的生活中，我们也许会被现实吞噬，也有可能还继续追逐梦想，这里是你我的起点，让我们放飞梦想一起来加入指尖钢琴社吧</p>
+                </div>
+                <form action="#" id="form" onsubmit="return false">
+                    <div class="weui_cells weui_cells_form mt0 bg">
+                        <div class="relesaTitle">加入星空琴行</div>
+                        <div class="weui_cell ">
+                            <div class="weui_cell_hd">
+                                <label class="weui_label">
+                                    <span class="spanText">姓名</span>
+                                </label>
+                            </div>
+                            <div class="weui_cell_bd weui_cell_primary">
+                                <input class="weui_input" type="text" placeholder="请输入姓名" name=""/>
+                            </div>
+                        </div>
+                        <div class="weui_cell ">
+                            <div class="weui_cell_hd">
+                                <label class="weui_label">
+                                    <span class="spanText">手机</span>
+                                </label>
+                            </div>
+                            <div class="weui_cell_bd weui_cell_primary">
+                                <input class="weui_input" type="text" placeholder="请输入手机号" name=""/>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="weui_btn_area fixed">
+                        <button class="weui_btn weui_btn_primary b0" >
+                            申请加入
+                        </button>
+                    </div>
+                </form>
+            </div>
+        </div>
+    </div>
+    <script src="../../assets/global/plugins/jquery.min.js"></script>
+    <script src="../../assets/mobile/plugins/swiper/dist/js/swiper.min.js"></script>
+    <script src="../../assets/mobile/js/global.js"></script>
+    <script>
+        $(function(){
+            new Swiper('#swiper-container', {
+                slidesPerView: 1,
+                pagination:'.swiper-pagination',
+                paginationClickable: true,
+                spaceBetween: 0,
+                loop:true,
+                autoplay: 5000,
+                autoplayDisableOnInteraction: false
+            });
+            new Swiper('#swiper-container1', {
+                slidesPerView: 1,
+                //                pagination:'.swiper-pagination',
+                //                prevButton:'.swiper-button-prev',
+                //                nextButton:'.swiper-button-next',
+                paginationClickable: true,
+                spaceBetween: 0,
+                //                loop:true,
+                //                autoplay: 5000,
+                autoplayDisableOnInteraction: false
+            });
+        });
+    </script>
+</body>
+</html>
