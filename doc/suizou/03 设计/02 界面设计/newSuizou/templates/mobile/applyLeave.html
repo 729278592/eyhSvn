@@ -390,9 +390,16 @@
     </script>
     <script>
         $(function(){
-            /*获取h5时间值*/
+            /*结束时间与开始时间的控制*/
             $('input').on('input propertychange',function(){
-                console.log($(this).val());
+                var start = $("#start").val().replace(/-/g,'');
+                var end   = $("#end").val().replace(/-/g,'');
+                if($("#end")[0].value != ''){
+                    if(start>end){
+                        showErrMsg('结束时间不能小于开始时间');
+                        $("#end").val(" ")
+                    }
+                }
             });
 
             /*选择部门*/
