@@ -259,18 +259,17 @@
     <script src="../../assets/mobile/js/global.js"></script>
     <script>
         $(function(){
-
             /*json数据生成与删除*/
             var object = {};
             var person = [];
             var str = "";
             function shuzu(dataId,text,i){
                 object.names = text;
-                object.texts = dataId;
+                object.uniqueId = dataId;
                 object.id    = i;
                 person.push({
                     names:object.names,
-                    texts:object.texts,
+                    uniqueId:object.uniqueId,
                     id   :object.id
                 });
 //                console.log(JSON.stringify(person));
@@ -336,7 +335,7 @@
                 addressChioce.addClass('slideOutRight');
                 str = '';
                 for(var j=0;j<person.length;j++){
-                    str += '<span>'+person[j].names+'</span><input type="hidden" input-id="'+person[j].texts+'"/>'
+                    str += '<span>'+person[j].names+'</span><input type="hidden" input-id="'+person[j].uniqueId+'"/>'
                 }
                 str += '';
                 $(".jsonAttr .taLeft").html(str);
@@ -388,47 +387,47 @@
         });
     </script>
     <script>
+        $(function(){
+            /*获取h5时间值*/
+            $('input').on('input propertychange',function(){
+                console.log($(this).val());
+            });
 
-        /*获取h5时间值*/
-        $('input').on('input propertychange',function(){
-            console.log($(this).val());
-        });
-
-        /*选择部门*/
-        $(".departmentTitle").on("touchend",function(){
-            if($(this).is(".rotate")){
-                $(this).removeClass("rotate");
-                $(this).next(".weui_cells.style").removeClass("hide");
-            }else{
-                $(this).addClass("rotate");
-                $(this).next(".weui_cells.style").addClass("hide");
-            }
-        });
+            /*选择部门*/
+            $(".departmentTitle").on("touchend",function(){
+                if($(this).is(".rotate")){
+                    $(this).removeClass("rotate");
+                    $(this).next(".weui_cells.style").removeClass("hide");
+                }else{
+                    $(this).addClass("rotate");
+                    $(this).next(".weui_cells.style").addClass("hide");
+                }
+            });
 
 
-        /*表单验证提示*/
-        $("#showTooltips").click(function(){
-            if($.trim($("#submitPerson").val()) == '') {
-                showErrMsg('提交对象不能为空');
-                return false;
-            }
-            else if($.trim($("#copePerson").val()) == ''){
-                showErrMsg('抄送对象不能为空');
-            }
-            else if($.trim($("#start").val()) == ''){
-                showErrMsg('开始时间不能为空');
-            }
-            else if($.trim($("#end").val()) == ''){
-                showErrMsg('结束时间不能为空');
-            }else if($.trim($("#caseDetails").val()) == ''){
-                showErrMsg('请假理由不能为空');
-            }
-            else{
-                showLoading("数据提交中","提交成功");
-            }
-            return true;
-        });
+            /*表单验证提示*/
+            $("#showTooltips").click(function(){
+                if($.trim($("#submitPerson").val()) == '') {
+                    showErrMsg('提交对象不能为空');
+                    return false;
+                }
+                else if($.trim($("#copePerson").val()) == ''){
+                    showErrMsg('抄送对象不能为空');
+                }
+                else if($.trim($("#start").val()) == ''){
+                    showErrMsg('开始时间不能为空');
+                }
+                else if($.trim($("#end").val()) == ''){
+                    showErrMsg('结束时间不能为空');
+                }else if($.trim($("#caseDetails").val()) == ''){
+                    showErrMsg('请假理由不能为空');
+                }
+                else{
+                    showLoading("数据提交中","提交成功");
+                }
+                return true;
+            });
+        })
     </script>
-
 </body>
 </html>
