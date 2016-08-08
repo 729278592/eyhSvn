@@ -39,10 +39,10 @@
                             <div class="weui_cell_bd weui_cell_primary">
                                 <!--<input type="text" class="weui_input" id='datetime-picker'/>-->
                                 <div class="weui_cell_ft taLeft">
-                                    <span>张丽1</span>
-                                    <input type="hidden" input-id="2">
-                                    <span>张丽2</span>
-                                    <input type="hidden" input-id="3">
+                                    <span>张三</span>
+                                    <input type="hidden" input-id="0">
+                                    <span>李四</span>
+                                    <input type="hidden" input-id="1">
                                 </div>
                             </div>
                         </a>
@@ -55,10 +55,10 @@
                             <div class="weui_cell_bd weui_cell_primary">
                                 <!--<input type="text" class="weui_input" id='datetime-picker'/>-->
                                 <div class="weui_cell_ft taLeft">
-                                    <span>张丽1</span>
-                                    <input type="hidden" input-id="2">
-                                    <span>张丽2</span>
-                                    <input type="hidden" input-id="3">
+                                    <span>张三</span>
+                                    <input type="hidden" input-id="0">
+                                    <span>李四</span>
+                                    <input type="hidden" input-id="1">
                                 </div>
                             </div>
                         </a>
@@ -110,8 +110,8 @@
                         销售部
                         <span class="caretDown"></span>
                     </p>
-                    <div class="weui_cells style mt0 ">
-                        <div class="weui_cell l0">
+                    <div class="weui_cells style mt0">
+                        <div class="weui_cell l0 inspector">
                             <div class="weui_cell_hd">
                                 <label class="weui_label">
                                     总　　监
@@ -209,37 +209,37 @@
                     <!--</a>-->
                 </div>
                 <div class="department">
-                    <div class="weui_cells weui_cells_checkbox">
-                        <label class="weui_cell weui_check_label l0"  for="s11" data-id="1">
+                    <div class="weui_cells weui_cells_checkbox" id="weui_cells_checkbox">
+                        <label class="weui_cell weui_check_label l0" onclick="chiocePerson(this,event)"  for="s11" data-id="0">
                             <div class="weui_cell_hd">
-                                <label class="weui_label">张丽0</label>
+                                <label class="weui_label">张三</label>
                             </div>
                             <div class="weui_cell_bd weui_cell_primary">
                                 <input type="checkbox" class="weui_check" name="checkbox1" id="s11">
                                 <i class="weui_icon_checked right"></i>
                             </div>
                         </label>
-                        <label class="weui_cell weui_check_label l0"  for="s12" data-id="2">
+                        <label class="weui_cell weui_check_label l0" onclick="chiocePerson(this,event)"  for="s12" data-id="1">
                             <div class="weui_cell_hd">
-                                <label class="weui_label">张丽1</label>
+                                <label class="weui_label">李四</label>
                             </div>
                             <div class="weui_cell_bd weui_cell_primary">
                                 <input type="checkbox" class="weui_check" name="checkbox1" id="s12">
                                 <i class="weui_icon_checked right"></i>
                             </div>
                         </label>
-                        <label class="weui_cell weui_check_label l0"  for="s13" data-id="3">
+                        <label class="weui_cell weui_check_label l0" onclick="chiocePerson(this,event)"  for="s13" data-id="2">
                             <div class="weui_cell_hd">
-                                <label class="weui_label">张丽2</label>
+                                <label class="weui_label">王二</label>
                             </div>
                             <div class="weui_cell_bd weui_cell_primary">
                                 <input type="checkbox" class="weui_check" name="checkbox1" id="s13">
                                 <i class="weui_icon_checked right"></i>
                             </div>
                         </label>
-                        <label class="weui_cell weui_check_label l0"  for="s14" data-id="4">
+                        <label class="weui_cell weui_check_label l0" onclick="chiocePerson(this,event)"  for="s14" data-id="3">
                             <div class="weui_cell_hd">
-                                <label class="weui_label">张丽3</label>
+                                <label class="weui_label">麻子</label>
                             </div>
                             <div class="weui_cell_bd weui_cell_primary">
                                 <input type="checkbox" class="weui_check" name="checkbox1" id="s14">
@@ -259,8 +259,9 @@
     <script src="../../assets/global/plugins/jquery.min.js"></script>
     <script src="../../assets/mobile/js/messageTip.js"></script>
     <script src="../../assets/mobile/js/global.js"></script>
+    <script src="../../assets/mobile/js/dataJson.js"></script>
     <script>
-        $(function(){
+
             /*json数据生成与删除*/
             var object = {};
             var person = [];
@@ -274,29 +275,29 @@
                     uniqueId:object.uniqueId,
                     id   :object.id
                 });
-//                console.log(JSON.stringify(person));
+                console.log(JSON.stringify(person));
             }
-
-            $(".weui_cells_checkbox .weui_check_label").each(function(i){
-                $(this).on("touchend",function(e){
-                    e.preventDefault();
-                    if($(this).find("input").prop("checked")){
-                        $(this).find("input").prop({checked:false});
-                        var that = $(this).attr("data");
+            function chiocePerson(obj,e){
+                e.preventDefault();
+                $(obj).each(function(i){
+                    if($(obj).find("input").prop("checked")){
+                        $(obj).find("input").prop({checked:false});
+                        var that = $(obj).attr("data");
                         person = person.filter(function(obj){
                             return obj.id != that;
                         });
 //                        console.log(JSON.stringify(person))
                     }else{
-                        $(this).attr({"data":i});
-                        $(this).find("input").prop({checked:true});
-                        $(this).addClass("active");
-                        dataId =  $(this).attr("data-id");
-                        text   =  $(this).find(".weui_label").text();
+                        $(obj).attr({"data":i});
+                        $(obj).find("input").prop({checked:true});
+                        $(obj).addClass("active");
+                        dataId =  $(obj).attr("data-id");
+                        text   =  $(obj).find(".weui_label").text();
                         shuzu(dataId,text,i);
                     }
                 });
-            });
+
+            }
 
             /*高级筛选*/
             $(".bd a.weui_cell").on("touchend",function(){
@@ -314,21 +315,41 @@
             });
 
             /*选择条件控制*/
-            $(".advancedSearch .weui_cell").on("touchend",function(){
-                var addressChioce = $(".addressChioce");
-                var advancedSearch = $(".advancedSearch");
-                addressChioce.removeClass("hide");
-                addressChioce.addClass('slideInRight');
-                $(addressChioce).on('webkitAnimationEnd', function (){
-                    addressChioce.removeClass("slideInRight");
-                    advancedSearch.addClass("hide");
+            $(".advancedSearch .weui_cell").each(function(i){
+                $(this).on("touchend",function(){
+                    var addressChioce = $(".addressChioce");
+                    var advancedSearch = $(".advancedSearch");
                     addressChioce.removeClass("hide");
-                }).on('animationend', function (){
-                    addressChioce.removeClass("slideInRight");
-                    addressChioce.removeClass("hide");
-                    advancedSearch.addClass("hide");
+                    addressChioce.addClass('slideInRight');
+
+                    var len = infor[i].length;
+                    var htmlPerson = '';
+                    for(var n = 0;n<len;n++){
+                        htmlPerson += '<label class="weui_cell weui_check_label l0" onclick="chiocePerson(this,event)" for="'+n+'" data-id="'+infor[i][n].dataNumid+'">'+
+                                '<div class="weui_cell_hd">'+
+                                '<label class="weui_label">'+infor[i][n].personName+'</label>'+
+                                '</div>'+
+                                '<div class="weui_cell_bd weui_cell_primary">'+
+                                '<input type="checkbox" class="weui_check" name="checkbox1" id="'+n+'">'+
+                                '<i class="weui_icon_checked right"></i>'+
+                                '</div>'+
+                                '</label>';
+                    }
+                    htmlPerson += '';
+                    $("#weui_cells_checkbox").html(htmlPerson);
+
+                    $(addressChioce).on('webkitAnimationEnd', function (){
+                        addressChioce.removeClass("slideInRight");
+                        advancedSearch.addClass("hide");
+                        addressChioce.removeClass("hide");
+                    }).on('animationend', function (){
+                        addressChioce.removeClass("slideInRight");
+                        addressChioce.removeClass("hide");
+                        advancedSearch.addClass("hide");
+                    });
                 });
             });
+
 
             /*完成选择条件*/
             $("#btnComplete").on("touchend",function(){
@@ -341,6 +362,7 @@
                 }
                 str += '';
                 $(".jsonAttr .taLeft").html(str);
+                person = [];
                 $(".weui_cells a.weui_cell").removeClass("jsonAttr");
                 $(addressChioce).on('webkitAnimationEnd', function (){
                     addressChioce.removeClass("slideOutRight");
@@ -386,7 +408,6 @@
             $('.content').on('touchend', '#search_cancel', function () {
                 $('#search_input').val('');
             })
-        });
     </script>
     <script>
         $(function(){
