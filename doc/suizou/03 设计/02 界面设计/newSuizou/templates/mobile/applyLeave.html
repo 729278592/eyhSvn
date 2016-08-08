@@ -41,7 +41,6 @@
                                 <div class="weui_cell_ft taLeft">
                                     张三
                                 </div>
-                                <input type="hidden"/>
                             </div>
                         </a>
                         <a class="weui_cell mb15" href="###">
@@ -53,9 +52,12 @@
                             <div class="weui_cell_bd weui_cell_primary">
                                 <!--<input type="text" class="weui_input" id='datetime-picker'/>-->
                                 <div class="weui_cell_ft taLeft">
-                                    李四
+                                    <div>
+                                        <span>张丽2</span>
+                                        <input type="hidden" input-id="3">
+
+                                    </div>
                                 </div>
-                                <input type="hidden" />
                             </div>
                         </a>
                         <div class="weui_cell">
@@ -206,44 +208,36 @@
                 </div>
                 <div class="department">
                     <div class="weui_cells weui_cells_checkbox">
-                        <label class="weui_cell weui_check_label l0"  for="s11" data="name">
+                        <label class="weui_cell weui_check_label l0"  for="s11" data-id="1">
                             <div class="weui_cell_hd">
-                                <label class="weui_label">
-                                    张丽丽
-                                </label>
+                                <label class="weui_label">张丽0</label>
                             </div>
                             <div class="weui_cell_bd weui_cell_primary">
                                 <input type="checkbox" class="weui_check" name="checkbox1" id="s11">
                                 <i class="weui_icon_checked right"></i>
                             </div>
                         </label>
-                        <label class="weui_cell weui_check_label l0"  for="s12" data="name">
+                        <label class="weui_cell weui_check_label l0"  for="s12" data-id="2">
                             <div class="weui_cell_hd">
-                                <label class="weui_label">
-                                    张丽丽
-                                </label>
+                                <label class="weui_label">张丽1</label>
                             </div>
                             <div class="weui_cell_bd weui_cell_primary">
                                 <input type="checkbox" class="weui_check" name="checkbox1" id="s12">
                                 <i class="weui_icon_checked right"></i>
                             </div>
                         </label>
-                        <label class="weui_cell weui_check_label l0"  for="s13" data="name">
+                        <label class="weui_cell weui_check_label l0"  for="s13" data-id="3">
                             <div class="weui_cell_hd">
-                                <label class="weui_label">
-                                    张丽丽
-                                </label>
+                                <label class="weui_label">张丽2</label>
                             </div>
                             <div class="weui_cell_bd weui_cell_primary">
                                 <input type="checkbox" class="weui_check" name="checkbox1" id="s13">
                                 <i class="weui_icon_checked right"></i>
                             </div>
                         </label>
-                        <label class="weui_cell weui_check_label l0"  for="s14" data="name">
+                        <label class="weui_cell weui_check_label l0"  for="s14" data-id="4">
                             <div class="weui_cell_hd">
-                                <label class="weui_label">
-                                    张丽丽
-                                </label>
+                                <label class="weui_label">张丽3</label>
                             </div>
                             <div class="weui_cell_bd weui_cell_primary">
                                 <input type="checkbox" class="weui_check" name="checkbox1" id="s14">
@@ -266,11 +260,49 @@
     <script>
         $(function(){
 
+            /*json数据生成与删除*/
+            var object = {};
+            var person = [];
+            var str = "";
+            function shuzu(dataId,text,i){
+                object.names = text;
+                object.texts = dataId;
+                object.id    = i;
+                person.push({
+                    names:object.names,
+                    texts:object.texts,
+                    id   :object.id
+                });
+//                console.log(JSON.stringify(person));
+            }
+
+            $(".weui_cells_checkbox .weui_check_label").each(function(i){
+                $(this).on("touchend",function(e){
+                    e.preventDefault();
+                    if($(this).find("input").prop("checked")){
+                        $(this).find("input").prop({checked:false});
+                        var that = $(this).attr("data");
+                        person = person.filter(function(obj){
+                            return obj.id != that;
+                        });
+//                        console.log(JSON.stringify(person))
+                    }else{
+                        $(this).attr({"data":i});
+                        $(this).find("input").prop({checked:true});
+                        $(this).addClass("active");
+                        dataId =  $(this).attr("data-id");
+                        text   =  $(this).find(".weui_label").text();
+                        shuzu(dataId,text,i);
+                    }
+                });
+            });
+
             /*高级筛选*/
             $(".bd a.weui_cell").on("touchend",function(){
                 var advancedSearch = $(".advancedSearch");
                 advancedSearch.removeClass("hide");
                 advancedSearch.addClass('slideInRight');
+                $(this).addClass("jsonAttr");
                 $(advancedSearch).on('webkitAnimationEnd', function (){
                     advancedSearch.removeClass("slideInRight");
                     advancedSearch.removeClass("hide");
@@ -279,7 +311,6 @@
                     advancedSearch.removeClass("hide");
                 });
             });
-
 
             /*选择条件控制*/
             $(".advancedSearch .weui_cell").on("touchend",function(){
@@ -298,12 +329,18 @@
                 });
             });
 
-
             /*完成选择条件*/
             $("#btnComplete").on("touchend",function(){
                 var addressChioce = $(this).closest(".addressChioce");
                 addressChioce.removeClass("hide");
                 addressChioce.addClass('slideOutRight');
+                str = '';
+                for(var j=0;j<person.length;j++){
+                    str += '<span>'+person[j].names+'</span><input type="hidden" input-id="'+person[j].texts+'"/>'
+                }
+                str += '';
+                $(".jsonAttr .taLeft").html(str);
+                $(".weui_cells a.weui_cell").removeClass("jsonAttr");
                 $(addressChioce).on('webkitAnimationEnd', function (){
                     addressChioce.removeClass("slideOutRight");
                     addressChioce.addClass("hide");
@@ -312,9 +349,6 @@
                     addressChioce.addClass("hide");
                 });
             });
-
-
-
 
             /*返回上一级*/
             $(".weui_search_bar span.left").on("touchend",function(){
@@ -347,13 +381,11 @@
                 }
             });
 
-
-
             /*搜索条*/
             $('.content').on('touchend', '#search_cancel', function () {
-                    $('#search_input').val('');
-                })
-            });
+                $('#search_input').val('');
+            })
+        });
     </script>
     <script>
 
@@ -373,12 +405,8 @@
             }
         });
 
-        $("#btnSure").on("click",function(){
 
-        });
-
-
-
+        /*表单验证提示*/
         $("#showTooltips").click(function(){
             if($.trim($("#submitPerson").val()) == '') {
                 showErrMsg('提交对象不能为空');

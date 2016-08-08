@@ -125,6 +125,8 @@ textarea{font-family: "微软雅黑";}
 .picker-modal .bar .title,.bar .button.pull-right{font-size: 14px;}
 .picker-item,.picker-items-col.picker-items-col-divider{font-size: 16px;}
 .weui_cells_form .weui_cell_ft.taLeft{font-size: 14px;text-align: left;position: relative;color: #3d4145;}
+.weui_cells_form .weui_cell_ft.taLeft span:before{content: ";"}
+.weui_cells_form .weui_cell_ft.taLeft span:first-child:before{content: ""}
 .weui_cell .weui_cell_ft.taLeft:after{content:" ";display:inline-block;-webkit-transform:rotate(45deg);transform:rotate(45deg);height:6px;width:6px;border-width:2px 2px 0 0;border-color:#C8C8CD;border-style:solid;position:absolute;top:5px;right:0;margin-left:.3em}
 .weui_cell_bd.date{position:relative}
 .weui_cell_bd.style{position:relative}
@@ -461,8 +463,28 @@ img.w100{width: 100%;}
 .weui_actionsheet_action button{background: #47aaea;color: #fff;width: 100%;height: 50px;border: 0;outline: 0;line-height: 50px;font-family: "微软雅黑";font-size: 18px;}
 .payCon .activeIn .giftIcon{width: 18px;height: 18px;background: url(../images/giftIcon.png) no-repeat;background-size: 100% 100%;}
 .weui_actionsheet_menu{}
+.weui_cells_form .weui_cell .weui_label{width: 65px;}
+.notFree,.free{border-bottom: 1px solid #dbdbdb;border-top: 1px solid #dbdbdb}
 
 
+/*activeInvitation*/
+.invitation{width: 94%;margin: 10px 3%;height: 250px;background: url("../images/invitationBg.png") no-repeat;background-size: 100% 100%;position: relative;}
+.invitationHead{width: 100%;position: absolute;top: 5px;}
+.invitationHead p{width: 90%;text-align: center;margin: 1px 5%;color: #fff;}
+.invitationHead .littleName{font-size: 16px;}
+.invitationHead .largeName{font-size: 20px;}
+.invitationCon{position: absolute;top: 108px;width: 100%;}
+.invitationCon p{width: 90%;margin: 3px 05%;text-align: left;font-size: 14px;color: #47aaea;}
+.invitationCon .invitationIcon{display: inline-block;}
+.invitationCon .invitationTime{width: 18px;height: 18px;background: url(../images/invitation1.png) no-repeat;background-size: 100% 100%;position: relative;top: 4px;}
+.invitationCon .invitationAddress{width: 18px;height: 18px;background: url(../images/invitation2.png) no-repeat;background-size: 100% 100%;position: relative;top: 4px;}
+.invitationFoot{position: absolute;bottom: 10px;width: 100%;}
+.invitationFoot p{width: 90%;font-size: 14px;color: #999;margin: 3px 5%;text-align: left;}
+.notice{background: #fff;}
+.noticeHead{width: 100%;font-size: 16px;color: #333;padding: 10px 15px;border-bottom: 1px solid #efefef;}
+.noticeHead img{width: 26px;}
+.noticeCon{padding: 10px 15px;}
+.noticeCon p{width: 100%;font-size: 14px;color: #666;margin-bottom: 10px;}
 
 
 @media screen and (max-width: 768px) {
