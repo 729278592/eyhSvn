@@ -211,7 +211,7 @@ textarea{font-family: "微软雅黑";}
 .applicatioNav li:first-child:after{content: "";position: absolute;right: 0;top: 0;width: 1px;bottom: 0;border-right: 1px solid #efefef;}
 .applicatioNav li a{display: inline-block;width: 100%;padding: 10px 0;border-bottom: 3px solid transparent;color: #333;}
 .applicatioNav li a.active{color: #47aaea;border-bottom: 3px solid #47aaea;}
-
+.weui_cell {min-height: 23px;}
 
 
 
