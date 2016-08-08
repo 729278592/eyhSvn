@@ -39,10 +39,7 @@
                             <div class="weui_cell_bd weui_cell_primary">
                                 <!--<input type="text" class="weui_input" id='datetime-picker'/>-->
                                 <div class="weui_cell_ft taLeft">
-                                    <span>张三</span>
-                                    <input type="hidden" input-id="0">
-                                    <span>李四</span>
-                                    <input type="hidden" input-id="1">
+                                    <span style="color: #666;">点击选择提交对象</span>
                                 </div>
                             </div>
                         </a>
@@ -55,10 +52,7 @@
                             <div class="weui_cell_bd weui_cell_primary">
                                 <!--<input type="text" class="weui_input" id='datetime-picker'/>-->
                                 <div class="weui_cell_ft taLeft">
-                                    <span>张三</span>
-                                    <input type="hidden" input-id="0">
-                                    <span>李四</span>
-                                    <input type="hidden" input-id="1">
+                                    <span style="color: #666;">点击选择抄送对象</span>
                                 </div>
                             </div>
                         </a>
@@ -210,42 +204,7 @@
                 </div>
                 <div class="department">
                     <div class="weui_cells weui_cells_checkbox" id="weui_cells_checkbox">
-                        <label class="weui_cell weui_check_label l0" onclick="chiocePerson(this,event)"  for="s11" data-id="0">
-                            <div class="weui_cell_hd">
-                                <label class="weui_label">张三</label>
-                            </div>
-                            <div class="weui_cell_bd weui_cell_primary">
-                                <input type="checkbox" class="weui_check" name="checkbox1" id="s11">
-                                <i class="weui_icon_checked right"></i>
-                            </div>
-                        </label>
-                        <label class="weui_cell weui_check_label l0" onclick="chiocePerson(this,event)"  for="s12" data-id="1">
-                            <div class="weui_cell_hd">
-                                <label class="weui_label">李四</label>
-                            </div>
-                            <div class="weui_cell_bd weui_cell_primary">
-                                <input type="checkbox" class="weui_check" name="checkbox1" id="s12">
-                                <i class="weui_icon_checked right"></i>
-                            </div>
-                        </label>
-                        <label class="weui_cell weui_check_label l0" onclick="chiocePerson(this,event)"  for="s13" data-id="2">
-                            <div class="weui_cell_hd">
-                                <label class="weui_label">王二</label>
-                            </div>
-                            <div class="weui_cell_bd weui_cell_primary">
-                                <input type="checkbox" class="weui_check" name="checkbox1" id="s13">
-                                <i class="weui_icon_checked right"></i>
-                            </div>
-                        </label>
-                        <label class="weui_cell weui_check_label l0" onclick="chiocePerson(this,event)"  for="s14" data-id="3">
-                            <div class="weui_cell_hd">
-                                <label class="weui_label">麻子</label>
-                            </div>
-                            <div class="weui_cell_bd weui_cell_primary">
-                                <input type="checkbox" class="weui_check" name="checkbox1" id="s14">
-                                <i class="weui_icon_checked right"></i>
-                            </div>
-                        </label>
+
                     </div>
                 </div>
                 <div class="weui_btn_area fixed">
@@ -361,6 +320,7 @@
                     str += '<span>'+person[j].names+'</span><input type="hidden" input-id="'+person[j].uniqueId+'"/>'
                 }
                 str += '';
+                $(".jsonAttr .taLeft").empty();
                 $(".jsonAttr .taLeft").html(str);
                 person = [];
                 $(".weui_cells a.weui_cell").removeClass("jsonAttr");

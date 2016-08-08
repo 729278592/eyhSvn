@@ -125,7 +125,7 @@ textarea{font-family: "微软雅黑";}
 .picker-modal .bar .title,.bar .button.pull-right{font-size: 14px;}
 .picker-item,.picker-items-col.picker-items-col-divider{font-size: 16px;}
 .weui_cells_form .weui_cell_ft.taLeft{font-size: 14px;text-align: left;position: relative;color: #3d4145;}
-.weui_cells_form .weui_cell_ft.taLeft span:before{content: ";"}
+.weui_cells_form .weui_cell_ft.taLeft span:before{content: "; "}
 .weui_cells_form .weui_cell_ft.taLeft span:first-child:before{content: ""}
 .weui_cell .weui_cell_ft.taLeft:after{content:" ";display:inline-block;-webkit-transform:rotate(45deg);transform:rotate(45deg);height:6px;width:6px;border-width:2px 2px 0 0;border-color:#C8C8CD;border-style:solid;position:absolute;top:5px;right:0;margin-left:.3em}
 .weui_cell_bd.date{position:relative}
