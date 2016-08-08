@@ -142,7 +142,7 @@ textarea{font-family: "微软雅黑";}
 .weui_btn_area .weui_btn.actived:active{background: #9a9a9a;color: rgba(255,255,255,1)}
 .weui_btn.b0,.weui_btn.b0:after{border:0;border-radius:0}
 .weui_btn_area .weui_btn_primary{background:#47aaea}
-.weui_btn_area.fixed{margin:0;width:100%;z-index:1;position:fixed;left:0;right:0;height:50px;text-align:center;line-height:50px;bottom:-8px}
+.weui_btn_area.fixed{margin:0;width:100%;z-index:10;position:fixed;left:0;right:0;height:50px;text-align:center;line-height:50px;bottom:-8px}
 .weui_cells.bg{background:#f7f7f7}
 .weui_cells.bg .weui_cell{background:#fff}
 .content,.page{position:absolute;top:0;right:0;bottom:0;left:0}
@@ -156,7 +156,7 @@ textarea{font-family: "微软雅黑";}
 .weui_toast{z-index:300}
 .weui_toast_content{text-align:center;font-size:14px}
 #smile-icon{margin:20px 0 10px}
-.addressChioce,.advancedSearch{position:fixed;z-index:10;left:0;top:0;right:0;bottom:0;background:#f7f7f7}
+.addressChioce,.advancedSearch{position:fixed;z-index:10;left:0;top:0;right:0;bottom:0;background:#f7f7f7;overflow-y: auto;}
 .weui_cells.style .weui_cell:after{content:" ";display:inline-block;-webkit-transform:rotate(45deg);transform:rotate(45deg);height:6px;width:6px;border-width:2px 2px 0 0;border-color:#C8C8CD;border-style:solid;position:relative;top:-2px;top:-1px;margin-left:.3em}
 .weui_cells.style1{margin-top:10px}
 .departmentTitle{font-size:16px;padding:10px 15px;color:#48a8e4;position: relative;background: #fff;border: 1px solid #dbdbdb;margin-top: 5px;}
