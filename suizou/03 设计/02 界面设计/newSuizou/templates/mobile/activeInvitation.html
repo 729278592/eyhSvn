@@ -1,0 +1,112 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8"/>
+    <title>活动-个人信息</title>
+    <meta name="viewport" content="width=device-width; initial-scale=1.0; user-scalable=no;">
+    <link rel="stylesheet" href="../../assets/mobile/plugins/weUi/css/example.css"/>
+    <link rel="stylesheet" href="../../assets/mobile/plugins/weUi/css/weui.css"/>
+    <link rel="stylesheet" href="../../assets/mobile/plugins/swiper/dist/css/swiper.min.css"/>
+    <link rel="stylesheet" href="../../assets/global/plugins/font-awesome/css/font-awesome.min.css"/>
+    <link rel="stylesheet" href="../../assets/mobile/css/global.css"/>
+</head>
+<body>
+    <div class="content">
+        <div class="page">
+            <div class="bd absolute pd50">
+                <div class="swiper-container mt0 swiper-container-horizontal" id="swiper-container">
+                    <div class="swiper-wrapper" style="transition-duration: 0ms; ">
+                        <div class="swiper-slide">
+                            <img src="../../assets/mobile/images/active1.jpg" alt="" class="w100"/>
+                        </div>
+                        <div class="swiper-slide">
+                            <img src="../../assets/mobile/images/active2.jpg" alt="" class="w100"/>
+                        </div>
+                    </div>
+                    <div class="swiper-pagination"></div>
+                    <!--<div class="swiper-button-next"></div>-->
+                    <!--<div class="swiper-button-prev"></div>-->
+                </div>
+                <div class="activeCon">
+                    <p class="title">指尖的钢琴-成人零基础[免费]学钢琴</p>
+                </div>
+                <div class="invitation">
+                    <div class="invitationHead">
+                        <p class="littleName">诚邀</p>
+
+                        <p class="largeName">张晓明</p>
+                    </div>
+                    <div class="invitationCon">
+                        <p>
+                            <span class="invitationIcon invitationTime"></span>
+                            2016.06.12 ~2016.09.23
+                        </p>
+
+                        <p>
+                            <span class="invitationIcon invitationAddress"></span>
+                            重庆市，渝中区，中新城上城6栋1110
+                        </p>
+                    </div>
+                    <div class="invitationFoot">
+                        <p>
+                            报名时间：2016.06.12 ~2016.09.23
+                        </p>
+
+                        <p>
+                            订单单号：72542542542542514
+                        </p>
+                    </div>
+                </div>
+                <div class="notice">
+                    <div class="noticeHead">
+                        <img src="../../assets/mobile/images/tzIcon.png" alt=""/>
+                        签到小提示
+                    </div>
+                    <div class="noticeCon">
+                        <p>1.扫码签到，活动当天在活动现场扫描签到二维码，既可 快速签到</p>
+
+                        <p>
+                            2.扫码签到，当您达到活动现场后，在“我的活动”找到 此活动，点击签到既可
+                        </p>
+                    </div>
+                </div>
+
+
+
+            </div>
+            <div class="weui_btn_area fixed">
+                <a class="weui_btn weui_btn_primary b0" href="addActive.html">
+                    申请加入
+                </a>
+            </div>
+        </div>
+    </div>
+    <script src="../../assets/global/plugins/jquery.min.js"></script>
+    <script src="../../assets/mobile/plugins/swiper/dist/js/swiper.min.js"></script>
+    <script src="../../assets/mobile/js/global.js"></script>
+    <script>
+        $(function(){
+            new Swiper('#swiper-container', {
+                slidesPerView: 1,
+                pagination:'.swiper-pagination',
+                paginationClickable: true,
+                spaceBetween: 0,
+                loop:true,
+                autoplay: 5000,
+                autoplayDisableOnInteraction: false
+            });
+            new Swiper('#swiper-container1', {
+                slidesPerView: 1,
+                //                pagination:'.swiper-pagination',
+                //                prevButton:'.swiper-button-prev',
+                //                nextButton:'.swiper-button-next',
+                paginationClickable: true,
+                spaceBetween: 0,
+                //                loop:true,
+                //                autoplay: 5000,
+                autoplayDisableOnInteraction: false
+            });
+        });
+    </script>
+</body>
+</html>

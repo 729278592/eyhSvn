@@ -7,6 +7,7 @@
     <link rel="stylesheet" href="../../assets/mobile/plugins/weUi/css/example.css"/>
     <link rel="stylesheet" href="../../assets/mobile/plugins/weUi/css/weui.css"/>
     <link rel="stylesheet" href="../../assets/global/plugins/font-awesome/css/font-awesome.min.css"/>
+    <link rel="stylesheet" href="../../assets/mobile/plugins/jquery-spinner/css/jquery.spinner.large.css"/>
     <link rel="stylesheet" href="../../assets/mobile/css/global.css"/>
 </head>
 <body>
@@ -57,14 +58,38 @@
                                 <input class="weui_input" type="text" id="mobile" placeholder="请输入手机号" name=""/>
                             </div>
                         </div>
-                        <div class="weui_cell">
-                            <div class="weui_cell_hd">
-                                <label class="weui_label">
-                                    <span class="spanText">费用</span>
-                                </label>
+                        <div class="free hide">
+                            <div class="weui_cell">
+                                <div class="weui_cell_hd">
+                                    <label class="weui_label">
+                                        <span class="spanText">费用</span>
+                                    </label>
+                                </div>
+                                <div class="weui_cell_bd weui_cell_primary">
+                                    免费
+                                </div>
                             </div>
-                            <div class="weui_cell_bd weui_cell_primary">
-                                免费
+                        </div>
+                        <div class="notFree">
+                            <div class="weui_cell">
+                                <div class="weui_cell_hd">
+                                    <label class="weui_label">
+                                        <span class="spanText">费用</span>
+                                    </label>
+                                </div>
+                                <div class="weui_cell_bd weui_cell_primary">
+                                    ￥900.00
+                                </div>
+                            </div>
+                            <div class="weui_cell">
+                                <div class="weui_cell_hd">
+                                    <label class="weui_label">
+                                        <span class="spanText">数量</span>
+                                    </label>
+                                </div>
+                                <div class="weui_cell_bd weui_cell_primary">
+                                    <input type="text" class="spinnerExample"/>
+                                </div>
                             </div>
                         </div>
                     </div>
@@ -80,6 +105,7 @@
     <script src="../../assets/global/plugins/jquery.min.js"></script>
     <script src="../../assets/mobile/js/global.js"></script>
     <script src="../../assets/mobile/js/removeTip.js"></script>
+    <script src="../../assets/mobile/plugins/jquery-spinner/js/jquery.spinner.js"></script>
     <script>
         $(function(){
             /*支付弹窗提示*/
@@ -121,7 +147,10 @@
                 setTimeout(function(){
                     $("#mask,#weui_actionsheet").remove();
                 },100)
-            })
+            });
+
+            /*数量选择*/
+            $('.spinnerExample').spinner({});
         })
     </script>
 </body>
