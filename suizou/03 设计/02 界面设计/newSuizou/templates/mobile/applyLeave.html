@@ -326,14 +326,14 @@
                     var htmlPerson = '';
                     for(var n = 0;n<len;n++){
                         htmlPerson += '<label class="weui_cell weui_check_label l0" onclick="chiocePerson(this,event)" for="'+n+'" data-id="'+infor[i][n].dataNumid+'">'+
-                                '<div class="weui_cell_hd">'+
-                                '<label class="weui_label">'+infor[i][n].personName+'</label>'+
-                                '</div>'+
-                                '<div class="weui_cell_bd weui_cell_primary">'+
-                                '<input type="checkbox" class="weui_check" name="checkbox1" id="'+n+'">'+
-                                '<i class="weui_icon_checked right"></i>'+
-                                '</div>'+
-                                '</label>';
+                                          '<div class="weui_cell_hd">'+
+                                              '<label class="weui_label">'+infor[i][n].personName+'</label>'+
+                                          '</div>'+
+                                          '<div class="weui_cell_bd weui_cell_primary">'+
+                                              '<input type="checkbox" class="weui_check" name="checkbox1" id="'+n+'">'+
+                                              '<i class="weui_icon_checked right"></i>'+
+                                          '</div>'+
+                                      '</label>';
                     }
                     htmlPerson += '';
                     $("#weui_cells_checkbox").html(htmlPerson);
