@@ -16,7 +16,7 @@ $(function(){
         },
         function(){
             var that = $(this);
-            $(this).animate({width:"50px"},200);
+            $(this).animate({width:"60px"},200);
             $(".main-nav-w158").animate({left:"-158px"},200,function(){
                 that.css({zIndex:"20"});
             });
@@ -26,26 +26,42 @@ $(function(){
     m.each(function(i){
         $(this).hover(
             function(){
-                mw158.eq(i).css({background:"#79a8ff"});
-                mw158.eq(i).siblings("li").css({background:""})
+                if(!$(this).is(".active")){
+                    var data = $(this).attr("data");
+                    $(this).find("img").attr({src:"../../assets/admin/images/" +data+ ".png"});
+                    mw158.eq(i).css({background:"#ffedd7"});
+                    mw158.eq(i).siblings("li").css({background:""})
+                }
             },
             function(){
-                mw158.css({background:""});
-                mw158.eq(i).siblings("li").css({background:""})
+                if(!$(this).is(".active")){
+                    var data = $(this).attr("data");
+                    $(this).find("img").attr({src:"../../assets/admin/images/" +data+ "1.png"});
+                    mw158.css({background:""});
+                    mw158.eq(i).siblings("li").css({background:""})
+                }
             }
         );
     });
     mw158.each(function(i){
         $(this).hover(
             function(){
-                $(this).css({background:"#79a8ff"});
-                $(this).eq(i).siblings("li").css({background:""});
-                m.eq(i).css({background:"#333"});
-                m.eq(i).siblings("li").css({background:""});
+                if(!$(this).is(".active")){
+                    $(this).css({background:"#ffedd7"});
+                    $(this).eq(i).siblings("li").css({background:""});
+                    var data = m.eq(i).attr("data");
+                    m.eq(i).find("img").attr({src:"../../assets/admin/images/" +data+ ".png"});
+                    m.eq(i).css({background:"#47aaea"});
+                    m.eq(i).siblings("li").css({background:""});
+                }
             },
             function(){
-                $(this).css({background:""});
-                m.css({background:""});
+                if(!$(this).is(".active")){
+                    var data = m.eq(i).attr("data");
+                    m.eq(i).find("img").attr({src:"../../assets/admin/images/" +data+ "1.png"});
+                    $(this).css({background:""});
+                    m.css({background:""});
+                }
             }
         );
     });
