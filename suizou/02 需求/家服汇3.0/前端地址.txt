@@ -1,0 +1,5 @@
+PC        http://h5.rzthinkmore.com/jfh/pages/index.html
+          http://h5.rzthinkmore.com/jfh/pages/links.html
+
+Mobile    http://h5.rzthinkmore.com/jfh-mobile/#!/
+
