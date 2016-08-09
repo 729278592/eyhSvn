@@ -153,15 +153,15 @@ $(function(){
         },
 
         highlight: function (element) { // hightlight error inputs
-            $(element).closest('.input-group').removeClass("has-success").addClass('has-error'); // set error class to the control group
+            $(element).closest('.form-group').removeClass("has-success").addClass('has-error'); // set error class to the control group
         },
 
         unhighlight: function (element) { // revert the change done by hightlight
-            $(element).closest('.input-group').removeClass('has-error'); // set error class to the control group
+            $(element).closest('.form-group').removeClass('has-error'); // set error class to the control group
         },
 
         success: function (label, element) {
-            label.closest('.input-group').removeClass('has-error'); // set success class to the control group
+            label.closest('.form-group').removeClass('has-error'); // set success class to the control group
         },
 
         submitHandler: function(form) {

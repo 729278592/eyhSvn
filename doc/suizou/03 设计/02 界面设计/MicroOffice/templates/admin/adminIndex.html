@@ -22,52 +22,52 @@
                     </div>
                 </div>
                 <ul class="main-nav-list">
-                    <li class="active">
+                    <li class="active" data="home">
                         <a href="adminIndex.html" class="clearfix" title="首页">
                             <div class="main-nav-icon">
-                                <i class="fa fa-home"></i>
+                                <img src="../../assets/admin/images/home.png" alt=""/>
                             </div>
                         </a>
                     </li>
-                    <li>
+                    <li data="Employer">
                         <a href="mobileExhibition.html" class="clearfix" title="雇主品牌">
                             <div class="main-nav-icon">
-                                <img src="../../assets/admin/images/index.png" alt=""/>
+                                <img src="../../assets/admin/images/Employer1.png" alt=""/>
                             </div>
                         </a>
                     </li>
-                    <li>
+                    <li data="position">
                         <a href="application.html" class="clearfix">
                             <div class="main-nav-icon">
-                                <img src="../../assets/admin/images/users.png" alt=""/>
+                                <img src="../../assets/admin/images/position1.png" alt=""/>
                             </div>
                         </a>
                     </li>
-                    <li>
+                    <li data="recruit">
                         <a href="positionManagement.html" class="clearfix">
                             <div class="main-nav-icon">
-                                <img src="../../assets/admin/images/positionM.png" alt=""/>
+                                <img src="../../assets/admin/images/recruit1.png" alt=""/>
                             </div>
                         </a>
                     </li>
-                    <li>
+                    <li data="special">
                         <a href="specialList.html" class="clearfix">
                             <div class="main-nav-icon">
-                                <img src="../../assets/admin/images/specilIcon.png" alt=""/>
+                                <img src="../../assets/admin/images/special1.png" alt=""/>
                             </div>
                         </a>
                     </li>
-                    <li>
+                    <li data="statistics">
                         <a href="jobDataStatistics.html" class="clearfix">
                             <div class="main-nav-icon">
-                                <img src="../../assets/admin/images/staticIcon.png" alt=""/>
+                                <img src="../../assets/admin/images/statistics1.png" alt=""/>
                             </div>
                         </a>
                     </li>
-                    <li class="last">
+                    <li data="set" class="last">
                         <a href="companyInfor.html" class="clearfix">
                             <div class="main-nav-icon">
-                                <i class="fa fa-gear"></i>
+                                <img src="../../assets/admin/images/set1.png" alt=""/>
                             </div>
                         </a>
                     </li>
@@ -182,9 +182,9 @@
                                     <span>公司logo</span>
                                 </div>
                                 <div class="company-info">
-                                    <p class="ft14" >重庆易优弧科技有限公司</p>
-                                    <p class="ft14" >互联网行业/500+人</p>
-                                    <p class="ft14" >www.eyohu.com</p>
+                                    <p class="ft14" style="font-size: 16px;">重庆易优弧科技有限公司</p>
+                                    <p class="ft14" style="color: #999;">互联网行业/500+人</p>
+                                    <p class="ft14" style="color: #999;">www.eyohu.com</p>
                                 </div>
                             </div>
                             <div class="clearfix moneyzp">
@@ -211,6 +211,7 @@
                                 </p>
                                 <p class="smsgzpp clearfix">
                                     <a href="javascript:;" class="howPosition">
+                                        <img src="../../assets/admin/images/question.png" alt=""/>
                                         如何绑定职位
                                         <span class="detailsPosition">
                                             <i class="fa fa-caret-left"></i>
@@ -245,7 +246,7 @@
                                 </div>
                                     <!--<img  alt="发布第一个职位吧" width="355" height="199" class="newbieguide-arrow"></div>-->
                                 <div class="card-item card-title bg">在招职位
-                                    <a href="postOffice.html" class="card-title-action postOffice">更多</a>
+                                    <a href="postOffice.html" class="card-title-action postOffice">更多...</a>
                                 </div>
                                 <div class="card-item card-content" id="home-pos-list">
                                     <div class="position-list">
@@ -255,7 +256,6 @@
                                                 <span>ss</span>
                                                 <span>dd</span>
                                                 <span>dd</span>
-                                                <span>dd</span>发布
                                             </p>
                                         </a>
                                     </div>
@@ -266,7 +266,6 @@
                                                 <span>ss</span>
                                                 <span>dd</span>
                                                 <span>dd</span>
-                                                <span>dd</span>发布
                                             </p>
                                         </a>
                                     </div>
@@ -290,7 +289,7 @@
                                     </div>
                                 </div>
                                 <div class="card-item card-title bg">新增简历
-                                    <a href="interviewerInformation.html" class="card-title-action interviewerInformation">更多</a>
+                                    <a href="interviewerInformation.html" class="card-title-action interviewerInformation">更多...</a>
                                 </div>
                                 <div class="card-item card-content" id="home-app-list">
                                     <div class="position-list" >
@@ -298,9 +297,9 @@
                                             <i class="dot green"></i>
                                             <p class="nala_db">
                                                 <span>Java开发</span>
-                                                <span>战三</span>
+                                                <span>张三</span>
                                                 <span>本科</span>
-                                                <span>一</span>年工作经验
+                                                <span class="last">本科/1年工作经验</span>
                                             </p>
                                         </a>
                                     </div>
@@ -338,20 +337,20 @@
                         obj.attr({disabled:"disabled"});
                         $(".copyTip").animate({
                             opacity:1,
-                            top:"-40px",
+                            top:"45px",
                             zIndex:"2"
                         },500,function(){
                             setTimeout(function(){
                                 $(".copyTip").animate({
                                     opacity:0,
-                                    top:"20px",
+                                    top:"75px",
                                     zIndex:"0"
                                 },500);
                                 obj.removeAttr("disabled");
                             },2000)
                         })
                     }
-
+                    $(".position-list:odd").css({background:"#fafafa",borderTop:"1px solid #efefef",borderBottom:"1px solid #efefef"});
                     $(document).ready(function(){
                         if ( window.clipboardData ) {
                             $('.btnCopy').click(function() {
