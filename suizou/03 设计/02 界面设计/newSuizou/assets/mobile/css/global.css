@@ -367,7 +367,7 @@ textarea{font-family: "微软雅黑";}
 .moneyInfor>div:last-child{text-align: right;}
 .moneyInfor>div p.title{font-size: 16px;color: #333;}
 .moneyInfor>div p.color{font-size: 18px;color: #ff3b30;}
-.moneyInfor>div .btnMoney{display: inline-block;padding: 8px 12px;font-size: 14px;color: #fff;background: #47aaea;border-radius: 2px;border: 0;outline: none;font-family: "微软雅黑"}
+.moneyInfor>div .btnMoney{float: right;display: inline-block;padding: 5px 10px;font-size: 14px;color: #fff;background: #47aaea;border-radius: 2px;border: 0;outline: none;font-family: "微软雅黑"}
 .moneyInfor>div p.color.style{text-align: right;}
 
 
