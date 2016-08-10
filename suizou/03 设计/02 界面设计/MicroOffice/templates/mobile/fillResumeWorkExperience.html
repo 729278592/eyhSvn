@@ -12,25 +12,22 @@
 <body>
 <div class="container js_container absolute errDailog">
     <div class="page">
-        <div class="head">
-            <i class="fa fa-angle-left"></i>
-            新建简历
-        </div>
         <div class="bd">
             <img src="../../assets/mobile/images/resume10.jpg" alt="" class="resume"/>
             <form action="#" id="form" onsubmit="return false">
                 <div class="weui_cells weui_cells_form mt0">
                     <div class="weui_cell">
-                        <div class="weui_cell_hd"><label  class="weui_label"><img src="../../assets/mobile/images/startTimeIcon.png" alt=""/>开始日期</label></div>
+                        <div class="weui_cell_hd"><label for="" class="weui_label"><img src="../../assets/mobile/images/startTimeIcon.png" alt=""/>开始日期</label></div>
                         <div class="weui_cell_bd weui_cell_primary">
-                            <input id="start" class="Wdate" type="text" style="border: none;height: 18px;" placeholder="2015-02-05" onfocus="WdatePicker({maxDate:'#F{$dp.$D(\'end\')}',readOnly:true})" readonly="">
+                            <input id="start" class="weui_input" type="date" placeholder="2015-2-2">
                             <i class="fa fa-calendar"></i>
                         </div>
                     </div>
                     <div class="weui_cell">
-                        <div class="weui_cell_hd"><label  class="weui_label"><img src="../../assets/mobile/images/endTimeIcon.png" alt=""/>结束日期</label></div>
+                        <div class="weui_cell_hd"><label for="" class="weui_label"><img src="../../assets/mobile/images/endTimeIcon.png" alt=""/>结束日期</label></div>
                         <div class="weui_cell_bd weui_cell_primary">
-                            <input id="end" class="Wdate" type="text" style="border: none;height: 18px;"placeholder="2015-02-06" onfocus="WdatePicker({minDate:'#F{$dp.$D(\'start\')}',readOnly:true})" readonly="">                            <i class="fa fa-calendar"></i>
+                            <input id="end" class="weui_input" type="date" placeholder="2015-2-2">
+                            <i class="fa fa-calendar"></i>
                         </div>
                     </div>
                     <!--<div class="weui_cell">-->
@@ -68,7 +65,6 @@
 <script src="../../assets/global/plugins/jquery/jquery-1.11.3.min.js"></script>
 <script src="../../assets/mobile/js/global.js"></script>
 <script src="../../assets/mobile/js/errMsg.js"></script>
-<script src="../../assets/global/plugins/My97DatePicker/WdatePicker.js"></script>
 <script>
     $("#saveBtn").click(function(){
         if($("#start").val() == '') {
