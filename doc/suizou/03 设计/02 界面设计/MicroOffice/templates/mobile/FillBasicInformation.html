@@ -12,10 +12,6 @@
 <body>
     <div class="container js_container absolute errDailog">
         <div class="page">
-            <div class="head">
-                <i class="fa fa-angle-left"></i>
-                基本信息
-            </div>
             <div class="bd">
                 <img src="../../assets/mobile/images/resume7.jpg" alt="" class="resume"/>
                 <form action="#" id="form" onsubmit="return false">
@@ -35,7 +31,7 @@
                         <div class="weui_cell">
                             <div class="weui_cell_hd"><label for="" class="weui_label">生日</label></div>
                             <div class="weui_cell_bd weui_cell_primary">
-                                <input id="start" class="Wdate" type="text" style="border: none;height: 18px;" placeholder="2015-02-05" onfocus="WdatePicker({})" readonly="">
+                                <input id="start" class="stareDate weui_input" type="date" placeholder="2015-2-2">
                                 <i class="fa fa-calendar"></i>
                             </div>
                         </div>
@@ -50,7 +46,6 @@
     <script src="../../assets/global/plugins/jquery/jquery-1.11.3.min.js"></script>
     <script src="../../assets/mobile/js/global.js"></script>
     <script src="../../assets/mobile/js/errMsg.js"></script>
-    <script src="../../assets/global/plugins/My97DatePicker/WdatePicker.js"></script>
     <script>
         $("#saveBtn").click(function(){
             var reg = /^0?(13[0-9]|15[012356789]|18[0236789]|14[57])[0-9]{8}$/;
