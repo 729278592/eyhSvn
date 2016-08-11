@@ -287,6 +287,12 @@
             });
 
             /*教育信息的操作*/
+
+            $('#start').on('input propertychange',function(){
+
+                console.log($(this).val());
+            });
+
             bd.delegate(".modifyEducation","click",function(){
                 var that = $(this);
                 $.ajax({
@@ -309,19 +315,19 @@
                     return false;
                 }
                 else if($("#start").val() == '') {
-                    showMsg('开始时间不正确');
+                    showMsg('开始时间不能为空');
                 }
                 else if($("#end").val() == '') {
-                    showMsg('结束时间不正确');
+                    showMsg('结束时间不能为空');
                 }
                 else if($("#specialName").val() == '') {
-                    showMsg('专业名不正确');
+                    showMsg('专业名不能为空');
                 }
                 else{
                     var that = $(this);
                     $.ajax({
-                        type : "POST",
-                        url : "educationList.html",
+                        type  : "POST",
+                        url   : "educationList.html",
                         dataType : "html",
                         cache : false,
                         success : function(data) {
