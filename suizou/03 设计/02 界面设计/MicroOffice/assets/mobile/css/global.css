@@ -75,8 +75,9 @@ img.w100{width: 100%;}
 
 .head{width: 100%;height: 40px;background: #fe685b;line-height: 40px;text-align: center;color: #fff;}
 .head .fa{float: left;position: relative;top: 10px;left: 3%;}
-.bd{position: relative;}
+
 .page .title{padding: 10px 0 0;text-align: center;color: #02b7ee;font-size: 14px;}
+.page .title.style{padding: 10px 0;}
 .page .title .proty{width:25px;height:25px;display:inline-block;line-height:25px;border-radius: 100%;border: 1px solid #02b7ee;}
 .weui_btn_area.absolute{position: absolute;bottom: 10px;width: 90%;left: 50%;margin-left: -45%;}
 .weui_btn_area.absolute.style{z-index: 100;bottom: 20px;}
@@ -109,9 +110,9 @@ img.resume{width: 100%;margin-bottom: 15px;border-bottom: 1px solid #efefef;}
 .weui_cell_primary {position: relative;}
 .weui_cell_primary .Wdate{position: relative;z-index: 10;background: transparent;}
 .weui_cell_primary .fa-calendar{position: absolute;top: 3px;right: 20px;color: #52ba92;}
-.weui_cells_form input{font-family: "微软雅黑";font-size: 14px;}
-
-
+.weui_cells_form input{font-family: "微软雅黑";font-size: 14px;height: 25px;line-height: 25px;}
+.weui_cell{min-height: 23px;}
+.bd.spacing.absolute{width: 94%;padding: 0 3%;}
 .positionMenu{padding: 3% 10px;}
 .positionMenu li{width: 100%;border: 1px solid #dbdbdb;border-radius: 10px;margin-bottom: 4%;background: #fff;}
 .positionMenu li>a{display:block;width: 96%;height: 96%;border-bottom: 1px solid #dbdbdb;padding: 2% 2% 0 2%;}
@@ -140,10 +141,11 @@ img.resume{width: 100%;margin-bottom: 15px;border-bottom: 1px solid #efefef;}
 .companyMenu.positionMenu.style li>a .peopleNum{position: relative;top: 5px;color: #999;}
 #content{bottom: 0;}
 
-
+.page.overflowX{overflow-x: hidden;}
 .entryList{margin-top: 10px;}
 .entryList.mt0{margin-top: 0;border-top: 0;}
 .entryList li .passIcon.notPassed.hide{display: none;}
+.entryList.bt0 li a{border-top: 0;}
 .entryList li .passIcon.passed.hide{display: none;}
 .entryList li{background: #fff;}
 .entryList.imgStyle{padding-bottom: 10px;}
@@ -151,16 +153,18 @@ img.resume{width: 100%;margin-bottom: 15px;border-bottom: 1px solid #efefef;}
 .entryList.imgStyle span img{width: 60px;height: 60px;}
 .entryList li .couponImg,.entryList li .inforList,.entryList li .tipLeft,.entryList li .passIcon{display: table-cell;vertical-align: middle;}
 .entryList li .inforList.style{padding: 0;}
-.entryList li .couponImg{width: 20%;position: relative;text-align: center;}
+.entryList li .couponImg{width: 20%;position: relative;text-align: left;}
 .entryList li .couponImg img.couponTip{position: absolute;width: 30%;right: -10%;top: -10%;}
 .entryList li .couponImg img.couponImg1{width: 60px;height: 60px;border-radius: 100%;}
 .entryList li .couponImg.style img.couponImg1{width: 80px;height: 80px;border-radius: 2px;}
 .entryList li .inforList{width: 65%;text-indent: 10px;}
+.entryList.mt0 li .inforList{width: 73%;padding-left: 5%;text-indent: 0;}
 .entryList li .inforList span{display: -webkit-box;
     -webkit-box-orient: vertical;
     -webkit-line-clamp: 1;
     overflow: hidden;
     text-overflow: ellipsis;font-size: 14px;color: #999;}
+.entryList li .inforList span img{    width: 16px;position: relative;top: -2px;}
 .entryList li .inforList span.title{font-size: 16px;color: #333;border: none;text-align: left;padding-top: 0;}
 .entryList li .inforList span.title.styles{font-size: 18px;}
 .entryList li .inforList.top{vertical-align: top;}
