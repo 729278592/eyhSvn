@@ -75,7 +75,7 @@ img.w100{width: 100%;}
 
 .head{width: 100%;height: 40px;background: #fe685b;line-height: 40px;text-align: center;color: #fff;}
 .head .fa{float: left;position: relative;top: 10px;left: 3%;}
-
+.prosuct.style .prosuctTitle.bb0{margin-bottom: 0;}
 .page .title{padding: 10px 0 0;text-align: center;color: #02b7ee;font-size: 14px;}
 .page .title.style{padding: 10px 0;}
 .page .title .proty{width:25px;height:25px;display:inline-block;line-height:25px;border-radius: 100%;border: 1px solid #02b7ee;}

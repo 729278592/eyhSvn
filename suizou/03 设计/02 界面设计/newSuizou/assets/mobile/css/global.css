@@ -105,7 +105,7 @@ tr th,tr td{height: 2.6em;}
 .attendanceFailInfor{font-size: 14px;color: #666;width: 80%;margin: 0 auto;}
 .attendanceFailInfor p.title{font-size: 16px;color: #000;text-align: center;}
 .datepicker{padding: 0;}
-
+.weui_actionsheet{z-index: 30;}
 
 
 /*applyLeave*/
