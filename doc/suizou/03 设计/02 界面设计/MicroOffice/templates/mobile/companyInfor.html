@@ -21,12 +21,12 @@
                                 <div class="couponImg style">
                                     <img src="../../assets/mobile/images/shop1.jpg" class="couponImg1" alt=""/>
                                 </div>
-                            <span class="inforList">
-                                <span class="title styles">
-                                    易优弧有限公司
+                                <span class="inforList">
+                                    <span class="title styles">
+                                        易优弧有限公司
+                                    </span>
+                                    <span>移动互联网，电子商务</span>
                                 </span>
-                                <span>移动互联网，电子商务</span>
-                            </span>
                             </a>
                         </li>
                     </ul>
@@ -232,7 +232,7 @@
         });
 
         /*查看全部信息*/
-        $(".btnAll").on("touchend",function(){
+        $(".btnAll").on("click",function(){
             var moreInfor = $(this).prev().find(".moreInfor");
             if(moreInfor.css("display")=="none"){
                 moreInfor.slideDown();
