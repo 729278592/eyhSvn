@@ -369,7 +369,7 @@ a.weui_btn.weui_btn_primary{font-size: 16px;}
 
 .companyBriefIntroduction.style,.prosuct.style,.companyImgList.style{padding: 0 0 3%;width: 100%;}
 .prosuct.style .goodMenu,.companyBriefIntroduction.style .comBIContent{width: 94%;padding: 0 3%;}
-.companyBriefIntroduction.style .comBIContent{height: 200px;overflow: auto;}
+.companyBriefIntroduction.style .comBIContent,.prosuct .prosuctContent{height: 200px;overflow: auto;}
 
 
 
