@@ -2,7 +2,7 @@
 <html>
 <head lang="en">
     <meta charset="UTF-8">
-    <title>手机号修改</title>
+    <title>登陆</title>
     <meta name="viewport" content="width=device-width; initial-scale=1.0; user-scalable=no;">
     <link rel="stylesheet" href="../../assets/global/plugins/font/css/font-awesome.min.css"/>
     <link rel="stylesheet" href="../../assets/mobile/css/weui.css"/>
@@ -12,56 +12,25 @@
 <body>
     <div class="content errDailog">
         <div class="page">
-            <div class="hd">
-                <a>
-                    <i class="fa fa-angle-left"></i>
-                </a>
-                得力加油
-                <div class="right nav_block">
-                    <a class="shop_cat"></a>
-                    <a class="dot_block"></a>
-                    <ul class="nav_link">
-                        <li>
-                            <a href="###">
-                                主页
-                            </a>
-                        </li>
-                        <li>
-                            <a href="###">
-                                精选商城
-                            </a>
-                        </li>
-                        <li>
-                            <a href="###">
-                                优惠券
-                            </a>
-                        </li>
-                        <li>
-                            <a href="###">
-                                会员中心
-                            </a>
-                        </li>
-                    </ul>
-                </div>
-            </div>
-            <div class="bd absolute pd48">
+            <div class="bd">
                 <form action="#" id="form" onsubmit="return false">
                     <div class="weui_cells weui_cells_form mt0">
                         <div class="weui_cell">
                             <div class="weui_cell_hd">
                                 <label class="weui_label">
                                     <span class="span_icon spa_phone"></span>
-
                                 </label>
                             </div>
                             <div class="weui_cell_bd weui_cell_primary">
-                                <input class="weui_input" type="text" placeholder="13678478463" name="mobile" id="mobile"/>
+                                <input class="weui_input" type="text" placeholder="请输入手机号" name="mobile" id="mobile"/>
                             </div>
                         </div>
+
                         <div class="weui_cell">
                             <div class="weui_cell_hd">
                                 <label class="weui_label">
                                     <span class="span_icon spa_code"></span>
+
                                 </label>
                             </div>
                             <div class="weui_cell_bd weui_cell_primary">
@@ -69,20 +38,33 @@
                                 <input type="button" class="getCode disabled" value="获取验证码" readonly id="getCode"/>
                             </div>
                         </div>
+                        <div class="weui_cell">
+                            <div class="weui_cell_hd">
+                                <label class="weui_label">
+                                    <span class="span_icon spa_lock"></span>
+                                </label>
+                            </div>
+                            <div class="weui_cell_bd weui_cell_primary">
+                                <input class="weui_input" type="text" placeholder="请输入密码" name="mobile" id="password"/>
+                            </div>
+                        </div>
+
                     </div>
-                    <div class="weui_btn_area fixed">
-                        <input type="submit" class="weui_btn b0 weui_btn_primary" id="saveBtn" value="保存">
+                    <div class="weui_btn_area">
+                        <input type="submit" class="weui_btn weui_btn_primary" id="sign_in" value="注册">
+                    </div>
+                    <div class="weui_btn_area mt10 clearfix">
+                        <a class="btn_forget right" href="login.html">立即登录</a>
                     </div>
                 </form>
             </div>
         </div>
     </div>
     <script src="../../assets/global/plugins/jquery/jquery-1.11.3.min.js"></script>
-    <script src="../../assets/mobile/js/global.js"></script>
     <script src="../../assets/mobile/js/removeTip.js"></script>
     <script>
         $(function(){
-            /*验证*/
+            /*验证码*/
             $("#getCode").on("touchend",function(){
                 var btn = $(this);
                 var count = 60;
@@ -101,24 +83,11 @@
                 btn.attr('disabled',true);
             });
 
+            /*登陆错误提示*/
+            $("#sign_on").on("touchend",function(){
 
-            /*保存错误提示*/
-            $("#saveBtn").on("touchend",function(){
-                var reg = /^0?(13[0-9]|15[012356789]|18[0236789]|14[57])[0-9]{8}$/;
-                if($("#mobile").val() == '') {
-                    showErrMsg('手机号码不能为空');
-                    return false;
-                }
-                else if($("#mobile").get(0)&&!reg.test($("#mobile").val())){
-                    showErrMsg('手机号码格式不正确');
-                    return false;
-                }
-                else{
-                    window.location.href = "personCenter.html";
-                }
-                return true;
             })
-        })
+        });
     </script>
 </body>
 </html>

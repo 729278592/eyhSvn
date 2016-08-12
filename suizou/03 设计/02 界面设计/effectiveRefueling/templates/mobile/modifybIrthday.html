@@ -2,7 +2,7 @@
 <html>
 <head lang="en">
     <meta charset="UTF-8">
-    <title>随走</title>
+    <title>信息修改</title>
     <meta name="viewport" content="width=device-width; initial-scale=1.0; user-scalable=no;">
     <link rel="stylesheet" href="../../assets/global/plugins/font/css/font-awesome.min.css"/>
     <link rel="stylesheet" href="../../assets/mobile/css/weui.css"/>
@@ -10,7 +10,7 @@
     <link rel="stylesheet" href="../../assets/mobile/css/global.css"/>
 </head>
 <body>
-    <div class="container errDailog">
+    <div class="content errDailog">
         <div class="page">
             <div class="hd">
                 <a>
@@ -51,13 +51,11 @@
                             <div class="weui_cell_hd">
                                 <label class="weui_label">
                                     <span class="span_icon spa_birthday"></span>
-                                    <span class="text">
-                                        生日
-                                    </span>
+
                                 </label>
                             </div>
-                            <div class="weui_cell_bd weui_cell_primary">
-                                <input class="weui_input" type="date" readonly placeholder="2014/02/02" id="birthday"/>
+                            <div class="weui_cell_bd weui_cell_primary relative">
+                                <input class="weui_input" type="date" placeholder="2014/02/02" id="birthday"/>
                                 <i class="fa fa-calendar"></i>
                             </div>
                         </div>
@@ -73,15 +71,17 @@
     <script src="../../assets/mobile/js/global.js"></script>
     <script src="../../assets/mobile/js/removeTip.js"></script>
     <script>
-        $("#saveBtn").click(function(){
-            if($.trim($("#birthday").val())== '') {
-                showErrMsg('生日不能为空');
-                return false;
-            }
-            else{
-                window.location.href = "personCenter.html";
-            }
-            return true;
+        $(function(){
+            $("#saveBtn").on("touchend",function(){
+                if($.trim($("#birthday").val())== '') {
+                    showErrMsg('生日不能为空');
+                    return false;
+                }
+                else{
+                    window.location.href = "personCenter.html";
+                }
+                return true;
+            })
         })
     </script>
 </body>
