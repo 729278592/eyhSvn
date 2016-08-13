@@ -118,3 +118,20 @@ function showApplication(img,message){
         $("#application .weui_toast_content .errSpan").empty();
     }, 3000);
 }
+
+function startLoading(message) {
+	if(message == '') {
+		message = '';
+	}
+    $("#loadingToast .weui_toast_content .errSpan").append(message);
+    $('#loadingToast').show();
+    $("#loadingToast .weui_toast").addClass("weui_toastshow");
+    
+}
+
+function stopLoading(message) {
+    $("#loadingToast .weui_toast").removeClass("weui_toastshow");
+    $('#loadingToast').hide();
+    $("#loadingToast .weui_toast_content .errSpan").empty();
+    showToast(message);
+}
