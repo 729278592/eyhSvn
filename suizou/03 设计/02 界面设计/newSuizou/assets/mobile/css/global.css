@@ -345,7 +345,7 @@ textarea{font-family: "微软雅黑";}
 .zhuyi{background: #fff;font-size: 14px;color: #ff3b30;text-align: center;padding-bottom: 10px;}
 
 /*memberDescription*/
-.member{background: url(../images/inforBg.jpg) no-repeat;background-size: 100% 100%;width: 100%;height: 100%;}
+.member{background: url(../images/inforBg.jpg) no-repeat;background-size: 100% 100%;width: 100%;height: 100%;overflow-y: auto;}
 .member .title{font-size: 18px;padding: 10px 15px;background: #fafafa;color: #333;}
 
 .member p{font-size: 14px;color: #efefef;line-height: 24px;text-indent: 28px;margin: 20px 0 0;padding: 0 15px;}
