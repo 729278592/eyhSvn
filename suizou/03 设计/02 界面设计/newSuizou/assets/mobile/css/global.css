@@ -352,6 +352,32 @@ textarea{font-family: "微软雅黑";}
 
 
 
+.weui_cells_access.style1 .weui_cell_ft:after{border: none;}
+.common_content{width: 96%;padding: 0 2%;margin-top: 10px;}
+.person_daily_content .daily_details,.common_content .daily_details,.list_content .daily_details,.common_content .common_introduction{font-size: 16px;color: #929296;position: relative;top: -18px;left: 1%;}
+.person_daily_content .list_head,.common_content .common{margin-top: -15px;}
+.list_content{border-bottom: 1px solid #d2d3d4;padding: 10px 2%;display: block;}
+.list_head,.common_content .common,.list_content .common{width: 98%;padding:1%;border: 1px solid #dddbdb;background: #fdfafa;}
+.list_content .common ul li,.common_content .common ul .last{border-bottom: none;}
+.list_head ul,.common ul{padding: 0 2%;background: #fff;border: 1px solid #eee;}
+.list_head ul li,.common ul li{border-bottom: 1px dashed #d2d2d2;padding: 10px 0;font-size: 14px;color: #3f4040;width: 100%;}
+.common ul li span{position: relative;display: inline-block;}
+.common ul li .type{width: 25%}
+.common ul li .name{width: 32%;}
+.common ul li .day{width: 40%;}
+.common ul li .fa-angle-right{position: absolute;right: 5%;font-size: 20px;color: #f89f8b;}
+.common ul li .right{float: right;}
+.common_content .comment{width: 96%;padding: 2%;background: #fdfafa;border: 1px solid #dddbdb;margin-top: 10px;font-size: 14px;}
+.common_content .comment a>img{width: 60px;margin-top: 3px;border-radius: 65px;border: 1px solid #acabae;}
+.comment_details{position: relative;left: 5px;top: 5px;}
+.copyright{text-align: center;padding: 10px 0;font-size: 16px;color: #939398;}
+.comment_details .right{float: right;position: relative;top: 16px;right: 10px;}
+.common_contentf{position: relative;top: 10px;}
+.comment_details .name{position: relative;top: -15px;}
+.comment_details .comment_content{position: relative;left: 65px;top: -25px;}
+.comment .no_comment{font-weight: bold;display: inline-block;width: 100%;text-align: center;position: relative;top: -22px;}
+/*日报详情*/
+
 /*membershipInfor*/
 .moneyInfor{width: 94%;border-top: 1px solid #efefef;padding: 10px 3%;display: table;background: #fff;}
 .moneyInfor>div{display: table-cell;vertical-align: middle;}
