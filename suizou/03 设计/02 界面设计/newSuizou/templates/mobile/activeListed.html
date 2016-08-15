@@ -8,11 +8,12 @@
     <link rel="stylesheet" href="../../assets/mobile/plugins/weUi/css/weui.css"/>
     <link rel="stylesheet" href="../../assets/global/plugins/font-awesome/css/font-awesome.min.css"/>
     <link rel="stylesheet" href="../../assets/mobile/css/global.css"/>
+    <link rel="stylesheet" href="../../assets/mobile/plugins/pullUp/css/pullUp.css"/>
 </head>
 <body>
     <div class="content">
         <div class="page">
-            <div class="bd absolute pd50">
+            <div class="bd height100">
                 <div class="applicatioOpetion">
                     <ul class="applicatioNav clearfix">
                         <li>
@@ -23,12 +24,14 @@
                         </li>
                     </ul>
                 </div>
-                <ul class="entryList">
-                    <li>
-                        <a href="activeInfor.html">
-                            <div class="couponImg style">
-                                <img src="../../assets/mobile/images/shop1.jpg" class="couponImg1" alt=""/>
-                            </div>
+                <section id=content>
+                    <div id=scroller>
+                        <ul class="entryList">
+                            <li>
+                                <a href="activeInfor.html">
+                                    <div class="couponImg style">
+                                        <img src="../../assets/mobile/images/shop1.jpg" class="couponImg1" alt=""/>
+                                    </div>
                                 <span class="inforList">
                                     <span class="title">
                                         求购二手钢琴
@@ -43,13 +46,13 @@
                                     </span>
                                     <span class="color">￥2000.00</span>
                                 </span>
-                        </a>
-                    </li>
-                    <li>
-                        <a href="activeInfor.html">
-                            <div class="couponImg style">
-                                <img src="../../assets/mobile/images/shop1.jpg" class="couponImg1" alt=""/>
-                            </div>
+                                </a>
+                            </li>
+                            <li>
+                                <a href="activeInfor.html">
+                                    <div class="couponImg style">
+                                        <img src="../../assets/mobile/images/shop1.jpg" class="couponImg1" alt=""/>
+                                    </div>
                                 <span class="inforList">
                                     <span class="title">
                                         求购二手钢琴
@@ -64,13 +67,13 @@
                                     </span>
                                     <span class="color">￥2000.00</span>
                                 </span>
-                        </a>
-                    </li>
-                    <li>
-                        <a href="activeInfor.html">
-                            <div class="couponImg style">
-                                <img src="../../assets/mobile/images/shop1.jpg" class="couponImg1" alt=""/>
-                            </div>
+                                </a>
+                            </li>
+                            <li>
+                                <a href="activeInfor.html">
+                                    <div class="couponImg style">
+                                        <img src="../../assets/mobile/images/shop1.jpg" class="couponImg1" alt=""/>
+                                    </div>
                                 <span class="inforList">
                                     <span class="title">
                                         求购二手钢琴
@@ -85,13 +88,13 @@
                                     </span>
                                     <span class="color">￥2000.00</span>
                                 </span>
-                        </a>
-                    </li>
-                    <li>
-                        <a href="activeInfor.html">
-                            <div class="couponImg style">
-                                <img src="../../assets/mobile/images/shop1.jpg" class="couponImg1" alt=""/>
-                            </div>
+                                </a>
+                            </li>
+                            <li>
+                                <a href="activeInfor.html">
+                                    <div class="couponImg style">
+                                        <img src="../../assets/mobile/images/shop1.jpg" class="couponImg1" alt=""/>
+                                    </div>
                                 <span class="inforList">
                                     <span class="title">
                                         求购二手钢琴
@@ -106,13 +109,32 @@
                                     </span>
                                     <span class="color">￥2000.00</span>
                                 </span>
-                        </a>
-                    </li>
-                </ul>
+                                </a>
+                            </li>
+                        </ul>
+                        <!--<div class="upMore">-->
+                            <!--<i class="fa fa-arrow-up"></i>-->
+                            <!--上滑加载更多活动-->
+                        <!--</div>-->
+                        <div id=pullUp class="ub ub-pc c-gra">
+                            <div class=pullUpIcon>
+
+                            </div>
+                            <div class=pullUpLabel>加载更多活动</div>
+                        </div>
+                    </div>
+                    <div id=footer style="display: none">
+                        <a id=next-page href='more.html'>更多职位</a>
+                        <!--<a id=next-page href=/mobile/position?tjtoken=20160705172856&amp;m=list&amp;employment_type=全部&amp;candidate_source=全部>更多职位</a>-->
+                    </div>
+                </section>
             </div>
         </div>
     </div>
     <script src="../../assets/global/plugins/jquery.min.js"></script>
     <script src="../../assets/mobile/js/global.js"></script>
+    <script src="../../assets/mobile/plugins/pullUp/js/runner-msk07720d667.js"></script>
+    <script src="../../assets/mobile/plugins/pullUp/js/global.bundle-msk49e83f440.js"></script>
+    <script src="../../assets/mobile/plugins/pullUp/js/main-msk6b35c6e83.js"></script>
 </body>
 </html>

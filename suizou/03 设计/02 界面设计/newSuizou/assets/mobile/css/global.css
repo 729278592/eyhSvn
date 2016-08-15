@@ -205,16 +205,20 @@ textarea{font-family: "微软雅黑";}
 
 
 /*applicatioApproval*/
-.applicatioOpetion{width: 100%;margin-bottom: 10px;}
+.applicatioOpetion{width: 100%;margin-bottom: 10px;position: relative;z-index: 100;}
 .applicatioNav{width: 100%;background: #fff;display: block;}
 .applicatioNav li{float: left;text-align: center;font-size: 16px;width: 50%;position: relative;}
 .applicatioNav li:first-child:after{content: "";position: absolute;right: 0;top: 0;width: 1px;bottom: 0;border-right: 1px solid #efefef;}
 .applicatioNav li a{display: inline-block;width: 100%;padding: 10px 0;border-bottom: 3px solid transparent;color: #333;}
 .applicatioNav li a.active{color: #47aaea;border-bottom: 3px solid #47aaea;}
 .weui_cell {min-height: 23px;}
-
+#pullUp.loading{left: 0%;display: block;width: 100%;position: relative;top: 10px;}
 .weui_btn_area .weui_btn_primary.disabled{background: #ccc;}
 .noMoney{font-size: 16px;color: #666;text-align: center;margin: 100px 0;}
+
+
+
+
 
 .entryList li .passIcon.notPassed.hide{display: none;}
 .entryList li .passIcon.passed.hide{display: none;}
@@ -343,6 +347,11 @@ textarea{font-family: "微软雅黑";}
 .entryList li .inforList span .addressIcon{width: 16px;height: 16px;background: url(../images/addressIcon.png) no-repeat;background-size: 100% 100%;}
 .entryList li .inforList span .timeIcon{width: 16px;height: 16px;background: url(../images/timeIcon.png) no-repeat;background-size: 100% 100%;}
 .zhuyi{background: #fff;font-size: 14px;color: #ff3b30;text-align: center;padding-bottom: 10px;}
+#content{top: 60px;font-size: 16px;bottom: 0;}
+.bd.height100{height: 100%;}
+.upMore{text-align: center;color: #999;position: fixed;bottom: 0;width: 100%;padding: 10px 0;}
+
+
 
 /*memberDescription*/
 .member{background: url(../images/inforBg.jpg) no-repeat;background-size: 100% 100%;width: 100%;height: 100%;overflow-y: auto;}
