@@ -5,6 +5,8 @@
     <title>购物车</title>
     <meta name="viewport" content="width=device-width; initial-scale=1.0; user-scalable=no;">
     <link rel="stylesheet" href="../../assets/global/plugins/font/css/font-awesome.min.css"/>
+    <link rel="stylesheet" href="../../assets/mobile/css/weui.css"/>
+    <link rel="stylesheet" href="../../assets/mobile/css/example.css"/>
     <link rel="stylesheet" href="../../assets/mobile/plugins/jquery-spinner/css/jquery.spinner.large.css"/>
     <link rel="stylesheet" href="../../assets/mobile/css/global.css"/>
 </head>
@@ -48,6 +50,109 @@
                     <ul class="orderList style">
                         <li>
                             <div class="orderCon">
+                                <div class="weui_cells weui_cells_checkbox mt0 style1 inline_block left5">
+                                    <label class="weui_cell weui_check_labe style p0" for="s11">
+                                        <div class="weui_cell_hd">
+                                            <input type="checkbox" class="weui_check" name="checkbox1" id="s11">
+                                            <i class="weui_icon_checked"></i>
+                                        </div>
+                                    </label>
+                                </div>
+                                <div class="orderImg">
+                                    <img src="../../assets/mobile/images/order1.jpg" alt=""/>
+                                </div>
+                                <div class="orderInfor">
+                                    <p class="clearfix">
+                                        <span class="left">植物油 <br/>￥100.00</span>
+                                        <span class="scale right">200积分</span>
+                                    </p>
+                                    <p class=" clearfix">
+                                        <input type="text" class="spinnerExample left"/>
+                                        <button class="right btnRemove">
+                                            <i class="fa fa-trash-o"></i> 删除
+                                        </button>
+                                    </p>
+                                </div>
+                            </div>
+                        </li>
+                        <li>
+                            <div class="orderCon">
+                                <div class="orderImg">
+                                    <img src="../../assets/mobile/images/order1.jpg" alt=""/>
+                                </div>
+                                <div class="orderInfor">
+                                    <p class="clearfix">
+                                        <span class="left">植物油 <br/>￥100.00</span>
+                                        <span class="scale right">200积分</span>
+                                    </p>
+                                    <p class=" clearfix">
+                                        <input type="text" class="spinnerExample left"/>
+                                        <button class="right btnRemove">
+                                            <i class="fa fa-trash-o"></i> 删除
+                                        </button>
+                                    </p>
+                                </div>
+                            </div>
+                        </li>
+                        <li>
+                            <div class="orderCon">
+                                <div class="orderImg">
+                                    <img src="../../assets/mobile/images/order1.jpg" alt=""/>
+                                </div>
+                                <div class="orderInfor">
+                                    <p class="clearfix">
+                                        <span class="left">植物油 <br/>￥100.00</span>
+                                        <span class="scale right">200积分</span>
+                                    </p>
+                                    <p class=" clearfix">
+                                        <input type="text" class="spinnerExample left"/>
+                                        <button class="right btnRemove">
+                                            <i class="fa fa-trash-o"></i> 删除
+                                        </button>
+                                    </p>
+                                </div>
+                            </div>
+                        </li>
+                        <li>
+                            <div class="orderCon">
+                                <div class="orderImg">
+                                    <img src="../../assets/mobile/images/order1.jpg" alt=""/>
+                                </div>
+                                <div class="orderInfor">
+                                    <p class="clearfix">
+                                        <span class="left">植物油 <br/>￥100.00</span>
+                                        <span class="scale right">200积分</span>
+                                    </p>
+                                    <p class=" clearfix">
+                                        <input type="text" class="spinnerExample left"/>
+                                        <button class="right btnRemove">
+                                            <i class="fa fa-trash-o"></i> 删除
+                                        </button>
+                                    </p>
+                                </div>
+                            </div>
+                        </li>
+                        <li>
+                            <div class="orderCon">
+                                <div class="orderImg">
+                                    <img src="../../assets/mobile/images/order1.jpg" alt=""/>
+                                </div>
+                                <div class="orderInfor">
+                                    <p class="clearfix">
+                                        <span class="left">植物油 <br/>￥100.00</span>
+                                        <span class="scale right">200积分</span>
+                                    </p>
+                                    <p class=" clearfix">
+                                        <input type="text" class="spinnerExample left"/>
+                                        <button class="right btnRemove">
+                                            <i class="fa fa-trash-o"></i> 删除
+                                        </button>
+                                    </p>
+                                </div>
+                            </div>
+                        </li>
+                        <li>
+                            <div class="orderCon">
                                 <div class="orderImg">
                                     <img src="../../assets/mobile/images/order1.jpg" alt=""/>
                                 </div>
@@ -67,15 +172,69 @@
                         </li>
                     </ul>
                 </div>
+                <div class="notConTip hide">
+                    <img src="../../assets/mobile/images/noShopping.png" alt=""/>
+                    <p class="notInfor hide">
+                        购物车什么都没有哦! <br/>
+                        <a href="###" style="color: #ff0004">去看看>></a>
+                    </p>
+                </div>
+            </div>
+            <div class="foot">
+                <ul class="optionType style clearfix">
+                    <li class="first">
+                        合计 : <span style="color: #ff0004">￥2000</span>
+                    </li>
+                    <li class="second">
+                        <button class="btnEmpty">
+                            <i class="fa fa-trash-o"></i>
+                            清空
+                        </button>
+                    </li>
+                    <li class="last">
+                        <button class="nowBuy">结算</button>
+                    </li>
+                </ul>
             </div>
         </div>
     </div>
     <script src="../../assets/global/plugins/jquery/jquery-1.11.3.min.js"></script>
     <script src="../../assets/mobile/plugins/jquery-spinner/js/jquery.spinner.js"></script>
+    <script src="../../assets/mobile/js/confirm.js"></script>
     <script src="../../assets/mobile/js/global.js"></script>
     <script>
         $(function(){
             $('.spinnerExample').spinner({});
+
+            /*商品删除弹框*/
+            $(".orderList").delegate(".btnRemove","touchend",function(){
+                confirmTip("是否删除该订单?");
+                $(".bd").addClass("zIndex");
+                $("#dialogConfirm").removeClass("hide");
+                $(this).closest("li").addClass("remove");
+            });
+
+            /*取消商品删除*/
+            $("#signCancel").on("touchend",function(){
+                $(".orderList li.remove").removeClass("remove");
+                $(".bd").removeClass("zIndex");
+                $("#dialogConfirm").addClass("hide");
+            });
+
+            /*确定商品删除*/
+            $("#signSure").on("touchend",function(){
+                $(".orderList li.remove").remove();
+                $(".bd").removeClass("zIndex");
+                $("#dialogConfirm").addClass("hide");
+            });
+
+
+            /*清空购物车弹框*/
+//            $(".btnEmpty").on("touchend",function(){
+//                confirmTip("是否清空购物车?");
+//                $(".bd").addClass("zIndex");
+//                $("#dialogConfirm").removeClass("hide");
+//            });
         })
     </script>
 </body>

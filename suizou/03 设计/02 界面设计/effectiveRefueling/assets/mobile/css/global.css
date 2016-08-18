@@ -192,6 +192,8 @@ textarea{font-family: "微软雅黑";}
 
 
 /*暂无数据提示*/
+.notConTip.hide{display: none;}
+.notConTip p{margin: 0;}
 .notConTip{text-align: center;color: #999;padding: 20px 0;position: absolute;top: 30%;width: 100%;}
 .notConTip.mt15{margin: 1rem 0;font-size: 0.75rem;}
 .notConTip img{width: 20%;margin-bottom: 0.26rem;}
@@ -505,12 +507,24 @@ img.shopInfor.w100{width: 100%;margin-bottom: 0.625rem;}
 .weui_cells_checkbox .weui_check_label.color .weui_check:checked + .weui_icon_checked:before{color: #fe7a23;}
 .weui_btn_primary.stylecolor{border-radius: 0;background: #ff6702;}
 .bd.style .weui_cells:after{border: none;}
+
+/*shoppingCat*/
 .orderList.style li .orderCon p{display: block;margin: 0;}
 .spinner{display: inline-block;float: left}
-.btnRemove{outline: none;border: none;color: #666;font-size: 1rem;background: transparent;font-family: "微软雅黑";}
+.btnRemove{outline: none;border: none;color: #666;font-size: 1rem;background: transparent;font-family: "微软雅黑";position: relative;top: 0.25rem;}
 .scale{color: #666;}
-
-
+.optionType.style{background: #fff;}
+.optionType.style li.first{width: 40%;line-height: 48px;}
+.optionType.style li.second{width: 30%;background: transparent;}
+.optionType.style li.second button.btnEmpty{background: transparent;color: #666;}
+.optionType.style li.last{width: 30%;}
+.optionType.style li.last button{background: #ff6702;}
+.weui_dialog_confirm.hide{display: none;}
+.weui_dialog_confirm{position: relative;z-index: 1000;}
+.bd.zIndex{position: relative;z-index: 200;}
+.weui_cells_checkbox.left5 {display: inline-block;float: left;position: relative;left: 0.4rem;}
+.weui_cells_checkbox.style1 .weui_cell.style.p0{padding: 0;}
+.orderList.style li .orderCon .orderImg{padding: 0.6rem 0.5rem}
 @media screen and (max-width: 768px) {
     body,html{font-size: 20px;}
 }
