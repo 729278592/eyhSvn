@@ -224,8 +224,9 @@ textarea{font-family: "微软雅黑";}
 .entryList li .passIcon.passed.hide{display: none;}
 .entryList li{background: #fff;}
 .entryList.imgStyle{padding-bottom: 10px;}
+.entryList.imgStyle li{display: block;}
 .entryList.imgStyle span{display: inline-block;width: 25%;text-align: center;margin-top: 10px;}
-.entryList.imgStyle span img{width: 60px;height: 60px;}
+.entryList.imgStyle span img{width: 60px;height: 60px;border-radius: 100%;}
 .entryList li .couponImg,.entryList li .inforList,.entryList li .tipLeft,.entryList li .passIcon{display: table-cell;vertical-align: middle;}
 .entryList li .inforList.style{padding: 0;}
 .entryList li .couponImg{width: 20%;position: relative;text-align: center;}
