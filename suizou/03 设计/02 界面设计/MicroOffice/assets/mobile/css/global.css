@@ -483,6 +483,8 @@ a.weui_btn.weui_btn_primary{font-size: 16px;}
     border-top: 1px solid #dbdbdb;
     }
 .positionListInfor .positionMenu.style li:first-child{margin-top: 0;}
+
+
 /*resumeDetailsInfor*/
 #dowebok .bd,#dowebok .page{height: 100%;}
 #dowebok .weui_btn_area{position: absolute;bottom: 10px;width: 90%;margin-left: -45%;left: 50%;}
