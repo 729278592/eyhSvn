@@ -21,5 +21,10 @@ $(function(){
 
     $(".nav_link li a").on("touchend",function(e){
         e.stopPropagation();
-    })
+    });
+
+    /*返回上一页面*/
+    $(".hd .left").on("click",function(){
+        window.history.go(-1)
+    });
 });

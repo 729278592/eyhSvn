@@ -1,0 +1,202 @@
+<!DOCTYPE html>
+<html>
+<head lang="en">
+    <meta charset="UTF-8">
+    <title>首页</title>
+    <meta name="viewport" content="width=device-width; initial-scale=1.0; user-scalable=no;">
+    <link rel="stylesheet" href="../../assets/global/plugins/font/css/font-awesome.min.css"/>
+    <link rel="stylesheet" href="../../assets/mobile/css/weui.css"/>
+    <link rel="stylesheet" href="../../assets/mobile/css/example.css"/>
+    <link rel="stylesheet" href="../../assets/mobile/css/global.css"/>
+    <link rel="stylesheet" href="../../assets/mobile/plugins/swiper/dist/css/swiper.min.css"/>
+</head>
+<body>
+    <div class="content">
+        <div class="page">
+            <div class="hd">
+                <a>
+                    <i class="fa fa-angle-left"></i>
+                </a>
+                <form action="#" class="formIndex">
+                    <input type="text" class="search_input" placeholder="搜索商品"/>
+                    <i class="fa fa-search"></i>
+                    <a href="javascript:" class="weui_icon_clear hide" id="search_clear"></a>
+                </form>
+                <div class="right nav_block">
+                    <a class="shop_cat"></a>
+                    <a class="dot_block"></a>
+                    <ul class="nav_link">
+                        <li>
+                            <a href="###">
+                                主页
+                            </a>
+                        </li>
+                        <li>
+                            <a href="###">
+                                精选商城
+                            </a>
+                        </li>
+                        <li>
+                            <a href="###">
+                                优惠券
+                            </a>
+                        </li>
+                        <li>
+                            <a href="###">
+                                会员中心
+                            </a>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+            <div class="bd absolute pd48">
+                <div class="swiper-container mt0 swiper-container-horizontal" id="swiper-container">
+                    <div class="swiper-wrapper" style="transition-duration: 0ms; ">
+                        <div class="swiper-slide">
+                            <img src="../../assets/mobile/images/indexSlider1.jpg" alt="" class="w100"/>
+                        </div>
+                        <div class="swiper-slide">
+                            <img src="../../assets/mobile/images/indexSlider2.jpg" alt="" class="w100"/>
+                        </div>
+                        <div class="swiper-slide">
+                            <img src="../../assets/mobile/images/indexSlider3.jpg" alt="" class="w100"/>
+                        </div>
+                    </div>
+                    <div class="swiper-pagination"></div>
+                    <!--<div class="swiper-button-next"></div>-->
+                    <!--<div class="swiper-button-prev"></div>-->
+                </div>
+                <div class="cardBg">
+                    <button class="btnApply">立即申请</button>
+                </div>
+                <ul class="ulLink clearfix">
+                    <li class="first">
+                        <a>
+                            <img src="../../assets/mobile/images/alink1.png" alt=""/>
+                        </a>
+                    </li>
+                    <li class="second">
+                        <a>
+                            <img src="../../assets/mobile/images/alink2.png" alt=""/>
+                        </a>
+                    </li>
+                    <li class="last">
+                        <a>
+                            <img src="../../assets/mobile/images/alink3.png" alt=""/>
+                        </a>
+                    </li>
+                </ul>
+
+                <ul class="shopList clearfix">
+                    <li>
+                        <a>
+                            <img src="../../assets/mobile/images/shop1.jpg" alt=""/>
+                        </a>
+                    </li>
+                    <li>
+                        <a>
+                            <img src="../../assets/mobile/images/shop2.jpg" alt=""/>
+                        </a>
+                    </li>
+                    <li class="mr0">
+                        <a>
+                            <img src="../../assets/mobile/images/shop3.jpg" alt=""/>
+                        </a>
+                    </li>
+                </ul>
+
+                <ul class="entryList">
+                    <li>
+                        <a href="shoppingInfor.html">
+                            <div class="couponImg">
+                                <img src="../../assets/mobile/images/shopImg1.jpg" class="couponImg1" alt=""/>
+                            </div>
+                            <span class="inforList">
+                                <span class="title">家庭食用油</span>
+                                <span>1kg</span>
+                                <span class="money">￥45.00</span>
+                            </span>
+                            <span class="tipLeft">
+                            </span>
+                        </a>
+                    </li>
+                    <li>
+                        <a href="shoppingInfor.html">
+                            <div class="couponImg">
+                                <img src="../../assets/mobile/images/shopImg1.jpg" class="couponImg1" alt=""/>
+                            </div>
+                            <span class="inforList">
+                                <span class="title">家庭食用油</span>
+                                <span>1kg</span>
+                                <span class="money">￥45.00</span>
+                            </span>
+                            <span class="tipLeft">
+                            </span>
+                        </a>
+                    </li>
+                </ul>
+            </div>
+            <div class="foot">
+                <ul class="tabMenu clearfix">
+                    <li class="active">
+                        <a href="index.html">
+                            <i class="fa fa-home"></i><br/>
+                            <span>首页</span>
+                        </a>
+                    </li>
+                    <li>
+                        <a href="softWen.html">
+                            <i class="fa fa-bars"></i><br/>
+                            <span>分类</span>
+                        </a>
+                    </li>
+                    <li>
+                        <a href="activeList.html">
+                            <i class="fa fa-gift"></i><br/>
+                            <span>优惠券</span>
+                        </a>
+                    </li>
+                    <li class="last">
+                        <a href="shangMeng.html">
+                            <i class="fa fa-user"></i><br/>
+                            <span>我的</span>
+                        </a>
+                    </li>
+                </ul>
+            </div>
+        </div>
+    </div>
+    <script src="../../assets/global/plugins/jquery/jquery-1.11.3.min.js"></script>
+    <script src="../../assets/mobile/plugins/swiper/dist/js/swiper.min.js"></script>
+    <script src="../../assets/mobile/js/global.js"></script>
+    <script>
+        $(function(){
+            /*搜索框*/
+            $(".formIndex .search_input").on("keydown",function(){
+                if($.trim($(this).val())==''){
+
+                }else{
+                    $(".weui_icon_clear").removeClass("hide");
+                }
+            });
+            $(".weui_icon_clear").on("touchend",function(){
+                $(".formIndex .search_input").val(" ");
+                $(this).addClass("hide");
+                $(this).attr({placeholder:"搜索商品"});
+            });
+
+            swiper = new Swiper('#swiper-container', {
+      //        prevButton:'.swiper-button-prev',
+      //        nextButton:'.swiper-button-next',
+                slidesPerView: 1,
+                pagination:'.swiper-pagination',
+                paginationClickable: true,
+                spaceBetween: 0,
+                loop:true,
+                autoplay: 5000,
+                autoplayDisableOnInteraction: false
+            });
+        })
+    </script>
+</body>
+</html>

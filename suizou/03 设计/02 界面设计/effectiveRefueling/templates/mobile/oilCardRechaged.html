@@ -1,0 +1,122 @@
+<!DOCTYPE html>
+<html>
+<head lang="en">
+    <meta charset="UTF-8">
+    <title>油卡充值</title>
+    <meta name="viewport" content="width=device-width; initial-scale=1.0; user-scalable=no;">
+    <link rel="stylesheet" href="../../assets/global/plugins/font/css/font-awesome.min.css"/>
+    <link rel="stylesheet" href="../../assets/mobile/css/weui.css"/>
+    <link rel="stylesheet" href="../../assets/mobile/css/example.css"/>
+    <link rel="stylesheet" href="../../assets/mobile/css/global.css"/>
+</head>
+<body>
+    <div class="content">
+        <div class="page">
+            <div class="hd">
+                <a>
+                    <i class="fa fa-angle-left"></i>
+                </a>
+                得力加油
+                <div class="right nav_block">
+                    <a class="shop_cat"></a>
+                    <a class="dot_block"></a>
+                    <ul class="nav_link">
+                        <li>
+                            <a href="###">
+                                主页
+                            </a>
+                        </li>
+                        <li>
+                            <a href="###">
+                                精选商城
+                            </a>
+                        </li>
+                        <li>
+                            <a href="###">
+                                优惠券
+                            </a>
+                        </li>
+                        <li>
+                            <a href="###">
+                                会员中心
+                            </a>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+            <div class="bd absolute pt">
+                <div class="oilCardHead">
+                    <p>
+                        <span class="title">余额</span>
+                        <span class="money">￥800</span>
+                    </p>
+
+                    <p>
+                        充值100返现30
+                    </p>
+                </div>
+                <div class="oilCardCon">
+                    <ul class="oilCardMenu clearfix">
+                        <li class="active">
+                            <div>
+                                <span>100</span>元
+                            </div>
+                        </li>
+                        <li>
+                            <div>
+                                <span>300</span>元
+                            </div>
+                        </li>
+                        <li class="mr0">
+                            <div>
+                                <span>500</span>元
+                            </div>
+                        </li>
+                        <li>
+                            <div>
+                                <span>800</span>元
+                            </div>
+                        </li>
+                        <li>
+                            <div>
+                                <span>1000</span>元
+                            </div>
+                        </li>
+                        <li class="mr0">
+                            <input type="text" class="otherMoney" value="其他金额"/>
+                        </li>
+                    </ul>
+                    <div class="rechargedOption">
+                        <a href="javascript:;" class="weui_btn weui_btn_primary">马上充值</a>
+                        <p>点击马上充值, 即表示您同意《得力充值协议》</p>
+                        <p class="btnRecharged">
+                            <a href="###">
+                                充值记录》
+                            </a>
+                        </p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <script src="../../assets/global/plugins/jquery/jquery-1.11.3.min.js"></script>
+    <script src="../../assets/mobile/js/global.js"></script>
+    <script>
+        $(function(){
+            $(".oilCardMenu li").on("touchend",function(){
+                $(this).addClass("active");
+                $(this).siblings("li").removeClass("active");
+                if($(this).find("input").is(".otherMoney")){
+                    $(this).find("input").removeAttr("readonly");
+                    $(this).find("input").val("");
+                    $(this).find("input").attr({placeholder:"其他金额"})
+                }else{
+                    $(".oilCardMenu li").find("input.otherMoney").attr("readonly");
+                    $(".oilCardMenu li").find("input.otherMoney").val("其他金额");
+                    $(".oilCardMenu li").find("input.otherMoney").attr({placeholder:" "})
+                }
+            })
+        })
+    </script>
+</body>
+</html>
