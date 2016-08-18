@@ -1,0 +1,160 @@
+<!DOCTYPE html>
+<html>
+<head lang="en">
+    <meta charset="UTF-8">
+    <title>附近加油站</title>
+    <meta name="viewport" content="width=device-width; initial-scale=1.0; user-scalable=no;">
+    <link rel="stylesheet" href="../../assets/global/plugins/font/css/font-awesome.min.css"/>
+    <link rel="stylesheet" href="../../assets/mobile/css/weui.css"/>
+    <link rel="stylesheet" href="../../assets/mobile/css/example.css"/>
+    <link rel="stylesheet" href="../../assets/mobile/css/global.css"/>
+    <link rel="stylesheet" href="../../assets/mobile/plugins/swiper/dist/css/swiper.min.css"/>
+</head>
+<body>
+    <div class="content">
+        <div class="page">
+            <div class="hd">
+                <a>
+                    <i class="fa fa-angle-left"></i>
+                </a>
+                得力加油
+                <div class="right nav_block">
+                    <a class="shop_cat"></a>
+                    <a class="dot_block"></a>
+                    <ul class="nav_link">
+                        <li>
+                            <a href="###">
+                                主页
+                            </a>
+                        </li>
+                        <li>
+                            <a href="###">
+                                精选商城
+                            </a>
+                        </li>
+                        <li>
+                            <a href="###">
+                                优惠券
+                            </a>
+                        </li>
+                        <li>
+                            <a href="###">
+                                会员中心
+                            </a>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+            <div class="bd absolute pt">
+                <div class="swiper-container mt0 swiper-container-horizontal" id="swiper-container">
+                    <div class="swiper-wrapper" style="transition-duration: 0ms; ">
+                        <div class="swiper-slide">
+                            <img src="../../assets/mobile/images/stopSlider1.jpg" alt="" class="w100"/>
+                        </div>
+                        <div class="swiper-slide">
+                            <img src="../../assets/mobile/images/stopSlider2.jpg" alt="" class="w100"/>
+                        </div>
+                        <div class="swiper-slide">
+                            <img src="../../assets/mobile/images/stopSlider3.jpg" alt="" class="w100"/>
+                        </div>
+                    </div>
+                    <div class="swiper-pagination"></div>
+                    <!--<div class="swiper-button-next"></div>-->
+                    <!--<div class="swiper-button-prev"></div>-->
+                </div>
+                <div class="hotStation">
+                    <div class="stationTitle">
+                        <div class="colorBlock">
+
+                        </div>
+                        <span>距离您最近的加油站</span>
+                    </div>
+                    <ul class="stationList">
+                        <li>
+                            <p class="clearfix">
+                                <span class="left color1">中国石油（渝中加油站）</span>
+                                <span class="right color2">距离5.9公里</span>
+                            </p>
+                            <p class="clearfix">
+                                <span class="left">重庆市渝中区菜园路208号</span>
+                                <a class="right">
+                                    <img src="../../assets/mobile/images/address.png" class="address" alt=""/>
+                                    去这里
+                                </a>
+                            </p>
+                        </li>
+                    </ul>
+                </div>
+                <div class="hotStation mt">
+                    <div class="stationTitle">
+                        <div class="colorBlock">
+
+                        </div>
+                        <span>距离您最近的加油站</span>
+                    </div>
+                    <ul class="stationList">
+                        <li>
+                            <p class="clearfix">
+                                <span class="left color1">中国石油（渝中加油站）</span>
+                                <span class="right color2">距离5.9公里</span>
+                            </p>
+                            <p class="clearfix">
+                                <span class="left">重庆市渝中区菜园路208号</span>
+                                <a class="right">
+                                    <img src="../../assets/mobile/images/address.png" class="address" alt=""/>
+                                    去这里
+                                </a>
+                            </p>
+                        </li>
+                        <li>
+                            <p class="clearfix">
+                                <span class="left color1">中国石油（渝中加油站）</span>
+                                <span class="right color2">距离5.9公里</span>
+                            </p>
+                            <p class="clearfix">
+                                <span class="left">重庆市渝中区菜园路208号</span>
+                                <a class="right">
+                                    <img src="../../assets/mobile/images/address.png" class="address" alt=""/>
+                                    去这里
+                                </a>
+                            </p>
+                        </li>
+                        <li>
+                            <p class="clearfix">
+                                <span class="left color1">中国石油（渝中加油站）</span>
+                                <span class="right color2">距离5.9公里</span>
+                            </p>
+                            <p class="clearfix">
+                                <span class="left">重庆市渝中区菜园路208号</span>
+                                <a class="right">
+                                    <img src="../../assets/mobile/images/address.png" class="address" alt=""/>
+                                    去这里
+                                </a>
+                            </p>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+    </div>
+    <script src="../../assets/global/plugins/jquery/jquery-1.11.3.min.js"></script>
+    <script src="../../assets/mobile/plugins/swiper/dist/js/swiper.min.js"></script>
+    <script src="../../assets/mobile/js/global.js"></script>
+    <script>
+        $(function(){
+
+            swiper = new Swiper('#swiper-container', {
+                //        prevButton:'.swiper-button-prev',
+                //        nextButton:'.swiper-button-next',
+                slidesPerView: 1,
+                pagination:'.swiper-pagination',
+                paginationClickable: true,
+                spaceBetween: 0,
+                loop:true,
+                autoplay: 5000,
+                autoplayDisableOnInteraction: false
+            });
+        })
+    </script>
+</body>
+</html>

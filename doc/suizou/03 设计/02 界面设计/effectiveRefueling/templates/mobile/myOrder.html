@@ -1,0 +1,116 @@
+<!DOCTYPE html>
+<html>
+<head lang="en">
+    <meta charset="UTF-8">
+    <title>我的订单</title>
+    <meta name="viewport" content="width=device-width; initial-scale=1.0; user-scalable=no;">
+    <link rel="stylesheet" href="../../assets/global/plugins/font/css/font-awesome.min.css"/>
+    <link rel="stylesheet" href="../../assets/mobile/css/global.css"/>
+</head>
+<body>
+    <div class="content">
+        <div class="page">
+            <div class="hd">
+                <a>
+                    <i class="fa fa-angle-left"></i>
+                </a>
+                得力加油
+                <div class="right nav_block">
+                    <a class="shop_cat"></a>
+                    <a class="dot_block"></a>
+                    <ul class="nav_link">
+                        <li>
+                            <a href="###">
+                                主页
+                            </a>
+                        </li>
+                        <li>
+                            <a href="###">
+                                精选商城
+                            </a>
+                        </li>
+                        <li>
+                            <a href="###">
+                                优惠券
+                            </a>
+                        </li>
+                        <li>
+                            <a href="###">
+                                会员中心
+                            </a>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+            <div class="bd absolute pt">
+                <ul class="orderMenu clearfix">
+                    <li>
+                        <a href="###" class="active" data="orderPay">
+                            <span class="order orderIcon1"></span><br/>
+                            待付款
+                        </a>
+                    </li>
+                    <li>
+                        <a href="###" data="orderPaySucess">
+                            <span class="order orderIcon2"></span><br/>
+                            待取货
+                        </a>
+                    </li>
+                    <li>
+                        <a href="###" data="orderRefund">
+                            <span class="order orderIcon3"></span><br/>
+                            已完成
+                        </a>
+                    </li>
+                    <li>
+                        <a href="###" data="orderRefundSuccess">
+                            <span class="order orderIcon4"></span><br/>
+                            退款中
+                        </a>
+                    </li>
+                </ul>
+                <div id="order">
+                </div>
+            </div>
+        </div>
+    </div>
+    <script src="../../assets/global/plugins/jquery/jquery-1.11.3.min.js"></script>
+    <script src="../../assets/mobile/js/global.js"></script>
+    <script>
+        $(function(){
+            /*订单初始化*/
+            $.ajax({
+                type : "post",
+                url : "orderPay.html",
+                dataType : "html",
+                cache : false,
+                success : function(data) {
+                    $(".bd").find("#order").html(data);
+                }
+            });
+
+            /*订单状态切换*/
+            $(".orderMenu li a").on("touchend",function(){
+                $(this).addClass("active");
+                $(this).closest("li").siblings("li").find("a").removeClass("active");
+                var data = $(this).attr("data");
+                var that = $(this);
+                $.ajax({
+                    type : "post",
+                    url : data+".html",
+                    dataType : "html",
+                    cache : false,
+                    success : function(data) {
+                        that.closest(".bd").find("#order").html(data);
+                    }
+                });
+            });
+
+            /*订单状态信息提示*/
+            $("#order").delegate(".btnType","touchend",function(){
+
+            })
+        })
+    </script>
+</body>
+</html>
