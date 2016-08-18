@@ -501,14 +501,14 @@ img.shopInfor.w100{width: 100%;margin-bottom: 0.625rem;}
 .weui_cells.bg .weui_cell>div.moneyDiv input{width: 75%;height: 2rem;line-height: 2rem;border: none;text-align: center;font-size: 0.875rem;color: #333;outline: none;font-family: "微软雅黑";}
 .weui_cells.bg .weui_cell>div.oilDiv{position: absolute;right: 0;}
 .weui_cells_checkbox .weui_check_label.w50{float: left;width: 30%;}
-
 .weui_cells_checkbox .weui_check_label.w50 .weui_check:checked + .weui_icon_checked:before{color: #fe7a23;}
 .weui_cells_checkbox .weui_check_label.color .weui_check:checked + .weui_icon_checked:before{color: #fe7a23;}
 .weui_btn_primary.stylecolor{border-radius: 0;background: #ff6702;}
 .bd.style .weui_cells:after{border: none;}
 .orderList.style li .orderCon p{display: block;margin: 0;}
-.spinner{display: inline-block;}
+.spinner{display: inline-block;float: left}
 .btnRemove{outline: none;border: none;color: #666;font-size: 1rem;background: transparent;font-family: "微软雅黑";}
+.scale{color: #666;}
 
 
 @media screen and (max-width: 768px) {
