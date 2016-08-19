@@ -100,11 +100,11 @@
                     </form>
                 </div>
                 <div class="department">
-                    <p class="departmentTitle">
+                    <p class="departmentTitle rotate">
                         销售部
                         <span class="caretDown"></span>
                     </p>
-                    <div class="weui_cells mt0 weui_cells_checkbox">
+                    <div class="weui_cells mt0 hide weui_cells_checkbox">
 
                     </div>
                     <p class="departmentTitle rotate">
@@ -185,20 +185,22 @@
                 var advancedSearch = $(".advancedSearch");
                 var len = infor[i].length;
                 var htmlPerson = '';
-                for(var n = 0;n<len;n++){
-                    htmlPerson += '<label class="weui_cell weui_check_label l0" onclick="chiocePerson(this,event)" for="'+n+'" data-id="'+infor[i][n].dataNumid+'">'+
-                                      '<div class="weui_cell_hd">'+
-                                          '<label class="weui_label">'+infor[i][n].personName+'</label>'+
-                                      '</div>'+
-                                      '<div class="weui_cell_bd weui_cell_primary">'+
-                                          '<input type="checkbox" class="weui_check" name="checkbox1" id="'+n+'">'+
-                                          '<i class="weui_icon_checked right"></i>'+
-                                      '</div>'+
-                                  '</label>';
-                }
-                htmlPerson += '';
-                $(".weui_cells_checkbox").eq(i).html(htmlPerson);
+
+
                 $(this).on("touchend",function(){
+                    for(var n = 0;n<len;n++){
+                        htmlPerson += '<label class="weui_cell weui_check_label l0" onclick="chiocePerson(this,event)" for="'+n+'" data-id="'+infor[i][n].dataNumid+'">'+
+                                '<div class="weui_cell_hd">'+
+                                '<label class="weui_label">'+infor[i][n].personName+'</label>'+
+                                '</div>'+
+                                '<div class="weui_cell_bd weui_cell_primary">'+
+                                '<input type="checkbox" class="weui_check" name="checkbox1" id="'+n+'">'+
+                                '<i class="weui_icon_checked right"></i>'+
+                                '</div>'+
+                                '</label>';
+                    }
+                    htmlPerson += '';
+                    $(this).next(".weui_cells_checkbox").html(htmlPerson);
                     if($(this).is(".rotate")){
                         $(this).removeClass("rotate");
                         $(this).next(".weui_cells_checkbox").removeClass("hide");
@@ -221,6 +223,10 @@
                 $(".jsonAttr .taLeft").html(str);
                 person = [];
                 $(".weui_cells a.weui_cell").removeClass("jsonAttr");
+                
+                $(".weui_cells_checkbox").empty();
+                $(".advancedSearch .departmentTitle").addClass("rotate");
+                $(".advancedSearch .departmentTitle").next(".weui_cells_checkbox").addClass("hide");
                 returns();
             });
 
@@ -241,7 +247,7 @@
 
             $(".weui_search_bar span.left").on("touchend",function(){
                 if($(this).closest(".advancedSearch").get(0)){
-                    returns();
+                    returns()
                 }
             });
 
