@@ -185,21 +185,20 @@
                 var advancedSearch = $(".advancedSearch");
                 var len = infor[i].length;
                 var htmlPerson = '';
-
-
+                for(var n = 0;n<len;n++){
+                    htmlPerson += '<label class="weui_cell weui_check_label l0" onclick="chiocePerson(this,event)" for="'+n+'" data-id="'+infor[i][n].dataNumid+'">'+
+                            '<div class="weui_cell_hd">'+
+                            '<label class="weui_label">'+infor[i][n].personName+'</label>'+
+                            '</div>'+
+                            '<div class="weui_cell_bd weui_cell_primary">'+
+                            '<input type="checkbox" class="weui_check" name="checkbox1" id="'+n+'">'+
+                            '<i class="weui_icon_checked right"></i>'+
+                            '</div>'+
+                            '</label>';
+                }
+                htmlPerson += '';
                 $(this).on("touchend",function(){
-                    for(var n = 0;n<len;n++){
-                        htmlPerson += '<label class="weui_cell weui_check_label l0" onclick="chiocePerson(this,event)" for="'+n+'" data-id="'+infor[i][n].dataNumid+'">'+
-                                '<div class="weui_cell_hd">'+
-                                '<label class="weui_label">'+infor[i][n].personName+'</label>'+
-                                '</div>'+
-                                '<div class="weui_cell_bd weui_cell_primary">'+
-                                '<input type="checkbox" class="weui_check" name="checkbox1" id="'+n+'">'+
-                                '<i class="weui_icon_checked right"></i>'+
-                                '</div>'+
-                                '</label>';
-                    }
-                    htmlPerson += '';
+
                     $(this).next(".weui_cells_checkbox").html(htmlPerson);
                     if($(this).is(".rotate")){
                         $(this).removeClass("rotate");
@@ -223,8 +222,7 @@
                 $(".jsonAttr .taLeft").html(str);
                 person = [];
                 $(".weui_cells a.weui_cell").removeClass("jsonAttr");
-                
-                $(".weui_cells_checkbox").empty();
+                $(".weui_cells_checkbox").html(" ");
                 $(".advancedSearch .departmentTitle").addClass("rotate");
                 $(".advancedSearch .departmentTitle").next(".weui_cells_checkbox").addClass("hide");
                 returns();
