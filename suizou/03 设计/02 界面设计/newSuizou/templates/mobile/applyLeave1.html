@@ -1,0 +1,423 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8"/>
+    <title>请假申请</title>
+    <meta name="viewport" content="width=device-width; initial-scale=1.0; user-scalable=no;">
+    <link rel="stylesheet" href="../../assets/mobile/plugins/weUi/css/example.css"/>
+    <link rel="stylesheet" href="../../assets/mobile/plugins/weUi/css/weui.css"/>
+    <link rel="stylesheet" href="../../assets/global/plugins/font-awesome/css/font-awesome.min.css"/>
+    <link rel="stylesheet" href="../../assets/mobile/css/global.css"/>
+</head>
+<body>
+    <div class="content errDailog">
+        <div class="page">
+            <div class="bd pd50 absolute">
+                <form action="#" id="form" onsubmit="return false">
+                    <div class="weui_cells weui_cells_form mt0 bg">
+                        <div class="weui_cell weui_cell_select mb15">
+                            <div class="weui_cell_hd">
+                                <label class="weui_label">
+                                    <span class="spanText">类型</span>
+                                </label>
+                            </div>
+                            <div class="weui_cell_bd weui_cell_primary date">
+                                <select class="weui_select" name="select1">
+                                    <option selected="" value="病假">病假</option>
+                                    <option value="事假">事假</option>
+                                    <option value="婚假">婚假</option>
+                                </select>
+                            </div>
+                        </div>
+
+                        <a class="weui_cell mb15" href="###">
+                            <div class="weui_cell_hd">
+                                <label class="weui_label">
+                                    <span class="spanText">提交对象</span>
+                                </label>
+                            </div>
+                            <div class="weui_cell_bd weui_cell_primary">
+                                <!--<input type="text" class="weui_input" id='datetime-picker'/>-->
+                                <div class="weui_cell_ft taLeft">
+                                    <span style="color: #666;">点击选择提交对象</span>
+                                </div>
+                            </div>
+                        </a>
+                        <a class="weui_cell mb15" href="###">
+                            <div class="weui_cell_hd">
+                                <label class="weui_label">
+                                    <span class="spanText">抄送对象</span>
+                                </label>
+                            </div>
+                            <div class="weui_cell_bd weui_cell_primary">
+                                <!--<input type="text" class="weui_input" id='datetime-picker'/>-->
+                                <div class="weui_cell_ft taLeft">
+                                    <span style="color: #666;">点击选择抄送对象</span>
+                                </div>
+                            </div>
+                        </a>
+                        <div class="weui_cell">
+                            <label class="weui_label">
+                                <span class="spanText">开始日期</span>
+                            </label>
+                            <div class="weui_cell_bd weui_cell_primary style">
+                                <input type="date" id="start" class="weui_input" placeholder="2015/04/04"/>
+                                <i class="fa fa-calendar"></i>
+                            </div>
+                        </div>
+                        <div class="weui_cell">
+                            <label class="weui_label">
+                                <span class="spanText">结束日期</span>
+                            </label>
+                            <div class="weui_cell_bd weui_cell_primary style">
+                                <input type="date" id="end" class="weui_input" placeholder="2015/04/04"/>
+                                <i class="fa fa-calendar"></i>
+                            </div>
+                        </div>
+                        <div class="relesaTitle">工作总结</div>
+                        <div>
+                            <textarea name="" style="padding: 5px 15px;font-size: 14px;" class="weui_textarea" placeholder="" cols="30" rows="5"></textarea>
+                        </div>
+                        <div class="weui_btn_area fixed">
+                            <a class="weui_btn weui_btn_primary b0" id="showTooltips">
+                                提交
+                            </a>
+                        </div>
+                    </div>
+                </form>
+            </div>
+            <div class="advancedSearch hide">
+                <div class="weui_search_bar style clearfix">
+                                <span class="left">
+                                    <i class="fa fa-angle-left"></i>
+                                </span>
+                    <form class="weui_search_outer left">
+                        <div class="weui_search_inner">
+                            <i class="weui_icon_search"></i>
+                            <input type="search" class="weui_search_input" id="search_input" placeholder="请输入关键词" required="">
+                            <a href="javascript:" class="weui_icon_clear" id="search_cancel"></a>
+                        </div>
+                    </form>
+                </div>
+                <div class="department">
+                    <p class="departmentTitle">
+                        销售部
+                        <span class="caretDown"></span>
+                    </p>
+                    <div class="weui_cells style mt0">
+                        <div class="weui_cell l0">
+                            <div class="weui_cell_hd">
+                                <label class="weui_label">
+                                    总　　监
+                                </label>
+                            </div>
+                            <div class="weui_cell_bd weui_cell_primary">
+                            </div>
+                        </div>
+                        <div class="weui_cell l0">
+                            <div class="weui_cell_hd">
+                                <label class="weui_label">
+                                    经　　理
+                                </label>
+                            </div>
+                            <div class="weui_cell_bd weui_cell_primary">
+                            </div>
+                        </div>
+                        <div class="weui_cell l0">
+                            <div class="weui_cell_hd">
+                                <label class="weui_label">
+                                    　副经理
+                                </label>
+                            </div>
+                            <div class="weui_cell_bd weui_cell_primary">
+                            </div>
+                        </div>
+                        <div class="weui_cell l0">
+                            <div class="weui_cell_hd">
+                                <label class="weui_label">
+                                    营销顾问
+                                </label>
+                            </div>
+                            <div class="weui_cell_bd weui_cell_primary">
+                            </div>
+                        </div>
+                    </div>
+                    <p class="departmentTitle rotate">
+                        市场部
+                        <span class="caretDown"></span>
+                    </p>
+                    <div class="weui_cells style mt0 hide">
+                        <div class="weui_cell l0">
+                            <div class="weui_cell_hd">
+                                <label class="weui_label">
+                                    总　　监
+                                </label>
+                            </div>
+                            <div class="weui_cell_bd weui_cell_primary">
+                            </div>
+                        </div>
+                        <div class="weui_cell l0">
+                            <div class="weui_cell_hd">
+                                <label class="weui_label">
+                                    经　　理
+                                </label>
+                            </div>
+                            <div class="weui_cell_bd weui_cell_primary">
+                            </div>
+                        </div>
+                        <div class="weui_cell l0">
+                            <div class="weui_cell_hd">
+                                <label class="weui_label">
+                                    　副经理
+                                </label>
+                            </div>
+                            <div class="weui_cell_bd weui_cell_primary">
+                            </div>
+                        </div>
+                        <div class="weui_cell l0">
+                            <div class="weui_cell_hd">
+                                <label class="weui_label">
+                                    营销顾问
+                                </label>
+                            </div>
+                            <div class="weui_cell_bd weui_cell_primary">
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="addressChioce hide">
+                <div class="weui_search_bar style clearfix">
+                                <span class="left">
+                                    <i class="fa fa-angle-left"></i>
+                                </span>
+                    <form class="weui_search_outer left">
+                        <div class="weui_search_inner">
+                            <i class="weui_icon_search"></i>
+                            <input type="search" class="weui_search_input" placeholder="请输入关键词" required="">
+                            <a href="javascript:" class="weui_icon_clear"></a>
+                        </div>
+                    </form>
+                    <!--<a href="javascript:" class="highSerch left">-->
+                    <!--完成-->
+                    <!--</a>-->
+                </div>
+                <div class="department">
+                    <div class="weui_cells weui_cells_checkbox" id="weui_cells_checkbox">
+
+                    </div>
+                </div>
+                <div class="weui_btn_area fixed">
+                    <a class="weui_btn weui_btn_primary b0" id="btnComplete">
+                        完成
+                    </a>
+                </div>
+            </div>
+        </div>
+    </div>
+    <script src="../../assets/global/plugins/jquery.min.js"></script>
+    <script src="../../assets/mobile/js/messageTip.js"></script>
+    <script src="../../assets/mobile/js/global.js"></script>
+    <script src="../../assets/mobile/js/dataJson.js"></script>
+    <script>
+
+        /*json数据生成与删除*/
+        var object = {};
+        var person = [];
+        var str = "";
+        function shuzu(dataId,text,i){
+            object.names = text;
+            object.uniqueId = dataId;
+            object.id    = i;
+            person.push({
+                names:object.names,
+                uniqueId:object.uniqueId,
+                id   :object.id
+            });
+            console.log(JSON.stringify(person));
+        }
+        function chiocePerson(obj,e){
+            e.preventDefault();
+            $(obj).each(function(i){
+                if($(obj).find("input").prop("checked")){
+                    $(obj).find("input").prop({checked:false});
+                    var that = $(obj).attr("data");
+                    person = person.filter(function(obj){
+                        return obj.id != that;
+                    });
+    //                        console.log(JSON.stringify(person))
+                }else{
+                    $(obj).attr({"data":i});
+                    $(obj).find("input").prop({checked:true});
+                    $(obj).addClass("active");
+                    dataId =  $(obj).attr("data-id");
+                    text   =  $(obj).find(".weui_label").text();
+                    shuzu(dataId,text,i);
+                }
+            });
+
+        }
+
+        /*高级筛选*/
+        $(".bd a.weui_cell").on("touchend",function(){
+            var advancedSearch = $(".advancedSearch");
+            advancedSearch.removeClass("hide");
+            advancedSearch.addClass('slideInRight');
+            $(this).addClass("jsonAttr");
+            $(advancedSearch).on('webkitAnimationEnd', function (){
+                advancedSearch.removeClass("slideInRight");
+                advancedSearch.removeClass("hide");
+            }).on('animationend', function (){
+                advancedSearch.removeClass("slideInRight");
+                advancedSearch.removeClass("hide");
+            });
+        });
+
+        /*选择条件控制*/
+        $(".advancedSearch .weui_cell").each(function(i){
+            $(this).on("touchend",function(){
+                var addressChioce = $(".addressChioce");
+                var advancedSearch = $(".advancedSearch");
+                addressChioce.removeClass("hide");
+                addressChioce.addClass('slideInRight');
+
+                var len = infor[i].length;
+                var htmlPerson = '';
+                for(var n = 0;n<len;n++){
+                    htmlPerson += '<label class="weui_cell weui_check_label l0" onclick="chiocePerson(this,event)" for="'+n+'" data-id="'+infor[i][n].dataNumid+'">'+
+                            '<div class="weui_cell_hd">'+
+                            '<label class="weui_label">'+infor[i][n].personName+'</label>'+
+                            '</div>'+
+                            '<div class="weui_cell_bd weui_cell_primary">'+
+                            '<input type="checkbox" class="weui_check" name="checkbox1" id="'+n+'">'+
+                            '<i class="weui_icon_checked right"></i>'+
+                            '</div>'+
+                            '</label>';
+                }
+                htmlPerson += '';
+                $("#weui_cells_checkbox").html(htmlPerson);
+
+                $(addressChioce).on('webkitAnimationEnd', function (){
+                    addressChioce.removeClass("slideInRight");
+                    advancedSearch.addClass("hide");
+                    addressChioce.removeClass("hide");
+                }).on('animationend', function (){
+                    addressChioce.removeClass("slideInRight");
+                    addressChioce.removeClass("hide");
+                    advancedSearch.addClass("hide");
+                });
+            });
+        });
+
+
+        /*完成选择条件*/
+        $("#btnComplete").on("touchend",function(){
+            var addressChioce = $(this).closest(".addressChioce");
+            addressChioce.removeClass("hide");
+            addressChioce.addClass('slideOutRight');
+            str = '';
+            for(var j=0;j<person.length;j++){
+                str += '<span>'+person[j].names+'</span><input type="hidden" input-id="'+person[j].uniqueId+'"/>'
+            }
+            str += '';
+            $(".jsonAttr .taLeft").empty();
+            $(".jsonAttr .taLeft").html(str);
+            person = [];
+            $(".weui_cells a.weui_cell").removeClass("jsonAttr");
+            $(addressChioce).on('webkitAnimationEnd', function (){
+                addressChioce.removeClass("slideOutRight");
+                addressChioce.addClass("hide");
+            }).on('animationend', function (){
+                addressChioce.removeClass("slideOutRight");
+                addressChioce.addClass("hide");
+            });
+        });
+
+        /*返回上一级*/
+        $(".weui_search_bar span.left").on("touchend",function(){
+            if($(this).closest(".advancedSearch").get(0)){
+                var advancedSearch = $(".advancedSearch");
+                advancedSearch.removeClass("hide");
+                advancedSearch.addClass('slideOutRight');
+                $(advancedSearch).on('webkitAnimationEnd', function (){
+                    advancedSearch.removeClass("slideOutRight");
+                    advancedSearch.addClass("hide");
+                }).on('animationend', function (){
+                    advancedSearch.removeClass("slideOutRight");
+                    advancedSearch.addClass("hide");
+                });
+            }else if($(this).closest(".addressChioce").get(0)){
+                var addressChioce = $(".addressChioce");
+                var advancedSearch = $(".advancedSearch");
+                addressChioce.removeClass("hide");
+                advancedSearch.removeClass("hide");
+                addressChioce.addClass('slideOutRight');
+                $(addressChioce).on('webkitAnimationEnd', function (){
+                    addressChioce.removeClass("slideOutRight");
+                    addressChioce.addClass("hide");
+                    advancedSearch.removeClass("hide");
+                }).on('animationend', function (){
+                    addressChioce.removeClass("slideOutRight");
+                    addressChioce.addClass("hide");
+                    advancedSearch.removeClass("hide");
+                });
+            }
+        });
+
+        /*搜索条*/
+        $('.content').on('touchend', '#search_cancel', function () {
+            $('#search_input').val('');
+        })
+    </script>
+    <script>
+        $(function(){
+            /*结束时间与开始时间的控制*/
+            $('input').on('input propertychange',function(){
+                var start = $("#start").val().replace(/-/g,'');
+                var end   = $("#end").val().replace(/-/g,'');
+                if($("#end")[0].value != ''){
+                    if(start>end){
+                        showErrMsg('结束时间不能小于开始时间');
+                        $("#end").val(" ")
+                    }
+                }
+            });
+
+            /*选择部门*/
+            $(".departmentTitle").on("touchend",function(){
+                if($(this).is(".rotate")){
+                    $(this).removeClass("rotate");
+                    $(this).next(".weui_cells.style").removeClass("hide");
+                }else{
+                    $(this).addClass("rotate");
+                    $(this).next(".weui_cells.style").addClass("hide");
+                }
+            });
+
+
+            /*表单验证提示*/
+            $("#showTooltips").click(function(){
+                if($.trim($("#submitPerson").val()) == '') {
+                    showErrMsg('提交对象不能为空');
+                    return false;
+                }
+                else if($.trim($("#copePerson").val()) == ''){
+                    showErrMsg('抄送对象不能为空');
+                }
+                else if($.trim($("#start").val()) == ''){
+                    showErrMsg('开始时间不能为空');
+                }
+                else if($.trim($("#end").val()) == ''){
+                    showErrMsg('结束时间不能为空');
+                }else if($.trim($("#caseDetails").val()) == ''){
+                    showErrMsg('请假理由不能为空');
+                }
+                else{
+                    showLoading("数据提交中","提交成功");
+                }
+                return true;
+            });
+        })
+    </script>
+</body>
+</html>
