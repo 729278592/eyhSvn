@@ -13,7 +13,7 @@ var confim = '<div class="weui_dialog_confirm hide" id="dialogConfirm">'+
                      '</div>'+
                  '</div>'+
              '</div>';
-$(".content").append(confim);
+$(".page").append(confim);
 
 function confirmTip(message){
     var dialogConfirm = $("#dialogConfirm");

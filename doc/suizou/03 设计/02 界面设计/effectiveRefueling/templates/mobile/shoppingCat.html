@@ -242,39 +242,52 @@
     <script src="../../assets/mobile/plugins/jquery-spinner/js/jquery.spinner.js"></script>
     <script src="../../assets/mobile/js/confirm.js"></script>
     <script src="../../assets/mobile/js/global.js"></script>
+    <script src="../../assets/mobile/js/removeTip.js"></script>
     <script>
         $(function(){
             $('.spinnerExample').spinner({});
 
             /*商品删除弹框*/
+            var page = $(".page");
             $(".orderList").delegate(".btnRemove","touchend",function(){
                 confirmTip("是否删除该订单?");
-                $(".bd").addClass("zIndex");
                 $("#dialogConfirm").removeClass("hide");
                 $(this).closest("li").addClass("remove");
+                $("#signCancel").addClass("signCancel");
+                $("#signSure").addClass("signSure");
             });
 
             /*取消商品删除*/
-            $("#signCancel").on("touchend",function(){
+            page.delegate(".signCancel","touchend",function(){
                 $(".orderList li.remove").removeClass("remove");
-                $(".bd").removeClass("zIndex");
                 $("#dialogConfirm").addClass("hide");
             });
 
             /*确定商品删除*/
-            $("#signSure").on("touchend",function(){
+            page.delegate(".signSure","touchend",function(){
                 $(".orderList li.remove").remove();
-                $(".bd").removeClass("zIndex");
+                $("#dialogConfirm").addClass("hide");
+                showErrMsg("商品删除成功");
+            });
+
+            /*清空购物车弹框*/
+            $(".btnEmpty").on("touchend",function(){
+                confirmTip("是否清空购物车?");
+                $("#dialogConfirm").removeClass("hide");
+                $("#signCancel").addClass("signCancelAll");
+                $("#signSure").addClass("signSureAll");
+            });
+
+            /*确定商品清空*/
+            page.delegate(".signSureAll","touchend",function(){
+                $(".orderList").empty();
                 $("#dialogConfirm").addClass("hide");
             });
 
-
-            /*清空购物车弹框*/
-//            $(".btnEmpty").on("touchend",function(){
-//                confirmTip("是否清空购物车?");
-//                $(".bd").addClass("zIndex");
-//                $("#dialogConfirm").removeClass("hide");
-//            });
+            /*取消商品清空*/
+            page.delegate(".signCancelAll","touchend",function(){
+                $("#dialogConfirm").addClass("hide");
+            });
         })
     </script>
 </body>

@@ -520,14 +520,13 @@ img.shopInfor.w100{width: 100%;margin-bottom: 0.625rem;}
 .optionType.style li.last{width: 30%;}
 .optionType.style li.last button{background: #ff6702;}
 .weui_dialog_confirm.hide{display: none;}
-.weui_dialog_confirm{position: relative;z-index: 1000;}
-.bd.zIndex{position: relative;z-index: 200;}
+.weui_dialog_confirm{position: absolute;z-index: 1000;top: 0;bottom: 0;left: 0;right: 0;}
 .weui_cells_checkbox.left5 {display: inline-block;float: left;position: relative;left: 0.4rem;}
 .weui_cells_checkbox.style1 .weui_cell.style.p0{padding: 0;}
 .orderList.style li .orderCon .orderImg{padding: 0.6rem 0.5rem}
 .orderList.style li .orderCon p.style{position: relative;top: 0.5rem;}
 .optionType.style li.first.style{width: 65%;text-align: right;padding-right: 5%;}
-
+.swiper-container-horizontal>.swiper-pagination-bullets{bottom: 0;}
 /*myRecord*/
 .orderMenu.style li{width: 33.33%;}
 .orderMenu.style li a.active{color: #f73737;}
