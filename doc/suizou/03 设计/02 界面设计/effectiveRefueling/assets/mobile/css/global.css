@@ -23,7 +23,7 @@ button:active{opacity: 0.85;}
 
 /*head*/
 .hd{width: 100%;height: 2.5rem;background: #fe685b;line-height: 2.5rem;text-align: center;color: #fff;padding: 0;position: relative;z-index: 102;}
-.hd a .fa-angle-left{float: left;position: relative;top: 0.4rem;left: 1rem;font-size: 1.5rem;color: #fff}
+.hd>a{padding: 0 0.5rem;float: left;position: relative;left: 0.5rem;font-size: 1.5rem;color: #fff}
 .shop_cat,.dot_block{display: inline-block;position: relative;top: 0.34rem;right: 0.5rem;}
 .shop_cat{background: url(../images/shopCat.png) no-repeat;background-size: 100% 100%;width: 1.4rem;height: 1.4rem;}
 .dot_block{background: url(../images/dot.png) no-repeat;background-size: 0.29rem 1.25rem;width: 0.29rem;height: 1.25rem;padding: 0 0.5rem;background-position: 0.5rem 0;}
@@ -231,10 +231,12 @@ textarea{font-family: "微软雅黑";}
 .orderList li .orderCon .orderImg,.orderList li .orderCon .orderInfor{display: table-cell;}
 .orderList li .orderCon .orderImg{padding: 0.6rem 1rem;width: 30%;}
 .orderList li .orderCon .orderImg img{width: 4.875rem;height: 4.875rem;}
-.orderList li .orderCon .orderInfor{padding: 0.6rem 1rem 0 0;width: 65%;}
-.orderList li .orderCon .top{display: block;position: relative;top: -0.875rem;}
-.orderList li .orderCon .bottom{vertical-align: bottom;display: block;position: relative;top: 0.625rem;}
+/*.orderList li .orderCon .orderInfor{padding: 0.6rem 1rem 0 0;width: 65%;}*/
+.orderList li .orderCon .orderInfor{padding-right:1rem;width: 65%;}
+.orderList li .orderCon .top{display: block;position: relative;top: -0.475rem;}
+.orderList li .orderCon .bottom{vertical-align: bottom;display: block;position: relative;top: 0.425rem;}
 .orderList li .orderCon span{}
+.orderList li .orderCon p{margin: 0;}
 .orderList li .orderCon .btnType{outline: none;text-align:center;width: 4.5rem;height: 1.8rem;background: #ff6702;border: 1px solid #ff6702;border-radius: 0.125rem;color: #fff;font-family: "微软雅黑";font-size: 0.825rem;}
 .orderList li .orderCon a{text-align:center;width: 4.5rem;height: 1.8rem;line-height:1.8rem;border-radius: 0.125rem;color: #4cb68d;border: 1px solid #4cb68d;font-size: 0.825rem;}
 .orderList li .orderCon .btnType:active{opacity: 0.8;}
@@ -322,20 +324,20 @@ textarea{font-family: "微软雅黑";}
 .weui_cells_checkbox .weui_cell_hd.style{position: relative;top: -0.625rem;}
 .weui_cells_checkbox.style1 .weui_check:checked + .weui_icon_checked:before{color: #f83a3a;}
 .invoiceHead.style .inline_block{display: inline-block;float: left;}
-.invoiceHead.style .inline_block.style{padding: 10px 0;width: 78%;}
+.invoiceHead.style .inline_block.style{padding: 10px 0;width: 82%;}
 .weui_cells_checkbox.style1 .weui_cell:active{background: #fff;}
 .weui_cells_checkbox.style1 .weui_cell.style{padding: 10px 0 10px 15px;}
-
+.invoice.style{width: 100%;margin: 0;}
 
 /*index*/
 .formIndex{width: 60%;display: inline-block;position: relative;}
-.formIndex .search_input{border: none;padding: 0.4rem 2rem;border-radius: 0.125rem;font-family: "微软雅黑";}
+.formIndex .search_input{border: none;padding: 0.4rem 1.5rem 0.4rem 2rem;border-radius: 0.125rem;font-family: "微软雅黑";}
 .formIndex .fa-search{position: absolute;left: 0.5rem;color: #333;top: 0.75rem}
 .formIndex .weui_icon_clear {position: absolute;top: -0.1rem;left: 11.3rem;padding: 0 10px;}
 .formIndex .weui_icon_clear.hide{display: none;}
-.swiper-slide img.w100{height: 9.3rem;}
+.swiper-slide img.w100{height: 9.3rem;width: 100%;}
 .cardBg{position: relative;background: url(../images/indexCard.png) no-repeat;width: 94%;margin: 0.625rem 3%;background-size: 100% 100%;height: 9rem;}
-.btnApply{position: absolute;bottom: 0.8rem;left: 50%;width: 7.5rem;height: 2.25rem;text-align: center;margin-left: -3.75rem;border: none;outline: none;background: #9ec62e;border-radius: 0.25rem;color: #fff;font-size: 1rem;font-family: "微软雅黑";}
+.btnApply{position: absolute;bottom: 0.8rem;left: 50%;width: 7.5rem;height: 2.25rem;line-height: 2.25rem;text-align: center;margin-left: -3.75rem;border: none;outline: none;background: #9ec62e;border-radius: 0.25rem;color: #fff;font-size: 1rem;font-family: "微软雅黑";display: inline-block;}
 .ulLink{display: block;margin-bottom: 0.625rem;}
 .ulLink li{float: left;width: 50%;}
 .ulLink li a{display: inline-block;width: 100%;height: 100%;}
@@ -405,8 +407,6 @@ textarea{font-family: "微软雅黑";}
 .entryList.mainstyle li>div{width: 85%;padding: 10px 5% 10px 10%;}
 
 
-
-
 /*classification*/
 .shoppingMenu{position: fixed;left: 0;top: 2.5rem;bottom: 3rem;min-height: 24.25rem;background: #fff;}
 .shoppingMenu li{border-bottom: 1px solid #efefef;}
@@ -425,8 +425,6 @@ textarea{font-family: "微软雅黑";}
 .shoppingMenu li.active a .shop_icon4{display: inline-block;width: 2rem;height: 1.25rem;background: url(../images/class4-2.png) no-repeat;background-size: 100% 100%;}
 .shoppingMenu li.active a .shop_icon5{display: inline-block;width: 2rem;height: 1.25rem;background: url(../images/class5-2.png) no-repeat;background-size: 100% 100%;}
 .shoppingMenu li.active a .shop_icon6{display: inline-block;width: 2rem;height: 1.25rem;background: url(../images/class6-2.png) no-repeat;background-size: 100% 100%;}
-
-
 .shopping{position: absolute;left: 6.4rem;right: 0.6rem;}
 .shoppingList{width: 100%;padding-bottom: 3.6rem;}
 .shoppingList li{width: 100%;margin-top: 0.625rem;background: #fff;}
@@ -444,7 +442,9 @@ textarea{font-family: "微软雅黑";}
 
 /*classificationInfor*/
 .shopping.style{position: relative;width: 100%;left:0;right: 0;}
-.shopping .shoppingList{padding-bottom: 0;}
+
+
+/*.shopping .shoppingList{padding-bottom: 0;}*/
 .shopping.style .shoppingList li {margin-top: 0;}
 .shopping.style .shoppingList li a .shop_list_bg{border-radius: 0;height: 8rem;}
 .shopping.style .shoppingList li a p{margin: 0.2rem 0;}
@@ -466,7 +466,7 @@ img.shopInfor.w100{width: 100%;margin-bottom: 0.625rem;}
 .optionType li button{font-family: "微软雅黑";outline: none;border: none;width: 100%;height: 100%;font-size: 1rem;color: #fff;}
 .optionType li .addCart{background: #9a9a9a;}
 .optionType li .nowBuy{background: #ff6702;}
-
+.optionType li a.nowBuy{display: inline-block;line-height: 48px;color: #fff;}
 /*gasStationList*/
 .hotStation{width: 100%;background: #fff;border-top: 1px solid #dbdbdb;}
 .hotStation.mt{margin-top: 0.625rem;}
@@ -525,6 +525,72 @@ img.shopInfor.w100{width: 100%;margin-bottom: 0.625rem;}
 .weui_cells_checkbox.left5 {display: inline-block;float: left;position: relative;left: 0.4rem;}
 .weui_cells_checkbox.style1 .weui_cell.style.p0{padding: 0;}
 .orderList.style li .orderCon .orderImg{padding: 0.6rem 0.5rem}
+.orderList.style li .orderCon p.style{position: relative;top: 0.5rem;}
+.optionType.style li.first.style{width: 65%;text-align: right;padding-right: 5%;}
+
+/*myRecord*/
+.orderMenu.style li{width: 33.33%;}
+.orderMenu.style li a.active{color: #f73737;}
+.orderMenu.style li a .record{position: relative;top: 0.3rem;display: inline-block;}
+.orderMenu.style li a .recordIcon1{width: 1.25rem;height: 1.25rem;background: url(../images/record1.png) no-repeat;background-size: 100% 100%;}
+.orderMenu.style li a .recordIcon2{width: 1.25rem;height: 1.25rem;background: url(../images/record2.png) no-repeat;background-size: 100% 100%;}
+.orderMenu.style li a .recordIcon3{width: 1.25rem;height: 1.25rem;background: url(../images/record3.png) no-repeat;background-size: 100% 100%;}
+.orderMenu.style li a.active .recordIcon1{width: 1.25rem;height: 1.25rem;background: url(../images/record1-1.png) no-repeat;background-size: 100% 100%;}
+.orderMenu.style li a.active .recordIcon2{width: 1.25rem;height: 1.25rem;background: url(../images/record2-1.png) no-repeat;background-size: 100% 100%;}
+.orderMenu.style li a.active .recordIcon3{width: 1.25rem;height: 1.25rem;background: url(../images/record3-1.png) no-repeat;background-size: 100% 100%;}
+.orderMenu.style li{position: relative;}
+.orderMenu.style li:after{position: absolute;width: 1px;border-right: 1px solid #efefef;content: "";top: 0;right: 0;bottom: -3px;}
+.orderMenu.style li:last-child:last-child{border: none;}
+.orderMenu.style li a{border-bottom-color: transparent;}
+.orderMenu.style li a.active {color: #f65050; border-bottom: 3px solid #f65050;}
+.invoiceList.style li .invoiceCon{display: block;}
+.invoiceList.style li .invoiceCon span.color{color: #ff3b30;}
+.weui_cells.mt{margin-top: 0.625rem;}
+
+/*paySucess*/
+.paySucess{background: #fff;text-align: center;font-size: 0.875rem;color: #666;}
+.paySucessBody{padding: 1rem 0;display: block;}
+.paySucessBody img{width: 2.5rem;}
+.paySucessFt{border-top: 1px solid #efefef;padding: 0.5rem 0;border-bottom: 1px solid #dbdbdb;}
+.paySucessBody .title{font-size:1.125rem;color: #333;}
+.pd5{padding: 0.5rem;background: #fff;border-top: 1px solid #efefef;border-bottom: 1px solid #dbdbdb;}
+.pd5 .weui_btn{background: #ff6702;}
+.otherInfor{background: #fff;margin-top: 0.625rem;border-top: 1px solid #dbdbdb;}
+.otherHead{display: block;color: #666;font-size: 0.875rem;padding: 0.625rem 15px;border-bottom: 1px solid #efefef;}
+.otherHead span{}
+.otherHead a{color: #666;}
+.otherCon{padding: 0.5rem;}
+.shoppingList.pb0{padding-bottom: 0;}
+.shoppingList.style{display: block;}
+.shoppingList.style li{float: left;width: 48%;margin-right: 2%;margin-top: 0;}
+.shoppingList.style li.mr0{margin-right: 0;}
+.shoppingList li a p.smallTile,.shoppingList li a p.tile{display: -webkit-box;
+    -webkit-box-orient: vertical;
+    -webkit-line-clamp: 1;
+    overflow: hidden;
+    text-overflow: ellipsis;}
+
+/*couponIndex*/
+.couponMoneyList{width: 100%;padding-bottom: 3.6rem;}
+.couponMoneyList li{position: relative;margin-top: 0.8rem;background: url(../images/coupon.png) no-repeat;width: 100%;height: 100px;background-size: 100% 100%;}
+.couponMoneyList li a{display: inline-block;width: 100%;height: 100%;}
+.couponMoneyList li p{color: #333;font-size: 0.875rem;display: block;width: 100%;}
+.couponMoneyList li p.title{color: #fff;position: absolute;top: 0.6rem;left: 2rem;}
+.couponMoneyList li p.couponP{position: absolute;top: 2rem;left: 4rem;font-size: 1rem;}
+.couponMoneyList li p.money{position: absolute;bottom: 0.25rem;color: #fff;font-size: 1rem;text-align: center;}
+.couponMoneyList li p .couponNum{font-size: 1.25rem;color: #ff0404;}
+
+
+/*couponInfor*/
+.couponMoneyList.style{padding-bottom: 0;width: 94%;margin: 0 3.5% 0.625rem 2.5%;}
+.couponMoneyList.style li{height: 150px;}
+
+/*payInvoice*/
+.invoice{width: 94%;margin: 0 3%;}
+.invoice p{width: 100%;margin: 0.5rem 0;}
+.invoice p input{padding: 0.5rem 0 0.5rem 0.5rem;border: 1px solid #dbdbdb;outline: none;width: 70%;}
+.invoice p span{color: #666;}
+.invoice p span.title{font-size: 1rem;color: #333;}
 @media screen and (max-width: 768px) {
     body,html{font-size: 20px;}
 }
@@ -541,22 +607,41 @@ img.shopInfor.w100{width: 100%;margin-bottom: 0.625rem;}
 }
 @media screen and (max-width: 415px) {
     .formIndex .weui_icon_clear{left: 11rem;}
-    .formIndex .fa-search{left: 1rem;}
+    .formIndex .fa-search{left: 1.5rem;}
     .shoppingList li a .shop_list_bg{height: 8rem;}
     .shopping.style .shoppingList li a .shop_list_bg{height: 10rem;}
+    .couponMoneyList li p.title{color: #fff;position: absolute;top: 0.3rem;left: 2rem;}
+    .couponMoneyList li p.couponP{position: absolute;top: 1.7rem;left: 5rem;font-size: 1rem;}
+    .couponMoneyList li p.money{position: absolute;bottom: 0.25rem;color: #fff;font-size: 1rem;text-align: center;}
+    .couponMoneyList li p .couponNum{font-size: 1.25rem;color: #ff0404;}
+    .couponMoneyList.style li p.title{color: #fff;position: absolute;top: 0.8rem;left: 4rem;}
+    .couponMoneyList.style li p.couponP{position: absolute;top: 3rem;left: 7.5rem;font-size: 1rem;}
+    .couponMoneyList.style li p.money{position: absolute;bottom: 0.5rem;color: #fff;font-size: 1rem;text-align: center;}
 }
 @media screen and (max-width: 384px) {
     .formIndex .weui_icon_clear{left: 10.5rem;}
 
 }
 @media screen and (max-width: 375px) {
+    .formIndex .fa-search{left: 1rem;}
     .shoppingList li a .shop_list_bg{height: 7rem;}
     .shopping.style .shoppingList li a .shop_list_bg{height: 9rem;}
+    .couponMoneyList li p.title{color: #fff;position: absolute;top: 0.35rem;left: 2rem;}
+    .couponMoneyList li p.couponP{position: absolute;top: 1.7rem;left: 4rem;font-size: 1rem;}
+    .couponMoneyList.style li p.title{color: #fff;position: absolute;top: 1rem;left: 3rem;}
+    .couponMoneyList.style li p.couponP{position: absolute;top: 3.5rem;left: 6.5rem;font-size: 1rem;}
+    .couponMoneyList.style li p.money{position: absolute;bottom: 0.7rem;color: #fff;font-size: 1rem;text-align: center;}
+
 }
 @media screen and (max-width: 360px) {
     body,html{font-size: 16px;}
 }
 @media screen and (max-width: 320px) {
+    .formIndex .fa-search{left: 0.8rem;}
     .shoppingList li a .shop_list_bg{height: 6rem;}
     .shopping.style .shoppingList li a .shop_list_bg{height: 8rem;}
+    .couponMoneyList li p.title{color: #fff;position: absolute;top: 0.6rem;left: 2rem;}
+    .couponMoneyList li p.couponP{position: absolute;top: 2rem;left: 4rem;font-size: 1rem;}
+    .couponMoneyList li p.money{position: absolute;bottom: 0.25rem;color: #fff;font-size: 1rem;text-align: center;}
+    .couponMoneyList li p .couponNum{font-size: 1.25rem;color: #ff0404;}
 }

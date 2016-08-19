@@ -1,0 +1,88 @@
+<!DOCTYPE html>
+<html>
+<head lang="en">
+    <meta charset="UTF-8">
+    <title>发票支付</title>
+    <meta name="viewport" content="width=device-width; initial-scale=1.0; user-scalable=no;">
+    <link rel="stylesheet" href="../../assets/global/plugins/font/css/font-awesome.min.css"/>
+    <link rel="stylesheet" href="../../assets/mobile/css/weui.css"/>
+    <link rel="stylesheet" href="../../assets/mobile/css/example.css"/>
+    <link rel="stylesheet" href="../../assets/mobile/css/global.css"/>
+</head>
+<body>
+    <div class="content errDailog">
+        <div class="page">
+            <div class="hd">
+                <a>
+                    <i class="fa fa-angle-left"></i>
+                </a>
+                得力加油
+                <div class="right nav_block">
+                    <a class="shop_cat"></a>
+                    <a class="dot_block"></a>
+                    <ul class="nav_link">
+                        <li>
+                            <a href="###">
+                                主页
+                            </a>
+                        </li>
+                        <li>
+                            <a href="###">
+                                精选商城
+                            </a>
+                        </li>
+                        <li>
+                            <a href="###">
+                                优惠券
+                            </a>
+                        </li>
+                        <li>
+                            <a href="###">
+                                会员中心
+                            </a>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+            <div class="bd absolute pd48">
+                <form action="#" id="form" onsubmit="return false">
+                    <div class="invoice">
+                        <p>
+                            <span class="title">发票抬头</span>
+                            <input type="text" class="invoiceInput" id="invoiceNum"/>
+                        </p>
+                        <p>
+                            <span class="title">发票内容</span>
+                            <span>汽油</span>
+                        </p>
+                        <p>
+                            <span class="title">发票金额</span>
+                            <span>￥600.00</span>
+                        </p>
+                        <div class="weui_btn_area fixed">
+                            <input type="submit" class="weui_btn b0 weui_btn_primary" id="saveBtn" value="确认">
+                        </div>
+                    </div>
+                </form>
+            </div>
+        </div>
+    </div>
+    <script src="../../assets/global/plugins/jquery/jquery-1.11.3.min.js"></script>
+    <script src="../../assets/mobile/js/global.js"></script>
+    <script src="../../assets/mobile/js/removeTip.js"></script>
+    <script>
+        $(function(){
+            $("#saveBtn").on("touchend",function(){
+                if($.trim($("#invoiceNum").val())== '') {
+                    showErrMsg('发票抬头不能为空');
+                    return false;
+                }
+                else{
+                    window.location.href = "personCenter.html";
+                }
+                return true;
+            })
+        })
+    </script>
+</body>
+</html>

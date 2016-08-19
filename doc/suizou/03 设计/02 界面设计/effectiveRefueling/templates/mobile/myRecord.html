@@ -2,7 +2,7 @@
 <html>
 <head lang="en">
     <meta charset="UTF-8">
-    <title>我的订单</title>
+    <title>加油记录</title>
     <meta name="viewport" content="width=device-width; initial-scale=1.0; user-scalable=no;">
     <link rel="stylesheet" href="../../assets/global/plugins/font/css/font-awesome.min.css"/>
     <link rel="stylesheet" href="../../assets/mobile/css/global.css"/>
@@ -43,32 +43,64 @@
                 </div>
             </div>
             <div class="bd absolute pt">
-                <ul class="orderMenu clearfix">
+                <ul class="orderMenu style clearfix">
                     <li>
                         <a href="###" class="active" data="orderPay">
-                            <span class="order orderIcon1"></span><br/>
-                            待付款
+                            <span class="record recordIcon1"></span>
+                            全部记录
                         </a>
                     </li>
                     <li>
                         <a href="###" data="orderPaySucess">
-                            <span class="order orderIcon2"></span><br/>
-                            待取货
+                            <span class="record recordIcon2"></span>
+                            充值记录
                         </a>
                     </li>
                     <li>
                         <a href="###" data="orderRefund">
-                            <span class="order orderIcon3"></span><br/>
-                            已完成
-                        </a>
-                    </li>
-                    <li>
-                        <a href="###" data="orderRefundSuccess">
-                            <span class="order orderIcon4"></span><br/>
-                            退款中
+                            <span class="record recordIcon3"></span>
+                            会员消费
                         </a>
                     </li>
                 </ul>
+                <div id="record">
+                    <ul class="invoiceList style">
+                        <li>
+                            <div class="invoiceCon">
+                                <p class="clearfix">
+                                    <span class="first left">加油</span>
+                                    <span class="second left">-￥200.00</span>
+                                    <span class="last right">直接支付</span>
+                                </p>
+                                <p class="clearfix">
+                                    <span class="left">93#</span>
+                                    <span class="right color">+4积分</span>
+                                </p>
+                                <p class="clearfix">
+                                    <span class="left">重庆市黄花园加油站</span>
+                                    <span class="right">2016-08-09 13:00</span>
+                                </p>
+                            </div>
+                        </li>
+                        <li>
+                            <div class="invoiceCon">
+                                <p class="clearfix">
+                                    <span class="first left">加油</span>
+                                    <span class="second left">-￥200.00</span>
+                                    <span class="last right">直接支付</span>
+                                </p>
+                                <p class="clearfix">
+                                    <span class="left">93#</span>
+                                    <span class="right color">+4积分</span>
+                                </p>
+                                <p class="clearfix">
+                                    <span class="left">重庆市黄花园加油站</span>
+                                    <span class="right">2016-08-09 13:00</span>
+                                </p>
+                            </div>
+                        </li>
+                    </ul>
+                </div>
                 <div class="notConTip hide">
                     <img src="../../assets/mobile/images/notContent.png" alt=""/>
                     <p class="notInfor">
@@ -91,7 +123,7 @@
                 dataType : "html",
                 cache : false,
                 success : function(data) {
-                    $(".bd").find("#order").html(data);
+                    $(".bd").find("#record").html(data);
                 }
             });
 
@@ -107,7 +139,7 @@
                     dataType : "html",
                     cache : false,
                     success : function(data) {
-                        that.closest(".bd").find("#order").html(data);
+                        that.closest(".bd").find("#record").html(data);
                     }
                 });
             });
@@ -120,10 +152,3 @@
     </script>
 </body>
 </html>
-
-
-
-
-
-
-
