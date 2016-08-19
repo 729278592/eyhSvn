@@ -104,106 +104,14 @@
                         销售部
                         <span class="caretDown"></span>
                     </p>
-                    <div class="weui_cells style mt0">
-                        <div class="weui_cell l0">
-                            <div class="weui_cell_hd">
-                                <label class="weui_label">
-                                    总　　监
-                                </label>
-                            </div>
-                            <div class="weui_cell_bd weui_cell_primary">
-                            </div>
-                        </div>
-                        <div class="weui_cell l0">
-                            <div class="weui_cell_hd">
-                                <label class="weui_label">
-                                    经　　理
-                                </label>
-                            </div>
-                            <div class="weui_cell_bd weui_cell_primary">
-                            </div>
-                        </div>
-                        <div class="weui_cell l0">
-                            <div class="weui_cell_hd">
-                                <label class="weui_label">
-                                    　副经理
-                                </label>
-                            </div>
-                            <div class="weui_cell_bd weui_cell_primary">
-                            </div>
-                        </div>
-                        <div class="weui_cell l0">
-                            <div class="weui_cell_hd">
-                                <label class="weui_label">
-                                    营销顾问
-                                </label>
-                            </div>
-                            <div class="weui_cell_bd weui_cell_primary">
-                            </div>
-                        </div>
+                    <div class="weui_cells mt0 weui_cells_checkbox">
+
                     </div>
                     <p class="departmentTitle rotate">
                         市场部
                         <span class="caretDown"></span>
                     </p>
-                    <div class="weui_cells style mt0 hide">
-                        <div class="weui_cell l0">
-                            <div class="weui_cell_hd">
-                                <label class="weui_label">
-                                    总　　监
-                                </label>
-                            </div>
-                            <div class="weui_cell_bd weui_cell_primary">
-                            </div>
-                        </div>
-                        <div class="weui_cell l0">
-                            <div class="weui_cell_hd">
-                                <label class="weui_label">
-                                    经　　理
-                                </label>
-                            </div>
-                            <div class="weui_cell_bd weui_cell_primary">
-                            </div>
-                        </div>
-                        <div class="weui_cell l0">
-                            <div class="weui_cell_hd">
-                                <label class="weui_label">
-                                    　副经理
-                                </label>
-                            </div>
-                            <div class="weui_cell_bd weui_cell_primary">
-                            </div>
-                        </div>
-                        <div class="weui_cell l0">
-                            <div class="weui_cell_hd">
-                                <label class="weui_label">
-                                    营销顾问
-                                </label>
-                            </div>
-                            <div class="weui_cell_bd weui_cell_primary">
-                            </div>
-                        </div>
-                    </div>
-                </div>
-            </div>
-            <div class="addressChioce hide">
-                <div class="weui_search_bar style clearfix">
-                    <span class="left">
-                        <i class="fa fa-angle-left"></i>
-                    </span>
-                    <form class="weui_search_outer left">
-                        <div class="weui_search_inner">
-                            <i class="weui_icon_search"></i>
-                            <input type="search" class="weui_search_input" placeholder="请输入关键词" required="">
-                            <a href="javascript:" class="weui_icon_clear"></a>
-                        </div>
-                    </form>
-                    <!--<a href="javascript:" class="highSerch left">-->
-                        <!--完成-->
-                    <!--</a>-->
-                </div>
-                <div class="department">
-                    <div class="weui_cells weui_cells_checkbox" id="weui_cells_checkbox">
+                    <div class="weui_cells mt0 hide weui_cells_checkbox">
 
                     </div>
                 </div>
@@ -234,7 +142,6 @@
                     uniqueId:object.uniqueId,
                     id   :object.id
                 });
-                console.log(JSON.stringify(person));
             }
             function chiocePerson(obj,e){
                 e.preventDefault();
@@ -273,48 +180,38 @@
                 });
             });
 
-            /*选择条件控制*/
-            $(".advancedSearch .weui_cell").each(function(i){
+            /*选择部门*/
+            $(".advancedSearch .departmentTitle").each(function(i){
+                var advancedSearch = $(".advancedSearch");
+                var len = infor[i].length;
+                var htmlPerson = '';
+                for(var n = 0;n<len;n++){
+                    htmlPerson += '<label class="weui_cell weui_check_label l0" onclick="chiocePerson(this,event)" for="'+n+'" data-id="'+infor[i][n].dataNumid+'">'+
+                                      '<div class="weui_cell_hd">'+
+                                          '<label class="weui_label">'+infor[i][n].personName+'</label>'+
+                                      '</div>'+
+                                      '<div class="weui_cell_bd weui_cell_primary">'+
+                                          '<input type="checkbox" class="weui_check" name="checkbox1" id="'+n+'">'+
+                                          '<i class="weui_icon_checked right"></i>'+
+                                      '</div>'+
+                                  '</label>';
+                }
+                htmlPerson += '';
+                $(".weui_cells_checkbox").eq(i).html(htmlPerson);
                 $(this).on("touchend",function(){
-                    var addressChioce = $(".addressChioce");
-                    var advancedSearch = $(".advancedSearch");
-                    addressChioce.removeClass("hide");
-                    addressChioce.addClass('slideInRight');
+                    if($(this).is(".rotate")){
+                        $(this).removeClass("rotate");
+                        $(this).next(".weui_cells_checkbox").removeClass("hide");
 
-                    var len = infor[i].length;
-                    var htmlPerson = '';
-                    for(var n = 0;n<len;n++){
-                        htmlPerson += '<label class="weui_cell weui_check_label l0" onclick="chiocePerson(this,event)" for="'+n+'" data-id="'+infor[i][n].dataNumid+'">'+
-                                          '<div class="weui_cell_hd">'+
-                                              '<label class="weui_label">'+infor[i][n].personName+'</label>'+
-                                          '</div>'+
-                                          '<div class="weui_cell_bd weui_cell_primary">'+
-                                              '<input type="checkbox" class="weui_check" name="checkbox1" id="'+n+'">'+
-                                              '<i class="weui_icon_checked right"></i>'+
-                                          '</div>'+
-                                      '</label>';
+                    }else{
+                        $(this).addClass("rotate");
+                        $(this).next(".weui_cells_checkbox").addClass("hide");
                     }
-                    htmlPerson += '';
-                    $("#weui_cells_checkbox").html(htmlPerson);
-
-                    $(addressChioce).on('webkitAnimationEnd', function (){
-                        addressChioce.removeClass("slideInRight");
-                        advancedSearch.addClass("hide");
-                        addressChioce.removeClass("hide");
-                    }).on('animationend', function (){
-                        addressChioce.removeClass("slideInRight");
-                        addressChioce.removeClass("hide");
-                        advancedSearch.addClass("hide");
-                    });
                 });
             });
 
-
             /*完成选择条件*/
             $("#btnComplete").on("touchend",function(){
-                var addressChioce = $(this).closest(".addressChioce");
-                addressChioce.removeClass("hide");
-                addressChioce.addClass('slideOutRight');
                 str = '';
                 for(var j=0;j<person.length;j++){
                     str += '<span>'+person[j].names+'</span><input type="hidden" input-id="'+person[j].uniqueId+'"/>'
@@ -324,43 +221,27 @@
                 $(".jsonAttr .taLeft").html(str);
                 person = [];
                 $(".weui_cells a.weui_cell").removeClass("jsonAttr");
-                $(addressChioce).on('webkitAnimationEnd', function (){
-                    addressChioce.removeClass("slideOutRight");
-                    addressChioce.addClass("hide");
-                }).on('animationend', function (){
-                    addressChioce.removeClass("slideOutRight");
-                    addressChioce.addClass("hide");
-                });
+                returns();
             });
 
+
             /*返回上一级*/
+            function returns(){
+                var advancedSearch = $(".advancedSearch");
+                advancedSearch.removeClass("hide");
+                advancedSearch.addClass('slideOutRight');
+                $(advancedSearch).on('webkitAnimationEnd', function (){
+                    advancedSearch.removeClass("slideOutRight");
+                    advancedSearch.addClass("hide");
+                }).on('animationend', function (){
+                    advancedSearch.removeClass("slideOutRight");
+                    advancedSearch.addClass("hide");
+                });
+            }
+
             $(".weui_search_bar span.left").on("touchend",function(){
                 if($(this).closest(".advancedSearch").get(0)){
-                    var advancedSearch = $(".advancedSearch");
-                    advancedSearch.removeClass("hide");
-                    advancedSearch.addClass('slideOutRight');
-                    $(advancedSearch).on('webkitAnimationEnd', function (){
-                        advancedSearch.removeClass("slideOutRight");
-                        advancedSearch.addClass("hide");
-                    }).on('animationend', function (){
-                        advancedSearch.removeClass("slideOutRight");
-                        advancedSearch.addClass("hide");
-                    });
-                }else if($(this).closest(".addressChioce").get(0)){
-                    var addressChioce = $(".addressChioce");
-                    var advancedSearch = $(".advancedSearch");
-                    addressChioce.removeClass("hide");
-                    advancedSearch.removeClass("hide");
-                    addressChioce.addClass('slideOutRight');
-                    $(addressChioce).on('webkitAnimationEnd', function (){
-                        addressChioce.removeClass("slideOutRight");
-                        addressChioce.addClass("hide");
-                        advancedSearch.removeClass("hide");
-                    }).on('animationend', function (){
-                        addressChioce.removeClass("slideOutRight");
-                        addressChioce.addClass("hide");
-                        advancedSearch.removeClass("hide");
-                    });
+                    returns();
                 }
             });
 
@@ -382,18 +263,6 @@
                     }
                 }
             });
-
-            /*选择部门*/
-            $(".departmentTitle").on("touchend",function(){
-                if($(this).is(".rotate")){
-                    $(this).removeClass("rotate");
-                    $(this).next(".weui_cells.style").removeClass("hide");
-                }else{
-                    $(this).addClass("rotate");
-                    $(this).next(".weui_cells.style").addClass("hide");
-                }
-            });
-
 
             /*表单验证提示*/
             $("#showTooltips").click(function(){
