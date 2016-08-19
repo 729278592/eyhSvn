@@ -24,7 +24,7 @@ $(function(){
     });
 
     /*返回上一页面*/
-    $(".hd .left").on("click",function(){
-        window.history.go(-1)
+    $(".hd>a").on("touchend",function(){
+        window.history.go(-1);
     });
 });

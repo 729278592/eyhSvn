@@ -55,7 +55,7 @@
                         </li>
                     </ul>
                 </div>
-                <div class="invoice" id="invoice">
+                <div class="invoice style" id="invoice">
 
                 </div>
             </div>
@@ -103,6 +103,17 @@
                 }else{
                     invoiceCon.slideUp();
                     $(this).find(".fa-angle-down").removeClass("fa-angle-down").addClass("fa-angle-right");
+                }
+            });
+
+
+            /*发票全部与全不选*/
+            $("#invoice").delegate(".weui_cells_checkbox.inline_block","touchend",function(e){
+                e.stopPropagation();
+                if($(this).find("input").prop("checked")){
+                    $(this).closest(".invoiceHead ").next(".invoiceCon ").find("input").prop({checked:false})
+                }else{
+                    $(this).closest(".invoiceHead ").next(".invoiceCon ").find("input").prop({checked:"checked"})
                 }
             })
         })
