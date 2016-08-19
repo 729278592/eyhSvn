@@ -411,6 +411,7 @@ textarea{font-family: "微软雅黑";}
 .shoppingMenu{position: fixed;left: 0;top: 2.5rem;bottom: 3rem;min-height: 24.25rem;background: #fff;}
 .shoppingMenu li{border-bottom: 1px solid #efefef;}
 .shoppingMenu li a{display: inline-block;text-align: center;padding:0.5rem 1rem;border-left: 2px solid transparent;font-size: 0.875rem;color: #666;background: #fff;min-width: 3.625rem;}
+.shoppingMenu.style li a{padding: 2rem 1rem;}
 .shoppingMenu li.active{}
 .shoppingMenu li.active a{border-left-color: #fe695c;color: #ff0404;}
 .shoppingMenu li a .shop_icon1{display: inline-block;width: 2rem;height: 1.25rem;background: url(../images/class1-1.png) no-repeat;background-size: 100% 100%;}
