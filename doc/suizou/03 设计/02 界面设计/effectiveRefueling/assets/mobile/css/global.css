@@ -254,10 +254,11 @@ textarea{font-family: "微软雅黑";}
 .applicatioNav{width: 100%;background: #fff;display: block;}
 .applicatioNav li{float: left;text-align: center;font-size: 1rem;width: 50%;position: relative;}
 .applicatioNav li:first-child:after{content: "";position: absolute;right: 0;top: 0;width: 1px;bottom: 0;border-right: 1px solid #efefef;}
-.applicatioNav li a{display: inline-block;width: 100%;padding: 0.875rem 0;border-bottom: 3px solid transparent;color: #333;}
+.applicatioNav li a{display: inline-block;width: 100%;padding: 0.6rem 0;border-bottom: 3px solid transparent;color: #333;}
 .applicatioNav li a.active{color: #f65050;border-bottom: 3px solid #f65050;}
 .coupon{width: 100%;}
 .couponList{}
+.weui_btn_disabled {color: rgba(255, 255, 255, 0.8);}
 .couponList li{padding: 0.25rem 0.93rem;background: #fff;margin-top: 0.625rem;border-top: 1px solid #dbdbdb;border-bottom: 1px solid #dbdbdb;}
 .couponList li p{font-size:1rem;margin: 0.3rem 0;display: block;}
 .couponList li p span{color: #999;font-size: 0.875rem;}
@@ -337,7 +338,9 @@ textarea{font-family: "微软雅黑";}
 .formIndex .weui_icon_clear.hide{display: none;}
 .swiper-slide img.w100{height: 9.3rem;width: 100%;}
 .cardBg{position: relative;background: url(../images/indexCard.png) no-repeat;width: 94%;margin: 0.625rem 3%;background-size: 100% 100%;height: 9rem;}
-.btnApply{position: absolute;bottom: 0.8rem;left: 50%;width: 7.5rem;height: 2.25rem;line-height: 2.25rem;text-align: center;margin-left: -3.75rem;border: none;outline: none;background: #9ec62e;border-radius: 0.25rem;color: #fff;font-size: 1rem;font-family: "微软雅黑";display: inline-block;}
+.btnApply,.btnApplyed{position: absolute;bottom: 0.8rem;left: 50%;width: 7.5rem;height: 2.25rem;line-height: 2.25rem;text-align: center;margin-left: -3.75rem;border: none;outline: none;background: #9ec62e;border-radius: 0.25rem;color: #fff;font-size: 1rem;font-family: "微软雅黑";display: inline-block;}
+.btnApplyed{background: #ccc;}
+.btnApplyed.hide{display: none;}
 .ulLink{display: block;margin-bottom: 0.625rem;}
 .ulLink li{float: left;width: 50%;}
 .ulLink li a{display: inline-block;width: 100%;height: 100%;}
