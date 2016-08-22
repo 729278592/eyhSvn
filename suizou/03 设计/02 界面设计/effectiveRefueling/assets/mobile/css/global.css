@@ -233,6 +233,8 @@ textarea{font-family: "微软雅黑";}
 .orderList li .orderCon .orderImg{padding: 0.6rem 1rem;width: 30%;}
 .orderList li .orderCon .orderImg img{width: 4.875rem;height: 4.875rem;}
 .orderList.style li .orderCon .btnRemove{width: auto;height: auto;background: transparent;color: #333;font-size: 1rem;top: 0.5rem;}
+.picker-item{font-size: 1rem;}
+
 
 /*.orderList li .orderCon .orderInfor{padding: 0.6rem 1rem 0 0;width: 65%;}*/
 .orderList li .orderCon .orderInfor{padding-right:1rem;width: 65%;}
