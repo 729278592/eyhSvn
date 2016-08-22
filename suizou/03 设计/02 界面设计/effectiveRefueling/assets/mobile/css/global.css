@@ -644,6 +644,7 @@ img.shopInfor.w100{width: 100%;margin-bottom: 0.625rem;}
 }
 @media screen and (max-width: 384px) {
     .formIndex .weui_icon_clear{left: 10.5rem;}
+    .formIndex .fa-search{left: 0.5rem;}
 
 }
 @media screen and (max-width: 375px) {
