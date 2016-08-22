@@ -337,13 +337,13 @@ textarea{font-family: "微软雅黑";}
 .weui_cells_checkbox.style1 .weui_cell:active{background: #fff;}
 .weui_cells_checkbox.style1 .weui_cell.style{padding: 0.625rem 0 0.625rem 15px;}
 .invoice.style{width: 100%;margin: 0;}
-
-
 .pay_infor{width: 100%;text-align: center;padding: 1.5rem 0;background: #fff;border-bottom: 1px solid #efefef;}
 .pay_infor p{width: 100%;font-size: 1rem}
 .pay_infor p.title{color: #333;}
 .pay_infor p.moneyNum{font-size: 1.25rem;color: #333;}
 .weui_cells_checkbox.style1.first:after{border-bottom: 1px solid #dbdbdb;}
+
+
 /*index*/
 .formIndex{width: 60%;display: inline-block;position: relative;}
 .formIndex .search_input{border: none;padding: 0.4rem 1.5rem 0.4rem 2rem;border-radius: 0.125rem;font-family: "微软雅黑";}
@@ -542,8 +542,11 @@ img.shopInfor.w100{width: 100%;margin-bottom: 0.625rem;}
 .optionType.style li.second button.btnEmpty{background: transparent;color: #666;}
 .optionType.style li.last{width: 30%;}
 .optionType.style li.last button{background: #ff6702;}
+
+
 .weui_dialog_confirm.hide{display: none;}
 .weui_dialog_confirm{position: absolute;z-index: 1000;top: 0;bottom: 0;left: 0;right: 0;}
+
 .weui_cells_checkbox.left5 {display: inline-block;float: left;position: relative;left: 0.4rem;}
 .weui_cells_checkbox.style1 .weui_cell.style.p0{padding: 0;}
 .orderList.style li .orderCon .orderImg{padding: 0.6rem 0.5rem}
