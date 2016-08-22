@@ -2,9 +2,12 @@
 <html>
 <head lang="en">
     <meta charset="UTF-8">
-    <title>分类详情</title>
+    <title>商品详情</title>
     <meta name="viewport" content="width=device-width; initial-scale=1.0; user-scalable=no;">
     <link rel="stylesheet" href="../../assets/global/plugins/font/css/font-awesome.min.css"/>
+    <link rel="stylesheet" href="../../assets/mobile/plugins/jquery-spinner/css/jquery.spinner.large.css"/>
+    <link rel="stylesheet" href="../../assets/mobile/css/weui.css"/>
+    <link rel="stylesheet" href="../../assets/mobile/css/example.css"/>
     <link rel="stylesheet" href="../../assets/mobile/css/global.css"/>
 </head>
 <body>
@@ -16,31 +19,31 @@
                 </a>
                 得力加油
                 <div class="right nav_block">
-                    <a class="shop_cat"></a>
-                    <a class="dot_block"></a>
-                    <ul class="nav_link">
-                        <li>
-                            <a href="###">
-                                主页
-                            </a>
-                        </li>
-                        <li>
-                            <a href="###">
-                                精选商城
-                            </a>
-                        </li>
-                        <li>
-                            <a href="###">
-                                优惠券
-                            </a>
-                        </li>
-                        <li>
-                            <a href="###">
-                                会员中心
-                            </a>
-                        </li>
-                    </ul>
-                </div>
+                <a href="shoppingCat.html" class="shop_cat"></a>
+                <a class="dot_block"></a>
+                <ul class="nav_link">
+                    <li>
+                        <a href="index.html">
+                            主页
+                        </a>
+                    </li>
+                    <li>
+                        <a href="shopMall.html">
+                            精选商城
+                        </a>
+                    </li>
+                    <li>
+                        <a href="gasStationInfor.html">
+                            马上加油
+                        </a>
+                    </li>
+                    <li>
+                        <a href="personCenter.html">
+                            会员中心
+                        </a>
+                    </li>
+                </ul>
+            </div>
             </div>
             <div class="bd absolute pd48">
                 <div class="shopping style">
@@ -81,6 +84,18 @@
                             </div>
                         </li>
                     </ul>
+                    <div class="weui_cells mt0">
+                        <div class="weui_cell">
+                            <div class="weui_cell_bd weui_cell_primary">
+                                <p>
+                                    数量 :
+                                </p>
+                            </div>
+                            <div class="weui_cell_ft">
+                                <input type="text" class="spinnerExample "/>
+                            </div>
+                        </div>
+                    </div>
                 </div>
                 <img src="../../assets/mobile/images/shopInfor1.jpg" alt="" class="w100 shopInfor"/>
                 <img src="../../assets/mobile/images/shopInfor2.jpg" alt="" class="w100 shopInfor"/>
@@ -88,7 +103,7 @@
             <div class="foot">
                 <ul class="optionType clearfix">
                     <li class="first">
-                        <a href="###">
+                        <a href="shoppingCat.html">
                             <span class="shopCat"></span>
                             <span class="caret">1</span>
                         </a>
@@ -104,9 +119,11 @@
         </div>
     </div>
     <script src="../../assets/global/plugins/jquery/jquery-1.11.3.min.js"></script>
+    <script src="../../assets/mobile/plugins/jquery-spinner/js/jquery.spinner.js"></script>
     <script src="../../assets/mobile/js/global.js"></script>
     <script>
         $(function() {
+            $('.spinnerExample').spinner({});
             /*重量切换*/
             $(".weightClass li .weightDiv").on("touchend",function(){
                 $(this).addClass("active");

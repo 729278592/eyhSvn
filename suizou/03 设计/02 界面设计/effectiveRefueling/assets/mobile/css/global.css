@@ -178,7 +178,6 @@ textarea{font-family: "微软雅黑";}
 
 
 /*applicatioApproval*/
-
 .weui_cell {min-height: 23px;}
 .weui_btn_area .weui_btn_primary.disabled{background: #ccc;}
 .noMoney{font-size: 1rem;color: #666;text-align: center;margin: 6.25rem 0;}
@@ -224,6 +223,7 @@ textarea{font-family: "微软雅黑";}
 .orderList{width: 100%;}
 .orderList li{width: 100%;background: #fff;margin-top: 0.625rem;border-top: 1px solid #dbdbdb;border-bottom: 1px solid #dbdbdb;}
 .orderList.style li:first-child{margin-top: 0;}
+.orderList li>a{display: block;width: 100%;}
 .orderList li .orderHead{font-size: 0.875rem;padding: 0.8rem 1rem;display: block;border-bottom: 1px solid #efefef;}
 .orderList li .orderHead .orderNum{color: #333;}
 .orderList li .orderHead .time{color: #999;}
@@ -232,15 +232,20 @@ textarea{font-family: "微软雅黑";}
 .orderList li .orderCon .orderImg,.orderList li .orderCon .orderInfor{display: table-cell;}
 .orderList li .orderCon .orderImg{padding: 0.6rem 1rem;width: 30%;}
 .orderList li .orderCon .orderImg img{width: 4.875rem;height: 4.875rem;}
+.orderList.style li .orderCon .btnRemove{width: auto;height: auto;background: transparent;color: #333;font-size: 1rem;top: 0.5rem;}
+
 /*.orderList li .orderCon .orderInfor{padding: 0.6rem 1rem 0 0;width: 65%;}*/
 .orderList li .orderCon .orderInfor{padding-right:1rem;width: 65%;}
 .orderList li .orderCon .top{display: block;position: relative;top: -0.475rem;}
 .orderList li .orderCon .bottom{vertical-align: bottom;display: block;position: relative;top: 0.425rem;}
 .orderList li .orderCon span{}
 .orderList li .orderCon p{margin: 0;}
-.orderList li .orderCon .btnType{outline: none;text-align:center;width: 4.5rem;height: 1.8rem;background: #ff6702;border: 1px solid #ff6702;border-radius: 0.125rem;color: #fff;font-family: "微软雅黑";font-size: 0.825rem;}
-.orderList li .orderCon a{text-align:center;width: 4.5rem;height: 1.8rem;line-height:1.8rem;border-radius: 0.125rem;color: #4cb68d;border: 1px solid #4cb68d;font-size: 0.825rem;}
+.orderList li .orderCon .btnType{line-height: 1.8rem;}
+.orderList li .orderCon .btnType,.orderList li .orderCon .btnSureShop{outline: none;text-align:center;width: 4.5rem;height: 1.8rem;background: #ff6702;border: 1px solid #ff6702;border-radius: 0.125rem;color: #fff;font-family: "微软雅黑";font-size: 0.825rem;}
+.orderList li .orderCon .btnSureShop.hide{display: none;}
+.orderList li .orderCon .btnRemove,.orderList li .orderCon .btnReturn{border: none;outline: none;text-align:center;width: 4.5rem;height: 1.8rem;background: #ccc;border-radius: 0.125rem;color: #fff;font-family: "微软雅黑";font-size: 0.825rem;}
 .orderList li .orderCon .btnType:active{opacity: 0.8;}
+.orderList li .orderCon .btnSureShop:active{opacity: 0.8;}
 .payInfor{background: #fff;margin-top: 10px;}
 .payAll{padding: 0.625rem 15px;border-top: 1px solid #dbdbdb;border-bottom: 1px solid #dbdbdb;}
 .payAll p{color: #999;text-align: right;margin: 0;}
@@ -248,7 +253,7 @@ textarea{font-family: "微软雅黑";}
 .payAll span.moreSpan{}
 .payAll a{color: #4cb68d;}
 .payNum{color: #ff6702;padding: 0.875rem 0.98rem;text-align: right;}
-
+.okTui{color: #ff6804;}
 
 /*couponRecord*/
 .applicatioOpetion{width: 100%;margin-bottom: 0.625rem;position: relative;z-index: 100;border-bottom: 1px solid #dbdbdb;}
@@ -300,8 +305,8 @@ textarea{font-family: "微软雅黑";}
 .recoedList{border-collapse:collapse;width: 100%;}
 .recoedList tr th{border-bottom:1px solid #dbdbdb;background: #f7f7f7;font-size: 0.875rem;padding: 0.625rem 0;color: #666;font-weight: 100;}
 .recoedList tr td{border-bottom:1px solid #dbdbdb;color: #333;background: #fff;text-align: center;padding: 0.625rem 0;font-size: 0.875rem;}
-
-
+.optionType.style.w50 li.second,.optionType.style.w50 li.last{width: 50%;}
+.optionType.style.w50 li.second button.btnEmpty{background: #ccc;color: #fff;}
 
 /*myInvoice*/
 .invoiceList{width: 100%;}
@@ -331,13 +336,19 @@ textarea{font-family: "微软雅黑";}
 .weui_cells_checkbox.style1 .weui_cell.style{padding: 0.625rem 0 0.625rem 15px;}
 .invoice.style{width: 100%;margin: 0;}
 
+
+.pay_infor{width: 100%;text-align: center;padding: 1.5rem 0;background: #fff;border-bottom: 1px solid #efefef;}
+.pay_infor p{width: 100%;font-size: 1rem}
+.pay_infor p.title{color: #333;}
+.pay_infor p.moneyNum{font-size: 1.25rem;color: #333;}
+.weui_cells_checkbox.style1.first:after{border-bottom: 1px solid #dbdbdb;}
 /*index*/
 .formIndex{width: 60%;display: inline-block;position: relative;}
 .formIndex .search_input{border: none;padding: 0.4rem 1.5rem 0.4rem 2rem;border-radius: 0.125rem;font-family: "微软雅黑";}
 .formIndex .fa-search{position: absolute;left: 0.5rem;color: #333;top: 0.75rem}
 .formIndex .weui_icon_clear {position: absolute;top: -0.1rem;left: 11.3rem;padding: 0 0.625rem;}
 .formIndex .weui_icon_clear.hide{display: none;}
-.swiper-slide img.w100{height: 9.3rem;width: 100%;}
+.swiper-slide img.w100{height: 10.3rem;width: 100%;}
 .cardBg{position: relative;background: url(../images/indexCard.png) no-repeat;width: 94%;margin: 0.625rem 3%;background-size: 100% 100%;height: 9rem;}
 .btnApply,.btnApplyed{position: absolute;bottom: 0.8rem;left: 50%;width: 7.5rem;height: 2.25rem;line-height: 2.25rem;text-align: center;margin-left: -3.75rem;border: none;outline: none;background: #9ec62e;border-radius: 0.25rem;color: #fff;font-size: 1rem;font-family: "微软雅黑";display: inline-block;}
 .btnApplyed{background: #ccc;}
@@ -472,6 +483,8 @@ img.shopInfor.w100{width: 100%;margin-bottom: 0.625rem;}
 .optionType li .addCart{background: #9a9a9a;}
 .optionType li .nowBuy{background: #ff6702;}
 .optionType li a.nowBuy{display: inline-block;line-height: 3rem;color: #fff;}
+
+
 /*gasStationList*/
 .hotStation{width: 100%;background: #fff;border-top: 1px solid #dbdbdb;}
 .hotStation.mt{margin-top: 0.625rem;}
@@ -480,10 +493,11 @@ img.shopInfor.w100{width: 100%;margin-bottom: 0.625rem;}
 .stationTitle span{position: relative;top: -0.23rem;}
 .stationList{width: 100%;}
 .stationList li{padding: 0.875rem 1.2rem;border-bottom: 1px solid #dbdbdb;}
+.stationList li .orderCon>a{display: block;width: 100%;height: 100%;}
 .stationList li p{display: block;}
 .stationList li p span{font-size: 0.875rem;color: #999;}
 .stationList li p:last-child span.left{position: relative; top: 0.25rem;}
-.stationList li p a{color: #7ebd8b;display: inline-block;padding: 0.125rem 0.25rem;border: 1px solid #7ebd8b;border-radius: 0.25rem;font-size: 0.875rem;}
+.stationList li p>a{color: #7ebd8b;display: inline-block;padding: 0.125rem 0.25rem;border: 1px solid #7ebd8b;border-radius: 0.25rem;font-size: 0.875rem;}
 .stationList li p a .address{width:1rem;position: relative;top: -0.125rem;}
 .stationList li p .color1{color: #333;font-size: 1rem;}
 .stationList li p .color2{color: #ff6702;}
@@ -497,7 +511,8 @@ img.shopInfor.w100{width: 100%;margin-bottom: 0.625rem;}
 .stationList.style li p:last-child span{position: relative;top: 0.25rem;}
 .style.stationList li{padding: 0.875rem 0.625rem;}
 .oilCardCon.style{background: #fff;border-top: 1px solid #dbdbdb;margin-bottom: 0.625rem;}
-.oilCardCon.style .title{color: #999;padding: 0.625rem 0 0 0.625rem;}
+.oilCardCon.style .title,.fillMoney{color: #999;padding: 0.625rem 0 0 0.625rem;}
+.fillMoney{background: #fff;padding: 0.625rem;}
 .oilCardCon.style .oilCardMenu{border-top: none;}
 .oilCardCon.style .oilCardMenu li div span:first-child{font-size: 1rem;color: #333;}
 .oilCardCon.style .oilCardMenu li div span:last-child{font-size: 0.875rem;color: #666;}
@@ -533,6 +548,8 @@ img.shopInfor.w100{width: 100%;margin-bottom: 0.625rem;}
 .orderList.style li .orderCon p.style{position: relative;top: 0.5rem;}
 .optionType.style li.first.style{width: 65%;text-align: right;padding-right: 5%;}
 .swiper-container-horizontal>.swiper-pagination-bullets{bottom: 0;}
+
+
 /*myRecord*/
 .orderMenu.style li{width: 33.33%;}
 .orderMenu.style li a.active{color: #f73737;}
