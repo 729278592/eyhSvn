@@ -3,7 +3,7 @@
  */
 var confim = '<div class="weui_dialog_confirm hide" id="dialogConfirm">'+
              '<div class="weui_mask"></div>'+
-                 '<div class="weui_dialog vux-dialog-transition">'+
+                 '<div class="weui_dialog">'+
                      '<div class="weui_dialog_hd">'+
                           '<strong class="weui_dialog_title"></strong>'+
                      '</div>'+
