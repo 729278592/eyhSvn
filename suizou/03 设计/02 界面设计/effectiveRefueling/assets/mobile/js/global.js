@@ -7,15 +7,15 @@ $(function(){
         e.stopPropagation();
         var nav_link = $(this).closest(".nav_block").find(".nav_link");
         if(nav_link.css("display")=="none"){
-            nav_link.slideDown(100);
+            nav_link.show();
         }else{
-            nav_link.slideUp(100);
+            nav_link.hide();
         }
     });
 
     $("body").on("touchend",function(){
         if($(".nav_link").css("display")=="block"){
-            $(".nav_link").slideUp(100);
+            $(".nav_link").hide();
         }
     });
 

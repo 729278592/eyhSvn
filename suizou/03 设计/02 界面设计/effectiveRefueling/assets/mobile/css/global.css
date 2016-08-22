@@ -359,9 +359,9 @@ textarea{font-family: "微软雅黑";}
 .ulLink li{float: left;width: 50%;}
 .ulLink li a{display: inline-block;width: 100%;height: 100%;}
 .ulLink li img{width: 100%;height: 100%;}
-.ulLink li.first {height: 153.8px;}
-.ulLink li.second {height: 5rem;}
-.ulLink li.last {height: 73.8px;}
+.ulLink li.first {height: 160px;}
+.ulLink li.second {height: 80px;}
+.ulLink li.last {height: 80px;}
 .ulLink li a:active{opacity: 1;}
 .shopList{display: block;width: 94%;padding: 0.625rem 3%;background: #fff;}
 .shopList li{float: left;width: 32%;margin-right: 2%;height: 8.125rem;}
