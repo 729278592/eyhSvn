@@ -274,7 +274,7 @@ textarea{font-family: "微软雅黑";}
 .couponList li p span{color: #999;font-size: 0.875rem;}
 .couponList li p span.time{color: #999;}
 .couponList li p span.moeny{color: #ff9452;position: relative;right: 0.75rem;}
-.couponList li p span.span_money{position: absolute;top: -1rem;right: -1rem;background: url(../images/sale.png) no-repeat;width: 2.25rem;height: 2.25rem;background-size: 100% 100%;}
+.couponList li p span.span_money{position: absolute;top: -1rem;right: -1rem;background: url(../images/sale.png) no-repeat;width: 1.25rem;height: 1.25rem;background-size: 100% 100%;}
 .couponList li p span.color{color: #333;font-size: 1rem;}
 .couponList li p span.color1{color: #333;font-size: 1rem;}
 .couponList li p span.moenyNum{color: #333;font-size: 1rem;}
