@@ -58,6 +58,8 @@ a:active{opacity: 0.6;}
 .span_icon{display: inline-block;width: 1.05rem;height: 1.3rem;}
 .spa_user{background: url(../images/userIcon.png) no-repeat;background-size: 100% 100%;}
 .bd.pd48{padding-bottom:3rem;padding-top: 2.5rem;}
+.bd.pd48.style{padding-bottom: 8rem;}
+.foot.style{height: 8rem;}
 .bd.pt{padding-top: 2.5rem;}
 .bd.absolute{position:absolute;top:0;bottom:0;overflow-y:scroll;-webkit-overflow-scrolling:touch;width:100%}
 .spa_code{background: url(../images/codeIcon.png) no-repeat;background-size: 100% 100%;}
