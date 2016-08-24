@@ -111,9 +111,9 @@
             $("#invoice").delegate(".weui_cells_checkbox.inline_block","touchend",function(e){
                 e.stopPropagation();
                 if($(this).find("input").prop("checked")){
-                    $(this).closest(".invoiceHead ").next(".invoiceCon ").find("input").prop({checked:false})
+                    $(this).closest(".invoiceHead ").next(".invoiceCon ").find("input").prop({checked:false});
                 }else{
-                    $(this).closest(".invoiceHead ").next(".invoiceCon ").find("input").prop({checked:"checked"})
+                    $(this).closest(".invoiceHead ").next(".invoiceCon ").find("input").prop({checked:"checked"});
                 }
             })
         })
