@@ -276,12 +276,16 @@
                 $(this).closest("li").addClass("remove");
                 $("#signCancel").addClass("signCancel");
                 $("#signSure").addClass("signSure");
+                $(".weui_dialog").css({display:"inline-block"});
+                $(".weui_dialog").removeClass("vux-dialog-leave")
             });
 
             /*取消商品删除*/
             page.delegate(".signCancel","touchend",function(){
                 $(".orderList li.remove").removeClass("remove");
                 $("#dialogConfirm").addClass("hide");
+                $(".weui_dialog").addClass("vux-dialog-leave")
+
             });
 
             /*确定商品删除*/

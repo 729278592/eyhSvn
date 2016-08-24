@@ -333,7 +333,7 @@ textarea{font-family: "微软雅黑";}
 .invoiceList li .invoiceCon.style span.spanBlock{font-size: 0.875rem;border-radius: 0.2rem;display: inline-block;padding: 0px 0.25rem;background: #fe6602;color: #fff;}
 .invoiceList li .invoiceCon.style span.color1{color: #fe6602;font-size: 1rem;}
 .weui_cells_checkbox .weui_cell_hd.style{position: relative;top: -0.625rem;}
-.weui_cells_checkbox.style1 .weui_check:checked + .weui_icon_checked:before{color: #f83a3a;}
+.weui_cells_checkbox.style1 .weui_check:checked + .weui_icon_checked:before{color: #fe7b25;}
 .invoiceHead.style .inline_block{display: inline-block;float: left;}
 .invoiceHead.style .inline_block.style{padding: 0.625rem 0;width: 82%;}
 .weui_cells_checkbox.style1 .weui_cell:active{background: #fff;}
@@ -348,7 +348,7 @@ textarea{font-family: "微软雅黑";}
 
 /*index*/
 .formIndex{width: 60%;display: inline-block;position: relative;}
-.formIndex .search_input{border: none;padding: 0.4rem 1.5rem 0.4rem 2rem;border-radius: 0.125rem;font-family: "微软雅黑";}
+.formIndex .search_input{font-size: 0.875rem;border: none;padding: 0.4rem 1.5rem 0.4rem 2rem;border-radius: 0.125rem;font-family: "微软雅黑";}
 .formIndex .fa-search{position: absolute;left: 0.5rem;color: #333;top: 0.75rem}
 .formIndex .weui_icon_clear {position: absolute;top: -0.1rem;left: 11.3rem;padding: 0 0.625rem;}
 .formIndex .weui_icon_clear.hide{display: none;}
@@ -549,6 +549,37 @@ img.shopInfor.w100{width: 100%;margin-bottom: 0.625rem;}
 .weui_dialog_confirm.hide{display: none;}
 .weui_dialog_confirm{position: absolute;z-index: 1000;top: 0;bottom: 0;left: 0;right: 0;}
 
+
+
+.vux-fade-enter, .vux-fade-leave {
+    opacity: 0
+}
+
+.vux-dialog-transition {
+    opacity: 1;
+    -webkit-transition-duration: .4s;
+    transition-duration: .4s;
+    -webkit-transform: translate(-50%, -50%) scale(1) !important;
+    transform: translate(-50%, -50%) scale(1) !important;
+    -webkit-transition-property: opacity, -webkit-transform !important;
+    transition-property: opacity, -webkit-transform !important;
+    transition-property: transform, opacity !important;
+    transition-property: transform, opacity, -webkit-transform !important
+}
+
+.vux-dialog-leave {
+    opacity: 0
+}
+
+
+.vux-dialog-leave {
+    -webkit-transform: translate(-50%, -50%) scale(1) !important;
+    transform: translate(-50%, -50%) scale(1) !important
+}
+
+
+
+
 .weui_cells_checkbox.left5 {display: inline-block;float: left;position: relative;left: 0.4rem;}
 .weui_cells_checkbox.style1 .weui_cell.style.p0{padding: 0;}
 .orderList.style li .orderCon .orderImg{padding: 0.6rem 0.5rem}
@@ -575,6 +606,7 @@ img.shopInfor.w100{width: 100%;margin-bottom: 0.625rem;}
 .invoiceList.style li .invoiceCon{display: block;}
 .invoiceList.style li .invoiceCon span.color{color: #ff3b30;}
 .weui_cells.mt{margin-top: 0.625rem;}
+
 
 /*paySucess*/
 .paySucess{background: #fff;text-align: center;font-size: 0.875rem;color: #666;}
@@ -621,10 +653,12 @@ img.shopInfor.w100{width: 100%;margin-bottom: 0.625rem;}
 .invoice p span{color: #666;}
 .invoice p span.title{font-size: 1rem;color: #333;}
 @media screen and (max-width: 768px) {
+    .formIndex .fa-search{left: 1rem;}
     body,html{font-size: 20px;}
 }
 
 @media screen and (max-width: 640px) {
+    .formIndex .fa-search{left: 0.5rem;top: 0.9rem;position: absolute;}
 
 
 }
@@ -632,7 +666,6 @@ img.shopInfor.w100{width: 100%;margin-bottom: 0.625rem;}
     body,html{font-size: 18px;}
 }
 @media screen and (max-width: 480px) {
-
 }
 @media screen and (max-width: 415px) {
     .formIndex .weui_icon_clear{left: 11rem;}
@@ -653,7 +686,7 @@ img.shopInfor.w100{width: 100%;margin-bottom: 0.625rem;}
 
 }
 @media screen and (max-width: 375px) {
-    .formIndex .fa-search{left: 1rem;}
+    .formIndex .fa-search{left: 0.5rem;}
     .shoppingList li a .shop_list_bg{height: 7rem;}
     .shopping.style .shoppingList li a .shop_list_bg{height: 9rem;}
     .couponMoneyList li p.title{color: #fff;position: absolute;top: 0.35rem;left: 2rem;}
