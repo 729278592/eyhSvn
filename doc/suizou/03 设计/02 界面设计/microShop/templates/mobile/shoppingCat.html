@@ -45,21 +45,21 @@
                 </ul>
             </div>
             </div>
-            <div class="bd absolute pt ">
+            <div class="bd absolute pt">
                 <div id="invoice">
                     <ul class="invoiceList">
-                        <li>
+                        <li v-for="order in orders | filterBy orderName in orderName shopping in 'shoppings' id in id allMoney in allMoney">
                             <div class="clearfix invoiceHead style">
                                 <div class="weui_cells weui_cells_checkbox mt0 style1 inline_block">
-                                    <label class="weui_cell weui_check_labe style" for="s11">
+                                    <label class="weui_cell weui_check_labe style" for={{order.id}}>
                                         <div class="weui_cell_hd">
-                                            <input type="checkbox" class="weui_check" name="checkbox1" id="s11" >
+                                            <input type="checkbox" class="weui_check" name="checkbox1" id={{order.id}} >
                                             <i class="weui_icon_checked"></i>
                                         </div>
                                     </label>
                                 </div>
                                 <div class="inline_block style">
-                                    <span class="left">美丽在线</span>
+                                    <span class="left">{{order.orderName}}</span>
                                     <span class="right">
                                         <i class="fa fa-angle-right"></i>
                                     </span>
@@ -67,119 +67,43 @@
                             </div>
                             <div class="invoiceCon style">
                                 <ul class="orderList style">
-                                    <li>
+                                    <li v-for="shopping in order.shoppings | filterBy shoppingName in shoppingName orderColor in 'orderColor' orderMoney in 'orderMoney' src in src  id in id src in src">
                                         <div class="orderCon">
                                             <div class="weui_cells weui_cells_checkbox mt0 style1 inline_block left5">
-                                                <label class="weui_cell weui_check_labe style p0" for="s13">
+                                                <label class="weui_cell weui_check_labe style p0" for={{shopping.id}}>
                                                     <div class="weui_cell_hd">
-                                                        <input type="checkbox" class="weui_check" name="checkbox1" id="s13">
+                                                        <input type="checkbox" class="weui_check" name="checkbox1" id={{shopping.id}}>
                                                         <i class="weui_icon_checked"></i>
                                                     </div>
                                                 </label>
                                             </div>
-                                            <div class="orderImg">
-                                                <img src="../../assets/mobile/images/order1.jpg" alt=""/>
+                                            <div class="orderImg" v-html="shopping.src">
+
                                             </div>
                                             <div class="orderInfor">
                                                 <p class="clearfix">
-                                                    <span class="left">植物油 <br/><span class="colors">红色</span></span>
+                                                    <span class="left">{{shopping.shoppingName}} <br/><span class="colors">{{shopping.orderColor}}</span></span>
                                                 </p>
                                                 <p class=" clearfix">
-                                                    <span class="left">￥600</span>
+                                                    <span class="left">￥{{shopping.orderMoney}}</span>
                                                     <input type="text" class="spinnerExample right"/>
                                                 </p>
                                             </div>
                                         </div>
                                     </li>
-                                    <li>
-                                        <div class="orderCon">
-                                            <div class="weui_cells weui_cells_checkbox mt0 style1 inline_block left5">
-                                                <label class="weui_cell weui_check_labe style p0" for="s123">
-                                                    <div class="weui_cell_hd">
-                                                        <input type="checkbox" class="weui_check" name="checkbox1" id="s123">
-                                                        <i class="weui_icon_checked"></i>
-                                                    </div>
-                                                </label>
-                                            </div>
-                                            <div class="orderImg">
-                                                <img src="../../assets/mobile/images/order1.jpg" alt=""/>
-                                            </div>
-                                            <div class="orderInfor">
-                                                <p class="clearfix">
-                                                    <span class="left">植物油 <br/><span class="colors">红色</span></span>
-                                                </p>
-                                                <p class=" clearfix">
-                                                    <span class="left">￥600</span>
-                                                    <input type="text" class="spinnerExample right"/>
-                                                </p>
-                                            </div>
-                                        </div>
-                                    </li>
+
                                 </ul>
                                 <ul class="optionType style clearfix">
                                     <li class="last">
                                         <a href="payChioce.html" class="nowBuy">结算</a>
                                     </li>
                                     <li class="first">
-                                        应付 : <span style="color: #ff0004">￥2000</span>
+                                        应付 : <span style="color: #ff0004">￥{{order.allMoney}}</span>
                                     </li>
                                 </ul>
                             </div>
                         </li>
-                        <li class="mb0">
-                            <div class="clearfix invoiceHead style">
-                                <div class="weui_cells weui_cells_checkbox mt0 style1 inline_block">
-                                    <label class="weui_cell weui_check_labe style" for="s116">
-                                        <div class="weui_cell_hd">
-                                            <input type="checkbox" class="weui_check" name="checkbox1" id="s116" >
-                                            <i class="weui_icon_checked"></i>
-                                        </div>
-                                    </label>
-                                </div>
-                                <div class="inline_block style">
-                                    <span class="left">美丽在线</span>
-                                    <span class="right">
-                                        <i class="fa fa-angle-right"></i>
-                                    </span>
-                                </div>
-                            </div>
-                            <div class="invoiceCon style">
-                                <ul class="orderList style">
-                                    <li>
-                                        <div class="orderCon">
-                                            <div class="weui_cells weui_cells_checkbox mt0 style1 inline_block left5">
-                                                <label class="weui_cell weui_check_labe style p0" for="s113">
-                                                    <div class="weui_cell_hd">
-                                                        <input type="checkbox" class="weui_check" name="checkbox1" id="s113">
-                                                        <i class="weui_icon_checked"></i>
-                                                    </div>
-                                                </label>
-                                            </div>
-                                            <div class="orderImg">
-                                                <img src="../../assets/mobile/images/order1.jpg" alt=""/>
-                                            </div>
-                                            <div class="orderInfor">
-                                                <p class="clearfix">
-                                                    <span class="left">植物油 <br/><span class="colors">红色</span></span>
-                                                </p>
-                                                <p class=" clearfix">
-                                                    <span class="left">￥600</span>
-                                                    <input type="text" class="spinnerExample right"/>
-                                                </p>
-                                            </div>
-                                        </div>
-                                    </li>
-                                </ul>
-                                <ul class="optionType style clearfix">
-                                    <li class="last">
-                                        <a href="payChioce.html" class="nowBuy">结算</a>
-                                    </li>
-                                    <li class="first">
-                                        应付 : <span style="color: #ff0004">￥2000</span>
-                                    </li>
-                                </ul>
-                            </div>
-                        </li>
+
                     </ul>
                 </div>
                 <div class="notConTip hide">
@@ -197,6 +121,8 @@
     <script src="../../assets/mobile/js/confirm.js"></script>
     <script src="../../assets/mobile/js/removeTip.js"></script>
     <script src="../../assets/mobile/js/global.js"></script>
+    <script src="../../assets/mobile/plugins/vue/vue.min.js"></script>
+    <script src="../../assets/mobile/data/shoppingCat.js"></script>
     <script>
         $(function(){
             $('.spinnerExample').spinner({});

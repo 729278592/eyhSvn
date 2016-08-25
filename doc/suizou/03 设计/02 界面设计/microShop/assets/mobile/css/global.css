@@ -510,7 +510,7 @@ textarea{font-family: "微软雅黑";}
 .weightClass .weightDiv{width: 90%;height: 2rem;line-height: 2rem;text-align: center;color: #666;border: 1px solid #dbdbdb;}
 .weightClass .weightDiv.active{color: #ff0404;border: 1px solid #ff0404;}
 img.shopInfor.w100{width: 100%;margin-bottom: 0.625rem;}
-.optionType{display: block;}
+.optionType{width: 100%;}
 .optionType li{float: left;height: 3rem;}
 .optionType.style li{float: right;height: 3rem;border-bottom: none;}
 .optionType li.first{width: 20%;}
@@ -574,7 +574,7 @@ img.shopInfor.w100{width: 100%;margin-bottom: 0.625rem;}
 .spinner{display: inline-block;float: left}
 .btnRemove{outline: none;border: none;color: #666;font-size: 1rem;background: transparent;font-family: "微软雅黑";position: relative;top: 0.25rem;}
 .scale{color: #666;}
-.optionType.style{background: #fff;text-align: center;}
+.optionType.style{background: #fff;text-align: center;border-bottom: 1px solid #dbdbdb;}
 .optionType.style li.first{width: 40%;line-height: 3rem;}
 .optionType.style li.second{width: 30%;background: transparent;}
 .optionType.style li.second button.btnEmpty{background: transparent;color: #666;}
