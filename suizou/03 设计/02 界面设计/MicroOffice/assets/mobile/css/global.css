@@ -1,9 +1,8 @@
 @charset "utf-8";
-
-
 /*common style*/
 body,html{margin:0;padding:0;    font-family: "Helvetica Neue",Helvetica,"PingFang SC","Hiragino Sans GB","Microsoft Yahei","WenQuanYi Micro Hei",sans-serif, sans-serif}
 p{margin: 0;padding: 0;}
+.verdana{font-family: "Verdana";}
 ul,li,img{margin:0;padding:0;list-style:none;border:none; vertical-align:middle;}
 a{color:#000;text-decoration:none;}
 .clearfix:after {content: ".";display: block;clear: both;visibility: hidden;line-height: 0;height: 0;}
