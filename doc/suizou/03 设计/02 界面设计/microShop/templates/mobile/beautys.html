@@ -1,0 +1,37 @@
+<!--<div id="shopping">-->
+    <ul class="shoppingList clearfix pb0">
+        <li v-for="shop in digitals | filterBy class in 'class' title in 'title' smallTile in 'smallTile' oldMoney in 'oldMoney' newMoney in 'newMoney'">
+            <a href={{shop.herf}} class="shop_div">
+                <div class="shop_list_bg shop_list_bg{{shop.class}}"></div>
+                <div class="shop_infor">
+                    <p class="tile">{{shop.title}}</p>
+                    <p class="smallTile">{{shop.smallTile}}</p>
+                    <p class="clearfix">
+                    <span class="left">
+                        <span class="oldMoney">{{shop.oldMoney}}</span>
+                        {{shop.newMoney}}
+                    </span>
+                    </p>
+                </div>
+            </a>
+        </li>
+    </ul>
+    <ul class="shoppingList style clearfix pb0">
+        <li v-for="shop in sciences | filterBy class in 'class' title in 'title' smallTile in 'smallTile' oldMoney in 'oldMoney' newMoney in 'newMoney'">
+            <a href={{shop.herf}} class="shop_div">
+                <div class="shop_list_bg shop_list_bg{{shop.class}}"></div>
+                <div class="shop_infor">
+                    <p class="tile">{{shop.title}}</p>
+                    <!--<p class="smallTile">{{shop.smallTile}}</p>-->
+                    <p class="clearfix">
+                    <span class="left">
+                        <span class="oldMoney">￥{{shop.oldMoney}}</span>
+                        ￥{{shop.newMoney}}
+                    </span>
+                    </p>
+                </div>
+            </a>
+        </li>
+    </ul>
+<!--</div>-->
+<script src="../../assets/mobile/data/index.js"></script>
