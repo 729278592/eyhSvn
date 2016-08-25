@@ -183,8 +183,8 @@ textarea{font-family: "微软雅黑";}
 .weui_search_bar.style .weui_search_inner .weui_icon_search:after{content:"";position:absolute;left:0;top:2px;bottom:-2px;width:1px;border-left:1px solid #efefef}
 .weui_search_bar.style .weui_search_inner .weui_icon_search:before{color:#48a8e4;font-weight:700}
 .weui_search_bar.style .weui_search_cancel{width:6%;text-align:center;color:#48a8e4}
-.weui_search_bar.style .weui_search_cancel,.weui_search_bar.style .weui_search_inner .weui_search_input{font-size:12px;font-family:"微软雅黑";position:absolute;top:0;width:80%;padding:9px 6px}
-.highSerch{display:inline-block;width:15%;height:36px;line-height:36px;text-align:center;color:#48a8e4;font-size:12px;position:relative}
+.weui_search_bar.style .weui_search_cancel,.weui_search_bar.style .weui_search_inner .weui_search_input{font-size:14px;font-family:"微软雅黑";position:absolute;top:0;width:80%;padding:8px 6px}
+.highSerch{display:inline-block;width:15%;height:36px;line-height:36px;text-align:center;color:#48a8e4;font-size:14px;position:relative}
 .weui_search_bar.style .weui_search_inner .weui_icon_clear{right:17%;padding:0 5px;top:2px}
 
 
@@ -246,12 +246,12 @@ textarea{font-family: "微软雅黑";}
 .entryList li .inforList span.title .inforTitle{font-size: 16px;display: inline-block;text-overflow:ellipsis; overflow:hidden; white-space:nowrap; width: 120px;color: #333;}
 .entryList li .inforList span.inforListInfor{display: -webkit-box;
     -webkit-box-orient: vertical;
-    -webkit-line-clamp: 3;
+    -webkit-line-clamp: 1;
     overflow: hidden;
     text-overflow: ellipsis;}
 .weui_textarea{border: 1px solid #efefef;padding: 5px;}
 .entryList li .inforList span.color{text-align: right;color: #ff3b30;}
-.entryList li .inforList span.inforListInfor.style{-webkit-line-clamp: 2;}
+.entryList li .inforList span.inforListInfor.style{-webkit-line-clamp: 1;}
 .entryList li .tipLeft,.entryList li .passIcon{font-size: 14px;width: 10%;position: relative;text-align: center;}
 .entryList li .passIcon .pass{background: url(../images/pass.png) no-repeat;width: 20px;height: 20px;background-size: 20px 20px;display: inline-block;}
 .entryList li .passIcon .notPass{background: url(../images/notPass.png) no-repeat;width: 20px;height: 20px;background-size: 20px 20px;display: inline-block;}
@@ -297,7 +297,7 @@ textarea{font-family: "微软雅黑";}
 .timeList li .timeInfor p.title{font-size: 14px;color: #333;}
 .entryList.style{border-bottom: 1px solid #efefef;}
 .entryList.style li .inforList span.title{color: #47aaea;}
-.weui_btn_area.style button {font-family: "微软雅黑";width: 50%;float: left;height: 42px;text-align: center;border: none;outline: none;background: #9a9a9a;color: #efefef;}
+.weui_btn_area.style button {font-family: "微软雅黑";width: 50%;float: left;height: 42px;text-align: center;border: none;outline: none;background: #9a9a9a;color: #efefef;font-size: 15px;}
 .weui_btn_area.style button.active{background: #47aaea;}
 #applicationInfor{width: 40px;height: 40px;margin:20px 0 10px}
 
@@ -521,6 +521,9 @@ img.w100{width: 100%;}
 .noticeHead img{width: 26px;}
 .noticeCon{padding: 10px 15px;}
 .noticeCon p{width: 100%;font-size: 14px;color: #666;margin-bottom: 10px;}
+
+
+.weui_cells_form .weui_cell_ft.taLeft,.weui_cell_bd input,.weui_cell_select .weui_select,.weui_cells_form textarea{font-size: 15px;!important;}
 
 
 @media screen and (max-width: 768px) {
