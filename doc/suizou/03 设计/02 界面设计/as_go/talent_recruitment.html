@@ -8,8 +8,9 @@
     <link rel="stylesheet" href="css/common.css?v=33"/>
     <link rel="stylesheet" href="css/mobile_style.css"/>
     <style>
+        .wrapper{min-height: auto;}
         .content{background: #fff;}
-        .footer{position: relative;width: 100%;}
+        .footer{position: fixed;width: 100%;bottom: 0;}
         @media screen and (max-width: 992px) {
             .common_content{margin-left: -35%;}
         }
@@ -79,144 +80,151 @@
                         </div>
 
                         <div class="common_content">
-                            <img src="images/zhiwei.png"  class="img-responsive" alt="Responsive image" style="position: relative;top: -25px;"/>
-                            <ul class="pay clearfix">
-                                <li class="col-lg-6">
-                                    <div class="clearfix">
-                                        <img src="images/pay1.png" alt=""/>
-                                        <span class="pay_title">薪酬水平</span><br/>
-                                        <span>业内有竞争力的薪酬、奖金计划、完善的社会福利保险及住房公积金、优秀员工奖励制度，新员工推荐奖励制度等，让每一位员工充分实现自身</span>
-                                    </div>
-                                </li>
-                                <li class="col-lg-6">
-                                    <div class="clearfix">
-                                        <img src="images/pay3.png" alt=""/>
-                                        <span class="pay_title">晋升空间</span><br/>
-                                        <span>我们关注员工的专业提升和职业发展，为每一位员工制定极富挑战的横向或纵向晋升发展空间，同时提供新人入职培训、个人发展计划、专业技术培训、内部分享交流以及团队拓展训练。</span>
-                                    </div>
-                                </li>
-                            </ul>
-                            <h4 class="col-lg-12" style="text-align:center;font-size: 18px;">具体工作类别</h4>
-                            <div class="wrap">
-                                <ul class="station_head">
-                                    <li class="col-lg-4 col-md-4 col-sm-4 col-xs-4">
-                                        <div class="station_name active">
-                                            <span>java工程师</span>
-                                        </div>
-                                    </li>
-                                    <li class="col-lg-4 col-md-4 col-sm-4 col-xs-4">
-                                        <div class="station_name">
-                                            <span>前端工程师</span>
-                                        </div>
-                                    </li>
-                                    <li class="col-lg-4 col-md-4 col-sm-4 col-xs-4">
-                                        <div class="station_name">
-                                            <span>产品经理</span>
-                                        </div>
-                                    </li>
-                                </ul>
-                                <ul class="station_content clearfix">
-                                    <li class="col-lg-12 col-md-12 first">
-                                        <div>
-                                            <img src="images/top.jpg" alt="" class="top1"/>
-                                            <h4>
-                                                岗位要求
-                                            </h4>
-                                            职位描述:<br>
-                                            <span>
-                                                1、技术人员职位，在上级的领导和监督下定期完成量化的工作要求； <br/>
-                                                2、能独立处理和解决所负责的任务； <br/>
-                                                3、根据开发进度和任务分配，完成相应模块软件的设计、开发、编程任务； <br/>
-                                                4、进行程序单元、功能的测试，查出软件存在的缺陷并保证其质量； <br/>
-                                                5、进行编制项目文档和质量记录的工作； <br/>
-                                                6、维护软件使之保持可用性和稳定性。 <br/>
-                                                <br>
-                                           </span>
-                                            职位要求:<br>
-                                            <span>
-                                                1.	2年以上软件开发经验；<br/>
-                                                2.	熟悉面向对象思想，精通编程，调试和相关技术；<br/>
-                                                3.	熟悉应用服务器的安装、调试、配置及使用；<br/>
-                                                4.	熟练使用HTML、CSS、Javascript、JQuery、等前端技术<br/>
-                                                5.	熟练掌握java语言;<br/>
-                                                6.	熟练使用Spring、SpringMVC、MyBatis等开源框架；<br/>
-                                                7.	具备 MySQL 数据库的使用经验；<br/>
-                                                8.	具备需求分析和系统设计能力，以及较强的逻辑分析和独立解决问题能力；<br/>
-                                                9.	熟练使用相关工具，包括开发工具、数据库工具、版本控制工具等<br/>
-                                                10.具有良好编码习惯，有一定文档编写能力。<br/>
-                                                11.具有大型项目开发经验、高并发性项目开发经验者优先考虑；<br/>
-                                                <br>
-                                                请将简历投递至邮箱：<span class="color">business#eyohu.com</span>(发邮件时请将#替换为@)
-                                            </span>
+                            <!--<img src="images/zhiwei.png"  class="img-responsive" alt="Responsive image" style="position: relative;top: -25px;"/>-->
+                            <!--<ul class="pay clearfix">-->
+                                <!--<li class="col-lg-6">-->
+                                    <!--<div class="clearfix">-->
+                                        <!--<img src="images/pay1.png" alt=""/>-->
+                                        <!--<span class="pay_title">薪酬水平</span><br/>-->
+                                        <!--<span>业内有竞争力的薪酬、奖金计划、完善的社会福利保险及住房公积金、优秀员工奖励制度，新员工推荐奖励制度等，让每一位员工充分实现自身</span>-->
+                                    <!--</div>-->
+                                <!--</li>-->
+                                <!--<li class="col-lg-6">-->
+                                    <!--<div class="clearfix">-->
+                                        <!--<img src="images/pay3.png" alt=""/>-->
+                                        <!--<span class="pay_title">晋升空间</span><br/>-->
+                                        <!--<span>我们关注员工的专业提升和职业发展，为每一位员工制定极富挑战的横向或纵向晋升发展空间，同时提供新人入职培训、个人发展计划、专业技术培训、内部分享交流以及团队拓展训练。</span>-->
+                                    <!--</div>-->
+                                <!--</li>-->
+                            <!--</ul>-->
+                            <!--<h4 class="col-lg-12" style="text-align:center;font-size: 18px;">具体工作类别</h4>-->
+                            <!--<div class="wrap">-->
+                                <!--<ul class="station_head">-->
+                                    <!--<li class="col-lg-4 col-md-4 col-sm-4 col-xs-4">-->
+                                        <!--<div class="station_name active">-->
+                                            <!--<span>java工程师</span>-->
+                                        <!--</div>-->
+                                    <!--</li>-->
+                                    <!--<li class="col-lg-4 col-md-4 col-sm-4 col-xs-4">-->
+                                        <!--<div class="station_name">-->
+                                            <!--<span>前端工程师</span>-->
+                                        <!--</div>-->
+                                    <!--</li>-->
+                                    <!--<li class="col-lg-4 col-md-4 col-sm-4 col-xs-4">-->
+                                        <!--<div class="station_name">-->
+                                            <!--<span>产品经理</span>-->
+                                        <!--</div>-->
+                                    <!--</li>-->
+                                <!--</ul>-->
+                                <!--<ul class="station_content clearfix">-->
+                                    <!--<li class="col-lg-12 col-md-12 first">-->
+                                        <!--<div>-->
+                                            <!--<img src="images/top.jpg" alt="" class="top1"/>-->
+                                            <!--<h4>-->
+                                                <!--岗位要求-->
+                                            <!--</h4>-->
+                                            <!--职位描述:<br>-->
+                                            <!--<span>-->
+                                                <!--1、技术人员职位，在上级的领导和监督下定期完成量化的工作要求； <br/>-->
+                                                <!--2、能独立处理和解决所负责的任务； <br/>-->
+                                                <!--3、根据开发进度和任务分配，完成相应模块软件的设计、开发、编程任务； <br/>-->
+                                                <!--4、进行程序单元、功能的测试，查出软件存在的缺陷并保证其质量； <br/>-->
+                                                <!--5、进行编制项目文档和质量记录的工作； <br/>-->
+                                                <!--6、维护软件使之保持可用性和稳定性。 <br/>-->
+                                                <!--<br>-->
+                                           <!--</span>-->
+                                            <!--职位要求:<br>-->
+                                            <!--<span>-->
+                                                <!--1.	2年以上软件开发经验；<br/>-->
+                                                <!--2.	熟悉面向对象思想，精通编程，调试和相关技术；<br/>-->
+                                                <!--3.	熟悉应用服务器的安装、调试、配置及使用；<br/>-->
+                                                <!--4.	熟练使用HTML、CSS、Javascript、JQuery、等前端技术<br/>-->
+                                                <!--5.	熟练掌握java语言;<br/>-->
+                                                <!--6.	熟练使用Spring、SpringMVC、MyBatis等开源框架；<br/>-->
+                                                <!--7.	具备 MySQL 数据库的使用经验；<br/>-->
+                                                <!--8.	具备需求分析和系统设计能力，以及较强的逻辑分析和独立解决问题能力；<br/>-->
+                                                <!--9.	熟练使用相关工具，包括开发工具、数据库工具、版本控制工具等<br/>-->
+                                                <!--10.具有良好编码习惯，有一定文档编写能力。<br/>-->
+                                                <!--11.具有大型项目开发经验、高并发性项目开发经验者优先考虑；<br/>-->
+                                                <!--<br>-->
+                                                <!--请将简历投递至邮箱：<span class="color">business#eyohu.com</span>(发邮件时请将#替换为@)-->
+                                            <!--</span>-->
 
-                                        </div>
+                                        <!--</div>-->
 
-                                    </li>
-                                    <li class="col-lg-12 col-md-12">
-                                        <div>
-                                            <img src="images/top.jpg" alt="" class="top2"/>
-                                            <h4>
-                                                岗位要求
-                                            </h4>
-                                            职位描述:<br>
-                                            <span>
-                                                1．依据产品需求, 配合设计师完成Web前端表现层开发；<br>
-                                                2．和后台开发人员共同制定前后端交互的架构设计和开发； <br>
-                                                3．JavaScript程序模块开发，通用类库、框架编写；<br>
-                                                4．促进产品易用性改进和界面技术优化。 <br>
-                                                <br>
-                                            </span>
-                                            职位要求:<br>
-                                            <span>
-                                                1. 熟悉 HTML5、CSS、页面重构和布局<br>
-                                                2. 熟悉 Javascript 语言，掌握 jQuery、zepto、Angular等。<br>
-                                                3. 熟悉 W3C 标准，对表现与数据分离、Web语义化等有较为深刻的理解，并且有良好的代码书写习惯。<br>
-                                                4. 熟悉 photoshop、fireworks等工具，能够自行切图<br>
-                                                5. 具有较强的沟通能力，具备良好的团队合作精神。<br>
-                                                6. 具有以下能力者优先考虑：<br>
-                                                a. 有成熟的前端作品<br>
-                                                b. 了解 WEB 环境的搭建。<br>
-                                                c. 掌握前端性能优化体验。<br>
-                                                <br>
-                                                请将简历投递至邮箱：<span class="color">business#eyohu.com</span>(发邮件时请将#替换为@)
-                                            </span>
+                                    <!--</li>-->
+                                    <!--<li class="col-lg-12 col-md-12">-->
+                                        <!--<div>-->
+                                            <!--<img src="images/top.jpg" alt="" class="top2"/>-->
+                                            <!--<h4>-->
+                                                <!--岗位要求-->
+                                            <!--</h4>-->
+                                            <!--职位描述:<br>-->
+                                            <!--<span>-->
+                                                <!--1．依据产品需求, 配合设计师完成Web前端表现层开发；<br>-->
+                                                <!--2．和后台开发人员共同制定前后端交互的架构设计和开发； <br>-->
+                                                <!--3．JavaScript程序模块开发，通用类库、框架编写；<br>-->
+                                                <!--4．促进产品易用性改进和界面技术优化。 <br>-->
+                                                <!--<br>-->
+                                            <!--</span>-->
+                                            <!--职位要求:<br>-->
+                                            <!--<span>-->
+                                                <!--1. 熟悉 HTML5、CSS、页面重构和布局<br>-->
+                                                <!--2. 熟悉 Javascript 语言，掌握 jQuery、zepto、Angular等。<br>-->
+                                                <!--3. 熟悉 W3C 标准，对表现与数据分离、Web语义化等有较为深刻的理解，并且有良好的代码书写习惯。<br>-->
+                                                <!--4. 熟悉 photoshop、fireworks等工具，能够自行切图<br>-->
+                                                <!--5. 具有较强的沟通能力，具备良好的团队合作精神。<br>-->
+                                                <!--6. 具有以下能力者优先考虑：<br>-->
+                                                <!--a. 有成熟的前端作品<br>-->
+                                                <!--b. 了解 WEB 环境的搭建。<br>-->
+                                                <!--c. 掌握前端性能优化体验。<br>-->
+                                                <!--<br>-->
+                                                <!--请将简历投递至邮箱：<span class="color">business#eyohu.com</span>(发邮件时请将#替换为@)-->
+                                            <!--</span>-->
 
-                                        </div>
+                                        <!--</div>-->
 
-                                    </li>
-                                    <li class="col-lg-12 col-md-12">
-                                        <div>
-                                            <img src="images/top.jpg" alt="" class="top3"/>
-                                            <h4>
-                                                岗位要求
-                                            </h4>
-                                            职位描述:<br>
-                                            <span>
-                                                1. 负责移动互联网创新型产品的市场调研，挖掘和把握用户对移动产品的各层次需求，设计产品功能，定义用户交互流程，创建新颖优质的移动应用；<br>
-                                                2. 对客户需求进行重要性排序，制定开发优先级；<br>
-                                                3. 引导产品的用户体验优化、功能完善，提升产品黏度，提升用户体验，对日常数据进行跟踪和研究，并据此调整产品和运营策略，分析产品运营效果和用户反馈，制定产品优化方案；<br>
-                                                4. 负责无线产品的项目管理，通过和市场、设计、开发等团队的沟通协作，确保移动产品开发的连贯性和时效性；<br>
-                                                5. 把握移动互联网市场趋势，制定升级及改进计划。<br>
-                                                <br>
-                                            </span>
-                                            职位要求:<br>
-                                            <span>
-                                                1. 三年以上移动互联网产品经验；<br>
-                                                2. 热爱移动互联网，关注移动互联网的新事物和用户行为变化；<br>
-                                                3. 有很好的大局观，能站在全局思考问题，明确各产品的定位和阶段性目标；<br>
-                                                4. 优秀的定量分析能力和严密的逻辑思维；<br>
-                                                5. 出色的语言、沟通、组织和协调能力；<br>
-                                                6. 具有敏锐的市场意识、良好的运营思维和创新意识；<br>
-                                                7. 能够输出方法论，指导和培养产品团队，有带领过3人以上产品团队经验；<br>
-                                                8. 本科以上,有计算机、数学、物理、经济、心理学，新闻传播或相关学科背景；<br>
-                                                9. 独立负责过一个产品的生命周期，从事TO B产品行业经验；<br>
-                                                10.请随简历发产品设计原型。<br>
-                                                <br>
-                                                请将简历投递至邮箱：<span class="color">business#eyohu.com</span>(发邮件时请将#替换为@)
-                                            </span>
-                                        </div>
-                                    </li>
-                                </ul>
+                                    <!--</li>-->
+                                    <!--<li class="col-lg-12 col-md-12">-->
+                                        <!--<div>-->
+                                            <!--<img src="images/top.jpg" alt="" class="top3"/>-->
+                                            <!--<h4>-->
+                                                <!--岗位要求-->
+                                            <!--</h4>-->
+                                            <!--职位描述:<br>-->
+                                            <!--<span>-->
+                                                <!--1. 负责移动互联网创新型产品的市场调研，挖掘和把握用户对移动产品的各层次需求，设计产品功能，定义用户交互流程，创建新颖优质的移动应用；<br>-->
+                                                <!--2. 对客户需求进行重要性排序，制定开发优先级；<br>-->
+                                                <!--3. 引导产品的用户体验优化、功能完善，提升产品黏度，提升用户体验，对日常数据进行跟踪和研究，并据此调整产品和运营策略，分析产品运营效果和用户反馈，制定产品优化方案；<br>-->
+                                                <!--4. 负责无线产品的项目管理，通过和市场、设计、开发等团队的沟通协作，确保移动产品开发的连贯性和时效性；<br>-->
+                                                <!--5. 把握移动互联网市场趋势，制定升级及改进计划。<br>-->
+                                                <!--<br>-->
+                                            <!--</span>-->
+                                            <!--职位要求:<br>-->
+                                            <!--<span>-->
+                                                <!--1. 三年以上移动互联网产品经验；<br>-->
+                                                <!--2. 热爱移动互联网，关注移动互联网的新事物和用户行为变化；<br>-->
+                                                <!--3. 有很好的大局观，能站在全局思考问题，明确各产品的定位和阶段性目标；<br>-->
+                                                <!--4. 优秀的定量分析能力和严密的逻辑思维；<br>-->
+                                                <!--5. 出色的语言、沟通、组织和协调能力；<br>-->
+                                                <!--6. 具有敏锐的市场意识、良好的运营思维和创新意识；<br>-->
+                                                <!--7. 能够输出方法论，指导和培养产品团队，有带领过3人以上产品团队经验；<br>-->
+                                                <!--8. 本科以上,有计算机、数学、物理、经济、心理学，新闻传播或相关学科背景；<br>-->
+                                                <!--9. 独立负责过一个产品的生命周期，从事TO B产品行业经验；<br>-->
+                                                <!--10.请随简历发产品设计原型。<br>-->
+                                                <!--<br>-->
+                                                <!--请将简历投递至邮箱：<span class="color">business#eyohu.com</span>(发邮件时请将#替换为@)-->
+                                            <!--</span>-->
+                                        <!--</div>-->
+                                    <!--</li>-->
+                                <!--</ul>-->
+                            <!--</div>-->
+
+
+                            <h3 style="text-align: center;">请移步随走招聘网</h3>
+                            <h4 style="text-align: center;font-size: 18px;">请扫下方二维码</h4>
+                            <div style="text-align: center">
+                                <img src="images/code1.jpg" alt="" style="width: 170px;height: 170px;"/>
                             </div>
                         </div>
                     </div>
