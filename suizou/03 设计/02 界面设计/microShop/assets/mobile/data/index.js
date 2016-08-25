@@ -26,8 +26,6 @@ new Vue({
         ]
     }
 });
-
-
 $(function(){
     $(".shoppingList.style li:odd").addClass("mr0")
 });
