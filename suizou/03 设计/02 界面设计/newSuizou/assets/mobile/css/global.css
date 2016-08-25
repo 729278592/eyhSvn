@@ -78,7 +78,7 @@ tr th,tr td{height: 2.6em;}
 .notes p span.style{display: inline-block;width: 20px;float: left;}
 .notes p span.last{width: 59%;}
 .notes p img{width: 18px;}
-.datepicker table tr td.today{background: url(../images/todayImg.png) no-repeat;background-position: 18px 2px;background-size: 22px;}
+.datepicker table tr td.today{background: url(../images/todayImg.png) no-repeat;background-position: 21px 2px;background-size: 16px;}
 
 .datepicker table tr td span.active.active{background: #48abea;}
 
