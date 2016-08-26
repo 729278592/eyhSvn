@@ -2,7 +2,7 @@
 <html>
 <head lang="en">
     <meta charset="UTF-8">
-    <title>联系我们</title>
+    <title>资讯详情</title>
     <link rel="stylesheet" href="plugins/font/css/font-awesome.min.css"/>
     <link rel="stylesheet" href="css/globle.css"/>
 </head>
@@ -34,53 +34,19 @@
                     <li>
                         <a href="talentRecruitment.html">人才招聘</a>
                     </li>
-                    <li>
+                    <li class="active">
                         <a href="consultingCenter.html">资讯中心</a>
                     </li>
-                    <li class="active">
+                    <li>
                         <a href="contactUs.html">联系我们</a>
                     </li>
                 </ul>
             </div>
         </div>
         <div class="content">
-            <img src="images/contact1.jpg" alt="" class="autoImg"/>
-            <div class="l_contact">
-                <div class="contact">
-                    <div class="c_type">
-                        联系方式
-                    </div>
-                    <ul class="l_contact_menu clearfix">
-                        <li class="first">
-                            <img src="images/contact1.png" alt=""/>
-                            电话 : (86 23) 8806 0206
-                        </li>
-                        <li class="second">
-                            <img src="images/contact2.png" alt=""/>
-                            传真 : (86 23) 8806 0206
-                        </li>
-                        <li class="next">
-                            <img src="images/contact3.png" alt=""/>
-                            邮政编码 : 400042
-                        </li>
-                        <li class="last mr0">
-                            <img src="images/contact3.png" alt=""/>
-                            <!--企业邮箱 : office@cqyclawyer.com-->
-
-                            企业邮箱 : office@cqyclawyer.com
-                        </li>
-                    </ul>
-                    <div class="contact_block">
-
-                    </div>
-                    <div class="c_type">
-                        原驰地址
-                        <span class="right">
-                            地址：重庆市渝中区经纬大道333号康德国际2号楼2001号
-                        </span>
-                    </div>
-                    <div id="allmap"></div>
-                </div>
+            <img src="images/caseAnalysisInfor1.jpg" alt="" class="autoImg"/>
+            <div class="l_consultingInfor">
+                <img src="images/ca_infor.jpg" alt="" class="autoImg"/>
             </div>
         </div>
         <div class="foot clearfix">
@@ -119,30 +85,13 @@
                 </ul>
             </div>
             <div class="copyright">
-                                <span>
-                                    渝ICP备15002338号-1 Copyright © 2014~2015 重庆原驰律师有限公司 版权所有
-                                </span>　
+                    <span>
+                        渝ICP备15002338号-1 Copyright © 2014~2015 重庆原驰律师有限公司 版权所有
+                    </span>　
             </div>
         </div>
     </div>
     <script src="plugins/jquery/jquery-1.11.3.min.js"></script>
     <script src="js/globle.js"></script>
-    <script type="text/javascript" src="http://api.map.baidu.com/api?v=2.0&ak=q0lvjEUGF5AOzHtbjn9YFtwl"></script>
-    <script type="text/javascript">
-        // 百度地图API功能
-        var map = new BMap.Map("allmap");    // 创建Map实例
-        map.centerAndZoom(new BMap.Point(116.404, 39.915), 11);  // 初始化地图,设置中心点坐标和地图级别
-        map.addControl(new BMap.MapTypeControl());   //添加地图类型控件
-        map.setCurrentCity("重庆");          // 设置地图显示的城市 此项是必须设置的
-        map.enableScrollWheelZoom(true);     //开启鼠标滚轮缩放
-        var myGeo = new BMap.Geocoder();
-        // 将地址解析结果显示在地图上,并调整地图视野
-        myGeo.getPoint("重庆市渝中区经纬大道3", function(point){
-            if (point) {
-                map.centerAndZoom(point, 16);
-                map.addOverlay(new BMap.Marker(point));
-            }
-        }, "重庆市");
-    </script>
 </body>
 </html>
