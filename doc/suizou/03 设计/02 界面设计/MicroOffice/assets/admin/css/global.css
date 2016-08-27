@@ -488,13 +488,13 @@ img.w100{width: 100%;}
 }
 
 /*mobileExhibition*/
-.maxw640{width: 395px;margin: 0 99px;position: relative;display: block;height: 813px;background-image: url("../images/device-sprite.png");background-size: 300%;background-repeat: no-repeat;background-position: 0 0;}
-.maxw640 .container{position: absolute;top: 117px;width: 321px;height: 569px;overflow: hidden;font-size: 0.85rem;line-height: 1.05rem;background: #eeeeee;}
+.maxw640{width: 365px;margin: 0 99px;position: relative;display: block;height: 745px;background-image: url("../images/iphone-bg.png");background-size: 100% 100%;background-repeat: no-repeat;background-position: 0 0;}
+.maxw640 .container{position: absolute;top: 80px;width: 321px;height: 569px;overflow: hidden;font-size: 0.85rem;line-height: 1.05rem;background: #eeeeee;}
 .maxw640 .container{overflow-y: auto;}
 .linkGroup{margin: 50px 0;width: 600px;}
 .linkGroup>div{margin-bottom: 30px;}
 .linkGroup>div .titleName{font-size: 16px;color: #666;}
-.linkGroup>div>div{margin-right: 30px;margin-top: 20px;margin-bottom: 10px;}
+.linkGroup>div>div{margin-left: 10px;margin-top: 10px;}
 .linkGroup>div .interA{}
 .linkGroup>div .interA a{text-decoration: underline;color: #4879c7;font-size: 16px;}
 .linkGroup>div img{width: 100px;height: 100px;}
@@ -611,16 +611,16 @@ a.keyword-button:hover,.keyword-button:active,.keyword-button:focus{color: #fff;
 .basicInfor{background: #e7e7e7;padding: 10px 50px;width: 100%;border: 1px solid #dbdbdb;}
 .basicInfor .interviewPerson{margin: 3px 80px 10px;width: 120px;height: 120px;border-radius: 120px;}
 .ulInfor{display: block;position: relative;left: 23px;}
-.ulInfor li{color: #999;font-size: 14px;float: left;border-right: 1px solid #999;padding: 0 24px;}
+.ulInfor li{color: #999;font-size: 14px;float: left;border-right: 1px solid #999;padding: 0 24px;position: relative;left: 40px;}
 .ulInfor li.br0{border-right: 0;}
-.headName{width: 100%;background: url(../images/personinforBg.jpg)no-repeat;background-size: 100% 100%;height: 40px;line-height: 40px;color: #fff;}
+.headName{width: 100%;background: url(../images/personinforBg.png)no-repeat;background-size: 100% 100%;height: 40px;line-height: 40px;color: #fff;}
 .headName span.name{position: relative;left: 15px;}
 .headName span.phones{position: relative;left: 250px;}
 .headName p{padding: 3px 10px 3px 10px;background: #fff;display: inline-block;margin-bottom: 10px;color: #6cb7ee;}
 .basicDiv{margin-left: 40px;width: 550px;margin-top: 5px;}
-.contentCon{}
+.contentCon{min-width: 520px;}
 .basicList{display: block;padding-top: 5px;}
-.basicList li{float: left;width: 45%;color: #999;font-size: 14px;line-height: 25px;padding-left: 5%;}
+.basicList li{float: left;width: 45%;color: #999;font-size: 14px;line-height: 25px;padding-left: 0;}
 .basicList li .typeSpan{display: inline-block;width: 58px;font-size: 14px;}
 .spanList span{display: inline-block;width: 29%;border-right: 1px solid #dbdbdb;text-align: center;color: #666;}
 .spanList span.br0{border-right: 0;}
@@ -718,7 +718,7 @@ a.keyword-button:hover,.keyword-button:active,.keyword-button:focus{color: #fff;
 .dinLink p.smsgzpp{margin: 0 0;position: relative;}
 .dinLink p.smsgzpp a{color: #999;float: left;position: relative;}
 .dinLink p.smsgzpp a:hover .detailsPosition{display: inline-block;}
-.detailsPosition{color: #fff;background: rgba(0,0,0,0.6);border-radius: 2px;padding: 10px 20px;position: absolute;min-width: 250px;left: 115px;top: -0px;z-index: 1000;display: none;}
+.detailsPosition{color: #fff;background: rgba(0,0,0,0.6);border-radius: 2px;padding: 10px 10px;position: absolute;min-width: 280px;left: 115px;top: -0px;z-index: 1000;display: none;}
 .detailsPosition .fa-caret-left{position: absolute;top: 3px;left: -5px;color: rgba(0,0,0,0.6);font-size: 16px;}
 .howPosition:hover .detailsPosition{display: inline-block;}
 
@@ -876,9 +876,10 @@ a.keyword-button:hover,.keyword-button:active,.keyword-button:focus{color: #fff;
 .i_head_main{width: 1024px;display: block;margin: 0 auto;}
 .i_head_main>img{float: left;width: 100px;position: relative;top: 8px;}
 .i_link{float: right;}
-.i_link li{float: left;}
+.i_link li{float: left;position: relative;}
 .i_link li a{display: inline-block;padding: 10px 20px;color: #fff;border-radius: 0 0 4px 4px;}
 .i_link li a.person{background: #f8723e;margin-right: 10px;}
+.suizou{width: 120px;position: absolute;top: 50px;}
 .i_link li a.company{background: #1bb3b4;}
 .i_content{width: 100%;min-width: 1024px;margin-top: -41px;}
 .i_con_head{}
