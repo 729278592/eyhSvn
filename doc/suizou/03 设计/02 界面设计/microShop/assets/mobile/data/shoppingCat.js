@@ -26,27 +26,28 @@ new Vue({
         toggleTasks:function(order){
             order.first = ! order.first;
         },
-        delegateOrder:function(shopping){
+        delegateOrder:function(index){
             this.hide = false;
 //            for(var i=0;i<this.orders.length;i++){
 //                this.orders[i].shoppings.$remove(shopping);
 //            }
 //            console.log(JSON.stringify())
         },
-        removeShopping:function(shopping){
+        removeShopping:function(){
             this.hide = true;
-            for(var i=0;i<this.orders.length;i++){
-                for(var j=0;j<this.orders[i].shoppings.length;j++){
-                    if(this.orders[i].shoppings[j].removeShop==true){
-                        this.orders[i].shoppings.$remove(shopping);
-                    }
-                }
-            }
         },
         hideMask:function(){
             this.hide = true;
+        },
+        active:function() {
+            return typeof this.value !== 'boolean' && this.group ? ~this.$parent.value.indexOf(this.value) : this.checked === this.value
         }
-    }
+    },
+
+    props: {
+        value: {
+            default: true
+        }}
 });
 
 

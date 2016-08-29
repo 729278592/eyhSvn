@@ -29,9 +29,9 @@ textarea,input,button,select{border: none;outline: none;}
 .content.bg-ecec{background: #ececec;padding-top: 1px;}
 a:hover{text-decoration: none;}
 img.w100{width: 100%;}
-.mask,.maskHide{position: absolute;top: 0;bottom: 0;right: 0;left: 0;background: rgba(0,0,0,0.6);z-index: 10;}
-.reward{background: #fff;position: relative;width: 96%;margin: 50% auto;font-size: 14px;text-align: center;padding: 10% 0;}
-.reward .shareImg{position: absolute;width: 20%;left: 0;top: -40%;z-index: 2;}
+.mask,.maskHide{position: absolute;top: 0;bottom: 0;right: 0;left: 0;background: rgba(0,0,0,0.8);z-index: 10;}
+.reward{position: relative;width: 100%;font-size: 14px;margin-top: 10%;}
+.reward .shareImg{width: 100%}
  .shareImg1{position: absolute;
     left: 2%;
     top: 2%;
@@ -257,7 +257,7 @@ img.resume{width: 100%;margin-bottom: 15px;border-bottom: 1px solid #efefef;}
     -webkit-box-orient: vertical;
     -webkit-line-clamp: 1;
     overflow: hidden;
-    text-overflow: ellipsis;padding: 10px 15px;}
+    text-overflow: ellipsis;padding: 10px;}
 .comInfors p:after{position: absolute;bottom: 0;left: -0px;right: -0px;content: "";height: 1px;background: #EFEFEF;}
 .comInfors p:last-child{border-bottom: 1px solid #dbdbdb;}
 .comInfors p img{width: 20px;margin-right: 5px;}

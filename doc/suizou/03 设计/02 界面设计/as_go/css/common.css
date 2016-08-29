@@ -54,8 +54,8 @@ a:hover{cursor: pointer;}
 .step{background: #e5e8ea;padding-top: 10px;width: 100%;}
 .step li{display: inline-block;}
 .step li .glyphicon-menu-right{position: relative;top: -27px;left: 65px;}
-.register_title{font-size: 16px;font-weight: bold;margin-left: -15px;}
-.registration_form{width: 100%;margin-top: 10px;margin-left: -15px;color: #666;}
+.register_title{font-size: 16px;font-weight: bold;margin-left: -15px;text-align: center;}
+.registration_form{color: #666;width: 50%;margin: 0 25%;}
 .registration_form li{padding: 0;}
 .registration_form li .caret{width: 0;height: 0;border-top: 30px solid transparent;border-right: 30px solid transparent;border-left: 30px solid transparent;border-bottom: 30px solid transparent;color: #fff;}
 .registration_form li .first_triangle{ border-left: 30px solid #3caee2;}
@@ -440,8 +440,8 @@ b {line-height: 30px;font-weight: 700;}
     .img_hide{display: none;!important;}
     .content_main .first{position: relative;left: 0;}
     .content_main .last{position: relative;left: 0;}
-    .content_main>li,.registration_form,.register_title{margin-left: 8.3333%;}
-    .registration_form li{width: 75.333%;!important;padding-right: 5%;}
+    .content_main>li,.registration_form,.register_title{width: 100%;margin: 0;margin-top: 10px;}
+    .registration_form li{width: 90%;!important;padding: 0 5%;}
     .step li .glyphicon-menu-right{left: 55%;}
     .verification{width: 40%;}
 }
