@@ -241,6 +241,19 @@ img.resume{width: 100%;margin-bottom: 15px;border-bottom: 1px solid #efefef;}
 .code p{font-size: 16px;color: #999;margin-top: 2%;}
 
 
+
+.companyHinfor{width: 100%;height: 220px;background: url(../images/companyhImg.jpg) no-repeat;background-size: 100% 100%;text-align: center;}
+.companyHinfor>img{width: 80px;height: 80px;border-radius: 100%;display: inline-block;margin: 65px 0 10px;}
+.companyHinfor .bottomDiv{color: #fff;width: 94%;margin: 0 3%;}
+.companyHinfor .bottomDiv p{display: -webkit-box;
+    -webkit-box-orient: vertical;
+    -webkit-line-clamp: 1;
+    overflow: hidden;
+    text-overflow: ellipsis;}
+.companyHinfor .bottomDiv p.fs20{font-size: 20px;}
+.companyHinfor .bottomDiv p.fs18{font-size: 16px;}
+
+
 .person-head{width: 96%;padding: 2%;position: relative;}
 .person-head .portrait{width: 25%;float: left;margin-right: 3%;}
 .personIfor{width: 30%;float: left;}
@@ -368,8 +381,8 @@ a.weui_btn.weui_btn_primary{font-size: 16px;}
 
 .companyBriefIntroduction.style,.prosuct.style,.companyImgList.style{padding: 0 0 3%;width: 100%;}
 .prosuct.style .goodMenu,.companyBriefIntroduction.style .comBIContent{width: 94%;padding: 0 3%;}
-.companyBriefIntroduction.style .comBIContent,.prosuct .prosuctContent{max-height: 80px;overflow: auto;}
-
+.companyBriefIntroduction.style .comBIContent,.prosuct .prosuctContent{height: 80px;overflow: auto;}
+.companyBriefIntroduction.style .comBIContent.active,.prosuct .prosuctContent.active{height: auto;}
 
 
 .companyImgList.style .companyImgListTitle.bb0{border-bottom: 0;margin-bottom: 0;}

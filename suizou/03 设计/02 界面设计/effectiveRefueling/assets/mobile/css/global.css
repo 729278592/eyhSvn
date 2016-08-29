@@ -539,10 +539,12 @@ img.shopInfor.w100{width: 100%;margin-bottom: 0.625rem;}
 .btnRemove{outline: none;border: none;color: #666;font-size: 1rem;background: transparent;font-family: "微软雅黑";position: relative;top: 0.25rem;}
 .scale{color: #666;}
 .optionType.style{background: #fff;}
-.optionType.style li.first{width: 40%;line-height: 3rem;}
-.optionType.style li.second{width: 30%;background: transparent;}
+.optionType.style li button{line-height: 5px;}
+.optionType.style li.first{width: 32%;background: transparent;}
+.optionType.style li.first button.btnEmpty{background: transparent;color: #666;}
+.optionType.style li.second{width: 34%;}
 .optionType.style li.second button.btnEmpty{background: transparent;color: #666;}
-.optionType.style li.last{width: 30%;}
+.optionType.style li.last{width: 34%;}
 .optionType.style li.last button{background: #ff6702;}
 
 

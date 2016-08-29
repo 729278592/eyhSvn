@@ -48,12 +48,13 @@
             <div class="bd absolute pt">
                 <div id="invoice">
                     <ul class="invoiceList">
-                        <li v-for="order in orders | filterBy orderName in orderName shopping in 'shoppings' id in id allMoney in allMoney">
-                            <div class="clearfix invoiceHead style">
+                        <!--<li v-for="order in orders" :class="[order.first ? 'active':'',order.last ? 'mb0':'']"  >-->
+                        <li v-for="order in orders" :class="{'active':order.first,'mb0':order.last}"  >
+                            <div class="clearfix invoiceHead style" @click="toggleTasks(order)">
                                 <div class="weui_cells weui_cells_checkbox mt0 style1 inline_block">
                                     <label class="weui_cell weui_check_labe style" for={{order.id}}>
                                         <div class="weui_cell_hd">
-                                            <input type="checkbox" class="weui_check" name="checkbox1" id={{order.id}} >
+                                            <input type="checkbox" class="weui_check" name="checkbox1" id={{order.id}} v-model="allChecked"}/>
                                             <i class="weui_icon_checked"></i>
                                         </div>
                                     </label>
@@ -67,12 +68,12 @@
                             </div>
                             <div class="invoiceCon style">
                                 <ul class="orderList style">
-                                    <li v-for="shopping in order.shoppings | filterBy shoppingName in shoppingName orderColor in 'orderColor' orderMoney in 'orderMoney' src in src  id in id src in src">
+                                    <li v-for="shopping in order.shoppings" :class="{'removeShop':shopping.removeShop}">
                                         <div class="orderCon">
-                                            <div class="weui_cells weui_cells_checkbox mt0 style1 inline_block left5">
+                                            <div class="weui_cells weui_cells_checkbox mt0 style1 inline_block left5">   <!--@:click.stop.prevent="toggleTasks")-->
                                                 <label class="weui_cell weui_check_labe style p0" for={{shopping.id}}>
                                                     <div class="weui_cell_hd">
-                                                        <input type="checkbox" class="weui_check" name="checkbox1" id={{shopping.id}}>
+                                                        <input type="checkbox" class="weui_check" name="checkbox1" id={{shopping.id}} v-model="shopping.checked"/>
                                                         <i class="weui_icon_checked"></i>
                                                     </div>
                                                 </label>
@@ -83,6 +84,9 @@
                                             <div class="orderInfor">
                                                 <p class="clearfix">
                                                     <span class="left">{{shopping.shoppingName}} <br/><span class="colors">{{shopping.orderColor}}</span></span>
+                                                    <button class="right btnRemove" @click="delegateOrder(shopping)">
+                                                        <i class="fa fa-trash-o"></i> 删除
+                                                    </button>
                                                 </p>
                                                 <p class=" clearfix">
                                                     <span class="left">￥{{shopping.orderMoney}}</span>
@@ -91,7 +95,6 @@
                                             </div>
                                         </div>
                                     </li>
-
                                 </ul>
                                 <ul class="optionType style clearfix">
                                     <li class="last">
@@ -103,7 +106,6 @@
                                 </ul>
                             </div>
                         </li>
-
                     </ul>
                 </div>
                 <div class="notConTip hide">
@@ -113,12 +115,26 @@
                         <a href="shopMall.html" style="color: #ff0004">去看看>></a>
                     </p>
                 </div>
+
+                <div class="weui_dialog_confirm" :class="{'hide':hide}" id="dialogConfirm">
+                    <div class="weui_mask"></div>
+                    <div class="weui_dialog vux-dialog-transition">
+                        <div class="weui_dialog_hd">
+                            <strong class="weui_dialog_title">是否删除该订单?</strong>
+                        </div>
+                        <div class="weui_dialog_ft">
+                            <a href="javascript:;" class="weui_btn_dialog default" @click="hideMask">取消</a>
+                            <a href="javascript:;" class="weui_btn_dialog primary" @click="removeShopping(shopping)">确定</a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
             </div>
         </div>
     </div>
     <script src="../../assets/global/plugins/jquery/jquery-1.11.3.min.js"></script>
     <script src="../../assets/mobile/plugins/jquery-spinner/js/jquery.spinner.js"></script>
-    <script src="../../assets/mobile/js/confirm.js"></script>
+    <!--<script src="../../assets/mobile/js/confirm.js"></script>-->
     <script src="../../assets/mobile/js/removeTip.js"></script>
     <script src="../../assets/mobile/js/global.js"></script>
     <script src="../../assets/mobile/plugins/vue/vue.min.js"></script>
@@ -127,71 +143,56 @@
         $(function(){
             $('.spinnerExample').spinner({});
 
-            /*商品删除弹框*/
-            var page = $(".page");
-            $(".orderList").delegate(".btnRemove","touchend",function(){
-                confirmTip("是否删除该订单?");
-                $("#dialogConfirm").removeClass("hide");
-                $(this).closest("li").addClass("remove");
-                $("#signCancel").addClass("signCancel");
-                $("#signSure").addClass("signSure");
-                $(".weui_dialog").css({display:"inline-block"});
-                $(".weui_dialog").removeClass("vux-dialog-leave")
-            });
+//            /*商品删除弹框*/
+//            var page = $(".page");
+//            $(".orderList").delegate(".btnRemove","touchend",function(){
+//                confirmTip("是否删除该订单?");
+//                $("#dialogConfirm").removeClass("hide");
+//                $(this).closest("li").addClass("remove");
+//                $("#signCancel").addClass("signCancel");
+//                $("#signSure").addClass("signSure");
+//                $(".weui_dialog").css({display:"inline-block"});
+//                $(".weui_dialog").removeClass("vux-dialog-leave")
+//            });
+//
+//            /*取消商品删除*/
+//            page.delegate(".signCancel","touchend",function(){
+//                $(".orderList li.remove").removeClass("remove");
+//                $("#dialogConfirm").addClass("hide");
+//                $(".weui_dialog").addClass("vux-dialog-leave")
+//
+//            });
+//
+//            /*确定商品删除*/
+//            page.delegate(".signSure","touchend",function(){
+//                $(".orderList li.remove").remove();
+//                $("#dialogConfirm").addClass("hide");
+//                showErrMsg("商品删除成功");
+//            });
+//
+//
+//            /*确定商品清空*/
+//            page.delegate(".signSureAll","touchend",function(){
+//                $(".orderList").empty();
+//                $("#dialogConfirm").addClass("hide");
+//            });
+//
+//            /*取消商品清空*/
+//            page.delegate(".signCancelAll","touchend",function(){
+//                $("#dialogConfirm").addClass("hide");
+//            });
+//
+//
+//            /*发票全部与全不选*/
+//            $("#invoice").delegate(".weui_cells_checkbox.inline_block","touchend",function(e){
+//                e.stopPropagation();
+//                if($(this).find("input").prop("checked")){
+//                    $(this).closest(".invoiceHead ").next(".invoiceCon ").find("input").prop({checked:false});
+//                }else{
+//                    $(this).closest(".invoiceHead ").next(".invoiceCon ").find("input").prop({checked:"checked"});
+//                }
+//            });
 
-            /*取消商品删除*/
-            page.delegate(".signCancel","touchend",function(){
-                $(".orderList li.remove").removeClass("remove");
-                $("#dialogConfirm").addClass("hide");
-                $(".weui_dialog").addClass("vux-dialog-leave")
-
-            });
-
-            /*确定商品删除*/
-            page.delegate(".signSure","touchend",function(){
-                $(".orderList li.remove").remove();
-                $("#dialogConfirm").addClass("hide");
-                showErrMsg("商品删除成功");
-            });
-
-
-            /*确定商品清空*/
-            page.delegate(".signSureAll","touchend",function(){
-                $(".orderList").empty();
-                $("#dialogConfirm").addClass("hide");
-            });
-
-            /*取消商品清空*/
-            page.delegate(".signCancelAll","touchend",function(){
-                $("#dialogConfirm").addClass("hide");
-            });
-
-            /*商品展示*/
-            $("#invoice").delegate(".invoiceHead","touchend",function(){
-                var invoiceCon = $(this).closest("li").find(".invoiceCon");
-                if(invoiceCon.css("display")=="none"){
-//                    invoiceCon.slideDown();
-                    $(this).closest("li").addClass("active");
-                    $(this).closest("li").siblings("li").removeClass("active");
-//                    $(this).closest("li").siblings("li").find(".invoiceCon").slideUp();
-                    $(this).find(".fa-angle-right").removeClass("fa-angle-right").addClass("fa-angle-down");
-                    $(this).closest("li").siblings("li").find(".fa-angle-down").removeClass("fa-angle-down").addClass("fa-angle-right");
-                }else{
-//                    invoiceCon.slideUp();
-                    $(this).closest("li").removeClass("active");
-                    $(this).find(".fa-angle-down").removeClass("fa-angle-down").addClass("fa-angle-right");
-                }
-            });
-
-            /*发票全部与全不选*/
-            $("#invoice").delegate(".weui_cells_checkbox.inline_block","touchend",function(e){
-                e.stopPropagation();
-                if($(this).find("input").prop("checked")){
-                    $(this).closest(".invoiceHead ").next(".invoiceCon ").find("input").prop({checked:false});
-                }else{
-                    $(this).closest(".invoiceHead ").next(".invoiceCon ").find("input").prop({checked:"checked"});
-                }
-            })
         })
     </script>
 </body>

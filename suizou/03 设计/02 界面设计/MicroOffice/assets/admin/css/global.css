@@ -615,7 +615,7 @@ a.keyword-button:hover,.keyword-button:active,.keyword-button:focus{color: #fff;
 .ulInfor li.br0{border-right: 0;}
 .headName{width: 100%;background: url(../images/personinforBg.png)no-repeat;background-size: 100% 100%;height: 40px;line-height: 40px;color: #fff;}
 .headName span.name{position: relative;left: 15px;}
-.headName span.phones{position: relative;left: 250px;}
+.headName span.phones{position: relative;left: 280px;}
 .headName p{padding: 3px 10px 3px 10px;background: #fff;display: inline-block;margin-bottom: 10px;color: #6cb7ee;}
 .basicDiv{margin-left: 40px;width: 550px;margin-top: 5px;}
 .contentCon{min-width: 520px;}
@@ -982,7 +982,7 @@ a.keyword-button:hover,.keyword-button:active,.keyword-button:focus{color: #fff;
 .workList li p .positionName{font-weight: 100;color: #666;display: inline-block;width: 100%;text-align: center;text-overflow:ellipsis; overflow:hidden; white-space:nowrap; }
 .dq-application-status-text, [class*=icon-], [class^=icon-]{font-size: 12px;font-family: "微软雅黑"!important;;}
 
-
+.widthStyle{width: 420px}
 
 
 .tops{
@@ -1032,10 +1032,16 @@ a.keyword-button:hover,.keyword-button:active,.keyword-button:focus{color: #fff;
     .common-list-item .item-actions.application-item-actions-pos{left: 52%;}
     .hoveran{width: 390px;}
     .annotation{width: 500px;}
-    .headName span.phones{position: relative;left: 160px;}
+    .headName span.phones{position: relative;left: 180px;}
     .resumeBq li{padding: 5px 20px;}
     .basicDiv{width: 385px;}
     .linkGroup{margin: 50px 0;width: 400px;}
+    .workList li.bottom .time {
+        min-width: 130px;
+        left:0;
+
+    }
+    .widthStyle{width: 230px}
 }
 @media screen and (max-height: 750px) {
     .regWrap{top:58%;}

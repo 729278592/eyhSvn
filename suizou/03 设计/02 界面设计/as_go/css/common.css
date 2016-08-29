@@ -41,7 +41,7 @@ a:hover{cursor: pointer;}
 .content_main{margin: 20px auto 0;width: 100%;}
 .content_main>li{border: 1px solid #dcdbdc;background: #fff;text-align: center;position: relative;color: #888;margin-bottom: 20px;}
 .content_main>li .icon{position: absolute;left: 5%;top: -10px;width: 50px;}
-.content_main .first{position: relative;left: -15px;}
+.content_main .first{position: relative;left: -15px;visibility: hidden;}
 .content_main .last{position: relative;left: 15px;}
 .content_main>li .btn{display: inline-block;width: 50%;height: 30px;line-height: 15px;color: #fff;margin: 20px 0;}
 .content_main>li .btn-insert{background: #d95450;}
@@ -447,7 +447,8 @@ b {line-height: 30px;font-weight: 700;}
 }
 
 @media screen and (max-width: 640px) {
-   .recommend .defalut{width: 80%;}
+    .recommend .defalut{width: 80%;}
+    .content_main .first{display:none;}
 }
 
 @media screen and (max-width: 391px) {
