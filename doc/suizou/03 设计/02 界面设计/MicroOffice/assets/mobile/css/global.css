@@ -252,7 +252,15 @@ img.resume{width: 100%;margin-bottom: 15px;border-bottom: 1px solid #efefef;}
     text-overflow: ellipsis;}
 .companyHinfor .bottomDiv p.fs20{font-size: 20px;}
 .companyHinfor .bottomDiv p.fs18{font-size: 16px;}
-
+.comInfors{background: #fff;}
+.comInfors p{font-size: 14px;color: #666;display: -webkit-box;position: relative;
+    -webkit-box-orient: vertical;
+    -webkit-line-clamp: 1;
+    overflow: hidden;
+    text-overflow: ellipsis;padding: 10px 15px;}
+.comInfors p:after{position: absolute;bottom: 0;left: -0px;right: -0px;content: "";height: 1px;background: #EFEFEF;}
+.comInfors p:last-child{border-bottom: 1px solid #dbdbdb;}
+.comInfors p img{width: 20px;margin-right: 5px;}
 
 .person-head{width: 96%;padding: 2%;position: relative;}
 .person-head .portrait{width: 25%;float: left;margin-right: 3%;}

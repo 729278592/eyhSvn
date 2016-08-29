@@ -41,33 +41,10 @@ new Vue({
                         this.orders[i].shoppings.$remove(shopping);
                     }
                 }
-
             }
         },
         hideMask:function(){
             this.hide = true;
-        },
-    computed: {
-        allChecked: {
-            get: function(){
-                return this.checkedCount == this.orders.length;
-            },
-            set: function(value){
-                this.orders.forEach(function(shopping){
-                    shopping.checked = value
-                });
-                return value;
-            }
-        },
-        checkedCount: {
-            get: function(){
-                var i = 0;
-                this.orders.forEach(function(shopping){
-                    if(shopping.checked == true) i++;
-                });
-                return i;
-            }
-        }
         }
     }
 });
