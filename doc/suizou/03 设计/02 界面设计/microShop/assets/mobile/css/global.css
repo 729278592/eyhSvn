@@ -235,7 +235,7 @@ textarea{font-family: "微软雅黑";}
 .orderList li .orderCon .orderImg,.orderList li .orderCon .orderInfor{display: table-cell;}
 .orderList li .orderCon .orderImg{padding: 0.6rem 1rem;width: 30%;}
 .orderList li .orderCon .orderImg img{width: 4.875rem;height: 4.875rem;}
-.orderList.style li .orderCon .btnRemove{width: auto;height: auto;background: transparent;color: #333;font-size: 1rem;top: 0.5rem;}
+.orderList.style li .orderCon .btnRemove{width: auto;height: auto;background: transparent;color: #333;font-size: 1rem;top:1rem;}
 .picker-item{font-size: 1rem;}
 
 
@@ -332,7 +332,7 @@ textarea{font-family: "微软雅黑";}
 .invoiceList>li .invoiceHead.style{padding: 0;}
 .invoiceList>li .invoiceHead .fa-angle-down,.invoiceList li .invoiceHead .fa-angle-right{font-size: 1.25rem;}
 .invoiceList>li .invoiceHead .weui_cell_bd{font-size: 1rem;}
-.invoiceList>li .invoiceCon.style{padding: 0;}
+.invoiceList>li .invoiceCon.style{padding: 0;width: 100%;}
 .invoiceList>li .invoiceCon.style span.color{color: #333;font-size: 1rem;}
 .invoiceList>li .invoiceCon.style span.spanBlock{font-size: 0.875rem;border-radius: 0.2rem;display: inline-block;padding: 0px 0.25rem;background: #fe6602;color: #fff;}
 .invoiceList>li .invoiceCon.style span.color1{color: #fe6602;font-size: 1rem;}
@@ -574,7 +574,7 @@ img.shopInfor.w100{width: 100%;margin-bottom: 0.625rem;}
 .spinner{display: inline-block;float: left}
 .btnRemove{outline: none;border: none;color: #666;font-size: 1rem;background: transparent;font-family: "微软雅黑";position: relative;top: 0.25rem;}
 .scale{color: #666;}
-.optionType.style{background: #fff;text-align: center;border-bottom: 1px solid #dbdbdb;}
+.optionType.style{background: #fff;text-align: center;border-bottom: 1px solid #dbdbdb;width: 100%;}
 .optionType.style li.first{width: 40%;line-height: 3rem;}
 .optionType.style li.second{width: 30%;background: transparent;}
 .optionType.style li.second button.btnEmpty{background: transparent;color: #666;}

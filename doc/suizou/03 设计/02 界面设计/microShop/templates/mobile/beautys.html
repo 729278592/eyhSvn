@@ -1,6 +1,6 @@
 <!--<div id="shopping">-->
     <ul class="shoppingList clearfix pb0">
-        <li v-for="shop in digitals | filterBy class in 'class' title in 'title' smallTile in 'smallTile' oldMoney in 'oldMoney' newMoney in 'newMoney'">
+        <li v-for="shop in digitals">
             <a href={{shop.herf}} class="shop_div">
                 <div class="shop_list_bg shop_list_bg{{shop.class}}"></div>
                 <div class="shop_infor">
@@ -17,7 +17,7 @@
         </li>
     </ul>
     <ul class="shoppingList style clearfix pb0">
-        <li v-for="shop in sciences | filterBy class in 'class' title in 'title' smallTile in 'smallTile' oldMoney in 'oldMoney' newMoney in 'newMoney'">
+        <li v-for="shop in sciences" :class="{'mr0':shop.mr0}">
             <a href={{shop.herf}} class="shop_div">
                 <div class="shop_list_bg shop_list_bg{{shop.class}}"></div>
                 <div class="shop_infor">
