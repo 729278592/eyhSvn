@@ -51,10 +51,10 @@
                         <!--<li v-for="order in orders" :class="[order.first ? 'active':'',order.last ? 'mb0':'']"  >-->
                         <li v-for="order in orders" :class="{'active':order.first,'mb0':order.last}"  >
                             <div class="clearfix invoiceHead style" @click="toggleTasks(order)">
-                                <div class="weui_cells weui_cells_checkbox mt0 style1 inline_block">
+                                <div class="weui_cells weui_cells_checkbox mt0 style1 inline_block" @:click.stop.prevent="toggleTasks"><!--@:click.stop.prevent="toggleTasks")-->
                                     <label class="weui_cell weui_check_labe style" for={{order.id}}>
                                         <div class="weui_cell_hd">
-                                            <input type="checkbox" class="weui_check" name="checkbox1" id={{order.id}} v-model="allChecked"}/>
+                                            <input type="checkbox" class="weui_check" name="checkbox1" id={{order.id}}/>
                                             <i class="weui_icon_checked"></i>
                                         </div>
                                     </label>
@@ -70,10 +70,10 @@
                                 <ul class="orderList style">
                                     <li v-for="shopping in order.shoppings" :class="{'removeShop':shopping.removeShop}">
                                         <div class="orderCon">
-                                            <div class="weui_cells weui_cells_checkbox mt0 style1 inline_block left5">   <!--@:click.stop.prevent="toggleTasks")-->
+                                            <div class="weui_cells weui_cells_checkbox mt0 style1 inline_block left5">
                                                 <label class="weui_cell weui_check_labe style p0" for={{shopping.id}}>
                                                     <div class="weui_cell_hd">
-                                                        <input type="checkbox" class="weui_check" name="checkbox1" id={{shopping.id}} v-model="shopping.checked"/>
+                                                        <input type="checkbox" class="weui_check" name="checkbox1" id={{shopping.id}}/>
                                                         <i class="weui_icon_checked"></i>
                                                     </div>
                                                 </label>
@@ -183,15 +183,15 @@
 //            });
 //
 //
-//            /*发票全部与全不选*/
-//            $("#invoice").delegate(".weui_cells_checkbox.inline_block","touchend",function(e){
-//                e.stopPropagation();
-//                if($(this).find("input").prop("checked")){
-//                    $(this).closest(".invoiceHead ").next(".invoiceCon ").find("input").prop({checked:false});
-//                }else{
-//                    $(this).closest(".invoiceHead ").next(".invoiceCon ").find("input").prop({checked:"checked"});
-//                }
-//            });
+            /*发票全部与全不选*/
+            $("#invoice").delegate(".weui_cells_checkbox.inline_block","touchend",function(e){
+                e.stopPropagation();
+                if($(this).find("input").prop("checked")){
+                    $(this).closest(".invoiceHead ").next(".invoiceCon ").find("input").prop({checked:false});
+                }else{
+                    $(this).closest(".invoiceHead ").next(".invoiceCon ").find("input").prop({checked:"checked"});
+                }
+            });
 
         })
     </script>
