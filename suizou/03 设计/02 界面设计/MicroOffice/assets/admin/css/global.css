@@ -934,6 +934,9 @@ a.keyword-button:hover,.keyword-button:active,.keyword-button:focus{color: #fff;
 .companyInfoTitles{width: 100%;height: 1px;background: #41b3f3;position: relative;}
 .companyInfoTitles a{display: inline-block;padding: 10px 15px;font-size: 16px;color: #41b3f3;position: absolute;left: 50%;top: 50%;margin-top: -23px;margin-left: -45px;background: #fff;}
 .companyInfoTitles a:hover{color: #41b3f3;}
+.form-horizontal.style{width: 80%;margin: 0 auto;}
+.form-horizontal.style label{width: 140px;text-align: center;}
+.form-horizontal.style textarea{width: 720px;}
 .companyInfoContents{width: 100%;}
 .companyInfoContents p{width: 100%;margin: 15px 0;font-size: 14px;color: #000;}
 .companyInfoContents p span{display: inline-block;}
