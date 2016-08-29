@@ -541,9 +541,10 @@ img.shopInfor.w100{width: 100%;margin-bottom: 0.625rem;}
 .optionType.style{background: #fff;}
 .optionType.style li button{line-height: 5px;}
 .optionType.style li.first{width: 32%;background: transparent;}
+.optionType.style li button{vertical-align: 10px;}
 .optionType.style li.first button.btnEmpty{background: transparent;color: #666;}
 .optionType.style li.second{width: 34%;}
-.optionType.style li.second button.btnEmpty{background: transparent;color: #666;}
+.optionType.style li.second button{background: transparent;color: #ff6702;}
 .optionType.style li.last{width: 34%;}
 .optionType.style li.last button{background: #ff6702;}
 
