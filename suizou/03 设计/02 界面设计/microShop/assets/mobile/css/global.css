@@ -77,6 +77,18 @@ a:active{opacity: 0.6;}
 .text{position: relative;top:-0.3rem;}
 
 
+.weui_cells_checkbox{}
+.weui_cells_checkbox.h153{min-height: 200px;}
+.weui_check_label.w30{width: 30%;float: left;}
+.weui_check_label.w50{width: 40.5%;float: left;position: relative;min-height: 155px;}
+.weui_check_label.w50 .sexImg{width: 70%;position: absolute;left: 50%;margin-left: -35%;}
+.weui_check_label.w50 .weui_cell_hd{position: absolute;bottom: 5%;left: 50%;margin-left: -12px;}
+.weui_check_label.w30.p0{padding: 0;}
+.weui_cells_checkbox.mt0{margin-top: 0;}
+.weui_cells.bt0:before{border-top: none;}
+.weui_cells.bt0:after{border-bottom: none;}
+.weui_cell.bt0:before{border-top: none;}
+
 /*pensonCenter*/
 .person_infor{background:#fff;overflow: hidden;border-bottom: 1px solid #dbdbdb;}
 .card{overflow: hidden;position: relative;width: 94%;height: 11rem;background: url(../images/cardBg.png) no-repeat;background-size: 100% 100%;margin: 0.625rem 3%;}
