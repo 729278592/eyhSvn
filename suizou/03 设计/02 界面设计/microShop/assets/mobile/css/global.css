@@ -236,14 +236,14 @@ textarea{font-family: "微软雅黑";}
 .orderList.style li:first-child{margin-top: 0;}
 .orderList li>a{display: block;width: 100%;}
 .orderList li .orderHead{font-size: 0.875rem;padding: 0.8rem 1rem;display: block;border-bottom: 1px solid #efefef;}
-.orderList li .orderHead .orderNum{color: #333;}
+.orderList li .orderHead .orderNum{color: #333;font-size: 1rem;}
 .orderList li .orderHead .time{color: #999;}
 .orderList li .orderHead .type{color: #ff3b30;font-size: 1rem;}
 .orderList li .orderCon{display: table;width: 100%;border-bottom: 1px solid #efefef;}
 .orderList li .orderCon:last-child{border-bottom: none;}
 .orderList li:last-child{margin-bottom: 0;}
 .orderList li .orderFt .weui_cells:after{border-bottom: 0;}
-.orderList li .orderFt .weui_cells .weui_cell_ft.style{color: #333;}
+.orderList li .orderFt .weui_cells .weui_cell_ft.style,.weui_cell_ft.style{color: #333;}
 .orderList li .orderCon .orderImg,.orderList li .orderCon .orderInfor{display: table-cell;}
 .orderList li .orderCon .orderInfor p span.color{font-size: 0.875rem;color: #999;}
 .orderList li .orderCon .orderImg{padding: 0.6rem 1rem;width: 30%;}
@@ -274,6 +274,40 @@ textarea{font-family: "微软雅黑";}
 .payAll a{color: #4cb68d;}
 .payNum{color: #ff6702;padding: 0.875rem 0.98rem;text-align: right;}
 .okTui{color: #ff6804;}
+.orderDetails{}
+.orderDetails .weui_cells:before{border-top: 0;}
+.orderDetails .weui_cells{margin-top: 0.625rem;border-top: 1px solid #dbdbdb;}
+.orderDetails .weui_cells.mt0{margin-top: 0;border-top: none;}
+
+
+.orderTitle{text-align: center;color: #ff0404;font-size: 1rem;padding: 0.625rem 0;background: #fff;border-bottom: 1px solid #dbdbdb;}
+.orderAddress{background: url(../images/addressBg.jpg) no-repeat;background-size: 100% 100%;height: 80px;margin: 0.625rem 0;}
+.orderAddress>a{display: block;width: 100%;height: 100%;}
+.orderAddress p{font-size: 0.875rem;color: #333;display: block;padding: 0.5rem 0.875rem 0 0.875rem }
+.orderAddress p span{font-size: 1rem;}
+.orderAddress p.addressInfor{display: -webkit-box;
+    -webkit-box-orient: vertical;
+    -webkit-line-clamp: 2;
+    overflow: hidden;
+    text-overflow: ellipsis;color: #666;}
+
+
+/*addressList*/
+.addressList{}
+
+.addressList li{background: #fff;margin-top: 0.625rem;border-bottom: 1px solid #dbdbdb;border-top: 1px solid #dbdbdb;}
+.addressList li:first-child{margin-top: 0;border-top: none;}
+.addressList li>.weui_cells{width: 8%;margin-top: 14px;}
+.addressList li .personInfor{float: left;width: 92%;}
+.addressList li .personInfor>p{display: block;padding: 0.625rem 0.625rem 0 0.625rem;}
+.addressList li .personInfor>p span{font-size: 1rem;color: #333;}
+.addressList li .personInfor>p.address{font-size: 0.875rem;display: -webkit-box;
+    -webkit-box-orient: vertical;
+    -webkit-line-clamp: 2;
+    overflow: hidden;
+    text-overflow: ellipsis;color: #666;padding-bottom: 0.625rem;}
+
+
 
 /*couponRecord*/
 .applicatioOpetion{width: 100%;margin-bottom: 0.625rem;position: relative;z-index: 100;border-bottom: 1px solid #dbdbdb;}
@@ -595,22 +629,17 @@ img.shopInfor.w100{width: 100%;margin-bottom: 0.625rem;}
 .optionType.style li.second button.btnEmpty{background: transparent;color: #666;}
 .optionType.style li.last{width: 30%;}
 .optionType.style li.last button{background: #ff6702;}
-
-
 .weui_dialog_confirm.hide{display: none;}
 .weui_dialog_confirm{position: absolute;z-index: 1000;top: 0;bottom: 0;left: 0;right: 0;}
-
-
-
-
-
 .weui_cells_checkbox.left5 {display: inline-block;float: left;position: relative;left: 0.4rem;}
 .weui_cells_checkbox.style1 .weui_cell.style.p0{padding: 0;}
 .orderList.style li .orderCon .orderImg{padding: 0.6rem 0.5rem}
 .orderList.style li .orderCon p.style{position: relative;top: 0.5rem;}
 .optionType.style li.first.style{width: 65%;text-align: right;padding-right: 5%;}
 .swiper-container-horizontal>.swiper-pagination-bullets{bottom: 0;}
-
+.addressModify{padding: 0.625rem 0;background: #fff;border-top: 1px solid #efefef;width: 100%;}
+.addressModify button{margin-right: 0.875rem;outline: none;border: none;font-size: 0.875rem;background: transparent;color: #666;}
+.addressModify button .fa{}
 
 /*myRecord*/
 .orderMenu.style li{width: 33.33%;}
