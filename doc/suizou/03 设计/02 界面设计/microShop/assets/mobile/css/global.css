@@ -65,7 +65,7 @@ a:active{opacity: 0.6;}
 .bd.absolute{position:absolute;top:0;bottom:0;overflow-y:scroll;-webkit-overflow-scrolling:touch;width:100%}
 .spa_code{background: url(../images/codeIcon.png) no-repeat;background-size: 100% 100%;}
 .spa_phone{background: url(../images/pboneIcon.png) no-repeat;background-size: 100% 100%;}
-.spa_birthday{background: url(../images/birthdayIcon.png) no-repeat;background-size: 100% 100%;}
+.spa_sex{background: url(../images/sexIcon.png) no-repeat;background-size: 100% 100%;}
 .spa_lock{background: url(../images/lockIcon.png) no-repeat;background-size: 100% 100%;}
 .spa_person{background: url(../images/comIcon.png) no-repeat;background-size: 100% 100%;}
 .spa_comName{background: url(../images/companyIcon.png) no-repeat;background-size: 100% 100%;}
@@ -290,6 +290,11 @@ textarea{font-family: "微软雅黑";}
     -webkit-line-clamp: 2;
     overflow: hidden;
     text-overflow: ellipsis;color: #666;}
+.order-details{background: #fff;padding:0.5rem 1rem;}
+.order-details p{margin:0.2rem;font-size: 0.875rem;color: #666;}
+.order-details p.title{color: #333;font-size: 1rem;}
+
+.portrait{width: 5rem;height: 5rem;padding: 1rem 0;display: block;margin: 0 auto;}
 
 
 /*addressList*/
