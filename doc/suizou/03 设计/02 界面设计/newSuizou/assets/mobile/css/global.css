@@ -93,7 +93,13 @@ tr th,tr td{height: 2.6em;}
 .hours,.minutes{color: #ff0000;}
 
 
+/*knowList*/
 
+
+.span_icon{display: inline-block;width: 16px;height: 20px;position: relative;top: 5px;}
+.span_icon{background: url(../images/rar.png) no-repeat;background-size: 100% 100%;}
+
+.weui_cells.weui_cells_access{margin-top: 0.6rem;}
 
 
 
