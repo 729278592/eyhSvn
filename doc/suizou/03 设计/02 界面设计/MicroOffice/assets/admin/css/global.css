@@ -939,6 +939,9 @@ a.keyword-button:hover,.keyword-button:active,.keyword-button:focus{color: #fff;
 .form-horizontal.style label{width: 140px;text-align: center;}
 .form-horizontal.style textarea{width: 720px;}
 .companyInfoContents{width: 100%;}
+.companyInfoContents p.style{display: table;}
+.companyInfoContents p.style>span{display: table-cell;}
+.companyInfoContents p.style .type{vertical-align: top; }
 .companyInfoContents p{width: 100%;margin: 15px 0;font-size: 14px;color: #000;}
 .companyInfoContents p span{display: inline-block;}
 .companyInfoContents p .required{color: #ff3b30;width: 18px;}
