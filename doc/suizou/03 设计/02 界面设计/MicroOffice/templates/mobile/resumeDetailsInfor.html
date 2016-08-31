@@ -541,6 +541,12 @@
                 }
                 return true;
             });
+
+
+            var arr = ["b1","b2","b3","b4","b5"];
+            $(".keyword-button").each(function(i){
+                $(".keyword-button").eq(i).addClass(arr[i]);
+            })
         });
     </script>
 </body>
