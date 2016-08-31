@@ -182,7 +182,7 @@ body{background: #eeeef1;}
 .l_b_c_head>.title{}
 img.w100{width: 100%;}
 .l_b_c_infor{line-height: 26px;color: #999;width: 100%;display: block;}
-.l_b_c_infor>div{width: 48%;float: left;margin: 5px 1%;}
+.l_b_c_infor>div{width: 48%;float: left;margin: 5px 1%;font-size: 14px;}
 .l_b_c_infor>div .caret{display: inline-block;width: 6px;height: 6px;background: #999;border-radius: 100%;position: relative;top: -4px;}
 
 
