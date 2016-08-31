@@ -1,0 +1,12 @@
+[
+    {
+        "id": 1,
+        "score": 4,
+        "price": "100.00",
+        "note": "用户需提前1天下单，单座起算<small>（每座长度不超过1.2米，超过2米的按三座计算，翻毛皮质沙发只清洗，不上蜡和抛光）</small>",
+        "range": "<img src='/static/temp/cleaning/safo1.jpg'>",
+        "text1": "<div class='sign'>皮质<small></small></div><li><p>科学测试区域、面积，皮革识别</p></li><li><p>毛巾填充缝隙、一次性塑料膜覆盖周边地板</p></li><li><p>进口无极变速沙发清洗机清洗表面，缝隙出手工深入清洁</p></li><li><p>专用低压喷枪杀菌消毒</p></li><li><p>专用烘干机干燥皮革</p></li><li><p>进口水晶家私蜡手工上蜡</p></li><li><p>纯新棉毛巾抛光</p></li>",
+        "text2": "<div class='sign'>布艺<small>不可拆卸式</small></div><li><p>科学测试区域、面积，木质识别</p></li><li><p>专用清洁液、专用沙发刷清洁</p></li><li><p>进口无极变速沙发清洗机清洗</p></li><li><p>专用低压喷枪杀菌消毒</p></li><li><p>吸尘吸水设备清理残留物</p></li><li><p>进口水晶家私蜡手工上蜡</p></li><li><p>纯新棉毛巾抛光</p></li>",
+        "content": "<div class='sign'><small style='color:#bbb;'>可拆卸式</small></div><img src='/static/temp/cleaning/safo2.jpg'>"
+    }
+]

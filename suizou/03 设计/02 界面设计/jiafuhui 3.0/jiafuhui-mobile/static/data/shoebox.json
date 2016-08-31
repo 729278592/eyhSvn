@@ -1,0 +1,12 @@
+[
+    {
+        "id": 1,
+        "name": "皮鞋",
+        "score": 5,
+        "price": "20.00",
+        "note": "注：上门服务<small>（按鞋柜地脚线实际长度测量，不足半米按半米计算，超出半米按一米计算）</small>",
+        "range": "鞋柜表面，把手，隔板，内壁",
+        "criterion": "鞋柜表面，把手，隔板，内壁干净；鞋类摆放整齐；鞋柜散发清香",
+        "flow_path": "<img src='/static/temp/shoes/shoebox.jpg'>"
+    }
+]

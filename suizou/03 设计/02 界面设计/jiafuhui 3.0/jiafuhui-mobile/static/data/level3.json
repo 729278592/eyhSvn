@@ -1,0 +1,11 @@
+[
+	{
+        "id": 1,
+        "name": "三级护工",
+        "price": "60.00",
+        "note": "自理患者",
+        "people": "一般慢性病、轻症、术前检查准备阶段的病人，正常孕妇等；<br>各种疾病或术后恢复期的病人；<br>能下床活动，生活自理者。",
+        "range": "<img src='/static/temp/nursing/level3_01.jpg'>",
+        "content": "<img src='/static/temp/nursing/level3_02.jpg'>"
+    }
+]

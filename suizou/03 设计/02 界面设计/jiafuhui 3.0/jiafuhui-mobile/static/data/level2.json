@@ -1,0 +1,11 @@
+[
+	{
+        "id": 1,
+        "name": "二级护工",
+        "price": "120.00",
+        "note": "中级。半自理患者",
+        "people": "病重期急性症状消失，大手术后病情稳定，但生活不能自理者；年老体弱或慢性病患者；",
+        "range": "<img src='/static/temp/nursing/level2_01.jpg'>",
+        "content": "<img src='/static/temp/nursing/level2_02.jpg'>"
+    }
+]

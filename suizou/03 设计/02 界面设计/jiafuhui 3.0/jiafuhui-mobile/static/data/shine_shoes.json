@@ -1,0 +1,12 @@
+[
+    {
+        "id": 1,
+        "name": "皮鞋",
+        "score": 5,
+        "price": "3.00",
+        "note": "用户需提前一天下单，上门服务（五双起）",
+        "range": "皮鞋、皮靴运动鞋外部除尘，上油保养",
+        "criterion": "皮革无尘、光亮，网面干净，鞋子清香；操作区域整洁无污，垃圾离开时带走。",
+        "flow_path": "<img src='/static/temp/shoes/shoes1.jpg'>"
+    }
+]

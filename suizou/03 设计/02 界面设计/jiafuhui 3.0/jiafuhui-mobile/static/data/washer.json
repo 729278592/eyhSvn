@@ -1,0 +1,11 @@
+[
+    {
+        "id": 1,
+        "score": 4,
+        "price": "120.00",
+        "note": "用户需提前一天下单，不包含大型清洗设备的清洁和保养",
+        "tryout": "居家式洗衣机",
+        "range_img": "<img src='/static/temp/cleaning/washer1.jpg'>",
+        "content_img": "<img src='/static/temp/cleaning/washer2.jpg'>"
+    }
+]

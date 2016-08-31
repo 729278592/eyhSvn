@@ -1,0 +1,15 @@
+[
+	{
+        "id": 1,
+        "title": "钟点保洁",
+        "name": "<i class='change icon-check-circle'></i><i slot='icon' class='icon icon-clock-o'></i>小时下单",
+        "score": 5,
+        "price": "<span>40.00</span>元/小时",
+        "note": "用户需提前一天下单，小时保洁服务两小时起售",
+        "apply": "本服务适用于普通家居日常保洁，不适用与学校、办公室、商铺、新装房集体宿舍的保洁服务",
+        "serve": "<img src='/static/temp/cleaning/hour2.jpg'>",
+        "area": "<img width='100%' src='/static/temp/cleaning/hour1.jpg'>",
+        "content": "<img src='/static/temp/cleaning/hour3.jpg'>",
+        "text": "<li><p>地面干净，室内整体光亮无尘</p></li><li><p>玻璃光亮物品整齐归位</p></li><li><p>厨房清洁无油烟</p></li><li><p>浴室光洁无水渍</p></li>"
+    }
+]

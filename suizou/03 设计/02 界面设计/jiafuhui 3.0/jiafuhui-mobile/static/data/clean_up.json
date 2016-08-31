@@ -1,0 +1,11 @@
+[
+    {
+        "id": 1,
+        "score": 5,
+        "price": "400.00",
+        "note": "注：用户需提前3天下单<small>（不足0.5米按0.5米计算；超过0.5米按1米计算）</small>",
+        "range": "衣橱里的衣服、配饰通过筛选、挂、叠重新规划整理收纳进衣橱",
+        "criterion": "衣橱整洁有序，各类衣物分类布局、方便拿取、衣橱空间利用率提高20%",
+        "flow_path": "<img src='/static/temp/wardrobe/clean_up.jpg'>"
+    }
+]

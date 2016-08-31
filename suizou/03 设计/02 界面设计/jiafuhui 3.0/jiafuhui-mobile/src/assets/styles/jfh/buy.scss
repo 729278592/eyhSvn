@@ -1,0 +1,99 @@
+.buy{
+	img{
+		vertical-align: bottom;
+	}
+	.banner-text{
+		img{
+			width: 100%;
+		}
+		.weui_cells{
+			margin-top: 0 !important;
+			.weui_cell_ft{
+				font-size: 1.4rem;
+				span{
+					font-size: 1.8rem;
+					color: #FF5000;
+				}
+			}
+		}
+	}
+	.select {
+		.choose-color{
+			.demo1-item-selected {
+	              border: 1px solid #bbb;
+	              position: relative;
+	              .icon{
+	                display: none;
+	                position: absolute;
+	                bottom: -2px;
+	                right: -2px;
+	                color:#FF5000; 
+	                font-size: 1rem;
+	              }
+	            }
+	            .demo1-selected{
+	                border: 1px solid #FF5000;
+	                position: relative;
+	                .icon{
+	                    display: block;
+	                    position: absolute;
+	                    bottom: -2px;
+	                    right: -2px;
+	                    color:#FF5000; 
+	                    font-size: 1rem;
+	                }
+	            }
+		}
+		.opt{
+			font-size: 1.4rem;
+			padding: 10px 15px 0 15px;
+			.vux-checker-box{
+				float: none;
+				margin-left: 10px;				
+			}
+			.demo1-item{
+				font-size: 1.2rem;
+				padding: 8px 6px;
+    			margin-right: 5px;
+			}
+		}
+		.weui_cell{
+			font-size: 1.4rem;
+			.weui_cell_primary{
+				-webkit-box-flex: none;
+			    -ms-flex: none;
+			    flex: none;
+				width: 42px;
+			}
+			&:before{
+				display: none !important;
+			}
+			.weui_cell_ft .vux-number-selector{
+				color: #333;
+			}
+		}
+		.vux-number-selector,.vux-number-input{
+			color: #333 !important;
+			padding: 10px;
+		}
+		.vux-number-selector{
+			padding: 10px 15px;
+			background: #eee;
+		}
+		.vux-number-selector.vux-number-disabled{
+			color: #ccc !important;
+		}
+	}
+	.tab{
+		.content{
+			img{
+				width: 100%;
+			}
+		}
+	}
+}
+.destine.pay{
+	.group-top .weui_cell_hd{
+		margin-top: 0;
+	}
+} 

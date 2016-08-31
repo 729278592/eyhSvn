@@ -1,0 +1,32 @@
+[
+    {
+        "id": 1,
+        "name": "金色伸缩衣架",
+        "banner": "<img src='/static/temp/buy/buy1.jpg'>",
+        "title": "衣架",
+        "price": "10.00",
+        "details": "<img src='/static/temp/buy/buy2.jpg'>",
+        "size": "",
+        "after_sale": ""
+    },
+    {
+        "id": 1,
+        "name": "高贵香槟色衣架",
+        "banner": "<img src='/static/temp/buy/buy1.jpg'>",
+        "title": "衣架",
+        "price": "15.00",
+        "details": "<img src='/static/temp/buy/buy2.jpg'>",
+        "size": "",
+        "after_sale": ""
+    },
+    {
+        "id": 1,
+        "name": "女神银色衣架",
+        "banner": "<img src='/static/temp/buy/buy1.jpg'>",
+        "title": "衣架",
+        "price": "20.00",
+        "details": "<img src='/static/temp/buy/buy2.jpg'>",
+        "size": "",
+        "after_sale": ""
+    }
+]

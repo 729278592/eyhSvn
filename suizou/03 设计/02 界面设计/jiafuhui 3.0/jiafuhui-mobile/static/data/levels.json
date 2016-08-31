@@ -1,0 +1,29 @@
+    [
+        {
+            "id": 1,
+            "name": "一级护工",
+            "price": "180.00",
+            "note": "最高级。非自理患者",
+            "people": "用于病情重或较大手术后病情不稳定的病员，生活完全不能自理，护理比较繁琐。",
+            "range": "<img src='/static/temp/nursing/level1_01.jpg'>",
+            "content": "<img src='/static/temp/nursing/level1_02.jpg'>"
+        },
+        {
+            "id": 1,
+            "name": "二级护工",
+            "price": "120.00",
+            "note": "中级。半自理患者",
+            "people": "病重期急性症状消失，大手术后病情稳定，但生活不能自理者；年老体弱或慢性病患者；",
+            "range": "<img src='/static/temp/nursing/level2_01.jpg'>",
+            "content": "<img src='/static/temp/nursing/level2_02.jpg'>"
+        },
+        {
+            "id": 1,
+            "name": "三级护工",
+            "price": "60.00",
+            "note": "自理患者",
+            "people": "一般慢性病、轻症、术前检查准备阶段的病人，正常孕妇等；<br>各种疾病或术后恢复期的病人；<br>能下床活动，生活自理者。",
+            "range": "<img src='/static/temp/nursing/level3_01.jpg'>",
+            "content": "<img src='/static/temp/nursing/level3_02.jpg'>"
+        }
+    ]

@@ -1,0 +1,11 @@
+[
+    {
+        "id": 1,
+        "score": 5,
+        "price": "50.00",
+        "note": "注：用户需提前3天下单。家服汇高端私人形象设计师上门服务",
+        "range": "10套起",
+        "criterion": "根据用户肤色、身高、气质、性格、经常出现的社交场所等元素，搭配不同风格，不同场合的服饰",
+        "flow_path": "<img src='/static/temp/wardrobe/pair_up.jpg'>"
+    }
+]

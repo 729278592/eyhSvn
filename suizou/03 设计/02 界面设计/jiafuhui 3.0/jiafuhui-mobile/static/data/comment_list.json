@@ -1,0 +1,26 @@
+[
+    {
+        "id": 1,
+        "nickname": "猫猫爱吃鱼",
+        "avatar": "/static/temp/comment/img1.jpg",
+        "location": "成都市武侯区",
+        "content": "服务很周到，打扫的很干净",
+        "pics":[]
+    },
+    {
+        "id": 2,
+        "nickname": "猫猫爱吃鱼",
+        "avatar": "/static/temp/comment/img1.jpg",
+        "location": "成都市武侯区",
+        "content": "服务很周到，打扫的很干净",
+        "pics":["/static/temp/comment/img2.jpg","/static/temp/comment/img3.jpg","/static/temp/comment/img2.jpg","/static/temp/comment/img3.jpg"]
+    },
+    {
+        "id": 3,
+        "nickname": "猫猫爱吃鱼",
+        "avatar": "/static/temp/comment/img1.jpg",
+        "location": "成都市武侯区",
+        "content": "服务很周到，打扫的很干净",
+        "pics":["/static/temp/comment/img2.jpg","/static/temp/comment/img3.jpg","/static/temp/comment/img2.jpg","/static/temp/comment/img3.jpg"]
+    }
+]

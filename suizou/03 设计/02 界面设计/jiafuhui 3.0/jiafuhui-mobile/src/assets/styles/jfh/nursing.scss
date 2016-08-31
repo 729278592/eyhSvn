@@ -1,0 +1,59 @@
+@import "../jfh/global";
+
+.nursing{
+    .header{
+        position: relative;
+        background: $color-green;
+        &:after{
+            position: absolute;
+            content: '';
+            width: 0;
+            height: 0;
+            border-left: 5px solid transparent;
+            border-right: 5px solid transparent;
+            border-bottom: 10px solid #fff;
+            bottom: 0;
+            left: 30px;
+        }
+    }
+    .vux-flex-row{
+        text-align: center;
+        padding: 15px 0;
+        i{
+            font-size: 3.6rem;
+            display:block;
+            color: $color-green;
+        }
+    }
+}
+
+.nursing_level{
+    padding-bottom: 80px;
+    .list {
+        background: #fff;
+        padding: 15px 0;
+        text-align: center;
+        .vux-flexbox-item {
+            margin-left: 8px !important;
+        }
+        .vux-flexbox {
+            width: auto;
+            padding: 0 15px;
+            background: none;
+            margin-bottom: 0 !important;
+            .item {
+                font-size: 1.8rem;
+                line-height: 55px;
+                height: 55px;
+                border: 1px solid $color-blue;
+                color: $color-blue;
+                text-align: center;
+                border-radius: 3px;
+            }
+            .item-active{
+                background: $color-blue;
+                color: #fff;
+            }
+        }
+    }
+}

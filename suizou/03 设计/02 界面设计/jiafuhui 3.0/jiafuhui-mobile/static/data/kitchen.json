@@ -1,0 +1,13 @@
+[
+    {
+        "id": 1,
+        "score": 5,
+        "price": "120.00",
+        "note": "用户需提前一天下单，<small>（不包含集成灶中的油烟机、直吸式油烟机的保养和清洁）</small>",
+        "tryout": "居家油烟机（中式、欧式）",
+        "range": "油烟机外观清洗，油网拆装清洗，油烟机涡轮深度 除油， 油烟机油盒清洗消毒。",
+        "range_img": "<img src='/static/temp/cleaning/kitchen1.jpg'>",
+        "content": "油烟机外观清净无污渍，油网无油渍，油烟机涡轮 干净无油污， 油烟机油盒清洁干爽无油污；油烟机无油 烟味。",
+        "content_img": "<img src='/static/temp/cleaning/kitchen2.jpg'>"
+    }
+]
