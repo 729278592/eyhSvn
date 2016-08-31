@@ -351,7 +351,8 @@ body.overflow{overflow-y: hidden;overflow-x: auto;}
 .question-infor .fa{position: absolute;left: -5px;top: 8px;color: #ff7f81;font-size: 16px;}
 .question-infor p{line-height: 16px;top: 0;}
 .form .form-group .w100{width: 100%;position: relative;border: 1px solid #dbdbdb;border-radius: 4px;padding: 9px 3%;}
-.form .form-group .w100 .inputText{width: 270px;padding-left: 5px;}
+.form .form-group .w100 .inputText{width: 270px;padding-left: 5px;border: none;}
+.form .form-group .w100 .selectText{width: 340px;padding-left: 5px;border: none;outline: none;}
 .form .form-group .w100 .inputText.w200{width: 160px;}
 input.btn-click{background: #f16a20;font-size: 12px;color: #fff;border-radius: 20px;}
 input.btn-click:hover{background: #e16a20}
