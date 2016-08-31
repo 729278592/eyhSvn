@@ -1,0 +1,132 @@
+@import "../jfh/global";
+
+.shoes{
+    .header{
+        position: relative;
+        background: $color-blue;
+        &:after{
+            position: absolute;
+            content: '';
+            width: 0;
+            height: 0;
+            border-left: 5px solid transparent;
+            border-right: 5px solid transparent;
+            border-bottom: 10px solid #fff;
+            bottom: 0;
+            left: 30px;
+        }
+    }
+    .vux-flex-row{
+        text-align: center;
+        padding: 15px 0;
+        i{
+            font-size: 3.6rem;
+            display:block;
+            color: $color-blue;
+        }
+    }
+}
+
+.shine-shoes{
+    .shoes-type{
+        background: #fff;
+        .vux-flexbox{
+            margin-bottom: 0;
+        }
+        .number .weui_cell{
+            padding: 10px;
+            .weui_cell_ft{
+                .vux-number-selector{
+                    padding: 0 1px;
+                    color: $color-blue;
+                }
+                .vux-number-input{
+                    padding: 0;
+                    font-size: 16px;
+                }
+                .vux-number-selector-sub{
+                    padding: 0 3px;
+                }
+                .vux-number-disabled{
+                    color: #ccc;
+                }
+            }
+        }
+    }
+    .area{
+        .weui_cells .weui_cell .weui_cell_ft .vux-number-selector{
+            color: $color-blue;
+        }
+        .weui_cells .weui_cell .weui_cell_ft .vux-number-selector.vux-number-disabled{
+            color: #ccc;
+        }
+        .weui_cell:before{
+            left: 0;
+        }
+    }
+    .opt{
+        padding-bottom: 12px;
+        .vux-checker-box{
+            float: none;
+            input[type='checkbox']{
+                opacity: 0;
+                width: 50px;
+                height: 30px;
+                position: absolute;
+                z-index: 2;
+            }
+            input[type='checkbox']:checked + .item {
+                border: 1px solid #FF5000;
+                position: relative;
+                .icon{
+                    display: block;
+                    position: absolute;
+                    bottom: -2px;
+                    right: -2px;
+                    color:#FF5000; 
+                    font-size: 1rem;
+                }
+            }           
+            .demo1-item{
+                padding: 5px;
+                border: none;
+            }
+            .demo1-item-selected {
+              border: none;
+              position: relative;
+              .icon{
+                display: none;
+                position: absolute;
+                bottom: -2px;
+                right: -2px;
+                color:#FF5000; 
+                font-size: 1rem;
+              }
+            }
+            .item{
+                border: 1px solid #bbb;
+                padding: 5px 10px;
+                position: relative;
+                span{
+                    display: block;
+                    position: absolute;
+                    font-size: 0.9rem;
+                    top: 29px;
+                    left: 0;
+                }
+            }
+            .demo1-selected{
+                border: 1px solid #FF5000;
+                position: relative;
+                .icon{
+                    display: block;
+                    position: absolute;
+                    bottom: -2px;
+                    right: -2px;
+                    color:#FF5000; 
+                    font-size: 1rem;
+                }
+            }
+        }
+    }
+}

@@ -1,0 +1,11 @@
+[
+    {
+        "id": 1,
+        "score": 5,
+        "price": "12.00",
+        "note": "用户需提前1天下单，（空房、工程除外）",
+        "tryout": "适用范围：实木强化木、竹纤维、抛光砖、大理石、花岗石、玻化砖",
+        "range": "<img src='/static/temp/cleaning/floor1.jpg'>",
+        "content": "<img src='/static/temp/cleaning/floor2.jpg'>"
+    }
+]

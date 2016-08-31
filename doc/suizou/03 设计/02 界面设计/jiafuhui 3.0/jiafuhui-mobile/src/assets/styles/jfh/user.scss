@@ -1,0 +1,448 @@
+@import "../jfh/global";
+.user {
+    img{
+        vertical-align: middle;
+    }
+    .weui_cell {
+        padding: 10px 15px;
+        padding-left: 45px;
+        &:before {
+            left: 45px;
+        }
+        i {
+            display: inline-block;
+            border-radius: 4px;
+            color: #fff;
+            font-size: 1.6rem;
+            padding: 3px;
+        }
+        .wallet {
+            background: #ea7154;
+        }
+        .money {
+            background: #fed568;
+        }
+        .phone {
+            background: #73a3eb;
+        }
+        .map {
+            background: #51aafd;
+        }
+        .lock {
+            background: #46bc62;
+        }
+        .weui_cell_hd {
+            position: absolute;
+            left: 12px;
+        }
+        .weui_cell_bd p {
+            line-height: 24px;
+        }
+    }
+}
+
+.user-info {
+    .vux-no-group-title {
+        margin-top: 0 !important;
+    }
+    .head {
+        width: 50px;
+        height: 50px;
+        border: 2px solid #bbb;
+        display: block;
+        border-radius: 50%;
+        overflow: hidden;
+    }
+    .weui_cells {
+        .title {
+            position: relative;
+            padding: 5px 15px;
+            &:before {
+                content: '';
+                width: 5px;
+                height: 15px;
+                position: absolute;
+                left: 0;
+                top: 50%;
+                margin-top: -8px;
+                background: #51AAFD;
+            }
+        }
+    }
+    .weui_cell {
+        &:before {
+            left: 0;
+        }
+    }
+    .button {
+        margin: 0 25px;
+    }
+}
+
+.change-password {
+    min-height: 100%;
+    background: #fff;
+    .group {
+        padding: 0 30px;
+        margin-top: -10px;
+        padding-top: 30px;
+        .weui_cells {
+            background: none;
+            &:before,&:after {
+                display: none;
+            }
+            .weui_cell{
+                border:1px solid #eee;
+                margin-bottom: 10px;
+                border-radius: 6px;
+                padding: 10px;
+                &:before {
+                    display: none;
+                }
+            }
+        }
+        .weui_cell {
+            padding-left: 0;
+            &:before {
+                left: 0;
+            }
+        }
+        .weui_cell.yzm{
+            border:none;
+            padding: 0;
+            .weui_cell_bd{
+                padding: 10px;
+                border: 1px solid #eee;
+                border-radius: 6px;
+            }
+            .weui_cell_ft{
+                padding: 10px;
+                background: $color-blue;
+                color: #fff;
+                border-radius: 6px;
+                margin-left: 10px;
+                .abtain{
+                    color: #fff;
+                }
+            }
+        }
+    }
+}
+
+.coupon {
+    padding: 20px;
+    .coupon_list.red{
+        &:before {
+            content: '';
+            background: url('/static/images/coupon/line1.png') repeat-y;
+            width: 10px;
+            height: 100%;
+            position: absolute;
+            left: 0;
+            top: 0;
+        }
+        .left p{
+            color: #F73B5F;
+        }
+        .label{
+            background: #F73B5F;
+        }
+    }
+    .coupon_list.rgay-blue{
+        &:before {
+            content: '';
+            background: url('/static/images/coupon/line2.png') repeat-y;
+            width: 10px;
+            height: 100%;
+            position: absolute;
+            left: 0;
+            top: 0;
+        }
+        .left p{
+            color: #73A3EB;
+        }
+        .label{
+            background: #73A3EB;
+        }
+    }
+    .coupon_list.blue{
+        &:before {
+            content: '';
+            background: url('/static/images/coupon/line3.png') repeat-y;
+            width: 10px;
+            height: 100%;
+            position: absolute;
+            left: 0;
+            top: 0;
+        }
+        .left p{
+            color: #51AAFD;
+        }
+        .label{
+            background: #51AAFD;
+        }
+    }
+    .coupon_list.green{
+        &:before {
+            content: '';
+            background: url('/static/images/coupon/line4.png') repeat-y;
+            width: 10px;
+            height: 100%;
+            position: absolute;
+            left: 0;
+            top: 0;
+        }
+        .left p{
+            color: #46BC62;
+        }
+        .label{
+            background: #46BC62;
+        }
+    }
+    .coupon_list.yellow{
+        &:before {
+            content: '';
+            background: url('/static/images/coupon/line5.png') repeat-y;
+            width: 10px;
+            height: 100%;
+            position: absolute;
+            left: 0;
+            top: 0;
+        }
+        .left p{
+            color: #FFBF3E;
+        }
+        .label{
+            background: #FFBF3E;
+        }
+    }
+    .coupon_list.gray{
+        &:before {
+            content: '';
+            background: url('/static/images/coupon/line6.png') repeat-y;
+            width: 10px;
+            height: 100%;
+            position: absolute;
+            left: 0;
+            top: 0;
+        }
+        .left,.right {
+            p{
+                color: #DDDDDD;
+            }
+            small{
+                color: #DDDDDD;
+            }
+            .label{
+                background: #DDDDDD;
+            }
+        }
+    }
+    .coupon_list {
+        position: relative;
+        background: #fff;
+        border: 1px solid #E7E7E7;
+        margin-bottom: 15px;        
+        .left,
+        .right {
+            padding: 30px 0 10px 0;
+            display: inline-block;
+            width: 40%;
+            text-align: center;
+            p {
+                font-size: 28px;
+                color: $color-blue;
+            }
+            small {
+                color: #bbb;
+            }
+        }
+        .left {
+            .label {
+                font-style: normal;
+                font-size: 12px;
+                position: absolute;
+                top: 10px;
+                left: 10px;
+                color: #fff;
+                border-radius: 4px;
+                padding: 0 5px;
+            }
+        }
+        .right {
+            position: relative;
+            width: 58%;
+            border-left: 1px dashed #E7E7E7;
+            &:before,
+            &:after {
+                content: '';
+                width: 15px;
+                height: 15px;
+                border-bottom: 1px solid #E7E7E7;
+                border-radius: 50%;
+                background: #F2F2F2;
+                position: absolute;
+                left: -8px;
+            }
+            &:after {
+                bottom: -10px;
+            }
+            &:before {
+                top: -18px;
+            }
+            p {
+                font-size: 16px;
+                color: #666;
+                margin-bottom: 10px;
+            }
+        }
+    }
+}
+
+.appoint {
+    div:first-child .weui_cells {
+        margin-top: 0 !important;
+    }
+    .weui_cells {
+        .title {
+            position: relative;
+            padding: 10px 15px;
+            &:before {
+                content: '';
+                width: 5px;
+                height: 15px;
+                position: absolute;
+                left: 0;
+                top: 50%;
+                margin-top: -8px;
+                background: $color-blue;
+            }
+            small{
+                float: right;
+                color: #ccc;
+                margin-left: 10px;
+                font-size: 1.3rem;
+                padding-top: 5px;
+            }
+        }
+    }
+    .weui_cell {
+        &:before {
+            left: 0;
+        }
+    }
+}
+
+.receipt{
+    padding: 15px;
+    .receipt-list{
+        background: #fff;
+        border-radius: 2px;
+        padding: 20px 25px;
+        color: #ddd;
+        -webkit-box-shadow: 0 3px 3px #ccc;  
+        box-shadow: 0 3px 3px #ccc; 
+        margin-bottom: 15px;
+        .title{
+            margin-bottom: 10px;
+            span{
+                float: right;
+            }
+        }
+        .pay{
+            font-size: 2.5rem;
+            div{
+                display: inline-block;
+                width: 45%;
+                &:first-child{
+                    text-align: left;
+                }
+                &:last-child{
+                    text-align: right;
+                }
+            }
+        }
+    }
+}
+
+.monthly-ticket{
+    padding: 10px 15px;
+    .ticket-list{
+        background: #fff;
+        border-radius: 2px;
+        padding: 25px;
+        -webkit-box-shadow: 0 3px 3px #ccc;  
+        box-shadow: 0 3px 3px #ccc; 
+        margin-bottom: 15px;
+        position: relative;
+        .time{
+            font-size: 1.2rem;
+            color: #bbb;
+            margin-top: 10px;
+        }
+        .icon{
+            position: absolute;
+            top: 50%;
+            margin-top: -15px;
+            font-size: 1.6rem;
+            right: 15px;
+        }
+        .blue{
+            color: $color-blue;
+        }
+    }
+    .ticket-box{
+        background: rgba(0,0,0,.8);
+        width: 100%;
+        height: 100%;
+        position: fixed;
+        top:0;
+        left: 0;
+        .ticket-bg{
+            background: #fff;
+            width: 250px;
+            position: absolute;
+            top: 50%;
+            left: 50%;
+            margin-top: -100px;
+            margin-left: -125px;
+            text-align: center;
+            .weui_cell:before{
+                display: none;
+            }
+            .title{
+                padding: 10px 15px 0 15px;
+            }
+            .time{
+                margin-top: 10px;
+                i{
+                    font-size: 2rem;
+                    color: $color-blue;
+                }
+                .weui_cell_ft.with_arrow:after{
+                    border-width: 0 2px 2px 0;
+                }
+                .weui_cell_ft{
+                    font-size: 1.6rem;
+                }
+            }
+            .weui_cell{
+                display: inline-block;
+                width: 100px;
+                margin-left: 10px;
+                background: #EEEEEE;
+            }
+            .ticket-btn{
+                margin-top: 15px;
+                padding: 10px 15px;
+                background: #fff;
+                border-top: 1px solid $color-blue;
+                .weui_btn_dialog{
+                    display: inline-block;
+                    width: 50%;
+                    text-align: center;
+                } 
+            }
+        }
+    }
+}

@@ -1,0 +1,10 @@
+[
+    {
+        "name": "一级护工",
+        "price": "180.00",
+        "note": "最高级。非自理患者",
+        "people": "用于病情重或较大手术后病情不稳定的病员，生活完全不能自理，护理比较繁琐。",
+        "range": "<img src='/static/temp/nursing/level1_01.jpg'>",
+        "content": "<img src='/static/temp/nursing/level1_02.jpg'>"
+    }
+]

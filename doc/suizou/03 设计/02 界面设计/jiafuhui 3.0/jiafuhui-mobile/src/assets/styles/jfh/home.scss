@@ -1,0 +1,202 @@
+@import "../jfh/global";
+.pg{
+    height: 100%;
+}
+.pg1{
+    background:#1EA0B6 url(/static/images/home/pg1.jpg) no-repeat center center;
+    background-size: 100%;
+    width: 100%;
+    height: 100%;
+    min-height: 700px;
+    position: relative;
+    a{
+        background: #fff;
+        width: 120px;
+        height: 30px;
+        text-align: center;
+        display: inline-block;
+        line-height: 30px;
+        border-radius: 6px;
+        color: #666;
+        letter-spacing: 4px;
+        position: absolute;
+        bottom: 10%;
+        left: 50%;
+        margin-left: -60px;
+    }
+}
+.pg2{
+    width: 100%;
+    // height: 1023px;
+    min-height: 100%;
+    background: #fff;
+}
+.pg2 .main{
+    width: 260px;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    margin-left: -120px;
+    margin-top: -193px;
+}
+.pg2 .main p{
+    margin-top: 10px;
+    position: relative;
+}
+.pg2 .main p span{
+    font-size: 10px;
+}
+.pg2 .main p.wx,.pg2 .main p.lxwm{
+    text-align: center;
+    position: relative;
+}
+.pg2 .main p.lxwm i:after{
+content: '';
+width: 100px;
+height: 1px;
+background: #1EA0B6;
+position: absolute;
+top: 30px;
+left: 50%;
+margin-left: -50px;
+}
+.pg2 .main p.lxwm i{
+margin-top: 5px;   
+display: block;
+font-style: inherit;
+font-size: 16px;
+letter-spacing: 0;
+}
+.pg2 .main p.lxwm{
+    font-size: 18px;
+    color: #1EA0B6;
+    letter-spacing: 4px;
+}
+.pg2 .main p.zx,.pg2 .main p.email{
+    margin-top: 40px;
+}
+.pg2 .main p.zx:after{
+content: '';
+width: 38px;
+height: 38px;
+background: url(/static/images/home/zx.jpg);
+display: inline-block;
+position: absolute;
+top: -35px;
+left: -35px;
+
+}
+.pg2 .main p.email:after{
+content: '';
+width: 38px;
+height: 38px;
+background: url(/static/images/home/yx.jpg);
+display: inline-block;
+position: absolute;
+top: -35px;
+left: -35px;
+
+}
+.home {
+    .banner{
+        height: 180px;
+    }
+    .vux-flexbox{
+        margin-bottom: 1.2rem;
+    }
+    .vux-flexbox-item > .vux-flexbox{
+        margin-bottom: 1px;
+    }
+    .top-group {
+        .shoes {
+            padding-left: 16px;
+        }
+        .armoire {
+            padding-left: 16px;
+            span {
+                line-height: 1;
+                padding-right: 2.5rem;
+                small {
+                    font-size: 0.9rem;
+                    color: $color-orange;
+                }
+            }
+        }
+    }
+    .middle-group {
+        .cleaning {
+            -webkit-box-flex: 0.7;
+            -ms-flex: 0.7;
+            flex: 0.7;
+            span {
+                display: inline-block;
+                padding: 2rem 0 1.5rem 2rem;
+                font-size: 1.7rem;
+                small {
+                    display: block;
+                    font-size: 0.9rem;
+                    color: $color-gray;
+                }
+            }
+        }
+        .mab,
+        .armoire,
+        .chaperonage,
+        .shoes {
+            span {
+                display: block;
+                text-align: center;
+                padding: 1.2rem 0 1.2rem 0;
+                line-height: 1;
+            }
+            i {
+                display: inline-block;
+                font-size: 2.5rem;
+                color: #fff;
+                width: 4rem;
+                height: 4rem;
+                border-radius: 50%;
+                line-height: 4rem;
+            }
+        }
+        .mab i {
+            background: $color-red;
+        }
+        .armoire i {
+            background: $color-yellow;
+        }
+        .chaperonage i {
+            background: $color-green;
+        }
+        .shoes i {
+            background: $color-blue;
+        }
+    }
+}
+
+.activity-panel{
+    .weui_panel_hd{
+        padding-left:0;
+        span{
+            display: inline-block;
+            line-height: 1.5;
+            padding-left:11px;
+            border-left:5px solid $color-blue;
+        }
+    }
+    .weui_panel_hd:after{
+        left: 0;
+    }
+    .weui_media_box .weui_media_title{
+        font-size: 1.4rem;
+    }
+    .more{
+        float: right;
+        color: $color-gray;
+    }
+    .date{
+        float: right;
+        font-size: 0.8rem;
+        color: $color-gray-bbb;
+    }
+}

@@ -1,0 +1,195 @@
+ @import "../jfh/global";
+ .address-no-data {
+     width: 100%;
+     min-height: 100%;
+     background: #fff;
+     text-align: center;
+     a {
+         padding: 50px 0;
+         display: inline-block;
+         color: $color-blue;
+         font-size: 16px;
+         .icon {
+             display: inline-block;
+             text-align: center;
+             margin-right: 3px;
+             vertical-align: middle;
+         }
+         span {
+             vertical-align: middle;
+         }
+     }
+ }
+.add-address-panel {
+    .weui_cell:before{
+        left: 0;
+    }
+    .weui_select{
+        // height: auto;
+        // line-height: 22px;
+    }
+    .weui_cell_select{
+        padding: 0 15px;
+    }
+}
+ .select-address-panel{
+     .scroll{
+         position: relative;
+         height: 180px;
+         overflow-y:auto;
+             touch-action: auto;
+    -webkit-user-select: none;
+    -webkit-user-drag: none;
+    -webkit-tap-highlight-color: rgba(0, 0, 0, 0);
+         -webkit-overflow-scrolling : touch;
+     }
+ }
+ .select-address-panel.coupon-panel .scroll{
+    height: auto;
+    .icon i{
+        color: $color-blue;
+    }
+ }
+.coupon-panel .address-list .item .name{
+    color: $color-blue;
+    font-size: 1.8rem;
+    span{
+        color: #ccc;
+        font-size: 1.4rem;
+    }
+}
+.select-address-panel .address-list{
+    .item{
+         position: relative;
+        display: -webkit-box;
+        display: -ms-flexbox;
+        display: flex;
+        -webkit-box-align: center;
+        -ms-flex-align: center;
+        align-items: center;
+         padding: 15px;
+
+         &:before {
+            content: " ";
+            position: absolute;
+            left: 0;
+            top: 0;
+            width: 100%;
+            height: 1px;
+            border-top: 1px solid #e5e5e5;
+            color: #e5e5e5;
+            -webkit-transform-origin: 0 0;
+            transform-origin: 0 0;
+            -webkit-transform: scaleY(.5);
+            transform: scaleY(.5);
+            left: 0;
+        }
+        .name{
+            padding-top: 0;
+        }
+        .name,.address{
+            padding-left: 0;
+            padding-right: 0;
+        }        
+        .isdefault{
+            .icon-check-circle-o{
+                opacity: 0;
+            }
+        }
+    }
+}
+.address-list.address{
+    .item{
+        margin-bottom: 10px;
+        .address{
+            position: relative;
+            padding-left: 35px;
+            i{
+                position: absolute;
+                left: 15px;
+                top: 7px;
+            }
+        }        
+         .blue{
+            color: $color-blue;
+         }
+    }
+}
+.address-list{
+     overflow: hidden;
+     .item{
+        background: #fff;
+
+         &:before {
+            content: " ";
+            position: absolute;
+            left: 0;
+            top: 0;
+            width: 100%;
+            height: 1px;
+            border-top: 1px solid #e5e5e5;
+            color: #e5e5e5;
+            -webkit-transform-origin: 0 0;
+            transform-origin: 0 0;
+            -webkit-transform: scaleY(.5);
+            transform: scaleY(.5);
+            left: 0;
+        }
+
+         .icon{
+             margin-right: .8em;
+             text-align: center;
+             font-size: 1.8rem;
+         }
+         .content{
+            font-size: 1.4rem;
+         }
+         .name{
+            padding: 10px 15px 0 15px;
+         }
+         .address{
+            line-height: 1.4;
+            padding: 5px 15px;
+         }
+
+         .item-bottom{
+            padding: 10px 15px;
+            overflow: hidden;
+            .btn, .isdefault{                
+                i{
+                    display: inline-block;
+                    margin-right: 3px;
+                    color: $color-blue;
+                }
+            }
+         }
+         .isdefault{
+            .icon-check-circle{
+                color: $color-blue;
+            }
+            
+         }
+         .item-action{
+             float: right;
+             .btn{
+                 padding: 0 5px;
+             }
+         }
+     }
+ }
+ 
+ .editor_address {
+     .vux-no-group-title {
+         margin-top: 0;
+     }
+     .weui_cell:before {
+         left: 0;
+     }
+     .weui_cell_select{
+        padding: 0 15px;
+     }
+     .button {
+         margin: 0 25px;
+     }
+ }
+ 

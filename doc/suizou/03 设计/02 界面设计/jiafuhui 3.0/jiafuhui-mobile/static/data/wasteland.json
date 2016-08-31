@@ -1,0 +1,13 @@
+[
+    {
+        "id": 1,
+        "title": "开荒清洁",
+        "score": 4,
+        "price": "<span>8.00</span>元/平米",
+        "note": "用户需提前一天下单，50平米起订服务",
+        "apply": "本服务适用于普通家居日常保洁，不适用与学校、办公室、商铺、新装房集体宿舍的保洁服务",
+        "serve": "<img src='/static/temp/cleaning/hour2.jpg'>",
+        "content": "<img src='/static/temp/cleaning/kh.jpg'>",
+        "text": "<li><p>地面干净，墙面干净，<span>门窗清洁</span>，室内整体光亮无尘</p></li><li><p><span>玻璃清洁明亮无水渍</span>，物品整齐归位</p></li><li><p>厨房清洁无油烟</p></li><li><p>浴室光洁无水渍</p></li><li><p><span>地脚线干净无污渍</span></p></li>"
+    }
+]

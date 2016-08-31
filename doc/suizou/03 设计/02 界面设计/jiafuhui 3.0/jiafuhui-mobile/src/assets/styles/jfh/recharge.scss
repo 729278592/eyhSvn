@@ -1,0 +1,70 @@
+@import "../jfh/global";
+.recharge {
+    min-height: 100%;
+    overflow: hidden;
+    background: #fff;
+    .header {
+        padding: 50px 0 10px;
+    }
+    .list {
+        margin-top: 15px;
+        .vux-flexbox-item {
+            margin-left: 8px !important;
+        }
+        .vux-flexbox {
+            width: auto;
+            padding: 0 15px;
+            background: none;
+            .item {
+                font-size: 1.8rem;
+                line-height: 70px;
+                height: 70px;
+                border: 1px solid $color-blue;
+                color: $color-blue;
+                text-align: center;
+                border-radius: 3px;
+                position: relative;
+                .col{
+                    width: 100%;
+                    display: block;
+                    font-size: 1.2rem;
+                    color: #B6B6B6;
+                    line-height: 0;
+                    position: absolute;
+                    top: 55px;
+                }
+            }
+            .other{
+                border: 1px solid #B6B6B6;
+                color: #B6B6B6;
+            }
+        }
+    }
+    .agree {
+        position: absolute;
+        bottom: 20px;
+        font-size: 1.4rem;
+        left: 35px;
+        color: #999;
+        a {
+            color: $color-blue;
+            display: inline-block;
+            margin-left: 10px;
+        }
+        i {
+            font-size: 1.8rem;
+            vertical-align: sub;
+        }
+        .icon-check-circle {
+            color: $color-blue;
+        }
+    }
+}
+
+.recharge-log {
+    min-height: 100%;
+    overflow: hidden;
+    .header {
+        padding: 50px 0 10px;
+    }
+}

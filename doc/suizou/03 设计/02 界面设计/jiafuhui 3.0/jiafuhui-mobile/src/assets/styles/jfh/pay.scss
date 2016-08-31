@@ -1,0 +1,182 @@
+.pay{
+	.group-top{
+		margin-top: -10px;
+		.weui_cell{
+			position:relative;
+		}
+		.weui_cell_hd{
+			margin-right: 5px;
+		}
+		.map{
+			color: #51AAFE;
+			font-size: 1.8rem;
+		}
+		.address-panel{
+			.weui_cell_hd{
+				position: absolute;
+    			top: 30px;
+			}
+			.weui_cell_bd{
+				margin-left: 20px;
+			}
+		}
+	}
+	.weui_cells{
+		font-size: 1.4rem;
+		.weui_radio{
+			padding: 10px 15px;
+			.radio-type{
+				display: inline-block;
+				margin-left: 25px;
+				i{
+					float: left;
+					display: inline-block;
+					margin-right: 5px;
+				}
+			}
+			i{
+				float: right;
+				vertical-align: middle;
+				font-size: 1.8rem;
+			}
+			.blue{
+				color: #51AAFE;				
+			}
+		}
+
+		.weui_cells_radio .weui_check:checked + .weui_icon_checked:before{
+			color: #fff;
+		    width: 15px;
+		    height: 15px;
+		    border: 1px solid #51AAFE;
+		    border-radius: 50%;
+		    line-height: 15px;
+		    background: #51AAFE;
+		}
+		.title_line{
+			padding: 10px 15px;
+		}
+		.cell_color .weui_cell_ft{
+			color: #FF5000;
+		}
+		.cell_list .weui_cell_primary {
+			p{
+				display: inline-block;
+			}
+			span{
+				color: #bbb;
+			}
+		}
+		.weui_cell_select{
+			padding: 0 15px;
+		}
+		.weui_cell.jf .weui_cell_ft i{
+			margin-left: 8px;
+		    font-size: 1.6rem;
+		    vertical-align: middle;
+		}
+	}
+	.weui_cell{
+		&:before{
+			left: 0;
+		}
+	}
+	.pay-type{
+		.weui_cell{
+			padding: 5px 15px;
+		}
+	}
+	.pay-change{
+		.weui_cell_ft.with_arrow:after{
+			border-width: 0 2px 2px 0;
+		}
+	}
+	.pay-type,.safe-type{
+		position: relative;
+		&:before{
+			content: " ";
+			position: absolute;
+			left: 0;
+			top: 0;
+			width: 100%;
+			height: 1px;
+			border-top: 1px solid #D9D9D9;
+			color: #D9D9D9;
+			-webkit-transform-origin: 0 0;
+			transform-origin: 0 0;
+			-webkit-transform: scaleY(0.5);
+			transform: scaleY(0.5);
+			}
+		.weui_cell{
+			.weui_cell_hd{
+				vertical-align: bottom;
+				padding-top: 5px;
+			}
+			.wx{
+				font-size: 2.5rem;
+				color: #86BF25;
+				margin-right: 5px;
+			}
+			.weui_cell_bd{
+				p{
+					display: inline-block;
+					margin-right: 30px;
+				}
+			}
+		}
+	}
+	.safe-type .vux-badge{
+		background: none;
+		border: 1px solid #51AAFE;
+		color: #51AAFE;
+		width: 15px;
+		height: 15px;
+	}	
+	.safe-type .weui_cell_hd{
+		margin-right: 5px;
+		i{
+			font-size: 1.6rem;
+		}
+	}
+}
+.receipt-box{
+		background: rgba(0,0,0,.8);
+		width: 100%;
+		height: 100%;
+		position: fixed;
+		top: 0;
+		z-index: 1000;
+		.box{
+			margin: 40px;
+			position: relative;
+			top: 10%;
+			.number{
+				padding: 10px 0px;
+				color: #999;
+				font-size: 1.3rem;
+			}
+			.weui_cells{
+				padding: 0 15px;
+				border-radius: 2px;
+			}
+			.weui_cell{
+				padding: 12px 0;
+				font-size: 1.4rem;
+				&:before{
+					left: 0;
+				}
+			}
+			.receipt-btn{
+				padding: 10px 15px;
+				background: #fff;
+				.weui_btn_dialog{
+					display: inline-block;
+					width: 50%;
+					text-align: center;
+				} 
+				.weui_btn_dialog.primary{
+					color: #51aafd;
+				}
+			}
+		}
+	}	

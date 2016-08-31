@@ -1,0 +1,77 @@
+@import "../jfh/global";
+
+.comment-panel{
+    margin-top: 10px;
+    background: #fff;
+
+    .comment-title{
+        position: relative;
+        padding: 8px 10px;
+        font-size: 1.4rem;
+        color: $color-black;
+
+        &:before{
+            content: '';
+            width: 5px;
+            height: 15px;
+            position: absolute;
+            left: 0;
+            top: 50%;
+            margin-top: -8px;
+            background: $color-blue;
+        }
+    }
+
+    .comment-item{
+        position: relative;
+        padding: 0 15px 5px 65px;
+        margin-top: 15px;
+
+        .user-info{
+            overflow: hidden;
+            
+            .nickname{
+                display: block;
+                
+            }
+
+            .avatar{
+                position: absolute;
+                top: 3px;
+                left: 15px;
+                width: 40px;
+                height: 40px;
+                background: $color-gray;
+                vertical-align: top;
+                border-radius: 50%;
+                overflow: hidden;
+            }
+        }
+
+        .location{
+            color: $color-gray;
+            font-size: 1.2rem;
+        }
+
+        .content{
+            margin: 5px 0;
+        }
+
+        .pics{
+            img{
+                width: 55px;
+                height: 55px;
+                margin: 0 5px 5px 0;
+            }
+        }
+    }
+
+    .comment-more{
+        display: inline-block;
+        color: $color-black;
+        margin: 10px auto;
+        width: 100%;
+        text-align: center;
+        
+    }
+}

@@ -1,0 +1,556 @@
+html {
+	-webkit-text-size-adjust: 100%;
+	-ms-text-size-adjust: 100%;
+}
+
+html,
+body {
+	position: relative;
+	color: #727171;
+	height: 100%;
+	min-width: 1295px;
+	min-height: 1000px;
+	font: 14px/1.428 Helvetica, Arial, "Hiragino Sans GB", "Microsoft Yahei", "微软雅黑", STHeiti, "华文细黑", sans-serif
+}
+
+
+/*	font-size: 14px;
+	line-height: 1.428;
+	font-family: "微软雅黑", Arial, sans-serif;*/
+
+ul,
+ol {
+	padding: 0;
+	list-style-type: none;
+}
+
+a {
+	color: inherit;
+	background-color: transparent;
+	text-decoration: none !important;
+}
+
+a:hover,
+a:focus,
+a:active {
+	outline: 0;
+}
+
+img {
+	border: 0;
+}
+
+button:focus,
+.btn:focus {
+	outline: none;
+}
+
+input {
+	-webkit-appearance: none;
+	appearance: none;
+	outline: none;
+	-webkit-tap-highlight-color: rgba(0, 0, 0, 0);
+	border-radius: 0;
+}
+
+::-webkit-input-placeholder {
+	color: #d2d2d2;
+}
+
+::-moz-placeholder {
+	color: #d2d2d2;
+}
+
+input:focus::-webkit-input-placeholder {
+	color: transparent !important;
+}
+
+input:focus::-moz-placeholder {
+	color: transparent !important;
+}
+
+.tc {
+	text-align: center !important;
+}
+
+.tr {
+	text-align: right !important;
+}
+
+.tl {
+	text-align: left !important;
+}
+
+.ovh {
+	overflow: hidden;
+}
+
+.body-bg {
+	background: rgb(251, 251, 251);
+}
+
+
+/*=========================*/
+
+[class^=icon-],
+[class*=icon-] {
+	display: inline-block;
+	background: url() no-repeat center;
+	vertical-align: middle;
+}
+
+.icon-wechat {
+	width: 34px;
+	height: 28px;
+	background-image: url(../img/icon_wechat.png);
+	cursor: pointer;
+}
+
+.icon-qq {
+	width: 22px;
+	height: 28px;
+	background-image: url(../img/icon_qq.png);
+	cursor: pointer;
+}
+
+.icon-phone {
+	width: 17px;
+	height: 22px;
+	background-image: url(../img/icon-phone.png);
+}
+
+.icon-date {
+	margin-left: 12px;
+	width: 37px;
+	height: 36px;
+	background: url(../img/ic_calendar.png);
+	cursor: pointer;
+}
+
+.icon-and {
+	width: 14px;
+	height: 14px;
+	background: url(../img/icon_and.png) no-repeat center;
+}
+
+.icon-sub {
+	width: 14px;
+	height: 14px;
+	background: url(../img/icon_minuse.png) no-repeat center;
+}
+
+.icon-plus {
+	width: 20px;
+	height: 20px;
+	background: url(../img/icon_plus3.png) no-repeat center;
+}
+
+
+/*
+ 
+ * */
+
+.f12 {
+	font-size: 12px !important;
+}
+
+.ww-dropdown {
+	position: relative;
+	width: 160px;
+}
+
+.ww-dropdown.dib {
+	display: inline-block;
+	vertical-align: bottom;
+	margin-right: 30px;
+}
+
+.ww-dropdown .droppanel {
+	position: relative;
+	display: inline-block;
+	padding-left: 25px;
+	cursor: pointer;
+}
+
+.ww-dropdown .droppanel input[type=text],
+.ww-dropdown .droppanel input[type=password] {
+	padding-left: 10px;
+	width: 100%;
+	border: none;
+	border-bottom: 1px solid #50A2F9;
+	cursor: pointer;
+}
+
+.ww-dropdown .droppanel em {
+	position: absolute;
+	left: 0;
+	bottom: 0;
+	background: url(../img/icon_plus3.png) center;
+	width: 20px;
+	height: 20px;
+	cursor: pointer;
+}
+
+.ww-dropdown.open .droplist {
+	display: block;
+}
+
+.ww-dropdown .droplist {
+	display: none;
+	position: absolute;
+	top: 26px;
+	left: 0;
+	width: 100%;
+	max-height: 227px;
+	z-index: 10;
+	background: #fff;
+	overflow: auto;
+	border: 1px solid #e6ecf0;
+	border-radius: 0 0 5px 5px;
+	text-align: center !important;
+}
+
+.ww-dropdown .droplist::-webkit-scrollbar {
+	width: 5px;
+	background: #ededed;
+}
+
+.ww-dropdown .droplist::-webkit-scrollbar-thumb {
+	background: #DEDEDE;
+	border-radius: 50px;
+}
+
+.ww-dropdown .droplist>li {
+	padding: 10px;
+	border-top: 1px dashed #DEDEDE;
+}
+
+.ww-dropdown .droplist>li:first-child {
+	border: none;
+}
+
+.ww-dropdown .droplist>li:hover {
+	background: rgb(246, 232, 233);
+	cursor: pointer;
+}
+
+.ww-dropdown .droplist>li.selected {
+	background: rgb(246, 232, 233);
+}
+
+.inputbox .ww-dropdown {
+	display: inline-block;
+	width: auto;
+}
+
+.inputbox .ww-dropdown .droppanel {
+	padding-left: 0;
+}
+
+.inputbox .ww-dropdown .droppanel input {
+	padding: 14px;
+	width: 195px;
+	padding-left: 35px;
+	border: 2px solid #50A2F9;
+	border-radius: 5px;
+}
+
+.inputbox .ww-dropdown em {
+	top: 50%;
+	left: 10px;
+	margin-top: -10px;
+}
+
+.inputbox .ww-dropdown .right em {
+	left: auto;
+	right: 10px !important;
+}
+
+.inputbox .ww-dropdown .right input {
+	padding-left: 15px;
+	padding-right: 30px;
+}
+
+.inputbox .ww-dropdown .left em {
+	left: 10px !important;
+}
+
+.inputbox .droplist {
+	top: 56px;
+}
+
+.ww-dropdown.drop-two {
+	display: inline-block;
+	width: 80%;
+}
+
+.ww-dropdown.drop-two .droppanel {
+	padding-left: 0;
+}
+
+.ww-dropdown.drop-two .droppanel input {
+	height: 54px;
+	padding: 10px;
+	text-align: center;
+	border: 2px solid #d2d2d2;
+}
+
+.ww-dropdown.drop-two .droppanel em {
+	left: auto;
+	top: 50%;
+	right: 10px;
+	margin-top: -10px;
+	background: url(../img/icon-arrow-down.png) no-repeat center;
+}
+
+.ww-dropdown.drop-two .droplist {
+	top: 53px;
+}
+
+
+/*
+ 
+ * */
+
+
+/*++++++++++++++++++++++++++++++++++++++++++++++++++++++++++*/
+
+.c-blue {
+	color: #50A2F9 !important;
+}
+
+.c-pink {
+	color: rgb(240, 101, 140) !important;
+}
+
+.noradius {
+	-webkit-ring-radius: 0;
+	border-radius: 0 !important;
+}
+
+.unitprice {
+	color: rgb(240, 101, 140) !important;
+	font-size: 45px !important;
+	line-height: 0;
+}
+
+.input input[type=text],
+.input input[type=password],
+input.input {
+	padding: 14px;
+	border: 2px solid #489af6;
+	border-radius: 5px;
+}
+
+.input.gray {
+	width: 406px !important;
+	border-color: #d2d2d2;
+}
+
+.input.midn {
+	width: 290px !important;
+}
+
+.input.plus {
+	width: 273px !important;
+}
+
+.input.max {
+	width: ;
+}
+
+.input.choose {
+	padding: ;
+}
+
+.input-word {
+	display: inline-block;
+	margin-left: 10px;
+}
+
+
+/*加减框*/
+
+.add-sub {
+	display: inline-block;
+	position: relative;
+}
+
+.add-sub .input {
+	padding-left: 22px !important;
+	padding-right: 22px !important;
+	margin-left: 0 !important;
+	text-align: center;
+}
+
+.add-sub .icon-and,
+.add-sub .icon-sub {
+	position: absolute;
+	top: 50%;
+	margin-top: -7px;
+	z-index: 10;
+	cursor: pointer;
+	zoom: 1;
+}
+
+.add-sub .icon-and {
+	right: 10px;
+}
+
+.add-sub .icon-sub {
+	left: 10px;
+}
+
+.add-sub .placeholder {
+	margin-left: 0 !important;
+}
+
+
+/*end 加减框*/
+
+.btn-main {
+	color: #fff;
+	background: #50a2fa;
+	width: 110px;
+	height: 37px;
+}
+
+.btn-disable {
+	background: rgb(137, 137, 137);
+	color: #fff;
+}
+
+.btn-hollow {
+	padding: 8px 12px;
+	min-width: 112px;
+	border: 2px solid #499bfa;
+	color: #499bfa;
+	background: #fff;
+}
+
+.btn-hollow.btn-order {
+	color: rgb(113, 113, 113);
+	border: 1px solid rgb(161, 161, 161);
+	border-radius: 5px;
+	min-width: 90px;
+}
+
+.btn-post {
+	width: 156px;
+	height: 50px;
+	font-size: 20px;
+}
+
+.btn-save {
+	width: 120px;
+	height: 50px;
+}
+
+.btn-hollow.selected {
+	background: #55a7f9 !important;
+	color: #fff !important;
+}
+
+.btn-main:hover,
+.btn-main:focus,
+.btn-main:active {
+	color: #fff;
+}
+
+.btn-hollow:hover,
+.btn-hollow:focus,
+.btn-hollow:active {
+	color: #499bfa;
+}
+
+.container-maxmain {
+	position: relative;
+	width: 1280px;
+	margin: 0 auto;
+}
+
+.container-medmmmain {
+	position: relative;
+	width: 1200px;
+	margin: 0 auto;
+}
+
+.container-main {
+	position: relative;
+	width: 1070px;
+	margin: 0 auto;
+}
+
+.overmb {
+	margin-bottom: 60px;
+}
+
+
+/*==========================================*/
+
+
+/*
+ * 自定义 单选 和 复合框 样式 （结合JS 处理）
+ * */
+
+.check-group {
+	position: relative;
+	display: inline-block;
+	width: 17px;
+	height: 17px;
+	vertical-align: -2px;
+}
+
+.check-group-laber {
+	font-weight: normal;
+	margin-bottom: 0;
+	vertical-align: 1px;
+	cursor: pointer;
+}
+
+.check-group>input,
+.check-group>.checkicon {
+	position: absolute;
+	top: 0;
+	left: 0;
+	width: 100%;
+	height: 100%;
+	cursor: pointer;
+}
+
+.check-group>input {
+	margin: 0;
+	z-index: 10;
+	opacity: 0;
+	filter: alpha(opacity=0);
+}
+
+.check-group>input:focus {
+	outline: 0;
+}
+
+.check-group>.checkicon {
+	background: url(../img/icon-radio.png) no-repeat center;
+}
+
+.check-group.checked>.checkicon {
+	background-image: url(../img/icon-radio1.png);
+}
+
+.check-group.gray>.checkicon {
+	background: url(../img/icon-radio-gray.png) no-repeat center;
+}
+
+.check-group.gray.checked>.checkicon {
+	background-image: url(../img/icon-radio1-gray.png);
+}
+
+.check-group.white>.checkicon {
+	background: url(../img/icon-radio-white1.png) no-repeat center;
+}
+
+.check-group.white.checked>.checkicon {
+	background-image: url(../img/icon-radio-white2.png);
+}
+
+@media only screen and (min-width: 100px) and (max-width: 640px) {}

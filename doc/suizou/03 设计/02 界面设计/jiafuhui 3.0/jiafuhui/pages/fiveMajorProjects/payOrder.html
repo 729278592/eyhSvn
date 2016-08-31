@@ -1,0 +1,154 @@
+<!DOCTYPE html>
+<html>
+
+	<head>
+		<meta charset="UTF-8">
+		<title>支付-弹窗</title>
+		<meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+		<meta name="renderer" content="webkit">
+		<link rel="stylesheet" href="../../common/css/bootstrap.min.css" />
+		<link rel="stylesheet" href="../../common/css/amazeui.datetimepicker.css" />
+		<link rel="stylesheet" href="../../common/css/public.css" />
+		<link rel="stylesheet" href="../../common/css/common.css" />
+		<script type="text/javascript" src="../../lib/jquery-1.9.1.min.js"></script>
+		<script type="text/javascript" src="../../lib/html5shiv.js"></script>
+		<script type="text/javascript" src="../../lib/bootstrap.min.js"></script>
+		<script type="text/javascript" src="../../lib/amazeui.datetimepicker.min.js"></script>
+		<script type="text/javascript" src="../../common/js/public.js"></script>
+		<script type="text/javascript" src="../../common/js/common.js"></script>
+		<!--[if lt IE8]>
+			<script type="text/javascript" src="../../common/js/ieplaceholder.js" ></script>			
+		<![endif]-->
+	</head>
+
+	<body>
+		<button id="btn" class="btn btn-main" mymodal-open="#payways">选择支付方式</button><br /><br /><br /><br /><br /><br />
+		<button class="btn btn-main" mymodal-open="#prevorder">月嫂预约成功</button><br /><br /><br /><br /><br /><br />
+		<button class="btn btn-main" mymodal-open="#servicearea" style="min-width: auto;width: auto;">服务不在本服务区域内</button>
+		
+		<button class="btn btn-main" mymodal-open="#addAddress" style="min-width: auto;width: auto;">新增地址</button>
+		
+
+		<div class="mymodal" id="payways">
+			<div class="mymoda-dialog">
+				<div class="mymoda-content payorder">
+					<span class="closebtn2" data-mymodal="close"></span>
+					<div class="payorder-header">
+						<i class="icon-rigth"></i> 订单提交成功！去付款
+					</div>
+					<div class="payorder-boding">
+						<div class="title">选择以下支付方式付款</div>
+						<p class="">支付平台</p>
+						<ol class="payways toggle-tabs">
+							<li class="tt-item"><img src="../../common/img/pw-zhifubao.png"></li>
+							<li class="tt-item"><img src="../../common/img/pw-wechart.png"></li>
+						</ol>
+					</div>
+				</div>
+			</div>
+		</div>
+
+		<div class="mymodal" id='prevorder'>
+			<div class="mymoda-dialog">
+				<div class="mymoda-content hint">
+					<a class="closebtn" data-mymodal="close"></a>
+					<i class="icon-sus"></i>
+					<div class="span"><button class="btn btn-main">预约成功</button></div>
+					<p>月嫂预约已成功，工作人员将尽快和您取得联系。</p>
+				</div>
+			</div>
+		</div>
+
+		<div class="mymodal" id='servicearea'>
+			<div class="mymoda-dialog">
+				<div class="mymoda-content hint">
+					<a class="closebtn" data-mymodal="close"></a>
+					<i class="icon-sus"></i>
+					<p class="span">服务不在本服务区域内。</p>
+					<div class="span"><button class="btn btn-main">OK</button></div>
+				</div>
+			</div>
+		</div>
+		<div class="mymodal" id="addAddress">
+			<div class="mymoda-dialog">
+				<div class="mymoda-content address-block">
+					<a class="closebtn" mymodal-close="#addAddress"></a>
+					<div class="col2">
+						<div class="col-item">
+							<input type="text" class="address-input" placeholder="请输入姓名" />
+						</div>
+						<div class="col-item">
+							<input type="text" class="address-input" placeholder="请输入电话号码" />
+						</div>
+					</div>
+
+					<div class="col3">
+						<div class="col-item">
+							<div class="ww-dropdown drop-two">
+								<div class="droppanel">
+									<input type="text" value="四川" readonly />
+									<em></em>
+								</div>
+								<ol class="droplist">
+									<li>四川</li>
+									<li>重庆</li>
+									<li>北京</li>
+									<li>上海</li>
+								</ol>
+							</div>
+							<span>省</span>
+						</div>
+						<div class="col-item tc">
+							<div class="ww-dropdown drop-two">
+								<div class="droppanel">
+									<input type="text" value="成都" readonly />
+									<em></em>
+								</div>
+								<ol class="droplist">
+									<li>成都</li>
+									<li>绵阳</li>
+									<li>遂宁</li>
+									<li>雅安</li>
+								</ol>
+							</div>
+							<span>市</span>
+						</div>
+						<div class="col-item tr">
+							<div class="ww-dropdown drop-two">
+								<div class="droppanel">
+									<input type="text" value="武侯" readonly />
+									<em></em>
+								</div>
+								<ol class="droplist">
+									<li>武侯</li>
+									<li>青羊</li>
+									<li>金牛</li>
+									<li>成华</li>
+								</ol>
+							</div>
+							<span>区</span>
+						</div>
+					</div>
+					<div class="col1 tl">
+						<input type="text" class="address-input" placeholder="详细地址" />
+					</div>
+					<div class="col1 tc">
+						<button class="btn btn-main" mymodal-open="#success">保存</button>
+					</div>
+				</div>
+
+			</div>
+		</div>
+		<div class="mymodal" id='success'>
+			<div class="mymoda-dialog">
+				<div class="mymoda-content hint">
+					<a class="closebtn" data-mymodal="close"></a>
+					<i class="icon-sus"></i>
+					<p class="span">保存成功！</p>
+					<div class="span"><button class="btn btn-main" data-mymodal="close">OK</button></div>
+				</div>
+			</div>
+		</div>
+		</bosdy>
+
+</html>

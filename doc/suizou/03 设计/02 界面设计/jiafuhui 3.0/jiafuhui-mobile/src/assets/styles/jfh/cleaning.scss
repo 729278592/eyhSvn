@@ -1,0 +1,159 @@
+@import "../jfh/global";
+
+.cleaning{
+    .header{
+        position: relative;
+        &:after{
+            position: absolute;
+            content: '';
+            width: 0;
+            height: 0;
+            border-left: 5px solid transparent;
+            border-right: 5px solid transparent;
+            border-bottom: 10px solid #f2f2f2;
+            bottom: 0;
+            left: 30px;
+        }
+    }
+    .title{
+        margin: 8px 0;
+        padding-left: 14px;
+        line-height: 1;
+        border-left: 5px solid $color-blue;
+        color: #999;
+    }
+    .vux-flex-row{
+        text-align: center;
+        padding: 15px 0;
+        i{
+            font-size: 3.6rem;
+            display:block;
+            color: $color-blue;
+        }
+    }
+}
+
+.clean-public{
+    padding-bottom: 80px;
+    .header .portrait{
+        background: none;
+        border: 1px solid #fff;
+        line-height: 85px;
+        font-size: 1.8rem;
+    }
+    .icebox_title{
+        padding: 10px 15px;
+        background: #fff;
+        .left,.right{
+            display: inline-block;
+        }
+        .left{
+            .top{
+                margin-bottom: 8px;
+            }
+            .thumbs{
+                color: #FF5000;
+                font-size: 1.8rem;
+                margin-right: 5px;
+            }
+        }
+        .right{
+            padding-top: 10px;
+            float: right;
+            vertical-align: middle;
+            span{
+                font-size: 1.8rem;
+                color: #FF5000;
+            }
+        }
+    }
+    .title_line{
+        padding: 8px 10px;
+        font-size: 1.4rem;
+        small{
+            color: #bbb;
+        }
+    }
+    .list{
+        background: #fff;
+        text-align: center;
+    }
+}
+.air .list .vux-flexbox-item {
+    padding: 0 20px !important;
+}
+.icebox,.air,.kitchen,.washer,.yuesao{
+    .list {
+        padding: 15px 0;
+        .vux-flexbox-item {
+            margin-left: 8px !important;
+        } 
+        .vux-flexbox {
+            width: auto;
+            padding: 0 15px;
+            background: none;
+            margin-bottom: 0 !important;
+            .item {
+                font-size: 1.8rem;
+                line-height: 55px;
+                height: 55px;
+                border: 1px solid $color-blue;
+                color: $color-blue;
+                text-align: center;
+                border-radius: 3px;
+            }
+            .item-active{
+                background: $color-blue;
+                color: #fff;
+            }
+        }       
+    }
+}
+.month-clean{
+    .list{
+        padding: 10px 0;
+        .vux-flexbox {
+            width: auto;
+            padding: 0 15px;
+            background: none;
+            margin-bottom: 0 !important;
+            .vux-flexbox-item{
+                position: relative;
+                &:nth-child(1):after{
+                    content: '';
+                    width: 1px;
+                    border-left: 1px solid $color-blue;
+                    height: 25px;
+                    position: absolute;
+                    top: 50%;
+                    right: 0;
+                    margin-top: -12px;
+                }
+            }
+            .item {
+                font-size: 1.4rem;
+                text-align: center;
+                border-radius: 3px;
+                position: relative;
+                .change{
+                    position: absolute;
+                    top: 38%;
+                    left: 55%;
+                    font-size: 1.6rem;
+                    color: #bbb;
+                }
+                .icon{
+                    font-size: 4rem;
+                    display: block;                
+                    color: $color-blue;
+                    margin-bottom: 5px;
+                }
+            }
+            .item-active{
+                .change{
+                    color: $color-blue;
+                }
+            }
+        }
+    }
+}
