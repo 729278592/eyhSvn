@@ -155,7 +155,7 @@ img.resume{width: 100%;margin-bottom: 15px;border-bottom: 1px solid #efefef;}
 .entryList li .couponImg{width: 20%;position: relative;text-align: left;}
 .entryList li .couponImg img.couponTip{position: absolute;width: 30%;right: -10%;top: -10%;}
 .entryList li .couponImg img.couponImg1{width: 60px;height: 60px;border-radius: 100%;}
-.entryList li .couponImg.style img.couponImg1{width: 80px;height: 80px;border-radius: 2px;}
+.entryList li .couponImg.style img.couponImg1{width: 80px;height: 80px;border-radius: 100%;}
 .entryList li .inforList{width: 65%;text-indent: 10px;}
 .entryList.mt0 li .inforList{width: 73%;padding-left: 5%;text-indent: 0;}
 .entryList li .inforList span{display: -webkit-box;
@@ -407,8 +407,9 @@ a.weui_btn.weui_btn_primary{font-size: 16px;}
 .prosuct .goodMenu{width: 100%;margin-top: 3%;}
 .prosuct .goodMenu li{width: 27.2%;margin-right: 2%;float: left;padding: 5px 0.1% 5px 3.9%;;border-radius: 4px;color: #61b0f0;font-size: 14px;border: 1px solid #61b0f0;margin-bottom: 5px;}
 .prosuct .goodMenu li.mr0{margin-right: 0;}
-.prosuct .goodMenu li .fa{font-size: 16px;}
-.prosuct .goodMenu li .goodName{}
+.prosuct .goodMenu li .fa{font-size: 16px;float: left;position: relative;top: 3px;}
+.prosuct .goodMenu li .goodName{display: inline-block;max-width: 56px;float: left;;
+    text-overflow:ellipsis; overflow:hidden; white-space:nowrap;margin-left: 5px;}
 
 .weui_search_inner .weui_search_input{font-size: 12px;font-family: "微软雅黑";padding: 4px 0 4px 20px;}
 .weui_search_cancel{font-size: 14px;font-family: "微软雅黑";}
