@@ -158,7 +158,7 @@ img.resume{width: 100%;margin-bottom: 15px;border-bottom: 1px solid #efefef;}
 .entryList li .couponImg.style img.couponImg1{width: 80px;height: 80px;border-radius: 100%;}
 .entryList li .inforList{width: 65%;text-indent: 10px;}
 .entryList.mt0 li .inforList{width: 73%;padding-left: 5%;text-indent: 0;}
-.entryList li .inforList span{display: -webkit-box;
+.entryList li .inforList span{display: -webkit-box;line-height: 28px;
     -webkit-box-orient: vertical;
     -webkit-line-clamp: 1;
     overflow: hidden;
@@ -250,8 +250,8 @@ img.resume{width: 100%;margin-bottom: 15px;border-bottom: 1px solid #efefef;}
     -webkit-line-clamp: 1;
     overflow: hidden;
     text-overflow: ellipsis;}
-.companyHinfor .bottomDiv p.fs20{font-size: 20px;}
-.companyHinfor .bottomDiv p.fs18{font-size: 16px;}
+.companyHinfor .bottomDiv p.fs20{font-size: 20px;line-height: 20px;}
+.companyHinfor .bottomDiv p.fs18{font-size: 16px;line-height: 16px;}
 .comInfors{background: #fff;}
 .comInfors p{font-size: 14px;color: #666;display: -webkit-box;position: relative;
     -webkit-box-orient: vertical;
@@ -584,9 +584,7 @@ a.weui_btn.weui_btn_primary{font-size: 16px;}
 .moneyInfor{padding: 10px 15px;margin-top: 10px;background: #fff;border-top: 1px solid #efefef;border-bottom: 1px solid #efefef;}
 .moneyInfor p{width: 100%;font-size: 16px;color: #367c8a;}
 .moneyInfor p span.money{color: #ff0404;font-size: 18px;}
-.moneyInfor .btnMoney:active {
-    color: rgba(255, 255, 255, 0.4);    background-color: #039702;
-}
+.moneyInfor .btnMoney:active {color: rgba(255, 255, 255, 0.4);    background-color: #039702;}
 .notConTip{text-align: center;color: #999;padding: 20px 0;position: relative;top: 30%;}
 .notConTip.mt15{margin: 15px 0;font-size: 12px;}
 .notConTip img{width: 20%;margin-bottom: 5px;}
