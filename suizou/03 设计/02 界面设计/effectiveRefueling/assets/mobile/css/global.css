@@ -218,6 +218,9 @@ textarea{font-family: "微软雅黑";}
 .orderMenu li a .orderIcon2{width: 1.25rem;height: 1.25rem;background: url(../images/order2-1.png) no-repeat;background-size: 100% 100%;}
 .orderMenu li a .orderIcon3{width: 1.25rem;height: 1.25rem;background: url(../images/order3-1.png) no-repeat;background-size: 100% 100%;}
 .orderMenu li a .orderIcon4{width: 1.25rem;height: 1.25rem;background: url(../images/order4-1.png) no-repeat;background-size: 100% 100%;}
+.orderMenu li a .orderIcon7{width: 1.25rem;height: 1.25rem;background: url(../images/order7-1.png) no-repeat;background-size: 100% 100%;}
+.orderMenu li a .orderIcon8{width: 1.25rem;height: 1.25rem;background: url(../images/order8-1.png) no-repeat;background-size: 100% 100%;}
+
 .orderMenu li a.active{color: #f73939;}
 
 
@@ -505,10 +508,15 @@ img.shopInfor.w100{width: 100%;margin-bottom: 0.625rem;}
 .stationList li p a .address{width:1rem;position: relative;top: -0.125rem;}
 .stationList li p .color1{color: #333;font-size: 1rem;}
 .stationList li p .color2{color: #ff6702;}
-
-
+.stationList li p span.kz{display: inline-block;width: 200px;overflow: hidden;
+    white-space: nowrap;
+    text-overflow: ellipsis;}
+.loadding.hide{display: none;}
+.loadding{position: fixed;top: 0;left: 0;right: 0;bottom: 0;background: rgba(0,0,0,0.5);}
+.loadding img{position: absolute;width: 50px;height: 50px;left: 50%;top: 50%;margin-left: -25px;margin-top: -25px;}
 /*gasStationInfor*/
 .stationDiv{background: #fff;}
+.stationDiv>img{height: 124px;}
 .stationDiv p{display: block;color: #666;padding: 1rem;}
 .stationDiv p a{color: #7ebd8b;display: inline-block;padding: 0.125rem 0.25rem;border: 1px solid #7ebd8b;border-radius: 0.25rem;font-size: 0.875rem;}
 .stationList.style li p a{color: #ff6702;border-color: #ff6702;}
