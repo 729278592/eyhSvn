@@ -15,6 +15,7 @@ body{background: #f7f7f7;}
 html[xmlns] .clearfix {display: block;}
 a,button,input,img,table,ul,li,tr,td,div{-webkit-tap-highlight-color:rgba(0,0,0,0);font-family: "微软雅黑";}
 button:active{opacity: 0.85;}
+.overflow-y{overflow-y: hidden;height: 100%;}
 .content {width: 100%;position: relative;max-width: 40rem;margin: 0 auto;}
 .content.overflow{overflow-x: hidden;}
 .content,.page{background: #f3f3f3;}
@@ -596,6 +597,7 @@ img.shopInfor.w100{width: 100%;margin-bottom: 0.625rem;}
 .orderList.style li .orderCon .orderImg{padding: 0.6rem 0.5rem}
 .orderList.style li .orderCon p.style{position: relative;top: 0.5rem;}
 .optionType.style li.first.style{width: 65%;text-align: right;padding-right: 5%;}
+.optionType.style li.first.style.w61{width: 61%;line-height: 48px;}
 .swiper-container-horizontal>.swiper-pagination-bullets{bottom: 0;}
 
 
