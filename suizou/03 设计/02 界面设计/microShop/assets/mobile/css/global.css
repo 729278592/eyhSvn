@@ -755,7 +755,7 @@ img.shopInfor.w100{width: 100%;margin-bottom: 0.625rem;}
 .entryList>li .inforList p span.Invalid{display: inline-block;padding: 0.1rem 0.6rem;background: #7c8991;color: #fff;font-size: 0.75rem;border-radius: 0.2rem;}
 .entryList>li .inforList p.top{position: absolute;top: 0;}
 .entryList>li .inforList p.bottom{position: absolute;bottom: 0;}
-.entryList>li .inforList p.bottom .btnLeave{outline: none;border: none;padding: 0.2rem 0.8rem;background: #ff6702;color: #fff;border-radius: 0.2rem;}
+.entryList>li .inforList p.bottom .btnLeave{outline: none;border: none;padding: 0.2rem 0.8rem;background: #ff6702;color: #fff;border-radius: 0.2rem;position: relative;left: -0.5rem;}
 .ulmenu li a .my_icon1{width: 4rem;height: 4rem;background: url(../images/my1.png) no-repeat;background-size: 100% 100%;}
 .ulmenu li a .my_icon2{width: 4rem;height: 4rem;background: url(../images/my2.png) no-repeat;background-size: 100% 100%;}
 .ulmenu li a .my_icon3{width: 4rem;height: 4rem;background: url(../images/my3.png) no-repeat;background-size: 100% 100%;}
