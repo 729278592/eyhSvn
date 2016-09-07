@@ -16,14 +16,22 @@
                 <a>
                     <i class="fa fa-angle-left"></i>
                 </a>
-                <form action="#" class="formIndex">
-                    <input type="text" class="search_input" placeholder="搜索商品"/>
-                    <i class="fa fa-search"></i>
-                    <a href="javascript:" class="weui_icon_clear hide" id="search_clear"></a>
-                </form>
+                消费全反
                 <div class="right nav_block">
                     <a href="shoppingCat.html" class="shop_cat"></a>
-                    <a href="message.html" class="shop_msg"></a>
+                    <a class="dot_block"></a>
+                    <ul class="nav_link">
+                        <li>
+                            <a href="myMessage.html">
+                                消息
+                            </a>
+                        </li>
+                        <li>
+                            <a href="index.html">
+                                首页
+                            </a>
+                        </li>
+                    </ul>
                 </div>
             </div>
             <div class="bd absolute pt">
@@ -50,28 +58,6 @@
     <script src="../../assets/mobile/js/global.js"></script>
     <script>
         $(function(){
-
-            /*搜索框*/
-            var searchInput = $(".formIndex .search_input");
-            searchInput.on("keydown",function(){
-                if($.trim($(this).val())==''){
-
-                }else{
-                    $(".weui_icon_clear").removeClass("hide");
-                }
-            });
-            searchInput.on("focus",function(){
-                $(this).closest(".formIndex").addClass("active")
-            });
-            searchInput.on("blur",function(){
-                $(this).closest(".formIndex").removeClass("active")
-            });
-            $(".weui_icon_clear").on("touchend",function(){
-                $(".formIndex .search_input").val(" ");
-                $(this).addClass("hide");
-                $(this).attr({placeholder:"搜索商品"});
-            });
-
             /*订单初始化*/
             $.ajax({
                 type : "post",
