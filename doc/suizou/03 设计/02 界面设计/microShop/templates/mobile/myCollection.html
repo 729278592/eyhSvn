@@ -1,0 +1,98 @@
+<!DOCTYPE html>
+<html>
+<head lang="en">
+    <meta charset="UTF-8">
+    <title>我的收藏</title>
+    <meta name="viewport" content="width=device-width; initial-scale=1.0; user-scalable=no;">
+    <link rel="stylesheet" href="../../assets/global/plugins/font/css/font-awesome.min.css"/>
+    <link rel="stylesheet" href="../../assets/mobile/css/weui.css"/>
+    <link rel="stylesheet" href="../../assets/mobile/css/example.css"/>
+    <link rel="stylesheet" href="../../assets/mobile/css/global.css"/>
+</head>
+<body>
+    <div class="content">
+        <div class="page">
+            <div class="hd">
+                <a>
+                    <i class="fa fa-angle-left"></i>
+                </a>
+                分类
+                <div class="right nav_block">
+                    <a href="shoppingCat.html" class="shop_cat"></a>
+                    <a class="dot_block"></a>
+                    <ul class="nav_link">
+                        <li>
+                            <a href="index.html">
+                                主页
+                            </a>
+                        </li>
+                        <li>
+                            <a href="shopMall.html">
+                                精选商城
+                            </a>
+                        </li>
+                        <li>
+                            <a href="gasStationInfor.html">
+                                马上加油
+                            </a>
+                        </li>
+                        <li>
+                            <a href="personCenter.html">
+                                会员中心
+                            </a>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+            <div class="bd absolute pt">
+                <div class="applicatioOpetion">
+                    <ul class="applicatioNav clearfix">
+                        <li>
+                            <a class="active" data="shoppingCollection">商品收藏</a>
+                        </li>
+                        <li>
+                            <a data="shopsCollection">商铺收藏</a>
+                        </li>
+                    </ul>
+                </div>
+                <div id="Collection">
+
+                </div>
+            </div>
+        </div>
+    </div>
+    <script src="../../assets/global/plugins/jquery/jquery-1.11.3.min.js"></script>
+    <script src="../../assets/mobile/js/global.js"></script>
+    <script>
+        $(function(){
+            /*订单初始化*/
+            $.ajax({
+                type : "post",
+                url : "shoppingCollection.html",
+                dataType : "html",
+                cache : false,
+                success : function(data) {
+                    $(".bd").find("#Collection").html(data);
+                }
+            });
+
+            /*订单状态切换*/
+            $(".applicatioNav li a").on("touchend",function(){
+                $(this).addClass("active");
+                $(this).closest("li").siblings("li").find("a").removeClass("active");
+                var data = $(this).attr("data");
+                var that = $(this);
+                $.ajax({
+                    type : "post",
+                    url : data+".html",
+                    dataType : "html",
+                    cache : false,
+                    success : function(data) {
+                        that.closest(".bd").find("#Collection").html(data);
+                    }
+                });
+            });
+        })
+    </script>
+</body>
+</html>
