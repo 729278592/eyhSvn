@@ -56,9 +56,16 @@ a:active{opacity: 0.6;}
 .weui_label span.text{position: relative;top: -0.3rem;}
 
 
+/*incomeDetail*/
+.span_icon{display: inline-block;width: 1.05rem;height: 1.3rem;}
+.span_time{display: inline-block;background: url(../images/startTimeIcon.png) no-repeat;background-size: 100% 100%;width: 1rem;height: 1rem;position: relative;top: 0.1rem;}
+.queryMenu li p.style{padding: 0.4rem 0;border-bottom: 1px solid #dbdbdb;}
+.queryMenu li p.style span{font-size: 0.875rem;color: #333;}
+.queryMenu li p.style:last-child{border-bottom: none;}
+.queryMenu.mb li{margin-bottom: 0.625rem;}
 /*modifyName*/
 .weui_cells_form.wauto .weui_cell .weui_label{width: 25px;}
-.span_icon{display: inline-block;width: 1.05rem;height: 1.3rem;}
+
 .bd.pd48{padding-bottom:3rem;padding-top: 2.5rem;}
 .bd.pd48.style{padding-bottom: 8rem;}
 .foot.style{height: 8rem;}
@@ -146,8 +153,8 @@ a:active{opacity: 0.6;}
 
 /*linkCode*/
 .user_agreement{width: 100%;}
-.user_agreement>p{width: 94%;margin: 0.625rem auto 0;}
-.user_agreement p.title{margin: 0.625rem 0;font-size: 1.25rem;color: #333;text-align: center;}
+.user_agreement>p{width: 94%;margin: 0.625rem auto 0;font-size: 0.875rem;color: #666;line-height: 1.7rem;}
+.user_agreement p.title{font-size: 1.25rem;color: #333;text-align: center;}
 .user_agreement p.time{font-size: 0.875rem;text-align: right;color: #999;}
 .user_agreement>div{font-size: 0.875rem;text-indent: 1.75rem;line-height: 1.5rem;width: 94%;margin: 0.625rem auto 0;color: #666;}
 .codeMenu{display: block;}
@@ -158,14 +165,15 @@ a:active{opacity: 0.6;}
 
 /*returnRecord*/
 .inputDiv{display: block;width: 94%;padding: 0.625rem 3%;background: #fff;}
+.inputDiv.bt1{border-top: 1px solid #dbdbdb;}
 .inputDiv .spanColor{display: inline-block;height: 34px;padding: 0 15px;color: #666;border-top: 1px solid #dbdbdb;border-bottom: 1px solid #dbdbdb;background: #e0e3f2;line-height: 36px;font-size: 14px;}
 .inputDiv .Wdate{height: 34px;line-height: 34px;width: 85px;border: 1px solid #efefef;text-align: center;}
 .inputDiv .spanColor,.inputDiv .Wdate,.inputDiv .btnQuery{float: left;}
 .inputDiv .btnQuery{border: none;outline: none;width: 60px;height: 34px;background: #ff6702;color: #fff;float: right;border-radius: 0.25rem;}
 
 
-.queryMenu{width: 100%;background: #fff;}
-.queryMenu li{width: 94%;padding: 0.325rem 3% 0.625rem;border-top: 1px solid #dbdbdb;}
+.queryMenu{width: 100%;}
+.queryMenu li{background: #fff;width: 94%;padding: 0.325rem 3% 0.625rem;border-top: 1px solid #dbdbdb;}
 .queryMenu li p{width: 100%;margin-top: 0.3rem;display: block;color: #666;font-size: 0.875rem;}
 .queryMenu li p span.time{font-size: 1rem;color: #333;}
 
