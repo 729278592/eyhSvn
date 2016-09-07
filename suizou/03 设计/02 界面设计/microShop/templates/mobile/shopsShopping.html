@@ -1,0 +1,141 @@
+<!DOCTYPE html>
+<html>
+<head lang="en">
+    <meta charset="UTF-8">
+    <title>商铺商品</title>
+    <meta name="viewport" content="width=device-width; initial-scale=1.0; user-scalable=no;">
+    <link rel="stylesheet" href="../../assets/global/plugins/font/css/font-awesome.min.css"/>
+    <link rel="stylesheet" href="../../assets/mobile/css/weui.css"/>
+    <link rel="stylesheet" href="../../assets/mobile/css/example.css"/>
+    <link rel="stylesheet" href="../../assets/mobile/css/global.css"/>
+</head>
+<body>
+    <div class="content">
+        <div class="page">
+            <div class="hd">
+                <a>
+                    <i class="fa fa-angle-left"></i>
+                </a>
+                <form action="#" class="formIndex">
+                    <input type="text" class="search_input" placeholder="搜索商品"/>
+                    <i class="fa fa-search"></i>
+                    <a href="javascript:" class="weui_icon_clear hide" id="search_clear"></a>
+                </form>
+                <div class="right nav_block">
+                    <a href="shoppingCat.html" class="shop_cat"></a>
+                    <a href="message.html" class="shop_msg"></a>
+                </div>
+            </div>
+            <div class="bd absolute pd48">
+                <ul class="shop_menu clearfix style">
+                    <li class="active">
+                        <a data="shopsShoppingNew">
+                            新品
+                        </a>
+                    </li>
+                    <li>
+                        <a data="shopsShoppingNum">
+                            销量
+                        </a>
+                    </li>
+                    <li>
+                        <a data="shopsShoppingPrioce">
+                            价格
+                        </a>
+                    </li>
+                    <li>
+                        <a data="shopsShoppingEvaluate">
+                            评价
+                        </a>
+                    </li>
+                </ul>
+                <div id="shopsShopping" class="shopsShopping">
+
+                </div>
+            </div>
+            <div class="foot">
+                <ul class="tabMenu clearfix">
+                    <li>
+                        <a href="index.html">
+                            <i class="fa fa-home"></i><br/>
+                            <span>全部商品</span>
+                        </a>
+                    </li>
+                    <li class="active">
+                        <a href="shopMall.html">
+                            <i class="fa fa-bars"></i><br/>
+                            <span>商品分类</span>
+                        </a>
+                    </li>
+                    <li>
+                        <a href="gasStationInfor.html">
+                            <i class="fa fa-tag"></i><br/>
+                            <span>商品简介</span>
+                        </a>
+                    </li>
+                    <li class="last">
+                        <a href="personCenter.html">
+                            <i class="fa fa-user"></i><br/>
+                            <span>联系商铺</span>
+                        </a>
+                    </li>
+                </ul>
+            </div>
+        </div>
+    </div>
+    <script src="../../assets/global/plugins/jquery/jquery-1.11.3.min.js"></script>
+    <script src="../../assets/mobile/plugins/vue/vue.min.js"></script>
+    <script src="../../assets/mobile/js/global.js"></script>
+    <script>
+        $(function(){
+            /*搜索框*/
+            var searchInput = $(".formIndex .search_input");
+            searchInput.on("keydown",function(){
+                if($.trim($(this).val())==''){
+
+                }else{
+                    $(".weui_icon_clear").removeClass("hide");
+                }
+            });
+            searchInput.on("focus",function(){
+                $(this).closest(".formIndex").addClass("active")
+            });
+            searchInput.on("blur",function(){
+                $(this).closest(".formIndex").removeClass("active")
+            });
+            $(".weui_icon_clear").on("touchend",function(){
+                $(".formIndex .search_input").val(" ");
+                $(this).addClass("hide");
+                $(this).attr({placeholder:"搜索商品"});
+            });
+
+
+            /*发送ajax取商品数据*/
+            $.ajax({
+                type : "post",
+                url : "shopsShoppingNew.html",
+                dataType : "html",
+                cache : false,
+                success : function(data) {
+                    $("#shopsShopping").html(data);
+                }
+            });
+            $(".shop_menu li a").on("touchend",function(){
+                $(this).closest("li").addClass("active");
+                $(this).closest("li").siblings("li").removeClass("active");
+                var datat = $(this).attr("data");
+                var that = $(this);
+                $.ajax({
+                    type : "post",
+                    url : datat+".html",
+                    dataType : "html",
+                    cache : false,
+                    success : function(data) {
+                        that.closest(".bd").find("#shopsShopping").html(data);
+                    }
+                });
+            });
+        })
+    </script>
+</body>
+</html>
