@@ -57,8 +57,8 @@ a:active{opacity: 0.6;}
 
 
 /*modifyName*/
+.weui_cells_form.wauto .weui_cell .weui_label{width: 25px;}
 .span_icon{display: inline-block;width: 1.05rem;height: 1.3rem;}
-.spa_user{background: url(../images/userIcon.png) no-repeat;background-size: 100% 100%;}
 .bd.pd48{padding-bottom:3rem;padding-top: 2.5rem;}
 .bd.pd48.style{padding-bottom: 8rem;}
 .foot.style{height: 8rem;}
@@ -957,7 +957,7 @@ img.shopInfor.w100{width: 100%;margin-bottom: 0.625rem;}
 .shopShoppingMenu li.second{width: 20%;}
 .shopShoppingMenu li.three{width: 30%;}
 .shopShoppingMenu li.four{width: 30%;}
-
+.weui_cells_form.w90 .weui_cell .weui_label{width: 90px;}
 .shopType{width: 94%;padding: 0.625rem 3%;}
 .shopType.style{margin-bottom: 0;border-bottom: 0;}
 .shopType .title{font-size: 0.75rem;color: #999;margin-bottom: 0.5rem;}
