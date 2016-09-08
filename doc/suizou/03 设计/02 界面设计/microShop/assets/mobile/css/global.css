@@ -49,6 +49,41 @@ a:active{opacity: 0.6;}
 .tabMenu li.active a{color: #ff6702;}
 
 
+/*shops-search*/
+.mask-bg{position: fixed;top: 0;right: 0;left: 0;bottom: 0;background: rgba(0,0,0,0.6);z-index: 9998;}
+.mask-bg.hide{display:none;}
+.tabSX{position: fixed;top: 0;width: 100%;height: 100%;z-index: 9999;max-width: 640px;background: #fff;overflow: auto;}
+
+.flexbox{height: 44px;border-bottom: 1px solid #f4f4f4;display: -webkit-box;
+    display: -moz-box;
+    display: -ms-box;
+    -webkit-box-orient: horizontal;background: #fff;
+
+}
+.flexbox li{display: block;
+    box-flex: 1;
+    -webkit-box-flex: 1;
+    height:44px;
+    line-height: 44px;
+    width: 25%;}
+.flexbox li.active a{color: #ff6666!important}
+.flexbox li a{display: block;
+    border-right: 1px solid #f4f4f4;
+    height: 44px;
+    line-height: 44px;
+    font-size: 14px;
+    text-align: center;
+    color: #565c67!important;
+    padding: 0 6px;}
+.flexbox li:last-child a{border-right: none;}
+.cont-box{}
+.cont{display: none;width: 100%;}
+.cont.active{display: inline-block;}
+.cont-menu{width: 100%;}
+.cont-menu li{width: 88%;padding: 2% 6%;border-bottom: 1px solid #f4f4f4;color: #666;font-size: 14px;}
+.weui_cells .weui_cell.style3{padding: 0;font-size: 1rem;}
+.shopsInfor.style{color: #666;}
+
 
 /*modiflrPersonCenter*/
 .person_head{background: #fff;text-align: center;}
@@ -76,6 +111,7 @@ a:active{opacity: 0.6;}
 .spa_sex{background: url(../images/sexIcon.png) no-repeat;background-size: 100% 100%;}
 .spa_lock{background: url(../images/lockIcon.png) no-repeat;background-size: 100% 100%;}
 .spa_person{background: url(../images/comIcon.png) no-repeat;background-size: 100% 100%;}
+.spa_money{background: url(../images/moneysIcon.png) no-repeat;background-size: 100% 100%;}
 .spa_comName{background: url(../images/companyIcon.png) no-repeat;background-size: 100% 100%;}
 .spa_inforAddress{background: url(../images/inforAddress.png) no-repeat;background-size: 100% 100%;}
 .spa_address{background: url(../images/address.png) no-repeat;background-size: 100% 100%;}
@@ -102,6 +138,12 @@ a:active{opacity: 0.6;}
 .weui_cells.bt0:before{border-top: none;}
 .weui_cells.bt0:after{border-bottom: none;}
 .weui_cell.bt0:before{border-top: none;}
+
+
+/**/
+.integralInfor{margin: 0.625rem 0;}
+.integralInfor p{text-align: right;font-size: 1rem;color: #333;width: 94%;
+    padding:0 3%;}
 
 /*pensonCenter*/
 .person_infor{background:#fff;overflow: hidden;border-bottom: 1px solid #dbdbdb;}
@@ -405,6 +447,7 @@ textarea{font-family: "微软雅黑";}
 .orderList.style li .orderCon .btnRemove{width: auto;height: auto;background: transparent;color: #333;font-size: 1rem;top:1rem;}
 .picker-item{font-size: 1rem;}
 .opreationBtn{padding: 0.625rem;display: block;border-top: 1px solid #efefef;}
+.opreationBtn .rundSuccess{font-size: 0.875rem;color: #fe695c;float: right;}
 .opreationBtn .btnType {margin-right: 0.875rem;}
 /*.orderList>li .orderCon .orderInfor{padding: 0.6rem 1rem 0 0;width: 65%;}*/
 .orderList>li .orderCon .orderInfor{padding-right:1rem;width: 65%;vertical-align: middle;}

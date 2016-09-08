@@ -45,6 +45,65 @@
                 </div>
             </div>
             <div class="bd absolute pd48">
+                <div class="mask-bg hide"></div>
+                <section class="">
+                    <ul class="flexbox">
+                        <li data="0">
+                            <a href="javascript:;">
+                                <span>排序</span>
+                                <i class="fa fa-caret-up"></i>
+                            </a>
+                        </li>
+                        <li data="1">
+                            <a href="javascript:;">
+                                <span>分类</span>
+                                <i class="fa fa-caret-up"></i>
+                            </a>
+                        </li>
+                        <li data="2">
+                            <a href="javascript:;">
+                                <span>地区</span>
+                                <i class="fa fa-caret-up"></i>
+                            </a>
+                        </li>
+                    </ul>
+                    <div class="cont-box">
+                        <div class="cont">
+                            <ul class="cont-menu">
+                                <li>
+                                    渝中区
+                                </li>
+                                <li>
+                                    渝中区
+                                </li>
+                                <li>
+                                    渝中区
+                                </li>
+                                <li>
+                                    渝中区
+                                </li>
+                            </ul>
+                        </div>
+                        <div class="cont">
+                            <ul class="cont-menu">
+                                <li>
+                                    四川
+                                </li>
+                                <li>
+                                    四川
+                                </li>
+                                <li>
+                                    四川
+                                </li>
+                                <li>
+                                    四川
+                                </li>
+                            </ul>
+                        </div>
+                        <div class="cont">
+                        </div>
+                    </div>
+                </section>
                 <ul class="entryList mt0 style">
                     <li>
                         <div>
@@ -198,5 +257,28 @@
     <script src="../../assets/global/plugins/jquery/jquery-1.11.3.min.js"></script>
     <script src="../../assets/mobile/plugins/vue/vue.min.js"></script>
     <script src="../../assets/mobile/js/global.js"></script>
+    <script>
+        $(function(){
+            $(".flexbox").delegate("li","click",function(){
+                $(this).closest("section").addClass("tabSX");
+                $(this).addClass("active");
+                $(this).siblings("li").removeClass("active");
+                $(".mask-bg").removeClass("hide");
+                var data = $(this).attr("data");
+                $(".cont").eq(data).addClass("active");
+                $(".cont").eq(data).siblings(".cont").removeClass("active");
+                $(this).find("i").removeClass("fa-caret-up").addClass("fa-caret-down");
+                $(this).siblings("li").find("i").removeClass("fa-caret-down").addClass("fa-caret-up");
+            });
+            $(".mask-bg").on("click",function(){
+                $(this).next("section").removeClass("tabSX");
+                $(this).addClass("hide");
+                $(".cont").removeClass("active");
+                $(".flexbox li").removeClass("active");
+                $(".flexbox li").find("i").removeClass("fa-caret-down").addClass("fa-caret-up");
+            })
+        });
+
+    </script>
 </body>
 </html>
