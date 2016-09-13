@@ -1,0 +1,27 @@
+<template>
+    <ul class="shoppingList style clearfix pb0">
+    <!--<li v-for="shop in beautys" :class="shop.mr0 ? 'mr0':''">-->
+    <li v-for="shop in beautys" :class="{'mr0':shop.mr0}">
+        <a href={{shop.herf}} class="shop_div">
+            <div class="shop_list_bg shop_list_bg{{shop.class}}"></div>
+            <div class="shop_infor">
+                <p class="tile">{{shop.title}}</p>
+                <!--<p class="smallTile">{{shop.smallTile}}</p>-->
+                <p class="clearfix">
+                <span class="left">
+                    <span class="oldMoney">￥{{shop.oldMoney}}</span>
+                    ￥{{shop.newMoney}}
+                </span>
+                </p>
+            </div>
+        </a>
+    </li>
+</ul>
+</template>
+<script>
+  export default {
+    props: {
+      list: Array
+    }
+  }
+</script>
