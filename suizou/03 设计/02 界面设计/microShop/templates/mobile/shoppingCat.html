@@ -17,39 +17,29 @@
                 <a>
                     <i class="fa fa-angle-left"></i>
                 </a>
-                消费全反
+                家得利
                 <div class="right nav_block">
-                <a href="shoppingCat.html" class="shop_cat"></a>
-                <a class="dot_block"></a>
-                <ul class="nav_link">
-                    <li>
-                        <a href="index.html">
-                            主页
-                        </a>
-                    </li>
-                    <li>
-                        <a href="shopMall.html">
-                            精选商城
-                        </a>
-                    </li>
-                    <li>
-                        <a href="gasStationInfor.html">
-                            马上加油
-                        </a>
-                    </li>
-                    <li>
-                        <a href="personCenter.html">
-                            会员中心
-                        </a>
-                    </li>
-                </ul>
-            </div>
+                    <a href="shoppingCat.html" class="shop_cat"></a>
+                    <a class="dot_block"></a>
+                    <ul class="nav_link">
+                        <li>
+                            <a href="myMessage.html">
+                                消息
+                            </a>
+                        </li>
+                        <li>
+                            <a href="index.html">
+                                首页
+                            </a>
+                        </li>
+                    </ul>
+                </div>
             </div>
             <div class="bd absolute pt">
                 <div id="invoice">
                     <ul class="invoiceList">
                         <!--<li v-for="order in orders" :class="[order.first ? 'active':'',order.last ? 'mb0':'']"  >-->
-                        <li v-for="order in orders" :class="{'active':order.first,'mb0':order.last}"  >
+                        <li v-for="order in orders" :class="{'mb0':order.last}"  >
                             <div class="clearfix invoiceHead style" v-on:click="toggleTasks(order)">
                                 <div class="weui_cells weui_cells_checkbox mt0 style1 inline_block"><!--@:click.stop.prevent="toggleTasks")-->
                                     <label class="weui_cell weui_check_labe style" for={{order.id}}>
