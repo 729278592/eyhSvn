@@ -578,7 +578,6 @@ textarea{font-family: "微软雅黑";}
 .invoiceList>li .invoiceHead span{color: #333;}
 .invoiceList>li .invoiceHead .fa-align-right{font-size: 2.25rem;}
 .invoiceList>li.active .invoiceCon{padding: 0.625rem 0.93rem;display: inline-block;}
-.invoiceList>li .invoiceCon{display: none;}
 .invoiceList>li .invoiceCon p{font-size: 0.875rem;display: block;color: #666;margin: 0.25rem 0;}
 .invoiceList>li .invoiceCon span{color: #333;font-size: 1rem;}
 .invoiceList>li .invoiceCon p.clearfix span.left{position: relative;top: 1rem;}
@@ -664,7 +663,9 @@ textarea{font-family: "微软雅黑";}
 .shoppingList li a p{font-size: 0.875rem;color: #333;display: block;}
 .shoppingList li a p.title{}
 .shoppingList li a p.smallTile{font-size: 0.75rem;color: #666;}
-.shoppingList li a p span{font-size: 0.875rem;color: #ff0404;}
+.shoppingList li a p>span{font-size: 0.875rem;color: #ff0404;}
+.shoppingList li a p span.oldMoney {font-size: 0.875rem;color: #666;}
+.shoppingList li a p span.shoppingNum{color: #999;}
 .shoppingList.style li{margin-top: 0.4rem;}
 .shoppingList.pb0{padding-bottom: 0;}
 .shoppingList.style{display: block;margin-bottom: 1rem;}
@@ -874,6 +875,27 @@ img.shopInfor.w100{width: 100%;margin-bottom: 0.625rem;}
 .optionType.style li.last button{background: #ff6702;}
 .weui_dialog_confirm.hide{display: none;}
 .weui_dialog_confirm{position: absolute;z-index: 1000;top: 0;bottom: 0;left: 0;right: 0;}
+
+
+
+
+.vux-dialog-transition{
+    opacity: 1;
+    -webkit-transition-duration: .4s;
+    transition-duration: .4s;
+    -webkit-transform: translate(-50%,-50%) scale(1)!important;
+    transform: translate(-50%,-50%) scale(1)!important;
+    -webkit-transition-property: opacity,-webkit-transform!important;
+    transition-property: opacity,-webkit-transform!important;
+    transition-property: transform,opacity!important;
+    transition-property: transform,opacity,-webkit-transform!important;
+
+}
+.vux-dialog-leave {
+    -webkit-transform: translate(-50%,-50%) scale(1)!important;
+    transform: translate(-50%,-50%) scale(1)!important;
+}
+
 .weui_cells_checkbox.left5 {display: inline-block;float: left;position: relative;left: 0.4rem;}
 .weui_cells_checkbox.style1 .weui_cell.style.p0{padding: 0;}
 .orderList.style li .orderCon .orderImg{padding: 0.6rem 0.5rem}
