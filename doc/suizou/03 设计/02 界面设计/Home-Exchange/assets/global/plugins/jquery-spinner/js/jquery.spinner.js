@@ -1,18 +1,18 @@
 ;(function ($) {
   $.fn.spinner = function (opts) {
-    return this.each(function () {
+    return function () {
       var defaults = {value:4, min:4};
       var options = $.extend(defaults, opts);
       var keyCodes = {up:38, down:40};
       var container = $('<div></div>');
       container.addClass('spinner');
       var textField = $(this).addClass('value').attr('maxlength','2').val(options.value)
-        .bind('keyup paste change', function (e) {
-          var field = $(this);
-          if (e.keyCode == keyCodes.up) changeValue(1);
-          else if (e.keyCode == keyCodes.down) changeValue(-1);
-          else if (getValue(field) != container.data('lastValidValue')) validateAndTrigger(field)
-        });
+          .bind('keyup paste change', function (e) {
+            var field = $(this);
+            if (e.keyCode == keyCodes.up) changeValue(1);
+            else if (e.keyCode == keyCodes.down) changeValue(-1);
+            else if (getValue(field) != container.data('lastValidValue')) validateAndTrigger(field)
+          });
       textField.wrap(container);
       var increaseButton = $('<button class="increase" type="button">+</button>').click(function () { changeValue(1) });
       var decreaseButton = $('<button class="decrease" type="button">-</button>').click(function () { changeValue(-1) });
@@ -58,6 +58,6 @@
         field = field || textField;
         return parseInt(field.val() || 0, 10)
       }
-    })
+    }
   }
 })(jQuery);
