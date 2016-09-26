@@ -43,7 +43,7 @@
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="professional1.html" pinned="false" current-in-tab="false">
+      <file leaf-file-name="professional1.html" pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/professional1.html">
           <provider selected="true" editor-type-id="text-editor">
             <state relative-caret-position="594">
@@ -83,7 +83,7 @@
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="talentRecruitment.html" pinned="false" current-in-tab="true">
+      <file leaf-file-name="talentRecruitment.html" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/talentRecruitment.html">
           <provider selected="true" editor-type-id="text-editor">
             <state relative-caret-position="297">
@@ -285,12 +285,12 @@
       <option name="presentableId" value="Default" />
       <updated>1474855348616</updated>
       <workItem from="1474855351128" duration="2710000" />
-      <workItem from="1474858085072" duration="2583000" />
+      <workItem from="1474858085072" duration="2723000" />
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="5293000" />
+    <option name="totallyTimeSpent" value="5433000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="165" y="26" width="1734" height="934" extended-state="0" />
@@ -418,14 +418,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/professional1.html">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="594">
-          <caret line="876" column="15" selection-start-line="876" selection-start-column="15" selection-end-line="876" selection-end-column="15" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/index.html">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="295">
@@ -443,6 +435,14 @@
             <element signature="n#style#0;n#p#0;n#div#1;n#li#1;n#ul#0;n#div#0;n#div#0;n#div#1;n#div#0;n#body#0;n#html#0;n#!!top" expanded="true" />
             <element signature="n#style#0;n#p#0;n#div#1;n#li#2;n#ul#0;n#div#0;n#div#0;n#div#1;n#div#0;n#body#0;n#html#0;n#!!top" expanded="true" />
           </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/professional1.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="594">
+          <caret line="876" column="15" selection-start-line="876" selection-start-column="15" selection-end-line="876" selection-end-column="15" />
+          <folding />
         </state>
       </provider>
     </entry>
