@@ -97,7 +97,7 @@
 		loop: 0,			//循环滚动次数，0时无限
 		direction: "left",	//滚动方向，"left","right","up","down"
 		scrollAmount:2,		//步长
-		scrollDelay:20		//时长
+		scrollDelay:30		//时长
 	};
     function getIE()
     {
