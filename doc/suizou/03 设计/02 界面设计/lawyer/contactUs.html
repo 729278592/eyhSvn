@@ -137,7 +137,7 @@
         map.enableScrollWheelZoom(true);     //开启鼠标滚轮缩放
         var myGeo = new BMap.Geocoder();
         // 将地址解析结果显示在地图上,并调整地图视野
-        myGeo.getPoint("重庆市渝中区经纬大道3", function(point){
+        myGeo.getPoint("重庆市渝中区经纬大道333号康德国际2号楼2001号", function(point){
             if (point) {
                 map.centerAndZoom(point, 16);
                 map.addOverlay(new BMap.Marker(point));
