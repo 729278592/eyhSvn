@@ -832,7 +832,6 @@
                     toResize()
                 });
             });
-
             $(".lawyer_menu li").each(function(i){
                 $(this).on("click",function(){
                     $(".lawyer_div").eq(i).addClass("active");
@@ -841,6 +840,7 @@
                     $(this).siblings("li").removeClass("active");
                 });
             });
+
 
             $(".professional_menu li a").hover(function(){
                 $(this).find(".person_mask_bg, .person_mask").animate({
@@ -864,17 +864,7 @@
             $(".dailog .close").on("click",function(){
                 $("html").removeClass("overflow");
                 $(".dailog").addClass("hide");
-                $(".dailog_menu li").removeClass("active");
             })
-
-            $(".lawyer_menu li").each(function(i){
-                $(this).on("click",function(){
-                    $(".lawyer_div").eq(i).addClass("active");
-                    $(".lawyer_div").eq(i).siblings(".lawyer_div").removeClass("active");
-                    $(this).addClass("active");
-                    $(this).siblings("li").removeClass("active");
-                });
-            });
 
         })
     </script>
