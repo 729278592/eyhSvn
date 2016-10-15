@@ -1,2 +1,0 @@
-webpackJsonp([0,61],{91:function(o,e,t){var p,r;r=t(187),o.exports=p||{},o.exports.__esModule&&(o.exports=o.exports["default"]),r&&(("function"==typeof o.exports?o.exports.options||(o.exports.options={}):o.exports).template=r)},187:function(o,e){o.exports=" <router-view></router-view> "}});
-//# sourceMappingURL=0.260d9df1706d521cae37.js.map
