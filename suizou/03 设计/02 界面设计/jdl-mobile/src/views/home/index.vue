@@ -46,7 +46,7 @@
         <div class="swiper-wrapper" style="transition-duration: 0ms; ">
             <div class="swiper-slide">
                 <a>
-                  <img src="../../../static/images/indexSlider2.jpg" class="w100" alt=""/>
+                  <img src="../../../static/images/indexSlider1.jpg" class="w100" alt=""/>
                 </a>
             </div>
             <div class="swiper-slide">
@@ -56,7 +56,7 @@
             </div>
             <div class="swiper-slide">
                 <a>
-                  <img src="../../../static/images/indexSlider2.jpg" class="w100" alt=""/>
+                  <img src="../../../static/images/indexSlider3.jpg" class="w100" alt=""/>
                 </a>
             </div>
         </div>
@@ -117,7 +117,7 @@
         <div class="otherCon style">
           <ul class="shoppingList style clearfix pb0">
               <li v-for="shop in list[num].goodses">
-                  <a v-link="{name: 'shopsShoppingInfor', params: {goodsId: shop.id}}" @click="addId(shop)" class="shop_div">
+                  <a @click="addId(shop)" class="shop_div">
                       <div class="shop_list_bg">
                           <img :src="this.imageUrl+shop.coverPhoto"/>
                       </div>
@@ -225,8 +225,9 @@
          e.currentTarget.setAttribute("class","active")
          userService.selectIndex(this,index)
        },
-       addId:function(){
-
+       addId:function(shops){
+         localStorage.setItem('shopingId',shops.mchId)
+         this.$router.go("/category/shopsShoppingInfor/"+shops.id)
        },
 
       getFocus:function(){

@@ -81,8 +81,8 @@
                 </div>
             </div>
         </div>
-        <div class="weui_btn_area fixed">
-            <input type="submit" class="weui_btn weui_btn_primary b0 saveBasic" value="保存" @click="save(this.value)">
+        <div class="weui_btn_area">
+            <input type="submit" class="weui_btn weui_btn_primary  saveBasic" value="保存" @click="save(this.value)">
         </div>
     </form>
     </validator>
@@ -110,8 +110,8 @@
           value:"",
           isEmpty:"",
            provinceList: [],
-                     cityList: [],
-                     areaList: [],
+           cityList: [],
+           areaList: [],
           selectValue:"",
           toastshow:false,
           toasttext:"",

@@ -11,7 +11,7 @@
                       </label>
                   </div>
                   <div class="weui_cell_bd weui_cell_primary">
-                        <input class="weui_input" @invalid="telonInvalid" initial="off" detect-change="off" v-model="mobile" id="mobile" type="tel" v-validate:mobile="['mobile']" placeholder='请输入手机号码' @keyup="isDisables($event)">
+                        <input class="weui_input"  initial="off" detect-change="off" v-model="mobile" id="mobile" type="tel"  placeholder='请输入手机号码'>
                   </div>
               </div>
               <div class="weui_cell">
@@ -21,7 +21,7 @@
                       </label>
                   </div>
                   <div class="weui_cell_bd weui_cell_primary">
-                      <input class="weui_input codeInput"  @invalid="isPostCodeInvalid" initial="off" detect-change="off" v-model="isPostCode" id="isPostCode" v-validate:isPostCode="['isPostCode']" placeholder="验证码为6位有效数字"/>
+                      <input class="weui_input codeInput"  initial="off" detect-change="off" v-model="isPostCode" id="isPostCode"  placeholder="验证码为6位有效数字"/>
                       <input type="button" class="getCode" :class="{'disabled':disabled}" disabled = {{type}} id="getCode" @click="getCodeBtn($event)" v-model="code" value = {{code}} />
                   </div>
               </div>
@@ -32,7 +32,7 @@
                       </label>
                   </div>
                   <div class="weui_cell_bd weui_cell_primary">
-                      <input class="weui_input" @invalid="passwordInvalid" initial="off" detect-change="off" v-model="password" id="password" type="password" v-validate:password="['passw']" placeholder="密码为6-20位的任何字类字符"/>
+                      <input class="weui_input"  initial="off" detect-change="off" v-model="password" id="password" type="password"  placeholder="密码为6-20位的任何字类字符"/>
                   </div>
               </div>
               <div class="weui_cell">
@@ -42,7 +42,7 @@
                       </label>
                   </div>
                   <div class="weui_cell_bd weui_cell_primary">
-                      <input class="weui_input" @invalid="aginPasswordInvalid" initial="off" detect-change="off" v-model="aginPassword" id="aginPassword" type="password" @blur="blurAginPassword()" v-validate:aginPassword="['aginPassw']" placeholder="请确认密码"/>
+                      <input class="weui_input"  initial="off" detect-change="off" v-model="aginPassword" id="aginPassword" type="password"   placeholder="请确认密码"/>
                   </div>
               </div>
                <div class="weui_cell">
@@ -52,7 +52,7 @@
                         </label>
                     </div>
                     <div class="weui_cell_bd weui_cell_primary">
-                          <input class="weui_input" initial="off" @invalid="refereesMobilenvalid" detect-change="off" v-model="refereesMobile" id="refereesMobile" type="text" v-validate:refereesMobile="['refereesMobile']"  placeholder='请输入推荐人手机号'>
+                          <input class="weui_input" initial="off"  detect-change="off" v-model="refereesMobile" id="refereesMobile" type="text"  placeholder='请输入推荐人手机号'>
                     </div>
                 </div>
                <div class="weui_cell weui_cell_select">
@@ -89,7 +89,7 @@
                       </label>
                   </div>
                   <div class="weui_cell_bd weui_cell_primary">
-                      <select class="weui_select" name="area" @change="areaChange" v-model="area">
+                      <select class="weui_select" name="area" v-model="area">
                         <option value="-1">请选择区县</option>
                           <option v-for="item in areaList" value={{item.id}}>{{item.name}}</option>
                       </select>
@@ -115,6 +115,7 @@
   import Toast from '../components/toast.vue'
   import Bar from '../components/headBar.vue'
   import userService from '../../api/userService'
+  import {API_ROOT} from '../../config'
   export default {
       components: {
         //注册组件
@@ -123,16 +124,16 @@
       },
       data () {
         return {
-         hide:true,
          toastshow:false,
          mobile:"",
+          valid: true,
          toasttext:"",
          isPostCode:"",
          isEmpty:"",
          password:"",
          sessionId:"",
-         disabled:true,
-         type:true,
+         disabled:false,
+         type:false,
          value:"",
          xxId:"",
          code:"获取验证码",
@@ -149,65 +150,29 @@
       ready () {
         document.title = '个人注册'
         userService.getRegionByPid(this,0,'p')
+        this.refereesMobile = this.$route.query.mobile
+        console.log(this.refereesMobile)
         console.log(JSON.stringify(this.provinceList))
       },
       methods: {
-        onShow: function () {
-          this.hide = !this.hide
+
+        showErrMsg(errMsg) {
+          this.$set('toasttext',errMsg);
+          this.$set('toastshow',true);
         },
-       telonInvalid(){
-           this.$set('toasttext','手机号不正确');
-           this.$set('toastshow',true);
-       },
-       isDisables:function(e){
-          var reg = /^(1[38][0-9]|14[57]|15[012356789]|17[0678])[0-9]{8}$/
-          if(reg.test(e.currentTarget.value)){
-            this.disabled = false
-             this.type = false
-          }else{
-            this.disabled = true
-            this.type = true
-          }
-       },
-       isPostCodeInvalid(){
-           this.$set('toasttext','验证码不正确');
-           this.$set('toastshow',true);
-       },
-       passwordInvalid(){
-           this.$set('toasttext','密码不正确');
-           this.$set('toastshow',true);
-       },
+
        getCodeBtn:function(e){
-           var btn = e.currentTarget
-           var that = this
-           var mobile = that.$get('mobile')
-           var isPostCod = that.$get('isPostCode')
-           var sendMemRegArr = {mobile:mobile}
-           userService.sendMemRegisterAuthCode(that,sendMemRegArr,btn)
-       },
-         aginPasswordInvalid(){
-            this.$set('toasttext','请确认密码');
-            this.$set('toastshow',true);
-         },
-         blurAginPassword:function(){
-            var that = this
-            var aginPassword = that.$get('aginPassword')
-            var password = this.$get('password')
-            if(aginPassword!=password){
-              this.$set('toasttext','密码不一致哦');
-              this.$set('toastshow',true);
-            }
-         },
-
-        refereesMobilenvalid:function(){
-          var refereesMobile = this.$get('refereesMobile')
-          if(!refereesMobile){
-
-          }else{
-            this.$set('toasttext','推荐人手机号不对');
-            this.$set('toastshow',true)
+         var reg = /^(1[38][0-9]|14[57]|15[012356789]|17[0678])[0-9]{8}$/
+          if(!reg.test(this.mobile)) {
+            this.showErrMsg("请输入有效的手机号")
+            return
           }
-        },
+           var btn = e.currentTarget
+           var mobile = this.mobile
+           var sendMemRegArr = {mobile:mobile}
+           userService.sendMemRegisterAuthCode(this,sendMemRegArr,btn)
+       },
+
      provinceChange: function(){
         this.cityList = []
         this.areaList = []
@@ -224,63 +189,68 @@
         }
          this.area = -1
        },
-      areaChange: function(){
-       },
-       save: function(value){
-        var addressArr = value.split(' ')
-         var that = this
-         var refereesMobile = that.$get('refereesMobile')
-         var isPostCode = that.$get('isPostCode')
-         var password = that.$get('password')
-         var mobile = that.$get('mobile')
-         var province = that.province
-         var city = that.city
-          var area = that.area
-          var province = that.province
-          var city = that.city
-          var area = that.area
-          if(this.province==-1){
-            that.$set('toasttext','请选择省');
-            that.$set('toastshow',true)
-          }
-          else if(this.city==-1){
-             that.$set('toasttext','请选择市');
-                      that.$set('toastshow',true)
-          }
-          else if(this.area==-1){
-              that.$set('toasttext','请选择县');
-              that.$set('toastshow',true)
-          }else{
-         that.$validate(true, function () {
 
-            var registerUserArr = {
-               mobile:mobile,
-               password:password,
-               authCode:isPostCode,
-               uid:that.sessionId,
-               msgAuthcodeId:that.xxId,
-               province:province,
-               city:city,
-               area:area,
-               refereesMobile:refereesMobile
-             }
-             var mobileReg = /^(1[38][0-9]|14[57]|15[012356789]|17[0678])[0-9]{8}$/
-             if (that.$validation.invalid) {
-                 if(!refereesMobile){
-                    userService.registerUser(that,registerUserArr)
-                 }
-             }else{
-               if(mobileReg.test(refereesMobile)){
-                 console.log(registerUserArr)
-                 userService.registerUser(that,registerUserArr)
-               }else{
-                 this.$set('toasttext','推荐人手机号不对');
-                 this.$set('toastshow',true)
-               }
-             }
-         })
+       save: function(){
+
+         var mobileReg = /^(1[38][0-9]|14[57]|15[012356789]|17[0678])[0-9]{8}$/
+         if(!mobileReg.test(this.mobile)){
+           this.showErrMsg("无效的手机号")
+           return
          }
-       }
+
+         if(!this.isPostCode){
+           this.showErrMsg("验证码不能为空")
+           return
+         }
+
+         if(!this.password){
+           this.showErrMsg("请输入密码")
+           return
+         }
+
+         if(!this.aginPassword){
+           this.showErrMsg("请输入确认密码")
+           return
+         }
+
+         if(this.password != this.aginPassword) {
+           this.showErrMsg("密码不一致")
+           return
+         }
+
+         if(this.refereesMobile && !mobileReg.test(this.refereesMobile)){
+           this.showErrMsg("推荐人手机号格式不正确")
+           return
+         }
+
+          if(this.province==-1){
+            this.showErrMsg("请选择省")
+            return
+          }
+          if(this.city==-1){
+            this.showErrMsg("请选择市")
+            return
+          }
+          if(this.area==-1){
+            this.showErrMsg("请选择县")
+            return
+          }
+
+         var registerUserArr = {
+           mobile:this.mobile,
+           password:this.password,
+           authCode:this.isPostCode,
+           msgAuthcodeId:this.xxId,
+           province:this.province,
+           city:this.city,
+           area:this.area,
+           refereesMobile:this.refereesMobile
+         }
+
+         userService.registerUser(this,registerUserArr)
+
+
+         }
       }
     }
 </script>

@@ -1,6 +1,23 @@
 <template>
-  <Bar></Bar>
-  <div class="bd absolute pt">
+  <div class="hd">
+    <a class="return" @click="returnPage()">
+      <i class="fa fa-angle-left"></i>
+    </a>
+    申请状态
+    <div class="right nav_block">
+      <a class="dot_block" @click.stop="onShow">
+        <i class="fa fa-user"></i>
+      </a>
+      <ul class="nav_link" :class="{'hide':hide}">
+        <li>
+          <a v-link="'/'">
+            首页
+          </a>
+        </li>
+      </ul>
+    </div>
+  </div>
+  <div class="bd absolute pd48">
     <div class="agentStyle">
         <p class="title">审核状态</p>
         <div class="agentStyleCon" v-if="0==stateInfor.status">
@@ -40,7 +57,7 @@
         </div>
         <div>
             <span>所在地区</span>
-            <span class="companyName">{{areaInfor}}</span>
+            <span class="companyName">{{stateInfor.mergeAddress}}</span>
         </div>
         <div>
             <span>详细地址</span>
@@ -63,12 +80,9 @@
 </div>
 </template>
 <script>
-     import Bar from '../components/shopHead.vue'
      import website from '../api/website'
      export default {
-        components: {
-             Bar
-         },
+
       data () {
         return {
           hide:true,
@@ -90,7 +104,10 @@
       methods: {
         onShow: function () {
           this.hide = !this.hide
-        }
+        },
+        returnPage:function(){
+          window.history.go(-1)
+        },
       }
     }
 </script>

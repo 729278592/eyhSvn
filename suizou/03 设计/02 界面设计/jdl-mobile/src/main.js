@@ -16,32 +16,25 @@ Vue.use(VueResource)
 Vue.use(VueRouter)
 Vue.use(Vuex)
 
-//解决跨域  XMLHttpRequest cannot load http://192.168.0.103/mobile/checkUser.do. Request header field Content-Type is not allowed by Access-Control-Allow-Headers in preflight response.
+//http 设置
 Vue.http.options.emulateJSON = true
 Vue.http.options.credentials = true
-Vue.http.headers.common['authorization'] = authService.getAuthHeader();
 
 Vue.http.interceptors.push((request, next)=>{
   // 这里对请求体进行处理
   request.headers = request.headers || {}
-//if (getCookie('token')) {
-//  request.headers.Authorization = 'Bearer ' + getCookie('token').replace(/(^\")|(\"$)/g, '')
-//}
-next((response) => {
 
-  var status = response.data.status
-  // 这里可以对响应的结果进行处理
-  if (status === "notLogin") {
-    authService.logout();
-    console.log(window.location.pathname)
-    //window.location.pathname = '/auth/personLogin'
-    window.router.go('/auth/personLogin')
-  } else if(status === "mchNotLogin") {
-    mchAuthService.logout();
-    //window.location.pathname = '/login'
-    window.router.go('/auth/login')
-  }
-})
+  next((response) => {
+    var status = response.data.status
+    // 这里可以对响应的结果进行处理
+    if (status === "notLogin") {
+      authService.logout();
+      window.router.go('/auth/personLogin')
+    } else if(status === "mchNotLogin") {
+      mchAuthService.logout();
+      window.router.go('/auth/login')
+    }
+  })
 })
 
 //防止刷新跳转登录页面
@@ -54,7 +47,7 @@ router.beforeEach((transition) => {
     window.scrollTo(0, 0)
 
   if (transition.to.auth) {
-    if (authService.isLogin()) {
+    if (authService.user.authenticated) {
       transition.next()
     } else {
       let redirect = encodeURIComponent(transition.to.path)
@@ -62,7 +55,7 @@ router.beforeEach((transition) => {
     }
   }
   else if (transition.to.mchAuth) {
-    if (mchAuthService.isLogin()) {
+    if (mchAuthService.user.authenticated) {
       transition.next()
     } else {
       let redirect = encodeURIComponent(transition.to.path)
@@ -74,10 +67,8 @@ router.beforeEach((transition) => {
   }
 })
 
-
-
-
 router.start(App, 'app')
+window.router = router
 
 
 

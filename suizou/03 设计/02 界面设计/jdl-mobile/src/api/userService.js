@@ -15,7 +15,7 @@ export default {
         context.$progress.start()
         context.$http.post(API_ROOT+"mobile/member/personCenter.do").then(function(response){
             context.$progress.finish()
-            var res = response.data
+            var res = response.json()
              if(res.status == "ok") {
                 // 路由登录
                   context.dataJson = res.datas
@@ -34,7 +34,7 @@ export default {
     context.$progress.start()
     context.$http.get(API_ROOT+"mobile/member/addressList.do").then(function(response){
       context.$progress.finish()
-      var res = response.data
+      var res = response.json()
       if(res.status == "ok") {
         console.log(JSON.stringify(res.datas))
         this.$progress.finish()
@@ -60,7 +60,7 @@ export default {
     context.$progress.start()
     context.$http.post(API_ROOT+"mobile/member/deleteAddress.do",deleteAddressArr).then(function(response){
       context.$progress.finish()
-      var res = response.data
+      var res = response.json()
       if(res.status == "ok") {
         this.show = false
         for(var i=0;i<this.addressList.length;i++){
@@ -88,7 +88,7 @@ export default {
     context.$progress.start()
     context.$http.post(API_ROOT+"mobile/member/setDefaultAddress.do",addressArr).then(function(response){
       context.$progress.finish()
-      var res = response.data
+      var res = response.json()
       console.log(JSON.stringify(this.addressList))
       if(res.status == "ok") {
         var len = this.addressList.length
@@ -111,12 +111,13 @@ export default {
     context.$progress.start()
     context.$http.post(API_ROOT+"mobile/member/getAddress.do",addAddressArr).then(function(response){
       context.$progress.finish()
-      var res = response.data
+      var res = response.json()
       if(res.status == "ok") {
         this.$progress.finish()
         this.addressList = res.datas
         this.isEmpty = this.addressList.consignee
         this.mobile = this.addressList.mobile
+
 
         this.addressIsEmpty = this.addressList.address
         this.pcaAddress = this.addressList.province+'　'+this.addressList.city+'　'+this.addressList.area
@@ -142,7 +143,7 @@ export default {
     context.$progress.start()
     context.$http.post(API_ROOT+"mobile/member/saveAddress.do",saveAddressArr).then(function(response){
       context.$progress.finish()
-      var res = response.data
+      var res = response.json()
       if(res.status == "ok") {
         context.$progress.finish()
         context.$set('toasttext','保存成功');
@@ -166,7 +167,7 @@ export default {
     context.$progress.start()
     context.$http.post(API_ROOT+"mobile/member/saveAddress.do",saveAddressArr).then(function(response){
       context.$progress.finish()
-      var res = response.data
+      var res = response.json()
       if(res.status == "ok") {
         context.$progress.finish()
         context.$set('toasttext','保存成功');
@@ -189,7 +190,7 @@ export default {
     context.$progress.start()
     context.$http.post(API_ROOT+"mobile/member/saveAddress.do",saveAddressArr).then(function(response){
       context.$progress.finish()
-      var res = response.data
+      var res = response.json()
       if(res.status == "ok") {
         context.$progress.finish()
         context.$set('toasttext','保存成功');
@@ -211,7 +212,7 @@ export default {
     context.$progress.start()
     context.$http.post(API_ROOT+"mobile/member/scoreShow.do").then(function(response){
       context.$progress.finish()
-      var res = response.data
+      var res = response.json()
       if(res.status == "ok") {
         this.lists = res.datas
         console.log(JSON.stringify(res.datas.id))
@@ -229,7 +230,7 @@ export default {
     context.$progress.start()
     context.$http.post(API_ROOT+"mobile/member/txApply.do").then(function(response){
       context.$progress.finish()
-      var res = response.data
+      var res = response.json()
       if(res.status == "ok") {
         this.$set('toasttext',"提现成功");
         this.$set('toastshow',true)
@@ -252,10 +253,10 @@ export default {
     context.$progress.start()
     context.$http.post(API_ROOT+"mobile/member/saveBankInfo.do",presentChioceArr).then(function(response){
       context.$progress.finish()
-      var res = response.data
+      var res = response.json()
       if(res.status == "ok") {
         context.$progress.finish()
-        this.$router.go('/user/presentIntegral')
+        context.$route.router.go('/user/presentIntegral')
         //presentIntegral
       } else {
         alert(res.message);
@@ -271,7 +272,7 @@ export default {
     context.$progress.start()
     context.$http.post(API_ROOT+"mobile/member/withList.do").then(function(response){
       context.$progress.finish()
-      var res = response.data
+      var res = response.json()
       if(res.status="ok"){
         this.$progress.finish()
         this.present = res.datas
@@ -298,7 +299,7 @@ export default {
     context.$progress.start()
     context.$http.post(API_ROOT+"mobile/sendMchStatusAuthCode.do",auditArr).then(function(response){
       context.$progress.finish()
-      var res = response.data
+      var res = response.json()
       if(res.status == "ok") {
         context.xxId = res.datas
         var count = 60;
@@ -334,10 +335,10 @@ export default {
     context.$progress.start()
     context.$http.post(API_ROOT+"mobile/getMchApplyStatus.do",formData).then(function(response){
       context.$progress.finish()
-      var res = response.data
+      var res = response.json()
       if(res.status == "ok") {
         localStorage.setItem('data',JSON.stringify(res.datas))
-        this.$router.go('/user/accountState')
+        context.$route.router.go('/user/accountState')
       } else {
         alert(res.message);
       }
@@ -352,7 +353,7 @@ export default {
     context.$progress.start()
     context.$http.post(API_ROOT+"mobile/sendMchRegisterAuthCode.do",sendMchCodeArr).then(function(response){
       context.$progress.finish()
-      var res = response.data
+      var res = response.json()
       if(res.status == "ok") {
         this.xxId = res.datas
         var count = 60;
@@ -388,7 +389,7 @@ export default {
     context.$progress.start()
     context.$http.post(API_ROOT+"mobile/registerMch.do",settledApplicationArr).then(function(response){
       context.$progress.finish()
-      var res = response.data
+      var res = response.json()
       if(res.status == "ok") {
         console.log(JSON.stringify(res.datas))
         this.$set('toasttext','申请成功')
@@ -411,7 +412,7 @@ export default {
     context.$progress.start()
     context.$http.get(API_ROOT+"mobile/getMainCategoryGoods.do").then(function(response){
       context.$progress.finish()
-      var res = response.data
+      var res = response.json()
       if(res.status == "ok") {
         console.log(JSON.stringify(res.datas))
         this.list = res.datas
@@ -429,7 +430,7 @@ export default {
     context.$progress.start()
     context.$http.get(API_ROOT+"mobile/getMainCategoryGoods.do").then(function(response){
       context.$progress.finish()
-      var res = response.data
+      var res = response.json()
       if(res.status == "ok") {
         this.num = index
       } else {
@@ -446,7 +447,7 @@ export default {
     context.$progress.start()
     context.$http.post(API_ROOT+"mobile/showGoods.do",shopsShoppingInforArr).then(function(response){
       context.$progress.finish()
-      var res = response.data
+      var res = response.json()
       if(res.status == "ok") {
         this.shopInfor = res.datas.goods
         this.products = res.datas.products
@@ -465,7 +466,7 @@ export default {
     context.$progress.start()
     context.$http.post(API_ROOT+"mobile/showGoodsEva.do",showGoodsEvaArr).then(function(response){
       context.$progress.finish()
-      var res = response.data
+      var res = response.json()
       if(res.status == "ok") {
         this.commentLists = res.datas.datas
       } else {
@@ -482,11 +483,11 @@ export default {
     context.$progress.start()
     context.$http.post(API_ROOT+"mobile/member/addCart.do",addCartArr).then(function(response){
       context.$progress.finish()
-      var res = response.data
+      var res = response.json()
       console.log(JSON.stringify(addCartArr))
       console.log(JSON.stringify(res.datas))
       if(res.status == "ok") {
-        this.$router.go('/user/shopCart')
+        context.$route.router.go('/user/shopCart')
       } else {
         alert(res.message);
       }
@@ -501,7 +502,7 @@ export default {
     context.$progress.start()
     context.$http.post(API_ROOT+"mobile/member/cartList.do").then(function(response){
       context.$progress.finish()
-      var res = response.data
+      var res = response.json()
       if(res.status == "ok") {
         console.log(JSON.stringify(res.datas))
         this.orders = res.datas
@@ -524,7 +525,7 @@ export default {
   //购物车总价
   cartUpdate(context,shopArr) {
     context.$http.post(API_ROOT+"mobile/member/updateCartGoodsNum.do",shopArr).then(function(response){
-      var res = response.data
+      var res = response.json()
       if(res.status == "ok") {
 
       } else {
@@ -540,7 +541,7 @@ export default {
     context.$progress.start()
     context.$http.post(API_ROOT+"mobile/member/getConfirmProducts.do",cartBuyArr).then(function(response){
       context.$progress.finish()
-      var res = response.data
+      var res = response.json()
       if(res.status == "ok") {
         console.log(JSON.stringify(res.datas))
         this.list = res.datas
@@ -558,7 +559,7 @@ export default {
     context.$progress.start()
     context.$http.post(API_ROOT+"mobile/member/getConfirmProductsGoBuy.do",cartBuyArr).then(function(response){
       context.$progress.finish()
-      var res = response.data
+      var res = response.json()
       if(res.status == "ok") {
         console.log(JSON.stringify(res.datas))
         this.list = res.datas
@@ -577,7 +578,7 @@ export default {
     context.$progress.start()
     context.$http.get(API_ROOT+"mobile/member/getDefaultAddress.do",cartBuyArr).then(function(response){
       context.$progress.finish()
-      var res = response.data
+      var res = response.json()
       if(res.status == "ok") {
         console.log(JSON.stringify(res.datas))
         this.addressDeList = res.datas
@@ -595,10 +596,10 @@ export default {
     context.$progress.start()
     context.$http.post(API_ROOT+"mobile/member/createOrder.do",sureBuyArr).then(function(response){
       context.$progress.finish()
-      var res = response.data
+      var res = response.json()
       if(res.status == "ok") {
         localStorage.setItem('data',JSON.stringify(res.datas))
-        this.$router.go('/user/payChioce')
+        context.$route.router.go('/user/payChioce')
       } else {
         alert(res.message)
       }
@@ -614,7 +615,7 @@ export default {
     console.log(deleteList)
     context.$http.post(API_ROOT+"mobile/member/deleteCart.do",deleteList).then(function(response){
       context.$progress.finish()
-      var res = response.data
+      var res = response.json()
       if(res.status == "ok") {
         console.log(JSON.stringify(res.datas))
         for(var i=0;i<this.orders.length;i++){
@@ -676,7 +677,7 @@ export default {
     context.$progress.start()
     context.$http.post(API_ROOT+"mobile/sendMemRegisterAuthCode.do",sendMemRegArr).then(function(response){
       context.$progress.finish()
-      var res = response.data
+      var res = response.json()
       if(res.status == "ok") {
         this.xxId = res.datas
         var count = 60;
@@ -712,10 +713,11 @@ export default {
     context.$progress.start()
     context.$http.post(API_ROOT+"mobile/registerUser.do",sendMemRegArr).then(function(response){
       context.$progress.finish()
-      var res = response.data
+      var res = response.json()
+
       if(res.status == "ok") {
         // 路由登录
-        this.$router.go('/auth/personLogin')
+        context.$route.router.go('/auth/personLogin')
 
       } else {
         alert(res.message);
@@ -731,7 +733,7 @@ export default {
     context.$progress.start()
     context.$http.post(API_ROOT+"mobile/member/getOrderList.do",orderStatus).then(function(response){
       context.$progress.finish()
-      var res = response.data
+      var res = response.json()
       if(res.status == "ok") {
         context.list = res.datas
         console.log(JSON.stringify(res.datas))
@@ -746,19 +748,17 @@ export default {
 
   //忘记密码验证码-个人
   sendMemForgotAuthCode(context,sendMemForgotArr,btn) {
-    context.$progress.start()
-    context.$http.post(API_ROOT+"mobile/sendMemForgotAuthCode.do",sendMemForgotArr,btn).then(function(response){
-      context.$progress.finish()
-      var res = response.data
+
+    context.$http.post(API_ROOT+"mobile/sendMemForgotAuthCode.do",sendMemForgotArr).then(function(response){
+
+      var res = response.json()
       if(res.status == "ok") {
-        this.xxId = res.datas
-        console.log(btn)
+        context.xxId = res.datas
         var count = 60;
         var resend = setInterval(function(){
           count--;
           if (count > 0){
             context.code = count+"秒后重新获取"
-            btn.value = context.code
             context.disabled = true
             context.type = true
           }else {
@@ -766,18 +766,16 @@ export default {
             context.disabled = false
             context.type = false
             context.code = "获取验证码"
-            btn.value = context.code
           }
         }, 1000);
         context.disabled = true
 
-        this.$set('toasttext','验证码发送成功');
-        this.$set('toastshow',true)
+        context.$set('toasttext','验证码发送成功');
+        context.$set('toastshow',true)
       } else {
         alert(res.message);
       }
     }, function(response){
-      context.$progress.failed()
       // 响应错误回调
     })
   },
@@ -787,10 +785,10 @@ export default {
     context.$progress.start()
     context.$http.post(API_ROOT+"mobile/updatePwd.do",updatePwdArr).then(function(response){
       context.$progress.finish()
-      var res = response.data
+      var res = response.json()
       if(res.status == "ok") {
         context.$progress.finish()
-        this.$router.go('/auth/personLogin')
+        context.$route.router.go('/auth/personLogin')
 
       } else {
         alert(res.message);
@@ -806,11 +804,11 @@ export default {
     context.$progress.start()
     context.$http.post(API_ROOT+"mobile/member/getPromote.do",myExtensionArr).then(function(response){
       context.$progress.finish()
-      var res = response.data
+      var res = response.json()
       if(res.status == "ok") {
         context.$progress.finish()
         console.log(JSON.stringify(res.datas.datas))
-        this.list = res.datas.datas
+        context.list = res.datas.datas
       } else {
         alert(res.message);
       }
@@ -825,13 +823,13 @@ export default {
     context.$progress.start()
     context.$http.post(API_ROOT+"mobile/member/personInfo.do").then(function(response){
       context.$progress.finish()
-      var res = response.data
+      var res = response.json()
       if(res.status == "ok") {
         context.$progress.finish()
         console.log(JSON.stringify(res.datas))
-        this.list = res.datas
-        this.address = this.list.province+' '+this.list.city+' '+this.list.area
-        console.log(this.address)
+        context.list = res.datas
+        context.address = context.list.province+' '+context.list.city+' '+context.list.area
+        console.log(context.address)
       } else {
         alert(res.message);
       }
@@ -846,10 +844,10 @@ export default {
     context.$progress.start()
     context.$http.post(API_ROOT+"mobile/loginOut.do").then(function(response){
       context.$progress.finish()
-      var res = response.data
+      var res = response.json()
       if(res.status == "ok") {
         authService.logout()
-        this.$router.go("/")
+        context.$route.router.go("/")
       } else {
         alert(res.message);
       }
@@ -864,9 +862,9 @@ export default {
     context.$progress.start()
     context.$http.post(API_ROOT+"mobile/member/saveNickName.do",modifyNameArr).then(function(response){
       context.$progress.finish()
-      var res = response.data
+      var res = response.json()
       if(res.status == "ok") {
-        this.$router.go("/user/personInfor")
+        context.$route.router.go("/user/personInfor")
       } else {
         alert(res.message);
       }
@@ -881,9 +879,9 @@ export default {
     context.$progress.start()
     context.$http.post(API_ROOT+"mobile/member/saveMobile.do",modifyPhoneArr).then(function(response){
       context.$progress.finish()
-      var res = response.data
+      var res = response.json()
       if(res.status == "ok") {
-        this.$router.go("/user/personInfor")
+        context.$route.router.go("/user/personInfor")
       } else {
         alert(res.message);
       }
@@ -898,9 +896,9 @@ export default {
     context.$progress.start()
     context.$http.post(API_ROOT+"mobile/member/sendMemChangeMobileAuthCode.do",sendMemForgotArr).then(function(response){
       context.$progress.finish()
-      var res = response.data
+      var res = response.json()
       if(res.status == "ok") {
-        this.xxId = res.datas
+        context.xxId = res.datas
         console.log(btn)
         var count = 60;
         var resend = setInterval(function(){
@@ -920,8 +918,8 @@ export default {
         }, 1000);
         context.disabled = true
 
-        this.$set('toasttext','验证码发送成功');
-        this.$set('toastshow',true)
+        context.$set('toasttext','验证码发送成功');
+        context.$set('toastshow',true)
       } else {
         alert(res.message);
       }
@@ -936,9 +934,9 @@ export default {
     context.$progress.start()
     context.$http.post(API_ROOT+"mobile/member/saveMobile.do",modifyPhoneArr).then(function(response){
       context.$progress.finish()
-      var res = response.data
+      var res = response.json()
       if(res.status == "ok") {
-        this.$router.go("/user/personInfor")
+        context.$route.router.go("/user/personInfor")
       } else {
         alert(res.message);
       }
@@ -953,10 +951,10 @@ export default {
     context.$progress.start()
     context.$http.post(API_ROOT+"mobile/member/modifyPwd.do",modifyNameArr).then(function(response){
       context.$progress.finish()
-      var res = response.data
+      var res = response.json()
       if(res.status == "ok") {
         context.$progress.finish()
-        this.$router.go("/user/personInfor")
+        context.$route.router.go("/user/personInfor")
       } else {
         alert(res.message);
       }
@@ -971,9 +969,9 @@ export default {
     context.$progress.start()
     context.$http.post(API_ROOT+"mobile/member/sendMemModifyPwdAuthCode.do",sendMemForgotArr).then(function(response){
       context.$progress.finish()
-      var res = response.data
+      var res = response.json()
       if(res.status == "ok") {
-        this.xxId = res.datas
+        context.xxId = res.datas
         console.log(btn)
         var count = 60;
         var resend = setInterval(function(){
@@ -993,8 +991,8 @@ export default {
         }, 1000);
         context.disabled = true
 
-        this.$set('toasttext','验证码发送成功');
-        this.$set('toastshow',true)
+        context.$set('toasttext','验证码发送成功');
+        context.$set('toastshow',true)
       } else {
         alert(res.message);
       }
@@ -1009,10 +1007,10 @@ export default {
     context.$progress.start()
     context.$http.post(API_ROOT+"mobile/member/saveSex.do",saveSexArr).then(function(response){
       context.$progress.finish()
-      var res = response.data
+      var res = response.json()
       if(res.status == "ok") {
         context.$progress.finish()
-        this.$router.go("/user/personInfor")
+        context.$route.router.go("/user/personInfor")
       } else {
         alert(res.message);
       }
@@ -1027,7 +1025,7 @@ export default {
     context.$progress.start()
     context.$http.post(API_ROOT+"mobile/member/orderDetail.do",orderIdArr).then(function(response){
       context.$progress.finish()
-      var res = response.data
+      var res = response.json()
       if(res.status == "ok") {
         context.payList = res.datas
         console.log(JSON.stringify(res.datas))
@@ -1045,7 +1043,7 @@ export default {
     context.$progress.start()
     context.$http.post(API_ROOT+"mobile/member/getMemberLevelList.do").then(function(response){
       context.$progress.finish()
-      var res = response.data
+      var res = response.json()
       if(res.status == "ok") {
         context.list = res.datas
         console.log(JSON.stringify(res.datas))
@@ -1063,9 +1061,9 @@ export default {
     context.$progress.start()
     context.$http.post(API_ROOT+"mobile/member/upLevelToPay.do",upDateArr).then(function(response){
       context.$progress.finish()
-      var res = response.data
+      var res = response.json()
       if(res.status == "ok") {
-        this.$router.go('/user/payChioce')
+        context.$route.router.go('/user/payChioce')
       } else {
         alert(res.message);
       }
@@ -1080,10 +1078,11 @@ export default {
     context.$progress.start()
     context.$http.post(API_ROOT+"mobile/member/cashbacksub.do").then(function(response){
       context.$progress.finish()
-      var res = response.data
+      var res = response.json()
       if(res.status == "ok") {
-        this.list = res.datas
-        console.log(JSON.stringify(res.datas))
+        if(res.datas!=null){
+          context.list = res.datas.datas
+        }
       } else {
         alert(res.message);
       }
@@ -1098,10 +1097,10 @@ export default {
     context.$progress.start()
     context.$http.post(API_ROOT+"mobile/member/changeAddress.do",saveAddressArr).then(function(response){
       context.$progress.finish()
-      var res = response.data
+      var res = response.json()
       if(res.status == "ok") {
-        this.list = res.datas
-        this.$router.go("/user/personInfor")
+        context.list = res.datas
+        context.$router.go("/user/personInfor")
       } else {
         alert(res.message);
       }
@@ -1116,10 +1115,10 @@ export default {
     context.$progress.start()
     context.$http.post(API_ROOT+"mobile/member/evaList.do").then(function(response){
       context.$progress.finish()
-      var res = response.data
+      var res = response.json()
       if(res.status == "ok") {
         console.log(JSON.stringify(res.datas.datas))
-        this.list = res.datas.datas
+        context.list = res.datas.datas
       } else {
         alert(res.message);
       }
@@ -1134,9 +1133,9 @@ export default {
     context.$progress.start()
     context.$http.post(API_ROOT+"mobile/member/collection.do",collectionArr).then(function(response){
       context.$progress.finish()
-      var res = response.data
+      var res = response.json()
       if(res.status == "ok") {
-        this.list = res.datas.datas
+        context.list = res.datas.datas
         console.log(JSON.stringify(res.datas.datas))
       } else {
         alert(res.message);
@@ -1151,12 +1150,12 @@ export default {
   registerAgent(context,arr) {
     context.$progress.start()
     context.$http.post(API_ROOT+"mobile/registerAgent.do",arr).then(function(response){
-      var res = response.data
+      var res = response.json()
       context.$progress.finish()
       if(res.status == "ok") {
         console.log(JSON.stringify(res.datas))
         context.$set('toasttext','申请成功')
-        this.$set('toastshow',true)
+        context.$set('toastshow',true)
         setTimeout(function () {
           context.$router.go("/")
         },2000)
@@ -1175,9 +1174,9 @@ export default {
     context.$progress.start()
     context.$http.post(API_ROOT+"mobile/sendAgentRegisterAuthCode.do",mobileArr).then(function(response){
       context.$progress.finish()
-      var res = response.data
+      var res = response.json()
       if(res.status == "ok") {
-        this.xxId = res.datas
+        context.xxId = res.datas
         var count = 60;
         var resend = setInterval(function(){
           count--;
@@ -1195,8 +1194,8 @@ export default {
           }
         }, 1000);
         context.disabled = true
-        this.$set('toasttext','验证码发送成功');
-        this.$set('toastshow',true)
+        context.$set('toasttext','验证码发送成功');
+        context.$set('toastshow',true)
       } else {
         alert(res.message);
       }
@@ -1211,10 +1210,10 @@ export default {
     context.$progress.start()
     context.$http.post(API_ROOT+"mobile/getAgentLevel.do").then(function(response){
       context.$progress.finish()
-      var res = response.data
+      var res = response.json()
       if(res.status == "ok") {
         console.log(JSON.stringify(res.datas))
-        this.optionList = res.datas
+        context.optionList = res.datas
       } else {
         alert(res.message);
       }
@@ -1231,20 +1230,20 @@ export default {
     context.$progress.start()
     context.$http.post(API_ROOT+"mobile/member/getCollectionMchList.do").then(function(response){
       context.$progress.finish()
-      var res = response.data
+      var res = response.json()
       if(res.status == "ok") {
         console.log(JSON.stringify(res.datas.datas))
-        this.shoplist = res.datas.datas
-        for(var i =0;i<this.shoplist.length;i++){
-          var len = Math.round(this.shoplist[i].priceScore)/2
+        context.shoplist = res.datas.datas
+        for(var i =0;i<context.shoplist.length;i++){
+          var len = Math.round(context.shoplist[i].priceScore)
           for(var j = 0;j<len;j++){
-            this.item[j].starActive = true
+            context.item[j].starActive = true
           }
         }
-        if(this.shoplist.length!=0){
-          this.dataShopHide = false
+        if(context.shoplist.length!=0){
+          context.dataShopHide = false
         }else{
-          this.dataShopHide = true
+          context.dataShopHide = true
         }
       } else {
         alert(res.message);
@@ -1262,13 +1261,13 @@ export default {
     context.$progress.start()
     context.$http.post(API_ROOT+"mobile/member/getCollectionGoodsList.do").then(function(response){
       context.$progress.finish()
-      var res = response.data
+      var res = response.json()
       if(res.status == "ok") {
-        this.list = res.datas.datas
-        if(this.list.length!=0){
-          this.dataHide = false
+        context.list = res.datas.datas
+        if(context.list.length!=0){
+          context.dataHide = false
         }else{
-          this.dataHide = true
+          context.dataHide = true
         }
       } else {
         alert(res.message);
@@ -1284,10 +1283,10 @@ export default {
     context.$progress.start()
     context.$http.post(API_ROOT+"mobile/member/collection.do",shopArr).then(function(response){
       context.$progress.finish()
-      var res = response.data
+      var res = response.json()
       if(res.status == "ok") {
-        this.$set('toasttext','收藏成功')
-        this.$set('toastshow',true)
+        context.$set('toasttext','收藏成功')
+        context.$set('toastshow',true)
       } else {
         alert(res.message);
       }
@@ -1302,17 +1301,17 @@ export default {
     context.$progress.start()
     context.$http.post(API_ROOT+"mobile/member/cancelCollection.do",shopArr).then(function(response){
       context.$progress.finish()
-      var res = response.data
+      var res = response.json()
       if(res.status == "ok") {
-        if(this.list.length==1){
-          this.dataHide = true
+        if(context.list.length==1){
+          context.dataHide = true
         }else{
-          this.dataHide = false
+          context.dataHide = false
         }
 
-        this.list.$remove(shopping)
-        this.$set('toasttext','取消成功')
-        this.$set('toastshow',true)
+        context.list.$remove(shopping)
+        context.$set('toasttext','取消成功')
+        context.$set('toastshow',true)
       } else {
         alert(res.message);
       }
@@ -1327,16 +1326,16 @@ export default {
     context.$progress.start()
     context.$http.post(API_ROOT+"mobile/member/cancelCollection.do",shopArr).then(function(response){
       context.$progress.finish()
-      var res = response.data
+      var res = response.json()
       if(res.status == "ok") {
-        if(this.shoplist.length==1){
-          this.dataShopHide = true
+        if(context.shoplist.length==1){
+          context.dataShopHide = true
         }else{
-          this.dataShopHide = false
+          context.dataShopHide = false
         }
-        this.shoplist.$remove(shopping)
-        this.$set('toasttext','取消成功')
-        this.$set('toastshow',true)
+        context.shoplist.$remove(shopping)
+        context.$set('toasttext','取消成功')
+        context.$set('toastshow',true)
       } else {
         alert(res.message);
       }
@@ -1351,11 +1350,11 @@ export default {
     context.$progress.start()
     context.$http.post(API_ROOT+"mobile/member/cancelOrder.do",shopArr).then(function(response){
       context.$progress.finish()
-      var res = response.data
+      var res = response.json()
       if(res.status == "ok") {
-       // this.list.$remove(orderStatus)
-        this.$set('toasttext','取消成功')
-        this.$set('toastshow',true)
+       // context.list.$remove(orderStatus)
+        context.$set('toasttext','取消成功')
+        context.$set('toastshow',true)
       } else {
         alert(res.message);
       }
@@ -1370,9 +1369,9 @@ export default {
     context.$progress.start()
     context.$http.post(API_ROOT+"mobile/member/cancelOrder.do",shopArr).then(function(response){
       context.$progress.finish()
-      var res = response.data
+      var res = response.json()
       if(res.status == "ok") {
-         this.list.$remove(orderStatus)
+         context.list.$remove(orderStatus)
       } else {
         alert(res.message);
       }

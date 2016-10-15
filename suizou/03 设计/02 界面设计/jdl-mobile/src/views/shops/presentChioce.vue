@@ -84,8 +84,8 @@
                 </div>
             </div>
         </div>
-        <div class="weui_btn_area fixed">
-            <input type="submit" class="weui_btn weui_btn_primary b0 saveBasic" value="保存" @click="save()">
+        <div class="weui_btn_area">
+            <input type="submit" class="weui_btn weui_btn_primary saveBasic" value="保存" @click="save(this.value)">
         </div>
     </form>
     </validator>
@@ -174,7 +174,7 @@
             this.$set('toasttext','卡号不正确');
             this.$set('toastshow',true);
           },
-        save:function(){
+        save:function(value){
             var that = this
             var isEmpty = that.$get('isEmpty')
             var cardNo = that.$get('cardNo')

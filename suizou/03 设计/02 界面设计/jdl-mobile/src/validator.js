@@ -13,6 +13,9 @@ Vue.validator('addressIsEmpty', function (value) {
   return !/^\s*$/.test(value)
 });
 
+Vue.validator('cardNo', function (value) {
+  return !/^\s*$/.test(value)
+});
 
 Vue.validator('isEmptyCompany', function (value) {
   return !/^\s*$/.test(value)
@@ -46,9 +49,7 @@ Vue.validator('isPostCode', function (value) {
   return /^\d{6}$/.test(value)
 });
 
-Vue.validator('cardNo', function (value) {
-  return /^\d{19}$/.test(value)
-});
+
 
 //添加一个密码验证
 //匹配6-20位的任何字类字符，包括下划线。与“[A-Za-z0-9_]”等效。

@@ -5,7 +5,7 @@
         </a>
         代理申请
     </div>
-  <div class="bd absolute pd48">
+  <div class="bd absolute pt">
     <validator name="validation">
       <form action="#" id="form" onsubmit="return false">
           <div class="weui_cells weui_cells_form mt0 wauto">
@@ -142,8 +142,8 @@
                 </div>
             </div>
         </div>
-        <div class="weui_btn_area fixed">
-            <input type="submit" class="weui_btn b0 weui_btn_primary" @click="save()" value="申请">
+        <div class="weui_btn_area">
+            <input type="submit" class="weui_btn weui_btn_primary" @click="save()" value="申请">
         </div>
       </form>
     </validator>

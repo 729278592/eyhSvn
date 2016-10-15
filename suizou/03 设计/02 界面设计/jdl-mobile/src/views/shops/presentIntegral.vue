@@ -48,6 +48,17 @@
             </div>
         </div>
     </form>
+
+    <div class="weui_dialog_confirm modal-mask" id="dialog1"  v-show="show">
+      <div class="weui_mask"></div>
+      <div class="weui_dialog">
+        <div class="weui_dialog_hd"><strong class="weui_dialog_title">确定提现？</strong></div>
+        <div class="weui_dialog_ft">
+          <a href="javascript:;" class="weui_btn_dialog default" @click="cancleDelete()">取消</a>
+          <a href="javascript:;" class="weui_btn_dialog primary" @click="sureDeleta()">确定</a>
+        </div>
+      </div>
+    </div>
     <Toast :toastshow.sync="toastshow" :toasttext="toasttext"></Toast>
 </div>
 </template>
@@ -75,19 +86,35 @@
         mchService.presentIntegral(this)
 
       },
-      methods: {
-        onShow: function () {
-          this.hide = !this.hide
-        },
-        present:function(){
-          if(this.lists.id == null){
-            this.$set('toasttext','请绑定银行卡');
-            this.$set('toastshow',true)
-          }
-        },
-        present:function(){
-            mchService.txApply(this)
-        }
-      }
+
+   methods: {
+     onShow: function () {
+       this.hide = !this.hide
+     },
+     present:function(socre){
+       if(socre.txScore<20000){
+         this.$set('toasttext',"提现积分不足");
+         this.$set('toastshow',true)
+       }
+       else{
+         this.socrePrent = socre
+         this.show = true
+       }
+     },
+     sureDeleta:function(){
+       if(this.socrePrent.id == null){
+         this.$set('toasttext','请绑定银行卡');
+         this.$set('toastshow',true)
+       }else{
+         mchService.txApply(this)
+       }
+     },
+     cancleDelete:function(){
+       this.show = false
+     }
+   }
+
+
+
     }
 </script>

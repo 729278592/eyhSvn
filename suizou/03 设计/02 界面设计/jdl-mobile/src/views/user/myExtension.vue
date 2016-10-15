@@ -15,7 +15,7 @@
     <ul class="merberMenu styleHide" :class="{'active':this.memberActive}">
         <li v-for="memberList in list">
             <p class="clearfix">
-                <span class="left phone verdana">{{memberList.memberMobile}}</span>
+                <span class="left phone verdana">{{memberList.mobile}}</span>
                 <span class="right score">收益
                     <span class="color"><span class="verdana">{{memberList.getScore}}</span>积分</span>
                 </span>

@@ -43,9 +43,9 @@
 <div class="weui_btn_area fixed">
     <a class="weui_btn b0 weui_btn_primary" v-link="'/user/addAddress'">+新建地址</a>
 </div>
-<div class="weui_dialog_confirm modal-mask" id="dialog1"  v-show="show" transition="modal">
+<div class="weui_dialog_confirm modal-mask" id="dialog1"  v-show="show">
     <div class="weui_mask"></div>
-    <div class="weui_dialog weui-dialog-transition">
+    <div class="weui_dialog ">
         <div class="weui_dialog_hd"><strong class="weui_dialog_title">确定删除地址？</strong></div>
         <div class="weui_dialog_ft">
             <a href="javascript:;" class="weui_btn_dialog default" @click="cancleDelete()">取消</a>

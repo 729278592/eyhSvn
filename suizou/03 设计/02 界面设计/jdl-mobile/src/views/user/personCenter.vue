@@ -32,7 +32,7 @@
            </ul>
        </div>
    </div>
-    <div class="bd absolute pt">
+    <div class="bd absolute pd48">
       <ul class="entryList mt0">
           <li>
               <div>
@@ -171,13 +171,9 @@
               </a>
           </li>
       </ul>
-      <div class="personCode"  v-if="dataJson.level==0">
-
-      </div>
-      <div class="personCode"  v-if="dataJson.level!=0">
-          <img v-if="dataJson.qrcode!=null" :src='this.imageUrl+dataJson.qrcode' class='couponImg1' alt=''>
-          <img v-if="dataJson.qrcode==null" src='../../../static/images/myCode.jpg' class='couponImg1' alt=''><br/>
-          个人推广二维码
+      <div class="personCode">
+        <img v-if="dataJson.qrcode!=null" :src='this.imageUrl+dataJson.qrcode' class='couponImg1' alt=''></br>
+        个人推广二维码
       </div>
   </div>
   <div class="foot">
