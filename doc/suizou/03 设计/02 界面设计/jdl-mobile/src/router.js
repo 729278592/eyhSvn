@@ -274,7 +274,7 @@ router.map({
             },
             auth: true
           },
-          
+
           '/addAddressBuy': {
             component: (resolve) => {
               require(['./views/user/addAddressBuy.vue'], resolve)
@@ -479,12 +479,7 @@ router.map({
           require(['./views/auth/personRegister.vue'], resolve)
         }
       },
-      '/personRegisterMobile/:mobile': {
-        name:"personRegisterMobile",
-        component: (resolve) => {
-          require(['./views/auth/personRegisterMobile.vue'], resolve)
-        }
-      },
+     
       '/register': {
         component: (resolve) => {
           require(['./views/auth/register.vue'], resolve)

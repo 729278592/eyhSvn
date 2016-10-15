@@ -49,8 +49,8 @@
 
 
           </div>
-          <div class="weui_btn_area fixed">
-              <input type="submit" class="weui_btn b0 weui_btn_primary" value="保存" @click="addAddress()">
+          <div class="weui_btn_area ">
+              <input type="submit" class="weui_btn  weui_btn_primary" value="保存" @click="addAddress()">
           </div>
       </form>
        </validator>

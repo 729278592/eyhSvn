@@ -23,7 +23,6 @@
     </div>
   </div>
   <div class="bd absolute pt">
-    <validator name="validation">
       <form action="#" id="form" onsubmit="return false">
           <div class="weui_cells weui_cells_form mt0 wauto">
               <div class="weui_cell">
@@ -33,7 +32,7 @@
                       </label>
                   </div>
                   <div class="weui_cell_bd weui_cell_primary">
-                        <input class="weui_input" @invalid="telonInvalid" initial="off" detect-change="off" v-model="mobile" id="mobile" type="tel" v-validate:mobile="['mobile']" placeholder='请输入手机号码' @keyup="isDisables($event)">
+                        <input class="weui_input"  initial="off" detect-change="off" v-model="mobile" id="mobile" type="tel"  placeholder='请输入手机号码'>
                   </div>
               </div>
               <div class="weui_cell">
@@ -42,9 +41,19 @@
                           <span class="span_icon spa_code"></span>
                       </label>
                   </div>
+                <div class="weui_cell_bd weui_cell_primary">
+                  <input class="weui_input codeInput"  initial="off" detect-change="off" v-model="isPostCode" id="isPostCode"  placeholder="验证码为6位有效数字"/>
+                  <input type="button" class="getCode" :class="{'disabled':disabled}" disabled = {{type}} id="getCode" @click="getCodeBtn($event)" v-model="code" value = {{code}} />
+                </div>
+              </div>
+              <div class="weui_cell">
+                  <div class="weui_cell_hd">
+                      <label class="weui_label">
+                          <span class="span_icon spa_lock"></span>
+                      </label>
+                  </div>
                   <div class="weui_cell_bd weui_cell_primary">
-                      <input class="weui_input codeInput"  @invalid="isPostCodeInvalid" initial="off" detect-change="off" v-model="isPostCode" id="isPostCode" v-validate:isPostCode="['isPostCode']" placeholder="验证码为6位有效数字"/>
-                      <input type="button" class="getCode" :class="{'disabled':disabled}" disabled = {{type}} id="getCode" @click="getCodeBtn($event)" v-model="code" value = {{code}} />
+                      <input class="weui_input"  initial="off" detect-change="off" v-model="password" id="password" type="password"  placeholder="密码为6-20位的任何字类字符"/>
                   </div>
               </div>
               <div class="weui_cell">
@@ -54,17 +63,7 @@
                       </label>
                   </div>
                   <div class="weui_cell_bd weui_cell_primary">
-                      <input class="weui_input" @invalid="passwordInvalid" initial="off" detect-change="off" v-model="password" id="password" type="password" v-validate:password="['passw']" placeholder="密码为6-20位的任何字类字符"/>
-                  </div>
-              </div>
-              <div class="weui_cell">
-                  <div class="weui_cell_hd">
-                      <label class="weui_label">
-                          <span class="span_icon spa_lock"></span>
-                      </label>
-                  </div>
-                  <div class="weui_cell_bd weui_cell_primary">
-                      <input class="weui_input" @invalid="aginPasswordInvalid" initial="off" detect-change="off" v-model="aginPassword" id="aginPassword" type="password" @blur="blurAginPassword()" v-validate:aginPassword="['aginPassw']" placeholder="请确认密码"/>
+                      <input class="weui_input" initial="off" detect-change="off" v-model="aginPassword" id="aginPassword" type="password"  placeholder="请确认密码"/>
                   </div>
               </div>
           </div>
@@ -75,7 +74,6 @@
               <a class="btn_forget right" v-link="'/auth/personLogin'">想起账号,立即登录</a>
           </div>
       </form>
-    </validator>
     <Toast :toastshow.sync="toastshow" :toasttext="toasttext"></Toast>
 </div>
 </template>
@@ -97,8 +95,8 @@
            aginPassword:"",
            password:"",
            sessionId:"",
-           disabled:true,
-           type:true,
+           disabled:false,
+           type:false,
            xxId:"",
            code:"获取验证码"
           }
@@ -113,62 +111,55 @@
           returnPage:function(){
             window.history.go(-1)
           },
-         telonInvalid(){
-             this.$set('toasttext','手机号不正确');
-             this.$set('toastshow',true);
-         },
-         isDisables:function(e){
-           var reg = /^(1[38][0-9]|14[57]|15[012356789]|17[0678])[0-9]{8}$/
-           if(reg.test(e.currentTarget.value)){
-             this.disabled = false
-             this.type = false
-           }else{
-             this.disabled = true
-             this.type = true
-           }
-        },
-         isPostCodeInvalid(){
-             this.$set('toasttext','验证码不正确')
-             this.$set('toastshow',true)
-         },
-         passwordInvalid(){
-             this.$set('toasttext','密码不正确')
-             this.$set('toastshow',true)
-         },
-         aginPasswordInvalid(){
-            this.$set('toasttext','请确认密码')
-            this.$set('toastshow',true)
-         },
-         blurAginPassword:function(){
-            var that = this
-            var aginPassword = that.$get('aginPassword')
-            var password = this.$get('password')
-            if(aginPassword!=password){
-              this.$set('toasttext','密码不一致哦')
-              this.$set('toastshow',true)
+
+          showErrMsg(errMsg) {
+            this.$set('toasttext',errMsg);
+            this.$set('toastshow',true);
+          },
+
+          getCodeBtn:function(e){
+            var reg = /^(1[38][0-9]|14[57]|15[012356789]|17[0678])[0-9]{8}$/
+            if(!reg.test(this.mobile)) {
+              this.showErrMsg("请输入有效的手机号")
+              return
             }
-         },
-         getCodeBtn:function(e){
             var btn = e.currentTarget
-            var that = this
-            var mobile = that.$get('mobile')
-            var isPostCod = that.$get('isPostCode')
-            var sendMemForgotArr = {mobile:mobile}
-            userService.sendMemForgotAuthCode(this,sendMemForgotArr,btn)
+            var mobile = this.mobile
+            var sendMemRegArr = {mobile:mobile}
+            userService.sendMemForgotAuthCode(this,sendMemRegArr,btn)
           },
          save: function(){
+
+           var mobileReg = /^(1[38][0-9]|14[57]|15[012356789]|17[0678])[0-9]{8}$/
+           if(!mobileReg.test(this.mobile)){
+             this.showErrMsg("无效的手机号")
+             return
+           }
+
+           if(!this.isPostCode){
+             this.showErrMsg("验证码不能为空")
+             return
+           }
+
+           if(!this.password){
+             this.showErrMsg("请输入密码")
+             return
+           }
+
+           if(!this.aginPassword){
+             this.showErrMsg("请输入确认密码")
+             return
+           }
+
+           if(this.password != this.aginPassword) {
+             this.showErrMsg("密码不一致")
+             return
+           }
+
             var that = this
-            var isPostCode = that.$get('isPostCode')
-            var password = that.$get('password')
-            var mobile = that.$get('mobile')
-            that.$validate(true, function () {
-                if (that.$validation.invalid) {
-                    //验证无效
-                }else{
-                  var updatePwdArr = {mobile:mobile,password:password,authCode:isPostCode,msgAuthcodeId:that.xxId}
-                  userService.updatePwd(that,updatePwdArr)
-                }
-            })
+           var updatePwdArr = {mobile:that.mobile,password:that.password,authCode:that.isPostCode,msgAuthcodeId:that.xxId}
+           userService.updatePwd(that,updatePwdArr)
+
           }
         }
       }

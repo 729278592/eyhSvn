@@ -1,6 +1,6 @@
 <template>
   <Bar></Bar>
-<div class="bd absolute pd48">
+<div class="bd absolute pt">
   <div>
     <img :src="this.imageUrl+shopInfor.images" alt="" class="w100"/>
   </div>

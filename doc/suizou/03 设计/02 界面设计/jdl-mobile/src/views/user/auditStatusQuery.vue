@@ -5,7 +5,7 @@
       </a>
       申请进度查询
   </div>
-  <div class="bd absolute pd48">
+  <div class="bd absolute pt">
     <validator name="validation">
       <form action="#" id="form" onsubmit="return false">
           <div class="weui_cells weui_cells_form mt0 wauto">
@@ -42,11 +42,12 @@
               </div>
 
           </div>
-          <div class="weui_btn_area fixed">
-          <!--<a  class="weui_btn b0 weui_btn_primary" >查询</a>-->
-           <input type="submit" class="weui_btn b0 weui_btn_primary" @click="save()" value="查询">
+          <div class="weui_btn_area">
+          <!--<a  class="weui_btn weui_btn_primary" >查询</a>-->
+           <input type="submit" class="weui_btn  weui_btn_primary" @click="save()" value="查询">
 
           </div>
+
       </form>
     </validator>
     <Toast :toastshow.sync="toastshow" :toasttext="toasttext"></Toast>

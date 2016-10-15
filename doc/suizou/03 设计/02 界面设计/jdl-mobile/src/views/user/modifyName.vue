@@ -15,8 +15,8 @@
                       </div>
                   </div>
               </div>
-              <div class="weui_btn_area fixed">
-                  <input type="button" class="weui_btn b0 weui_btn_primary" @click="save()" value="保存">
+              <div class="weui_btn_area ">
+                  <input type="button" class="weui_btn  weui_btn_primary" @click="save()" value="保存">
               </div>
           </form>
       </validator>

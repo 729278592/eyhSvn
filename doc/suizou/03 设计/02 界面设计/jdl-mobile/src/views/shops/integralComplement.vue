@@ -26,15 +26,15 @@
                    </div>
               </div>
 
-              <div class="weui_btn_area fixed">
-                  <input type="button" class="weui_btn b0 weui_btn_primary" @click="save()" value="支付">
+              <div class="weui_btn_area">
+                  <input type="button" class="weui_btn  weui_btn_primary" @click="save()" value="支付">
               </div>
           </form>
       </validator>
 
-      <div class="weui_dialog_confirm modal-mask" id="dialog1"  v-show="show" transition="modal">
+      <div class="weui_dialog_confirm modal-mask" id="dialog1"  v-show="show">
          <div class="weui_mask"></div>
-         <div class="weui_dialog weui-dialog-transition">
+         <div class="weui_dialog ">
              <div class="weui_dialog_hd">
                 <p>
                    商户将获得的预留积分:{{data.mchGetScore}}

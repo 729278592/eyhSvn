@@ -111,6 +111,7 @@
 
     ready () {
       document.title = '家得利'
+      console.log(this.$els.msg)
       new Swiper (this.$els.msg, {
          slidesPerView: 1,
          pagination:'.swiper-pagination',

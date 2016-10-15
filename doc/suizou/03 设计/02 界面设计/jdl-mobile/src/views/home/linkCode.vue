@@ -148,7 +148,7 @@
     <div class="foot">
         <ul class="codeMenu clearfix">
             <li>
-                <a v-link="{ name: 'personRegisterMobile', params: {mobile: this.mobile}}">个人用户注册</a>
+                <a v-link="{ path: '/auth/personRegister', query: {mobile: this.mobile}}">个人用户注册</a>
             </li>
             <li>
                 <a v-link="{ name: 'settledApplicationMobile', params: {mobile: this.mobile}}">商家入驻申请</a>
@@ -161,25 +161,15 @@
 </style>
 <script>
   export default {
-    components: {
-      },
       data () {
         return {
-          list:[],
           mobile:""
         }
       },
       ready () {
         document.title = '协议'
-
         this.mobile = this.$route.params.mobile
-        console.log(this.mobile)
-
-      },
-      methods: {
-        onShow: function () {
-          this.hide = !this.hide
-        }
       }
+
     }
 </script>

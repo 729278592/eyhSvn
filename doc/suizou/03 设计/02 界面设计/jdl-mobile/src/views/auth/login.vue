@@ -49,9 +49,9 @@
       </form>
     </validator>
 
-    <div class="weui_dialog_confirm modal-mask" id="dialog1"  v-show="show" transition="modal">
+    <div class="weui_dialog_confirm modal-mask" id="dialog1"  v-show="show">
        <div class="weui_mask"></div>
-       <div class="weui_dialog weui-dialog-transition">
+       <div class="weui_dialog">
            <div class="weui_dialog_hd">
               <strong class="weui_dialog_title">确定去支付？</strong>
               <p>

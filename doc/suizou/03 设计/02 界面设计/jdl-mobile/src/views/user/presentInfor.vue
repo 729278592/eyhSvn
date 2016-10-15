@@ -49,8 +49,8 @@
         </div>
     </div>
 </div>
-<div class="weui_btn_area fixed">
-    <a class="weui_btn b0 weui_btn_primary" v-link="'/auth/login'">修改</a>
+<div class="weui_btn_area ">
+    <a class="weui_btn  weui_btn_primary" v-link="'/auth/login'">修改</a>
 </div>
 </template>
 
