@@ -1,0 +1,16 @@
+[
+  {
+    "id":"22",
+    "consignee":"张三",
+    "mobile":"150624325425",
+    "address":"重庆市九龙坡区袁家岗中新城上城",
+    "isDefault":"0"
+  },
+  {
+    "consignee":"张三",
+    "mobile":"150624325425",
+    "address":"重庆市九龙坡区袁家岗中新城上城",
+    "id":"33",
+    "isDefault":null
+  }
+]

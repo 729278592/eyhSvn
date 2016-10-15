@@ -1,0 +1,21 @@
+{
+  "status": "ok",
+  "message": "success",
+  "datas": {
+    "pageNo": 1,
+    "pageSize": 10,
+    "orderBy": null,
+    "order": null,
+    "datas": [],
+    "totalCount": 0,
+    "orderBySetted": false,
+    "nextPage": 1,
+    "hasPre": false,
+    "prePage": 1,
+    "slider": [],
+    "totalPages": 0,
+    "hasNext": false,
+    "firstResult": 0
+  },
+  "jsonString": "{\"datas\":{\"datas\":[],\"firstResult\":0,\"hasNext\":false,\"hasPre\":false,\"nextPage\":1,\"orderBySetted\":false,\"pageNo\":1,\"pageSize\":10,\"prePage\":1,\"slider\":[],\"totalCount\":0,\"totalPages\":0},\"message\"A:\"Asuccess\",\"status\":\"ok\"}"
+}

@@ -1,0 +1,22 @@
+[
+  {"name":"美丽在线1","allOrder":false,"waitPayOrder":true,"waitSendGoodsOrder":false,"waitGetGoodsOrder":false,"waitCommentOrder":false,"time":"2016.5.5 9:00","freight":"5","allNum":"3","allMoney":"5000.00","shoppings":[
+      {"img":"<img src='../../../static/images/order1.jpg' alt=''/>","title":"植物油","color":"红色","price":"600.00","num":"2"},
+      {"img":"<img src='../../../static/images/order1.jpg' alt=''/>","title":"植物油1","color":"红色","price":"600.00","num":"2"}
+    ]
+  },
+  {"name":"美丽在线4","allOrder":false,"waitPayOrder":false,"waitSendGoodsOrder":true,"waitGetGoodsOrder":false,"waitCommentOrder":false,"time":"2016.5.5 9:00","allNum":"3","allMoney":"5000.00","shoppings":[
+      {"img":"<img src='../../../static/images/order1.jpg' alt=''/>","title":"植物油","color":"红色","price":"600.00","num":"2"},
+      {"img":"<img src='../../../static/images/order1.jpg' alt=''/>","title":"植物油1","color":"红色","price":"600.00","num":"2"}
+    ]
+  },
+  {"name":"美丽在线1","allOrder":false,"waitPayOrder":false,"waitSendGoodsOrder":false,"waitGetGoodsOrder":true,"waitCommentOrder":false,"time":"2016.5.5 9:00","freight":"5","allNum":"3","allMoney":"5000.00","shoppings":[
+      {"img":"<img src='../../../static/images/order1.jpg' alt=''/>","title":"植物油","color":"红色","price":"600.00","num":"2"},
+      {"img":"<img src='../../../static/images/order1.jpg' alt=''/>","title":"植物油1","color":"红色","price":"600.00","num":"2"}
+    ]
+  },
+  {"name":"美丽在线4","allOrder":false,"waitPayOrder":false,"waitSendGoodsOrder":false,"waitGetGoodsOrder":false,"waitCommentOrder":true,"time":"2016.5.5 9:00","allNum":"3","allMoney":"5000.00","freight":"5","shoppings":[
+      {"img":"<img src='../../../static/images/order1.jpg' alt=''/>","title":"植物油","color":"红色","price":"600.00","num":"2"},
+      {"img":"<img src='../../../static/images/order1.jpg' alt=''/>","title":"植物油1","color":"红色","price":"600.00","num":"2"}
+    ]
+  }
+]
