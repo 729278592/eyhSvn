@@ -1,0 +1,8 @@
+[
+  {"payMoney":"999.00","payStyle":[
+     {"payId":"11","payName":"支付宝"},
+     {"payId":"12","payName":"微信支付"},
+     {"payId":"13","payName":"银行卡支付"}
+    ]
+  }
+]
