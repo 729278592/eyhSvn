@@ -4,14 +4,14 @@
     <ul class="entryList mt0">
         <li>
             <div>
-                <div class="couponImg style">
+                <div class="couponImg style" v-link="{ path: '/shops/contactShopsShopping', query: {id: list.id}}">
                    <img v-if="list.logo==null" src="../../../static/images/shoppingC1.jpg" class="couponImg1" alt="">
                    <img v-if="list.logo!=null" :src="this.imageUrl+list.logo" class="couponImg1" />
                </div>
                 <div class="inforList">
                     <p class="clearfix">
                         <span class="left shopsName">{{list.mchName}}</span>
-                        <button class="btnCollectioning right" @click="onCollection()">收藏商铺</button>
+                        <button class="btnCollectioning right" @click="onCollection(list)">收藏商铺</button>
                         <button class="btnCollectioning right" v-if="list.collectionId==this.cancelCollection" @click="onCancelCollection()">取消收藏</button>
                     </p>
                     <div class="clearfix">
@@ -85,13 +85,18 @@
           </li>
       </ul>
   </div>
+  <Toast :toastshow.sync="toastshow" :toasttext="toasttext"></Toast>
 </template>
 <script>
     import Bar from '../components/headBar.vue'
     import mchService from '../../api/mchService'
+    import userService from '../../api/userService'
+    import authService  from '../../api/authService'
+    import Toast from '../components/toast.vue'
     export default {
        components: {
-            Bar
+            Bar,
+            Toast
         },
       data () {
         return {
@@ -102,6 +107,8 @@
           shopListArr:[],
           shopsId:"",
           imageUrl:"",
+          toastshow:false,
+          toasttext:"",
            item:[
             {starActive:false},
             {starActive:false},
@@ -139,9 +146,16 @@
           this.collection = 0
           this.cancelCollection = 1
         },
-        onCollection:function(){
-          this.collection = 1
-          this.cancelCollection = 0
+        onCollection:function(shopsList){
+          if (authService.isLogin()) {
+            var shopArr = {
+              type:1,
+              id:shopsList.id
+            }
+            userService.collectionShopping(this,shopArr)
+          }else{
+            this.$router.go('/auth/personLogin')
+          }
         }
       }
     }

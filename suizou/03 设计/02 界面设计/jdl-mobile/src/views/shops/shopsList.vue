@@ -140,6 +140,7 @@
        </li>
    </ul>
   </div>
+  <Toast :toastshow.sync="toastshow" :toasttext="toasttext"></Toast>
 </template>
 
 <style>
@@ -160,8 +161,10 @@
     import mchService from '../../api/mchService'
     import userService from '../../api/userService'
     import authService from '../../api/authService'
+    import Toast from '../components/toast.vue'
     export default {
      components: {
+       Toast
       },
       data () {
         return {

@@ -79,7 +79,7 @@
               var res = response.data
                console.log(JSON.stringify(res.datas));
               if(res.status == "ok") {
-                 authService.logout()
+                authService.logout()
                  this.$router.go("/")
                } else {
                   alert(res.message);

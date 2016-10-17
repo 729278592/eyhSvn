@@ -20,25 +20,48 @@ export default {
       var result = response.json()
 
       if (result.status == 'ok') {
-      loginIng = "登录中..."
-      localStorage.setItem('mch_token', result.status)
-      this.user.authenticated = true
-      // Redirect to a specified route
-      if(redirect) {
-        router.go(redirect)
+        loginIng = "登录中..."
+        localStorage.setItem('mch_token', result.status)
+        this.user.authenticated = true
+        // Redirect to a specified route
+        if(redirect) {
+          router.go(redirect)
+        }
+      } else if(result.status =="mchNotPay"){
+        context.show = true
+        context.orderId=result.datas.orderId
+        context.amount=result.datas.amount
       }
-    } else if(result.status =="mchNotPay"){
-      context.show = true
-      context.orderId=result.datas.orderId
-      context.amount=result.datas.amount
-    }
-  else {
-      alert(result.message)
-    }
-  },(response) => {
+      else {
+        alert(result.message)
+      }
+    },(response) => {
       // error callback
       context.error = response
       console.log(context.error)
+    })
+  },
+
+
+
+  signup(context, creds, redirect) {
+    context.$http.post(SIGNUP_URL, creds).then((response) => {
+      // success callback
+      var result = response.json()
+
+      if (result.status == 'ok') {
+        localStorage.setItem('mch_token', result.status)
+        this.user.authenticated = true
+        // Redirect to a specified route
+        if(redirect) {
+          router.go(redirect)
+        }
+      } else {
+        alert(result.message)
+      }
+
+    },(response) => {
+      context.error = response
     })
   },
 

@@ -1,27 +1,27 @@
 <template>
-<div class="hd">
-      <a class="return" @click="returnPage()">
-          <i class="fa fa-angle-left"></i>
-      </a>
-      忘记密码
-      <div class="right nav_block">
-        <a class="dot_block" @click.stop="onShow">
-          <i class="fa fa-user"></i>
+  <div class="hd">
+        <a class="return" @click="returnPage()">
+            <i class="fa fa-angle-left"></i>
         </a>
-        <ul class="nav_link" :class="{'hide':hide}">
-            <li>
-              <a v-link="'/'">
-                  首页
-              </a>
-            </li>
-            <li>
-                <a v-link="'/auth/personLogin'">
-                    登录
+        忘记密码
+        <div class="right nav_block">
+          <a class="dot_block" @click.stop="onShow">
+            <i class="fa fa-user"></i>
+          </a>
+          <ul class="nav_link" :class="{'hide':hide}">
+              <li>
+                <a v-link="'/'">
+                    首页
                 </a>
-            </li>
-        </ul>
+              </li>
+              <li>
+                  <a v-link="'/auth/personLogin'">
+                      登录
+                  </a>
+              </li>
+          </ul>
+      </div>
     </div>
-  </div>
   <div class="bd absolute pt">
       <form action="#" id="form" onsubmit="return false">
           <div class="weui_cells weui_cells_form mt0 wauto">
@@ -118,46 +118,46 @@
           },
 
           getCodeBtn:function(e){
-            var reg = /^(1[38][0-9]|14[57]|15[012356789]|17[0678])[0-9]{8}$/
+            var reg = /^(1[38][0-9]|14[57]|15[012356789]|17[0678])[0-9]{8}$/;
             if(!reg.test(this.mobile)) {
-              this.showErrMsg("请输入有效的手机号")
+              this.showErrMsg("请输入有效的手机号");
               return
             }
-            var btn = e.currentTarget
-            var mobile = this.mobile
-            var sendMemRegArr = {mobile:mobile}
+            var btn = e.currentTarget;
+            var mobile = this.mobile;
+            var sendMemRegArr = {mobile:mobile};
             userService.sendMemForgotAuthCode(this,sendMemRegArr,btn)
           },
          save: function(){
 
-           var mobileReg = /^(1[38][0-9]|14[57]|15[012356789]|17[0678])[0-9]{8}$/
+           var mobileReg = /^(1[38][0-9]|14[57]|15[012356789]|17[0678])[0-9]{8}$/;
            if(!mobileReg.test(this.mobile)){
-             this.showErrMsg("无效的手机号")
+             this.showErrMsg("无效的手机号");
              return
            }
 
            if(!this.isPostCode){
-             this.showErrMsg("验证码不能为空")
+             this.showErrMsg("验证码不能为空");
              return
            }
 
            if(!this.password){
-             this.showErrMsg("请输入密码")
+             this.showErrMsg("请输入密码");
              return
            }
 
            if(!this.aginPassword){
-             this.showErrMsg("请输入确认密码")
+             this.showErrMsg("请输入确认密码");
              return
            }
 
            if(this.password != this.aginPassword) {
-             this.showErrMsg("密码不一致")
+             this.showErrMsg("密码不一致");
              return
            }
 
-            var that = this
-           var updatePwdArr = {mobile:that.mobile,password:that.password,authCode:that.isPostCode,msgAuthcodeId:that.xxId}
+            var that = this;
+           var updatePwdArr = {mobile:that.mobile,password:that.password,authCode:that.isPostCode,msgAuthcodeId:that.xxId};
            userService.updatePwd(that,updatePwdArr)
 
           }

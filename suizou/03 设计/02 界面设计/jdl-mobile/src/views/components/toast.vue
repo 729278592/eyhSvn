@@ -7,6 +7,7 @@
                     <img src="../../../static/images/smile_icon.png" alt="" id="smile-icon"/><br/>
                     <span class="errSpan color" style="color:#fff">{{toasttext}}</span>
                 </p>
+          </div>
         </div>
     </div>
 </template>
@@ -32,7 +33,7 @@ export default{
         //显示的时间
         duration: {
             type: Number,
-            default:3000,//默认3秒
+            default:2000,//默认3秒
             required:false
         }
     },

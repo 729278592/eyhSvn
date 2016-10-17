@@ -89,11 +89,11 @@
           this.hide = !this.hide
         },
         isEmptyAccountInvalid(){
-            this.$set('toasttext','账号不正确');
+            this.$set('toasttext','无效账号');
             this.$set('toastshow',true)
         },
         isEmptyMoneyInvalid(){
-            this.$set('toasttext','金额不正确');
+            this.$set('toasttext','金额不能为空');
             this.$set('toastshow',true)
         },
         save: function(){

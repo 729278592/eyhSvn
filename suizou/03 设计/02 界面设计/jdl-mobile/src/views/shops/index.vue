@@ -142,7 +142,7 @@
 <script>
    import mchService from '../../api/mchService'
      import website from '../api/website'
-       import authService from '../../api/mchAuthService'
+       import authService  from '../../api/mchAuthService'
     export default {
       components: {
         },
@@ -179,7 +179,7 @@
               var res = response.data
                console.log(JSON.stringify(res.datas));
               if(res.status == "ok") {
-                 authService.logout()
+                authService.logout()
                  this.$router.go("/")
                } else {
                   alert(res.message);

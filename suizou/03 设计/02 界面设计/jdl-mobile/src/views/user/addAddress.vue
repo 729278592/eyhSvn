@@ -11,7 +11,7 @@
                         </label>
                     </div>
                     <div class="weui_cell_bd weui_cell_primary">
-                          <input class="weui_input" @invalid="isEmptyInvalid" initial="off" detect-change="off" v-model="isEmpty" id="isEmpty" type="text" v-validate:isEmpty="['isEmpty']"  placeholder='请输入昵称'>
+                          <input class="weui_input" v-model="isEmpty" id="isEmpty" type="text" placeholder='请输入昵称'>
                     </div>
                 </div>
                 <div class="weui_cell">
@@ -21,7 +21,7 @@
                         </label>
                     </div>
                     <div class="weui_cell_bd weui_cell_primary">
-                      <input class="weui_input" @invalid="telonInvalid" initial="off" detect-change="off" v-model="mobile" id="mobile" type="tel" v-validate:mobile="['mobile']"  placeholder='请输入手机号码'>
+                      <input class="weui_input" v-model="mobile" id="mobile" type="tel" placeholder='请输入手机号码'>
                     </div>
                 </div>
                 <div class="weui_cell weui_cell_select">
@@ -72,7 +72,7 @@
                         </label>
                     </div>
                     <div class="weui_cell_bd weui_cell_primary">
-                        <input class="weui_input" @invalid="addressIsEmptyInvalid" initial="off" detect-change="off" v-model="addressIsEmpty" id="addressIsEmpty" type="text" v-validate:addressIsEmpty="['addressIsEmpty']"  placeholder='请填写详细地址'>
+                        <input class="weui_input" v-model="addressIsEmpty" id="addressIsEmpty" type="text"  placeholder='请填写详细地址'>
                     </div>
                 </div>
             </div>
@@ -132,79 +132,78 @@
 
        provinceChange: function(){
 
-                             this.cityList = []
-                             this.areaList = []
-                             if(this.province != '-1') {
-                               userService.getRegionByPid(this,this.province,'c')
-                             }
-                             this.city = -1
-                             this.area=-1
+         this.cityList = []
+         this.areaList = []
+         if(this.province != '-1') {
+           userService.getRegionByPid(this,this.province,'c')
+         }
+         this.city = -1
+         this.area=-1
 
 
-                            },
-
-                            cityChange: function(){
-
-                            this.areaList = []
-                             if(this.city != '-1') {
-                                userService.getRegionByPid(this,this.city,'a')
-                             }
-                              this.area = -1
-
-                            },
-
-                           areaChange: function(){
-
-                            },
-
-       isEmptyInvalid(){
-           this.$set('toasttext','昵称不能为空');
-           this.$set('toastshow',true);
-       },
-       telonInvalid(){
-            this.$set('toasttext','手机号不正确');
-            this.$set('toastshow',true);
         },
-        addressIsEmptyInvalid(){
-           this.$set('toasttext','联系地址不能为空');
-           this.$set('toastshow',true);
-       },
-        addAddress:function(){
-          var that = this
-          var isEmpty = that.$get('isEmpty')
-          var mobile = that.$get('mobile')
-          var addressIsEmpty = that.$get('addressIsEmpty')
 
-          var province = that.province
-          var city = that.city
-          var area = that.area
+        cityChange: function(){
 
+        this.areaList = []
+         if(this.city != '-1') {
+            userService.getRegionByPid(this,this.city,'a')
+         }
+          this.area = -1
 
-         if(this.province==-1){
-               that.$set('toasttext','请选择省');
-               that.$set('toastshow',true)
-             }
-             else if(this.city==-1){
-                that.$set('toasttext','请选择市');
-                         this.$set('toastshow',true)
-             }
-             else if(this.area==-1){
-                 that.$set('toasttext','请选择县');
-                 that.$set('toastshow',true)
-             }else{
-             that.$validate(true, function () {
-                if (that.$validation.invalid) {
-                }else{
-                     that.$progress.start()
-                     if(that.paramsAddressId==undefined){
-                        that.paramsAddressId=" "
-                     }
-                      var saveAddressArr = {id:that.paramsAddressId,mobile:mobile,address:addressIsEmpty,consignee:isEmpty,province:province,city:city,area:area}
-                       userService.saveAddress(that,saveAddressArr)
-                }
-              })
-            }
-        }
+        },
+
+       areaChange: function(){
+
+        },
+        showErrMsg(errMsg) {
+          this.$set('toasttext',errMsg);
+          this.$set('toastshow',true);
+        },
+
+    addAddress:function(){
+      if(!this.isEmpty){
+        this.showErrMsg("昵称不能为空");
+        return
+      }
+
+      var mobileReg = /^(1[38][0-9]|14[57]|15[012356789]|17[0678])[0-9]{8}$/;
+      if(!mobileReg.test(this.mobile)){
+        this.showErrMsg("无效的手机号");
+        return
+      }
+      if(this.province==-1){
+        this.showErrMsg("请选择省");
+        return
+      }
+      if(this.city==-1){
+        this.showErrMsg("请选择市");
+        return
+      }
+      if(this.area==-1){
+        this.showErrMsg("请选择县");
+        return
+      }
+      if(!this.addressIsEmpty){
+        this.showErrMsg("联系地址不能为空");
+        return
+      }
+
+      if(this.paramsAddressId==undefined){
+        this.paramsAddressId=" "
+      }
+      var saveAddressArr = {
+        id:this.paramsAddressId,
+        mobile:this.mobile,
+        address:this.addressIsEmpty,
+        consignee:this.isEmpty,
+        province:this.province,
+        city:this.city,
+        area:this.area
+      };
+      console.log(JSON.stringify(saveAddressArr))
+      userService.saveAddress(this,saveAddressArr)
+    }
       }
     }
 </script>

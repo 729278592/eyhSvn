@@ -16,7 +16,7 @@
                       </label>
                   </div>
                   <div class="weui_cell_bd weui_cell_primary">
-                      <input class="weui_input" @invalid="isEmptyCompanyInvalid" initial="off" detect-change="off" v-model="isEmptyCompany" id="isEmptyCompany" type="text" v-validate:isEmptyCompany="['isEmpty']"  placeholder='请输入公司名' maxlength="32">
+                      <input class="weui_input" v-model="isEmptyCompany" id="isEmptyCompany" type="text"   placeholder='请输入公司名' maxlength="32">
                   </div>
               </div>
               <div class="weui_cell">
@@ -26,7 +26,7 @@
                       </label>
                   </div>
                   <div class="weui_cell_bd weui_cell_primary">
-                      <input class="weui_input" @invalid="isEmptyInvalid" initial="off" detect-change="off" v-model="isEmpty" id="isEmpty" type="text" v-validate:isEmpty="['isEmpty']"  placeholder='请输入联系人姓名' maxlength="32">
+                      <input class="weui_input" v-model="isEmpty" id="isEmpty" type="text" placeholder='请输入联系人姓名' maxlength="32">
                   </div>
               </div>
               <div class="weui_cell">
@@ -36,7 +36,7 @@
                       </label>
                   </div>
                   <div class="weui_cell_bd weui_cell_primary">
-                        <input class="weui_input" @invalid="telonInvalid" initial="off" detect-change="off" v-model="mobile" id="mobile" type="tel" v-validate:mobile="['mobile']" placeholder='请输入手机号码' @keyup="isDisables($event)">
+                        <input class="weui_input" v-model="mobile" id="mobile" type="tel"  placeholder='请输入手机号码'>
                   </div>
               </div>
               <div class="weui_cell">
@@ -46,7 +46,7 @@
                       </label>
                   </div>
                   <div class="weui_cell_bd weui_cell_primary">
-                      <input class="weui_input codeInput"  @invalid="isPostCodeInvalid" initial="off" detect-change="off" v-model="isPostCode" id="isPostCode" v-validate:isPostCode="['isPostCode']" type="number" placeholder="验证码为6位有效数字" />
+                      <input class="weui_input codeInput"  v-model="isPostCode" id="isPostCode" type="number" placeholder="验证码为6位有效数字" />
                       <input type="button" class="getCode" :class="{'disabled':disabled}" disabled = {{type}} id="getCode" @click="getCodeBtn($event)" v-model="code" value = {{code}} />
                   </div>
               </div>
@@ -98,7 +98,7 @@
                       </label>
                   </div>
                   <div class="weui_cell_bd weui_cell_primary">
-                    <input class="weui_input" @invalid="addressIsEmptyInvalid" initial="off" detect-change="off" v-model="addressIsEmpty" id="addressIsEmpty" type="text" v-validate:addressIsEmpty="['addressIsEmpty']"  placeholder='请填写详细地址' maxlength="50">
+                    <input class="weui_input" v-model="addressIsEmpty" id="addressIsEmpty" type="text" placeholder='请填写详细地址' maxlength="50">
                   </div>
               </div>
              <div class="weui_cell" style="display:none">
@@ -135,7 +135,7 @@
                     </label>
                 </div>
                 <div class="weui_cell_bd weui_cell_primary">
-                    <input class="weui_input" initial="off" @invalid="refereesMobilenvalid" detect-change="off" v-model="refereesMobile" id="refereesMobile" type="tel" v-validate:refereesMobile="['refereesMobile']"  placeholder='推荐人手机号'>
+                    <input class="weui_input" v-model="refereesMobile" id="refereesMobile" type="tel"  placeholder='推荐人手机号'>
                 </div>
             </div>
         </div>
@@ -164,11 +164,11 @@
          isPostCode:"",
          isEmptyCompany:"",
          isEmpty:"",
-         disabled:true,
+         disabled:false,
          addressIsEmpty:"",
          refereesMobile:"",
          xxId:"",
-         type:true,
+         type:false,
          code:"获取验证码",
          provinceList: [],
          cityList: [],
@@ -179,7 +179,7 @@
         }
       },
       ready () {
-        document.title = '入驻申请'
+        document.title = '入驻申请';
          userService.getRegionByPid(this,0,'p')
       },
       methods: {
@@ -190,143 +190,101 @@
           window.history.go(-1)
         },
         provinceChange: function(){
-           this.cityList = []
-           this.areaList = []
-           if(this.province != '-1') {
-             userService.getRegionByPid(this,this.province,'c')
-           }
-           this.city = -1
-           this.area=-1
-
-
-          },
-
-          cityChange: function(){
-
-          this.areaList = []
+          this.cityList = [];
+          this.areaList = [];
+          if(this.province != '-1') {
+            userService.getRegionByPid(this,this.province,'c')
+          }
+          this.city = -1;
+          this.area=-1
+        },
+        cityChange: function(){
+          this.areaList = [];
            if(this.city != '-1') {
               userService.getRegionByPid(this,this.city,'a')
            }
             this.area = -1
 
           },
-
          areaChange: function(){
 
           },
-
-
-        isEmptyCompanyInvalid(){
-            this.$set('toasttext','公司名不能为空');
-            this.$set('toastshow',true)
-        },
-        isEmptyInvalid(){
-            this.$set('toasttext','联系人不能为空');
-            this.$set('toastshow',true)
-        },
-       telonInvalid(){
-           this.$set('toasttext','手机号不正确');
-           this.$set('toastshow',true);
-       },
-       isPostCodeInvalid(){
-           this.$set('toasttext','验证码不正确');
-           this.$set('toastshow',true);
-       },
-       addressIsEmptyInvalid(){
-          this.$set('toasttext','地址不能为空');
-          this.$set('toastshow',true);
-       },
-      refereesMobilenvalid:function(){
-        var refereesMobile = this.$get('refereesMobile')
-        if(!refereesMobile){
-
-        }else{
-          this.$set('toasttext','推荐人手机号不对');
-          this.$set('toastshow',true)
-        }
-      },
-       isDisables:function(e){
-          var reg = /^(1[38][0-9]|14[57]|15[012356789]|17[0678])[0-9]{8}$/
-          if(reg.test(e.currentTarget.value)){
-            this.disabled = false
-             this.type = false
-          }else{
-            this.disabled = true
-            this.type = true
+        getCodeBtn:function(e){
+          var reg = /^(1[38][0-9]|14[57]|15[012356789]|17[0678])[0-9]{8}$/;
+          if(!reg.test(this.mobile)) {
+            this.showErrMsg("请输入有效的手机号");
+            return
           }
+          var btn = e.currentTarget;
+          var mobile = this.mobile;
+          var sendMchCodeArr = {mobile:mobile};
+          userService.sendMchRegisterAuthCode(this,sendMchCodeArr,btn)
        },
-      getCodeBtn:function(e){
-         var btn = e.currentTarget
-         var that = this
-         var mobile = that.$get('mobile')
-         var isPostCod = that.$get('isPostCode')
-         var sendMchCodeArr = {mobile:mobile}
-         userService.sendMchRegisterAuthCode(that,sendMchCodeArr,btn)
-     },
+        showErrMsg(errMsg) {
+          this.$set('toasttext',errMsg);
+          this.$set('toastshow',true);
+        },
        save: function(){
-         var that = this
-         var isEmpty = that.$get('isEmpty')
-         var isPostCode = that.$get('isPostCode');
-         var isEmptyCompany = that.$get('isEmptyCompany')
-         var addressIsEmpty = that.$get('addressIsEmpty');
-         var mobile = that.$get('mobile')
-         var refereesMobile = that.$get('refereesMobile')
-         var province = that.province
-         var city = that.city
-         var area = that.area
+
+         var mobileReg = /^(1[38][0-9]|14[57]|15[012356789]|17[0678])[0-9]{8}$/;
+         if(!this.isEmptyCompany){
+           this.showErrMsg("公司名不能为空");
+           return
+         }
+
+         if(!this.isEmpty){
+           this.showErrMsg("联系人不能为空");
+           return
+         }
+         if(!mobileReg.test(this.mobile)){
+           this.showErrMsg("无效的手机号");
+           return
+         }
+
+         if(!this.isPostCode){
+           this.showErrMsg("验证码不能为空");
+           return
+         }
 
          if(this.province==-1){
-           this.$set('toasttext','请选择省');
-           this.$set('toastshow',true)
+           this.showErrMsg("请选择省");
+           return
          }
-         else if(this.city==-1){
-            this.$set('toasttext','请选择市');
-                     this.$set('toastshow',true)
+
+         if(this.city==-1){
+           this.showErrMsg("请选择市");
+           return
          }
-         else if(this.area==-1){
-             this.$set('toasttext','请选择县');
-             this.$set('toastshow',true)
-         }else{
-         that.$validate(true, function () {
 
-             var settledApplicationArr ={
-                mobile:mobile,
-                mchName:isEmptyCompany,
-                authCode:isPostCode,
-                realname:isEmpty,
-                province:province,
-                city:city,
-                area:area,
-                adress:addressIsEmpty,
-                businessLicense:"",
-                refereesMobile:refereesMobile,
-                msgAuthcodeId:that.xxId
-             }
-             var mobileReg = /^(1[38][0-9]|14[57]|15[012356789]|17[0678])[0-9]{8}$/
-
-             if (that.$validation.invalid) {
-
-                if(!refereesMobile){
-                    userService.settledApplication(that,settledApplicationArr)
-                }
-             }else{
-                if(mobileReg.test(refereesMobile)){
-                  userService.settledApplication(that,settledApplicationArr)
-                }else{
-                  this.$set('toasttext','推荐人手机号不对');
-                  this.$set('toastshow',true)
-                }
-             }
-
-
-
-
-         })
-
-
-
-
+         if(this.area==-1){
+           this.showErrMsg("请选择县");
+           return
          }
+
+         if(!this.addressIsEmpty){
+           this.showErrMsg("详细地址不能为空");
+           return
+         }
+
+         if(this.refereesMobile && !mobileReg.test(this.refereesMobile)){
+           this.showErrMsg("推荐人手机号格式不正确");
+           return
+         }
+
+         var settledApplicationArr ={
+           mobile:this.mobile,
+           mchName:this.isEmptyCompany,
+           authCode:this.isPostCode,
+           realname:this.isEmpty,
+           province:this.province,
+           city:this.city,
+           area:this.area,
+           adress:this.addressIsEmpty,
+           businessLicense:"",
+           refereesMobile:this.refereesMobile,
+           msgAuthcodeId:this.xxId
+         };
+         userService.settledApplication(this,settledApplicationArr)
        }
       }
     }

@@ -89,31 +89,31 @@
               <div class="weui_cell_ft">查看全部订单</div>
           </a>
           <ul class="orderMenu clearfix bt1">
-              <li>
+              <li v-link="{ path: '/user/myOrder', query: {status: 1}}">
                   <a>
                       <span class="order orderIcon1"></span><br/>
                       待付款
                   </a>
               </li>
-              <li>
+            <li v-link="{ path: '/user/myOrder', query: {status: 2}}">
                   <a >
                       <span class="order orderIcon2"></span><br/>
                       待发货
                   </a>
               </li>
-              <li>
+            <li v-link="{ path: '/user/myOrder', query: {status: 3}}">
                   <a>
                       <span class="order orderIcon6"></span><br/>
                       待确认
                   </a>
               </li>
-              <li>
+            <li v-link="{ path: '/user/myOrder', query: {status: 4}}">
                   <a>
                       <span class="order orderIcon9"></span><br/>
                       已完成
                   </a>
               </li>
-              <li>
+              <li v-link="'/user/orderRefundSuccessed'">
                   <a>
                       <span class="order orderIcon8"></span><br/>
                       退款订单
@@ -172,7 +172,7 @@
           </li>
       </ul>
       <div class="personCode">
-        <img v-if="dataJson.qrcode!=null" :src='this.imageUrl+dataJson.qrcode' class='couponImg1' alt=''></br>
+        <img v-if="dataJson.qrcode!=null" :src="this.imageUrl+dataJson.qrcode" class='couponImg1' alt=''></br>
         个人推广二维码
       </div>
   </div>
@@ -204,9 +204,7 @@
           </li>
       </ul>
   </div>
-
 </template>
-
 
 <style>
   .shop_cat{top:0.3rem;}
@@ -228,19 +226,20 @@
           domainName:"",
           imageUrl:"",
           isLogin:false,
+          fric:"fric",
           items: [
-           {orderStyle:true,con:"全部",active: true,name:"allOrderPerson",num:"0"},
-           {orderStyle:true,con:"待付款",active: false,name:"waitPayOrderPerson",num:"1"},
-           {orderStyle:true,con:"待发货",active: false,name:"waitSendGoodsOrderPerson",num:"2"},
-           {orderStyle:true,con:"待确认",active: false,name:"waitGetGoodsOrderPerson",num:"3"},
-           {orderStyle:true,con:"已完成",active: false,name:"waitCommentOrderPerson",num:"4"}
-         ],
+           {orderStyle:true,con:"全部",num:"0"},
+           {orderStyle:true,con:"待付款",num:"1"},
+           {orderStyle:true,con:"待发货",num:"2"},
+           {orderStyle:true,con:"待确认",num:"3"},
+           {orderStyle:true,con:"已完成",num:"4"}
+         ]
         }
       },
       ready () {
-        document.title = '个人中心'
-        userService.personCenter(this)
-        this.imageUrl = userService.imgUrlFric
+        document.title = '个人中心';
+        userService.personCenter(this);
+        this.imageUrl = userService.imgUrlAddFric;
        if (authService.isLogin()) {
           this.isLogin = true
         }else{

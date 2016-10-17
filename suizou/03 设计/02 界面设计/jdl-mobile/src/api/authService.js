@@ -17,20 +17,43 @@ export default {
       var result = response.json()
 
       if (result.status == 'ok') {
-      loginIng = "登录中"
+        loginIng = "登录中"
         localStorage.setItem('id_token', result.status)
         this.user.authenticated = true
         // Redirect to a specified route
         if(redirect) {
           router.go(redirect)
+        }
+      } else {
+        alert(result.message)
       }
-    } else {
-      alert(result.message)
-    }
-  },(response) => {
+    },(response) => {
       // error callback
       context.error = response
       console.log(context.error)
+    })
+  },
+
+
+
+  signup(context, creds, redirect) {
+    context.$http.post(SIGNUP_URL, creds).then((response) => {
+      // success callback
+      var result = response.json()
+
+      if (result.status == 'ok') {
+        localStorage.setItem('id_token', result.status)
+        this.user.authenticated = true
+        // Redirect to a specified route
+        if(redirect) {
+          router.go(redirect)
+        }
+      } else {
+        alert(result.message)
+      }
+
+    },(response) => {
+      context.error = response
     })
   },
 
@@ -59,3 +82,4 @@ export default {
     return 'Bearer ' + localStorage.getItem('id_token')
   }
 }
+

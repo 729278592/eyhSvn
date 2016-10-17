@@ -372,6 +372,11 @@ router.map({
         },
         mchAuth:true
       },
+      '/contactShopsShopping': {
+        component: (resolve) => {
+          require(['./views/shops/contactShopsShopping.vue'], resolve)
+        }
+      },
       '/presentIntegral': {
         component: (resolve) => {
           require(['./views/shops/presentIntegral.vue'], resolve)
@@ -437,11 +442,7 @@ router.map({
           require(['./views/shops/contactShopsShopping.vue'], resolve)
         }
       },
-      '/shopsDetails': {
-        component: (resolve) => {
-          require(['./views/shops/shopsDetails.vue'], resolve)
-        }
-      },
+     
       '/shopstype': {
         component: (resolve) => {
           require(['./views/shops/shopstype.vue'], resolve)

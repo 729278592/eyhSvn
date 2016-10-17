@@ -68,7 +68,7 @@
           <div class="evaluateScore">
               商铺评价 :
               <ul class="starList clearfix">
-                  <li v-for="start in evaluates.starList" :class="{'active':start.active}" @click="addActive(evaluates,$index)">
+                  <li v-for="start in starList" :class="{'active':start.active}" @click="addActive(start,$index)">
                       <i class="fa fa-star-o"></i>
                   </li>
               </ul>
@@ -86,8 +86,8 @@
           </p>
       </div>
   </div>
-  <div class="weui_btn_area">
-      <input type="submit" class="weui_btn  weui_btn_primary" value="提交">
+  <div class="weui_btn_area fixed">
+      <input type="submit" class="weui_btn b0 weui_btn_primary" value="提交">
   </div>
 </template>
 <script>
@@ -99,7 +99,14 @@
       data () {
         return {
           hide:true,
-          list:[]
+          list:[],
+          starList:[
+            {active:false,num:2},
+            {active:false,num:4},
+            {active:false,num:6},
+            {active:false,num:8},
+            {active:false,num:10}
+          ]
         }
       },
       ready () {
@@ -117,10 +124,10 @@
 
         addActive:function(evaluates,index){
           for(var i = 0;i<index+1;i++){
-            evaluates.starList[i].active = true
+            this.starList[i].active = true
           }
-          for(var j = index+1;j<(evaluates.starList.length);j++){
-            evaluates.starList[j].active = false
+          for(var j = index+1;j<(this.starList.length);j++){
+            this.starList[j].active = false
           }
         }
       }

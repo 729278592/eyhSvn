@@ -1,5 +1,5 @@
 import router from '../router'
-import authService from './authService'
+import mchAuthService from './mchAuthService'
 import {API_ROOT} from '../config'
 import {imgUrlFric} from '../config'
 import {imgUrl} from '../config'
@@ -8,7 +8,6 @@ import {imgUrl} from '../config'
 export default {
   imgUrlFric: imgUrlFric,
   imgUrl: imgUrl,
-
 
   //商家个人中心
   personCenter(context) {
@@ -39,7 +38,6 @@ export default {
       var res = response.json()
       if(res.status == "ok") {
         context.list = res.datas
-        console.log(JSON.stringify(res.datas))
       } else {
         alert(res.message);
       }
@@ -57,7 +55,6 @@ export default {
       var res = response.json()
       if(res.status == "ok") {
         context.lists = res.datas
-        console.log(JSON.stringify(res.datas.id))
       } else {
         alert(res.message);
       }
@@ -118,7 +115,6 @@ export default {
         context.$progress.finish()
         context.present = res.datas
         //context.fourNum = res.datas.cardNo.substr(res.datas.cardNo.length-4)
-        console.log(JSON.stringify(res.datas))
         if(context.present.length==0){
           context.dataHide = true
           context.listHide = false
@@ -136,14 +132,13 @@ export default {
   },
 
   //返现明细
-  detailOutcome(context) {
+  detailOutcome(context,arr) {
     context.$progress.start()
-    context.$http.post(API_ROOT+"mobile/mch/cashbacksub.do").then(function(response){
+    context.$http.post(API_ROOT+"mobile/mch/cashbacksub.do",arr).then(function(response){
       context.$progress.finish()
       var res = response.json()
       if(res.status == "ok") {
         context.list = res.datas
-        console.log(JSON.stringify(res.datas))
       } else {
         alert(res.message);
       }
@@ -161,7 +156,6 @@ export default {
       var res = response.json()
       if(res.status == "ok") {
         context.list = res.datas
-        console.log(JSON.stringify(res.datas))
       } else {
         alert(res.message);
       }
@@ -179,7 +173,6 @@ export default {
       var res = response.json()
       if(res.status == "ok") {
         context.list = res.datas.datas
-        console.log(JSON.stringify(res.datas))
       } else {
         alert(res.message);
       }
@@ -197,7 +190,6 @@ export default {
       var res = response.json()
       if(res.status == "ok") {
         context.list = res.datas.datas
-        console.log(JSON.stringify(res.datas.datas))
         for(var i =0;i<context.list.length;i++){
           var len = Math.round(context.list[i].grade)
           for(var j = 0;j<len;j++){
@@ -243,9 +235,6 @@ export default {
       var res = response.json()
       if(res.status == "ok") {
         context.shopListArr = res.datas.datas
-
-        console.log(context.shopListArr.length)
-        console.log(JSON.stringify(context.shopListArr))
       } else {
         alert(res.message);
       }
@@ -266,7 +255,6 @@ export default {
         context.show = true
         localStorage.setItem('data',context.data.orderId)
         localStorage.setItem('dataMoney',context.data.amount)
-        console.log(JSON.stringify(res.datas))
       } else {
         alert(res.message);
       }
@@ -274,8 +262,53 @@ export default {
       context.$progress.failed()
       // 响应错误回调
     })
-  }
+  },
 
+  //商铺信息
+  linkShops(context,accountArr) {
+    context.$progress.start()
+    context.$http.post(API_ROOT+"mobile/getMchInfo.do",accountArr).then(function(response){
+      context.$progress.finish()
+      var res = response.json()
+      if(res.status == "ok") {
+        if( res.datas!=null){
+          console.log(JSON.stringify(res.datas))
+          context.list = res.datas
+          var len = Math.round(context.list.grade)
+          for(var j = 0;j<len;j++){
+            context.item[j].starActive = true
+          }
+        }
+      } else {
+        alert(res.message);
+      }
+    }, function(response){
+      context.$progress.failed()
+      // 响应错误回调
+    })
+  },
+
+
+
+  //评论-商家
+  evaList(context) {
+    context.$progress.start()
+    context.$http.post(API_ROOT+"mobile/mch/evaList.do").then(function(response){
+      context.$progress.finish()
+      var res = response.json()
+      console.log(JSON.stringify(res.datas))
+      if(res.status == "ok") {
+        if(res.datas!=null){
+          context.list = res.datas.datas
+        }
+      } else {
+        alert(res.message);
+      }
+    }, function(response){
+      context.$progress.failed()
+
+    })
+  }
 
 
 

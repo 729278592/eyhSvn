@@ -135,21 +135,21 @@ a:active{opacity: 0.6;}
 .shopsDetails .title{padding: 0.625rem 0;border-bottom: 1px solid #dbdbdb;font-size: 1rem;color: #333;}
 .shopsDetails .infor{padding: 0.625rem 0;font-size: 0.875rem;color: #666;}
 .category_menu{width: 100%;}
-.category_menu>li{display: block;width: 100%;position: relative;background: #fff;margin-bottom: 0.625rem;height: 7.5rem;border-bottom: 1px solid #dbdbdb;}
+.category_menu>li{display: block;width: 100%;position: relative;background: #fff;margin-bottom: 0.625rem;height: 7.5rem;border-top: 1px solid #dbdbdb;}
 .category_menu>li:last-child{margin-bottom: 0;}
 .category_menu>li:last-child:after{border-bottom: none;}
 .category_menu>li>div.left{width: 25%;font-size: 1rem;position: relative;color: #333;height: 7.5rem;text-align: center;}
-.category_menu>li>div.left:before{position: absolute;top: 0;left: 0;border-top: 1px solid #dbdbdb;content: "";width: 100%;height: 1px;}
+.category_menu>li>div.left:after{position: absolute;bottom: 0;left: 0;border-bottom: 1px solid #dbdbdb;content: "";width: 100%;height: 1px;}
 .category_menu>li>div>div{display: block;width: 3.625rem;height: 3.625rem;margin: 1.2rem auto 0;}
 .category_menu>li>div>div.shopping_img1{background: url(../images/calss1.png);background-size: 100% 100%;}
 .category_menu>li>div>div.shopping_img2{background: url(../images/calss2.png);background-size: 100% 100%;}
 .category_menu>li>div>div.shopping_img3{background: url(../images/calss3.png);background-size: 100% 100%;}
 .category_menu>li>div>div.shopping_img4{background: url(../images/calss4.png);background-size: 100% 100%;}
 .category_menu>li>div.right{width: 75%;font-size: 0.875rem;}
-.shopping_category_menu{width: 100%;display: block;}
+.shopping_category_menu{width: 100%;display: block;border-left: 1px solid #dbdbdb;}
 .shopping_category_menu li{float: left;position: relative;width: 33.33%;height: 2.5rem;line-height: 2.5rem;text-align: center;}
-.shopping_category_menu li:before{content: "";position: absolute;left: 0;top: 0;width: 100%;height: 1px;border-top: 1px solid #dbdbdb;}
-.shopping_category_menu li:after{content: "";position: absolute;left: 0;top: 0;width: 1px;height: 100%;border-left: 1px solid #dbdbdb;}
+.shopping_category_menu li:before{content: "";position: absolute;left: 0;bottom: 0;width: 100%;height: 1px;border-bottom: 1px solid #dbdbdb;}
+.shopping_category_menu li:after{content: "";position: absolute;right: 0;top: 0;width: 1px;height: 100%;border-right: 1px solid #dbdbdb;}
 .shopping_category_menu li a{display: inline-block;width: 100%;height: 100%;color: #333;}
 .user_agreement{width: 100%;}
 .user_agreement>p{width: 94%;margin: 0.625rem auto 0;font-size: 0.875rem;color: #666;line-height: 1.7rem;}
@@ -163,8 +163,8 @@ a:active{opacity: 0.6;}
 .codeMenu li a{display: inline-block;width: 100%;height: 100%;color: #fff;}
 .inputDiv{display: block;width: 94%;padding: 0.625rem 3%;background: #fff;}
 .inputDiv.bt1{border-top: 1px solid #dbdbdb;}
-.inputDiv .spanColor{display: inline-block;height: 34px;padding: 0 15px;color: #666;border-top: 1px solid #dbdbdb;border-bottom: 1px solid #dbdbdb;background: #e0e3f2;line-height: 36px;font-size: 14px;}
-.inputDiv .Wdate{height: 34px;line-height: 34px;width: 85px;border: 1px solid #efefef;text-align: center;}
+.inputDiv .spanColor{display: inline-block;height: 34px;padding: 0 7px;color: #666;border-top: 1px solid #dbdbdb;border-bottom: 1px solid #dbdbdb;background: #e0e3f2;line-height: 36px;font-size: 14px;}
+.inputDiv .Wdate{height: 34px;line-height: 34px;width: 95px;border: 1px solid #efefef;text-align: center;}
 .inputDiv .spanColor,.inputDiv .Wdate,.inputDiv .btnQuery{float: left;}
 .inputDiv .btnQuery{border: none;outline: none;width: 60px;height: 34px;background: #ff6702;color: #fff;float: right;border-radius: 0.25rem;font-size: 0.875rem;}
 .queryMenu{width: 100%;}
@@ -353,6 +353,7 @@ textarea{font-family: "微软雅黑";}
 .orderList>li .orderCon span{}
 .orderList>li .orderCon p{margin: 0;}
 .orderList>li .orderFt .btnRemove{margin-top: -0.25rem;}
+.orderList>li .orderFt span.btn{border: none;}
 .orderList>li .orderFt .agentShop,.orderList>li .orderFt .agentMoney{margin-right: 0.875rem;}
 .orderList>li .orderFt .btn{line-height: 1.8rem;display: inline-block;}
 .orderList>li .orderFt .btn.hide{display: none;}
