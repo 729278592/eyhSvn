@@ -102,7 +102,7 @@
        </div>
 </template>
 <style>
-  @import '../../../static/plugins/swiper/dist/css/swiper.min.css'
+  @import '../../../static/plugins/swiper/dist/css/swiper.min.css';
 </style>
 
 <script>

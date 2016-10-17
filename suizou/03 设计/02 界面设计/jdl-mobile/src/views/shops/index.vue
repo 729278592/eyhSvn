@@ -28,25 +28,12 @@
                         <span class="right">联盟商户</span>
                     </p>
                     <div class="clearfix">
-                        <ul class="starList clearfix">
-                            <li class="active">
-                                <i class="fa fa-star-o"></i>
-                            </li>
-                            <li>
-                                <i class="fa fa-star-o"></i>
-                            </li>
-                            <li>
-                                <i class="fa fa-star-o"></i>
-                            </li>
-                            <li>
-                                <i class="fa fa-star-o"></i>
-                            </li>
-                            <li>
-                                <i class="fa fa-star-o"></i>
-                            </li>
-                        </ul>
+                      <ul class="starList clearfix">
+                        <li v-for="activeItem in item" :class="{'active':activeItem.starActive}">
+                          <i class="fa fa-star-o"></i>
+                        </li>
+                      </ul>
                     </div>
-
                     <p class="clearfix">
                         <span class="left">销量{{lists.salesNum}}</span>
                         <span class="right">共{{lists.goodsNum}}件商品</span>
@@ -163,7 +150,14 @@
         return{
          hide:true,
           lists:[],
-          resUid:""
+          resUid:"",
+          item:[
+            {starActive:false},
+            {starActive:false},
+            {starActive:false},
+            {starActive:false},
+            {starActive:false}
+          ]
         }
       },
       ready () {

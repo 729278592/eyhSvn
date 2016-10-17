@@ -62,7 +62,7 @@
                               <div class="weui_cell_bd weui_cell_primary">
                                   <p>共{{payList.totalNum}}件商品</p>
                               </div>
-                              <div class="weui_cell_ft style">总计 : ￥{{payList.freight}} (运费￥{{payList.freight}})</div>
+                              <div class="weui_cell_ft style">总计 : ￥{{payList.amount}} (运费￥{{payList.freight}})</div>
                           </div>
                       </div>
                   </div>
@@ -105,7 +105,7 @@
           暂无数据
       </p>
   </div>
-
+</div>
 </template>
 <script>
   import Bar from '../components/headBar.vue'

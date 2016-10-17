@@ -807,8 +807,11 @@ export default {
       var res = response.json()
       if(res.status == "ok") {
         context.$progress.finish()
-        console.log(JSON.stringify(res.datas.datas))
-        context.list = res.datas.datas
+        if(res.datas!=null){
+          context.list = res.datas.datas
+        }else {
+          context.list = []
+        }
       } else {
         alert(res.message);
       }

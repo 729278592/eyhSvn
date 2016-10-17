@@ -52,7 +52,7 @@
                 <div>
                     <div class="couponImg style" @click="shopsDefault(shopsList)">
                         <img v-if="shopsList.img==null" src="../../../static/images/shoppingC1.jpg" class="couponImg1" alt="">
-                        <img v-if="shopsList.img!=null" :src="imageUrl+shopsList.img" class="couponImg1" />
+                        <img v-if="shopsList.img!=null" :src="this.imageUrl+shopsList.img" class="couponImg1" />
                     </div>
                     <div class="inforList">
                         <p class="clearfix top">
@@ -127,7 +127,7 @@
       },
       ready () {
         document.title = '我的收藏'
-        this.imageUrl = userService.imageUrl
+        this.imageUrl = userService.imgUrl
         console.log(this.imageUrl)
         userService.shopCollection(this)
       },

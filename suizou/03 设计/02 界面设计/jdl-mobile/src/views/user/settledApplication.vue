@@ -118,7 +118,7 @@
                             <ul class="weui_uploader_files clearfix">
                                 <li class="weui_uploader_file">
                                     <!--<img src="../../../static/images/defaultImg.jpg" />-->
-                                    <img src="../../../static/images/defaultImg.jpg"">
+                                    <img src="../../../static/images/defaultImg.jpg">
                                 </li>
                             </ul>
                             <div class="weui_uploader_input_wrp">

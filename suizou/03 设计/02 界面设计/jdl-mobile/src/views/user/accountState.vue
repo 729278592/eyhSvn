@@ -28,7 +28,7 @@
         <div class="agentStyleCon" v-if="1==stateInfor.status">
             <img src="../../../static/images/pass.png" alt=""/>
             <p class="agentTitle">审核通过</p>
-            <p>请用前往 www.quanfan.com/stores/login.do</p>
+            <p>请用前往 http://www.jdl800.com/fric/login.do</p>
             <p>登录管理您的商家</p>
         </div>
         <div class="agentStyleCon" v-if="2==stateInfor.status">

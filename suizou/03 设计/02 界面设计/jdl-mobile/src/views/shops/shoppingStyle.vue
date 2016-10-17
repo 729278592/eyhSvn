@@ -64,6 +64,7 @@
              </li>
          </ul>
        </div>
+     </div>
 </template>
 <script>
   import Bar from '../components/shopHead.vue'

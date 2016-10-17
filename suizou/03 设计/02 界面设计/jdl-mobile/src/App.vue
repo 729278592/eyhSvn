@@ -11,7 +11,7 @@
   @import "../static/css/weui.css";
   @import "../static/css/example.css";
   @import "../static/css/global.css";
-  @import '../static/plugins/font/css/font-awesome.css'
+  @import '../static/plugins/font/css/font-awesome.css';
 </style>
 
 <script>
