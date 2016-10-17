@@ -169,7 +169,12 @@
       ready () {
         document.title = '协议'
         this.mobile = this.$route.params.mobile
+      },
+    methods:{
+      returnPage:function(){
+        window.history.go(-1)
       }
+    }
 
     }
 </script>

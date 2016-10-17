@@ -91,6 +91,7 @@
 </template>
 
 <style>
+  .orderList>li{border-top: 0;margin-bottom: 0;}
   .orderList>li .orderCon .spinner{top:-0.5rem;}
   .invoiceHead.style .inline_block.style{padding:0.625rem 0.5rem;width:94%;}
 </style>

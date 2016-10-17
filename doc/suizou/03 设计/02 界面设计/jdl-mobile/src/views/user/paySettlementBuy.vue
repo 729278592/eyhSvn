@@ -1,6 +1,6 @@
 <template>
     <Bar></Bar>
-    <div class="bd absolute pt">
+    <div class="bd absolute pt hide" :class="{'active':bdActive}">
         <div class="orderAddress" @click="showModal()">
             <a>
                 <div v-if="addressDeList.isDefault==defalutAddress" >
@@ -62,7 +62,7 @@
             <div class="weui_actionsheet style" :class="{'weui_actionsheet_toggle':addClassActionsheet}" id="weui_actionsheet">
                 <div style="position:relative;top:0;bottom:0;left:0;right:0;">
                     <div class="weui_btn_area style">
-                        <a class="weui_btn b0 weui_btn_primary" v-link="'/user/addAddressBuy'" style="disabled:inline-block;height:50px;line-height:50px;">新增地址</a>
+                        <a class="weui_btn b0 weui_btn_primary" @click="addAddressLink()" style="disabled:inline-block;height:50px;line-height:50px;">新增地址</a>
                     </div>
                     <div class="weui_actionsheet_menu">
                         <ul class="addressList style">
@@ -132,6 +132,92 @@
         </div>
         <Toast :toastshow.sync="toastshow" :toasttext="toasttext"></Toast>
     </div>
+
+  <div class="bd fixed hide" style="z-index: 1000;padding-top: 0;" :class="{'active':bdAddressActive}">
+    <validator name="validation">
+      <form action="#" id="form" onsubmit="return false">
+        <div class="weui_cells weui_cells_form mt0 wauto">
+          <div class="weui_cell">
+            <div class="weui_cell_hd">
+              <label class="weui_label">
+                <span class="span_icon spa_person"></span>
+              </label>
+            </div>
+            <div class="weui_cell_bd weui_cell_primary">
+              <input class="weui_input" v-model="isEmpty" id="isEmpty" type="text"  placeholder='请输入昵称'>
+            </div>
+          </div>
+          <div class="weui_cell">
+            <div class="weui_cell_hd">
+              <label class="weui_label">
+                <span class="span_icon spa_phone"></span>
+              </label>
+            </div>
+            <div class="weui_cell_bd weui_cell_primary">
+              <input class="weui_input"  v-model="mobile" id="mobile" type="tel"  placeholder='请输入手机号码'>
+            </div>
+          </div>
+          <div class="weui_cell weui_cell_select">
+            <div class="weui_cell_hd">
+              <label class="weui_label style">
+                <span class="span_icon spa_address"></span>
+              </label>
+            </div>
+            <div class="weui_cell_bd weui_cell_primary">
+              <select class="weui_select" name="province" @change="provinceChange" v-model="province">
+                <option value="-1">请选择省份</option>
+                <option v-for="item in provinceList" value={{item.id}}>{{item.name}}</option>
+              </select>
+            </div>
+          </div>
+
+          <div class="weui_cell weui_cell_select">
+            <div class="weui_cell_hd">
+              <label class="weui_label style">
+                <span class="span_icon spa_address"></span>
+              </label>
+            </div>
+            <div class="weui_cell_bd weui_cell_primary">
+              <select class="weui_select" name="city" @change="cityChange" v-model="city">
+                <option value="-1">请选择城市</option>
+                <option v-for="item in cityList" value={{item.id}}>{{item.name}}</option>
+              </select>
+            </div>
+          </div>
+
+          <div class="weui_cell weui_cell_select">
+            <div class="weui_cell_hd">
+              <label class="weui_label style">
+                <span class="span_icon spa_address"></span>
+              </label>
+            </div>
+            <div class="weui_cell_bd weui_cell_primary">
+              <select class="weui_select" name="area" @change="areaChange" v-model="area">
+                <option value="-1">请选择区县</option>
+                <option v-for="item in areaList" value={{item.id}}>{{item.name}}</option>
+              </select>
+            </div>
+          </div>
+          <div class="weui_cell">
+            <div class="weui_cell_hd">
+              <label class="weui_label">
+                <span class="span_icon spa_address"></span>
+              </label>
+            </div>
+            <div class="weui_cell_bd weui_cell_primary">
+              <input class="weui_input" v-model="addressIsEmpty" id="addressIsEmpty" type="text"  placeholder='请填写详细地址'>
+            </div>
+          </div>
+        </div>
+        <div class="weui_btn_area">
+          <input type="submit" class="weui_btn  weui_btn_primary" id="saveBtn" value="保存" @click="addAddress()">
+        </div>
+      </form>
+    </validator>
+    <Toast :toastshow.sync="toastshow" :toasttext="toasttext"></Toast>
+  </div>
+
+
     <div class="foot">
         <ul class="optionType style clearfix">
             <li class="last">
@@ -144,6 +230,18 @@
     </div>
 </template>
 
+<style>
+  .bd{background: #f3f3f3;}
+  .bd.hide{display: none}
+  .bd.active{display: block}
+  .bd.fixed{
+    position: absolute;
+    top: 2.5rem;
+    bottom: 0;
+    overflow-y: scroll;
+    -webkit-overflow-scrolling: touch;
+    width: 100%;}
+</style>
 
 <script>
   import Bar from '../components/headBar.vue'
@@ -171,20 +269,46 @@
           defalutAddress:"Y",
           notDefalutAddress:"N",
           addHide:"",
-          notAaddressTip:true
+          notAaddressTip:true,
+          bdActive:true,
+          bdAddressActive:false,
+
+          addressIsEmpty:"",
+          isEmpty:"",
+          mobile:"",
+          value:"",
+          pcaAddress:"",
+          paramsAddressId:"",
+          provinceList: [],
+          cityList: [],
+          areaList: [],
+          province:"-1",
+          city:"-1",
+          area:"-1"
         }
       },
       ready () {
-        document.title = '付款结算'
-        userService.addressAdmin(this)
-        this.imageUrl = userService.imgUrl
+        document.title = '付款结算';
+        userService.addressAdmin(this);
+        this.imageUrl = userService.imgUrl;
         var cartBuyArr = {
           productId:eval("("+localStorage.getItem('data')+")").productId,
           num:eval("("+localStorage.getItem('data')+")").num
         }
-        console.log(JSON.stringify(cartBuyArr))
-        userService.cartGoBuy(this,cartBuyArr)
-        userService.getDeAddress(this)
+        console.log(JSON.stringify(cartBuyArr));
+        userService.cartGoBuy(this,cartBuyArr);
+        userService.getDeAddress(this);
+
+
+        this.paramsAddressId = this.$route.params.addressId;
+        userService.getRegionByPid(this,0,'p');
+        if(this.$route.params.addressId !=undefined){
+          var addAddressArr = {
+            addressId:this.$route.params.addressId
+          };
+          userService.addAddress(this,addAddressArr)
+        }
+
       },
       methods: {
         onShow: function () {
@@ -216,7 +340,6 @@
         },
        btnBuy:function(addressDeList,list){
          localStorage.setItem('dataMoney',JSON.stringify(this.list.totalPrice))
-         console.log(JSON.stringify(addressDeList))
          if(!addressDeList){
            this.$set('toasttext','请选择地址');
            this.$set('toastshow',true);
@@ -228,7 +351,6 @@
             productId:eval("("+localStorage.getItem('data')+")").productId,
             num:eval("("+localStorage.getItem('data')+")").num
           }
-           console.log(sureBuyArr)
            userService.sureBuy(this,sureBuyArr)
          }
        },
@@ -238,6 +360,83 @@
            }
            var addressD = address
            userService.setDefaultAddress(this,addressArr,addressD)
+        },
+
+        addAddressLink:function(){
+          this.bdAddressActive=true;
+          this.bdActive = false;
+        },
+
+        provinceChange: function(){
+          this.cityList = []
+          this.areaList = []
+          if(this.province != '-1') {
+            userService.getRegionByPid(this,this.province,'c')
+          }
+          this.city = -1
+          this.area=-1
+
+
+        },
+        cityChange: function(){
+
+          this.areaList = []
+          if(this.city != '-1') {
+            userService.getRegionByPid(this,this.city,'a')
+          }
+          this.area = -1
+
+        },
+
+        areaChange: function(){
+
+        },
+        showErrMsg(errMsg) {
+          this.$set('toasttext',errMsg);
+          this.$set('toastshow',true);
+        },
+        addAddress:function(){
+          if(!this.isEmpty){
+            this.showErrMsg("昵称不能为空");
+            return
+          }
+
+          var mobileReg = /^(1[38][0-9]|14[57]|15[012356789]|17[0678])[0-9]{8}$/;
+          if(!mobileReg.test(this.mobile)){
+            this.showErrMsg("无效的手机号");
+            return
+          }
+          if(this.province==-1){
+            this.showErrMsg("请选择省");
+            return
+          }
+          if(this.city==-1){
+            this.showErrMsg("请选择市");
+            return
+          }
+          if(this.area==-1){
+            this.showErrMsg("请选择县");
+            return
+          }
+          if(!this.addressIsEmpty){
+            this.showErrMsg("联系地址不能为空");
+            return
+          }
+
+          if(this.paramsAddressId==undefined){
+            this.paramsAddressId=" "
+          }
+          var saveAddressArr = {
+            id:this.paramsAddressId,
+            mobile:this.mobile,
+            address:this.addressIsEmpty,
+            consignee:this.isEmpty,
+            province:this.province,
+            city:this.city,
+            area:this.area
+          };
+          console.log(JSON.stringify(saveAddressArr))
+          userService.saveAddressBuyYes(this,saveAddressArr)
         }
       }
     }

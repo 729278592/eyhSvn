@@ -11,7 +11,7 @@
                       </label>
                   </div>
                   <div class="weui_cell_bd weui_cell_primary">
-                        <input class="weui_input" @invalid="telonInvalid" initial="off" detect-change="off" v-model="mobile" id="mobile" type="tel" v-validate:mobile="['mobile']" placeholder='请输入手机号码' @keyup="isDisables($event)">
+                        <input class="weui_input" v-model="mobile" id="mobile" type="tel" placeholder='请输入手机号码'>
                   </div>
               </div>
               <div class="weui_cell">
@@ -21,7 +21,7 @@
                       </label>
                   </div>
                   <div class="weui_cell_bd weui_cell_primary">
-                       <input class="weui_input codeInput"  @invalid="isPostCodeInvalid" initial="off" detect-change="off" v-model="isPostCode" id="isPostCode" v-validate:isPostCode="['isPostCode']" placeholder="验证码为6位有效数字"/>
+                       <input class="weui_input codeInput" v-model="isPostCode" id="isPostCode" placeholder="验证码为6位有效数字"/>
                        <input type="button" class="getCode" :class="{'disabled':disabled}" disabled = {{type}} id="getCode" @click="getCodeBtn($event)" v-model="code" value = {{code}} />
                    </div>
               </div>
@@ -51,62 +51,56 @@
           mobile:"",
           toasttext:"",
           isPostCode:"",
-          disabled:true,
-          type:true,
+          disabled:false,
+          type:false,
           xxId:"",
           code:"获取验证码"
         }
       },
       ready () {
-        document.title = '修改手机'
-        this.mobile = this.$route.params.mobile
+        document.title = '修改手机';
+        this.mobile = this.$route.params.mobile;
         console.log(this.$route.params.mobile)
       },
       methods: {
         onShow: function () {
           this.hide = !this.hide
         },
-       isDisables:function(e){
-           var reg = /^(1[38][0-9]|14[57]|15[012356789]|17[0678])[0-9]{8}$/
-           if(reg.test(e.currentTarget.value)){
-             this.disabled = false
-             this.type = false
-           }else{
-             this.disabled = true
-             this.type = true
-           }
-        },
-      telonInvalid(){
-          //设置提示信息内容
-          this.$set('toasttext','手机号不正确');
-          //显示提示信息组件
-          this.$set('toastshow',true);
-      },
-      isPostCodeInvalid(){
-          this.$set('toasttext','验证码不正确');
-          this.$set('toastshow',true);
-      },
-      getCodeBtn:function(e){
-           var btn = e.currentTarget
-           var that = this
-           var mobile = that.$get('mobile')
-           var isPostCod = that.$get('isPostCode')
-           var sendMemForgotArr = {mobile:mobile}
-           userService.sendMemChangeMobileAuthCode(that,sendMemForgotArr,btn)
-       },
-      save: function(){
-        var that = this
-        var mobile = that.$get('mobile')
-        var isPostCod = that.$get('isPostCode')
-        that.$validate(true, function () {
-            if (that.$validation.invalid) {
 
-            }else{
-                var modifyPhoneArr = {mobile:mobile,authCode:isPostCod,msgAuthcodeId:that.xxId}
-                console.log(modifyPhoneArr)
-                userService.modifyPhone(that,modifyPhoneArr)
-            }
-          })
+
+      getCodeBtn:function(e){
+        var reg = /^(1[38][0-9]|14[57]|15[012356789]|17[0678])[0-9]{8}$/;
+        if(!reg.test(this.mobile)) {
+          this.showErrMsg("请输入有效的手机号");
+          return
+        }
+        var btn = e.currentTarget;
+        var mobile = this.mobile;
+        var sendMemForgotArr = {mobile:mobile};
+        userService.sendMemChangeMobileAuthCode(this,sendMemForgotArr,btn)
+       },
+        showErrMsg(errMsg) {
+          this.$set('toasttext',errMsg);
+          this.$set('toastshow',true);
+        },
+      save: function(){
+        var mobileReg = /^(1[38][0-9]|14[57]|15[012356789]|17[0678])[0-9]{8}$/;
+        if(!mobileReg.test(this.mobile)){
+          this.showErrMsg("无效的手机号");
+          return
+        }
+
+        if(!this.isPostCode){
+          this.showErrMsg("验证码不能为空");
+          return
+        }
+
+        var modifyPhoneArr = {
+          mobile:this.mobile,
+          authCode:this.isPostCode,
+          msgAuthcodeId:this.xxId
+        };
+        userService.modifyPhone(this,modifyPhoneArr)
         }
       }
     }

@@ -49,23 +49,25 @@
                   </div>
 
                   <div class="opreationBtn clearfix">
-                      <a class="btn right" v-if=" 0==shop.status">删除</a>
+                      <a class="btn right" v-if=" 0==shop.status"  @click="deleteOrderBtn(shop)">删除</a>
                       <a class="btn right" v-if=" 0==shop.status" @click="pay(shop)">付款</a>
                       <span class="btn right" v-if="1==shop.status">已取消</span>
-                      <span class="btn right" v-if="2==shop.status">待发货</span>
-                      <a class="btn right" v-if="2==shop.status" @click="cancelOrderBtn(shop)">取消订单</a>
+                      <a class="btn right" v-if="2==shop.status" @click="cancelOrderBtn(shop)">申请退款</a>
+                      <a class="btn right" v-if="2==shop.status" v-link="{ path: '/shops/contactShopsShopping', query: {id: shop.mchId}}">联系商家</a>
 
-                      <span class="btn right" v-if="3==shop.status">订单申请取消中</span>
-                      <span class="btn right" v-if="4==shop.status">卖家同意退款,请等待</span>
-                      <span class="btn right" v-if="5==shop.status">已取消(有退款)</span>
+                      <span class="btn right" v-if="3==shop.status">退款中</span>
+                      <span class="btn right" v-if="4==shop.status">退款中</span>
+                      <span class="btn right" v-if="5==shop.status">退款成功</span>
 
-                      <span class="btn right" v-if="6==shop.status">已发货</span>
-                      <a class="btn right" v-if="7==shop.status">取消订单</a>
-                      <span class="btn right" v-if="8==shop.status">卖家同意退款,请等待</span>
-                      <span class="btn right" v-if="9==shop.status">已取消(退货)</span>
-
+                      <a class="btn right" v-if="6==shop.status" @click="sureShop(shop)">确认收货</a>
+                      <a class="btn right" v-if="6==shop.status">申请退款</a>
+                      <span class="btn right" v-if="7==shop.status">退款中</span>
+                      <span class="btn right" v-if="8==shop.status">退款中</span>
+                      <span class="btn right" v-if="9==shop.status">退款成功</span>
+                      <span class="btn right" v-if="10==shop.status">已完成</span>
                       <a class="btn right" v-if="10==shop.status" v-link="'/user/evaluate'">评价</a>
-                      <span class="btn right" v-if="11==shop.status">完成</span>
+                      <span class="btn right" v-if="11==shop.status">已完成</span>
+                    <span class="btn right" v-if="11==shop.status">已评价</span>
                   </div>
               </div>
           </li>
@@ -105,19 +107,29 @@
         toastshow:false,
         toasttext:"",
         items: [
-          {orderStyle:true,con:"全部",active: true,name:"allOrderPerson",num:"0"},
-          {orderStyle:true,con:"待付款",active: false,name:"waitPayOrderPerson",num:"1"},
-          {orderStyle:true,con:"待发货",active: false,name:"waitSendGoodsOrderPerson",num:"2"},
-          {orderStyle:true,con:"待确认",active: false,name:"waitGetGoodsOrderPerson",num:"3"},
-          {orderStyle:true,con:"已完成",active: false,name:"waitCommentOrderPerson",num:"4"}
+          {orderStyle:true,con:"全部",active: true,num:"0"},
+          {orderStyle:true,con:"待付款",active: false,num:"1"},
+          {orderStyle:true,con:"待发货",active: false,num:"2"},
+          {orderStyle:true,con:"待确认",active: false,num:"3"},
+          {orderStyle:true,con:"已完成",active: false,num:"4"}
         ],
         tab_index:true
       }
     },
     ready () {
-      document.title = '我的订单'
-      this.imageUrl = userService.imgUrl
-      userService.myOrder(this,this.orderStatus)
+      document.title = '我的订单';
+      this.imageUrl = userService.imgUrl;
+      if(this.$route.query.status){
+        var index = this.$route.query.status;
+        console.log(index);
+        for(var i =0;i<this.items.length;i++){
+          this.items[i].active = false
+        }
+        this.items[index].active = true;
+        userService.myOrder(this,{status:index});
+        return
+      }
+      userService.myOrder(this,this.orderStatus);
       this.totalPrice = this.list
     },
     methods: {
@@ -125,40 +137,52 @@
         this.hide = !this.hide
       },
       onSelect:function(index,item){
-        this.tab_index = item
+        this.tab_index = item;
         this.items.forEach(function(item, i) {
           if(i === index)
             item.active = true;
           else
             item.active = false;
-        })
-        this.orderStatus={status:index}
+        });
+        this.orderStatus={status:index};
         userService.myOrder(this,this.orderStatus)
       },
       showModal:function(shopping){
-         this.show = true
+         this.show = true;
          this.shops = shopping
       },
       cancleDelete:function(){
          this.show = false
       },
       sureDeleta:function(orderStatus){
-         this.show = false
+         this.show = false;
          var orderArr = {
          id:orderStatus.orderId
-        }
-        console.log(orderStatus.orderId)
+        };
+        console.log(orderStatus.orderId);
         userService.deleteOrder(this,orderArr,orderStatus)
+      },
+      deleteOrderBtn:function(orderStatus){
+        var orderArr = {
+          id:orderStatus.orderId
+        };
+        userService.deleteOrderBtn(this,orderArr,orderStatus)
       },
      cancelOrderBtn:function(orderStatus){
        var orderArr = {
         id:orderStatus.orderId
-       }
-       console.log(orderStatus.orderId)
+       };
+       console.log(orderStatus.orderId);
        userService.cancelOrder(this,orderArr,orderStatus)
       },
       pay:function(shop){
         window.location.href="http://www.jdl800.com/fric/mobile/goods/toPay.do?id="+shop.orderId
+      },
+      sureShop:function(shop){
+        var orderArr = {
+          id:shop.orderId
+        };
+        userService.sureOrder(this,orderArr)
       }
     }
 }

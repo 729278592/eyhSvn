@@ -3,11 +3,12 @@ import authService from './authService'
 import {API_ROOT} from '../config'
 import {imgUrlFric} from '../config'
 import {imgUrl} from '../config'
-
+import {imgUrlAddFric} from '../config'
 
 export default {
   imgUrlFric:imgUrlFric,
   imgUrl:imgUrl,
+  imgUrlAddFric:imgUrlAddFric,
 
 
   //个人中心
@@ -17,15 +18,14 @@ export default {
             context.$progress.finish()
             var res = response.json()
              if(res.status == "ok") {
-                // 路由登录
                   context.dataJson = res.datas
-                  console.log(JSON.stringify(res.datas))
-                } else {
+               //console.log(JSON.stringify(res.datas))
+             } else {
                    alert(res.message);
                 }
          }, function(response){
+          // 响应错误回调
          	context.$progress.failed()
-           // 响应错误回调
          })
 	},
 
@@ -36,7 +36,6 @@ export default {
       context.$progress.finish()
       var res = response.json()
       if(res.status == "ok") {
-        console.log(JSON.stringify(res.datas))
         this.$progress.finish()
         this.addressList = res.datas
 
@@ -51,20 +50,21 @@ export default {
       }
     }, function(response){
       context.$progress.failed()
-      // 响应错误回调
+
     })
   },
 
   //删除地址
   deleteAddress(context,deleteAddressArr) {
-    context.$progress.start()
+    context.$progress.start();
     context.$http.post(API_ROOT+"mobile/member/deleteAddress.do",deleteAddressArr).then(function(response){
-      context.$progress.finish()
-      var res = response.json()
+      context.$progress.finish();
+      var res = response.json();
       if(res.status == "ok") {
-        this.show = false
+        this.show = false;
         for(var i=0;i<this.addressList.length;i++){
-          this.addressList.$remove(this.shops)
+          this.addressList.$remove(this.shops);
+          console.log(JSON.stringify(this.shops))
           this.$set('toasttext','删除成功');
           this.$set('toastshow',true);
           location.reload()
@@ -79,7 +79,7 @@ export default {
       }
     }, function(response){
       context.$progress.failed()
-      // 响应错误回调
+
     })
   },
 
@@ -89,7 +89,6 @@ export default {
     context.$http.post(API_ROOT+"mobile/member/setDefaultAddress.do",addressArr).then(function(response){
       context.$progress.finish()
       var res = response.json()
-      console.log(JSON.stringify(this.addressList))
       if(res.status == "ok") {
         var len = this.addressList.length
         for(var i =0;i<len;i++){
@@ -102,7 +101,7 @@ export default {
       }
     }, function(response){
       context.$progress.failed()
-      // 响应错误回调
+
     })
   },
 
@@ -134,7 +133,7 @@ export default {
       }
     }, function(response){
       context.$progress.failed()
-      // 响应错误回调
+
     })
   },
 
@@ -156,7 +155,7 @@ export default {
       }
     }, function(response){
       context.$progress.failed()
-      // 响应错误回调
+
     })
   },
 
@@ -180,7 +179,7 @@ export default {
       }
     }, function(response){
       context.$progress.failed()
-      // 响应错误回调
+
     })
   },
 
@@ -196,14 +195,14 @@ export default {
         context.$set('toasttext','保存成功');
         context.$set('toastshow',true);
         setTimeout(function(){
-          context.$router.go('/user/paySettlementBuy')
+          location.reload()
         },1000)
       } else {
         alert(res.message);
       }
     }, function(response){
       context.$progress.failed()
-      // 响应错误回调
+
     })
   },
 
@@ -215,13 +214,12 @@ export default {
       var res = response.json()
       if(res.status == "ok") {
         this.lists = res.datas
-        console.log(JSON.stringify(res.datas.id))
       } else {
         alert(res.message);
       }
     }, function(response){
       context.$progress.failed()
-      // 响应错误回调
+
     })
   },
 
@@ -244,7 +242,7 @@ export default {
       }
     }, function(response){
       context.$progress.failed()
-      // 响应错误回调
+
     })
   },
 
@@ -263,7 +261,7 @@ export default {
       }
     }, function(response){
       context.$progress.failed()
-      // 响应错误回调
+
     })
   },
 
@@ -277,7 +275,6 @@ export default {
         this.$progress.finish()
         this.present = res.datas
         //this.fourNum = res.datas.cardNo.substr(res.datas.cardNo.length-4)
-        console.log(JSON.stringify(res.datas))
         if(this.present.length==0){
           this.dataHide = true
           this.listHide = false
@@ -290,7 +287,7 @@ export default {
       }
     }, function(response){
       context.$progress.failed()
-      // 响应错误回调
+
     })
   },
 
@@ -326,7 +323,7 @@ export default {
       }
     }, function(response){
       context.$progress.failed()
-      // 响应错误回调
+
     })
   },
 
@@ -344,7 +341,7 @@ export default {
       }
     }, function(response){
       context.$progress.failed()
-      // 响应错误回调
+
     })
   },
 
@@ -380,7 +377,7 @@ export default {
       }
     }, function(response){
       context.$progress.failed()
-      // 响应错误回调
+
     })
   },
 
@@ -391,7 +388,6 @@ export default {
       context.$progress.finish()
       var res = response.json()
       if(res.status == "ok") {
-        console.log(JSON.stringify(res.datas))
         this.$set('toasttext','申请成功')
         this.$set('toastshow',true)
         setTimeout(function () {
@@ -403,7 +399,7 @@ export default {
       }
     }, function(response){
       context.$progress.failed()
-      // 响应错误回调
+
     })
   },
 
@@ -414,14 +410,13 @@ export default {
       context.$progress.finish()
       var res = response.json()
       if(res.status == "ok") {
-        console.log(JSON.stringify(res.datas))
         this.list = res.datas
       } else {
         alert(res.message);
       }
     }, function(response){
       context.$progress.failed()
-      // 响应错误回调
+
     })
   },
 
@@ -438,7 +433,7 @@ export default {
       }
     }, function(response){
       context.$progress.failed()
-      // 响应错误回调
+
     })
   },
 
@@ -451,13 +446,12 @@ export default {
       if(res.status == "ok") {
         this.shopInfor = res.datas.goods
         this.products = res.datas.products
-        console.log(JSON.stringify(res.datas.products))
       } else {
         alert(res.message);
       }
     }, function(response){
       context.$progress.failed()
-      // 响应错误回调
+
     })
   },
 
@@ -474,7 +468,7 @@ export default {
       }
     }, function(response){
       context.$progress.failed()
-      // 响应错误回调
+
     })
   },
 
@@ -484,8 +478,6 @@ export default {
     context.$http.post(API_ROOT+"mobile/member/addCart.do",addCartArr).then(function(response){
       context.$progress.finish()
       var res = response.json()
-      console.log(JSON.stringify(addCartArr))
-      console.log(JSON.stringify(res.datas))
       if(res.status == "ok") {
         context.$route.router.go('/user/shopCart')
       } else {
@@ -493,7 +485,7 @@ export default {
       }
     }, function(response){
       context.$progress.failed()
-      // 响应错误回调
+
     })
   },
 
@@ -504,7 +496,6 @@ export default {
       context.$progress.finish()
       var res = response.json()
       if(res.status == "ok") {
-        console.log(JSON.stringify(res.datas))
         this.orders = res.datas
         if(this.orders.length!=0){
           this.dataHide = false
@@ -518,7 +509,7 @@ export default {
       }
     }, function(response){
       context.$progress.failed()
-      // 响应错误回调
+
     })
   },
 
@@ -532,7 +523,7 @@ export default {
         alert(res.message);
       }
     }, function(response){
-      // 响应错误回调
+
     })
   },
 
@@ -543,14 +534,13 @@ export default {
       context.$progress.finish()
       var res = response.json()
       if(res.status == "ok") {
-        console.log(JSON.stringify(res.datas))
         this.list = res.datas
       } else {
         alert(res.message);
       }
     }, function(response){
       context.$progress.failed()
-      // 响应错误回调
+
     })
   },
 
@@ -560,15 +550,16 @@ export default {
     context.$http.post(API_ROOT+"mobile/member/getConfirmProductsGoBuy.do",cartBuyArr).then(function(response){
       context.$progress.finish()
       var res = response.json()
+
       if(res.status == "ok") {
-        console.log(JSON.stringify(res.datas))
         this.list = res.datas
+        console.log(JSON.stringify(res.datas))
       } else {
         alert(res.message);
       }
     }, function(response){
       context.$progress.failed()
-      // 响应错误回调
+
     })
   },
 
@@ -580,14 +571,13 @@ export default {
       context.$progress.finish()
       var res = response.json()
       if(res.status == "ok") {
-        console.log(JSON.stringify(res.datas))
         this.addressDeList = res.datas
       } else {
         alert(res.message);
       }
     }, function(response){
       context.$progress.failed()
-      // 响应错误回调
+
     })
   },
 
@@ -605,19 +595,17 @@ export default {
       }
     }, function(response){
       context.$progress.failed()
-      // 响应错误回调
+
     })
   },
 
   //购物车列表删除
   sureDeleteList(context,deleteList) {
     context.$progress.start()
-    console.log(deleteList)
     context.$http.post(API_ROOT+"mobile/member/deleteCart.do",deleteList).then(function(response){
       context.$progress.finish()
       var res = response.json()
       if(res.status == "ok") {
-        console.log(JSON.stringify(res.datas))
         for(var i=0;i<this.orders.length;i++){
           this.orders[i].list.$remove(this.shop)
           if(this.orders.length!=0){
@@ -645,7 +633,7 @@ export default {
       }
     }, function(response){
       context.$progress.failed()
-      // 响应错误回调
+
     })
   },
 
@@ -667,7 +655,7 @@ export default {
         alert(res.message);
       }
     }, function (response) {
-      // 响应错误回调
+
     })
   },
 
@@ -704,7 +692,7 @@ export default {
       }
     }, function(response){
       context.$progress.failed()
-      // 响应错误回调
+
     })
   },
 
@@ -724,7 +712,7 @@ export default {
       }
     }, function(response){
       context.$progress.failed()
-      // 响应错误回调
+
     })
   },
 
@@ -742,7 +730,7 @@ export default {
       }
     }, function(response){
       context.$progress.failed()
-      // 响应错误回调
+
     })
   },
 
@@ -776,7 +764,7 @@ export default {
         alert(res.message);
       }
     }, function(response){
-      // 响应错误回调
+
     })
   },
 
@@ -795,7 +783,7 @@ export default {
       }
     }, function(response){
       context.$progress.failed()
-      // 响应错误回调
+
     })
   },
 
@@ -817,7 +805,7 @@ export default {
       }
     }, function(response){
       context.$progress.failed()
-      // 响应错误回调
+
     })
   },
 
@@ -829,16 +817,14 @@ export default {
       var res = response.json()
       if(res.status == "ok") {
         context.$progress.finish()
-        console.log(JSON.stringify(res.datas))
         context.list = res.datas
         context.address = context.list.province+' '+context.list.city+' '+context.list.area
-        console.log(context.address)
       } else {
         alert(res.message);
       }
     }, function(response){
       context.$progress.failed()
-      // 响应错误回调
+
     })
   },
 
@@ -856,7 +842,7 @@ export default {
       }
     }, function(response){
       context.$progress.failed()
-      // 响应错误回调
+
     })
   },
 
@@ -873,7 +859,7 @@ export default {
       }
     }, function(response){
       context.$progress.failed()
-      // 响应错误回调
+
     })
   },
 
@@ -890,7 +876,7 @@ export default {
       }
     }, function(response){
       context.$progress.failed()
-      // 响应错误回调
+
     })
   },
 
@@ -902,7 +888,6 @@ export default {
       var res = response.json()
       if(res.status == "ok") {
         context.xxId = res.datas
-        console.log(btn)
         var count = 60;
         var resend = setInterval(function(){
           count--;
@@ -928,7 +913,7 @@ export default {
       }
     }, function(response){
       context.$progress.failed()
-      // 响应错误回调
+
     })
   },
 
@@ -945,7 +930,7 @@ export default {
       }
     }, function(response){
       context.$progress.failed()
-      // 响应错误回调
+
     })
   },
 
@@ -963,7 +948,7 @@ export default {
       }
     }, function(response){
       context.$progress.failed()
-      // 响应错误回调
+
     })
   },
 
@@ -975,7 +960,6 @@ export default {
       var res = response.json()
       if(res.status == "ok") {
         context.xxId = res.datas
-        console.log(btn)
         var count = 60;
         var resend = setInterval(function(){
           count--;
@@ -1001,7 +985,7 @@ export default {
       }
     }, function(response){
       context.$progress.failed()
-      // 响应错误回调
+
     })
   },
 
@@ -1019,7 +1003,7 @@ export default {
       }
     }, function(response){
       context.$progress.failed()
-      // 响应错误回调
+
     })
   },
 
@@ -1031,13 +1015,12 @@ export default {
       var res = response.json()
       if(res.status == "ok") {
         context.payList = res.datas
-        console.log(JSON.stringify(res.datas))
       } else {
         alert(res.message);
       }
     }, function(response){
       context.$progress.failed()
-      // 响应错误回调
+
     })
   },
 
@@ -1049,13 +1032,12 @@ export default {
       var res = response.json()
       if(res.status == "ok") {
         context.list = res.datas
-        console.log(JSON.stringify(res.datas))
       } else {
         alert(res.message);
       }
     }, function(response){
       context.$progress.failed()
-      // 响应错误回调
+
     })
   },
 
@@ -1072,17 +1054,18 @@ export default {
       }
     }, function(response){
       context.$progress.failed()
-      // 响应错误回调
+
     })
   },
 
   //返现明细
-  detailOutcome(context) {
+  detailOutcome(context,dateArr) {
     context.$progress.start()
-    context.$http.post(API_ROOT+"mobile/member/cashbacksub.do").then(function(response){
+    context.$http.post(API_ROOT+"mobile/member/cashbacksub.do",dateArr).then(function(response){
       context.$progress.finish()
       var res = response.json()
       if(res.status == "ok") {
+        console.log(JSON.stringify(res.datas.datas))
         if(res.datas!=null){
           context.list = res.datas.datas
         }
@@ -1091,7 +1074,7 @@ export default {
       }
     }, function(response){
       context.$progress.failed()
-      // 响应错误回调
+
     })
   },
 
@@ -1109,7 +1092,7 @@ export default {
       }
     }, function(response){
       context.$progress.failed()
-      // 响应错误回调
+
     })
   },
 
@@ -1120,14 +1103,15 @@ export default {
       context.$progress.finish()
       var res = response.json()
       if(res.status == "ok") {
-        console.log(JSON.stringify(res.datas.datas))
-        context.list = res.datas.datas
+        if(res.datas!=null){
+          context.list = res.datas.datas
+        }
       } else {
         alert(res.message);
       }
     }, function(response){
       context.$progress.failed()
-      // 响应错误回调
+
     })
   },
 
@@ -1139,13 +1123,12 @@ export default {
       var res = response.json()
       if(res.status == "ok") {
         context.list = res.datas.datas
-        console.log(JSON.stringify(res.datas.datas))
       } else {
         alert(res.message);
       }
     }, function(response){
       context.$progress.failed()
-      // 响应错误回调
+
     })
   },
 
@@ -1156,7 +1139,6 @@ export default {
       var res = response.json()
       context.$progress.finish()
       if(res.status == "ok") {
-        console.log(JSON.stringify(res.datas))
         context.$set('toasttext','申请成功')
         context.$set('toastshow',true)
         setTimeout(function () {
@@ -1168,7 +1150,7 @@ export default {
       }
     }, function(response){
       context.$progress.failed()
-      // 响应错误回调
+
     })
   },
 
@@ -1204,7 +1186,7 @@ export default {
       }
     }, function(response){
       context.$progress.failed()
-      // 响应错误回调
+
     })
   },
 
@@ -1215,14 +1197,13 @@ export default {
       context.$progress.finish()
       var res = response.json()
       if(res.status == "ok") {
-        console.log(JSON.stringify(res.datas))
         context.optionList = res.datas
       } else {
         alert(res.message);
       }
     }, function(response){
       context.$progress.failed()
-      // 响应错误回调
+
     })
   },
 
@@ -1235,8 +1216,8 @@ export default {
       context.$progress.finish()
       var res = response.json()
       if(res.status == "ok") {
-        console.log(JSON.stringify(res.datas.datas))
         context.shoplist = res.datas.datas
+        //console.log(JSON.stringify(res.datas.datas))
         for(var i =0;i<context.shoplist.length;i++){
           var len = Math.round(context.shoplist[i].priceScore)
           for(var j = 0;j<len;j++){
@@ -1253,7 +1234,7 @@ export default {
       }
     }, function(response){
       context.$progress.failed()
-      // 响应错误回调
+
     })
   },
 
@@ -1277,7 +1258,7 @@ export default {
       }
     }, function(response){
       context.$progress.failed()
-      // 响应错误回调
+
     })
   },
 
@@ -1295,7 +1276,7 @@ export default {
       }
     }, function(response){
       context.$progress.failed()
-      // 响应错误回调
+
     })
   },
 
@@ -1320,7 +1301,7 @@ export default {
       }
     }, function(response){
       context.$progress.failed()
-      // 响应错误回调
+
     })
   },
 
@@ -1344,7 +1325,27 @@ export default {
       }
     }, function(response){
       context.$progress.failed()
-      // 响应错误回调
+
+    })
+  },
+
+  deleteOrderBtn(context,shopArr,orderStatus) {
+    context.$progress.start()
+    context.$http.post(API_ROOT+"mobile/member/cancelOrder.do",shopArr).then(function(response){
+      context.$progress.finish()
+      var res = response.json()
+      if(res.status == "ok") {
+        context.$set('toasttext','删除成功')
+        context.$set('toastshow',true)
+        setTimeout(function(){
+          context.list.$remove(orderStatus)
+        },20)
+      } else {
+        alert(res.message);
+      }
+    }, function(response){
+      context.$progress.failed()
+
     })
   },
 
@@ -1355,17 +1356,39 @@ export default {
       context.$progress.finish()
       var res = response.json()
       if(res.status == "ok") {
-       // context.list.$remove(orderStatus)
         context.$set('toasttext','取消成功')
+        context.$set('toastshow',true)
+        setTimeout(function(){
+          location.reload()
+        },20)
+      } else {
+        alert(res.message);
+      }
+    }, function(response){
+      context.$progress.failed()
+
+    })
+  },
+
+  //确认收货
+  sureOrder(context,shopArr) {
+    context.$progress.start()
+    context.$http.post(API_ROOT+"mobile/member/auditOrder.do",shopArr).then(function(response){
+      context.$progress.finish()
+      var res = response.json()
+      if(res.status == "ok") {
+        // context.list.$remove(orderStatus)
+        context.$set('toasttext','已确认')
         context.$set('toastshow',true)
       } else {
         alert(res.message);
       }
     }, function(response){
       context.$progress.failed()
-      // 响应错误回调
+
     })
   },
+
 
   //删除订单
   deleteOrder(context,shopArr,orderStatus) {
@@ -1380,7 +1403,7 @@ export default {
       }
     }, function(response){
       context.$progress.failed()
-      // 响应错误回调
+
     })
   }
 

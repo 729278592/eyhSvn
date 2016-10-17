@@ -135,6 +135,7 @@
               </li>
           </ul>
          </div>
+     </div>
        <div class="foot">
          <ul class="tabMenu clearfix">
              <li class="active">
@@ -166,7 +167,7 @@
 </template>
 
 <style>
-  @import '../../../static/plugins/swiper/dist/css/swiper.min.css'
+  @import '../../../static/plugins/swiper/dist/css/swiper.min.css';
 </style>
 <style>
   .otherCon.style{padding:0;}

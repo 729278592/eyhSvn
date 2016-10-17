@@ -148,10 +148,10 @@
         }
       },
       ready () {
-        document.title = '个人注册'
-        userService.getRegionByPid(this,0,'p')
-        this.refereesMobile = this.$route.query.mobile
-        console.log(this.refereesMobile)
+        document.title = '个人注册';
+        userService.getRegionByPid(this,0,'p');
+        this.refereesMobile = this.$route.query.mobile;
+        console.log(this.refereesMobile);
         console.log(JSON.stringify(this.provinceList))
       },
       methods: {
@@ -162,28 +162,28 @@
         },
 
        getCodeBtn:function(e){
-         var reg = /^(1[38][0-9]|14[57]|15[012356789]|17[0678])[0-9]{8}$/
+         var reg = /^(1[38][0-9]|14[57]|15[012356789]|17[0678])[0-9]{8}$/;
           if(!reg.test(this.mobile)) {
-            this.showErrMsg("请输入有效的手机号")
+            this.showErrMsg("请输入有效的手机号");
             return
           }
-           var btn = e.currentTarget
-           var mobile = this.mobile
-           var sendMemRegArr = {mobile:mobile}
+           var btn = e.currentTarget;
+           var mobile = this.mobile;
+           var sendMemRegArr = {mobile:mobile};
            userService.sendMemRegisterAuthCode(this,sendMemRegArr,btn)
        },
 
-     provinceChange: function(){
-        this.cityList = []
-        this.areaList = []
+      provinceChange: function(){
+        this.cityList = [];
+        this.areaList = [];
         if(this.province != '-1') {
           userService.getRegionByPid(this,this.province,'c')
         }
-        this.city = -1
+        this.city = -1;
         this.area=-1
        },
        cityChange: function(){
-       this.areaList = []
+       this.areaList = [];
         if(this.city != '-1') {
            userService.getRegionByPid(this,this.city,'a')
         }
@@ -191,48 +191,47 @@
        },
 
        save: function(){
-
-         var mobileReg = /^(1[38][0-9]|14[57]|15[012356789]|17[0678])[0-9]{8}$/
+         var mobileReg = /^(1[38][0-9]|14[57]|15[012356789]|17[0678])[0-9]{8}$/;
          if(!mobileReg.test(this.mobile)){
-           this.showErrMsg("无效的手机号")
+           this.showErrMsg("无效的手机号");
            return
          }
 
          if(!this.isPostCode){
-           this.showErrMsg("验证码不能为空")
+           this.showErrMsg("验证码不能为空");
            return
          }
 
          if(!this.password){
-           this.showErrMsg("请输入密码")
+           this.showErrMsg("请输入密码");
            return
          }
 
          if(!this.aginPassword){
-           this.showErrMsg("请输入确认密码")
+           this.showErrMsg("请输入确认密码");
            return
          }
 
          if(this.password != this.aginPassword) {
-           this.showErrMsg("密码不一致")
+           this.showErrMsg("密码不一致");
            return
          }
 
          if(this.refereesMobile && !mobileReg.test(this.refereesMobile)){
-           this.showErrMsg("推荐人手机号格式不正确")
+           this.showErrMsg("推荐人手机号格式不正确");
            return
          }
 
           if(this.province==-1){
-            this.showErrMsg("请选择省")
+            this.showErrMsg("请选择省");
             return
           }
           if(this.city==-1){
-            this.showErrMsg("请选择市")
+            this.showErrMsg("请选择市");
             return
           }
           if(this.area==-1){
-            this.showErrMsg("请选择县")
+            this.showErrMsg("请选择县");
             return
           }
 
@@ -245,11 +244,8 @@
            city:this.city,
            area:this.area,
            refereesMobile:this.refereesMobile
-         }
-
+         };
          userService.registerUser(this,registerUserArr)
-
-
          }
       }
     }

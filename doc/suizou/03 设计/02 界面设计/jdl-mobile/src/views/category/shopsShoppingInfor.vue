@@ -32,7 +32,7 @@
       </ul>
     </div>
   </div>
-<div class="bd absolute pt">
+<div class="bd absolute pd48">
   <div>
     <img :src="this.imageUrl+shopInfor.images" alt="" class="w100"/>
   </div>
@@ -196,6 +196,7 @@
 
 <style>
   .bd.absolute{bottom:auto}
+  .foot{height: 49px;line-height: 49px;}
 </style>
 
 
@@ -203,7 +204,7 @@
    import Spinner from '../components/spinner.vue'
    import Bar from '../components/headBar.vue'
    import userService from '../../api/userService'
-   import authService from '../../api/authService'
+   import authService  from '../../api/authService'
     import Toast from '../components/toast.vue'
    export default {
       components: {
@@ -240,13 +241,12 @@
         }
       },
       ready () {
-        document.title = '商铺商品详情'
-        var shopsShoppingInforArr = {goodsId:this.$route.params.goodsId}
-        this.idS = localStorage.getItem('shopingId')
-        console.log(shopsShoppingInforArr)
-        console.log(this.idS)
-        this.imageUrl = userService.imgUrl
-        userService.shopsShoppingInfor(this,shopsShoppingInforArr)
+        document.title = '商铺商品详情';
+        var shopsShoppingInforArr = {goodsId:this.$route.params.goodsId};
+        this.idS = localStorage.getItem('shopingId');
+
+        this.imageUrl = userService.imgUrl;
+        userService.shopsShoppingInfor(this,shopsShoppingInforArr);
         if (authService.isLogin()) {
           this.isLogin = true
         }else{

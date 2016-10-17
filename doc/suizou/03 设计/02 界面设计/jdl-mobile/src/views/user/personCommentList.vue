@@ -2,43 +2,42 @@
   <Bar></Bar>
   <div class="bd absolute pt">
     <ul class="entryList mt0 style">
-        <li v-for="commentList in list">
-            <div class="weui_cells mt0 bt0">
-                <div class="weui_cell style3">
-                    <div class="weui_cell_bd weui_cell_primary">
-                        <p>{{commentList.mchName}}</p>
-                    </div>
-                    <div class="weui_cell_ft">{{commentList.createTime}}</div>
-                </div>
+      <li v-for="commentList in list">
+        <div class="weui_cells mt0 bt0">
+          <div class="weui_cell style3">
+            <div class="weui_cell_bd weui_cell_primary">
+              <p>{{commentList.mchName}}</p>
             </div>
-            <div>
-                <div class="couponImg style">
-                  <img v-if="commentList.coverPhoto ==null" :src="commentList.coverPhoto" style="width:100%;"/>
-                  <img v-else :src="this.imageUrl+commentList.coverPhoto" src="../../../static/images/shopsImg.jpg" style="width:100%;"/>
-                </div>
+            <div class="weui_cell_ft">{{commentList.createTime}}</div>
+          </div>
+        </div>
+        <div>
+          <div class="couponImg style">
+            <img v-if="commentList.coverPhoto!=null" :src="commentList.coverPhoto" style="width:100%;"/>
+            <img v-else src="../../../static/images/shopsImg.jpg" style="width:100%;"/>
+          </div>
+        </div>
+        <div class="inforList">
+          <p class="clearfix">
+            <span class="left shopsName">{{commentList.goodsName}}</span>
+          </p>
+          <p>
+            <span>{{commentList.specName}}</span>
+          </p>
+          <p class="clearfix">
+            <span class="left shopsName" v-if="commentList.evaLevel==0">好评</span>
+            <span class="left shopsName" v-if="commentList.evaLevel==1">中评</span>
+            <span class="left shopsName" v-if="commentList.evaLevel==2">差评</span>
+          </p>
+        </div>
 
-
-                <div class="inforList">
-                    <p class="clearfix">
-                        <span class="left shopsName">{{commentList.goodsName}}</span>
-                    </p>
-                    <p>
-                        <span>{{commentList.specName}}</span>
-                    </p>
-                    <p class="clearfix">
-                        <span class="left shopsName" v-if="commentList.evaLevel==0">好评</span>
-                        <span class="left shopsName" v-if="commentList.evaLevel==1">中评</span>
-                        <span class="left shopsName" v-if="commentList.evaLevel==2">差评</span>
-                    </p>
-                </div>
-            </div>
-            <div v-if="commentList.evaluation!=null" class="shopsInfor style">
-                {{commentList.evaluation}}
-            </div>
-            <div v-else class="shopsInfor style">
-                无评价内容
-            </div>
-        </li>
+        <div v-if="commentList.evaluation!=null" class="shopsInfor style">
+          {{commentList.evaluation}}
+        </div>
+        <div v-else class="shopsInfor style">
+          无评价内容
+        </div>
+      </li>
     </ul>
 </div>
 </template>
