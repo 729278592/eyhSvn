@@ -44,7 +44,7 @@
                           <div class="weui_cell_bd weui_cell_primary">
                               <p>共{{shop.totalNum}}件商品</p>
                           </div>
-                          <div class="weui_cell_ft style">总计 : ￥{{totalPrice}} (运费￥{{shop.freight}})</div>
+                          <div class="weui_cell_ft style">总计 : ￥{{shop.amount}} (运费￥{{shop.freight}})</div>
                       </div>
                   </div>
 

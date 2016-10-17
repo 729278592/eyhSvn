@@ -59,11 +59,7 @@ router.map({
             },
             auth: true
           },
-          '/shoppingInfor': {
-            component: (resolve) => {
-              require(['./views/user/shoppingInfor.vue'], resolve)
-            }
-          },
+        
           '/myOrder': {
             component: (resolve) => {
               require(['./views/user/myOrder.vue'], resolve)
@@ -479,7 +475,7 @@ router.map({
           require(['./views/auth/personRegister.vue'], resolve)
         }
       },
-     
+
       '/register': {
         component: (resolve) => {
           require(['./views/auth/register.vue'], resolve)

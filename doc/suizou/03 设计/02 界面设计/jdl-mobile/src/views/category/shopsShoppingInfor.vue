@@ -1,5 +1,37 @@
 <template>
-  <Bar></Bar>
+  <div class="hd">
+    家得利
+    <div class="right nav_block">
+      <a v-link="'/user/shopCart'" class="shop_cat"></a>
+      <a class="dot_block" @click.stop="onShow">
+        <i class="fa fa-user"></i>
+      </a>
+      <ul class="nav_link" :class="{'hide':hide}" v-if="isLogin==false">
+        <li>
+          <a v-link="'/'">
+            首页
+          </a>
+        </li>
+        <li>
+          <a v-link="'/auth/personLogin'">
+            登录
+          </a>
+        </li>
+      </ul>
+      <ul class="nav_link" :class="{'hide':hide}" v-if="isLogin==true">
+        <li>
+          <a v-link="'/user/personCenter'">
+            个人中心
+          </a>
+        </li>
+        <li>
+          <a @click="loginOut()">
+            退出
+          </a>
+        </li>
+      </ul>
+    </div>
+  </div>
 <div class="bd absolute pt">
   <div>
     <img :src="this.imageUrl+shopInfor.images" alt="" class="w100"/>
@@ -203,7 +235,8 @@
           indexNmu:"",
           toastshow:false,
           toasttext:"",
-          idS :""
+          idS :"",
+          isLogin:false
         }
       },
       ready () {
@@ -214,10 +247,18 @@
         console.log(this.idS)
         this.imageUrl = userService.imgUrl
         userService.shopsShoppingInfor(this,shopsShoppingInforArr)
+        if (authService.isLogin()) {
+          this.isLogin = true
+        }else{
+          this.isLogin = false
+        }
       },
       methods: {
         onShow: function () {
           this.hide = !this.hide
+        },
+        loginOut:function(){
+          userService.loginOut(this)
         },
         showModal :function(){
           this.addClassFade = true

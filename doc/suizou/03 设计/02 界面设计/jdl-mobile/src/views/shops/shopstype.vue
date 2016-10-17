@@ -50,6 +50,7 @@
           </p>
       </div>
       <div class="weui_cell_ft"></div>
+   </a>
     <a class="weui_cell" v-link="'/shops/shoppingStyle'" v-for="shopping in list.shoppingType">
         <div class="weui_cell_bd weui_cell_primary">
             <p>

@@ -18,7 +18,10 @@ export default {
       var res = response.json()
       if (res.status == "ok") {
         context.lists = res.datas
-        console.log(JSON.stringify(res.datas))
+        var len = Math.round(context.lists.grade)
+        for(var j = 0;j<len;j++){
+          context.item[j].starActive = true
+        }
       } else {
         alert(res.message);
       }

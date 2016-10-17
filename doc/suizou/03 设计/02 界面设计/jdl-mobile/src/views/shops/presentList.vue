@@ -21,6 +21,7 @@
            暂无数据
        </p>
      </div>
+  </div>
 </template>
 <script>
   import Bar from '../components/shopHead.vue'

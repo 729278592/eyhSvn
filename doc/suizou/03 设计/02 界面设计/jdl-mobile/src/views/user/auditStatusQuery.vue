@@ -50,8 +50,8 @@
 
       </form>
     </validator>
-    <Toast :toastshow.sync="toastshow" :toasttext="toasttext"></Toast>
 </div>
+  <Toast :toastshow.sync="toastshow" :toasttext="toasttext"></Toast>
 </template>
 <script>
   import Toast from '../components/toast.vue'
