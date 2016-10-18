@@ -36,17 +36,29 @@
     <div class="mask-bg" :class="{'hide':this.maskHide}" v-if="showFade" transition="fade" @click="maskClick()"></div>
     <section :class="{'tabSX':this.tabHide}">
         <ul class="flexbox">
-            <li :class="{'active':this.sortActive}" @click="selectSort()">
+            <li class="hide" :class="{'active':this.sortActive}" @click="bigSort()">
                 <a >
                     <span>销量</span>
                     <i class="fa fa-caret-up"></i>
                 </a>
             </li>
-            <li :class="{'active':this.addressActive}" @click="selectAddress()">
+            <li class="hide" :class="{'smallActive':this.sortHide}" @click="smallSort()">
+              <a >
+                <span>销量</span>
+                <i class="fa fa-caret-down"></i>
+              </a>
+            </li>
+            <li class="hide" :class="{'comSmallActive':this.addressActive}" @click="bigSorta()">
                 <a >
                     <span>评价</span>
                     <i class="fa fa-caret-up"></i>
                 </a>
+            </li>
+            <li class="hide" :class="{'comActive':this.smallAddressActive}" @click="smallSorta()">
+              <a >
+                <span>评价</span>
+                <i class="fa fa-caret-down"></i>
+              </a>
             </li>
             <li :class="{'active':this.mapActive}" @click="selectMap()">
                 <a >
@@ -154,6 +166,9 @@
   .cont-box,.cont{position:absolute;;left:0;right:0;bottom:0;z-index:-1;}
   .cont-box{top:45px;}
   .cont{top:0;}
+  .flexbox li.hide{display: none;}
+  .flexbox li.active a{color: #565c67!important;}
+  .flexbox li.active,.flexbox li.smallActive,.flexbox li.comSmallActive,.flexbox li.comActive{display: block;}
 </style>
 
 <script>
@@ -171,8 +186,10 @@
           hide:true,
           collection:true,
           cancelCollection:false,
-          sortActive:false,
-          addressActive:false,
+          sortActive:true,
+          sortHide:false,
+          addressActive:true,
+          smallAddressActive:false,
           mapActive:false,
           list:[],
           type:[],
@@ -289,27 +306,19 @@
             var shopArr = {
              type:1,
              id:shopsList.id
-           }
-           console.log(shopArr)
+           };
+
             userService.collectionShopping(this,shopArr)
           }else{
            this.$router.go('/auth/personLogin')
          }
        },
-       selectSort:function(){
 
-
-       },
-       selectAddress:function(){
-
-
-       },
        selectMap:function(){
          this.$set('showFade',true)
          this.$set('tabHide',true)
          this.$set('maskHide',false)
-         this.sortActive=false
-         this.addressActive=false
+
          this.mapActive=true
          this.$http.get('../../static/data/extensionShopping.json').then(function(response){
             this.type = response.data
@@ -321,10 +330,36 @@
           this.$set('showFade',false)
           this.$set('tabHide',false)
           this.$set('maskHide',true)
-          this.sortActive=false
-          this.addressActive=false
           this.mapActive=false
-       }
+       },
+        bigSort:function(){
+          this.sortActive=false;
+          this.sortHide=true;
+          var sortArr = {sort:0};
+          console.log(JSON.stringify(sortArr));
+          userService.sort(this,sortArr)
+        },
+        bigSorta:function(){
+          this.addressActive=false;
+          this.smallAddressActive=true;
+          var sortArr = {sort:2};
+          console.log(JSON.stringify(sortArr));
+          userService.sort(this,sortArr)
+        },
+        smallSort:function(){
+          this.sortActive=true;
+          this.sortHide=false;
+          var sortArr = {sort:1};
+          console.log(JSON.stringify(sortArr));
+          userService.sort(this,sortArr)
+        },
+        smallSorta:function(){
+          this.addressActive=true;
+          this.smallAddressActive=false;
+          var sortArr = {sort:3};
+          console.log(JSON.stringify(sortArr));
+          userService.sort(this,sortArr)
+        }
       }
     }
 </script>

@@ -1,5 +1,8 @@
 <template>
   <div class="hd">
+    <a class="return" @click="returnPage()">
+      <i class="fa fa-angle-left"></i>
+    </a>
     家得利
     <div class="right nav_block">
       <a v-link="'/user/shopCart'" class="shop_cat"></a>
@@ -194,7 +197,7 @@
 <Toast :toastshow.sync="toastshow" :toasttext="toasttext"></Toast>
 </template>
 
-<style>
+<style scoped>
   .bd.absolute{bottom:auto}
   .foot{height: 49px;line-height: 49px;}
 </style>
@@ -254,6 +257,9 @@
         }
       },
       methods: {
+        returnPage:function(){
+          window.history.go(-1)
+        },
         onShow: function () {
           this.hide = !this.hide
         },

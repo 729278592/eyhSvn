@@ -14,7 +14,7 @@
            </ul>
        </div>
      </div>
-    <div class="bd absolute pt">
+     <div class="bd absolute pt">
       <ul class="entryList mt0">
         <li>
             <div>
@@ -136,7 +136,9 @@
          </li>
       </ul>
   </div>
-
+    <div class="weui_btn_area fixed clearfix" style="right: 1rem;">
+      <a class="btn_forget right" v-link="'/shops/modifyPassword'">忘记密码</a>
+    </div>
 </template>
 
 <script>

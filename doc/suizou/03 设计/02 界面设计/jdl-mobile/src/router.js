@@ -59,7 +59,7 @@ router.map({
             },
             auth: true
           },
-        
+
           '/myOrder': {
             component: (resolve) => {
               require(['./views/user/myOrder.vue'], resolve)
@@ -329,6 +329,16 @@ router.map({
             component: (resolve) => {
               require(['./views/user/userHelp.vue'], resolve)
             }
+          },
+          '/searchShopping': {
+            component: (resolve) => {
+              require(['./views/user/searchShopping.vue'], resolve)
+            }
+          },
+          '/nowScore': {
+            component: (resolve) => {
+              require(['./views/user/nowScore.vue'], resolve)
+            }
           }
         }
       },
@@ -437,12 +447,8 @@ router.map({
         },
         mchAuth:true
       },
-      '/contactShopsShopping': {
-        component: (resolve) => {
-          require(['./views/shops/contactShopsShopping.vue'], resolve)
-        }
-      },
-     
+
+
       '/shopstype': {
         component: (resolve) => {
           require(['./views/shops/shopstype.vue'], resolve)
@@ -451,6 +457,11 @@ router.map({
       '/shoppingStyle': {
         component: (resolve) => {
           require(['./views/shops/shoppingStyle.vue'], resolve)
+        }
+      },
+      '/modifyPassword': {
+        component: (resolve) => {
+          require(['./views/shops/modifyPassword.vue'], resolve)
         }
       }
     }
@@ -485,6 +496,11 @@ router.map({
       '/forget': {
         component: (resolve) => {
           require(['./views/auth/forget.vue'], resolve)
+        }
+      },
+      '/mchForget': {
+        component: (resolve) => {
+          require(['./views/auth/mchForget.vue'], resolve)
         }
       }
     }

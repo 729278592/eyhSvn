@@ -65,7 +65,7 @@
                       <span class="btn right" v-if="8==shop.status">退款中</span>
                       <span class="btn right" v-if="9==shop.status">退款成功</span>
                       <span class="btn right" v-if="10==shop.status">已完成</span>
-                      <a class="btn right" v-if="10==shop.status" v-link="'/user/evaluate'">评价</a>
+                      <a class="btn right" v-if="10==shop.status" v-link="{ path: '/user/evaluate', query: {orderId: shop.orderId}}">评价</a>
                       <span class="btn right" v-if="11==shop.status">已完成</span>
                     <span class="btn right" v-if="11==shop.status">已评价</span>
                   </div>

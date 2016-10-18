@@ -11,12 +11,10 @@
                     </label>
                 </div>
                 <div class="weui_cell_bd weui_cell_primary">
-                    <select class="weui_select" name="select1" v-model="selected">
-                        <option selected="" value="工商银行">工商银行</option>
-                        <option value="中国银行">中国银行</option>
-                        <option value="广发银行">广发银行</option>
-                        <option value="中信银行">中信银行</option>
-                    </select>
+                  <span style="position:absolute;left:104px;line-height:44px;" v-show="agentHide">请选择代理级别</span>
+                  <select class="weui_select" v-model="bank" @change="bankChange()">
+                    <option v-for="option in optionList" value={{option.id}}>{{option.kindname}}</option>
+                  </select>
                 </div>
             </div>
 
@@ -116,12 +114,15 @@
            cityList: [],
            areaList: [],
           selectValue:"",
+          agentHide:true,
           toastshow:false,
           toasttext:"",
           selected:"",
           province:"-1",
           city:"-1",
-          area:"-1"
+          area:"-1",
+          optionList:[],
+          bank:""
         }
       },
       ready () {
@@ -129,6 +130,7 @@
         userService.getRegionByPid(this,0,'p')
         userService.getRegionByPid(this,this.province,'c')
         userService.getRegionByPid(this,this.city,'a')
+        mchService.bankChioce(this)
       },
       watch: {
           selected: function(val) {
@@ -139,7 +141,6 @@
         onShow: function () {
           this.hide = !this.hide
         },
-
 
          provinceChange: function(){
            this.cityList = []
@@ -174,6 +175,9 @@
             this.$set('toasttext','卡号不正确');
             this.$set('toastshow',true);
           },
+        bankChange:function () {
+          this.agentHide=false;
+        },
         save:function(value){
             var that = this
             var isEmpty = that.$get('isEmpty')

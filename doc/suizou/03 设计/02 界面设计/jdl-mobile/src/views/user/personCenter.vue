@@ -62,7 +62,7 @@
                   <span class="color">￥<span class="verdana">{{dataJson.yesterdayFx}}</span></span>
               </div>
           </li>
-          <li>
+          <li v-link="'/user/nowScore'">
               <div class="payInfoy">
                   <span class="spanIcon sordIcon"></span>
                   <span>当前积分</span><br/>
@@ -172,7 +172,7 @@
           </li>
       </ul>
       <div class="personCode">
-        <img v-if="dataJson.qrcode!=null" :src="this.imageUrl+dataJson.qrcode" class='couponImg1' alt=''></br>
+        <img :src="this.imageUrl+dataJson.qrcode" class='couponImg1' alt=''></br>
         个人推广二维码
       </div>
   </div>

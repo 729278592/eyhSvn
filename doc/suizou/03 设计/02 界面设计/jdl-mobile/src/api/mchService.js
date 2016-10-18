@@ -196,6 +196,7 @@ export default {
             context.item[j].starActive = true
           }
         }
+        console.log(JSON.stringify(res.datas))
       } else {
         alert(res.message);
       }
@@ -308,9 +309,151 @@ export default {
       context.$progress.failed()
 
     })
+  },
+
+  //银行选择
+  bankChioce(context,accountArr) {
+    context.$progress.start()
+    context.$http.post(API_ROOT+"mobile/getBankList.do",accountArr).then(function(response){
+      context.$progress.finish()
+      var res = response.json()
+      if(res.status == "ok") {
+        this.optionList = res.datas
+      } else {
+        alert(res.message);
+      }
+    }, function(response){
+      context.$progress.failed()
+      // 响应错误回调
+    })
+  },
+
+
+
+  //忘记密码验证码-个人
+  sendMemForgotAuthCode(context,sendMemForgotArr,btn) {
+
+    context.$http.post(API_ROOT+"mobile/sendMchForgotAuthCode.do",sendMemForgotArr).then(function(response){
+
+      var res = response.json()
+      if(res.status == "ok") {
+        context.xxId = res.datas
+        var count = 60;
+        var resend = setInterval(function(){
+          count--;
+          if (count > 0){
+            context.code = count+"秒后重新获取"
+            btn.value = context.code
+            context.disabled = true
+            context.type = true
+          }else {
+            clearInterval(resend);
+            context.disabled = false
+            context.type = false
+            context.code = "获取验证码"
+            btn.value = context.code
+          }
+        }, 1000);
+        context.disabled = true
+
+        context.$set('toasttext','验证码发送成功');
+        context.$set('toastshow',true)
+      } else {
+        alert(res.message);
+      }
+    }, function(response){
+
+    })
+  },
+
+  //忘记密码-个人
+  updatePwd(context,updatePwdArr) {
+    context.$progress.start()
+    context.$http.post(API_ROOT+"mobile/updateMchPwd.do",updatePwdArr).then(function(response){
+      context.$progress.finish()
+      var res = response.json()
+      if(res.status == "ok") {
+        context.$progress.finish()
+        context.$route.router.go('/auth/login')
+
+      } else {
+        alert(res.message);
+      }
+    }, function(response){
+      context.$progress.failed()
+
+    })
+  },
+
+  //忘记密码验证码-个人
+  sendMemForgotAuthCode(context,sendMemForgotArr,btn) {
+    context.$http.post(API_ROOT+"mobile/sendMemForgotAuthCode.do",sendMemForgotArr).then(function(response){
+      var res = response.json()
+      if(res.status == "ok") {
+        context.xxId = res.datas
+        var count = 60;
+        var resend = setInterval(function(){
+          count--;
+          if (count > 0){
+            context.code = count+"秒后重新获取"
+            btn.value = context.code
+            context.disabled = true
+            context.type = true
+          }else {
+            clearInterval(resend);
+            context.disabled = false
+            context.type = false
+            context.code = "获取验证码"
+            btn.value = context.code
+          }
+        }, 1000);
+        context.disabled = true
+
+        context.$set('toasttext','验证码发送成功');
+        context.$set('toastshow',true)
+      } else {
+        alert(res.message);
+      }
+    }, function(response){
+
+    })
+  },
+
+  //忘记密码-个人
+  updatePwd(context,updatePwdArr) {
+    context.$progress.start()
+    context.$http.post(API_ROOT+"mobile/updatePwd.do",updatePwdArr).then(function(response){
+      context.$progress.finish()
+      var res = response.json()
+      if(res.status == "ok") {
+        context.$progress.finish()
+        context.$route.router.go('/auth/personLogin')
+
+      } else {
+        alert(res.message);
+      }
+    }, function(response){
+      context.$progress.failed()
+
+    })
+  },
+
+  //商品排序
+  bigSortFun(context,updatePwdArr) {
+    context.$progress.start()
+    context.$http.post(API_ROOT+"mobile/getCategoryAllGoods.do",updatePwdArr).then(function(response){
+      context.$progress.finish()
+      var res = response.json()
+      if(res.status == "ok") {
+        context.list = res.datas.datas
+      } else {
+        alert(res.message);
+      }
+    }, function(response){
+      context.$progress.failed()
+
+    })
   }
-
-
 
 
 
