@@ -11,8 +11,8 @@
               <div class="inforList">
                 <p class="clearfix">
                   <span class="left shopsName">{{list.mchName}}</span>
-                  <button class="btnCollectioning right" v-if="list.collectionId==this.cancelCollection" @click="onCancelCollection()">取消收藏</button>
-                  <button class="btnCollectioning right" @click="onCollection(list)">收藏商铺</button>
+                  <button class="btnCollectioning right" v-if="list.collectionId!=null" @click="onCancelCollection(list)">取消收藏</button>
+                  <button class="btnCollectioning right" v-else @click="onCollection(list)">收藏商铺</button>
                 </p>
                   <div class="clearfix">
                     <ul class="starList clearfix">
@@ -153,7 +153,16 @@
           }else{
             this.$router.go('/auth/personLogin')
           }
-        }
+        },
+        onCancelCollection:function(shopsList){
+          if (authService.isLogin()) {
+            var collectArr = {id:shopsList.collectionId}
+            userService.cancelCollectionShop(this,collectArr)
+          }else{
+            this.$router.go('/auth/personLogin')
+          }
+
+        },
       }
     }
 </script>

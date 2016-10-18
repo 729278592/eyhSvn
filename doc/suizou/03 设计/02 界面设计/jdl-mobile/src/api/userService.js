@@ -447,6 +447,8 @@ export default {
       if(res.status == "ok") {
         this.shopInfor = res.datas.goods
         this.products = res.datas.products
+
+        console.log(JSON.stringify(res.datas))
       } else {
         alert(res.message);
       }
@@ -554,7 +556,7 @@ export default {
 
       if(res.status == "ok") {
         this.list = res.datas
-        console.log(JSON.stringify(res.datas))
+
       } else {
         alert(res.message);
       }
@@ -1272,6 +1274,9 @@ export default {
       if(res.status == "ok") {
         context.$set('toasttext','收藏成功')
         context.$set('toastshow',true)
+        setTimeout(function () {
+          location.reload()
+        },200)
       } else {
         alert(res.message);
       }
@@ -1321,6 +1326,35 @@ export default {
         context.shoplist.$remove(shopping)
         context.$set('toasttext','取消成功')
         context.$set('toastshow',true)
+      } else {
+        alert(res.message);
+      }
+    }, function(response){
+      context.$progress.failed()
+
+    })
+  },
+
+
+  //取消商家列表收藏
+  cancelCollectionShop(context,shopArr) {
+    context.$progress.start()
+    context.$http.post(API_ROOT+"mobile/member/cancelCollection.do",shopArr).then(function(response){
+      context.$progress.finish()
+      var res = response.json()
+      if(res.status == "ok") {
+        if(context.list){
+          if(context.list.length==1){
+            context.dataHide = true
+          }else{
+            context.dataHide = false
+          }
+        }
+        context.$set('toasttext','取消成功')
+        context.$set('toastshow',true)
+        setTimeout(function () {
+          location.reload()
+        },200)
       } else {
         alert(res.message);
       }
@@ -1517,6 +1551,32 @@ export default {
   nowScore(context,accountArr) {
     context.$progress.start()
     context.$http.post(API_ROOT+"mobile/member/getUseScoreDetails.do",accountArr).then(function(response){
+      context.$progress.finish()
+      var res = response.json()
+      if(res.status == "ok") {
+        if(res.datas != null){
+          context.list = res.datas.datas
+        }
+        if(context.list.length!=0){
+          context.dataHide = false
+        }else{
+          context.dataHide = true
+        }
+
+        console.log(JSON.stringify(res.datas.datas))
+      } else {
+        alert(res.message);
+      }
+    }, function(response){
+      context.$progress.failed()
+      // 响应错误回调
+    })
+  },
+
+  //预留积分
+  reserveScore(context,accountArr) {
+    context.$progress.start()
+    context.$http.post(API_ROOT+"mobile/member/getReservedScoreDetails.do",accountArr).then(function(response){
       context.$progress.finish()
       var res = response.json()
       if(res.status == "ok") {

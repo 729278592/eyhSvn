@@ -113,8 +113,8 @@
                         <a v-link="{ name: 'shopsInfor', params: {shops: shopsList.id}}">逛逛商铺</a>
                     </span>
                     <span>
-                        <a class="btnCollectioning"  @click="onCollection(shopsList)">收藏商铺</a>
-                        <a class="btnCollectioning" v-if="shopsList.collectionId==cancelCollection" @click="onCancelCollection(shopsList)">取消收藏</a>
+                        <a class="btnCollectioning" v-if="shopsList.collectionId!=null" @click="onCancelCollection(shopsList)">取消收藏</a>
+                        <a class="btnCollectioning" V-else @click="onCollection(shopsList)">收藏商铺</a>
                     </span>
                     <span>
                         <a>联系商铺</a>
@@ -151,6 +151,12 @@
            </a>
        </li>
    </ul>
+  </div>
+  <div class="notConTip" v-show="dataHide">
+    <img src="../../../static/images/notContent.png" alt=""/>
+    <p class="notInfor">
+      暂无数据
+    </p>
   </div>
   <Toast :toastshow.sync="toastshow" :toasttext="toasttext"></Toast>
 </template>
@@ -201,6 +207,9 @@
           toastshow:false,
           toasttext:"",
           isLogin:false,
+          dataHide:false,
+          lat:"106",
+          lng:"30",
           item:[
            {starActive:false},
            {starActive:false},
@@ -214,8 +223,8 @@
         document.title = '商铺列表'
 
         	// 初始化地图中心设置为渝中区
-            var lng = 106.527269;
-            var lat = 29.555415;
+            var lng = this.lng;
+            var lat = this.lat;
 
         	var currLng = null;
         	var currLat = null;
@@ -299,7 +308,13 @@
            userService.loginOut(this)
         },
        onCancelCollection:function(shopsList){
-         shopsList.collectionId = !shopsList.collectionId
+         if (authService.isLogin()) {
+           var collectArr = {id:shopsList.collectionId}
+           userService.cancelCollectionShop(this,collectArr)
+         }else{
+           this.$router.go('/auth/personLogin')
+         }
+
        },
        onCollection:function(shopsList){
           if (authService.isLogin()) {
@@ -307,7 +322,6 @@
              type:1,
              id:shopsList.id
            };
-
             userService.collectionShopping(this,shopArr)
           }else{
            this.$router.go('/auth/personLogin')
@@ -336,28 +350,28 @@
           this.sortActive=false;
           this.sortHide=true;
           var sortArr = {sort:0};
-          console.log(JSON.stringify(sortArr));
+
           userService.sort(this,sortArr)
         },
         bigSorta:function(){
           this.addressActive=false;
           this.smallAddressActive=true;
           var sortArr = {sort:2};
-          console.log(JSON.stringify(sortArr));
+
           userService.sort(this,sortArr)
         },
         smallSort:function(){
           this.sortActive=true;
           this.sortHide=false;
           var sortArr = {sort:1};
-          console.log(JSON.stringify(sortArr));
+
           userService.sort(this,sortArr)
         },
         smallSorta:function(){
           this.addressActive=true;
           this.smallAddressActive=false;
           var sortArr = {sort:3};
-          console.log(JSON.stringify(sortArr));
+
           userService.sort(this,sortArr)
         }
       }

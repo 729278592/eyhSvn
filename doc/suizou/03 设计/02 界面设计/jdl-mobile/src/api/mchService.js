@@ -17,7 +17,7 @@ export default {
       var res = response.json()
       if (res.status == "ok") {
         context.lists = res.datas
-        var len = Math.round(context.lists.grade)
+        var len = Math.round(context.lists.evaTotalScore/context.lists.evaOrderNum)
         for(var j = 0;j<len;j++){
           context.item[j].starActive = true
         }
@@ -148,6 +148,24 @@ export default {
     })
   },
 
+
+  //返现明细
+  detailIncome(context,arr) {
+    context.$progress.start()
+    context.$http.post(API_ROOT+"mobile/mch/getIncomeDetails.do",arr).then(function(response){
+      context.$progress.finish()
+      var res = response.json()
+      if(res.status == "ok") {
+        context.inList = res.datas.datas
+      } else {
+        alert(res.message);
+      }
+    }, function(response){
+      context.$progress.failed()
+      // 响应错误回调
+    })
+  },
+
   //商家分类
   getAllCategory(context) {
     context.$progress.start()
@@ -191,11 +209,18 @@ export default {
       if(res.status == "ok") {
         context.list = res.datas.datas
         for(var i =0;i<context.list.length;i++){
-          var len = Math.round(context.list[i].grade)
+          var len = Math.round(context.list[i].evaTotalScore/context.list[i].evaOrderNum)
           for(var j = 0;j<len;j++){
             context.item[j].starActive = true
           }
+          if(context.list[i].lat||context.list[i].lng){
+            this.lat = context.list[i].lat;
+            this.lng = context.list[i].lng;
+          }
+          console.log(this.lat)
+          console.log(this.lng)
         }
+
         console.log(JSON.stringify(res.datas))
       } else {
         alert(res.message);
@@ -215,7 +240,8 @@ export default {
       if(res.status == "ok") {
         context.list = res.datas
         console.log(JSON.stringify(res.datas))
-        var len = Math.round(context.list.grade)
+        var len = Math.round(context.list.evaTotalScore/context.list.evaOrderNum)
+
         for(var j = 0;j<len;j++){
           context.item[j].starActive = true
         }
@@ -275,7 +301,7 @@ export default {
         if( res.datas!=null){
           console.log(JSON.stringify(res.datas))
           context.list = res.datas
-          var len = Math.round(context.list.grade)
+          var len = Math.round(context.list.evaTotalScore/context.list.evaOrderNum)
           for(var j = 0;j<len;j++){
             context.item[j].starActive = true
           }
@@ -453,9 +479,59 @@ export default {
       context.$progress.failed()
 
     })
+  },
+
+  //当前积分
+  nowScore(context,accountArr) {
+    context.$progress.start()
+    context.$http.post(API_ROOT+"mobile/mch/getUseScoreDetails.do",accountArr).then(function(response){
+      context.$progress.finish()
+      var res = response.json()
+      if(res.status == "ok") {
+        if(res.datas != null){
+          context.list = res.datas.datas
+        }
+        if(context.list.length!=0){
+          context.dataHide = false
+        }else{
+          context.dataHide = true
+        }
+
+        console.log(JSON.stringify(res.datas.datas))
+      } else {
+        alert(res.message);
+      }
+    }, function(response){
+      context.$progress.failed()
+      // 响应错误回调
+    })
+  },
+
+  //预留积分
+  reserveScore(context,accountArr) {
+    context.$progress.start()
+    context.$http.post(API_ROOT+"mobile/mch/getReservedScoreDetails.do",accountArr).then(function(response){
+      context.$progress.finish()
+      var res = response.json()
+      if(res.status == "ok") {
+        if(res.datas != null){
+          context.list = res.datas.datas
+        }
+        if(context.list.length!=0){
+          context.dataHide = false
+        }else{
+          context.dataHide = true
+        }
+
+        console.log(JSON.stringify(res.datas.datas))
+      } else {
+        alert(res.message);
+      }
+    }, function(response){
+      context.$progress.failed()
+      // 响应错误回调
+    })
   }
-
-
 
 
 

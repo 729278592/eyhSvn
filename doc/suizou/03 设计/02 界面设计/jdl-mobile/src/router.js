@@ -339,6 +339,11 @@ router.map({
             component: (resolve) => {
               require(['./views/user/nowScore.vue'], resolve)
             }
+          },
+          '/reserveScore': {
+            component: (resolve) => {
+              require(['./views/user/reserveScore.vue'], resolve)
+            }
           }
         }
       },
@@ -462,6 +467,16 @@ router.map({
       '/modifyPassword': {
         component: (resolve) => {
           require(['./views/shops/modifyPassword.vue'], resolve)
+        }
+      },
+      '/nowScore': {
+        component: (resolve) => {
+          require(['./views/shops/nowScore.vue'], resolve)
+        }
+      },
+      '/reserveScore': {
+        component: (resolve) => {
+          require(['./views/shops/reserveScore.vue'], resolve)
         }
       }
     }

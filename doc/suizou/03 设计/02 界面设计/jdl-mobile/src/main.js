@@ -35,11 +35,11 @@ Vue.http.interceptors.push((request, next)=>{
       authService.logout();
       console.log(window.location.pathname)
       //window.location.pathname = '/auth/personLogin'
-      window.router.go('/auth/personLogin')
+      router.go('/auth/personLogin')
     } else if(status === "mchNotLogin") {
       mchAuthService.logout();
       //window.location.pathname = '/login'
-      window.router.go('/auth/login')
+      router.go('/auth/login')
     }
   })
 })
@@ -73,9 +73,6 @@ router.beforeEach((transition) => {
     transition.next()
   }
 })
-
-
-
 
 router.start(App, 'app')
 
