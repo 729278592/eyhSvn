@@ -6,8 +6,8 @@
                    </a>
         -->
          <form action="#" class="formIndex" :class="{'active':active}">
-             <input type="text" class="search_input" placeholder="搜索商品" @focus="getFocus()" @blur="getBlur()" id="searchInput"/>
-             <i class="fa fa-search"></i>
+             <input type="text" class="search_input" placeholder="搜索商品" @focus="getFocus()" v-model="searchCon" @blur="getBlur()" id="searchInput"/>
+             <i class="fa fa-search" @click="searchBtn()"></i>
              <a class="weui_icon_clear" :class="{'hide':clearHide}"  id="search_clear" @click="clearInput()"></a>
          </form>
          <div class="right nav_block">
@@ -164,6 +164,7 @@
              </li>
          </ul>
      </div>
+  <Toast :toastshow.sync="toastshow" :toasttext="toasttext"></Toast>
 </template>
 
 <style>
@@ -181,7 +182,11 @@
   import userService from '../../api/userService'
   import website from '../api/website'
   import authService from '../../api/authService'
+  import Toast from '../components/toast.vue'
   export default {
+    components: {
+      Toast
+    },
     data () {
       return {
         list: [],
@@ -192,7 +197,10 @@
         num:0,
         domainName:"",
         imageUrl:"",
-        isLogin:false
+        isLogin:false,
+        searchCon:"",
+        toasttext:"",
+        textareaText:"",
       }
     },
     ready () {
@@ -252,7 +260,16 @@
       },
       loginOut:function(){
           userService.loginOut(this)
+        },
+      searchBtn:function () {
+        if(!this.searchCon){
+          this.$set('toasttext','请输入关键字');
+          this.$set('toastshow',true);
+          return
         }
+        localStorage.setItem('goodsName',this.searchCon)
+        this.$router.go('/user/searchShopping')
+      }
     }
   }
 </script>

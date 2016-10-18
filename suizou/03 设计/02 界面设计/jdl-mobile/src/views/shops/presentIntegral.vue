@@ -10,7 +10,7 @@
                 <p>
                      可提现积分　{{lists.txScore}}
                 </p>
-                <button type="submit" class="weui_btn weui_btn_primary bg" @click="present()">提现</button>
+                <button type="submit" class="weui_btn weui_btn_primary bg" @click="present(lists)">提现</button>
             </div>
             <div class="weui_cells mt0 weui_cells_access style1">
                 <a class="weui_cell" v-link="'/shops/presentChioce'">
@@ -92,7 +92,7 @@
        this.hide = !this.hide
      },
      present:function(socre){
-       if(socre.txScore<20000){
+       if(socre.txScore<10000){
          this.$set('toasttext',"提现积分不足");
          this.$set('toastshow',true)
        }

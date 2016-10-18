@@ -825,8 +825,8 @@ ul.styleHide.active{display: inline-block;}
 .shopShoppingMenu li a{ height: 100%;display: inline-block;background: #fff;font-size: 0.875rem;width: 100%;color: #333;}
 .shop_menu li a{ position: relative;}
 .shop_menu li a span.top,.shop_menu li a span.bottom{position: absolute;right: 10px;line-height: normal;}
-.shop_menu li a span.top{top:10px;}
-.shop_menu li a span.bottom{bottom: 10px;}
+.shop_menu li a span.top{top:7px;}
+.shop_menu li a span.bottom{bottom: 7px;}
 .shopShoppingMenu li a.active .fa{color: #ff3b30;}
 .shopShoppingMenu li a .fa{display: block;position: relative;top: 0.5rem;}
 .shopShoppingMenu li button{height: 100%;font-size: 0.875rem;width: 100%;outline: none;border: none;}

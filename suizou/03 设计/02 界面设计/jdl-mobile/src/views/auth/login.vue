@@ -46,6 +46,9 @@
           <input type="submit" class="weui_btn weui_btn_primary" @click="save($event)" v-model="loginValue" value={{loginValue}}>
           <!--<a class="weui_btn weui_btn_primary" @click="save" v-link="'/shops/index'">登陆</a>-->
         </div>
+        <div class="weui_btn_area mt10 clearfix">
+          <a class="btn_forget right" v-link="'/auth/mchForget'">忘记密码</a>
+        </div>
       </form>
     </validator>
 

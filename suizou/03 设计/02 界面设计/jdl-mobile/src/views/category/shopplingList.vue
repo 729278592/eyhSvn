@@ -6,8 +6,8 @@
             <a>
                {{item.con}}
                <span v-if="item.orderHide==true">
-                 <span class="top"><i class="fa fa-angle-up"></i></span></br>
-                 <span class="bottom"><i class="fa fa-angle-down"></i></span>
+                 <span class="top" @click.stop="bigSort($index)"><i class="fa fa-angle-up"></i></span></br>
+                 <span class="bottom" @click.stop="smallSort($index)"><i class="fa fa-angle-down"></i></span>
                </span>
             </a>
          </li>
@@ -90,9 +90,9 @@
         imageUrl:"",
         items: [
             	{con:"新品",active: true,name:"shopplingListNew",orderHide:false},
-              {con:"销量",active: false,name:"shopplingListSale",orderHide:false},
+              {con:"销量",active: false,name:"shopplingListSale",orderHide:true},
               {con:"价格",active: false,name:"shopplingListPrice",orderHide:true},
-              {con:"评价",active: false,name:"shopplingListComment",orderHide:false}
+              {con:"评价",active: false,name:"shopplingListComment",orderHide:true}
             ]
       }
     },
@@ -120,16 +120,40 @@
             item.active = false;
         })
 
-
-
          var getCategoryArr = {
            categoryId:this.shopId,
-                  type:this.type
-                }
+              type:this.type
+            }
          mchService.getCategoryAllGoods(this,getCategoryArr)
 
-
-
+      },
+      bigSort:function (index) {
+        if(index==1){
+          mchService.bigSortFun(this,{sort:0})
+          return
+        }
+        if(index==2){
+          mchService.bigSortFun(this,{sort:2})
+          return
+        }
+        if(index==3){
+          mchService.bigSortFun(this,{sort:4})
+          return
+        }
+      },
+      smallSort:function (index) {
+        if(index==1){
+          mchService.bigSortFun(this,{sort:1})
+          return
+        }
+        if(index==2){
+          mchService.bigSortFun(this,{sort:3})
+          return
+        }
+        if(index==3){
+          mchService.bigSortFun(this,{sort:5})
+          return
+        }
       }
     }
   }

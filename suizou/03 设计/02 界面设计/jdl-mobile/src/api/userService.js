@@ -411,6 +411,7 @@ export default {
       var res = response.json()
       if(res.status == "ok") {
         this.list = res.datas
+        console.log(JSON.stringify(res.datas));
       } else {
         alert(res.message);
       }
@@ -736,9 +737,7 @@ export default {
 
   //忘记密码验证码-个人
   sendMemForgotAuthCode(context,sendMemForgotArr,btn) {
-
-    context.$http.post(API_ROOT+"mobile/sendMemForgotAuthCode.do",sendMemForgotArr).then(function(response){
-
+    context.$http.post(API_ROOT+"mobile/sendMchForgotAuthCode.do",sendMemForgotArr).then(function(response){
       var res = response.json()
       if(res.status == "ok") {
         context.xxId = res.datas
@@ -747,6 +746,7 @@ export default {
           count--;
           if (count > 0){
             context.code = count+"秒后重新获取"
+            btn.value = context.code
             context.disabled = true
             context.type = true
           }else {
@@ -754,6 +754,7 @@ export default {
             context.disabled = false
             context.type = false
             context.code = "获取验证码"
+            btn.value = context.code
           }
         }, 1000);
         context.disabled = true
@@ -771,12 +772,12 @@ export default {
   //忘记密码-个人
   updatePwd(context,updatePwdArr) {
     context.$progress.start()
-    context.$http.post(API_ROOT+"mobile/updatePwd.do",updatePwdArr).then(function(response){
+    context.$http.post(API_ROOT+"mobile/updateMchPwd.do",updatePwdArr).then(function(response){
       context.$progress.finish()
       var res = response.json()
       if(res.status == "ok") {
         context.$progress.finish()
-        context.$route.router.go('/auth/personLogin')
+        context.$route.router.go('/shops/index')
 
       } else {
         alert(res.message);
@@ -1404,6 +1405,137 @@ export default {
     }, function(response){
       context.$progress.failed()
 
+    })
+  },
+
+
+  //订单待评论列表
+  evaluateMchId(context,shopArr) {
+    context.$progress.start()
+    context.$http.post(API_ROOT+"mobile/member/evaMain.do",shopArr).then(function(response){
+      context.$progress.finish()
+      var res = response.json()
+      if(res.status == "ok") {
+        context.list = res.datas
+        var len = context.list.list.length;
+        if(len > 0) {
+          for(var i= 0;i<len;i++) {
+            context.list.list[i].evaContent;
+            context.list.list[i].level='';
+          }
+        }
+      } else {
+        alert(res.message);
+        console.log(res.message)
+      }
+    }, function(response){
+      context.$progress.failed()
+
+    })
+  },
+
+
+  //保存订单评论
+  saveEva(context,shopArr) {
+    context.$progress.start()
+    context.$http.post(API_ROOT+"mobile/member/saveEva.do",shopArr).then(function(response){
+      context.$progress.finish()
+      var res = response.json()
+      if(res.status == "ok") {
+        context.$router.go('/user/myOrder')
+      } else {
+        alert(res.message);
+      }
+    }, function(response){
+      context.$progress.failed()
+
+    })
+  },
+
+  //排序
+  sort(context,accountArr) {
+    context.$progress.start()
+    context.$http.post(API_ROOT+"mobile/getMchList.do",accountArr).then(function(response){
+      context.$progress.finish()
+      var res = response.json()
+      if(res.status == "ok") {
+        console.log(JSON.stringify(res.datas))
+        context.list = res.datas.datas
+      } else {
+        alert(res.message);
+      }
+    }, function(response){
+      context.$progress.failed()
+      // 响应错误回调
+    })
+  },
+
+  //银行选择
+  bankChioce(context,accountArr) {
+    context.$progress.start()
+    context.$http.post(API_ROOT+"mobile/getBankList.do",accountArr).then(function(response){
+      context.$progress.finish()
+      var res = response.json()
+      if(res.status == "ok") {
+        this.optionList = res.datas
+      } else {
+        alert(res.message);
+      }
+    }, function(response){
+      context.$progress.failed()
+      // 响应错误回调
+    })
+  },
+
+  //商品搜索
+  searchGoods(context,accountArr) {
+    context.$progress.start()
+    context.$http.post(API_ROOT+"mobile/searchGoods.do",accountArr).then(function(response){
+      context.$progress.finish()
+      var res = response.json()
+      if(res.status == "ok") {
+        if(res.datas != null){
+          context.list = res.datas.datas
+        }
+        if(context.list.length!=0){
+          context.dataHide = false
+        }else{
+          context.dataHide = true
+        }
+
+        console.log(JSON.stringify(res.datas.datas))
+      } else {
+        alert(res.message);
+      }
+    }, function(response){
+      context.$progress.failed()
+      // 响应错误回调
+    })
+  },
+
+  //当前积分
+  nowScore(context,accountArr) {
+    context.$progress.start()
+    context.$http.post(API_ROOT+"mobile/member/getUseScoreDetails.do",accountArr).then(function(response){
+      context.$progress.finish()
+      var res = response.json()
+      if(res.status == "ok") {
+        if(res.datas != null){
+          context.list = res.datas.datas
+        }
+        if(context.list.length!=0){
+          context.dataHide = false
+        }else{
+          context.dataHide = true
+        }
+
+        console.log(JSON.stringify(res.datas.datas))
+      } else {
+        alert(res.message);
+      }
+    }, function(response){
+      context.$progress.failed()
+      // 响应错误回调
     })
   }
 
