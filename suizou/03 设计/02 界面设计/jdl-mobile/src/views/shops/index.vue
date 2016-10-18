@@ -50,14 +50,14 @@
                   <span class="color">￥<span class="verdana">{{lists.yesterdayFx}}</span></span>
               </div>
           </li>
-          <li>
+          <li v-link="'/shops/nowScore'">
               <div class="payInfoy">
                   <span class="spanIcon sordIcon"></span>
                   <span>当前积分</span><br/>
                   <span class="color">￥<span class="verdana">{{lists.score}}</span></span>
               </div>
           </li>
-          <li>
+          <li v-link="'/shops/reserveScore'">
               <div class="payInfoy">
                   <span class="spanIcon zheIcon"></span>
                   <span>预留积分</span><br/>

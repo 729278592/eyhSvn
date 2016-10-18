@@ -12,38 +12,38 @@
       </ul>
   </div>
   <div class="styleHide" :class="{'active':this.incomeActive}">
-    <div class="inputDiv clearfix bt1">
-      <input class="Wdate" type="text" placeholder="开始日期">
+    <div class="inputDiv clearfix">
+      <input class="Wdate" v-model="startDate" type="date" placeholder="开始日期" >
       <span class="spanColor">至</span>
-      <input class="Wdate" type="text" placeholder="结束日期">　
-      <input type="button" class="btnQuery right" value="查询" readonly/>
+      <input class="Wdate" v-model="endDate" type="date" placeholder="结束日期" >　
+      <input type="button" class="btnQuery right" value="查询" @click="btnFindIn()" readonly/>
     </div>
     <ul class="queryMenu mb">
-      <li v-for="incomeList in list">
+      <li v-for="incomeList in inList">
         <p class="clearfix">
           <span class="span_icon span_time"></span>
               <span class="time">
-                  <span class="verdana">{{incomeList.returnTime}}</span>
+                  <span class="verdana">{{incomeList.auditTime}}</span>
               </span>
         </p>
         <p class="clearfix style">
           <span class="left">完成订单</span>
               <span class="right">
-                  <span class="verdana">{{incomeList.allIntegral}}</span>单
+                  <span class="verdana">{{incomeList.orderId}}</span>单
               </span>
         </p>
 
         <p class="clearfix style">
           <span class="left">成交总额</span>
               <span class="right">
-                  ￥<span class="verdana">{{incomeList.returnProportion}}</span>
+                  ￥<span class="verdana">{{incomeList.orderAmount}}</span>
               </span>
         </p>
 
         <p class="clearfix style">
           <span class="left">收入贷款</span>
               <span class="right">
-                  ￥<span class="verdana">{{incomeList.returnYestoady}}</span>
+                  ￥<span class="verdana">{{incomeList.balance}}</span>
               </span>
         </p>
       </li>
@@ -81,6 +81,7 @@
     </ul>
   </div>
 </div>
+  <Toast :toastshow.sync="toastshow" :toasttext="toasttext"></Toast>
 </template>
 
 <style>
@@ -103,6 +104,7 @@
           incomeActive:true,
           hide:true,
           list:[],
+          inList:[],
           startDate:"",
           endDate:"",
           toastshow:false,
@@ -111,11 +113,8 @@
       },
       ready () {
         document.title = '资金明细'
-        this.$http.get('../../static/data/detailIncome.json').then(function(response){
-              this.list = response.data
-           }, function(response){
-             // 响应错误回调
-           })
+        var detailIncomeArr = {}
+        mchService.detailIncome(this,detailIncomeArr)
 
       },
       methods: {
@@ -125,11 +124,8 @@
         selectIncome:function(){
           this.incomeActive=true
           this.outcomeActive=false
-          this.$http.get('../../static/data/detailIncome.json').then(function(response){
-              this.list = response.data
-           }, function(response){
-             // 响应错误回调
-           })
+          var detailIncomeArr = {}
+          mchService.detailIncome(this,detailIncomeArr)
         },
         selectOutcome:function(){
            this.incomeActive=false
@@ -150,6 +146,29 @@
               endDate:this.endDate
             };
             mchService.detailOutcome(this,dateArr)
+
+            return false;
+          }
+          else{
+            this.$set('toasttext',"日期无效");
+            this.$set('toastshow',true)
+            return false;
+          }
+        },
+        btnFindIn:function(){
+          var arr=this.startDate.split("-");
+          var starttime=new Date(arr[0],arr[1],arr[2]);
+          var starttimes=starttime.getTime();
+
+          var arrs=this.endDate.split("-");
+          var lktime=new Date(arrs[0],arrs[1],arrs[2]);
+          var lktimes=lktime.getTime();
+          if(starttimes<lktimes){
+            var detailIncomeArr = {
+              startDate:this.startDate,
+              endDate:this.endDate
+            };
+            mchService.detailIncome(this,detailIncomeArr)
 
             return false;
           }

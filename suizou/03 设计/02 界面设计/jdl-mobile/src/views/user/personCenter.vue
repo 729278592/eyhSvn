@@ -69,7 +69,7 @@
                   <span class="color"><span class="verdana">{{dataJson.score}}</span></span>
               </div>
           </li>
-          <li>
+          <li v-link="'/user/reserveScore'">
               <div class="payInfoy">
                   <span class="spanIcon zheIcon"></span>
                   <span>预留积分</span><br/>

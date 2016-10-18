@@ -181,9 +181,13 @@
           </a>
       </li>
       <li class="second">
-          <a :class="{'active':active}" @click="onCollection(shopInfor)">
-              <i class="fa" :class="{'fa-star-o':notCollectionActive,'fa-star':collectionActive}"></i>
-              收藏
+          <a v-if="shopInfor.collectionId!=null" @click="cancelCollection(shopInfor)">
+            <i class="fa" :class="{'fa-star-o':notCollectionActive,'fa-star':collectionActive}"></i>
+            取消收藏
+          </a>
+          <a @click="onCollection(shopInfor)" v-else>
+            <i class="fa" :class="{'fa-star-o':notCollectionActive,'fa-star':collectionActive}"></i>
+            收藏
           </a>
       </li>
       <li class="three">
@@ -286,7 +290,15 @@
           this.shopActive=true
           this.commentActive=false
         },
-
+        cancelCollection:function (shopsList) {
+          if (authService.isLogin()) {
+            var collectArr = {id:shopsList.collectionId};
+            console.log(collectArr)
+            userService.cancelCollectionShop(this,collectArr)
+          }else{
+            this.$router.go('/auth/personLogin')
+          }
+        },
         onCollection:function(shopInfor){
             if (authService.isLogin()) {
             var shopArr = {

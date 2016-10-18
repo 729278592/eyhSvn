@@ -11,7 +11,7 @@
                     </label>
                 </div>
                 <div class="weui_cell_bd weui_cell_primary">
-                  <span style="position:absolute;left:104px;line-height:44px;" v-show="agentHide">请选择代理级别</span>
+                  <span style="position:absolute;left:104px;line-height:44px;" v-show="agentHide">请选择银行类别</span>
                   <select class="weui_select" v-model="bank" @change="bankChange()">
                     <option v-for="option in optionList" value={{option.id}}>{{option.kindname}}</option>
                   </select>
