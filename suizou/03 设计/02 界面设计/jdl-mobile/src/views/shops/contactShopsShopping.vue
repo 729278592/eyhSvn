@@ -119,6 +119,8 @@
           cancelCollection:1,
           list:[],
           imageUrl:"",
+          toastshow:false,
+          toasttext:"",
           item:[
             {starActive:false},
             {starActive:false},

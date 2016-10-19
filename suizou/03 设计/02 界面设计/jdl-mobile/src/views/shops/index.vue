@@ -142,7 +142,7 @@
 
 <script>
    import mchService from '../../api/mchService'
-   import authService  from '../../api/mchAuthService'
+   import mchAuthService  from '../../api/mchAuthService'
     export default {
 
       data () {
@@ -174,18 +174,7 @@
                  window.history.go(-1)
                },
           loginOut:function(){
-            this.$http.get(website.domainName+website.linkObj.mchLoginOut).then(function(response){
-              var res = response.data
-               console.log(JSON.stringify(res.datas));
-              if(res.status == "ok") {
-                authService.logout()
-                 this.$router.go("/")
-               } else {
-                  alert(res.message);
-               }
-            }, function(response){
-              // 响应错误回调
-            })
+            mchService.mchLoginOut(this)
           }
        }
     }

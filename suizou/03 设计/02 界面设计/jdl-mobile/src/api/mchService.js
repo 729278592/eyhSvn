@@ -30,6 +30,25 @@ export default {
     })
   },
 
+
+  //商家退出
+  mchLoginOut(context) {
+    context.$progress.start()
+    context.$http.post(API_ROOT + "mobile/mchLoginOut.do").then(function (response) {
+      context.$progress.finish()
+      var res = response.json()
+      if(res.status == "ok") {
+        mchAuthService.logout()
+        context.$router.go("/")
+      } else {
+        alert(res.message);
+      }
+    }, function (response) {
+      context.$progress.failed()
+      // 响应错误回调
+    })
+  },
+
   //我的订单-个人
   myOrder(context,orderStatus) {
     context.$progress.start()
@@ -139,6 +158,14 @@ export default {
       var res = response.json()
       if(res.status == "ok") {
         context.list = res.datas
+
+        if(context.list.length!=0){
+          context.dataJsonHide = false
+        }else{
+          context.dataJsonHide = true
+        }
+
+
       } else {
         alert(res.message);
       }
@@ -156,7 +183,14 @@ export default {
       context.$progress.finish()
       var res = response.json()
       if(res.status == "ok") {
-        context.inList = res.datas.datas
+        if(res.datas!=null){
+          context.inList = res.datas.datas
+        }
+        if(context.inList.length!=0){
+          context.dataHide = false
+        }else{
+          context.dataHide = true
+        }
       } else {
         alert(res.message);
       }
@@ -207,21 +241,27 @@ export default {
       context.$progress.finish()
       var res = response.json()
       if(res.status == "ok") {
-        context.list = res.datas.datas
+        if(res.datas!=null){
+          context.list = res.datas.datas
+        }
         for(var i =0;i<context.list.length;i++){
+          context.list[i].item = [
+            {starActive:false},
+            {starActive:false},
+            {starActive:false},
+            {starActive:false},
+            {starActive:false}
+          ]
           var len = Math.round(context.list[i].evaTotalScore/context.list[i].evaOrderNum)
           for(var j = 0;j<len;j++){
-            context.item[j].starActive = true
+            context.list[i].item[j].starActive = true
           }
+          console.log(len);
           if(context.list[i].lat||context.list[i].lng){
             this.lat = context.list[i].lat;
             this.lng = context.list[i].lng;
           }
-          console.log(this.lat)
-          console.log(this.lng)
         }
-
-        console.log(JSON.stringify(res.datas))
       } else {
         alert(res.message);
       }
@@ -523,7 +563,7 @@ export default {
           context.dataHide = true
         }
 
-        console.log(JSON.stringify(res.datas.datas))
+
       } else {
         alert(res.message);
       }

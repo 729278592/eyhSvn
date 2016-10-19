@@ -99,7 +99,6 @@
 
         this.stateInfor = eval("("+localStorage.getItem('data')+")")
         this.areaInfor = this.stateInfor.province+" "+this.stateInfor.city+" "+this.stateInfor.area
-        this.imageUrl = website.imageUrl
       },
       methods: {
         onShow: function () {

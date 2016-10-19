@@ -51,7 +51,8 @@
 </style>
 
 <script>
-  import authService from '../../api/mchAuthService'
+  import mchAuthService from '../../api/mchAuthService'
+  import mchService from '../../api/mchService'
   export default{
       data () {
         return {
@@ -60,7 +61,7 @@
         }
       },
       ready(){
-        if (authService.isLogin()) {
+        if (mchAuthService.isLogin()) {
             this.isLogin = true
           }else{
             this.isLogin = false
@@ -74,18 +75,7 @@
           window.history.go(-1)
         },
         loginOut:function(){
-            this.$http.get(website.domainName+website.linkObj.mchLoginOut).then(function(response){
-              var res = response.data
-               console.log(JSON.stringify(res.datas));
-              if(res.status == "ok") {
-                authService.logout()
-                 this.$router.go("/")
-               } else {
-                  alert(res.message);
-               }
-            }, function(response){
-              // 响应错误回调
-            })
+            mchService.mchLoginOut(this)
           }
       }
   }

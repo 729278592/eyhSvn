@@ -49,6 +49,13 @@
       </li>
 
     </ul>
+
+    <div class="notConTip" v-show="dataHide">
+      <img src="../../../static/images/notContent.png" alt=""/>
+      <p class="notInfor">
+        暂无数据
+      </p>
+    </div>
   </div>
   <div class="styleHide" :class="{'active':this.outcomeActive}">
     <div class="inputDiv clearfix">
@@ -79,6 +86,12 @@
         </p>
       </li>
     </ul>
+    <div class="notConTip" v-show="dataJsonHide">
+      <img src="../../../static/images/notContent.png" alt=""/>
+      <p class="notInfor">
+        暂无数据
+      </p>
+    </div>
   </div>
 </div>
   <Toast :toastshow.sync="toastshow" :toasttext="toasttext"></Toast>
@@ -95,8 +108,8 @@
  import Toast from '../components/toast.vue'
  export default {
     components: {
-         Bar,
-      Toast
+       Bar,
+       Toast
      },
       data () {
         return {
@@ -108,7 +121,9 @@
           startDate:"",
           endDate:"",
           toastshow:false,
-          toasttext:""
+          toasttext:"",
+          dataJsonHide:false,
+          dataHide:false
         }
       },
       ready () {

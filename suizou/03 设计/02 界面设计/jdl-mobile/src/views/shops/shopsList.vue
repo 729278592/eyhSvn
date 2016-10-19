@@ -86,7 +86,7 @@
                     </p>
                     <div class="clearfix">
                        <ul class="starList clearfix">
-                            <li v-for="activeItem in item" :class="{'active':activeItem.starActive}">
+                            <li v-for="activeItem in shopsList.item" :class="{'active':activeItem.starActive}">
                                 <i class="fa fa-star-o"></i>
                             </li>
                         </ul>
@@ -209,14 +209,7 @@
           isLogin:false,
           dataHide:false,
           lat:"106",
-          lng:"30",
-          item:[
-           {starActive:false},
-           {starActive:false},
-           {starActive:false},
-           {starActive:false},
-           {starActive:false}
-         ]
+          lng:"30"
         }
       },
       ready () {

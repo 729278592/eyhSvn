@@ -61,7 +61,7 @@
 
 <script>
   import Bar from '../components/headBar.vue'
-
+  import userService from '../../api/userService'
   export default {
      components: {
           Bar
@@ -73,18 +73,8 @@
         }
       },
       ready () {
-        document.title = '个人信息'
-        this.$http.get(website.linkObj.presentInfor).then(function(response){
-          var res = response.data
-          console.log(JSON.stringify(res.datas));
-          if(res.status="ok"){
-            this.personList = res.datas
-          }else{
-            alert(res.message)
-          }
-        }, function(response){
-          // 响应错误回调
-        })
+        document.title = '个人信息';
+        userService.presentInfor(this)
       },
       methods: {
         onShow: function () {
