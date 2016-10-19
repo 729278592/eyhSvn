@@ -92,7 +92,6 @@
 </div>
 </template>
 <script>
-  import Address from '../components/address-app.vue'
   import Toast from '../components/toast.vue'
   import website from '../api/website'
   export default {
