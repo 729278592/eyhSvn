@@ -30,6 +30,12 @@
         </li>
     </ul>
 </div>
+  <div class="notConTip" v-show="dataHide">
+    <img src="../../../static/images/notContent.png" alt=""/>
+    <p class="notInfor">
+      暂无数据
+    </p>
+  </div>
   <Toast :toastshow.sync="toastshow" :toasttext="toasttext"></Toast>
 </template>
 <script>
@@ -48,7 +54,8 @@
           startDate:"",
           endDate:"",
           toastshow:false,
-          toasttext:""
+          toasttext:"",
+          dataHide:false
         }
       },
       ready () {
