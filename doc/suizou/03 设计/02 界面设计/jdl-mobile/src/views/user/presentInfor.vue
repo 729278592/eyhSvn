@@ -61,7 +61,7 @@
 
 <script>
   import Bar from '../components/headBar.vue'
-  import website from '../api/website'
+
   export default {
      components: {
           Bar

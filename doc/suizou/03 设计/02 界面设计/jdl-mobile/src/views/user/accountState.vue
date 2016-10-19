@@ -80,7 +80,7 @@
 </div>
 </template>
 <script>
-     import website from '../api/website'
+
      export default {
 
       data () {

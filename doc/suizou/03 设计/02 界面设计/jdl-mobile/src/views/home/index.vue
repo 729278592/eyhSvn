@@ -175,7 +175,6 @@
 <script>
   import '../../../static/plugins/swiper/dist/js/swiper.min.js'
   import userService from '../../api/userService'
-  import website from '../api/website'
   import authService from '../../api/authService'
   import Toast from '../components/toast.vue'
   export default {
