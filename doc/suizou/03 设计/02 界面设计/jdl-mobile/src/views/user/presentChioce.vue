@@ -13,51 +13,21 @@
                 <div class="weui_cell_bd weui_cell_primary">
                   <span style="position:absolute;left:104px;line-height:44px;" v-show="agentHide">请选择银行类别</span>
                   <select class="weui_select" v-model="bank" @change="bankChange()">
-                    <option v-for="option in optionList" value={{option.id}}>{{option.kindname}}</option>
+                    <option v-for="option in optionList" value={{option.kindname}}>{{option.kindname}}</option>
                   </select>
                 </div>
             </div>
-          <div class="weui_cell weui_cell_select">
-             <div class="weui_cell_hd">
-                 <label class="weui_label style">
-                     <span class="span_icon spa_address"></span>
-                 </label>
-             </div>
-             <div class="weui_cell_bd weui_cell_primary">
-                 <select class="weui_select" name="province" @change="provinceChange" v-model="province">
-                     <option value="-1">请选择省份</option>
-                     <option v-for="item in provinceList" value={{item.id}}>{{item.name}}</option>
-                 </select>
-             </div>
-         </div>
+          <div class="weui_cell">
+            <div class="weui_cell_hd">
+              <label class="weui_label style">
+                详细地址
+              </label>
+            </div>
+            <div class="weui_cell_bd weui_cell_primary">
+              <input class="weui_input" @invalid="addressInvalid" initial="off" detect-change="off" id="addressInfor" v-model="addressInfor" v-validate:addressInfor="['addressInfor']"  type="text"  placeholder='请输入详细地址'>
+            </div>
+          </div>
 
-         <div class="weui_cell weui_cell_select">
-             <div class="weui_cell_hd">
-                 <label class="weui_label style">
-                     <span class="span_icon spa_address"></span>
-                 </label>
-             </div>
-             <div class="weui_cell_bd weui_cell_primary">
-                <select class="weui_select" name="city" @change="cityChange" v-model="city">
-                   <option value="-1">请选择城市</option>
-                     <option v-for="item in cityList" value={{item.id}}>{{item.name}}</option>
-                 </select>
-             </div>
-         </div>
-
-         <div class="weui_cell weui_cell_select">
-             <div class="weui_cell_hd">
-                 <label class="weui_label style">
-                     <span class="span_icon spa_address"></span>
-                 </label>
-             </div>
-             <div class="weui_cell_bd weui_cell_primary">
-                 <select class="weui_select" name="area" @change="areaChange" v-model="area">
-                   <option value="-1">请选择区县</option>
-                     <option v-for="item in areaList" value={{item.id}}>{{item.name}}</option>
-                 </select>
-             </div>
-         </div>
             <div class="weui_cell">
                 <div class="weui_cell_hd">
                     <label class="weui_label style">
@@ -80,7 +50,7 @@
             </div>
         </div>
         <div class="weui_btn_area">
-            <input type="submit" class="weui_btn weui_btn_primary  saveBasic" value="保存" @click="save(this.value)">
+            <input type="submit" class="weui_btn weui_btn_primary  saveBasic" value="保存" @click="save()">
         </div>
     </form>
     </validator>
@@ -108,23 +78,19 @@
           value:"",
           isEmpty:"",
           agentHide:true,
-           provinceList: [],
-           cityList: [],
-           areaList: [],
+          addressInfor:"",
           selectValue:"",
           toastshow:false,
           toasttext:"",
           selected:"",
           bank:"",
-          province:"-1",
-          city:"-1",
-          area:"-1",
+
           optionList:[]
         }
       },
       ready () {
         document.title = '银行选择'
-        userService.getRegionByPid(this,0,'p')
+
         userService.bankChioce(this)
       },
       watch: {
@@ -138,32 +104,10 @@
         },
 
 
-         provinceChange: function(){
-
-           this.cityList = []
-           this.areaList = []
-           if(this.province != '-1') {
-             userService.getRegionByPid(this,this.province,'c')
-           }
-           this.city = -1
-           this.area=-1
-
-
-          },
-
-          cityChange: function(){
-
-          this.areaList = []
-           if(this.city != '-1') {
-              userService.getRegionByPid(this,this.city,'a')
-           }
-            this.area = -1
-
-          },
-
-         areaChange: function(){
-
-          },
+        addressInvalid:function(){
+          this.$set('toasttext','请输入详细地址');
+          this.$set('toastshow',true);
+        },
 
         isEmptyInvalid(){
            this.$set('toasttext','姓名不能为空');
@@ -172,11 +116,12 @@
         bankChange:function () {
           this.agentHide=false;
         },
+
          cardNoInvalid(){
             this.$set('toasttext','卡号不正确');
             this.$set('toastshow',true);
           },
-        save:function(value){
+        save:function(){
             var that = this
             var isEmpty = that.$get('isEmpty')
             var cardNo = that.$get('cardNo')
@@ -186,24 +131,18 @@
             var city = that.city
             var area = that.area
 
-                   if(this.province==-1){
-                     that.$set('toasttext','请选择省');
+                   if(this.agentHide==true){
+                     that.$set('toasttext','请选择开户行');
                      that.$set('toastshow',true)
                    }
-                   else if(this.city==-1){
-                      that.$set('toasttext','请选择市');
-                               this.$set('toastshow',true)
-                   }
-                   else if(this.area==-1){
-                       that.$set('toasttext','请选择县');
-                       that.$set('toastshow',true)
-                   }else{
+
+                  else{
 
             that.$validate(true, function () {
               if (that.$validation.invalid) {
 
               }else{
-                 var presentChioceArr = {openName:isEmpty,cardNo:cardNo,bankName:that.bank,openArea:value}
+                 var presentChioceArr = {openName:isEmpty,cardNo:cardNo,bankName:that.bank,openArea:that.addressInfor}
                  userService.presentChioce(that,presentChioceArr)
               }
             })

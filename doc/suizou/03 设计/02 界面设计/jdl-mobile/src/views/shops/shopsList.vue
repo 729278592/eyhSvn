@@ -113,7 +113,7 @@
                         <a v-link="{ name: 'shopsInfor', params: {shops: shopsList.id}}">逛逛商铺</a>
                     </span>
                     <span>
-                        <a class="btnCollectioning" v-if="shopsList.collectionId!=null" @click="onCancelCollection(shopsList)">取消收藏</a>
+                        <a class="btnCollectioning" v-if="shopsList.collectionId!=null && shopsList.collectionId!=''" @click="onCancelCollection(shopsList)">取消收藏</a>
                         <a class="btnCollectioning" V-else @click="onCollection(shopsList)">收藏商铺</a>
                     </span>
                     <span>

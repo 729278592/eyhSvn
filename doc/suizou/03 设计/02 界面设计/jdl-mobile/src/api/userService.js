@@ -1597,6 +1597,30 @@ export default {
       context.$progress.failed()
       // 响应错误回调
     })
+  },
+
+
+
+  //预留积分
+  upgradeFun(context) {
+    context.$progress.start()
+    context.$http.post(API_ROOT+"mobile/member/auditLevel.do").then(function(response){
+      context.$progress.finish()
+      var res = response.json()
+      if(res.status == "ok") {
+        context.$route.router.go('/user/memberUpgrade')
+
+      }
+      else if(res.status=="levelUp"){
+        location.reload()
+      }
+      else {
+        alert(res.message);
+      }
+    }, function(response){
+      context.$progress.failed()
+      // 响应错误回调
+    })
   }
 
 
