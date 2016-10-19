@@ -25,6 +25,9 @@ Vue.validator('isEmptyMoney', function (value) {
   return !/^\s*$/.test(value)
 });
 
+Vue.validator('addressInfor', function (value) {
+  return !/^\s*$/.test(value)
+});
 
 //添加一个简单的手机号验证
 Vue.validator('mobile', function (value) {

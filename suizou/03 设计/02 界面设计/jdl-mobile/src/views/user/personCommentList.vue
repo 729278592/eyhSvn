@@ -11,13 +11,13 @@
             <div class="weui_cell_ft">{{commentList.createTime}}</div>
           </div>
         </div>
-        <div>
+        <div style="width: 20%;display: inline-block">
           <div class="couponImg style">
-            <img v-if="commentList.coverPhoto!=null" :src="commentList.coverPhoto" style="width:100%;"/>
+            <img v-if="commentList.coverPhoto!=null" :src="this.imageUrl+commentList.coverPhoto" style="width:100%;"/>
             <img v-else src="../../../static/images/shopsImg.jpg" style="width:100%;"/>
           </div>
         </div>
-        <div class="inforList">
+        <div class="inforList" style="display: inline-block;width: 63%">
           <p class="clearfix">
             <span class="left shopsName">{{commentList.goodsName}}</span>
           </p>
@@ -41,6 +41,14 @@
     </ul>
 </div>
 </template>
+
+<style>
+  .weui_cells.mt0{border-bottom: 1px solid #dbdbdb;}
+  .entryList>li>div{border-top: 0;}
+  .entryList>li .inforList{position: relative;top: -25px;}
+  .shopsInfor.style{border-top: 1px solid #dbdbdb;}
+</style>
+
 <script>
   import Bar from '../components/headBar.vue'
   import userService from '../../api/userService'

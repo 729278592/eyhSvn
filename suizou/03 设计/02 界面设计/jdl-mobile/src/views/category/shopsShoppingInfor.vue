@@ -53,7 +53,7 @@
       </P>
       <P class="clearfix">
           <span class="left">
-              应付债卷 : ￥<span class="verdana">{{shopInfor.shouldVolume}}</span>
+              可用劵 : ￥<span class="verdana">{{shopInfor.shouldVolume}}</span>
           </span>
           <span class="right">
               应付金额 : ￥<span class="verdana">{{shopInfor.shouldMoney}}</span>
@@ -181,10 +181,11 @@
           </a>
       </li>
       <li class="second">
-          <a v-if="shopInfor.collectionId!=null" @click="cancelCollection(shopInfor)">
+          <a v-if="shopInfor.collectionId!=null && shopInfor.collectionId!=''" @click="cancelCollection(shopInfor)">
             <i class="fa" :class="{'fa-star-o':notCollectionActive,'fa-star':collectionActive}"></i>
             取消收藏
           </a>
+
           <a @click="onCollection(shopInfor)" v-else>
             <i class="fa" :class="{'fa-star-o':notCollectionActive,'fa-star':collectionActive}"></i>
             收藏

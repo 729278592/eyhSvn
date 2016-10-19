@@ -27,12 +27,13 @@
                         <span class="left shopsName">{{lists.mchName}}</span>
                         <span class="right">联盟商户</span>
                     </p>
-                    <div class="clearfix">
+                    <div class="clearfix" style="display: block">
                       <ul class="starList clearfix">
                         <li v-for="activeItem in item" :class="{'active':activeItem.starActive}">
                           <i class="fa fa-star-o"></i>
                         </li>
                       </ul>
+                      <a class=" right" v-link="'/shops/modifyPassword'"style="color: #1cbc9d;text-decoration: underline;">修改密码</a>
                     </div>
                     <p class="clearfix">
                         <span class="left">销量{{lists.salesNum}}</span>
@@ -136,9 +137,7 @@
          </li>
       </ul>
   </div>
-    <div class="weui_btn_area fixed clearfix" style="right: 1rem;">
-      <a class="btn_forget right" v-link="'/shops/modifyPassword'">忘记密码</a>
-    </div>
+
 </template>
 
 <script>
@@ -146,8 +145,7 @@
      import website from '../api/website'
        import authService  from '../../api/mchAuthService'
     export default {
-      components: {
-        },
+
       data () {
         return{
          hide:true,

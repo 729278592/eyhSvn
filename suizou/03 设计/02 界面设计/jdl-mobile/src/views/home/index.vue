@@ -116,7 +116,7 @@
         </ul>
         <div class="otherCon style">
           <ul class="shoppingList style clearfix pb0">
-              <li v-for="shop in list[num].goodses">
+              <li v-for="shop in list[num].goodses" :class="{'mr0':$index%2==1}">
                   <a @click="addId(shop)" class="shop_div">
                       <div class="shop_list_bg">
                           <img :src="this.imageUrl+shop.coverPhoto"/>
@@ -170,12 +170,7 @@
 <style>
   @import '../../../static/plugins/swiper/dist/css/swiper.min.css';
 </style>
-<style>
-  .otherCon.style{padding:0;}
-  .shoppingList.style li{margin-left:2%;margin-right:0;width:48%;}
-  .shoppingList li a .shop_list_bg{height:10rem;}
-  .shop_cat{top:0.3rem;}
-</style>
+
 
 <script>
   import '../../../static/plugins/swiper/dist/js/swiper.min.js'

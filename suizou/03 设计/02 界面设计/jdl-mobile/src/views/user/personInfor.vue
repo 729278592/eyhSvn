@@ -18,7 +18,7 @@
             <div class="weui_cell_ft" v-if="list.nickname==null">未知</div>
             <div v-else class="weui_cell_ft">{{list.nickname}}</div>
         </a>
-        <a class="weui_cell" v-link="{ name: 'modifyMobile', params: {mobile: list.mobile}}">
+        <a class="weui_cell"><!-- v-link="{ name: 'modifyMobile', params: {mobile: list.mobile}}"-->
             <div class="weui_cell_bd weui_cell_primary">
                 <p>
                     <span class="span_icon spa_phone"></span>

@@ -13,52 +13,14 @@
                 <div class="weui_cell_bd weui_cell_primary">
                   <span style="position:absolute;left:104px;line-height:44px;" v-show="agentHide">请选择银行类别</span>
                   <select class="weui_select" v-model="bank" @change="bankChange()">
-                    <option v-for="option in optionList" value={{option.id}}>{{option.kindname}}</option>
+                    <option v-for="option in optionList" value={{option.kindname}}>{{option.kindname}}</option>
                   </select>
                 </div>
             </div>
 
-          <div class="weui_cell weui_cell_select">
-            <div class="weui_cell_hd">
-                <label class="weui_label style">
-                    <span class="span_icon spa_address"></span>
-                </label>
-            </div>
-            <div class="weui_cell_bd weui_cell_primary">
-                <select class="weui_select" name="province" @change="provinceChange" v-model="province">
-                    <option value="-1">请选择省份</option>
-                    <option v-for="item in provinceList" value={{item.id}}>{{item.name}}</option>
-                </select>
-            </div>
-        </div>
-
-        <div class="weui_cell weui_cell_select">
-            <div class="weui_cell_hd">
-                <label class="weui_label style">
-                    <span class="span_icon spa_address"></span>
-                </label>
-            </div>
-            <div class="weui_cell_bd weui_cell_primary">
-               <select class="weui_select" name="city" @change="cityChange" v-model="city">
-                  <option value="-1">请选择城市</option>
-                    <option v-for="item in cityList" value={{item.id}}>{{item.name}}</option>
-                </select>
-            </div>
-        </div>
-
-        <div class="weui_cell weui_cell_select">
-            <div class="weui_cell_hd">
-                <label class="weui_label style">
-                    <span class="span_icon spa_address"></span>
-                </label>
-            </div>
-            <div class="weui_cell_bd weui_cell_primary">
-                <select class="weui_select" name="area" @change="areaChange" v-model="area">
-                  <option value="-1">请选择区县</option>
-                    <option v-for="item in areaList" value={{item.id}}>{{item.name}}</option>
-                </select>
-            </div>
-        </div>
+          <div class="weui_cell_bd weui_cell_primary">
+            <input class="weui_input" @invalid="addressInvalid" initial="off" detect-change="off" id="addressInfor" v-model="addressInfor" v-validate:addressInfor="['addressInfor']"  type="text"  placeholder='请输入详细地址'>
+          </div>
 
 
             <div class="weui_cell">
@@ -110,26 +72,20 @@
           hide:true,
           cardNo:"",
           isEmpty:"",
-           provinceList: [],
-           cityList: [],
-           areaList: [],
           selectValue:"",
           agentHide:true,
+          addressInfor:"",
           toastshow:false,
           toasttext:"",
           selected:"",
-          province:"-1",
-          city:"-1",
-          area:"-1",
+
           optionList:[],
           bank:""
         }
       },
       ready () {
         document.title = '银行选择'
-        userService.getRegionByPid(this,0,'p')
-        userService.getRegionByPid(this,this.province,'c')
-        userService.getRegionByPid(this,this.city,'a')
+
         mchService.bankChioce(this)
       },
       watch: {
@@ -142,29 +98,10 @@
           this.hide = !this.hide
         },
 
-         provinceChange: function(){
-           this.cityList = []
-           this.areaList = []
-           if(this.province != '-1') {
-             userService.getRegionByPid(this,this.province,'c')
-           }
-           this.city = -1
-           this.area=-1
-          },
-
-          cityChange: function(){
-
-            this.areaList = []
-             if(this.city != '-1') {
-                userService.getRegionByPid(this,this.city,'a')
-             }
-            this.area = -1
-
-          },
-
-         areaChange: function(){
-
-          },
+        addressInvalid:function(){
+          this.$set('toasttext','请输入详细地址');
+          this.$set('toastshow',true);
+        },
 
 
         isEmptyInvalid(){
@@ -186,24 +123,17 @@
         var province = that.province
                 var city = that.city
                 var area = that.area
-              if(this.province==-1){
-                  this.$set('toasttext','请选择省');
-                  this.$set('toastshow',true)
-                }
-                else if(this.city==-1){
-                   this.$set('toasttext','请选择市');
-                            this.$set('toastshow',true)
-                }
-                else if(this.area==-1){
-                    this.$set('toasttext','请选择县');
-                    this.$set('toastshow',true)
-                }else{
+            if(this.agentHide==true){
+              that.$set('toasttext','请选择开户行');
+              that.$set('toastshow',true)
+            }
+               else{
 
             that.$validate(true, function () {
               if (that.$validation.invalid) {
 
               }else{
-                 var presentChioceArr = {openName:isEmpty,cardNo:cardNo,bankName:that.selectValue,openArea:value}
+                 var presentChioceArr = {openName:isEmpty,cardNo:cardNo,bankName:that.selectValue,openArea:that.addressInfor}
                  mchService.presentChioce(that,presentChioceArr)
               }
             })

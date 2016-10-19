@@ -11,7 +11,7 @@
                 <div class="inforList">
                     <p class="clearfix">
                         <span class="left shopsName">{{list.mchName}}</span>
-                      <button class="btnCollectioning right" v-if="list.collectionId!=null" @click="onCancelCollection(list)">取消收藏</button>
+                      <button class="btnCollectioning right" v-if="list.collectionId!=null && list.collectionId!=''" @click="onCancelCollection(list)">取消收藏</button>
                       <button class="btnCollectioning right" v-else @click="onCollection(list)">收藏商铺</button>
                     </p>
                     <div class="clearfix">

@@ -21,10 +21,6 @@ export const imgUrl = (process.env.NODE_ENV === 'production')
 
 
 
-
-
-
-//
 // export const API_ROOT = (process.env.NODE_ENV === 'production')
 //   ? 'http://www.jdl800.com/fric/'
 //   :'http://192.168.0.103/'

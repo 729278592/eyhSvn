@@ -47,7 +47,7 @@
                       <p class="clearfix bottom">
                           <span class="left" v-if="dataJson.level==0">普通会员</span>
                           <span class="left" v-if="dataJson.level!=0">金钻会员</span>
-                          <a v-if="dataJson.level==0" v-link="'/user/memberUpgrade'" class="btnLeave right">立即升级</a>
+                          <a v-if="dataJson.level==0" @click="upgrade()" class="btnLeave right">立即升级</a>
                           <a v-if="dataJson.level!=0" disabled="disabled" class="btnLeave right disabled">立即升级</a>
                       </p>
                   </div>
@@ -252,6 +252,9 @@
         },
          loginOut:function(){
             userService.loginOut(this)
+         },
+         upgrade:function(){
+           userService.upgradeFun(this)
          }
        }
     }
