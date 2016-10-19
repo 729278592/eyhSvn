@@ -93,7 +93,7 @@
 </template>
 <script>
   import Toast from '../components/toast.vue'
-  import website from '../api/website'
+
   export default {
       components: {
         //注册组件
