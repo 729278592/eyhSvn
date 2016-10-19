@@ -61,7 +61,6 @@
 
 
 <script>
-    import Address from '../components/address-app.vue'
     import Bar from '../components/headBar.vue'
     import Toast from '../components/toast.vue'
     import userService from '../../api/userService'
