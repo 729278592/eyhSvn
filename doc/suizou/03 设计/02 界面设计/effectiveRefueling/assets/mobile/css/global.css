@@ -64,6 +64,10 @@ a:active{opacity: 0.6;}
 .bd.pt{padding-top: 2.5rem;}
 .bd.absolute{position:absolute;top:0;bottom:0;overflow-y:scroll;-webkit-overflow-scrolling:touch;width:100%}
 .spa_code{background: url(../images/codeIcon.png) no-repeat;background-size: 100% 100%;}
+.spa_person {
+    background: url(../images/comIcon.png);
+    background-size: 100% 100%;
+}
 .spa_phone{background: url(../images/pboneIcon.png) no-repeat;background-size: 100% 100%;}
 .spa_birthday{background: url(../images/birthdayIcon.png) no-repeat;background-size: 100% 100%;}
 .spa_lock{background: url(../images/lockIcon.png) no-repeat;background-size: 100% 100%;}
@@ -92,6 +96,9 @@ a:active{opacity: 0.6;}
 .pay_list li>div .moneyIcon{background: url(../images/moneyIcon.png) no-repeat;background-size: 100% 100%;}
 .pay_list li>div .sordIcon{background: url(../images/sordIcon.png) no-repeat;background-size: 100% 100%;}
 .pay_list li>div .zheIcon{background: url(../images/zheIcon.png) no-repeat;background-size: 100% 100%;}
+
+
+
 .pay_list li>div span{font-size: 0.875rem;}
 .pay_list li>div .color{font-size: 1rem;color: #666;}
 .weui_cells.weui_cells_access{margin-top: 0.6rem;}
@@ -101,6 +108,12 @@ a:active{opacity: 0.6;}
 .spa_jilu{background: url(../images/listIcon.png) no-repeat;background-size: 100% 100%;}
 .spa_piao{background: url(../images/piaoIcon.png) no-repeat;background-size: 100% 100%;}
 .spa_users{background: url(../images/usersIcon.png) no-repeat;background-size: 100% 100%;}
+
+.carIcon1{background: url(../images/regardIcon.png) no-repeat;background-size: 100% 100%;}
+.carIcon2{background: url(../images/listIcon.png) no-repeat;background-size: 100% 100%;}
+.carIcon3{background: url(../images/piaoIcon.png) no-repeat;background-size: 100% 100%;}
+.carIcon4{background: url(../images/usersIcon.png) no-repeat;background-size: 100% 100%;}
+
 
 
 
@@ -275,7 +288,7 @@ textarea{font-family: "微软雅黑";}
 .weui_btn_disabled {color: rgba(255, 255, 255, 0.8);}
 .couponList li{padding: 0.25rem 0.93rem;background: #fff;margin-top: 0.625rem;border-top: 1px solid #dbdbdb;border-bottom: 1px solid #dbdbdb;}
 .couponList li p{font-size:1rem;margin: 0.3rem 0;display: block;}
-.couponList li p span{color: #999;font-size: 0.875rem;}
+.couponList li p span{color: #666;font-size: 0.875rem;}
 .couponList li p span.time{color: #999;}
 .couponList li p span.moeny{color: #ff9452;position: relative;right: 0.75rem;}
 .couponList li p span.span_money{position: absolute;top: -1rem;right: -1rem;background: url(../images/sale.png) no-repeat;width: 1.25rem;height: 1.25rem;background-size: 100% 100%;}
@@ -542,6 +555,89 @@ img.shopInfor.w100{width: 100%;margin-bottom: 0.625rem;}
 .weui_btn_primary.stylecolor{border-radius: 0;background: #ff6702;}
 .bd.style .weui_cells:after{border: none;}
 
+
+
+/*carTeam*/
+.carTeamMenu{width: 100%;}
+.carTeamMenu li{padding: 0.8rem 3%;background: #fff;border-bottom: 1px solid #dbdbdb;display: table;width: 94%;}
+.carTeamMenu li>div{display: table-cell;vertical-align: middle;}
+.carTeamMenu li p{font-size: 0.875rem;color: #666;margin-bottom: 0.2rem;}
+.carTeamMenu li p:last-child{margin-bottom: 0;}
+.carTeamMenu li p.title{font-size: 1rem;color: #000;}
+.carTeamMenu li .weuiBtn{float: right;}
+.weuiBtn.disabled{background: #cccccc  }
+.carTeamMenu li .weuiBtn.hide{display: none;}
+.weuiBtn.weui-btn_primary:not(.weui-btn_disabled):visited {
+    color: #FFFFFF;
+}
+.weuiBtn.weui-btn  {
+    margin-top: 0
+}
+.weuiBtn.weui-btn_mini {
+    display: inline-block;
+    padding: 0 1.32em;
+    line-height: 2.3;
+    font-size: 13px;
+    margin-right: 0;
+}
+.weuiBtn.weui-btn_primary {
+    background-color: #ff6702;
+}
+.weuiBtn.weui-btn {
+    position: relative;
+    display: block;
+
+
+    width: 80px;;
+    box-sizing: border-box;
+    font-size: 16px;
+    text-align: center;
+    text-decoration: none;
+    color: #FFFFFF;
+    line-height: 2;
+    border-radius: 5px;
+    -webkit-tap-highlight-color: rgba(0, 0, 0, 0);
+    overflow: hidden;
+}
+.weuiBtn.weui-btn:after {
+    content: " ";
+    width: 200%;
+    height: 200%;
+    position: absolute;
+    top: 0;
+    left: 0;
+    border: 1px solid rgba(0, 0, 0, 0.2);
+    -webkit-transform: scale(0.5);
+    transform: scale(0.5);
+    -webkit-transform-origin: 0 0;
+    transform-origin: 0 0;
+    box-sizing: border-box;
+    border-radius: 10px;
+}
+
+
+
+
+
+/*addCarPeople*/
+.search_block{width: 94%;padding: 0.625rem 3%;position: relative;}
+.search_block .fa-search{position: absolute;font-size: 1rem;  top:1.3rem;left: 5%;color: #666;}
+.search_block .close{position: absolute;font-size: 0.625rem;top:1.3rem;right: 6%;color: #666;
+    display: inline-block;width: 0.875rem;height: 0.875rem;border-radius: 100%;background: #ccc;text-align: center;line-height: 0.875rem;}
+.search_block .close.hide{display: none;}
+.search_block input{width: 89%;border: 1px solid #dbdbdb;border-radius: 2px;padding: 0.625rem 0 0.625rem  10%;outline: none;}
+.mask{z-index: 1000;}
+.mask.hide{display: none;}
+.member_infor{width: 92%;position: absolute;left: 50%;margin-left: -46%;top: 50%;margin-top: -180px;}
+.member_infor .title{background: #fff;text-align: center;color: #333;font-size: 1.125rem;padding: 0.8rem 0;border-bottom: 1px solid #dbdbdb;border-radius: 4px 4px 0 0;}
+.cardDetails{background: #fff;overflow: hidden;}
+.cardDetails .card_p{text-align: center;font-size: 0.875rem;color: #666;padding: 0 3% 0.5rem;}
+.sureBtn{display: inline-block;padding: 0.8rem 0;text-align: center;background: red;width: 100%;color: #fff;
+    font-size: 1rem;border-radius: 0 0 4px 4px ;}
+
+
+
+
 /*shoppingCat*/
 .orderList.style li .orderCon p{display: block;margin: 0;}
 .spinner{display: inline-block;float: left}
@@ -589,8 +685,11 @@ img.shopInfor.w100{width: 100%;margin-bottom: 0.625rem;}
     transform: translate(-50%, -50%) scale(1) !important
 }
 
-
-
+.luckInfor{width: 88%;margin: .625rem 6%;background: url("../images/luckInfor.png");
+    background-size: 100% 100%;padding: 2rem 0 1rem;
+}
+.luckInfor p{font-size: 0.875rem;color: #fff;margin-bottom: 0.875rem;padding: 0 0.875rem;}
+.luckInfor p.title{font-size: 1rem;}
 
 .weui_cells_checkbox.left5 {display: inline-block;float: left;position: relative;left: 0.4rem;}
 .weui_cells_checkbox.style1 .weui_cell.style.p0{padding: 0;}
