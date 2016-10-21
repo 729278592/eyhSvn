@@ -66,7 +66,6 @@
     import userService from '../../api/userService'
     export default {
         components: {
-          Address,
           Bar,
           Toast
         },

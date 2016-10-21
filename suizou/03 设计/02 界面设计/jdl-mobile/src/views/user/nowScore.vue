@@ -75,12 +75,12 @@
           </p>
 
           <p class="clearfix">
-            <span class="left">预留积分</span>
+            <span class="left">当前积分</span>
             <span class="right">{{returnList.score}}</span>
           </p>
 
           <p class="clearfix">
-            <span class="left">预留积分总额</span>
+            <span class="left">当前积分总额</span>
             <span class="right">{{returnList.totalReseScore}}</span>
           </p>
 
@@ -96,12 +96,12 @@
           </p>
 
           <p class="clearfix">
-            <span class="left">预留积分</span>
+            <span class="left">当前积分</span>
             <span class="right">{{returnList.score}}</span>
           </p>
 
           <p class="clearfix">
-            <span class="left">预留积分总额</span>
+            <span class="left">当前积分总额</span>
             <span class="right">{{returnList.totalReseScore}}</span>
           </p>
 

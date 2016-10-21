@@ -57,9 +57,9 @@
         }
       },
       ready () {
-        document.title = '选择支付'
-        this.money=this.$route.params.money
-        this.stateInfor = this.$route.params.upDateId
+        document.title = '选择支付';
+        this.money=localStorage.getItem('moneyId');
+        this.stateInfor = localStorage.getItem('upDateId')
       },
       methods: {
         onShow: function () {
@@ -69,27 +69,31 @@
            for(var a = 0;a<this.payType.length;a++){
               this.payType[a].check = false
             }
-            this.payTy = payTypeList
-            payTypeList.check = true
+            this.payTy = payTypeList;
+            payTypeList.check = true;
             this.id =  payTypeList.payId
          },
         btnPay:function(){
           if(this.payTy.check){
-            this.$progress.start()
+
+
+            this.$progress.start();
             this.$http.post("http://www.jdl800.com/fric/mobile/member/createUpLevelOrder.do",{levelId:this.stateInfor}).then(function(response){
-              this.$progress.finish()
-              var res = response.data
+              this.$progress.finish();
+              var res = response.data;
               if(res.status == "ok") {
                 window.location.href="http://www.jdl800.com/fric/mobile/upLevelToPay.do?id="+res.datas
               } else {
                 alert(res.message)
               }
             }, function(response){
-              this.$progress.failed()
+              this.$progress.failed();
               // 响应错误回调
             })
+
+
         }else{
-         this.$set('toasttext','请选择支付方式')
+         this.$set('toasttext','请选择支付方式');
          this.$set('toastshow',true)
           }
         }

@@ -45,7 +45,7 @@
   <div class="shopsshoppingInfor">
       <P class="clearfix">
           <span class="left">
-              市场价　: ￥<span class="verdana">{{shopInfor.marketPrice}}</span>
+              市场价 : ￥<span class="verdana">{{shopInfor.marketPrice}}</span>
           </span>
           <span class="right color">
               平台优惠价 : ￥<span class="verdana">{{shopInfor.price}}</span>
@@ -203,10 +203,9 @@
 </template>
 
 <style scoped>
-  .bd.absolute{bottom:auto}
+  .bd.absolute{bottom:0}
   .foot{height: 49px;line-height: 49px;}
 </style>
-
 
 <script>
    import Spinner from '../components/spinner.vue'

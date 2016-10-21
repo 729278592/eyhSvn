@@ -1,7 +1,6 @@
 <template>
   <Bar></Bar>
   <div class="bd absolute pt">
-
     <div id="order">
       <ul class="orderList">
           <li v-for="shop in list">
@@ -9,7 +8,7 @@
                   <span class="orderNum left">{{shop.name}}</span>
                   <span class="time right"><span class="verdana">{{shop.time}}</span></span>
               </div>
-              <a v-for="shopping in shop.shoppings" v-link="'/user/orderInfor'">
+              <a v-for="shopping in shop.shoppings">
                   <div class="orderCon">
                       <div class="orderImg" v-html="shopping.img"></div>
                       <div class="orderInfor">

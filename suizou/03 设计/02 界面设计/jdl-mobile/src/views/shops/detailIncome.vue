@@ -67,12 +67,12 @@
     <ul class="queryMenu">
       <li v-for="returnList in list.datas">
         <p class="clearfix">
-          <span class="time">{{returnList.createTime}}</span>
+          <span class="time">{{returnList.cashbackDate}}</span>
         </p>
 
         <p class="clearfix">
           <span class="left">存留积分总额</span>
-          <span class="right">{{returnList.todayScore}}</span>
+          <span class="right">{{returnList.haveScore}}</span>
         </p>
 
         <p class="clearfix">
@@ -81,8 +81,8 @@
         </p>
 
         <p class="clearfix">
-          <span class="left">昨日返现</span>
-          <span class="right">{{returnList.reservedScore}}</span>
+          <span class="left">今日返现</span>
+          <span class="right">{{returnList.todayScore}}</span>
         </p>
       </li>
     </ul>

@@ -16,7 +16,7 @@
                       </label>
                   </div>
                   <div class="weui_cell_bd weui_cell_primary">
-                      <input class="weui_input" @invalid="isEmptyInvalid" initial="off" detect-change="off" id="isEmpty" v-model="isEmpty" type="text" v-validate:isEmpty="['isEmpty']"  placeholder='请输入公司名称'>
+                      <input class="weui_input" id="isEmpty" v-model="isEmpty" type="text" placeholder='请输入公司名称'>
                   </div>
               </div>
               <div class="weui_cell">
@@ -26,7 +26,7 @@
                       </label>
                   </div>
                   <div class="weui_cell_bd weui_cell_primary">
-                      <input class="weui_input" @invalid="telonInvalid" initial="off" detect-change="off" v-model="mobile" id="mobile" type="tel" v-validate:mobile="['mobile']"  placeholder='请输入手机号'  @keyup="isDisables($event)">
+                      <input class="weui_input" v-model="mobile" id="mobile" type="tel"  placeholder='请输入手机号'>
                   </div>
               </div>
               <div class="weui_cell">
@@ -36,14 +36,13 @@
                       </label>
                   </div>
                   <div class="weui_cell_bd weui_cell_primary">
-                      <input class="weui_input codeInput"  @invalid="isPostCodeInvalid" initial="off" detect-change="off" v-model="isPostCode" id="isPostCode" v-validate:isPostCode="['isPostCode']" placeholder="验证码为6位有效数字"/>
+                      <input class="weui_input codeInput"  v-model="isPostCode" id="isPostCode"  placeholder="验证码为6位有效数字"/>
                       <input type="button" class="getCode" :class="{'disabled':disabled}" disabled = {{type}} id="getCode" @click="getCodeBtn($event)" v-model="code" value = {{code}} />
                   </div>
               </div>
 
           </div>
           <div class="weui_btn_area">
-          <!--<a  class="weui_btn weui_btn_primary" >查询</a>-->
            <input type="submit" class="weui_btn  weui_btn_primary" @click="save()" value="查询">
 
           </div>
@@ -69,8 +68,8 @@
          toasttext:"",
          isPostCode:"",
          isEmpty:"",
-         type:true,
-         disabled:true,
+         type:false,
+         disabled:false,
          code:"获取验证码",
          xxId:"",
          modifyValue:[]
@@ -87,55 +86,47 @@
           window.history.go(-1)
         },
 
-       telonInvalid(){
-           this.$set('toasttext','手机号不正确');
-           this.$set('toastshow',true);
-       },
-       isPostCodeInvalid(){
-           this.$set('toasttext','验证码不正确');
-           this.$set('toastshow',true);
-       },
-       isEmptyInvalid(){
-           this.$set('toasttext','公司名不能为空');
-           this.$set('toastshow',true);
-       },
-       isDisables:function(e){
-         var reg = /^(1[38][0-9]|14[57]|15[012356789]|17[0678])[0-9]{8}$/
-         if(reg.test(e.currentTarget.value)){
-           this.disabled = false
-            this.type = false
-         }else{
-           this.disabled = true
-           this.type = true
-         }
-      },
+        showErrMsg(errMsg) {
+          this.$set('toasttext',errMsg);
+          this.$set('toastshow',true);
+        },
       getCodeBtn:function(e){
-         var btn = e.currentTarget
-         var that = this
-         var mobile = that.$get('mobile')
-         var auditArr = {mobile:mobile}
-         userService.sendMchStatusAuthCode(that,auditArr,btn)
+
+        var reg = /^(1[38][0-9]|14[57]|15[012356789]|17[0678])[0-9]{8}$/;
+        if(!reg.test(this.mobile)) {
+          this.showErrMsg("请输入有效的手机号");
+          return
+        }
+        var btn = e.currentTarget;
+        var mobile = this.mobile;
+        var auditArr = {mobile:mobile};
+        userService.sendMchStatusAuthCode(this,auditArr,btn)
      },
        save: function(){
-         var that = this
-         var isEmpty = that.$get('isEmpty')
-         var mobile = that.$get('mobile')
-         var isPostCod = that.$get('isPostCode')
+         if(!this.isEmpty){
+           this.showErrMsg("公司名不能为空");
+           return
+         }
 
-         that.$validate(true, function () {
-             if (that.$validation.invalid) {
-             }else{
-                var formData = {
-                    mobile:mobile,realname:isEmpty,
-                    authCode:isPostCod,
-                    msgAuthcodeId:that.xxId
-                 }
-                 userService.getMchApplyStatus(that,formData)
+         var mobileReg = /^(1[38][0-9]|14[57]|15[012356789]|17[0678])[0-9]{8}$/;
+         if(!mobileReg.test(this.mobile)){
+           this.showErrMsg("无效的手机号");
+           return
+         }
 
-             }
-         })
+         if(!this.isPostCode){
+           this.showErrMsg("验证码不能为空");
+           return
+         }
 
+         var formData = {
+           mobile:this.mobile,
+           realname:this.isEmpty,
+           authCode:this.isPostCode,
+           msgAuthcodeId:this.xxId
+         };
 
+         userService.getMchApplyStatus(this,formData)
 
        }
       }

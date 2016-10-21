@@ -117,12 +117,12 @@
                         <div class="weui_uploader_bd">
                             <ul class="weui_uploader_files clearfix">
                                 <li class="weui_uploader_file">
-                                    <!--<img src="../../../static/images/defaultImg.jpg" />-->
                                     <img src="../../../static/images/defaultImg.jpg">
+                                    <!--<img id="preview" src="{{file && URL.createObjectURL(file)}}">-->
                                 </li>
                             </ul>
                             <div class="weui_uploader_input_wrp">
-                                <input class="weui_uploader_input" type="file" accept="image/*">
+                                <input class="weui_uploader_input" type="file"  accept="image/*" >
                             </div>
                         </div>
                     </div>
@@ -175,13 +175,18 @@
          areaList: [],
           province:"-1",
           city:"-1",
-          area:"-1"
+          area:"-1",
+          $file: null,
+          file: null
         }
       },
       ready () {
         document.title = '入驻申请';
          userService.getRegionByPid(this,0,'p')
       },
+    created () {
+      this.$file = this.$els.msg;
+    },
       methods: {
         onShow: function () {
           this.hide = !this.hide
@@ -224,6 +229,8 @@
           this.$set('toasttext',errMsg);
           this.$set('toastshow',true);
         },
+
+
        save: function(){
 
          var mobileReg = /^(1[38][0-9]|14[57]|15[012356789]|17[0678])[0-9]{8}$/;
