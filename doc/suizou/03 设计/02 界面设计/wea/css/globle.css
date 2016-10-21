@@ -24,11 +24,12 @@ body{}
 .logo{width: 50px;height: 50px;position: absolute;left: 0;top: 5px;}
 .logo a{display: inline-block;width: 100%;height: 100%;}
 .logo a img{width: 100%;height: 100%;}
-.menu{display: block;width: 1024px;margin: 0 auto;}
+.menu{display: block;width: 768px;margin: 0 auto;}
 .menu>li{position: relative;float: left;width: 110px;height: 60px;line-height: 60px;text-align: center;margin-right: 18px;}
 .menu>li.active>a{background: #3da63d;}
 .menu>li>a{font-size: 16px;color: #333;border-bottom: 3px solid transparent;display: inline-block;width: 100%;height: 57px;}
 .menu>li.active>a{color: #fff;}
+.menu>li> ul li a.active{background: #3da63d;color: #fff;}
 .menu>li:hover>a{background: #3da63d;color: #fff;}
 .menu>li>ul{display: none;width: 100%;position: absolute;left: 0;top: 50px;z-index: 1000;}
 .menu>li>ul li{width: 100%;height: 40px;}
