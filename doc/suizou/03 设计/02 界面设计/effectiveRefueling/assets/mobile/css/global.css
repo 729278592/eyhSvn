@@ -508,6 +508,7 @@ img.shopInfor.w100{width: 100%;margin-bottom: 0.625rem;}
 
 /*gasStationList*/
 .hotStation{width: 100%;background: #fff;border-top: 1px solid #dbdbdb;}
+.hotStation>div.hide{display: none;}
 .hotStation.mt{margin-top: 0.625rem;}
 .stationTitle{font-size: 1rem;color: #ff0404;padding: 0.6rem 0.625rem;border-bottom: 1px solid #efefef;}
 .stationTitle .colorBlock{position: relative;top: 0.2rem;display: inline-block;width: 0.25rem;height: 1.5rem;background: #ff0404;}
@@ -518,7 +519,7 @@ img.shopInfor.w100{width: 100%;margin-bottom: 0.625rem;}
 .stationList li p{display: block;}
 .stationList li p span{font-size: 0.875rem;color: #999;}
 .stationList li p:last-child span.left{position: relative; top: 0.25rem;}
-.stationList li p>a{color: #7ebd8b;display: inline-block;padding: 0.125rem 0.25rem;border: 1px solid #7ebd8b;border-radius: 0.25rem;font-size: 0.875rem;}
+.stationList li p>a{color: #ff6702;display: inline-block;padding: 0.125rem 0.25rem;border: 1px solid #ff6702;border-radius: 0.25rem;font-size: 0.875rem;}
 .stationList li p a .address{width:1rem;position: relative;top: -0.125rem;}
 .stationList li p .color1{color: #333;font-size: 1rem;}
 .stationList li p .color2{color: #ff6702;}
@@ -531,8 +532,8 @@ img.shopInfor.w100{width: 100%;margin-bottom: 0.625rem;}
 /*gasStationInfor*/
 .stationDiv{background: #fff;}
 .stationDiv>img{height: 124px;}
-.stationDiv p{display: block;color: #666;padding: 1rem;}
-.stationDiv p a{color: #7ebd8b;display: inline-block;padding: 0.125rem 0.25rem;border: 1px solid #7ebd8b;border-radius: 0.25rem;font-size: 0.875rem;}
+.stationDiv p{display: block;color: #666;padding: 0.5rem 1rem;}
+.stationDiv p a{color: #7ebd8b;display: inline-block;padding: 0.125rem 0.25rem;border-radius: 0.25rem;font-size: 0.875rem;}
 .stationList.style li p a{color: #ff6702;border-color: #ff6702;}
 .stationList.style li p:last-child span{position: relative;top: 0.25rem;}
 .style.stationList li{padding: 0.875rem 0.625rem;}
