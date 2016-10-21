@@ -18,8 +18,15 @@
                 </div>
             </div>
 
-          <div class="weui_cell_bd weui_cell_primary">
-            <input class="weui_input" @invalid="addressInvalid" initial="off" detect-change="off" id="addressInfor" v-model="addressInfor" v-validate:addressInfor="['addressInfor']"  type="text"  placeholder='请输入详细地址'>
+          <div class="weui_cell">
+            <div class="weui_cell_hd">
+              <label class="weui_label style">
+                详细地址
+              </label>
+            </div>
+            <div class="weui_cell_bd weui_cell_primary">
+              <input class="weui_input" @invalid="addressInvalid" initial="off" detect-change="off" id="addressInfor" v-model="addressInfor" v-validate:addressInfor="['addressInfor']"  type="text"  placeholder='请输入详细地址'>
+            </div>
           </div>
 
 

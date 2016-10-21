@@ -185,6 +185,7 @@ export default {
       if(res.status == "ok") {
         if(res.datas!=null){
           context.inList = res.datas.datas
+          console.log(JSON.stringify(res.datas.datas))
         }
         if(context.inList.length!=0){
           context.dataHide = false
@@ -256,7 +257,6 @@ export default {
           for(var j = 0;j<len;j++){
             context.list[i].item[j].starActive = true
           }
-          console.log(len);
           if(context.list[i].lat||context.list[i].lng){
             this.lat = context.list[i].lat;
             this.lng = context.list[i].lng;
@@ -279,7 +279,6 @@ export default {
       var res = response.json()
       if(res.status == "ok") {
         context.list = res.datas
-        console.log(JSON.stringify(res.datas))
         var len = Math.round(context.list.evaTotalScore/context.list.evaOrderNum)
 
         for(var j = 0;j<len;j++){
@@ -339,7 +338,6 @@ export default {
       var res = response.json()
       if(res.status == "ok") {
         if( res.datas!=null){
-          console.log(JSON.stringify(res.datas))
           context.list = res.datas
           var len = Math.round(context.list.evaTotalScore/context.list.evaOrderNum)
           for(var j = 0;j<len;j++){
@@ -363,7 +361,6 @@ export default {
     context.$http.post(API_ROOT+"mobile/mch/evaList.do").then(function(response){
       context.$progress.finish()
       var res = response.json()
-      console.log(JSON.stringify(res.datas))
       if(res.status == "ok") {
         if(res.datas!=null){
           context.list = res.datas.datas
@@ -536,8 +533,7 @@ export default {
         }else{
           context.dataHide = true
         }
-
-        console.log(JSON.stringify(res.datas.datas))
+        //console.log(JSON.stringify(res.datas.datas))
       } else {
         alert(res.message);
       }
@@ -562,8 +558,6 @@ export default {
         }else{
           context.dataHide = true
         }
-
-
       } else {
         alert(res.message);
       }

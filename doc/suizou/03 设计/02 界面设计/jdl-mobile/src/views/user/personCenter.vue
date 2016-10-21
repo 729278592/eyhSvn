@@ -38,7 +38,7 @@
               <div>
                   <div class="couponImg style">
                   <img v-if="dataJson.headimgurl!=null" :src='this.imageUrl+dataJson.headimgurl' class='couponImg1' alt=''>
-                  <img v-if="dataJson.headimgurl==null" src='../../../static/images/shopsImg.jpg' class='couponImg1' alt=''>
+                  <img v-if="dataJson.headimgurl==null" src='../../../static/images/personLogo.jpg' class='couponImg1' alt=''>
                   </div>
                   <div class="inforList">
                       <p class="clearfix top">

@@ -91,27 +91,20 @@
               </a>
           </li>
       </ul>
-
-
         <div style="font-size:14px;padding:0.5rem;">
           <span>客服电话:028-84279066</span>
           <a v-link="'/user/userHelp'" style="color:#81b57b;text-decoration:underline;float:right">《用户帮助》</a>
         </div>
-
-
        </div>
 </template>
 <style>
   @import '../../../static/plugins/swiper/dist/css/swiper.min.css';
 </style>
-
 <script>
   import '../../../static/plugins/swiper/dist/js/swiper.min.js'
   export default {
-
     ready () {
-      document.title = '家得利'
-      console.log(this.$els.msg)
+      document.title = '家得利';
       new Swiper (this.$els.msg, {
          slidesPerView: 1,
          pagination:'.swiper-pagination',
@@ -121,8 +114,6 @@
          autoplay: 5000,
          autoplayDisableOnInteraction: false
       })
-
     }
-
   }
 </script>

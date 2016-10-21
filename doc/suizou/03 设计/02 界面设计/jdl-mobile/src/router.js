@@ -226,8 +226,7 @@ router.map({
             }
           },
 
-          '/memberPayChioce/:upDateId/:money': {
-            name:"memberPayChioce",
+          '/memberPayChioce/': {
             component: (resolve) => {
               require(['./views/user/memberPayChioce.vue'], resolve)
             },

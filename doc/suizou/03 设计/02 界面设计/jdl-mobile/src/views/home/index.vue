@@ -171,6 +171,9 @@
   @import '../../../static/plugins/swiper/dist/css/swiper.min.css';
 </style>
 
+<style>
+  .shop_cat{top:0.3rem;}
+</style>
 
 <script>
   import '../../../static/plugins/swiper/dist/js/swiper.min.js'
