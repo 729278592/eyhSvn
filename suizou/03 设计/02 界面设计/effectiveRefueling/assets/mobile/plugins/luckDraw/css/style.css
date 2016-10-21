@@ -2,7 +2,7 @@
 a{text-decoration:none;}
 img{border:none;}
 li{list-style:none outside none;}
-body{background:#c9c9c9;font-size:14px;font-family:"宋体";}
+body{background:#c9c9c9;font-size:14px;font-family:"微软雅黑";}
 
 
 .luckDraw{position: relative;overflow: hidden;background: url("../../../images/luckBg.png");width: 88%;margin: .625rem 6%;background-size: 100% 100%;height: 380px;}
@@ -30,6 +30,7 @@ em{font-size:30px;font-style:normal;color:red;}
     .myBox li{width: 90px;height: 90px;line-height: 80px;}
     .bt2{left: 120px;top: 124px;width: 90px;height: 90px;line-height: 90px;}
     .luckDraw{height: 350px;}
+    .myBox li{font-size: 24px;}
 }
 
 @media screen and (max-width: 325px) {
