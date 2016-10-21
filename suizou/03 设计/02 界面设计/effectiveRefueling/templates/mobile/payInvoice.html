@@ -8,6 +8,13 @@
     <link rel="stylesheet" href="../../assets/mobile/css/weui.css"/>
     <link rel="stylesheet" href="../../assets/mobile/css/example.css"/>
     <link rel="stylesheet" href="../../assets/mobile/css/global.css"/>
+    <style>
+        .fpSelect{    padding: 0.5rem 0 0.5rem 0.5rem;
+            border: 1px solid #dbdbdb;
+            outline: none;
+            width: 72%; }
+        .fpSelect option{width: 72%;display: inline-block;}
+    </style>
 </head>
 <body>
     <div class="content errDailog">
@@ -58,6 +65,28 @@
                         <p>
                             <span class="title">发票金额</span>
                             <span>￥<span class="verdana">600.00</span></span>
+                        </p>
+                        <p>
+                            <span class="title">发票地址</span>
+                            <select class="fpSelect" name="" id="">
+                                <option value="请选择发票">请选择省</option>
+                                <option value=""></option>
+                                <option value=""></option>
+                            </select>
+                        </p>
+                        <p>
+                            <select class="fpSelect" name="" id="" style="position: relative;left: 4.2rem">
+                                <option value="请选择发票">请选择市</option>
+                                <option value=""></option>
+                                <option value=""></option>
+                            </select>
+                        </p>
+                        <p>
+                            <select class="fpSelect" name="" id="" style="position: relative;left: 4.2rem">
+                                <option value="请选择发票">请选择县</option>
+                                <option value=""></option>
+                                <option value=""></option>
+                            </select>
                         </p>
                         <div class="weui_btn_area fixed">
                             <input type="submit" class="weui_btn b0 weui_btn_primary" id="saveBtn" value="确认">
