@@ -369,9 +369,21 @@ html.overflow{overflow: hidden;}
 .solute_nav li a.active{border-left: 5px solid #3da63d;color: #3da63d;}
 
 
-.solute_details{width: 820px;border: 1px solid #dbdbdb;}
-
-
+.solute_details{width: 820px;}
+.soluteInfor{background: #f3f3f3;padding: 10px 20px;}
+.soluteInfor p{font-size: 14px;color: #999;margin-bottom: 5px;}
+.soluteInfor p.title{font-size: 16px;color: #333;}
+.soluteInfor p.con{text-indent: 28px;margin-bottom: 20px;}
+.casePrice{padding: 15px 0;}
+.casePrice span{position: relative;top: 5px;}
+.casePrice img{margin-right: 10px;}
+.casePrice span.pf{display: inline-block;padding: 5px 10px;background:#3da63d;color: #fff;}
+.casePrice span.money{color: #3da63d;position: relative;left: 10px;}
+.casePrice span.spanCon{color: #999;font-size: 14px;position: relative;left: 10px;}
+.conTitle{font-size: 16px;color: #666;padding: 15px 20px;background: #e4e4e4;display: inline-block;}
+.divTitle{font-size: 16px;color: #333;}
+.divTitle p{margin-top: 20px;font-size: 14px;color: #999;line-height: 24px;}
+.divTitle p.title{font-size: 16px;color: #333;}
 
 /*about*/
 .l_about{color: #666;}
