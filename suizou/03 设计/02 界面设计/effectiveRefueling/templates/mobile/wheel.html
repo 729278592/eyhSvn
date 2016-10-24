@@ -11,6 +11,7 @@
     <link rel="stylesheet" href="../../assets/mobile/plugins/luckDraw/css/style.css">
     <style>
         .bd{background: #ff5343;}
+        .errDailog .weui_toast{padding: 5px;}
     </style>
 </head>
 <body>
@@ -68,7 +69,7 @@
                 </p>
                 <p>
                     您当前拥有
-                    <span class="score">200</span>
+                    <span class="score">50</span>
                     积分
                 </p>
                 <a href="myPrize.html" class="myBtn weuiBtn weui-btn weui-btn_mini weui-btn_primary">我的奖品</a>
@@ -76,7 +77,6 @@
             <div class="luckInfor">
                 <p class="title">
                     活动时间：
-
                 </p>
                 <p>
                     2014年6月20日——2014年12月31日
@@ -133,17 +133,19 @@
 <script src="../../assets/global/plugins/jquery/jquery-1.11.3.min.js"></script>
 <script src="../../assets/mobile/js/removeTip.js"></script>
 <script src="../../assets/mobile/js/global.js"></script>
+<script src="../../assets/mobile/js/removeTip.js"></script>
 <script src="../../assets/mobile/plugins/luckDraw/js/luckDraw.js"></script>
 <script>
     $(function(){
-        var tar = 5;
-
         $('.cj2').myLuckDraw({
             row : 3, //行
             column : 3, //列
             spacing: 5, //空隙
             click : '.bt2', //点击触发
             time: 1 ,//匀速运动的时间
+            arr:["5元","谢谢","100元","30元","50元","200元","10元","20元"],
+            nowScore:$(".reduce").text(),
+            totalScore:$(".score").text(),
             end:function(e){
                 //抽奖执行完毕的回调函数,参数e为获奖编号
                 //因为这里是指定的，所以e == 12
