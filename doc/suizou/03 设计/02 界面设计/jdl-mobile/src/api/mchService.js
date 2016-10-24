@@ -252,8 +252,8 @@ export default {
             {starActive:false},
             {starActive:false},
             {starActive:false}
-          ]
-          var len = Math.round(context.list[i].evaTotalScore/context.list[i].evaOrderNum)
+          ];
+          var len = Math.round(context.list[i].evaTotalScore/context.list[i].evaOrderNum);
           for(var j = 0;j<len;j++){
             context.list[i].item[j].starActive = true
           }
@@ -267,7 +267,7 @@ export default {
         alert(res.message);
       }
     }, function(response){
-      context.$progress.failed()
+      context.$progress.failed();
       // 响应错误回调
     })
   },
