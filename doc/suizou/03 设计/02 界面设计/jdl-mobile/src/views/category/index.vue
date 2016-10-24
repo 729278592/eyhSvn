@@ -36,7 +36,7 @@
   <ul class="category_menu">
       <li class="clearfix" v-for="shopList in list">
           <div class="left"  v-link="{ name: 'shopplingList', params: {shopplingListId: shopList.id,type:'p'}}">
-              <div class="shopping_img1"></div>
+              <div class="shopping_img2"></div>
               <span>{{shopList.name}}</span>
           </div>
           <div class="right">
