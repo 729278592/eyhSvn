@@ -6,13 +6,13 @@ ul li,ul{margin:0;padding:0;list-style:none;}
 .nav .slider{
     position: absolute;left: 0;height:480px;
 }
-.infor{position: absolute;top: 20px;left: 10px;}
+.infor{position: absolute;top: 0px;left: 10px;}
 .infor_img{display: inline-block;font-size: 1rem;color:#fff;background: url("../images/soluteBg.png");width: 63px;height:30px;background-size: 100% 100%;line-height: 30px;text-align: center;position: relative;left: 20px;}
 .infor p{display: inline-block;font-size: 0.875rem;color: #1bbe1b;text-decoration: underline;line-height: 30px;}
 
 
 
-.nav .slider li{float:left;width: 820px;height:480px;}
+.nav .slider li{float:left;width: 820px;height:480px;position: relative;}
 .nav .slider li a{display: inline-block;width: 100%;height: 100%;}
 .nav .slider li a img{width: 100%;height: 100%;}
 .nav .num{
