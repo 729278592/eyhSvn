@@ -1,37 +1,37 @@
 <template>
   <div class="hd">
-          家得利
-          <div class="right nav_block">
-            <a v-link="'/user/shopCart'" class="shop_cat"></a>
-            <a class="dot_block" @click.stop="onShow">
-              <i class="fa fa-user"></i>
-            </a>
-            <ul class="nav_link" :class="{'hide':hide}" v-if="isLogin==false">
-                <li>
-                    <a v-link="'/'">
-                        首页
-                    </a>
-                </li>
-                <li>
-                    <a v-link="'/auth/personLogin'">
-                        登录
-                    </a>
-                </li>
-            </ul>
-             <ul class="nav_link" :class="{'hide':hide}" v-if="isLogin==true">
-                <li>
-                    <a v-link="'/user/personCenter'">
-                        个人中心
-                    </a>
-                </li>
-                <li>
-                    <a @click="loginOut()">
-                        退出
-                    </a>
-                </li>
-            </ul>
-        </div>
-    </div>
+    家得利
+    <div class="right nav_block">
+      <a v-link="'/user/shopCart'" class="shop_cat"></a>
+      <a class="dot_block" @click.stop="onShow">
+        <i class="fa fa-user"></i>
+      </a>
+      <ul class="nav_link" :class="{'hide':hide}" v-if="isLogin==false">
+          <li>
+              <a v-link="'/'">
+                  首页
+              </a>
+          </li>
+          <li>
+              <a v-link="'/auth/personLogin'">
+                  登录
+              </a>
+          </li>
+      </ul>
+       <ul class="nav_link" :class="{'hide':hide}" v-if="isLogin==true">
+          <li>
+              <a v-link="'/user/personCenter'">
+                  个人中心
+              </a>
+          </li>
+          <li>
+              <a @click="loginOut()">
+                  退出
+              </a>
+          </li>
+      </ul>
+  </div>
+  </div>
   <div class="bd absolute pd48">
     <div class="mask-bg" :class="{'hide':this.maskHide}" v-if="showFade" transition="fade" @click="maskClick()"></div>
     <section :class="{'tabSX':this.tabHide}">
