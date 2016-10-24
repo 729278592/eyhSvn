@@ -24,11 +24,11 @@
 			var line = row-2;//除去上下de行数
 			var length = $this.children('li').length;
 			var options = this.options;
-			var arr = ["5元","谢谢","100元","30元","50元","200元","10元","20元"]
+			//var arr = ["5元","谢谢","100元","30元","50元","200元","10元","20元"]
 
 			if(length < allNumber){
 				for(var i=length;i<=(allNumber-length);i++){
-					$this.append("<li>"+(arr[i])+"</li>");
+					$this.append("<li>"+(this.options.arr[i])+"</li>");
 				}
 			}
 			var children = $this.children('li');
@@ -119,12 +119,20 @@
 			var time = this.options.time*1000;//匀速运行的时间，单位秒
 
 			$(click).on('click',function(){
-				if(!flg){
-					flg = true;
-					target = $this.target || Math.floor(Math.random()*allNumber+1);
-					speedUp();
-				}else{
-					return ;
+				if(parseInt(options.totalScore)<parseInt(options.nowScore)){
+					showErrMsg('您当前的积分不够');
+					return;
+				}
+				else{
+					if(!flg){
+						flg = true;
+						$(".score").text($(".score").text()-$(".reduce").text());
+						options.totalScore = options.totalScore-options.nowScore;
+						target = $this.target || Math.floor(Math.random()*allNumber+1);
+						speedUp();
+					}else{
+						return ;
+					}
 				}
 			});
 
@@ -159,13 +167,14 @@
 			//减速
 			function speedDown(){
 				var stop3 = setTimeout(speedDown,v);
-				var arr = ["5元","谢谢","100元","30元","50元","200元","10元","20元"]
+				//var arr = ["5元","谢谢","100元","30元","50元","200元","10元","20元"]
 				if(v >= 500){
 					v = 500;
 					if(ix == target-1){
 						clearTimeout(stop3);
-						$(".weui_mask").removeClass("hide")
-						options.end(arr[target-1]);
+						$(".weui_mask").removeClass("hide");
+						options.end(options.arr[target-1]);
+
 						flg = false;
 					}
 				}else{
