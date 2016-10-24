@@ -258,8 +258,9 @@ export default {
             context.list[i].item[j].starActive = true
           }
           if(context.list[i].lat||context.list[i].lng){
-            this.lat = context.list[i].lat;
-            this.lng = context.list[i].lng;
+            context.lat = context.list[i].lat;
+            context.lng = context.list[i].lng;
+            return;
           }
         }
       } else {

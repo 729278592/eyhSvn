@@ -51,46 +51,46 @@
                   </div>
               </div>
               <div class="weui_cell weui_cell_select">
-                              <div class="weui_cell_hd">
-                                  <label class="weui_label style">
-                                      <span class="span_icon spa_address"></span>
-                                  </label>
-                              </div>
-                              <div class="weui_cell_bd weui_cell_primary">
-                                  <select class="weui_select" name="province" @change="provinceChange" v-model="province">
-                                      <option value="-1">请选择省份</option>
-                                      <option v-for="item in provinceList" value={{item.id}}>{{item.name}}</option>
-                                  </select>
-                              </div>
-                          </div>
+                  <div class="weui_cell_hd">
+                      <label class="weui_label style">
+                          <span class="span_icon spa_address"></span>
+                      </label>
+                  </div>
+                  <div class="weui_cell_bd weui_cell_primary">
+                      <select class="weui_select" name="province" @change="provinceChange" v-model="province">
+                          <option value="-1">请选择省份</option>
+                          <option v-for="item in provinceList" value={{item.id}}>{{item.name}}</option>
+                      </select>
+                  </div>
+              </div>
 
-                          <div class="weui_cell weui_cell_select">
-                              <div class="weui_cell_hd">
-                                  <label class="weui_label style">
-                                      <span class="span_icon spa_address"></span>
-                                  </label>
-                              </div>
-                              <div class="weui_cell_bd weui_cell_primary">
-                                 <select class="weui_select" name="city" @change="cityChange" v-model="city">
-                                    <option value="-1">请选择城市</option>
-                                      <option v-for="item in cityList" value={{item.id}}>{{item.name}}</option>
-                                  </select>
-                              </div>
-                          </div>
+              <div class="weui_cell weui_cell_select">
+                  <div class="weui_cell_hd">
+                      <label class="weui_label style">
+                          <span class="span_icon spa_address"></span>
+                      </label>
+                  </div>
+                  <div class="weui_cell_bd weui_cell_primary">
+                     <select class="weui_select" name="city" @change="cityChange" v-model="city">
+                        <option value="-1">请选择城市</option>
+                          <option v-for="item in cityList" value={{item.id}}>{{item.name}}</option>
+                      </select>
+                  </div>
+              </div>
 
-                          <div class="weui_cell weui_cell_select">
-                              <div class="weui_cell_hd">
-                                  <label class="weui_label style">
-                                      <span class="span_icon spa_address"></span>
-                                  </label>
-                              </div>
-                              <div class="weui_cell_bd weui_cell_primary">
-                                  <select class="weui_select" name="area" @change="areaChange" v-model="area">
-                                    <option value="-1">请选择区县</option>
-                                      <option v-for="item in areaList" value={{item.id}}>{{item.name}}</option>
-                                  </select>
-                              </div>
-                          </div>
+              <div class="weui_cell weui_cell_select">
+                  <div class="weui_cell_hd">
+                      <label class="weui_label style">
+                          <span class="span_icon spa_address"></span>
+                      </label>
+                  </div>
+                  <div class="weui_cell_bd weui_cell_primary">
+                      <select class="weui_select" name="area" @change="areaChange" v-model="area">
+                        <option value="-1">请选择区县</option>
+                          <option v-for="item in areaList" value={{item.id}}>{{item.name}}</option>
+                      </select>
+                  </div>
+              </div>
               <div class="weui_cell">
                   <div class="weui_cell_hd">
                       <label class="weui_label">
@@ -175,18 +175,14 @@
          areaList: [],
           province:"-1",
           city:"-1",
-          area:"-1",
-          $file: null,
-          file: null
+          area:"-1"
         }
       },
       ready () {
         document.title = '入驻申请';
          userService.getRegionByPid(this,0,'p')
       },
-    created () {
-      this.$file = this.$els.msg;
-    },
+
       methods: {
         onShow: function () {
           this.hide = !this.hide
@@ -229,10 +225,7 @@
           this.$set('toasttext',errMsg);
           this.$set('toastshow',true);
         },
-
-
        save: function(){
-
          var mobileReg = /^(1[38][0-9]|14[57]|15[012356789]|17[0678])[0-9]{8}$/;
          if(!this.isEmptyCompany){
            this.showErrMsg("公司名不能为空");
@@ -243,6 +236,7 @@
            this.showErrMsg("联系人不能为空");
            return
          }
+
          if(!mobileReg.test(this.mobile)){
            this.showErrMsg("无效的手机号");
            return

@@ -140,51 +140,21 @@
           问：如何联系家得利客服？ <br>
           答：如您对家得利有任何疑问，欢迎拨打客服热线028-84279066
 
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
             </div></br>
-
-        </div>
     </div>
-
 </template>
 
 <style>
-  .user_agreement>div{text-indent:0;}
+  .user_agreement{text-indent:0;}
+  .user_agreement {
+    font-size: .875rem;
+    line-height: 1.5rem;
+    width: 94%;
+    margin: .625rem auto 0;
+    color: #666;
+  }
 </style>
+
 <script>
   export default {
     components: {
@@ -202,8 +172,8 @@
           this.hide = !this.hide
         },
         returnPage:function(){
-                 window.history.go(-1)
-               }
+          window.history.go(-1)
+        }
       }
     }
 </script>
