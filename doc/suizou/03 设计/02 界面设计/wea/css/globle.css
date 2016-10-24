@@ -130,7 +130,7 @@ body{}
 
 
 
-.evalute{background: #fdfaeb;margin: 25px 0;}
+.evalute{background: #fdfaeb;margin: 50px 0 25px;}
 .evalute img{width: 233px;height: 45px;margin: 0 auto;position: relative;top: -23px;display: block;}
 .evalute_menu{display: block;width: 1024px;
     margin: 0 auto;}
@@ -370,14 +370,14 @@ html.overflow{overflow: hidden;}
 .solute_nav li a.active{border-left: 5px solid #3da63d;color: #3da63d;}
 
 
-.solute_details{width: 820px;}
+.solute_details{width: 820px;margin-bottom: 40px;}
 .soluteInfor{background: #f3f3f3;padding: 10px 20px;}
 .soluteInfor p{font-size: 14px;color: #999;margin-bottom: 5px;}
 .soluteInfor p.title{font-size: 16px;color: #333;}
 .soluteInfor p.con{text-indent: 28px;margin-bottom: 20px;}
 .casePrice{padding: 15px 0;}
 .casePrice span{position: relative;top: 5px;}
-.casePrice img{margin-right: 10px;}
+.casePrice img{margin-right: 10px;position: relative;top: -5px;}
 .casePrice span.pf{display: inline-block;padding: 5px 10px;background:#3da63d;color: #fff;}
 .casePrice span.money{color: #3da63d;position: relative;left: 10px;}
 .casePrice span.spanCon{color: #999;font-size: 14px;position: relative;left: 10px;}
@@ -393,7 +393,7 @@ html.overflow{overflow: hidden;}
 .center{text-align: center;font-size: 14px;color: #999;text-indent: -28px;}
 .center p{line-height: 24px;}
 /*foot*/
-.foot{width: 100%;background: #2d2728;height: 90px;}
+.foot{width: 100%;background: #171915;height: 90px;padding: 20px 0 60px;}
 .foot-main{width: 1024px; margin: 0 auto;}
 .foot-nav{width: 510px;margin: 20px auto;display: block;}
 .foot-nav li{float: left;border-right: 1px solid #a39582;position: relative;width:80px;padding: 0 10px;height: 16px;overflow: hidden;}
