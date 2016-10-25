@@ -5,7 +5,7 @@
         <li>
             <div>
                 <div class="couponImg style" v-link="{ path: '/shops/contactShopsShopping', query: {id: list.id}}">
-                   <img v-if="list.logo==null" src="../../../static/images/shoppingC1.jpg" class="couponImg1" alt="">
+                   <img v-if="list.logo==null" src="../../../static/images/personLogo.jpg" class="couponImg1" alt="">
                    <img v-if="list.logo!=null" :src="this.imageUrl+list.logo" class="couponImg1" />
                </div>
                 <div class="inforList">
