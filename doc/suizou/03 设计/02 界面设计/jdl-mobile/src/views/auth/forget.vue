@@ -158,7 +158,7 @@
 
             var that = this;
            var updatePwdArr = {mobile:that.mobile,password:that.password,authCode:that.isPostCode,msgAuthcodeId:that.xxId};
-           userService.updatePwd(that,updatePwdArr)
+           userService.updateNotLoginPwd(that,updatePwdArr)
 
           }
         }
