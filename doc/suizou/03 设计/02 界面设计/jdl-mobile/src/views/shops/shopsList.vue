@@ -77,7 +77,7 @@
         <li v-for="shopsList in list">
             <div>
                 <div class="couponImg style">
-                    <img v-if="shopsList.logo==null" src="../../../static/images/shoppingC1.jpg" class="couponImg1" alt="">
+                    <img v-if="shopsList.logo==null" src="../../../static/images/personLogo.jpg" class="couponImg1" alt="">
                     <img v-if="shopsList.logo!=null" :src="this.imageUrl+shopsList.logo" class="couponImg1" />
                 </div>
                 <div class="inforList">
