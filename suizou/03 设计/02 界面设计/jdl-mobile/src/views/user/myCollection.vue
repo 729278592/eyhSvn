@@ -51,7 +51,7 @@
             <li v-for="shopsList in shoplist"><!--v-link="{ name: 'shopsInfor', params: {shops: shopsList.goodsMchId}}"-->
                 <div>
                     <div class="couponImg style" @click="shopsDefault(shopsList)">
-                        <img v-if="shopsList.img==null" src="../../../static/images/shoppingC1.jpg" class="couponImg1" alt="">
+                        <img v-if="shopsList.img==null" src="../../../static/images/personLogo.jpg" class="couponImg1" alt="">
                         <img v-if="shopsList.img!=null" :src="this.imageUrl+shopsList.img" class="couponImg1" />
                     </div>
                     <div class="inforList">
