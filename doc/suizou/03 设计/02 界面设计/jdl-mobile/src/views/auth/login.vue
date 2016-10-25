@@ -3,7 +3,7 @@
     <a class="return" @click="returnPage()">
       <i class="fa fa-angle-left"></i>
     </a>
-    商家登陆
+    商家登录
     <div class="right nav_block">
       <a class="dot_block" @click.stop="onShow">
         <i class="fa fa-home"></i>
@@ -44,7 +44,7 @@
         </div>
         <div class="weui_btn_area mt10">
           <input type="submit" class="weui_btn weui_btn_primary" @click="save($event)" v-model="loginValue" value={{loginValue}}>
-          <!--<a class="weui_btn weui_btn_primary" @click="save" v-link="'/shops/index'">登陆</a>-->
+          <!--<a class="weui_btn weui_btn_primary" @click="save" v-link="'/shops/index'">登录</a>-->
         </div>
         <div class="weui_btn_area mt10 clearfix">
           <a class="btn_forget right" v-link="'/auth/mchForget'">忘记密码</a>
@@ -93,12 +93,12 @@
         error: '',
         amount:"",
         orderId:"",
-        loginValue:"登陆",
+        loginValue:"登录",
         show:false
       }
     },
     ready () {
-      document.title = '商家登陆'
+      document.title = '商家登录'
       if(mchAuthService.user.authenticated) {
         this.$route.router.go('/shops/index/')
       }
