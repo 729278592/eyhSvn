@@ -42,7 +42,7 @@
           <li>
               <a v-link="'auth/personLogin/'">
                   <span class="span_index index_icona"></span><br/>
-                  <span>个人登陆</span>
+                  <span>个人登录</span>
               </a>
           </li>
           <li>
