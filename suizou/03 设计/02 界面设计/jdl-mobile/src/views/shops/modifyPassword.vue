@@ -124,7 +124,7 @@
         var btn = e.currentTarget;
         var mobile = this.mobile;
         var sendMemRegArr = {mobile:mobile};
-        mchService.sendMemForgotAuthCode(this,sendMemRegArr,btn)
+        mchService.sendMchForgotAuthCodes(this,sendMemRegArr,btn)
       },
       save: function(){
 
@@ -156,7 +156,7 @@
 
         var that = this;
         var updatePwdArr = {mobile:that.mobile,password:that.password,authCode:that.isPostCode,msgAuthcodeId:that.xxId};
-        mchService.updatePwd(that,updatePwdArr)
+        mchService.updatemchPwd(that,updatePwdArr)
 
       }
     }
