@@ -5,7 +5,7 @@
       <li>
           <div>
               <div class="couponImg style">
-                 <img v-if="list.logo==null" src="../../../static/images/shopsImg.jpg" class="couponImg1" alt="">
+                 <img v-if="list.logo==null" src="../../../static/images/personLogo.jpg" class="couponImg1" alt="">
                  <img v-else :src="this.imageUrl+list.logo" class="couponImg1" alt="">
               </div>
               <div class="inforList">
