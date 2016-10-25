@@ -15,7 +15,7 @@
           </a>
         </li>
         <li>
-          <a v-link="'/auth/personLogin'">
+          <a v-link="'/auth/login'">
             登录
           </a>
         </li>
@@ -126,7 +126,7 @@
         var btn = e.currentTarget;
         var mobile = this.mobile;
         var sendMemRegArr = {mobile:mobile};
-        mchService.sendMemForgotAuthCode(this,sendMemRegArr,btn)
+        mchService.sendmchForgotAuthCodes(this,sendMemRegArr,btn)
       },
       save: function(){
 
