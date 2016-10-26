@@ -105,7 +105,7 @@ body{}
 .consultation_title{}
 .consultation_title .day{width: 50px;height: 50px;line-height: 50px;text-align: center;color: #fff;background: #ce2020;}
 .consultation_title .month{width: 50px;height: 50px;line-height: 50px;text-align: center;color: #fff;background: #000;}
-.consultation_con{width: 345px;margin-left: 15px;}
+.consultation_con{width: 395px;margin-left: 15px;}
 .consultation_menu li:hover{background: #66b770;color: #fff;}
 .consultation_menu li:hover a{background-color: #66b770;color: #fff;}
 .consultation_menu li:hover .consultation_con .title{color: #fff;}
@@ -328,7 +328,7 @@ html.overflow{overflow: hidden;}
 .consulting_infor{width: 760px;margin-left: 20px;}
 .consulting_infor p{line-height: 26px;}
 .consulting_infor .title{font-size: 16px;color: #333;margin-bottom: 10px;}
-.consulting_infor .consulting_con{font-size: 14px;color: #999;}
+.consulting_infor .consulting_con{font-size: 14px;color: #999;text-indent: 28px;}
 .consulting_infor .consulting_link{text-align: right;}
 .consulting_infor .consulting_link a{color: #999;}
 .consulting_infor .consulting_link a:hover{color: #666;text-decoration: underline;}
