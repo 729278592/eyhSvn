@@ -1,0 +1,46 @@
+.con-main{position: relative;width: 1200px;margin: 40px auto;}
+
+#nav.absolute { list-style: none;  margin: 0; position: absolute;top: 900px;left: 200px; }
+#nav { list-style: none;  margin: 0; left: 200px;position: fixed;top: 200px; }
+#nav li.first{border-top: 1px solid #dbdbdb;}
+
+#nav li.current span.s_c_l{background: #ce0f0f;color: #fff;}
+#nav li {
+	width: 40px;height: 40px;
+	position: relative;overflow: hidden;
+	border: 1px solid #dbdbdb;
+	border-top: none;
+}
+
+#nav a {
+	background: #fff;
+	color: #666;
+	display: block;
+	font-size: 14px;
+	width: 100%;
+	height: 80px;
+	position: absolute;top: 0;left: 0;
+}
+#nav a span{display: block;width: 40px;height: 40px;text-align: center;font-family: "微软雅黑"}
+#nav a span.s_c_l{line-height: 40px;}
+#nav a:hover{top: -38px;background: #ce0f0f;color: #fff;}
+#nav a:hover span.s_c_l{background: #ce0f0f;color: #fff;}
+
+
+
+
+
+
+#container {
+	margin: 0 auto;
+	width: 1200px;
+}
+.section{margin-bottom: 80px;}
+.section p:last-child {
+	margin-bottom: 0;
+}
+
+@media screen and (max-width: 1700px) {
+	#nav.absolute{left: 10px;z-index: 9999;}
+	#nav{left: 10px;z-index: 9999;}
+}

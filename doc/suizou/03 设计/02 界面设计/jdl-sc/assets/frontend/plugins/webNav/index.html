@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="utf-8">
+	<title>jQuery One Page Nav</title>
+	<link href="demo.css" rel="stylesheet" media="all">
+</head>
+
+<body>
+	<ul id="nav">
+		<li class="current"><a href="#intro">Intro</a></li>
+		<li><a href="#usage">Usage</a></li>
+		<li><a href="#options">Options</a></li>
+		<li><a href="#examples">Examples</a></li>
+	</ul>
+
+	<div id="container">
+		<div class="section" id="intro">
+
+		</div>
+
+		<div class="section" id="usage">
+
+
+		</div>
+
+		<div class="section" id="options">
+
+		</div>
+
+		<div class="section" id="examples">
+
+		</div>
+	</div>
+
+	<script src="jquery-1.11.3.min.js"></script>
+	<script src="jquery.nav.js"></script>
+	<script>
+		$(document).ready(function() {
+			$('#nav').onePageNav();
+		});
+	</script>
+</body>
+</html>
