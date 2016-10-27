@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<title></title>
+		<style type="text/css">
+* { margin: 0; padding: 0; }
+body{ background-color: #1E1E1E; color: #666666; }
+li { list-style: none; }
+
+        </style>
+
+		<script type="text/javascript">
+			$(function(){
+				$("#pj-lunbo").Carousel({
+					'play':'true', //是否循环播放
+					'prevButton':'#prev1', //左按钮
+					'nextButton':'#next1',  //右按钮
+					'auto':'true'   //是否自动播放
+				});
+				$("#pj-lunbo2").Carousel({
+					'play':'false', //是否循环播放
+					'prevButton':'#prev', //左按钮
+					'nextButton':'#next',  //右按钮
+					'auto':'true'   //是否自动播放
+				});
+			})
+		</script>
+		</head>
+		<body>
+
+//不自动播放
+<div id="pj-lunbo2">
+  <button id="prev">上一页</button>
+  <button id="next">下一页</button>
+  <div class="pj-Carousel">
+<div class="pj-Carousel-box">
+      <div class="pj-Carousel-item">1</div>
+      <div class="pj-Carousel-item">2</div>
+      <div class="pj-Carousel-item">3</div>
+      <div class="pj-Carousel-item">4</div>
+    </div>
+<!--状态-->
+<div class="pj-Carousel-active"> </div>
+</div>
+</div>
+
+</body>
+</html>
