@@ -10,7 +10,7 @@
     <link rel="stylesheet" href="../../assets/mobile/css/global.css"/>
 </head>
 <body>
-    <div class="content">
+    <div class="content errDailog">
         <div class="page">
             <div class="hd">
                 <a>
@@ -86,6 +86,19 @@
                     </label>
                 </div>
             </div>
+            <div class="weui_dialog_confirm" id="dialogConfirm">
+                <div class="weui_mask"></div>
+                <div class="weui_dialog vux-dialog-transition" style="display: inline-block;">
+                    <div class="weui_dialog_hd" style="padding-left: 0;padding-right: 0;">
+                        支付密码:
+                        <input type="number" placeholder="请输入支付密码" class="payPassword"  style="padding: 5px 0 5px 5px;border: 1px solid #dbdbdb;outline: none;">
+                    </div>
+                    <div class="weui_dialog_ft">
+                        <a href="javascript:;" class="weui_btn_dialog default signCancel" id="signCancel">取消</a>
+                        <a href="javascript:;" class="weui_btn_dialog primary signSure" id="signSure">确定</a>
+                    </div>
+                </div>
+            </div>
             <div class="weui_btn_area fixed">
                 <a href="paySuccess.html" class="weui_btn b0 weui_btn_primary">立即支付</a>
             </div>
@@ -93,5 +106,33 @@
     </div>
     <script src="../../assets/global/plugins/jquery/jquery-1.11.3.min.js"></script>
     <script src="../../assets/mobile/js/global.js"></script>
+    <script src="../../assets/mobile/js/removeTip.js"></script>
+    <script>
+        $(function () {
+            /*取消商品删除*/
+            var page = $(".page");
+            var payPassword = $(".payPassword");
+            var number = /^-?(?:\d+|\d{1,3}(?:,\d{3})+)?(?:\.\d+)?$/;
+            page.delegate(".signCancel","touchend",function(){
+                $("#dialogConfirm").addClass("hide");
+                $(".weui_dialog").addClass("vux-dialog-leave")
+            });
+
+            /*确定商品删除*/
+            page.delegate(".signSure","touchend",function(){
+                if(!$.trim(payPassword.val())){
+                    showErrMsg("请输入有效密码");
+                    return
+                }
+                if(!number.test(payPassword.val())){
+                    showErrMsg("请输入有效密码");
+                    return
+                }
+                $("#dialogConfirm").addClass("hide");
+
+                showErrMsg("密码设置成功");
+            });
+        })
+    </script>
 </body>
 </html>
