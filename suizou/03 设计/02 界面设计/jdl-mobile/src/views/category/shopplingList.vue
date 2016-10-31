@@ -27,8 +27,12 @@
                             <span class="oldMoney">￥{{shop.marketPrice}}</span>
                             ￥{{shop.price}}
                         </span>
+
                       </p>
                       <p class="clearfix">
+                        <span class="left">
+                            可用券 : 500
+                        </span>
                           <span class="right shoppingNum">
                               销量{{shop.sales}}
                           </span>

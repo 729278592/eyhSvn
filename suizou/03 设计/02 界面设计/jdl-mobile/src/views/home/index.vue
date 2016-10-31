@@ -72,15 +72,15 @@
             </a>
         </li>
         <li>
-            <a v-link="'/user/presentIntegral'">
+            <a><!-- v-link="'/user/presentIntegral'"-->
                 <span class="span_index index_icon2"></span><br/>
-                <span>积分提现</span>
+                <span>提现管理</span>
             </a>
         </li>
         <li>
-            <a v-link="'/user/detailOutcome'">
+            <a><!-- v-link="'/user/detailOutcome'"-->
                 <span class="span_index index_icon3"></span><br/>
-                <span>返现明细</span>
+                <span>交易明细</span>
             </a>
         </li>
         <li>
@@ -129,6 +129,12 @@
                               <span class="oldMoney">￥{{shop.marketPrice}}</span>
                               ￥{{shop.price}}
                           </span>
+
+                          </p>
+                          <p class="clearfix">
+                            <span class="left">
+                                可用券 : 500
+                            </span>
                           </p>
                       </div>
                   </a>
