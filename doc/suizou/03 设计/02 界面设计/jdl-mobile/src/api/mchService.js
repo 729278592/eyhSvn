@@ -394,8 +394,8 @@ export default {
 
 
 
-  //忘记密码验证码-个人
-  sendMemForgotAuthCode(context,sendMemForgotArr,btn) {
+  //忘记密码验证码-商家
+  sendmchForgotAuthCode(context,sendMemForgotArr,btn) {
 
     context.$http.post(API_ROOT+"mobile/sendMchForgotAuthCode.do",sendMemForgotArr).then(function(response){
 
@@ -430,7 +430,7 @@ export default {
     })
   },
 
-  //忘记密码-个人
+  //忘记密码-商家
   updatePwd(context,updatePwdArr) {
     context.$progress.start()
     context.$http.post(API_ROOT+"mobile/updateMchPwd.do",updatePwdArr).then(function(response){
@@ -449,9 +449,9 @@ export default {
     })
   },
 
-  //忘记密码验证码-个人
-  sendMemForgotAuthCode(context,sendMemForgotArr,btn) {
-    context.$http.post(API_ROOT+"mobile/sendMemForgotAuthCode.do",sendMemForgotArr).then(function(response){
+  //忘记密码验证码-商家
+  sendMchForgotAuthCodes(context,sendMemForgotArr,btn) {
+    context.$http.post(API_ROOT+"mobile/mch/sendMchModifyPwdAuthCode.do",sendMemForgotArr).then(function(response){
       var res = response.json()
       if(res.status == "ok") {
         context.xxId = res.datas
@@ -483,15 +483,15 @@ export default {
     })
   },
 
-  //忘记密码-个人
-  updatePwd(context,updatePwdArr) {
+  //忘记密码-商家
+  updatemchPwd(context,updatePwdArr) {
     context.$progress.start()
-    context.$http.post(API_ROOT+"mobile/updatePwd.do",updatePwdArr).then(function(response){
+    context.$http.post(API_ROOT+"mobile/mch/modifyPwd.do",updatePwdArr).then(function(response){
       context.$progress.finish()
       var res = response.json()
       if(res.status == "ok") {
         context.$progress.finish()
-        context.$route.router.go('/auth/personLogin')
+        context.$route.router.go('/auth/login')
 
       } else {
         alert(res.message);
