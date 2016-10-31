@@ -2,7 +2,7 @@
 <html>
 <head lang="en">
     <meta charset="UTF-8">
-    <title>原驰律所|专业人员-高级合伙人</title>
+    <title>原驰律所|专业团队-高级合伙人</title>
     <link rel="stylesheet" href="plugins/font/css/font-awesome.min.css"/>
     <link rel="stylesheet" href="css/globle.css"/>
 </head>
@@ -26,7 +26,7 @@
                         <a href="businessField.html">业务领域</a>
                     </li>
                     <li class="active">
-                        <a href="professional.html">专业人员</a>
+                        <a href="professional.html">专业团队</a>
                     </li>
                     <li>
                         <a href="caseAnalysis.html">案例介绍</a>
@@ -167,6 +167,31 @@
                                     </div>
                                 </a>
                             </li>
+                            <li class="mr0 jClick">
+                                <a href="###">
+                                    <div class="person">
+                                        <img src="images/default.png" alt="" style="width: 100%; height: 100%;"/>
+                                        <div style="text-align: center;line-height: 256px;font-size: 24px;color: #333;position: absolute;top: 0;left: 0;right: 0;bottom: 0;">
+                                            虚位以待
+                                        </div>
+                                        <!--<div class="person_mask_bg"></div>-->
+                                        <!--<div class="person_mask">-->
+                                            <!--<div class="infor">-->
+
+                                                <!--业务领域 : <br/>-->
+                                                <!--公司及房地产法务<br/>-->
+                                                <!--合同及劳动法务<br/>-->
+                                                <!--刑事辩护-->
+                                            <!--</div>-->
+                                        <!--</div>-->
+                                    </div>
+                                    <div class="person_infor">
+                                        <p class="name">某某</p>
+
+                                        <p class="type">高级合伙人</p>
+                                    </div>
+                                </a>
+                            </li>
                         </ul>
                     </div>
                 </div>
@@ -189,8 +214,8 @@
                     </li>
                     <li>
                         <a href="professional.html">
-                            <p class="first">专业人员</p>
-                            <p class="last">专业人员</p>
+                            <p class="first">专业团队</p>
+                            <p class="last">专业团队</p>
                         </a>
                     </li>
                     <li>
@@ -584,6 +609,9 @@
 
             $(".professional_menu>li").each(function(i){
                 $(this).on("click",function(){
+                    if(i==5){
+                        return
+                    }
                     $(".dailog").removeClass("hide");
                     $("html").addClass("overflow");
                     $(".dailog_menu>li").eq(i).addClass("active");
