@@ -19,7 +19,7 @@ button:active{opacity: 0.85;}
 .content {width: 100%;position: relative;max-width: 40rem;margin: 0 auto;}
 .content.overflow{overflow-x: hidden;}
 .content,.page{background: #f3f3f3;}
-
+.bd.pb40{padding-bottom: 3rem;}
 
 
 /*head*/
