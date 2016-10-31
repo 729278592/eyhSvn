@@ -173,7 +173,7 @@
                     //验证无效
                 }else{
                   var updatePwdArr = {mobile:mobile,password:password,authCode:isPostCode,msgAuthcodeId:that.xxId}
-                  userService.updatePwd(that,updatePwdArr)
+                  userService.modifyPassword(that,updatePwdArr)
                 }
             })
           }

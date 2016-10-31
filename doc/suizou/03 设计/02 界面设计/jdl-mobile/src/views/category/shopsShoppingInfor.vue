@@ -45,10 +45,10 @@
   <div class="shopsshoppingInfor">
       <P class="clearfix">
           <span class="left">
-              市场价 : ￥<span class="verdana">{{shopInfor.marketPrice}}</span>
+              现金 : ￥<span class="verdana">{{shopInfor.marketPrice}}</span>
           </span>
           <span class="right color">
-              平台优惠价 : ￥<span class="verdana">{{shopInfor.price}}</span>
+              市场价 : ￥<span class="verdana">{{shopInfor.price}}</span>
           </span>
       </P>
       <P class="clearfix">

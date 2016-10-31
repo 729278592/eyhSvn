@@ -43,29 +43,29 @@
             </div>
         </li>
     </ul>
-      <ul class="pay_list clearfix">
-          <li>
-              <div class="payInfoy">
-                  <span class="spanIcon moneyIcon"></span>
-                  <span>昨天返现</span><br/>
-                  <span class="color">￥<span class="verdana">{{lists.yesterdayFx}}</span></span>
-              </div>
-          </li>
-          <li v-link="'/shops/nowScore'">
-              <div class="payInfoy">
-                  <span class="spanIcon sordIcon"></span>
-                  <span>当前积分</span><br/>
-                  <span class="color">￥<span class="verdana">{{lists.score}}</span></span>
-              </div>
-          </li>
-          <li v-link="'/shops/reserveScore'">
-              <div class="payInfoy">
-                  <span class="spanIcon zheIcon"></span>
-                  <span>预留积分</span><br/>
-                  <span class="color"><span class="verdana">{{lists.reservedScore}}</span></span>
-              </div>
-          </li>
-      </ul>
+      <!--<ul class="pay_list clearfix">-->
+          <!--<li>-->
+              <!--<div class="payInfoy">-->
+                  <!--<span class="spanIcon moneyIcon"></span>-->
+                  <!--<span>昨天返现</span><br/>-->
+                  <!--<span class="color">￥<span class="verdana">{{lists.yesterdayFx}}</span></span>-->
+              <!--</div>-->
+          <!--</li>-->
+          <!--<li v-link="'/shops/nowScore'">-->
+              <!--<div class="payInfoy">-->
+                  <!--<span class="spanIcon sordIcon"></span>-->
+                  <!--<span>当前积分</span><br/>-->
+                  <!--<span class="color">￥<span class="verdana">{{lists.score}}</span></span>-->
+              <!--</div>-->
+          <!--</li>-->
+          <!--<li v-link="'/shops/reserveScore'">-->
+              <!--<div class="payInfoy">-->
+                  <!--<span class="spanIcon zheIcon"></span>-->
+                  <!--<span>预留积分</span><br/>-->
+                  <!--<span class="color"><span class="verdana">{{lists.reservedScore}}</span></span>-->
+              <!--</div>-->
+          <!--</li>-->
+      <!--</ul>-->
       <div class="weui_cells weui_cells_access mt10 top0">
           <a class="weui_cell"v-link="'/shops/shopsOrder'">
               <div class="weui_cell_bd weui_cell_primary">
@@ -112,15 +112,15 @@
       </div>
       <ul class="ulmenu clearfix mt0">
           <li>
-              <a v-link="'/shops/presentIntegral'">
+              <a><!-- v-link="'/shops/presentIntegral'"-->
                   <span class="span_index shops_icon1"></span><br/>
-                  <span>积分提现</span>
+                  <span>积分管理</span>
               </a>
           </li>
           <li>
-             <a v-link="'/shops/detailIncome'">
+             <a><!-- v-link="'/shops/detailIncome'"-->
                   <span class="span_index shops_icon2"></span><br/>
-                  <span>收入明细</span>
+                  <span>交易明细</span>
               </a>
           </li>
           <li>
