@@ -216,7 +216,7 @@ textarea{font-family: "微软雅黑";}
 .notConTip img{width: 20%;margin-bottom: 0.26rem;}
 .notConTip img.w10{width: 10%;}
 .notConTip .notInfor{color: #999;font-size: 1rem;}
-
+.notConTip .notInfor a{color: #ff6804;text-decoration: underline;}
 
 
 
@@ -516,11 +516,13 @@ img.shopInfor.w100{width: 100%;margin-bottom: 0.625rem;}
 .stationTitle span{position: relative;top: -0.23rem;}
 .stationList{width: 100%;}
 .stationList li{padding: 0.875rem 1.2rem;border-bottom: 1px solid #dbdbdb;}
+.stationList li>a{display: block;}
 .stationList li .orderCon>a{display: block;width: 100%;height: 100%;}
 .stationList li p{display: block;}
 .stationList li p span{font-size: 0.875rem;color: #999;}
+.stationList li>a{display: block;}
 .stationList li p:last-child span.left{position: relative; top: 0.25rem;}
-.stationList li p>a{color: #ff6702;display: inline-block;padding: 0.125rem 0.25rem;border: 1px solid #ff6702;border-radius: 0.25rem;font-size: 0.875rem;}
+.stationList li p:last-child>span:last-child.right{color: #ff6702;display: inline-block;padding: 0.125rem 0.25rem;border: 1px solid #ff6702;border-radius: 0.25rem;font-size: 0.875rem;}
 .stationList li p a .address{width:1rem;position: relative;top: -0.125rem;}
 .stationList li p .color1{color: #333;font-size: 1rem;}
 .stationList li p .color2{color: #ff6702;}
@@ -532,7 +534,7 @@ img.shopInfor.w100{width: 100%;margin-bottom: 0.625rem;}
 .loadding img{position: absolute;width: 50px;height: 50px;left: 50%;top: 50%;margin-left: -25px;margin-top: -25px;}
 /*gasStationInfor*/
 .stationDiv{background: #fff;}
-.stationDiv>img{height: 124px;}
+.stationDiv>img{height: 10.3rem;}
 .stationDiv p{display: block;color: #888;padding: 0.5rem 0.875rem;}
 .stationDiv p a{color: #7ebd8b;display: inline-block;padding: 0.125rem 0.25rem;border-radius: 0.25rem;font-size: 0.875rem;}
 .stationList.style li p a{color: #ff6702;border-color: #ff6702;}
@@ -623,11 +625,11 @@ img.shopInfor.w100{width: 100%;margin-bottom: 0.625rem;}
 
 /*addCarPeople*/
 .search_block{width: 94%;padding: 0.625rem 3%;position: relative;}
-.search_block .fa-search{position: absolute;font-size: 1rem;  top:1.3rem;right: 8%;color: #666;}
+.search_block .fa-search{font-size: 1rem; color: #666;}
 .search_block .close{position: absolute;top:1.3rem;right: 6%;
     display: inline-block;width: 0.875rem;height: 0.875rem;background: url("../images/clear.png");background-size: 100% 100%;}
 .search_block .close.hide{display: none;}
-.search_block input{width: 89%;border: 1px solid #dbdbdb;border-radius: 2px;padding: 0.625rem 8% 0.625rem  2%;outline: none;}
+.search_block input{width: 71%;border: 1px solid #dbdbdb;border-radius: 2px;padding: 0.625rem 8% 0.625rem  2%;outline: none;}
 .mask{z-index: 1000;}
 .mask.hide{display: none;}
 .member_infor{width: 92%;position: absolute;left: 50%;margin-left: -46%;top: 50%;margin-top: -180px;}
