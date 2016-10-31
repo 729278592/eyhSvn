@@ -64,6 +64,7 @@ export default {
         this.show = false;
         for(var i=0;i<this.addressList.length;i++){
           this.addressList.$remove(this.shops);
+          console.log(JSON.stringify(this.shops))
           this.$set('toasttext','删除成功');
           this.$set('toastshow',true);
           location.reload()
@@ -426,7 +427,7 @@ export default {
       var res = response.json()
       if(res.status == "ok") {
         this.list = res.datas
-
+        console.log(JSON.stringify(res.datas));
       } else {
         alert(res.message);
       }
@@ -462,6 +463,8 @@ export default {
       if(res.status == "ok") {
         this.shopInfor = res.datas.goods
         this.products = res.datas.products
+
+        console.log(JSON.stringify(res.datas))
       } else {
         alert(res.message);
       }
@@ -740,6 +743,7 @@ export default {
       var res = response.json()
       if(res.status == "ok") {
         context.list = res.datas
+        console.log(JSON.stringify(res.datas))
       } else {
         alert(res.message);
       }
@@ -1081,8 +1085,8 @@ export default {
       var res = response.json()
       if(res.status == "ok") {
         if(res.datas!=null){
-          context.list = res.datas.datas
           console.log(JSON.stringify(res.datas.datas))
+          context.list = res.datas.datas
         }
 
         if(context.list.length!=0){
@@ -1238,6 +1242,7 @@ export default {
       var res = response.json()
       if(res.status == "ok") {
         context.shoplist = res.datas.datas
+        //console.log(JSON.stringify(res.datas.datas))
         for(var i =0;i<context.shoplist.length;i++){
           var len = Math.round(context.shoplist[i].priceScore)
           for(var j = 0;j<len;j++){
@@ -1291,6 +1296,7 @@ export default {
       if(res.status == "ok") {
         context.$set('toasttext','收藏成功')
         context.$set('toastshow',true)
+        console.log(JSON.stringify(res.datas))
         setTimeout(function () {
           location.reload()
         },200)
@@ -1477,6 +1483,7 @@ export default {
         }
       } else {
         alert(res.message);
+        console.log(res.message)
       }
     }, function(response){
       context.$progress.failed()
@@ -1571,6 +1578,8 @@ export default {
         }else{
           context.dataHide = true
         }
+
+        console.log(JSON.stringify(res.datas.datas))
       } else {
         alert(res.message);
       }
@@ -1589,6 +1598,7 @@ export default {
       if(res.status == "ok") {
         if(res.datas != null){
           context.list = res.datas.datas
+          console.log(JSON.stringify(res.datas.datas))
         }
         if(context.list.length!=0){
           context.dataHide = false
@@ -1620,6 +1630,8 @@ export default {
         }else{
           context.dataHide = true
         }
+
+        console.log(JSON.stringify(res.datas.datas))
       } else {
         alert(res.message);
       }
