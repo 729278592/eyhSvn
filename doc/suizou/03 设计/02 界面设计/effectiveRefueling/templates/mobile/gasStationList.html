@@ -72,17 +72,19 @@
                         </div>
                         <ul class="stationList">
                             <li>
-                                <p class="clearfix">
-                                    <span class="left color1">中国石油（渝中加油站）</span>
-                                    <span class="right color2">距离<af class="verdana">5.9</af>公里</span>
-                                </p>
-                                <p class="clearfix">
-                                    <span class="left">重庆市渝中区菜园路208号</span>
-                                    <a class="right">
-                                        <img src="../../assets/mobile/images/address2.png" class="address" alt=""/>
-                                        去这里
-                                    </a>
-                                </p>
+                                <a href="gasStationInfor.html">
+                                    <p class="clearfix">
+                                        <span class="left color1">中国石油（渝中加油站）</span>
+                                        <span class="right color2">距离<af class="verdana">5.9</af>公里</span>
+                                    </p>
+                                    <p class="clearfix">
+                                        <span class="left">重庆市渝中区菜园路208号</span>
+                                        <span class="right">
+                                            <img src="../../assets/mobile/images/address2.png" class="address" alt=""/>
+                                            去这里
+                                        </span>
+                                    </p>
+                                </a>
                             </li>
                         </ul>
                     </div>
@@ -102,43 +104,19 @@
                     </div>
                     <ul class="stationList">
                         <li>
-                            <p class="clearfix">
-                                <span class="left color1">中国石油（渝中加油站）</span>
-                                <span class="right color2">距离<af class="verdana">5.9</af>公里</span>
-                            </p>
-                            <p class="clearfix">
-                                <span class="left">重庆市渝中区菜园路<span class="verdana">208</span>号</span>
-                                <a class="right">
-                                    <img src="../../assets/mobile/images/address2.png" class="address" alt=""/>
-                                    去这里
-                                </a>
-                            </p>
-                        </li>
-                        <li>
-                            <p class="clearfix">
-                                <span class="left color1">中国石油（渝中加油站）</span>
-                                <span class="right color2">距离<af class="verdana">5.9</af>公里</span>
-                            </p>
-                            <p class="clearfix">
-                                <span class="left">重庆市渝中区菜园路<span class="verdana">208</span>号</span>
-                                <a class="right">
-                                    <img src="../../assets/mobile/images/address2.png" class="address" alt=""/>
-                                    去这里
-                                </a>
-                            </p>
-                        </li>
-                        <li>
-                            <p class="clearfix">
-                                <span class="left color1">中国石油（渝中加油站）</span>
-                                <span class="right color2">距离<af class="verdana">5.9</af>公里</span>
-                            </p>
-                            <p class="clearfix">
-                                <span class="left">重庆市渝中区菜园路<span class="verdana">208</span>号</span>
-                                <a class="right">
-                                    <img src="../../assets/mobile/images/address2.png" class="address" alt=""/>
-                                    去这里
-                                </a>
-                            </p>
+                            <a href="gasStationInfor.html">
+                                <p class="clearfix">
+                                    <span class="left color1">中国石油（渝中加油站）</span>
+                                    <span class="right color2">距离<af class="verdana">5.9</af>公里</span>
+                                </p>
+                                <p class="clearfix">
+                                    <span class="left">重庆市渝中区菜园路208号</span>
+                                        <span class="right">
+                                            <img src="../../assets/mobile/images/address2.png" class="address" alt=""/>
+                                            去这里
+                                        </span>
+                                </p>
+                            </a>
                         </li>
                     </ul>
                 </div>
@@ -191,11 +169,9 @@
                 autoplayDisableOnInteraction: false
             });
 
-            $(".stationList li").on("touchend",function(){
-                window.location.href = "gasStationInfor.html";
-            });
-            $(".stationList li p a").on("touchend",function(e){
-                e.stopPropagation();
+
+            $(".stationList li p:last-child>span:last-child.right").on("touchend",function(e){
+                e.preventDefault();
             })
         })
     </script>
