@@ -336,9 +336,9 @@ html.overflow{overflow: hidden;}
 .consulting_infor.style  .consulting_link{text-align: left;}
 
 
-.cInfor{padding: 20px 40px;font-size: 16px;}
+.cInfor{padding: 20px 300px 60px;font-size: 14px;}
 .cInfor .cInforTitle{text-align: center;font-size: 24px;color: #333;margin: 20px 0;}
-.cInfor .cInforCon p{font-size: 16px;color: #666;text-indent: 32px;margin-bottom: 10px;line-height: 24px;}
+.cInfor .cInforCon p{font-size: 15px;color: #666;text-indent: 32px;margin-bottom: 10px;line-height: 30px;}
 .cInfor .cInforCon p.title{font-size: 20px;color: #333;text-indent: 0;}
 .question_menu{}
 .question_menu li{padding: 20px 0;}
@@ -396,7 +396,7 @@ html.overflow{overflow: hidden;}
 @media screen and (max-width: 1600px) {
     .nav .btn_r{right: 100px;}
     .nav .btn_l{left: 100px;}
-
+    .cInfor{padding: 20px 150px 60px;font-size: 14px;}
 }
 
 @media screen and (max-width: 1400px) {
