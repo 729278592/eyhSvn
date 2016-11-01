@@ -626,7 +626,7 @@ img.shopInfor.w100{width: 100%;margin-bottom: 0.625rem;}
 /*addCarPeople*/
 .search_block{width: 94%;padding: 0.625rem 3%;position: relative;}
 .search_block .fa-search{font-size: 1rem; color: #666;}
-.search_block .close{position: absolute;top:1.3rem;right: 6%;
+.search_block .close{position: absolute;top:1.3rem;right: 23%;
     display: inline-block;width: 0.875rem;height: 0.875rem;background: url("../images/clear.png");background-size: 100% 100%;}
 .search_block .close.hide{display: none;}
 .search_block input{width: 71%;border: 1px solid #dbdbdb;border-radius: 2px;padding: 0.625rem 8% 0.625rem  2%;outline: none;}
