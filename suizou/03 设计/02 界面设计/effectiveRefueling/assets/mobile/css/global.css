@@ -280,8 +280,11 @@ textarea{font-family: "微软雅黑";}
 /*couponRecord*/
 .applicatioOpetion{width: 100%;margin-bottom: 0.625rem;position: relative;z-index: 100;border-bottom: 1px solid #dbdbdb;}
 .applicatioNav{width: 100%;background: #fff;display: block;}
+.applicatioNav.style li {width: 33.3%;}
 .applicatioNav li{float: left;text-align: center;font-size: 1rem;width: 50%;position: relative;}
 .applicatioNav li:first-child:after{content: "";position: absolute;right: 0;top: 0;width: 1px;bottom: 0;border-right: 1px solid #efefef;}
+.applicatioNav.style li:after{content: "";position: absolute;right: 0;top: 0;width: 1px;bottom: 0;border-right: 1px solid #efefef;}
+.applicatioNav.style li.last-child:after{border-right: 0;}
 .applicatioNav li a{display: inline-block;width: 100%;padding: 0.6rem 0;border-bottom: 3px solid transparent;color: #333;}
 .applicatioNav li a.active{color: #f65050;border-bottom: 3px solid #f65050;}
 .coupon{width: 100%;}
