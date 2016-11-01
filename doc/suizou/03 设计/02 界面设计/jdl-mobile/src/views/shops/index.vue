@@ -6,6 +6,11 @@
              <i class="fa fa-home"></i>
            </a>
            <ul class="nav_link" :class="{'hide':hide}">
+             <li>
+               <a v-link="'/'">
+                 首页
+               </a>
+             </li>
                <li>
                    <a @click="loginOut()">
                        退出

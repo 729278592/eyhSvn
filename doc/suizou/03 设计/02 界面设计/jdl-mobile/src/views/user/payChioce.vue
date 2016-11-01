@@ -11,7 +11,7 @@
   <div class="weui_cells weui_cells_checkbox mt0 first style1" v-for="payTypeList in payType" @click="chiocePay(payTypeList)">
       <label class="weui_cell weui_check_label" for={{payTypeList.payId}}>
           <div class="weui_cell_hd">
-              <input type="radio" class="weui_check" name="checkbox1" id={{payTypeList.payId}} checked = {{payTypeList.check}}>
+              <!--<input type="radio" class="weui_check" name="checkbox1" id={{payTypeList.payId}} checked = {{payTypeList.check}}>-->
               <i class="weui_icon_checked"></i>
           </div>
           <div class="weui_cell_bd weui_cell_primary">
@@ -75,12 +75,12 @@
 
          },
         btnPay:function(){
-          if(this.payTy.check){
-            window.location.href="http://www.jdl800.com/fric/mobile/goods/toPay.do?id="+this.stateInfor
-          }else{
-            this.$set('toasttext','请选择支付方式')
-            this.$set('toastshow',true)
-          }
+//          if(this.payTy.check){
+//            window.location.href="http://www.jdl800.com/fric/mobile/goods/toPay.do?id="+this.stateInfor
+//          }else{
+//            this.$set('toasttext','请选择支付方式')
+//            this.$set('toastshow',true)
+//          }
         }
       }
     }

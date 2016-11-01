@@ -121,7 +121,7 @@
       },
 
       paySure:function(){
-        window.location.href="http://www.jdl800.com/fric/mchFeeToPay.do?id="+this.orderId+"&type=mobile"
+//        window.location.href="http://www.jdl800.com/fric/mchFeeToPay.do?id="+this.orderId+"&type=mobile"
       },
       payCancel:function(){
         this.show = false

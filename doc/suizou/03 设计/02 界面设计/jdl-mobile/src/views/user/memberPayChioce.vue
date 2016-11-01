@@ -11,7 +11,7 @@
   <div class="weui_cells weui_cells_checkbox mt0 first style1" v-for="payTypeList in payType" @click="chiocePay(payTypeList)">
       <label class="weui_cell weui_check_label" for={{payTypeList.payId}}>
           <div class="weui_cell_hd">
-              <input type="radio" class="weui_check" name="checkbox1" id={{payTypeList.payId}} checked = {{payTypeList.check}}>
+              <!--<input type="radio" class="weui_check" name="checkbox1" id={{payTypeList.payId}} checked = {{payTypeList.check}}>-->
               <i class="weui_icon_checked"></i>
           </div>
           <div class="weui_cell_bd weui_cell_primary">
@@ -74,28 +74,28 @@
             this.id =  payTypeList.payId
          },
         btnPay:function(){
-          if(this.payTy.check){
-
-
-            this.$progress.start();
-            this.$http.post("http://www.jdl800.com/fric/mobile/member/createUpLevelOrder.do",{levelId:this.stateInfor}).then(function(response){
-              this.$progress.finish();
-              var res = response.data;
-              if(res.status == "ok") {
-                window.location.href="http://www.jdl800.com/fric/mobile/upLevelToPay.do?id="+res.datas
-              } else {
-                alert(res.message)
-              }
-            }, function(response){
-              this.$progress.failed();
-              // 响应错误回调
-            })
-
-
-        }else{
-         this.$set('toasttext','请选择支付方式');
-         this.$set('toastshow',true)
-          }
+//          if(this.payTy.check){
+//
+//
+//            this.$progress.start();
+//            this.$http.post("http://www.jdl800.com/fric/mobile/member/createUpLevelOrder.do",{levelId:this.stateInfor}).then(function(response){
+//              this.$progress.finish();
+//              var res = response.data;
+//              if(res.status == "ok") {
+//                window.location.href="http://www.jdl800.com/fric/mobile/upLevelToPay.do?id="+res.datas
+//              } else {
+//                alert(res.message)
+//              }
+//            }, function(response){
+//              this.$progress.failed();
+//              // 响应错误回调
+//            })
+//
+//
+//        }else{
+//         this.$set('toasttext','请选择支付方式');
+//         this.$set('toastshow',true)
+//          }
         }
       }
     }
