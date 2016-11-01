@@ -1,0 +1,100 @@
+<!DOCTYPE html>
+<html>
+<head lang="en">
+    <meta charset="UTF-8">
+    <title>家得利|联系我们</title>
+    <link rel="stylesheet" href="../../assets/frontend/plugins/slider/css/slider.css"/>
+    <link rel="stylesheet" href="../../assets/frontend/plugins/font/css/font-awesome.min.css"/>
+    <link rel="stylesheet" href="../../assets/frontend/css/global.css"/>
+</head>
+<body>
+    <div class="wrapper">
+        <div class="head">
+            <div class="head_main">
+                <div class="logo">
+                    <a href="index.html">
+                        <img src="../../assets/frontend/images/logo.jpg" alt=""/>
+                    </a>
+                </div>
+                <ul class="menu clearfix">
+                    <li>
+                        <a href="index.html">首页</a>
+                    </li>
+                    <li>
+                        <a href="scIndex.html">网上商城</a>
+                    </li>
+                    <li>
+                        <a href="consultingCenter.html">资讯中心</a>
+                    </li>
+                    <li>
+                        <a href="talentRecruitment.html">人才招聘</a>
+                    </li>
+                    <li>
+                        <a href="about.html">关于我们</a>
+                    </li>
+                    <li class="active">
+                        <a href="contactUs.html">联系我们</a>
+                    </li>
+                    <li class="mr0">
+                        <a href="###">商家登录</a>
+                    </li>
+                </ul>
+            </div>
+        </div>
+        <div class="content pt0 mb0">
+            <img src="../../../jdePc/images/contact1.jpg" alt="" class="autoImg"/>
+            <div class="l_contact">
+                <div class="contact">
+                    <div class="c_type">
+                        联系方式
+                    </div>
+                    <ul class="l_contact_menu clearfix">
+                        <li class="first">
+                            <img src="../../../jdePc/images/contact1.png" alt=""/>
+                            电话 : (86 23) 8806 0206
+                        </li>
+                        <li class="second">
+                            <img src="../../../jdePc/images/contact2.png" alt=""/>
+                            传真 : (86 23) 8806 0206
+                        </li>
+                        <li class="last mr0">
+                            <img src="../../../jdePc/images/contact3.png" alt=""/>
+                            邮政编码 : 400042
+                        </li>
+                    </ul>
+                    <div class="contact_block">
+
+                    </div>
+                    <div class="c_type">
+                        原驰地址
+                        <span class="right">
+                            地址：四川豪恩帮电子商务333号康德国际2号楼2001号
+                        </span>
+                    </div>
+                    <div id="allmap"></div>
+                </div>
+            </div>
+        </div>
+
+    </div>
+    <script type="text/javascript" src="../../assets/global/plugins/jquery/jquery-1.11.3.min.js"></script>
+    <script type="text/javascript" src="../../assets/frontend/js/global.js"></script>
+    <script type="text/javascript" src="http://api.map.baidu.com/api?v=2.0&ak=q0lvjEUGF5AOzHtbjn9YFtwl"></script>
+    <script type="text/javascript">
+        // 百度地图API功能
+        var map = new BMap.Map("allmap");    // 创建Map实例
+        map.centerAndZoom(new BMap.Point(116.404, 39.915), 11);  // 初始化地图,设置中心点坐标和地图级别
+        map.addControl(new BMap.MapTypeControl());   //添加地图类型控件
+        map.setCurrentCity("四川");          // 设置地图显示的城市 此项是必须设置的
+        map.enableScrollWheelZoom(true);     //开启鼠标滚轮缩放
+        var myGeo = new BMap.Geocoder();
+        // 将地址解析结果显示在地图上,并调整地图视野
+        myGeo.getPoint("四川豪恩帮电子商务", function(point){
+            if (point) {
+                map.centerAndZoom(point, 16);
+                map.addOverlay(new BMap.Marker(point));
+            }
+        }, "四川省");
+    </script>
+</body>
+</html>

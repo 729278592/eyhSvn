@@ -1,0 +1,232 @@
+<!DOCTYPE html>
+<html>
+<head lang="en">
+    <title>网上商城</title>
+    <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+    <link rel="stylesheet" href="../../assets/global/plugins/font/css/font-awesome.min.css">
+    <link rel="stylesheet" href="../../assets/frontend/css/global.css" type="text/css">
+</head>
+<body>
+    <div class="wrapper">
+        <div class="head">
+            <div class="head_main">
+                <div class="logo">
+                    <a href="index.html">
+                        <img src="../../assets/frontend/images/logo.jpg" alt=""/>
+                    </a>
+                </div>
+                <ul class="menu clearfix">
+                    <li class="active">
+                        <a href="index.html">首页</a>
+                    </li>
+                    <li>
+                        <a href="scIndex.html">网上商城</a>
+                    </li>
+                    <li>
+                        <a href="consultingCenter.html">资讯中心</a>
+                    </li>
+                    <li>
+                        <a href="talentRecruitment.html">人才招聘</a>
+                    </li>
+                    <li>
+                        <a href="about.html">关于我们</a>
+                    </li>
+                    <li>
+                        <a href="contactUs.html">联系我们</a>
+                    </li>
+                    <li class="mr0">
+                        <a href="###">商家登录</a>
+                    </li>
+                </ul>
+            </div>
+        </div>
+        <div class="content">
+
+            <!--所有商品分类-->
+            <div class="nav-wrap">
+                <div class="navWrap">
+                    <div class="goods left">
+                        <h2 class="title">
+                            所有商品分类
+                            <i class="fa fa-angle-down right"></i>
+                        </h2>
+                        <div class="all-goods">
+                        </div>
+                    </div>
+                    <ul class="nav-list cf left">
+                        <li><a href="scIndex.html">商城</a></li>
+                        <!--<li><a href="###">热门</a></li>-->
+                        <li><a class="on" href="onlinem-mall.html">商铺</a></li>
+                        <!--<li><a href="###">个人中心</a></li>-->
+                        <li><a href="shopping.html">所有商品</a></li>
+                    </ul>
+                    <div id="search-2014" class="left">
+                        <div class="form">
+                            <div class="type">
+                                <div class="search-type">
+                                        <span class="type-name">
+                                            店铺
+                                        </span>
+                                    <i class="fa fa-angle-down"></i>
+                                    <div class="w1">
+                                    </div>
+                                </div>
+                                <ul class="type-menu hide">
+                                    <li>宝贝</li>
+                                    <li>店铺</li>
+                                </ul>
+                            </div>
+                            <input type="text" class="text" placeholder="请输入关键字">
+                            <button  class="button cw-icon"><i class="fa fa-search"></i></button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <!--所有商品分类-->
+
+            <!--面包屑导航-->
+            <div class="breadDiv">
+                <div class="center">
+                    <ul class="breadNav clearfix left">
+                        <li>
+                            <a href="scIndex.html">
+                                商城
+                                <i class="fa fa-angle-right"></i>
+                            </a>
+                        </li>
+                        <li> <a href="onlinem-mall.html">商铺</a></li>
+                    </ul>
+                    <div class="right shopNum">
+                        为你搜到相关
+                        <span class="color">4554</span>
+                        家商铺
+                    </div>
+                </div>
+            </div>
+            <!--面包屑导航-->
+
+            <!--商铺列表切换-->
+            <div class="shopDiv">
+                <ul class="shopNav">
+                    <li>
+                        <a class="active" data="all-shops">
+                            全部
+                        </a>
+                    </li>
+                    <li>
+                        <a data="sales-shops">
+                            销量
+                            <i class="fa active fa-caret-up"></i>
+                            <i class="fa fa-caret-down"></i>
+                        </a>
+                    </li>
+                    <li>
+                        <a data="evaluate-shops">
+                            评价
+                            <i class="fa active fa-caret-up"></i>
+                            <i class="fa fa-caret-down"></i>
+                        </a>
+                    </li>
+                    <li>
+                        <a data="nearby-shops">
+                            周边
+                        </a>
+                    </li>
+                </ul>
+            </div>
+            <!--商铺列表切换-->
+
+            <!--商铺列表列表-->
+            <div id="shops">
+
+                <!--数据用ajax请求过来-->
+
+            </div>
+            <!--商铺列表列表-->
+
+            <!--无数据提示-->
+            <div class="notDataTips hide">
+                <img src="../../assets/frontend/images/notDataTips.png" alt=""/><br/>
+                暂无数据
+            </div>
+            <!--无数据提示-->
+
+            <!--分页-->
+            <div class="paging clearfix">
+                <ul class="page-menu clearfix">
+                    <p class="page-pre" data-pagenum="1"><i class="fa fa-angle-left"></i></p>
+                    <li class="active">1</li>
+                    <li class="liPage">2</li>
+                    <li class="liPage">3</li>
+                    <li class="liPage">4</li>
+                    <li class="liPage">5</li>
+                    <li class="liPage">6</li>
+                    <li class="liPage">7</li>
+                </ul>
+                <input type="text" class="page-num" id="pageNumTarget">
+                <button type="button" class="btn-jump" id="targetButton">跳转</button>
+                <p class="page-next" data-pagenum="2"><i class="fa fa-angle-right"></i></p>
+                <input type="hidden" value="447" id="totalPages">
+            </div>
+            <!--分页-->
+
+        </div>
+    </div>
+</body>
+    <script type="text/javascript" src="../../assets/global/plugins/jquery/jquery-1.11.3.min.js"></script>
+    <script type="text/javascript" src="../../assets/frontend/js/tNav.js"></script>
+    <script type="text/javascript" src="../../assets/frontend/js/global.js"></script>
+    <script>
+        $(function(){
+            /*商铺列表初始化*/
+            var shops = $("#shops");
+            var shopNav_li_a =  $(".shopNav li a");
+            var fa = $(".fa");
+            var fa_up = $(".fa-caret-up");
+            var fa_down = $(".fa-caret-down");
+            $.ajax({
+                type : "post",
+                url : "shops-list/all-shops.html",
+                dataType : "html",
+                cache : false,
+                success : function(data) {
+                    shops.html(data);
+                }
+            });
+
+            /*商铺列表切换*/
+            shopNav_li_a.on("click",function(){
+                $(this).addClass("active");
+                $(this).closest("li").siblings("li").find("a").removeClass("active");
+                var data = $(this).attr("data");
+                $.ajax({
+                    type : "post",
+                    url : 'shops-list/'+data+".html",
+                    dataType : "html",
+                    cache : false,
+                    success : function(data) {
+                        shops.html(data);
+                    }
+                });
+            });
+            /*排序*/
+            shopNav_li_a.find(fa).on("click",function(){
+                if($(this).is(fa_up)){
+                    $(this).addClass("active");
+                    $(this).siblings(fa).removeClass("active");
+                    return ;
+                }
+                if($(this).is(fa_down)){
+                    $(this).addClass("active");
+                    $(this).siblings(fa).removeClass("active");
+                    return ;
+                }
+            });
+
+            /*分页居中*/
+            var paging = $(".paging");
+            var ml = (paging.outerWidth())/2;
+            paging.get(0).style.marginLeft = -ml+"px";
+        })
+    </script>
+</html>

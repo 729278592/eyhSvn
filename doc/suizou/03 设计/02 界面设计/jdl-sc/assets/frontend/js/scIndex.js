@@ -86,31 +86,31 @@ $(function () {
         'auto':'true'   //是否自动播放
     });
     $("#pj-lunbo1").Carousel({
-        'play':'false', //是否循环播放
+        'play':'true', //是否循环播放
         'prevButton':'#prev1', //左按钮
         'nextButton':'#next1',  //右按钮
         'auto':'true'   //是否自动播放
     });
     $("#pj-lunbo2").Carousel({
-        'play':'false', //是否循环播放
+        'play':'true', //是否循环播放
         'prevButton':'#prev2', //左按钮
         'nextButton':'#next2',  //右按钮
         'auto':'true'   //是否自动播放
     });
     $("#pj-lunbo3").Carousel({
-        'play':'false', //是否循环播放
+        'play':'true', //是否循环播放
         'prevButton':'#prev3', //左按钮
         'nextButton':'#next3',  //右按钮
         'auto':'true'   //是否自动播放
     });
     $("#pj-lunbo4").Carousel({
-        'play':'false', //是否循环播放
+        'play':'true', //是否循环播放
         'prevButton':'#prev4', //左按钮
         'nextButton':'#next4',  //右按钮
         'auto':'true'   //是否自动播放
     });
     $("#pj-lunbo5").Carousel({
-        'play':'false', //是否循环播放
+        'play':'true', //是否循环播放
         'prevButton':'#prev5', //左按钮
         'nextButton':'#next5',  //右按钮
         'auto':'true'   //是否自动播放

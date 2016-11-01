@@ -1,7 +1,7 @@
-.con-main{position: relative;width: 1200px;margin: 40px auto;}
+.con-main{position: relative;width: 1200px;margin: 40px auto 0;}
 
 #nav.absolute { list-style: none;  margin: 0; position: absolute;top: 900px;left: 200px; }
-#nav { list-style: none;  margin: 0; left: 200px;position: fixed;top: 200px; }
+#nav { list-style: none;  margin: 0; left: 200px;position: fixed;top: 200px;z-index: 2000; }
 #nav li.first{border-top: 1px solid #dbdbdb;}
 
 #nav li.current span.s_c_l{background: #ce0f0f;color: #fff;}
