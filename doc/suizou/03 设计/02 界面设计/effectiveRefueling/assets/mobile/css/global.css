@@ -318,9 +318,16 @@ textarea{font-family: "微软雅黑";}
 .oilCardMenu li{float: left;width: 32%;margin-right: 2%;margin-bottom: 0.3rem;border-radius: 0.4rem;}
 .oilCardMenu li.mr0{margin-right: 0;}
 .oilCardMenu li.active div,.oilCardMenu li.active input{border-color: #ff9452;color: #ff9452;}
-.oilCardMenu li div,.oilCardMenu li input{font-family: "微软雅黑";display: inline-block;width: 100%;border: 1px solid #dbdbdb;color: #333;border-radius: 0.4rem;text-align: center;font-size: 0.875rem;height: 62px;line-height: 62px;}
-.oilCardMenu li div.otherMoney,.oilCardMenu li input.otherMoney{}
-.oilCardMenu li input{padding: 18px 0;height: 26px;line-height: 26px;}
+
+
+.oilCardMenu li div,.oilCardMenu li input{font-family: "微软雅黑";display: inline-block;width: 100%;border: 1px solid #dbdbdb;color: #333;padding: 1.2rem 0;border-radius: 0.4rem;text-align: center;font-size: 0.875rem;line-height: normal;}
+.oilCardMen li input{padding: 1.3rem 0;}
+
+
+.oilCardMenu.style li div,.oilCardMenu.style li input{font-family: "微软雅黑";display: inline-block;width: 100%;border: 1px solid #dbdbdb;color: #333;border-radius: 0.4rem;text-align: center;font-size: 0.875rem;height: 62px;line-height: 62px;padding: 0;}
+.oilCardMenu.style li input{padding: 18px 0;height: 26px;line-height: 26px;}
+
+
 .rechargedOption{padding: 0 0.93rem;}
 .rechargedOption a.weui_btn{background: #ff6702;}
 .rechargedOption p{font-size: 0.875rem;color: #999;margin: 0.25rem 0;}
