@@ -176,7 +176,7 @@
        userService.cancelOrder(this,orderArr,orderStatus)
       },
       pay:function(shop){
-        window.location.href="http://www.jdl800.com/fric/mobile/goods/toPay.do?id="+shop.orderId
+//        window.location.href="http://www.jdl800.com/fric/mobile/goods/toPay.do?id="+shop.orderId
       },
       sureShop:function(shop){
         var orderArr = {

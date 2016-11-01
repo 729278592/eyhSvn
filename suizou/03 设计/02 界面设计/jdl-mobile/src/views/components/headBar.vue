@@ -22,6 +22,11 @@
                 </li>
             </ul>
              <ul class="nav_link" :class="{'hide':hide}" v-if="isLogin==true">
+               <li>
+                 <a v-link="'/'">
+                   首页
+                 </a>
+               </li>
                 <li>
                     <a v-link="'/user/personCenter'">
                         个人中心
