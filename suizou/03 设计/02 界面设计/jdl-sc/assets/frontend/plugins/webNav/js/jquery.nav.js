@@ -17,7 +17,7 @@
  * });
  */
 
-;(function($, window, document, undefined){
+(function($, window, document, undefined){
 
 	// our plugin constructor
 	var OnePageNav = function(elem, options){
@@ -143,7 +143,9 @@
 			var $link = $(e.currentTarget);
 			var $parent = $link.parent();
 			var newLoc = '#' + self.getHash($link);
-
+			if(newLoc == "#shoping3"){
+				return
+			}
 			if(!$parent.hasClass(self.config.currentClass)) {
 				//Start callback
 				if(self.config.begin) {
@@ -162,7 +164,6 @@
 					if(self.config.changeHash) {
 						window.location.hash = newLoc;
 					}
-
 					//Add the auto-adjust on scroll back in
 					self.bindInterval();
 
@@ -200,7 +201,6 @@
 
 		scrollTo: function(target, callback) {
 			var offset = $(target).offset().top;
-
 			$('html, body').animate({
 				scrollTop: offset
 			}, this.config.scrollSpeed, this.config.easing, callback);

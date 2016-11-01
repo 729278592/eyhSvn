@@ -9,23 +9,21 @@ $.getJSON("../../assets/frontend/data/tNav.json",function (data) {
                                     '<p class="title">'+json[b].shopType+'</p>'+
                                     '<ul class="shop-menu clearfix">';
                                         for(var j = 0;j<json[b].shopTypeInfor.length;j++){
-                                            html += '<li><a href="###" target="_blank">'+json[b].shopTypeInfor[j].shopName+'</a></li>'
+                                            html += '<li><a href="shoppingInfor.html">'+json[b].shopTypeInfor[j].shopName+'</a></li>'
                                         }
                             html += '</ul>'+
-                                '</div>'+
-                                '<div class="faRight">' +
                                 '</div>'+
                             '</div>'+
                             '<div class="product-wrap pos0'+a+'">'+
                                 '<div class="cf">'+
                                     '<div class="fl wd252 pr20">'+
                                         '<h2>' +
-                                            '<a href="###">'+json[b].shopType+'</a>' +
+                                            '<a>'+json[b].shopType+'</a>' +
                                         '</h2>'+
 
                                         '<ul class="cf">';
                                             for(var j = 0;j<json[b].shopTypeDetails.length;j++){
-                                                html += '<li><a href="###" target="_blank">'+json[b].shopTypeDetails[j].shopName+'</a></li>'
+                                                html += '<li><a href="shoppingInfor.html">'+json[b].shopTypeDetails[j].shopName+'</a></li>'
                                             }
                                 html += '</ul>'+
                                     '</div>'+

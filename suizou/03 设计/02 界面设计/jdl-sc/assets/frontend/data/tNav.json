@@ -26,36 +26,36 @@
       ]
     },
     {
-      "shopType":"男女服饰",
+      "shopType":"电器产品",
       "shopTypeInfor":[
-        {"shopName":"女装"},
-        {"shopName":"童装"},
-        {"shopName":"鞋子"}
+        {"shopName":"手机"},
+        {"shopName":"电脑"},
+        {"shopName":"冰箱"}
       ],
       "shopTypeDetails":[
-        {"shopName":"上装"},
-        {"shopName":"下装"},
-        {"shopName":"上装"},
-        {"shopName":"下装"},
-        {"shopName":"上装"},
-        {"shopName":"下装"},
-        {"shopName":"上装"},
-        {"shopName":"下装"},
-        {"shopName":"上装"},
-        {"shopName":"下装"},
-        {"shopName":"上装"},
-        {"shopName":"下装"},
-        {"shopName":"上装"},
-        {"shopName":"下装"},
-        {"shopName":"上装"}
+        {"shopName":"华为"},
+        {"shopName":"三星"},
+        {"shopName":"苹果"},
+        {"shopName":"魅族"},
+        {"shopName":"荣耀"},
+        {"shopName":"华硕"},
+        {"shopName":"戴尔"},
+        {"shopName":"华为"},
+        {"shopName":"三星"},
+        {"shopName":"苹果"},
+        {"shopName":"魅族"},
+        {"shopName":"荣耀"},
+        {"shopName":"华硕"},
+        {"shopName":"戴尔"},
+        {"shopName":"戴尔"}
       ]
     },
     {
-      "shopType":"男女服饰",
+      "shopType":"进口食品",
       "shopTypeInfor":[
-        {"shopName":"女装"},
-        {"shopName":"童装"},
-        {"shopName":"鞋子"}
+        {"shopName":"饼干糕点"},
+        {"shopName":"休闲零食"},
+        {"shopName":"国产食品"}
       ],
       "shopTypeDetails":[
         {"shopName":"上装"},
