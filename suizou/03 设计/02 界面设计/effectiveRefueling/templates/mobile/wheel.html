@@ -128,7 +128,7 @@
         <!--</div>-->
         <div class="weui_mask mask hide">
             <div class='luckon'>
-                <div class='jg jg2'>恭喜您抽中 <span></span></div>
+                <div class='jg jg2'></div>
                 <div class="sureDiv">
                     <a class="weuiBtn weui-btn weui-btn_mini weui-btn_primary">确定</a>
                 </div>
@@ -153,15 +153,20 @@
             nowScore:$(".reduce").text(),
             totalScore:$(".score").text(),
             end:function(e){
-                //抽奖执行完毕的回调函数,参数e为获奖编号
-                //因为这里是指定的，所以e == 12
-                $('.jg2 span').text(e);
+                if(e=="谢谢"){
+                    //抽奖执行完毕的回调函数,参数e为获奖编号
+                    //因为这里是指定的，所以e == 12
+                    $('.jg2').text('谢谢参与');
+                    return
+                }
+                $('.jg2').text('恭喜您抽中'+e);
             }
         });
 
         $(".sureDiv .weuiBtn").on("click",function(){
             $(".mask").addClass("hide")
         })
+
     });
 </script>
 </body>
