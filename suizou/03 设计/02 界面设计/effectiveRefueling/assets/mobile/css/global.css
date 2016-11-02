@@ -87,7 +87,7 @@ a:active{opacity: 0.6;}
 .cardInfor{}
 .cardInfor p{font-size: 1rem;color: #fff;line-height: 1.25rem;}
 .cardInfor p.name{}
-.cardInfor p.phone{}
+.cardInfor p.phone span.verdana,.cardNum span.verdana{color: #fff;}
 .cardNum{font-size: 1rem;position: absolute;right: 0.6rem;bottom: 0.6rem;color: #fff;}
 .pay_list{width: 100%;background: #fff;border-top: 1px solid #dbdbdb;}
 .pay_list li{width: 33.3%;text-align: center;float: left;padding: 0.6rem 0;}
@@ -150,7 +150,7 @@ a:active{opacity: 0.6;}
 /*applyLeave*/
 .weui_cells.weui_cells_form.mt0{margin-top: 0;}
 .weui_cell .weui_label, .weui_cells .weui_cell{font-size: 0.875rem;}
-.zk p{color: #ff3b30;}
+.zk p{color: #f73a3a;}
 .zk p.hide{display: none;}
 .weui_cells_form input {font-family: "微软雅黑";font-size: 0.875rem;}
 .weui_cell.weui_cell_select {padding: 0 15px;}
