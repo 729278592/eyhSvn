@@ -150,6 +150,8 @@ a:active{opacity: 0.6;}
 /*applyLeave*/
 .weui_cells.weui_cells_form.mt0{margin-top: 0;}
 .weui_cell .weui_label, .weui_cells .weui_cell{font-size: 0.875rem;}
+.zk p{color: #ff3b30;}
+.zk p.hide{display: none;}
 .weui_cells_form input {font-family: "微软雅黑";font-size: 0.875rem;}
 .weui_cell.weui_cell_select {padding: 0 15px;}
 .weui_select {font-family: "微软雅黑";padding: 0;color: #333;}
