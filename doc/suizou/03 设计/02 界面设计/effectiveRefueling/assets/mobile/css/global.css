@@ -324,7 +324,7 @@ textarea{font-family: "微软雅黑";}
 .oilCardMen li input{padding: 1.3rem 0;}
 
 
-.oilCardMenu.style li div,.oilCardMenu.style li input{font-family: "微软雅黑";display: inline-block;width: 100%;border: 1px solid #dbdbdb;color: #333;border-radius: 0.4rem;text-align: center;font-size: 0.875rem;height: 62px;line-height: 62px;padding: 0;}
+.oilCardMenu.style li div,.oilCardMenu.style li input{font-family: "微软雅黑";display: inline-block;width: 100%;border-radius: 0.4rem;text-align: center;font-size: 0.875rem;height: 62px;line-height: 62px;padding: 0;}
 .oilCardMenu.style li input{padding: 18px 0;height: 26px;line-height: 26px;}
 
 
