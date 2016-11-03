@@ -38,6 +38,7 @@ a:active{opacity: 0.6;}
 /*foot*/
 .foot{position: fixed;left: 0;right: 0;bottom: 0;height: 3rem;text-align: center;line-height: 2.5rem;background: #fafafa;border-top: 1px solid #dbdbdb;}
 .tabMenu{width: 100%;}
+.tabMenu.style li{width: 33.3%;}
 .tabMenu li{width: 25%;padding: 5px 0;float: left;}
 .tabMenu.w30 li{width: 33.333%;}
 .tabMenu li a:after{content: "";position: absolute;top: 0;right: 0;width: 1px;height: 100%;border-right: 1px solid #ccc;}
