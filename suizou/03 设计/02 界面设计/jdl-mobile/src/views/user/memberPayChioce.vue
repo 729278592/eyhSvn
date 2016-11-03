@@ -8,7 +8,7 @@
           ￥<span class="verdana">{{money}}</span>
       </p>
   </div>
-  <div class="weui_cells weui_cells_checkbox mt0 first style1" v-for="payTypeList in payType" @click="chiocePay(payTypeList)">
+  <div class="weui_cells weui_cells_checkbox mt0 first style1" v-for="payTypeList in payType" @click="chiocePay(payTypeList)" :class="{'hide':payTypeList.isWeixin}">
       <label class="weui_cell weui_check_label" for={{payTypeList.payId}}>
           <div class="weui_cell_hd">
               <!--<input type="radio" class="weui_check" name="checkbox1" id={{payTypeList.payId}} checked = {{payTypeList.check}}>-->
@@ -50,9 +50,9 @@
           toasttext:"",
           payTy:"",
           payType:[
-            {payId:11,payName:"支付宝",check:false},
-            {payId:12,payName:"微信支付",check:false},
-            {payId:13,payName:"银联支付",check:false}
+            {payId:11,payName:"支付宝",check:false,type:false,isWeixin:false},
+            {payId:12,payName:"微信支付",check:false,type:false,isWeixin:false},
+            {payId:13,payName:"银联支付",check:false,type:true,isWeixin:false}
           ]
         }
       },
@@ -60,6 +60,29 @@
         document.title = '选择支付';
         this.money=localStorage.getItem('moneyId');
         this.stateInfor = localStorage.getItem('upDateId')
+
+        /*判断是否为微信*/
+        var ua = navigator.userAgent.toLowerCase();
+        if(ua.match(/MicroMessenger/i)=="micromessenger") {
+          for(var i = 0;i<this.payType.length;i++){
+            this.payType[i].isWeixin = false;
+            if(this.payType[i].type){
+              this.payType[i].isWeixin = true;
+            }
+          }
+          //console.log(JSON.stringify(this.payType))
+          return true;
+        } else {
+          for(var i = 0;i<this.payType.length;i++){
+            this.payType[i].isWeixin = false;
+            if(!this.payType[i].type){
+              this.payType[i].isWeixin = true;
+            }
+          }
+          //console.log(JSON.stringify(this.payType))
+          return false;
+        }
+
       },
       methods: {
         onShow: function () {

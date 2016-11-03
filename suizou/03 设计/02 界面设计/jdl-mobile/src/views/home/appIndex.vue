@@ -54,7 +54,7 @@
           <li>
               <a><!--v-link="'user/presentIntegral/'"-->
                   <span class="span_index index_iconc"></span><br/>
-                  <span>积分管理</span>
+                  <span>积分兑换</span>
               </a>
           </li>
           <li>

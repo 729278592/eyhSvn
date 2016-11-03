@@ -5,12 +5,12 @@
         <div class="weui_cells_form mt0">
             <div class="moneyInfor">
                 <p>
-                    当前积分　　{{lists.nowScore}}
+                    当前积分{{lists.nowScore}}
                 </p>
                 <p>
-                     可提现积分　{{lists.txScore}}
+                     可提现积分{{lists.txScore}}
                 </p>
-                <button type="submit" class="weui_btn weui_btn_primary bg" @click="present(lists)">提现</button>
+                <button type="submit" class="weui_btn weui_btn_primary bg" @click="present(lists)">兑换</button>
             </div>
             <div class="weui_cells mt0 weui_cells_access style1">
                 <a class="weui_cell" v-link="'/shops/presentChioce'">
