@@ -376,7 +376,9 @@ textarea{font-family: "微软雅黑";}
 .pay_infor p.title{color: #333;}
 .pay_infor p.moneyNum{font-size: 1.25rem;color: #333;}
 .weui_cells_checkbox.style1.first:after{border-bottom: 1px solid #dbdbdb;}
-
+.weui_cells_checkbox.style1.first.bb0:after{border-bottom: none;}
+.weui_cells_checkbox.style1.bb0 .weui_cell:active{background: transparent;}
+.weui_cells_checkbox.style1.bb0 .weui_cell{padding-right: 0;padding-top: 0;}
 
 /*index*/
 .formIndex{width: 60%;display: inline-block;position: relative;}
