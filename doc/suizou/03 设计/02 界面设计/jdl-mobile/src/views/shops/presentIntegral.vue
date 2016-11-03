@@ -8,7 +8,7 @@
                     当前积分{{lists.nowScore}}
                 </p>
                 <p>
-                     可提现积分{{lists.txScore}}
+                     可兑换积分{{lists.txScore}}
                 </p>
                 <button type="submit" class="weui_btn weui_btn_primary bg" @click="present(lists)">兑换</button>
             </div>
@@ -31,20 +31,20 @@
                     <div class="weui_cell_bd weui_cell_primary style">
                         <p>
                             <span class="score score2"></span>
-                            提现记录
+                          兑换记录
                         </p>
                     </div>
                     <div class="weui_cell_ft"></div>
                 </a>
-                <a class="weui_cell" v-link="'/shops/presentRules'">
-                    <div class="weui_cell_bd weui_cell_primary style">
-                        <p>
-                            <span class="score score3"></span>
-                            提现规则
-                        </p>
-                    </div>
-                    <div class="weui_cell_ft"></div>
-                </a>
+                <!--<a class="weui_cell" v-link="'/shops/presentRules'">-->
+                    <!--<div class="weui_cell_bd weui_cell_primary style">-->
+                        <!--<p>-->
+                            <!--<span class="score score3"></span>-->
+                            <!--提现规则-->
+                        <!--</p>-->
+                    <!--</div>-->
+                    <!--<div class="weui_cell_ft"></div>-->
+                <!--</a>-->
             </div>
         </div>
     </form>
