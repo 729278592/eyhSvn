@@ -11,7 +11,7 @@
       <li v-for="returnList in list">
         <div v-if="returnList.type==0">
         <p class="clearfix">
-          <span class="time">积分提现</span>
+          <span class="time">积分兑换</span>
         </p>
 
         <p class="clearfix">

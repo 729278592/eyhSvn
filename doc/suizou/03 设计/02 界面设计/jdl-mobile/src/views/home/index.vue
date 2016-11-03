@@ -74,7 +74,7 @@
         <li>
             <a><!-- v-link="'/user/presentIntegral'"-->
                 <span class="span_index index_icon2"></span><br/>
-                <span>提现管理</span>
+                <span>积分兑换</span>
             </a>
         </li>
         <li>
