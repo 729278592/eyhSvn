@@ -121,7 +121,14 @@
       },
 
       paySure:function(){
-//        window.location.href="http://www.jdl800.com/fric/mchFeeToPay.do?id="+this.orderId+"&type=mobile"
+
+        var ua = navigator.userAgent.toLowerCase();
+        if(ua.match(/MicroMessenger/i)=="micromessenger") {
+
+        }
+        else{
+          window.location.href="http://www.jdl800.com/fric/unionpay/mchFeeToPay.do?id="+this.orderId+"&type=mobile"
+        }
       },
       payCancel:function(){
         this.show = false
