@@ -516,6 +516,7 @@ export default {
       var res = response.json()
       if(res.status == "ok") {
         this.orders = res.datas
+        console.log(JSON.stringify(this.orders))
         if(this.orders.length!=0){
           this.dataHide = false
           this.orderHide = true
