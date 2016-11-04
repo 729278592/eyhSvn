@@ -176,7 +176,14 @@
        userService.cancelOrder(this,orderArr,orderStatus)
       },
       pay:function(shop){
-//        window.location.href="http://www.jdl800.com/fric/mobile/goods/toPay.do?id="+shop.orderId
+
+        var ua = navigator.userAgent.toLowerCase();
+        if(ua.match(/MicroMessenger/i)=="micromessenger") {
+
+        }
+        else{
+          window.location.href="http://www.jdl800.com/fric/mobile/goods/unionpay/toPay.do?id="+shop.orderId
+        }
       },
       sureShop:function(shop){
         var orderArr = {
