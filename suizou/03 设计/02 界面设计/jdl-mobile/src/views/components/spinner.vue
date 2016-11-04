@@ -47,6 +47,31 @@
           }else{
             this.numbers = 1
           }
+
+          /*
+           var number = /^-?(?:\d+|\d{1,3}(?:,\d{3})+)?(?:\.\d+)?$/;
+           if(number.test(this.numbers)){
+           e.currentTarget.value = this.numbers;
+           if(!this.numbers){
+           this.numbers = 1;
+           e.currentTarget.value = 1;
+           }
+           if(this.numbers==0){
+           this.numbers = 1;
+           e.currentTarget.value = 1;
+           }
+           if(this.numbers>10){
+           this.numbers = 10;
+           e.currentTarget.value = 10;
+           }
+           }else{
+           this.$set('toasttext','请输入数字哦');
+           this.$set('toastshow',true);
+           this.numbers = 1;
+           e.currentTarget.value = 1;
+           } */
+
+
         }
      }
    }
