@@ -51,7 +51,7 @@
                                         <span class="left">￥{{shopping.price}}</span>
                                          <div class="spinner right clearfix">
                                           <button class="btnReduce left" @click="reduce(shopping.mchId,$index)">-</button>
-                                          <input class="numInput left" type="number" @keyup="add(shopping.mchId,$index)"  value={{shopping.num}} />
+                                          <input class="numInput left" type="text" @keyup="keyInput(shopping.mchId,$index)" v-model="num" value={{shopping.num}} />
                                           <button class="btnPlus left" @click="plus(shopping.mchId,$index)">+</button>
                                         </div>
                                     </p>
@@ -78,7 +78,7 @@
         </p>
     </div>
   </div>
-   <div class="weui_dialog_confirm modal-mask" id="dialog1"  v-show="show">
+  <div class="weui_dialog_confirm modal-mask" id="dialog1"  v-show="show">
        <div class="weui_mask"></div>
        <div class="weui_dialog ">
            <div class="weui_dialog_hd"><strong class="weui_dialog_title">确定删除订单？</strong></div>
@@ -88,6 +88,7 @@
            </div>
        </div>
      </div>
+  <Toast :toastshow.sync="toastshow" :toasttext="toasttext"></Toast>
 </template>
 
 <style>
@@ -97,13 +98,13 @@
 </style>
 
 <script>
-
+  import Toast from '../components/toast.vue'
   import Bar from '../components/headBar.vue'
   import userService from '../../api/userService'
   export default {
      components: {
         //注册组件
-
+        Toast,
           Bar
       },
       data () {
@@ -120,7 +121,9 @@
   	      checked:false,
   	      totalPrice:"",
   	      event:"",
-  	      orderHide:""
+  	      orderHide:"",
+          toastshow:false,
+          toasttext:""
   	    }
   	  },
       ready () {
@@ -203,6 +206,45 @@
            }
          }
        },
+
+        keyInput:function (mchId,index) {
+          var number = /^-?(?:\d+|\d{1,3}(?:,\d{3})+)?(?:\.\d+)?$/;
+          for(var i=0; i<this.orders.length; i++) {
+            if(this.orders[i].mchId == mchId) {
+              var item = this.orders[i].list[index];
+              if(number.test(this.num)){
+                item.num = this.num;
+                if(!this.num){
+                  this.num = 1;
+                  item.num = 1;
+                }
+                if(this.num==0){
+                  this.num = 1;
+                  item.num = 1;
+                }
+                if(this.num>10){
+                  this.num = 10;
+                  item.num = 10;
+                }
+                var totalPrice = 0;
+                for (var j = 0; j < this.orders[i].list.length; j++) {
+                  var self = this.orders[i].list[j];
+                  totalPrice += self.price * self.num;
+                }
+                this.orders[i].totalPrice = totalPrice.toFixed(2);
+                this.updateGoodsNum(item.cartId,item.num);
+                break;
+              }else{
+                item.num = 1;
+                this.num = 1;
+                this.$set('toasttext','请输入数字');
+                this.$set('toastshow',true);
+                console.log(typeof this.orders[i].list[index])
+              }
+            }
+          }
+        },
+
        updateGoodsNum:function (cartId,num) {
 
          var shopArr = {cartId:cartId,num:num}
