@@ -179,6 +179,7 @@
 
         var ua = navigator.userAgent.toLowerCase();
         if(ua.match(/MicroMessenger/i)=="micromessenger") {
+          window.location.href="http://www.jdl800.com/fric/mobile/goods/wxpay/toPay.do?id="+shop.orderId
 
         }
         else{

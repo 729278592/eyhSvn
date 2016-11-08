@@ -72,13 +72,13 @@
             </a>
         </li>
         <li>
-            <a><!-- v-link="'/user/presentIntegral'"-->
+            <a v-link="'/user/presentIntegral><!-- '"-->
                 <span class="span_index index_icon2"></span><br/>
                 <span>积分兑换</span>
             </a>
         </li>
         <li>
-            <a><!-- v-link="'/user/detailOutcome'"-->
+            <a v-link="'/user/detailOutcome><!-- '"-->
                 <span class="span_index index_icon3"></span><br/>
                 <span>交易明细</span>
             </a>

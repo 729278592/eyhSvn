@@ -98,7 +98,13 @@
 
             var ua = navigator.userAgent.toLowerCase();
             if(ua.match(/MicroMessenger/i)=="micromessenger") {
-
+              for(var i = 0;i<this.payType.length;i++){
+                if(this.payType[i].check&&!this.payType[i].type){
+                  window.location.href="http://www.jdl800.com/fric/mobile/goods/wxpay/toPay.do?id="+this.stateInfor
+                }else if((this.payType[i].check&&this.payType[i].type)){
+                  window.location.href="http://www.jdl800.com/fric/mobile/goods/unionpay/toPay.do?id="+this.stateInfor
+                }
+              }
             }
             else{
               window.location.href="http://www.jdl800.com/fric/mobile/goods/unionpay/toPay.do?id="+this.stateInfor
