@@ -101,6 +101,14 @@
                 var ua = navigator.userAgent.toLowerCase();
                 if(ua.match(/MicroMessenger/i)=="micromessenger") {
 
+                  for(var i = 0;i<this.payType.length;i++){
+                    if(this.payType[i].check&&!this.payType[i].type){
+                      window.location.href="http://www.jdl800.com/fric/mobile/wxpay/upLevelToPay.do?id="+res.datas
+                    }else if((this.payType[i].check&&this.payType[i].type)){
+                      window.location.href="http://www.jdl800.com/fric/mobile/unionpay/upLevelToPay.do?id="+res.datas
+                    }
+                  }
+
                 }
                 else{
                   window.location.href="http://www.jdl800.com/fric/mobile/unionpay/upLevelToPay.do?id="+res.datas
