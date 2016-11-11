@@ -176,6 +176,9 @@ textarea{font-family: "微软雅黑";}
 .weui_btn_area .weui_btn.actived{background: #9a9a9a;}
 .weui_btn_area .weui_btn.actived:active{background: #9a9a9a;color: rgba(255,255,255,1)}
 .weui_btn.b0,.weui_btn.b0:after{border:0;border-radius:0;}
+
+.weui_btn_area.styleAdd{margin: 0.635rem 0 0 0;}
+.weui_btn_area.styleAdd a{font-size: 0.875rem;color: #fff;}
 .weui_btn_area.fixed{margin:0;width:100%;z-index:10;position:fixed;left:0;right:0;height:50px;text-align:center;line-height:50px;bottom:-8px}
 .weui_cells.bg{background:#f7f7f7}
 .weui_cells.bg .weui_cell{background:#fff}
@@ -484,10 +487,11 @@ textarea{font-family: "微软雅黑";}
 .shoppingList li{width: 100%;margin-top: 0.625rem;background: #fff;}
 .shoppingList li a{width: 100%;display: block;}
 .shoppingList li a .shop_list_bg{border-radius: 0.2rem 0.2rem 0 0;}
-.shoppingList li a .shop_list_bg1{background: url(../images/shopList1.jpg) no-repeat;height: 6rem;background-size: 100% 100%;}
-.shoppingList li a .shop_list_bg2{background: url(../images/shopList2.jpg) no-repeat;height: 6rem;background-size: 100% 100%;}
-.shoppingList li a .shop_list_bg3{background: url(../images/shopList3.jpg) no-repeat;height: 6rem;background-size: 100% 100%;}
-.shoppingList li a .shop_list_bg4{background: url(../images/shopList4.jpg) no-repeat;height: 6rem;background-size: 100% 100%;}
+.shoppingList li a .shop_list_bg img{height: 8rem;width: 100%;}
+/*.shoppingList li a .shop_list_bg1{background: url(../images/shopList1.jpg) no-repeat;height: 6rem;background-size: 100% 100%;}*/
+/*.shoppingList li a .shop_list_bg2{background: url(../images/shopList2.jpg) no-repeat;height: 6rem;background-size: 100% 100%;}*/
+/*.shoppingList li a .shop_list_bg3{background: url(../images/shopList3.jpg) no-repeat;height: 6rem;background-size: 100% 100%;}*/
+/*.shoppingList li a .shop_list_bg4{background: url(../images/shopList4.jpg) no-repeat;height: 6rem;background-size: 100% 100%;}*/
 .shoppingList li a .shop_infor{padding: 0.2rem 0.4rem;border: 1px solid #dbdbdb;border-top: none;}
 .shoppingList li a p{font-size: 0.875rem;color: #333;display: block;}
 .shoppingList li a p.title{}
@@ -819,7 +823,7 @@ img.shopInfor.w100{width: 100%;margin-bottom: 0.625rem;}
 }
 @media screen and (max-width: 375px) {
     .formIndex .fa-search{left: 0.5rem;}
-    .shoppingList li a .shop_list_bg{height: 7rem;}
+    .shoppingList li a .shop_list_bg{height: 8rem;}
     .shopping.style .shoppingList li a .shop_list_bg{height: 9rem;}
     .couponMoneyList li p.title{color: #fff;position: absolute;top: 0.35rem;left: 2rem;}
     .couponMoneyList li p.couponP{position: absolute;top: 1.7rem;left: 4rem;font-size: 1rem;}
@@ -834,6 +838,7 @@ img.shopInfor.w100{width: 100%;margin-bottom: 0.625rem;}
 @media screen and (max-width: 320px) {
     .formIndex .fa-search{left: 0.8rem;}
     .shoppingList li a .shop_list_bg{height: 6rem;}
+    .shoppingList li a .shop_list_bg img{height: 6rem;}
     .shopping.style .shoppingList li a .shop_list_bg{height: 8rem;}
     .couponMoneyList li p.title{color: #fff;position: absolute;top: 0.6rem;left: 2rem;}
     .couponMoneyList li p.couponP{position: absolute;top: 2rem;left: 4rem;font-size: 1rem;}
