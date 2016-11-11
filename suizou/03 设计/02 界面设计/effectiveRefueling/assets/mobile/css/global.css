@@ -788,6 +788,92 @@ img.shopInfor.w100{width: 100%;margin-bottom: 0.625rem;}
 .invoice p input{padding: 0.5rem 0 0.5rem 0.5rem;border: 1px solid #dbdbdb;outline: none;width: 70%;}
 .invoice p span{color: #666;}
 .invoice p span.title{font-size: 1rem;color: #333;}
+
+
+
+
+
+
+
+
+/*数量的选择*/
+a.num {
+    color: #474747;
+    display: inline-block;
+    position: relative;
+    top: 10px;;
+}
+
+a.num span {
+    float: left;
+    height: 28px;
+    line-height: 28px;
+    color: #474747;
+}
+.minus {
+    position: relative;
+    text-align: center;
+    display: inline-block;
+    width: 29px;
+    border: 1px solid #d4d5d6;
+    background-color: #f8f8f8;
+    cursor: pointer;
+}
+a.num input {
+    width: 30px;
+    height: 28px;
+    vertical-align: middle;
+    border: 1px solid #ccc;
+    border-left: 0;
+    border-right: 0;
+    text-align: center;
+    padding: 0;
+    display: inline-block;
+    line-height: 28px;
+    background-color: #fff;
+    float: left;
+}
+.plus {
+    position: relative;
+    text-align: center;
+    display: inline-block;
+    width: 29px;
+    border: 1px solid #d4d5d6;
+    background-color: #f8f8f8;
+    margin-right: 5px;
+    cursor: pointer;
+}
+.minus:after {
+    content: "";
+    position: absolute;
+    top: 13px;
+    left: 9px;
+    border-top: 2px solid #333;
+    width: 10px;
+}
+
+
+
+.plus:before {
+    content: "";
+    position: absolute;
+    height: 10px;
+    border-left: 2px solid #333;
+    top: 9px;
+    left: 14px;
+}
+.plus:after {
+    content: "";
+    position: absolute;
+    width: 10px;
+    border-top: 2px solid #333;
+    top: 13px;
+    left: 10px;
+}
+
+
+
+
 @media screen and (max-width: 768px) {
     .formIndex .fa-search{left: 1rem;}
     body,html{font-size: 20px;}
