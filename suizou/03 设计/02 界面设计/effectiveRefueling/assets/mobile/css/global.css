@@ -873,6 +873,15 @@ a.num input {
 
 
 
+/*小弹窗*/
+.weui_dialog_confirm.style .weui_dialog .weui_dialog_hd{padding: 0;font-family: "微软雅黑"}
+.weui_dialog_confirm.style p{text-align: center;margin: 3px 0;}
+.weui_dialog_confirm.style .weui_dialog_ft{}
+.weui_dialog_confirm.style p.tips{font-size: 14px;color: #999;margin-bottom: 10px;}
+.largeTitle{font-size: 18px;color: #000;font-weight: bold;}
+.smallTitle{font-size: 18px;color: #000;}
+
+
 
 @media screen and (max-width: 768px) {
     .formIndex .fa-search{left: 1rem;}
