@@ -33,7 +33,7 @@ body{background: #eeeef1;}
 
 /*index*/
 .autoImg{position: relative;}
-.l_about{background: #fff;padding: 20px 0;width: 100%;}
+.l_about{background: #fff;padding: 0;width: 100%;}
 .about{width: 1024px;margin: 0 auto;}
 .l_a_title{width: 100%;text-align: center;font-size: 20px;}
 .l_a_title_img1{display: inline-block;width: 39px;height: 41px;background: url(../images/title1.png) no-repeat;background-size: 100% 100%;}
@@ -273,7 +273,7 @@ html.overflow{overflow: hidden;}
 /*about*/
 .l_about{color: #666;}
 .l_about .title{margin-bottom: 30px;}
-.l_about .infor{font-size: 14px;line-height: 24px;}
+.l_about .infor{font-size: 15px;line-height: 28px;}
 .center{text-align: center;font-size: 14px;color: #999;text-indent: -28px;}
 .center p{line-height: 24px;}
 /*foot*/
