@@ -1,0 +1,140 @@
+<!DOCTYPE html>
+<html>
+<head lang="en">
+    <meta charset="UTF-8">
+    <title>计算详情</title>
+    <meta name="viewport" content="width=device-width; initial-scale=1.0; user-scalable=no;">
+    <meta name="format-detection" content="telephone=no">
+    <link rel="stylesheet" href="../../assets/global/plugins/font/css/font-awesome.min.css"/>
+    <link rel="stylesheet" href="../../assets/mobile/plugins/swiper/dist/css/swiper.min.css"/>
+    <link rel="stylesheet" href="../../assets/mobile/css/weui.css"/>
+    <link rel="stylesheet" href="../../assets/mobile/css/example.css"/>
+    <link rel="stylesheet" href="../../assets/mobile/css/global.css"/>
+</head>
+<body>
+    <div class="content">
+        <div class="page">
+
+            <!--头部开始-->
+            <div class="hd">
+                <a class="left">
+                    <i class="fa fa-angle-left"></i>
+                </a>
+                <ul class="h_menu">
+                    <li>
+                        <a>计算详情</a>
+                    </li>
+                </ul>
+            </div>
+            <!--头部结束-->
+
+            <!--内容开始-->
+            <div class="bd absolute pt">
+
+                <div class="calculation">
+                    <p class="c_in">
+                        幸运号<br>
+                        <span class="fs">023888</span>
+                    </p>
+                </div>
+
+                <div class="c_infors">
+                    <div class="color1">
+                        <span class="title">幸运号</span>
+                         =数值A%活动总需人数（取余数)+10000001 <br>
+                        =165544555%120（取余数)+10000001 <br>
+                        =100
+                    </div>
+                    <div class="color2">
+                        <span class="title">数值A</span>
+                         =将这10条参与记录的时间按照时、分、秒组合（如19:23:54则是192354），然后相加 <br>
+                        =XXXXX
+                    </div>
+                </div>
+
+                <!--参与记录开始-->
+                <div class="c_re">
+                    <div class="titleTip">当期活动最后10个参与记录的参与时间</div>
+                    <ul class="entryList mt0 block liBt0">
+                        <li>
+                            <div>
+                                <div class="couponImg style">
+                                    <img src="../../assets/mobile/images/shopping1.jpg" class="couponImg1" alt="">
+                                </div>
+                            <span class="inforList">
+                                <span class="title clearfix">
+                                    <span class="left">丁丁芭比丁丁芭比</span>
+                                     <span class="right color1">参与8次</span>
+                                </span>
+                                <span class="clearfix">
+                                    <span class="left">2011-10-31</span>
+                                </span>
+
+                            </span>
+                            </div>
+
+                        </li>
+                        <li>
+                            <div>
+                                <div class="couponImg style">
+                                    <img src="../../assets/mobile/images/shopping1.jpg" class="couponImg1" alt="">
+                                </div>
+                            <span class="inforList">
+                                <span class="title clearfix">
+                                    <span class="left">丁丁芭比</span>
+                                     <span class="right color1">参与8次</span>
+                                </span>
+                                 <span class="clearfix">
+                                    <span class="left">2011-10-31</span>
+                                </span>
+
+                            </span>
+                            </div>
+
+                        </li>
+                    </ul>
+                    <a class="btnLook">
+                         <span class="text">展开查看全部</span>
+                         <span class="animates animatesBottom">
+                            <i class="fa fa-angle-double-down "></i>
+                        </span>
+                    </a>
+                </div>
+                <!--参与记录结束-->
+
+                <!--无参与记录开始-->
+                <div class="notConTip hide">
+                    <img src="../../assets/mobile/images/noDate.png" alt=""/>
+                    <p class="notInfor">
+                        暂无参与记录！
+                    </p>
+                </div>
+                <!--无参与记录结束-->
+
+            </div>
+            <!--内容结束-->
+        </div>
+    </div>
+    <script src="../../assets/global/plugins/jquery/jquery-1.11.3.min.js"></script>
+    <script src="../../assets/mobile/js/global.js"></script>
+    <script>
+        $(function(){
+            /*展开更多*/
+            var btnLookA = $("a.btnLook ");
+            var text = $(".text");
+            var animates = $(".animates");
+            btnLookA.on("touchend",function(){
+                if($(this).find("i").is(".fa-angle-double-up")){
+                    $(this).find(animates).removeClass("animatesTop").addClass("animatesBottom");
+                    $(this).find("i").removeClass("fa-angle-double-up").addClass("fa-angle-double-down");
+                    $(this).find(text).text("展开查看全部");
+                }else if($(this).find("i").is(".fa-angle-double-down")){
+                    $(this).find(animates).removeClass("animatesBottom").addClass("animatesTop");
+                    $(this).find("i").removeClass("fa-angle-double-down").addClass("fa-angle-double-up");
+                    $(this).find(text).text("收起");
+                }
+            });
+        })
+    </script>
+</body>
+</html>
