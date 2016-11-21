@@ -504,7 +504,7 @@ textarea{font-family: "微软雅黑";}
 
 /*.shopping .shoppingList{padding-bottom: 0;}*/
 .shopping.style .shoppingList li {margin-top: 0;}
-.shopping.style .shoppingList li a .shop_list_bg{border-radius: 0;height: 8rem;}
+.shopping.style .shoppingList li a .shop_list_bg{border-radius: 0;height: 13rem;}
 .shopping.style .shoppingList li a p{margin: 0.2rem 0;}
 .shopType{margin: 0.625rem 0;background: #fff;border-top: 1px solid #dbdbdb;border-bottom: 1px solid #dbdbdb;}
 .weightClass{display: block;}
@@ -901,8 +901,8 @@ a.num input {
 @media screen and (max-width: 415px) {
     .formIndex .weui_icon_clear{left: 11rem;}
     .formIndex .fa-search{left: 1.5rem;}
-    .shoppingList li a .shop_list_bg{height: 8rem;}
-    .shopping.style .shoppingList li a .shop_list_bg{height: 10rem;}
+    .shoppingList li a .shop_list_bg{height: 16rem;}
+    .shopping.style .shoppingList li a .shop_list_bg{height: 16rem;}
     .couponMoneyList li p.title{color: #fff;position: absolute;top: 0.3rem;left: 2rem;}
     .couponMoneyList li p.couponP{position: absolute;top: 1.7rem;left: 5rem;font-size: 1rem;}
     .couponMoneyList li p.money{position: absolute;bottom: 0.25rem;color: #fff;font-size: 1rem;text-align: center;}
@@ -918,8 +918,8 @@ a.num input {
 }
 @media screen and (max-width: 375px) {
     .formIndex .fa-search{left: 0.5rem;}
-    .shoppingList li a .shop_list_bg{height: 8rem;}
-    .shopping.style .shoppingList li a .shop_list_bg{height: 9rem;}
+    .shoppingList li a .shop_list_bg{height: 14rem;}
+    .shopping.style .shoppingList li a .shop_list_bg{height: 14rem;}
     .couponMoneyList li p.title{color: #fff;position: absolute;top: 0.35rem;left: 2rem;}
     .couponMoneyList li p.couponP{position: absolute;top: 1.7rem;left: 4rem;font-size: 1rem;}
     .couponMoneyList.style li p.title{color: #fff;position: absolute;top: 1rem;left: 3rem;}
@@ -932,9 +932,9 @@ a.num input {
 }
 @media screen and (max-width: 320px) {
     .formIndex .fa-search{left: 0.8rem;}
-    .shoppingList li a .shop_list_bg{height: 6rem;}
-    .shoppingList li a .shop_list_bg img{height: 6rem;}
-    .shopping.style .shoppingList li a .shop_list_bg{height: 8rem;}
+    .shoppingList li a .shop_list_bg{height: 13rem;}
+    .shoppingList li a .shop_list_bg img{height: 13rem;}
+    .shopping.style .shoppingList li a .shop_list_bg{height: 13rem;}
     .couponMoneyList li p.title{color: #fff;position: absolute;top: 0.6rem;left: 2rem;}
     .couponMoneyList li p.couponP{position: absolute;top: 2rem;left: 4rem;font-size: 1rem;}
     .couponMoneyList li p.money{position: absolute;bottom: 0.25rem;color: #fff;font-size: 1rem;text-align: center;}
