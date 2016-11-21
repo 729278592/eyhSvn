@@ -487,7 +487,7 @@ textarea{font-family: "微软雅黑";}
 .shoppingList li{width: 100%;margin-top: 0.625rem;background: #fff;}
 .shoppingList li a{width: 100%;display: block;}
 .shoppingList li a .shop_list_bg{border-radius: 0.2rem 0.2rem 0 0;}
-.shoppingList li a .shop_list_bg img{height: 8rem;width: 100%;}
+.shoppingList li a .shop_list_bg img{height: 16rem;width: 100%;}
 /*.shoppingList li a .shop_list_bg1{background: url(../images/shopList1.jpg) no-repeat;height: 6rem;background-size: 100% 100%;}*/
 /*.shoppingList li a .shop_list_bg2{background: url(../images/shopList2.jpg) no-repeat;height: 6rem;background-size: 100% 100%;}*/
 /*.shoppingList li a .shop_list_bg3{background: url(../images/shopList3.jpg) no-repeat;height: 6rem;background-size: 100% 100%;}*/
