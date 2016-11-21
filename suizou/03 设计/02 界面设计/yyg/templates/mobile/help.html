@@ -1,0 +1,95 @@
+<!DOCTYPE html>
+<html>
+<head lang="en">
+    <meta charset="UTF-8">
+    <title>帮助</title>
+    <meta name="viewport" content="width=device-width; initial-scale=1.0; user-scalable=no;">
+    <meta name="format-detection" content="telephone=no">
+    <link rel="stylesheet" href="../../assets/global/plugins/font/css/font-awesome.min.css"/>
+    <link rel="stylesheet" href="../../assets/mobile/plugins/swiper/dist/css/swiper.min.css"/>
+    <link rel="stylesheet" href="../../assets/mobile/css/weui.css"/>
+    <link rel="stylesheet" href="../../assets/mobile/css/example.css"/>
+    <link rel="stylesheet" href="../../assets/mobile/css/global.css"/>
+</head>
+<body>
+    <div class="content">
+        <div class="page">
+
+            <!--头部开始-->
+            <div class="hd">
+                <a class="left">
+                    <i class="fa fa-angle-left"></i>
+                </a>
+                <ul class="h_menu">
+                    <li>
+                        <a>最新开奖</a>
+                    </li>
+                </ul>
+            </div>
+            <!--头部结束-->
+
+            <!--内容开始-->
+            <div class="bd absolute pt">
+                <ul class="navJ">
+                    <li class="on">
+                        <div class="j_h clearfix">
+                            <span class="left">1、关于发货问题</span>
+                            <span class="right">
+                                <i class="fa fa-angle-down"></i>
+                            </span>
+                        </div>
+                        <div class="j_b">
+                            在收到短信通知后,请到我的-个人资料完善真实的收货地址,以便我们为您派发商品
+                        </div>
+                    </li>
+                    <li>
+                        <div class="j_h clearfix">
+                            <span class="left">2、怎么查看中奖</span>
+                            <span class="right">
+                                <i class="fa fa-angle-right"></i>
+                            </span>
+                        </div>
+                        <div class="j_b">
+                            在收到短信通知后,请到我的-个人资料完善真实的收货地址,以便我们为您派发商品
+                        </div>
+                    </li>
+                    <li>
+                        <div class="j_h clearfix">
+                            <span class="left">3、如何领奖</span>
+                            <span class="right">
+                                <i class="fa fa-angle-right"></i>
+                            </span>
+                        </div>
+                        <div class="j_b">
+                            在收到短信通知后,请到我的-个人资料完善真实的收货地址,以便我们为您派发商品
+                        </div>
+                    </li>
+                </ul>
+            </div>
+            <!--内容结束-->
+
+        </div>
+    </div>
+    <script src="../../assets/global/plugins/jquery/jquery-1.11.3.min.js"></script>
+    <script src="../../assets/mobile/js/global.js"></script>
+    <script>
+        $(function () {
+            var j_h = $(".navJ li .j_h");
+            var j_b = $(".navJ li .j_b");
+            j_h.on("touchend",function(){
+                var parent = $(this).closest("li");
+                if(parent.is(".on")){
+                    parent.removeClass("on");
+                    $(this).find(".fa").removeClass("fa-angle-down").addClass("fa-angle-right");
+                }else{
+                    parent.addClass("on");
+                    $(this).find(".fa").removeClass("fa-angle-right").addClass("fa-angle-down");
+                    parent.siblings("li").removeClass("on");
+                    $(this).siblings("li").find(".fa").removeClass("fa-angle-down").addClass("fa-angle-right");
+                }
+
+            });
+        })
+    </script>
+</body>
+</html>

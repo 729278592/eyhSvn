@@ -1,0 +1,106 @@
+<!DOCTYPE html>
+<html>
+<head lang="en">
+    <meta charset="UTF-8">
+    <title>晒单分享</title>
+    <meta name="viewport" content="width=device-width; initial-scale=1.0; user-scalable=no;">
+    <meta name="format-detection" content="telephone=no">
+    <link rel="stylesheet" href="../../assets/global/plugins/font/css/font-awesome.min.css"/>
+    <link rel="stylesheet" href="../../assets/mobile/plugins/swiper/dist/css/swiper.min.css"/>
+    <link rel="stylesheet" href="../../assets/mobile/css/weui.css"/>
+    <link rel="stylesheet" href="../../assets/mobile/css/example.css"/>
+    <link rel="stylesheet" href="../../assets/mobile/css/global.css"/>
+</head>
+<body>
+    <div class="content">
+        <div class="page">
+
+            <!--头部开始-->
+            <div class="hd">
+                <a class="left">
+                    <i class="fa fa-angle-left"></i>
+                </a>
+                <ul class="h_menu">
+                    <li>
+                        <a>晒单分享</a>
+                    </li>
+                </ul>
+            </div>
+            <!--头部结束-->
+
+            <!--内容开始-->
+            <div class="bd absolute pd48">
+                <form action="#">
+                    <div class="score clearfix">
+                        <span class="c666 left">活动评分 : </span>
+                        <ul class="starList clearfix left">
+                            <li>
+                                <i class="fa fa-star"></i>
+                            </li>
+                            <li>
+                                <i class="fa fa-star"></i>
+                            </li>
+                            <li>
+                                <i class="fa fa-star"></i>
+                            </li>
+                            <li>
+                                <i class="fa fa-star"></i>
+                            </li>
+                            <li>
+                                <i class="fa fa-star"></i>
+                            </li>
+                        </ul>
+                        <!--<span class="fraction">-->
+                            <!--<span class="numFraction">0</span> 分-->
+                        <!--</span>-->
+                        <input type="hidden" id="inputStar" value="0"/>
+                    </div>
+                    <div class="weui_cell bt0" style="background: #fff;">
+                        <div class="weui_cell_bd weui_cell_primary">
+                            <span class="c666">活动评价 :</span> <br>
+                            <textarea name="" id="activeComment" class="weui_textarea pd10" placeholder="请输入评价内容" cols="30" rows="5"></textarea>
+                        </div>
+                    </div>
+                    <div class="weui_btn_area btnStyle w100 fixed">
+                        <a class="weui_btn weui_btn_primary bg3 b0" id="submit">
+                            提交
+                        </a>
+                    </div>
+                </form>
+            </div>
+            <!--内容结束-->
+
+        </div>
+    </div>
+    <script src="../../assets/global/plugins/jquery/jquery-1.11.3.min.js"></script>
+    <script src="../../assets/mobile/js/stars.js"></script>
+    <script src="../../assets/mobile/js/removeTip.js"></script>
+    <script src="../../assets/mobile/js/global.js"></script>
+    <script>
+        $(function(){
+            /*评分*/
+            var starListLi = $(".starList li");
+            commentStars.init(starListLi);
+
+            /*提交验证*/
+
+            var activeComment = $("#activeComment");
+            var submit = $("#submit");
+            submit.on("touchend",function(){
+
+                if(!$(".starList li.active").get(0)){
+                    showErrMsg("请打评分");
+                    return;
+                }
+
+                if($.trim(activeComment.val())==''){
+                    showErrMsg("请输入评价内容");
+                    return;
+                }
+
+            })
+
+        })
+    </script>
+</body>
+</html>
