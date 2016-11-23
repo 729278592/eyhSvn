@@ -1,0 +1,126 @@
+{
+  "status": "ok",
+  "message": "success",
+  "datas":[
+    {
+      "id": 1001,
+      "freNum":"10",
+      "lotteryTime":"2016-03-07 11:13:41",
+      "headImg": "../../assets/mobile/images/shopping1.jpg",
+      "lotteryName":"1"
+    },
+    {
+      "id": 1002,
+      "freNum":"100",
+      "lotteryTime":"2016-04-07 11:13:41",
+      "headImg": "../../assets/mobile/images/shopping1.jpg",
+      "lotteryName":"2"
+    },
+    {
+      "id": 1003,
+      "freNum":"100",
+      "lotteryTime":"2016-04-07 11:13:41",
+      "headImg": "../../assets/mobile/images/shopping1.jpg",
+      "lotteryName":"3"
+    },
+    {
+      "id": 1001,
+      "freNum":"10",
+      "lotteryTime":"2016-03-07 11:13:41",
+      "headImg": "../../assets/mobile/images/shopping1.jpg",
+      "lotteryName":"4"
+    },
+    {
+      "id": 1002,
+      "freNum":"100",
+      "lotteryTime":"2016-04-07 11:13:41",
+      "headImg": "../../assets/mobile/images/shopping1.jpg",
+      "lotteryName":"5"
+    },
+    {
+      "id": 1003,
+      "freNum":"100",
+      "lotteryTime":"2016-04-07 11:13:41",
+      "headImg": "../../assets/mobile/images/shopping1.jpg",
+      "lotteryName":"6"
+    }
+  ,
+    {
+      "id": 1003,
+      "freNum":"100",
+      "lotteryTime":"2016-04-07 11:13:41",
+      "headImg": "../../assets/mobile/images/shopping1.jpg",
+      "lotteryName":"7"
+    } ,
+    {
+      "id": 1003,
+      "freNum":"100",
+      "lotteryTime":"2016-04-07 11:13:41",
+      "headImg": "../../assets/mobile/images/shopping1.jpg",
+      "lotteryName":"8"
+    }
+
+
+
+
+  ,
+    {
+      "id": 1003,
+      "freNum":"100",
+      "lotteryTime":"2016-04-07 11:13:41",
+      "headImg": "../../assets/mobile/images/shopping1.jpg",
+      "lotteryName":"9"
+    } ,
+    {
+      "id": 1003,
+      "freNum":"100",
+      "lotteryTime":"2016-04-07 11:13:41",
+      "headImg": "../../assets/mobile/images/shopping1.jpg",
+      "lotteryName":"10"
+    } ,
+    {
+      "id": 1003,
+      "freNum":"100",
+      "lotteryTime":"2016-04-07 11:13:41",
+      "headImg": "../../assets/mobile/images/shopping1.jpg",
+      "lotteryName":"11"
+    } ,
+    {
+      "id": 1003,
+      "freNum":"100",
+      "lotteryTime":"2016-04-07 11:13:41",
+      "headImg": "../../assets/mobile/images/shopping1.jpg",
+      "lotteryName":"12"
+    } ,
+    {
+      "id": 1003,
+      "freNum":"100",
+      "lotteryTime":"2016-04-07 11:13:41",
+      "headImg": "../../assets/mobile/images/shopping1.jpg",
+      "lotteryName":"13"
+    } ,
+    {
+      "id": 1003,
+      "freNum":"100",
+      "lotteryTime":"2016-04-07 11:13:41",
+      "headImg": "../../assets/mobile/images/shopping1.jpg",
+      "lotteryName":"14"
+    } ,
+    {
+      "id": 1003,
+      "freNum":"100",
+      "lotteryTime":"2016-04-07 11:13:41",
+      "headImg": "../../assets/mobile/images/shopping1.jpg",
+      "lotteryName":"15"
+    } ,
+    {
+      "id": 1003,
+      "freNum":"100",
+      "lotteryTime":"2016-04-07 11:13:41",
+      "headImg": "../../assets/mobile/images/shopping1.jpg",
+      "lotteryName":"16"
+    }
+
+
+  ]
+}

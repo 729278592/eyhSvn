@@ -1,12 +1,5 @@
 var commUtil = commUtil || {};
-commUtil.userTaskInfos = function (callback){
-	// commUtil.log({userId : commUtil.currentUserId()});
-	// if(commUtil.currentUserId()){
-	// 	$.post(request.contextPath + "/task/userTaskInfos.json",{userId : commUtil.currentUserId()},function(data){
-	// 		callback(data);
-	// 	},"json");
-	// }
-}
+
 commUtil.loading = function(flag){
 	// commUtil.log(flag?"加载完成":"加载中");
 	var loadingFix = $("#loddingFix");
@@ -23,14 +16,14 @@ commUtil.loading = function(flag){
 		loadingFix.show();
 		setTimeout(function(){loadingFix.hide();},1000);
 	}
-}
+};
 commUtil.loading(true);
 
 
-window.onbeforeunload = function(){
-	commUtil.loading();
-	return undefined;
-}
+// window.onbeforeunload = function(){
+// 	commUtil.loading();
+// 	return undefined;
+// }
 
 jQuery._myReAjax = jQuery.ajax
 jQuery.ajax = function(a,b)

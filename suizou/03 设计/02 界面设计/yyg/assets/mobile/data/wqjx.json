@@ -1,0 +1,26 @@
+{
+  "status": "ok",
+  "message": "success",
+  "datas":[
+    {
+      "id": 1000,
+      "num": "001",
+      "tatolNum": "10",
+      "lotteryTime":"2016-03-07 11:13:41",
+      "headImg": "../../assets/mobile/images/shopping1.jpg",
+      "lotteryName":"顶顶小臂",
+      "createTime": "2016-03-07",
+      "luckyNumber":"10022444"
+    },
+    {
+      "id":1001,
+      "num": "002",
+      "tatolNum": "50",
+      "lotteryTime":"2016-04-07",
+      "headImg": "../../assets/mobile/images/shopping1.jpg",
+      "lotteryName":"顶顶小臂1",
+      "createTime": "2016-05-07 11:13:41",
+      "luckyNumber":"122022554"
+    }
+  ]
+}

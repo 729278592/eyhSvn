@@ -59,7 +59,7 @@
                 <!--我的记录切换结束-->
 
                 <!--我的记录开始-->
-                <div id="myRecord">
+                <div id="myRecord" class="margin">
 
                 </div>
                 <!--我的记录结束-->
@@ -73,48 +73,40 @@
     <script src="../../assets/mobile/js/tips.js"></script>
     <script src="../../assets/mobile/js/spinner.js"></script>
     <script src="../../assets/mobile/js/global.js"></script>
-<script>
+    <script>
+        $(function(){
 
-    $(function(){
-
-
-
-        /*我的记录初始化*/
-        var active_n = $(".recordMenu li a");
-        var data = active_n.eq(0).attr("data");
-        active_n.eq(0).addClass("active");
-        $.ajax({
-            type : "post",
-            url : "myRecord/"+data+".html",
-            dataType : "html",
-            cache : false,
-            success : function(data) {
-                $("#myRecord").html(data);
-            }
-        });
-
-        /*我的记录状态切换*/
-
-        active_n.on("touchend",function(){
-            $(this).addClass("active");
-            $(this).closest("li").siblings("li").find("a").removeClass("active");
-            var data = $(this).attr("data");
-            var that = $(this);
+            /*我的记录初始化*/
+            var active_n = $(".recordMenu li a");
+            var data = active_n.eq(0).attr("data");
+            active_n.eq(0).addClass("active");
             $.ajax({
                 type : "post",
                 url : "myRecord/"+data+".html",
                 dataType : "html",
                 cache : false,
                 success : function(data) {
-                    that.closest(".bd").find("#myRecord").html(data);
+                    $("#myRecord").html(data);
                 }
             });
-        });
 
-
-    })
-</script>
-
-
+            /*我的记录状态切换*/
+            active_n.on("touchend",function(){
+                $(this).addClass("active");
+                $(this).closest("li").siblings("li").find("a").removeClass("active");
+                var data = $(this).attr("data");
+                var that = $(this);
+                $.ajax({
+                    type : "post",
+                    url : "myRecord/"+data+".html",
+                    dataType : "html",
+                    cache : false,
+                    success : function(data) {
+                        that.closest(".bd").find("#myRecord").html(data);
+                    }
+                });
+            });
+        })
+    </script>
 </body>
 </html>

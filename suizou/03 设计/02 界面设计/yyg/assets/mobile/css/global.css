@@ -44,6 +44,7 @@ img.w100{width: 100%;}
 .hd>a.left.relative{position: relative;}
 .hd>a.left .fa{font-size: 1.5rem;position: relative;top: 0.2rem;}
 .hd .h_menu{display: inline-block;position: relative;}
+.hd .h_menu.l1{left: 1rem;}
 .hd.style .h_menu{display: inline-block;position: relative;left: 0;}
 .hd .h_menu li{float: left;margin-right: 0.3rem;}
 .hd .h_menu li a{display: inline-block;color: #333;height: 2.375rem;line-height:2.375rem; }
@@ -175,6 +176,9 @@ img.w100{width: 100%;}
 .per_i_i p img{display: inline-block;width: 4rem;height: 4rem;margin-right: 0.5rem;}
 .per_i_i p.title{font-size: 1rem;color: #333;}
 .starMenu{position: absolute;right: 0;top: 0;display: block;}
+.starMenu.relative{
+    position: relative;
+}
 .starMenu li{float: left;margin-right: 0.2rem;padding: 0;}
 .starMenu li .fa{font-size: 1rem;color: #999;}
 .starMenu li.active .fa{color: #ffc809;}
@@ -331,7 +335,9 @@ button.weui_btn, input.weui_btn {
     display: block;
     padding: 0.625rem;
 }
-.entryList li p .numS{color: #999;}
+.entryList li p .numS{color: #999;    word-break: break-all;
+    width: 55%;
+    text-align: right;}
 .entryList.bd100 li .couponImg.style img.couponImg1 {
     width: 4rem;height: 4rem;border-radius: 2px;
     border-radius: 100%;
@@ -365,6 +371,13 @@ button.weui_btn, input.weui_btn {
 .tabMenu li a.hide{display: none;}
 .weui_dialog_confirm{z-index: 10000;position: relative;}
 .weui_dialog_confirm .weui_dialog .weui_dialog_bd.style {padding: 0;text-align: center !important;}
+.weui_label{width: 80px;}
+.weui_vcode_btn.disabled{background: #ccc;color: #fff;}
+.entryList li p span.c333{color: #333;}
+.entryList.style li .inforList span.clearfix span{width: 50%;word-wrap: break-word;}
+.entryList.style li .inforList span.clearfix span.left{text-align: left;}
+.entryList.style li .inforList span.clearfix span.right{text-align: right;}
+
 
 
 /*数量的选择*/
@@ -455,7 +468,6 @@ a.num input {
 .entryList.style  li .inforList span.color1{color: #e72a83;}
 .entryList.style  li .inforList span.color2{color: #e72a83;font-weight: bold;}
 .entryList.style  li{margin-bottom: 0.625rem;}
-.entryList.style  li:last-child{margin-bottom: 0}
 .ac_in.pb10{padding-bottom: 0.625rem;}
 
 /*暂无数据提示*/
@@ -506,6 +518,7 @@ a.num input {
 .entryList.liBt0 li:first-child>div{border-top: 0;}
 .btnLook{position: relative;width: 100%;padding: 0.6rem 0;background: #fff;border-top: 1px solid #efefef;color: #666;font-size: 1rem;display: block;text-align: center;}
 .btnLook.bt0{border-top: 0;}
+.btnLook.pt0{padding-top: 0;}
 .ac_mu li:last-child{padding-bottom: 0;}
 .btnLook .fa{position: absolute;}
 
@@ -677,19 +690,27 @@ a.num input {
 .k_j_y.bg1{}
 .k_j_k.bg2{background: #ff0231;}
 .infor.style.hide{display: none;}
-.k_j_y.bg3{background: #343434;color: #fff;position: relative;overflow: auto;;}
+.k_j_y.bg3{background: #343434;color: #fff;position: relative;}
 .lj_type{
     position: absolute;
     display: inline-block;
-    padding: 0.2rem 0.5rem;
-    background: #ff0004;
+    width: 97%;
+    height: 90%;
+    line-height: 25px;
+
+    text-align: center;
     color: #666;
     font-size: 0.875rem;
     margin-right: 0.2rem;
-    top: 1.8rem;left: 0;
+    top: 1.7rem;left: 0;
     z-index: 1000;
-
+    border: 1px solid #dbdbdb;border-top: 0;
+    background: #fff;
 }
+.lj_type.style1{  color: #e72a83}
+.lj_type.style1{  color: #999;}
+.lj_type.hide{display: none;}
+.margin .entryList li .pross.style .pross_i .fatherNum{margin: 0.6rem 0;}
 .lj_type.hide{display: none;}
 .lj_type.bg{}
 .lj_type.bg1{}
@@ -720,6 +741,8 @@ a>.weui_cell_ft.style:after{right: 12px;}
     background: #000;
     opacity: 0.8;
 }
+
+
 /**/
 .c666.left{position: relative;top: 0.2rem;padding-right: 0.625rem;display: inline-block;}
 .score {
@@ -740,7 +763,7 @@ a>.weui_cell_ft.style:after{right: 12px;}
     font-size: 1rem;
     color: #999;
 }
-
+.entryList li .inforList>span.inherit{overflow: inherit;}
 
 
 
@@ -824,6 +847,8 @@ a>.weui_cell_ft.style:after{right: 12px;}
 .weui_toast_content{text-align:center;font-size:0.875rem;}
 #smile-icon{margin:1.25rem 0 0.625rem;}
 .weui_cell .weui_label{display: table;}
+
+
 .weui_cell .weui_label>span{position: relative;top: 3px;}
 .codeInput{width: 55%;}
 .getCode{height: 35px;line-height: 35px;position: absolute;width: 38%;top: 5px;background: #ff6702;border: none;outline: none;font-size: 0.875rem;color: #fff;border-radius: 0.125rem;}
