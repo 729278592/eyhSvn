@@ -6,14 +6,13 @@
 ;(function ($,window,document,undefined) {
     $.fn.scrollLoad = function (options) {
         var defaults = {
-            start: 0,
+            
             startNum:7,
             limit: 16,
             wajxHtml:'',
-            firstLoad:true,
-            resNum:null,
-            timeOutFlag : undefined,
-            num  : null
+            firstLoad:true,//第一次加载为true
+            timeOutFlag : undefined //控制加载时上拉再次加载
+
         };
         var opts = $.extend({}, defaults, options);
         var Methods = {
@@ -81,7 +80,7 @@
                     setTimeout(function(){
                         loadingFix.hide();
                         if(opts.startNum+opts.limit>res.length){
-                            if((opts.num>res.length-opts.startNum)&&(res.length-opts.startNum>0)){
+                            if((opts.limit>res.length-opts.startNum)&&(res.length-opts.startNum>0)){
                                 for(var i = opts.startNum;i<res.length;i++){
                                     _this.append(Methods.ajaxRecord(res[i], opts.wajxHtml));
                                 }
@@ -125,7 +124,7 @@
                                 return;
                             }
                             opts.timeOutFlag = setTimeout(function(){
-                                opts.num = opts.limit - opts.start;
+                                
                                 if(opts.startNum>opts.res.length){
                                     showErrMsg("没有更多数据咯");
                                     return;
@@ -149,10 +148,5 @@
             }
         };
         Methods.init($(this));
-
-
-
     };
-
-    
 })(jQuery,window,document);
