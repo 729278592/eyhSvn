@@ -57,7 +57,7 @@
                                 <img src="../../assets/mobile/plugins/swiper/dist/images/indexSlider4.jpg" alt="" class="w100"/>
                             </a>                        </div>
                     </div>
-                    <div class="swiper-pagination"></div>
+                    <div class="swiper-pagination style"></div>
                     <!--<div class="swiper-button-next"></div>-->
                     <!--<div class="swiper-button-prev"></div>-->
                 </div>
@@ -216,40 +216,36 @@
         });
 
         var timeOutFlag = undefined;
+
         $(window).scroll(function () {
-            var scrollTop = $(this).scrollTop();//335
-            var scrollHeight = $(document).height();//480
-            var windowHeight = $(this).height();//382
+
+            var scrollTop = $(this).scrollTop()//354
+            var scrollHeight = $(document).height()//834
+            var windowHeight = $(this).height();//480
+
+            console.log(windowHeight)
+
 
             if (scrollTop + windowHeight == scrollHeight) {
 
+
                 if(timeOutFlag){
+
                     return;
                 }
+                timeOutFlag = setTimeout(function () {
 
-                var iStartY = 0;
-                var iStartPagey = 0;
-                $(window).on("touchstart", function (ev) {
-                    iStartPagey = ev.originalEvent.targetTouches[0].pageY;
-                });
+                    $.post("",{},function(data){
+                        if(data.code == 0){//查询成功
 
-                $(window).on("touchmove", function (ev) {
-                    iStartY = iStartPagey - ev.originalEvent.targetTouches[0].pageY;
-                });
+                        }
+                        else{//没有更多
+                        }
+                        timeOutFlag = undefined;
+                    },"json");
 
-                $(window).on("touchend", function () {
-                    if(iStartY>0){
-                        iStartY = 0;
-                        timeOutFlag = setTimeout(function () {
-
-                            $.post("",{},function(data){
-                                timeOutFlag = undefined;
-                            },"json");
-
-                            setTimeout(function(){timeOutFlag = undefined;},2000);
-                        }, 100);
-                    }
-                });
+                    setTimeout(function(){timeOutFlag = undefined;},2000);
+                }, 100);
             }
         });
 

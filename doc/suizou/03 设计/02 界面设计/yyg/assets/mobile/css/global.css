@@ -72,13 +72,14 @@ img.w100{width: 100%;}
 
 
 /*index*/
+.swiper-pagination.style{text-align: right;}
 .bannerNav{display: block;padding: 1.5rem 0.9rem;background: #fff;position: relative;  top: -0.6rem;}
 .nacMenu{display: block;}
 .nacMenu li{float: left;width: 22%;margin-right: 3%}
 .nacMenu li a{display: block;text-align: center;color: #666;font-size: 0.875rem;}
 .nacMenu li a img{width: 100%}
 .nacMenu li:last-child{margin-right:0;}
-.activeList{padding: 0.4rem 0.9rem;}
+.activeList{padding: 0.2rem 0.625rem;}
 .activeList.mt0{margin-top: 0 !important;}
 .activeList.p0{padding: 0;margin-top: -0.5rem;}
 .activeMenu{display: block;}
