@@ -33,7 +33,7 @@
                 <form action="#">
                     <div class="score clearfix">
                         <span class="c666 left">活动评分 : </span>
-                        <ul class="starList clearfix left">
+                        <ul class="starMenu clearfix left relative">
                             <li>
                                 <i class="fa fa-star"></i>
                             </li>
@@ -79,7 +79,7 @@
     <script>
         $(function(){
             /*评分*/
-            var starListLi = $(".starList li");
+            var starListLi = $(".starMenu  li");
             commentStars.init(starListLi);
 
             /*提交验证*/
@@ -88,7 +88,7 @@
             var submit = $("#submit");
             submit.on("touchend",function(){
 
-                if(!$(".starList li.active").get(0)){
+                if(!$(".starMenu  li.active").get(0)){
                     showErrMsg("请打评分");
                     return;
                 }

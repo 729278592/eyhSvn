@@ -21,7 +21,7 @@
                 <a class="left relative">
                     <i class="fa fa-angle-left"></i>
                 </a>
-                <ul class="h_menu">
+                <ul class="h_menu l1">
                     <li>
                         <a>活动详情</a>
                     </li>
@@ -282,11 +282,11 @@
 
                     <!--往期揭晓开始-->
                     <div class="ac_in">
-                        <ul class="entryList bd100 style mt0">
+                        <ul class="entryList bd100 style mt0" id="wqjx">
                             <li>
                                 <p class="clearfix">
                                     <span class="left">期号 : 001 共10期</span>
-                                    <span class="numS right">开奖时间:2016-11-20</span>
+                                    <span class="numS right">开奖时间 : 2016-11-20</span>
                                 </p>
                                 <div>
                                     <div class="couponImg style left">
@@ -312,13 +312,13 @@
                             <li>
                                 <p class="clearfix">
                                     <span class="left">期号 : 001 共10期</span>
-                                    <span class="numS right">开奖时间:2016-11-20</span>
+                                    <span class="numS right">开奖时间 : 2016-11-20</span>
                                 </p>
                                 <div>
-                                    <div class="couponImg style">
+                                    <div class="couponImg style left">
                                         <img src="../../assets/mobile/images/shopping1.jpg" class="couponImg1" alt="">
                                     </div>
-                                    <span class="inforList">
+                                    <span class="inforList w75">
                                         <span class="title">
                                             丁丁芭比
                                         </span>
@@ -333,6 +333,7 @@
 
                                     </span>
                                 </div>
+
                             </li>
                         </ul>
                         <a class="btnLook bt0">
@@ -466,7 +467,8 @@
 
 
             /*进度条*/
-            $('.pross').progress({});
+            var pross = $('.pross');
+            pross.progress({});
 
             /*关注*/
             var addressIcon = $(".addressIcon");
@@ -500,15 +502,70 @@
             var btnLookA = $("a.btnLook ");
             var text = $(".text");
             var animates = $(".animates");
+            var wqjx = $("#wqjx");
+            var wajxHtml = "";
             btnLookA.on("touchend",function(){
-                if($(this).find("i").is(".fa-angle-double-up")){
-                    $(this).find(animates).removeClass("animatesTop").addClass("animatesBottom");
-                    $(this).find("i").removeClass("fa-angle-double-up").addClass("fa-angle-double-down");
-                    $(this).find(text).text("展开查看全部");
-                }else if($(this).find("i").is(".fa-angle-double-down")){
-                    $(this).find(animates).removeClass("animatesBottom").addClass("animatesTop");
-                    $(this).find("i").removeClass("fa-angle-double-down").addClass("fa-angle-double-up");
-                    $(this).find(text).text("收起");
+                var that = $(this);
+                if(that.find("i").is(".fa-angle-double-up")){
+
+                    /*隐藏ajax加载进来的部分*/
+                    wqjx.find("li.active").removeClass("active").addClass("hide");
+
+                    /*点击加载按钮的变化*/
+                    that.find(animates).removeClass("animatesTop").addClass("animatesBottom");
+                    that.find("i").removeClass("fa-angle-double-up").addClass("fa-angle-double-down");
+                    that.find(text).text("展开查看全部");
+                }else if(that.find("i").is(".fa-angle-double-down")){
+
+                    /*判断是否第一次加载*/
+                    if(wqjx.find("li").is(".hide")){
+
+                        /*如果不是第一次加载显示影藏的部分*/
+                        wqjx.find("li.hide").removeClass("hide").addClass("active");
+                    }else {
+
+                        /*第一次用ajax加载*/
+                        $.post("../../assets/mobile/data/wqjx.json",{},function(data){
+                            if(data.status == "ok"){//查询成功
+                                var res = data.datas;
+                                for(var i=0;i<res.length;i++){
+                                    wajxHtml += '<li class="active">'+
+                                                    '<p class="clearfix">'+
+                                                        '<span class="left">期号 : '+res[i].num+' 共'+res[i].tatolNum+'期</span>'+
+                                                        '<span class="numS right">开奖时间 : '+res[i].lotteryTime+'</span>'+
+                                                    '</p>'+
+                                                    '<div>'+
+                                                        '<div class="couponImg style left">'+
+                                                            '<img src="'+res[i].headImg+'" class="couponImg1" alt="">'+
+                                                        '</div>'+
+                                                        '<span class="inforList w75">'+
+                                                            '<span class="title">'+res[i].lotteryName+'</span>'+
+                                                            '<span class="clearfix">'+
+                                                                '<span class="left">ID:'+res[i].id+'</span>'+
+                                                                '<span class="right color1">幸运号</span>'+
+                                                            '</span>'+
+                                                            '<span class="clearfix">'+
+                                                                '<span class="left">'+res[i].createTime+'</span>'+
+                                                                '<span class="right color2">'+res[i].luckyNumber+'</span>'+
+                                                            '</span>'+
+                                                        '</span>'+
+                                                    '</div>'+
+                                                '</li class="active">';
+                                }
+                                wqjx.append(wajxHtml);
+
+                            }
+                            else{//没有更多
+                                tipMsg("加载失败");
+                            }
+
+                        },"json");
+                    }
+
+                    /*点击加载按钮的变化*/
+                    that.find(animates).removeClass("animatesBottom").addClass("animatesTop");
+                    that.find("i").removeClass("fa-angle-double-down").addClass("fa-angle-double-up");
+                    that.find(text).text("收起");
                 }
             });
         })

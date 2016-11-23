@@ -9,15 +9,13 @@ var commentStars = function(){
                 $(this).addClass('active');
                 $(this).prevAll("li").addClass('active');
                 $(this).nextAll("li").removeClass('active');
-                $("#inputStar").val($(".starList li.active").size()*2)
-
+                $("#inputStar").val($(".starMenu li.active").size()*2)
             })
         });
     };
 
     return {
         init:function(_this){
-
             starsclick(_this);
         }
     }
