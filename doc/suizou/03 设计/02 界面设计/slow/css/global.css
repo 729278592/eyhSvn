@@ -44,7 +44,7 @@ embed{height: 600px;}
 .dm-video{width: 1024px;margin: 40px auto;}
 .dm-list{width: 100%;}
 .dm-list li{float: left;width: 50%;}
-.dm-list li a{display: inline-block;width: 100%;position: relative;}
+.dm-list li>a{display: inline-block;width: 100%;position: relative;}
 .dm-list li img{width: 100%;}
 /*video-mask*/
 .video-mask,.video-mask-bg{position: fixed;left: 0;right: 0;bottom: 0;top: 0;z-index: 10000;min-height: 650px;min-width: 1024px;}
@@ -52,7 +52,7 @@ embed{height: 600px;}
 .video-div{width: 960px;height: 600px;position: absolute;left: 50%;top: 50%;margin-left: -480px;margin-top: -300px;}
 .video-div .close{opacity: .6;filter:alpha(opacity=60);position: absolute;right: -15px;top: -15px;width: 30px;height: 30px;line-height: 30px;text-align: center;font-size: 16px;color: #ededed;border-radius: 100%;border: 1px solid #ededed;z-index: 10;}
 .video-div .close:hover{opacity: 1;filter:alpha(opacity=100);}
-.play-on {position: absolute;width: 80px;height: 80px;left: 50%;top: 50%;margin-top: -40px;margin-left: -40px;background: url(../images/play.png);background-size: 80px 80px;}
+.play-on {display: block;position: absolute;width: 80px;height: 80px;left: 50%;top: 50%;margin-top: -40px;margin-left: -40px;background: url(../images/play.png);background-size: 80px 80px;}
 
 
 
