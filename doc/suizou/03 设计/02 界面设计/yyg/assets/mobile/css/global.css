@@ -1,7 +1,7 @@
 @charset "utf-8";
 /*common style*/
-.verdana{font-family: "Verdana";}
-body,html{margin:0;padding:0;font-size:16px;color:#000;font-family:"Microsoft YaHei","微软雅黑";line-heihgt:1.25rem;}
+.verdana{font-family: -apple-system-font,Helvetica Neue,Helvetica,sans-serif;}
+body,html{margin:0;padding:0;font-size:16px;color:#000;font-family:-apple-system-font,Helvetica Neue,Helvetica,sans-serif;line-heihgt:1.25rem;}
 ul,li,img{margin:0;padding:0;list-style:none;border:none;}
 a{color:#000;text-decoration:none;}
 body{background: #f7f7f7;}
@@ -14,7 +14,7 @@ body{background: #f7f7f7;}
 .right{float: right;}
 .hide{display: none;}
 html[xmlns] .clearfix {display: block;}
-a,button,input,img,table,ul,li,tr,td,div{-webkit-tap-highlight-color:rgba(0,0,0,0);font-family: "微软雅黑";}
+a,button,input,img,table,ul,li,tr,td,div{-webkit-tap-highlight-color:rgba(0,0,0,0);font-family:-apple-system-font,Helvetica Neue,Helvetica,sans-serif;}
 button:active{opacity: 0.85;}
 .overflow-y{overflow-y: hidden;height: 100%;}
 .content {width: 100%;position: relative;max-width: 40rem;margin: 0 auto;}

@@ -2,19 +2,18 @@
  * Created by WHB on 2016/11/23.
  */
 
-
 ;(function ($,window,document,undefined) {
     $.fn.scrollLoad = function (options) {
         var defaults = {
-            
             startNum:7,
             limit: 16,
             wajxHtml:'',
             firstLoad:true,//第一次加载为true
             timeOutFlag : undefined //控制加载时上拉再次加载
-
         };
+        
         var opts = $.extend({}, defaults, options);
+        
         var Methods = {
             init: function (_this) {
                 opts.timeOutFlag = setTimeout(function(){
@@ -53,11 +52,12 @@
             },
             loading : function(flag,res,_this){
 
-                var loadingFix = new Object();
-                if(loadingFix){
-                    loadingFix = $("#loddingFix");
+                var loadingFix = $("#loddingFix");
+                if(loadingFix.get(0)){
+
                     loadingFix.hide();
                 }else{
+                  
                     var loadingHtml = '<div id="loddingFix" style="width: 100%;height: 100%;z-index: 999;display: none;position: fixed;background: gray;filter:alpha(opacity=50); -moz-opacity:0.5; -khtml-opacity: 0.5; opacity: 0.5;left: 0;top: 0; "><img style=" width: 2.5rem; top: 47%; position: fixed; left: 45%; " src="../../assets/mobile/images/loading.gif"></div>';
                     $("body").append(loadingHtml);
                     loadingFix = $("#loddingFix");
@@ -147,6 +147,7 @@
                 });
             }
         };
+        
         Methods.init($(this));
     };
 })(jQuery,window,document);
