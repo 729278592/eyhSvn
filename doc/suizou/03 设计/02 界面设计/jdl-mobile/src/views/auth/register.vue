@@ -158,7 +158,7 @@
            var mobile = that.$get('mobile')
            var isPostCod = that.$get('isPostCode')
            that.$http.post(website.domainName+website.linkObj.sendMchRegisterAuthCode,{mobile:mobile}).then(function(response){
-               var res = response.data
+               var res = response.json()
                console.log(JSON.stringify(res.datas));
                if(res.status == "ok") {
                  this.xxId = res.datas
@@ -184,7 +184,7 @@
                  //验证无效
              }else{
                 that.$http.post(website.domainName+website.linkObj.registerUser,{mobile:mobile,password:password,authCode:isPostCode,refereesMobile:tmobile,uid:that.sessionId,province:addressArr[0],city:addressArr[1],area:addressArr[2],msgAuthcodeId:that.xxId}).then(function(response){
-                    var res = response.data
+                    var res = response.json()
                     if(res.status == "ok") {
                     // 路由登录
                     this.$router.go('/auth/login')

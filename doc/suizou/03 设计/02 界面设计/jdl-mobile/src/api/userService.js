@@ -680,8 +680,6 @@ export default {
       var res = response.json();
       if (res.status == "ok") {
         if(type=='p'){
-
-
           context.provinceList = res.datas
         } else if(type=='c') {
           context.cityList = res.datas

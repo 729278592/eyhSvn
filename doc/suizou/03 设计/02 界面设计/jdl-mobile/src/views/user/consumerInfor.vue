@@ -26,7 +26,7 @@
       ready () {
         document.title = '协议'
         this.$http.get('../../static/data/linkCode.json').then(function(response){
-           this.list = response.data
+           this.list = response.json()
         }, function(response){
           // 响应错误回调
         })

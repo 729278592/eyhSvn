@@ -32,7 +32,7 @@
     ready () {
       document.title = '公告'
      this.$http.get('../../static/data/consumerList.json').then(function(response){
-         this.list = response.data
+         this.list = response.json()
      }, function(response){
       // 响应错误回调
      })
@@ -49,7 +49,7 @@
             item.active = false;
         })
         this.$http.get('../../static/data/'+this.items[index].name+'.json').then(function(response){
-          this.list = response.data
+          this.list = response.json()
         }, function(response){
           // 响应错误回调
         })

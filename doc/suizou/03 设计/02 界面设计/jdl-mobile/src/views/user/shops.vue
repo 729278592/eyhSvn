@@ -178,7 +178,7 @@
       ready () {
         document.title = '商铺'
         this.$http.get('../../static/data/shoppingOrderInfor.json').then(function(response){
-           this.dataJson = response.data
+           this.dataJson = response.json()
         }, function(response){
           // 响应错误回调
         })

@@ -90,7 +90,7 @@
       ready () {
         document.title = '资金明细'
         this.$http.get('../../static/data/detailIncome.json').then(function(response){
-           this.list = response.data
+           this.list = response.json()
         }, function(response){
           // 响应错误回调
         })
@@ -103,7 +103,7 @@
           this.incomeActive=true
           this.outcomeActive=false
           this.$http.get('../../static/data/detailIncome.json').then(function(response){
-              this.list = response.data
+              this.list = response.json()
            }, function(response){
              // 响应错误回调
            })
@@ -112,7 +112,7 @@
            this.incomeActive=false
            this.outcomeActive=true
           this.$http.get('../../static/data/detailOutcome.json').then(function(response){
-             this.list = response.data
+             this.list = response.json()
           }, function(response){
             // 响应错误回调
           })
