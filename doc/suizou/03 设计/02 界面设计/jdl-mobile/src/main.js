@@ -10,6 +10,7 @@ import validator from './validator'
 import authService from './api/authService'
 import mchAuthService from './api/mchAuthService'
 
+
 Vue.use(validator)
 Vue.use(VueProgressBar)
 Vue.use(VueResource)
@@ -74,7 +75,8 @@ router.beforeEach((transition) => {
   }
 })
 
-router.start(App, 'app')
+router.start(App, 'app');
+window.router = router;
 
 
 

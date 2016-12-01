@@ -60,7 +60,7 @@
           </li>
       </ul>
       <ul class="pay_list clearfix">
-          <li>
+          <li v-link="'/user/nowScore'">
               <div class="payInfoy">
                   <span class="spanIcon moneyIcon"></span>
                   <span>总积分</span><br/>
@@ -83,7 +83,7 @@
           </li>
       </ul>
       <div class="weui_cells weui_cells_access mt10 top0">
-          <a class="weui_cell"v-link="'/user/myOrder'">
+          <a class="weui_cell" v-link="'/user/myOrder'">
               <div class="weui_cell_bd weui_cell_primary">
                   <p>
                       <span class="text">

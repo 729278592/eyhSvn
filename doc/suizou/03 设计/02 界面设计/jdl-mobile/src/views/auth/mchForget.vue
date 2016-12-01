@@ -126,7 +126,7 @@
         var btn = e.currentTarget;
         var mobile = this.mobile;
         var sendMemRegArr = {mobile:mobile};
-        mchService.sendmchForgotAuthCodes(this,sendMemRegArr,btn)
+        mchService.sendmchForgotAuthCode(this,sendMemRegArr,btn)
       },
       save: function(){
 

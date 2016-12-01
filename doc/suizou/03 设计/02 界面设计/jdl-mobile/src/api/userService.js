@@ -421,10 +421,10 @@ export default {
 
   //商城首页商品
   index(context) {
-    context.$progress.start()
+    context.$progress.start();
     context.$http.get(API_ROOT+"mobile/getMainCategoryGoods.do").then(function(response){
-      context.$progress.finish()
-      var res = response.json()
+      context.$progress.finish();
+      var res = response.json();
       if(res.status == "ok") {
         this.list = res.datas
         console.log(JSON.stringify(res.datas));
@@ -436,6 +436,24 @@ export default {
 
     })
   },
+
+  getMainRego(context) {
+    context.$progress.start();
+    context.$http.get(API_ROOT+"mobile/getMainRego.do").then(function(response){
+      context.$progress.finish();
+      var res = response.json();
+      if(res.status == "ok") {
+        this.getMainRegoList = res.datas;
+        console.log(JSON.stringify(res.datas));
+      } else {
+        alert(res.message);
+      }
+    }, function(response){
+      context.$progress.failed()
+
+    })
+  },
+
 
   //点击切换商城首页商品
   selectIndex(context,index) {
@@ -1080,21 +1098,28 @@ export default {
 
   //返现明细
   detailOutcome(context,dateArr) {
-    context.$progress.start()
+    context.$progress.start();
     context.$http.post(API_ROOT+"mobile/member/cashbacksub.do",dateArr).then(function(response){
-      context.$progress.finish()
-      var res = response.json()
+      context.$progress.finish();
+      var res = response.json();
       if(res.status == "ok") {
         if(res.datas!=null){
-          console.log(JSON.stringify(res.datas.datas))
-          context.list = res.datas.datas
+          context.nowPage = res.datas.datas;
+          context.totalNum = res.datas.totalPages;
+          context.nextNum = res.datas.nextPage;
+          context.pageNum = res.datas.pageNo;
+          context.list = context.list.concat(context.nowPage);
+          context.btnHide = true;
+          console.log(JSON.stringify(res.datas))
         }
 
         if(context.list.length!=0){
-          context.dataHide = false
+          context.dataHide = false;
         }else{
-          context.dataHide = true
+          context.dataHide = true;
+          context.btnHide = false;
         }
+
       } else {
         alert(res.message);
       }
@@ -1103,6 +1128,80 @@ export default {
 
     })
   },
+
+
+
+  //查询更多预留积分
+  ModiflydetailScore(context,pageArr) {
+    context.$progress.start();
+    context.$http.post(API_ROOT+"mobile/member/cashbacksub.do",pageArr).then(function(response){
+      context.$progress.finish();
+      var res = response.json();
+      if(res.status == "ok") {
+        if(res.datas != null){
+          context.nowPage = res.datas.datas;
+          context.totalNum = res.datas.totalPages;
+          context.nextNum = res.datas.nextPage;
+          context.pageNum = res.datas.pageNo;
+          context.list = context.list.concat(context.nowPage);
+          context.btnHide = true;
+          console.log(JSON.stringify(res.datas))
+        }
+
+        if(context.list.length!=0){
+          context.dataHide = false
+        }else{
+          context.dataHide = true
+          context.btnHide = false;
+        }
+      } else {
+        alert(res.message);
+      }
+    }, function(response){
+      context.$progress.failed()
+      // 响应错误回调
+    })
+  },
+
+  //返现明细
+  detailModiflyTime(context,dateArr) {
+    context.$progress.start();
+    context.$http.post(API_ROOT+"mobile/member/cashbacksub.do",dateArr).then(function(response){
+      context.$progress.finish();
+      var res = response.json();
+      if(res.status == "ok") {
+        if(res.datas!=null){
+          context.nowPage = [];
+          context.list = [];
+          context.nowPage = res.datas.datas;
+          context.totalNum = res.datas.totalPages;
+          context.nextNum = res.datas.nextPage;
+          context.pageNum = res.datas.pageNo;
+          context.list = context.list.concat(context.nowPage);
+          context.btnHide = true;
+          console.log(JSON.stringify(res.datas));
+          console.log(JSON.stringify(context.list))
+        }
+
+        if(context.list.length!=0){
+          context.dataHide = false;
+        }else{
+          context.dataHide = true;
+          context.btnHide = false;
+        }
+
+      } else {
+        alert(res.message);
+      }
+    }, function(response){
+      context.$progress.failed()
+
+    })
+  },
+
+
+
+
 
   //修改地址-个人信息
   changeAddress(context,saveAddressArr) {
@@ -1525,15 +1624,15 @@ export default {
             {starActive:false},
             {starActive:false},
             {starActive:false}
-          ]
+          ];
           var len = Math.round(context.list[i].evaTotalScore/context.list[i].evaOrderNum)
           for(var j = 0;j<len;j++){
             context.list[i].item[j].starActive = true
           }
-          if(context.list[i].lat||context.list[i].lng){
-            this.lat = context.list[i].lat;
-            this.lng = context.list[i].lng;
-          }
+          // if(context.list[i].lat||context.list[i].lng){
+          //   this.lat = context.list[i].lat;
+          //   this.lng = context.list[i].lng;
+          // }
         }
 
 
@@ -1555,6 +1654,23 @@ export default {
       var res = response.json()
       if(res.status == "ok") {
         this.optionList = res.datas
+      } else {
+        alert(res.message);
+      }
+    }, function(response){
+      context.$progress.failed()
+      // 响应错误回调
+    })
+  },
+
+//上传图片
+  upLoad(context) {
+    context.$progress.start();
+    context.$http.post("http://192.168.0.103/mobile/upload.do").then(function(response){
+      context.$progress.finish()
+      var res = response.json()
+      if(res.status == "ok") {
+        console.log(JSON.stringify(res.datas))
       } else {
         alert(res.message);
       }
@@ -1591,20 +1707,27 @@ export default {
   },
 
   //当前积分
-  nowScore(context,accountArr) {
-    context.$progress.start()
-    context.$http.post(API_ROOT+"mobile/member/getUseScoreDetails.do",accountArr).then(function(response){
-      context.$progress.finish()
-      var res = response.json()
+  nowScore(context,pageArr) {
+    context.$progress.start();
+    context.$http.post(API_ROOT+"mobile/member/getUseScoreDetails.do",pageArr).then(function(response){
+      context.$progress.finish();
+      var res = response.json();
       if(res.status == "ok") {
         if(res.datas != null){
-          context.list = res.datas.datas
-          console.log(JSON.stringify(res.datas.datas))
+          context.nowPage = res.datas.datas;
+          context.totalNum = res.datas.totalPages;
+          context.nextNum = res.datas.nextPage;
+          context.pageNum = res.datas.pageNo;
+          context.list = context.list.concat(context.nowPage);
+          context.btnHide = true;
+          console.log(JSON.stringify(res.datas))
         }
+
         if(context.list.length!=0){
-          context.dataHide = false
+          context.dataHide = false;
         }else{
-          context.dataHide = true
+          context.dataHide = true;
+          context.btnHide = false;
         }
 
       } else {
@@ -1613,26 +1736,101 @@ export default {
     }, function(response){
       context.$progress.failed()
       // 响应错误回调
+    })
+  },
+
+  //查询更多当前积分
+  ModiflyNowScore(context,pageArr) {
+    context.$progress.start();
+    context.$http.post(API_ROOT+"mobile/member/getUseScoreDetails.do",pageArr).then(function(response){
+      context.$progress.finish();
+      var res = response.json();
+      if(res.status == "ok") {
+        if(res.datas != null){
+          context.nowPage = res.datas.datas;
+          context.totalNum = res.datas.totalPages;
+          context.nextNum = res.datas.nextPage;
+          context.pageNum = res.datas.pageNo;
+          context.list = context.list.concat(context.nowPage);
+          context.btnHide = true;
+          console.log(JSON.stringify(res.datas))
+        }
+
+        if(context.list.length!=0){
+          context.dataHide = false
+        }else{
+          context.dataHide = true
+          context.btnHide = false;
+        }
+      } else {
+        alert(res.message);
+      }
+    }, function(response){
+      context.$progress.failed()
+      // 响应错误回调
+    })
+  },
+
+
+  //个人当前积分时间查询
+  nowScoreModifly(context,dateArr) {
+    context.$progress.start();
+    context.$http.post(API_ROOT+"mobile/member/getUseScoreDetails.do",dateArr).then(function(response){
+      context.$progress.finish();
+      var res = response.json();
+      if(res.status == "ok") {
+        if(res.datas!=null){
+          context.nowPage = [];
+          context.list = [];
+          context.nowPage = res.datas.datas;
+          context.totalNum = res.datas.totalPages;
+          context.nextNum = res.datas.nextPage;
+          context.pageNum = res.datas.pageNo;
+          context.list = context.list.concat(context.nowPage);
+          context.btnHide = true;
+          console.log(JSON.stringify(res.datas));
+          console.log(JSON.stringify(context.list))
+        }
+
+        if(context.list.length!=0){
+          context.dataHide = false;
+        }else{
+          context.dataHide = true;
+          context.btnHide = false;
+        }
+
+      } else {
+        alert(res.message);
+      }
+    }, function(response){
+      context.$progress.failed()
+
     })
   },
 
   //预留积分
-  reserveScore(context,accountArr) {
-    context.$progress.start()
-    context.$http.post(API_ROOT+"mobile/member/getReservedScoreDetails.do",accountArr).then(function(response){
-      context.$progress.finish()
-      var res = response.json()
+  reserveScore(context,pageArr) {
+    context.$progress.start();
+    context.$http.post(API_ROOT+"mobile/member/getReservedScoreDetails.do",pageArr).then(function(response){
+      context.$progress.finish();
+      var res = response.json();
       if(res.status == "ok") {
         if(res.datas != null){
-          context.list = res.datas.datas
+          context.nowPage = res.datas.datas;
+          context.totalNum = res.datas.totalPages;
+          context.nextNum = res.datas.nextPage;
+          context.pageNum = res.datas.pageNo;
+          context.list = context.list.concat(context.nowPage);
+          context.btnHide = true;
+          console.log(JSON.stringify(res.datas))
         }
+
         if(context.list.length!=0){
           context.dataHide = false
         }else{
           context.dataHide = true
+          context.btnHide = false;
         }
-
-        console.log(JSON.stringify(res.datas.datas))
       } else {
         alert(res.message);
       }
@@ -1643,6 +1841,72 @@ export default {
   },
 
 
+  //查询更多预留积分
+  ModiflyreserveScore(context,pageArr) {
+    context.$progress.start();
+    context.$http.post(API_ROOT+"mobile/member/getReservedScoreDetails.do",pageArr).then(function(response){
+      context.$progress.finish();
+      var res = response.json();
+      if(res.status == "ok") {
+        if(res.datas != null){
+          context.nowPage = res.datas.datas;
+          context.totalNum = res.datas.totalPages;
+          context.nextNum = res.datas.nextPage;
+          context.pageNum = res.datas.pageNo;
+          context.list = context.list.concat(context.nowPage);
+          context.btnHide = true;
+          console.log(JSON.stringify(res.datas))
+        }
+
+        if(context.list.length!=0){
+          context.dataHide = false
+        }else{
+          context.dataHide = true
+          context.btnHide = false;
+        }
+      } else {
+        alert(res.message);
+      }
+    }, function(response){
+      context.$progress.failed()
+      // 响应错误回调
+    })
+  },
+
+  //个人预留积分时间查询
+  reserveScoreModifly(context,dateArr) {
+    context.$progress.start();
+    context.$http.post(API_ROOT+"mobile/member/getReservedScoreDetails.do",dateArr).then(function(response){
+      context.$progress.finish();
+      var res = response.json();
+      if(res.status == "ok") {
+        if(res.datas!=null){
+          context.nowPage = [];
+          context.list = [];
+          context.nowPage = res.datas.datas;
+          context.totalNum = res.datas.totalPages;
+          context.nextNum = res.datas.nextPage;
+          context.pageNum = res.datas.pageNo;
+          context.list = context.list.concat(context.nowPage);
+          context.btnHide = true;
+          console.log(JSON.stringify(res.datas));
+          console.log(JSON.stringify(context.list))
+        }
+        if(context.list.length!=0){
+          context.dataHide = false;
+        }else{
+          context.dataHide = true;
+          context.btnHide = false;
+        }
+
+      } else {
+        alert(res.message);
+      }
+    }, function(response){
+      context.$progress.failed()
+
+    })
+  },
 
   //预留积分
   upgradeFun(context) {

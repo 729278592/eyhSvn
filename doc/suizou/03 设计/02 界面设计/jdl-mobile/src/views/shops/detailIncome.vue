@@ -18,8 +18,8 @@
       <input class="Wdate" v-model="endDate" type="date" placeholder="结束日期" >　
       <input type="button" class="btnQuery right" value="查询" @click="btnFindIn()" readonly/>
     </div>
-    <ul class="queryMenu mb">
-      <li v-for="incomeList in inList">
+    <ul class="queryMenu mb styleHides">
+      <li v-for="incomeList in inList" :class="{'hide':incomeList.display}">
         <p class="clearfix">
           <span class="span_icon span_time"></span>
               <span class="time">
@@ -49,7 +49,9 @@
       </li>
 
     </ul>
-
+    <div class="weui_btn_area" v-show="btnHide">
+      <input type="button" class="weui_btn  weui_btn_primary" @click="lookMore()" value={{typeData}} v-model="typeData">
+    </div>
     <div class="notConTip" v-show="dataHide">
       <img src="../../../static/images/notContent.png" alt=""/>
       <p class="notInfor">
@@ -65,7 +67,7 @@
       <input type="button" class="btnQuery right" value="查询" @click="btnFind()" readonly/>
     </div>
     <ul class="queryMenu">
-      <li v-for="returnList in list.datas">
+      <li v-for="returnList in list">
         <p class="clearfix">
           <span class="time">{{returnList.cashbackDate}}</span>
         </p>
@@ -86,6 +88,9 @@
         </p>
       </li>
     </ul>
+    <div class="weui_btn_area" v-show="btnHide">
+      <input type="button" class="weui_btn  weui_btn_primary" @click="lookMoreOut()" value={{typeData}} v-model="typeData">
+    </div>
     <div class="notConTip" v-show="dataJsonHide">
       <img src="../../../static/images/notContent.png" alt=""/>
       <p class="notInfor">
@@ -122,14 +127,20 @@
           endDate:"",
           toastshow:false,
           toasttext:"",
-          dataJsonHide:false,
-          dataHide:false
+          btnHide:Boolean,
+          typeData:"查看更多",
+          pageNum:1,
+          nextNum:null,
+          totalNum:null,
+          nowPage:[]
         }
       },
       ready () {
         document.title = '资金明细'
-        var detailIncomeArr = {}
-        mchService.detailIncome(this,detailIncomeArr)
+        var detailIncomeArr = {
+          pageNo:this.pageNum
+        }
+        mchService.detailIncomes(this,detailIncomeArr)
 
       },
       methods: {
@@ -139,13 +150,18 @@
         selectIncome:function(){
           this.incomeActive=true
           this.outcomeActive=false
-          var detailIncomeArr = {}
-          mchService.detailIncome(this,detailIncomeArr)
+          var detailIncomeArr = {
+            pageNo:this.pageNum
+          }
+          mchService.detailIncomes(this,detailIncomeArr)
         },
         selectOutcome:function(){
            this.incomeActive=false
            this.outcomeActive=true
-           mchService.detailOutcome(this)
+          var pageArr = {
+            pageNo:this.pageNum
+          };
+           mchService.detailOutcome(this,pageArr)
         },
         btnFind:function(){
           var arr=this.startDate.split("-");
@@ -156,12 +172,14 @@
           var lktime=new Date(arrs[0],arrs[1],arrs[2]);
           var lktimes=lktime.getTime();
           if(starttimes<lktimes){
-            var dateArr = {
-              startDate:this.startDate,
-              endDate:this.endDate
-            };
-            mchService.detailOutcome(this,dateArr)
 
+
+            var detailIncomeArr = {
+              startDate:this.startDate,
+              endDate:this.endDate,
+              pageNo:1
+            };
+            mchService.modifyDetailOutcome(this,detailIncomeArr);
             return false;
           }
           else{
@@ -174,24 +192,107 @@
           var arr=this.startDate.split("-");
           var starttime=new Date(arr[0],arr[1],arr[2]);
           var starttimes=starttime.getTime();
-
           var arrs=this.endDate.split("-");
           var lktime=new Date(arrs[0],arrs[1],arrs[2]);
           var lktimes=lktime.getTime();
           if(starttimes<lktimes){
             var detailIncomeArr = {
               startDate:this.startDate,
-              endDate:this.endDate
+              endDate:this.endDate,
+              pageNo:1
             };
-            mchService.detailIncome(this,detailIncomeArr)
-
+            mchService.modifyDetailIncome(this,detailIncomeArr);
             return false;
           }
           else{
             this.$set('toasttext',"日期无效");
-            this.$set('toastshow',true)
+            this.$set('toastshow',true);
             return false;
           }
+        },
+        lookMore:function(){
+          if((this.startDate)&&(this.endDate)){
+            var arr=this.startDate.split("-");
+            var starttime=new Date(arr[0],arr[1],arr[2]);
+            var starttimes=starttime.getTime();
+
+            var arrs=this.endDate.split("-");
+            var lktime=new Date(arrs[0],arrs[1],arrs[2]);
+            var lktimes=lktime.getTime();
+            if(this.nextNum == this.pageNum ){
+              this.$set('toasttext',"无更多数据");
+              this.$set('toastshow',true);
+              return;
+            }
+
+            if(this.nextNum){
+              this.pageNum = this.nextNum
+            }
+            var dateArr = {
+              startDate:this.startDate,
+              endDate:this.endDate,
+              pageNo:this.pageNum
+            };
+            mchService.NowModiflyScore(this,dateArr);
+            return;
+          }
+
+
+          if(this.nextNum == this.pageNum ){
+            this.$set('toasttext',"无更多数据");
+            this.$set('toastshow',true);
+            return;
+          }
+
+          if(this.nextNum){
+            this.pageNum = this.nextNum
+          }
+          var pageArr = {
+            pageNo:this.pageNum
+          };
+          mchService.detailIncomes(this,pageArr);
+        },
+        lookMoreOut:function(){
+
+          if((this.startDate)&&(this.endDate)){
+            var arr=this.startDate.split("-");
+            var starttime=new Date(arr[0],arr[1],arr[2]);
+            var starttimes=starttime.getTime();
+
+            var arrs=this.endDate.split("-");
+            var lktime=new Date(arrs[0],arrs[1],arrs[2]);
+            var lktimes=lktime.getTime();
+            if(this.nextNum == this.pageNum ){
+              this.$set('toasttext',"无更多数据");
+              this.$set('toastshow',true);
+              return;
+            }
+
+            if(this.nextNum){
+              this.pageNum = this.nextNum
+            }
+            var dateArr = {
+              startDate:this.startDate,
+              endDate:this.endDate,
+              pageNo:this.pageNum
+            };
+            mchService.NowModiflyOutScore(this,dateArr);
+            return;
+          }
+
+          if(this.nextNum == this.pageNum ){
+            this.$set('toasttext',"无更多数据");
+            this.$set('toastshow',true);
+            return;
+          }
+
+          if(this.nextNum){
+            this.pageNum = this.nextNum
+          }
+          var pageArr = {
+            pageNo:this.pageNum
+          };
+          mchService.detailOutcome(this,pageArr)
         }
       }
     }

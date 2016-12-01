@@ -150,19 +150,31 @@ export default {
     })
   },
 
-  //返现明细
-  detailOutcome(context,arr) {
+  //返现明细----
+  nowScoreModifly(context,arr) {
     context.$progress.start()
-    context.$http.post(API_ROOT+"mobile/mch/cashbacksub.do",arr).then(function(response){
+    context.$http.post(API_ROOT+"mobile/mch/getUseScoreDetails.do",arr).then(function(response){
       context.$progress.finish()
       var res = response.json()
       if(res.status == "ok") {
-        context.list = res.datas
+        if(res.datas!=null){
+          context.nowPage = [];
+          context.list = [];
+          context.nowPage = res.datas.datas;
+          context.totalNum = res.datas.totalPages;
+          context.nextNum = res.datas.nextPage;
+          context.pageNum = res.datas.pageNo;
+          context.list = context.list.concat(context.nowPage);
+          context.btnHide = true;
+          console.log(JSON.stringify(res.datas));
+          console.log(JSON.stringify(context.list))
+        }
 
         if(context.list.length!=0){
-          context.dataJsonHide = false
+          context.dataHide = false;
         }else{
-          context.dataJsonHide = true
+          context.dataHide = true;
+          context.btnHide = false;
         }
 
 
@@ -176,17 +188,64 @@ export default {
   },
 
 
+
   //返现明细
-  detailIncome(context,arr) {
+  detailOutcome(context,arr) {
     context.$progress.start()
-    context.$http.post(API_ROOT+"mobile/mch/getIncomeDetails.do",arr).then(function(response){
+    context.$http.post(API_ROOT+"mobile/mch/cashbacksub.do",arr).then(function(response){
       context.$progress.finish()
       var res = response.json()
       if(res.status == "ok") {
         if(res.datas!=null){
-          context.inList = res.datas.datas
-          console.log(JSON.stringify(res.datas.datas))
+
+          context.nowPage = res.datas.datas;
+          context.totalNum = res.datas.totalPages;
+          context.nextNum = res.datas.nextPage;
+          context.pageNum = res.datas.pageNo;
+          context.list = context.list.concat(context.nowPage);
+          context.btnHide = true;
+          console.log(JSON.stringify(res.datas));
+          console.log(JSON.stringify(context.list))
         }
+        if(context.list.length!=0){
+          context.dataHide = false;
+        }else{
+          context.dataHide = true;
+          context.btnHide = false;
+        }
+
+
+      } else {
+        alert(res.message);
+      }
+    }, function(response){
+      context.$progress.failed()
+      // 响应错误回调
+    })
+  },
+
+
+
+
+  //返现明细
+  detailIncome(context,dateArr) {
+    context.$progress.start()
+    context.$http.post(API_ROOT+"mobile/mch/getIncomeDetails.do",dateArr).then(function(response){
+      context.$progress.finish()
+      var res = response.json()
+      if(res.status == "ok") {
+        if(res.datas!=null){
+          context.list = res.datas.datas;
+          context.btnHide = true;
+          for(var i =0;i<num;i++){
+            context.list[i].display = displayFalse;
+          }
+
+          for(var i = num;i<context.list.length;i++){
+            context.list[i].display = displayTrue;
+          }
+        }
+        context.btnHide = false;
         if(context.inList.length!=0){
           context.dataHide = false
         }else{
@@ -200,6 +259,75 @@ export default {
       // 响应错误回调
     })
   },
+
+  //返现明细
+  detailIncomes(context,dateArr) {
+    context.$progress.start();
+    context.$http.post(API_ROOT+"mobile/mch/getIncomeDetails.do",dateArr).then(function(response){
+      context.$progress.finish();
+      var res = response.json();
+      if(res.status == "ok") {
+        if(res.datas!=null){
+          context.nowPage = res.datas.datas;
+          context.totalNum = res.datas.totalPages;
+          context.nextNum = res.datas.nextPage;
+          context.pageNum = res.datas.pageNo;
+          context.inList = context.inList.concat(context.nowPage);
+          context.btnHide = true;
+          console.log(JSON.stringify(res.datas))
+          console.log(JSON.stringify(res.datas.datas))
+        }
+
+        if(context.inList.length!=0){
+          context.dataHide = false;
+        }else{
+          context.dataHide = true;
+          context.btnHide = false;
+        }
+      } else {
+        alert(res.message);
+      }
+    }, function(response){
+      context.$progress.failed()
+      // 响应错误回调
+    })
+  },
+
+
+
+
+  //查询更多当前积分
+  NowModiflyScore(context,pageArr) {
+    context.$progress.start();
+    context.$http.post(API_ROOT+"mobile/mch/getIncomeDetails.do",pageArr).then(function(response){
+      context.$progress.finish();
+      var res = response.json();
+      if(res.status == "ok") {
+        if(res.datas != null){
+          context.nowPage = res.datas.datas;
+          context.totalNum = res.datas.totalPages;
+          context.nextNum = res.datas.nextPage;
+          context.pageNum = res.datas.pageNo;
+          context.inLinst = context.inLinst.concat(context.nowPage);
+          context.btnHide = true;
+          console.log(JSON.stringify(res.datas))
+        }
+
+        if(context.inLinst.length!=0){
+          context.dataHide = false
+        }else{
+          context.dataHide = true
+          context.btnHide = false;
+        }
+      } else {
+        alert(res.message);
+      }
+    }, function(response){
+      context.$progress.failed()
+      // 响应错误回调
+    })
+  },
+
 
   //商家分类
   getAllCategory(context) {
@@ -244,6 +372,7 @@ export default {
       if(res.status == "ok") {
         if(res.datas!=null){
           context.list = res.datas.datas
+          console.log(JSON.stringify(context.list))
         }
         for(var i =0;i<context.list.length;i++){
           context.list[i].item = [
@@ -254,14 +383,15 @@ export default {
             {starActive:false}
           ];
           var len = Math.round(context.list[i].evaTotalScore/context.list[i].evaOrderNum);
+
           for(var j = 0;j<len;j++){
             context.list[i].item[j].starActive = true
           }
-          if(context.list[i].lat||context.list[i].lng){
-            context.lat = context.list[i].lat;
-            context.lng = context.list[i].lng;
-            return;
-          }
+          // if(context.list[i].lat||context.list[i].lng){
+          //   context.lat = context.list[i].lat;
+          //   context.lng = context.list[i].lng;
+          //   return;
+          // }
         }
       } else {
         alert(res.message);
@@ -520,19 +650,27 @@ export default {
   },
 
   //当前积分
-  nowScore(context,accountArr) {
+  nowScore(context,pageArr) {
     context.$progress.start()
-    context.$http.post(API_ROOT+"mobile/mch/getUseScoreDetails.do",accountArr).then(function(response){
+    context.$http.post(API_ROOT+"mobile/mch/getUseScoreDetails.do",pageArr).then(function(response){
       context.$progress.finish()
       var res = response.json()
       if(res.status == "ok") {
         if(res.datas != null){
-          context.list = res.datas.datas
+          context.nowPage = res.datas.datas;
+          context.totalNum = res.datas.totalPages;
+          context.nextNum = res.datas.nextPage;
+          context.pageNum = res.datas.pageNo;
+          context.list = context.list.concat(context.nowPage);
+          context.btnHide = true;
+          console.log(JSON.stringify(res.datas))
         }
+
         if(context.list.length!=0){
-          context.dataHide = false
+          context.dataHide = false;
         }else{
-          context.dataHide = true
+          context.dataHide = true;
+          context.btnHide = false;
         }
         //console.log(JSON.stringify(res.datas.datas))
       } else {
@@ -544,20 +682,238 @@ export default {
     })
   },
 
-  //预留积分
-  reserveScore(context,accountArr) {
-    context.$progress.start()
-    context.$http.post(API_ROOT+"mobile/mch/getReservedScoreDetails.do",accountArr).then(function(response){
-      context.$progress.finish()
-      var res = response.json()
+
+  //查询更多当前积分
+  ModiflyNowScore(context,pageArr) {
+    context.$progress.start();
+    context.$http.post(API_ROOT+"mobile/mch/getUseScoreDetails.do",pageArr).then(function(response){
+      context.$progress.finish();
+      var res = response.json();
       if(res.status == "ok") {
         if(res.datas != null){
-          context.list = res.datas.datas
+          context.nowPage = res.datas.datas;
+          context.totalNum = res.datas.totalPages;
+          context.nextNum = res.datas.nextPage;
+          context.pageNum = res.datas.pageNo;
+          context.list = context.list.concat(context.nowPage);
+          context.btnHide = true;
+          console.log(JSON.stringify(res.datas))
         }
+
         if(context.list.length!=0){
           context.dataHide = false
         }else{
           context.dataHide = true
+          context.btnHide = false;
+        }
+      } else {
+        alert(res.message);
+      }
+    }, function(response){
+      context.$progress.failed()
+      // 响应错误回调
+    })
+  },
+
+  //预留积分
+  reserveScore(context,arr) {
+    context.$progress.start();
+    context.$http.post(API_ROOT+"mobile/mch/getReservedScoreDetails.do",arr).then(function(response){
+      context.$progress.finish();
+      var res = response.json();
+      if(res.status == "ok") {
+        if(res.datas != null){
+          context.nowPage = res.datas.datas;
+          context.totalNum = res.datas.totalPages;
+          context.nextNum = res.datas.nextPage;
+          context.pageNum = res.datas.pageNo;
+          context.list = context.list.concat(context.nowPage);
+          context.btnHide = true;
+          console.log(JSON.stringify(res.datas))
+        }
+        if(context.list.length!=0){
+          context.dataHide = false;
+        }else{
+          context.dataHide = true;
+          context.btnHide = false;
+        }
+      } else {
+        alert(res.message);
+      }
+    }, function(response){
+      context.$progress.failed()
+      // 响应错误回调
+    })
+  },
+
+
+  //返现明细----
+  preserveScoreModifly(context,arr) {
+    context.$progress.start()
+    context.$http.post(API_ROOT+"mobile/mch/getReservedScoreDetails.do",arr).then(function(response){
+      context.$progress.finish()
+      var res = response.json()
+      if(res.status == "ok") {
+        if(res.datas!=null){
+          context.nowPage = [];
+          context.list = [];
+          context.nowPage = res.datas.datas;
+          context.totalNum = res.datas.totalPages;
+          context.nextNum = res.datas.nextPage;
+          context.pageNum = res.datas.pageNo;
+          context.list = context.list.concat(context.nowPage);
+          context.btnHide = true;
+          console.log(JSON.stringify(res.datas));
+          console.log(JSON.stringify(context.list))
+        }
+
+        if(context.list.length!=0){
+          context.dataHide = false;
+        }else{
+          context.dataHide = true;
+          context.btnHide = false;
+        }
+
+
+      } else {
+        alert(res.message);
+      }
+    }, function(response){
+      context.$progress.failed()
+      // 响应错误回调
+    })
+  },
+
+
+  //查询更多当前积分
+  ModiflyrNowScore(context,pageArr) {
+    context.$progress.start();
+    context.$http.post(API_ROOT+"mobile/mch/getReservedScoreDetails.do",pageArr).then(function(response){
+      context.$progress.finish();
+      var res = response.json();
+      if(res.status == "ok") {
+        if(res.datas != null){
+          context.nowPage = res.datas.datas;
+          context.totalNum = res.datas.totalPages;
+          context.nextNum = res.datas.nextPage;
+          context.pageNum = res.datas.pageNo;
+          context.list = context.list.concat(context.nowPage);
+          context.btnHide = true;
+          console.log(JSON.stringify(res.datas))
+        }
+
+        if(context.list.length!=0){
+          context.dataHide = false
+        }else{
+          context.dataHide = true
+          context.btnHide = false;
+        }
+      } else {
+        alert(res.message);
+      }
+    }, function(response){
+      context.$progress.failed()
+      // 响应错误回调
+    })
+  },
+
+  //返现明细----
+  modifyDetailIncome(context,arr) {
+    context.$progress.start()
+    context.$http.post(API_ROOT+"mobile/mch/getIncomeDetails.do",arr).then(function(response){
+      context.$progress.finish()
+      var res = response.json()
+      if(res.status == "ok") {
+        if(res.datas!=null){
+          context.nowPage = [];
+          context.inList = [];
+          context.nowPage = res.datas.datas;
+          context.totalNum = res.datas.totalPages;
+          context.nextNum = res.datas.nextPage;
+          context.pageNum = res.datas.pageNo;
+          context.inList = context.inList.concat(context.nowPage);
+          context.btnHide = true;
+          console.log(JSON.stringify(res.datas));
+          console.log(JSON.stringify(context.inList))
+        }
+
+        if(context.inList.length!=0){
+          context.dataHide = false;
+        }else{
+          context.dataHide = true;
+          context.btnHide = false;
+        }
+
+
+      } else {
+        alert(res.message);
+      }
+    }, function(response){
+      context.$progress.failed()
+      // 响应错误回调
+    })
+  },
+
+
+  //返现明细----
+  modifyDetailOutcome(context,arr) {
+    context.$progress.start()
+    context.$http.post(API_ROOT+"mobile/mch/cashbacksub.do",arr).then(function(response){
+      context.$progress.finish()
+      var res = response.json()
+      if(res.status == "ok") {
+        if(res.datas!=null){
+          context.nowPage = [];
+          context.list = [];
+          context.nowPage = res.datas.datas;
+          context.totalNum = res.datas.totalPages;
+          context.nextNum = res.datas.nextPage;
+          context.pageNum = res.datas.pageNo;
+          context.list = context.list.concat(context.nowPage);
+          context.btnHide = true;
+          console.log(JSON.stringify(res.datas));
+          console.log(JSON.stringify(context.list))
+        }
+
+        if(context.list.length!=0){
+          context.dataHide = false;
+        }else{
+          context.dataHide = true;
+          context.btnHide = false;
+        }
+
+
+      } else {
+        alert(res.message);
+      }
+    }, function(response){
+      context.$progress.failed()
+      // 响应错误回调
+    })
+  },
+
+
+  //查询更多当前积分
+  NowModiflyOutScore(context,pageArr) {
+    context.$progress.start();
+    context.$http.post(API_ROOT+"mobile/mch/cashbacksub.do",pageArr).then(function(response){
+      context.$progress.finish();
+      var res = response.json();
+      if(res.status == "ok") {
+        if(res.datas != null){
+          context.nowPage = res.datas.datas;
+          context.totalNum = res.datas.totalPages;
+          context.nextNum = res.datas.nextPage;
+          context.pageNum = res.datas.pageNo;
+          context.list = context.list.concat(context.nowPage);
+          context.btnHide = true;
+        }
+
+        if(context.list.length!=0){
+          context.dataHide = false
+        }else{
+          context.dataHide = true
+          context.btnHide = false;
         }
       } else {
         alert(res.message);
@@ -567,12 +923,6 @@ export default {
       // 响应错误回调
     })
   }
-
-
-
-
-
-
 
 
 }

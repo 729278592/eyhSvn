@@ -7,8 +7,8 @@
       <input class="Wdate" v-model="endDate" type="date" placeholder="结束日期" >　
       <input type="button" class="btnQuery right" value="查询" @click="btnFind()" readonly/>
     </div>
-    <ul class="queryMenu">
-      <li v-for="returnList in list">
+    <ul class="queryMenu styleHides">
+      <li v-for="returnList in list" :class="{'hide':returnList.display}">
         <div v-if="returnList.type==0">
         <p class="clearfix">
           <span class="time">积分兑换</span>
@@ -51,6 +51,9 @@
 
       </li>
     </ul>
+    <div class="weui_btn_area" v-show="btnHide">
+      <input type="button" class="weui_btn  weui_btn_primary" @click="lookMore()" value={{typeData}} v-model="typeData">
+    </div>
     <div class="notConTip" v-show="dataHide">
       <img src="../../../static/images/notContent.png" alt=""/>
       <p class="notInfor">
@@ -77,12 +80,21 @@
         startDate:"",
         endDate:"",
         toastshow:false,
-        toasttext:""
+        toasttext:"",
+        btnHide:Boolean,
+        typeData:"查看更多",
+        pageNum:1,
+        nextNum:null,
+        totalNum:null,
+        nowPage:[]
       }
     },
     ready () {
       document.title = '当前积分';
-      mchService.nowScore(this)
+      var pageArr = {
+        pageNo:this.pageNum
+      };
+      mchService.nowScore(this,pageArr)
     },
     methods: {
       onShow: function () {
@@ -99,9 +111,11 @@
         if(starttimes<lktimes){
           var dateArr = {
             startDate:this.startDate,
-            endDate:this.endDate
+            endDate:this.endDate,
+            pageNo:1
           };
-         // mchService.detailOutcome(this,dateArr)
+
+          mchService.nowScoreModifly(this,dateArr);
 
           return false;
         }
@@ -110,6 +124,51 @@
           this.$set('toastshow',true);
           return false;
         }
+      },
+      lookMore:function(){
+
+        if((this.startDate)&&(this.endDate)){
+          var arr=this.startDate.split("-");
+          var starttime=new Date(arr[0],arr[1],arr[2]);
+          var starttimes=starttime.getTime();
+
+          var arrs=this.endDate.split("-");
+          var lktime=new Date(arrs[0],arrs[1],arrs[2]);
+          var lktimes=lktime.getTime();
+          if(this.nextNum == this.pageNum ){
+            this.$set('toasttext',"无更多数据");
+            this.$set('toastshow',true);
+            return;
+          }
+
+          if(this.nextNum){
+            this.pageNum = this.nextNum
+          }
+          var dateArr = {
+            startDate:this.startDate,
+            endDate:this.endDate,
+            pageNo:this.pageNum
+          };
+          mchService.ModiflyNowScore(this,dateArr);
+          return;
+        }
+
+
+
+        if(this.nextNum == this.pageNum ){
+          this.$set('toasttext',"无更多数据");
+          this.$set('toastshow',true);
+          return;
+        }
+
+        if(this.nextNum){
+          this.pageNum = this.nextNum
+        }
+        var pageArr = {
+          pageNo:this.pageNum
+        };
+
+        mchService.nowScore(this,pageArr);
       }
     }
   }
