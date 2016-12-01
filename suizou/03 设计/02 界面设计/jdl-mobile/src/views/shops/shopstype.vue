@@ -109,7 +109,7 @@
       ready () {
         document.title = '商品分类'
         this.$http.get('../../static/data/shopstype.json').then(function(response){
-           this.list = response.data
+           this.list = response.json()
         }, function(response){
           // 响应错误回调
         })

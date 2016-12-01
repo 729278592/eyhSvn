@@ -61,7 +61,7 @@
       ready () {
         document.title = '已退货'
         this.$http.get('../../static/data/orderRefundSuccessed.json').then(function(response){
-           this.list = response.data
+           this.list = response.json()
         }, function(response){
           // 响应错误回调
         })

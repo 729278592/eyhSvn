@@ -96,8 +96,10 @@
             this.$progress.start();
             this.$http.post("http://www.jdl800.com/fric/mobile/member/createUpLevelOrder.do",{levelId:this.stateInfor}).then(function(response){
               this.$progress.finish();
-              var res = response.data;
+              var res = response.json();
+
               if(res.status == "ok") {
+
                 var ua = navigator.userAgent.toLowerCase();
                 if(ua.match(/MicroMessenger/i)=="micromessenger") {
 

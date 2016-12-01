@@ -30,7 +30,7 @@ Vue.http.interceptors.push((request, next)=>{
 //}
   next((response) => {
 
-    var status = response.data.status
+    var status = response.json().status
     // 这里可以对响应的结果进行处理
     if (status === "notLogin") {
       authService.logout();

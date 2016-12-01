@@ -86,7 +86,7 @@
     ready () {
       document.title = '商品类别'
      this.$http.get('../../static/data/shoppingStyleNew.json').then(function(response){
-         this.list = response.data
+         this.list = response.json()
      }, function(response){
       // 响应错误回调
      })
@@ -103,7 +103,7 @@
             item.active = false;
         })
         this.$http.get('../../static/data/'+this.items[index].name+'.json').then(function(response){
-          this.list = response.data
+          this.list = response.json()
         }, function(response){
           // 响应错误回调
         })

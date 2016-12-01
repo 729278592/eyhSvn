@@ -28,7 +28,7 @@
       ready () {
         document.title = '消息'
         this.$http.get('../../static/data/myMessage.json').then(function(response){
-           this.list = response.data
+           this.list = response.json()
         }, function(response){
           // 响应错误回调
         })
