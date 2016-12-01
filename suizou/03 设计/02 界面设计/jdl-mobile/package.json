@@ -10,10 +10,11 @@
     "test": ""
   },
   "dependencies": {
-	"babel-runtime": "^6.0.0",
+    "babel-runtime": "^6.0.0",
     "fastclick": "^1.0.6",
     "react-cookie": "^0.4.7",
     "vue": "^1.0.21",
+    "vue-file-upload": "0.0.7",
     "vue-progressbar": "^0.2.5",
     "vue-resource": "^0.9.1",
     "vue-router": "^0.7.13",

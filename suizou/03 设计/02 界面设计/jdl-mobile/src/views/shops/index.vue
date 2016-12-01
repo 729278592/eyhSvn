@@ -49,7 +49,7 @@
         </li>
     </ul>
       <ul class="pay_list clearfix">
-          <li>
+          <li v-link="'/shops/nowScore'">
               <div class="payInfoy">
                   <span class="spanIcon moneyIcon"></span>
                   <span>总积分</span><br/>

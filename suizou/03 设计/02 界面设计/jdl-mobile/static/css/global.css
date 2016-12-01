@@ -47,6 +47,7 @@ a:active{opacity: 0.6;}
 .tabMenu li a .fa{font-size: 1.125rem;}
 .tabMenu li.active a{color: #ff6702;}
 .mask-bg{position: fixed;top: 0;right: 0;left: 0;bottom: 0;background: rgba(0,0,0,0.6);z-index: 9998;}
+.bd.absolute.overflowY{overflow-y: hidden;}
 .mask-bg.hide{display:none;}
 .tabSX{position: absolute;top: 0;width: 100%;height: 80%;z-index: 9999;max-width: 640px;background: #fff;overflow: auto;}
 #allmap{width: 100%;  height:100%;}
@@ -93,7 +94,20 @@ a:active{opacity: 0.6;}
 .weui_cell_primary .fa-calendar{position: absolute;top: 0.25rem;right: 0;color: #52ba92;}
 .text{position: relative;top:-0.3rem;}
 .weui_uploader_bd{text-align: center;margin-right: 0;}
-.weui_uploader_files{float: left}
+.weui_uploader_file {
+  width: 54px;
+  height: 54px;
+}
+.weui_uploader_input_wrp {
+  width: 52px;
+  height: 52px;
+}
+.weui_uploader_input_wrp:before {
+  height: 21.5px;
+}
+.weui_uploader_input_wrp:after {
+  width: 19.5px;
+}
 .weui_uploader_file img{width:100%;height:100%;}
 .weui_uploader_files li.mr0{margin-right: 0;}
 .weui_uploader_input_wrp{border: 1px dashed #ff6702;}
@@ -152,10 +166,54 @@ a:active{opacity: 0.6;}
 .shopping_category_menu li:after{content: "";position: absolute;right: 0;top: 0;width: 1px;height: 100%;border-right: 1px solid #dbdbdb;}
 .shopping_category_menu li a{display: inline-block;width: 100%;height: 100%;color: #333;}
 .user_agreement{width: 100%;}
-.user_agreement>p{width: 94%;margin: 0.625rem auto 0;font-size: 0.875rem;color: #666;line-height: 1.7rem;}
-.user_agreement p.title{font-size: 1.25rem;color: #333;text-align: center;}
-.user_agreement p.time{font-size: 0.875rem;text-align: right;color: #999;}
-.user_agreement>div{font-size: 0.875rem;text-indent: 1.75rem;line-height: 1.5rem;width: 94%;margin: 0.625rem auto 0;color: #666;}
+.user_agreement.style{width: 94% !important;padding: 0 3%;}
+/*.user_agreement>p{width: 94%;margin: 0.625rem auto 0;font-size: 0.875rem;color: #666;line-height: 1.7rem;}*/
+/*.user_agreement p.title{font-size: 1.25rem;color: #333;text-align: center;}*/
+/*.user_agreement p.time{font-size: 0.875rem;text-align: right;color: #999;}*/
+.user_agreement{
+  font-size: .875rem;
+  line-height: 1.5rem;
+  width: 100% !important;
+  margin: .625rem auto 0;
+  color: #666;}
+.user_agreement p.title{font-size: 1.2rem;text-align: center;color: #000;margin-bottom: 0.5rem;}
+.user_agreement .user{font-size: 0.875rem;line-height: 1.5rem;width: 100%;margin: 0 auto;color: #666;border-bottom: 1px solid #efefef;}
+
+.user_agreement .user .userHead{position: relative;width: 94%;color: #333;font-size: 0.875rem;background: #fff;padding: 0.625rem 3%;}
+
+.user_agreement .user .userHead:after {
+  content: " ";
+  display: inline-block;
+  height: 6px;
+  width: 6px;
+  border-width: 2px 2px 0 0;
+  border-color: #C8C8CD;
+  border-style: solid;
+  -webkit-transform: matrix(0.71, 0.71, -0.71, 0.71, 0, 0);
+  transform: matrix(0.71, 0.71, -0.71, 0.71, 0, 0);
+  position: absolute;
+  top: 50%;
+  margin-top: -4px;
+  right: 3%;
+}
+.user_agreement .user .userHead.active:after {
+  -webkit-transform: rotate(135deg);
+  -moz-transform: rotate(135deg);
+  -ms-transform: rotate(135deg);
+  -o-transform: rotate(135deg);
+  transform: rotate(135deg);
+}
+
+.user_agreement .user .userCon{width: 94%;color: #666;font-size: 0.875rem;padding: 0.625rem 3%;display: none;}
+.user_agreement .user .userCon.on{display:block;}
+.user_agreement.style>div {
+  font-size: .875rem;
+  text-indent: 1.75rem;
+  line-height: 1.5rem;
+  width: 100%;
+  margin: .625rem auto 0;
+  color: #666;
+}
 .codeMenu{display: block;}
 .codeMenu li{float: left;width: 50%;height: 3rem;line-height: 3rem;text-align: center;color: #fff;font-size: 1rem;}
 .codeMenu li:first-child{background: #9a9a9a;}
@@ -168,6 +226,8 @@ a:active{opacity: 0.6;}
 .inputDiv .spanColor,.inputDiv .Wdate,.inputDiv .btnQuery{float: left;}
 .inputDiv .btnQuery{border: none;outline: none;width: 60px;height: 34px;background: #ff6702;color: #fff;float: right;border-radius: 0.25rem;font-size: 0.875rem;}
 .queryMenu{width: 100%;}
+.queryMenu.styleHides li.hide{display: none;}
+.weui_btn_area.hide{display: none;}
 .queryMenu li{background: #fff;width: 94%;padding: 0.325rem 3% 0.625rem;border-top: 1px solid #dbdbdb;}
 .queryMenu li p{width: 100%;margin-top: 0.3rem;display: block;color: #666;font-size: 0.875rem;}
 .queryMenu li p span.time{font-size: 1rem;color: #333;}
@@ -516,9 +576,9 @@ textarea{font-family: "微软雅黑";}
 .ulLink li{float: left;width: 50%;}
 .ulLink li a{display: inline-block;width: 100%;height: 100%;}
 .ulLink li img{width: 100%;height: 100%;}
-.ulLink li:first-child{height: 160px;position: relative;top: 0;}
-.ulLink li{height: 80px;position: relative;top: 1px;}
-.ulLink li:last-child{height: 80px;position: relative;top: 0;}
+.ulLink li{height: 160px;position: relative;top: 0;}
+
+
 .ulLink li a:active{opacity: 0.8;}
 .shop_menu{display: block;width: 100%;background: #fff;border-top: 1px solid #dbdbdb;border-bottom: 1px solid #dbdbdb;margin: 0.625rem 0 0 0;}
 .shop_menu li{width: 25%;float: left;height: 50px;}
@@ -937,6 +997,46 @@ ul.styleHide.active{display: inline-block;}
 .btnReduce{width: 1.5rem;height: 26px;outline: none;border: 1px solid #dbdbdb;background: transparent;}
 .numInput{height: 24px;width: 3rem;text-align: center;line-height: 1.5rem;border: none;border-bottom: 1px solid #dbdbdb;border-top:  1px solid #dbdbdb;}
 .btnPlus{width: 1.5rem;height: 26px;outline: none;border: 1px solid #dbdbdb;background: transparent;}
+
+
+
+.weui-gallery {
+  position: fixed;
+  top: 0;
+  right: 0;
+  bottom: 0;
+  left: 0;
+  background-color: #000000;
+  z-index: 1000;
+}
+.weui-gallery__img {
+  position: absolute;
+  top: 0;
+  right: 0;
+  bottom: 0px;
+  left: 0;
+  background: center center no-repeat;
+  background-size: contain;
+}
+.weui-gallery__img img{    width: 100%;
+  height: 100%;
+  position: absolute;
+  top: 0%;
+  right: 0;
+  bottom: 0%;
+  left: 0;}
+.weui-gallery__opr {
+  position: absolute;
+  right: 0;
+  bottom: 0;
+  left: 0;
+  background-color: #0D0D0D;
+  color: #FFFFFF;
+  line-height: 60px;
+  text-align: center;
+}
+
+.weui_btn_primary.bg{background: #ff6804;}
 
 @media screen and (max-width: 768px){.formIndex .fa-search{left: 1rem;} body,html{font-size: 20px;}}
 @media screen and (max-width: 640px){.formIndex .fa-search{left: 12rem;top: 0.8rem;}}

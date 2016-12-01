@@ -72,13 +72,13 @@
             </a>
         </li>
         <li>
-            <a v-link="'/user/presentIntegral><!-- '"-->
+            <a v-link="'/user/presentIntegral'">
                 <span class="span_index index_icon2"></span><br/>
                 <span>积分兑换</span>
             </a>
         </li>
         <li>
-            <a v-link="'/user/detailOutcome><!-- '"-->
+            <a v-link="'/user/detailOutcome'">
                 <span class="span_index index_icon3"></span><br/>
                 <span>交易明细</span>
             </a>
@@ -91,19 +91,9 @@
         </li>
     </ul>
        <ul class="ulLink clearfix">
-         <li class="first">
-             <a>
-                 <img src="../../../static/images/alink1.png" alt=""/>
-             </a>
-         </li>
-         <li class="second">
-             <a>
-                 <img src="../../../static/images/alink2.png" alt=""/>
-             </a>
-         </li>
-         <li class="last">
-             <a>
-                 <img src="../../../static/images/alink3.png" alt=""/>
+         <li class="first" v-for="liList in getMainRegoList">
+             <a @click="addShopId(liList)">
+                 <img :src="this.imageUrl+liList.pic" alt=""/>
              </a>
          </li>
      </ul>
@@ -204,14 +194,16 @@
         searchCon:"",
         toasttext:"",
         textareaText:"",
+        getMainRegoList:[]
       }
     },
     ready () {
       document.title = '首页'
       //var shop_menu = document.getElementById("shop_menu").firstChild
       //shop_menu.setAttribute("class","active")
-      userService.index(this)
-      this.imageUrl = userService.imgUrl
+      userService.index(this);
+      userService.getMainRego(this);
+      this.imageUrl = userService.imgUrl;
       new Swiper ('#swiper-container', {
          slidesPerView: 1,
          pagination:'.swiper-pagination',
@@ -221,7 +213,7 @@
          autoplay: 5000,
          autoplayDisableOnInteraction: false,
          active:false
-      })
+      });
 
       if (authService.isLogin()) {
         this.isLogin = true
@@ -234,14 +226,17 @@
          for(var i=0;i<e.currentTarget.parentNode.children.length;i++){
             e.currentTarget.parentNode.children[i].setAttribute("class"," ")
          }
-         e.currentTarget.setAttribute("class","active")
+         e.currentTarget.setAttribute("class","active");
          userService.selectIndex(this,index)
        },
        addId:function(shops){
-         localStorage.setItem('shopingId',shops.mchId)
+         localStorage.setItem('shopingId',shops.mchId);
          this.$router.go("/category/shopsShoppingInfor/"+shops.id)
        },
-
+      addShopId:function(shops){
+        localStorage.setItem('shopingId',shops.mchId);
+        this.$router.go("/category/shopsShoppingInfor/"+shops.goodsId)
+      },
       getFocus:function(){
         this.clearHide = false
         this.active = true

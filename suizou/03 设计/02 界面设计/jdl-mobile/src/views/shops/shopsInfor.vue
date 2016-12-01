@@ -126,6 +126,7 @@
         document.title = '商铺'
 
         this.shopsId = this.$route.params.shops
+
         this.imageUrl = mchService.imgUrl
         localStorage.setItem('shopingId',this.shopsId)
 
