@@ -40,7 +40,7 @@
                     <!--<div class="weui_cell_bd weui_cell_primary style">-->
                         <!--<p>-->
                             <!--<span class="score score3"></span>-->
-                            <!--提现规则-->
+                            <!--兑换规则-->
                         <!--</p>-->
                     <!--</div>-->
                     <!--<div class="weui_cell_ft"></div>-->
@@ -52,7 +52,7 @@
     <div class="weui_dialog_confirm modal-mask" id="dialog1"  v-show="show">
       <div class="weui_mask"></div>
       <div class="weui_dialog">
-        <div class="weui_dialog_hd"><strong class="weui_dialog_title">确定提现？</strong></div>
+        <div class="weui_dialog_hd"><strong class="weui_dialog_title">确定兑换？</strong></div>
         <div class="weui_dialog_ft">
           <a href="javascript:;" class="weui_btn_dialog default" @click="cancleDelete()">取消</a>
           <a href="javascript:;" class="weui_btn_dialog primary" @click="sureDeleta()">确定</a>
@@ -82,7 +82,7 @@
         }
       },
       ready () {
-        document.title = '积分提现'
+        document.title = '积分兑换'
         mchService.presentIntegral(this)
 
       },
@@ -93,7 +93,7 @@
      },
      present:function(socre){
        if(socre.txScore<10000){
-         this.$set('toasttext',"提现积分不足");
+         this.$set('toasttext',"兑换积分不足");
          this.$set('toastshow',true)
        }
        else{

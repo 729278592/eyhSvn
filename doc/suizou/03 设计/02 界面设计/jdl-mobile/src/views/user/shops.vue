@@ -51,7 +51,7 @@
       <li>
           <div class="payInfoy">
               <span class="spanIcon sordIcon"></span>
-              <span>昨天返现</span><br/>
+              <span>昨天赠送</span><br/>
               <span class="color">￥<span class="verdana">900.00</span></span>
           </div>
       </li>
@@ -111,7 +111,7 @@
       <li>
           <a href="presentIntegral.html">
               <span class="span_index shops_icon1"></span><br/>
-              <span>积分提现</span>
+              <span>积分兑换</span>
           </a>
       </li>
       <li>
