@@ -9,9 +9,9 @@
             </p>
             <p class="clearfix">
                 <span class="left time">{{presentNum.createTime}}</span>
-                <span class="right success" v-if="presentNum.status==1">提现成功</span>
+                <span class="right success" v-if="presentNum.status==1">兑换成功</span>
                 <span class="right going" v-if="presentNum.status==0">处理中</span>
-                <span class="right fail" v-if="presentNum.status==2">提现失败</span>
+                <span class="right fail" v-if="presentNum.status==2">兑换失败</span>
             </p>
         </li>
     </ul>
@@ -41,7 +41,7 @@
         }
       },
       ready () {
-        document.title = '提现记录'
+        document.title = '兑换记录'
         mchService.presentList(this)
       },
       methods: {

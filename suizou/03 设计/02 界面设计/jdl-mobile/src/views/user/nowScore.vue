@@ -31,7 +31,7 @@
 
         <div v-if="returnList.type==1">
           <p class="clearfix">
-            <span class="time">积分提现</span>
+            <span class="time">积分兑换</span>
           </p>
 
           <p class="clearfix">

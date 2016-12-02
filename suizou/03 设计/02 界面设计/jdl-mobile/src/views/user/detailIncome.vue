@@ -7,7 +7,7 @@
               <a :class="{'active':this.incomeActive}" @click="selectIncome()">收入</a>
           </li>
           <li>
-              <a :class="{'active':this.outcomeActive}" @click="selectOutcome()">返现</a>
+              <a :class="{'active':this.outcomeActive}" @click="selectOutcome()">赠送</a>
           </li>
       </ul>
   </div>
@@ -60,12 +60,12 @@
         </p>
 
         <p class="clearfix">
-            <span class="left">返现比例</span>
+            <span class="left">赠送比例</span>
             <span class="right">{{returnList.returnProportion}}</span>
         </p>
 
         <p class="clearfix">
-            <span class="left">昨日返现</span>
+            <span class="left">昨日赠送</span>
             <span class="right">{{returnList.returnYestoady}}</span>
         </p>
     </li>

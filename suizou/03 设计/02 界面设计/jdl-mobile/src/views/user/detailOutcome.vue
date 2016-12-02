@@ -19,12 +19,12 @@
             </p>
 
             <p class="clearfix">
-                <span class="left">返现比例</span>
+                <span class="left">赠送比例</span>
                 <span class="right">{{returnList.percentage}}</span>
             </p>
 
             <p class="clearfix">
-                <span class="left">今日返现</span>
+                <span class="left">今日赠送</span>
                 <span class="right">{{returnList.todayScore}}</span>
             </p>
         </li>
@@ -68,7 +68,7 @@
         }
       },
       ready () {
-        document.title = '返现明细';
+        document.title = '赠送明细';
         var pageArr = {
           pageNo:this.pageNum
         };
