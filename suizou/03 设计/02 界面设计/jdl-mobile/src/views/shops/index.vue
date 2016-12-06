@@ -49,11 +49,11 @@
         </li>
     </ul>
       <ul class="pay_list clearfix">
-          <li v-link="'/shops/nowScore'">
+          <li v-link="'/shops/totalScrore'">
               <div class="payInfoy">
                   <span class="spanIcon moneyIcon"></span>
                   <span>总积分</span><br/>
-                  <span class="color">￥<span class="verdana">{{lists.yesterdayFx}}</span></span>
+                  <span class="color">￥<span class="verdana">{{lists.totalScore}}</span></span>
               </div>
           </li>
           <li v-link="'/shops/nowScore'">

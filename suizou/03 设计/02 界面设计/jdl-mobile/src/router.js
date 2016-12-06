@@ -334,6 +334,11 @@ router.map({
               require(['./views/user/searchShopping.vue'], resolve)
             }
           },
+          '/totalScrore': {
+            component: (resolve) => {
+              require(['./views/user/totalScrore.vue'], resolve)
+            }
+          },
           '/nowScore': {
             component: (resolve) => {
               require(['./views/user/nowScore.vue'], resolve)
@@ -466,6 +471,11 @@ router.map({
       '/modifyPassword': {
         component: (resolve) => {
           require(['./views/shops/modifyPassword.vue'], resolve)
+        }
+      },
+      '/totalScrore': {
+        component: (resolve) => {
+          require(['./views/shops/totalScrore.vue'], resolve)
         }
       },
       '/nowScore': {

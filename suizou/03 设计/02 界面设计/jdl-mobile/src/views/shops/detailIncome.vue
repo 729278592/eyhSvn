@@ -16,7 +16,8 @@
       <input class="Wdate" v-model="startDate" type="date" placeholder="开始日期" >
       <span class="spanColor">至</span>
       <input class="Wdate" v-model="endDate" type="date" placeholder="结束日期" >　
-      <input type="button" class="btnQuery right" value="查询" @click="btnFindIn()" readonly/>
+      <!--<input type="button" class="btnQuery right" value="查询" @click="btnFindIn()" readonly/>-->
+      <a class="btnQuery right" @click="btnFindIn()">查询</a>
     </div>
     <ul class="queryMenu mb styleHides">
       <li v-for="incomeList in inList" :class="{'hide':incomeList.display}">
@@ -59,12 +60,17 @@
       </p>
     </div>
   </div>
+
+
+
+
   <div class="styleHide" :class="{'active':this.outcomeActive}">
     <div class="inputDiv clearfix">
       <input class="Wdate" v-model="startDate" type="date" placeholder="开始日期" >
       <span class="spanColor">至</span>
       <input class="Wdate" v-model="endDate" type="date" placeholder="结束日期" >　
-      <input type="button" class="btnQuery right" value="查询" @click="btnFind()" readonly/>
+      <!--<input type="button" class="btnQuery right" value="查询" @click="btnFind()" readonly/>-->
+      <a class="btnQuery right" @click="btnFind()">查询</a>
     </div>
     <ul class="queryMenu">
       <li v-for="returnList in list">

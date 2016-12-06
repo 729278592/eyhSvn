@@ -60,11 +60,11 @@
           </li>
       </ul>
       <ul class="pay_list clearfix">
-          <li v-link="'/user/nowScore'">
+          <li v-link="'/user/totalScrore'">
               <div class="payInfoy">
                   <span class="spanIcon moneyIcon"></span>
                   <span>总积分</span><br/>
-                  <span class="color">￥<span class="verdana">{{dataJson.yesterdayFx}}</span></span>
+                  <span class="color">￥<span class="verdana">{{dataJson.totalScore}}</span></span>
               </div>
           </li>
           <li v-link="'/user/nowScore'">

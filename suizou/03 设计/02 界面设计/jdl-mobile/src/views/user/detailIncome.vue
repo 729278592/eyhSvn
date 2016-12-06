@@ -15,7 +15,8 @@
       <input class="Wdate" type="text" placeholder="开始日期">
       <span class="spanColor">至</span>
       <input class="Wdate" type="text" placeholder="结束日期">　
-      <input type="button" class="btnQuery right" value="查询" readonly/>
+      <!--<input type="button" class="btnQuery right" value="查询" readonly/>-->
+    <a class="btnQuery right" @click="btnFind()">查询</a>
   </div>
   <ul class="queryMenu mb styleHide" :class="{'active':this.incomeActive}">
       <li v-for="incomeList in list">
