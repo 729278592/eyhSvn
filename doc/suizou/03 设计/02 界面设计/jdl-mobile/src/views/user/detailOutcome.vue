@@ -5,7 +5,8 @@
         <input class="Wdate" v-model="startDate" type="date" placeholder="开始日期" >
         <span class="spanColor">至</span>
         <input class="Wdate" v-model="endDate" type="date" placeholder="结束日期" >　
-        <input type="button" class="btnQuery right" value="查询" @click="btnFind()" readonly/>
+        <!--<input type="button" class="btnQuery right" value="查询" @click="btnFind()" readonly/>-->
+      <a class="btnQuery right" @click="btnFind()">查询</a>
     </div>
     <ul class="queryMenu styleHides">
         <li v-for="returnList in list" :class="{'hide':returnList.display}">

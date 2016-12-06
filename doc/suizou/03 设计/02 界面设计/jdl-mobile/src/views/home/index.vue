@@ -54,11 +54,11 @@
                 <img src="../../../static/images/indexSlider2.jpg" class="w100" alt=""/>
               </a>
             </div>
-            <div class="swiper-slide">
-                <a>
-                  <img src="../../../static/images/indexSlider3.jpg" class="w100" alt=""/>
-                </a>
-            </div>
+            <!--<div class="swiper-slide">-->
+                <!--<a>-->
+                  <!--<img src="../../../static/images/indexSlider3.jpg" class="w100" alt=""/>-->
+                <!--</a>-->
+            <!--</div>-->
         </div>
         <div class="swiper-pagination"></div>
         <!--<div class="swiper-button-next"></div>-->

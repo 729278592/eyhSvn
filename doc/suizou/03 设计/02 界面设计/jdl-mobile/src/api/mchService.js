@@ -17,6 +17,7 @@ export default {
       var res = response.json()
       if (res.status == "ok") {
         context.lists = res.datas
+        console.log(JSON.stringify(context.lists))
         var len = Math.round(context.lists.evaTotalScore/context.lists.evaOrderNum)
         for(var j = 0;j<len;j++){
           context.item[j].starActive = true
@@ -152,6 +153,45 @@ export default {
 
   //返现明细----
   nowScoreModifly(context,arr) {
+    context.$progress.start()
+    context.$http.post(API_ROOT+"mobile/mch/getTotalScoreReservedScore.do",arr).then(function(response){
+      context.$progress.finish()
+      var res = response.json()
+      if(res.status == "ok") {
+        if(res.datas!=null){
+          context.nowPage = [];
+          context.list = [];
+          context.nowPage = res.datas.datas;
+          context.totalNum = res.datas.totalPages;
+          context.nextNum = res.datas.nextPage;
+          context.pageNum = res.datas.pageNo;
+          context.list = context.list.concat(context.nowPage);
+          context.btnHide = true;
+          console.log(JSON.stringify(res.datas));
+          console.log(JSON.stringify(context.list))
+        }
+
+        if(context.list.length!=0){
+          context.dataHide = false;
+        }else{
+          context.dataHide = true;
+          context.btnHide = false;
+        }
+
+
+      } else {
+        alert(res.message);
+      }
+    }, function(response){
+      context.$progress.failed()
+      // 响应错误回调
+    })
+  },
+
+
+
+  //返现明细----
+  nowScoreModiflyInfor(context,arr) {
     context.$progress.start()
     context.$http.post(API_ROOT+"mobile/mch/getUseScoreDetails.do",arr).then(function(response){
       context.$progress.finish()
@@ -652,6 +692,40 @@ export default {
   //当前积分
   nowScore(context,pageArr) {
     context.$progress.start()
+    context.$http.post(API_ROOT+"mobile/mch/getTotalScoreReservedScore.do",pageArr).then(function(response){
+      context.$progress.finish()
+      var res = response.json()
+      if(res.status == "ok") {
+        if(res.datas != null){
+          context.nowPage = res.datas.datas;
+          context.totalNum = res.datas.totalPages;
+          context.nextNum = res.datas.nextPage;
+          context.pageNum = res.datas.pageNo;
+          context.list = context.list.concat(context.nowPage);
+          context.btnHide = true;
+          console.log(JSON.stringify(res.datas))
+        }
+
+        if(context.list.length!=0){
+          context.dataHide = false;
+        }else{
+          context.dataHide = true;
+          context.btnHide = false;
+        }
+        //console.log(JSON.stringify(res.datas.datas))
+      } else {
+        alert(res.message);
+      }
+    }, function(response){
+      context.$progress.failed()
+      // 响应错误回调
+    })
+  },
+
+
+  //当前积分
+  nowScoreDetailsInfor(context,pageArr) {
+    context.$progress.start()
     context.$http.post(API_ROOT+"mobile/mch/getUseScoreDetails.do",pageArr).then(function(response){
       context.$progress.finish()
       var res = response.json()
@@ -683,8 +757,43 @@ export default {
   },
 
 
+
   //查询更多当前积分
   ModiflyNowScore(context,pageArr) {
+    context.$progress.start();
+    context.$http.post(API_ROOT+"mobile/mch/getTotalScoreReservedScore.do",pageArr).then(function(response){
+      context.$progress.finish();
+      var res = response.json();
+      if(res.status == "ok") {
+        if(res.datas != null){
+          context.nowPage = res.datas.datas;
+          context.totalNum = res.datas.totalPages;
+          context.nextNum = res.datas.nextPage;
+          context.pageNum = res.datas.pageNo;
+          context.list = context.list.concat(context.nowPage);
+          context.btnHide = true;
+          console.log(JSON.stringify(res.datas))
+        }
+
+        if(context.list.length!=0){
+          context.dataHide = false
+        }else{
+          context.dataHide = true
+          context.btnHide = false;
+        }
+      } else {
+        alert(res.message);
+      }
+    }, function(response){
+      context.$progress.failed()
+      // 响应错误回调
+    })
+  },
+
+
+
+  //查询更多当前积分
+  ModiflyNowScoreInfor(context,pageArr) {
     context.$progress.start();
     context.$http.post(API_ROOT+"mobile/mch/getUseScoreDetails.do",pageArr).then(function(response){
       context.$progress.finish();
@@ -714,6 +823,9 @@ export default {
       // 响应错误回调
     })
   },
+
+
+
 
   //预留积分
   reserveScore(context,arr) {

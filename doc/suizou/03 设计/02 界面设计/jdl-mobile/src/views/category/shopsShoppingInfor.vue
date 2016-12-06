@@ -119,58 +119,58 @@
       </div>
   </div>
   <div class="weui_mask_transition" id="mask" :class="{'weui_fade_toggle':addClassFade}" @click="hideModal()"></div>
-    <div class="weui_actionsheet" :class="{'weui_actionsheet_toggle':addClassActionsheet}" id="weui_actionsheet">
-        <div class="weui_actionsheet_menu">
-            <img src="../../../static/images/closeImg.png" alt="" class="closeImg" @click="hideModal()"/>
-            <ul class="entryList mt0">
-                <li>
-                    <div>
-                        <div class="couponImg style">
-                            <img v-if="shopInfor.images==null" src="../../../static/images/shoppingC1.jpg" class="couponImg1" alt="">
-                            <img v-if="shopInfor.images!=null" :src="this.imageUrl+shopInfor.images" class="couponImg1" alt="">
-                        </div>
-                        <div class="inforList">
-                            <p class="clearfix top w74">
-                                <span class="left shopsName">{{shopInfor.goodsName}}</span>
-                            </p>
-                            <p class="clearfix bottom w74">
-                                <span class="left money">￥{{shopInfor.price}}</span>
-                            </p>
-                        </div>
-                    </div>
-                </li>
-            </ul>
-            <div class="shopType style">
-                <p class="title">规格</p>
-                <ul class="shopTypeList clearfix">
-                    <li v-for="shopInforSize in products"  @click="onSelect($index,$event)">{{shopInforSize.specName}}</li>
-                </ul>
-            </div>
-            <div class="weui_cells  mt0 ">
-                <div class="weui_cell">
-                    <div class="weui_cell_hd">
-                        <label class="weui_label">
-                            <span class="spanText" style="width: 50px;top: 0;display: inline-block;font-size: 0.75rem;color: #999;">数量</span>
-                        </label>
-                    </div>
-                    <div class="weui_cell_bd weui_cell_primary">
-                      <Spinner  v-ref:msg></Spinner>
-                    </div>
-                </div>
-            </div>
-        </div>
-        <div class="weui_actionsheet_action">
-            <ul class="shopShoppingMenu style clearfix">
-                <li class="four">
-                    <button class="btnBuy" @click="nowBuy()">立刻购买</button>
-                </li>
-                <li class="three">
-                    <button class="btnCart" @click="btnCart()">加入购物车</button>
-                </li>
-            </ul>
-            <button class="btnSure hide">确定</button>
-        </div>
-    </div>
+  <div class="weui_actionsheet" :class="{'weui_actionsheet_toggle':addClassActionsheet}" id="weui_actionsheet">
+      <div class="weui_actionsheet_menu">
+          <img src="../../../static/images/closeImg.png" alt="" class="closeImg" @click="hideModal()"/>
+          <ul class="entryList mt0">
+              <li>
+                  <div>
+                      <div class="couponImg style">
+                          <img v-if="shopInfor.images==null" src="../../../static/images/shoppingC1.jpg" class="couponImg1" alt="">
+                          <img v-if="shopInfor.images!=null" :src="this.imageUrl+shopInfor.images" class="couponImg1" alt="">
+                      </div>
+                      <div class="inforList">
+                          <p class="clearfix top w74">
+                              <span class="left shopsName">{{shopInfor.goodsName}}</span>
+                          </p>
+                          <p class="clearfix bottom w74">
+                              <span class="left money">￥{{shopInfor.price}}</span>
+                          </p>
+                      </div>
+                  </div>
+              </li>
+          </ul>
+          <div class="shopType style">
+              <p class="title">规格</p>
+              <ul class="shopTypeList clearfix">
+                  <li v-for="shopInforSize in products"  @click="onSelect($index,$event)">{{shopInforSize.specName}}</li>
+              </ul>
+          </div>
+          <div class="weui_cells  mt0 ">
+              <div class="weui_cell">
+                  <div class="weui_cell_hd">
+                      <label class="weui_label">
+                          <span class="spanText" style="width: 50px;top: 0;display: inline-block;font-size: 0.75rem;color: #999;">数量</span>
+                      </label>
+                  </div>
+                  <div class="weui_cell_bd weui_cell_primary">
+                    <Spinner  v-ref:msg></Spinner>
+                  </div>
+              </div>
+          </div>
+      </div>
+      <div class="weui_actionsheet_action">
+          <ul class="shopShoppingMenu style clearfix">
+              <li class="four">
+                  <button class="btnBuy" @click="nowBuy()">立刻购买</button>
+              </li>
+              <li class="three">
+                  <button class="btnCart" @click="btnCart()">加入购物车</button>
+              </li>
+          </ul>
+          <button class="btnSure hide">确定</button>
+      </div>
+  </div>
 </div>
 <div class="foot">
   <ul class="shopShoppingMenu clearfix">

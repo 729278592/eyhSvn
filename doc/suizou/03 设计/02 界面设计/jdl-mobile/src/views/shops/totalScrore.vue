@@ -12,16 +12,16 @@
       <li v-for="returnList in list" :class="{'hide':returnList.display}">
         <div v-if="returnList.type==0">
           <p class="clearfix">
-            <span class="time">订单确认{{returnList.orderId}}</span>
+            <span class="time">订单确认</span>
           </p>
 
           <p class="clearfix">
-            <span class="left">预留积分</span>
+            <span class="left">当前积分</span>
             <span class="right">{{returnList.score}}</span>
           </p>
 
           <p class="clearfix">
-            <span class="left">预留积分总额</span>
+            <span class="left">当前积分总额</span>
             <span class="right">{{returnList.totalReseScore}}</span>
           </p>
 
@@ -36,32 +36,12 @@
           </p>
 
           <p class="clearfix">
-            <span class="left">预留积分</span>
+            <span class="left">当前积分</span>
             <span class="right">{{returnList.score}}</span>
           </p>
 
           <p class="clearfix">
-            <span class="left">预留积分总额</span>
-            <span class="right">{{returnList.totalReseScore}}</span>
-          </p>
-
-          <p class="clearfix">
-            <span class="left">{{returnList.createTime}}</span>
-          </p>
-        </div>
-
-        <div v-if="returnList.type==2">
-          <p class="clearfix">
-            <span class="time">积分赠送</span>
-          </p>
-
-          <p class="clearfix">
-            <span class="left">预留积分</span>
-            <span class="right">{{returnList.score}}</span>
-          </p>
-
-          <p class="clearfix">
-            <span class="left">预留积分总额</span>
+            <span class="left">当前积分总额</span>
             <span class="right">{{returnList.totalReseScore}}</span>
           </p>
 
@@ -111,11 +91,11 @@
       }
     },
     ready () {
-      document.title = '预留积分';
+      document.title = '当前积分';
       var pageArr = {
-        pageNo:this.pageNum
+        nowPageNo:this.pageNum
       };
-      mchService.reserveScore(this,pageArr)
+      mchService.nowScore(this,pageArr)
     },
     methods: {
       onShow: function () {
@@ -133,9 +113,11 @@
           var dateArr = {
             startDate:this.startDate,
             endDate:this.endDate,
-            pageNo:1
+            nowPageNo:1
           };
-          mchService.preserveScoreModifly(this,dateArr);
+
+          mchService.nowScoreModifly(this,dateArr);
+
           return false;
         }
         else{
@@ -145,7 +127,6 @@
         }
       },
       lookMore:function(){
-
 
         if((this.startDate)&&(this.endDate)){
           var arr=this.startDate.split("-");
@@ -167,9 +148,9 @@
           var dateArr = {
             startDate:this.startDate,
             endDate:this.endDate,
-            pageNo:this.pageNum
+            nowPageNo:this.pageNum
           };
-          mchService.ModiflyrNowScore(this,dateArr);
+          mchService.ModiflyNowScore(this,dateArr);
           return;
         }
 
@@ -185,10 +166,10 @@
           this.pageNum = this.nextNum
         }
         var pageArr = {
-          pageNo:this.pageNum
+          nowPageNo:this.pageNum
         };
 
-        mchService.reserveScore(this,pageArr);
+        mchService.nowScore(this,pageArr);
       }
     }
   }

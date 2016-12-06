@@ -1,33 +1,37 @@
 <template>
   <Bar></Bar>
   <div class="bd absolute pt">
+
+
+
     <div class="inputDiv clearfix">
       <input class="Wdate" v-model="startDate" type="date" placeholder="开始日期" >
       <span class="spanColor">至</span>
       <input class="Wdate" v-model="endDate" type="date" placeholder="结束日期" >　
-      <input type="button" class="btnQuery right" value="查询" @click="btnFind()" readonly/>
+      <!--<input type="button" class="btnQuery right" value="查询" @click="btnFind()" readonly/>-->
+      <a class="btnQuery right" @click="btnFind()">查询</a>
     </div>
     <ul class="queryMenu styleHides">
       <li v-for="returnList in list" :class="{'hide':returnList.display}">
         <div v-if="returnList.type==0">
-        <p class="clearfix">
-          <span class="time">推荐会员升为金钻{{returnList.mcMo}}</span>
-        </p>
+          <p class="clearfix">
+            <span class="time">推荐会员升为金钻{{returnList.mcMo}}</span>
+          </p>
 
-        <p class="clearfix">
-          <span class="left">当前积分</span>
-          <span class="right">{{returnList.score}}</span>
-        </p>
+          <p class="clearfix">
+            <span class="left">当前积分</span>
+            <span class="right">{{returnList.score}}</span>
+          </p>
 
-        <p class="clearfix">
-          <span class="left">当前积分总额</span>
-          <span class="right">{{returnList.totalReseScore}}</span>
-        </p>
+          <p class="clearfix">
+            <span class="left">当前积分总额</span>
+            <span class="right">{{returnList.totalReseScore}}</span>
+          </p>
 
-        <p class="clearfix">
-          <span class="left">{{returnList.createTime}}</span>
-        </p>
-      </div>
+          <p class="clearfix">
+            <span class="left">{{returnList.createTime}}</span>
+          </p>
+        </div>
 
         <div v-if="returnList.type==1">
           <p class="clearfix">
@@ -119,10 +123,16 @@
       <p class="notInfor">
         暂无数据
       </p>
-  </div>
+    </div>
+
+
   </div>
   <Toast :toastshow.sync="toastshow" :toasttext="toasttext"></Toast>
 </template>
+
+
+
+
 <script>
   import Bar from '../components/headBar.vue'
   import userService from '../../api/userService'
@@ -135,7 +145,10 @@
     data () {
       return {
         hide:true,
+        outcomeActive:false,
+        incomeActive:true,
         list:[],
+        inList:[],
         dataHide:false,
         startDate:"",
         endDate:"",
@@ -154,13 +167,14 @@
       var pageArr = {
         pageNo:this.pageNum
       };
-      userService.nowScore(this,pageArr);
+      userService.nowScoreDetailInfor(this,pageArr);
 
     },
     methods: {
       onShow: function () {
         this.hide = !this.hide
       },
+
       btnFind:function(){
         var arr=this.startDate.split("-");
         var starttime=new Date(arr[0],arr[1],arr[2]);
@@ -175,7 +189,7 @@
             pageNo:1
           };
 
-          userService.nowScoreModifly(this,dateArr);
+          userService.nowScoreModiflyInfor(this,dateArr);
           return false;
         }
         else{
@@ -208,7 +222,7 @@
             endDate:this.endDate,
             pageNo:this.pageNum
           };
-          userService.ModiflyNowScore(this,dateArr);
+          userService.ModiflyNowScoreInfor(this,dateArr);
           return;
         }
 
@@ -220,13 +234,14 @@
 
 
        if(this.nextNum){
-         this.pageNum = this.nextNum
-       }
-        var pageArr = {
-          pageNo:this.pageNum
-        };
+         this.pageNum = this.nextNum;
+         var pageArr = {
+           pageNo:this.pageNum
+         };
 
-        userService.nowScore(this,pageArr);
+         userService.nowScoreDetailInfor(this,pageArr);
+       }
+
       }
     }
   }

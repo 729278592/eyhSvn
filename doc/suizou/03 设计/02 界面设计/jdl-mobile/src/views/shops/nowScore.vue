@@ -5,13 +5,14 @@
       <input class="Wdate" v-model="startDate" type="date" placeholder="开始日期" >
       <span class="spanColor">至</span>
       <input class="Wdate" v-model="endDate" type="date" placeholder="结束日期" >　
-      <input type="button" class="btnQuery right" value="查询" @click="btnFind()" readonly/>
+      <!--<input type="button" class="btnQuery right" value="查询" @click="btnFind()" readonly/>-->
+      <a class="btnQuery right" @click="btnFind()">查询</a>
     </div>
     <ul class="queryMenu styleHides">
       <li v-for="returnList in list" :class="{'hide':returnList.display}">
         <div v-if="returnList.type==0">
         <p class="clearfix">
-          <span class="time">积分兑换</span>
+          <span class="time">订单确认</span>
         </p>
 
         <p class="clearfix">
@@ -31,7 +32,7 @@
 
         <div v-if="returnList.type==1">
           <p class="clearfix">
-            <span class="time">积分赠送</span>
+            <span class="time">积分补足</span>
           </p>
 
           <p class="clearfix">
@@ -64,7 +65,7 @@
   </div>
 </template>
 <script>
-  import Bar from '../components/headBar.vue'
+  import Bar from '../components/shopHead.vue'
   import mchService from '../../api/mchService'
   import Toast from '../components/toast.vue'
   export default {
@@ -94,7 +95,7 @@
       var pageArr = {
         pageNo:this.pageNum
       };
-      mchService.nowScore(this,pageArr)
+      mchService.nowScoreDetailsInfor(this,pageArr)
     },
     methods: {
       onShow: function () {
@@ -115,7 +116,7 @@
             pageNo:1
           };
 
-          mchService.nowScoreModifly(this,dateArr);
+          mchService.nowScoreModiflyInfor(this,dateArr);
 
           return false;
         }
@@ -142,33 +143,33 @@
           }
 
           if(this.nextNum){
+
             this.pageNum = this.nextNum
+
           }
           var dateArr = {
             startDate:this.startDate,
             endDate:this.endDate,
             pageNo:this.pageNum
           };
-          mchService.ModiflyNowScore(this,dateArr);
+          mchService.ModiflyNowScoreInfor(this,dateArr);
           return;
         }
-
-
 
         if(this.nextNum == this.pageNum ){
           this.$set('toasttext',"无更多数据");
           this.$set('toastshow',true);
           return;
         }
-
         if(this.nextNum){
           this.pageNum = this.nextNum
-        }
-        var pageArr = {
-          pageNo:this.pageNum
-        };
+          var pageArr = {
+            pageNo:this.pageNum
+          };
 
-        mchService.nowScore(this,pageArr);
+          mchService.nowScoreDetailsInfor(this,pageArr);
+        }
+
       }
     }
   }
