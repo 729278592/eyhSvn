@@ -268,7 +268,7 @@ h2{font-family:"microsoft yahei";font-size:14px;}
 .s_slider{display: inline-block;}
 .s_slider>img{width: 594px;height: 257px;}
 .s_c_c .s_left,.s_c_f  .s_left{float: left;border: 1px solid #dbdbdb;width: 197px; height: 256px;text-align: center;display: inline-block;}
-.s_c_c .s_left a>img{position: relative;top: 30px;width: 115px;height: 150px;}
+.s_c_c .s_left a>img{position: relative;top: 10px;width: 180px;height: 170px;}
 .s_left a{display: block;width: 100%;height: 100%;}
 .s_c_c .s_left,.s_c_f  .s_left{border-right: 0;}
 .s_c_c .s_left.br1,.s_c_f  .s_left.br1{border-right: 1px solid #dbdbdb;}
@@ -280,7 +280,7 @@ h2{font-family:"microsoft yahei";font-size:14px;}
     overflow: hidden; text-align: left;margin: 0 auto;}
 .bigTitle{font-size: 18px;color: #333;font-weight: bold;margin-top: 25px;}
 .smallTitle{font-size: 14px;color: #666;}
-.clothTitle{font-size: 16px;color: #999;margin-top: 35px;text-align: center;}
+.clothTitle{font-size: 16px;color: #999;margin-top: 20px;text-align: center;}
 .clothMoney{text-align: center;}
 .clothMoney .nowPrice{font-size: 14px;color: #d00a4d;font-weight: bold;}
 .clothMoney .oldPrice{font-size: 14px;color: #999;text-decoration: line-through;}
