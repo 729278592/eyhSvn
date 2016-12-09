@@ -131,8 +131,8 @@
                             <th><span>分类</span></th>
                             <th><span>进货价</span></th>
                             <th><span>销售价</span></th>
-                            <th><span>供货商</span></th>
-                            <th><span>数量</span></th>
+                            <th width="20%"><span>供货商</span></th>
+                            <th width="15%"><span>数量</span></th>
                             <th><span>小计</span></th>
                             <th><span>操作</span></th>
                         </tr>
@@ -169,12 +169,6 @@
                                 </td>
                                 <td>
 
-                                    <!--查看商品开始-->
-                                    <a class="spanShop lookShop">
-                                        <i class="fa fa-eye"></i>
-                                        查看
-                                    </a> |
-                                    <!--查看商品结束-->
 
                                     <!--删除商品开始-->
                                     <a class="spanOnwork deleteStore">
@@ -243,24 +237,7 @@
                     </div>
                     <!--正在加载提示结束-->
 
-                    <!--分页开始-->
-                    <div class="paging clearfix">
-                        <ul class="page-menu clearfix">
-                            <p class="page-pre" data-pagenum="1"><i class="fa fa-angle-left"></i></p>
-                            <li class="active">1</li>
-                            <li class="liPage">2</li>
-                            <li class="liPage">3</li>
-                            <li class="liPage">4</li>
-                            <li class="liPage">5</li>
-                            <li class="liPage">6</li>
-                            <li class="liPage">7</li>
-                        </ul>
-                        <input type="text" class="page-num" id="pageNumTarget">
-                        <button type="button" class="btn-jump" id="targetButton">跳转</button>
-                        <p class="page-next" data-pagenum="2"><i class="fa fa-angle-right"></i></p>
-                        <input type="hidden" value="447" id="totalPages">
-                    </div>
-                    <!--分页结束-->
+
 
                 </div>
             </div>
@@ -308,33 +285,33 @@
             <form action="###">
                 <div class="dailog addStaffDailog hide">
                     <div class="dailogHead">
-                        添加门店
+                        商品资料
                         <i class="fa fa-remove right"></i>
                     </div>
                     <div class="dailogContent">
                         <div class="divInput clearfix">
                             <div class="w50">
-                                <span class="spanName">门店ID :</span>
+                                <span class="spanName">商品条码 :</span>
                                 <input type="number" class="input" id="storeId" placeholder="请输入门店ID">
                             </div>
                             <div class="w50 last">
-                                <span class="spanName">门店名称 :</span>
+                                <span class="spanName">商品进价 :</span>
                                 <input type="text" class="input" id="storeName" placeholder="请输入门店名称">
                             </div>
                         </div>
                         <div class="divInput clearfix">
                             <div class="w50">
-                                <span class="spanName">联系人 :</span>
+                                <span class="spanName">商品名称 :</span>
                                 <input type="number" class="input" id="storePerson" placeholder="请输入联系人">
                             </div>
                             <div class="w50 last">
-                                <span class="spanName">联系电话 :</span>
+                                <span class="spanName">商品售价 :</span>
                                 <input type="tel" class="input" id="storePhone" placeholder="请输入联系电话">
                             </div>
                         </div>
                         <div class="divInput clearfix style">
-                            <div class="w50 w100">
-                                <span class="spanName">会员等级 :</span>
+                            <div class="w50">
+                                <span class="spanName">商品分类 :</span>
                                 <div class="divSelect style styles">
                                     <select name="">
                                         <option value="请选择省">请选择省</option>
@@ -345,26 +322,7 @@
                                             <i class="fa fa-caret-down"></i>
                                         </span>
                                 </div>
-                                <div class="divSelect style styles">
-                                    <select name="">
-                                        <option value="请选择市">请选择市</option>
-                                        <option value="广安市">广安市</option>
-                                    </select>
-                                    <span class="h1"></span>
-                                        <span class="spanSelect">
-                                            <i class="fa fa-caret-down"></i>
-                                        </span>
-                                </div>
-                                <div class="divSelect style styles">
-                                    <select name="">
-                                        <option value="请选择县">请选择县</option>
-                                        <option value="武胜县">武胜县</option>
-                                    </select>
-                                    <span class="h1"></span>
-                                        <span class="spanSelect">
-                                            <i class="fa fa-caret-down"></i>
-                                        </span>
-                                </div>
+
                             </div>
 
                         </div>
@@ -465,8 +423,7 @@
                 heightAuto();
             });
 
-            //查看商品
-            var lookShop = $(".lookShop");
+
 
 
 
