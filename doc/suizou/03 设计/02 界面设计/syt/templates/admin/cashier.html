@@ -1,0 +1,485 @@
+<!DOCTYPE html>
+<html>
+<head lang="en">
+    <meta charset="UTF-8">
+    <title>收银</title>
+    <link rel="stylesheet" href="../../assets/admin/css/global.css"/>
+    <link rel="stylesheet" href="../../assets/global/plugins/font/css/font-awesome.css"/>
+</head>
+<body>
+    <div class="wrapper">
+
+        <!--头部开始-->
+        <div class="head">
+            <div class="headMain">
+                <img src="../../assets/admin/images/logo.png" alt="" class="logo"/>
+                <ul class="clearfix navMeun">
+                    <li>
+                        <a href="###">
+                            工作台
+                        </a>
+                    </li>
+                    <li class="li active">
+                        <a href="###">
+                            收银
+                        </a>
+                    </li>
+                    <li>
+                        <a href="###">
+                            会员
+                        </a>
+                    </li>
+                    <li>
+                        <a href="###">
+                            员工
+                        </a>
+                    </li>
+                    <li class="li">
+                        <a href="###">
+                            库存
+                        </a>
+                    </li>
+                    <li class="li">
+                        <a href="###">
+                            财务
+                        </a>
+                    </li>
+                    <li>
+                        <a href="###">
+                            线上商铺
+                        </a>
+                    </li>
+                </ul>
+                <div class="right">
+                    <div class="divSelect">
+                        <select name="" id="">
+                            <option value="分店一">分店一是谁所生</option>
+                            <option value="分店二">分店二</option>
+                        </select>
+                        <span class="h1"></span>
+                                <span class="spanSelect">
+                                    <i class="fa fa-caret-down"></i>
+                                </span>
+                    </div>
+                    <div class="relative inBlock">
+                        <a>
+                            <i class="fa fa-user"></i><br>
+                            工号242
+                        </a>
+                        <ul class="account-selection hide">
+                            <li>
+                                <a href="accountSetting.html" class="companyInfors">
+                                    <i class="fa fa-gear"></i>
+                                    账号设置
+                                </a>
+                            </li>
+                            <li class="signOut">
+                                <a href="login.html">
+                                    <i class="fa fa-power-off"></i>
+                                    退出登录
+                                </a>
+                            </li>
+                        </ul>
+                    </div>
+                </div>
+                <div class="linkDiv hide">
+                    <ul class="navMeuns navMeun1  clearfix">
+                        <li ><a href="###">收银台</a></li>
+                        <li><a href="###">退款</a></li>
+                        <li><a href="###">收银明细</a></li>
+                    </ul>
+
+                </div>
+                <div class="linkDiv hide">
+
+                    <ul class="navMeuns navMeun2  clearfix">
+                        <li><a href="###">进货/报损</a></li>
+                        <li><a href="###">商品管理</a></li>
+                        <li><a href="###">供货商品管理</a></li>
+                        <li><a href="###">库存流水</a></li>
+                    </ul>
+
+                </div>
+                <div class="linkDiv hide">
+
+                    <ul class="navMeuns navMeun3 clearfix">
+                        <li><a href="###">营业流水</a></li>
+                        <li><a href="###">充值记录</a></li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+        <!--头部结束-->
+
+        <!--内容开始-->
+        <div class="content">
+            <div class="contentMain">
+                <div class="conHead clearfix">
+                    <div class="left shopTitle">
+                        <img src="../../assets/admin/images/kcInfor.png" alt=""> 商品信息
+                    </div>
+                    <button class="right btnAdd mr0">+添加商品</button>
+                </div>
+                <div class="recordContent">
+
+                    <!--商品信息数据开始-->
+                    <table class="recordTable ">
+                        <thead>
+                        <tr>
+                            <th><span>商品条码</span></th>
+                            <th><span>商品名称</span></th>
+                            <th><span>分类</span></th>
+                            <th><span>进货价</span></th>
+                            <th><span>销售价</span></th>
+                            <th><span>供货商</span></th>
+                            <th><span>数量</span></th>
+                            <th><span>小计</span></th>
+                            <th><span>操作</span></th>
+                        </tr>
+                        </thead>
+                        <tbody class="">
+                            <tr>
+                                <td>
+                                    43565656
+                                </td>
+                                <td>
+                                    水果饼干(50g)
+                                </td>
+                                <td>
+                                    食物
+                                </td>
+                                <td>
+                                    5.00
+                                </td>
+                                <td>
+                                    5.00
+                                </td>
+                                <td>
+                                    请选择
+                                </td>
+                                <td>
+                                    <a class="num">
+                                        <span class="minus"></span>
+                                        <input type="text" class="buycount" value="1" maxlength="3"/>
+                                        <span class="plus" ></span>
+                                    </a>
+                                </td>
+                                <td>
+                                    8.00
+                                </td>
+                                <td>
+
+                                    <!--查看商品开始-->
+                                    <a class="spanShop lookShop">
+                                        <i class="fa fa-eye"></i>
+                                        查看
+                                    </a> |
+                                    <!--查看商品结束-->
+
+                                    <!--删除商品开始-->
+                                    <a class="spanOnwork deleteStore">
+                                        <i class="fa fa-trash"></i>
+                                        删除
+                                    </a>
+                                    <!--删除商品结束-->
+
+                                </td>
+                            </tr>
+                            <tr>
+                                <td>
+                                    43565656
+                                </td>
+                                <td>
+                                    水果饼干(50g)
+                                </td>
+                                <td>
+                                    食物
+                                </td>
+                                <td>
+                                    5.00
+                                </td>
+                                <td>
+                                    5.00
+                                </td>
+                                <td>
+                                    请选择
+                                </td>
+                                <td>
+                                    <a class="num">
+                                        <span class="minus"></span>
+                                        <input type="text" class="buycount" value="1" maxlength="3"/>
+                                        <span class="plus" ></span>
+                                    </a>
+                                </td>
+                                <td>
+                                    8.00
+                                </td>
+                                <td>
+
+                                    <!--删除门店开始-->
+                                    <a class="spanOnwork deleteStore">
+                                        <i class="fa fa-trash"></i>
+                                        删除
+                                    </a>
+                                    <!--删除门店结束-->
+
+                                </td>
+                            </tr>
+                        </tbody>
+                    </table>
+                    <!--商品信息数据结束-->
+
+                    <!--加载无数据提示开始-->
+                    <div class="notDataTips hide">
+                        <img src="../../assets/admin/images/notDataTips.png" alt=""/><br/>
+                        暂无数据
+                    </div>
+                    <!--加载无数据提示结束-->
+
+                    <!--正在加载提示开始-->
+                    <div class="loadingTip hide">
+                        <img src="../../assets/admin/images/loading.jpg" alt=""/><br/>
+                        正在加载,请稍后...
+                    </div>
+                    <!--正在加载提示结束-->
+
+                    <!--分页开始-->
+                    <div class="paging clearfix">
+                        <ul class="page-menu clearfix">
+                            <p class="page-pre" data-pagenum="1"><i class="fa fa-angle-left"></i></p>
+                            <li class="active">1</li>
+                            <li class="liPage">2</li>
+                            <li class="liPage">3</li>
+                            <li class="liPage">4</li>
+                            <li class="liPage">5</li>
+                            <li class="liPage">6</li>
+                            <li class="liPage">7</li>
+                        </ul>
+                        <input type="text" class="page-num" id="pageNumTarget">
+                        <button type="button" class="btn-jump" id="targetButton">跳转</button>
+                        <p class="page-next" data-pagenum="2"><i class="fa fa-angle-right"></i></p>
+                        <input type="hidden" value="447" id="totalPages">
+                    </div>
+                    <!--分页结束-->
+
+                </div>
+            </div>
+        </div>
+        <!--内容开始-->
+
+        <!--商品信息开始-->
+        <div class="shopInfor">
+            <div class="shopInforCon clearfix">
+                <div class="shopModify left">
+                    <div>
+                        <input type="text" placeholder="请输入商品代码或扫描商品条码"><button class="btnModifyShop">查询</button>
+                    </div>
+                    <div>
+                        <button class="btnBs">商品报损</button>
+                    </div>
+                </div>
+                <div class="shopTable left">
+                    <table>
+                        <thead>
+                        <tr>
+                            <th><img src="../../assets/admin/images/k_icon1.png" alt=""> 总入库</th>
+                            <th><img src="../../assets/admin/images/k_icon2.png" alt=""> 总进价</th>
+                            <th><img src="../../assets/admin/images/k_icon3.png" alt=""> 总售价</th>
+                        </tr>
+                        <tr>
+                            <td>5555</td>
+                            <td>56556.21</td>
+                            <td>3232.21</td>
+                        </tr>
+                        </thead>
+                    </table>
+                </div>
+                <div class="shopBtn right">
+                    <button class="btnSubmit mt0">提交</button>
+                </div>
+            </div>
+        </div>
+        <!--商品信息结束-->
+
+        <div class="maskBg hide"></div>
+        <div class="mask hide">
+
+            <!--添加门店弹窗开始-->
+            <form action="###">
+                <div class="dailog addStaffDailog hide">
+                    <div class="dailogHead">
+                        添加门店
+                        <i class="fa fa-remove right"></i>
+                    </div>
+                    <div class="dailogContent">
+                        <div class="divInput clearfix">
+                            <div class="w50">
+                                <span class="spanName">门店ID :</span>
+                                <input type="number" class="input" id="storeId" placeholder="请输入门店ID">
+                            </div>
+                            <div class="w50 last">
+                                <span class="spanName">门店名称 :</span>
+                                <input type="text" class="input" id="storeName" placeholder="请输入门店名称">
+                            </div>
+                        </div>
+                        <div class="divInput clearfix">
+                            <div class="w50">
+                                <span class="spanName">联系人 :</span>
+                                <input type="number" class="input" id="storePerson" placeholder="请输入联系人">
+                            </div>
+                            <div class="w50 last">
+                                <span class="spanName">联系电话 :</span>
+                                <input type="tel" class="input" id="storePhone" placeholder="请输入联系电话">
+                            </div>
+                        </div>
+                        <div class="divInput clearfix style">
+                            <div class="w50 w100">
+                                <span class="spanName">会员等级 :</span>
+                                <div class="divSelect style styles">
+                                    <select name="">
+                                        <option value="请选择省">请选择省</option>
+                                        <option value="北京省">北京省</option>
+                                    </select>
+                                    <span class="h1"></span>
+                                        <span class="spanSelect">
+                                            <i class="fa fa-caret-down"></i>
+                                        </span>
+                                </div>
+                                <div class="divSelect style styles">
+                                    <select name="">
+                                        <option value="请选择市">请选择市</option>
+                                        <option value="广安市">广安市</option>
+                                    </select>
+                                    <span class="h1"></span>
+                                        <span class="spanSelect">
+                                            <i class="fa fa-caret-down"></i>
+                                        </span>
+                                </div>
+                                <div class="divSelect style styles">
+                                    <select name="">
+                                        <option value="请选择县">请选择县</option>
+                                        <option value="武胜县">武胜县</option>
+                                    </select>
+                                    <span class="h1"></span>
+                                        <span class="spanSelect">
+                                            <i class="fa fa-caret-down"></i>
+                                        </span>
+                                </div>
+                            </div>
+
+                        </div>
+                        <div class="divInput clearfix">
+                            <div class="w50 w100">
+                                <span class="spanName top">详细地址 :</span>
+                                <textarea name="" class="textarea" placeholder="请输入详细地址" cols="30" rows="5"></textarea>
+                            </div>
+                        </div>
+                        <div class="divInput clearfix mb0">
+                            <div class="w50 w100">
+                                <span class="spanName top">备注 :</span>
+                                <textarea name="" class="textarea" placeholder="请输入详细地址" cols="30" rows="5"></textarea>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="dailogFoot">
+                        <button class="btnCancel">取消</button>
+                        <button class="btnSure" id="sureAddStaff">保存</button>
+                    </div>
+                </div>
+            </form>
+            <!--添加门店弹窗结束-->
+
+            <!--删除门店弹窗开始-->
+            <div class="dailog dismissStaffDailog hide style">
+                <div class="dailogHead">
+                    确认删除该商品信息
+                    <i class="fa fa-remove right"></i>
+                </div>
+                <div class="dailogContent center">
+                    <p class="fs16">该商品信息后，将无法查看该商品信息，确认删除该商品信息？</p>
+                </div>
+                <div class="dailogFoot">
+                    <button class="btnCancel">取消</button>
+                    <button class="btnSure" id="sureDeleteStaff">确认</button>
+                </div>
+            </div>
+            <!--删除门店弹窗结束-->
+
+        </div>
+    </div>
+    <script src="../../assets/global/plugins/jquery/jquery-1.11.3.min.js"></script>
+    <script src="../../assets/global/plugins/My97DatePicker/WdatePicker.js"></script>
+    <script src="../../assets/admin/js/common-validate.js"></script>
+    <script src="../../assets/admin/js/global.js"></script>
+    <script src="../../assets/admin/js/tips.js"></script>
+    <script src="../../assets/admin/js/spinner.js"></script>
+    <script>
+        $(function () {
+            /*数量选择*/
+            $('.num').spinner({});
+
+
+            //添加员工
+            var mbm = $(".mask,.maskBg");
+            var btnAdd = $(".btnAdd");
+            var addStaffDailog = $(".addStaffDailog");
+            btnAdd.on("click",function () {
+                mbm.removeClass("hide");
+                addStaffDailog.removeClass("hide").addClass("shake");
+                heightAuto();
+            });
+
+
+
+
+            /*单窗居中*/
+            function heightAuto(){
+                var dailog = $(".dailog");
+                dailog.each(function(){
+                    var ht = -$(this).outerHeight(true)/2 + "px";
+                    $(this).get(0).style.marginTop = ht;
+                });
+            }
+
+            /*弹窗影藏*/
+            function noneDailog(obj){
+                obj.closest(".dailog").addClass("hide").removeClass("shake");
+                obj.closest(".mask").addClass("hide");
+                obj.closest(".mask").prev(".maskBg").addClass("hide");
+                $(".dailog").get(0).style.marginTop = 0;
+            }
+
+            $(".mask").delegate(".fa-remove,.btnCancel","click",function(){
+                noneDailog($(this));
+            });
+
+
+            //商品信息删除
+            var mbm = $(".mask,.maskBg");
+            var deleteStore = $(".deleteStore");
+            var dismissStaffDailog = $(".dismissStaffDailog");
+            deleteStore.on("click",function () {
+                mbm.removeClass("hide");
+                dismissStaffDailog.removeClass("hide").addClass("shake");
+                $(this).closest("tr").addClass("sureDelete");
+                heightAuto();
+            });
+
+            //查看商品
+            var lookShop = $(".lookShop");
+
+
+
+            //确认门店删除
+
+            var sureDeleteStaff = $("#sureDeleteStaff");
+            sureDeleteStaff.on("click",function () {
+                noneDailog($(this));
+                $(".sureDelete").remove();
+                $(".dailog").get(0).style.marginTop = 0;
+            });
+
+        })
+    </script>
+</body>
+</html>
