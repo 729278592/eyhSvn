@@ -39,8 +39,11 @@ $(function () {
 
 
     /*分页居中*/
-    var ml = ($(".paging").outerWidth()+$(".page-num").outerWidth()+$(".btn-jump").outerWidth())/2;
-    $(".paging").get(0).style.marginLeft = -ml+"px";
+    if($(".paging").get(0)){
+        var ml = ($(".paging").outerWidth()+$(".page-num").outerWidth()+$(".btn-jump").outerWidth())/2;
+        $(".paging").get(0).style.marginLeft = -ml+"px";
+    }
+
 
     //兼容IE8
     function getIE(){

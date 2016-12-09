@@ -16,7 +16,7 @@ textarea,select,input,button{outline: none;border: none;font-family: "微软雅�
 a:link{text-decoration: none;}
 body{background: #edeeee;}
 .wrapper{width: 100%;position: relative;min-width: 1120px;}
-.content{width: 100%;margin-top: 50px;}
+.content{width: 100%;margin-top: 20px;}
 .center{width: 1024px;margin: 0 auto;}
 
 
@@ -433,7 +433,7 @@ body{background: #edeeee;}
 .inBlock .account-selection li.signOut a{
     color: #e75f49;
 }
-.linkDiv{background: #fff;position: absolute;top: 60px;left: 0;height: 40px;width: 100%;}
+.linkDiv{background: #fff;position: absolute;top: 60px;left: 0;height: 40px;width: 100%;z-index: 100;}
 .navMeuns{height: 40px;position: absolute;  line-height: 40px;}
 .navMeuns li{    float: left;
     margin: 0 0 0 28px;
