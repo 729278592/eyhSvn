@@ -2,7 +2,7 @@
 <html>
 <head lang="en">
     <meta charset="UTF-8">
-    <title>收银</title>
+    <title>收银详情</title>
     <link rel="stylesheet" href="../../assets/admin/plugins/switch/lc_switch.css"/>
     <link rel="stylesheet" href="../../assets/admin/css/global.css"/>
     <link rel="stylesheet" href="../../assets/global/plugins/font/css/font-awesome.css"/>
@@ -58,9 +58,9 @@
                             <option value="分店二">分店二</option>
                         </select>
                         <span class="h1"></span>
-                                <span class="spanSelect">
-                                    <i class="fa fa-caret-down"></i>
-                                </span>
+                                    <span class="spanSelect">
+                                        <i class="fa fa-caret-down"></i>
+                                    </span>
                     </div>
                     <div class="relative inBlock">
                         <a>
@@ -114,190 +114,225 @@
 
         <!--内容开始-->
         <div class="content">
-            <div class="contentMain">
-                <div class="conHead clearfix">
-                    <div class="left shopTitle">
-                        <img src="../../assets/admin/images/kcInfor.png" alt=""> 商品信息
+            <div class="contentMain clearfix">
+
+                <div class="left conLeft">
+                    <div class="conLeftHead">
+                        <input type="text" placeholder="请输入订单号或会员手机号">
+                        <button type="button" class="btnModifyShop">搜索</button>
                     </div>
-                    <button class="right btnAdd mr0">+添加商品</button>
+                    <div class="conLeftCon">
+                        <ul class="cashList">
+                            <li>
+                                <p class="clearfix">
+                                    <span class="left orderNum">1545454545</span>
+                                    <span class="right money">380.00</span>
+                                </p>
+                                <p class="clearfix">
+                                    <span class="left mobile">1545454545</span>
+                                    <span class="right time">2016-11-24 15:02 : 13</span>
+                                </p>
+                            </li>
+                            <li class="active">
+                                <p class="clearfix">
+                                    <span class="left orderNum">1545454545</span>
+                                    <span class="right money">380.00</span>
+                                </p>
+                                <p class="clearfix">
+                                    <span class="left mobile">1545454545</span>
+                                    <span class="right time">2016-11-24 15:02 : 13</span>
+                                </p>
+                            </li>
+                            <li>
+                                <p class="clearfix">
+                                    <span class="left orderNum">1545454545</span>
+                                    <span class="right money">380.00</span>
+                                </p>
+                                <p class="clearfix">
+                                    <span class="left mobile">1545454545</span>
+                                    <span class="right time">2016-11-24 15:02 : 13</span>
+                                </p>
+                            </li>
+                        </ul>
+                    </div>
                 </div>
-                <div class="recordContent">
-
-                    <!--商品信息数据开始-->
-                    <table class="recordTable ">
-                        <thead>
-                        <tr>
-                            <th><span>商品条码</span></th>
-                            <th><span>商品名称</span></th>
-                            <th><span>分类</span></th>
-                            <th><span>进货价</span></th>
-                            <th><span>销售价</span></th>
-                            <th width="20%"><span>供货商</span></th>
-                            <th width="15%"><span>数量</span></th>
-                            <th><span>小计</span></th>
-                            <th><span>操作</span></th>
-                        </tr>
-                        </thead>
-                        <tbody class="">
-                            <tr>
-                                <td>
-                                    43565656
-                                </td>
-                                <td>
-                                    水果饼干(50g)
-                                </td>
-                                <td>
-                                    食物
-                                </td>
-                                <td>
-                                    5.00
-                                </td>
-                                <td>
-                                    5.00
-                                </td>
-                                <td>
-                                    请选择
-                                </td>
-                                <td>
-                                    <a class="num">
-                                        <span class="minus"></span>
-                                        <input type="text" class="buycount" value="1" maxlength="3"/>
-                                        <span class="plus" ></span>
-                                    </a>
-                                </td>
-                                <td>
-                                    8.00
-                                </td>
-                                <td>
-
-
-                                    <!--删除商品开始-->
-                                    <a class="spanOnwork deleteStore">
-                                        <i class="fa fa-trash"></i>
-                                        删除
-                                    </a>
-                                    <!--删除商品结束-->
-
-                                </td>
-                            </tr>
-                            <tr>
-                                <td>
-                                    43565656
-                                </td>
-                                <td>
-                                    水果饼干(50g)
-                                </td>
-                                <td>
-                                    食物
-                                </td>
-                                <td>
-                                    5.00
-                                </td>
-                                <td>
-                                    5.00
-                                </td>
-                                <td>
-                                    请选择
-                                </td>
-                                <td>
-                                    <a class="num">
-                                        <span class="minus"></span>
-                                        <input type="text" class="buycount" value="1" maxlength="3"/>
-                                        <span class="plus" ></span>
-                                    </a>
-                                </td>
-                                <td>
-                                    8.00
-                                </td>
-                                <td>
-
-                                    <!--删除门店开始-->
-                                    <a class="spanOnwork deleteStore">
-                                        <i class="fa fa-trash"></i>
-                                        删除
-                                    </a>
-                                    <!--删除门店结束-->
-
-                                </td>
-                            </tr>
-                            <tr>
-                                <td></td>
-                                <td></td>
-                                <td></td>
-                                <td></td>
-                                <td></td>
-                                <td></td>
-                                <td></td>
-                                <td></td>
-                                <td></td>
-                            </tr>
-                            <tr>
-                                <td></td>
-                                <td></td>
-                                <td></td>
-                                <td></td>
-                                <td></td>
-                                <td></td>
-                                <td></td>
-                                <td></td>
-                                <td></td>
-                            </tr>
-                        </tbody>
-                    </table>
-                    <!--商品信息数据结束-->
-
-                    <!--加载无数据提示开始-->
-                    <div class="notDataTips hide">
-                        <img src="../../assets/admin/images/notDataTips.png" alt=""/><br/>
-                        暂无数据
+                <div class="right conRight">
+                    <div class="conRightHead">
+                        <p class="clearfix">
+                            <span class="name left">会员姓名 : 张三</span>
+                            <span class="money right">总金额 : 380.00</span>
+                        </p>
+                        <p class="clearfix">
+                            <span class="totalNum right">共13件</span>
+                        </p>
+                        <p class="clearfix">
+                            <span class="mobile left">会员手机 : 13654679798</span>
+                            <span class="time right">2016-11-24 15:30:03</span>
+                        </p>
                     </div>
-                    <!--加载无数据提示结束-->
+                    <div class="conRightCon">
+                        <div class="recordContent">
+                            <table class="recordTable ">
+                                <thead>
+                                <tr>
+                                    <th><span>员工号</span></th>
+                                    <th><span>姓名</span></th>
+                                    <th><span>手机</span></th>
+                                    <th><span>店铺</span></th>
+                                    <th><span>状态</span></th>
+                                    <th><span>操作</span></th>
+                                </tr>
+                                </thead>
+                                <tbody class="">
+                                <tr class="notOn">
+                                    <td>
+                                        43565656
+                                    </td>
+                                    <td>
+                                        程陈
+                                    </td>
+                                    <td>
+                                        15678787856
+                                    </td>
+                                    <td>
+                                        袁家岗分店一
+                                    </td>
+                                    <td>
+                                        启用
+                                    </td>
+                                    <td>
 
-                    <!--正在加载提示开始-->
-                    <div class="loadingTip hide">
-                        <img src="../../assets/admin/images/loading.jpg" alt=""/><br/>
-                        正在加载,请稍后...
+                                        <!--离职状态开始-->
+                                    <span class="spanOnwork hide notWork">
+                                        <img src="../../assets/admin/images/onWork.png" alt="">
+                                        离职
+                                    </span>
+                                    <span class="spanNotOnwork ">
+                                        <img src="../../assets/admin/images/notWork.png" alt="">
+                                        已离职
+                                    </span>
+                                        <!--离职状态结束-->
+
+                                    </td>
+                                </tr>
+                                <tr>
+                                    <td>
+                                        43565656
+                                    </td>
+                                    <td>
+                                        程陈
+                                    </td>
+                                    <td>
+                                        15678787856
+                                    </td>
+                                    <td>
+                                        袁家岗分店一
+                                    </td>
+                                    <td>
+                                        启用
+                                    </td>
+                                    <td>
+
+                                        <!--离职状态开始-->
+                                    <span class="spanOnwork notWork">
+                                        <img src="../../assets/admin/images/onWork.png" alt="">
+                                        离职
+                                    </span>
+                                    <span class="spanNotOnwork hide">
+                                        <img src="../../assets/admin/images/notWork.png" alt="">
+                                        已离职
+                                    </span>
+                                        <!--离职状态结束-->
+
+                                    </td>
+                                </tr>
+                                <tr>
+                                    <td>
+                                        43565656
+                                    </td>
+                                    <td>
+                                        程陈
+                                    </td>
+                                    <td>
+                                        15678787856
+                                    </td>
+                                    <td>
+                                        袁家岗分店一
+                                    </td>
+                                    <td>
+                                        启用
+                                    </td>
+                                    <td>
+
+                                        <!--离职状态开始-->
+                                    <span class="spanOnwork notWork">
+                                        <img src="../../assets/admin/images/onWork.png" alt="">
+                                        离职
+                                    </span>
+                                    <span class="spanNotOnwork hide">
+                                        <img src="../../assets/admin/images/notWork.png" alt="">
+                                        已离职
+                                    </span>
+                                        <!--离职状态结束-->
+
+                                    </td>
+                                </tr>
+                                <tr>
+                                    <td>
+                                        43565656
+                                    </td>
+                                    <td>
+                                        程陈
+                                    </td>
+                                    <td>
+                                        15678787856
+                                    </td>
+                                    <td>
+                                        袁家岗分店一
+                                    </td>
+                                    <td>
+                                        启用
+                                    </td>
+                                    <td>
+
+                                        <!--离职状态开始-->
+                                    <span class="spanOnwork notWork">
+                                        <img src="../../assets/admin/images/onWork.png" alt="">
+                                        离职
+                                    </span>
+                                    <span class="spanNotOnwork hide">
+                                        <img src="../../assets/admin/images/notWork.png" alt="">
+                                        已离职
+                                    </span>
+                                        <!--离职状态结束-->
+
+                                    </td>
+                                </tr>
+                                </tbody>
+                            </table>
+
+                            <!--加载无数据提示开始-->
+                            <div class="notDataTips hide">
+                                <img src="../../assets/admin/images/notDataTips.png" alt=""/><br/>
+                                暂无数据
+                            </div>
+                            <!--加载无数据提示结束-->
+
+                            <!--正在加载提示开始-->
+                            <div class="loadingTip hide">
+                                <img src="../../assets/admin/images/loading.jpg" alt=""/><br/>
+                                正在加载,请稍后...
+                            </div>
+                            <!--正在加载提示结束-->
+                        </div>
                     </div>
-                    <!--正在加载提示结束-->
-
                 </div>
+
             </div>
         </div>
         <!--内容开始-->
 
-        <!--商品信息开始-->
-        <div class="shopInfor">
-            <div class="shopInforCon clearfix">
-                <div class="shopModify left">
-                    <div>
-                        <input type="text" placeholder="请输入商品代码或扫描商品条码"><button type="button" class="btnModifyShop">查询</button>
-                    </div>
-                    <div>
-                        <button class="btnBs">商品报损</button>
-                    </div>
-                </div>
-                <div class="shopTable left">
-                    <table>
-                        <thead>
-                        <tr>
-                            <th><img src="../../assets/admin/images/k_icon1.png" alt=""> 总入库</th>
-                            <th><img src="../../assets/admin/images/k_icon2.png" alt=""> 总进价</th>
-                            <th><img src="../../assets/admin/images/k_icon3.png" alt=""> 总售价</th>
-                        </tr>
-                        <tr>
-                            <td>5555</td>
-                            <td>56556.21</td>
-                            <td>3232.21</td>
-                        </tr>
-                        </thead>
-                    </table>
-                </div>
-                <div class="shopBtn right">
-                    <button class="btnSubmit mt0">提交</button>
-                </div>
-            </div>
-        </div>
-        <!--商品信息结束-->
+
 
         <div class="maskBg hide"></div>
         <div class="mask hide">
@@ -339,9 +374,9 @@
                                         <option value="商品分类一">商品分类一</option>
                                     </select>
                                     <span class="h1"></span>
-                                        <span class="spanSelect">
-                                            <i class="fa fa-caret-down"></i>
-                                        </span>
+                                            <span class="spanSelect">
+                                                <i class="fa fa-caret-down"></i>
+                                            </span>
                                 </div>
                             </div>
                             <div class="w50 last">
@@ -368,9 +403,9 @@
                                             <option value="供货商一">供货商一</option>
                                         </select>
                                         <span class="h1"></span>
-                                        <span class="spanSelect">
-                                            <i class="fa fa-caret-down"></i>
-                                        </span>
+                                            <span class="spanSelect">
+                                                <i class="fa fa-caret-down"></i>
+                                            </span>
                                     </div>
                                 </div>
                             </div>
