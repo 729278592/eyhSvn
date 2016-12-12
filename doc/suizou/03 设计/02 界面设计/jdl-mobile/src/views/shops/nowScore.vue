@@ -32,7 +32,7 @@
 
         <div v-if="returnList.type==1">
           <p class="clearfix">
-            <span class="time">积分补足</span>
+            <span class="time">积分赠送</span>
           </p>
 
           <p class="clearfix">
