@@ -298,9 +298,9 @@
                                 <input type="tel" class="input" id="storePhone" placeholder="请输入联系电话">
                             </div>
                         </div>
-                        <div class="divInput clearfix style">
+                        <div class="divInput clearfix style w180">
                             <div class="w50 w100">
-                                <span class="spanName">会员等级 :</span>
+                                <span class="spanName">门店地址 :</span>
                                 <div class="divSelect style styles">
                                     <select name="">
                                         <option value="请选择省">请选择省</option>
@@ -373,11 +373,13 @@
 
         </div>
     </div>
+
     <script src="../../assets/global/plugins/jquery/jquery-1.11.3.min.js"></script>
-    <script src="../../assets/global/plugins/My97DatePicker/WdatePicker.js"></script>
-    <script src="../../assets/admin/js/common-validate.js"></script>
-    <script src="../../assets/admin/js/global.js"></script>
-    <script src="../../assets/admin/js/tips.js"></script>
+    <script src="../../assets/global/plugins/My97DatePicker/WdatePicker.js"></script>  <!--日历插件-->
+    <script src="../../assets/admin/js/common-validate.js"></script> <!--表单验证提示-->
+    <script src="../../assets/admin/js/global.js"></script> <!--通用js-->
+    <script src="../../assets/admin/js/tips.js"></script> <!--操作后状态提示-失败或者成功-->
+
     <script>
         $(function () {
 
@@ -449,12 +451,14 @@
 
 
             //确认门店删除
-
+            var dailog = $(".dailog");
+            var mbm = $(".mask,.maskBg");
             var sureDeleteStaff = $("#sureDeleteStaff");
             sureDeleteStaff.on("click",function () {
-                noneDailog($(this));
+                dailog.addClass("hide").removeClass("shake");
+                mbm.addClass("hide");
+                dailog.get(0).style.marginTop = 0;
                 $(".sureDelete").remove();
-                $(".dailog").get(0).style.marginTop = 0;
             });
 
         })
