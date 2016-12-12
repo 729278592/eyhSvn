@@ -67,8 +67,8 @@
 
 /* on */
 .lcs_switch.lcs_on {
-	background: #75b936;
-    box-shadow: 0 0 2px #579022 inset;
+	background: #02abdf;
+    box-shadow: 0 0 2px #02abdf inset;
 }
 .lcs_switch.lcs_on .lcs_cursor {
 	left: 48px;

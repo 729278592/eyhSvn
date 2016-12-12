@@ -1,0 +1,617 @@
+<!DOCTYPE html>
+<html>
+<head lang="en">
+    <meta charset="UTF-8">
+    <title>库存管理-入库记录</title>
+    <link rel="stylesheet" href="../../assets/admin/css/global.css"/>
+    <link rel="stylesheet" href="../../assets/global/plugins/font/css/font-awesome.css"/>
+</head>
+<body>
+    <div class="wrapper">
+
+        <!--头部开始-->
+        <div class="head">
+            <div class="headMain">
+                <img src="../../assets/admin/images/logo.png" alt="" class="logo"/>
+                <ul class="clearfix navMeun">
+                    <li>
+                        <a href="index.html">
+                            工作台
+                        </a>
+                    </li>
+                    <li class="li">
+                        <a href="###">
+                            收银
+                        </a>
+                    </li>
+                    <li class="active">
+                        <a href="###">
+                            会员
+                        </a>
+                    </li>
+                    <li>
+                        <a href="###">
+                            员工
+                        </a>
+                    </li>
+                    <li class="li">
+                        <a href="###">
+                            库存
+                        </a>
+                    </li>
+                    <li class="li">
+                        <a href="###">
+                            财务
+                        </a>
+                    </li>
+                    <li>
+                        <a href="###">
+                            线上商铺
+                        </a>
+                    </li>
+                </ul>
+                <div class="right">
+                    <div class="divSelect">
+                        <select name="" id="">
+                            <option value="分店一">分店一是谁所生</option>
+                            <option value="分店二">分店二</option>
+                        </select>
+                        <span class="h1"></span>
+                        <span class="spanSelect">
+                                <i class="fa fa-caret-down"></i>
+                            </span>
+                    </div>
+                    <div class="relative inBlock">
+                        <a>
+                            <i class="fa fa-user"></i><br>
+                            工号242
+                        </a>
+                        <ul class="account-selection hide">
+                            <li>
+                                <a href="accountSetting.html" class="companyInfors">
+                                    <i class="fa fa-gear"></i>
+                                    账号设置
+                                </a>
+                            </li>
+                            <li class="signOut">
+                                <a href="login.html">
+                                    <i class="fa fa-power-off"></i>
+                                    退出登录
+                                </a>
+                            </li>
+                        </ul>
+                    </div>
+                </div>
+                <div class="linkDiv hide">
+                    <ul class="navMeuns navMeun1  clearfix">
+                        <li ><a href="###">收银台</a></li>
+                        <li><a href="###">退款</a></li>
+                        <li><a href="###">收银明细</a></li>
+                    </ul>
+
+                </div>
+                <div class="linkDiv hide">
+
+                    <ul class="navMeuns navMeun2  clearfix">
+                        <li><a href="###">进货/报损</a></li>
+                        <li><a href="###">商品管理</a></li>
+                        <li><a href="###">供货商品管理</a></li>
+                        <li><a href="###">库存流水</a></li>
+                    </ul>
+
+                </div>
+                <div class="linkDiv hide">
+
+                    <ul class="navMeuns navMeun3 clearfix">
+                        <li><a href="###">营业流水</a></li>
+                        <li><a href="###">充值记录</a></li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+        <!--头部结束-->
+
+        <!--内容开始-->
+        <div class="content">
+            <div class="contentMain">
+                <div class="conHead clearfix">
+
+                    <button class="right btnModify">查询</button>
+                    <div class="right doubleTime">
+                        <div class="div-wdate left">
+                            <input id="start" class="Wdate" type="text" placeholder="2015-4-4" onFocus="WdatePicker({minDate:'%y-%M-{%d}',maxDate:'#F{$dp.$D(\'end\')}'})"/>
+                            <span class="h1"></span>
+                            <i class="fa fa-calendar"></i>
+                        </div>
+                        <span class="left timeTo">至</span>
+                        <div class="div-wdate left">
+
+                            <input id="end" class="Wdate" type="text" placeholder="2015-4-4" onFocus="WdatePicker({minDate:'#F{$dp.$D(\'start\')||\'%y-%M-{%d+1}\'}'})"/>
+                            <span class="h1"></span>
+                            <i class="fa fa-calendar"></i>
+                        </div>
+                    </div>
+                    <div class="divSelect style right mr20">
+                        <select name="">
+                            <option value="全部">全部</option>
+                            <option value="进货">进货</option>
+                            <option value="退货">退货</option>
+                            <option value="销售">销售</option>
+                            <option value="报损">报损</option>
+                        </select>
+                        <span class="h1"></span>
+                        <span class="spanSelect">
+                            <i class="fa fa-caret-down"></i>
+                        </span>
+                    </div>
+                </div>
+                <div class="recordContent">
+                    <table class="recordTable ">
+                        <thead>
+                        <tr>
+                            <th><span>库存流水号</span></th>
+                            <th><span>类型</span></th>
+                            <th><span>数量</span></th>
+                            <th><span>操作时间</span></th>
+                            <th><span>操作人</span></th>
+                            <th><span>备注</span></th>
+                            <th><span>操作</span></th>
+                        </tr>
+                        </thead>
+                        <tbody class="">
+                        <tr>
+                            <td>
+                                4356565556
+                            </td>
+                            <td>
+                                库存进库
+                            </td>
+                            <td>
+                                20
+                            </td>
+                            <td>
+                                2015-11-27 15:15:15
+                            </td>
+                            <td>
+                                1001(张三)
+                            </td>
+                            <td>
+                                进货单 : 2265656
+                            </td>
+
+                            <td>
+
+                                <!--查看订单信息开始-->
+                                <a class="spanLook lookOrder">
+                                    <i class="fa fa-eye"></i>
+                                    查看
+                                </a>
+                                <!--查看订单信息结束-->
+
+                            </td>
+                        </tr>
+                        <tr>
+                            <td>
+                                4356565556
+                            </td>
+                            <td>
+                                库存进库
+                            </td>
+                            <td>
+                                20
+                            </td>
+                            <td>
+                                2015-11-27 15:15:15
+                            </td>
+                            <td>
+                                1001(张三)
+                            </td>
+                            <td>
+                                进货单 : 2265656
+                            </td>
+
+                            <td>
+
+                                <!--查看订单信息开始-->
+                                <a class="spanLook lookOrder">
+                                    <i class="fa fa-eye"></i>
+                                    查看
+                                </a>
+                                <!--查看订单信息结束-->
+
+                            </td>
+                        </tr>
+                        <tr>
+                            <td></td>
+                            <td></td>
+                            <td></td>
+                            <td></td>
+                            <td></td>
+                            <td></td>
+                            <td></td>
+                        </tr>
+                        <tr>
+                            <td></td>
+                            <td></td>
+                            <td></td>
+                            <td></td>
+                            <td></td>
+                            <td></td>
+                            <td></td>
+                        </tr>
+                        <tr>
+                            <td></td>
+                            <td></td>
+                            <td></td>
+                            <td></td>
+                            <td></td>
+                            <td></td>
+                            <td></td>
+                        </tr>
+                        <tr>
+                            <td></td>
+                            <td></td>
+                            <td></td>
+                            <td></td>
+                            <td></td>
+                            <td></td>
+                            <td></td>
+                        </tr>
+                        <tr>
+                            <td></td>
+                            <td></td>
+                            <td></td>
+                            <td></td>
+                            <td></td>
+                            <td></td>
+                            <td></td>
+                        </tr>
+                        <tr>
+                            <td></td>
+                            <td></td>
+                            <td></td>
+                            <td></td>
+                            <td></td>
+                            <td></td>
+                            <td></td>
+                        </tr>
+                        </tbody>
+                    </table>
+
+                    <!--加载无数据提示开始-->
+                    <div class="notDataTips hide">
+                        <img src="../../assets/admin/images/notDataTips.png" alt=""/><br/>
+                        暂无数据
+                    </div>
+                    <!--加载无数据提示结束-->
+
+                    <!--正在加载提示开始-->
+                    <div class="loadingTip hide">
+                        <img src="../../assets/admin/images/loading.jpg" alt=""/><br/>
+                        正在加载,请稍后...
+                    </div>
+                    <!--正在加载提示结束-->
+
+                    <!--分页开始-->
+                    <div class="paging clearfix">
+                        <ul class="page-menu clearfix">
+                            <p class="page-pre" data-pagenum="1"><i class="fa fa-angle-left"></i></p>
+                            <li class="active">1</li>
+                            <li class="liPage">2</li>
+                            <li class="liPage">3</li>
+                            <li class="liPage">4</li>
+                            <li class="liPage">5</li>
+                            <li class="liPage">6</li>
+                            <li class="liPage">7</li>
+                        </ul>
+                        <input type="text" class="page-num" id="pageNumTarget">
+                        <button type="button" class="btn-jump" id="targetButton">跳转</button>
+                        <p class="page-next" data-pagenum="2"><i class="fa fa-angle-right"></i></p>
+                        <input type="hidden" value="447" id="totalPages">
+                    </div>
+                    <!--分页结束-->
+
+                </div>
+            </div>
+        </div>
+        <!--内容开始-->
+
+        <!--订单信息开始-->
+        <div class="shopInfor ordersInfor">
+            <div class="shopInforCon clearfix">
+                <ul class="clearfix orderMenuInfor">
+                    <li>
+                        <p>总单数 : 98单</p>
+                    </li>
+                    <li>
+                        <p>商品件数 : 555</p>
+                    </li>
+                    <li>
+                        <p>总成本 : 3333</p>
+                    </li>
+                    <li class="br0">
+                        <p>总收益 : 355.00</p>
+                        <p>微信支付 : 425.00</p>
+                    </li>
+                </ul>
+            </div>
+        </div>
+        <!--订单信息结束-->
+
+        <div class="maskBg hide"></div>
+        <div class="mask hide">
+
+
+
+            <!--辞退员工弹窗开始-->
+            <div class="dailog orderInforDailog hide w900">
+                <div class="dailogHead ">
+                    <i class="fa fa-remove right"></i>
+                    商品信息
+                </div>
+                <div class="dailogContent style">
+                    <div class="recordContent">
+                        <div class="recordDiv">
+                            <table class="recordTable ">
+                                <thead>
+                                <tr>
+                                    <td><span>商品条码</span></td>
+                                    <td><span>商品名称</span></td>
+                                    <td><span>分类</span></td>
+                                    <td><span>进货价</span></td>
+                                    <td><span>销售价</span></td>
+                                    <td><span>供货商</span></td>
+                                    <td><span>库存变化</span></td>
+                                    <td><span>小计</span></td>
+                                </tr>
+                                </thead>
+                                <tbody class="">
+                                <tr>
+                                    <td>
+                                        55555
+                                    </td>
+                                    <td>
+                                        水果饼干(50g)
+                                    </td>
+                                    <td>
+                                        食品
+                                    </td>
+                                    <td>
+                                        5.00
+                                    </td>
+                                    <td>
+                                        8.00
+                                    </td>
+                                    <td>
+                                        ---
+                                    </td>
+                                    <td>
+                                        2
+                                    </td>
+                                    <td>
+                                        8.00
+                                    </td>
+                                </tr>
+                                <tr>
+                                    <td>
+                                        55555
+                                    </td>
+                                    <td>
+                                        水果饼干(50g)
+                                    </td>
+                                    <td>
+                                        食品
+                                    </td>
+                                    <td>
+                                        5.00
+                                    </td>
+                                    <td>
+                                        8.00
+                                    </td>
+                                    <td>
+                                        ---
+                                    </td>
+                                    <td>
+                                        2
+                                    </td>
+                                    <td>
+                                        8.00
+                                    </td>
+                                </tr>
+                                <tr>
+                                    <td>
+                                        55555
+                                    </td>
+                                    <td>
+                                        水果饼干(50g)
+                                    </td>
+                                    <td>
+                                        食品
+                                    </td>
+                                    <td>
+                                        5.00
+                                    </td>
+                                    <td>
+                                        8.00
+                                    </td>
+                                    <td>
+                                        ---
+                                    </td>
+                                    <td>
+                                        2
+                                    </td>
+                                    <td>
+                                        8.00
+                                    </td>
+                                </tr>
+                                <tr>
+                                    <td>
+                                        55555
+                                    </td>
+                                    <td>
+                                        水果饼干(50g)
+                                    </td>
+                                    <td>
+                                        食品
+                                    </td>
+                                    <td>
+                                        5.00
+                                    </td>
+                                    <td>
+                                        8.00
+                                    </td>
+                                    <td>
+                                        ---
+                                    </td>
+                                    <td>
+                                        2
+                                    </td>
+                                    <td>
+                                        8.00
+                                    </td>
+                                </tr>
+                                <tr>
+                                    <td>
+                                        55555
+                                    </td>
+                                    <td>
+                                        水果饼干(50g)
+                                    </td>
+                                    <td>
+                                        食品
+                                    </td>
+                                    <td>
+                                        5.00
+                                    </td>
+                                    <td>
+                                        8.00
+                                    </td>
+                                    <td>
+                                        ---
+                                    </td>
+                                    <td>
+                                        2
+                                    </td>
+                                    <td>
+                                        8.00
+                                    </td>
+                                </tr>
+                                <tr>
+                                    <td>
+                                        55555
+                                    </td>
+                                    <td>
+                                        水果饼干(50g)
+                                    </td>
+                                    <td>
+                                        食品
+                                    </td>
+                                    <td>
+                                        5.00
+                                    </td>
+                                    <td>
+                                        8.00
+                                    </td>
+                                    <td>
+                                        ---
+                                    </td>
+                                    <td>
+                                        2
+                                    </td>
+                                    <td>
+                                        8.00
+                                    </td>
+                                </tr>
+                                <tr>
+                                    <td>
+                                        55555
+                                    </td>
+                                    <td>
+                                        水果饼干(50g)
+                                    </td>
+                                    <td>
+                                        食品
+                                    </td>
+                                    <td>
+                                        5.00
+                                    </td>
+                                    <td>
+                                        8.00
+                                    </td>
+                                    <td>
+                                        ---
+                                    </td>
+                                    <td>
+                                        2
+                                    </td>
+                                    <td>
+                                        8.00
+                                    </td>
+                                </tr>
+                                </tbody>
+                            </table>
+                        </div>
+                    </div>
+                </div>
+                <div class="dailogFoot style">
+                    <button class="btnSure">确认</button>
+                </div>
+            </div>
+            <!--辞退员工弹窗结束-->
+
+        </div>
+    </div>
+
+    <script src="../../assets/global/plugins/jquery/jquery-1.11.3.min.js"></script>
+    <script src="../../assets/global/plugins/My97DatePicker/WdatePicker.js"></script>  <!--日历插件-->
+    <script src="../../assets/admin/js/common-validate.js"></script> <!--表单验证提示-->
+    <script src="../../assets/admin/js/global.js"></script> <!--通用js-->
+    <script src="../../assets/admin/js/tips.js"></script> <!--操作后状态提示-失败或者成功-->
+    <script src="../../assets/admin/js/footHandle.js"></script> <!--底部固定在页面下面-->
+    <script>
+        $(function () {
+
+            // 查询订单弹窗
+            var btnModify = $(".btnModify");
+            var staffModify = $("#staffModify");
+            btnModify.on("click",function () {
+                if($.trim(staffModify.val()=="")){
+                    tip($(".maskTip"),"请输入有效信息",600,"fail");  //失败提示 第一参数为固定参数 第二参数为提示信息自己填写  第二参数为时间自定  第四参数为提示状态，失败为fail，成功为success
+                    return ;
+                }
+
+            });
+
+
+            //查看订单信息弹窗
+            var mbm = $(".mask,.maskBg");
+            var lookOrder = $(".lookOrder");
+            var orderInforDailog = $(".orderInforDailog");
+            lookOrder.on("click",function () {
+                mbm.removeClass("hide");
+                orderInforDailog.removeClass("hide").addClass("shake");
+                heightAuto(orderInforDailog);
+            });
+
+            /*弹窗居中*/
+            function heightAuto(obj){
+                var ht = -obj.outerHeight(true)/2 + "px";
+                obj.get(0).style.marginTop = ht;
+            }
+
+            /*弹窗影藏*/
+            function noneDailog(obj){
+                obj.closest(".dailog").addClass("hide").removeClass("shake");
+                obj.closest(".mask").addClass("hide");
+                obj.closest(".mask").prev(".maskBg").addClass("hide");
+                $(".dataTable").find("a.commonStyle").removeClass("commonStyle");
+                $(".dailog").get(0).style.marginTop = 0;
+            }
+            $(".mask").delegate(".fa-remove,.btnSure","click",function(){
+                noneDailog($(this));
+            });
+
+        })
+    </script>
+</body>
+</html>

@@ -126,16 +126,16 @@
                             <i class="fa fa-caret-down"></i>
                         </span>
                     </div>
-                    <div class="divSelect style left">
-                        <select name="">
-                            <option value="启用">启用</option>
-                            <option value="分店二">分店二</option>
-                        </select>
-                        <span class="h1"></span>
-                        <span class="spanSelect">
-                            <i class="fa fa-caret-down"></i>
-                        </span>
-                    </div>
+                    <!--<div class="divSelect style left">-->
+                        <!--<select name="">-->
+                            <!--<option value="启用">启用</option>-->
+                            <!--<option value="分店二">分店二</option>-->
+                        <!--</select>-->
+                        <!--<span class="h1"></span>-->
+                        <!--<span class="spanSelect">-->
+                            <!--<i class="fa fa-caret-down"></i>-->
+                        <!--</span>-->
+                    <!--</div>-->
                     <button class="right btnModify">查询</button>
                     <input type="text" class="right inputCss" id="staffModify" placeholder="请输入员工号或员工手机号码">
                 </div>
@@ -148,7 +148,7 @@
                                 <th><span>手机</span></th>
                                 <th><span>店铺</span></th>
                                 <th><span>状态</span></th>
-                                <th><span>操作</span></th>
+                                <th width="20%"><span>操作</span></th>
                             </tr>
                         </thead>
                         <tbody class="">
@@ -181,36 +181,12 @@
                                     </span>
                                     <!--离职状态结束-->
 
-                                </td>
-                            </tr>
-                            <tr>
-                                <td>
-                                    43565656
-                                </td>
-                                <td>
-                                    程陈
-                                </td>
-                                <td>
-                                    15678787856
-                                </td>
-                                <td>
-                                    袁家岗分店一
-                                </td>
-                                <td>
-                                    启用
-                                </td>
-                                <td>
-
-                                    <!--离职状态开始-->
-                                    <span class="spanOnwork notWork">
-                                        <img src="../../assets/admin/images/onWork.png" alt="">
-                                        离职
-                                    </span>
-                                    <span class="spanNotOnwork hide">
-                                        <img src="../../assets/admin/images/notWork.png" alt="">
-                                        已离职
-                                    </span>
-                                    <!--离职状态结束-->
+                                    <!--编辑员工信息开始-->
+                                    <a class="spanLook modifyStaffInfor hide">
+                                        <i class="fa fa-pencil"></i>
+                                        编辑
+                                    </a>
+                                    <!--编辑员工信息结束-->
 
                                 </td>
                             </tr>
@@ -243,6 +219,15 @@
                                     </span>
                                     <!--离职状态结束-->
 
+                                    <span class="color">|</span>
+
+                                    <!--编辑员工信息开始-->
+                                    <a class="spanLook modifyStaffInfor">
+                                        <i class="fa fa-pencil"></i>
+                                        编辑
+                                    </a>
+                                    <!--编辑员工信息结束-->
+
                                 </td>
                             </tr>
                             <tr>
@@ -273,6 +258,51 @@
                                         已离职
                                     </span>
                                     <!--离职状态结束-->
+
+                                    <!--编辑员工信息开始-->
+                                    <a class="spanLook modifyStaffInfor">
+                                        <i class="fa fa-pencil"></i>
+                                        编辑
+                                    </a>
+                                    <!--编辑员工信息结束-->
+
+                                </td>
+                            </tr>
+                            <tr>
+                                <td>
+                                    43565656
+                                </td>
+                                <td>
+                                    程陈
+                                </td>
+                                <td>
+                                    15678787856
+                                </td>
+                                <td>
+                                    袁家岗分店一
+                                </td>
+                                <td>
+                                    启用
+                                </td>
+                                <td>
+
+                                    <!--离职状态开始-->
+                                    <span class="spanOnwork notWork">
+                                        <img src="../../assets/admin/images/onWork.png" alt="">
+                                        离职
+                                    </span>
+                                    <span class="spanNotOnwork hide">
+                                        <img src="../../assets/admin/images/notWork.png" alt="">
+                                        已离职
+                                    </span>
+                                    <!--离职状态结束-->
+
+                                    <!--编辑员工信息开始-->
+                                    <a class="spanLook modifyStaffInfor">
+                                        <i class="fa fa-pencil"></i>
+                                        编辑
+                                    </a>
+                                    <!--编辑员工信息结束-->
 
                                 </td>
                             </tr>
@@ -331,11 +361,11 @@
                         <div class="divInput clearfix">
                             <div class="w50">
                                 <span class="spanName">员工编号 :</span>
-                                <input type="number" class="input" id="memNum" placeholder="请输入会员编号">
+                                <input type="number" class="input" id="memNum" placeholder="请输入员工编号">
                             </div>
                             <div class="w50 last">
                                 <span class="spanName">员工姓名 :</span>
-                                <input type="text" class="input" id="memName" placeholder="请输入会员姓名">
+                                <input type="text" class="input" id="memName" placeholder="请输入员工姓名">
                             </div>
                         </div>
                         <div class="divInput clearfix">
@@ -364,13 +394,13 @@
                             </div>
                             <div class="w50 last">
                                 <span class="spanName">员工折扣 :</span>
-                                <input type="number" class="input" id="memSole" placeholder="请输入会员折扣">
+                                <input type="number" class="input" id="memSole" placeholder="请输入员工折扣">
                             </div>
                         </div>
                         <div class="divInput clearfix">
                             <div class="w50">
                                 <span class="spanName">员工手机 :</span>
-                                <input type="tel" class="input" id="memMember" placeholder="请输入会员手机">
+                                <input type="tel" class="input" id="memMember" placeholder="请输入员工手机">
                             </div>
 
                         </div>
@@ -378,7 +408,7 @@
                             <div class="w50">
                                 <span class="spanName">开卡日期 :</span>
                                 <div class="div-wdate">
-                                    <input id="start" class="Wdate" type="number" placeholder="2015-4-4" onFocus="WdatePicker({minDate:'%y-%M-{%d}',maxDate:'#F{$dp.$D(\'end\')}'})"/>
+                                    <input id="start" class="Wdate" type="text" placeholder="2015-4-4" onFocus="WdatePicker({minDate:'%y-%M-{%d}',maxDate:'#F{$dp.$D(\'end\')}'})"/>
                                     <span class="h1"></span>
                                     <i class="fa fa-calendar"></i>
                                 </div>
@@ -386,7 +416,7 @@
                             <div class="w50 last">
                                 <span class="spanName">到期日期 :</span>
                                 <div class="div-wdate">
-                                    <input id="end" class="Wdate" type="number" placeholder="2015-4-4" onFocus="WdatePicker({minDate:'#F{$dp.$D(\'start\')||\'%y-%M-{%d+1}\'}'})"/>
+                                    <input id="end" class="Wdate" type="text" placeholder="2015-4-4" onFocus="WdatePicker({minDate:'#F{$dp.$D(\'start\')||\'%y-%M-{%d+1}\'}'})"/>
                                     <span class="h1"></span>
                                     <i class="fa fa-calendar"></i>
                                 </div>
@@ -400,6 +430,91 @@
                 </div>
             </form>
             <!--添加员工弹窗结束-->
+
+            <!--编辑员工信息弹窗开始-->
+            <form action="###">
+                <div class="dailog modifyStaffDailog hide">
+                    <div class="dailogHead">
+                        员工资料
+                        <i class="fa fa-remove right"></i>
+                    </div>
+                    <div class="dailogContent">
+                        <div class="divInput clearfix">
+                            <div class="w50">
+                                <span class="spanName">员工编号 :</span>
+                                <input type="number" class="input" id="modigyMemNum" placeholder="请输入员工编号">
+                            </div>
+                            <div class="w50 last">
+                                <span class="spanName">员工姓名 :</span>
+                                <input type="text" class="input" id="modigyMemName" placeholder="请输入员工姓名">
+                            </div>
+                        </div>
+                        <div class="divInput clearfix">
+                            <div class="w50">
+                                <span class="spanName">手机号 :</span>
+                                <input type="number" class="input" id="modigyMemMobile" placeholder="请输入手机号">
+                            </div>
+                            <div class="w50 last">
+                                <span class="spanName">所在门店 :</span>
+                                <div class="divSelect style styles">
+                                    <select name="">
+                                        <option value="分店选择">分店选择</option>
+                                        <option value="分店二">分店二</option>
+                                    </select>
+                                    <span class="h1"></span>
+                                    <span class="spanSelect">
+                                        <i class="fa fa-caret-down"></i>
+                                    </span>
+                                </div>
+                            </div>
+                        </div>
+
+                        <div class="divInput clearfix">
+                            <div class="w50">
+                                <span class="spanName">登录密码 :</span>
+
+                                <!--密码加密开始-->
+                                <span class="encryption">222233</span>
+                                <!--密码加密结束-->
+
+                                <a class="resetPassword right">重置密码</a>
+                            </div>
+                        </div>
+
+                        <div class="divInput clearfix hide">
+                            <div class="w50">
+                                <span class="spanName">登录密码 :</span>
+                                <input type="number" class="input" id="modigyMemPassword" placeholder="请输入密码">
+                            </div>
+                            <div class="w50 last">
+                                <span class="spanName">确认密码 :</span>
+                                <input type="text" class="input style" id="modigyMemSurePassword" placeholder="请确认密码">
+                                <button class="sureModifyPassword">确认</button>
+                            </div>
+                        </div>
+                        <div class="divInput clearfix">
+                            <div class="w50">
+                                <span class="spanName">状态 :</span>
+                                <span>启用</span>
+                                <a class="spanOnwork right notWork">员工离职</a>
+                            </div>
+                            <div class="w50 last">
+                                <span class="spanName">加入日期 :</span>
+                                <div class="div-wdate">
+                                    <input id="d4311" class="Wdate" type="text" placeholder="2015-4-4" onFocus="WdatePicker({minDate:'%y-%M-{%d}'})"/>
+                                    <span class="h1"></span>
+                                    <i class="fa fa-calendar"></i>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="dailogFoot">
+                        <button class="btnCancel">取消</button>
+                        <button class="btnSure">保存</button>
+                    </div>
+                </div>
+            </form>
+            <!--编辑员工信息窗结束-->
 
             <!--辞退员工弹窗开始-->
             <div class="dailog dismissStaffDailog style hide">
@@ -429,7 +544,7 @@
     <script>
         $(function () {
 
-            // 查询员工
+            // 查询员工提示
             var btnModify = $(".btnModify");
             var staffModify = $("#staffModify");
             btnModify.on("click",function () {
@@ -437,27 +552,52 @@
                     tip($(".maskTip"),"请输入员工号或员工手机号",600,"fail");  //失败提示 第一参数为固定参数 第二参数为提示信息自己填写  第二参数为时间自定  第四参数为提示状态，失败为fail，成功为success
                     return ;
                 }
-
             });
 
 
-            //添加员工
+            //添加员工弹窗
             var mbm = $(".mask,.maskBg");
             var btnAdd = $(".btnAdd");
             var addStaffDailog = $(".addStaffDailog");
             btnAdd.on("click",function () {
                 mbm.removeClass("hide");
                 addStaffDailog.removeClass("hide").addClass("shake");
-                heightAuto();
+                heightAuto(addStaffDailog);
             });
 
-            /*单窗居中*/
-            function heightAuto(){
-                var dailog = $(".dailog");
-                dailog.each(function(){
-                    var ht = -$(this).outerHeight(true)/2 + "px";
-                    $(this).get(0).style.marginTop = ht;
-                });
+            //编辑员工信息弹窗
+            var mbm = $(".mask,.maskBg");
+            var modifyStaffInfor = $(".modifyStaffInfor");
+            var modifyStaffDailog = $(".modifyStaffDailog");
+            modifyStaffInfor.on("click",function () {
+                mbm.removeClass("hide");
+                modifyStaffDailog.removeClass("hide").addClass("shake");
+                heightAuto(modifyStaffDailog);
+            });
+
+            //重置密码
+            var resetPassword = $(".resetPassword");
+            var divInput = $(".divInput ");
+            resetPassword.on("click",function () {
+                $(this).closest(divInput).next().slideDown(100);
+                $(this).closest(divInput).addClass("hide")
+            });
+
+            //确认重置密码
+            var sureModifyPassword = $(".sureModifyPassword");
+            sureModifyPassword.on("click",function () {
+                $(this).closest(divInput).slideUp(100);
+                var that = $(this);
+                setTimeout(function () {
+                    that.closest(divInput).prev().removeClass("hide");
+                },100)
+            });
+
+
+            /*弹窗居中*/
+            function heightAuto(obj){
+                var ht = -obj.outerHeight(true)/2 + "px";
+                obj.get(0).style.marginTop = ht;
             }
 
             /*弹窗影藏*/
@@ -473,27 +613,28 @@
                 noneDailog($(this));
             });
 
-
-
-            //提交表单
+            //查询员工提示
             var sureAddStaff = $("#sureAddStaff");
             var memNum = $("#memNum");
             var memName = $("#memName");
             sureAddStaff.on("click",function () {
                 if(isEmpty(memNum.val())){
-                    tip($(".maskTip"),"无效会员编号",500,"fail");
+                    tip($(".maskTip"),"无效员工编号",500,"fail");  //失败提示 第一参数为固定参数 第二参数为提示信息自己填写  第二参数为时间自定  第四参数为提示状态，失败为fail，成功为success
                     return ;
                 }
             });
 
-            //辞退员工
+            //辞退员工弹窗
             var mbm = $(".mask,.maskBg");
             var notWork = $(".notWork");
             var dismissStaffDailog = $(".dismissStaffDailog");
             notWork.on("click",function () {
+                if($(this).closest(modifyStaffDailog)){
+                    modifyStaffDailog.addClass("hide");
+                }
                 mbm.removeClass("hide");
                 dismissStaffDailog.removeClass("hide").addClass("shake");
-                heightAuto();
+                heightAuto(dismissStaffDailog);
             });
         })
     </script>

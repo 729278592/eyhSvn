@@ -17,7 +17,6 @@ a:link{text-decoration: none;}
 body{background: #edeeee;}
 .wrapper{width: 100%;position: relative;min-width: 1120px;}
 .content{width: 100%;margin-top: 20px;}
-.center{width: 1024px;margin: 0 auto;}
 
 
 
@@ -461,6 +460,7 @@ body{background: #edeeee;}
 .divSelect.style select{padding: 11px 100px 11px 10px}
 .divSelect.style select,.divSelect.style {top: 0;font-size: 14px;}
 .btnAdd,.btnModify{padding: 11px 25px;background: #fb7c55;color: #fff;font-size: 16px;border-radius: 8px;outline: 0;margin-right: 10%;}
+.btnAdd.mr15{margin-right: 15px;}
 .btnAdd.mr0{margin-right: 0;}
 .btnModify{background: #4ebfca;margin-right:0;margin-left: 20px;}
 .divSelect.style .h1{height: 43px;}
@@ -546,6 +546,12 @@ body{background: #edeeee;}
 
 /*cashier*/
 .shopInfor{background: #fff;padding: 15px 0;border-top: 1px solid #dbdbdb;}
+.shopInfor.ordersInfor{background: #9c9c9c;}
+.orderMenuInfor{display: block;}
+.orderMenuInfor li{float: left;width: 25%;position: relative;margin: 10px 0;text-align: center;color: #fff;}
+.orderMenuInfor li:after{content: "";position: absolute;top: 0;right: 0;width: 1px;height: 100%;border-right: 1px solid #fff;}
+.orderMenuInfor li.br0:after{border-right: 0;}
+.orderMenuInfor li p{}
 .shopInforCon{width:80%;margin: 0 auto;display: block;}
 .shopModify,.shopTable{width: 40%;text-align: center;}
 .shopBtn{width: 18%;}
@@ -559,11 +565,19 @@ body{background: #edeeee;}
 .shopBtn{text-align: right;}
 .btnSubmit{padding: 31px 0;background: #fb7d55;color: #fff;border-radius: 4px;margin-top: 10px;font-size: 20px;width: 100%;}
 .btnSubmit.mt0{margin-top: 0;}
+.dailogHead.style{}
+.dailogHead.style p{display: block;width: 96%;line-height: 34px;}
+.dailogContent.style{padding: 0;width: 100%;}
+.dailogContent.style .recordContent{margin-top: 0;height: 350px;overflow-y: auto;}
+.dailogContent.style .recordTable tr td{height: 57px;line-height: 57px;}
+.dailogFoot.style{padding: 15px 0;}
+
 
 
 /*数量的选择*/
-a.num {
+.recordTable tr td>a.num {
     color: #474747;
+    height: auto;
     display: inline-block;
     position: relative;
     top: 10px;
@@ -754,8 +768,8 @@ a.num input {
 .maskBg{background: #000;opacity: 0.6;filter:alpha(opacity=60);}
 .dailog{background: #fff;position: fixed;top: 50%;left: 50%;width: 500px;margin-left: -200px;border-radius: 10px;z-index: 999;}
 
-.dailogHead{width: 94.1%;padding: 10px 3%;background: #02abdf;text-align: center;color: #fff;border-radius: 8px 8px 0 0;font-size: 18px;}
-.dailogHead .fa-remove{color: #dbdbdb;}
+.dailogHead{width: 94%;padding: 15px 3%;background: #02abdf;text-align: center;color: #fff;border-radius: 8px 8px 0 0;font-size: 18px;}
+.dailogHead .fa-remove{color: #dbdbdb;    position: absolute;  right: 10px;top: 10px;}
 .dailogHead .fa-remove:hover{color: #fff;}
 
 .dailogContent p.typeP{font-size: 14px;color: #333;text-align: center;}
@@ -871,30 +885,50 @@ table tr.on{background: #e8fcfd;}
 table tr.notOn{background: #e3e3e3 !important;}
 table tr.notOn td{color: #666 !important;}
 .recordTable tr td .spanOnwork{color: #02abdf;}
+.recordTable tr td .spanOnwork img,.recordTable tr td .spanNotOnwork img{width: 20px;}
+.recordTable tr td .color{color: #666;}
+.recordTable tr td .spanDelete{color: #fb7e56;}
+.recordTable tr td .spanLook{color: #02abdf;}
 .recordTable tr td a.spanOnwork{text-decoration: underline;}
 .recordTable tr td a.spanShop{color: #fb7e56;}
 .recordTable tr td .spanOnwork:hover{cursor: pointer;}
 .recordTable tr td .spanNotOnwork{color: #666;}
-.dailog{width: 632px;margin-left:-316px;}
+.dailog{width: 700px;  margin-left: -350px;}
+.dailog.w900{width: 900px;  margin-left: -450px;}
+.dailog.w900.dailogContent{width: 850px;}
 .dailog.style{width: 500px;margin-left: -250px;}
 .dailog.style .dailogContent{width: 468px;padding: 30px 15px;}
 .dailogContent{padding: 20px 15px 10px;width: 600px;border-top: none;font-size: 14px;}
-.dailogContent p.fs16{font-size: 16px;}
+.dailogContent{padding: 20px 25px 10px;width: 650px;border-top: none;font-size: 14px;}
+.dailogContent p.fs16{font-size: 16px;color: #666;}
 .dailogContent.center{text-align: center;}
 .div-wdate{width: 204px;height: 40px;background: #fff;position: relative;border: 1px solid #dbdbdb; display: inline-block;  }
+.timeTo{display: inline-block;padding:10px;background: #ccc;color: #fff;}
+.divSelect.mr20{margin-right: 20px;}
 .div-wdate .Wdate{font-size: 14px;border: none;background: transparent;width: 194px;height: 36px;line-height: 36px;position: relative;z-index: 5;padding-left: 10px;}
 .div-wdate.w100{width: 310px;}
 .div-wdate .Wdate.text{width: 300px;}
 .div-wdate .fa{position: absolute;right: 13px;top: 10px;}
 .divInput{display: block;margin-bottom: 15px;text-align: left;}
+.divInput.hide{display: none;}
 .divInput.mb0{margin-bottom: 0;}
 .divInput div.w50{width: 50%;float: left;font-size: 16px;}
+.divInput div.w50 label{margin-right: 40px;}
+.divInput div.w50 .textLeft {position: relative;top: -13px;}
+.divInput div.w50 .textLeft span{text-align: left;}
 .divInput div.w50.w100{width: 100%;}
 .divInput div.w50.last{float: right;text-align: right;}
-.divInput div.w50 .spanName{display: inline-block;width: 80px;text-align: right;}
+.divInput div.w50 span{color: #444;}
+.divInput div.w50 .spanName{display: inline-block;width: 95px;text-align: right;}
+.returnMoney{width: 116px;padding: 10px;border: 1px solid #dbdbdb;}
+.visibility{visibility: hidden;}
+.divInput div.w50 .resetPassword{color: #02abdf;text-decoration: underline;position: relative;right: 34px;}
+.divInput div.w50 .spanOnwork {color: #02abdf;text-decoration: underline;position: relative;right: 34px;}
 .divInput div.w50 .spanName.top{position: relative;top: -93px;}
 .divInput div.w50 .input{padding: 10px 40px 10px 10px;border: 1px solid #dbdbbd;font-size: 14px;}
-.qy,.bqy{display: inline-block;width: 55px;text-align: right;}
+.divInput div.w50 .input.style{padding-right: 0;width: 147px;}
+.divInput div.w50 .sureModifyPassword{padding: 11px 8px;background: #fb9777;color: #fff;outline: none;}
+.qy,.bqy{display: inline-block;width: 98px;text-align: right;}
 .qy.hide,.bqy.hide{display: none;}
 input::-webkit-inner-spin-button{
     -webkit-appearance: none !important;
@@ -904,7 +938,7 @@ input::-webkit-inner-spin-button{
     /*padding: 10px 100.5px 10px 10px;*/
     font-size: 14px;
 }
-.divInput div.w50 .textarea{width: 490px;resize: none;border: 1px solid #dbdbdb;padding: 10px;}
+.divInput div.w50 .textarea{width: 528px;resize: none;border: 1px solid #dbdbdb;padding: 10px;}
 .divSelect.styles{display: inline-block;margin-left: 0;}
 .divSelect.styles select{padding: 10px 0 10px 10px;font-size: 14px;width: 205px;}
 .divSelect.styles .h1{height: 41px;}
@@ -928,7 +962,7 @@ input::-webkit-inner-spin-button{
 .contentMain.clearfix{display: block;}
 .conLeft{width: 30%;float: left;position: relative;}
 .conLeftHead{padding: 10px 2%;background: #02abdf;position: absolute;top: 0;width: 96%;}
-.conLeftHead input{padding: 12px 2%;width: 75%;}
+.conLeftHead input{padding: 11px 2%;width: 75%;font-size: 14px;}
 .conLeftHead button{}
 .conLeftCon{background: #fff;border: 1px solid #dbdbdb;margin-top: 61px;overflow-y: auto;height: 490px;}
 .cashList{}
@@ -937,8 +971,9 @@ input::-webkit-inner-spin-button{
 .cashList li.active p span{color: #fff !important;}
 
 .cashList li p{display: block;line-height: 26px;}
-
-.cashList li p span{font-size: 16px;color: #666;}
+.cashList li.on{background: #e8fcfd;}
+.cashList li:hover {  background: #e7f3ff;cursor: pointer;}
+.cashList li p span{font-size: 16px;color: #999;}
 .cashList li p span.orderNum{font-size: 18px;color: #333;}
 .cashList li p span.money{font-size: 18px;color: #333;}
 .cashList li p span.mobile{}
@@ -952,10 +987,15 @@ input::-webkit-inner-spin-button{
 .conRightHead p span.totalNum{}
 .conRightHead p span.mobile{}
 .conRightHead p span.time{}
-.conRightCon{overflow-y: auto;height: 490px;}
-
-
-
+.conRightCon .recordContent{background: #fff;}
+.conRightCon .recordDiv{overflow-y: auto;height: 377px;}
+.conRightCon .recordTable tr td{height: 62px;}
+.shoppingSure{text-align: right;padding: 9.5px 20px;border: 1px solid #dbdbdb;}
+.shoppingSure .btnSure,.shoppingSure .btnCancel{display: inline-block;padding: 10px 0;width:134px;border-radius: 10px;font-size: 16px;}
+.shoppingSure .btnSure{background: #fa7d55;color: #fff;margin-right:8px;position: relative;}
+.shoppingSure .btnCancel{background: #4ebfca;color: #fff;border: 1px solid #ccc;position: relative;}
+.shoppingSure .btnSure:hover{opacity: 0.8;}
+.shoppingSure .btnCancel:hover{opacity: 0.8;}
 
 
 /*无数据提示*/

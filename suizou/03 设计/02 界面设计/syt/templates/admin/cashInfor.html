@@ -118,7 +118,7 @@
 
                 <div class="left conLeft">
                     <div class="conLeftHead">
-                        <input type="text" placeholder="请输入订单号或会员手机号">
+                        <input type="text" placeholder="请输入订单号或会员手机号" id="orderInput">
                         <button type="button" class="btnModifyShop">搜索</button>
                     </div>
                     <div class="conLeftCon">
@@ -172,144 +172,68 @@
                     </div>
                     <div class="conRightCon">
                         <div class="recordContent">
-                            <table class="recordTable ">
-                                <thead>
-                                <tr>
-                                    <th><span>员工号</span></th>
-                                    <th><span>姓名</span></th>
-                                    <th><span>手机</span></th>
-                                    <th><span>店铺</span></th>
-                                    <th><span>状态</span></th>
-                                    <th><span>操作</span></th>
-                                </tr>
-                                </thead>
-                                <tbody class="">
-                                <tr class="notOn">
-                                    <td>
-                                        43565656
-                                    </td>
-                                    <td>
-                                        程陈
-                                    </td>
-                                    <td>
-                                        15678787856
-                                    </td>
-                                    <td>
-                                        袁家岗分店一
-                                    </td>
-                                    <td>
-                                        启用
-                                    </td>
-                                    <td>
+                            <div class="recordDiv">
+                                <table class="recordTable ">
+                                    <thead>
+                                    <tr>
+                                        <th><span>商品名称</span></th>
+                                        <th><span>售价</span></th>
+                                        <th><span>折扣</span></th>
+                                        <th><span>数量</span></th>
 
-                                        <!--离职状态开始-->
-                                    <span class="spanOnwork hide notWork">
-                                        <img src="../../assets/admin/images/onWork.png" alt="">
-                                        离职
-                                    </span>
-                                    <span class="spanNotOnwork ">
-                                        <img src="../../assets/admin/images/notWork.png" alt="">
-                                        已离职
-                                    </span>
-                                        <!--离职状态结束-->
+                                    </tr>
+                                    </thead>
+                                    <tbody class="">
+                                    <tr>
+                                        <td>
+                                            水果饼干(50g)
+                                        </td>
+                                        <td>
+                                            8.00
+                                        </td>
+                                        <td>
+                                            -
+                                        </td>
+                                        <td>
+                                            2
+                                        </td>
+                                    </tr>
+                                    <tr>
+                                        <td>
+                                            水果饼干(50g)
+                                        </td>
+                                        <td>
+                                            8.00
+                                        </td>
+                                        <td>
+                                            -
+                                        </td>
+                                        <td>
+                                            2
+                                        </td>
+                                    </tr>
+                                    <tr>
+                                        <td>
+                                            水果饼干(50g)
+                                        </td>
+                                        <td>
+                                            8.00
+                                        </td>
+                                        <td>
+                                            -
+                                        </td>
+                                        <td>
+                                            2
+                                        </td>
+                                    </tr>
+                                    </tbody>
+                                </table>
+                            </div>
 
-                                    </td>
-                                </tr>
-                                <tr>
-                                    <td>
-                                        43565656
-                                    </td>
-                                    <td>
-                                        程陈
-                                    </td>
-                                    <td>
-                                        15678787856
-                                    </td>
-                                    <td>
-                                        袁家岗分店一
-                                    </td>
-                                    <td>
-                                        启用
-                                    </td>
-                                    <td>
-
-                                        <!--离职状态开始-->
-                                    <span class="spanOnwork notWork">
-                                        <img src="../../assets/admin/images/onWork.png" alt="">
-                                        离职
-                                    </span>
-                                    <span class="spanNotOnwork hide">
-                                        <img src="../../assets/admin/images/notWork.png" alt="">
-                                        已离职
-                                    </span>
-                                        <!--离职状态结束-->
-
-                                    </td>
-                                </tr>
-                                <tr>
-                                    <td>
-                                        43565656
-                                    </td>
-                                    <td>
-                                        程陈
-                                    </td>
-                                    <td>
-                                        15678787856
-                                    </td>
-                                    <td>
-                                        袁家岗分店一
-                                    </td>
-                                    <td>
-                                        启用
-                                    </td>
-                                    <td>
-
-                                        <!--离职状态开始-->
-                                    <span class="spanOnwork notWork">
-                                        <img src="../../assets/admin/images/onWork.png" alt="">
-                                        离职
-                                    </span>
-                                    <span class="spanNotOnwork hide">
-                                        <img src="../../assets/admin/images/notWork.png" alt="">
-                                        已离职
-                                    </span>
-                                        <!--离职状态结束-->
-
-                                    </td>
-                                </tr>
-                                <tr>
-                                    <td>
-                                        43565656
-                                    </td>
-                                    <td>
-                                        程陈
-                                    </td>
-                                    <td>
-                                        15678787856
-                                    </td>
-                                    <td>
-                                        袁家岗分店一
-                                    </td>
-                                    <td>
-                                        启用
-                                    </td>
-                                    <td>
-
-                                        <!--离职状态开始-->
-                                    <span class="spanOnwork notWork">
-                                        <img src="../../assets/admin/images/onWork.png" alt="">
-                                        离职
-                                    </span>
-                                    <span class="spanNotOnwork hide">
-                                        <img src="../../assets/admin/images/notWork.png" alt="">
-                                        已离职
-                                    </span>
-                                        <!--离职状态结束-->
-
-                                    </td>
-                                </tr>
-                                </tbody>
-                            </table>
+                            <div class="shoppingSure">
+                                <button class="btnSure" id="returnShop">退货</button>
+                                <button class="btnCancel" id="orderNot">订单作废</button>
+                            </div>
 
                             <!--加载无数据提示开始-->
                             <div class="notDataTips hide">
@@ -337,214 +261,61 @@
         <div class="maskBg hide"></div>
         <div class="mask hide">
 
-            <!--添加门店弹窗开始-->
-            <form action="###">
-                <div class="dailog addStaffDailog hide">
-                    <div class="dailogHead">
-                        添加商品
-                        <i class="fa fa-remove right"></i>
-                    </div>
-                    <div class="dailogContent">
-                        <div class="divInput clearfix">
-                            <div class="w50">
-                                <span class="spanName">商品条码 :</span>
-                                <input type="number" class="input" id="storeId" placeholder="请输入门店ID">
-                            </div>
-                            <div class="w50 last">
-                                <span class="spanName">商品进价 :</span>
-                                <input type="text" class="input" id="storeName" placeholder="请输入门店名称">
-                            </div>
-                        </div>
-                        <div class="divInput clearfix">
-                            <div class="w50">
-                                <span class="spanName">商品名称 :</span>
-                                <input type="number" class="input" id="storePerson" placeholder="请输入联系人">
-                            </div>
-                            <div class="w50 last">
-                                <span class="spanName">商品售价 :</span>
-                                <input type="tel" class="input" id="storePhone" placeholder="请输入联系电话">
-                            </div>
-                        </div>
-                        <div class="divInput clearfix style">
-                            <div class="w50">
-                                <span class="spanName">商品分类 :</span>
-                                <div class="divSelect style styles">
-                                    <select name="">
-                                        <option value="请选择">请选择</option>
-                                        <option value="商品分类一">商品分类一</option>
-                                    </select>
-                                    <span class="h1"></span>
-                                            <span class="spanSelect">
-                                                <i class="fa fa-caret-down"></i>
-                                            </span>
-                                </div>
-                            </div>
-                            <div class="w50 last">
-                                <span class="spanName">商品库存 :</span>
-                                <input type="tel" class="input" id="storeNum" placeholder="请输入联系电话">
-                            </div>
-                        </div>
-                        <div class="displayMore">
-                            展开
-                            <i class="fa fa-angle-double-down"></i>
-                        </div>
-                        <div class="w1"></div>
-                        <div class="moreTj hide">
-                            <div class="divInput clearfix">
-                                <div class="w50">
-                                    <span class="spanName">拼音条码 :</span>
-                                    <input type="tel" class="input" id="pytm" placeholder="请输入拼音条码">
-                                </div>
-                                <div class="w50 last">
-                                    <span class="spanName">供货商 :</span>
-                                    <div class="divSelect style styles">
-                                        <select name="">
-                                            <option value="请选择">请选择</option>
-                                            <option value="供货商一">供货商一</option>
-                                        </select>
-                                        <span class="h1"></span>
-                                            <span class="spanSelect">
-                                                <i class="fa fa-caret-down"></i>
-                                            </span>
-                                    </div>
-                                </div>
-                            </div>
-                            <div class="divInput clearfix">
-                                <div class="w50">
-                                    <span class="spanName">商品启用 :</span>
-                                    <div style="display: inline-block">
-                                        <input type="checkbox" name="check-3" value="6" class="lcs_check lcs_tt1" checked="checked" autocomplete="off" />
-                                        <span class="qy">启用</span>
-                                        <span class="bqy hide">不启用</span>
-                                    </div>
-                                </div>
-                                <div class="w50 last">
-                                    <span class="spanName">会员折扣 :</span>
-                                    <input type="checkbox" name="check-3" value="6" class="lcs_check lcs_tt1" checked="checked" autocomplete="off" />
-                                    <span class="qy">启用</span>
-                                    <span class="bqy hide">不启用</span>
-                                </div>
-                            </div>
-
-                            <div class="divInput clearfix mb0">
-                                <div class="w50 w100">
-                                    <span class="spanName top">商品备注 :</span>
-                                    <textarea name="" class="textarea" placeholder="请输入详细地址" cols="30" rows="5"></textarea>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                    <div class="dailogFoot mt15">
-                        <button class="btnCancel">取消</button>
-                        <button class="btnSure" id="sureAddStaff">确认</button>
-                    </div>
-                </div>
-            </form>
-            <!--添加门店弹窗结束-->
-
-            <!--删除门店弹窗开始-->
-            <div class="dailog dismissStaffDailog hide style">
-                <div class="dailogHead">
-                    确认删除该商品信息
-                    <i class="fa fa-remove right"></i>
-                </div>
-                <div class="dailogContent center">
-                    <p class="fs16">该商品信息后，将无法查看该商品信息，确认删除该商品信息？</p>
-                </div>
-                <div class="dailogFoot">
-                    <button class="btnCancel">取消</button>
-                    <button class="btnSure" id="sureDeleteStaff">确认</button>
-                </div>
-            </div>
-            <!--删除门店弹窗结束-->
-
-            <!--无商品弹窗开始-->
+            <!--退货弹窗开始-->
             <div class="dailog notShopDailog hide style">
                 <div class="dailogHead">
                     提示
                     <i class="fa fa-remove right"></i>
                 </div>
                 <div class="dailogContent center">
-                    <p class="fs16">没有商品信息，是否添加新商品?</p>
-                </div>
-                <div class="dailogFoot">
-                    <button class="btnCancel">取消</button>
-                    <button class="btnSure" id="sureAddShopping">确认</button>
-                </div>
-            </div>
-            <!--无商品弹窗结束-->
-
-            <!--商品报损弹窗开始-->
-            <div class="dailog ShopReported  hide style">
-                <div class="dailogHead">
-                    进货备注
-                    <i class="fa fa-remove right"></i>
-                </div>
-                <div class="dailogContent center">
-                    <div class="divInput clearfix mb0">
-                        <div class="w50 w100">
-                            <span class="spanName top">备注 :</span>
-                            <textarea name="" class="textarea style" placeholder="请输入进货备注" cols="30" rows="5"></textarea>
-                        </div>
-                    </div>
+                    <p class="fs16">确认对该订单进行退款操作？</p>
                 </div>
                 <div class="dailogFoot">
                     <button class="btnCancel">取消</button>
                     <button class="btnSure">确认</button>
                 </div>
             </div>
-            <!--商品报损弹窗结束-->
+            <!--退货弹窗结束-->
+
+            <!--订单作废弹窗开始-->
+            <div class="dailog orderDailog hide style">
+                <div class="dailogHead">
+                    提示
+                    <i class="fa fa-remove right"></i>
+                </div>
+                <div class="dailogContent center">
+                    <p class="fs16">订单作废后将不可恢复，是否确定该订单作废？</p>
+                </div>
+                <div class="dailogFoot">
+                    <button class="btnCancel">取消</button>
+                    <button class="btnSure">确认</button>
+                </div>
+            </div>
+            <!--订单作废弹窗结束-->
 
         </div>
     </div>
     <script src="../../assets/global/plugins/jquery/jquery-1.11.3.min.js"></script>
-    <script src="../../assets/admin/plugins/switch/js/lc_switch.js"></script>  <!--switch开关-->
     <script src="../../assets/admin/plugins/jquery.actual/jquery.actual.js"></script> <!--获取隐藏元素高度-->
     <script src="../../assets/admin/js/common-validate.js"></script> <!--表单验证提示-->
     <script src="../../assets/admin/js/global.js"></script> <!--通用js-->
     <script src="../../assets/admin/js/tips.js"></script> <!--操作后状态提示-失败或者成功-->
-    <script src="../../assets/admin/js/spinner.js"></script> <!--商品数量选择的spinner插件-->
-    <script src="../../assets/admin/js/footHandle.js"></script> <!--底部固定在页面下面-->
     <script>
         $(function () {
-            /*数量选择*/
-            $('.num').spinner({});
 
-            /*switch开关*/
-            $('.lcs_check').lc_switch();
+            /*奇数行背景色*/
+            $(".cashList li:odd").addClass("on");
 
-            /*展开更多条件*/
-            var displayMore = $(".displayMore");
-            var dailogFoot = $(".dailogFoot");
-            var addStaffDailog = $(".addStaffDailog");
-            var moreTj = $(".moreTj");
-            displayMore.on("click",function () {
-                if(moreTj.is(".hide")){
-                    moreTj.removeClass("hide");
-                    dailogFoot.removeClass("mt15");
-                    displayMore.find(".fa-angle-double-down").removeClass("fa-angle-double-down").addClass("fa-angle-double-up");
-                    heightAuto(addStaffDailog);
-                }else {
-                    moreTj.addClass("hide");
-                    dailogFoot.addClass("mt15");
-                    displayMore.find(".fa-angle-double-up").removeClass("fa-angle-double-up").addClass("fa-angle-double-down");
-                    heightAuto(addStaffDailog);
-                }
+            /*点击查看订单列表的详情弹窗*/
+            var cashList = $(".cashList li");
+            cashList.each(function (i) {
+                $(this).on("click",function () {
+                    $(this).addClass("active");
+                    $(this).siblings("li").removeClass("active");
+                })
             });
 
-
-            //添加商品
-            var mbm = $(".mask,.maskBg");
-            var btnAdd = $(".btnAdd");
-            var addStaffDailog = $(".addStaffDailog");
-            btnAdd.on("click",function () {
-                mbm.removeClass("hide");
-                addStaffDailog.removeClass("hide").addClass("shake");
-                heightAuto(addStaffDailog);
-            });
-
-
-            /*单窗居中*/
+            /*弹窗居中*/
             function heightAuto(obj){
                 var ht = -obj.actual('height')/2 + "px";
                 obj.get(0).style.marginTop = ht;
@@ -564,57 +335,34 @@
                 noneDailog($(this));
             });
 
-
-            //商品信息删除
+            //退货弹窗
             var mbm = $(".mask,.maskBg");
-            var deleteStore = $(".deleteStore");
-            var dismissStaffDailog = $(".dismissStaffDailog");
-            deleteStore.on("click",function () {
-                mbm.removeClass("hide");
-                dismissStaffDailog.removeClass("hide").addClass("shake");
-                $(this).closest("tr").addClass("sureDelete");
-                heightAuto(dismissStaffDailog);
-            });
-
-            //查询商品信息
-            var btnModifyShop = $(".btnModifyShop");
+            var returnShop = $("#returnShop");
             var notShopDailog = $(".notShopDailog");
-            btnModifyShop.on("click",function () {
+            returnShop.on("click",function () {
                 mbm.removeClass("hide");
                 notShopDailog.removeClass("hide").addClass("shake");
                 heightAuto(notShopDailog);
             });
 
-
-            //查询无商品信息后添加商品
-            var sureAddShopping = $("#sureAddShopping");
-            sureAddShopping.on("click",function () {
-                notShopDailog.addClass("hide").removeClass("shake");
-                addStaffDailog.removeClass("hide").addClass("shake");
-                heightAuto(addStaffDailog);
-            });
-
-
-
-            //确认门店删除
-            var dailog = $(".dailog");
+            //订单作废弹窗
             var mbm = $(".mask,.maskBg");
-            var sureDeleteStaff = $("#sureDeleteStaff");
-            sureDeleteStaff.on("click",function () {
-                dailog.addClass("hide").removeClass("shake");
-                mbm.addClass("hide");
-                dailog.get(0).style.marginTop = 0;
-                $(".sureDelete").remove();
+            var orderNot = $("#orderNot");
+            var orderDailog = $(".orderDailog");
+            orderNot.on("click",function () {
+                mbm.removeClass("hide");
+                orderDailog.removeClass("hide").addClass("shake");
+                heightAuto(orderDailog);
             });
 
-
-            //商品报损
-            var ShopReported = $(".ShopReported");
-            var btnBs = $(".btnBs");
-            btnBs.on("click",function () {
-                mbm.removeClass("hide");
-                ShopReported.removeClass("hide").addClass("shake");
-                heightAuto(ShopReported);
+            //搜索提示
+            var btnModifyShop = $(".btnModifyShop");
+            var orderInput = $("#orderInput");
+            btnModifyShop.on("click",function () {
+                if(isEmpty(orderInput.val())){
+                    tip($(".maskTip"),"请输入有效信息",500,"fail");  //失败提示 第一参数为固定参数 第二参数为提示信息自己填写  第二参数为时间自定  第四参数为提示状态，失败为fail，成功为success
+                    return ;
+                }
             });
         })
     </script>

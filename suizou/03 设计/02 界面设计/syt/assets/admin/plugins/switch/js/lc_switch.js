@@ -41,8 +41,6 @@
 				$wrap.find('input').trigger('lcs-on');
 				$wrap.find('input').trigger('lcs-statuschange');
 				$wrap.find('input').attr('checked', 'checked');
-				$wrap.closest(".w50").find(".bqy").addClass("hide");
-				$wrap.closest(".w50").find(".qy").removeClass("hide");
 				$wrap.find('.lcs_switch').removeClass('lcs_off').addClass('lcs_on');
 				// if radio - disable other ones
 				if( $wrap.find('.lcs_switch').hasClass('lcs_radio_switch') ) {
@@ -70,8 +68,7 @@
 				$wrap.find('input').trigger('lcs-off');
 				$wrap.find('input').trigger('lcs-statuschange');
 				$wrap.find('input').removeAttr('checked');
-				$wrap.closest(".w50").find(".qy").addClass("hide");
-				$wrap.closest(".w50").find(".bqy").removeClass("hide");
+
 				$wrap.find('.lcs_switch').removeClass('lcs_on').addClass('lcs_off');
             });
 			
@@ -122,33 +119,23 @@
 	};	
 	
 	
-	
-	// handlers
-	$(document).ready(function() {
-		
-		// on click
-		$(document).delegate('.lcs_switch:not(.lcs_disabled)', 'click tap', function(e) {
-
-			if( $(this).hasClass('lcs_on') ) {
-				if( !$(this).hasClass('lcs_radio_switch') ) { // not for radio
-					$(this).lcs_off();
-				}
-			} else {
-				$(this).lcs_on();
-			}
-		});
-		
-		
-		// on checkbox status change
-		$(document).delegate('.lcs_wrap input', 'change', function() {
-
-			if( $(this).is(':checked') ) {
-				$(this).lcs_on();
-			} else {
-				$(this).lcs_off();
-			}	
-		});
-		
-	});
+	//
+	// // handlers
+	// $(document).ready(function() {
+	//
+    //
+	//
+	//
+	// 	// on checkbox status change
+	// 	$(document).delegate('.lcs_wrap input', 'change', function() {
+    //
+	// 		if( $(this).is(':checked') ) {
+	// 			$(this).lcs_on();
+	// 		} else {
+	// 			$(this).lcs_off();
+	// 		}
+	// 	});
+	//
+	// });
 	
 })(jQuery);
