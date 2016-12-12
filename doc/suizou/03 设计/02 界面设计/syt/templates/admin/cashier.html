@@ -172,7 +172,7 @@
 
 
                                     <!--删除商品开始-->
-                                    <a class="spanOnwork deleteStore">
+                                    <a class="spanOnwork spanDelete deleteStore">
                                         <i class="fa fa-trash"></i>
                                         删除
                                     </a>
@@ -212,7 +212,7 @@
                                 <td>
 
                                     <!--删除门店开始-->
-                                    <a class="spanOnwork deleteStore">
+                                    <a class="spanOnwork spanDelete deleteStore">
                                         <i class="fa fa-trash"></i>
                                         删除
                                     </a>
@@ -378,9 +378,9 @@
                                 <div class="w50">
                                     <span class="spanName">商品启用 :</span>
                                     <div style="display: inline-block">
-                                        <input type="checkbox" name="check-3" value="6" class="lcs_check lcs_tt1" checked="checked" autocomplete="off" />
-                                        <span class="qy">启用</span>
-                                        <span class="bqy hide">不启用</span>
+                                        <input type="checkbox" name="check-3" value="6" class="lcs_check lcs_tt1" autocomplete="off" />
+                                        <span class="qy hide">启用</span>
+                                        <span class="bqy">不启用</span>
                                     </div>
                                 </div>
                                 <div class="w50 last">
@@ -472,13 +472,29 @@
     <script src="../../assets/admin/js/footHandle.js"></script> <!--底部固定在页面下面-->
     <script>
         $(function () {
-            /*数量选择*/
+            /*数量选择插件*/
             $('.num').spinner({});
 
-            /*switch开关*/
+            /*switch开关插件*/
             $('.lcs_check').lc_switch();
+            var qy = $(".qy");
+            var bqy = $(".bqy");
+            $(document).delegate('.lcs_switch:not(.lcs_disabled)', 'click tap', function(e) {
+                if( $(this).hasClass('lcs_on') ) {
+                    if( !$(this).hasClass('lcs_radio_switch') ) { // not for radio
+                        $(this).lcs_off();
+                        qy.addClass("hide");
+                        bqy.removeClass("hide");
+                    }
+                } else {
+                    $(this).lcs_on();
+                    bqy.addClass("hide");
+                    qy.removeClass("hide");
+                }
+            });
 
-            /*展开更多条件*/
+
+            /*展开更多条件弹窗*/
             var displayMore = $(".displayMore");
             var dailogFoot = $(".dailogFoot");
             var addStaffDailog = $(".addStaffDailog");
@@ -498,7 +514,7 @@
             });
 
 
-            //添加商品
+            //添加商品弹窗
             var mbm = $(".mask,.maskBg");
             var btnAdd = $(".btnAdd");
             var addStaffDailog = $(".addStaffDailog");
@@ -509,7 +525,7 @@
             });
 
 
-            /*单窗居中*/
+            /*弹窗居中*/
             function heightAuto(obj){
                 var ht = -obj.actual('height')/2 + "px";
                 obj.get(0).style.marginTop = ht;
@@ -530,7 +546,7 @@
             });
 
 
-            //商品信息删除
+            //商品信息删除弹窗
             var mbm = $(".mask,.maskBg");
             var deleteStore = $(".deleteStore");
             var dismissStaffDailog = $(".dismissStaffDailog");
@@ -541,7 +557,7 @@
                 heightAuto(dismissStaffDailog);
             });
 
-            //查询商品信息
+            //查询商品信息弹窗
             var btnModifyShop = $(".btnModifyShop");
             var notShopDailog = $(".notShopDailog");
             btnModifyShop.on("click",function () {
@@ -551,7 +567,7 @@
             });
 
 
-            //查询无商品信息后添加商品
+            //查询无商品信息后添加商品弹窗
             var sureAddShopping = $("#sureAddShopping");
             sureAddShopping.on("click",function () {
                 notShopDailog.addClass("hide").removeClass("shake");
@@ -561,7 +577,7 @@
 
 
 
-            //确认门店删除
+            //确认门店删除弹窗
             var dailog = $(".dailog");
             var mbm = $(".mask,.maskBg");
             var sureDeleteStaff = $("#sureDeleteStaff");
@@ -573,7 +589,7 @@
             });
 
 
-            //商品报损
+            //商品报损弹窗
             var ShopReported = $(".ShopReported");
             var btnBs = $(".btnBs");
             btnBs.on("click",function () {
