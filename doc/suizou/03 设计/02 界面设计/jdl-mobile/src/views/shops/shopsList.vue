@@ -123,6 +123,9 @@
         </div>
       </li>
     </ul>
+    <div class="weui_btn_area" v-show="btnHide">
+      <input type="button" class="weui_btn  weui_btn_primary" @click="lookMore()" value={{typeData}} v-model="typeData">
+    </div>
   </div>
   <div class="foot">
     <ul class="tabMenu clearfix">
@@ -212,7 +215,13 @@
           currPoint:null,
           currLng:"",
           currLat:"",
-          overflowY:false
+          overflowY:false,
+          btnHide:Boolean,
+          typeData:"查看更多",
+          pageNum:1,
+          nextNum:null,
+          totalNum:null,
+          nowPage:[]
         }
       },
       ready () {
@@ -272,8 +281,8 @@
         	}
 
         this.imageUrl = mchService.imgUrl
-        var mchListArr = {}
-        mchService.mchList(this,mchListArr)
+        var pageArr = {}
+        mchService.mchList(this,pageArr)
       if (authService.isLogin()) {
           this.isLogin = true
         }else{
@@ -289,7 +298,7 @@
         },
        onCancelCollection:function(shopsList){
          if (authService.isLogin()) {
-           var collectArr = {id:shopsList.collectionId}
+           var collectArr = {id:shopsList.collectionId};
            userService.cancelCollectionShop(this,collectArr)
          }else{
            this.$router.go('/auth/personLogin')
@@ -391,6 +400,24 @@
           var sortArr = {sort:3};
 
           userService.sort(this,sortArr)
+        },
+        lookMore:function(){
+
+
+          if(this.nextNum == this.pageNum ){
+            this.$set('toasttext',"无更多数据");
+            this.$set('toastshow',true);
+            return;
+          }
+          if(this.nextNum){
+            this.pageNum = this.nextNum;
+            var pageArr = {
+              pageNo:this.pageNum
+            };
+
+            mchService.mchList(this,pageArr);
+          }
+
         }
       }
     }

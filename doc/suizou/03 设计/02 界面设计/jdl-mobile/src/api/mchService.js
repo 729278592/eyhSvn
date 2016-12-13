@@ -11,14 +11,14 @@ export default {
 
   //商家个人中心
   personCenter(context) {
-    context.$progress.start()
+    context.$progress.start();
     context.$http.post(API_ROOT + "mobile/mch/personCenter.do").then(function (response) {
-      context.$progress.finish()
-      var res = response.json()
+      context.$progress.finish();
+      var res = response.json();
       if (res.status == "ok") {
-        context.lists = res.datas
-        console.log(JSON.stringify(context.lists))
-        var len = Math.round(context.lists.evaTotalScore/context.lists.evaOrderNum)
+        context.lists = res.datas;
+        console.log(JSON.stringify(context.lists));
+        var len = Math.round(context.lists.evaTotalScore/context.lists.evaOrderNum);
         for(var j = 0;j<len;j++){
           context.item[j].starActive = true
         }
@@ -377,6 +377,7 @@ export default {
       var res = response.json()
       if(res.status == "ok") {
         context.list = res.datas
+
       } else {
         alert(res.message);
       }
@@ -394,6 +395,7 @@ export default {
       var res = response.json()
       if(res.status == "ok") {
         context.list = res.datas.datas
+        console.log(JSON.stringify(context.list))
       } else {
         alert(res.message);
       }
@@ -409,10 +411,21 @@ export default {
     context.$http.post(API_ROOT+"mobile/getMchList.do",mchListArr).then(function(response){
       context.$progress.finish()
       var res = response.json()
+
       if(res.status == "ok") {
         if(res.datas!=null){
-          context.list = res.datas.datas
-          console.log(JSON.stringify(res.datas))
+          context.nowPage = res.datas.datas;
+          context.totalNum = res.datas.totalPages;
+          context.nextNum = res.datas.nextPage;
+          context.pageNum = res.datas.pageNo;
+          context.list = context.list.concat(context.nowPage);
+          context.btnHide = true;
+        }
+        if(context.list.length!=0){
+          context.dataHide = false;
+        }else{
+          context.dataHide = true;
+          context.btnHide = false;
         }
         for(var i =0;i<context.list.length;i++){
           context.list[i].item = [
