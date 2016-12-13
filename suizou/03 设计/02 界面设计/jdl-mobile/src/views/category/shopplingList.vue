@@ -15,7 +15,7 @@
       <div class="otherCon style">
         <ul class="shoppingList style clearfix pb0">
             <li v-for="shop in list" :class="{'mr0':$index%2==1}">
-                <a v-link="{ name: 'shopsShoppingInfor', params: {goodsId: shop.id}}" class="shop_div">
+                <a @click="addId(shop)" class="shop_div">
                     <div class="shop_list_bg">
                       <img :src="this.imageUrl+shop.coverPhoto" style="width:100%;height:100%;" />
                     </div>
@@ -102,7 +102,8 @@
     },
     ready () {
       document.title = '商品列表'
-      this.shopId = this.$route.params.shopplingListId
+      this.shopId = this.$route.params.shopplingListId;
+      console.log(this.shopId)
       this.type = this.$route.params.type
       this.imageUrl = mchService.imgUrl
       console.log(this.imageUrl)
@@ -115,6 +116,10 @@
     methods: {
      onShow: function () {
         this.hide = !this.hide
+      },
+      addId:function(shops){
+        localStorage.setItem('shopingId',shops.mchId);
+        this.$router.go("/category/shopsShoppingInfor/"+shops.id)
       },
       onSelect:function(index){
         this.items.forEach(function(item, i) {
