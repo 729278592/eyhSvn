@@ -412,7 +412,7 @@ export default {
       if(res.status == "ok") {
         if(res.datas!=null){
           context.list = res.datas.datas
-          console.log(JSON.stringify(context.list))
+          console.log(JSON.stringify(res.datas))
         }
         for(var i =0;i<context.list.length;i++){
           context.list[i].item = [
