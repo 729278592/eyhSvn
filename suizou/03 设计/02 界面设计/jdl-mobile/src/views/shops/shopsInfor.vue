@@ -40,20 +40,45 @@
                     </div>
                     <div class="shop_infor">
                         <p class="tile">{{product.goodsName}}</p>
+                        <!--<p class="clearfix">-->
+                            <!--<span class="left">-->
+                                <!--<span class="oldMoney">￥{{product.marketPrice}}</span>-->
+                                <!--￥{{product.price}}-->
+                            <!--</span>-->
+
+                        <!--</p>-->
+                        <!--<p class="clearfix">-->
+                          <!--<span class="left">-->
+                              <!--可用券 : 500-->
+                          <!--</span>-->
+                            <!--<span class="right shoppingNum">-->
+                                <!--销量{{product.sales}}-->
+                            <!--</span>-->
+                        <!--</p>-->
+
                         <p class="clearfix">
                             <span class="left">
-                                <span class="oldMoney">￥{{product.marketPrice}}</span>
-                                ￥{{product.price}}
+                                现　金: {{product.price}}
                             </span>
-
                         </p>
                         <p class="clearfix">
-                          <span class="left">
-                              可用券 : 500
+                          <span class="left" v-if="shop.costPrice!=null && shop.costPrice!=''">
+                              可用券: {{shop.costPrice}}
                           </span>
-                            <span class="right shoppingNum">
-                                销量{{product.sales}}
+                          <span class="left" v-else="">
+                              可用券: <span class="noPrice">暂无</span>
+                          </span>
+                        </p>
+                        <p class="clearfix">
+                            <span class="left">
+                              <!--<span class="oldMoney">市场价: {{shop.marketPrice}}</span>-->
+                              <span class="">市场价: {{product.marketPrice}}</span>
                             </span>
+                        </p>
+                        <p class="clearfix">
+                              <span class="left shoppingNum">
+                                    销　量: {{product.sales}}
+                              </span>
                         </p>
                     </div>
                 </a>
@@ -134,7 +159,6 @@
             id:this.shopsId
         }
         mchService.shopsInfor(this,shopsInforArr)
-
 
 
         var getMchGoodsListArr = {

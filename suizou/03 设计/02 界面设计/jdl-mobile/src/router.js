@@ -15,7 +15,7 @@ router.map({
     '/': {
       name: 'appIndex',
       component: (resolve) => {
-      require(['./views/home/appIndex.vue'], resolve)
+      require(['./views/home/index.vue'], resolve)
     }
   },
   // 首页

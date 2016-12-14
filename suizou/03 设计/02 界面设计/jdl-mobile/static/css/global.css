@@ -18,7 +18,7 @@ button:active{opacity: 0.85;}
 .content{width: 100%;position: relative;max-width: 40rem;margin: 0 auto;}
 .content.overflow{overflow-x: hidden;}
 .content,.page{background: #f3f3f3;}
-.hd{width: 100%;height: 2.5rem;background: #fe685b;line-height: 2.5rem;text-align: center;color: #fff;padding: 0;position: relative;z-index: 102;}
+.hd{width: 100%;height: 2.5rem;background: #fe4d57;line-height: 2.5rem;text-align: center;color: #fff;padding: 0;position: relative;z-index: 102;}
 .hd>a{padding: 0 0.5rem;float: left;position: relative;left: 0.5rem;font-size: 2rem;color: #fff;top:-0.1rem;}
 .shop_cat,.dot_block,.shop_msg{display: inline-block;position: relative;right: 0.5rem;font-size: 1.2rem;color: #fff;}
 .shop_cat{background: url(../images/shopCat.png) no-repeat;background-size: 100% 100%;width: 1.4rem;height: 1.4rem;margin-right: 0.5rem;}
@@ -149,7 +149,7 @@ a:active{opacity: 0.6;}
 .shopsDetails .title{padding: 0.625rem 0;border-bottom: 1px solid #dbdbdb;font-size: 1rem;color: #333;}
 .shopsDetails .infor{padding: 0.625rem 0;font-size: 0.875rem;color: #666;}
 .category_menu{width: 100%;}
-.category_menu>li{display: block;width: 100%;position: relative;background: #fff;margin-bottom: 0.625rem;height: 7.5rem;border-top: 1px solid #dbdbdb;}
+.category_menu>li{overflow: hidden;display: block;width: 100%;position: relative;background: #fff;margin-bottom: 0.625rem;height: 7.5rem;border-top: 1px solid #dbdbdb;}
 .category_menu>li:last-child{margin-bottom: 0;}
 .category_menu>li:last-child:after{border-bottom: none;}
 .category_menu>li>div.left{width: 25%;font-size: 1rem;position: relative;color: #333;height: 7.5rem;text-align: center;}
@@ -567,11 +567,12 @@ textarea{font-family: "微软雅黑";}
 .ulmenu li:before{position: absolute;top: 0;left: 0;height: 1px;width: 100%;border-top: 1px solid #dbdbdb;content: "";}
 .ulmenu li:after{position: absolute;top: 0;right: 0;height: 100%;width: 1px;border-right: 1px solid #dbdbdb;content: "";}
 .ulmenu li a{display: inline-block;width: 100%;height: 100%;text-align: center;font-size: 0.875rem;color: #333;}
+.ulmenu.fs12 li a{font-size: 0.625rem;}
 .ulmenu li a .span_index{display: inline-block;}
-.ulmenu li a .index_icon1{width: 4rem;height: 4rem;background: url(../images/indexIcon1.png) no-repeat;background-size: 100% 100%;}
-.ulmenu li a .index_icon2{width: 4rem;height: 4rem;background: url(../images/indexIcon2.png) no-repeat;background-size: 100% 100%;}
-.ulmenu li a .index_icon3{width: 4rem;height: 4rem;background: url(../images/indexIcon3.png) no-repeat;background-size: 100% 100%;}
-.ulmenu li a .index_icon4{width: 4rem;height: 4rem;background: url(../images/indexIcon4.png) no-repeat;background-size: 100% 100%;}
+.ulmenu li a .index_icon1{width: 2.4rem;height: 2.4rem;background: url(../images/indexIcon1.png) no-repeat;background-size: 100% 100%;}
+.ulmenu li a .index_icon2{width: 2.4rem;height: 2.4rem;background: url(../images/indexIcon2.png) no-repeat;background-size: 100% 100%;}
+.ulmenu li a .index_icon3{width: 2.4rem;height: 2.4rem;background: url(../images/indexIcon3-1.png) no-repeat;background-size: 100% 100%;}
+.ulmenu li a .index_icon4{width: 2.4rem;height: 2.4rem;background: url(../images/indexIcon4.png) no-repeat;background-size: 100% 100%;}
 .ulmenu li a:active{opacity: 0.8;}
 .ulLink{display: block;margin-bottom: 0.625rem;}
 .ulLink li{float: left;width: 50%;}
@@ -692,21 +693,21 @@ img.shopInfor.w100{width: 100%;margin-bottom: 0.625rem;}
 .entryList>li .inforList p.bottom{position: absolute;bottom: 0;}
 .entryList>li .inforList p.bottom .btnLeave{outline: none;border: none;padding: 0.2rem 0.8rem;background: #ff6702;color: #fff;border-radius: 0.2rem;position: relative;left: -0.5rem;}
 .entryList>li .inforList p.bottom .btnLeave.disabled{background: #dbdbdb;color: #333;}
-.ulmenu li a .my_icon1{width: 4rem;height: 4rem;background: url(../images/my1.png) no-repeat;background-size: 100% 100%;}
-.ulmenu li a .my_icon2{width: 4rem;height: 4rem;background: url(../images/my2.png) no-repeat;background-size: 100% 100%;}
-.ulmenu li a .my_icon3{width: 4rem;height: 4rem;background: url(../images/my3.png) no-repeat;background-size: 100% 100%;}
-.ulmenu li a .my_icon4{width: 4rem;height: 4rem;background: url(../images/my4.png) no-repeat;background-size: 100% 100%;}
-.ulmenu li a .my_icon5{width: 4rem;height: 4rem;background: url(../images/my5.png) no-repeat;background-size: 100% 100%;}
-.ulmenu li a .my_icon6{width: 4rem;height: 4rem;background: url(../images/my6.png) no-repeat;background-size: 100% 100%;}
+.ulmenu li a .my_icon1{width: 2.4rem;height: 2.4rem;background: url(../images/my1.png) no-repeat;background-size: 100% 100%;}
+.ulmenu li a .my_icon2{width: 2.4rem;height: 2.4rem;background: url(../images/my2.png) no-repeat;background-size: 100% 100%;}
+.ulmenu li a .my_icon3{width: 2.4rem;height: 2.4rem;background: url(../images/my3.png) no-repeat;background-size: 100% 100%;}
+.ulmenu li a .my_icon4{width: 2.4rem;height: 2.4rem;background: url(../images/my4.png) no-repeat;background-size: 100% 100%;}
+.ulmenu li a .my_icon5{width: 2.4rem;height: 2.4rem;background: url(../images/my5.png) no-repeat;background-size: 100% 100%;}
+.ulmenu li a .my_icon6{width: 2.4rem;height: 2.4rem;background: url(../images/my6.png) no-repeat;background-size: 100% 100%;}
 
-.ulmenu li a .index_icona{width: 4rem;height: 4rem;background: url(../images/appIndex1.png) no-repeat;background-size: 100% 100%;}
-.ulmenu li a .index_iconb{width: 4rem;height: 4rem;background: url(../images/appIndex2.png) no-repeat;background-size: 100% 100%;}
-.ulmenu li a .index_iconc{width: 4rem;height: 4rem;background: url(../images/appIndex3.png) no-repeat;background-size: 100% 100%;}
-.ulmenu li a .index_icond{width: 4rem;height: 4rem;background: url(../images/appIndex4.png) no-repeat;background-size: 100% 100%;}
-.ulmenu li a .index_icone{width: 4rem;height: 4rem;background: url(../images/appIndex5.png) no-repeat;background-size: 100% 100%;}
-.ulmenu li a .index_iconf{width: 4rem;height: 4rem;background: url(../images/appIndex6.png) no-repeat;background-size: 100% 100%;}
-.ulmenu li a .index_icong{width: 4rem;height: 4rem;background: url(../images/appIndex7.png) no-repeat;background-size: 100% 100%;}
-.ulmenu li a .index_iconh{width: 4rem;height: 4rem;background: url(../images/appIndex8.png) no-repeat;background-size: 100% 100%;}
+.ulmenu li a .index_icona{width: 2.4rem;height: 2.4rem;background: url(../images/appIndex1.png) no-repeat;background-size: 100% 100%;}
+.ulmenu li a .index_iconb{width: 2.4rem;height: 2.4rem;background: url(../images/appIndex2.png) no-repeat;background-size: 100% 100%;}
+.ulmenu li a .index_iconc{width: 2.4rem;height: 2.4rem;background: url(../images/appIndex3.png) no-repeat;background-size: 100% 100%;}
+.ulmenu li a .index_icond{width: 2.4rem;height: 2.4rem;background: url(../images/appIndex4.png) no-repeat;background-size: 100% 100%;}
+.ulmenu li a .index_icone{width: 2.4rem;height: 2.4rem;background: url(../images/appIndex5.png) no-repeat;background-size: 100% 100%;}
+.ulmenu li a .index_iconf{width: 2.4rem;height: 2.4rem;background: url(../images/appIndex6.png) no-repeat;background-size: 100% 100%;}
+.ulmenu li a .index_icong{width: 2.4rem;height: 2.4rem;background: url(../images/appIndex7.png) no-repeat;background-size: 100% 100%;}
+.ulmenu li a .index_iconh{width: 2.4rem;height: 2.4rem;background: url(../images/appIndex8.png) no-repeat;background-size: 100% 100%;}
 
 .personCode{width: 100%;padding: 1rem 0;text-align: center;font-size: 1rem;color: #333;}
 .personCode img{margin-bottom: 0.625rem;width: 40%;}
@@ -815,10 +816,10 @@ img.shopInfor.w100{width: 100%;margin-bottom: 0.625rem;}
 .ulmenu.mt0{margin-top: 0;border-top: 0;}
 .ulmenu.mt0 li:last-child:after{border-right: 0;}
 .ulmenu li a .span_index{display: inline-block;}
-.ulmenu li a .shops_icon1{width: 4rem;height: 4rem;background: url(../images/shops1.png) no-repeat;background-size: 100% 100%;}
-.ulmenu li a .shops_icon2{width: 4rem;height: 4rem;background: url(../images/shops2.png) no-repeat;background-size: 100% 100%;}
-.ulmenu li a .shops_icon3{width: 4rem;height: 4rem;background: url(../images/shops3.png) no-repeat;background-size: 100% 100%;}
-.ulmenu li a .shops_icon4{width: 4rem;height: 4rem;background: url(../images/shops4.png) no-repeat;background-size: 100% 100%;}
+.ulmenu li a .shops_icon1{width: 2.4rem;height: 2.4rem;background: url(../images/shops1.png) no-repeat;background-size: 100% 100%;}
+.ulmenu li a .shops_icon2{width: 2.4rem;height: 2.4rem;background: url(../images/shops2.png) no-repeat;background-size: 100% 100%;}
+.ulmenu li a .shops_icon3{width: 2.4rem;height: 2.4rem;background: url(../images/shops3.png) no-repeat;background-size: 100% 100%;}
+.ulmenu li a .shops_icon4{width: 2.4rem;height: 2.4rem;background: url(../images/shops4.png) no-repeat;background-size: 100% 100%;}
 .orderMenu.bt1{border-top: 1px solid #dbdbdb;border-bottom: 0;}
 .orderMenu.bt1 a{font-size: 0.875rem;}
 .weui_cells_access.mt10{margin-top: 0.625rem;border-top: 1px solid #dbdbdb;}
@@ -1038,6 +1039,20 @@ ul.styleHide.active{display: inline-block;}
 }
 
 .weui_btn_primary.bg{background: #ff6804;}
+
+.ulmenu.mt{
+  display: block;
+  background: #fff;
+  margin: 0.625rem 0 0 0;
+  border-bottom: 0;}
+.ulmenu.mt li:after{border-right:0;}
+.ulmenu.mb li:after{border-right:0;}
+.ulmenu.mb{
+  display: block;
+  background: #fff;
+  margin: 0 0 0.625rem 0;
+  border-bottom: 0;}
+
 
 @media screen and (max-width: 768px){.formIndex .fa-search{left: 1rem;} body,html{font-size: 20px;}}
 @media screen and (max-width: 640px){.formIndex .fa-search{left: 12rem;top: 0.8rem;}}

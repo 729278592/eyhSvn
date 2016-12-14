@@ -23,20 +23,29 @@
                       <p class="tile">{{shop.goodsName}}</p>
                         <!--<p class="smallTile">{{shop.goodsName}}</p>-->
                         <p class="clearfix">
-                        <span class="left">
-                            <span class="oldMoney">￥{{shop.marketPrice}}</span>
-                            ￥{{shop.price}}
-                        </span>
-
-                      </p>
-                      <p class="clearfix">
-                        <span class="left">
-                            可用券 : 500
-                        </span>
-                          <span class="right shoppingNum">
-                              销量{{shop.sales}}
-                          </span>
-                      </p>
+                              <span class="left">
+                                  现　金: {{shop.price}}
+                              </span>
+                        </p>
+                        <p class="clearfix">
+                            <span class="left" v-if="shop.costPrice!=null && shop.costPrice!=''">
+                                可用券: {{shop.costPrice}}
+                            </span>
+                          <span class="left" v-else="">
+                                可用券: <span class="noPrice">暂无</span>
+                            </span>
+                        </p>
+                        <p class="clearfix">
+                            <span class="left">
+                              <!--<span class="oldMoney">市场价: {{shop.marketPrice}}</span>-->
+                              <span class="">市场价: {{shop.marketPrice}}</span>
+                            </span>
+                        </p>
+                        <p class="clearfix">
+                            <span class="left shoppingNum">
+                                  销　量: {{shop.sales}}
+                            </span>
+                        </p>
                     </div>
                 </a>
             </li>

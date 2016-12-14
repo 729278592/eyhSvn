@@ -468,6 +468,7 @@ export default {
         for(var j = 0;j<len;j++){
           context.item[j].starActive = true
         }
+
       } else {
         alert(res.message);
       }
@@ -485,6 +486,7 @@ export default {
       var res = response.json()
       if(res.status == "ok") {
         context.shopListArr = res.datas.datas
+        console.log(JSON.stringify(context.shopListArr))
       } else {
         alert(res.message);
       }

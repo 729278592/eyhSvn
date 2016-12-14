@@ -1,8 +1,8 @@
 import router from '../router'
 import {API_ROOT} from '../config'
 // URL and endpoint constants
-const LOGIN_URL = API_ROOT + 'mobile/checkUser.do'
-const SIGNUP_URL = API_ROOT + 'mobile/login.do'
+const LOGIN_URL = API_ROOT + 'mobile/checkUser.do';
+const SIGNUP_URL = API_ROOT + 'mobile/login.do';
 
 export default {
   // User object will let us check authentication status
@@ -14,12 +14,12 @@ export default {
   login(context, creds, redirect,loginIng) {
     context.$http.post(LOGIN_URL, creds).then((response) => {
       // success callback
-      var result = response.json()
+      var result = response.json();
 
       if (result.status == 'ok') {
-        loginIng = "登录中"
-        localStorage.setItem('id_token', result.status)
-        this.user.authenticated = true
+        loginIng = "登录中";
+        localStorage.setItem('id_token', result.status);
+        this.user.authenticated = true;
         // Redirect to a specified route
         if(redirect) {
           router.go(redirect)
@@ -29,20 +29,20 @@ export default {
       }
     },(response) => {
       // error callback
-      context.error = response
+      context.error = response;
       console.log(context.error)
     })
   },
-  
+
 
   // To log out, we just need to remove the token
   logout() {
-    localStorage.removeItem('id_token')
+    localStorage.removeItem('id_token');
     this.user.authenticated = false
   },
 
   checkAuth() {
-    var jwt = localStorage.getItem('id_token')
+    var jwt = localStorage.getItem('id_token');
     if(jwt) {
       this.user.authenticated = true
     }
