@@ -474,14 +474,19 @@ export default {
 
   //商品详情
   shopsShoppingInfor(context,shopsShoppingInforArr) {
-    context.$progress.start()
+    context.$progress.start();
     context.$http.post(API_ROOT+"mobile/showGoods.do",shopsShoppingInforArr).then(function(response){
-      context.$progress.finish()
-      var res = response.json()
+      context.$progress.finish();
+      var res = response.json();
       if(res.status == "ok") {
-        this.shopInfor = res.datas.goods
-        this.products = res.datas.products
+        context.shopInfor = res.datas.goods;
+        context.products = res.datas.products;
+        context.imagesArr = context.shopInfor.images.split(",");
 
+        // var len = context.shopInfor.images.split(",");
+        // for(var i = 0;i<len.length;i++){
+        //   context.imagesArr.push({"img":len[i]})
+        // }
         console.log(JSON.stringify(res.datas))
       } else {
         alert(res.message);

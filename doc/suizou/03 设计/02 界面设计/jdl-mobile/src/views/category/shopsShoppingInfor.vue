@@ -36,9 +36,23 @@
     </div>
   </div>
 <div class="bd absolute pd48">
-  <div>
-    <img :src="this.imageUrl+shopInfor.images" alt="" class="w100"/>
+  <!--<div>-->
+    <!--<img :src="this.imageUrl+shopInfor.images" alt="" class="w100"/>-->
+  <!--</div>-->
+  <div v-el:msg class="swiper-container mt0 swiper-container-horizontal" id="swiper-container">
+    <div class="swiper-wrapper" style="transition-duration: 0ms; ">
+      <div class="swiper-slide" v-for="(goodsImg,index) in imagesArr">
+        <a>
+          <img :src="this.imageUrl+index" class="w100" alt=""/>
+        </a>
+      </div>
+
+    </div>
+    <div class="swiper-pagination"></div>
+    <!--<div class="swiper-button-next"></div>-->
+    <!--<div class="swiper-button-prev"></div>-->
   </div>
+
   <div class="shopsshoppingName">
       {{shopInfor.goodsName}}
   </div>
@@ -53,11 +67,11 @@
       </P>
       <P class="clearfix">
           <span class="left">
-              可用劵 : ￥<span class="verdana">{{shopInfor.shouldVolume}}</span>
+              可用劵 : ￥<span class="verdana">{{shopInfor.costPrice}}</span>
           </span>
-          <span class="right">
-              应付金额 : ￥<span class="verdana">{{shopInfor.shouldMoney}}</span>
-          </span>
+          <!--<span class="right">-->
+              <!--应付金额 : ￥<span class="verdana">{{shopInfor.shouldMoney}}</span>-->
+          <!--</span>-->
       </P>
       <P class="clearfix">
           <span class="left color1" v-if="shopInfor.freight==0">
@@ -127,7 +141,7 @@
                   <div>
                       <div class="couponImg style">
                           <img v-if="shopInfor.images==null" src="../../../static/images/shoppingC1.jpg" class="couponImg1" alt="">
-                          <img v-if="shopInfor.images!=null" :src="this.imageUrl+shopInfor.images" class="couponImg1" alt="">
+                          <img v-if="shopInfor.images!=null" :src="this.imageUrl+imagesArr[0]" class="couponImg1" alt="">
                       </div>
                       <div class="inforList">
                           <p class="clearfix top w74">
@@ -143,7 +157,7 @@
           <div class="shopType style">
               <p class="title">规格</p>
               <ul class="shopTypeList clearfix">
-                  <li v-for="shopInforSize in products"  @click="onSelect($index,$event)">{{shopInforSize.specName}}</li>
+                  <li v-for="shopInforSize in products" @click="onSelect($index,$event)">{{shopInforSize.specName}}</li>
               </ul>
           </div>
           <div class="weui_cells  mt0 ">
@@ -202,17 +216,21 @@
 <Toast :toastshow.sync="toastshow" :toasttext="toasttext"></Toast>
 </template>
 
+<style>
+  @import '../../../static/plugins/swiper/dist/css/swiper.min.css';
+</style>
 <style scoped>
   .bd.absolute{bottom:0}
   .foot{height: 49px;line-height: 49px;}
 </style>
 
 <script>
+   import '../../../static/plugins/swiper/dist/js/swiper.min.js'
    import Spinner from '../components/spinner.vue'
    import Bar from '../components/headBar.vue'
    import userService from '../../api/userService'
    import authService  from '../../api/authService'
-    import Toast from '../components/toast.vue'
+   import Toast from '../components/toast.vue'
    export default {
       components: {
          //注册组件
@@ -244,14 +262,14 @@
           toastshow:false,
           toasttext:"",
           idS :"",
-          isLogin:false
+          isLogin:false,
+          imagesArr:[]
         }
       },
       ready () {
         document.title = '商铺商品详情';
         var shopsShoppingInforArr = {goodsId:this.$route.params.goodsId};
         this.idS = localStorage.getItem('shopingId');
-
         this.imageUrl = userService.imgUrl;
         userService.shopsShoppingInfor(this,shopsShoppingInforArr);
         if (authService.isLogin()) {
@@ -259,6 +277,19 @@
         }else{
           this.isLogin = false
         }
+        var that = this;
+        setTimeout(function () {
+          new Swiper (that.$els.msg, {
+            slidesPerView: 1,
+            pagination:'.swiper-pagination',
+            paginationClickable: true,
+            spaceBetween: 0,
+            loop:true,
+            autoplay: 5000,
+            autoplayDisableOnInteraction: false,
+            active:false
+          })
+        },200)
       },
       methods: {
         returnPage:function(){
@@ -282,12 +313,13 @@
          for(var i=0;i<e.currentTarget.parentNode.children.length;i++){
             e.currentTarget.parentNode.children[i].setAttribute("class"," ")
          }
-         this.active = true
-         this.indexNum = index
+         this.active = true;
+         this.indexNum = index;
+         this.shopInfor.price = this.products[this.indexNum].price;
          e.currentTarget.setAttribute("class","active")
         },
         selectShoop:function(){
-          this.shopActive=true
+          this.shopActive=true;
           this.commentActive=false
         },
         cancelCollection:function (shopsList) {
@@ -366,4 +398,6 @@
          }
       }
     }
+
+
 </script>

@@ -64,23 +64,27 @@
         <!--<div class="swiper-button-next"></div>-->
         <!--<div class="swiper-button-prev"></div>-->
     </div>
-      <ul class="ulmenu clearfix">
+      <ul class="ulmenu fs12 clearfix mt">
         <li>
-            <a v-link="'/user/myOrder'">
-                <span class="span_index index_icon1"></span><br/>
-                <span>我的订单</span>
+          <a v-link="'/user/myOrder'">
+            <span class="span_index index_icon1"></span><br/>
+            <span>我的订单</span>
+          </a>
+        </li>
+        <li>
+            <!--<a v-link="'/user/presentIntegral'">-->
+                <!--<span class="span_index index_icon2"></span><br/>-->
+                <!--<span>积分兑换</span>-->
+            <!--</a>-->
+            <a v-link="'auth/personLogin/'">
+              <span class="span_index index_icona"></span><br/>
+              <span>个人登录</span>
             </a>
         </li>
         <li>
-            <a v-link="'/user/presentIntegral'">
-                <span class="span_index index_icon2"></span><br/>
-                <span>积分兑换</span>
-            </a>
-        </li>
-        <li>
-            <a v-link="'/user/detailOutcome'">
+            <a v-link="'/user/userHelp'">
                 <span class="span_index index_icon3"></span><br/>
-                <span>交易明细</span>
+                <span>用户帮助</span>
             </a>
         </li>
         <li>
@@ -90,6 +94,33 @@
             </a>
         </li>
     </ul>
+       <ul class="ulmenu fs12 clearfix mb">
+         <li>
+           <a v-link="'user/settledApplication/'">
+             <span class="span_index index_icone"></span><br/>
+             <span>入驻申请</span>
+           </a>
+         </li>
+         <li>
+           <a v-link="'auth/login/'">
+             <span class="span_index index_iconf"></span><br/>
+             <span>商家登录</span>
+           </a>
+         </li>
+         <li>
+           <a v-link="'user/agentApplication/'">
+             <span class="span_index index_icong"></span><br/>
+             <span>代理申请</span>
+           </a>
+         </li>
+         <li>
+           <a v-link="'user/auditStatusQuery/'">
+             <span class="span_index index_iconh"></span><br/>
+             <span>申请进度</span>
+           </a>
+         </li>
+       </ul>
+
        <ul class="ulLink clearfix">
          <li class="first" v-for="liList in getMainRegoList">
              <a @click="addShopId(liList)">
@@ -115,15 +146,22 @@
                           <p class="tile">{{shop.goodsName}}</p>
                           <!--<p class="smallTile">{{shop.goodsName}}</p>-->
                           <p class="clearfix">
-                          <span class="left">
-                              <span class="oldMoney">￥{{shop.marketPrice}}</span>
-                              ￥{{shop.price}}
-                          </span>
-
+                            <span class="left">
+                                现　金: {{shop.price}}
+                            </span>
                           </p>
                           <p class="clearfix">
+                           <span class="left" v-if="shop.costPrice==null">
+                              可用券: <span class="noPrice">暂无</span>
+                            </span>
+                            <span class="left" v-else>
+                              可用券: {{shop.costPrice}}
+                            </span>
+                        </p>
+                          <p class="clearfix">
                             <span class="left">
-                                可用券 : 500
+                              <!--<span class="oldMoney">市场价: {{shop.marketPrice}}</span>-->
+                              <span class="">市场价: {{shop.marketPrice}}</span>
                             </span>
                           </p>
                       </div>
