@@ -12,6 +12,7 @@ textarea,select,input,button{outline: none;border: none;font-family: "微软雅�
 .hide{display: none;}
 .right{float: right;}
 .left{float: left;}
+a:hover{cursor: pointer;}
 a:link{text-decoration: none;}
 body{background: #eeeef1;}
 .wrapper{width: 100%;position: relative;margin: 0 auto;min-width: 1024px;}
@@ -257,6 +258,7 @@ html.overflow{overflow: hidden;}
 .l_consulting_menu{width: 100%;}
 .l_consulting_menu li{width: 100%;padding: 20px 0;border-bottom: 1px solid #efefef;}
 .l_consulting_menu li:hover{background: #efefef;}
+.l_consulting_menu.notHover li:hover{background: #fff;}
 .consulting{width: 1024px;display: block;margin: 0 auto;}
 .consulting_img{width: 240px;height: 240px;}
 .consulting_img>img{width: 100%;height: 100%;}
@@ -283,7 +285,7 @@ html.overflow{overflow: hidden;}
 .foot-nav li{float: left;border-right: 1px solid #a39582;position: relative;width:80px;padding: 0 10px;height: 16px;overflow: hidden;}
 .foot-nav li.last{border-right: none;}
 .foot-nav li a{display: inline-block;width:80px;height: 32px;line-height: 16px;color: #fff;text-align: center;transition:.5s all ease;-webkit-transition:.5s all ease;-moz-transition:.5s all ease;position: absolute;top: 0;}
-.foot-nav li a:hover{cursor:default;position: relative;top: -20px;}
+.foot-nav li a:hover{cursor:pointer;position: relative;top: -20px;}
 .foot-nav li a p{width: 100%;height: 20px;font-size: 14px;}
 .foot-nav li a p.first{color: #ccc;}
 .foot-nav li a p.last{color: #fff;}

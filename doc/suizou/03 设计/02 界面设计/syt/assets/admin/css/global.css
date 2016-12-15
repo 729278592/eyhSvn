@@ -466,6 +466,7 @@ body{background: #edeeee;}
 .divSelect.style .h1{height: 43px;}
 .spanSelect .fa{top: 13px;}
 .inputCss{padding: 12px 0 12px 10px;width: 35%;border: 1px solid #dbdbdb;}
+.inputCss.style{width: 25%;}
 .contentMainLeft{width: 230px;background: #fff;}
 .contentLeft{width: 100%;border: 1px solid #dbdbdb;border-top: 0;}
 .contentLeft>.title{width: 210px;height: 40px;padding: 0 10px;line-height: 40px;color: #efefef;background: #8d94ae;}
@@ -555,15 +556,22 @@ body{background: #edeeee;}
 .shopInforCon{width:80%;margin: 0 auto;display: block;}
 .shopModify,.shopTable{width: 40%;text-align: center;}
 .shopBtn{width: 18%;}
-.shopModify input{padding: 11px;border: 1px solid #dbdbdb;width: 66%;}
+.shopTable tr th img{width: 22px;}
+.shopModify input,.shopInforCon.style input{padding: 11px;border: 1px solid #dbdbdb;width: 66%;}
+.shopInforCon.style table{width: 100%;}
 .btnBs{padding: 10px 0;background: #fb7d55;color: #fff;border-radius: 4px;width: 88%;margin-top: 10px;font-size: 16px;}
-.btnModifyShop{padding: 10px 0;background: #fb7d55;color: #fff;width: 19%;font-size: 16px;}
+.btnSureShop,.btnSmShop,.btnModifyShop{padding: 10px 0;background: #fb7d55;color: #fff;width: 19%;font-size: 16px;}
+.shopInforCon.style .btnModifyShop{margin-bottom: 28px;}
+.shopInforCon.style .shopTable input{width: 76%;}
 .shopTable table{border-collapse:collapse;background: #fff;width: 100%;}
 .shopTable table tr th{background: #4ebfca;color: #fff;font-weight: 100;}
 .shopTable table tr td,.shopTable table tr th{text-align: center;border: 1px solid #dbdbdb;padding: 11.5px 0;}
+.shopInforCon.style .shopTable table tr td,.shopInforCon.style .shopTable table tr th{text-align: center;border: 1px solid #dbdbdb;padding: 6px 0;}
+.btnCharge{background: #fb7b54;font-size: 16px;border-radius: 4px;color: #fff;padding: 4px 6px;}
 .shopTable table tr td{color: #4ebfca;}
 .shopBtn{text-align: right;}
 .btnSubmit{padding: 31px 0;background: #fb7d55;color: #fff;border-radius: 4px;margin-top: 10px;font-size: 20px;width: 100%;}
+.shopInforCon.style .btnSubmit{padding: 43px 0;}
 .btnSubmit.mt0{margin-top: 0;}
 .dailogHead.style{}
 .dailogHead.style p{display: block;width: 96%;line-height: 34px;}
@@ -917,6 +925,10 @@ table tr.notOn td{color: #666 !important;}
 .divInput div.w50 .textLeft {position: relative;top: -13px;}
 .divInput div.w50 .textLeft span{text-align: left;}
 .divInput div.w50.w100{width: 100%;}
+.divInput div.w50.w100.style1{text-align: center;}
+.divInput div.w50.w100.style1 .shopTable{display: inline-block;width: 60%;}
+.divInput div.w50.w100.style1 .shopTable table{margin: 15px 0;}
+.divInput div.w50.w100.style1 .shopTable input{width: 76%;padding: 11px 2%;border: 1px solid #dbdbdb;}
 .divInput div.w50.last{float: right;text-align: right;}
 .divInput div.w50 span{color: #444;}
 .divInput div.w50 .spanName{display: inline-block;width: 95px;text-align: right;}
@@ -952,7 +964,8 @@ input::-webkit-inner-spin-button{
 
 .dailogFoot .btnCancel:hover{opacity: 0.8;}
 .displayMore{font-size: 16px;color: #02abdf;text-indent: 10px;}
-.displayMore .fa{font-size: 20px;}
+.displayMore:hover{cursor: pointer;}
+.displayMore .fa{font-size: 20px;position: relative;top: 3px;left: -10px;}
 .w1{position: absolute;left: 0;right: 0;height: 1px;background: #dbdbdb;margin: 10px 0;}
 .moreTj{margin-top: 25px;}
 
@@ -1028,11 +1041,11 @@ body,html{height: 100%;}
 .wrapper.h100{width: 100%;height: 100%;min-height: 650px;}
 .logBodyBg{width: 100%;height: 100%;position: absolute;z-index: 1;left: 0;top: 0;overflow: hidden;min-width: 1024px;}
 .logBodyBg img{width: 100%; height: 100%;}
-.logWrap,.regWrap{background-color: #fff;width: 442px;position: absolute;z-index: 2;left: 50%;top: 50%;margin: 0 0 0 -221px;border-radius: 8px;}
+.logWrap,.regWrap{background-color: #fff;width: 560px;position: absolute;z-index: 2;left: 50%;top: 50%;margin: 0 0 0 -280px;border-radius: 8px;}
 .reWrap{margin-top: -180px;height: 460px;}
 .loginPeople{position: absolute;top: -130px;left: 150px;}
 .logBox,.regBox{padding-top:1px;margin: 20px 40px;}
-.logBox .title,.regBox .title{font-family: "微软雅黑";font-size: 18px;color: #f16a20;width: 100%;text-align: center;padding-bottom: 20px;}
+.logBox .title,.regBox .title{font-family: "微软雅黑";font-size: 20px;color: #33bbe5;width: 100%;text-align: center;padding-bottom: 20px;}
 .form{width: 100%;height:100%;font-size: 14px;}
 .form.fs14{font-size: 14px;}
 body.overflow{overflow-y: hidden;overflow-x: auto;}
@@ -1040,11 +1053,11 @@ body.overflow{overflow-y: hidden;overflow-x: auto;}
 .question-infor .fa{position: absolute;left: -5px;top: 8px;color: #ff7f81;font-size: 16px;}
 .question-infor p{line-height: 16px;top: 0;}
 .form .form-group .w100{width: 100%;position: relative;border: 1px solid #dbdbdb;border-radius: 20px;padding: 6px 3%;}
-.form .form-group .w100 .inputText{width: 270px;padding-left: 5px;}
-.form .form-group .w100 .inputText.w200{width: 160px;}
+.form .form-group .w100 .inputText{width: 85%;padding-left: 2%;}
+.form .form-group .w100 .inputText.w200{width: 60%;}
 input.btn-click{background: #f16a20;font-size: 12px;color: #fff;border-radius: 20px;}
 input.btn-click:hover{background: #e16a20}
-.form .form-group .btn-click{background: #f16a20;font-size: 14px;color: #fff;border-radius: 6px;text-align: center;border: none;display: block;height: 40px;}
+.form .form-group .btn-click{background: #00abdf;font-size: 14px;color: #fff;border-radius: 6px;text-align: center;border: none;display: block;height: 40px;}
 .form .form-group .btn-click:hover{text-decoration: none;opacity: 0.8;filter:alpha(opacity=80);}
 .form  a:hover{text-decoration: underline;}
 .form  a{color: #f16a20;}
@@ -1055,17 +1068,17 @@ input.btn-click:hover{background: #e16a20}
 label.error {color: #EA5200;margin-bottom: 0;font-family: "微软雅黑";}
 .form .mt{margin-top: 10px;}
 .form-group.h54{height: 20px;margin-bottom: 0;font-size: 14px;font-family: "微软雅黑";}
-.form .form-group.bocea .w100{border-color: #ff7b22;font-family: "微软雅黑";}
+.form .form-group.bocea .w100{border-color: #00abdf;font-family: "微软雅黑";}
 .input-group .form-control.w66{width: 65.6666%;padding-left: 1%;line-height: 30px;}
 .input-group span.c6{color: #666;font-size: 14px;}
 .form-group .checkboxs{position: relative;top: 2px;}
 .form-group.mb0{margin-bottom: 0;}
 .form-group .check{color: #666;font-family: "微软雅黑";font-size: 14px;}
 .form-group.bo .w100{border: none;color: #666;font-family: "微软雅黑";}
-.form-group .getcode{position: absolute;right: 0;top: 0;height: 34px;width: 120px;background: #f16a20;text-align: center;line-height: 34px;color: #fff;border-radius: 0 20px 20px 0;font-size: 12px;}
+.form-group .getcode{position: absolute;right: 0;top: 0;height: 34px;width: 26%;background: #f16a20;text-align: center;line-height: 34px;color: #fff;border-radius: 0 20px 20px 0;font-size: 12px;}
 .form-group .getcode:hover{opacity: 0.8;filter:alpha(opacity=80);}
 .form-group .getcode.active{background: #ccc;}
-.form-group .w100 .type{display: inline-block;width: 64px;color: #666;font-family: "微软雅黑";}
+.form-group .w100 .type{display: inline-block;width: 12%;color: #666;font-family: "微软雅黑";}
 .form-group .help-block-error{font-family: "微软雅黑";position: relative;left: 12px;color: #fe695c;top:0px;}
 .form-group .errMessge{color: #fe695c;font-family: "微软雅黑";}
 .form-group .btnSure{font-family: "微软雅黑";background: #f16b22;color: #fff;width: 60px;}
@@ -1141,6 +1154,7 @@ label{font-weight: 100;color: #4B525C;}
     .inputCss.w20{width: 200px;}
     .divSelect.style select{padding: 11px 50px 11px 10px}
     .divSelect.styles.w180 .h1{height: 41px;}
+    .shopInforCon.style .shopTable input{width: 74%;}
     .navMeun1 {
         left: 144px;
     }
@@ -1153,8 +1167,9 @@ label{font-weight: 100;color: #4B525C;}
     .navMeun>li{margin-left: 10px;}
     .navMeun>li>a{width: 90px;}
     .btnAdd{margin-right: 0;}
-
+    .shopInforCon.style .shopTable input{width: 74%;}
     .inputCss{width: 250px;}
+    .inputCss.style{width: 180px;}
     .inputCss.w20{width: 200px;}
     .navMeun1 {
         left: 78px;
