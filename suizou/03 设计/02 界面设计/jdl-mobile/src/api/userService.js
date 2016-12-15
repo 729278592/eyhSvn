@@ -19,7 +19,6 @@ export default {
             var res = response.json()
              if(res.status == "ok") {
                   context.dataJson = res.datas
-               console.log(JSON.stringify(res.datas))
              } else {
                    alert(res.message);
                 }
@@ -64,7 +63,6 @@ export default {
         this.show = false;
         for(var i=0;i<this.addressList.length;i++){
           this.addressList.$remove(this.shops);
-          console.log(JSON.stringify(this.shops))
           this.$set('toasttext','删除成功');
           this.$set('toastshow',true);
           location.reload()
@@ -426,8 +424,12 @@ export default {
       context.$progress.finish();
       var res = response.json();
       if(res.status == "ok") {
-        this.list = res.datas
-        console.log(JSON.stringify(res.datas));
+        this.list = res.datas;
+        if(context.list[context.num].length!=0){
+          context.dataHide = false;
+        }else{
+          context.dataHide = true;
+        }
       } else {
         alert(res.message);
       }
@@ -444,7 +446,6 @@ export default {
       var res = response.json();
       if(res.status == "ok") {
         this.getMainRegoList = res.datas;
-        console.log(JSON.stringify(res.datas));
       } else {
         alert(res.message);
       }
@@ -462,7 +463,12 @@ export default {
       context.$progress.finish()
       var res = response.json()
       if(res.status == "ok") {
-        this.num = index
+        context.num = index;
+        if(context.list[context.num].goodses.length!=0){
+          context.dataHide = false;
+        }else{
+          context.dataHide = true;
+        }
       } else {
         alert(res.message);
       }
@@ -487,7 +493,6 @@ export default {
         // for(var i = 0;i<len.length;i++){
         //   context.imagesArr.push({"img":len[i]})
         // }
-        console.log(JSON.stringify(res.datas))
       } else {
         alert(res.message);
       }
@@ -539,7 +544,6 @@ export default {
       var res = response.json()
       if(res.status == "ok") {
         this.orders = res.datas
-        console.log(JSON.stringify(this.orders))
         if(this.orders.length!=0){
           this.dataHide = false
           this.orderHide = true
@@ -644,30 +648,33 @@ export default {
 
   //购物车列表删除
   sureDeleteList(context,deleteList) {
-    context.$progress.start()
+    context.$progress.start();
     context.$http.post(API_ROOT+"mobile/member/deleteCart.do",deleteList).then(function(response){
-      context.$progress.finish()
-      var res = response.json()
+      context.$progress.finish();
+      var res = response.json();
       if(res.status == "ok") {
-        for(var i=0;i<this.orders.length;i++){
-          this.orders[i].list.$remove(this.shop)
-          if(this.orders.length!=0){
-            this.dataHide = false
-            this.orderHide = true
+        for(var i=0;i<context.orders.length;i++){
+          context.orders[i].list.$remove(context.shop);
+          if(context.orders[i].list.length!=0){
           }else{
-            this.dataHide = true
-            this.orderHide = false
+            context.orders.$remove(context.orders[context.index])
+            if(context.orders.length!=0){
+              context.dataHide = false;
+              context.orderHide = true;
+            }else{
+              context.dataHide = true;
+              context.orderHide = false
+            }
           }
-
         }
         for(var i=0; i<this.orders.length; i++) {
-          if(this.orders[i].mchId == deleteList.mchId) {
+          if(context.orders[i].mchId == deleteList.mchId) {
             var totalPrice = 0;
-            for (var j = 0; j < this.orders[i].list.length; j++) {
-              var self = this.orders[i].list[j];
+            for (var j = 0; j < context.orders[i].list.length; j++) {
+              var self = context.orders[i].list[j];
               totalPrice += self.price * self.num;
             }
-            this.orders[i].totalPrice = totalPrice.toFixed(2);
+            context.orders[i].totalPrice = totalPrice.toFixed(2);
             break;
           }
         }
@@ -708,7 +715,7 @@ export default {
       context.$progress.finish()
       var res = response.json()
       if(res.status == "ok") {
-        this.xxId = res.datas
+        context.xxId = res.datas
         var count = 60;
         var resend = setInterval(function(){
           count--;
@@ -726,8 +733,8 @@ export default {
           }
         }, 1000);
         context.disabled = true
-        this.$set('toasttext','验证码发送成功');
-        this.$set('toastshow',true)
+        context.$set('toasttext','验证码发送成功');
+        context.$set('toastshow',true)
       } else {
         alert(res.message);
       }
@@ -765,7 +772,6 @@ export default {
       var res = response.json()
       if(res.status == "ok") {
         context.list = res.datas
-        console.log(JSON.stringify(res.datas))
       } else {
         alert(res.message);
       }
@@ -876,7 +882,8 @@ export default {
       context.$progress.finish()
       var res = response.json()
       if(res.status == "ok") {
-        authService.logout()
+        context.hide = true;
+        authService.logout();
         context.$route.router.go("/")
       } else {
         alert(res.message);
@@ -1113,7 +1120,6 @@ export default {
           context.pageNum = res.datas.pageNo;
           context.list = context.list.concat(context.nowPage);
           context.btnHide = true;
-          console.log(JSON.stringify(res.datas))
         }
 
         if(context.list.length!=0){
@@ -1148,7 +1154,6 @@ export default {
           context.pageNum = res.datas.pageNo;
           context.list = context.list.concat(context.nowPage);
           context.btnHide = true;
-          console.log(JSON.stringify(res.datas))
         }
 
         if(context.list.length!=0){
@@ -1182,8 +1187,6 @@ export default {
           context.pageNum = res.datas.pageNo;
           context.list = context.list.concat(context.nowPage);
           context.btnHide = true;
-          console.log(JSON.stringify(res.datas));
-          console.log(JSON.stringify(context.list))
         }
 
         if(context.list.length!=0){
@@ -1399,7 +1402,6 @@ export default {
       if(res.status == "ok") {
         context.$set('toasttext','收藏成功')
         context.$set('toastshow',true)
-        console.log(JSON.stringify(res.datas))
         setTimeout(function () {
           location.reload()
         },200)
@@ -1586,7 +1588,6 @@ export default {
         }
       } else {
         alert(res.message);
-        console.log(res.message)
       }
     }, function(response){
       context.$progress.failed()
@@ -1633,8 +1634,8 @@ export default {
             context.list[i].item[j].starActive = true
           }
           // if(context.list[i].lat||context.list[i].lng){
-          //   this.lat = context.list[i].lat;
-          //   this.lng = context.list[i].lng;
+          //   context.lat = context.list[i].lat;
+          //   context.lng = context.list[i].lng;
           // }
         }
 
@@ -1656,7 +1657,7 @@ export default {
       context.$progress.finish()
       var res = response.json()
       if(res.status == "ok") {
-        this.optionList = res.datas
+        context.optionList = res.datas
       } else {
         alert(res.message);
       }
@@ -1673,7 +1674,6 @@ export default {
       context.$progress.finish()
       var res = response.json()
       if(res.status == "ok") {
-        console.log(JSON.stringify(res.datas))
       } else {
         alert(res.message);
       }
@@ -1699,7 +1699,6 @@ export default {
           context.dataHide = true
         }
 
-        console.log(JSON.stringify(res.datas.datas))
       } else {
         alert(res.message);
       }
@@ -1723,7 +1722,6 @@ export default {
           context.pageNum = res.datas.pageNo;
           context.list = context.list.concat(context.nowPage);
           context.btnHide = true;
-          console.log(JSON.stringify(res.datas))
         }
 
         if(context.list.length!=0){
@@ -1759,7 +1757,6 @@ export default {
           context.pageNum = res.datas.pageNo;
           context.list = context.list.concat(context.nowPage);
           context.btnHide = true;
-          console.log(JSON.stringify(res.datas))
         }
 
         if(context.list.length!=0){
@@ -1793,8 +1790,7 @@ export default {
           context.pageNum = res.datas.pageNo;
           context.inList = context.inList.concat(context.nowPage);
           context.btnHide = true;
-          console.log(JSON.stringify(res.datas));
-          console.log(JSON.stringify(context.inList))
+
         }
         if(context.list.length!=0){
           context.dataHide = false;
@@ -1866,7 +1862,6 @@ export default {
           context.pageNum = res.datas.pageNo;
           context.list = context.list.concat(context.nowPage);
           context.btnHide = true;
-          console.log(JSON.stringify(res.datas))
         }
 
         if(context.list.length!=0){
@@ -1900,7 +1895,6 @@ export default {
           context.pageNum = res.datas.pageNo;
           context.list = context.list.concat(context.nowPage);
           context.btnHide = true;
-          console.log(JSON.stringify(res.datas))
         }
 
         if(context.list.length!=0){
@@ -1932,7 +1926,6 @@ export default {
           context.pageNum = res.datas.pageNo;
           context.inLinst = context.inLinst.concat(context.nowPage);
           context.btnHide = true;
-          console.log(JSON.stringify(res.datas))
         }
 
         if(context.inLinst.length!=0){
@@ -1968,8 +1961,7 @@ export default {
           context.pageNum = res.datas.pageNo;
           context.list = context.list.concat(context.nowPage);
           context.btnHide = true;
-          console.log(JSON.stringify(res.datas));
-          console.log(JSON.stringify(context.list))
+
         }
 
         if(context.list.length!=0){
@@ -2006,8 +1998,7 @@ export default {
           context.pageNum = res.datas.pageNo;
           context.list = context.list.concat(context.nowPage);
           context.btnHide = true;
-          console.log(JSON.stringify(res.datas));
-          console.log(JSON.stringify(context.list))
+
         }
 
         if(context.list.length!=0){
@@ -2042,7 +2033,7 @@ export default {
           context.pageNum = res.datas.pageNo;
           context.list = context.list.concat(context.nowPage);
           context.btnHide = true;
-          console.log(JSON.stringify(res.datas))
+
         }
 
         if(context.list.length!=0){
@@ -2075,7 +2066,6 @@ export default {
           context.pageNum = res.datas.pageNo;
           context.list = context.list.concat(context.nowPage);
           context.btnHide = true;
-          console.log(JSON.stringify(res.datas))
         }
 
         if(context.list.length!=0){
@@ -2109,8 +2099,7 @@ export default {
           context.pageNum = res.datas.pageNo;
           context.list = context.list.concat(context.nowPage);
           context.btnHide = true;
-          console.log(JSON.stringify(res.datas));
-          console.log(JSON.stringify(context.list))
+
         }
         if(context.list.length!=0){
           context.dataHide = false;

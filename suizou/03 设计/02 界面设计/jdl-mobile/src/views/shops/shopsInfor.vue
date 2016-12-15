@@ -61,14 +61,14 @@
                                 现　金: {{product.price}}
                             </span>
                         </p>
-                        <p class="clearfix">
-                          <span class="left" v-if="shop.costPrice!=null && shop.costPrice!=''">
-                              可用券: {{shop.costPrice}}
-                          </span>
-                          <span class="left" v-else="">
-                              可用券: <span class="noPrice">暂无</span>
-                          </span>
-                        </p>
+                        <!--<p class="clearfix">-->
+                          <!--<span class="left" v-if="product.costPrice!=null && product.costPrice!=''">-->
+                              <!--可用券: {{product.costPrice}}-->
+                          <!--</span>-->
+                          <!--<span class="left" v-else="">-->
+                              <!--可用券: <span class="noPrice">暂无</span>-->
+                          <!--</span>-->
+                        <!--</p>-->
                         <p class="clearfix">
                             <span class="left">
                               <!--<span class="oldMoney">市场价: {{shop.marketPrice}}</span>-->
@@ -77,19 +77,22 @@
                         </p>
                         <p class="clearfix">
                               <span class="left shoppingNum">
-                                    销　量: {{product.sales}}
+                                  销　量: {{product.sales}}
                               </span>
                         </p>
                     </div>
                 </a>
             </li>
         </ul>
+      <div class="weui_btn_area" v-show="btnHide">
+        <input type="button" class="weui_btn  weui_btn_primary" @click="lookMore()" value={{typeData}} v-model="typeData">
+      </div>
     </div>
 </div>
   <div class="foot">
       <ul class="tabMenu clearfix">
           <li>
-               <a v-link="'/home/index'">
+               <a v-link="'/'">
                   <i class="fa fa-home"></i><br/>
                   <span>商城</span>
               </a>
@@ -144,7 +147,13 @@
             {starActive:false},
             {starActive:false},
             {starActive:false}
-          ]
+          ],
+          btnHide:false,
+          typeData:"查看更多",
+          pageNum:1,
+          nextNum:null,
+          totalNum:null,
+          nowPage:[]
         }
       },
       ready () {
@@ -162,7 +171,8 @@
 
 
         var getMchGoodsListArr = {
-          id:this.shopsId
+          id:this.shopsId,
+          pageNo:this.pageNum
         }
         mchService.getMchGoodsList(this,getMchGoodsListArr)
 
@@ -188,6 +198,22 @@
             userService.collectionShopping(this,shopArr)
           }else{
             this.$router.go('/auth/personLogin')
+          }
+        },
+        lookMore:function(){
+          if(this.nextNum == this.pageNum ){
+            this.$set('toasttext',"无更多数据");
+            this.$set('toastshow',true);
+            return;
+          }
+
+          if(this.nextNum){
+            this.pageNum = this.nextNum;
+            var getMchGoodsListArr = {
+              id:this.shopsId,
+              pageNo:this.pageNum
+            }
+            mchService.getMchGoodsList(this,getMchGoodsListArr)
           }
         }
       }

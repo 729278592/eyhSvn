@@ -27,14 +27,14 @@
                                   现　金: {{shop.price}}
                               </span>
                         </p>
-                        <p class="clearfix">
-                            <span class="left" v-if="shop.costPrice!=null && shop.costPrice!=''">
-                                可用券: {{shop.costPrice}}
-                            </span>
-                          <span class="left" v-else="">
-                                可用券: <span class="noPrice">暂无</span>
-                            </span>
-                        </p>
+                        <!--<p class="clearfix">-->
+                            <!--<span class="left" v-if="shop.costPrice!=null && shop.costPrice!=''">-->
+                                <!--可用券: {{shop.costPrice}}-->
+                            <!--</span>-->
+                          <!--<span class="left" v-else="">-->
+                                <!--可用券: <span class="noPrice">暂无</span>-->
+                            <!--</span>-->
+                        <!--</p>-->
                         <p class="clearfix">
                             <span class="left">
                               <!--<span class="oldMoney">市场价: {{shop.marketPrice}}</span>-->
@@ -50,11 +50,20 @@
                 </a>
             </li>
         </ul>
+        <div class="notConTip" v-show="dataHide">
+          <img src="../../../static/images/notContent.png" alt=""/>
+          <p class="notInfor">
+            暂无数据
+          </p>
+        </div>
+        <div class="weui_btn_area" v-show="btnHide">
+          <input type="button" class="weui_btn  weui_btn_primary" @click="lookMore()" value={{typeData}} v-model="typeData">
+        </div>
        </div>
        <div class="foot">
          <ul class="tabMenu clearfix">
              <li>
-                 <a v-link="'/home/index'">
+                 <a v-link="'/'">
                      <i class="fa fa-home"></i><br/>
                      <span>商城</span>
                  </a>
@@ -79,20 +88,24 @@
              </li>
          </ul>
        </div>
+       <Toast :toastshow.sync="toastshow" :toasttext="toasttext"></Toast>
        </div>
 </template>
 
 <style>
-  .bd.absolute.pd48{bottom:auto;}
+  .bd.absolute.pd48{bottom:auto;overflow: visible;}
+  .notConTip{top: 100%;}
 </style>
 
 <script>
   import Bar from '../components/headBar.vue';
     import mchService from '../../api/mchService'
+  import Toast from '../components/toast.vue'
     export default {
       components: {
         //注册组件
-          Bar
+          Bar,
+        Toast
       },
     data () {
       return {
@@ -100,13 +113,22 @@
         list: [],
         shopId:"",
         type:"",
+        dataHide:false,
         imageUrl:"",
         items: [
             	{con:"新品",active: true,name:"shopplingListNew",orderHide:false},
               {con:"销量",active: false,name:"shopplingListSale",orderHide:true},
               {con:"价格",active: false,name:"shopplingListPrice",orderHide:true},
               {con:"评价",active: false,name:"shopplingListComment",orderHide:true}
-            ]
+            ],
+        toastshow:false,
+        toasttext:"",
+        btnHide:false,
+        typeData:"查看更多",
+        pageNum:1,
+        nextNum:null,
+        totalNum:null,
+        nowPage:[]
       }
     },
     ready () {
@@ -117,9 +139,10 @@
       this.imageUrl = mchService.imgUrl
       console.log(this.imageUrl)
       var getCategoryArr = {
-        categoryId:this.shopId,
-               type:this.type
-             }
+               type:this.type,
+               pageNo:this.pageNum,
+                categoryId:this.shopId
+             };
       mchService.getCategoryAllGoods(this,getCategoryArr)
     },
     methods: {
@@ -140,37 +163,91 @@
 
          var getCategoryArr = {
            categoryId:this.shopId,
+           pageNo:this.pageNum,
               type:this.type
-            }
-         mchService.getCategoryAllGoods(this,getCategoryArr)
+            };
+         mchService.getCategoryAllChioceGoods(this,getCategoryArr)
 
       },
       bigSort:function (index) {
         if(index==1){
-          mchService.bigSortFun(this,{sort:0})
+          var getCategoryArr = {
+            categoryId:this.shopId,
+            pageNo:this.pageNum,
+            type:this.type,
+            sort:0
+          };
+          mchService.bigSortFun(this,getCategoryArr)
           return
         }
         if(index==2){
-          mchService.bigSortFun(this,{sort:2})
+          var getCategoryArr = {
+            categoryId:this.shopId,
+            pageNo:this.pageNum,
+            type:this.type,
+            sort:2
+          };
+          mchService.bigSortFun(this,getCategoryArr)
           return
         }
         if(index==3){
-          mchService.bigSortFun(this,{sort:4})
+          var getCategoryArr = {
+            categoryId:this.shopId,
+            pageNo:this.pageNum,
+            type:this.type,
+            sort:4
+          };
+          mchService.bigSortFun(this,getCategoryArr)
           return
         }
       },
       smallSort:function (index) {
         if(index==1){
-          mchService.bigSortFun(this,{sort:1})
+          var getCategoryArr = {
+            categoryId:this.shopId,
+            pageNo:this.pageNum,
+            type:this.type,
+            sort:1
+          };
+          mchService.bigSortFun(this,getCategoryArr)
           return
         }
         if(index==2){
-          mchService.bigSortFun(this,{sort:3})
+          var getCategoryArr = {
+            categoryId:this.shopId,
+            pageNo:this.pageNum,
+            type:this.type,
+            sort:3
+          };
+          mchService.bigSortFun(this,getCategoryArr)
           return
         }
         if(index==3){
-          mchService.bigSortFun(this,{sort:5})
+          var getCategoryArr = {
+            categoryId:this.shopId,
+            pageNo:this.pageNum,
+            type:this.type,
+            sort:5
+          };
+          mchService.bigSortFun(this,getCategoryArr)
           return
+        }
+      },
+      lookMore:function(){
+        if(this.nextNum == this.pageNum ){
+          this.$set('toasttext',"无更多数据");
+          this.$set('toastshow',true);
+          return;
+        }
+
+        if(this.nextNum){
+          this.pageNum = this.nextNum;
+          var getCategoryArr = {
+            type:this.type,
+            pageNo:this.pageNum,
+            categoryId:this.shopId
+          };
+          mchService.getCategoryAllGoods(this,getCategoryArr)
         }
       }
     }

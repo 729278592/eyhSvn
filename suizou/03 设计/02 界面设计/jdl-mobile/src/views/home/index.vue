@@ -54,11 +54,11 @@
                 <img src="../../../static/images/indexSlider2.jpg" class="w100" alt=""/>
               </a>
             </div>
-            <!--<div class="swiper-slide">-->
-                <!--<a>-->
-                  <!--<img src="../../../static/images/indexSlider3.jpg" class="w100" alt=""/>-->
-                <!--</a>-->
-            <!--</div>-->
+            <div class="swiper-slide">
+                <a>
+                  <img src="../../../static/images/indexSlider3.jpg" class="w100" alt=""/>
+                </a>
+            </div>
         </div>
         <div class="swiper-pagination"></div>
         <!--<div class="swiper-button-next"></div>-->
@@ -129,13 +129,13 @@
          </li>
      </ul>
       <ul class="shop_menu clearfix" id="shop_menu">
-           <li v-for="itemList in list" @click="onSelect($index,$event)">
+           <li v-for="itemList in list" class="li" @click="onSelect($index,$event)" :class="{'active':$index==0}">
               <a>
                 {{itemList.topCategoryName}}
               </a>
            </li>
         </ul>
-        <div class="otherCon style">
+        <div class="otherCon style relative">
           <ul class="shoppingList style clearfix pb0">
               <li v-for="shop in list[num].goodses" :class="{'mr0':$index%2==1}">
                   <a @click="addId(shop)" class="shop_div">
@@ -150,14 +150,14 @@
                                 现　金: {{shop.price}}
                             </span>
                           </p>
-                          <p class="clearfix">
-                           <span class="left" v-if="shop.costPrice==null">
-                              可用券: <span class="noPrice">暂无</span>
-                            </span>
-                            <span class="left" v-else>
-                              可用券: {{shop.costPrice}}
-                            </span>
-                        </p>
+                          <!--<p class="clearfix">-->
+                           <!--<span class="left" v-if="shop.costPrice==null">-->
+                              <!--可用券: <span class="noPrice">暂无</span>-->
+                            <!--</span>-->
+                            <!--<span class="left" v-else>-->
+                              <!--可用券: {{shop.costPrice}}-->
+                            <!--</span>-->
+                        <!--</p>-->
                           <p class="clearfix">
                             <span class="left">
                               <!--<span class="oldMoney">市场价: {{shop.marketPrice}}</span>-->
@@ -168,12 +168,18 @@
                   </a>
               </li>
           </ul>
+          <div class="notConTip relative" v-show="dataHide">
+            <img src="../../../static/images/notContent.png" alt=""/>
+            <p class="notInfor">
+              暂无数据
+            </p>
+          </div>
          </div>
      </div>
        <div class="foot">
          <ul class="tabMenu clearfix">
              <li class="active">
-                 <a v-link="'/home/index'">
+                 <a v-link="'/'">
                      <i class="fa fa-home"></i><br/>
                      <span>商城</span>
                  </a>
@@ -224,6 +230,7 @@
         clearHide:true,
         active:false,
         swiperList:[],
+        dataHide:false,
         hide:true,
         num:0,
         domainName:"",
@@ -236,9 +243,10 @@
       }
     },
     ready () {
-      document.title = '首页'
-      //var shop_menu = document.getElementById("shop_menu").firstChild
-      //shop_menu.setAttribute("class","active")
+      document.title = '首页';
+//      var shop_menu = document.getElementsByClassName("li")[0];
+//      console.log(shop_menu)
+//      shop_menu.setAttribute("class","active")
       userService.index(this);
       userService.getMainRego(this);
       this.imageUrl = userService.imgUrl;
@@ -252,7 +260,6 @@
          autoplayDisableOnInteraction: false,
          active:false
       });
-
       if (authService.isLogin()) {
         this.isLogin = true
       }else{
@@ -308,5 +315,6 @@
       }
     }
   }
+
 </script>
 
