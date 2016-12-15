@@ -54,7 +54,7 @@ $(function(){
 });
 
 function showErrMsg(message) {
-    $("#errMsg .weui_toast_content .errSpan").append(message);
+    $("#errMsg .weui_toast_content .errSpan").html(message);
     $('#errMsg').show();
     $("#errMsg .weui_toast").addClass("weui_toastshow");
     setTimeout(function () {

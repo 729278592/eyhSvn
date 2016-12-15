@@ -4,7 +4,8 @@
       var buycount = $(this).find(".buycount");
       var plus = $(this).find(".plus");
       var minus = $(this).find(".minus");
-      
+
+      /*数量输入*/
       buycount.keyup(function() {
         var number = parseInt(buycount.val());
         if (isNaN(number))
@@ -14,12 +15,14 @@
         buycount.val(number);
       });
 
+      /*数量加1*/
       plus.click(function() {
         var number = parseInt(buycount.val());
         number++;
         buycount.val(number);
       });
 
+      /*数量减1*/
       minus.click(function() {
         var number = parseInt(buycount.val());
         number--;

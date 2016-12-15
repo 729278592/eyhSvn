@@ -2,7 +2,7 @@
 <html>
 <head lang="en">
     <meta charset="UTF-8">
-    <title>营业流水</title>
+    <title>商品库存变动明细</title>
     <link rel="stylesheet" href="../../assets/admin/css/global.css"/>
     <link rel="stylesheet" href="../../assets/global/plugins/font/css/font-awesome.css"/>
 </head>
@@ -58,8 +58,8 @@
                     </select>
                     <span class="h1"></span>
                     <span class="spanSelect">
-                            <i class="fa fa-caret-down"></i>
-                        </span>
+                                <i class="fa fa-caret-down"></i>
+                            </span>
                 </div>
                 <div class="relative inBlock">
                     <a>
@@ -115,7 +115,6 @@
     <div class="content">
         <div class="contentMain">
             <div class="conHead clearfix">
-
                 <button class="right btnModify">查询</button>
                 <div class="right doubleTime">
                     <div class="div-wdate left">
@@ -133,27 +132,30 @@
                 </div>
                 <div class="divSelect style right mr20">
                     <select name="">
-                        <option value="请选择">请选择</option>
-                        <option value="销售订单">销售订单</option>
+                        <option value="全部">全部</option>
+                        <option value="进货">进货</option>
+                        <option value="退货">退货</option>
+                        <option value="销售">销售</option>
+                        <option value="报损">报损</option>
                     </select>
                     <span class="h1"></span>
                     <span class="spanSelect">
-                        <i class="fa fa-caret-down"></i>
-                    </span>
+                            <i class="fa fa-caret-down"></i>
+                        </span>
                 </div>
+                <input type="text" class="right inputCss style" id="staffModify" placeholder="请输入商品代码或商品条码">
             </div>
             <div class="recordContent">
                 <table class="recordTable ">
                     <thead>
                     <tr>
-                        <th><span>流水号</span></th>
+                        <th><span>变动类型</span></th>
+                        <th><span>变动前库存</span></th>
+                        <th><span>库存变动</span></th>
+                        <th><span>变动后库存</span></th>
                         <th><span>操作时间</span></th>
-                        <th><span>类型</span></th>
-                        <th><span>操作人</span></th>
-                        <th><span>订单应收</span></th>
-                        <th><span>支付方式</span></th>
-                        <th><span>订单收入</span></th>
-                        <th><span>操作</span></th>
+                        <th><span>备注</span></th>
+                        <!--<th><span>操作</span></th>-->
                     </tr>
                     </thead>
                     <tbody class="">
@@ -162,90 +164,64 @@
                             4356565556
                         </td>
                         <td>
+                            库存进库
+                        </td>
+                        <td>
+                            20
+                        </td>
+                        <td>
                             2015-11-27 15:15:15
                         </td>
                         <td>
-                            销售
+                            1001(张三)
                         </td>
                         <td>
-                            夏利
+                            进货单 : 2265656
                         </td>
-                        <td>
-                            1822.00
-                        </td>
-                        <td>
-                            现金
-                        </td>
-                        <td>
-                            300.00
-                        </td>
-                        <td>
 
-                            <!--查看订单信息开始-->
-                            <a class="spanLook lookOrder">
-                                <i class="fa fa-eye"></i>
-                                查看
-                            </a>
-                            <!--查看订单信息结束-->
+                        <!--<td>-->
 
-                        </td>
+                            <!--&lt;!&ndash;查看订单信息开始&ndash;&gt;-->
+                            <!--<a class="spanLook lookOrder">-->
+                                <!--<i class="fa fa-eye"></i>-->
+                                <!--查看-->
+                            <!--</a>-->
+                            <!--&lt;!&ndash;查看订单信息结束&ndash;&gt;-->
+
+                        <!--</td>-->
                     </tr>
                     <tr>
                         <td>
                             4356565556
                         </td>
                         <td>
+                            库存进库
+                        </td>
+                        <td>
+                            20
+                        </td>
+                        <td>
                             2015-11-27 15:15:15
                         </td>
                         <td>
-                            销售
+                            1001(张三)
                         </td>
                         <td>
-                            夏利
+                            进货单 : 2265656
                         </td>
-                        <td>
-                            1822.00
-                        </td>
-                        <td>
-                            现金
-                        </td>
-                        <td>
-                            300.00
-                        </td>
-                        <td>
 
-                            <!--查看订单信息开始-->
-                            <a class="spanLook lookOrder">
-                                <i class="fa fa-eye"></i>
-                                查看
-                            </a>
-                            <!--查看订单信息结束-->
+                        <!--<td>-->
 
-                        </td>
+                        <!--&lt;!&ndash;查看订单信息开始&ndash;&gt;-->
+                        <!--<a class="spanLook lookOrder">-->
+                        <!--<i class="fa fa-eye"></i>-->
+                        <!--查看-->
+                        <!--</a>-->
+                        <!--&lt;!&ndash;查看订单信息结束&ndash;&gt;-->
+
+                        <!--</td>-->
                     </tr>
                     <tr>
-                        <td></td>
-                        <td></td>
-                        <td></td>
-                        <td></td>
-                        <td></td>
-                        <td></td>
-                        <td></td>
-                        <td></td>
-                    </tr>
-                    <tr>
-                        <td></td>
-                        <td></td>
-                        <td></td>
-                        <td></td>
-                        <td></td>
-                        <td></td>
-                        <td></td>
-                        <td></td>
-                    </tr>
-                    <tr>
-                        <td></td>
-                        <td></td>
                         <td></td>
                         <td></td>
                         <td></td>
@@ -260,6 +236,12 @@
                         <td></td>
                         <td></td>
                         <td></td>
+                    </tr>
+                    <tr>
+                        <td></td>
+                        <td></td>
+                        <td></td>
+                        <td></td>
                         <td></td>
                         <td></td>
                     </tr>
@@ -270,12 +252,16 @@
                         <td></td>
                         <td></td>
                         <td></td>
-                        <td></td>
-                        <td></td>
                     </tr>
                     <tr>
                         <td></td>
                         <td></td>
+                        <td></td>
+                        <td></td>
+                        <td></td>
+                        <td></td>
+                    </tr>
+                    <tr>
                         <td></td>
                         <td></td>
                         <td></td>
@@ -329,20 +315,19 @@
         <div class="shopInforCon clearfix">
             <ul class="clearfix orderMenuInfor">
                 <li>
-                    <p>总单数 : 98单</p>
-                    <p>现金支付 : 425.00</p>
+                    <p>商品名称 : 蛋糕</p>
+                    <p>商品条码 : 56565</p>
                 </li>
                 <li>
-                    <p>总应收 : 555.00</p>
-                    <p>会员卡支付 : 425.00</p>
+                    <p>现有库存 : 555</p>
+                    <p>商品销售 : -5</p>
                 </li>
                 <li>
-                    <p>总收入 : 3333.00</p>
-                    <p>支付宝支付 : 425.00</p>
+                    <p>库存进货 : 3333</p>
+                    <p>顾客退货 : 2</p>
                 </li>
                 <li class="br0">
-                    <p>总收益 : 355.00</p>
-                    <p>微信支付 : 425.00</p>
+                    <p>商品报损 : 3</p>
                 </li>
             </ul>
         </div>
@@ -352,20 +337,13 @@
     <div class="maskBg hide"></div>
     <div class="mask hide">
 
-        <!--辞退员工弹窗开始-->
-        <div class="dailog orderInforDailog w900 hide">
-            <div class="dailogHead style">
-                <i class="fa fa-remove right"></i>
-                <p class="clearfix">
-                    <span class="left name">会员姓名 : 陈丽丽</span>
-                    <span class="money textCenter">总金额 : 380.00(现金300.00)</span>
-                    <span class="right totalNum">共13件</span>
-                </p>
-                <p class="clearfix">
-                    <span class="left mobile">会员手机 : 13678478463</span>
-                    <span class="right time">2016-2-26 15:31:02</span>
-                </p>
 
+
+        <!--辞退员工弹窗开始-->
+        <div class="dailog orderInforDailog hide w900">
+            <div class="dailogHead ">
+                <i class="fa fa-remove right"></i>
+                商品信息
             </div>
             <div class="dailogContent style">
                 <div class="recordContent">
@@ -373,137 +351,197 @@
                         <table class="recordTable ">
                             <thead>
                             <tr>
+                                <td><span>商品条码</span></td>
                                 <td><span>商品名称</span></td>
-                                <td><span>售价</span></td>
-                                <td><span>折扣价</span></td>
-                                <td><span>数量</span></td>
+                                <td><span>分类</span></td>
+                                <td><span>进货价</span></td>
+                                <td><span>销售价</span></td>
+                                <td><span>供货商</span></td>
+                                <td><span>库存变化</span></td>
+                                <td><span>小计</span></td>
                             </tr>
                             </thead>
                             <tbody class="">
                             <tr>
                                 <td>
+                                    55555
+                                </td>
+                                <td>
                                     水果饼干(50g)
+                                </td>
+                                <td>
+                                    食品
+                                </td>
+                                <td>
+                                    5.00
                                 </td>
                                 <td>
                                     8.00
                                 </td>
                                 <td>
-                                    -
+                                    ---
                                 </td>
                                 <td>
                                     2
+                                </td>
+                                <td>
+                                    8.00
                                 </td>
                             </tr>
                             <tr>
                                 <td>
+                                    55555
+                                </td>
+                                <td>
                                     水果饼干(50g)
+                                </td>
+                                <td>
+                                    食品
+                                </td>
+                                <td>
+                                    5.00
                                 </td>
                                 <td>
                                     8.00
                                 </td>
                                 <td>
-                                    -
+                                    ---
                                 </td>
                                 <td>
                                     2
+                                </td>
+                                <td>
+                                    8.00
                                 </td>
                             </tr>
                             <tr>
                                 <td>
+                                    55555
+                                </td>
+                                <td>
                                     水果饼干(50g)
+                                </td>
+                                <td>
+                                    食品
+                                </td>
+                                <td>
+                                    5.00
                                 </td>
                                 <td>
                                     8.00
                                 </td>
                                 <td>
-                                    -
+                                    ---
                                 </td>
                                 <td>
                                     2
+                                </td>
+                                <td>
+                                    8.00
                                 </td>
                             </tr>
                             <tr>
                                 <td>
+                                    55555
+                                </td>
+                                <td>
                                     水果饼干(50g)
+                                </td>
+                                <td>
+                                    食品
+                                </td>
+                                <td>
+                                    5.00
                                 </td>
                                 <td>
                                     8.00
                                 </td>
                                 <td>
-                                    -
+                                    ---
                                 </td>
                                 <td>
                                     2
+                                </td>
+                                <td>
+                                    8.00
                                 </td>
                             </tr>
                             <tr>
                                 <td>
+                                    55555
+                                </td>
+                                <td>
                                     水果饼干(50g)
+                                </td>
+                                <td>
+                                    食品
+                                </td>
+                                <td>
+                                    5.00
                                 </td>
                                 <td>
                                     8.00
                                 </td>
                                 <td>
-                                    -
+                                    ---
                                 </td>
                                 <td>
                                     2
+                                </td>
+                                <td>
+                                    8.00
                                 </td>
                             </tr>
                             <tr>
                                 <td>
+                                    55555
+                                </td>
+                                <td>
                                     水果饼干(50g)
+                                </td>
+                                <td>
+                                    食品
+                                </td>
+                                <td>
+                                    5.00
                                 </td>
                                 <td>
                                     8.00
                                 </td>
                                 <td>
-                                    -
+                                    ---
                                 </td>
                                 <td>
                                     2
+                                </td>
+                                <td>
+                                    8.00
                                 </td>
                             </tr>
                             <tr>
                                 <td>
+                                    55555
+                                </td>
+                                <td>
                                     水果饼干(50g)
+                                </td>
+                                <td>
+                                    食品
+                                </td>
+                                <td>
+                                    5.00
                                 </td>
                                 <td>
                                     8.00
                                 </td>
                                 <td>
-                                    -
+                                    ---
                                 </td>
                                 <td>
                                     2
-                                </td>
-                            </tr>
-                            <tr>
-                                <td>
-                                    水果饼干(50g)
                                 </td>
                                 <td>
                                     8.00
-                                </td>
-                                <td>
-                                    -
-                                </td>
-                                <td>
-                                    2
-                                </td>
-                            </tr>
-                            <tr>
-                                <td>
-                                    水果饼干(50g)
-                                </td>
-                                <td>
-                                    8.00
-                                </td>
-                                <td>
-                                    -
-                                </td>
-                                <td>
-                                    2
                                 </td>
                             </tr>
                             </tbody>

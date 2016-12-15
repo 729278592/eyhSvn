@@ -5,6 +5,13 @@
     <title>资讯详情</title>
     <link rel="stylesheet" href="plugins/font/css/font-awesome.min.css"/>
     <link rel="stylesheet" href="css/globle.css"/>
+    <style>
+        #marquee{width: 1024px;height: auto;margin: 0 auto;overflow: hidden;height: 340px;}
+        .active-ul li {float: left; height: auto;width: auto;}
+        .active-ul li a{display: inline-block;margin-right: 10px;text-align: center;height: auto;}
+        .active-ul li a.mr0{margin-right: 0;}
+        .active-ul li a img{width: 340px;height: auto;}
+    </style>
 </head>
 <body>
     <div class="wrapper">
@@ -44,9 +51,46 @@
             </div>
         </div>
         <div class="content">
-            <img src="images/caseAnalysisInfor1.jpg" alt="" class="autoImg"/>
-            <div class="l_consultingInfor">
-                <img src="images/ca_infor.jpg" alt="" class="autoImg"/>
+
+            <div class="cInfor">
+                <p class="cInforTitle">我所主任易涛律师受聘西南大学法学院硕士生实务导师</p>
+                <div class="cInforCon">
+
+                    12月3日，西南大学法学院举办2016年“法律硕士实务导师聘任暨高层次实务型法律人才培养座谈会”，重庆原驰律师事务所主任
+                    易涛律师受聘西南大学法学院硕士生实务导师。原驰律所始终坚持“校企合作，共同发展”的人才培养模式，这次本所律师受聘西南大学，将有效促进我所和高校之间的联系，形成法学学术和司法实务的良性互动，实现高校和律所的互利共赢和共同发展。
+                    <br><br>
+                    据悉，西南大学（Southwest University）是教育部直属，教育部、农业部、重庆市共建的重点综合大学，是国家"211工程"和"985工程优势学科创新平台"建设高校。
+                </div>
+            </div>
+
+            <div id="marquee">
+                <ul class="active-ul" style="width: 2048px;">
+                    <li>
+                        <a href="#">
+                            <img src="images/1.jpg" alt=" ">
+                        </a>
+                    </li>
+                    <li>
+                        <a href="#">
+                            <img src="images/2.jpg" alt=" ">
+                        </a>
+                    </li>
+                    <li>
+                        <a href="#">
+                            <img src="images/3.jpg" alt=" ">
+                        </a>
+                    </li>
+                    <li>
+                        <a href="#">
+                            <img src="images/4.jpg" alt=" ">
+                        </a>
+                    </li>
+                    <li>
+                        <a href="#">
+                            <img src="images/5.jpg" alt=" ">
+                        </a>
+                    </li>
+                </ul>
             </div>
         </div>
         <div class="foot clearfix">
@@ -92,6 +136,13 @@
         </div>
     </div>
     <script src="plugins/jquery/jquery-1.11.3.min.js"></script>
+    <script src="plugins/jquery.kxbdmarquee/js/jquery.kxbdMarquee.js"></script>
     <script src="js/globle.js"></script>
+    <script src="js/footHandle.js"></script>
+    <script>
+        (function(){
+            $("#marquee").kxbdMarquee({direction:"left",scrollDelay:25});
+        })();
+    </script>
 </body>
 </html>
