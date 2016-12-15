@@ -17,7 +17,6 @@ export default {
       var res = response.json();
       if (res.status == "ok") {
         context.lists = res.datas;
-        console.log(JSON.stringify(context.lists));
         var len = Math.round(context.lists.evaTotalScore/context.lists.evaOrderNum);
         for(var j = 0;j<len;j++){
           context.item[j].starActive = true
@@ -167,8 +166,7 @@ export default {
           context.pageNum = res.datas.pageNo;
           context.list = context.list.concat(context.nowPage);
           context.btnHide = true;
-          console.log(JSON.stringify(res.datas));
-          console.log(JSON.stringify(context.list))
+
         }
 
         if(context.list.length!=0){
@@ -206,8 +204,7 @@ export default {
           context.pageNum = res.datas.pageNo;
           context.list = context.list.concat(context.nowPage);
           context.btnHide = true;
-          console.log(JSON.stringify(res.datas));
-          console.log(JSON.stringify(context.list))
+
         }
 
         if(context.list.length!=0){
@@ -244,8 +241,7 @@ export default {
           context.pageNum = res.datas.pageNo;
           context.list = context.list.concat(context.nowPage);
           context.btnHide = true;
-          console.log(JSON.stringify(res.datas));
-          console.log(JSON.stringify(context.list))
+
         }
         if(context.list.length!=0){
           context.dataHide = false;
@@ -314,8 +310,7 @@ export default {
           context.pageNum = res.datas.pageNo;
           context.inList = context.inList.concat(context.nowPage);
           context.btnHide = true;
-          console.log(JSON.stringify(res.datas))
-          console.log(JSON.stringify(res.datas.datas))
+
         }
 
         if(context.inList.length!=0){
@@ -350,7 +345,6 @@ export default {
           context.pageNum = res.datas.pageNo;
           context.inLinst = context.inLinst.concat(context.nowPage);
           context.btnHide = true;
-          console.log(JSON.stringify(res.datas))
         }
 
         if(context.inLinst.length!=0){
@@ -394,8 +388,50 @@ export default {
       context.$progress.finish()
       var res = response.json()
       if(res.status == "ok") {
-        context.list = res.datas.datas
-        console.log(JSON.stringify(context.list))
+        if(res.datas != null){
+          context.nowPage = res.datas.datas;
+          context.totalNum = res.datas.totalPages;
+          context.nextNum = res.datas.nextPage;
+          context.pageNum = res.datas.pageNo;
+          context.list = context.list.concat(context.nowPage);
+          context.btnHide = true;
+        }
+
+        if(context.list.length!=0){
+          context.dataHide = false;
+        }
+        else{
+          context.dataHide = true;
+          context.btnHide = false;
+        }
+      } else {
+        alert(res.message);
+      }
+    }, function(response){
+      context.$progress.failed()
+      // 响应错误回调
+    })
+  },
+
+  //商家选择分类
+  getCategoryAllChioceGoods(context,getCategoryArr) {
+    context.$progress.start()
+    context.$http.post(API_ROOT+"mobile/getCategoryAllGoods.do",getCategoryArr).then(function(response){
+      context.$progress.finish()
+      var res = response.json()
+      if(res.status == "ok") {
+        if(res.datas != null){
+          context.list = res.datas.datas;
+          context.btnHide = true;
+        }
+
+        if(context.list.length!=0){
+          context.dataHide = false;
+        }
+        else{
+          context.dataHide = true;
+          context.btnHide = false;
+        }
       } else {
         alert(res.message);
       }
@@ -485,8 +521,21 @@ export default {
       context.$progress.finish()
       var res = response.json()
       if(res.status == "ok") {
-        context.shopListArr = res.datas.datas
-        console.log(JSON.stringify(context.shopListArr))
+
+        context.nowPage = res.datas.datas;
+        context.totalNum = res.datas.totalPages;
+        context.nextNum = res.datas.nextPage;
+        context.pageNum = res.datas.pageNo;
+        context.shopListArr = context.shopListArr.concat(context.nowPage);
+        context.btnHide = true;
+
+        if(context.shopListArr.length!=0){
+          context.dataHide = false;
+        }
+        else{
+          context.dataHide = true;
+          context.btnHide = false;
+        }
       } else {
         alert(res.message);
       }
@@ -718,7 +767,6 @@ export default {
           context.pageNum = res.datas.pageNo;
           context.list = context.list.concat(context.nowPage);
           context.btnHide = true;
-          console.log(JSON.stringify(res.datas))
         }
 
         if(context.list.length!=0){
@@ -752,7 +800,6 @@ export default {
           context.pageNum = res.datas.pageNo;
           context.list = context.list.concat(context.nowPage);
           context.btnHide = true;
-          console.log(JSON.stringify(res.datas))
         }
 
         if(context.list.length!=0){
@@ -761,7 +808,6 @@ export default {
           context.dataHide = true;
           context.btnHide = false;
         }
-        //console.log(JSON.stringify(res.datas.datas))
       } else {
         alert(res.message);
       }
@@ -787,7 +833,6 @@ export default {
           context.pageNum = res.datas.pageNo;
           context.list = context.list.concat(context.nowPage);
           context.btnHide = true;
-          console.log(JSON.stringify(res.datas))
         }
 
         if(context.list.length!=0){
@@ -821,7 +866,6 @@ export default {
           context.pageNum = res.datas.pageNo;
           context.list = context.list.concat(context.nowPage);
           context.btnHide = true;
-          console.log(JSON.stringify(res.datas))
         }
 
         if(context.list.length!=0){
@@ -856,7 +900,6 @@ export default {
           context.pageNum = res.datas.pageNo;
           context.list = context.list.concat(context.nowPage);
           context.btnHide = true;
-          console.log(JSON.stringify(res.datas))
         }
         if(context.list.length!=0){
           context.dataHide = false;
@@ -890,8 +933,7 @@ export default {
           context.pageNum = res.datas.pageNo;
           context.list = context.list.concat(context.nowPage);
           context.btnHide = true;
-          console.log(JSON.stringify(res.datas));
-          console.log(JSON.stringify(context.list))
+
         }
 
         if(context.list.length!=0){
@@ -926,7 +968,6 @@ export default {
           context.pageNum = res.datas.pageNo;
           context.list = context.list.concat(context.nowPage);
           context.btnHide = true;
-          console.log(JSON.stringify(res.datas))
         }
 
         if(context.list.length!=0){
@@ -960,8 +1001,7 @@ export default {
           context.pageNum = res.datas.pageNo;
           context.inList = context.inList.concat(context.nowPage);
           context.btnHide = true;
-          console.log(JSON.stringify(res.datas));
-          console.log(JSON.stringify(context.inList))
+
         }
 
         if(context.inList.length!=0){
@@ -998,8 +1038,7 @@ export default {
           context.pageNum = res.datas.pageNo;
           context.list = context.list.concat(context.nowPage);
           context.btnHide = true;
-          console.log(JSON.stringify(res.datas));
-          console.log(JSON.stringify(context.list))
+
         }
 
         if(context.list.length!=0){

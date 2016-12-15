@@ -130,7 +130,7 @@
   <div class="foot">
     <ul class="tabMenu clearfix">
       <li>
-        <a v-link="'/home/index'">
+        <a v-link="'/'">
           <i class="fa fa-home"></i><br/>
           <span>商城</span>
         </a>
@@ -216,7 +216,7 @@
           currLng:"",
           currLat:"",
           overflowY:false,
-          btnHide:Boolean,
+          btnHide:false,
           typeData:"查看更多",
           pageNum:1,
           nextNum:null,

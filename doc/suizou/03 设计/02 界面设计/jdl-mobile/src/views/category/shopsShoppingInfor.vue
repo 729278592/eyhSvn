@@ -59,10 +59,10 @@
   <div class="shopsshoppingInfor">
       <P class="clearfix">
           <span class="left">
-              现金 : ￥<span class="verdana">{{shopInfor.marketPrice}}</span>
+              现金 : ￥<span class="verdana">{{shopInfor.price}}</span>
           </span>
           <span class="right color">
-              市场价 : ￥<span class="verdana">{{shopInfor.price}}</span>
+              市场价 : ￥<span class="verdana">{{shopInfor.marketPrice}}</span>
           </span>
       </P>
       <P class="clearfix">

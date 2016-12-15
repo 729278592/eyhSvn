@@ -124,14 +124,9 @@
         暂无数据
       </p>
     </div>
-
-
   </div>
   <Toast :toastshow.sync="toastshow" :toasttext="toasttext"></Toast>
 </template>
-
-
-
 
 <script>
   import Bar from '../components/headBar.vue'

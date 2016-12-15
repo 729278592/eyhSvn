@@ -2,7 +2,7 @@
   <validator name="validation">
       <div class="spinner right clearfix">
         <button class="btnReduce left" @click="reduce()">-</button>
-        <input class="numInput left" type="number" @keyup="add($event)"  @invalid="isNumInvalid" initial="off" detect-change="off" id="isNumber" v-validate:isNumber="['isNum']" value={{numbers}} />
+        <input class="numInput left" type="number" @keyup="add($event)" readonly  @invalid="isNumInvalid" initial="off" detect-change="off" id="isNumber" v-validate:isNumber="['isNum']" value={{numbers}} />
         <button class="btnPlus left" @click="plus()">+</button>
       </div>
   </validator>

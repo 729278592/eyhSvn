@@ -43,7 +43,7 @@
                   <div class="orderInfor style">
                     <p class="clearfix">
                       <span class="left">{{shopping.goodsName}} <br/><span class="colors">{{shopping.specName}}</span></span>
-                      <button class="right btnRemove" @click="showModal(shopping)">
+                      <button class="right btnRemove" @click="showModal(shopping,$index)">
                         <i class="fa fa-trash-o"></i> 删除
                       </button>
                     </p>
@@ -51,7 +51,7 @@
                       <span class="left">￥{{shopping.price}}</span>
                     <div class="spinner right clearfix">
                       <button class="btnReduce left" @click="reduce(shopping.mchId,$index)">-</button>
-                      <input class="numInput left" type="number" @keyup="add(shopping.mchId,$index)"  value={{shopping.num}} />
+                      <input class="numInput left" type="number" readonly @keyup="add(shopping.mchId,$index)"  value={{shopping.num}} />
                       <button class="btnPlus left" @click="plus(shopping.mchId,$index)">+</button>
                     </div>
                     </p>
@@ -112,6 +112,7 @@
         orders:[],
         show: false,
         shop:"",
+        index:null,
         num:0,
         dataHide:false,
         imageUrl:"",
@@ -134,15 +135,16 @@
       onShow: function () {
         this.hide = !this.hide
       },
-      showModal:function(shopping){
-        this.show = true
+      showModal:function(shopping,index){
+        this.show = true;
+        this.index = index;
         this.shop = shopping
       },
       cancleDelete:function(){
         this.show = false
       },
       sureDeleta:function(){
-        this.show = false
+        this.show = false;
         var deleteList = {cartId:this.shop.cartId,mchId:this.shop.mchId}
         userService.sureDeleteList(this,deleteList)
       },
