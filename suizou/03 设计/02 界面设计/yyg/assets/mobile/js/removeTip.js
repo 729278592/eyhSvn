@@ -3,22 +3,30 @@
  */
 var errMessage =    '<div id="errMsg" style="display: none;">'+
                         '<div class="weui_mask_transparent fixed"></div>'+
-                        '<div class="weui_toast">'+
+                        '<div class="weui_toast errTip">'+
                             '<p class="weui_toast_content">' +
-                            '<img src="../../assets/mobile/images/smile_icon.png" alt="" id="smile-icon"/><br/>'+
+                            // '<img src="../../assets/mobile/images/smile_icon.png" alt="" id="smile-icon"/><br/>'+
                             '<span class="errSpan"></span>'+
                             '</p>'+
                         '</div>'+
                     '</div>';
 $("body").append(errMessage);
 
+function widthAuto(obj){
+    obj.css({marginLeft:-obj.actual("width")/2});
+    alert(obj.actual("width")/2)
+}
+
+
 function showErrMsg(message) {
-    $("#errMsg .weui_toast_content .errSpan").append(message);
-    $('#errMsg').show();
-    $("#errMsg .weui_toast").addClass("weui_toastshow");
+    var errMsg = $("#errMsg");
+    var errSpan = errMsg.find(".errSpan");
+    var weui_toast = errMsg.find(".weui_toast");
+    errMsg.show();
+    errSpan.html(message);
+    widthAuto(weui_toast);
     setTimeout(function () {
-        $("#errMsg .weui_toast").removeClass("weui_toastshow");
-        $('#errMsg').hide();
-        $("#errMsg .weui_toast_content .errSpan").empty();
+        //errMsg.hide();
+        //errSpan.empty();
     }, 2000);
 }
