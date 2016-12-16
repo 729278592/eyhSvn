@@ -16,7 +16,7 @@
 <body>
     <div class="content errDailog">
         <div class="page">
-            <div class="bd">
+            <div class="bd pd50">
                 <form action="#" class="absoluteForm" id="form" onsubmit="return false">
                     <div class="weui_cells weui_cells_form mt0 bg">
                         <div class="relesaTitle">我要发布</div>
@@ -109,14 +109,16 @@
                                 <input class="weui_input" type="text" placeholder="请输入手机号" name=""/>
                             </div>
                         </div>
+                        <div class="weui_btn_area fixed">
+                            <a class="weui_btn weui_btn_primary b0" id="showTooltips">
+                                发布
+                            </a>
+                        </div>
                     </div>
-                    <div class="weui_btn_area fixed">
-                        <a class="weui_btn weui_btn_primary b0" id="showTooltips">
-                            发布
-                        </a>
-                    </div>
+
                 </form>
             </div>
+
         </div>
     </div>
     <script src="../../assets/global/plugins/jquery.min.js"></script>
@@ -158,6 +160,29 @@
             }
 
         });
+
+
+
+        $(".weui_textarea,.weui_input").on("focus",function () {
+            $(".weui_btn_area").css({position:"relative"})
+            $(".bd").removeClass("pd50");
+        });
+
+        $(".weui_textarea,.weui_input").on("blur",function () {
+            $(".weui_btn_area").css({position:"fixed"});
+            $(".bd").addClass("pd50");
+        })
+
+//        $(window).resize(function () {
+//            if($(".weui_btn_area").is(".fixed")){
+//                alert()
+//                $(".weui_btn_area").removeClass("fixed").addClass("relative")
+//                $(".bd").removeClass("pd50");
+//            }else {
+//                $(".weui_btn_area").removeClass("relative").addClass("fixed")
+//                $(".bd").addClass("pd50");
+//            }
+//        })
     </script>
 </body>
 </html>
