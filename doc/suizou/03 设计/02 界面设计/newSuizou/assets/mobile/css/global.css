@@ -182,6 +182,7 @@ textarea{font-family: "微软雅黑";}
 .departmentTitle.rotate .caretDown{webkit-transform: rotate(-90deg);
     transform: rotate(-90deg);}
 .weui_search_bar.style{background:#fff;height:54px;display:block;width:100%}
+.weui_search_bar.style.heightAuto{height: 46px;}
 .weui_search_bar.style span.left{display:inline-block;width:10%;height:30px;font-size:24px;text-align:center;line-height:30px;color:#333}
 .weui_search_bar.style .weui_search_outer{width:90%}
 .weui_search_bar.style .weui_search_inner{padding-left:10px;height:36px;line-height:36px;padding-right: 0;}
@@ -246,6 +247,7 @@ textarea{font-family: "微软雅黑";}
     overflow: hidden;
     text-overflow: ellipsis;font-size: 14px;color: #999;}
 .entryList li .inforList span.title{font-size: 16px;color: #333;border: none;font-weight: bold;}
+.entryList li .inforList span.title span.right{font-weight: 100;}
 .entryList li .inforList span.title.styles{font-size: 18px;}
 .entryList li .inforList.top{vertical-align: top;}
 .entryList li .inforList span.color1{color:#ff0404; font-size: 18px;}

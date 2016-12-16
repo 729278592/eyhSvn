@@ -131,7 +131,7 @@
                             <th><span>商品名称</span></th>
                             <th><span>售价</span></th>
                             <th><span>折扣</span></th>
-                            <th width="15%"><span>数量</span></th>
+                            <th width="20%"><span>数量</span></th>
                             <th><span>小计</span></th>
                             <th><span>操作</span></th>
                         </tr>
@@ -281,12 +281,12 @@
                     <table>
                         <thead>
                         <tr>
-                            <th><img src="../../assets/admin/images/k_icon4.png" alt=""> 总入库</th>
+                            <th><img src="../../assets/admin/images/k_icon4.png" alt=""> 会员卡</th>
                             <th><img src="../../assets/admin/images/k_icon2.png" alt="">
-                                总进价
+                                余额
                                 <button class="btnCharge">充值</button>
                             </th>
-                            <th><img src="../../assets/admin/images/k_icon5.png" alt=""> 总售价</th>
+                            <th><img src="../../assets/admin/images/k_icon5.png" alt=""> 积分</th>
                         </tr>
                         <tr>
                             <td>5555</td>
@@ -428,12 +428,12 @@
                     </div>
 
                     <div class="divInput clearfix">
-                        <div class="w50 w100">
+                        <div class="w50 w100 chioceLabel">
                             <span class="spanName">支护方式 :</span>
                             <label for="money1">
-                                <input type="radio" name="money" id="money1" checked> 现金
+                                <input type="radio" name="money" id="money1"> 现金
                             </label>
-                            <label for="money4">
+                            <label for="money4" class="memberPay">
                                 <input type="radio" name="money" id="money4" checked> 会员卡
                             </label>
                             <label for="money2">
@@ -444,7 +444,7 @@
                             </label>
                         </div>
                     </div>
-                    <div class="divInput clearfix">
+                    <div class="divInput clearfix hide" id="memberType">
                         <div class="w50 w100 style1">
                             <div class="shopTable">
                                 <div>
@@ -453,11 +453,11 @@
                                 <table>
                                     <thead>
                                     <tr>
-                                        <th><img src="../../assets/admin/images/k_icon4.png" alt=""> 总入库</th>
+                                        <th><img src="../../assets/admin/images/k_icon4.png" alt=""> 会员卡</th>
                                         <th><img src="../../assets/admin/images/k_icon2.png" alt="">
-                                            总进价
+                                            余额
                                         </th>
-                                        <th><img src="../../assets/admin/images/k_icon5.png" alt=""> 总售价</th>
+                                        <th><img src="../../assets/admin/images/k_icon5.png" alt=""> 积分</th>
                                     </tr>
                                     <tr>
                                         <td>5555</td>
@@ -606,6 +606,7 @@
             }
 
             /*弹窗影藏*/
+            var memberType = $("#memberType");
             function noneDailog(obj){
                 obj.closest(".dailog").addClass("hide").removeClass("shake");
                 obj.closest(".mask").addClass("hide");
@@ -613,6 +614,9 @@
                 var deleteStore = $(".deleteStore");
                 deleteStore.closest("tr").removeClass("sureDelete");
                 $(".dailog").get(0).style.marginTop = 0;
+                if(memberType.is("hide")){
+                    alert()
+                }
             }
 
             $(".mask").delegate(".fa-remove,.btnCancel","click",function(){
@@ -632,12 +636,17 @@
             });
 
             //查询商品信息弹窗
-            var btnModifyShop = $(".btnModifyShop");
+            var btn = $(".btnModifyShop,.btnSmShop");
             var notShopDailog = $(".notShopDailog");
-            btnModifyShop.on("click",function () {
+            var settlementStaffDailog = $(".settlementStaffDailog");
+            btn.on("click",function () {
                 mbm.removeClass("hide");
+                if(settlementStaffDailog.is(".shake")){
+                    settlementStaffDailog.addClass("hide").removeClass("shake");
+                }
                 notShopDailog.removeClass("hide").addClass("shake");
                 heightAuto(notShopDailog);
+
             });
 
 
@@ -681,6 +690,23 @@
                 settlementStaffDailog.removeClass("hide").addClass("shake");
                 heightAuto(settlementStaffDailog);
             });
+
+            /*会员卡支付*/
+            var memberPay = $(".memberPay");
+            var memberType = $("#memberType");
+            var chioceLabel = $(".chioceLabel label");
+            function checkeType() {
+                if(memberPay.find("input").prop("checked")){
+                    memberType.removeClass("hide");
+                }else {
+                    memberType.addClass("hide");
+                }
+            }
+            checkeType();
+            chioceLabel.on("click",function () {
+                checkeType();
+                heightAuto(settlementStaffDailog)
+            })
         })
     </script>
 </body>

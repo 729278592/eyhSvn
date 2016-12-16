@@ -556,7 +556,7 @@ body{background: #edeeee;}
 .shopInforCon{width:80%;margin: 0 auto;display: block;}
 .shopModify,.shopTable{width: 40%;text-align: center;}
 .shopBtn{width: 18%;}
-.shopTable tr th img{width: 22px;}
+.shopTable tr th img{width: 18px;}
 .shopModify input,.shopInforCon.style input{padding: 11px;border: 1px solid #dbdbdb;width: 66%;}
 .shopInforCon.style table{width: 100%;}
 .btnBs{padding: 10px 0;background: #fb7d55;color: #fff;border-radius: 4px;width: 88%;margin-top: 10px;font-size: 16px;}
@@ -910,10 +910,10 @@ table tr.notOn td{color: #666 !important;}
 .dailogContent{padding: 20px 25px 10px;width: 650px;border-top: none;font-size: 14px;}
 .dailogContent p.fs16{font-size: 16px;color: #666;}
 .dailogContent.center{text-align: center;}
-.div-wdate{width: 204px;height: 40px;background: #fff;position: relative;border: 1px solid #dbdbdb; display: inline-block;  }
+.div-wdate{width: 226px;height: 40px;background: #fff;position: relative;border: 1px solid #dbdbdb; display: inline-block;  }
 .timeTo{display: inline-block;padding:10px;background: #ccc;color: #fff;}
 .divSelect.mr20{margin-right: 20px;}
-.div-wdate .Wdate{font-size: 14px;border: none;background: transparent;width: 194px;height: 36px;line-height: 36px;position: relative;z-index: 5;padding-left: 10px;}
+.div-wdate .Wdate{font-size: 14px;border: none;background: transparent;width: 216px;height: 36px;line-height: 36px;position: relative;z-index: 5;padding-left: 10px;}
 .div-wdate.w100{width: 310px;}
 .div-wdate .Wdate.text{width: 300px;}
 .div-wdate .fa{position: absolute;right: 13px;top: 10px;}
@@ -931,14 +931,17 @@ table tr.notOn td{color: #666 !important;}
 .divInput div.w50.w100.style1 .shopTable input{width: 76%;padding: 11px 2%;border: 1px solid #dbdbdb;}
 .divInput div.w50.last{float: right;text-align: right;}
 .divInput div.w50 span{color: #444;}
-.divInput div.w50 .spanName{display: inline-block;width: 95px;text-align: right;}
+.divInput div.w50 .spanName{display: inline-block;width: 88px;text-align: right;}
+.divInput div.w50 .spanName.style{width: 92px;}
+.divInput div.w50 .textarea.w531{width: 531px;}
+.displayMore{display: inline-block;}
 .returnMoney{width: 116px;padding: 10px;border: 1px solid #dbdbdb;}
 .visibility{visibility: hidden;}
 .divInput div.w50 .resetPassword{color: #02abdf;text-decoration: underline;position: relative;right: 34px;}
 .divInput div.w50 .spanOnwork {color: #02abdf;text-decoration: underline;position: relative;right: 34px;}
 .divInput div.w50 .spanName.top{position: relative;top: -93px;}
-.divInput div.w50 .input{padding: 10px 40px 10px 10px;border: 1px solid #dbdbbd;font-size: 14px;}
-.divInput div.w50 .input.style{padding-right: 0;width: 147px;}
+.divInput div.w50 .input{padding: 10px 40px 10px 10px;border: 1px solid #dbdbbd;font-size: 16px;}
+.divInput div.w50 .input.style{padding-right: 0;width: 166px;}
 .divInput div.w50 .sureModifyPassword{padding: 11px 8px;background: #fb9777;color: #fff;outline: none;}
 .qy,.bqy{display: inline-block;width: 98px;text-align: right;}
 .qy.hide,.bqy.hide{display: none;}
@@ -948,19 +951,20 @@ input::-webkit-inner-spin-button{
 }
 .divInput.style .divSelect.styles select {
     /*padding: 10px 100.5px 10px 10px;*/
-    font-size: 14px;
+    font-size: 16px;
 }
-.divInput div.w50 .textarea{width: 528px;resize: none;border: 1px solid #dbdbdb;padding: 10px;}
+.divInput div.w50 .textarea{width: 535px;resize: none;border: 1px solid #dbdbdb;padding: 10px;font-size: 16px;}
+
 .divSelect.styles{display: inline-block;margin-left: 0;}
-.divSelect.styles select{padding: 10px 0 10px 10px;font-size: 14px;width: 205px;}
-.divSelect.styles .h1{height: 41px;}
+.divSelect.styles select{padding: 10px 0 10px 10px;font-size: 14px;width: 226px;}
+.divSelect.styles .h1{height: 44px;}
 .divInput.w180 .divSelect.styles select{padding: 10px 0 10px 10px;font-size: 14px;width: 168px;}
 .divInput.w180 .divSelect.styles .h1{height: 41px;}
 .dailogFoot .btnSure,.dailogFoot .btnCancel{display: inline-block;padding: 10px 50px;border-radius: 10px;font-size: 16px;}
 .dailogFoot .btnSure{background: #fa7d55;color: #fff;margin-right:8px;position: relative;left: 10px;}
 .dailogFoot .btnCancel{background: #4ebfca;color: #fff;border: 1px solid #ccc;margin-left: 7px;position: relative;left: -10px;}
 .dailogFoot .btnSure:hover{opacity: 0.8;}
-.divInput div.w50 .textarea.style{width: 360px;}
+.divInput div.w50 .textarea.style{width: 353px;}
 
 .dailogFoot .btnCancel:hover{opacity: 0.8;}
 .displayMore{font-size: 16px;color: #02abdf;text-indent: 10px;}
