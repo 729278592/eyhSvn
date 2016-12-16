@@ -138,6 +138,7 @@ a:active{opacity: 0.6;}
 .errDailog .weui_mask_transparent{position:absolute;left:0;right:0;top:0;bottom:0;background:0 0}
 .errDailog .weui_toast{position:absolute;width:8em;min-height:7.5em;margin-left:-4em;margin-top:-3.75em;top: 40%;}
 .weui_toast{z-index:300;}
+
 .weui_toast_content{text-align:center;font-size:0.875rem;}
 #smile-icon{margin:1.25rem 0 0.625rem;}
 .weui_cell .weui_label{display: table;width: 25px;}
