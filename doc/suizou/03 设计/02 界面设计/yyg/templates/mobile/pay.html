@@ -10,6 +10,25 @@
     <link rel="stylesheet" href="../../assets/mobile/css/weui.css"/>
     <link rel="stylesheet" href="../../assets/mobile/css/example.css"/>
     <link rel="stylesheet" href="../../assets/mobile/css/global.css"/>
+    <style>
+        .weui_toast.errTip{
+            position: fixed;
+            z-index: 3;
+            width: auto;
+            min-height: inherit;
+
+            top: 180px;
+            left: 50%;
+            margin-left: -3.8em;
+            background: rgba(40, 40, 40, 0.75);
+            text-align: center;
+            border-radius: 5px;
+            color: #FFFFFF;
+        }
+        .weui_toast_content {
+            margin: 0;padding: 1rem 2rem;
+        }
+    </style>
 </head>
 <body>
 <div class="content">
@@ -135,6 +154,7 @@
     </div>
 </div>
 <script src="../../assets/global/plugins/jquery/jquery-1.11.3.min.js"></script>
+<script src="../../assets/global/plugins/jquery.actual/jquery.actual.js"></script>
 <script src="../../assets/mobile/js/removeTip.js"></script>
 <script src="../../assets/mobile/js/global.js"></script>
 <script>
@@ -149,7 +169,7 @@
         submit.on("touchend",function(){
 
             if($.trim(person.val())==''){
-                showErrMsg("请输入姓名");
+                showErrMsg("请输入姓名55555555555555555");
                 return;
             }
 
