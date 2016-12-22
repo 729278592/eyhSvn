@@ -92,25 +92,25 @@
               <li>
                   <a>
                       <span class="order orderIcon2"></span><br/>
-                      待确认
+                      待发货
                   </a>
               </li>
               <li>
                   <a>
                       <span class="order orderIcon6"></span><br/>
-                      已收货
+                      待确认
                   </a>
               </li>
               <li>
                   <a>
-                      <span class="order orderIcon7"></span><br/>
+                      <span class="order orderIcon9"></span><br/>
                       已完成
                   </a>
               </li>
               <li>
                   <a>
                       <span class="order orderIcon8"></span><br/>
-                      已退款
+                      退款订单
                   </a>
               </li>
           </ul>

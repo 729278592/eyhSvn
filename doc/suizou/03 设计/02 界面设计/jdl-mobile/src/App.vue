@@ -14,6 +14,8 @@
   @import '../static/plugins/font/css/font-awesome.css';
 </style>
 
+
+
 <script>
   import progress from 'vue-progressbar/vue-progressbar.vue'
   export default {

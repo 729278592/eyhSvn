@@ -78,11 +78,12 @@
           notOnCardState:0,
           lists:[],
           toastshow:false,
+          show:false,
           toasttext:""
         }
       },
       ready () {
-        document.title = '积分兑换'
+        document.title = '积分兑换';
         mchService.presentIntegral(this)
 
       },
@@ -92,13 +93,13 @@
        this.hide = !this.hide
      },
      present:function(socre){
-       if(socre.txScore<10000){
+       if(socre.nowScore<socre.txScore){
          this.$set('toasttext',"兑换积分不足");
          this.$set('toastshow',true)
        }
        else{
-         this.socrePrent = socre
-         this.show = true
+         this.socrePrent = socre;
+         this.show = true;
        }
      },
      sureDeleta:function(){
