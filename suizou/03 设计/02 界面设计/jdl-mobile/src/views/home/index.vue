@@ -176,7 +176,7 @@
           </div>
          </div>
      </div>
-       <div class="foot">
+     <div class="foot">
          <ul class="tabMenu clearfix">
              <li class="active">
                  <a v-link="'/'">

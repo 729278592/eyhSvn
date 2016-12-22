@@ -92,7 +92,7 @@
           this.hide = !this.hide
         },
         present:function(socre){
-          if(socre.txScore<10000){
+          if(socre.nowScore<socre.txScore){
             this.$set('toasttext',"兑换积分不足");
             this.$set('toastshow',true)
           }

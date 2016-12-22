@@ -82,9 +82,9 @@
         items: [
           {type:"allOrder",con:"全部",active: true,name:"allOrderShops",num:"0"},
           {type:"waitPayOrder",con:"待付款",active: false,name:"waitPayOrderShops",num:"1"},
-          {type:"waitSendGoodsOrder",con:"待发货",active: false,name:"waitSendGoodsOrderShops",num:"6"},
-          {type:"waitGetGoodsOrder",con:"待确认",active: false,name:"waitGetGoodsOrderShops",num:"7"},
-          {type:"waitCommentOrder",con:"已退款",active: false,name:"waitCommentOrderShops",num:"8"}
+          {type:"waitSendGoodsOrder",con:"待发货",active: false,name:"waitSendGoodsOrderShops",num:"2"},
+          {type:"waitGetGoodsOrder",con:"待确认",active: false,name:"waitGetGoodsOrderShops",num:"3"},
+          {type:"waitCommentOrder",con:"已完成",active: false,name:"waitCommentOrderShops",num:"4"}
         ]
       }
     },
