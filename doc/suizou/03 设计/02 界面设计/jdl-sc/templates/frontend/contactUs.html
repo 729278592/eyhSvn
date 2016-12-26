@@ -17,9 +17,9 @@
                     </a>
                 </div>
                 <ul class="menu clearfix">
-                    <!--<li>-->
-                        <!--<a href="index.html">首页</a>-->
-                    <!--</li>-->
+                    <li>
+                        <a href="index.html">首页</a>
+                    </li>
                     <li>
                         <a href="scIndex.html">网上商城</a>
                     </li>
@@ -35,9 +35,9 @@
                     <li class="active">
                         <a href="contactUs.html">联系我们</a>
                     </li>
-                    <!--<li class="mr0">-->
-                        <!--<a href="###">商家登录</a>-->
-                    <!--</li>-->
+                    <li class="mr0">
+                        <a href="###">商家登录</a>
+                    </li>
                 </ul>
             </div>
         </div>
@@ -66,9 +66,9 @@
 
                     </div>
                     <div class="c_type">
-                        原驰地址
+                        家得利地址
                         <span class="right">
-                            地址：四川豪恩帮电子商务333号康德国际2号楼2001号
+                            地址：龙潭寺工业园区成宏路26号汇润国际14楼
                         </span>
                     </div>
                     <div id="allmap"></div>
@@ -89,12 +89,12 @@
         map.enableScrollWheelZoom(true);     //开启鼠标滚轮缩放
         var myGeo = new BMap.Geocoder();
         // 将地址解析结果显示在地图上,并调整地图视野
-        myGeo.getPoint("四川豪恩帮电子商务", function(point){
+        myGeo.getPoint("龙潭寺工业园区成宏路26号汇润国际", function(point){
             if (point) {
                 map.centerAndZoom(point, 16);
                 map.addOverlay(new BMap.Marker(point));
             }
-        }, "四川省");
+        }, "重庆市");
     </script>
 </body>
 </html>

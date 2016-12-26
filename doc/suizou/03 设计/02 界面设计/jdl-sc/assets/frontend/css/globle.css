@@ -279,7 +279,7 @@ html.overflow{overflow: hidden;}
 
 
 /*分页*/
-.paging{position: absolute;left: 50%;margin-top: 20px;bottom: 15px;}
+.paging{position: absolute;left: 50%;margin-top: 20px;}
 .page-pre,.page-next{float: left;border-radius: 4px;background: #f2f2f2;color: #666;font-size: 16px;width: 40px;height: 30px;text-align: center;line-height: 30px;}
 .page-next{margin-left: 5px;}
 .page-menu{float: left;}
@@ -332,14 +332,14 @@ button,a,input{font-family: "微软雅黑";}
 /*head*/
 .head{width: 100%;background: #fff;border-bottom: 1px solid #dbdbdb;}
 .head_main{width: 90%;margin: 0 5%;position: relative;}
-.logo{width: 100px;height: 35px;position: absolute;left: 0;top: 27px;}
+.logo{width: 100px;height: 35px;position: absolute;left: 0;top: 12px;}
 .logo a{display: inline-block;width: 100%;height: 100%;}
 .logo a img{width: 100%;height: 100%;}
 .menu{display: block;width: 1090px;margin: 0 auto;}
-.menu li{float: left;width: 110px;height: 90px;line-height: 90px;text-align: center;margin-right: 53px;}
+.menu li{float: left;width: 110px;text-align: center;margin-right: 53px;}
 .menu li.mr0{margin-right: 0;}
 .menu li.active{}
-.menu li a{font-size: 16px;color: #333;border-bottom: 3px solid transparent;display: inline-block;width: 100%;height: 87px;position: relative;top: 1px;}
+.menu li a{font-size: 16px;color: #333;border-bottom: 3px solid transparent;display: inline-block;width: 100%;position: relative;top: 1px;}
 .menu li.active a{color: #fe5205;border-bottom: 3px solid #fe5205; }
 
 
@@ -686,9 +686,6 @@ h2{font-family:"microsoft yahei";font-size:14px;}
 .shopUl li{float: left;width: 27%;margin-right: 9.5%;}
 .shopUl li.mr0{margin-right: 0;}
 .shopUl li a{display: inline-block;text-align: center;width: 100%;height:100%;}
-.shopUl li a img{width: 120px;height: 120px;}
-.shopUl li a span{font-size: 14px;color: #333;display: inline-block;padding-top: 15px;}
-.shopUl li a span.spanTitle{font-size: 16px;color: #666;}
 
 
 
@@ -733,7 +730,7 @@ h2{font-family:"microsoft yahei";font-size:14px;}
 .s_l_h p{font-size: 14px;color: #666;margin-top: 10px;}
 .s_l_h .title{font-size: 18px;color: #333;margin-bottom: 20px;}
 .shop_menu{display: block;}
-.shop_menu li{width: 240px;margin-left: 7px;float: left}
+.shop_menu li{width: 239px;margin-left: 7px;float: left}
 .shop_menu li img{width: 100%;height: 227px;}
 .s_m_f{background: #fff;width: 240px;padding: 10px 0;border: 1px dotted #dfdfdf;border-top: 0;}
 .s_m_f p{padding: 0 15px;display: inline-block;}
