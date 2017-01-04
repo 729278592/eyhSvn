@@ -881,6 +881,7 @@ a.num input {
 .recordHeadBread li{float: left;font-size: 16px;}
 .recordHeadBread li a{color: #386fbe;}
 .recordContent{width: 100%;margin-top: 15px;min-height: 350px;position: relative;}
+.recordContent.style{max-height: 490px;overflow-y: auto;}
 .recordTable{width: 100%;border-collapse:collapse;border: 1px solid #dbdbdb;background: #fff;}
 .recordTable tr:hover{background: #e7f3ff;}
 .recordTable tr th{background: #02abdf;}
