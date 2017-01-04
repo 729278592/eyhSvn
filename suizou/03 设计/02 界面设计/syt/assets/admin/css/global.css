@@ -868,7 +868,7 @@ a.num input {
 .modifyInput>div.right .btnSure,.modifyInput>div.right .btnCancel{display: inline-block;padding: 5px 10px;border-radius: 4px;color: #fff;}
 .modifyInput>div.right .btnSure{background: #f78f5d;}
 .modifyInput>div.right .btnCancel{background: #ccc;}
-.tips{padding: 6px 50px;border-radius: 30px;position: fixed;background: #fff;z-index: 99999999;text-align: center;left: 50%;opacity: 0;top: -5%;font-size: 16px;}
+.tips{font-family: "微软雅黑";padding: 6px 50px;border-radius: 30px;position: fixed;background: #fff;z-index: 99999999;text-align: center;left: 50%;opacity: 0;top: -5%;font-size: 16px;}
 .tips.success{border: 1px solid #2ed6b1;color: #2ed6b1;}
 .tips.fail{border: 1px solid #ff0404;color: #ff0404;}
 
@@ -1057,7 +1057,7 @@ body.overflow{overflow-y: hidden;overflow-x: auto;}
 .question-infor .fa{position: absolute;left: -5px;top: 8px;color: #ff7f81;font-size: 16px;}
 .question-infor p{line-height: 16px;top: 0;}
 .form .form-group .w100{width: 100%;position: relative;border: 1px solid #dbdbdb;border-radius: 20px;padding: 6px 3%;}
-.form .form-group .w100 .inputText{width: 85%;padding-left: 2%;}
+.form .form-group .w100 .inputText{width: 76%;padding-left: 2%;}
 .form .form-group .w100 .inputText.w200{width: 60%;}
 input.btn-click{background: #f16a20;font-size: 12px;color: #fff;border-radius: 20px;}
 input.btn-click:hover{background: #e16a20}
@@ -1065,8 +1065,15 @@ input.btn-click:hover{background: #e16a20}
 .form .form-group .btn-click:hover{text-decoration: none;opacity: 0.8;filter:alpha(opacity=80);}
 .form  a:hover{text-decoration: underline;}
 .form  a{color: #f16a20;}
-
-
+.form-select{width: 78%;border: 0;display: inline-block;     height: auto;
+     padding: 1px 0;      -webkit-box-shadow: none;
+    box-shadow: none}
+.form-select:focus {
+    border-color: #66afe9;
+    outline: 0;
+    -webkit-box-shadow: none;
+    box-shadow: none;
+}
 
 /*.col-sm-8,.col-sm-4{padding: 0;}*/
 label.error {color: #EA5200;margin-bottom: 0;font-family: "微软雅黑";}
@@ -1083,6 +1090,7 @@ label.error {color: #EA5200;margin-bottom: 0;font-family: "微软雅黑";}
 .form-group .getcode:hover{opacity: 0.8;filter:alpha(opacity=80);}
 .form-group .getcode.active{background: #ccc;}
 .form-group .w100 .type{display: inline-block;width: 12%;color: #666;font-family: "微软雅黑";}
+.div-form.style .w100 .type{display: inline-block;width: 21%;}
 .form-group .help-block-error{font-family: "微软雅黑";position: relative;left: 12px;color: #fe695c;top:0px;}
 .form-group .errMessge{color: #fe695c;font-family: "微软雅黑";}
 .form-group .btnSure{font-family: "微软雅黑";background: #f16b22;color: #fff;width: 60px;}
