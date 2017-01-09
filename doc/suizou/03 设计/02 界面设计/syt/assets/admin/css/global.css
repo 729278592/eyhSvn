@@ -1157,7 +1157,7 @@ label{font-weight: 100;color: #4B525C;}
 .orderInfor-list tr th{background: #f3f3f3;}
 
 .switch.style span.qy,.switch.style span.bqy{width: auto;}
-
+.inputBm,.inputMc{    padding: 12px 0 12px 2%;width: 46%;border: 1px solid #dbdbdb}
 /*media*/
 @media screen and (max-width: 1850px) {
 
