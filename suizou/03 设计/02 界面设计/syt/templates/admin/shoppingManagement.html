@@ -3,6 +3,7 @@
 <head lang="en">
     <meta charset="UTF-8">
     <title>商品管理</title>
+    <link rel="stylesheet" href="../../assets/admin/plugins/switch/lc_switch.css"/>
     <link rel="stylesheet" href="../../assets/admin/css/global.css"/>
     <link rel="stylesheet" href="../../assets/global/plugins/font/css/font-awesome.css"/>
 </head>
@@ -115,7 +116,7 @@
         <div class="content">
             <div class="contentMain">
                 <div class="conHead clearfix">
-                    <button class="left btnAdd mr15">+添加分类</button>
+                    <!--<button class="left btnAdd mr15">+添加分类</button>-->
                     <button class="left btnAdd">+添加商品</button>
                     <button class="right btnModify">查询</button>
                     <input type="text" class="right inputCss" id="staffModify" placeholder="请输入商品条码或名称">
@@ -235,48 +236,107 @@
         <div class="maskBg hide"></div>
         <div class="mask hide">
 
-            <!--添加供应商信息工弹窗开始-->
+            <!--添加商品弹窗开始-->
             <form action="###">
                 <div class="dailog addStaffDailog hide">
                     <div class="dailogHead">
-                        供应商资料
+                        添加商品
                         <i class="fa fa-remove right"></i>
                     </div>
                     <div class="dailogContent">
                         <div class="divInput clearfix">
                             <div class="w50">
-                                <span class="spanName">供应商编号 :</span>
-                                <input type="number" class="input" id="memNum" placeholder="请输入员工编号">
+                                <span class="spanName">商品条码 :</span>
+                                <input type="number" class="input" id="storeId" placeholder="请输入商品条码">
                             </div>
                             <div class="w50 last">
-                                <span class="spanName">供应商名称 :</span>
-                                <input type="text" class="input" id="memName" placeholder="请输入员工姓名">
+                                <span class="spanName">商品进价 :</span>
+                                <input type="text" class="input" id="storeName" placeholder="请输入商品进价">
                             </div>
                         </div>
                         <div class="divInput clearfix">
                             <div class="w50">
-                                <span class="spanName">联系人 :</span>
-                                <input type="number" class="input" id="memMoney" placeholder="请输入余额">
+                                <span class="spanName">商品名称 :</span>
+                                <input type="number" class="input" id="storePerson" placeholder="请输入商品名称">
                             </div>
                             <div class="w50 last">
-                                <span class="spanName">联系电话 :</span>
-                                <input type="number" class="input" id="memScore" placeholder="请输入积分">
+                                <span class="spanName">商品售价 :</span>
+                                <input type="tel" class="input" id="storePhone" placeholder="请输入商品售价">
                             </div>
                         </div>
-                        <div class="divInput clearfix mb0">
-                            <div class="w50 w100">
-                                <span class="spanName top">备注 :</span>
-                                <textarea name="" class="textarea" placeholder="请输入详细信息" cols="30" rows="5"></textarea>
+                        <div class="divInput clearfix style">
+                            <div class="w50">
+                                <span class="spanName">商品分类 :</span>
+                                <div class="divSelect style styles">
+                                    <select name="">
+                                        <option value="请选择">请选择</option>
+                                        <option value="商品分类一">商品分类一</option>
+                                    </select>
+                                    <span class="h1"></span>
+                                    <span class="spanSelect">
+                                            <i class="fa fa-caret-down"></i>
+                                        </span>
+                                </div>
+                            </div>
+                            <div class="w50 last">
+                                <span class="spanName">商品库存 :</span>
+                                <input type="tel" class="input" id="storeNum" placeholder="请输入联系电话">
+                            </div>
+                        </div>
+                        <div class="displayMore" style="display: inline-block;">
+                            <span class="typeSpan">展开</span>
+                            <i class="fa fa-angle-double-down"></i>
+                        </div>
+                        <div class="w1"></div>
+                        <div class="moreTj hide">
+                            <div class="divInput clearfix">
+                                <div class="w50">
+                                    <span class="spanName">拼音条码 :</span>
+                                    <input type="tel" class="input" id="pytm" placeholder="请输入拼音条码">
+                                </div>
+                                <div class="w50 last">
+                                    <span class="spanName">供货商 :</span>
+                                    <div class="divSelect style styles">
+                                        <select name="">
+                                            <option value="请选择">请选择</option>
+                                            <option value="供货商一">供货商一</option>
+                                        </select>
+                                        <span class="h1"></span>
+                                        <span class="spanSelect">
+                                            <i class="fa fa-caret-down"></i>
+                                        </span>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="divInput clearfix">
+                                <div class="w100 style">
+                                    <span class="spanName">会员折扣 :</span>
+                                    <div class="switch style" style="display: inline-block">
+                                        <input type="checkbox" name="check-3" value="6" class="lcs_check lcs_tt1" autocomplete="off" />
+                                        <span class="qy hide">启用</span>
+                                        <span class="bqy">不启用</span>
+                                    </div>
+                                    <span class="visibility returnspan">
+                                        <input type="text" class="returnMoney" placeholder="请输入折扣"> %
+                                    </span>
+                                </div>
+                            </div>
+
+                            <div class="divInput clearfix mb0">
+                                <div class="w50 w100">
+                                    <span class="spanName top">商品备注 :</span>
+                                    <textarea name="" class="textarea" placeholder="请输入详细地址" cols="30" rows="5"></textarea>
+                                </div>
                             </div>
                         </div>
                     </div>
-                    <div class="dailogFoot">
+                    <div class="dailogFoot mt15">
                         <button class="btnCancel">取消</button>
-                        <button class="btnSure" type="button" id="sureAddStaff">保存</button>
+                        <button class="btnSure" id="sureAddStaff">确认</button>
                     </div>
                 </div>
             </form>
-            <!--添加供应商信息工弹窗结束-->
+            <!--添加商品弹窗结束-->
 
             <!--删除供应商工弹窗开始-->
             <div class="dailog dismissStaffDailog style hide">
@@ -298,7 +358,9 @@
     </div>
 
     <script src="../../assets/global/plugins/jquery/jquery-1.11.3.min.js"></script>
+    <script src="../../assets/admin/plugins/switch/js/lc_switch.js"></script>  <!--switch开关-->
     <script src="../../assets/global/plugins/My97DatePicker/WdatePicker.js"></script>  <!--日历插件-->
+    <script src="../../assets/admin/plugins/jquery.actual/jquery.actual.js"></script> <!--获取隐藏元素高度-->
     <script src="../../assets/admin/js/common-validate.js"></script> <!--表单验证提示-->
     <script src="../../assets/admin/js/global.js"></script> <!--通用js-->
     <script src="../../assets/admin/js/tips.js"></script> <!--操作后状态提示-失败或者成功-->
@@ -316,6 +378,50 @@
                 }
             });
 
+            /*switch开关插件*/
+            $('.lcs_check').lc_switch();
+            var qy = $(".qy");
+            var bqy = $(".bqy");
+            var returnspan = $(".returnspan");
+            $(document).delegate('.lcs_switch:not(.lcs_disabled)', 'click tap', function(e) {
+                if( $(this).hasClass('lcs_on') ) {
+                    if( !$(this).hasClass('lcs_radio_switch') ) { // not for radio
+                        returnspan.addClass("visibility");
+                        $(this).lcs_off();
+                        $(this).closest(".switch").find(qy).addClass("hide");
+                        $(this).closest(".switch").find(bqy).removeClass("hide");
+                    }
+                } else {
+                    returnspan.removeClass("visibility");
+                    $(this).lcs_on();
+                    $(this).closest(".switch").find(qy).removeClass("hide");
+                    $(this).closest(".switch").find(bqy).addClass("hide");
+                }
+            });
+
+            /*展开更多条件弹窗*/
+            var displayMore = $(".displayMore");
+            var dailogFoot = $(".dailogFoot");
+            var addStaffDailog = $(".addStaffDailog");
+            var  typeSpan = $(".typeSpan");
+            var moreTj = $(".moreTj");
+            displayMore.on("click",function () {
+                if(moreTj.is(".hide")){
+                    moreTj.removeClass("hide");
+                    dailogFoot.removeClass("mt15");
+                    typeSpan.text("收起");
+                    displayMore.find(".fa-angle-double-down").removeClass("fa-angle-double-down").addClass("fa-angle-double-up");
+                    heightAuto(addStaffDailog);
+                }else {
+                    moreTj.addClass("hide");
+                    dailogFoot.addClass("mt15");
+                    typeSpan.text("展开");
+                    displayMore.find(".fa-angle-double-up").removeClass("fa-angle-double-up").addClass("fa-angle-double-down");
+                    heightAuto(addStaffDailog);
+                }
+            });
+
+
 
             //添加供应商弹窗
             var mbm = $(".mask,.maskBg");
@@ -329,7 +435,7 @@
 
             /*弹窗居中*/
             function heightAuto(obj){
-                var ht = -obj.outerHeight(true)/2 + "px";
+                var ht = -obj.actual('height')/2 + "px";
                 obj.get(0).style.marginTop = ht;
             }
 

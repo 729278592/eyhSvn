@@ -11,13 +11,14 @@ $(".wrapper").append(maskTip);
 
 
 var tip = function(obj,message,time,staute){
-
+    var tipsObj = $(".tips");
+    var typeObj = $(".type");
     obj.removeClass("hide");
-    var type = obj.find(".type");
-    var tips = obj.find(".tips");
+    var type = obj.find(typeObj);
+    var tips = obj.find(tipsObj);
     type.text(message);
     tips.addClass(staute);
-    pageAuto(obj.find(".tips"));
+    pageAuto(obj.find(tipsObj));
     tips.animate({
         top: "8px",
         opacity: "1"
