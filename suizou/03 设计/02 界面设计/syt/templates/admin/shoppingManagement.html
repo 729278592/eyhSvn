@@ -119,7 +119,11 @@
                     <!--<button class="left btnAdd mr15">+添加分类</button>-->
                     <button class="left btnAdd">+添加商品</button>
                     <button class="right btnModify">查询</button>
-                    <input type="text" class="right inputCss" id="staffModify" placeholder="请输入商品条码或名称">
+                    <div class="right">
+                        <input type="number" class="inputBm" id="inputBm" placeholder="请输入编码">
+                        <input type="text" class="inputMc" id="inputMc" placeholder="请输入名称">
+                    </div>
+                    <!--<input type="text" class="right inputCss" id="staffModify" placeholder="请输入商品条码或名称">-->
                     <div class="divSelect style right mr20">
                         <select name="">
                             <option value="全部">全部</option>
@@ -370,10 +374,16 @@
 
             // 查询供应商提示
             var btnModify = $(".btnModify");
-            var staffModify = $("#staffModify");
+            var inputBm = $("#inputBm");
+            var inputMc = $("#inputMc");
             btnModify.on("click",function () {
-                if($.trim(staffModify.val()=="")){
-                    tip($(".maskTip"),"请输入商品条码或名称",600,"fail");  //失败提示 第一参数为固定参数 第二参数为提示信息自己填写  第二参数为时间自定  第四参数为提示状态，失败为fail，成功为success
+                if(isEmpty(inputBm.val())){
+                    tip($(".maskTip"),"请输入编码",600,"fail");  //失败提示 第一参数为固定参数 第二参数为提示信息自己填写  第二参数为时间自定  第四参数为提示状态，失败为fail，成功为success
+                    return ;
+                }
+
+                if(isEmpty(inputMc.val())){
+                    tip($(".maskTip"),"请输入名称",600,"fail");  //失败提示 第一参数为固定参数 第二参数为提示信息自己填写  第二参数为时间自定  第四参数为提示状态，失败为fail，成功为success
                     return ;
                 }
             });
