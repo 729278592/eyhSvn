@@ -933,6 +933,7 @@ table tr.notOn td{color: #666 !important;}
 .divInput div.w50.last{float: right;text-align: right;}
 .divInput div.w50 span{color: #444;}
 .divInput div.w50 .spanName{display: inline-block;width: 88px;text-align: right;}
+.divInput div.w100.style .spanName{display: inline-block;width: 88px;text-align: right;}
 .divInput div.w50 .spanName.style{width: 92px;}
 .divInput div.w50 .textarea.w531{width: 531px;}
 .displayMore{display: inline-block;}
@@ -940,7 +941,7 @@ table tr.notOn td{color: #666 !important;}
 .visibility{visibility: hidden;}
 .divInput div.w50 .resetPassword{color: #02abdf;text-decoration: underline;position: relative;right: 34px;}
 .divInput div.w50 .spanOnwork {color: #02abdf;text-decoration: underline;position: relative;right: 34px;}
-.divInput div.w50 .spanName.top{position: relative;top: -93px;}
+.divInput div.w50 .spanName.top{vertical-align: top;}
 .divInput div.w50 .input{padding: 10px 40px 10px 10px;border: 1px solid #dbdbbd;font-size: 16px;}
 .divInput div.w50 .input.style{padding-right: 0;width: 166px;}
 .divInput div.w50 .sureModifyPassword{padding: 11px 8px;background: #fb9777;color: #fff;outline: none;}
@@ -958,7 +959,7 @@ input::-webkit-inner-spin-button{
 
 .divSelect.styles{display: inline-block;margin-left: 0;}
 .divSelect.styles select{padding: 10px 0 10px 10px;font-size: 14px;width: 226px;}
-.divSelect.styles .h1{height: 44px;}
+.divSelect.styles .h1{height: 43px;}
 .divInput.w180 .divSelect.styles select{padding: 10px 0 10px 10px;font-size: 14px;width: 168px;}
 .divInput.w180 .divSelect.styles .h1{height: 41px;}
 .dailogFoot .btnSure,.dailogFoot .btnCancel{display: inline-block;padding: 10px 50px;border-radius: 10px;font-size: 16px;}
@@ -1154,6 +1155,8 @@ label{font-weight: 100;color: #4B525C;}
 .orderInfor-list{ border-collapse:collapse;width: 100%;background: #fff;}
 .orderInfor-list tr td,.orderInfor-list tr th{ text-align:center;font-size: 14px;border:none;}
 .orderInfor-list tr th{background: #f3f3f3;}
+
+.switch.style span.qy,.switch.style span.bqy{width: auto;}
 
 /*media*/
 @media screen and (max-width: 1850px) {
