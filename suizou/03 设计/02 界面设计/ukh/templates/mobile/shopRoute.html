@@ -1,0 +1,137 @@
+<!DOCTYPE html>
+<html>
+<head lang="en">
+    <meta charset="UTF-8">
+    <title>到店路线</title>
+    <meta name="viewport" content="width=device-width; initial-scale=1.0; user-scalable=no;">
+    <link rel="stylesheet" href="../../assets/global/plugins/font/css/font-awesome.min.css"/>
+    <link rel="stylesheet" href="../../assets/mobile/css/weui.css"/>
+    <link rel="stylesheet" href="../../assets/mobile/css/example.css"/>
+    <link rel="stylesheet" href="../../assets/mobile/css/global.css"/>
+</head>
+<body>
+    <div class="wrapper style">
+        <div class="page">
+            <div class="bd absolute">
+                <div class="htmlTitle">
+                    到店路线
+                </div>
+                <div class="addressCon">
+                    <img src="../../assets/mobile/images/addressNow.png" alt="">
+                    <div class="nowInfor">
+                        <p class="title">我的当前位置</p>
+                        <p>ssds傻傻的方式</p>
+                    </div>
+                </div>
+                <div class="search clearfix">
+                    <div class="left divInput">
+                        <i class="fa fa-search"></i>
+                        <input type="text" class="searchInput" id="searchInput" placeholder="请输入门店名称">
+                        <span class="close hide" id="search_clear"></span>
+                    </div>
+                    <div class="left divBtn">
+                        <button type="button" id="serchBtn">搜索</button>
+                    </div>
+                </div>
+
+                <div class="storeList">
+                    <ul class="shoppingList flex">
+                        <li>
+                            <a class="shop_div">
+                                <div class="shop_list_bgs style">
+                                    <img src="../../assets/mobile/images/indexSlider1.jpg" alt="">
+                                </div>
+                                <div class="shop_infors style">
+                                    <p class="tile">英国进口健达开心河马巧克力</p>
+                                    <p class="addressInfor">
+                                        sssssss胜多负少
+                                    </p>
+                                    <p class="clearfix">
+                                        <span class="right">
+                                            约3333m
+                                        </span>
+                                    </p>
+                                </div>
+                            </a>
+                            <div class="aList">
+                                <a href="tel:13678478463">
+                                    <span class="spani spanPhone"></span> 电话
+                                </a>
+                                <a href="###">
+                                    <span class="spani spanDh"></span> 导航
+                                </a>
+                            </div>
+                        </li>
+                        <li>
+                            <a class="shop_div">
+                                <div class="shop_list_bgs style">
+                                    <img src="../../assets/mobile/images/indexSlider1.jpg" alt="">
+                                </div>
+                                <div class="shop_infors style">
+                                    <p class="tile">英国进口健达开心河马巧克力</p>
+                                    <p class="addressInfor">
+                                        sssssss胜多负少
+                                    </p>
+                                    <p class="clearfix">
+                                        <span class="right">
+                                            约3333m
+                                        </span>
+                                    </p>
+                                </div>
+                            </a>
+                            <div class="aList">
+                                <a href="tel:13678478463">
+                                    <span class="spani spanPhone"></span> 电话
+                                </a>
+                                <a href="###">
+                                    <span class="spani spanDh"></span> 导航
+                                </a>
+                            </div>
+                        </li>
+                    </ul>
+                </div>
+
+            </div>
+            <div class="mask-bg hide shareMask">
+                <img src="../../assets/mobile/images/share.png" class="shareImg" alt="">
+            </div>
+        </div>
+    </div>
+    <script src="../../assets/global/plugins/jquery/jquery-1.11.3.min.js"></script>
+    <script src="../../assets/mobile/js/global.js"></script>
+    <script src="../../assets/mobile/js/common-validate.js"></script>
+    <script src="../../assets/mobile/js/removeTip.js"></script>
+    <script>
+        $(function () {
+
+            /*搜索条*/
+            var searchInput = $("#searchInput");
+            var search_clear = $("#search_clear");
+            searchInput.on('keyup', function () {
+                if($.trim($(this).val())){
+                    search_clear.removeClass("hide")
+                }else{
+                    search_clear.addClass("hide")
+                }
+            });
+            search_clear.on('touchend', function () {
+                searchInput.val('');
+                $(this).addClass("hide")
+            });
+
+
+            /*搜索提示*/
+            var serchBtn = $("#serchBtn");
+            var searchInput = $("#searchInput");
+            serchBtn.on('touchend',function () {
+                if(isEmpty(searchInput.val())){
+
+                    showErrMsg("请输入门店名称");
+                    return ;
+                }
+            })
+
+        })
+    </script>
+</body>
+</html>
