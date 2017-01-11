@@ -1,0 +1,165 @@
+
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset="utf-8">
+    <title>分类</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1,maximum-scale=1,user-scalable=no">
+    <meta name="apple-mobile-web-app-capable" content="yes">
+    <meta name="apple-mobile-web-app-status-bar-style" content="black">
+
+    <!--标准mui.css-->
+    <link rel="stylesheet" href="../../../assets/mobile/plugins/hello-mui/css/mui.min.css">
+
+    <!--扩展的字体图标-->
+    <link rel="stylesheet" type="text/css" href="../../../assets/mobile/plugins/hello-mui/css/icons-extra.css">
+
+    <!--App自定义的css-->
+    <link rel="stylesheet" type="text/css" href="../../../assets/mobile/css/global.css"/>
+
+</head>
+<body>
+    <div class="wrapper style">
+        <!--内容开始-->
+        <div class="mui-content clearfix">
+
+            <!--分类开始-->
+            <ul class="left shoppingMenu">
+                <li class="active">
+                    <a>
+                        全部产品
+                    </a>
+                </li>
+                <li>
+                    <a>
+                        汽车用品
+                    </a>
+                </li>
+                <li>
+                    <a>
+                        各色饮料
+                    </a>
+                </li>
+                <li>
+                    <a>
+                        休闲零食
+                    </a>
+                </li>
+                <li>
+                    <a>
+                        个人护理
+                    </a>
+                </li>
+                <li>
+                    <a>
+                        休闲零食
+                    </a>
+                </li>
+            </ul>
+            <!--分类结束-->
+
+            <!--商品列表开始-->
+            <div class="shopping left">
+                <ul class="shoppingList flex">
+                    <li>
+                        <a href="shopsShoppingInfor.html" class="shop_div">
+                            <div class="shop_list_bgs style">
+                                <img src="../../../assets/mobile/images/indexSlider1.jpg" class="shopImg" alt="">
+                            </div>
+                            <div class="shop_infors style">
+                                <p class="tile">英国进口健达开心河马巧克力</p>
+                                <p class="clearfix">
+                                    <span class="left style">
+                                        <span >销量</span>
+                                        666
+                                    </span>
+                                </p>
+                                <p class="clearfix">
+                                    <span class="left">
+                                        ￥333
+                                    </span>
+                                    <span class="right shopIcon"></span>
+                                </p>
+                            </div>
+                        </a>
+                    </li>
+                    <li>
+                        <a href="shopsShoppingInfor.html" class="shop_div">
+                            <div class="shop_list_bgs style">
+                                <img src="../../../assets/mobile/images/indexSlider1.jpg" class="shopImg" alt="">
+                            </div>
+                            <div class="shop_infors style">
+                                <p class="tile">英国进口健达开心河马巧克力</p>
+                                <p class="clearfix">
+                                    <span class="left style">
+                                        <span >销量</span>
+                                        666
+                                    </span>
+                                </p>
+                                <p class="clearfix">
+                                    <span class="left">
+                                        ￥333
+                                    </span>
+                                    <span class="right shopIcon"></span>
+                                </p>
+                            </div>
+                        </a>
+                    </li>
+                </ul>
+            </div>
+            <!--商品列表结束-->
+
+            <!--无数据提示开始-->
+            <div class="notConTip hide">
+                <img src="../../../assets/mobile/images/notContent.png" alt=""/>
+                <p class="notInfor">
+                    暂无数据
+                </p>
+            </div>
+            <!--无数据提示结束-->
+        </div>
+        <!--内容结束-->
+
+        <!--底部导航开始-->
+        <nav class="mui-bar mui-bar-tab">
+            <a class="mui-tab-item" href="index.html">
+                <span class="mui-icon mui-icon-home"></span>
+                <span class="mui-tab-label">首页</span>
+            </a>
+            <a class="mui-tab-item mui-active" href="classification.html">
+                <span class="mui-icon-extra mui-icon mui-icon-extra-class"></span>
+                <span class="mui-tab-label">分类</span>
+            </a>
+            <a class="mui-tab-item shoopCarBody" href="shoppingCat.html">
+                <span class="mui-icon-extra mui-icon mui-icon-extra-cart">
+                    <span class="mui-badge num">0</span>
+                </span>
+                <span class="mui-tab-label">购物车</span>
+            </a>
+            <a class="mui-tab-item" href="personCenter.html">
+                <span class="mui-icon mui-icon-contact"></span>
+                <span class="mui-tab-label">会员</span>
+            </a>
+        </nav>
+        <!--底部导航开始-->
+    </div>
+    <script src="../../../assets/mobile/plugins/jquery/jquery-1.11.3.min.js"></script>
+    <script type="text/javascript" src="../../../assets/mobile/js/jQuery-shopping.js"></script>
+    <script>
+        $(function() {
+
+
+            /*分类状态切换*/
+            $(".shoppingMenu li").on("touchend",function(){
+                $(this).addClass("active");
+                $(this).closest("li").siblings("li").removeClass("active");
+            });
+
+            /*加入购物车动画*/
+            $('.shopIcon').shoping({});
+        })
+    </script>
+</body>
+
+</html>

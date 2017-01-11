@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8"/>
+    <title>积分商城</title>
+    <meta name="viewport" content="width=device-width; initial-scale=1.0; user-scalable=no;">
+    <meta name="format-detection" content="telephone=no">
+    <meta name="viewport" content="width=device-width; initial-scale=1.0; user-scalable=no;">
+    <link rel="stylesheet" href="../../../assets/global/plugins/font/css/font-awesome.min.css"/>
+    <link rel="stylesheet" href="../../../assets/mobile/css/weui.css"/>
+    <link rel="stylesheet" href="../../../assets/mobile/css/example.css"/>
+    <link rel="stylesheet" href="../../../assets/mobile/css/global.css"/>
+</head>
+<body>
+    <div class="wrapper style">
+        <div class="page bgfff">
+            <div class="bd">
+                <div class="applicatioOpetion">
+                    <ul class="applicatioNav clearfix">
+                        <li>
+                            <a href="newActive.html">最新活动</a>
+                        </li>
+                        <li>
+                            <a href="scoreMall.html" class="active">积分商城</a>
+                        </li>
+                    </ul>
+                </div>
+                <ul class="entryList">
+                    <!--<li>-->
+                        <!--<a href="shopsShoppingInfor.html">-->
+                            <!--<div class="couponImg style">-->
+                                <!--<img src="../../../assets/mobile/images/shopList1.jpg" class="couponImg1" alt=""/>-->
+                            <!--</div>-->
+                            <!--<span class="inforList">-->
+                                <!--<span class="title">-->
+                                    <!--求购二手钢琴-->
+                                <!--</span>-->
+                                <!--<span>-->
+                                    <!--需要积分 : <span class="color fs16">￥2000.00</span>-->
+                                <!--</span>-->
+                                <!--<span>-->
+                                   <!--剩余数量 : <span class="color1">666</span>-->
+                                <!--</span>-->
+                            <!--</span>-->
+                        <!--</a>-->
+                    <!--</li>-->
+
+                </ul>
+            </div>
+        </div>
+    </div>
+    <script src="../../../assets/global/plugins/jquery/jquery-1.11.3.min.js"></script>
+    <script src="../../../assets/mobile/js/removeTip.js"></script><!--消息提示-->
+    <script src="../../../assets/mobile/js/participationRecord.js"></script><!--上滑加载-->
+    <script src="../../../assets/mobile/js/global.js"></script>
+    <script>
+        $(function(){
+            /*滚动加载*/
+            var entryList = $('.entryList');
+            entryList.scrollLoad({
+                limit: 6, //限制条数
+                startNum:5, //初始化显示条数
+                interface:"../../../assets/mobile/data/scoreMall.json" //接口
+            })
+        })
+    </script>
+</body>
+</html>
