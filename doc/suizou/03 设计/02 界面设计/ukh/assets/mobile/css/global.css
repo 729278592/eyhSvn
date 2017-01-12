@@ -660,7 +660,7 @@ textarea{font-family: "微软雅黑";}
 .shop_menu{display: block;width: 100%;background: #fff;border-top: 1px solid #dbdbdb;border-bottom: 1px solid #dbdbdb;margin: 0.625rem 0 0 0;}
 .shop_menu li{width: 25%;float: left;height: 50px;}
 .shop_menu li.right{float: right;}
-.shop_menu li.active a{border-bottom: 2px solid red;color: red;}
+.shop_menu li.active a{border-bottom: 2px solid #ff6a06;color: #ff6a06;}
 .otherCon.style{background: #eee;padding: 0 0.5rem;}
 .shoppingList li a p span>span.oldMoney{color: #666;text-decoration: line-through;}
 .shoppingList li a p span.shoppingNum{color: #999;}
@@ -1524,9 +1524,15 @@ page.icons .icon-box i {
 .entryList>li .inforList span.color1{color: #333;font-size: 1rem;}
 .entryList>li .inforList span.color.fs16{font-size: 1rem;}
 .page.bgfff{background: #fff;}
+.mui-bar-tab .mui-tab-item.mui-active{color: #ff3b30;}
+.mui-icon .mui-badge{background: #ff3b30;}
 
-
-
+.weui_cells_access div.weui_cell:not(.no_access):active {background-color: #fff;  }
+.privilege{background: #fff;margin: 0.625rem 1rem;font-size: 0.875rem;color: #999;padding: 0.625rem;}
+.privilege .time{color: #ff3b30;font-size: 1rem;}
+.entryList>li .inforList>span.hide{display: none;}
+.applicatioOpetion.mb0{margin-bottom: 0;}
+.entryList.firstBt0>li:first-child>a{border-top: 0;}
 /*加入购物车动画*/
 #floatOrder{width:3rem;height:3rem;padding:2px;background:#fff;border:solid 5px #ccc;overflow:hidden;position:absolute;z-index:890;}
 #floatOrder img{width: 100%;height: 100%;}
