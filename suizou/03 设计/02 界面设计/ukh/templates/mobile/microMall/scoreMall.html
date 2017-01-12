@@ -15,7 +15,7 @@
     <div class="wrapper style">
         <div class="page bgfff">
             <div class="bd">
-                <div class="applicatioOpetion">
+                <div class="applicatioOpetion mb0">
                     <ul class="applicatioNav clearfix">
                         <li>
                             <a href="newActive.html">最新活动</a>
@@ -27,7 +27,7 @@
                 </div>
 
                 <!--数据开始-->
-                <ul class="entryList">
+                <ul class="entryList mt0 firstBt0">
                     <!--<li>-->
                         <!--<a href="shopsShoppingInfor.html">-->
                             <!--<div class="couponImg style">-->
@@ -73,7 +73,27 @@
             entryList.scrollLoad({
                 limit: 6, //限制条数
                 startNum:5, //初始化显示条数
-                interface:"../../../assets/mobile/data/scoreMall.json" //接口
+                interface:"../../../assets/mobile/data/scoreMall.json" ,//接口
+                ajaxRecord:function(obj,wajxHtml){
+                    //模板片段
+                    wajxHtml += '<li>'+
+                                    '<a href="shopsShoppingInfor.html">'+
+                                        '<div class="couponImg style">'+
+                                            '<img src="'+obj.headImg+'" class="couponImg1" alt=""/>'+
+                                        '</div>'+
+                                        '<span class="inforList">'+
+                                            '<span class="title">'+obj.title+'</span>'+
+                                            '<span>'+
+                                                '需要积分 : <span class="color fs16">'+obj.needScore+'</span>'+
+                                            '</span>'+
+                                            '<span>'+
+                                                '剩余数量 : <span class="color1">'+obj.surplusNum+'</span>'+
+                                            '</span>'+
+                                        '</span>'+
+                                    '</a>'+
+                                '</li>';
+                    return wajxHtml;
+                }
             })
         })
     </script>
