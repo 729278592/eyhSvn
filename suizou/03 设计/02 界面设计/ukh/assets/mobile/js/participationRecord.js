@@ -30,26 +30,7 @@
                 },100);
                 Methods.scrollLoad(_this)
             },
-            ajaxRecord:function(obj,wajxHtml){
-                //模板片段
-                wajxHtml += '<li>'+
-                                '<a href="shopsShoppingInfor.html">'+
-                                    '<div class="couponImg style">'+
-                                        '<img src="'+obj.headImg+'" class="couponImg1" alt=""/>'+
-                                    '</div>'+
-                                    '<span class="inforList">'+
-                                        '<span class="title">'+obj.title+'</span>'+
-                                        '<span>'+
-                                            '需要积分 : <span class="color fs16">'+obj.needScore+'</span>'+
-                                        '</span>'+
-                                        '<span>'+
-                                            '剩余数量 : <span class="color1">'+obj.surplusNum+'</span>'+
-                                        '</span>'+
-                                    '</span>'+
-                                '</a>'+
-                            '</li>';
-                return wajxHtml;
-            },
+
             loading : function(flag,res,_this){
 
                 var loadingFix = $("#loddingFix");
@@ -69,7 +50,7 @@
                     setTimeout(function(){
                         loadingFix.hide();
                         for(var i = 0;i<opts.startNum;i++){
-                            _this.append(Methods.ajaxRecord(res[i],opts.wajxHtml));
+                            _this.append(options.ajaxRecord(res[i],opts.wajxHtml));
                         }
                         opts.wajxHtml = '';
                     },1000);
@@ -84,7 +65,7 @@
                         if(opts.startNum+opts.limit>res.length){
                             if((opts.limit>res.length-opts.startNum)&&(res.length-opts.startNum>0)){
                                 for(var i = opts.startNum;i<res.length;i++){
-                                    _this.append(Methods.ajaxRecord(res[i], opts.wajxHtml));
+                                    _this.append(options.ajaxRecord(res[i], opts.wajxHtml));
                                 }
 
                                 opts.startNum = opts.limit + opts.startNum;
@@ -94,7 +75,7 @@
                         }
 
                         for (var i = opts.startNum; i < opts.startNum + opts.limit; i++) {
-                            _this.append(Methods.ajaxRecord(res[i], opts.wajxHtml));
+                            _this.append(options.ajaxRecord(res[i], opts.wajxHtml));
                         }
 
                         opts.startNum = opts.limit + opts.startNum;
