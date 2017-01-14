@@ -10,10 +10,10 @@
     <meta name="apple-mobile-web-app-status-bar-style" content="black">
 
     <!--标准mui.css-->
-    <link rel="stylesheet" href="../../../assets/mobile/plugins/hello-mui/css/mui.min.css">
+    <link rel="stylesheet" href="../../../assets/mobile/plugins/mui/css/mui.min.css">
 
     <!--扩展的字体图标-->
-    <link rel="stylesheet" type="text/css" href="../../../assets/mobile/plugins/hello-mui/css/icons-extra.css">
+    <link rel="stylesheet" type="text/css" href="../../../assets/mobile/plugins/mui/css/icons-extra.css">
 
     <!--App自定义的css-->
     <link rel="stylesheet" type="text/css" href="../../../assets/mobile/css/global.css"/>
@@ -60,7 +60,7 @@
                     <!-- 额外增加的一个节点(循环轮播：第一个节点是最后一张轮播) -->
                     <div class="mui-slider-item mui-slider-item-duplicate">
                         <a href="#">
-                            <img src="../../../assets/mobile/plugins/hello-mui/images/yuantiao.jpg">
+                            <img src="../../../assets/mobile/plugins/mui/images/yuantiao.jpg">
                             <!--<p class="mui-slider-title">-->
                             <!--<img src="../../../assets/mobile/images/heprotite.jpg" class="heprotite" alt="">-->
                             <!--<span>玻璃房子</span>-->
@@ -70,29 +70,29 @@
                     </div>
                     <div class="mui-slider-item">
                         <a href="#">
-                            <img src="../../../assets/mobile/plugins/hello-mui/images/shuijiao.jpg">
+                            <img src="../../../assets/mobile/plugins/mui/images/shuijiao.jpg">
                         </a>
                     </div>
                     <div class="mui-slider-item">
                         <a href="#">
-                            <img src="../../../assets/mobile/plugins/hello-mui/images/muwu.jpg">
+                            <img src="../../../assets/mobile/plugins/mui/images/muwu.jpg">
 
                         </a>
                     </div>
                     <div class="mui-slider-item">
                         <a href="#">
-                            <img src="../../../assets/mobile/plugins/hello-mui/images/cbd.jpg">
+                            <img src="../../../assets/mobile/plugins/mui/images/cbd.jpg">
                         </a>
                     </div>
                     <div class="mui-slider-item">
                         <a href="#">
-                            <img src="../../../assets/mobile/plugins/hello-mui/images/yuantiao.jpg">
+                            <img src="../../../assets/mobile/plugins/mui/images/yuantiao.jpg">
                         </a>
                     </div>
                     <!-- 额外增加的一个节点(循环轮播：最后一个节点是第一张轮播) -->
                     <div class="mui-slider-item mui-slider-item-duplicate">
                         <a href="#">
-                            <img src="../../../assets/mobile/plugins/hello-mui/images/shuijiao.jpg">
+                            <img src="../../../assets/mobile/plugins/mui/images/shuijiao.jpg">
                         </a>
                     </div>
                 </div>
@@ -145,7 +145,7 @@
                                         <span class="left">
                                             ￥333
                                         </span>
-                                        <span class="right shopIcon"></span>
+                                        <span class="right shopIcon" shopppngId="555"></span>
                                     </p>
                                 </div>
                             </a>
@@ -167,7 +167,7 @@
                                     <span class="left">
                                         ￥333
                                     </span>
-                                    <span class="right shopIcon">
+                                    <span class="right shopIcon" shopppngId="556">
                                     </span>
                                     </p>
                                 </div>
@@ -203,15 +203,14 @@
             </a>
         </nav>
         <!--底部导航开始-->
+
     </div>
-    <script src="../../../assets/mobile/plugins/hello-mui/js/mui.min.js"></script>
+    <script src="../../../assets/mobile/plugins/mui/js/mui.min.js"></script>
     <script src="../../../assets/mobile/plugins/jquery/jquery-1.11.3.min.js"></script>
     <script src="../../../assets/mobile/plugins/upScroll/js/jquery.bootstrap.newsbox.min.js"></script><!--热评动画-->
     <script type="text/javascript" src="../../../assets/mobile/js/addShoppingCar.js"></script><!--加入购物车动画-->
-
     <script type="text/javascript">
         $(function () {
-
 
             /*热评动画*/
             $(".guScroll").bootstrapNews({
@@ -230,7 +229,14 @@
             });
 
             /*加入购物车动画*/
-            $('.shopIcon').shoping({});
+            $('.shopIcon').on("click",function (e) {
+                e.preventDefault();
+                $(this).shoping({
+                    interface:"",  //接口
+                    shoppingId:$(this).attr("shopppngId")  //商品id
+                });
+            })
+
         });
     </script>
 </body>
