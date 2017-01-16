@@ -1,0 +1,88 @@
+<!--infor.wxml-->
+<view class="content">
+  <!--内容开始-->
+  <view class="bd">
+      <!--slider开始-->
+      <view class="slider">
+        <swiper indicator-dots="{{indicatorDots}}" autoplay="{{autoplay}}" interval="{{interval}}" duration="{{duration}}" circular="{{circular}}">
+          <block wx:for="{{list.slider}}">  <!--block循环标签页面中不会显示-->
+            <swiper-item>
+              <image src="{{item}}" model="aspectFill" class="slide-image"/>
+            </swiper-item>
+          </block>
+        </swiper>
+      </view>
+      <!--slider结束-->
+
+      <!--火锅开始-->
+      <view class="board">
+
+        <view class="board-item">
+          <view class="listImg">
+            <image src="{{list.avatar}}" class="default"></image>
+          </view>
+          <view class="listCon">
+            <view class="listP clearfix"> <!--给点级元素点击时加交互cursor:pointer;-->
+              <text class="title">{{list.name}}</text>
+            </view>
+            <view class="listP clearfix lh">
+              <view class="left">
+                人均 : <text>{{list.consume}}</text>元/人
+              </view>
+              <view class="right btnPhone" data-name="{{list.tel}}"  bindtap="dial">
+                <view class="bgPhone"></view>
+                <text>电话订座</text>
+              </view>
+            </view>
+            <view class="listP clearfix">
+              <view class="bgAddress"></view>
+              <text class="address">{{list.address}}</text>
+            </view>
+            <view class="listP clearfix">
+            <view class="left tasteList" wx:for="{{list.tags}}"><text>{{item}}</text></view>
+            </view>
+          </view>
+          <view class="bgSort" wx:if="{{list.sort<4}}">
+            <text>{{list.sort}}</text>
+          </view>
+          <view class="bgSort bg" wx:else>
+            <text>{{list.sort}}</text>
+          </view>
+        </view>
+
+      </view>
+      <!--火锅结束-->
+
+      <!--火锅特色开始-->
+      <view class="hotPot">
+        <view class="hotPotHd">
+          <view class="colorBlock"></view>
+          <text>特色</text>
+        </view>
+        <view class="hotPotCon style">
+          <text>{{list.detailsIntro}}</text>
+        </view>
+      </view>
+      <!--火锅特色结束-->
+
+      <!--火锅详情介绍开始-->
+      <view class="hotPot">
+        <view class="hotPotHd">
+          <view class="colorBlock"></view>
+          <text>详情介绍</text>
+        </view>
+        <view class="hotPotCon">
+          <block wx:for="{{list.product}}">
+            <image src="{{item}}"></image>
+          </block>
+          <!--<text class="detailsInfor">-->
+            <!--详情详情详情详情详情详情详情详情详情详情详情详情详情详情详情详情详情详情详情详情详情详情详情详情详情详情详情详情详情详情详情详情详情详情详情详情详情详情详情详情详情详情详情详情详情详情详情详情-->
+          <!--</text>-->
+        </view>
+      </view>
+      <!--火锅详情介绍结束-->
+  </view>
+  <!--内容结束-->
+</view>
+
+

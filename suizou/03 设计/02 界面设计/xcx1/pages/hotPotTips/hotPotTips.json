@@ -1,0 +1,264 @@
+{
+  "status": "ok",
+  "message": "success",
+  "datas": {
+    "pageNo": 1,
+    "pageSize": 10,
+    "datas": [
+      {
+        "id": "1",
+        "headImg": "http://www.wqiyu.com/cqhg/images/default.png",
+        "title": "晓宇火锅1",
+        "price": "70",
+        "address": "渝中区",
+        "mobile": "13678478463",
+        "commentType": [
+          {
+            "type": "味道好"
+          },
+          {
+            "type": "味道好1"
+          },
+          {
+            "type": "味道好2"
+          }
+        ]
+      },
+      {
+        "id": "2",
+        "headImg": "http://www.wqiyu.com/cqhg/images/default.png",
+        "title": "晓宇火锅",
+        "price": "80",
+        "address": "南坪区",
+        "mobile": "13678478465",
+        "commentType": [
+          {
+            "type": "味道好"
+          },
+          {
+            "type": "味道好1"
+          },
+          {
+            "type": "味道好2"
+          }
+        ]
+      },
+      {
+        "id": "2",
+        "headImg": "http://www.wqiyu.com/cqhg/images/default.png",
+        "title": "晓宇火锅",
+        "price": "80",
+        "address": "南坪区",
+        "mobile": "13678478463",
+        "commentType": [
+          {
+            "type": "味道好"
+          },
+          {
+            "type": "味道好1"
+          },
+          {
+            "type": "味道好2"
+          }
+        ]
+      },
+      {
+        "id": "2",
+        "headImg": "http://www.wqiyu.com/cqhg/images/default.png",
+        "title": "晓宇火锅",
+        "price": "80",
+        "address": "南坪区",
+        "mobile": "13678478463",
+        "commentType": [
+          {
+            "type": "味道好"
+          },
+          {
+            "type": "味道好1"
+          },
+          {
+            "type": "味道好2"
+          }
+        ]
+      },
+      {
+        "id": "2",
+        "headImg": "http://www.wqiyu.com/cqhg/images/default.png",
+        "title": "晓宇火锅",
+        "price": "80",
+        "address": "南坪区",
+        "mobile": "13678478463",
+        "commentType": [
+          {
+            "type": "味道好"
+          },
+          {
+            "type": "味道好1"
+          },
+          {
+            "type": "味道好2"
+          }
+        ]
+      },
+      {
+        "id": "2",
+        "headImg": "http://www.wqiyu.com/cqhg/images/default.png",
+        "title": "晓宇火锅",
+        "price": "80",
+        "address": "南坪区",
+        "mobile": "13678478463",
+        "commentType": [
+          {
+            "type": "味道好"
+          },
+          {
+            "type": "味道好1"
+          },
+          {
+            "type": "味道好2"
+          }
+        ]
+      },
+      {
+        "id": "2",
+        "headImg": "http://www.wqiyu.com/cqhg/images/default.png",
+        "title": "晓宇火锅",
+        "price": "80",
+        "address": "南坪区",
+        "mobile": "13678478463",
+        "commentType": [
+          {
+            "type": "味道好"
+          },
+          {
+            "type": "味道好1"
+          },
+          {
+            "type": "味道好2"
+          }
+        ]
+      },
+      {
+        "id": "2",
+        "headImg": "http://www.wqiyu.com/cqhg/images/default.png",
+        "title": "晓宇火锅",
+        "price": "80",
+        "address": "南坪区",
+        "mobile": "13678478463",
+        "commentType": [
+          {
+            "type": "味道好"
+          },
+          {
+            "type": "味道好1"
+          },
+          {
+            "type": "味道好2"
+          }
+        ]
+      },
+      {
+        "id": "2",
+        "headImg": "http://www.wqiyu.com/cqhg/images/default.png",
+        "title": "晓宇火锅",
+        "price": "80",
+        "address": "南坪区",
+        "mobile": "13678478463",
+        "commentType": [
+          {
+            "type": "味道好"
+          },
+          {
+            "type": "味道好1"
+          },
+          {
+            "type": "味道好2"
+          }
+        ]
+      },
+      {
+        "id": "2",
+        "headImg": "http://www.wqiyu.com/cqhg/images/default.png",
+        "title": "晓宇火锅",
+        "price": "80",
+        "address": "南坪区",
+        "mobile": "13678478463",
+        "commentType": [
+          {
+            "type": "味道好"
+          },
+          {
+            "type": "味道好1"
+          },
+          {
+            "type": "味道好2"
+          }
+        ]
+      },
+      {
+        "id": "2",
+        "headImg": "http://www.wqiyu.com/cqhg/images/default.png",
+        "title": "晓宇火锅",
+        "price": "80",
+        "address": "南坪区",
+        "mobile": "13678478463",
+        "commentType": [
+          {
+            "type": "味道好"
+          },
+          {
+            "type": "味道好1"
+          },
+          {
+            "type": "味道好2"
+          }
+        ]
+      },
+      {
+        "id": "2",
+        "headImg": "http://www.wqiyu.com/cqhg/images/default.png",
+        "title": "晓宇火锅",
+        "price": "80",
+        "address": "南坪区",
+        "mobile": "13678478463",
+        "commentType": [
+          {
+            "type": "味道好"
+          },
+          {
+            "type": "味道好1"
+          },
+          {
+            "type": "味道好2"
+          }
+        ]
+      },
+      {
+        "id": "2",
+        "headImg": "http://www.wqiyu.com/cqhg/images/default.png",
+        "title": "晓宇火锅",
+        "price": "80",
+        "address": "南坪区",
+        "mobile": "13678478463",
+        "commentType": [
+          {
+            "type": "味道好"
+          },
+          {
+            "type": "味道好1"
+          },
+          {
+            "type": "味道好2"
+          }
+        ]
+      }
+    ],
+    "totalCount": 1,
+    "firstResult": 0,
+    "hasNext": false,
+    "hasPre": false,
+    "prePage": 1,
+    "totalPages": 1,
+    "nextPage": 1
+  }
+}

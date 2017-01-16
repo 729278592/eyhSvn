@@ -1,0 +1,13 @@
+{
+  "pages":[
+    "pages/hotPotRank/hotPotRank",
+    "pages/infor/infor",
+    "pages/hotPotTips/hotPotTips"
+  ],
+  "window":{
+    "backgroundTextStyle":"light",
+    "navigationBarBackgroundColor": "#d71c3b",
+    "navigationBarTitleText": "重庆火锅",
+    "navigationBarTextStyle":"white"
+  }
+}

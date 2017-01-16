@@ -1,0 +1,81 @@
+<!-- 火锅列表 -->
+<import src="../common/movie-list.wxml"/>
+<view class="content">
+<!--内容开始-->
+<view class="bd">
+  <scroll-view scroll-y="true" class="page-body" bindscrolltolower="onReachBottom">
+
+    <view class="hgHotType">
+
+      <navigator class="active" url="../hotPotRank/hotPotRank">
+        <view class="hgBanner">
+          <text>火锅十强</text>
+        </view>
+      </navigator>
+
+      <navigator url="../hotPotTips/hotPotTips">
+        <view class="hgBanner">
+          <text>火锅小贴士</text>
+        </view>
+      </navigator>
+
+    </view>
+
+    <!--火锅列表开始-->
+    <view class="board">
+
+      <block wx:for="{{list}}">
+        <navigator bindtap="pageTo" url="../infor/infor?id={{item.id}}"><!--hover去掉navigator点击时的高亮颜色hover-class="no"-->
+          <view class="board-item">
+            <view class="listImg">
+              <image src="{{item.avatar}}" class="default"></image>
+            </view>
+            <view class="listCon">
+              <view class="listP clearfix"> <!--给点级元素点击时加交互cursor:pointer;-->
+                <text class="title">{{item.name}}</text>
+              </view>
+              <view class="listP clearfix lh">
+                <view class="left">
+                  人均 : <text>{{item.consume}}</text>元/人
+                </view>
+                <view class="right btnPhone" data-name="{{item.tel}}" catchtap="pageTo" bindtap="dial">
+                  <view class="bgPhone"></view>
+                  <text>电话订座</text>
+                </view>
+              </view>
+              <view class="listP clearfix">
+                <view class="bgAddress"></view>
+                <text class="address">{{item.address}}</text>
+              </view>
+              <view class="listP clearfix">
+                <view class="left tasteList" wx:for="{{item.tags}}"><text>{{item}}</text></view>
+              </view>
+            </view>
+            <view class="bgSort" wx:if="{{item.sort<4}}">
+              <text>{{item.sort}}</text>
+            </view>
+            <view class="bgSort bg" wx:else>
+              <text>{{item.sort}}</text>
+            </view>
+          </view>
+        </navigator>
+      </block>
+
+    </view>
+    <!--火锅列表结束-->
+
+    <!--数据加载提示开始-->
+    <!--<view class="tips">-->
+      <!--<view wx:if="{{hasMore}}"><image src="/images/loading.gif" mode="aspectFill"/><text>玩了命的加载中...</text></view>-->
+      <!--<view wx:else><text>没有更多内容了</text></view>-->
+    <!--</view>-->
+    <!--数据加载提示结束-->
+
+  </scroll-view>
+
+</view>
+
+<!--内容结束-->
+</view>
+
+
