@@ -6,10 +6,10 @@
     <meta name="viewport" content="width=device-width; initial-scale=1.0; user-scalable=no;">
     <meta name="format-detection" content="telephone=no">
     <!--标准mui.css-->
-    <link rel="stylesheet" href="../../../assets/mobile/plugins/hello-mui/css/mui.min.css">
+    <link rel="stylesheet" href="../../../assets/mobile/plugins/mui/css/mui.min.css">
 
     <!--扩展的字体图标-->
-    <link rel="stylesheet" type="text/css" href="../../../assets/mobile/plugins/hello-mui/css/icons-extra.css">
+    <link rel="stylesheet" type="text/css" href="../../../assets/mobile/plugins/mui/css/icons-extra.css">
     <link rel="stylesheet" href="../../../assets/mobile/css/weui.css"/>
     <link rel="stylesheet" href="../../../assets/mobile/css/example.css"/>
     <link rel="stylesheet" href="../../../assets/mobile/css/global.css"/>
@@ -21,19 +21,36 @@
 
                 <!--个人信息开始-->
                 <div class="person_infor">
-                    <div class="card">
-                        <div class="card_infor">
-                            <div class="card_img">
-                                <img src="../../../assets/mobile/images/cardImg.png" alt=""/>
+                    <div class="cardDetails">
+                        <div class="card zm">
+                            <div class="card_infor">
+                                <!--<div class="card_img">-->
+                                <!--<img src="../../../assets/mobile/images/cardImg.png" alt=""/>-->
+                                <!--</div>-->
+                                <div class="cardInfor">
+                                    <p class="name">优客汇VIP会员卡</p>
+                                </div>
                             </div>
-                            <!--<div class="cardInfor">-->
-                                <!--<p class="name">陈小洁</p>-->
-                                <!--<p class="phone"><span class="verdana">15036656545</span></p>-->
-                            <!--</div>-->
+                            <div class="cardNum">
+                                <span class="name">会员卡号</span><br>
+                                <span class="verdana">65656545</span>
+                            </div>
                         </div>
-                        <div class="cardNum">
-                            <span class="name">会员卡号</span><br>
-                            <span class="verdana">65656545</span>
+                        <div class="cardz fm hide">
+                            <div class="cardzInfor">
+                                <p>
+                                    <span class="span_icon phoneIcon"></span>
+                                    <span>
+                                        02356656565
+                                    </span>
+                                </p>
+                                <p>
+                                    <span class="span_icon addressIcon"></span>
+                                    <span>
+                                        袁家岗
+                                    </span>
+                                </p>
+                            </div>
                         </div>
                     </div>
                     <p class="tipP">
@@ -232,6 +249,20 @@
                 }
                 dialogRegister.addClass("hide");
             });
+
+
+            /*会员卡信息*/
+            var card = $(".card");
+            var cardz = $(".cardz");
+            card.click(function(){
+                $(this).removeClass('zm').addClass('fm').addClass("hide");
+                cardz.removeClass('hide').removeClass('fm').addClass('zm');
+            });
+            cardz.click(function(){
+                $(this).removeClass('zm').addClass('fm').addClass("hide");
+                card.removeClass("hide").removeClass('fm').addClass('zm');
+            })
+
         })
     </script>
 </body>
