@@ -1,0 +1,111 @@
+/**app.wxss**/
+.verdana{font-family: -apple-system-font,Helvetica Neue,Helvetica,sans-serif;}
+body,html{margin:0;padding:0;}
+page{font-family: -apple-system-font, 'Helvetica Neue', Helvetica, 'Microsoft YaHei', sans-serif;}
+
+
+body{background: #f7f7f7;}
+.clearfix:after{content: ".";display: block;clear: both;visibility: hidden;line-height: 0;height: 0;}
+.clearfix{display: inline-block;}
+.relative{position:relative;}
+.absolute{position: absolute;}
+.fix{position: fixed;}
+.left{float: left;}
+.right{float: right;}
+.hide{display: none;}
+html[xmlns] .clearfix{display: block;}
+.overflow-y{overflow-y: hidden;height: 100%;}
+.content{width: 100%;position: relative;margin: 0 auto;background:#f1f1f1;}
+
+
+.bd.absolute{position:absolute;top:0;bottom:0;overflow-y:scroll;-webkit-overflow-scrolling:touch;width:100%}
+.bd.bt1{border-top: 1px solid #efefef;}
+.bd.bgfff{background: #fff;}
+.hd.fixed{position: fixed}
+body, html{height: 100%; -webkit-tap-highlight-color: transparent}
+
+.link{color: #1aad19}
+image{margin:0;padding:0;}
+
+
+
+/**火锅排名-hotPotTank**/
+.hgHotType{display: flex;}
+.hgHotType>navigator{-webkit-box-flex: 1;-webkit-flex: 1;flex: 1;padding:40rpx 0;color:#666;background:#fafafa;border-right:1px solid #dbdbdb;}
+.hgHotType>navigator.active{color:#d81e3b;border-bottom:2px solid #d81e3b;}
+.hgBanner{font-size:32rpx;border-right:1px solid #dbdbdb;border-bottom:2px solid transparent;text-align:center;}
+.hgBanner:last-child{border-right:none;}
+.board{width:100%;display: flex;flex-direction:column;}
+.board-item{margin-top:20rpx;
+/**cursor:pointer;**/
+display:table;
+width:94%;padding:20rpx 3%;position:relative;background:#fff;border-top:1px solid #dbdbdb;border-bottom:1px solid #dbdbdb;-webkit-box-flex: 1;-webkit-flex: 1;flex: 1;}
+.listImg,.listCon{display:table-cell;vertical-align: middle;}
+.listImg .default{width:140rpx;height:140rpx;margin-right:20rpx}
+.listCon{-webkit-box-flex: 1;-webkit-flex: 1;flex: 1;}
+.listP{color:#999;font-size:28rpx;}
+.listP.lh>.left{line-height:61rpx;cursor:pointer;}
+.listP .title{font-size:32rpx;color:#333;}
+.listP.clearfix{display:block;}
+.listP .btnPhone{padding:5px;border:1px solid #dbdbdb;border-radius:5px;color:#333;}
+.listP .btnPhone text{font-size:28rpx;}
+.listP .btnPhone .bgPhone{background:url("../../images/phoneIcon.png") no-repeat;background-size:100% 100%;width:28rpx;height:28rpx;display:inline-block;position:relative;top:4rpx;margin-right:4rpx;}
+.listP.btnPhone text{}
+.listP .bgAddress{}
+.listP .address{font-size:28rpx;}
+.listP .tasteList{font-size:28rpx;padding:3px 5px;border-radius:8px;border:1px solid #dbdbdb;background:#e8e8e8;margin-right:4px;margin-top:5px;}
+.listP .tasteList text{}
+.bgSort{position:absolute;right:0;top:0;width: 0;
+height: 0;
+border-left: 40rpx solid transparent;
+border-right: 40rpx solid #d81e3b;
+border-bottom: 40rpx solid transparent;border-top: 40rpx solid #d81e3b;}
+.bgSort text{position:relative;top:-36rpx;left:9rpx;font-size:28rpx;color:#fff;}
+.bgSort.bg{border-left: 40rpx solid transparent;
+           border-right: 40rpx solid #efefef;
+           border-bottom: 40rpx solid transparent;border-top: 40rpx solid #efefef;}
+.bgSort.bg text{color:#333;}
+.navigator-hover {
+    color:blue;
+}
+.other-navigator-hover {
+    color:red;
+}
+
+.page-body {
+  display: flex;
+  flex: 1;
+  flex-direction: column;
+}
+
+
+/*页面加载提示*/
+.tips {
+  font-size: 28rpx;
+  text-align: center;
+  padding: 50rpx;
+  color: #ccc;
+}
+
+.tips image {
+  width: 40rpx;
+  height: 40rpx;
+  margin-right: 20rpx;
+}
+
+.tips image,
+.tips text {vertical-align: middle;}
+
+
+/**火锅详情-infor**/
+.slider swiper{height:400rpx;}
+.slide-image{width:100%;height:100%;}
+.hotPot{background:#fff;margin-top:20rpx;border-top:1px solid #dbdbdb;border-bottom:1px solid #dbdbdb;}
+.hotPotHd{padding:20rpx 3%;width:94%;border-bottom:1px solid #efefef;font-size:32rpx;color:#333;vertical-align:middle;display:flex;padding-bottom:20rpx;}
+.hotPotHd .colorBlock{display:inline-block;width:6rpx;height:40rpx;background:#d71c3a;margin-right:14rpx;}
+.hotPotHd text{-webkit-box-flex: 1;-webkit-flex: 1;flex: 1;}
+.hotPotCon.style{padding-top:20rpx;padding:20rpx 3%;width:94%;}
+.hotPotCon{font-size:28rpx;color:#666;}
+.hotPotCon image{width:100%;}
+.hotPotCon .detailsInfor{width:94%;padding: 0 3% 20rpx 3%;display:inline-block;}
+
