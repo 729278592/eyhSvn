@@ -172,9 +172,10 @@
 					v = 500;
 					if(ix == target-1){
 						clearTimeout(stop3);
-						$(".weui_mask").removeClass("hide");
+						setTimeout(function () {
+                            $(".weui_mask").removeClass("hide");
+                        },500);
 						options.end(options.arr[target-1]);
-
 						flg = false;
 					}
 				}else{
