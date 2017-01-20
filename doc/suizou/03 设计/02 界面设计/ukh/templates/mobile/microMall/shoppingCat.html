@@ -7,7 +7,6 @@
     <link rel="stylesheet" href="../../../assets/global/plugins/font/css/font-awesome.min.css"/>
     <link rel="stylesheet" href="../../../assets/mobile/css/weui.css"/>
     <link rel="stylesheet" href="../../../assets/mobile/css/example.css"/>
-    <link rel="stylesheet" href="../../../assets/mobile/plugins/jquery-spinner/css/jquery.spinner.large.css"/>
     <link rel="stylesheet" href="../../../assets/mobile/css/global.css"/>
 </head>
 <body>
@@ -15,8 +14,8 @@
         <div class="page">
             <div class="bd absolute pb48">
                 <div id="order">
-
                     <!--商品列表开始-->
+                    <div class="title">购物车</div>
                     <ul class="orderList style">
                         <li>
                             <div class="orderCon">
@@ -25,52 +24,27 @@
                                 </div>
                                 <div class="orderInfor">
                                     <p class="clearfix">
-                                        <span class="left">植物油 <br/>￥<span class="verdana">100.00</span></span>
-                                        <!--<span class="scale right"><span class="verdana">200</span>积分</span>-->
+                                        <span class="left">植物油</span>
                                     </p>
-                                    <p class=" clearfix">
-
-                                        <a class="num">
-                                            <span class="minus" ></span>
-                                            <input type="number" class="buycount" value="1" maxlength="3" format="3N" />
-                                            <span class="plus" ></span>
-                                        </a>
-
-                                        <button class="right btnRemove">
-                                            <i class="fa fa-trash-o"></i> 删除
-                                        </button>
-                                    </p>
-                                </div>
-                            </div>
-                        </li>
-                        <li>
-                            <div class="orderCon">
-                                <div class="orderImg">
-                                    <img src="../../../assets/mobile/images/order1.jpg" alt=""/>
-                                </div>
-                                <div class="orderInfor">
                                     <p class="clearfix">
-                                        <span class="left">植物油 <br/>￥<span class="verdana">100.00</span></span>
-                                        <!--<span class="scale right"><span class="verdana">200</span>积分</span>-->
+                                        单价 : ￥<span class="verdana color2">100.00</span>
                                     </p>
                                     <p class=" clearfix">
-
                                         <a class="num">
                                             <span class="minus" ></span>
-                                            <input type="number" class="buycount" value="1" maxlength="3" format="3N" />
+                                            <input type="number" class="buycount" value="1" maxlength="3"/>
                                             <span class="plus" ></span>
                                         </a>
-
                                         <button class="right btnRemove">
-                                            <i class="fa fa-trash-o"></i> 删除
+                                             删除
                                         </button>
                                     </p>
                                 </div>
                             </div>
                         </li>
                     </ul>
+                    <div class="totalPrice">总价 : <span class="color2">￥200</span></div>
                     <!--商品列表结束-->
-
                 </div>
 
                 <!--无数据提示开始-->
@@ -78,76 +52,48 @@
                     <img src="../../../assets/mobile/images/noShopping.png" alt=""/>
                     <p class="notInfor hide">
                         购物车什么都没有哦! <br/>
-                        <a href="shopMall.html" style="color: #ff0004">去看看>></a>
+                        <a href="index.html" style="color: #ff0004">去看看>></a>
                     </p>
                 </div>
                 <!--无数据提示结束-->
 
             </div>
-            <div class="foot">
-
-                <ul class="optionType clearfix">
-                    <li class="first style">
-                        合计 : <span class="color">￥200</span>
-                    </li>
-                    <li class="last right">
-                        <a href="payChioce.html" class="nowBuy bg">结算</a>
-                    </li>
-                </ul>
+            <div class="weui_btn_area fixed">
+                <input type="button" class="weui_btn b0 weui_btn_primary" value="结算">
             </div>
         </div>
     </div>
     <script src="../../../assets/global/plugins/jquery/jquery-1.11.3.min.js"></script>
     <script src="../../../assets/mobile/plugins/jquery-spinner/js/jquery.spinner.js"></script><!--数量选择-->
-    <script src="../../../assets/mobile/js/confirm.js"></script>
-    <script src="../../../assets/mobile/js/removeTip.js"></script>
     <script src="../../../assets/mobile/js/global.js"></script>
+    <script src="../../../assets/mobile/js/weui.js"></script>
     <script>
         $(function(){
 
             /*数量选择*/
-            var num = $('.num');
-            var buycount = $(".buycount");
-            num.spinner({
-                val:$(this).find(buycount).val()
-            });
+            var orderList = $('.orderList');
+            orderList.spinner({});
 
-            /*商品删除弹框*/
-            var page = $(".page");
-            var orderList = $(".orderList");
-            var dialogConfirm = $("#dialogConfirm");
-            var signSure =  $("#signSure");
-            var signCancel = $("#signCancel");
-            var weui_dialog = $(".weui_dialog");
-            orderList.delegate(".btnRemove","touchend",function(){
-                confirmTip("是否删除该商品?");
-                dialogConfirm.removeClass("hide");
-                $(this).closest("li").addClass("remove");
-                signCancel.addClass("signCancel");
-                signSure.addClass("signSure");
-                weui_dialog.css({display:"inline-block"});
-                weui_dialog.removeClass("vux-dialog-leave")
-            });
+            $(".orderList").on("touchend",".btnRemove",function(){
+                weui.confirm("是否删除该商品?",function(){
+                    weui.startLoading();
 
-            /*取消商品删除*/
-            var orderList = $(".orderList");
-            var dialogConfirm = $("#dialogConfirm");
-            var weui_dialog = $(".weui_dialog");
-            page.delegate(".signCancel","touchend",function(){
-                orderList.find("li.remove").removeClass("remove");
-                dialogConfirm.addClass("hide");
-                weui_dialog.addClass("vux-dialog-leave")
-            });
+                    $.ajax({
+                        url:"",
+                        dataType:'jsonp',
+                        data:'',
+                        jsonp:'callback',
+                        success:function(data) {
+                            weui.stopLoading();
+                            weui.showMsg("取消商品删除");
+                        }
+                    });
 
-            /*确定商品删除*/
-            var orderList = $(".orderList");
-            var dialogConfirm = $("#dialogConfirm");
-            page.delegate(".signSure","touchend",function(){
-                orderList.find("li.remove").remove();
-                dialogConfirm.addClass("hide");
-                showErrMsg("商品删除成功");
-            });
+                },function(){
 
+                })
+
+            });
         })
     </script>
 </body>

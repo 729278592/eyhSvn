@@ -21,26 +21,22 @@
 
 				addShoping:function(_this){
 
-					var id = _this.attr('id'),
-					    x = _this.offset().left - 30,
-						y = _this.offset().top - 30,
+					var x = _this.offset().left,
+						y = _this.offset().top ,
 						X = $shop.offset().left+$shop.width()/2-_this.width()/2+10,
 						Y = $shop.offset().top;
 						imgSrc = _this.closest($shop_div).find($shopImg).attr("src");
                     if ($('#floatOrder').length <= 0) {
-                        $('body').append('<div id="floatOrder"><img src = "'+imgSrc+'" width="50" height="50" /></div>');
+                        $('body').append('<div id="floatOrder"></div>');
                     }
                     var $obj = $('#floatOrder');
                     if(!$obj.is(':animated')){
-                        $obj.css({'left': x,'top': y}).animate({'left': X,'top': Y-80},500,function() {
-                            $obj.stop(false, false).animate({'top': Y-20,'opacity':0},500,function(){
+                        $obj.css({'left': x,'top': y}).animate({'left': X+4,'top': Y+4},500,function() {
+                            $obj.stop(false, false).animate({'top': Y+4,'opacity':0},500,function(){
                                 $obj.fadeOut(300,function(){
                                     $obj.remove();
 
-                                    //提交商品信息
-                                    $.post(opts.interface,{id:opts.shoppingId},function(data){
-
-                                    });
+                                    opts.interFun();
 
                                     var	num = Number($num.text());//数量增加
                                     $num.text(num+1);

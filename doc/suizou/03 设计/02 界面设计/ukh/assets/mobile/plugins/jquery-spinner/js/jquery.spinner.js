@@ -1,44 +1,36 @@
 ;(function ($) {
-  $.fn.spinner = function (options) {
-    return this.each(function () {
-      var buycount = $(this).find(".buycount");
-      var plus = $(this).find(".plus");
-      var minus = $(this).find(".minus");
+    $.fn.spinner = function () {
 
       /*手动输入*/
-      buycount.keyup(function() {
-        var number = parseInt(buycount.val());
-        if (isNaN(number))
-          number = 1;
-        if (number < 1){
-            number = 1;
-        }
-        buycount.val(number);
-      });
+        $(this).on("keyup",'.buycount',function() {
+            var buycount = $(this).closest(".num").find(".buycount");
+            var number = parseInt(buycount.val());
+            if (isNaN(number))
+                number = 1;
+            if (number < 1){
+                number = 1;
+            }
+            buycount.val(number);
+        });
 
-      /*数量+*/
-      plus.click(function() {
-        var number = parseInt(buycount.val());
-        number++;
-        buycount.val(number);
+      /*数量加1*/
+        $(this).on("click",".plus",function() {
+            var buycount = $(this).closest(".num").find(".buycount");
+            var number = parseInt(buycount.val());
+            number++;
+            buycount.val(number);
+        });
 
-      });
+      /*数量减1*/
+        $(this).on("click",".minus",function() {
+            var buycount = $(this).closest(".num").find(".buycount");
+            var number = parseInt(buycount.val());
+            number--;
+            if (number <= 0){
+                number = 1;
+            }
+            buycount.val(number);
+        })
 
-      /*数量-*/
-      minus.click(function() {
-        var number = parseInt(buycount.val());
-        number--;
-        if (number <= 0){
-            number = 1;
-        }
-          buycount.val(number);
-      });
-
-      /*数量改变*/
-      function changeVal(){
-          return options.val;
-      }
-
-    })
-  }
+    }
 })(jQuery);
