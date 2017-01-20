@@ -7,6 +7,10 @@
     <link rel="stylesheet" href="../../../assets/global/plugins/font/css/font-awesome.min.css"/>
     <link rel="stylesheet" href="../../../assets/mobile/css/weui.css"/>
     <link rel="stylesheet" href="../../../assets/mobile/css/example.css"/>
+    <!--标准mui.css-->
+    <link rel="stylesheet" href="../../../assets/mobile/plugins/mui/css/mui.min.css">
+    <!--扩展的字体图标-->
+    <link rel="stylesheet" type="text/css" href="../../../assets/mobile/plugins/mui/css/icons-extra.css">
     <link rel="stylesheet" href="../../../assets/mobile/css/global.css"/>
 </head>
 <body>
@@ -14,18 +18,16 @@
         <div class="page">
             <div class="bd absolute pb48">
                 <img src="../../../assets/mobile/images/shopsShoppingSlider1.jpg" alt="" class="w100"/>
-                <div class="shopsshoppingName">
+                <div class="shopsshoppingName w100">
                     [欧莱雅旗舰店]女士护肤化妆品复颜抗皱紧致套装补水保湿面霜水
                 </div>
 
-                <div class="shopsshoppingInfor">
+                <div class="shopsshoppingInfor w100">
                     <P class="clearfix">
                         <span class="left color">
                            <span class="verdana">￥1200.00</span>
                         </span>
-                        <a class="right" id="share">
-                            <i class="fa fa-share-alt"></i> 分享有奖
-                        </a>
+                        <a class="right shopIcon" id="addCart" specifications="true" shopppngid="555"></a>
                     </P>
                     <P class="clearfix">
                         <span class="left color1">
@@ -35,20 +37,28 @@
                             销量 : <span class="verdana">1000</span>
                         </span>
                     </P>
+                    <P class="clearfix">
+                        <span class="left color1 style" id="collection" data-collection="true">
+                            <i class="fa fa-star"></i>
+                        </span>
+                        <span class="right color1">
+                            <button class="rightNowBuy" id="rightNowBuy" specifications="true">立即购买</button>
+                        </span>
+                    </P>
                 </div>
 
-                <div class="weui_cells weui_cells_access mt10 top0" style="border-bottom: 1px solid #dbdbdb;">
-                    <a class="weui_cell">
-                        <div class="weui_cell_bd weui_cell_primary">
-                            <p>
-                                <span class="text">
-                                    选择型号尺寸及数量
-                                </span>
-                            </p>
-                        </div>
-                        <div class="weui_cell_ft"></div>
-                    </a>
-                </div>
+                <!--<div class="weui_cells weui_cells_access mt10 top0" style="border-bottom: 1px solid #dbdbdb;">-->
+                    <!--<a class="weui_cell">-->
+                        <!--<div class="weui_cell_bd weui_cell_primary">-->
+                            <!--<p>-->
+                                <!--<span class="text">-->
+                                    <!--选择型号尺寸及数量-->
+                                <!--</span>-->
+                            <!--</p>-->
+                        <!--</div>-->
+                        <!--<div class="weui_cell_ft"></div>-->
+                    <!--</a>-->
+                <!--</div>-->
 
                 <div class="applicatioOpetion m">
                     <ul class="applicatioNav clearfix">
@@ -106,51 +116,37 @@
 
             </div>
 
-            <div class="foot">
-                <ul class="shopShoppingMenu clearfix">
-                    <li class="first">
-                        <a href="index.html">
-                            <i class="fa fa-home"></i>
-                            首页
-                        </a>
-                    </li>
-                    <li class="second" id="collection" data-collection = false >
-                        <a href="###">
-                            <i class="fa fa-star-o"></i>
-                            收藏
-                        </a>
-                    </li>
-                    <li class="three">
-                        <button class="btnCart">加入购物车</button>
-                    </li>
-                    <li class="four">
-                        <button class="btnBuy">立刻购买</button>
-                    </li>
-                </ul>
-            </div>
+            <!--底部导航开始-->
+            <nav class="mui-bar mui-bar-tab">
+                <a class="mui-tab-item" href="index.html">
+                    <span class="mui-icon mui-icon-home"></span>
+                    <span class="mui-tab-label">首页</span>
+                </a>
+                <a class="mui-tab-item mui-active" href="classification.html">
+                    <span class="mui-icon-extra mui-icon mui-icon-extra-class"></span>
+                    <span class="mui-tab-label">分类</span>
+                </a>
+                <a class="mui-tab-item shoopCarBody" href="shoppingCat.html">
+                <span class="mui-icon-extra mui-icon mui-icon-extra-cart">
+                    <span class="mui-badge num">0</span>
+                </span>
+                    <span class="mui-tab-label">购物车</span>
+                </a>
+                <a class="mui-tab-item" href="personCenter.html">
+                    <span class="mui-icon mui-icon-contact"></span>
+                    <span class="mui-tab-label">会员</span>
+                </a>
+            </nav>
+            <!--底部导航开始-->
 
             <!--提示选规格开始-->
-            <div class="weui_mask_transition" id="mask"></div>
-            <div class="weui_actionsheet" id="weui_actionsheet">
+            <div class="weui_mask_transition hide" id="mask"></div>
+            <div class="weui_actionsheet hide" id="weui_actionsheet">
                 <div class="weui_actionsheet_menu">
-                    <img src="../../../assets/mobile/images/closeImg.png" alt="" class="closeImg"/>
-                    <ul class="entryList mt0">
-                        <li>
-                            <div>
-                                <div class="couponImg style">
-                                    <img src="../../../assets/mobile/images/shoppingC1.jpg" class="couponImg1" alt="">
-                                </div>
-                                <div class="inforList">
-                                    <p class="clearfix top">
-                                        <span class="left shopsName">美容在线</span>
-                                    </p>
-                                    <p class="clearfix bottom">
-                                        <span class="left money">￥<af class="verdana">600.00</af></span>
-                                    </p>
-                                </div>
-                            </div>
-                        </li>
-                    </ul>
+                    <div class="weui_con_hd">
+                        商品名
+                        <span class="closeImg">×</span>
+                    </div>
                     <div class="shopType style">
                         <p class="title">选择规格 :</p>
                         <ul class="shopTypeList clearfix">
@@ -161,66 +157,30 @@
                             <li>尺寸一尺寸一尺寸一尺寸一</li>
                         </ul>
                     </div>
-                    <div class="weui_cells  mt0 ">
-                        <div class="weui_cell">
-                            <div class="weui_cell_hd">
-                                购买数量 :
-                            </div>
-                            <div class="weui_cell_bd weui_cell_primary taRight">
-                                <a class="num">
-                                    <span class="minus"></span>
-                                    <input type="num" class="buycount" value="1" maxlength="3" />
-                                    <span class="plus" ></span>
-                                </a>
-                            </div>
+                    <div class="weui_con_ft clearfix">
+                        <div class="left">
+                            <span class="num">￥10.9</span>
+                            <span class="name">(规格名)</span>
+                        </div>
+                        <div class="right">
+                            <a href="###" class="btnAddCat" id="btnAddCat">
+                                <img src="../../../assets/mobile/images/cart.png" class="cart" alt="">
+                                加入购物车
+                            </a>
                         </div>
                     </div>
                 </div>
-                <div class="weui_actionsheet_action">
-                    <ul class="shopShoppingMenu style clearfix">
-                        <li class="four">
-                            <button class="btnBuy">立刻购买</button>
-                        </li>
-                        <li class="three">
-                            <button class="btnCart">加入购物车</button>
-                        </li>
-                    </ul>
-                    <!--<button class="btnSure" id="btnSure">确定</button>-->
-                </div>
             </div>
             <!--提示选规格结束-->
-
-            <!--分享提示开始-->
-            <div class="mask-bg hide shareMask">
-                <img src="../../../assets/mobile/images/share.png" class="shareImg" alt="">
-            </div>
-            <!--分享提示结束-->
 
         </div>
     </div>
     <script src="../../../assets/global/plugins/jquery/jquery-1.11.3.min.js"></script>
     <script src="../../../assets/mobile/plugins/jquery-spinner/js/jquery.spinner.js"></script><!--数量选择-->
-    <script src="../../../assets/mobile/js/removeTip.js"></script>
+    <script src="../../../assets/mobile/js/weui.js"></script>
     <script src="../../../assets/mobile/js/global.js"></script>
     <script>
         $(function(){
-
-            /*分享提示*/
-            var shareMask = $(".shareMask");
-            var share = $("#share");
-            share.on("click",function(){
-                shareMask.removeClass("hide");
-            });
-            shareMask.on("click",function(){
-                $(this).addClass("hide");
-            });
-
-            /*数量选择*/
-            var num = $('.num');
-            var buycount = $(".buycount");
-            num.spinner({
-                val:$(this).find(buycount).val()
-            });
 
             /*用户评价和商品介绍的切换*/
             var applicatioNav = $(".applicatioNav li a");
@@ -242,67 +202,59 @@
             });
 
             /*点击购买或加入购物车提示选择规格*/
-            var btnCart = $(".btnCart");
-            var btnBuy = $(".btnBuy");
-            var weui_cells_access = $(".weui_cells_access ");
+            var addCart = $("#addCart");
+            var rightNowBuy = $("#rightNowBuy");
+            var btnAddCat = $("#btnAddCat");
             var shopTypeListLi = $(".shopTypeList li");
             var mask = $("#mask");
             var weui_actionsheet = $("#weui_actionsheet");
-            btnCart.on("touchend",function(){  //加入购物车
-                if(!shopTypeListLi.is(".active")){
+            addCart.on("touchend",function(){  //加入购物车
+                if($(this).attr("specifications")){  //specifications有无规格;
                     onDailog();
-                }else{
-                    if(mask.is(".weui_fade_toggle")){
-                        closeDailog();
-                        btnCart.addClass("disabled");
-                        btnCart.attr({"disabled":"disabled"});
-                        showErrMsg("已加入购物车");
-                    }
+                }else {  //无规格
+
                 }
             });
 
-            weui_cells_access.on("touchend",function(){//直接选规格
-                if(!shopTypeListLi.is(".active")){
+            //选规格后加入购物车
+            btnAddCat.on("touchend",function(){
+                closeDailog()
+            });
+
+
+            /*直接购买*/
+            rightNowBuy.on("touchend",function(){
+                if($(this).attr("specifications")){  //specifications有无规格;
                     onDailog();
-                }else {
-                    setTimeout(function(){
-                        mask.addClass("weui_fade_toggle");
-                        weui_actionsheet.addClass("weui_actionsheet_toggle");
-                        $("body").addClass("overflowy");
-                    },10)
+                }else {  //无规格
+
                 }
             });
 
-            btnBuy.on("touchend",function(){//直接购买
-                if(!shopTypeListLi.is(".active")){
-                    onDailog();
-                }else{
-                    window.location.href = "shopsOrderInfor.html"
-                }
-            });
 
+            //选择规格弹窗
             function onDailog() {
-                showErrMsg("请选择规格");
                 setTimeout(function(){
-                    mask.addClass("weui_fade_toggle");
-                    weui_actionsheet.addClass("weui_actionsheet_toggle");
+                    mask.removeClass("hide");
+                    weui_actionsheet.removeClass("hide");
                     $("body").addClass("overflowy");
+                    if(!shopTypeListLi.is(".active")){
+                        shopTypeListLi.eq(0).addClass("active");
+                    }
                 },10)
             }
 
-            /*关闭支付弹窗*/
+            /*选规格*/
             var mask = $("#mask");
-            var weui_actionsheet = $("#weui_actionsheet");
-            var wrapper = $(".wrapper");
             var closeImg = $(".closeImg");
-            wrapper.delegate("#mask,.closeImg","touchend",function(){
+            weui_actionsheet.on("touchend",".closeImg",function(){
                 closeDailog()
             });
             function closeDailog() {
                 $("body").removeClass("overflowy");
                 setTimeout(function(){
-                    mask.removeClass("weui_fade_toggle");
-                    weui_actionsheet.removeClass("weui_actionsheet_toggle");
+                    mask.addClass("hide");
+                    weui_actionsheet.addClass("hide");
                 },100)
             }
 
@@ -312,11 +264,11 @@
                 if($(this).prop("data-collection")){
                     $(this).prop({"data-collection":false});
                     $(this).removeClass("active");
-                    showErrMsg("取消收藏");
+                    weui.showMsg("取消收藏");
                 }else {
                     $(this).prop({"data-collection":true});
                     $(this).addClass("active");
-                    showErrMsg("收藏成功");
+                    weui.showMsg("收藏成功");
                 }
             })
         })

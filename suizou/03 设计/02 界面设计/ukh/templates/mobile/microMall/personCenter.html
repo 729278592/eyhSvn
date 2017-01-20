@@ -36,7 +36,7 @@
                                 <span class="verdana">65656545</span>
                             </div>
                         </div>
-                        <div class="cardz fm hide">
+                        <div class="cardz fm ">
                             <div class="cardzInfor">
                                 <p>
                                     <span class="span_icon phoneIcon"></span>
@@ -66,7 +66,7 @@
                             </div>
                         </li>
                         <li>
-                            <div class="payInfoy">
+                            <div class="payInfoy" id="sign">
                                 <span class="spanIcon sordIcon"></span>
                                 <span>签到积分</span><br/>
                                 <span class="color"><span class="verdana">900</span></span>
@@ -88,6 +88,7 @@
                         </div>
                         <div class="weui_cell_ft"></div>
                     </a>
+
                     <a class="weui_cell" href="newActive.html">
                         <div class="weui_cell_bd weui_cell_primary">
                             <p>
@@ -132,27 +133,27 @@
                         </div>
                         <div class="weui_cell_ft"></div>
                     </a>
-                    <div class="weui_cell" href="personInfor.html">
+                    <a class="weui_cell" href="addressList.html">
                         <div class="weui_cell_bd weui_cell_primary">
                             <p>
-                                <span class="span_icon addressIcon"></span>
+                                <span class="span_icon tqIcon"></span>
                                 <span class="text">
-                                    联系地址 : 重庆市袁家岗中新城上城
+                                    地址列表
                                 </span>
                             </p>
                         </div>
-                        <!--<div class="weui_cell_ft"></div>-->
-                    </div>
-                    <div class="weui_cell" href="tel:13678478463">
-                        <div class="weui_cell_bd weui_cell_primary">
-                            <p>
-                                <span class="span_icon phoneIcon"></span>
-                                <span class="text">
-                                    联系电话 : 13678478463
-                                </span>
-                            </p>
-                        </div>
-                    </div>
+                        <div class="weui_cell_ft"></div>
+                    </a>
+                    <!--<div class="weui_cell" href="tel:13678478463">-->
+                        <!--<div class="weui_cell_bd weui_cell_primary">-->
+                            <!--<p>-->
+                                <!--<span class="span_icon phoneIcon"></span>-->
+                                <!--<span class="text">-->
+                                    <!--联系电话 : 13678478463-->
+                                <!--</span>-->
+                            <!--</p>-->
+                        <!--</div>-->
+                    <!--</div>-->
                 </div>
 
             </div>
@@ -255,12 +256,19 @@
             var card = $(".card");
             var cardz = $(".cardz");
             card.click(function(){
-                $(this).removeClass('zm').addClass('fm').addClass("hide");
-                cardz.removeClass('hide').removeClass('fm').addClass('zm');
+                $(this).removeClass('zm').addClass('fm');
+                cardz.removeClass('fm').addClass('zm');
             });
             cardz.click(function(){
-                $(this).removeClass('zm').addClass('fm').addClass("hide");
-                card.removeClass("hide").removeClass('fm').addClass('zm');
+                $(this).removeClass('zm').addClass('fm');
+                card.removeClass('fm').addClass('zm');
+            })
+
+            /*签到*/
+            var sign = $("#sign");
+            sign.on("click",function () {
+                $(this).addClass("sign");
+                $(this).html("<span class='spanIcon sordIcon'></span> 已签到");
             })
 
         })

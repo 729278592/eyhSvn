@@ -160,7 +160,17 @@
                 e.preventDefault();
                 $(this).shoping({
                     interface:"",  //接口
-                    shoppingId:$(this).attr("shopppngId")  //商品id
+                    shoppingId:$(this).attr("shopppngId"),  //商品id
+                    interFun:function () {
+                        //提交商品信息
+                        $.post(this.interface,{id:this.shoppingId},function(res){
+                            if(res.status == "ok"){
+
+                            }else{
+
+                            }
+                        });
+                    }
                 });
             })
         })

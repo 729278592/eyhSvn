@@ -1,0 +1,102 @@
+<!DOCTYPE html>
+<html>
+<head lang="en">
+    <meta charset="UTF-8">
+    <title>我的商品</title>
+    <meta name="viewport" content="width=device-width; initial-scale=1.0; user-scalable=no;">
+    <link rel="stylesheet" href="../../../assets/global/plugins/font/css/font-awesome.min.css"/>
+    <link rel="stylesheet" href="../../../assets/mobile/css/weui.css"/>
+    <link rel="stylesheet" href="../../../assets/mobile/css/example.css"/>
+    <link rel="stylesheet" href="../../../assets/mobile/css/global.css"/>
+</head>
+<body>
+<div class="wrapper style">
+    <div class="page">
+        <div class="hd style bg">
+            我的商品
+        </div>
+        <div class="bd absolute pt">
+
+            <!--我的商品信息开始-->
+            <div class="myShopping">
+                <img src="../../../assets/mobile/images/shopList1.jpg" alt="">
+                <p class="title">商品介绍 : 撒发生地方萨芬撒的发生沙发沙发</p>
+                <p>需要积分 : 10分</p>
+                <p>剩余数量 : 35</p>
+
+                <!--按钮状态-->
+                <a href="###" class="tipSore hide">谢谢参与</a>
+                <a href="###" class="tipSore hide">卖光了</a>
+                <a href="###" class="tipSore hide">积分不够哦</a>
+                <a href="###" class="tipSore hide">已经下架</a>
+                <a href="###" class="tipSore active">立即使用</a>
+            </div>
+            <!--我的商品信息结束-->
+
+            <!--使用记录开始-->
+            <ul class="useMenu">
+                <li>
+                    <span class="number">SN : 55</span>
+                    <span class="type">xxx</span>
+                    <span>(已使用)</span>
+                </li>
+                <li>
+                    <span class="number">SN : 55</span>
+                    <span class="type">xxx</span>
+                    <span>(已使用)</span>
+                </li>
+            </ul>
+            <!--使用记录结束-->
+
+            <!--无数据提示开始-->
+            <div class="notConTip hide">
+                <img src="../../../assets/mobile/images/notContent.png" alt=""/>
+                <p class="notInfor">
+                    暂无数据
+                </p>
+            </div>
+            <!--无数据提示结束-->
+        </div>
+    </div>
+</div>
+<script src="../../../assets/global/plugins/jquery/jquery-1.11.3.min.js"></script>
+<script src="../../../assets/mobile/js/global.js"></script>
+<script src="../../../assets/mobile/js/weui.js"></script>
+<script src="../../../assets/mobile/js/common-validate.js"></script>
+<script>
+    $(function () {
+        /*表单提交*/
+        var saveBtn = $("#saveBtn");
+        var mobile = $("#mobile");
+        var personName = $("#personName");
+        var caseDetails = $("#caseDetails");
+        var weui_dialog_confirm = $(".weui_dialog_confirm");
+        var sureBm = $("#sureBm");
+        saveBtn.on("touchend",function(){
+
+            if(isEmpty(personName.val())){
+                weui.showMsg("请输入姓名");
+                return ;
+            }
+
+            if(isEmpty(mobile.val())||!isPhone(mobile.val())){
+                weui.showMsg("请输入有效手机号");
+                return ;
+            }
+
+            if(isEmpty(caseDetails.val())){
+                weui.showMsg("请输入详细地址");
+                return ;
+            }
+            weui_dialog_confirm.removeClass("hide");
+        });
+
+
+//            sureBm.on("touchend",function(){
+//                weui_dialog_confirm.addClass("hide");
+//                location.reload()
+//            });
+    })
+</script>
+</body>
+</html>

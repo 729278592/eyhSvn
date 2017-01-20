@@ -12,36 +12,39 @@
 <body>
     <div class="wrapper style">
         <div class="page">
-            <div class="bd absolute pb48">
+            <div class="hd style">
+                添加地址
+                <div class="absolute rightBtn">
+                    <a href="addressList.html" class="btnRight btnAddAddress">收货地址</a>
+                </div>
+            </div>
+            <div class="bd absolute pd48">
                 <form action="#" id="form" onsubmit="return false">
                     <div class="weui_cells labelStyle weui_cells_form mt0">
                         <div class="weui_cell">
                             <div class="weui_cell_hd">
                                 <label class="weui_label">
-                                    <span class="personIcon span_icon"></span> 收货人:
+                                    <!--<span class="personIcon span_icon"></span>--> 收货人:
                                 </label>
                             </div>
                             <div class="weui_cell_bd weui_cell_primary">
                                 <input id="personName" class="weui_input" type="text" placeholder="请输入您的姓名">
                             </div>
                         </div>
-
-
                         <div class="weui_cell">
                             <div class="weui_cell_hd">
                                 <label class="weui_label">
-                                    <span class="phoneIcon span_icon"></span> 手机号 :
+                                    <!--<span class="phoneIcon span_icon"></span>--> 手机号 :
                                 </label>
                             </div>
                             <div class="weui_cell_bd weui_cell_primary">
                                 <input id="mobile" class="weui_input" type="tel" placeholder="请输入您的手机号">
                             </div>
                         </div>
-
                         <div class="weui_cell weui_cell_select">
                             <div class="weui_cell_hd">
                                 <label class="weui_label">
-                                    <span class="addressIcon span_icon"></span> 省份 :
+                                    <!--<span class="addressIcon span_icon"></span>--> 省份 :
                                 </label>
                             </div>
                             <div class="weui_cell_bd weui_cell_primary">
@@ -54,7 +57,7 @@
                         <div class="weui_cell weui_cell_select">
                             <div class="weui_cell_hd">
                                 <label class="weui_label">
-                                    <span class="addressIcon span_icon"></span> 城市 :
+                                    <!--<span class="addressIcon span_icon"></span>--> 城市 :
                                 </label>
                             </div>
                             <div class="weui_cell_bd weui_cell_primary">
@@ -67,7 +70,7 @@
                         <div class="weui_cell weui_cell_select">
                             <div class="weui_cell_hd">
                                 <label class="weui_label">
-                                    <span class="addressIcon span_icon"></span> 地区 :
+                                    <!--<span class="addressIcon span_icon"></span>--> 地区 :
                                 </label>
                             </div>
                             <div class="weui_cell_bd weui_cell_primary">
@@ -77,39 +80,46 @@
                                 </select>
                             </div>
                         </div>
-
                         <div class="weui_cell">
                             <div class="weui_cell_hd">
                                 <label class="weui_label">
-                                    <span class="addressIcon span_icon"></span> 详细地址 :
+                                    <!--<span class="addressIcon span_icon"></span>--> 详细地址 :
                                 </label>
                             </div>
                             <div class="weui_cell_bd weui_cell_primary">
-                                <textarea name="" id="caseDetails" class="weui_textarea" placeholder="项目描述" cols="30" rows="5"></textarea>
+                                <textarea name="" id="caseDetails" class="weui_textarea" placeholder="请输入详细地址" cols="30" rows="5"></textarea>
                             </div>
                         </div>
-
+                        <!--<div class="weui_cell">-->
+                            <!--<div class="weui_cell_hd">-->
+                                <!--<label class="weui_label">-->
+                                    <!--&lt;!&ndash;<span class="addressIcon span_icon"></span>&ndash;&gt; 默认地址 :-->
+                                <!--</label>-->
+                            <!--</div>-->
+                            <!--<div class="weui_cell_bd weui_cell_primary">-->
+                                <!--<div class="weui_cells weui_cells_checkbox mt0 bt0">-->
+                                    <!--<label class="weui_cell weui_check_label style" for="s11">-->
+                                        <!--<div class="weui_cell_hd">-->
+                                            <!--<input type="checkbox" class="weui_check" name="checkbox1" id="s11" checked="checked">-->
+                                            <!--<i class="weui_icon_checked"></i>-->
+                                        <!--</div>-->
+                                    <!--</label>-->
+                                <!--</div>-->
+                            <!--</div>-->
+                        <!--</div>-->
                         <div class="weui_cell">
                             <div class="weui_cell_hd">
                                 <label class="weui_label">
-                                    <span class="addressIcon span_icon"></span> 默认地址 :
+                                    <!--<span class="addressIcon span_icon"></span>--> 默认地址 :
                                 </label>
                             </div>
                             <div class="weui_cell_bd weui_cell_primary">
-                                <div class="weui_cells weui_cells_checkbox mt0 bt0">
-                                    <label class="weui_cell weui_check_label style" for="s11">
-                                        <div class="weui_cell_hd">
-                                            <input type="checkbox" class="weui_check" name="checkbox1" id="s11" checked="checked">
-                                            <i class="weui_icon_checked"></i>
-                                        </div>
-                                    </label>
-                                </div>
+                                <input type="checkbox">
                             </div>
                         </div>
-
                     </div>
                     <div class="weui_btn_area fixed">
-                        <input type="button"  class="weui_btn b0 bg weui_btn_primary saveBasic" id="saveBtn" value="保存">
+                        <input type="button"  class="weui_btn b0 weui_btn_primary saveBasic" id="saveBtn" value="保存">
                     </div>
                 </form>
             </div>
@@ -133,7 +143,7 @@
     </div>
     <script src="../../../assets/global/plugins/jquery/jquery-1.11.3.min.js"></script>
     <script src="../../../assets/mobile/js/global.js"></script>
-    <script src="../../../assets/mobile/js/removeTip.js"></script><!--消息提示-->
+    <script src="../../../assets/mobile/js/weui.js"></script>
     <script src="../../../assets/mobile/js/common-validate.js"></script>
     <script>
         $(function () {
@@ -147,20 +157,21 @@
             saveBtn.on("touchend",function(){
 
                 if(isEmpty(personName.val())){
-                    showErrMsg("请输入姓名");
+                    weui.showMsg("请输入姓名");
                     return ;
                 }
 
                 if(isEmpty(mobile.val())||!isPhone(mobile.val())){
-                    showErrMsg("请输入有效手机号");
+                    weui.showMsg("请输入有效手机号");
                     return ;
                 }
 
                 if(isEmpty(caseDetails.val())){
-                    showErrMsg("请输入详细地址");
+                    weui.showMsg("请输入详细地址");
                     return ;
                 }
-                weui_dialog_confirm.removeClass("hide");
+//                weui_dialog_confirm.removeClass("hide");
+                window.location = "sureOrder.html"
             });
 
 
