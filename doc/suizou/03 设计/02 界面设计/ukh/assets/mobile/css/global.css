@@ -976,7 +976,7 @@ img.shopInfor.w100{width: 100%;margin-bottom: 0.625rem;}
 .commentCon p span.type{}
 .applicatioOpetion.m{margin-top: 0.625rem;margin-bottom: 0;border-top: 1px solid #dbdbdb;z-index: 0;}
 
-.weui_mask_transition{z-index: 1000;}
+.weui_mask_transition{z-index: 1000;height: auto;bottom: 50px;}
 .weui_actionsheet {z-index: 1001;}
 .weui_actionsheet_menu .closeImg{position: absolute;right: 0.5rem;top: 0.5rem;width: 2rem;z-index: 1000;font-size: 1.6rem;}
 .weui_mask_transition.weui_fade_toggle{display: inline-block;}
@@ -1612,7 +1612,7 @@ a.shopIcon {
 .weui_dialog_hd .closeImg{font-size: 1.5rem;position: absolute;right: 0.5rem;top: 0;}
 .weui_toast_content{color: #fff;}
 .shopsshoppingInfor p span.color1.active{color: #ff3b30;}
-.shopsshoppingInfor p span.color1.style{display: inline-block;padding: 0.2rem 0.5rem;}
+.shopsshoppingInfor p span.color1.style{display: inline-block;padding: 0.2rem 0.5rem;position: relative;top: -0.2rem;}
 
 
 

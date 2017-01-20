@@ -28,6 +28,10 @@
                            <span class="verdana">￥1200.00</span>
                         </span>
                         <a class="right shopIcon" id="addCart" specifications="true" shopppngid="555"></a>
+
+                        <span class="right color1 style" id="collection" data-collection="true">
+                            <i class="fa fa-star"></i>
+                        </span>
                     </P>
                     <P class="clearfix">
                         <span class="left color1">
@@ -38,12 +42,10 @@
                         </span>
                     </P>
                     <P class="clearfix">
-                        <span class="left color1 style" id="collection" data-collection="true">
-                            <i class="fa fa-star"></i>
-                        </span>
-                        <span class="right color1">
-                            <button class="rightNowBuy" id="rightNowBuy" specifications="true">立即购买</button>
-                        </span>
+
+                        <!--<span class="right color1">-->
+                            <!--<button class="rightNowBuy" id="rightNowBuy" specifications="true">立即购买</button>-->
+                        <!--</span>-->
                     </P>
                 </div>
 
@@ -63,23 +65,23 @@
                 <div class="applicatioOpetion m">
                     <ul class="applicatioNav clearfix">
                         <li>
-                            <a class="active">商品介绍</a>
+                            <a class="active" href="#tab1">商品介绍</a>
                         </li>
                         <li>
-                            <a>用户评价</a>
+                            <a href="#tab2">用户评价</a>
                         </li>
                     </ul>
                 </div>
 
                 <!--商品图文开始-->
                 <div class="shopsShoppings">
-                    <div class="shopsShopping-infor active">
+                    <div class="shopsShopping-infor active" id="tabInfor">
                         <img src="../../../assets/mobile/images/shopsShoppingInfor1.jpg" alt=""/>
                         <img src="../../../assets/mobile/images/shopsShoppingInfor2.jpg" alt=""/>
                         <img src="../../../assets/mobile/images/shopsShoppingInfor3.jpg" alt=""/>
                         <img src="../../../assets/mobile/images/shopsShoppingInfor4.jpg" alt=""/>
                     </div>
-                    <div class="shopsShopping-infor ">
+                    <div class="shopsShopping-infor " id="tabComment">
                         <ul class="commentList">
                             <li>
                                 <div class="commentHead">
@@ -159,7 +161,7 @@
                     </div>
                     <div class="weui_con_ft clearfix">
                         <div class="left">
-                            <span class="num">￥10.9</span>
+                            <span class="nums">￥10.9</span>
                             <span class="name">(规格名)</span>
                         </div>
                         <div class="right">
@@ -183,7 +185,25 @@
         $(function(){
 
             /*用户评价和商品介绍的切换*/
-            var applicatioNav = $(".applicatioNav li a");
+            $(".applicatioNav a").on("touchend", function(e){
+                e.preventDefault();
+                $(this).addClass("active");
+                $(this).parent().siblings().find("a").removeClass("active");
+                var tabId = $(this).attr("href");
+                $(tabId).addClass("active");
+                $(tabId).siblings().removeClass("active");
+            })
+
+
+
+
+
+
+
+
+
+
+/*            var applicatioNav = $(".applicatioNav li a");
             var shopsShoppingInfor = $(".shopsShopping-infor");
             applicatioNav.each(function(i){
                 $(this).on("touchend",function(){
@@ -192,7 +212,7 @@
                     shopsShoppingInfor.eq(i).addClass("active");
                     shopsShoppingInfor.eq(i).siblings(shopsShoppingInfor).removeClass("active");
                 });
-            });
+            });*/
 
             /*规格选择*/
             var shopTypeListLi = $(".shopTypeList li");
