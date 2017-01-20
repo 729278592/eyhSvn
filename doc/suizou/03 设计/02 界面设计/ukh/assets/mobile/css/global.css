@@ -976,11 +976,10 @@ img.shopInfor.w100{width: 100%;margin-bottom: 0.625rem;}
 .commentCon p span.type{}
 .applicatioOpetion.m{margin-top: 0.625rem;margin-bottom: 0;border-top: 1px solid #dbdbdb;z-index: 0;}
 
-.weui_mask_transition{z-index: 1000;height: auto;bottom: 50px;}
+.weui_mask_transition{z-index: 1000;height: auto;bottom: 0;}
 .weui_actionsheet {z-index: 1001;}
 .weui_actionsheet_menu .closeImg{position: absolute;right: 0.5rem;top: 0.5rem;width: 2rem;z-index: 1000;font-size: 1.6rem;}
 .weui_mask_transition.weui_fade_toggle{display: inline-block;}
-
 
 .weui_actionsheet_action{margin-top: 0;}
 .weui_actionsheet_action button.btnSure{background: #ff5102;color: #fff;width: 100%;height: 48px;border: 0;outline: 0;line-height: 50px;font-family: "微软雅黑";font-size: 18px;}
@@ -1218,7 +1217,7 @@ img.shopInfor.w100{width: 100%;margin-bottom: 0.625rem;}
 .shop_infors.style p{width: 95%;}
 /*.shopsshoppingName,.shopsshoppingInfor{width: 100%;}*/
 
-
+.bd.absolute.pb48>img.w100{height: 12rem;}
 .w100{width: 100%;}
 .shoppingMenu {
      position: static;
@@ -1614,16 +1613,25 @@ a.shopIcon {
 .shopsshoppingInfor p span.color1.active{color: #ff3b30;}
 .shopsshoppingInfor p span.color1.style{display: inline-block;padding: 0.2rem 0.5rem;position: relative;top: -0.2rem;}
 
-
-
-
-
-
-
-
-
-
-
+.entryList.styless{margin: 2%;}
+.entryList.styless>li{border: 1px solid #dbdbdb;}
+.orderHead{font-size: 0.875rem;color: #333;}
+.entryList>li .inforList.styles{padding: 0 3%;}
+.entryList>li .inforList.styles>span{font-size: 0.875rem;color: #999;}
+.entryList>li .inforList.styles>span.color{color: #ff3b30;}
+.payBtn{padding: 0.2rem 0.5rem;background: #09bb07;color: #fff;border: none;outline: none;border-radius: 0.2rem;}
+.entryList.mb10>li{margin-bottom: 0.625rem;}
+.orderInfor{margin: 0.625rem 2%;border: 1px solid #dbdbdb;}
+.orderInfor>div{background: #fff;padding: 0.625rem 2%;}
+.orderDiv{ width: 4.875rem;height: 4.875rem;padding-right: 0.5rem;}
+.orderInforBd .orderImg{    width: 100%;height: 100%;  }
+.orderInforHd{border-bottom: 1px solid #dbdbdb;}
+.orderInforHd p{font-size: 0.875rem;color: #333;}
+.orderInforBd{display: table;border-bottom: 1px solid #dbdbdb;width: 96%;}
+.orderInforBd >div{display: table-cell;vertical-align: middle;}
+.orderInforBd p{font-size: 0.875rem;color: #333;}
+.orderInforFd{}
+.orderInforFd p{font-size: 0.875rem;color: #333;}
 
 
 .rightNowBuy{outline: none;padding: 0.2rem 0.6rem;font-size: 0.875rem;background: #ff6702;color: #fff;border: 1px solid #dbdbdb;border-radius: 0.2rem;}
@@ -1636,7 +1644,7 @@ p{margin-bottom: 0;}
 
 
     /*加入购物车动画*/
-#floatOrder{width:0.875rem;height:0.87rem;padding:2px;background:#fff;border:solid 5px #ccc;overflow:hidden;position:absolute;z-index:890;}
+#floatOrder{width:0.875rem;height:0.87rem;padding:2px;background: #ff3b30;border:solid 5px #ff3b30;overflow:hidden;position:absolute;z-index:100000;border-radius: 100%;}
 #floatOrder img{width: 100%;height: 100%;}
 .shoppingList li a p span.shopIcon{width: 1.25rem;height: 1.25rem;border-radius: 100%;}
 .shoppingList li a p span.shopIcon{background: url("../images/shopIcon.png") no-repeat;background-size: 100% 100%;}
