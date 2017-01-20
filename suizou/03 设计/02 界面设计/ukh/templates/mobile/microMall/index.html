@@ -146,7 +146,7 @@
                                         <span class="left">
                                             ￥333
                                         </span>
-                                        <span class="right shopIcon addCart" specifications="true" shopppngId="555"></span>
+                                        <span class="right shopIcon showBuyDailog" data-specifications="false" data-shopppngId="555"></span>
                                     </p>
                                 </div>
                             </a>
@@ -168,7 +168,7 @@
                                     <span class="left">
                                         ￥333
                                     </span>
-                                    <span class="right shopIcon addCart"  specifications="true" shopppngId="556">
+                                        <span class="right shopIcon showBuyDailog" data-specifications="true" data-shopppngId="556">
                                     </span>
                                     </p>
                                 </div>
@@ -206,43 +206,14 @@
         <!--底部导航开始-->
 
         <!--提示选规格开始-->
-        <div class="weui_mask_transition hide" id="mask"></div>
-        <div class="weui_actionsheet hide" id="weui_actionsheet">
-            <div class="weui_actionsheet_menu">
-                <div class="weui_con_hd">
-                    商品名
-                    <span class="closeImg">×</span>
-                </div>
-                <div class="shopType style">
-                    <p class="title">选择规格 :</p>
-                    <ul class="shopTypeList clearfix">
-                        <li>尺寸一</li>
-                        <li>尺寸一尺寸一</li>
-                        <li>尺寸一</li>
-                        <li>尺寸一</li>
-                        <li>尺寸一尺寸一尺寸一尺寸一</li>
-                    </ul>
-                </div>
-                <div class="weui_con_ft clearfix">
-                    <div class="left">
-                        <span class="nums">￥10.9</span>
-                        <span class="name">(规格名)</span>
-                    </div>
-                    <div class="right">
-                        <a href="###" class="btnAddCat" id="btnAddCat">
-                            <img src="../../../assets/mobile/images/cart.png" class="cart" alt="">
-                            加入购物车
-                        </a>
-                    </div>
-                </div>
-            </div>
-        </div>
+
         <!--提示选规格结束-->
 
     </div>
     <script src="../../../assets/mobile/plugins/mui/js/mui.min.js"></script>
-    <script src="../../../assets/mobile/plugins/jquery/jquery-1.11.3.min.js"></script>
+    <script src="../../../assets/global/plugins/jquery/jquery-1.11.3.min.js"></script>
     <script src="../../../assets/mobile/plugins/upScroll/js/jquery.bootstrap.newsbox.min.js"></script><!--热评动画-->
+    <script type="text/javascript" src="../../../assets/mobile/js/addShoppingAnimate.js"></script><!--加入购物车动画-->
     <script type="text/javascript" src="../../../assets/mobile/js/addShoppingCar.js"></script><!--加入购物车动画-->
     <script type="text/javascript">
         $(function () {
@@ -262,80 +233,6 @@
             slider.slider({
                 interval: 5000
             });
-
-            /*加入购物车动画*/
-            $('.shopIcon').on("click",function (e) {
-                e.preventDefault();
-                $(this).shoping({
-                    interface:"",  //接口
-                    shoppingId:$(this).attr("shopppngId"),  //商品id
-                    interFun:function () {
-                        //提交商品信息
-                        $.post(this.interface,{id:this.shoppingId},function(res){
-                            if(res.status == "ok"){
-
-                            }else{
-
-                            }
-                        });
-                    }
-                });
-            });
-
-            /*规格选择*/
-            var shopTypeListLi = $(".shopTypeList li");
-            shopTypeListLi.on("touchend",function(){
-                $(this).addClass("active");
-                $(this).siblings(shopTypeListLi).removeClass("active");
-            });
-
-            /*点击购买或加入购物车提示选择规格*/
-            var addCart = $(".addCart");
-            var rightNowBuy = $("#rightNowBuy");
-            var btnAddCat = $("#btnAddCat");
-            var shopTypeListLi = $(".shopTypeList li");
-            var mask = $("#mask");
-            var weui_actionsheet = $("#weui_actionsheet");
-            addCart.on("touchend",function(){  //加入购物车
-                if($(this).attr("specifications")){  //specifications有无规格;
-                    onDailog();
-                }else {  //无规格
-
-                }
-            });
-
-            //选规格后加入购物车
-            btnAddCat.on("touchend",function(){
-                closeDailog()
-            });
-
-            //选择规格弹窗
-            function onDailog() {
-                setTimeout(function(){
-                    mask.removeClass("hide");
-                    weui_actionsheet.removeClass("hide");
-                    $("body").addClass("overflowy");
-                    if(!shopTypeListLi.is(".active")){
-                        shopTypeListLi.eq(0).addClass("active");
-                    }
-                },10)
-            }
-
-            /*选规格*/
-            var mask = $("#mask");
-            var closeImg = $(".closeImg");
-            weui_actionsheet.on("touchend",".closeImg",function(){
-                closeDailog()
-            });
-
-            //关闭选择规格弹窗
-            function closeDailog() {
-                $("body").removeClass("overflowy");
-                setTimeout(function(){
-                    mask.addClass("hide");
-                    weui_actionsheet.addClass("hide");
-                },100)
-            }
 
         });
     </script>

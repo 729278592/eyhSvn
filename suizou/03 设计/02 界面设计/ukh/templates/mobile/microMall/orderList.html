@@ -1,0 +1,97 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8"/>
+    <title>订单列表</title>
+    <meta name="viewport" content="width=device-width; initial-scale=1.0; user-scalable=no;">
+    <meta name="format-detection" content="telephone=no">
+    <link rel="stylesheet" href="../../../assets/global/plugins/font/css/font-awesome.min.css"/>
+    <link rel="stylesheet" href="../../../assets/mobile/css/weui.css"/>
+    <link rel="stylesheet" href="../../../assets/mobile/css/example.css"/>
+    <link rel="stylesheet" href="../../../assets/mobile/css/global.css"/>
+</head>
+<body>
+<div class="wrapper style">
+    <div class="page">
+        <div class="bd">
+
+            <!--数据开始-->
+            <ul class="entryList mt0 mb10 styless">
+                <li>
+                   <div class="orderHead">
+                       订单号 : SN4545465465
+                   </div>
+                    <a href="orderInfor.html">
+                        <div class="couponImg style">
+                        <img src="../../../assets/mobile/images/shopList1.jpg" class="couponImg1" alt=""/>
+                        </div>
+                        <span class="inforList styles">
+                            <span >
+                                订单金额 : ￥10
+                            </span>
+                            <span>
+                                订单状态 : <span class="color">未付款</span>
+                            </span>
+                            <span class="title">
+                                下单时间 : 2017-05-05 16:40
+                            </span>
+                            <span>
+                                <button type="button" class="payBtn">去付款</button>
+                            </span>
+                        </span>
+                    </a>
+                </li>
+                <li>
+                    <div class="orderHead">
+                        订单号 : SN4545465465
+                    </div>
+                    <a href="orderInfor.html">
+                        <div class="couponImg style">
+                            <img src="../../../assets/mobile/images/shopList1.jpg" class="couponImg1" alt=""/>
+                        </div>
+                        <span class="inforList styles">
+                            <span >
+                                订单金额 : ￥10
+                            </span>
+                            <span>
+                                订单状态 : <span class="color">未付款</span>
+                            </span>
+                            <span class="title">
+                                下单时间 : 2017-05-05 16:40
+                            </span>
+                            <span>
+                                <button type="button" class="payBtn">去付款</button>
+                            </span>
+                        </span>
+                    </a>
+                </li>
+
+            </ul>
+            <!--数据结束-->
+
+            <!--无数据提示开始-->
+            <div class="notConTip hide">
+                <img src="../../../assets/mobile/images/notContent.png" alt=""/>
+                <p class="notInfor">
+                    暂无数据
+                </p>
+            </div>
+            <!--无数据提示结束-->
+
+        </div>
+    </div>
+</div>
+<script src="../../../assets/global/plugins/jquery/jquery-1.11.3.min.js"></script>
+<script src="../../../assets/mobile/js/participationRecord.js"></script><!--上滑加载-->
+<script>
+    $(function () {
+        var entryList = $(".entryList");
+        entryList.on("touchend",'.payBtn',function (e) {
+            e.preventDefault();
+            window.location.href = "pay.html"
+        })
+
+    })
+</script>
+</body>
+</html>
