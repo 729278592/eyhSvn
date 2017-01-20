@@ -1,4 +1,7 @@
 <!--infor.wxml-->
+<import src="../../wxParse/wxParse.wxml"/>
+
+
 <view class="content">
   <!--内容开始-->
   <view class="bd">
@@ -30,12 +33,12 @@
                 人均 : <text>{{list.consume}}</text>元/人
               </view>
               <view class="right btnPhone" data-name="{{list.tel}}"  bindtap="dial">
-                <view class="bgPhone"></view>
+                <image class="bgPhone" src="../../images/phoneIcon.png"></image>
                 <text>电话订座</text>
               </view>
             </view>
             <view class="listP clearfix">
-              <view class="bgAddress"></view>
+              <image class="bgAddress" src="../../images/addressIcon.png"></image>
               <text class="address">{{list.address}}</text>
             </view>
             <view class="listP clearfix">
@@ -60,7 +63,7 @@
           <text>特色</text>
         </view>
         <view class="hotPotCon style">
-          <text>{{list.detailsIntro}}</text>
+          <text>{{list.features}}</text>
         </view>
       </view>
       <!--火锅特色结束-->
@@ -72,9 +75,10 @@
           <text>详情介绍</text>
         </view>
         <view class="hotPotCon">
-          <block wx:for="{{list.product}}">
-            <image src="{{item}}"></image>
-          </block>
+
+          <view class="wxParse">
+            <template is="wxParse" data="{{wxParseData:article.nodes}}"/>
+          </view>
           <!--<text class="detailsInfor">-->
             <!--详情详情详情详情详情详情详情详情详情详情详情详情详情详情详情详情详情详情详情详情详情详情详情详情详情详情详情详情详情详情详情详情详情详情详情详情详情详情详情详情详情详情详情详情详情详情详情详情-->
           <!--</text>-->

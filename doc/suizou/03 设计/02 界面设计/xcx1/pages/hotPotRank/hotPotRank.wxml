@@ -25,7 +25,7 @@
     <view class="board">
 
       <block wx:for="{{list}}">
-        <navigator bindtap="pageTo" url="../infor/infor?id={{item.id}}"><!--hover去掉navigator点击时的高亮颜色hover-class="no"-->
+        <navigator url="../infor/infor?id={{item.id}}" bindtap="pageTo"><!--hover去掉navigator点击时的高亮颜色hover-class="no"-->
           <view class="board-item">
             <view class="listImg">
               <image src="{{item.avatar}}" class="default"></image>
@@ -38,20 +38,20 @@
                 <view class="left">
                   人均 : <text>{{item.consume}}</text>元/人
                 </view>
-                <view class="right btnPhone" data-name="{{item.tel}}" catchtap="pageTo" bindtap="dial">
-                  <view class="bgPhone"></view>
+                <view class="right btnPhone" data-name="{{item.tel}}" catchtap="pageTo" bindtap="dial"> <!--catchtap="pageTo" 阻止事件冒泡-->
+                  <image class="bgPhone" src="../../images/phoneIcon.png"></image>
                   <text>电话订座</text>
                 </view>
               </view>
               <view class="listP clearfix">
-                <view class="bgAddress"></view>
+                <image class="bgAddress" src="../../images/addressIcon.png"></image>
                 <text class="address">{{item.address}}</text>
               </view>
               <view class="listP clearfix">
                 <view class="left tasteList" wx:for="{{item.tags}}"><text>{{item}}</text></view>
               </view>
             </view>
-            <view class="bgSort" wx:if="{{item.sort<4}}">
+            <view class="bgSort" wx:if="{{item.sort<sort}}">
               <text>{{item.sort}}</text>
             </view>
             <view class="bgSort bg" wx:else>
@@ -60,6 +60,8 @@
           </view>
         </navigator>
       </block>
+
+
 
     </view>
     <!--火锅列表结束-->

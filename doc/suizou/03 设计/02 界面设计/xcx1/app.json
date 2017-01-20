@@ -1,8 +1,8 @@
 {
   "pages":[
     "pages/hotPotRank/hotPotRank",
-    "pages/infor/infor",
-    "pages/hotPotTips/hotPotTips"
+    "pages/hotPotTips/hotPotTips",
+    "pages/infor/infor"
   ],
   "window":{
     "backgroundTextStyle":"light",
