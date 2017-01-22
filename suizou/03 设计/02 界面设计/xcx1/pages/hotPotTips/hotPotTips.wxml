@@ -1,5 +1,5 @@
 <!-- 火锅列表 -->
-<import src="../common/movie-list.wxml"/>
+
 <view class="content">
 <!--内容开始-->
 <view class="bd">
@@ -7,22 +7,18 @@
 
     <view class="hgHotType">
 
-      <navigator url="../hotPotRank/hotPotRank">
-        <view class="hgBanner">
-          <text>火锅十强</text>
-        </view>
-      </navigator>
+      <view class="hgBanner" bindtap="hotPotRank">
+        <text>火锅十强</text>
+      </view>
 
-      <navigator class="active" url="../hotPotTips/hotPotTips">
-        <view class="hgBanner">
-          <text>火锅小贴士</text>
-        </view>
-      </navigator>
+      <view class="hgBanner active" bindtap="hotPotTips">
+        <text>火锅小贴士</text>
+      </view>
 
     </view>
 
     <!--火锅列表开始-->
-    <view class="board v">
+    <view class="board">
       <block wx:for="{{list}}">
           <view class="{{_num == item.displayStyle ? 'animation':''}} ts-item">
             <view class="tsHd" bindtap="headControll" data-num="{{item.displayStyle}}">
@@ -36,6 +32,10 @@
           </view>
       </block>
     </view>
+
+
+
+
     <!--火锅列表结束-->
 
     <!--数据加载提示开始-->

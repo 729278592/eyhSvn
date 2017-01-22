@@ -32,7 +32,7 @@
               <view class="left">
                 人均 : <text>{{list.consume}}</text>元/人
               </view>
-              <view class="right btnPhone" data-name="{{list.tel}}"  bindtap="dial">
+              <view class="btnPhone right" data-name="{{list.tel}}"  bindtap="dial">
                 <image class="bgPhone" src="../../images/phoneIcon.png"></image>
                 <text>电话订座</text>
               </view>

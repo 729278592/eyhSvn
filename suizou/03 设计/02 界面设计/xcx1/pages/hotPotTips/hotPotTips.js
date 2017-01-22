@@ -67,17 +67,7 @@ Page({
             phoneNumber: e.currentTarget.dataset.name
         })
     },
-    hotPotRank:function () {
-        wx.navigateTo({
-            url: '../hotPotRank/hotPotRank'
-        })
-    },
-    hotPotTips:function () {
-        wx.navigateTo({
-            url: '../hotPotTips/hotPotTips'
 
-        });
-    },
     headControll:function (e) {
         if(this.data._num==e.target.dataset.num){
             this.setData({
@@ -91,22 +81,4 @@ Page({
 
     },
 
-    // onReachBottom: function() {
-    //     const that = this;
-    //     wx.showToast({
-    //         title: '加载中',
-    //         icon: 'loading',
-    //         duration: 1000,
-    //         success:function(){
-    //             that.setData({
-    //                 // nowPage: res.data.datas.datas,hasMore: false
-    //             })
-    //             // context.nowPage = res.datas.datas;
-    //             // context.totalNum = res.datas.totalPages;
-    //             // context.nextNum = res.datas.nextPage;
-    //             // context.pageNum = res.datas.pageNo;
-    //             // context.list = context.list.concat(context.nowPage);
-    //         }
-    //     });
-    // }
 });
