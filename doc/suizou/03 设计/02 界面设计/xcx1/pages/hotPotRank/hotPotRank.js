@@ -3,22 +3,59 @@ var app = getApp();
 Page({
   data: {
       list: [],
+      lists: [],
+      _num:0,
+      hotpot:'hotpot',
+      hotpotTips:'hotpotTips',
       display:[],
       label:[],
       hasMore: true,
       pageNum:1,
       nextNum:null,
       totalNum:null,
+      hotPot:null,
       nowPage:[],
       sore:true,
+      currentTab: 0,
       sort:4
   },
+    swichNav: function( e ) {
 
+        var that = this;
+        if( this.data.currentTab === e.target.dataset.current ) {
+            return false;
+        } else {
+
+            that.setData( {
+                currentTab: e.target.dataset.current,
+                hotPot    : e.target.dataset.pot
+            });
+            that.onLoad();
+        }
+    },
+    headControll:function (e) {
+        if(this.data._num==e.target.dataset.num){
+            this.setData({
+                _num:-1
+            });
+            return ;
+        }
+        this.setData({
+            _num:e.target.dataset.num
+        })
+
+    },
   onLoad: function () {
        const that = this;
       //const apiUrl = 'https://www.wqiyu.com/cqhg/pages/hotPotRank/hotPotRank.json';
       //const apiUrl = 'http://192.168.0.104/xcx1/pages/hotPotRank/hotPotRank.json';
-      const apiUrl = 'https://www.wqiyu.com/fric/mobile/hotpot.do';
+      var apiUrl = '';
+
+      if(!that.data.hotPot){
+           apiUrl = 'https://www.wqiyu.com/fric/mobile/hotpot.do';
+      }else {
+          apiUrl = 'https://www.wqiyu.com/fric/mobile/'+that.data.hotPot+'.do';
+      }
       wx.showToast({
           title: '加载中',
           icon: 'loading',
@@ -31,13 +68,25 @@ Page({
                   success: function(res) {
                       if(res.data.status =="ok"){
                           wx.hideToast();
-                          for(var i=0;i<res.data.datas.datas.length;i++){
-                              res.data.datas.datas[i].tags = res.data.datas.datas[i].tags.split(",");
-                          }
-                          that.setData({
-                              list: res.data.datas.datas,
-                              hasMore: false
-                          });
+                            if(that.data.hotPot==that.data.hotpot||!that.data.hotPot){
+                                for(var i=0;i<res.data.datas.datas.length;i++){
+                                    res.data.datas.datas[i].tags = res.data.datas.datas[i].tags.split(",");
+                                }
+                                that.setData({
+                                    list: res.data.datas.datas,
+                                    hasMore: false
+                                });
+                            }else if(that.data.hotPot==that.data.hotpotTips){
+                                for(var i = 0;i<res.data.datas.datas.length;i++){
+                                    res.data.datas.datas[i].displayStyle = i;
+                                }
+                                res.data.datas.datas[0].displayStyle = 0;
+
+                                that.setData({
+                                    lists: res.data.datas.datas,
+                                    hasMore: false
+                                });
+                            }
                       }
                       else {
                           wx.showToast({
@@ -51,12 +100,9 @@ Page({
           }
       });
   },
-    pageTo(){
+    pageTo(e){
        wx.navigateTo({
            url: ''
-           // success:function (res) {
-           //
-           // }
        })
    },
     dial (e) { //拨打电话号码
@@ -70,16 +116,6 @@ Page({
             desc: '分享描述',
             path: ''
         }
-    },
-    hotPotRank:function () {
-        wx.navigateTo({
-            url: '../hotPotRank/hotPotRank'
-        })
-    },
-    hotPotTips:function () {
-        wx.navigateTo({
-            url: '../hotPotTips/hotPotTips'
-        });
     },
     onReachBottom: function() { //加载更多
         const that = this;

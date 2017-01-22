@@ -1,0 +1,14 @@
+
+<template name="hotPotTips">
+<view class="{{_num == item.displayStyle ? 'animation':''}} ts-item">
+  <view class="tsHd" bindtap="headControll" data-num="{{item.displayStyle}}">
+    <image class="left hg" src="../../images/hgts.png"></image>
+    <text class="title">{{item.name}}</text>
+    <image class="right ts" src="../../images/bh.png"></image>
+  </view>
+  <view class="tsBd">
+    <text class="tsInfor">{{item.detail}}</text>
+  </view>
+</view>
+</template>
+

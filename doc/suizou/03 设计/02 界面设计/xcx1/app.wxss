@@ -23,13 +23,13 @@ html[xmlns] .clearfix{display: block;}
 body, html{height: 100%; -webkit-tap-highlight-color: transparent}
 .link{color: #1aad19}
 image{margin:0;padding:0;}
-
+.relative{position:relative;}
 
 
 /**火锅排名-hotPotTank**/
 .hgHotType{display: flex;}
-.hgHotType>navigator{-webkit-box-flex: 1;-webkit-flex: 1;flex: 1;padding:40rpx 0;color:#666;background:#fafafa;border-right:1px solid #dbdbdb;}
-.hgHotType>navigator.active{color:#d81e3b;border-bottom:2px solid #d81e3b;}
+.hgHotType>.hgBanner{-webkit-box-flex: 1;-webkit-flex: 1;flex: 1;padding:40rpx 0;color:#666;background:#fafafa;border-right:1px solid #dbdbdb;}
+.hgHotType>.hgBanner.active{color:#d81e3b;border-bottom:2px solid #d81e3b;}
 .hgBanner{font-size:32rpx;border-right:1px solid #dbdbdb;border-bottom:2px solid transparent;text-align:center;}
 .hgBanner:last-child{border-right:none;}
 .board{width:100%;display: flex;flex-direction:column;}
@@ -45,10 +45,16 @@ width:94%;padding:20rpx 3%;position:relative;background:#fff;border-top:1px soli
 .listP.lh>.left{line-height:61rpx;cursor:pointer;}
 .listP .title{font-size:32rpx;color:#333;}
 .listP.clearfix{display:block;}
-.listP .btnPhone{padding:5px;border:1px solid #dbdbdb;border-radius:5px;color:#333;}
+.btnPhone.style{padding:6rpx 10rpx;border:1px solid #dbdbdb;border-radius:10rpx;color:#333;position:absolute;top:80rpx;right:40rpx;}
+.btnPhone.style text{font-size:28rpx;}
+.btnPhone.style .bgPhone{width:28rpx;height:28rpx;display:inline-block;position:relative;top:4rpx;margin-right:4rpx;}
+
+.listP .btnPhone{padding:8rpx 10rpx;border:1px solid #dbdbdb;border-radius:10rpx;color:#333;display:inline-block;position:relative;right:10rpx;}
 .listP .btnPhone text{font-size:28rpx;}
 .listP .btnPhone .bgPhone{width:28rpx;height:28rpx;display:inline-block;position:relative;top:4rpx;margin-right:4rpx;}
-.listP.btnPhone text{}
+
+
+.listP .btnPhone text{}
 .listP .bgAddress{width:28rpx;height:35rpx;display:inline-block;position:relative;top:4rpx;margin-right:4rpx;}
 .listP .address{font-size:28rpx;}
 .listP .tasteList{font-size:28rpx;padding:3px 5px;border-radius:8px;border:1px solid #dbdbdb;background:#e8e8e8;margin-right:4px;margin-top:5px;}
