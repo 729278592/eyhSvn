@@ -1459,6 +1459,7 @@ page.icons .icon-box i {
 .tipP .syIcon{background: url("../images/syIcon.png") no-repeat;background-size: 100% 100%;    width: 1.3rem;  height: 1.3rem;position: relative;top: 0.3rem;}
 .weui_cell_primary p .text{top: -0.1rem;color: #333;}
 .tqIcon{background: url("../images/tqIcon.png") no-repeat;background-size: 100% 100%;    width: 1.2rem;  height: 1.05rem;}
+.orderIcon{background: url("../images/order.png") no-repeat;background-size: 100% 100%;    width: 1.2rem;  height: 1.05rem;}
 .yhkIcon{background: url("../images/yhjIcon.png") no-repeat;background-size: 100% 100%;    width: 1.2rem;  height: 1.05rem;}
 .lpIcon{background: url("../images/giftIcon.png") no-repeat;background-size: 100% 100%;    width: 1.2rem;  height: 1.05rem;}
 .shopIcons{background: url("../images/shopIcons.png") no-repeat;background-size: 100% 100%;    width: 1.2rem;  height: 1.05rem;}
