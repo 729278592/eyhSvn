@@ -173,6 +173,15 @@
                         <input type="number" id="mobile" pattern="[0-9]*" class="weui_input" placeholder="请输入您的手机号">
                         <span class="close search_clear hide"></span>
                     </div>
+                    <div class="weui_cell weui_cell_vcode styles ">
+                        <div class="weui_cell__bd inputGroup">
+                            <input class="weui_input" type="tel" placeholder="请输入验证码">
+                            <span class="close search_clear hide"></span>
+                        </div>
+                        <div class="weui_cell__ft">
+                            <a href="javascript:;" class="weui_vcode_btn" id="getCode">获取验证码</a>
+                        </div>
+                    </div>
                 </div>
                 <div class="weui_dialog_ft mt0">
                     <a href="javascript:;" class="weui_btn_dialog primary style" id="saveBtn">激活</a>
@@ -259,6 +268,33 @@
             dialogRegister.addClass("hide");
             window.location = "personCenter.html"
         });
+
+        /*获取验证码*/
+        var getCode = $('#getCode');
+        getCode.on("touchend",function(){
+            if(isEmpty(mobile.val())||!isPhone(mobile.val())){
+                weui.showMsg("请输入有效手机号");
+                return ;
+            }
+
+            weui.showMsg("验证码发送成功");
+            var that = $(this);
+            var count = 60;
+            that.text(count+"秒后重新获取");
+            that.addClass('disabled');
+            that.attr({disabled:"disabled"});
+            var resend = setInterval(function(){
+                count--;
+                if (count > 0){
+                    that.text(count+"秒后重新获取")
+                }else {
+                    clearInterval(resend);
+                    that.removeClass('disabled');
+                    that.removeAttr("disabled");
+                    that.text("获取验证码");
+                }
+            }, 1000);
+        })
 
     })
 </script>

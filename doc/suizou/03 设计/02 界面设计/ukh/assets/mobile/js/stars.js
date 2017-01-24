@@ -2,7 +2,7 @@
  * Created by WHB on 2016/3/25.
  */
 var commentStars = function(){
-
+console.log(JSON.stringify())
 //    var starsmousemove = function(_this){
 //        _this.each(function(){
 //            $(this).mousemove(function(){

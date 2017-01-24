@@ -1,0 +1,23 @@
+{
+    "status": "ok",
+    "message": "success",
+    "name":"衣服",
+    "datas":[
+        {
+            "id": 1001,
+            "specifi":"尺寸",
+            "price": 50
+        },
+        {
+            "id": 1002,
+            "specifi":"尺寸一",
+            "price": 60
+        },
+        {
+            "id": 1003,
+            "specifi":"尺寸二",
+            "price": 70
+        }
+
+    ]
+}
