@@ -8,7 +8,8 @@
     <meta name="viewport" content="width=device-width, initial-scale=1,maximum-scale=1,user-scalable=no">
     <meta name="apple-mobile-web-app-capable" content="yes">
     <meta name="apple-mobile-web-app-status-bar-style" content="black">
-
+    <link rel="stylesheet" href="../../../assets/mobile/css/weui.css"/>
+    <link rel="stylesheet" href="../../../assets/mobile/css/example.css"/>
     <!--标准mui.css-->
     <link rel="stylesheet" href="../../../assets/mobile/plugins/mui/css/mui.min.css">
 
@@ -156,16 +157,18 @@
                 $(this).closest("li").siblings("li").removeClass("active");
             });
 
-            /*加入购物车*/
-            function shopCartAnimate(obj,e){
-                e.preventDefault();
-                $(obj).shoppingAnimate({
-                    specifications: $(obj).data("specifications"),
-                    shoppingId:$(obj).data("shoppingId"),
-                    interface:"" //加入购物车接口
-                })
-            }
+
         })
+
+        /*加入购物车*/
+        function shopCartAnimate(obj,e){
+            e.preventDefault();
+            $(obj).shoppingAnimate({
+                specifications: $(obj).data("specifications"),
+                shoppingId:$(obj).data("shoppingId"),
+                interface:"" //加入购物车接口
+            })
+        }
     </script>
 </body>
 

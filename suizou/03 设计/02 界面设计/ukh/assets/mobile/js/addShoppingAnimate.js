@@ -39,7 +39,7 @@
 
             },
             jsInfor:function (that) { //取出相应规格的价格
-                $(".nums span").text(that.attr("price"));
+                $(".nums>span").text(that.attr("price"));
                 $(".name").text(that.text());
             },
             ajaxRecord:function(opt,wajxHtml,specifiLi){//规格弹窗的模板
