@@ -79,7 +79,7 @@
                                     <span class="left">
                                         ￥333
                                     </span>
-                                    <span class="right shopIcon"></span>
+                                    <span class="right shopIcon" onclick="shopCartAnimate(this,event)" data-specifications="true" data-shopppngId="556"></span>
                                 </p>
                             </div>
                         </a>
@@ -101,7 +101,7 @@
                                     <span class="left">
                                         ￥333
                                     </span>
-                                    <span class="right shopIcon"></span>
+                                    <span class="right shopIcon" onclick="shopCartAnimate(this,event)" data-specifications="true" data-shopppngId="556"></span>
                                 </p>
                             </div>
                         </a>
@@ -147,6 +147,7 @@
     </div>
     <script src="../../../assets/global/plugins/jquery/jquery-1.11.3.min.js"></script>
     <script type="text/javascript" src="../../../assets/mobile/js/addShoppingCar.js"></script><!--加入购物车动画-->
+    <script type="text/javascript" src="../../../assets/mobile/js/addShoppingAnimate.js"></script><!--加入购物车动画-->
     <script>
         $(function() {
             /*分类状态切换*/
@@ -155,24 +156,15 @@
                 $(this).closest("li").siblings("li").removeClass("active");
             });
 
-            /*加入购物车动画*/
-            $('.shopIcon').on("click",function (e) {
+            /*加入购物车*/
+            function shopCartAnimate(obj,e){
                 e.preventDefault();
-                $(this).shoping({
-                    interface:"",  //接口
-                    shoppingId:$(this).attr("shopppngId"),  //商品id
-                    interFun:function () {
-                        //提交商品信息
-                        $.post(this.interface,{id:this.shoppingId},function(res){
-                            if(res.status == "ok"){
-
-                            }else{
-
-                            }
-                        });
-                    }
-                });
-            })
+                $(obj).shoppingAnimate({
+                    specifications: $(obj).data("specifications"),
+                    shoppingId:$(obj).data("shoppingId"),
+                    interface:"" //加入购物车接口
+                })
+            }
         })
     </script>
 </body>

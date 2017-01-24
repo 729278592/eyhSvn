@@ -2,11 +2,8 @@
 ;(function($){
 	$.extend($.fn,{
 		shoping:function(options){
-			var self = this,
-				$shop = $('.shoopCarBody'),
-				$num = $('.num'),
-				$shop_div = $(".shop_div"),
-				$shopImg = $(".shopImg");
+			var $shop = $('.shoopCarBody'),
+				$num = $('.num')
             var defaults = {  //默认数据
 
             };
@@ -24,7 +21,7 @@
 					var x = _this.offset().left,
 						y = _this.offset().top,
 						X = $shop.offset().left + $shop.width()/2+2,
-						Y = $shop.offset().top + 4;
+						Y = $shop.offset().top + 2;
 
 
                     if ($('#floatOrder').length <= 0) {

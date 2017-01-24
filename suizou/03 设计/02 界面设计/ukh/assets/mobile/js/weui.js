@@ -79,7 +79,7 @@ var weui = function(){
 		$('body').append($dialogWrap);
 		$mask.fadeIn('normal');
 		$dialog.fadeIn('normal');
-		
+
 		$dialogWrap.on('click', '.weui_dialog_btn', function (evt) {
 			var index = $(this).index();
 			hide(function(){

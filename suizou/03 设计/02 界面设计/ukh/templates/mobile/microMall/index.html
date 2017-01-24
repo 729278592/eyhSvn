@@ -146,7 +146,7 @@
                                         <span class="left">
                                             ￥333
                                         </span>
-                                        <span class="right shopIcon showBuyDailog" data-specifications="false" data-shopppngId="555"></span>
+                                        <span class="right shopIcon showBuyDailog" onclick="shopCartAnimate(this,event)" data-specifications="false" data-shopppngId="555"></span>
                                     </p>
                                 </div>
                             </a>
@@ -168,7 +168,7 @@
                                     <span class="left">
                                         ￥333
                                     </span>
-                                        <span class="right shopIcon showBuyDailog" data-specifications="true" data-shopppngId="556">
+                                        <span class="right shopIcon" onclick="shopCartAnimate(this,event)" data-specifications="true" data-shopppngId="556">
                                     </span>
                                     </p>
                                 </div>
@@ -205,16 +205,13 @@
         </nav>
         <!--底部导航开始-->
 
-        <!--提示选规格开始-->
-
-        <!--提示选规格结束-->
-
     </div>
     <script src="../../../assets/mobile/plugins/mui/js/mui.min.js"></script>
     <script src="../../../assets/global/plugins/jquery/jquery-1.11.3.min.js"></script>
+    <script src="../../../assets/mobile/js/fastclick.js"></script>
     <script src="../../../assets/mobile/plugins/upScroll/js/jquery.bootstrap.newsbox.min.js"></script><!--热评动画-->
-    <script type="text/javascript" src="../../../assets/mobile/js/addShoppingAnimate.js"></script><!--加入购物车动画-->
     <script type="text/javascript" src="../../../assets/mobile/js/addShoppingCar.js"></script><!--加入购物车动画-->
+    <script type="text/javascript" src="../../../assets/mobile/js/addShoppingAnimate.js"></script><!--加入购物车动画-->
     <script type="text/javascript">
         $(function () {
 
@@ -235,6 +232,16 @@
             });
 
         });
+
+        /*加入购物车*/
+        function shopCartAnimate(obj,e){
+            e.preventDefault();
+            $(obj).shoppingAnimate({
+                specifications: $(obj).data("specifications"),
+                shoppingId:$(obj).data("shoppingId"),
+                interface:"" //加入购物车接口
+            })
+        }
     </script>
 </body>
 

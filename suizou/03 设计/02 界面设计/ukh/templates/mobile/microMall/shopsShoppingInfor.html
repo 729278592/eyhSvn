@@ -27,7 +27,7 @@
                         <span class="left color">
                            <span class="verdana">￥1200.00</span>
                         </span>
-                        <a class="right shopIcon" id="addCart" specifications="true" shopppngid="555"></a>
+                        <a class="right shopIcon" onclick="shopCartAnimate(this)" data-specifications="false" data-shopppngId="555"></a>
 
                         <span class="right color1 style" id="collection" data-collection="true">
                             <i class="fa fa-star"></i>
@@ -180,6 +180,8 @@
     <script src="../../../assets/global/plugins/jquery/jquery-1.11.3.min.js"></script>
     <script src="../../../assets/mobile/plugins/jquery-spinner/js/jquery.spinner.js"></script><!--数量选择-->
     <script src="../../../assets/mobile/js/weui.js"></script>
+    <script type="text/javascript" src="../../../assets/mobile/js/addShoppingCar.js"></script><!--加入购物车动画-->
+    <script type="text/javascript" src="../../../assets/mobile/js/addShoppingAnimate.js"></script><!--加入购物车动画-->
     <script src="../../../assets/mobile/js/global.js"></script>
     <script>
         $(function(){
@@ -192,90 +194,15 @@
                 var tabId = $(this).attr("href");
                 $(tabId).addClass("active");
                 $(tabId).siblings().removeClass("active");
-            })
-
-
-
-
-
-
-
-
-
-
-/*            var applicatioNav = $(".applicatioNav li a");
-            var shopsShoppingInfor = $(".shopsShopping-infor");
-            applicatioNav.each(function(i){
-                $(this).on("touchend",function(){
-                    $(this).addClass("active");
-                    $(this).closest("li").siblings("li").find("a").removeClass("active");
-                    shopsShoppingInfor.eq(i).addClass("active");
-                    shopsShoppingInfor.eq(i).siblings(shopsShoppingInfor).removeClass("active");
-                });
-            });*/
-
-            /*规格选择*/
-            var shopTypeListLi = $(".shopTypeList li");
-            shopTypeListLi.on("touchend",function(){
-                $(this).addClass("active");
-                $(this).siblings(shopTypeListLi).removeClass("active");
             });
 
-            /*点击购买或加入购物车提示选择规格*/
-            var addCart = $("#addCart");
-            var rightNowBuy = $("#rightNowBuy");
-            var btnAddCat = $("#btnAddCat");
-            var shopTypeListLi = $(".shopTypeList li");
-            var mask = $("#mask");
-            var weui_actionsheet = $("#weui_actionsheet");
-            addCart.on("touchend",function(){  //加入购物车
-                if($(this).attr("specifications")){  //specifications有无规格;
-                    onDailog();
-                }else {  //无规格
-
-                }
-            });
-
-            //选规格后加入购物车
-            btnAddCat.on("touchend",function(){
-                closeDailog()
-            });
-
-
-            /*直接购买*/
-            rightNowBuy.on("touchend",function(){
-                if($(this).attr("specifications")){  //specifications有无规格;
-                    onDailog();
-                }else {  //无规格
-
-                }
-            });
-
-
-            //选择规格弹窗
-            function onDailog() {
-                setTimeout(function(){
-                    mask.removeClass("hide");
-                    weui_actionsheet.removeClass("hide");
-                    $("body").addClass("overflowy");
-                    if(!shopTypeListLi.is(".active")){
-                        shopTypeListLi.eq(0).addClass("active");
-                    }
-                },10)
-            }
-
-            /*选规格*/
-            var mask = $("#mask");
-            var closeImg = $(".closeImg");
-            weui_actionsheet.on("touchend",".closeImg",function(){
-                closeDailog()
-            });
-            function closeDailog() {
-                $("body").removeClass("overflowy");
-                setTimeout(function(){
-                    mask.addClass("hide");
-                    weui_actionsheet.addClass("hide");
-                },100)
+            /*加入购物车*/
+            function shopCartAnimate(obj){
+                $(obj).shoppingAnimate({
+                    specifications: $(obj).data("specifications"),
+                    shoppingId:$(obj).data("shoppingId"),
+                    interface:"" //加入购物车接口
+                })
             }
 
             /*点击收藏与否*/
