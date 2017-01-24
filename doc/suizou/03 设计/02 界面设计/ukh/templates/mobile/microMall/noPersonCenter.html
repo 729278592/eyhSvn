@@ -175,7 +175,7 @@
                     </div>
                     <div class="weui_cell weui_cell_vcode styles ">
                         <div class="weui_cell__bd inputGroup">
-                            <input class="weui_input" type="tel" placeholder="请输入验证码">
+                            <input class="weui_input" type="tel" id="code" placeholder="请输入验证码">
                             <span class="close search_clear hide"></span>
                         </div>
                         <div class="weui_cell__ft">
@@ -238,7 +238,7 @@
         var activation = $("#activation");
         var dialogRegister = $("dialogRegister");
         var closeImg = $("#closeImg");
-
+        var code = $("#code");
         //提示激活会员弹窗
         activation.on("touchend",function(){
             dialogRegister.removeClass("hide")
@@ -263,6 +263,10 @@
 
             if(isEmpty(mobile.val())||!isPhone(mobile.val())){
                 weui.showMsg("请输入有效手机号");
+                return ;
+            }
+            if(isEmpty(code.val())){
+                weui.showMsg("请输验证码");
                 return ;
             }
             dialogRegister.addClass("hide");
