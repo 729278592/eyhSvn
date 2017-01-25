@@ -1,0 +1,140 @@
+<!DOCTYPE html>
+<html>
+<head lang="en">
+    <meta charset="UTF-8">
+    <meta name=viewport content="width=device-width,initial-scale=1,maximum-scale=1,user-scalable=no">
+    <title>联系我们</title>
+    <link rel="stylesheet" href="plugins/font/css/font-awesome.min.css"/>
+    <link rel="stylesheet" href="css/global.css"/>
+    <link rel="stylesheet" href="css/mobile.css">
+</head>
+<body>
+<div class="wrapper">
+    <div class="head">
+        <div class="head_main clearfix">
+            <div class="logo left">
+                <a href="index.html">
+                    <img src="images/logo.png" alt="">
+                </a>
+            </div>
+            <div class="left menuList">
+                    <span class="menuDisplay" data-datatypes="false">
+                        <i class="fa fa-bars"></i>
+                    </span>
+                <ul class="menuNav clearfix">
+                    <li>
+                        <a href="index.html">首页</a>
+                    </li>
+                    <li>
+                        <a href="brand.html">产品介绍</a>
+                    </li>
+                    <li class="active">
+                        <a href="companyInfor.html">公司介绍</a>
+                    </li>
+                    <li>
+                        <a href="talentRecruitment.html">人才招聘</a>
+                    </li>
+
+                    <li class="mr0 last">
+                        <a target="_blank" href="crowdFunding.html">
+                            <img src="images/market.png" alt=""/>
+                            参与众筹
+                        </a>
+                    </li>
+                </ul>
+            </div>
+
+        </div>
+    </div>
+    <div class="content">
+        <img src="images/contact1.jpg" class="w100 mh200"/>
+        <div class="l_contact">
+            <div class="contact">
+                <div class="c_type">
+                    关于全航
+                </div>
+                <div class="c_typeInfor">
+                    重庆全航食品有限公司是一家通过食品生产许可（SC）认证的，专业从事健康休闲食品研发、生产、销售的综合性现代食品企业；由研发团队
+                </div>
+                <br>
+                <div class="c_type">
+                    联系方式
+                </div>
+                <ul class="l_contact_menu clearfix">
+                    <li>
+                        <img src="images/contact1.png">
+                        座机 : 023-65381101
+                    </li>
+                </ul>
+                <div class="contact_block">
+
+                </div>
+                <div class="c_type">
+                    全航位置
+                    <span class="right">
+                            地址：重庆市合川工业园区南办处高坎村三社1号
+                        </span>
+                </div>
+                <div id="allmap"></div>
+            </div>
+        </div>
+    </div>
+    <div class="foot">
+        <div class="foot_details clearfix">
+            <div class="foot-main">
+                <ul class="foot-nav clearfix">
+                    <li>
+                        <a href="###">
+                            <p class="first">首页</p>
+                            <p class="last">首页</p>
+                        </a>
+                    </li>
+                    <li>
+                        <a href="###">
+                            <p class="first">产品介绍</p>
+                            <p class="last">产品介绍</p>
+                        </a>
+                    </li>
+                    <li>
+                        <a href="###">
+                            <p class="first">公司介绍</p>
+                            <p class="last">公司介绍</p>
+                        </a>
+                    </li>
+                    <li class="last">
+                        <a href="###">
+                            <p class="first">招商加盟</p>
+                            <p class="last">招商加盟</p>
+                        </a>
+                    </li>
+                </ul>
+            </div>
+            <div class="copyright">
+                    <span>
+                        渝ICP备15002338号-1 Copyright © 2014~2015 重庆全航食品有限公司 版权所有
+                    </span>　
+            </div>
+        </div>
+    </div>
+</div>
+<script src="plugins/jquery/jquery-1.11.3.min.js"></script>
+<script src="js/gloabl.js"></script>
+<script type="text/javascript" src="http://api.map.baidu.com/api?v=2.0&ak=q0lvjEUGF5AOzHtbjn9YFtwl"></script>
+<script type="text/javascript">
+    // 百度地图API功能
+    var map = new BMap.Map("allmap");    // 创建Map实例
+    map.centerAndZoom(new BMap.Point(116.404, 39.915), 11);  // 初始化地图,设置中心点坐标和地图级别
+    map.addControl(new BMap.MapTypeControl());   //添加地图类型控件
+    map.setCurrentCity("重庆");          // 设置地图显示的城市 此项是必须设置的
+    map.enableScrollWheelZoom(true);     //开启鼠标滚轮缩放
+    var myGeo = new BMap.Geocoder();
+    // 将地址解析结果显示在地图上,并调整地图视野
+    myGeo.getPoint("重庆市合川工业园区南办处高坎村三社1号", function(point){
+        if (point) {
+            map.centerAndZoom(point, 16);
+            map.addOverlay(new BMap.Marker(point));
+        }
+    }, "重庆市");
+</script>
+</body>
+</html>

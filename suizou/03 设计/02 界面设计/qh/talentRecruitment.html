@@ -1,0 +1,155 @@
+<!DOCTYPE html>
+<html>
+<head lang="en">
+    <meta charset="UTF-8">
+    <title>人才招聘</title>
+    <meta name=viewport content="width=device-width,initial-scale=1,maximum-scale=1,user-scalable=no">
+    <link rel="stylesheet" href="plugins/font/css/font-awesome.min.css"/>
+    <link rel="stylesheet" href="css/global.css"/>
+    <link rel="stylesheet" href="css/mobile.css">
+</head>
+<body>
+<div class="wrapper">
+    <div class="head">
+        <div class="head_main clearfix">
+            <div class="logo left">
+                <a href="index.html">
+                    <img src="images/logo.png" alt="">
+                </a>
+            </div>
+            <div class="left menuList">
+                <span class="menuDisplay" data-datatypes="false">
+                        <i class="fa fa-bars"></i>
+                    </span>
+                <ul class="menuNav clearfix">
+                    <li>
+                        <a href="index.html">首页</a>
+                    </li>
+                    <li>
+                        <a href="brand.html">产品介绍</a>
+                    </li>
+                    <li>
+                        <a href="companyInfor.html">公司介绍</a>
+                    </li>
+                    <li class="active">
+                        <a href="talentRecruitment.html">人才招聘</a>
+                    </li>
+
+                    <li class="mr0 last">
+                        <a target="_blank" href="crowdFunding.html">
+                            <img src="images/market.png" alt=""/>
+                            参与众筹
+                        </a>
+                    </li>
+                </ul>
+            </div>
+
+        </div>
+    </div>
+    <div class="content">
+        <img src="images/zp1.jpg" alt="" class="w100 mh200"/>
+        <div class="l_talent">
+            <div class="talent">
+                <div class="l_talent_head clearfix">
+                    <div>职位名称</div>
+                    <div>类别</div>
+                    <div>地点</div>
+                    <div>人数</div>
+                </div>
+                <ul class="l_talent_menu">
+                    <li class="on">
+                        <div class="l_talent_name clearfix">
+                            <div>卤味师傅</div>
+                            <div>卤味师傅</div>
+                            <div>重庆</div>
+                            <div>不限</div>
+                        </div>
+                        <div class="l_talent_infor">
+                            任职资格 <br/>
+                            1.主要工作职责是做卤菜，要求工作年限在2-3年，会做卤菜的品种的；<br/>
+                            2.做卤猪蹄，味道独特，会买菜、开车的优先考虑；<br/>
+                            有意者可先将简历投至邮箱：office@cqyclawyer.com， 联系人：程小姐 联系电话：88060206<br/><br/>
+                            <!--<img src="images/code1.png" alt="">-->
+                            <!--<p style="font-size: 16px;">扫二维码投递简历</p>-->
+                            <button class="btn_td">投递简历</button>
+                        </div>
+                    </li>
+                    <li>
+                        <div class="l_talent_name clearfix">
+                            <div>卤味师傅</div>
+                            <div>卤味师傅</div>
+                            <div>重庆</div>
+                            <div>不限</div>
+                        </div>
+                        <div class="l_talent_infor">
+                            任职资格 <br/>
+                            1.主要工作职责是做卤菜，要求工作年限在2-3年，会做卤菜的品种的；<br/>
+                            2.做卤猪蹄，味道独特，会买菜、开车的优先考虑；<br/>
+                            有意者可先将简历投至邮箱：office@cqyclawyer.com， 联系人：程小姐 联系电话：88060206<br/><br/>
+                            <!--<img src="images/code1.png" alt="">-->
+                            <!--<p style="font-size: 16px;">扫二维码投递简历</p>-->
+                            <button class="btn_td">投递简历</button>
+                        </div>
+                    </li>
+                </ul>
+            </div>
+        </div>
+    </div>
+    <div class="foot">
+        <div class="foot_details clearfix">
+            <div class="foot-main">
+                <ul class="foot-nav clearfix">
+                    <li>
+                        <a href="###">
+                            <p class="first">首页</p>
+                            <p class="last">首页</p>
+                        </a>
+                    </li>
+                    <li>
+                        <a href="###">
+                            <p class="first">产品介绍</p>
+                            <p class="last">产品介绍</p>
+                        </a>
+                    </li>
+                    <li>
+                        <a href="###">
+                            <p class="first">公司介绍</p>
+                            <p class="last">公司介绍</p>
+                        </a>
+                    </li>
+                    <li class="last">
+                        <a href="###">
+                            <p class="first">招商加盟</p>
+                            <p class="last">招商加盟</p>
+                        </a>
+                    </li>
+                </ul>
+            </div>
+            <div class="copyright">
+                    <span>
+                        渝ICP备15002338号-1 Copyright © 2014~2015 重庆全航食品有限公司 版权所有
+                    </span>　
+            </div>
+        </div>
+    </div>
+</div>
+<script src="plugins/jquery/jquery-1.11.3.min.js"></script>
+<script src="js/gloabl.js"></script>
+<script>
+    $(function(){
+        $(".l_talent_menu li").hover(function(){
+            if($(this).find(".l_talent_infor").css("display")=="none"){
+                $(this).addClass("on");
+                $(this).find(".l_talent_infor").slideDown();
+                $(this).siblings("li").removeClass("on");
+                $(this).siblings("li").find(".l_talent_infor").slideUp();
+            }else{
+
+            }
+        },function(){
+
+        });
+    })
+</script>
+</body>
+</html>
