@@ -1,0 +1,201 @@
+<!DOCTYPE html>
+<html>
+<head lang="en">
+    <meta charset="UTF-8">
+    <title>都漫|首页</title>
+    <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1" />
+    <meta name=viewport content="width=device-width,initial-scale=1,maximum-scale=1,user-scalable=no">
+    <meta content="都漫，智能设计 一键启动 都市生活，当然快人一步" name="Description" />
+    <meta content="都漫，智能设计 一键启动 都市生活，当然快人一步" name="Keywords" />
+    <link rel="stylesheet" href="plugins/swiper/dist/css/swiper.min.css"/>
+    <link rel="stylesheet" href="plugins/font/css/font-awesome.min.css"/>
+    <link rel="stylesheet" href="css/global.css"/>
+    <link rel="stylesheet" href="css/mobile.css"/>
+</head>
+<body class="overflow">
+    <div class="wrapper">
+        <div class="head">
+            <div class="head_main clearfix">
+                <div class="logo left">
+                    <a href="index.html">
+                        <img src="images/logo.png" alt="">
+                    </a>
+                </div>
+                <div class="left menuList">
+                    <span class="menuDisplay" data-datatypes="false">
+                        <i class="fa fa-bars"></i>
+                    </span>
+                    <ul class="menuNav clearfix">
+                        <li class="active">
+                            <a href="index.html">首页</a>
+                        </li>
+                        <li>
+                            <a href="brand.html">产品介绍</a>
+                        </li>
+                        <li>
+                            <a href="companyInfor.html">公司介绍</a>
+                        </li>
+                        <li>
+                            <a href="talentRecruitment.html">人才招聘</a>
+                        </li>
+
+                        <li class="mr0 last">
+                            <a target="_blank" href="crowdFunding.html">
+                                <img src="images/market.png" alt=""/>
+                                参与众筹
+                            </a>
+                        </li>
+                    </ul>
+                </div>
+
+            </div>
+        </div>
+        <div class="content">
+            <div class="swiper-container swiper-container-horizontal" id="swiper-container">
+                <div class="swiper-wrapper" style="transition-duration: 0ms; ">
+                    <div class="swiper-slide">
+                        <a href="###" class="waves-button">
+                            <img src="plugins/swiper/dist/images/indexSlider1.jpg" alt="" class="w100"/>
+                        </a>
+                    </div>
+                    <div class="swiper-slide">
+                        <a href="###" class="waves-button">
+                            <img src="plugins/swiper/dist/images/indexSlider1.jpg" alt="" class="w100"/>
+                        </a>
+                    </div>
+                </div>
+                <div class="swiper-pagination style"></div>
+                <!--<div class="swiper-button-next"></div>-->
+                <!--<div class="swiper-button-prev"></div>-->
+            </div>
+
+            <div class="dm-video">
+                <ul class="clearfix dm-list">
+                    <li>
+                        <a href="http://www.iqiyi.com/w_19ruma2ct1.html" target="_blank">
+                            <img src="images/banner1.jpg" alt=""/>
+                            <div class="play-on">
+                                <span class="play"></span>
+                            </div>
+                        </a>
+                    </li>
+                    <li>
+                        <a href="###">
+                            <img src="images/banner2.jpg" alt=""/>
+                        </a>
+                    </li>
+                </ul>
+            </div>
+        </div>
+        <div class="foot">
+            <div class="foot_details clearfix">
+                <div class="foot-main">
+                    <ul class="foot-nav clearfix">
+                        <li>
+                            <a href="###">
+                                <p class="first">首页</p>
+                                <p class="last">首页</p>
+                            </a>
+                        </li>
+                        <li>
+                            <a href="###">
+                                <p class="first">产品介绍</p>
+                                <p class="last">产品介绍</p>
+                            </a>
+                        </li>
+                        <li>
+                            <a href="###">
+                                <p class="first">公司介绍</p>
+                                <p class="last">公司介绍</p>
+                            </a>
+                        </li>
+                        <li class="last">
+                            <a href="###">
+                                <p class="first">招商加盟</p>
+                                <p class="last">招商加盟</p>
+                            </a>
+                        </li>
+                    </ul>
+                </div>
+                <div class="copyright">
+                    <span>
+                        渝ICP备15002338号-1 Copyright © 2014~2015 重庆全航食品有限公司 版权所有
+                    </span>　
+                </div>
+            </div>
+        </div>
+        <div class="video-mask-bg hide"></div>
+        <div class="video-mask hide">
+            <div class="video-div">
+                <div class="close">
+                    <i class="fa fa-remove"></i>
+                </div>
+                <div class="video">
+                    <iframe width="960px" height="600px" src="http://yuntv.letv.com/bcloud.html?uu=6mgaqg1zfo&vu=8e7c52117c&pu=b778877a45&auto_play=1&gpcflag=1&width=100%&height=600&max-width=900" frameborder=0 allowfullscreen autoplay="false"></iframe>
+                </div>
+                <div class="noe-video hide">亲,还没上传视屏哦!</div>
+            </div>
+        </div>
+        <div class="fm">
+            <img src="images/fm.jpg" alt="">
+            <button class="gotoIndex"></button>
+        </div>
+    </div>
+    <script src="plugins/jquery/jquery-1.11.3.min.js"></script>
+    <script src="plugins/swiper/dist/js/swiper.min.js"></script>
+    <script src="js/gloabl.js"></script>
+    <script>
+        $(function(){
+            /*slider滑动*/
+            var swiper = new Swiper('#swiper-container', {
+                //prevButton:'.swiper-button-prev',
+                //nextButton:'.swiper-button-next',
+                slidesPerView: 1,
+                pagination:'.swiper-pagination',
+                paginationClickable: true,
+                spaceBetween: 0,
+                loop:true,
+                autoplay: 500000,
+                autoplayDisableOnInteraction: false
+            });
+
+            var gotoIndex = $(".gotoIndex");
+            gotoIndex.on("click",function () {
+               $(this).closest(".fm").fadeOut(200);
+                $("body").removeClass("overflow");
+            });
+
+            /*video*/
+//           $(".play-on").on("click",function(){
+//               $("html").addClass("overflow");
+//               $(".video-mask,.video-mask-bg").removeClass("hide");
+//
+//            });
+//
+//
+//            $(".video-div").delegate(".close","click",function(){
+//                $(".video-mask,.video-mask-bg").addClass("hide");
+//                $("html").removeClass("overflow");
+//            })
+        });
+
+
+        /*全屏图片居中*/
+        var ai = $(".autoImg");
+        ai.each(function(){
+            $(this).get(0).style.width ="1920px";
+            var that = $(this);
+            function toResize(){
+                var veiwidth = $(window).width();
+                if(veiwidth>1205){
+                    that.get(0).style.left = -(parseInt(that.get(0).style.width) - veiwidth)/2 + "px"
+                }
+            }
+            toResize();
+            $(window).on("resize",function(){
+                toResize()
+            });
+        });
+    </script>
+</body>
+</html>
