@@ -51,11 +51,11 @@
                     <ul class="l_contact_menu clearfix">
                         <li class="first">
                             <img src="../../assets/frontend/images/contact1.png" alt=""/>
-                            电话 : (86 028) 8427 9066
+                            电话 : (023) 68610177
                         </li>
                         <li class="second">
                             <img src="../../assets/frontend/images/contact2.png" alt=""/>
-                            传真 : (86 23) 8806 0206
+                            传真 : (023) 68610177
                         </li>
                         <li class="last mr0">
                             <img src="../../assets/frontend/images/contact3.png" alt=""/>
@@ -66,9 +66,9 @@
 
                     </div>
                     <div class="c_type">
-                        家得利地址
+                        公司地址
                         <span class="right">
-                            地址：龙潭寺工业园区成宏路26号汇润国际14楼
+                            地址：渝中区袁家岗中心城上城6栋11楼
                         </span>
                     </div>
                     <div id="allmap"></div>
@@ -85,16 +85,16 @@
         var map = new BMap.Map("allmap");    // 创建Map实例
         map.centerAndZoom(new BMap.Point(116.404, 39.915), 11);  // 初始化地图,设置中心点坐标和地图级别
         map.addControl(new BMap.MapTypeControl());   //添加地图类型控件
-        map.setCurrentCity("四川");          // 设置地图显示的城市 此项是必须设置的
+        map.setCurrentCity("重庆");          // 设置地图显示的城市 此项是必须设置的
         map.enableScrollWheelZoom(true);     //开启鼠标滚轮缩放
         var myGeo = new BMap.Geocoder();
         // 将地址解析结果显示在地图上,并调整地图视野
-        myGeo.getPoint("龙潭寺工业园区成宏路26号汇润国际", function(point){
+        myGeo.getPoint("渝中区袁家岗中心城上城6栋11楼", function(point){
             if (point) {
                 map.centerAndZoom(point, 16);
                 map.addOverlay(new BMap.Marker(point));
             }
-        }, "四川省");
+        }, "重庆市");
     </script>
 </body>
 </html>
