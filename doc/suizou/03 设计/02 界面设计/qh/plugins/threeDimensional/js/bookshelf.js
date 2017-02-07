@@ -10,11 +10,7 @@
  */
 (function() {
 
-	var supportAnimations = 'WebkitAnimation' in document.body.style ||
-			'MozAnimation' in document.body.style ||
-			'msAnimation' in document.body.style ||
-			'OAnimation' in document.body.style ||
-			'animation' in document.body.style,
+	var
 		animEndEventNames = {
 			'WebkitAnimation' : 'webkitAnimationEnd',
 			'OAnimation' : 'oAnimationEnd',
@@ -80,8 +76,14 @@
 		if( this.bb ) {
 			this.ctrls.querySelector( 'a:nth-child(1)' ).addEventListener( 'click', function( ev ) { ev.preventDefault(); self._open(); } );
 			this.ctrlBBClose.addEventListener( 'click', function( ev ) { ev.preventDefault(); self._close(); } );
-			this.ctrlBBNext.addEventListener( 'click', function( ev ) { ev.preventDefault(); self._nextPage(); } );
-			this.ctrlBBPrev.addEventListener( 'click', function( ev ) { ev.preventDefault(); self._prevPage(); } );
+			$(this.ctrlBBNext).on("click",function (ev) {
+                ev.preventDefault(); self._nextPage();
+            })
+            $(this.ctrlBBPrev).on("click",function (ev) {
+                ev.preventDefault(); self._prevPage();
+            })
+			// this.ctrlBBNext.addEventListener( 'click', function( ev ) { ev.preventDefault(); self._nextPage();} );
+			// this.ctrlBBPrev.addEventListener( 'click', function( ev ) { ev.preventDefault(); self._prevPage(); } );
 		}
 
 		this.ctrls.querySelector( 'a:nth-child(2)' ).addEventListener( 'click', function( ev ) { ev.preventDefault(); self._showDetails(); } );
@@ -101,7 +103,7 @@
 				classie.add( scrollWrap, 'hide-overflow' );
 			};
 
-		if( supportAnimations ) {
+		if( !supportAnimations ) {
 			this.bbWrapper.addEventListener( animEndEventName, onOpenBookEndFn );
 		}
 		else {
@@ -126,7 +128,7 @@
 				classie.remove( self.bbWrapper, 'hide' );
 			};
 
-		if( supportAnimations ) {
+		if( !supportAnimations ) {
 			this.bbWrapper.addEventListener( animEndEventName, onCloseBookEndFn );
 		}
 		else {
