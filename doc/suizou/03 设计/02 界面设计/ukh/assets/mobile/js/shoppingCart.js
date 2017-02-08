@@ -14,7 +14,7 @@
                 Methods.plus(_this);
                 Methods.reduce(_this);
             },
-            ajaxRecord:function(opt,wajxHtml){//规格弹窗的模板
+            ajaxRecord:function(opt,wajxHtml){//商品结构
                 for(let i = 0;i<opt.length;i++){
                     wajxHtml += '<li data-num="'+opt[i].index+'">'+
                                     '<div class="orderCon">'+
@@ -44,7 +44,7 @@
                 }
                 return wajxHtml;
             },
-            ajaxGg:function (_this) {
+            ajaxGg:function (_this) { //取商品结构的json数据
                 var that = this;
                 $.ajax({
                     url: opts.shopList,
@@ -55,17 +55,17 @@
                         if(res.status == "ok"){
                             opts.list = res.datas;
                             for(let i = 0;i<opts.list.length;i++){
-                                opts.list[i].index = i;
+                                opts.list[i].index = i; //给每条商品json数据添加下标
                             }
                             //console.log(JSON.stringify(opts.list))
-                            _this.append(that.ajaxRecord(opts.list,opts.wajxHtml));//加入购物车弹窗添加到wrapper
+                            _this.append(that.ajaxRecord(opts.list,opts.wajxHtml));//商品结构加入页面
                         }else{
 
                         }
                     }
                 });
             },
-            keyup:function (_this) {
+            keyup:function (_this) { //键盘输入
                 _this.on("keyup",'.buycount',function() {
                     var buycount = $(this).closest(".num").find(".buycount");
                     var number = parseInt(buycount.val());
@@ -85,7 +85,7 @@
                     Methods.updateTotalPrice(_this,$(this),number);
                 });
             },
-            plus:function (_this) {
+            plus:function (_this) { //点击加数量
 
                 _this.on("click",".plus",function() {
 
@@ -100,8 +100,7 @@
                     Methods.updateTotalPrice(_this,$(this),number);
                 });
             },
-
-            reduce:function (_this) {
+            reduce:function (_this) { //点击减数量
                 _this.on("click",".minus",function() {
                     var buycount = $(this).closest(".num").find(".buycount");
                     var number = parseInt(buycount.val());
@@ -114,7 +113,7 @@
                     Methods.updateTotalPrice(_this,$(this),number);
                 })
             },
-            updateTotalPrice:function (_this,_that,number) {
+            updateTotalPrice:function (_this,_that,number) { //更新总价
                 var dataNum = _that.closest("li").data("num");
                 opts.list[dataNum].num = number;
                 for(let i = 0;i<opts.list.length;i++){

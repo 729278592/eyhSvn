@@ -81,7 +81,8 @@
                 shopList:"../../../assets/mobile/data/shoppingCart.json",
                 interfaceNum:"" //数量更新接口
             });
-            $(".orderList").on("touchend",".btnRemove",function(){
+
+            orderList.on("touchend",".btnRemove",function(){
                 weui.confirm("是否删除该商品?",function(){
                     weui.startLoading();
 
@@ -99,7 +100,6 @@
                 },function(){
 
                 })
-
             });
         })
     </script>
