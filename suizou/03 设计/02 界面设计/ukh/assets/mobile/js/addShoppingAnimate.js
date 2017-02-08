@@ -75,7 +75,7 @@
             ajaxGg:function () {
                 var that = this;
                 $.ajax({
-                    url: "../../../assets/mobile/data/specifications.json",
+                    url: opts.shoppingList,
                     dataType: 'json',
                     data: '',
 //                  jsonp: 'callback',

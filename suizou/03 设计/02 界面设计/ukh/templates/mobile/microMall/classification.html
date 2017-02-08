@@ -80,7 +80,7 @@
                                     <span class="left">
                                         ￥333
                                     </span>
-                                    <span class="right shopIcon" onclick="shopCartAnimate(this,event)" data-specifications="true" data-shopppngId="556"></span>
+                                    <span class="right shopIcon" onclick="shopCartAnimate(this,event)" data-specifications="false" data-shopppngId="556"></span>
                                 </p>
                             </div>
                         </a>
@@ -166,6 +166,7 @@
             $(obj).shoppingAnimate({
                 specifications: $(obj).data("specifications"),
                 shoppingId:$(obj).data("shoppingId"),
+                shoppingList:"../../../assets/mobile/data/specifications.json",//商品规格接口
                 interface:"" //加入购物车接口
             })
         }

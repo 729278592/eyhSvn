@@ -28,7 +28,7 @@
                            <span class="verdana">￥1200.00</span>
                         </span>
 
-                        <a class="right shopIcon" onclick="shopCartAnimate(this,event)" data-specifications="true" data-shopppngId="555"></a>
+                        <a class="right shopIcon" onclick="shopCartAnimate(this,event)" data-specifications="false" data-shopppngId="555"></a>
 
                         <span class="right color1 style" id="collection" data-collection="true">
                             <i class="fa fa-star"></i>
@@ -186,6 +186,7 @@
             $(obj).shoppingAnimate({
                 specifications: $(obj).data("specifications"),
                 shoppingId:$(obj).data("shoppingId"),
+                shoppingList:"../../../assets/mobile/data/specifications.json",//商品规格接口
                 interface:"" //加入购物车接口
             })
         }
