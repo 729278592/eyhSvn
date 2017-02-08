@@ -49,13 +49,15 @@ embed{height: 600px;}
 .dm-list li>a{display: inline-block;width: 100%;position: relative;}
 .dm-list li img{width: 100%;height: 256px;}
 .fm{position: fixed;top: 0;left: 0;right: 0;bottom: 0;z-index: 100;}
-.fm>img{width: 100%;height: 100%;}
+.fm>.fmImg{width: 100%;height: 100%;}
+.fm>.fmTuImg{position: absolute;z-index: 10;width: 50%;margin-left: -25%;left: 50%;top: 10%;}
 .gotoIndex{width: 275px;height: 47px;position: absolute;top: 80%;left: 50%;margin-left: -136px;background: transparent;}
 .gotoIndex>img{width: 100%;height: 100%;}
 
 /*众筹*/
 .zc{position: fixed;top: 80px;left: 0;right: 0;bottom: 0;z-index: 100;}
-.zc>img{width: 100%;height: 100%;}
+.zc>.jm{width: 100%;height: 100%;}
+.zc>.jm1{position: absolute;bottom: 0;left: 50%;margin-left: -20%;width: 40%;}
 /*video-mask*/
 .video-mask,.video-mask-bg{position: fixed;left: 0;right: 0;bottom: 0;top: 0;z-index: 10000;min-height: 650px;min-width: 1024px;}
 .video-mask-bg{background: #000;opacity: 0.6;filter:alpha(opacity=60);}
@@ -184,7 +186,7 @@ html {
 .l_contact_menu li{float: left;width: 94%;padding: 0 3%;color: #fff;height: 60px;line-height: 60px;text-align: left;background: #c12725;}
 
 #allmap{width: 100%;height: 600px;}
-.c_typeInfor{font-size: 14px;color: #999;}
+.c_typeInfor{font-size: 14px;color: #999;line-height: 22px;}
 
 
 /*talentRecruitment */
@@ -246,7 +248,15 @@ html {
 
 
 /*media*/
-@media screen and (max-width: 1024px) {
-
-
+@media screen and (max-width: 1400px) {
+    .fm>.fmTuImg{top: 25%;}
+    .zc>.jm1{margin-left: -25%;width: 50%;}
+}
+@media screen and (max-width: 1000px) {
+    .fm>.fmTuImg{top: 35%;}
+    .zc>.jm1{margin-left: -30%;width: 60%;}
+}
+@media screen and (max-width: 640px) {
+    .fm>.fmTuImg{top: 30%;width: 80%;margin-left: -40%;}
+    .zc>.jm1{margin-left: -40%;width: 80%;}
 }
