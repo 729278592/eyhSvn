@@ -5,7 +5,7 @@ var errMessage =    '<div id="errMsg" style="display: none;">'+
                         '<div class="weui_mask_transparent fixed"></div>'+
                         '<div class="weui_toast errTip">'+
                             '<p class="weui_toast_content">' +
-                            // '<img src="../../assets/mobile/images/smile_icon.png" alt="" id="smile-icon"/><br/>'+
+                             '<img src="../../assets/mobile/images/smile_icon.png" alt="" id="smile-icon"/><br/>'+
                             '<span class="errSpan"></span>'+
                             '</p>'+
                         '</div>'+
@@ -13,8 +13,7 @@ var errMessage =    '<div id="errMsg" style="display: none;">'+
 $("body").append(errMessage);
 
 function widthAuto(obj){
-    obj.css({marginLeft:-obj.actual("width")/2});
-    alert(obj.actual("width")/2)
+    obj.css({marginLeft:-obj.outerWidth(true)/2});
 }
 
 
@@ -26,7 +25,7 @@ function showErrMsg(message) {
     errSpan.html(message);
     widthAuto(weui_toast);
     setTimeout(function () {
-        //errMsg.hide();
-        //errSpan.empty();
+        errMsg.hide();
+        errSpan.empty();
     }, 2000);
 }
