@@ -125,14 +125,15 @@
                             }
                             opts.timeOutFlag = setTimeout(function(){
 
-                                if(opts.startNum>opts.res.length){
-                                    showErrMsg("没有更多数据咯");
-                                    return;
-                                }
+
                                 $.post("../../assets/mobile/data/participationRecord.json", {}, function (data) {
                                     if (data.status == "ok") {//查询成功
                                         opts.res = data.datas;
                                         opts.firstLoad = false;
+                                        if(opts.startNum>opts.res.length){
+                                            showErrMsg("没有更多数据咯");
+                                            return;
+                                        }
                                         Methods.loading(true, opts.res, _this);
                                     }
                                     else {
