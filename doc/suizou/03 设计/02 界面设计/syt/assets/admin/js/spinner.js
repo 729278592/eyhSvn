@@ -1,36 +1,36 @@
 ;(function ($) {
   $.fn.spinner = function () {
-    return this.each(function () {
-      var buycount = $(this).find(".buycount");
-      var plus = $(this).find(".plus");
-      var minus = $(this).find(".minus");
 
-      /*数量输入*/
-      buycount.keyup(function() {
+      /*手动输入*/
+      $(this).delegate('.buycount',"keyup",function() {
+        var buycount = $(this).closest(".num").find(".buycount");
         var number = parseInt(buycount.val());
         if (isNaN(number))
           number = 1;
-        if (number < 1)
+        if (number < 1){
           number = 1;
+        }
         buycount.val(number);
       });
 
       /*数量加1*/
-      plus.click(function() {
+      $(this).delegate(".plus","click",function() {
+        var buycount = $(this).closest(".num").find(".buycount");
         var number = parseInt(buycount.val());
         number++;
         buycount.val(number);
       });
 
       /*数量减1*/
-      minus.click(function() {
+      $(this).delegate(".minus","click",function() {
+        var buycount = $(this).closest(".num").find(".buycount");
         var number = parseInt(buycount.val());
         number--;
-        if (number <= 0)
+        if (number <= 0){
           number = 1;
+        }
         buycount.val(number);
       })
 
-    })
   }
 })(jQuery);
