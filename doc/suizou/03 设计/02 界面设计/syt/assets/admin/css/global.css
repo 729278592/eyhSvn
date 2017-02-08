@@ -960,7 +960,7 @@ input::-webkit-inner-spin-button{
 .divSelect.styles{display: inline-block;margin-left: 0;}
 .divSelect.styles select{padding: 10px 0 10px 10px;font-size: 16px;width: 226px;}
 .divSelect.styles .h1{height: 43px;}
-.divInput.w180 .divSelect.styles select{padding: 10px 0 10px 10px;font-size: 14px;width: 168px;}
+.divInput.w180 .divSelect.styles select{padding: 10px 0 10px 10px;font-size: 16px;width: 168px;}
 .divInput.w180 .divSelect.styles .h1{height: 41px;}
 .dailogFoot .btnSure,.dailogFoot .btnCancel{display: inline-block;padding: 10px 50px;border-radius: 10px;font-size: 16px;}
 .dailogFoot .btnSure{background: #fa7d55;color: #fff;margin-right:8px;position: relative;left: 10px;}
