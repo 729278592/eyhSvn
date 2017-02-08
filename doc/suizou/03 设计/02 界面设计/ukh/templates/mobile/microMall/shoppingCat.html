@@ -14,37 +14,40 @@
         <div class="page">
             <div class="bd absolute pb48">
                 <div id="order">
+
                     <!--商品列表开始-->
                     <div class="title">购物车</div>
                     <ul class="orderList style">
-                        <li>
-                            <div class="orderCon">
-                                <div class="orderImg">
-                                    <img src="../../../assets/mobile/images/order1.jpg" alt=""/>
-                                </div>
-                                <div class="orderInfor">
-                                    <p class="clearfix">
-                                        <span class="left">植物油</span>
-                                    </p>
-                                    <p class="clearfix">
-                                        单价 : ￥<span class="verdana color2">100.00</span>
-                                    </p>
-                                    <p class=" clearfix">
-                                        <a class="num">
-                                            <span class="minus" ></span>
-                                            <input type="number" class="buycount" value="1" maxlength="3"/>
-                                            <span class="plus" ></span>
-                                        </a>
-                                        <button class="right btnRemove">
-                                             删除
-                                        </button>
-                                    </p>
-                                </div>
-                            </div>
-                        </li>
+                        <!--<li>-->
+                            <!--<div class="orderCon">-->
+                                <!--<div class="orderImg">-->
+                                    <!--<img src="../../../assets/mobile/images/order1.jpg" alt=""/>-->
+                                <!--</div>-->
+                                <!--<div class="orderInfor">-->
+                                    <!--<p class="clearfix">-->
+                                        <!--<span class="left">植物油</span>-->
+                                    <!--</p>-->
+                                    <!--<p class="clearfix">-->
+                                        <!--单价 : ￥<span class="verdana color2">100.00</span>-->
+                                    <!--</p>-->
+                                    <!--<p class=" clearfix">-->
+                                        <!--<a class="num">-->
+                                            <!--<span class="minus" ></span>-->
+                                            <!--<input type="tel" class="buycount" value="1" maxlength="3"/>-->
+                                            <!--<span class="plus" ></span>-->
+                                        <!--</a>-->
+                                        <!--<button class="right btnRemove">-->
+                                             <!--删除-->
+                                        <!--</button>-->
+                                    <!--</p>-->
+                                <!--</div>-->
+                            <!--</div>-->
+                        <!--</li>-->
+
                     </ul>
-                    <div class="totalPrice">总价 : <span class="color2">￥200</span></div>
+                    <div class="totalPrice">总价 : ￥<span class="color2">400</span></div>
                     <!--商品列表结束-->
+
                 </div>
 
                 <!--无数据提示开始-->
@@ -64,16 +67,20 @@
         </div>
     </div>
     <script src="../../../assets/global/plugins/jquery/jquery-1.11.3.min.js"></script>
-    <script src="../../../assets/mobile/plugins/jquery-spinner/js/jquery.spinner.js"></script><!--数量选择-->
+    <!--<script src="../../../assets/mobile/plugins/jquery-spinner/js/jquery.spinner.js"></script>&lt;!&ndash;数量选择&ndash;&gt;-->
     <script src="../../../assets/mobile/js/global.js"></script>
     <script src="../../../assets/mobile/js/weui.js"></script>
+    <script src="../../../assets/mobile/js/shoppingCart.js"></script>
     <script>
         $(function(){
 
             /*数量选择*/
             var orderList = $('.orderList');
-            orderList.spinner({});
-
+//            orderList.spinner({});
+            orderList.shoppingBuy({
+                shopList:"../../../assets/mobile/data/shoppingCart.json",
+                interfaceNum:"" //数量更新接口
+            });
             $(".orderList").on("touchend",".btnRemove",function(){
                 weui.confirm("是否删除该商品?",function(){
                     weui.startLoading();
